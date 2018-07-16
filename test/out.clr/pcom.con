@@ -1,0 +1,630 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 755: 'intsize' hiding existing declaration on line 96
+  warning on line 769: 'i' hiding existing declaration on line 757
+  warning on line 863: 'i' hiding existing declaration on line 757
+  warning on line 942: 'fsys' hiding existing declaration on line 939
+  warning on line 951: 'constant' hiding existing declaration on line 160
+  warning on line 951: 'fsys' hiding existing declaration on line 939
+  warning on line 1112: 'fsys' hiding existing declaration on line 939
+  warning on line 1116: 'fsys' hiding existing declaration on line 1112
+  warning on line 1116: 'fsys' hiding existing declaration on line 939
+  warning on line 1116: 'fsp' hiding existing declaration on line 1112
+  warning on line 1116: 'fsize' hiding existing declaration on line 1112
+  warning on line 1117: 'lsp' hiding existing declaration on line 1113
+  warning on line 1117: 'lsp1' hiding existing declaration on line 1113
+  warning on line 1117: 'lcp' hiding existing declaration on line 1113
+  warning on line 1201: 'fsys' hiding existing declaration on line 1112
+  warning on line 1201: 'fsys' hiding existing declaration on line 939
+  warning on line 1202: 'lcp' hiding existing declaration on line 1113
+  warning on line 1202: 'lsp' hiding existing declaration on line 1113
+  warning on line 1202: 'lsp1' hiding existing declaration on line 1113
+  warning on line 1202: 'lsp2' hiding existing declaration on line 1113
+  warning on line 1203: 'lsize' hiding existing declaration on line 1114
+  warning on line 1615: 'fsy' hiding existing declaration on line 939
+  warning on line 1620: 'fsy' hiding existing declaration on line 1615
+  warning on line 1620: 'fsy' hiding existing declaration on line 939
+  warning on line 1621: 'lcp' hiding existing declaration on line 1616
+  warning on line 1621: 'lcp1' hiding existing declaration on line 1616
+  warning on line 1621: 'lsp' hiding existing declaration on line 1616
+  warning on line 1622: 'llc' hiding existing declaration on line 1618
+  warning on line 1895: 'fsys' hiding existing declaration on line 939
+  warning on line 2167: 'fsys' hiding existing declaration on line 1895
+  warning on line 2167: 'fsys' hiding existing declaration on line 939
+  warning on line 2169: 'lcp' hiding existing declaration on line 1908
+  warning on line 2169: 'llp' hiding existing declaration on line 1909
+  warning on line 2173: 'fsys' hiding existing declaration on line 2167
+  warning on line 2173: 'fsys' hiding existing declaration on line 1895
+  warning on line 2173: 'fsys' hiding existing declaration on line 939
+  warning on line 2174: 'lcp' hiding existing declaration on line 2169
+  warning on line 2174: 'lcp' hiding existing declaration on line 1908
+  warning on line 2299: 'access' hiding existing declaration on line 2295
+  warning on line 2299: 'cval' hiding existing declaration on line 2295
+  warning on line 2299: 'dplmt' hiding existing declaration on line 2295
+  warning on line 2299: 'idplmt' hiding existing declaration on line 2295
+  warning on line 2299: 'kind' hiding existing declaration on line 2295
+  warning on line 2299: 'typtr' hiding existing declaration on line 2295
+  warning on line 2299: 'vlevel' hiding existing declaration on line 2295
+  warning on line 2314: 'fsys' hiding existing declaration on line 2167
+  warning on line 2314: 'fsys' hiding existing declaration on line 1895
+  warning on line 2314: 'fsys' hiding existing declaration on line 939
+  warning on line 2317: 'fsys' hiding existing declaration on line 2314
+  warning on line 2317: 'fsys' hiding existing declaration on line 2167
+  warning on line 2317: 'fsys' hiding existing declaration on line 1895
+  warning on line 2317: 'fsys' hiding existing declaration on line 939
+  warning on line 2318: 'lcp' hiding existing declaration on line 2169
+  warning on line 2318: 'lcp' hiding existing declaration on line 1908
+  warning on line 2334: redefining predefined identifier 'read'
+  warning on line 2391: redefining predefined identifier 'write'
+  warning on line 2485: redefining predefined identifier 'pack'
+  warning on line 2513: redefining predefined identifier 'unpack'
+  warning on line 2541: redefining predefined identifier 'new'
+  warning on line 2586: 'mark' hiding existing declaration on line 366
+  warning on line 2594: 'release' hiding existing declaration on line 367
+  warning on line 2604: redefining predefined identifier 'abs'
+  warning on line 2613: redefining predefined identifier 'sqr'
+  warning on line 2622: redefining predefined identifier 'trunc'
+  warning on line 2630: redefining predefined identifier 'odd'
+  warning on line 2638: redefining predefined identifier 'ord'
+  warning on line 2646: redefining predefined identifier 'chr'
+  warning on line 2662: redefining predefined identifier 'eof'
+  warning on line 2683: 'lcp' hiding existing declaration on line 2169
+  warning on line 2683: 'lcp' hiding existing declaration on line 1908
+  warning on line 2171: 'fsys' hiding existing declaration on line 2167
+  warning on line 2171: 'fsys' hiding existing declaration on line 1895
+  warning on line 2171: 'fsys' hiding existing declaration on line 939
+  warning on line 2829: 'fsys' hiding existing declaration on line 2171
+  warning on line 2829: 'fsys' hiding existing declaration on line 2167
+  warning on line 2829: 'fsys' hiding existing declaration on line 1895
+  warning on line 2829: 'fsys' hiding existing declaration on line 939
+  warning on line 2830: 'lattr' hiding existing declaration on line 2827
+  warning on line 2830: 'lop' hiding existing declaration on line 2827
+  warning on line 2832: 'fsys' hiding existing declaration on line 2829
+  warning on line 2832: 'fsys' hiding existing declaration on line 2171
+  warning on line 2832: 'fsys' hiding existing declaration on line 2167
+  warning on line 2832: 'fsys' hiding existing declaration on line 1895
+  warning on line 2832: 'fsys' hiding existing declaration on line 939
+  warning on line 2833: 'lattr' hiding existing declaration on line 2830
+  warning on line 2833: 'lattr' hiding existing declaration on line 2827
+  warning on line 2833: 'lop' hiding existing declaration on line 2830
+  warning on line 2833: 'lop' hiding existing declaration on line 2827
+  warning on line 2835: 'fsys' hiding existing declaration on line 2832
+  warning on line 2835: 'fsys' hiding existing declaration on line 2829
+  warning on line 2835: 'fsys' hiding existing declaration on line 2171
+  warning on line 2835: 'fsys' hiding existing declaration on line 2167
+  warning on line 2835: 'fsys' hiding existing declaration on line 1895
+  warning on line 2835: 'fsys' hiding existing declaration on line 939
+  warning on line 2836: 'lcp' hiding existing declaration on line 2169
+  warning on line 2836: 'lcp' hiding existing declaration on line 1908
+  warning on line 3234: 'llp' hiding existing declaration on line 2169
+  warning on line 3234: 'llp' hiding existing declaration on line 1909
+  warning on line 3405: 'lsy' hiding existing declaration on line 940
+  warning on line 3478: 'lcp' hiding existing declaration on line 2169
+  warning on line 3478: 'lcp' hiding existing declaration on line 1908
+
+0 error(s), 101 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = clr)
+-----------------------------------------------------
+
+P2 errcode = 0
+
+verifying the resulting binary
+-----------------------------------------------------
+[IL]: Error: [pcom.exe : <Module>::Insymbol][offset 0x00000590][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Insymbol][offset 0x0000059C][found unmanaged pointer][expected readonly address of value 'T_constant'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Insymbol][offset 0x000005AE][found unmanaged pointer][expected readonly address of value 'T_constant'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Insymbol][offset 0x000005D0][found unmanaged pointer][expected readonly address of value 'T_constant'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Insymbol][offset 0x0000063C][found unmanaged pointer][expected readonly address of value 'T_constant'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Insymbol][offset 0x000006E8][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Insymbol][offset 0x0000069B][found unmanaged pointer][expected readonly address of value 'T_constant'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Insymbol][offset 0x000006B3][found unmanaged pointer][expected readonly address of value 'T_constant'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Insymbol][offset 0x000006CB][found unmanaged pointer][expected readonly address of value 'T_constant'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Insymbol][offset 0x000008DA][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Insymbol][offset 0x000008E6][found unmanaged pointer][expected readonly address of value 'T_constant'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Insymbol][offset 0x000008F2][found unmanaged pointer][expected readonly address of value 'T_constant'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Insymbol][offset 0x0000092A][found unmanaged pointer][expected readonly address of value 'T_constant'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Insymbol][offset 0x0000094F][found unmanaged pointer][expected readonly address of value 'T_constant'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Insymbol][offset 0x000009A2][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Searchsection][offset 0x0000009B][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : <Module>::Searchid][offset 0x00000123][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : <Module>::Getbounds][offset 0x0000000A][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Getbounds][offset 0x00000013][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Align][offset 0x0000000A][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Printtables][offset 0x000000C6][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Genlabel][offset 0x0000000A][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Genlabel][offset 0x00000026][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [pcom.exe : <Module>::Programme][offset 0x0000009F][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Programme][offset 0x000000AF][found unmanaged pointer][expected readonly address of value 'T_filerec'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Programme][offset 0x000000BF][found unmanaged pointer][expected readonly address of value 'T_filerec'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Programme][offset 0x000000BF][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Programme][offset 0x000000CA][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Programme][offset 0x00000151][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x0000000D][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x00000018][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x00000023][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x0000003A][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x00000045][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x00000050][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x0000005C][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x00000067][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x00000072][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x00000089][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x00000094][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x0000009F][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x000000AB][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x000000B6][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x000000C1][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x000000D8][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x000000E3][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x000000EE][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x000000FA][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x00000105][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x00000110][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x00000127][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x00000132][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x0000013D][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x00000149][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x00000154][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x0000015F][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x0000015F][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x00000176][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x00000181][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x0000018D][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x00000198][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x000001A3][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x000001BA][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x000001C5][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x000001D0][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x000001DC][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x000001E7][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x000001F6][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x000001F6][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x0000020D][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterstdtypes][offset 0x00000218][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000011][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000001D][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000002D][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000003D][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000003D][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000049][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000054][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000064][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000070][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000080][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000090][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000090][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000009C][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000000A7][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000000B7][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000000C3][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000000D3][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000000E3][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000000E3][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000000EF][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000000FA][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000010A][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000116][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000126][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000136][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000136][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000142][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000014D][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000154][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000176][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000182][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000001A2][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000001B2][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000001B2][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000001C3][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000001C3][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000001CE][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000001E7][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000001F2][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000001FE][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000022B][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000022B][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000023B][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000247][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000257][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000267][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000267][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000273][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000273][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000027E][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000290][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000029B][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000002C1][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000002CD][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000002ED][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000002FD][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000002FD][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000309][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000315][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000321][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000321][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000336][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000359][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000364][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000003AC][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000003B8][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000003D8][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000003E8][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000003E8][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000003F4][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000400][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000040C][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000040C][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000421][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000445][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000450][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000497][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000004A3][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000004AF][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000004CF][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000004DB][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000004DB][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000004E7][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000004E7][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000503][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000050F][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000051B][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000526][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000556][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000562][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000056E][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000058A][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000596][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000596][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000005A2][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000005A2][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000005B8][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000005C4][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000005D0][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000005DB][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000603][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000060F][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000061B][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000063B][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000647][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000647][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000653][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000653][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000670][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000067C][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000688][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000693][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000006C3][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000006CF][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000006DF][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000006EF][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000006EF][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000006FB][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000707][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000713][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000713][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000728][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000740][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000768][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000774][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000780][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000078C][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000007AC][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000007BC][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000007BC][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000007CD][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000007CD][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000007D9][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000007E5][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x000007FA][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000080E][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000081A][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000826][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x00000832][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Entstdnames][offset 0x0000083D][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x00000010][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x0000001B][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x0000002A][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x00000035][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x00000035][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x00000040][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x0000004F][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x0000005A][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x00000069][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x00000074][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x00000074][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x0000007F][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x0000007F][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x00000089][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x0000009A][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x000000A9][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x000000B4][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x000000C3][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x000000CE][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x000000CE][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x000000D9][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x000000E4][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x000000E4][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x000000F8][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x0000010F][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x0000011A][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x00000129][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x00000134][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x00000143][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x0000014E][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x0000014E][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x00000159][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x00000159][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x00000170][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x0000017B][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x0000018A][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x00000195][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x000001A0][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x000001AB][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x000001BA][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x000001C5][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x000001C5][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x000001D0][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x000001DB][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x000001DB][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x000001E6][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x000001FA][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x00000204][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x00000214][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x0000021F][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x0000022A][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x00000239][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x00000244][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x0000024F][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x0000025A][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x00000269][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x00000274][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x00000274][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x0000027F][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x0000027F][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x0000028A][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x00000295][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x000002A9][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x000002B3][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x000002C3][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x000002CE][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Enterundecl][offset 0x000002D9][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Initscalars][offset 0x00000007][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Initscalars][offset 0x00000054][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::Initscalars][offset 0x0000009B][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::_Program][offset 0x00000078][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::_Program][offset 0x00000089][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::_Program][offset 0x000000DD][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::_Program][offset 0x000000EE][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::_SetContains][offset 0x00000004][found address of value 'T_set_29'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::_SetContains][offset 0x00000005][found address of value 'T_set_31'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::_SetContains][offset 0x00000004][found address of value 'T_set_79'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::_SetContains][offset 0x00000004][found address of value 'T_set_8'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::_SetContains][offset 0x00000004][found address of value 'T_setofids'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::_SetContains][offset 0x00000004][found address of value 'T_setty'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::_SetEqual][offset 0x00000006][found address of value 'T_set_31'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::_SetEqual][offset 0x00000006][found address of value 'T_set_31'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::_SetCastTo_T_set_31][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [pcom.exe : <Module>::_SetDifference][offset 0x00000008][found address of value 'T_set_31'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::_SetDifference][offset 0x00000008][found address of value 'T_set_31'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::_SetDifference][offset 0x00000008][found address of value 'T_set_31'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::_SetUnion][offset 0x00000008][found address of value 'T_set_31'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::_SetUnion][offset 0x00000008][found address of value 'T_set_31'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::_SetUnion][offset 0x00000008][found address of value 'T_set_31'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::_SetCastTo_T_setty][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [pcom.exe : <Module>::_SetUnion][offset 0x00000007][found address of value 'T_setty'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::_SetUnion][offset 0x00000007][found address of value 'T_setty'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::_SetUnion][offset 0x00000007][found address of value 'T_setty'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : <Module>::_SetCheck][offset 0x00000006][found address of value 'T_set_31'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @insymbol::Nextch][offset 0x00000062][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : T_insymbol_array_5::arrayToString][offset 0x00000006][found address of value 'T_insymbol_array_5'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : T_alpha::arrayToString][offset 0x00000005][found address of value 'T_alpha'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : T_set_8::clear][offset 0x00000003] Instruction cannot be verified.
+[IL]: Error: [pcom.exe : T_setty::clear][offset 0x00000003] Instruction cannot be verified.
+[IL]: Error: [pcom.exe : T_setofids::clear][offset 0x00000003] Instruction cannot be verified.
+[IL]: Error: [pcom.exe : @printtables::Marker][offset 0x00000043][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Typ][offset 0x00000012][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Labeldeclaration][offset 0x00000053][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Labeldeclaration][offset 0x000000B1][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block::Constdeclaration][offset 0x00000088][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Constdeclaration][offset 0x00000094][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Constdeclaration][offset 0x000000A4][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Constdeclaration][offset 0x000000B0][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Constdeclaration][offset 0x000000B0][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Constdeclaration][offset 0x000000BC][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Constdeclaration][offset 0x000000BC][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Constdeclaration][offset 0x000000C8][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Constdeclaration][offset 0x0000013B][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Constdeclaration][offset 0x00000146][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Constdeclaration][offset 0x00000157][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Constdeclaration][offset 0x00000157][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Constdeclaration][offset 0x00000168][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Typedeclaration][offset 0x00000088][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Typedeclaration][offset 0x00000094][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Typedeclaration][offset 0x000000A4][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Typedeclaration][offset 0x000000B0][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Typedeclaration][offset 0x000000B0][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Typedeclaration][offset 0x000000BC][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Typedeclaration][offset 0x0000012F][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Typedeclaration][offset 0x0000013A][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Typedeclaration][offset 0x0000014B][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Typedeclaration][offset 0x0000014B][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Typedeclaration][offset 0x00000156][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Typedeclaration][offset 0x0000020E][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block::Typedeclaration][offset 0x000002B2][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block::Vardeclaration][offset 0x00000055][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Vardeclaration][offset 0x00000072][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Vardeclaration][offset 0x0000007E][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Vardeclaration][offset 0x0000008E][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Vardeclaration][offset 0x0000009F][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Vardeclaration][offset 0x0000009F][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Vardeclaration][offset 0x000000AB][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Vardeclaration][offset 0x000000B7][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Vardeclaration][offset 0x000000B7][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Vardeclaration][offset 0x000000C3][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Vardeclaration][offset 0x000000D3][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Vardeclaration][offset 0x000000DE][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Vardeclaration][offset 0x000000EA][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Vardeclaration][offset 0x0000022B][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Vardeclaration][offset 0x0000029B][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x000000D9][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x000000D9][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x000000E5][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x000003A0][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x00000430][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x00000435][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x00000464][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x000004A4][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x000004C3][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x000004C3][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x00000644][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x000006B2][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x000006BD][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x000006D5][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x00000761][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x000004D5][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x000004F4][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x000004F4][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x00000532][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x0000053E][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x00000543][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x00000554][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x00000554][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x00000560][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block::Procdeclaration][offset 0x0000044F][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block::Body][offset 0x0000003A][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : T_set_29::clear][offset 0x00000003] Instruction cannot be verified.
+[IL]: Error: [pcom.exe : T_set_31::clear][offset 0x00000004] Instruction cannot be verified.
+[IL]: Error: [pcom.exe : @block_typ::Simpletype][offset 0x00000012][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : T_set_79::clear][offset 0x00000003] Instruction cannot be verified.
+[IL]: Error: [pcom.exe : @block_body::Load][offset 0x00000018][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body::Store][offset 0x00000011][found address of value 'T_attr'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body::Store][offset 0x0000001C][found unmanaged pointer][expected readonly address of value 'T_attr'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body::Store][offset 0x00000022][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body::Loadaddress][offset 0x00000018][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body::Genfjp][offset 0x0000002A][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body::Statement][offset 0x0000008A][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body::Statement][offset 0x0000010E][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body::Statement][offset 0x000001C2][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body::Statement][offset 0x000001D2][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body::Statement][offset 0x000001EC][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body::Statement][offset 0x000001FD][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : T_array_100::arrayToString][offset 0x00000005][found address of value 'T_array_100'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement::Expression][offset 0x00000092][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement::Gotostatement][offset 0x00000087][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement::Gotostatement][offset 0x00000119][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement::Casestatement][offset 0x000000AF][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement::Casestatement][offset 0x000000BB][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement::Forstatement][offset 0x000000A5][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement::Forstatement][offset 0x00000103][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement::Forstatement][offset 0x00000119][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement::Forstatement][offset 0x0000011E][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement::Forstatement][offset 0x0000013A][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement::Forstatement][offset 0x00000164][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement::Forstatement][offset 0x0000017F][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement::Forstatement][offset 0x000001B0][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement::Forstatement][offset 0x0000019F][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement::Forstatement][offset 0x000002B4][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement::Forstatement][offset 0x000003F7][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement::Forstatement][offset 0x00000747][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement::Forstatement][offset 0x00000772][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement::Withstatement][offset 0x0000005E][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement::Withstatement][offset 0x000000B3][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement::Withstatement][offset 0x000000C3][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement::Withstatement][offset 0x00000079][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Variable][offset 0x00000038][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Variable][offset 0x0000006F][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Variable][offset 0x00000053][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Getputresetrewrite][offset 0x0000006A][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Read][offset 0x000000C9][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Read][offset 0x000000F0][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Write][offset 0x00000129][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Write][offset 0x00000150][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Pack][offset 0x0000007A][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Pack][offset 0x00000081][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Pack][offset 0x00000091][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Unpack][offset 0x0000007A][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Unpack][offset 0x00000081][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Unpack][offset 0x00000091][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::New][offset 0x0000007C][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::New][offset 0x000000A6][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::New][offset 0x000002F5][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Mark][offset 0x00000055][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Release][offset 0x00000055][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Abs][offset 0x00000018][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Sqr][offset 0x00000018][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Trunc][offset 0x00000018][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Odd][offset 0x00000018][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Ord][offset 0x00000018][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Chr][offset 0x00000018][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Predsucc][offset 0x00000018][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Eof][offset 0x000000EF][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Eof][offset 0x00000089][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Callnonstandard][offset 0x00000094][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Callnonstandard][offset 0x00000099][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Callnonstandard][offset 0x000000AA][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Callnonstandard][offset 0x000000BF][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Callnonstandard][offset 0x000000F7][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Callnonstandard][offset 0x00000136][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Callnonstandard][offset 0x00000575][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Callnonstandard][offset 0x00000586][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Callnonstandard][offset 0x0000058B][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Callnonstandard][offset 0x000001ED][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Callnonstandard][offset 0x00000201][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Callnonstandard][offset 0x00000213][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Callnonstandard][offset 0x00000233][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Callnonstandard][offset 0x0000023E][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Callnonstandard][offset 0x00000243][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Callnonstandard][offset 0x00000243][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Callnonstandard][offset 0x00000321][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Callnonstandard][offset 0x000005DF][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Callnonstandard][offset 0x00000680][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_call::Callnonstandard][offset 0x00000685][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x000000A7][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x000000C5][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x000000D5][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x00000103][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x0000011E][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x00000163][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x0000017B][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x00000180][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x0000019B][found unmanaged pointer][expected readonly address of value 'T_identifier'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x000001CB][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x000001DB][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x0000022B][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x00000265][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x000002AC][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x000002BE][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x000002CA][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x000002DA][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x000002DA][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x000002E6][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x000002F2][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x000002F2][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x00000310][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x00000320][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x00000427][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x00000496][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x000004A2][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x000004AE][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x000004AE][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x000004C6][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x000004D2][found unmanaged pointer][expected readonly address of value 'T_structure'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x000004F0][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x0000086D][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x00000879][found unmanaged pointer][expected readonly address of value 'T_constant'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x0000088A][found unmanaged pointer][expected readonly address of value 'T_constant'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x00000896][found unmanaged pointer][expected readonly address of value 'T_constant'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x000009F5][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x00000A01][found unmanaged pointer][expected readonly address of value 'T_constant'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x00000A12][found unmanaged pointer][expected readonly address of value 'T_constant'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x00000A1E][found unmanaged pointer][expected readonly address of value 'T_constant'] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x00000A33][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression_term::Factor][offset 0x00000554][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression_simpleexpression::Term][offset 0x000000D8][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression::Simpleexpression][offset 0x000000C6][found unmanaged pointer] Non-compatible types on the stack.
+[IL]: Error: [pcom.exe : @block_body_statement_expression::Simpleexpression][offset 0x000001C2][found unmanaged pointer] Non-compatible types on the stack.
+513 Error(s) Verifying pcom.exe

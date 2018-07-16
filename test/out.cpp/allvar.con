@@ -1,0 +1,12 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+0 error(s), 0 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = cpp)
+-----------------------------------------------------
+allvar.cpp
+
+P2 errcode = 0

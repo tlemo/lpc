@@ -1,0 +1,22 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+0 error(s), 0 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = clr)
+-----------------------------------------------------
+
+P2 errcode = 0
+
+verifying the resulting binary
+-----------------------------------------------------
+[IL]: Error: [ranges.exe : <Module>::_Program][offset 0x000001A3][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [ranges.exe : <Module>::_Program][offset 0x000001B1][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [ranges.exe : <Module>::_Program][offset 0x000001C3][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [ranges.exe : <Module>::_Program][offset 0x00000257][found address of Short][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [ranges.exe : <Module>::_Program][offset 0x00000268][found address of Short][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [ranges.exe : <Module>::_Program][offset 0x0000027D][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [ranges.exe : T_array_1::arrayToString][offset 0x00000005][found address of value 'T_array_1'][expected unmanaged pointer] Unexpected type on the stack.
+7 Error(s) Verifying ranges.exe

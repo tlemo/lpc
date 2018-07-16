@@ -1,0 +1,111 @@
+ HI.  THIS IS CHESS .5
+ ENTER MOVE OR TYPE GO.       
+ PR                                                                        
+
+ 8 23456432
+ 7 11111111
+ 6 --------
+ 5 --------
+ 4 --------
+ 3 --------
+ 2 AAAAAAAA
+ 1 BCDEFDCB
+ W RNBQKBNR
+ GO                                                                        
+   MY MOVE - P-Q3.            
+ GO                                                                        
+   MY MOVE - P-K3.            
+ GO                                                                        
+   MY MOVE - P-KR3.           
+ GO                                                                        
+   MY MOVE - Q-B3.            
+ GO                                                                        
+   MY MOVE - P-QB4.           
+ GO                                                                        
+   MY MOVE - Q-B4.            
+ GO                                                                        
+   MY MOVE - Q-Q2.            
+ GO                                                                        
+   MY MOVE - Q-K5.            
+ GO                                                                        
+   MY MOVE - P*Q.             
+ GO                                                                        
+   MY MOVE - B-R6.            
+ GO                                                                        
+   MY MOVE - Q-B4.            
+ GO                                                                        
+   MY MOVE - K-Q1.            
+ GO                                                                        
+   MY MOVE - Q-Q6.            
+ GO                                                                        
+   MY MOVE - P-K4.            
+ GO                                                                        
+   MY MOVE - N-KB3.           
+ GO                                                                        
+   MY MOVE - P-KB4.           
+ PR                                                                        
+
+ 8 2346--32
+ 7 1111--11
+ 6 ---E----
+ 5 ----11--
+ 4 --A-A---
+ 3 4----C-A
+ 2 AA--AAA-
+ 1 BCD-FD-B
+ W RNBQKBNR
+ GO                                                                        
+   MY MOVE - Q-B5.            
+ GO                                                                        
+   MY MOVE - P-Q4.            
+ GO                                                                        
+   MY MOVE - N-R2.            
+ GO                                                                        
+   MY MOVE - P-Q5.            
+ GO                                                                        
+   MY MOVE - N*B.             
+ GO                                                                        
+   MY MOVE - P-B5.            
+ GO                                                                        
+   MY MOVE - K-Q1.            
+ GO                                                                        
+   MY MOVE - B-N5.            
+ PR                                                                        
+
+ 8 23-6--32
+ 7 111---11
+ 6 --------
+ 5 --E-1---
+ 4 --A1A14-
+ 3 C------A
+ 2 AA--AAAC
+ 1 B-DF-D-B
+ W RNBQKBNR
+ GO                                                                        
+   MY MOVE - P*B.             
+ GO                                                                        
+   MY MOVE - P-Q6.            
+ GO                                                                        
+   MY MOVE - Q*P/R.           
+ GO                                                                        
+   MY MOVE - K-B1.            
+ GO                                                                        
+   MY MOVE - Q-N6.            
+ GO                                                                        
+   MY MOVE - R*N.             
+ GO                                                                        
+   MY MOVE - K-Q2.            
+ GO                                                                        
+   MY MOVE - P*P.             
+ PR                                                                        
+
+ 8 -36---32
+ 7 -11---11
+ 6 -E------
+ 5 ----1---
+ 4 --A-A1A-
+ 3 2-------
+ 2 AA-F1AAC
+ 1 B-D--D-B
+ W RNBQKBNR
+ EN                                                                        

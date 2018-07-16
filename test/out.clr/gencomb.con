@@ -1,0 +1,29 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 7: 'v' hiding existing declaration on line 5
+  warning on line 9: 'i' hiding existing declaration on line 4
+  warning on line 23: 'v' hiding existing declaration on line 5
+  warning on line 24: 'i' hiding existing declaration on line 4
+
+0 error(s), 4 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = clr)
+-----------------------------------------------------
+
+P2 errcode = 0
+
+verifying the resulting binary
+-----------------------------------------------------
+[IL]: Error: [gencomb.exe : <Module>::Gen][offset 0x0000000B][found address of value 'T_vec'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [gencomb.exe : <Module>::Gen][offset 0x0000004B][found unmanaged pointer][expected address of value 'T_vec'] Unexpected type on the stack.
+[IL]: Error: [gencomb.exe : <Module>::Gen][offset 0x000000BE][found unmanaged pointer][expected address of value 'T_vec'] Unexpected type on the stack.
+[IL]: Error: [gencomb.exe : <Module>::Gen][offset 0x000000ED][found unmanaged pointer][expected address of value 'T_vec'] Unexpected type on the stack.
+[IL]: Error: [gencomb.exe : <Module>::Gen][offset 0x000000FE][found unmanaged pointer][expected address of value 'T_vec'] Unexpected type on the stack.
+[IL]: Error: [gencomb.exe : <Module>::Gen][offset 0x00000148][found unmanaged pointer][expected address of value 'T_vec'] Unexpected type on the stack.
+[IL]: Error: [gencomb.exe : <Module>::Gen][offset 0x0000015B][found unmanaged pointer][expected address of value 'T_vec'] Unexpected type on the stack.
+[IL]: Error: [gencomb.exe : <Module>::_Program][offset 0x00000051][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [gencomb.exe : <Module>::_Program][offset 0x00000096][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+9 Error(s) Verifying gencomb.exe

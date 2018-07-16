@@ -1,0 +1,223 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 315: non-local goto
+  warning on line 346: non-local goto
+  warning on line 365: 't' hiding existing declaration on line 242
+  warning on line 519: 'b' hiding existing declaration on line 242
+  warning on line 526: 'a' hiding existing declaration on line 242
+  warning on line 526: 'b' hiding existing declaration on line 242
+  warning on line 587: 'fsys' hiding existing declaration on line 574
+  warning on line 606: 'enter' hiding existing declaration on line 477
+  warning on line 606: 'id' hiding existing declaration on line 224
+  warning on line 624: 'id' hiding existing declaration on line 224
+  warning on line 641: 'fsys' hiding existing declaration on line 574
+  warning on line 642: 'x' hiding existing declaration on line 585
+  warning on line 679: 'fsys' hiding existing declaration on line 574
+  warning on line 680: 'x' hiding existing declaration on line 585
+  warning on line 685: 'eltp' hiding existing declaration on line 681
+  warning on line 687: 'elrf' hiding existing declaration on line 681
+  warning on line 687: 'elsz' hiding existing declaration on line 682
+  warning on line 709: 'high' hiding existing declaration on line 686
+  warning on line 709: 'low' hiding existing declaration on line 686
+  warning on line 722: 'typ' hiding existing declaration on line 679
+  warning on line 754: 'typ' hiding existing declaration on line 679
+  warning on line 777: 'x' hiding existing declaration on line 585
+  warning on line 794: 'typ' hiding existing declaration on line 679
+  warning on line 805: 'typ' hiding existing declaration on line 679
+  warning on line 856: 'typ' hiding existing declaration on line 679
+  warning on line 877: 'typ' hiding existing declaration on line 679
+  warning on line 888: 'isfun' hiding existing declaration on line 574
+  warning on line 900: 'fsys' hiding existing declaration on line 574
+  warning on line 904: 'fsys' hiding existing declaration on line 900
+  warning on line 904: 'fsys' hiding existing declaration on line 574
+  warning on line 905: 'x' hiding existing declaration on line 585
+  warning on line 905: 'a' hiding existing declaration on line 242
+  warning on line 942: 'fsys' hiding existing declaration on line 900
+  warning on line 942: 'fsys' hiding existing declaration on line 574
+  warning on line 942: 'i' hiding existing declaration on line 901
+  warning on line 943: 'x' hiding existing declaration on line 585
+  warning on line 992: 'a' hiding existing declaration on line 242
+  warning on line 992: 'b' hiding existing declaration on line 242
+  warning on line 902: 'fsys' hiding existing declaration on line 900
+  warning on line 902: 'fsys' hiding existing declaration on line 574
+  warning on line 902: 'x' hiding existing declaration on line 585
+  warning on line 1011: 'fsys' hiding existing declaration on line 902
+  warning on line 1011: 'fsys' hiding existing declaration on line 900
+  warning on line 1011: 'fsys' hiding existing declaration on line 574
+  warning on line 1011: 'x' hiding existing declaration on line 902
+  warning on line 1011: 'x' hiding existing declaration on line 585
+  warning on line 1012: 'y' hiding existing declaration on line 1009
+  warning on line 1012: 'op' hiding existing declaration on line 1009
+  warning on line 1014: 'fsys' hiding existing declaration on line 1011
+  warning on line 1014: 'fsys' hiding existing declaration on line 902
+  warning on line 1014: 'fsys' hiding existing declaration on line 900
+  warning on line 1014: 'fsys' hiding existing declaration on line 574
+  warning on line 1014: 'x' hiding existing declaration on line 1011
+  warning on line 1014: 'x' hiding existing declaration on line 902
+  warning on line 1014: 'x' hiding existing declaration on line 585
+  warning on line 1015: 'y' hiding existing declaration on line 1012
+  warning on line 1015: 'y' hiding existing declaration on line 1009
+  warning on line 1015: 'op' hiding existing declaration on line 1012
+  warning on line 1015: 'op' hiding existing declaration on line 1009
+  warning on line 1017: 'fsys' hiding existing declaration on line 1014
+  warning on line 1017: 'fsys' hiding existing declaration on line 1011
+  warning on line 1017: 'fsys' hiding existing declaration on line 902
+  warning on line 1017: 'fsys' hiding existing declaration on line 900
+  warning on line 1017: 'fsys' hiding existing declaration on line 574
+  warning on line 1017: 'x' hiding existing declaration on line 1014
+  warning on line 1017: 'x' hiding existing declaration on line 1011
+  warning on line 1017: 'x' hiding existing declaration on line 902
+  warning on line 1017: 'x' hiding existing declaration on line 585
+  warning on line 1018: 'i' hiding existing declaration on line 901
+  warning on line 1057: 'typ' hiding existing declaration on line 679
+  warning on line 1230: 'x' hiding existing declaration on line 585
+  warning on line 1264: 'x' hiding existing declaration on line 585
+  warning on line 1281: 'x' hiding existing declaration on line 585
+  warning on line 1282: 'i' hiding existing declaration on line 901
+  warning on line 1288: 'k' hiding existing declaration on line 1282
+  warning on line 1330: 'x' hiding existing declaration on line 585
+  warning on line 1346: 'x' hiding existing declaration on line 585
+  warning on line 1356: 'x' hiding existing declaration on line 585
+  warning on line 1357: 'i' hiding existing declaration on line 901
+  warning on line 1388: 'i' hiding existing declaration on line 901
+  warning on line 1389: 'x' hiding existing declaration on line 585
+  warning on line 1521: 't' hiding existing declaration on line 242
+  warning on line 1522: 'b' hiding existing declaration on line 242
+  warning on line 1527: 'display' hiding existing declaration on line 244
+
+0 error(s), 84 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = clr)
+-----------------------------------------------------
+
+P2 errcode = 0
+
+verifying the resulting binary
+-----------------------------------------------------
+[IL]: Error: [pascal-s.exe : <Module>::Nextch][offset 0x000000BD][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : <Module>::Interpret][offset 0x00001415][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : <Module>::Interpret][offset 0x00001454][found address of Double][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : <Module>::Interpret][offset 0x00001499][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : <Module>::_Program][offset 0x00000B54][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : <Module>::_Program][offset 0x00000B95][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : <Module>::_SetContains][offset 0x00000004][found address of value 'T_set_61'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : <Module>::_SetContains][offset 0x00000005][found address of value 'T_set_62'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : <Module>::_SetContains][offset 0x00000004][found address of value 'T_symset'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : <Module>::_SetContains][offset 0x00000004][found address of value 'T_typset'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : <Module>::_SetEqual][offset 0x00000006][found address of value 'T_set_62'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : <Module>::_SetEqual][offset 0x00000006][found address of value 'T_set_62'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : <Module>::_SetCastTo_T_set_61][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [pascal-s.exe : <Module>::_SetCastTo_T_set_62][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [pascal-s.exe : <Module>::_SetCastTo_T_set_62][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [pascal-s.exe : <Module>::_SetDifference][offset 0x00000008][found address of value 'T_set_62'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : <Module>::_SetDifference][offset 0x00000008][found address of value 'T_set_62'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : <Module>::_SetDifference][offset 0x00000008][found address of value 'T_set_62'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : <Module>::_SetUnion][offset 0x00000008][found address of value 'T_set_62'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : <Module>::_SetUnion][offset 0x00000008][found address of value 'T_set_62'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : <Module>::_SetUnion][offset 0x00000008][found address of value 'T_set_62'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : <Module>::_SetCastTo_T_symset][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [pascal-s.exe : <Module>::_SetUnion][offset 0x00000007][found address of value 'T_symset'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : <Module>::_SetUnion][offset 0x00000007][found address of value 'T_symset'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : <Module>::_SetUnion][offset 0x00000007][found address of value 'T_symset'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : <Module>::_SetCheck][offset 0x00000006][found address of value 'T_set_62'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : T_alfa::arrayToString][offset 0x00000006][found address of value 'T_alfa'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : T_set_61::clear][offset 0x00000003] Instruction cannot be verified.
+[IL]: Error: [pascal-s.exe : T_set_62::clear][offset 0x00000004] Instruction cannot be verified.
+[IL]: Error: [pascal-s.exe : T_array_65::arrayToString][offset 0x00000009][found address of value 'T_array_65'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : T_symset::clear][offset 0x00000003] Instruction cannot be verified.
+[IL]: Error: [pascal-s.exe : @block::Constant][offset 0x00000011][found address of value 'T_block_conrec'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block::Constant][offset 0x00000034][found unmanaged pointer][expected readonly address of value 'T_block_conrec'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block::Constant][offset 0x00000040][found unmanaged pointer][expected readonly address of value 'T_block_conrec'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block::Constant][offset 0x00000085][found unmanaged pointer][expected readonly address of value 'T_block_conrec'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block::Constant][offset 0x00000095][found unmanaged pointer][expected readonly address of value 'T_block_conrec'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block::Constant][offset 0x00000151][found unmanaged pointer][expected readonly address of value 'T_block_conrec'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block::Constant][offset 0x0000015C][found unmanaged pointer][expected readonly address of value 'T_block_conrec'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block::Constant][offset 0x0000019B][found unmanaged pointer][expected readonly address of value 'T_block_conrec'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block::Constant][offset 0x000001C7][found unmanaged pointer][expected readonly address of value 'T_block_conrec'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block::Constant][offset 0x000001EA][found unmanaged pointer][expected readonly address of value 'T_block_conrec'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block::Constant][offset 0x00000201][found unmanaged pointer][expected readonly address of value 'T_block_conrec'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block::Constant][offset 0x00000224][found unmanaged pointer][expected readonly address of value 'T_block_conrec'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block::Constant][offset 0x0000023C][found unmanaged pointer][expected readonly address of value 'T_block_conrec'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block::Typ][offset 0x00000019][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block::Typ][offset 0x00000025][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block::Typ][offset 0x0000002F][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block::Typ][offset 0x0000007A][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [pascal-s.exe : @block_typ::Arraytyp][offset 0x00000011][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_typ::Arraytyp][offset 0x0000001B][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_typ::Arraytyp][offset 0x000001A5][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement::Selector][offset 0x00000019][found address of value 'T_item'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement::Selector][offset 0x00000080][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement::Selector][offset 0x000000A8][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement::Selector][offset 0x0000014B][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement::Selector][offset 0x0000016B][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement::Selector][offset 0x0000020B][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement::Selector][offset 0x0000022E][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement::Selector][offset 0x000002C5][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement::Selector][offset 0x000002E5][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement::Expression][offset 0x00000019][found address of value 'T_item'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement::Expression][offset 0x000000D5][found unmanaged pointer][expected address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement::Expression][offset 0x00000113][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement::Expression][offset 0x0000012A][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement::Expression][offset 0x000002D6][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement::Expression][offset 0x000001CD][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement::Expression][offset 0x000001E1][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement::Expression][offset 0x00000220][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : T_typset::clear][offset 0x00000003] Instruction cannot be verified.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term_factor::Standfct][offset 0x000000E1][found unmanaged pointer][expected address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term_factor::Standfct][offset 0x0000022E][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term_factor::Standfct][offset 0x000002EB][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term_factor::Standfct][offset 0x00000259][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term_factor::Standfct][offset 0x00000208][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term_factor::Standfct][offset 0x00000127][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term_factor::Standfct][offset 0x0000013C][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term::Factor][offset 0x00000019][found address of value 'T_item'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term::Factor][offset 0x00000061][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term::Factor][offset 0x0000007D][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term::Factor][offset 0x00000128][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term::Factor][offset 0x00000144][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term::Factor][offset 0x0000014F][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term::Factor][offset 0x000001C0][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term::Factor][offset 0x000001E0][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term::Factor][offset 0x00000278][found unmanaged pointer][expected address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term::Factor][offset 0x00000288][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term::Factor][offset 0x000002AE][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term::Factor][offset 0x00000397][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term::Factor][offset 0x0000042B][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term::Factor][offset 0x00000498][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term::Factor][offset 0x0000045F][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term::Factor][offset 0x00000470][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term::Factor][offset 0x000004FA][found unmanaged pointer][expected address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term::Factor][offset 0x00000546][found unmanaged pointer][expected address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term::Factor][offset 0x00000551][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression_term::Factor][offset 0x00000570][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression::Term][offset 0x00000019][found address of value 'T_item'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression::Term][offset 0x000000CA][found unmanaged pointer][expected address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression::Term][offset 0x0000013E][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression::Term][offset 0x00000153][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression::Term][offset 0x0000015E][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression::Term][offset 0x000001AB][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression::Term][offset 0x000001C7][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression::Term][offset 0x000001F9][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression::Term][offset 0x0000022D][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression::Term][offset 0x00000263][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression::Term][offset 0x00000282][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression::Term][offset 0x000002B6][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression::Term][offset 0x000002EC][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression::Term][offset 0x000002FC][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression::Term][offset 0x0000034A][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression_simpleexpression::Term][offset 0x00000380][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression::Simpleexpression][offset 0x00000019][found address of value 'T_item'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression::Simpleexpression][offset 0x000000D4][found unmanaged pointer][expected address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression::Simpleexpression][offset 0x000000DF][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression::Simpleexpression][offset 0x000001A8][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression::Simpleexpression][offset 0x000001DC][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression::Simpleexpression][offset 0x00000212][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression::Simpleexpression][offset 0x00000233][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression::Simpleexpression][offset 0x00000248][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression::Simpleexpression][offset 0x00000253][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression::Simpleexpression][offset 0x0000010E][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
+[IL]: Error: [pascal-s.exe : @block_statement_expression::Simpleexpression][offset 0x00000148][found unmanaged pointer][expected address of value 'T_item'] Unexpected type on the stack.
+123 Error(s) Verifying pascal-s.exe

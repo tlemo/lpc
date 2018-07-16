@@ -1,0 +1,10 @@
+*.sdf
+*.suo
+*.ncb
+Debug
+Release
+ipch
+*.opensdf
+_lexer.*
+_parser.*
+.vs

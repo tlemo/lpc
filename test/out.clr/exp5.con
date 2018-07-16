@@ -1,0 +1,16 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+! error on line 30: set element type must be ordinal
+! error on line 29: unknown type 'rec4'
+! error on line 31: unknown type 'rec6'
+! error on line 21: unknown type 'rec3'
+! error on line 38: unknown type 'rec5'
+! error on line 50: unknown type 'rec3'
+  warning on line 59: 'rec' hiding existing declaration on line 7
+! error on line 63: for index must be a local variable
+! error on line 69: attempting to use undefined 'i'
+
+8 error(s), 1 warning(s)
+
+P1 errcode = 1

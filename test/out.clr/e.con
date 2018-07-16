@@ -1,0 +1,69 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 17: 'x' hiding existing declaration on line 13
+  warning on line 19: 'i' hiding existing declaration on line 15
+  warning on line 25: 'x' hiding existing declaration on line 13
+  warning on line 25: 'xs' hiding existing declaration on line 14
+  warning on line 28: 'i' hiding existing declaration on line 15
+  warning on line 41: 's' hiding existing declaration on line 13
+  warning on line 41: 'x' hiding existing declaration on line 13
+  warning on line 41: 'xs' hiding existing declaration on line 14
+  warning on line 43: 'i' hiding existing declaration on line 15
+  warning on line 71: 's' hiding existing declaration on line 13
+  warning on line 71: 'x' hiding existing declaration on line 13
+  warning on line 71: 'xs' hiding existing declaration on line 14
+  warning on line 73: 'i' hiding existing declaration on line 15
+
+0 error(s), 13 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = clr)
+-----------------------------------------------------
+
+P2 errcode = 0
+
+verifying the resulting binary
+-----------------------------------------------------
+[IL]: Error: [e.exe : <Module>::Initinteger][offset 0x00000012][found address of value 'T_digitarray'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Initinteger][offset 0x0000001E][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Initinteger][offset 0x0000005C][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Divide][offset 0x00000012][found address of value 'T_digitarray'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Divide][offset 0x00000023][found address of value 'T_digitarray'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Divide][offset 0x0000002F][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Divide][offset 0x0000006C][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Divide][offset 0x00000088][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Divide][offset 0x000000EB][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [e.exe : <Module>::Add][offset 0x0000000B][found address of value 'T_digitarray'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Add][offset 0x00000015][found address of value 'T_digitarray'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Add][offset 0x00000050][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Add][offset 0x00000066][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Add][offset 0x0000009B][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Add][offset 0x000000D2][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Add][offset 0x0000013E][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Add][offset 0x00000172][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Add][offset 0x000001A9][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Sub][offset 0x0000000B][found address of value 'T_digitarray'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Sub][offset 0x00000015][found address of value 'T_digitarray'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Sub][offset 0x00000050][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Sub][offset 0x00000066][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Sub][offset 0x00000097][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Sub][offset 0x000000CF][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Sub][offset 0x0000013B][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Sub][offset 0x0000016B][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::Sub][offset 0x000001A3][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::_Program][offset 0x00000020][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::_Program][offset 0x0000002F][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::_Program][offset 0x0000003A][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::_Program][offset 0x00000045][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::_Program][offset 0x0000005F][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::_Program][offset 0x0000005F][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::_Program][offset 0x0000008F][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::_Program][offset 0x0000008F][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::_Program][offset 0x000000A3][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::_Program][offset 0x000000A3][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::_Program][offset 0x0000011E][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::_Program][offset 0x00000167][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+[IL]: Error: [e.exe : <Module>::_Program][offset 0x00000242][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
+40 Error(s) Verifying e.exe

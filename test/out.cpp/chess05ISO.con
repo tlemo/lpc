@@ -1,0 +1,53 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 56: redefining predefined identifier 'ln'
+  warning on line 2261: 'INTV' hiding existing declaration on line 2252
+  warning on line 2286: 'INTV' hiding existing declaration on line 2252
+  warning on line 2306: 'INTV' hiding existing declaration on line 2252
+  warning on line 2337: 'INTV' hiding existing declaration on line 2252
+  warning on line 2393: 'jumpin' hiding existing declaration on line 287
+  warning on line 2478: non-local goto
+  warning on line 2497: non-local goto
+  warning on line 2509: non-local goto
+  warning on line 2517: 'INTW' hiding existing declaration on line 2463
+  warning on line 2760: 'INTJ' hiding existing declaration on line 2755
+  warning on line 2778: non-local goto
+  warning on line 2793: 'INTJ' hiding existing declaration on line 2755
+  warning on line 2816: 'INRA' hiding existing declaration on line 2754
+  warning on line 2835: non-local goto
+  warning on line 2845: 'INTJ' hiding existing declaration on line 2755
+  warning on line 2999: non-local goto
+  warning on line 3011: non-local goto
+  warning on line 3018: non-local goto
+  warning on line 3035: non-local goto
+  warning on line 3089: non-local goto
+  warning on line 3221: non-local goto
+  warning on line 3247: 'INRA' hiding existing declaration on line 2754
+  warning on line 3261: non-local goto
+  warning on line 3344: non-local goto
+  warning on line 3419: 'A' hiding existing declaration on line 3412
+  warning on line 3429: 'A' hiding existing declaration on line 3412
+  warning on line 3430: 'B' hiding existing declaration on line 3413
+  warning on line 3479: 'A' hiding existing declaration on line 3412
+  warning on line 3480: 'B' hiding existing declaration on line 3413
+  warning on line 3492: 'A' hiding existing declaration on line 3412
+  warning on line 3492: 'B' hiding existing declaration on line 3413
+  warning on line 3518: 'A' hiding existing declaration on line 3412
+  warning on line 3519: 'B' hiding existing declaration on line 3413
+  warning on line 3547: 'A' hiding existing declaration on line 3412
+  warning on line 3548: 'B' hiding existing declaration on line 3413
+  warning on line 3694: 'jumpin' hiding existing declaration on line 287
+  warning on line 3706: non-local goto
+  warning on line 3915: 'INTB' hiding existing declaration on line 3673
+  warning on line 3930: non-local goto
+
+0 error(s), 40 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = cpp)
+-----------------------------------------------------
+chess05ISO.cpp
+
+P2 errcode = 0

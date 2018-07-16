@@ -1,0 +1,20 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 28: 'vector' hiding existing declaration on line 27
+  warning on line 28: 'x' hiding existing declaration on line 27
+  warning on line 28: 'y' hiding existing declaration on line 27
+
+0 error(s), 3 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = clr)
+-----------------------------------------------------
+
+P2 errcode = 0
+
+verifying the resulting binary
+-----------------------------------------------------
+[IL]: Error: [aggregates.exe : T_A::arrayToString][offset 0x00000006][found address of value 'T_A'][expected unmanaged pointer] Unexpected type on the stack.
+1 Error(s) Verifying aggregates.exe

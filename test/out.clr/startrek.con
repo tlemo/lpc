@@ -1,0 +1,55 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 425: 'xpos' hiding existing declaration on line 390
+  warning on line 425: 'ypos' hiding existing declaration on line 390
+  warning on line 425: 'xinc' hiding existing declaration on line 390
+  warning on line 425: 'yinc' hiding existing declaration on line 390
+  warning on line 426: 'course' hiding existing declaration on line 389
+  warning on line 426: 'warp' hiding existing declaration on line 390
+  warning on line 539: 'i' hiding existing declaration on line 534
+  warning on line 565: 'i' hiding existing declaration on line 534
+  warning on line 665: non-local goto
+
+0 error(s), 9 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = clr)
+-----------------------------------------------------
+
+P2 errcode = 0
+
+verifying the resulting binary
+-----------------------------------------------------
+[IL]: Error: [startrek.exe : <Module>::Printdigit][offset 0x0000000A][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [startrek.exe : <Module>::Printdigit][offset 0x00000022][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [startrek.exe : <Module>::Setupquad][offset 0x0000000B][found address of value 'T_sectxy'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [startrek.exe : <Module>::Setupquad][offset 0x000000BB][found unmanaged pointer][expected readonly address of value 'T_sectxy'] Unexpected type on the stack.
+[IL]: Error: [startrek.exe : <Module>::Setupquad][offset 0x000000D5][found unmanaged pointer][expected readonly address of value 'T_sectxy'] Unexpected type on the stack.
+[IL]: Error: [startrek.exe : <Module>::Setupquad][offset 0x000000E5][found unmanaged pointer][expected readonly address of value 'T_sectxy'] Unexpected type on the stack.
+[IL]: Error: [startrek.exe : <Module>::Setupquad][offset 0x000000F5][found unmanaged pointer][expected readonly address of value 'T_sectxy'] Unexpected type on the stack.
+[IL]: Error: [startrek.exe : <Module>::Moveenterprise][offset 0x00000071][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [startrek.exe : <Module>::Moveenterprise][offset 0x00000098][found address of Double][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [startrek.exe : <Module>::Firephasers][offset 0x0000004F][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [startrek.exe : <Module>::Firetorpedoes][offset 0x00000066][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [startrek.exe : <Module>::Selfdestruct][offset 0x0000005F][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [startrek.exe : <Module>::Command][offset 0x0000004F][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [startrek.exe : <Module>::Instructions][offset 0x000001BF][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [startrek.exe : <Module>::_SetContains][offset 0x00000004][found address of value 'T_set_27'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [startrek.exe : <Module>::_SetContains][offset 0x00000005][found address of value 'T_set_28'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [startrek.exe : T_array_1::arrayToString][offset 0x00000006][found address of value 'T_array_1'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [startrek.exe : T_array_12::arrayToString][offset 0x00000006][found address of value 'T_array_12'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [startrek.exe : T_klingonattack_array_23::arrayToString][offset 0x00000005][found address of value 'T_klingonattack_array_23'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [startrek.exe : T_set_27::clear][offset 0x00000003] Instruction cannot be verified.
+[IL]: Error: [startrek.exe : T_set_28::clear][offset 0x00000004] Instruction cannot be verified.
+[IL]: Error: [startrek.exe : @moveenterprise::Moveintra][offset 0x00000021][found address of Double][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [startrek.exe : @moveenterprise::Moveintra][offset 0x0000002B][found address of Double][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [startrek.exe : @moveenterprise::Moveintra][offset 0x00000037][found address of Double][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [startrek.exe : @moveenterprise::Moveintra][offset 0x00000041][found address of Double][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [startrek.exe : @moveenterprise::Moveintra][offset 0x0000006F][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [startrek.exe : @firetorpedoes::Hitnova][offset 0x00000012][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [startrek.exe : @firetorpedoes::Hitnova][offset 0x000001D0][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [startrek.exe : @firetorpedoes::Hitklingbase][offset 0x00000012][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [startrek.exe : @firetorpedoes::Hitklingbase][offset 0x00000043][found unmanaged pointer] Expected ByRef on the stack.
+30 Error(s) Verifying startrek.exe

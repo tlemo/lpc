@@ -1,0 +1,16 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 28: 'vector' hiding existing declaration on line 27
+  warning on line 28: 'x' hiding existing declaration on line 27
+  warning on line 28: 'y' hiding existing declaration on line 27
+
+0 error(s), 3 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = cpp)
+-----------------------------------------------------
+aggregates.cpp
+
+P2 errcode = 0

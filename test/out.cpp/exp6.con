@@ -1,0 +1,14 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+! error on line 9: 'Test' already declared on line 6
+  warning on line 13: 'Test' hiding existing declaration on line 6
+  warning on line 19: 'Fn2' hiding existing declaration on line 17
+! error on line 34: multiple definitions for 'ReadOperand', see line 27
+! error on line 41: forward declaration for 'Fn' on line 7 doesn't match
+! error on line 49: multiple definitions for 'TestProc', see line 46
+! error on line 52: multiple definitions for 'TestProc', see line 49
+
+5 error(s), 2 warning(s)
+
+P1 errcode = 1

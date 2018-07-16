@@ -1,0 +1,66 @@
+    0 var x, squ;
+    1  
+    1 procedure square;
+    1 begin
+    3    squ := x * x
+    5 end;
+    0  jmp  1    0
+    1  jmp  1    2
+    2  int  1    3
+    3  lod  1    3
+    4  lod  1    3
+    5  opr  1    4
+    6  sto  1    4
+    7  opr  1    0
+    8  
+    8 begin
+    9    x := 1;
+   11    while x < 10 do
+   15    begin
+   15       call square;
+   16       x := x + 1
+   18    end
+   20 end.
+    0  jmp  1    8
+    1  jmp  1    2
+    2  int  1    3
+    3  lod  1    3
+    4  lod  1    3
+    5  opr  1    4
+    6  sto  1    4
+    7  opr  1    0
+    8  int  1    5
+    9  lit  1    1
+   10  sto  1    3
+   11  lod  1    3
+   12  lit  1   10
+   13  opr  1   10
+   14  jpc  1   21
+   15  cal  1    2
+   16  lod  1    3
+   17  lit  1    1
+   18  opr  1    2
+   19  sto  1    3
+   20  jmp  1   11
+   21  opr  1    0
+ start pl/0
+1
+1
+2
+4
+3
+9
+4
+16
+5
+25
+6
+36
+7
+49
+8
+64
+9
+81
+10
+ end pl/0

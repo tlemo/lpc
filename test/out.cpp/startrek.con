@@ -1,0 +1,22 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 425: 'xpos' hiding existing declaration on line 390
+  warning on line 425: 'ypos' hiding existing declaration on line 390
+  warning on line 425: 'xinc' hiding existing declaration on line 390
+  warning on line 425: 'yinc' hiding existing declaration on line 390
+  warning on line 426: 'course' hiding existing declaration on line 389
+  warning on line 426: 'warp' hiding existing declaration on line 390
+  warning on line 539: 'i' hiding existing declaration on line 534
+  warning on line 565: 'i' hiding existing declaration on line 534
+  warning on line 665: non-local goto
+
+0 error(s), 9 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = cpp)
+-----------------------------------------------------
+startrek.cpp
+
+P2 errcode = 0

@@ -1,0 +1,32 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 66: non-local goto
+  warning on line 115: non-local goto
+  warning on line 117: 'a' hiding existing declaration on line 42
+  warning on line 151: 'id' hiding existing declaration on line 35
+  warning on line 183: 'a' hiding existing declaration on line 42
+  warning on line 187: 'fsys' hiding existing declaration on line 130
+  warning on line 189: 'fsys' hiding existing declaration on line 187
+  warning on line 189: 'fsys' hiding existing declaration on line 130
+  warning on line 191: 'fsys' hiding existing declaration on line 189
+  warning on line 191: 'fsys' hiding existing declaration on line 187
+  warning on line 191: 'fsys' hiding existing declaration on line 130
+  warning on line 193: 'fsys' hiding existing declaration on line 191
+  warning on line 193: 'fsys' hiding existing declaration on line 189
+  warning on line 193: 'fsys' hiding existing declaration on line 187
+  warning on line 193: 'fsys' hiding existing declaration on line 130
+  warning on line 194: 'i' hiding existing declaration on line 188
+  warning on line 240: 'fsys' hiding existing declaration on line 187
+  warning on line 240: 'fsys' hiding existing declaration on line 130
+  warning on line 374: 'a' hiding existing declaration on line 42
+
+0 error(s), 19 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = cpp)
+-----------------------------------------------------
+plzero.cpp
+
+P2 errcode = 0

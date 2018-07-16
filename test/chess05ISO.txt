@@ -1,0 +1,361 @@
+Chess 0.5, Release 1 - 2005-05-30
+
+*********************************************************************************
+If you find errors, please report them to the rec.games.chess.computer newsgroup.
+Please use a subject with "Byte Chess 0.5" in it to make it easily searched.
+*********************************************************************************
+
+
+
+Notes about Chess 0.5
+*********************
+
+This is a classic chess program written by Peter Frey and Larry Atkin in 1978.
+Larry Atkin was the co-author of the famous "Chess" line of programs back in the
+1970's.  At the time of the article, Chess was at about version 4.6.
+
+This program, Chess 0.5, is based on his intimate knowledge of that program,
+but is, of course, a brand new and seperate program.
+
+The program was written in a very old (although new at the time) dialect of
+Pascal.  Technically it's called "Standard pascal", although that's a bit of
+misnomer, since there is practically no standardization among Pascal compilers.
+
+It appears to have been written for the CDC 6000 line of computers, because
+there are a few CDC 6000 specific routines to be used to make it run faster,
+and because it was coded for that character set.  (The CDC family used the
+CDC 'Display' character set, and not ASCII.)
+
+Chess 0.5 was published in Byte Magazine in November and December of 1978, with
+a couple of additional articles in October 1978 and January 1979.
+
+The program was designed to be able to play chess vaguely well on the hardware
+of the time, and to do so with readable demonstration program.
+
+It was not designed to play extremely well or for modern hardware.  It was not
+designed for efficiency.
+
+There were many techniques, ideas, and methods that were deliberately left out
+in order to keep the program as a demonstration program, and to let it run on
+limited hardware.
+
+That doesn't mean it can't play a decent game if you adjust some settings to
+let it search deep enough.  But don't expect it to compare well against modern
+programs.  Especially since the program is written for clairity in Pascal,
+rather than for efficiency.
+
+The value of the program is historical, not as a quality chess player.
+
+
+I don't see an explicit copyright in the program or article, but I would assume
+that both Peter Frey and Larry Atkin still own it.  However, I seriously doubt
+that either one of them woud care about the distribution of their 27 year old
+article and program.
+
+If anything, I would expect them to be glad (and surprised) that anybody still
+cares about it, and looks upon it fondly.
+
+
+
+About this copy
+***************
+
+My copy was originally a photocopy that was made in the late 80's.
+
+I scanned it in and used the ABBYY FineReader OCR program on it.
+
+Considering the small print of the original listing, and the quality of my
+photocopy, I am impressed with its OCR abilities.
+
+I am, however, significantly less than impressed with its abilities to output
+in a usable format.
+
+If all you want is the OCR ability, then FineReader will probably do the job.
+But do NOT expect to be able to easily use the output!
+
+If you need to work with the output, then you should definetly find another
+OCR program, or expect to spend a lot of time trying to get it into a usable
+format.
+
+
+Reporting an error
+******************
+
+Since this was an OCR copy, it's possible there are still errors in it.
+
+My copy was poor and the font was small, and it was hard for the program to
+tell the difference betwwen M and N, and D and O, O and 0,  1 and l, 8 and B,
+and so on.
+
+Pascal's type checking took care of most of that, but there were a few that
+could be either one.
+
+I'm pretty sure I've corrected all the important stuff, but there may still be
+errors.  And of course, typo's in the comments.
+
+I have also attempted to restore the original formatting of the program.
+
+Also, there may be errors in the program itself, that aren't related my work.
+
+In function YRMHIT, a comment has the word "firt". That's a genuine typo
+error in the original program.
+
+There may or may not have been bug reports sent to Byte Magazine, Peter Frey,
+or Larry Atkin.  I don't know.
+
+
+******************************************************************************
+If you spot any, please report them to the rec.games.chess.computer newsgroup.
+Please use a subject with "Byte Chess 0.5" in it to make it easily searched.
+******************************************************************************
+
+
+
+Compiling the program
+*********************
+
+The program uses interprocedural goto's, and procedural parameters.  Both are
+standard, official Pascal, but most compilers don't bother to implement them.
+This does mean that Borland / Turbo Pascal can not compile it.  The same for
+FPC (Free Pascal Compiler).
+
+In fact, most free compilers and most older compilers are not likely to have
+bothered to implement official standard pascal, but only a subset with some
+private extensions.  (The Borland / Turbo pascal compilers are infamous.)
+
+You can easily modify the program to not need the procedural parameters, but
+the goto's are much mroe difficult to get rid of.
+
+You will probably have to use the GNU Pascal compiler.  It's the only free
+pascal compiler that I know of that can handle it.
+
+
+Changes to compile under GPC.
+
+ 1) The constants AC and ZC aren't needed.
+
+ 2) Type SC should be changed to
+   SC = SET OF CHAR;
+
+ 3) Type 'RC' should be moved above RB
+
+ 4) In RB, RBIS should be changed to type RC
+
+ 5) Var MBORD should be changed to type RC
+
+ 6) Var ATKTO should be changed to type RX
+
+ 7) Var ATKFR should be changed to type RX
+
+ 8) Var MOVES should be changed to type RF
+
+ 9) Var VALUE should be changed to type RE
+
+10) In RDRGNT, the statement:
+      WHILE (JNTJ < ZJ) AND (ORD(ILINE[JNTJ]) >= ORD('+')) DO
+    should be replaced with:
+      WHILE (JNTJ < ZJ) AND (NOT (ILINE[JNTJ] IN ['A'..'Z','0'..'9'])) DO
+
+11) In RDRGNT, the statement:
+      WHILE (JNTJ < ZJ) AND (INTJ < ZA) AND (ILINE[JNTJ] IN ['A'..'9']) DO
+    should be replaced with:
+      WHILE (JNTJ < ZJ) AND (INTJ < ZA) AND
+            (ILINE[JNTJ] IN ['A'..'Z','0'..'9']) DO
+
+12) In RDRGNT, the statement:
+      WHILE (INTJ < ZJ) AND (JNTJ < ZJ) AND (ILINE[JNTJ] IN ['A'..'9']) DO
+    should be replaced with:
+      WHILE (INTJ < ZJ) AND (JNTJ < ZJ) AND
+            (ILINE[JNTJ] IN ['A'..'Z','0'..'9']) DO
+
+13) In BOACMD replace line:
+      IF ILINE[JNTJ] IN ['A'..'9'] THEN
+    with:
+      IF ILINE[JNTJ] IN ['A'..'Z','0'..'9'] THEN
+
+14) In NCHIN, replace line:
+      AND ((ILINE[JNTJ]=  ' ') OR (ORD(ILINE[JNTJ]) > ORD(ZC))) DO
+    with:
+      AND ((ILINE[JNTJ]=  ' ') ) DO
+
+15) The program uses double quote " to delimit strings, where as Pascal uses
+    single quote ' to do that.  Either do a global search and replace, or give
+    the compiler the --gnu-pascal switch.
+
+
+
+
+Additional helpful changes
+1) If desired, in function inicon, you can change the piece letters to
+   upper and lower case, instead of letters and numbers.
+   The CDC character set didn't have lower case.
+
+2) In prinam, before the final write(' ') you can put
+   if (intf <> f8) then
+
+3) In RDLINE, you might want to add the lines:
+      IF ( (ICARD[INTJ] >= 'a') AND    (* LOWER CASE *)
+           (ICARD[INTJ] <= 'z') ) THEN
+        ICARD[INTJ] := CHR(ORD(ICARD[INTJ])-32); (*ASCII ONLY*)
+   The lines should be placed right after the line: read(icard[intj]);
+   This allows the program to understand lower case ASCII
+
+4) In YRMOVE, right after LSTMOV, you can add the following lines to make
+   the program give you a list of the moves available.  Just in case you
+   can't remember how to do classic chess move notation.
+     FOR INTW := AW TO JNTW-1 DO
+     BEGIN
+       MINENG(MOVES[intw],'');
+       WRITeln(intw:2,' ',movms);
+     END;
+
+
+To realistically run this on non-8 bit micros (or anything with more than
+a few hundred thousand instructions per second!), increase ZW to at least
+1000 or so, and increase FNODEL, which controls how many nodes are searched.
+
+FNODEL is basically the control of how deep you want to search and therefor
+how long you search.  Expect anywhere from 100 nodes per second on an old old
+computer, to 10,000 per second on newer hardware.
+
+You might also want to increase ZK to 30 or so, but it's not required.
+
+
+
+Running the program
+*******************
+
+Everything should be entered in upper case, unless you make the modification
+suggested above.
+
+Depending on the compiler used, the program may occasionally skip a full line
+of input!  This is due to Pascal's infamous problem with keyboard input, and
+dealing with EOLn, and so on.
+
+Some compilers get it right, others don't.  It obviously worked right with the
+original Pascal compiler the authors used, but it may not with yours.
+
+There is no quick and easy fix because the failure may vary depending on what
+compiler you use, what library it uses, and so on.
+
+With the version of GPC I used during debuggin, it would always miss the first
+line of input, the 'pause' line of input, and an occasional one depending on
+what command I had just done.
+
+This is only annoying, and doesn't actually effect play.
+
+
+The first move listed with PM seems to be the move that was just made.
+This is probably a feature.
+
+Moves are entered using old style chess notation.  You know, p-kb3 and that
+kind of stuff.  The program doesn't know about any fancy "algebraic" notation.
+
+
+The list of commands are:
+
+BO - BOARD Set up a position
+  Start at the lower left.  L means Lite, D means Dark.  P, N, B, R, Q, K should
+  be obvious.  Empty square are done as a number 1-8.
+  board lrnbqkb1rpppp1ppp5n24p34dp33n4pppp1pppr1bqkbnr
+
+EN - END program
+
+GO - GO 'n' moves
+
+IN - INITIALIZE for a new game
+
+LE - LET (set) variable
+  FKPSHD
+  FKSANQ
+  FMAXMT
+  FNODEL
+  FPADQR
+  FPADQN
+  FPADQB
+  FPADQF
+  FPADKF
+  FPADKB
+  FPADKN
+  FPADKR
+  FPBLOK
+  FPCONN
+  FPFLNX
+  FRDUBL
+  FRK7TH
+  FTRADE
+  FTRDSL
+  FTRPDK
+  FTRPWN
+  FWKING
+  FWMAJM
+  FWMINM
+  FWPAWN
+  FWROOK
+  WINDOW
+
+PB - Print attack map Boards
+  TO - to squares
+  FROM - from squares
+
+PO - Print Other stuff
+
+PL - Print 'Let' variables
+  FKPSHD
+  FKSANQ
+  FMAXMT
+  FNODEL
+  FPADQR
+  FPADQN
+  FPADQB
+  FPADQF
+  FPADKF
+  FPADKB
+  FPADKN
+  FPADKR
+  FPBLOK
+  FPCONN
+  FPFLNX
+  FRDUBL
+  FRK7TH
+  FTRADE
+  FTRDSL
+  FTRPDK
+  FTRPWN
+  FWKING
+  FWMAJM
+  FWMINM
+  FWPAWN
+  FWROOK
+  WINDOW
+
+PM - Print Move list
+  Unfortunately, this wont be in english, but only as numbers.
+
+PR - PRint board
+  An optional argument (anything) will show mbord.
+  Useful for verifying detecting errors in update & downdate.
+
+ST - STatus change
+  D - Dark
+  EP - Enpassant (qr, qn, rb, q, k, kb, kn, kr)
+  G - set side to move
+  L - Lite
+  N - set move number
+  OO - allow king side castle
+  OOO - allow queen side castle
+
+SW - SWitch xxx (on off  or none to print)
+  EC - echo input
+  PA - paging
+  PS - print preliminary scores
+  RE - reply with move
+  SU - print statistics summary
+  TR - trace tree search
+
+WH - WHat? reprint last message
+
+Genreally, only the first two letters are used to identify a command and subcommand.
+
+
+

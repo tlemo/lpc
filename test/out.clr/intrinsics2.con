@@ -1,0 +1,29 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+0 error(s), 0 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = clr)
+-----------------------------------------------------
+
+P2 errcode = 0
+
+verifying the resulting binary
+-----------------------------------------------------
+[IL]: Error: [intrinsics2.exe : <Module>::_Program][offset 0x0000001C][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [intrinsics2.exe : <Module>::_Program][offset 0x00000028][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [intrinsics2.exe : <Module>::_Program][offset 0x00000033][found unmanaged pointer][expected readonly address of value 'T_rec'] Unexpected type on the stack.
+[IL]: Error: [intrinsics2.exe : <Module>::_Program][offset 0x0000003D][found unmanaged pointer][expected readonly address of value 'T_rec'] Unexpected type on the stack.
+[IL]: Error: [intrinsics2.exe : <Module>::_Program][offset 0x00000054][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [intrinsics2.exe : <Module>::_Program][offset 0x0000005A][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [intrinsics2.exe : <Module>::_Program][offset 0x00000066][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [intrinsics2.exe : <Module>::_Program][offset 0x00000071][found unmanaged pointer][expected readonly address of value 'T_rec'] Unexpected type on the stack.
+[IL]: Error: [intrinsics2.exe : <Module>::_Program][offset 0x0000007B][found unmanaged pointer][expected readonly address of value 'T_rec'] Unexpected type on the stack.
+[IL]: Error: [intrinsics2.exe : <Module>::_Program][offset 0x00000092][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [intrinsics2.exe : <Module>::_Program][offset 0x00000098][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [intrinsics2.exe : <Module>::_Program][offset 0x000000A2][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [intrinsics2.exe : <Module>::_Program][offset 0x000000A8][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [intrinsics2.exe : T_set_9::clear][offset 0x00000003] Instruction cannot be verified.
+14 Error(s) Verifying intrinsics2.exe

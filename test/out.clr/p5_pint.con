@@ -1,0 +1,181 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 507: 'i' hiding existing declaration on line 472
+  warning on line 525: 'i' hiding existing declaration on line 472
+  warning on line 542: 'i' hiding existing declaration on line 472
+  warning on line 559: 'i' hiding existing declaration on line 472
+  warning on line 570: 'b' hiding existing declaration on line 471
+  warning on line 579: 'b' hiding existing declaration on line 471
+  warning on line 595: 'i' hiding existing declaration on line 472
+  warning on line 612: 'i' hiding existing declaration on line 472
+  warning on line 629: 'c' hiding existing declaration on line 473
+  warning on line 645: 'i' hiding existing declaration on line 472
+  warning on line 654: 'ad' hiding existing declaration on line 470
+  warning on line 662: 'i' hiding existing declaration on line 472
+  warning on line 676: 'p' hiding existing declaration on line 440
+  warning on line 677: 'i' hiding existing declaration on line 472
+  warning on line 700: 'i' hiding existing declaration on line 472
+  warning on line 701: 'i' hiding existing declaration on line 472
+  warning on line 712: 'p' hiding existing declaration on line 440
+  warning on line 712: 'i' hiding existing declaration on line 472
+  warning on line 726: 'ad' hiding existing declaration on line 470
+  warning on line 729: 'op' hiding existing declaration on line 440
+  warning on line 729: 'p' hiding existing declaration on line 440
+  warning on line 729: 'q' hiding existing declaration on line 440
+  warning on line 764: 'i' hiding existing declaration on line 472
+  warning on line 820: 'i' hiding existing declaration on line 472
+  warning on line 1050: non-local goto
+  warning on line 1055: 'i' hiding existing declaration on line 472
+  warning on line 1074: redefining predefined identifier 'succ'
+  warning on line 1074: 'ad' hiding existing declaration on line 470
+  warning on line 1077: 'op' hiding existing declaration on line 440
+  warning on line 1077: 'q' hiding existing declaration on line 440
+  warning on line 1162: 'i' hiding existing declaration on line 472
+  warning on line 1162: 's1' hiding existing declaration on line 478
+  warning on line 1162: 'c' hiding existing declaration on line 473
+  warning on line 1166: 'x' hiding existing declaration on line 1162
+  warning on line 1176: 'x' hiding existing declaration on line 1162
+  warning on line 1182: 'i' hiding existing declaration on line 1162
+  warning on line 1182: 'i' hiding existing declaration on line 472
+  warning on line 1437: 'i' hiding existing declaration on line 472
+  warning on line 1486: non-local goto
+  warning on line 1490: 'ad' hiding existing declaration on line 470
+  warning on line 1508: 'i' hiding existing declaration on line 472
+  warning on line 1586: 'ad' hiding existing declaration on line 470
+  warning on line 1603: 'b' hiding existing declaration on line 471
+  warning on line 1628: 'ad' hiding existing declaration on line 470
+  warning on line 1628: 'ad1' hiding existing declaration on line 470
+  warning on line 1656: 'ad' hiding existing declaration on line 470
+  warning on line 1656: 'ad1' hiding existing declaration on line 470
+  warning on line 1674: 'ad' hiding existing declaration on line 470
+  warning on line 1699: 'i' hiding existing declaration on line 472
+  warning on line 1699: 'j' hiding existing declaration on line 472
+  warning on line 1700: 'c' hiding existing declaration on line 473
+  warning on line 1701: 'b' hiding existing declaration on line 471
+  warning on line 1702: 'ad' hiding existing declaration on line 470
+  warning on line 1702: 'ad1' hiding existing declaration on line 470
+  warning on line 1704: 'fn' hiding existing declaration on line 481
+  warning on line 1706: 'f' hiding existing declaration on line 1699
+  warning on line 1706: 'i' hiding existing declaration on line 1699
+  warning on line 1706: 'i' hiding existing declaration on line 472
+  warning on line 1711: 'f' hiding existing declaration on line 1699
+  warning on line 1711: 'r' hiding existing declaration on line 1703
+  warning on line 1716: 'f' hiding existing declaration on line 1699
+  warning on line 1716: 'c' hiding existing declaration on line 1700
+  warning on line 1716: 'c' hiding existing declaration on line 473
+  warning on line 1721: 'f' hiding existing declaration on line 1699
+  warning on line 1721: 'ad' hiding existing declaration on line 1702
+  warning on line 1721: 'ad' hiding existing declaration on line 470
+  warning on line 1721: 'w' hiding existing declaration on line 1699
+  warning on line 1721: 'l' hiding existing declaration on line 1699
+  warning on line 1722: 'i' hiding existing declaration on line 1699
+  warning on line 1722: 'i' hiding existing declaration on line 472
+  warning on line 1729: 'f' hiding existing declaration on line 1699
+  warning on line 1734: 'f' hiding existing declaration on line 1699
+  warning on line 1734: 'ad' hiding existing declaration on line 1702
+  warning on line 1734: 'ad' hiding existing declaration on line 470
+  warning on line 435: only Text files are supported
+
+0 error(s), 75 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = clr)
+-----------------------------------------------------
+
+P2 errcode = 0
+
+verifying the resulting binary
+-----------------------------------------------------
+[IL]: Error: [p5_pint.exe : <Module>::Getset][offset 0x00000012][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::Getset][offset 0x000000A0][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::Popint][offset 0x0000000A][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::Popint][offset 0x0000003B][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::Poprel][offset 0x0000000A][found address of Double][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::Poprel][offset 0x0000003B][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::Popset][offset 0x0000000A][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::Popset][offset 0x00000037][found unmanaged pointer][expected address of value 'T_settype'] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::Popadr][offset 0x0000000A][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::Popadr][offset 0x0000003B][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::Lstins][offset 0x0000000A][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::Lstins][offset 0x00000016][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::Alignu][offset 0x00000011][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::Alignu][offset 0x0000001D][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::Alignd][offset 0x00000011][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::Alignd][offset 0x0000001D][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::Fndfre][offset 0x0000000A][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::Fndfre][offset 0x00000038][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::Newspc][offset 0x0000000A][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::Newspc][offset 0x00000022][found unmanaged pointer][expected address of Int32] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::Newspc][offset 0x0000002D][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::Callsp][offset 0x00001C41][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::Callsp][offset 0x00001E66][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::_Program][offset 0x000029FD][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::_SetContains][offset 0x00000005][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::_SetEqual][offset 0x00000006][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::_SetEqual][offset 0x00000006][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::_SetIsSubset][offset 0x00000006][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::_SetIsSubset][offset 0x00000006][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::_SetDifference][offset 0x00000008][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::_SetDifference][offset 0x00000008][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::_SetDifference][offset 0x00000008][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::_SetIntersection][offset 0x00000008][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::_SetIntersection][offset 0x00000008][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::_SetIntersection][offset 0x00000008][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::_SetUnion][offset 0x00000008][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::_SetUnion][offset 0x00000008][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : <Module>::_SetUnion][offset 0x00000008][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : T_settype::clear][offset 0x00000004] Instruction cannot be verified.
+[IL]: Error: [p5_pint.exe : T_alfa::arrayToString][offset 0x00000006][found address of value 'T_alfa'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @load::Getnxt][offset 0x00000043][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @load::Generate][offset 0x000000E4][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @load::Generate][offset 0x00000124][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @load::Generate][offset 0x000001CC][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @load::Generate][offset 0x0000025B][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @load::Assemble][offset 0x000001A2][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @load::Assemble][offset 0x00000ACB][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @load::Assemble][offset 0x0000097A][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @load::Assemble][offset 0x00000990][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @load::Assemble][offset 0x00000587][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @load::Assemble][offset 0x000005FB][found address of Double][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @load::Assemble][offset 0x000006B3][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @load::Assemble][offset 0x00000860][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @load::Assemble][offset 0x00000478][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @load::Assemble][offset 0x000003CB][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @load::Assemble][offset 0x000003E6][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @load::Assemble][offset 0x0000038A][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @load::Assemble][offset 0x00000202][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @load::Assemble][offset 0x00000152][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @load::Assemble][offset 0x00000167][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : T_beta::arrayToString][offset 0x00000006][found address of value 'T_beta'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @load_assemble::Labelsearch][offset 0x0000002E][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @load_assemble::Labelsearch][offset 0x00000073][found address of Short][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @load_assemble::Getname][offset 0x0000015D][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : T_load_assemble_array_261::arrayToString][offset 0x00000009][found address of value 'T_load_assemble_array_261'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Readi][offset 0x00000011][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Readi][offset 0x0000001A][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Readi][offset 0x00000025][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Readi][offset 0x00000050][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Readi][offset 0x00000050][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Readr][offset 0x00000011][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Readr][offset 0x0000001A][found address of Double][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Readr][offset 0x00000025][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Readr][offset 0x00000046][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Readr][offset 0x00000046][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Readc][offset 0x00000011][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Readc][offset 0x0000001A][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Readc][offset 0x00000025][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Readc][offset 0x0000004C][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Readc][offset 0x0000004C][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Writestr][offset 0x00000019][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Writestr][offset 0x00000067][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Writestr][offset 0x000000DE][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Getfile][offset 0x00000011][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Getfile][offset 0x0000001C][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Getfile][offset 0x00000036][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Putfile][offset 0x00000011][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Putfile][offset 0x0000001A][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Putfile][offset 0x00000025][found unmanaged pointer][expected readonly address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [p5_pint.exe : @callsp::Putfile][offset 0x00000030][found unmanaged pointer] Expected ByRef on the stack.
+90 Error(s) Verifying p5_pint.exe

@@ -1,0 +1,23 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 14: 'x' hiding existing declaration on line 11
+  warning on line 15: 'x' hiding existing declaration on line 14
+  warning on line 15: 'x' hiding existing declaration on line 11
+  warning on line 16: 'x' hiding existing declaration on line 15
+  warning on line 16: 'x' hiding existing declaration on line 14
+  warning on line 16: 'x' hiding existing declaration on line 11
+
+0 error(s), 6 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = clr)
+-----------------------------------------------------
+
+P2 errcode = 0
+
+verifying the resulting binary
+-----------------------------------------------------
+[IL]: Error: [test05.exe : T_array_6::arrayToString][offset 0x00000005][found address of value 'T_array_6'][expected unmanaged pointer] Unexpected type on the stack.
+1 Error(s) Verifying test05.exe

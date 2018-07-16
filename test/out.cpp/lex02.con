@@ -1,0 +1,11 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+! error on line 10: End of line in string constant [1st test...`) ;]
+! error on line 10: parse error
+! error on line 10: Unmatched end of comment [}]
+! error on line 14: parse error
+
+4 error(s), 0 warning(s)
+
+P1 errcode = 1

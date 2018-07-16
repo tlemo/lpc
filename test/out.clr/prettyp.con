@@ -1,0 +1,270 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 317: 'INPUTFILE' hiding existing declaration on line 288
+  warning on line 318: 'NEXTCHAR' hiding existing declaration on line 294
+  warning on line 319: 'CURRCHAR' hiding existing declaration on line 293
+  warning on line 369: 'INPUTFILE' hiding existing declaration on line 288
+  warning on line 371: 'CURRCHAR' hiding existing declaration on line 293
+  warning on line 372: 'NEXTCHAR' hiding existing declaration on line 294
+  warning on line 392: 'INPUTFILE' hiding existing declaration on line 288
+  warning on line 393: 'CURRCHAR' hiding existing declaration on line 293
+  warning on line 394: 'NEXTCHAR' hiding existing declaration on line 294
+  warning on line 426: 'INPUTFILE' hiding existing declaration on line 288
+  warning on line 427: 'CURRCHAR' hiding existing declaration on line 293
+  warning on line 428: 'NEXTCHAR' hiding existing declaration on line 294
+  warning on line 508: 'INPUTFILE' hiding existing declaration on line 288
+  warning on line 509: 'CURRCHAR' hiding existing declaration on line 293
+  warning on line 510: 'NEXTCHAR' hiding existing declaration on line 294
+  warning on line 546: 'INPUTFILE' hiding existing declaration on line 288
+  warning on line 547: 'CURRCHAR' hiding existing declaration on line 293
+  warning on line 548: 'NEXTCHAR' hiding existing declaration on line 294
+  warning on line 568: 'INPUTFILE' hiding existing declaration on line 288
+  warning on line 569: 'CURRCHAR' hiding existing declaration on line 293
+  warning on line 570: 'NEXTCHAR' hiding existing declaration on line 294
+  warning on line 608: 'CURRCHAR' hiding existing declaration on line 293
+  warning on line 609: 'NEXTCHAR' hiding existing declaration on line 294
+  warning on line 654: 'INPUTFILE' hiding existing declaration on line 288
+  warning on line 655: 'CURRCHAR' hiding existing declaration on line 293
+  warning on line 656: 'NEXTCHAR' hiding existing declaration on line 294
+  warning on line 682: 'INPUTFILE' hiding existing declaration on line 288
+  warning on line 683: 'CURRCHAR' hiding existing declaration on line 293
+  warning on line 684: 'NEXTCHAR' hiding existing declaration on line 294
+  warning on line 741: 'INPUTFILE' hiding existing declaration on line 288
+  warning on line 742: 'NEXTSYM' hiding existing declaration on line 297
+  warning on line 743: 'CURRSYM' hiding existing declaration on line 296
+  warning on line 785: 'INPUTFILE' hiding existing declaration on line 288
+  warning on line 786: 'OUTPUTFILE' hiding existing declaration on line 289
+  warning on line 790: 'CURRLINEPOS' hiding existing declaration on line 313
+  warning on line 791: 'CURRMARGIN' hiding existing declaration on line 314
+  warning on line 793: 'KEYWORD' hiding existing declaration on line 303
+  warning on line 795: 'DBLCHARS' hiding existing declaration on line 305
+  warning on line 797: 'DBLCHAR' hiding existing declaration on line 307
+  warning on line 799: 'SGLCHAR' hiding existing declaration on line 308
+  warning on line 801: 'RECORDSEEN' hiding existing declaration on line 291
+  warning on line 803: 'CURRCHAR' hiding existing declaration on line 293
+  warning on line 804: 'NEXTCHAR' hiding existing declaration on line 294
+  warning on line 806: 'CURRSYM' hiding existing declaration on line 296
+  warning on line 807: 'NEXTSYM' hiding existing declaration on line 297
+  warning on line 809: 'PPOPTION' hiding existing declaration on line 301
+  warning on line 1236: 'CURRLINEPOS' hiding existing declaration on line 313
+  warning on line 1237: 'OUTPUTFILE' hiding existing declaration on line 289
+  warning on line 1256: 'CURRSYM' hiding existing declaration on line 296
+  warning on line 1257: 'OUTPUTFILE' hiding existing declaration on line 289
+  warning on line 1276: 'CURRSYM' hiding existing declaration on line 296
+  warning on line 1277: 'OUTPUTFILE' hiding existing declaration on line 289
+  warning on line 1352: 'SYMBOL' hiding existing declaration on line 258
+  warning on line 1353: 'OUTPUTFILE' hiding existing declaration on line 289
+  warning on line 1373: 'CURRLINEPOS' hiding existing declaration on line 313
+  warning on line 1374: 'OUTPUTFILE' hiding existing declaration on line 289
+  warning on line 1389: 'CURRSYM' hiding existing declaration on line 296
+  warning on line 1390: 'CURRLINEPOS' hiding existing declaration on line 313
+  warning on line 1391: 'OUTPUTFILE' hiding existing declaration on line 289
+  warning on line 1410: 'CURRSYM' hiding existing declaration on line 296
+  warning on line 1411: 'OUTPUTFILE' hiding existing declaration on line 289
+  warning on line 1465: 'INPUTFILE' hiding existing declaration on line 288
+  warning on line 1467: 'CURRSYM' hiding existing declaration on line 296
+  warning on line 1468: 'NEXTSYM' hiding existing declaration on line 297
+  warning on line 1469: 'OUTPUTFILE' hiding existing declaration on line 289
+  warning on line 1491: 'CURRSYM' hiding existing declaration on line 296
+  warning on line 1461: 'CURRSYM' hiding existing declaration on line 296
+
+0 error(s), 67 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = clr)
+-----------------------------------------------------
+
+P2 errcode = 0
+
+verifying the resulting binary
+-----------------------------------------------------
+[IL]: Error: [prettyp.exe : <Module>::GETCHAR][offset 0x0000000B][found address of value 'T_CHARINFO'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHAR][offset 0x00000015][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHAR][offset 0x0000001F][found address of value 'T_CHARINFO'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHAR][offset 0x00000061][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [prettyp.exe : <Module>::STORENEXTCHAR][offset 0x0000000A][found address of value 'T_CHARINFO'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::STORENEXTCHAR][offset 0x00000013][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::STORENEXTCHAR][offset 0x0000001C][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::STORENEXTCHAR][offset 0x00000026][found address of value 'T_CHARINFO'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::STORENEXTCHAR][offset 0x00000032][found address of value 'T_STRING'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::STORENEXTCHAR][offset 0x00000049][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::STORENEXTCHAR][offset 0x00000049][found unmanaged pointer][expected address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::STORENEXTCHAR][offset 0x00000049][found unmanaged pointer][expected address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::STORENEXTCHAR][offset 0x00000054][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [prettyp.exe : <Module>::SKIPSPACES][offset 0x0000000C][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::SKIPSPACES][offset 0x00000016][found address of value 'T_CHARINFO'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::SKIPSPACES][offset 0x00000020][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::SKIPSPACES][offset 0x0000002A][found address of value 'T_CHARINFO'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::SKIPSPACES][offset 0x00000034][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::SKIPSPACES][offset 0x00000050][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCOMMENT][offset 0x0000000A][found address of value 'T_CHARINFO'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCOMMENT][offset 0x00000013][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCOMMENT][offset 0x0000001E][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCOMMENT][offset 0x00000028][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCOMMENT][offset 0x00000032][found address of value 'T_CHARINFO'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCOMMENT][offset 0x0000003E][found address of value 'T_STRING'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCOMMENT][offset 0x0000004B][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETIDENTIFIER][offset 0x0000000B][found address of value 'T_CHARINFO'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETIDENTIFIER][offset 0x00000015][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETIDENTIFIER][offset 0x00000021][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETIDENTIFIER][offset 0x0000002B][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETIDENTIFIER][offset 0x00000035][found address of value 'T_CHARINFO'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETIDENTIFIER][offset 0x00000041][found address of value 'T_STRING'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETIDENTIFIER][offset 0x000000A0][found unmanaged pointer][expected readonly address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETIDENTIFIER][offset 0x00000094][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETIDENTIFIER][offset 0x00000094][found unmanaged pointer][expected address of Int32] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETIDENTIFIER][offset 0x00000094][found unmanaged pointer][expected address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETIDENTIFIER][offset 0x00000094][found unmanaged pointer][expected address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETIDENTIFIER][offset 0x00000094][found unmanaged pointer][expected address of value 'T_STRING'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETIDENTIFIER][offset 0x000000B8][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNUMBER][offset 0x0000000A][found address of value 'T_CHARINFO'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNUMBER][offset 0x00000013][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNUMBER][offset 0x0000001E][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNUMBER][offset 0x00000028][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNUMBER][offset 0x00000032][found address of value 'T_CHARINFO'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNUMBER][offset 0x0000003E][found address of value 'T_STRING'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNUMBER][offset 0x00000071][found unmanaged pointer][expected readonly address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNUMBER][offset 0x00000066][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNUMBER][offset 0x00000066][found unmanaged pointer][expected address of Int32] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNUMBER][offset 0x00000066][found unmanaged pointer][expected address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNUMBER][offset 0x00000066][found unmanaged pointer][expected address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNUMBER][offset 0x00000066][found unmanaged pointer][expected address of value 'T_STRING'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNUMBER][offset 0x00000083][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x0000000A][found address of value 'T_CHARINFO'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x00000013][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x0000001F][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x00000029][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x00000033][found address of value 'T_CHARINFO'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x0000003F][found address of value 'T_STRING'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x000000FE][found unmanaged pointer][expected readonly address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x0000007F][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x0000007F][found unmanaged pointer][expected address of Int32] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x0000007F][found unmanaged pointer][expected address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x0000007F][found unmanaged pointer][expected address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x0000007F][found unmanaged pointer][expected address of value 'T_STRING'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x000000B3][found unmanaged pointer][expected readonly address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x000000A7][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x000000A7][found unmanaged pointer][expected address of Int32] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x000000A7][found unmanaged pointer][expected address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x000000A7][found unmanaged pointer][expected address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x000000A7][found unmanaged pointer][expected address of value 'T_STRING'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x000000C8][found unmanaged pointer][expected readonly address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x000000F3][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x000000F3][found unmanaged pointer][expected address of Int32] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x000000F3][found unmanaged pointer][expected address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x000000F3][found unmanaged pointer][expected address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x000000F3][found unmanaged pointer][expected address of value 'T_STRING'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETCHARLITERAL][offset 0x00000113][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETSPECIALCHAR][offset 0x0000000A][found address of value 'T_CHARINFO'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETSPECIALCHAR][offset 0x00000013][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETSPECIALCHAR][offset 0x0000001E][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETSPECIALCHAR][offset 0x00000028][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETSPECIALCHAR][offset 0x00000032][found address of value 'T_CHARINFO'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETSPECIALCHAR][offset 0x0000003E][found address of value 'T_STRING'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETSPECIALCHAR][offset 0x00000061][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETSPECIALCHAR][offset 0x00000061][found unmanaged pointer][expected address of Int32] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETSPECIALCHAR][offset 0x00000061][found unmanaged pointer][expected address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETSPECIALCHAR][offset 0x00000061][found unmanaged pointer][expected address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETSPECIALCHAR][offset 0x00000061][found unmanaged pointer][expected address of value 'T_STRING'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETSPECIALCHAR][offset 0x00000072][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x0000000A][found address of value 'T_CHARINFO'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x00000013][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x0000001F][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x00000029][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x00000033][found address of value 'T_CHARINFO'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x0000003F][found address of value 'T_STRING'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x0000004A][found unmanaged pointer][expected readonly address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x0000007B][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x0000007B][found unmanaged pointer][expected address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x0000007B][found unmanaged pointer][expected address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x0000007B][found unmanaged pointer][expected address of Int32] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x0000007B][found unmanaged pointer][expected address of value 'T_STRING'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x0000007B][found unmanaged pointer][expected address of Int32] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x000000B0][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x000000B0][found unmanaged pointer][expected address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x000000B0][found unmanaged pointer][expected address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x000000B0][found unmanaged pointer][expected address of Int32] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x000000B0][found unmanaged pointer][expected address of value 'T_STRING'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x000000B0][found unmanaged pointer][expected address of Int32] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x000000E5][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x000000E5][found unmanaged pointer][expected address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x000000E5][found unmanaged pointer][expected address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x000000E5][found unmanaged pointer][expected address of Int32] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x000000E5][found unmanaged pointer][expected address of value 'T_STRING'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x000000E5][found unmanaged pointer][expected address of Int32] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x0000011A][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x0000011A][found unmanaged pointer][expected address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x0000011A][found unmanaged pointer][expected address of value 'T_CHARINFO'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x0000011A][found unmanaged pointer][expected address of Int32] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x0000011A][found unmanaged pointer][expected address of value 'T_STRING'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x0000011A][found unmanaged pointer][expected address of Int32] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x00000125][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [prettyp.exe : <Module>::GETNEXTSYMBOL][offset 0x00000170][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [prettyp.exe : <Module>::INITIALISE][offset 0x0000000D][found address of value 'T_CHARINFO'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::INITIALISE][offset 0x00000017][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::INITIALISE][offset 0x00000023][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::POPSTACK][offset 0x0000000A][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::POPSTACK][offset 0x00000013][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::POPSTACK][offset 0x0000003F][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [prettyp.exe : <Module>::POPSTACK][offset 0x0000007C][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [prettyp.exe : <Module>::WRITECRS][offset 0x0000000B][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::WRITECRS][offset 0x0000001C][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::WRITECRS][offset 0x0000004C][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::WRITECRS][offset 0x00000072][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [prettyp.exe : <Module>::INSERTSPACE][offset 0x0000000A][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::MOVELINEPOS][offset 0x0000000B][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::MOVELINEPOS][offset 0x0000001C][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::MOVELINEPOS][offset 0x0000002E][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [prettyp.exe : <Module>::PRINTSYMBOL][offset 0x0000000B][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x00000077][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x00000077][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x0000030F][found unmanaged pointer][expected readonly address of value 'T_SYMBOL'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x00000096][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x00000096][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x000000B1][found unmanaged pointer][expected readonly address of value 'T_SYMBOL'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x000000DA][found unmanaged pointer][expected readonly address of value 'T_SYMBOL'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x000000FE][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x00000113][found unmanaged pointer][expected readonly address of value 'T_SYMBOL'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x00000137][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x0000014C][found unmanaged pointer][expected readonly address of value 'T_SYMBOL'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x00000170][found unmanaged pointer][expected readonly address of value 'T_SYMBOL'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x0000018E][found unmanaged pointer][expected readonly address of value 'T_SYMBOL'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x000001B7][found unmanaged pointer][expected readonly address of value 'T_SYMBOL'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x000001DB][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x000001EA][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x000001F9][found unmanaged pointer][expected readonly address of value 'T_SYMBOL'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x0000021D][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x0000022C][found unmanaged pointer][expected readonly address of value 'T_SYMBOL'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x0000024B][found unmanaged pointer][expected readonly address of value 'T_SYMBOL'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x0000025F][found unmanaged pointer][expected readonly address of value 'T_SYMBOL'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x0000027F][found unmanaged pointer][expected readonly address of value 'T_SYMBOL'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x00000293][found unmanaged pointer][expected readonly address of value 'T_SYMBOL'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x000002BC][found unmanaged pointer][expected readonly address of value 'T_SYMBOL'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x000002DA][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x000002DA][found address of unmanaged pointer][expected address of unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_Program][offset 0x000002E9][found unmanaged pointer][expected readonly address of value 'T_SYMBOL'] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_SetContains][offset 0x00000004][found address of value 'T_DBLCHRSET'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_SetContains][offset 0x00000004][found address of value 'T_OPTIONSET'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_SetContains][offset 0x00000005][found address of value 'T_set_1'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_SetContains][offset 0x00000004][found address of value 'T_set_3'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_SetContains][offset 0x00000004][found address of value 'T_set_6'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_SetCastTo_T_DBLCHRSET][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [prettyp.exe : <Module>::_SetCastTo_T_OPTIONSET][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [prettyp.exe : <Module>::_SetCastTo_T_set_1][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [prettyp.exe : <Module>::_SetUnion][offset 0x00000008][found address of value 'T_set_1'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_SetUnion][offset 0x00000008][found address of value 'T_set_1'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_SetUnion][offset 0x00000008][found address of value 'T_set_1'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_SetCastTo_T_set_6][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [prettyp.exe : <Module>::_SetCheck][offset 0x00000006][found address of value 'T_set_1'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : <Module>::_SetCheck][offset 0x00000005][found address of value 'T_set_6'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : T_set_1::clear][offset 0x00000004] Instruction cannot be verified.
+[IL]: Error: [prettyp.exe : T_set_3::clear][offset 0x00000003] Instruction cannot be verified.
+[IL]: Error: [prettyp.exe : T_STRING::arrayToString][offset 0x00000009][found address of value 'T_STRING'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : T_KEY::arrayToString][offset 0x00000006][found address of value 'T_KEY'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : T_set_6::clear][offset 0x00000003] Instruction cannot be verified.
+[IL]: Error: [prettyp.exe : T_SPECIALCHAR::arrayToString][offset 0x00000005][found address of value 'T_SPECIALCHAR'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [prettyp.exe : T_DBLCHRSET::clear][offset 0x00000003] Instruction cannot be verified.
+[IL]: Error: [prettyp.exe : T_OPTIONSET::clear][offset 0x00000003] Instruction cannot be verified.
+187 Error(s) Verifying prettyp.exe

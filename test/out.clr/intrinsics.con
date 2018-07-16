@@ -1,0 +1,15 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+0 error(s), 0 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = clr)
+-----------------------------------------------------
+
+P2 errcode = 0
+
+verifying the resulting binary
+-----------------------------------------------------
+All Classes and Methods in intrinsics.exe Verified.

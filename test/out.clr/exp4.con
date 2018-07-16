@@ -1,0 +1,10 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+! error on line 18: parse error
+! error on line 21: parse error
+! error on line 55: parse error
+
+3 error(s), 0 warning(s)
+
+P1 errcode = 1

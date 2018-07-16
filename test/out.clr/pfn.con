@@ -1,0 +1,23 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 32: 'pfn' hiding existing declaration on line 29
+  warning on line 44: 'testPfn' hiding existing declaration on line 11
+
+0 error(s), 2 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = clr)
+-----------------------------------------------------
+
+P2 errcode = 0
+
+verifying the resulting binary
+-----------------------------------------------------
+[IL]: Error: [pfn.exe : <Module>::Foo][offset 0x00000031][found ref 'T_foo_subroutine_5'][expected ref 'T_foo_subroutine_1'] Unexpected type on the stack.
+[IL]: Error: [pfn.exe : <Module>::Foo][offset 0x00000043][found ref 'T_foo_subroutine_6'][expected ref 'T_foo_subroutine_3'] Unexpected type on the stack.
+[IL]: Error: [pfn.exe : @foo::Bar2][offset 0x0000005D][found ref 'T_foo_bar2_subroutine_4'][expected ref 'T_foo_subroutine_1'] Unexpected type on the stack.
+[IL]: Error: [pfn.exe : @foo::Bar2][offset 0x0000006F][found ref 'T_foo_bar2_subroutine_4'][expected ref 'T_foo_bar2_subroutine_2'] Unexpected type on the stack.
+[IL]: Error: [pfn.exe : @foo_bar2::Moo][offset 0x00000090][found ref 'T_foo_bar2_subroutine_2'][expected ref 'T_foo_subroutine_1'] Unexpected type on the stack.
+5 Error(s) Verifying pfn.exe

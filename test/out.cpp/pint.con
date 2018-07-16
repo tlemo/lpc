@@ -1,0 +1,30 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 139: 'i' hiding existing declaration on line 118
+  warning on line 209: redefining predefined identifier 'succ'
+  warning on line 262: 'i' hiding existing declaration on line 118
+  warning on line 287: 'i' hiding existing declaration on line 262
+  warning on line 287: 'i' hiding existing declaration on line 118
+  warning on line 477: 'i' hiding existing declaration on line 118
+  warning on line 502: non-local goto
+  warning on line 506: 'ad' hiding existing declaration on line 116
+  warning on line 531: 'ad' hiding existing declaration on line 116
+  warning on line 539: 'ad' hiding existing declaration on line 116
+  warning on line 547: 'c' hiding existing declaration on line 119
+  warning on line 547: 'ad' hiding existing declaration on line 116
+  warning on line 557: 'i' hiding existing declaration on line 118
+  warning on line 557: 'j' hiding existing declaration on line 118
+  warning on line 558: 'ad' hiding existing declaration on line 116
+  warning on line 569: 'ad' hiding existing declaration on line 116
+  warning on line 576: 'ad' hiding existing declaration on line 116
+
+0 error(s), 17 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = cpp)
+-----------------------------------------------------
+pint.cpp
+
+P2 errcode = 0

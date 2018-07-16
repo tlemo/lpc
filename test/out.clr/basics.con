@@ -1,0 +1,119 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 132: 'str' hiding existing declaration on line 128
+  warning on line 134: 'i' hiding existing declaration on line 130
+  warning on line 134: 'j' hiding existing declaration on line 130
+  warning on line 199: non-local goto
+  warning on line 459: 'i1' hiding existing declaration on line 452
+  warning on line 459: 'i2' hiding existing declaration on line 452
+  warning on line 460: 'f' hiding existing declaration on line 453
+  warning on line 788: 'c' hiding existing declaration on line 781
+  warning on line 809: 'c' hiding existing declaration on line 788
+  warning on line 809: 'c' hiding existing declaration on line 781
+  warning on line 1177: non-local goto
+  warning on line 1191: non-local goto
+  warning on line 1203: non-local goto
+  warning on line 1207: non-local goto
+  warning on line 1209: non-local goto
+  warning on line 1229: non-local goto
+  warning on line 1233: non-local goto
+
+0 error(s), 17 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = clr)
+-----------------------------------------------------
+
+P2 errcode = 0
+
+verifying the resulting binary
+-----------------------------------------------------
+[IL]: Error: [basics.exe : <Module>::Prtlin][offset 0x0000000A][found address of value 'T_string80'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Prtlin][offset 0x00000036][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Prtlin][offset 0x0000007C][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Prtlin][offset 0x000000A1][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Prtlin][offset 0x000000CC][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Null][offset 0x0000000B][found address of value 'T_string80'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Null][offset 0x00000036][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Lint][offset 0x0000000A][found address of value 'T_string80'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Lint][offset 0x0000004D][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Lint][offset 0x00000069][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Lint][offset 0x00000093][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Inpstr][offset 0x0000000B][found address of value 'T_string80'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Inpstr][offset 0x0000002F][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Inpstr][offset 0x00000073][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Inpstr][offset 0x0000007E][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Enter][offset 0x0000000B][found address of value 'T_string80'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Enter][offset 0x00000017][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Enter][offset 0x00000110][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [basics.exe : <Module>::Enter][offset 0x00000167][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Enter][offset 0x000001A7][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Enter][offset 0x000001E8][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Enter][offset 0x000002E5][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [basics.exe : <Module>::Enter][offset 0x00000395][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [basics.exe : <Module>::Keycom][offset 0x0000000B][found address of value 'T_string80'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Keycom][offset 0x0000006F][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Keycom][offset 0x000000D0][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Keycom][offset 0x000000FC][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Keycom][offset 0x000002CE][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Keycom][offset 0x0000015E][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Keycom][offset 0x0000018E][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Keycom][offset 0x000001EF][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Keycom][offset 0x00000271][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Getval][offset 0x0000000A][found address of value 'T_string80'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Getval][offset 0x00000049][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Getval][offset 0x00000065][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Getval][offset 0x0000008A][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Getval][offset 0x000000C4][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Getval][offset 0x00000105][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Getbval][offset 0x0000000A][found address of value 'T_bstring80'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Getbval][offset 0x00000035][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Getbval][offset 0x0000004C][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Getbval][offset 0x0000006D][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Getbval][offset 0x000000EA][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Getbval][offset 0x00000101][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Getbval][offset 0x000000B2][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Getbval][offset 0x0000013C][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Getbval][offset 0x00000153][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Getbval][offset 0x0000017A][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Putbval][offset 0x0000000A][found address of value 'T_bstring80'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Putbval][offset 0x0000001D][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Putbval][offset 0x00000048][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Putbval][offset 0x00000085][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Putbval][offset 0x000000B0][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Putbval][offset 0x000000CF][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Putbval][offset 0x00000114][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Putbval][offset 0x00000193][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Prtbstr][offset 0x0000000B][found address of value 'T_bstring80'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Prtbstr][offset 0x00000016][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Prtbstr][offset 0x00000038][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Inpbstr][offset 0x0000000B][found address of value 'T_bstring80'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Inpbstr][offset 0x00000029][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Inpbstr][offset 0x00000072][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Inpbstr][offset 0x00000088][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Inpbstr][offset 0x000000FB][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Cat][offset 0x0000000B][found address of value 'T_bstring80'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Cat][offset 0x00000015][found address of value 'T_bstring80'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Cat][offset 0x00000020][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Cat][offset 0x0000002B][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Cat][offset 0x00000047][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Cat][offset 0x00000063][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Cat][offset 0x0000006E][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Cat][offset 0x00000085][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Cat][offset 0x000000C5][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Cat][offset 0x000000D0][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::Cat][offset 0x000000D6][found unmanaged pointer][expected readonly address of value 'T_bstring80'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : <Module>::_SetContains][offset 0x00000005][found address of value 'T_set_7'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [basics.exe : T_string10::arrayToString][offset 0x00000006][found address of value 'T_string10'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [basics.exe : @prtlin::Prtkey][offset 0x00000011][found address of value 'T_string10'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [basics.exe : @prtlin::Prtkey][offset 0x0000003D][found unmanaged pointer][expected address of value 'T_string10'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : @prtlin::Prtkey][offset 0x00000089][found unmanaged pointer][expected address of value 'T_string10'] Unexpected type on the stack.
+[IL]: Error: [basics.exe : T_string80::arrayToString][offset 0x00000006][found address of value 'T_string80'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [basics.exe : @keycom::Matstr][offset 0x00000011][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [basics.exe : @keycom::Matstr][offset 0x0000001A][found address of value 'T_string80'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [basics.exe : @keycom::Matstr][offset 0x00000023][found address of value 'T_string10'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [basics.exe : @keycom::Matstr][offset 0x0000002F][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [basics.exe : T_set_7::clear][offset 0x00000004] Instruction cannot be verified.
+86 Error(s) Verifying basics.exe

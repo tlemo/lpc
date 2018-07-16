@@ -1,0 +1,192 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="Source Files">
+      <UniqueIdentifier>{4FC737F1-C7A5-4376-A066-2A32D752A2FF}</UniqueIdentifier>
+      <Extensions>cpp;c;cxx;def;odl;idl;hpj;bat;asm;asmx</Extensions>
+    </Filter>
+    <Filter Include="Header Files">
+      <UniqueIdentifier>{93995380-89BD-4b04-88EB-625FBE52EBFB}</UniqueIdentifier>
+      <Extensions>h;hpp;hxx;hm;inl;inc;xsd</Extensions>
+    </Filter>
+    <Filter Include="Tests">
+      <UniqueIdentifier>{54a30bc5-f144-4863-ad23-a0f3c4e3d291}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="_lexer.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="_parser.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="main.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="types.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="ast.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="symbols.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="stringTable.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="objects.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="cppBackend.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+    <ClCompile Include="clrBackend.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="_lexer.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="_parser.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="ast.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="common.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compilationContext.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="frontEnd.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="stringTable.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="symbols.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="types.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="compiler.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="commandLine.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="objects.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="cppBackend.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="backend.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="heapManager.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="clrBackend.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="notes.txt" />
+    <None Include="test\basics.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\chess05ISO.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\exp1.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\exp2.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\exp3.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\exp4.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\lex01.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\lex02.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\prettyp.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\test01.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\test02.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\test03.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\exp5.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\pcom.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\pint.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\exp6.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\test04.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\freeVars.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\pfn.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\err_typeCompat.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\err_intrinChecks.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\nonlocalGoto.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\test05.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\amort4.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\pascal-s.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\iso7185pat.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\roman.pas">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\runTests.py">
+      <Filter>Tests</Filter>
+    </None>
+    <None Include="test\prototype.pas">
+      <Filter>Tests</Filter>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <CustomBuild Include="lexer.l" />
+    <CustomBuild Include="parser.y" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,236 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 56: redefining predefined identifier 'ln'
+  warning on line 2261: 'INTV' hiding existing declaration on line 2252
+  warning on line 2286: 'INTV' hiding existing declaration on line 2252
+  warning on line 2306: 'INTV' hiding existing declaration on line 2252
+  warning on line 2337: 'INTV' hiding existing declaration on line 2252
+  warning on line 2393: 'jumpin' hiding existing declaration on line 287
+  warning on line 2478: non-local goto
+  warning on line 2497: non-local goto
+  warning on line 2509: non-local goto
+  warning on line 2517: 'INTW' hiding existing declaration on line 2463
+  warning on line 2760: 'INTJ' hiding existing declaration on line 2755
+  warning on line 2778: non-local goto
+  warning on line 2793: 'INTJ' hiding existing declaration on line 2755
+  warning on line 2816: 'INRA' hiding existing declaration on line 2754
+  warning on line 2835: non-local goto
+  warning on line 2845: 'INTJ' hiding existing declaration on line 2755
+  warning on line 2999: non-local goto
+  warning on line 3011: non-local goto
+  warning on line 3018: non-local goto
+  warning on line 3035: non-local goto
+  warning on line 3089: non-local goto
+  warning on line 3221: non-local goto
+  warning on line 3247: 'INRA' hiding existing declaration on line 2754
+  warning on line 3261: non-local goto
+  warning on line 3344: non-local goto
+  warning on line 3419: 'A' hiding existing declaration on line 3412
+  warning on line 3429: 'A' hiding existing declaration on line 3412
+  warning on line 3430: 'B' hiding existing declaration on line 3413
+  warning on line 3479: 'A' hiding existing declaration on line 3412
+  warning on line 3480: 'B' hiding existing declaration on line 3413
+  warning on line 3492: 'A' hiding existing declaration on line 3412
+  warning on line 3492: 'B' hiding existing declaration on line 3413
+  warning on line 3518: 'A' hiding existing declaration on line 3412
+  warning on line 3519: 'B' hiding existing declaration on line 3413
+  warning on line 3547: 'A' hiding existing declaration on line 3412
+  warning on line 3548: 'B' hiding existing declaration on line 3413
+  warning on line 3694: 'jumpin' hiding existing declaration on line 287
+  warning on line 3706: non-local goto
+  warning on line 3915: 'INTB' hiding existing declaration on line 3673
+  warning on line 3930: non-local goto
+
+0 error(s), 40 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = clr)
+-----------------------------------------------------
+
+P2 errcode = 0
+
+verifying the resulting binary
+-----------------------------------------------------
+[IL]: Error: [chess05ISO.exe : <Module>::SORTIT][offset 0x0000000B][found address of value 'T_RE'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::SORTIT][offset 0x00000015][found address of value 'T_RF'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::SORTIT][offset 0x00000061][found unmanaged pointer][expected address of value 'T_RE'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::SORTIT][offset 0x0000007D][found unmanaged pointer][expected address of value 'T_RF'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::SORTIT][offset 0x000000AA][found unmanaged pointer][expected address of value 'T_RE'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::SORTIT][offset 0x000000C9][found unmanaged pointer][expected address of value 'T_RE'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::SORTIT][offset 0x000000DA][found unmanaged pointer][expected address of value 'T_RE'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::SORTIT][offset 0x000000F7][found unmanaged pointer][expected address of value 'T_RF'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::SORTIT][offset 0x00000108][found unmanaged pointer][expected address of value 'T_RF'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::SORTIT][offset 0x0000015A][found unmanaged pointer][expected address of value 'T_RE'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::SORTIT][offset 0x00000178][found unmanaged pointer][expected address of value 'T_RF'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::ANDRS][offset 0x00000019][found address of value 'T_RS'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::ANDRS][offset 0x0000003E][found unmanaged pointer][expected readonly address of value 'T_RS'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::CLRRS][offset 0x00000011][found address of value 'T_RS'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::CLRRS][offset 0x0000001C][found unmanaged pointer][expected readonly address of value 'T_RS'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::CLRRS][offset 0x00000041][found unmanaged pointer][expected readonly address of value 'T_RS'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::CPYRS][offset 0x00000012][found address of value 'T_RS'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::CPYRS][offset 0x00000037][found unmanaged pointer][expected readonly address of value 'T_RS'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::IORRS][offset 0x00000019][found address of value 'T_RS'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::IORRS][offset 0x0000003E][found unmanaged pointer][expected readonly address of value 'T_RS'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::NEWRS][offset 0x0000000B][found address of value 'T_RS'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::NEWRS][offset 0x00000030][found unmanaged pointer][expected readonly address of value 'T_RS'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::NOTRS][offset 0x00000012][found address of value 'T_RS'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::NOTRS][offset 0x00000041][found unmanaged pointer][expected readonly address of value 'T_RS'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::NXTTS][offset 0x0000000B][found address of value 'T_RS'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::NXTTS][offset 0x00000015][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::NXTTS][offset 0x0000003A][found unmanaged pointer][expected readonly address of value 'T_RS'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::NXTTS][offset 0x0000007E][found unmanaged pointer][expected readonly address of value 'T_RS'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::NXTTS][offset 0x000000C4][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::SETRS][offset 0x00000011][found address of value 'T_RS'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::SETRS][offset 0x0000001C][found unmanaged pointer][expected readonly address of value 'T_RS'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::SETRS][offset 0x00000041][found unmanaged pointer][expected readonly address of value 'T_RS'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::SFTRS][offset 0x0000000A][found address of value 'T_RS'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::SFTRS][offset 0x00000023][found unmanaged pointer][expected address of value 'T_RS'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::SFTRS][offset 0x000000B8][found unmanaged pointer][expected address of value 'T_RS'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::INITAL][offset 0x0000000B][found address of value 'T_RB'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::INITAL][offset 0x00000037][found unmanaged pointer][expected readonly address of value 'T_RB'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::INITAL][offset 0x0000004D][found unmanaged pointer][expected readonly address of value 'T_RB'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::INITAL][offset 0x00000059][found unmanaged pointer][expected readonly address of value 'T_RB'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::INITAL][offset 0x00000065][found unmanaged pointer][expected readonly address of value 'T_RB'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::INITAL][offset 0x0000008A][found unmanaged pointer][expected readonly address of value 'T_RB'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::INITAL][offset 0x000000CA][found unmanaged pointer][expected readonly address of value 'T_RB'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::INITAL][offset 0x00000117][found unmanaged pointer][expected readonly address of value 'T_RB'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::INITAL][offset 0x00000160][found unmanaged pointer][expected readonly address of value 'T_RB'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::INITAL][offset 0x0000017D][found unmanaged pointer][expected readonly address of value 'T_RB'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::INITAL][offset 0x0000019A][found unmanaged pointer][expected readonly address of value 'T_RB'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::INITAL][offset 0x000001B7][found unmanaged pointer][expected readonly address of value 'T_RB'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::INITAL][offset 0x000001D4][found unmanaged pointer][expected readonly address of value 'T_RB'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::INITAL][offset 0x000001F1][found unmanaged pointer][expected readonly address of value 'T_RB'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::INITAL][offset 0x0000020E][found unmanaged pointer][expected readonly address of value 'T_RB'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::INITAL][offset 0x0000022B][found unmanaged pointer][expected readonly address of value 'T_RB'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::INITAL][offset 0x00000248][found unmanaged pointer][expected readonly address of value 'T_RB'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::INITAL][offset 0x00000265][found unmanaged pointer][expected readonly address of value 'T_RB'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::INITAL][offset 0x00000282][found unmanaged pointer][expected readonly address of value 'T_RB'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::INITAL][offset 0x000002A0][found unmanaged pointer][expected readonly address of value 'T_RB'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::INITAL][offset 0x000002BE][found unmanaged pointer][expected readonly address of value 'T_RB'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::INITAL][offset 0x000002DC][found unmanaged pointer][expected readonly address of value 'T_RB'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::INITAL][offset 0x000002FA][found unmanaged pointer][expected readonly address of value 'T_RB'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::INITAL][offset 0x00000317][found unmanaged pointer][expected readonly address of value 'T_RB'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x0000000A][found address of value 'T_RM'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x000000D5][found unmanaged pointer][expected readonly address of value 'T_RM'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x000000E2][found unmanaged pointer][expected readonly address of value 'T_RM'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x000000F0][found unmanaged pointer][expected readonly address of value 'T_RM'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x00000104][found unmanaged pointer][expected readonly address of value 'T_RM'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x0000011F][found unmanaged pointer][expected readonly address of value 'T_RM'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x00000145][found unmanaged pointer][expected readonly address of value 'T_RM'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x000001E2][found unmanaged pointer][expected readonly address of value 'T_RM'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x000001ED][found unmanaged pointer][expected readonly address of value 'T_RM'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x00000209][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x0000021E][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x0000023A][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x00000266][found unmanaged pointer][expected readonly address of value 'T_RM'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x00000276][found unmanaged pointer][expected readonly address of value 'T_RM'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x0000029F][found unmanaged pointer][expected readonly address of value 'T_RM'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x000002E0][found unmanaged pointer][expected readonly address of value 'T_RM'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x000002EB][found unmanaged pointer][expected readonly address of value 'T_RM'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x0000037A][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x0000038F][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x0000063E][found unmanaged pointer][expected readonly address of value 'T_RM'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x000006AE][found unmanaged pointer][expected readonly address of value 'T_RM'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x000006BA][found unmanaged pointer][expected readonly address of value 'T_RM'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x000006CD][found unmanaged pointer][expected readonly address of value 'T_RM'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x000003C7][found unmanaged pointer][expected readonly address of value 'T_RM'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x000003E2][found unmanaged pointer][expected readonly address of value 'T_RM'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x00000401][found unmanaged pointer][expected readonly address of value 'T_RM'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x00000455][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x0000046A][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x00000486][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x000004B2][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::UPDATE][offset 0x000004DE][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::READER][offset 0x0000014C][found ref 'T_READER_subroutine_220'][expected ref 'T_READER_subroutine_115'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::READER][offset 0x00000163][found ref 'T_READER_subroutine_222'][expected ref 'T_READER_subroutine_115'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::READER][offset 0x0000017A][found ref 'T_READER_subroutine_224'][expected ref 'T_READER_subroutine_115'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::READER][offset 0x00000191][found ref 'T_READER_subroutine_226'][expected ref 'T_READER_subroutine_115'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::READER][offset 0x000001A8][found ref 'T_READER_subroutine_228'][expected ref 'T_READER_subroutine_115'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::READER][offset 0x000001BF][found ref 'T_READER_subroutine_230'][expected ref 'T_READER_subroutine_115'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::READER][offset 0x000001D6][found ref 'T_READER_subroutine_232'][expected ref 'T_READER_subroutine_115'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::READER][offset 0x000001ED][found ref 'T_READER_subroutine_234'][expected ref 'T_READER_subroutine_115'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::READER][offset 0x00000204][found ref 'T_READER_subroutine_236'][expected ref 'T_READER_subroutine_115'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::READER][offset 0x0000021B][found ref 'T_READER_subroutine_238'][expected ref 'T_READER_subroutine_115'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::READER][offset 0x00000232][found ref 'T_READER_subroutine_240'][expected ref 'T_READER_subroutine_115'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::READER][offset 0x00000249][found ref 'T_READER_subroutine_242'][expected ref 'T_READER_subroutine_115'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::READER][offset 0x00000260][found ref 'T_READER_subroutine_244'][expected ref 'T_READER_subroutine_115'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::YRMOVE][offset 0x0000027A][found ref 'T_YRMOVE_subroutine_313'][expected ref 'T_YRMOVE_subroutine_307'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::YRMOVE][offset 0x00000408][found ref 'T_YRMOVE_subroutine_315'][expected ref 'T_YRMOVE_subroutine_307'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::YRMOVE][offset 0x00000426][found ref 'T_YRMOVE_subroutine_315'][expected ref 'T_YRMOVE_subroutine_307'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::YRMOVE][offset 0x00000444][found ref 'T_YRMOVE_subroutine_340'][expected ref 'T_YRMOVE_subroutine_307'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::YRMOVE][offset 0x00000462][found ref 'T_YRMOVE_subroutine_342'][expected ref 'T_YRMOVE_subroutine_307'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::YRMOVE][offset 0x00000480][found ref 'T_YRMOVE_subroutine_315'][expected ref 'T_YRMOVE_subroutine_307'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::YRMOVE][offset 0x00000298][found ref 'T_YRMOVE_subroutine_315'][expected ref 'T_YRMOVE_subroutine_307'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::YRMOVE][offset 0x00000301][found ref 'T_YRMOVE_subroutine_315'][expected ref 'T_YRMOVE_subroutine_307'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::YRMOVE][offset 0x0000037C][found ref 'T_YRMOVE_subroutine_329'][expected ref 'T_YRMOVE_subroutine_307'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::YRMOVE][offset 0x00000395][found ref 'T_YRMOVE_subroutine_331'][expected ref 'T_YRMOVE_subroutine_307'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::YRMOVE][offset 0x000003AE][found ref 'T_YRMOVE_subroutine_333'][expected ref 'T_YRMOVE_subroutine_307'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::YRMOVE][offset 0x000003C7][found ref 'T_YRMOVE_subroutine_315'][expected ref 'T_YRMOVE_subroutine_307'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::YRMOVE][offset 0x000003E5][found ref 'T_YRMOVE_subroutine_336'][expected ref 'T_YRMOVE_subroutine_307'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::YRMOVE][offset 0x00000322][found ref 'T_YRMOVE_subroutine_324'][expected ref 'T_YRMOVE_subroutine_307'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::YRMOVE][offset 0x00000340][found ref 'T_YRMOVE_subroutine_326'][expected ref 'T_YRMOVE_subroutine_307'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::YRMOVE][offset 0x0000035E][found ref 'T_YRMOVE_subroutine_315'][expected ref 'T_YRMOVE_subroutine_307'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::YRMOVE][offset 0x000002B6][found ref 'T_YRMOVE_subroutine_317'][expected ref 'T_YRMOVE_subroutine_307'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::YRMOVE][offset 0x000002CF][found ref 'T_YRMOVE_subroutine_319'][expected ref 'T_YRMOVE_subroutine_307'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::YRMOVE][offset 0x000002E8][found ref 'T_YRMOVE_subroutine_321'][expected ref 'T_YRMOVE_subroutine_307'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetContains][offset 0x00000004][found address of value 'T_SQ'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetContains][offset 0x00000004][found address of value 'T_SX'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetContains][offset 0x00000004][found address of value 'T_set_100'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetContains][offset 0x00000005][found address of value 'T_set_5'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetIsSubset][offset 0x00000005][found address of value 'T_SX'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetIsSubset][offset 0x00000005][found address of value 'T_SX'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetCastTo_T_SQ][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetCastTo_T_SX][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetDifference][offset 0x00000007][found address of value 'T_SX'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetDifference][offset 0x00000007][found address of value 'T_SX'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetDifference][offset 0x00000007][found address of value 'T_SX'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetIntersection][offset 0x00000007][found address of value 'T_SX'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetIntersection][offset 0x00000007][found address of value 'T_SX'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetIntersection][offset 0x00000007][found address of value 'T_SX'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetUnion][offset 0x00000007][found address of value 'T_SX'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetUnion][offset 0x00000007][found address of value 'T_SX'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetUnion][offset 0x00000007][found address of value 'T_SX'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetCastTo_T_set_100][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetCastTo_T_set_5][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetCastTo_T_set_5][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetCastTo_T_set_5][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetDifference][offset 0x00000008][found address of value 'T_set_5'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetDifference][offset 0x00000008][found address of value 'T_set_5'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetDifference][offset 0x00000008][found address of value 'T_set_5'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetIntersection][offset 0x00000008][found address of value 'T_set_5'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetIntersection][offset 0x00000008][found address of value 'T_set_5'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetIntersection][offset 0x00000008][found address of value 'T_set_5'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetUnion][offset 0x00000008][found address of value 'T_set_5'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetUnion][offset 0x00000008][found address of value 'T_set_5'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetUnion][offset 0x00000008][found address of value 'T_set_5'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : <Module>::_SetCheck][offset 0x00000006][found address of value 'T_set_5'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : T_SX::clear][offset 0x00000003] Instruction cannot be verified.
+[IL]: Error: [chess05ISO.exe : T_set_5::clear][offset 0x00000004] Instruction cannot be verified.
+[IL]: Error: [chess05ISO.exe : T_RA::arrayToString][offset 0x00000006][found address of value 'T_RA'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : T_SQ::clear][offset 0x00000003] Instruction cannot be verified.
+[IL]: Error: [chess05ISO.exe : T_array_99::arrayToString][offset 0x00000006][found address of value 'T_array_99'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : T_set_100::clear][offset 0x00000003] Instruction cannot be verified.
+[IL]: Error: [chess05ISO.exe : @READER::RDRGNT][offset 0x00000011][found address of value 'T_RA'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : @READER::RDRGNT][offset 0x00000094][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [chess05ISO.exe : @READER::RDLINE][offset 0x00000048][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : @READER::RDLINE][offset 0x0000009C][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : @READER::STACMD][offset 0x00000030][found ref 'T_READER_STACMD_subroutine_203'][expected ref 'T_READER_STACMD_subroutine_201'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : @READER::STACMD][offset 0x00000047][found ref 'T_READER_STACMD_subroutine_205'][expected ref 'T_READER_STACMD_subroutine_201'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : @READER::STACMD][offset 0x0000005E][found ref 'T_READER_STACMD_subroutine_207'][expected ref 'T_READER_STACMD_subroutine_201'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : @READER::STACMD][offset 0x00000075][found ref 'T_READER_STACMD_subroutine_209'][expected ref 'T_READER_STACMD_subroutine_201'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : @READER::STACMD][offset 0x0000008C][found ref 'T_READER_STACMD_subroutine_211'][expected ref 'T_READER_STACMD_subroutine_201'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : @READER::STACMD][offset 0x000000A3][found ref 'T_READER_STACMD_subroutine_213'][expected ref 'T_READER_STACMD_subroutine_201'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : @READER::STACMD][offset 0x000000BA][found ref 'T_READER_STACMD_subroutine_215'][expected ref 'T_READER_STACMD_subroutine_201'] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : @READER_LETCMD::LETONE][offset 0x00000018][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : @READER_LETCMD::LETONE][offset 0x0000005D][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [chess05ISO.exe : @READER_SWICMD::SWIONE][offset 0x00000018][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : @READER_SWICMD::SWIONE][offset 0x000000A2][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [chess05ISO.exe : @READER_SWICMD::SWIONE][offset 0x000000D7][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [chess05ISO.exe : @READER_SWICMD::SWIONE][offset 0x000000F8][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [chess05ISO.exe : @READER_SWICMD::SWIONE][offset 0x00000113][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [chess05ISO.exe : @MINENG::SETSQD][offset 0x00000020][found address of value 'T_set_100'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : @MINENG::SETSQD][offset 0x0000002C][found address of value 'T_set_100'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [chess05ISO.exe : @MINENG::SETSQD][offset 0x0000008A][found unmanaged pointer] Expected ByRef on the stack.
+180 Error(s) Verifying chess05ISO.exe

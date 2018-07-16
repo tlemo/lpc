@@ -1,0 +1,24 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+0 error(s), 0 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = clr)
+-----------------------------------------------------
+
+P2 errcode = 0
+
+verifying the resulting binary
+-----------------------------------------------------
+[IL]: Error: [udtReturn.exe : <Module>::_SetContains][offset 0x00000005][found address of value 'T_set_1'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [udtReturn.exe : <Module>::_SetCastTo_T_S][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [udtReturn.exe : <Module>::_SetCastTo_T_set_1][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [udtReturn.exe : <Module>::_SetIntersection][offset 0x00000008][found address of value 'T_set_1'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [udtReturn.exe : <Module>::_SetIntersection][offset 0x00000008][found address of value 'T_set_1'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [udtReturn.exe : <Module>::_SetIntersection][offset 0x00000008][found address of value 'T_set_1'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [udtReturn.exe : <Module>::_SetCheck][offset 0x00000006][found address of value 'T_set_1'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [udtReturn.exe : T_S::clear][offset 0x00000003] Instruction cannot be verified.
+[IL]: Error: [udtReturn.exe : T_set_1::clear][offset 0x00000004] Instruction cannot be verified.
+9 Error(s) Verifying udtReturn.exe

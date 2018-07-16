@@ -1,0 +1,38 @@
+
+Tiny basic interpreter vs. 0.1 Copyright (C) 1994 S. A. Moore
+
+Ready
+Hello, world!
+Ready
+20 print "Hello ", U$
+30 print "How many stars do you want: ";
+31 input N
+32 print N
+40 S$ = ""
+50 let I = 1
+60 S$ = S$ + "*"
+70 I = I + 1
+72 if I <= N then goto 60
+80 print S$
+90 print "Do you want more stars? ";
+91 input A$
+92 print A$
+100 if LEN(A$) = 0 then goto 90
+110 A$ = left$(A$, 1)
+120 if chr(A$) = chr("Y") then goto 30
+130 print "Goodbye ", U$
+140 bye
+Ready
+What is your name: Lemo 
+Hello Lemo 
+How many stars do you want: 3
+***
+Do you want more stars? Y 
+How many stars do you want: 7
+*******
+Do you want more stars? Y 
+How many stars do you want: 1
+*
+Do you want more stars? N 
+Goodbye Lemo 
+Bye...

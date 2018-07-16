@@ -1,0 +1,11 @@
+
+Pascal-S compiler/interpreter
+    0  
+    0  program test1(output);
+    0  begin
+    0      writeln('hello, world!');
+    3  end.
+ (eof) 
+hello, world!
+
+4 steps

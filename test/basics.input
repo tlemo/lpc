@@ -1,0 +1,35 @@
+
+print "Hello, world!"
+
+10 PRINT "What is your name: " ;
+11 INPUT U$
+12 PRINT U$
+20 PRINT "Hello ", U$
+30 PRINT "How many stars do you want: ";
+31 INPUT N
+32 PRINT N
+40 S$ = ""
+50 LET I = 1
+60 S$ = S$ + "*"
+70 I = I + 1
+72 IF I <= N THEN GOTO 60
+80 PRINT S$
+90 PRINT "Do you want more stars? ";
+91 INPUT A$
+92 PRINT A$
+100 IF LEN(A$) = 0 THEN GOTO 90
+110 A$ = LEFT$(A$, 1)
+120 IF chr(A$) = chr("Y") THEN GOTO 30
+130 PRINT "Goodbye ", U$
+140 bye
+
+list 20
+run
+Lemo
+3
+Y
+7
+Y
+1
+N
+

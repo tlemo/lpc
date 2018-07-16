@@ -1,0 +1,19 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 4: 'myName' hiding existing declaration on line 2
+
+0 error(s), 1 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = clr)
+-----------------------------------------------------
+
+P2 errcode = 0
+
+verifying the resulting binary
+-----------------------------------------------------
+[IL]: Error: [test02.exe : <Module>::_Program][offset 0x00000038][found address of value 'T_array_1'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [test02.exe : T_array_1::arrayToString][offset 0x00000006][found address of value 'T_array_1'][expected unmanaged pointer] Unexpected type on the stack.
+2 Error(s) Verifying test02.exe

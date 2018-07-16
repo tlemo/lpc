@@ -1,0 +1,117 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 139: 'i' hiding existing declaration on line 118
+  warning on line 209: redefining predefined identifier 'succ'
+  warning on line 262: 'i' hiding existing declaration on line 118
+  warning on line 287: 'i' hiding existing declaration on line 262
+  warning on line 287: 'i' hiding existing declaration on line 118
+  warning on line 477: 'i' hiding existing declaration on line 118
+  warning on line 502: non-local goto
+  warning on line 506: 'ad' hiding existing declaration on line 116
+  warning on line 531: 'ad' hiding existing declaration on line 116
+  warning on line 539: 'ad' hiding existing declaration on line 116
+  warning on line 547: 'c' hiding existing declaration on line 119
+  warning on line 547: 'ad' hiding existing declaration on line 116
+  warning on line 557: 'i' hiding existing declaration on line 118
+  warning on line 557: 'j' hiding existing declaration on line 118
+  warning on line 558: 'ad' hiding existing declaration on line 116
+  warning on line 569: 'ad' hiding existing declaration on line 116
+  warning on line 576: 'ad' hiding existing declaration on line 116
+
+0 error(s), 17 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = clr)
+-----------------------------------------------------
+
+P2 errcode = 0
+
+verifying the resulting binary
+-----------------------------------------------------
+[IL]: Error: [pint.exe : <Module>::_SetContains][offset 0x00000004][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : <Module>::_SetEqual][offset 0x00000005][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : <Module>::_SetEqual][offset 0x00000005][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : <Module>::_SetIsSubset][offset 0x00000005][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : <Module>::_SetIsSubset][offset 0x00000005][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : <Module>::_SetCastTo_T_set_103][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [pint.exe : <Module>::_SetUnion][offset 0x00000008][found address of value 'T_set_103'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : <Module>::_SetUnion][offset 0x00000008][found address of value 'T_set_103'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : <Module>::_SetUnion][offset 0x00000008][found address of value 'T_set_103'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : <Module>::_SetCastTo_T_settype][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [pint.exe : <Module>::_SetDifference][offset 0x00000007][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : <Module>::_SetDifference][offset 0x00000007][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : <Module>::_SetDifference][offset 0x00000007][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : <Module>::_SetIntersection][offset 0x00000007][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : <Module>::_SetIntersection][offset 0x00000007][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : <Module>::_SetIntersection][offset 0x00000007][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : <Module>::_SetUnion][offset 0x00000007][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : <Module>::_SetUnion][offset 0x00000007][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : <Module>::_SetUnion][offset 0x00000007][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : <Module>::_SetCheck][offset 0x00000006][found address of value 'T_set_103'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : T_alfa::arrayToString][offset 0x00000006][found address of value 'T_alfa'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Generate][offset 0x00000030][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Generate][offset 0x00000077][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Generate][offset 0x000000A6][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Generate][offset 0x000000D7][found address of Short][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Generate][offset 0x0000015B][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Assemble][offset 0x00000234][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Assemble][offset 0x00000249][found address of Short][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Assemble][offset 0x0000026A][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Assemble][offset 0x00000291][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Assemble][offset 0x00000423][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Assemble][offset 0x0000046A][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Assemble][offset 0x00000526][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Assemble][offset 0x00000686][found address of Double][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Assemble][offset 0x000007A2][found address of Short][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Assemble][offset 0x000007DC][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Assemble][offset 0x00000834][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Assemble][offset 0x00000871][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Assemble][offset 0x000008F7][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Assemble][offset 0x00000918][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Assemble][offset 0x0000092F][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Assemble][offset 0x00000A88][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Assemble][offset 0x00000A9E][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Assemble][offset 0x00000C8C][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Assemble][offset 0x000003DA][found address of Short][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Assemble][offset 0x00000389][found address of Short][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Assemble][offset 0x000001FF][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Assemble][offset 0x00000214][found address of Short][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load::Assemble][offset 0x000001CD][found address of Short][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : T_beta::arrayToString][offset 0x00000006][found address of value 'T_beta'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load_assemble::Labelsearch][offset 0x0000002E][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load_assemble::Labelsearch][offset 0x00000073][found address of Short][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load_assemble::Getname][offset 0x0000005A][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load_assemble::Getname][offset 0x0000007C][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @load_assemble::Getname][offset 0x000000B0][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : T_settype::clear][offset 0x00000003] Instruction cannot be verified.
+[IL]: Error: [pint.exe : T_set_103::clear][offset 0x00000004] Instruction cannot be verified.
+[IL]: Error: [pint.exe : @callsp::Readi][offset 0x00000011][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Readi][offset 0x00000058][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Readi][offset 0x00000058][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Readi][offset 0x00000083][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Readi][offset 0x00000088][found unmanaged pointer][expected readonly address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Readr][offset 0x00000011][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Readr][offset 0x0000004E][found address of Double][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Readr][offset 0x0000004E][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Readr][offset 0x00000079][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Readr][offset 0x0000007E][found unmanaged pointer][expected readonly address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Readc][offset 0x00000011][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Readc][offset 0x00000029][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Readc][offset 0x00000029][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Readc][offset 0x0000008B][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Readc][offset 0x00000090][found unmanaged pointer][expected readonly address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Readc][offset 0x000000C4][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Readc][offset 0x000000C9][found unmanaged pointer][expected readonly address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Writestr][offset 0x00000012][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Writestr][offset 0x000000A5][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Writestr][offset 0x00000116][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Getfile][offset 0x00000011][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Getfile][offset 0x00000036][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Getfile][offset 0x00000052][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Getfile][offset 0x00000057][found unmanaged pointer][expected readonly address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Putfile][offset 0x00000011][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Putfile][offset 0x00000036][found unmanaged pointer][expected readonly address of value 'LPC.File'] Unexpected type on the stack.
+[IL]: Error: [pint.exe : @callsp::Putfile][offset 0x0000005B][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
+84 Error(s) Verifying pint.exe

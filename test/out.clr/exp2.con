@@ -1,0 +1,17 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 5: redefining predefined identifier 'real'
+  warning on line 9: redefining predefined identifier 'integer'
+  warning on line 12: redefining predefined identifier 'boolean'
+  warning on line 15: redefining predefined identifier 'true'
+  warning on line 15: redefining predefined identifier 'false'
+! error on line 18: unknown type 'integer'
+! error on line 18: 'true' already declared on line 15
+! error on line 22: unknown type 'integer'
+! error on line 22: 'false' already declared on line 15
+! error on line 23: 'real' already declared on line 5
+
+5 error(s), 5 warning(s)
+
+P1 errcode = 1

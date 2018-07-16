@@ -1,0 +1,29 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+0 error(s), 0 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = clr)
+-----------------------------------------------------
+
+P2 errcode = 0
+
+verifying the resulting binary
+-----------------------------------------------------
+[IL]: Error: [hanoi2.exe : <Module>::Punere][offset 0x0000000A][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [hanoi2.exe : <Module>::Punere][offset 0x00000013][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [hanoi2.exe : <Module>::Punere][offset 0x0000001C][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [hanoi2.exe : <Module>::Punere][offset 0x00000029][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [hanoi2.exe : <Module>::Punere][offset 0x00000039][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [hanoi2.exe : <Module>::Scoatere][offset 0x0000000B][found unmanaged pointer][expected readonly address of value 'T_nod'] Unexpected type on the stack.
+[IL]: Error: [hanoi2.exe : <Module>::Scoatere][offset 0x00000010][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [hanoi2.exe : <Module>::_Program][offset 0x0000003C][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [hanoi2.exe : <Module>::_Program][offset 0x000000A1][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [hanoi2.exe : <Module>::_Program][offset 0x000000AC][found unmanaged pointer][expected readonly address of value 'T_nod'] Unexpected type on the stack.
+[IL]: Error: [hanoi2.exe : <Module>::_Program][offset 0x000000AC][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [hanoi2.exe : <Module>::_Program][offset 0x000001D0][found unmanaged pointer][expected readonly address of value 'T_nod'] Unexpected type on the stack.
+[IL]: Error: [hanoi2.exe : <Module>::_Program][offset 0x000001DF][found unmanaged pointer][expected readonly address of value 'T_nod'] Unexpected type on the stack.
+[IL]: Error: [hanoi2.exe : <Module>::_Program][offset 0x000001EE][found unmanaged pointer][expected readonly address of value 'T_nod'] Unexpected type on the stack.
+14 Error(s) Verifying hanoi2.exe

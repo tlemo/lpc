@@ -1,0 +1,310 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 398: 'z' hiding existing declaration on line 155
+  warning on line 398: 'q' hiding existing declaration on line 155
+  warning on line 406: 'z' hiding existing declaration on line 155
+  warning on line 431: 'x' hiding existing declaration on line 155
+  warning on line 443: non-local goto
+  warning on line 447: 'a' hiding existing declaration on line 158
+  warning on line 451: 'x' hiding existing declaration on line 155
+  warning on line 451: 'y' hiding existing declaration on line 155
+  warning on line 451: 'z' hiding existing declaration on line 155
+  warning on line 467: 'a' hiding existing declaration on line 158
+  warning on line 467: 'es' hiding existing declaration on line 176
+  warning on line 467: 's' hiding existing declaration on line 175
+  warning on line 468: 'r' hiding existing declaration on line 159
+  warning on line 468: 'rc' hiding existing declaration on line 178
+  warning on line 468: 'stc' hiding existing declaration on line 179
+  warning on line 471: 'i' hiding existing declaration on line 155
+  warning on line 472: 'ci' hiding existing declaration on line 187
+  warning on line 494: 'junk9' hiding existing declaration on line 494
+  warning on line 495: 'y' hiding existing declaration on line 155
+  warning on line 504: 'x' hiding existing declaration on line 155
+  warning on line 504: 'y' hiding existing declaration on line 155
+  warning on line 504: 'junk10' hiding existing declaration on line 504
+  warning on line 512: 'x' hiding existing declaration on line 155
+  warning on line 521: 'q' hiding existing declaration on line 155
+  warning on line 539: 'i' hiding existing declaration on line 155
+  warning on line 539: 'x' hiding existing declaration on line 155
+  warning on line 559: 'x' hiding existing declaration on line 155
+  warning on line 559: 'i' hiding existing declaration on line 155
+  warning on line 581: 'intalias' hiding existing declaration on line 152
+  warning on line 615: 'a' hiding existing declaration on line 158
+  warning on line 2539: 'i' hiding existing declaration on line 155
+  warning on line 2539: 'r' hiding existing declaration on line 159
+  warning on line 2542: 'i' hiding existing declaration on line 2539
+  warning on line 2542: 'i' hiding existing declaration on line 155
+  warning on line 2542: 'r' hiding existing declaration on line 2539
+  warning on line 2542: 'r' hiding existing declaration on line 159
+  warning on line 2545: 'i' hiding existing declaration on line 2542
+  warning on line 2545: 'i' hiding existing declaration on line 2539
+  warning on line 2545: 'i' hiding existing declaration on line 155
+  warning on line 2545: 'r' hiding existing declaration on line 2542
+  warning on line 2545: 'r' hiding existing declaration on line 2539
+  warning on line 2545: 'r' hiding existing declaration on line 159
+  warning on line 2548: 'i' hiding existing declaration on line 2545
+  warning on line 2548: 'i' hiding existing declaration on line 2542
+  warning on line 2548: 'i' hiding existing declaration on line 2539
+  warning on line 2548: 'i' hiding existing declaration on line 155
+  warning on line 2548: 'r' hiding existing declaration on line 2545
+  warning on line 2548: 'r' hiding existing declaration on line 2542
+  warning on line 2548: 'r' hiding existing declaration on line 2539
+  warning on line 2548: 'r' hiding existing declaration on line 159
+  warning on line 2551: 'i' hiding existing declaration on line 2548
+  warning on line 2551: 'i' hiding existing declaration on line 2545
+  warning on line 2551: 'i' hiding existing declaration on line 2542
+  warning on line 2551: 'i' hiding existing declaration on line 2539
+  warning on line 2551: 'i' hiding existing declaration on line 155
+  warning on line 2551: 'r' hiding existing declaration on line 2548
+  warning on line 2551: 'r' hiding existing declaration on line 2545
+  warning on line 2551: 'r' hiding existing declaration on line 2542
+  warning on line 2551: 'r' hiding existing declaration on line 2539
+  warning on line 2551: 'r' hiding existing declaration on line 159
+  warning on line 2554: 'i' hiding existing declaration on line 2551
+  warning on line 2554: 'i' hiding existing declaration on line 2548
+  warning on line 2554: 'i' hiding existing declaration on line 2545
+  warning on line 2554: 'i' hiding existing declaration on line 2542
+  warning on line 2554: 'i' hiding existing declaration on line 2539
+  warning on line 2554: 'i' hiding existing declaration on line 155
+  warning on line 2554: 'r' hiding existing declaration on line 2551
+  warning on line 2554: 'r' hiding existing declaration on line 2548
+  warning on line 2554: 'r' hiding existing declaration on line 2545
+  warning on line 2554: 'r' hiding existing declaration on line 2542
+  warning on line 2554: 'r' hiding existing declaration on line 2539
+  warning on line 2554: 'r' hiding existing declaration on line 159
+  warning on line 2557: 'i' hiding existing declaration on line 2554
+  warning on line 2557: 'i' hiding existing declaration on line 2551
+  warning on line 2557: 'i' hiding existing declaration on line 2548
+  warning on line 2557: 'i' hiding existing declaration on line 2545
+  warning on line 2557: 'i' hiding existing declaration on line 2542
+  warning on line 2557: 'i' hiding existing declaration on line 2539
+  warning on line 2557: 'i' hiding existing declaration on line 155
+  warning on line 2557: 'r' hiding existing declaration on line 2554
+  warning on line 2557: 'r' hiding existing declaration on line 2551
+  warning on line 2557: 'r' hiding existing declaration on line 2548
+  warning on line 2557: 'r' hiding existing declaration on line 2545
+  warning on line 2557: 'r' hiding existing declaration on line 2542
+  warning on line 2557: 'r' hiding existing declaration on line 2539
+  warning on line 2557: 'r' hiding existing declaration on line 159
+  warning on line 2560: 'i' hiding existing declaration on line 2557
+  warning on line 2560: 'i' hiding existing declaration on line 2554
+  warning on line 2560: 'i' hiding existing declaration on line 2551
+  warning on line 2560: 'i' hiding existing declaration on line 2548
+  warning on line 2560: 'i' hiding existing declaration on line 2545
+  warning on line 2560: 'i' hiding existing declaration on line 2542
+  warning on line 2560: 'i' hiding existing declaration on line 2539
+  warning on line 2560: 'i' hiding existing declaration on line 155
+  warning on line 2560: 'r' hiding existing declaration on line 2557
+  warning on line 2560: 'r' hiding existing declaration on line 2554
+  warning on line 2560: 'r' hiding existing declaration on line 2551
+  warning on line 2560: 'r' hiding existing declaration on line 2548
+  warning on line 2560: 'r' hiding existing declaration on line 2545
+  warning on line 2560: 'r' hiding existing declaration on line 2542
+  warning on line 2560: 'r' hiding existing declaration on line 2539
+  warning on line 2560: 'r' hiding existing declaration on line 159
+  warning on line 2563: 'i' hiding existing declaration on line 2560
+  warning on line 2563: 'i' hiding existing declaration on line 2557
+  warning on line 2563: 'i' hiding existing declaration on line 2554
+  warning on line 2563: 'i' hiding existing declaration on line 2551
+  warning on line 2563: 'i' hiding existing declaration on line 2548
+  warning on line 2563: 'i' hiding existing declaration on line 2545
+  warning on line 2563: 'i' hiding existing declaration on line 2542
+  warning on line 2563: 'i' hiding existing declaration on line 2539
+  warning on line 2563: 'i' hiding existing declaration on line 155
+  warning on line 2563: 'r' hiding existing declaration on line 2560
+  warning on line 2563: 'r' hiding existing declaration on line 2557
+  warning on line 2563: 'r' hiding existing declaration on line 2554
+  warning on line 2563: 'r' hiding existing declaration on line 2551
+  warning on line 2563: 'r' hiding existing declaration on line 2548
+  warning on line 2563: 'r' hiding existing declaration on line 2545
+  warning on line 2563: 'r' hiding existing declaration on line 2542
+  warning on line 2563: 'r' hiding existing declaration on line 2539
+  warning on line 2563: 'r' hiding existing declaration on line 159
+  warning on line 2566: 'i' hiding existing declaration on line 2563
+  warning on line 2566: 'i' hiding existing declaration on line 2560
+  warning on line 2566: 'i' hiding existing declaration on line 2557
+  warning on line 2566: 'i' hiding existing declaration on line 2554
+  warning on line 2566: 'i' hiding existing declaration on line 2551
+  warning on line 2566: 'i' hiding existing declaration on line 2548
+  warning on line 2566: 'i' hiding existing declaration on line 2545
+  warning on line 2566: 'i' hiding existing declaration on line 2542
+  warning on line 2566: 'i' hiding existing declaration on line 2539
+  warning on line 2566: 'i' hiding existing declaration on line 155
+  warning on line 2569: 'i' hiding existing declaration on line 2566
+  warning on line 2569: 'i' hiding existing declaration on line 2563
+  warning on line 2569: 'i' hiding existing declaration on line 2560
+  warning on line 2569: 'i' hiding existing declaration on line 2557
+  warning on line 2569: 'i' hiding existing declaration on line 2554
+  warning on line 2569: 'i' hiding existing declaration on line 2551
+  warning on line 2569: 'i' hiding existing declaration on line 2548
+  warning on line 2569: 'i' hiding existing declaration on line 2545
+  warning on line 2569: 'i' hiding existing declaration on line 2542
+  warning on line 2569: 'i' hiding existing declaration on line 2539
+  warning on line 2569: 'i' hiding existing declaration on line 155
+  warning on line 2606: 'i' hiding existing declaration on line 155
+  warning on line 2606: 'r' hiding existing declaration on line 159
+  warning on line 2606: replacing identifier 'i' defined on line 2606
+  warning on line 2606: replacing identifier 'r' defined on line 2606
+  warning on line 2606: replacing identifier 'i' defined on line 2606
+  warning on line 2606: replacing identifier 'r' defined on line 2606
+  warning on line 2606: replacing identifier 'i' defined on line 2606
+  warning on line 2606: replacing identifier 'r' defined on line 2606
+  warning on line 2606: replacing identifier 'i' defined on line 2606
+  warning on line 2606: replacing identifier 'r' defined on line 2606
+  warning on line 2606: replacing identifier 'i' defined on line 2606
+  warning on line 2606: replacing identifier 'r' defined on line 2606
+  warning on line 2606: replacing identifier 'i' defined on line 2606
+  warning on line 2606: replacing identifier 'r' defined on line 2606
+  warning on line 2606: replacing identifier 'i' defined on line 2606
+  warning on line 2606: replacing identifier 'r' defined on line 2606
+  warning on line 2606: replacing identifier 'i' defined on line 2606
+  warning on line 2606: replacing identifier 'r' defined on line 2606
+  warning on line 2606: replacing identifier 'i' defined on line 2606
+  warning on line 2620: 'a' hiding existing declaration on line 158
+  warning on line 2620: 'es' hiding existing declaration on line 176
+  warning on line 2620: 'i' hiding existing declaration on line 155
+  warning on line 2620: 'r' hiding existing declaration on line 159
+  warning on line 2620: 'rc' hiding existing declaration on line 178
+  warning on line 2620: 's' hiding existing declaration on line 175
+  warning on line 2620: 'stc' hiding existing declaration on line 179
+  warning on line 2623: 'a' hiding existing declaration on line 2620
+  warning on line 2623: 'a' hiding existing declaration on line 158
+  warning on line 2623: 'b' hiding existing declaration on line 2620
+  warning on line 2628: 'a' hiding existing declaration on line 158
+  warning on line 2629: 'a' hiding existing declaration on line 158
+  warning on line 368: only Text files are supported
+  warning on line 354: only Text files are supported
+  warning on line 358: only Text files are supported
+  warning on line 360: only Text files are supported
+  warning on line 352: only Text files are supported
+  warning on line 374: only Text files are supported
+  warning on line 364: only Text files are supported
+  warning on line 370: only Text files are supported
+  warning on line 362: only Text files are supported
+  warning on line 366: only Text files are supported
+  warning on line 372: only Text files are supported
+  warning on line 369: only Text files are supported
+  warning on line 355: only Text files are supported
+  warning on line 359: only Text files are supported
+  warning on line 361: only Text files are supported
+  warning on line 353: only Text files are supported
+  warning on line 375: only Text files are supported
+  warning on line 365: only Text files are supported
+  warning on line 371: only Text files are supported
+  warning on line 363: only Text files are supported
+  warning on line 367: only Text files are supported
+  warning on line 373: only Text files are supported
+
+0 error(s), 194 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = clr)
+-----------------------------------------------------
+
+P2 errcode = 0
+
+verifying the resulting binary
+-----------------------------------------------------
+[IL]: Error: [iso7185pat.exe : <Module>::Junk2][offset 0x0000000A][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::Junk2][offset 0x0000001B][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::Junk3][offset 0x0000000A][found address of value 'T_string10'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::Junk3][offset 0x0000001B][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::Junk12][offset 0x00000020][found ref 'T_subroutine_3'][expected ref 'T_subroutine_5'] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::Junk17][offset 0x0000003C][found ref 'T_junk17_subroutine_8'][expected ref 'T_subroutine_7'] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::Junk19][offset 0x0000000D][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::Junk19][offset 0x0000001A][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_Program][offset 0x0000C827][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_Program][offset 0x0000C832][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_Program][offset 0x0000C83D][found unmanaged pointer] Expected ByRef on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetContains][offset 0x00000005][found address of value 'T_cset'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetContains][offset 0x00000004][found address of value 'T_set_118'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetContains][offset 0x00000004][found address of value 'T_set_123'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetContains][offset 0x00000005][found address of value 'T_set_129'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetEqual][offset 0x00000006][found address of value 'T_cset'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetEqual][offset 0x00000006][found address of value 'T_cset'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetEqual][offset 0x00000005][found address of value 'T_set_118'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetEqual][offset 0x00000005][found address of value 'T_set_118'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetEqual][offset 0x00000005][found address of value 'T_set_123'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetEqual][offset 0x00000005][found address of value 'T_set_123'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetEqual][offset 0x00000006][found address of value 'T_set_129'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetEqual][offset 0x00000006][found address of value 'T_set_129'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetIsSubset][offset 0x00000006][found address of value 'T_cset'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetIsSubset][offset 0x00000006][found address of value 'T_cset'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetIsSubset][offset 0x00000005][found address of value 'T_set_118'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetIsSubset][offset 0x00000005][found address of value 'T_set_118'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetIsSubset][offset 0x00000005][found address of value 'T_set_123'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetIsSubset][offset 0x00000005][found address of value 'T_set_123'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetIsSubset][offset 0x00000006][found address of value 'T_set_129'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetIsSubset][offset 0x00000006][found address of value 'T_set_129'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetCastTo_T_cset][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetCastTo_T_cset][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetCastTo_T_cset][offset 0x00000006] Instruction cannot be verified.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetCastTo_T_cset][offset 0x00000006] Instruction cannot be verified.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetDifference][offset 0x00000008][found address of value 'T_cset'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetDifference][offset 0x00000008][found address of value 'T_cset'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetDifference][offset 0x00000008][found address of value 'T_cset'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetIntersection][offset 0x00000008][found address of value 'T_cset'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetIntersection][offset 0x00000008][found address of value 'T_cset'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetIntersection][offset 0x00000008][found address of value 'T_cset'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetUnion][offset 0x00000008][found address of value 'T_cset'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetUnion][offset 0x00000008][found address of value 'T_cset'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetUnion][offset 0x00000008][found address of value 'T_cset'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetCastTo_T_set_118][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetDifference][offset 0x00000007][found address of value 'T_set_118'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetDifference][offset 0x00000007][found address of value 'T_set_118'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetDifference][offset 0x00000007][found address of value 'T_set_118'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetIntersection][offset 0x00000007][found address of value 'T_set_118'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetIntersection][offset 0x00000007][found address of value 'T_set_118'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetIntersection][offset 0x00000007][found address of value 'T_set_118'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetUnion][offset 0x00000007][found address of value 'T_set_118'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetUnion][offset 0x00000007][found address of value 'T_set_118'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetUnion][offset 0x00000007][found address of value 'T_set_118'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetCastTo_T_set_123][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetDifference][offset 0x00000007][found address of value 'T_set_123'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetDifference][offset 0x00000007][found address of value 'T_set_123'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetDifference][offset 0x00000007][found address of value 'T_set_123'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetIntersection][offset 0x00000007][found address of value 'T_set_123'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetIntersection][offset 0x00000007][found address of value 'T_set_123'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetIntersection][offset 0x00000007][found address of value 'T_set_123'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetUnion][offset 0x00000007][found address of value 'T_set_123'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetUnion][offset 0x00000007][found address of value 'T_set_123'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetUnion][offset 0x00000007][found address of value 'T_set_123'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetCastTo_T_set_124][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetCastTo_T_set_126][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetCastTo_T_set_129][offset 0x00000006] Instruction cannot be verified.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetDifference][offset 0x00000008][found address of value 'T_set_129'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetDifference][offset 0x00000008][found address of value 'T_set_129'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetDifference][offset 0x00000008][found address of value 'T_set_129'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetIntersection][offset 0x00000008][found address of value 'T_set_129'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetIntersection][offset 0x00000008][found address of value 'T_set_129'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetIntersection][offset 0x00000008][found address of value 'T_set_129'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetUnion][offset 0x00000008][found address of value 'T_set_129'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetUnion][offset 0x00000008][found address of value 'T_set_129'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetUnion][offset 0x00000008][found address of value 'T_set_129'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetCastTo_T_set_130][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetCastTo_T_set_130][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetCastTo_T_set_132][offset 0x00000005] Instruction cannot be verified.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetCastTo_T_set_34][offset 0x00000006] Instruction cannot be verified.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetCastTo_T_set_35][offset 0x00000006] Instruction cannot be verified.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetCheck][offset 0x00000006][found address of value 'T_cset'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetCheck][offset 0x00000005][found address of value 'T_set_123'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : <Module>::_SetCheck][offset 0x00000006][found address of value 'T_set_129'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : T_string10::arrayToString][offset 0x00000006][found address of value 'T_string10'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : T_cset::clear][offset 0x00000004] Instruction cannot be verified.
+[IL]: Error: [iso7185pat.exe : T_set_34::clear][offset 0x00000004] Instruction cannot be verified.
+[IL]: Error: [iso7185pat.exe : T_set_35::clear][offset 0x00000004] Instruction cannot be verified.
+[IL]: Error: [iso7185pat.exe : T_set_118::clear][offset 0x00000003] Instruction cannot be verified.
+[IL]: Error: [iso7185pat.exe : T_array_122::arrayToString][offset 0x00000006][found address of value 'T_array_122'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : T_set_123::clear][offset 0x00000003] Instruction cannot be verified.
+[IL]: Error: [iso7185pat.exe : T_set_124::clear][offset 0x00000003] Instruction cannot be verified.
+[IL]: Error: [iso7185pat.exe : T_set_126::clear][offset 0x00000003] Instruction cannot be verified.
+[IL]: Error: [iso7185pat.exe : T_set_129::clear][offset 0x00000004] Instruction cannot be verified.
+[IL]: Error: [iso7185pat.exe : T_set_130::clear][offset 0x00000003] Instruction cannot be verified.
+[IL]: Error: [iso7185pat.exe : T_set_132::clear][offset 0x00000003] Instruction cannot be verified.
+[IL]: Error: [iso7185pat.exe : T_array_263::arrayToString][offset 0x00000005][found address of value 'T_array_263'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : T_array_267::arrayToString][offset 0x00000005][found address of value 'T_array_267'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : T_array_274::arrayToString][offset 0x00000005][found address of value 'T_array_274'][expected unmanaged pointer] Unexpected type on the stack.
+[IL]: Error: [iso7185pat.exe : T_array_287::arrayToString][offset 0x00000005][found address of value 'T_array_287'][expected unmanaged pointer] Unexpected type on the stack.
+100 Error(s) Verifying iso7185pat.exe

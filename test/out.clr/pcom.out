@@ -1,0 +1,93 @@
+
+     1        9 
+
+     2        9 (* demonstrate the access to free variables *)
+
+     3        9 
+
+     4        9 program test;
+
+     5        9 
+
+     6        9 var v : integer;
+
+     7       10 
+
+     8       10 procedure foo;
+
+     9        5     var foov : integer;
+
+    10        6     
+
+    11        6     procedure bar1(i : integer);
+
+    12        6         var bar1v : integer;
+
+    13        7     begin
+
+    14        3         bar1v := i;
+
+    15        7         if i < 3 then bar1(i + 1);
+
+    16       16         writeln(bar1v, ' ', foov, ' ', v);
+
+    17       38     end;
+
+    18       39 
+
+    19       39     procedure bar2(i : integer);
+
+    20       39         var bar2v : integer;
+
+    21        7         
+
+    22        7         procedure moo;
+
+    23        5             var moov : integer;
+
+    24        6         begin
+
+    25       39             moov := 100;
+
+    26       43             bar1(2);
+
+    27       46             writeln(moov, ' ', bar2v, ' ', i, ' ', foov, ' ', v);
+
+    28       84         end;
+
+    29       85 
+
+    30       85     begin
+
+    31       85         bar2v := i;
+
+    32       89         bar1(1);
+
+    33       92         moo;
+
+    34       94         writeln(bar2v, ' ', foov, ' ', v);
+
+    35      116     end;
+
+    36      117     
+
+    37      117 begin
+
+    38      117     bar1(0);
+
+    39      122     bar2(1000);
+
+    40      125     writeln(foov, ' ', v);
+
+    41      139 end;
+
+    42      140 
+
+    43      140 begin 
+
+    44      140     foo;
+
+    45      144     writeln(v);
+
+    46      150 end.
+

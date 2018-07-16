@@ -1,0 +1,20 @@
+
+<AutoVisualizer xmlns="http://schemas.microsoft.com/vstudio/debugger/natvis/2010">
+
+<Type Name="ts::ArrayType">
+    <DisplayString>Array [{*m_pIndexType}] of {*m_pElemType}</DisplayString>
+</Type>
+
+<Type Name="ts::RangeType">
+    <DisplayString>{*m_pStart} .. {*m_pEnd}</DisplayString>
+</Type>
+
+<Type Name="ts::CharType">
+    <DisplayString>Char</DisplayString>
+</Type>
+
+<Type Name="obj::Constant">
+    <DisplayString>{intValue}</DisplayString>
+</Type>
+
+</AutoVisualizer>
