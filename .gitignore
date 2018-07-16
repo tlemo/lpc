@@ -1,6 +1,7 @@
 *.sdf
 *.suo
 *.ncb
+*.vcxproj.user
 Debug
 Release
 ipch
