@@ -9,3 +9,4 @@ ipch
 _lexer.*
 _parser.*
 .vs
+.vscode
