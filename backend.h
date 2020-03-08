@@ -43,7 +43,7 @@ T* funcAlloc(size_t size)
 inline
 VarPtr allocStr(const char* str)
 {
-    rsize_t size = strlen(str) + 1;
+    const size_t size = strlen(str) + 1;
     char* newStr = funcAlloc<char>(size);
     strcpy_s(newStr, size, str);
     return VarPtr(newStr);
@@ -75,7 +75,7 @@ string indentBlock(const string& str)
 
     for(size_t pos = 0; pos < str.length();)
     {
-        size_t eolPos = str.find('\n', pos);
+        const size_t eolPos = str.find('\n', pos);
         if(eolPos == string::npos)
             throw Exception("ill-formatted block string");
         block += TAB;
