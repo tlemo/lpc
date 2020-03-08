@@ -100,9 +100,9 @@ protected:
     {
     }
 
-    virtual ~Backend() {}
-    
 public:
+    virtual ~Backend() = default;
+    
     virtual const char* targetName() const = 0;
 
     virtual void generateCode(Scope* pGlobalScope)

@@ -15,8 +15,9 @@
 
 #pragma once
 
-#include <list>
+#include <vector>
 #include <stdarg.h>
+#include <memory>
 #include <assert.h>
 
 #include "common.h"
@@ -45,11 +46,11 @@ public:
         m_enableLogging(false),
         m_pTarget(nullptr)
     {
-        m_backends.push_back(new cpp::CppBackend);
-        m_backends.push_back(new clr::ClrBackend);
+        m_backends.push_back(make_unique<cpp::CppBackend>());
+        m_backends.push_back(make_unique<clr::ClrBackend>());
     }
     
-    virtual ~Compiler()
+    ~Compiler() override
     {
         #if 0
         m_symbolTable.print();
@@ -211,8 +212,10 @@ private:
         m_cmdLine.addOption("-outPath=", "changes the output location");
         m_cmdLine.addOption("-target=", "selects the code generation target");
 
-        for(auto it = m_backends.begin(); it != m_backends.end(); ++it)
-            m_cmdLine.addTarget((*it)->targetName());
+        for (const auto& backend : m_backends)
+        {
+            m_cmdLine.addTarget(backend->targetName());
+        }
 
         try
         {
@@ -237,11 +240,11 @@ private:
             if(targetName.empty())
                 throw Exception("target name was not specified");
 
-            for(auto it = m_backends.begin(); it != m_backends.end(); ++it)
+            for (const auto& backend : m_backends)
             {
-                if(targetName == (*it)->targetName())
+                if(targetName == backend->targetName())
                 {
-                    m_pTarget = *it;
+                    m_pTarget = backend.get();
                     break;
                 }
             }
@@ -249,7 +252,7 @@ private:
             if(nullptr == m_pTarget)
                 throw Exception("invalid target name (%s)", targetName.c_str());
         }
-        catch(Exception& e)
+        catch(const Exception& e)
         {
             _printBanner();
             printf("COMMAND LINE ERROR: %s\n\n", e.message());
@@ -273,13 +276,14 @@ private:
     HeapManager     m_heapManager;
     FrontEnd        m_frontEnd;
     SymbolTable     m_symbolTable;
-    list<Backend*>  m_backends;
-    Backend*        m_pTarget;
     int             m_errorsCount;
     int             m_warningsCount;
     bool            m_enableWarnings;
     bool            m_enableLogging;
     string          m_outputName;
+
+    vector<unique_ptr<Backend>> m_backends;
+    Backend*        m_pTarget;
 };
 
 

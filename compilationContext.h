@@ -32,7 +32,7 @@ class SymbolTable;
 class CompilationContext
 {
 protected:
-    virtual ~CompilationContext() {}
+    virtual ~CompilationContext() = default;
     
 public:
     virtual void error(int line, const char* msg, ...) = 0;
