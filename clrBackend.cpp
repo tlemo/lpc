@@ -50,13 +50,13 @@ int LCM(int a, int b)
 {
     assert(a > 0 && b > 0);
 
-    int p = a * b;
+    const int p = a * b;
 
     // compute GCD
     //
     while(b > 0)
     {
-        int tmp = b;
+        const int tmp = b;
         b = a % b;
         a = tmp;
     }
@@ -77,7 +77,7 @@ TypeGen::FieldsDef TypeGen::_fieldsDef(const ts::RecordFields* pFields, int offs
 
     // add field helper
     //
-    auto addField = [&](const Identifier* pId, ts::Type* pType)
+    const auto addField = [&](const Identifier* pId, ts::Type* pType)
     {
         auto pExt = ext(pType);
 
@@ -107,16 +107,14 @@ TypeGen::FieldsDef TypeGen::_fieldsDef(const ts::RecordFields* pFields, int offs
     {
         def << "\n";
 
-        auto pList = pFields->pFixedFields;
-        for(auto it = pList->begin(); it != pList->end(); ++it)
+        for (const auto& fieldSet : *pFields->pFixedFields)
         {
-            auto pFieldType = (*it)->pType;
+            auto pFieldType = fieldSet->pType;
             m_pBackend->_generateType(pFieldType);
 
-            auto pNames = (*it)->pNames;
-            for(auto idIt = pNames->begin(); idIt != pNames->end(); ++idIt)
+            for (const auto& id : *fieldSet->pNames)
             {
-                addField(*idIt, pFieldType);
+                addField(id, pFieldType);
             }
         }
     }
@@ -137,15 +135,12 @@ TypeGen::FieldsDef TypeGen::_fieldsDef(const ts::RecordFields* pFields, int offs
 
         int varFieldsSize = 0;
 
-        auto pList = pFields->pVariableFields->pVariantFields;
-        for(auto it = pList->begin(); it != pList->end(); ++it)
+        for (const auto& variantSection : *pFields->pVariableFields->pVariantFields)
         {
             def << "\n";
 
-            auto pCases = (*it)->pConstants;
-            for(auto caseIt = pCases->begin(); caseIt != pCases->end(); ++caseIt)
+            for (const auto& pConst : *variantSection->pConstants)
             {
-                auto pConst = *caseIt;
                 assert(pConst->pType->isOrdinal());
 
                 def << "// case ";
@@ -164,7 +159,7 @@ TypeGen::FieldsDef TypeGen::_fieldsDef(const ts::RecordFields* pFields, int offs
                 }
             }
 
-            auto varFieldsDef = _fieldsDef((*it)->pFields, offset);
+            auto varFieldsDef = _fieldsDef(variantSection->pFields, offset);
             
             def << indentBlock(varFieldsDef.def);
 
