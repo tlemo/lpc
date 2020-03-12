@@ -108,6 +108,7 @@
     <ClCompile Include="ast.cpp" />
     <ClCompile Include="clrBackend.cpp" />
     <ClCompile Include="cppBackend.cpp" />
+    <ClCompile Include="llvmBackend.cpp" />
     <ClCompile Include="objects.cpp" />
     <ClCompile Include="stringTable.cpp" />
     <ClCompile Include="symbols.cpp" />
@@ -123,6 +124,7 @@
     <ClInclude Include="compiler.h" />
     <ClInclude Include="cppBackend.h" />
     <ClInclude Include="heapManager.h" />
+    <ClInclude Include="llvmBackend.h" />
     <ClInclude Include="objects.h" />
     <ClInclude Include="types.h" />
     <ClInclude Include="_lexer.h" />

@@ -94,11 +94,7 @@ string indentBlock(const string& str)
 class Backend
 {
 protected:
-    Backend() :
-        m_output(nullptr),
-        m_debugInfo(false)
-    {
-    }
+    Backend() = default;
 
 public:
     virtual ~Backend() = default;
@@ -119,7 +115,7 @@ public:
         auto pScope = pGlobalScope;
         bool explored = false;
 
-        // a depth first traversal
+        // depth first traversal of the scopes
         //
         while(pScope != nullptr)
         {
@@ -217,8 +213,8 @@ private:
 
 private:
     string m_outputName;
-    FILE* m_output;
-    bool m_debugInfo;
+    FILE* m_output = nullptr;
+    bool m_debugInfo = false;
 };
 
 

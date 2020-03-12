@@ -29,6 +29,7 @@
 #include "backend.h"
 #include "cppBackend.h"
 #include "clrBackend.h"
+#include "llvmBackend.h"
 #include "heapManager.h"
 
 using namespace std;
@@ -48,6 +49,7 @@ public:
     {
         m_backends.push_back(make_unique<cpp::CppBackend>());
         m_backends.push_back(make_unique<clr::ClrBackend>());
+        m_backends.push_back(make_unique<llvm::LlvmBackend>());
     }
     
     ~Compiler() override

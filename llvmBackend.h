@@ -1,5 +1,5 @@
 
-// Copyright 2018 LPC Authors
+// Copyright 2020 LPC Authors
 // 
 // Licensed under the Apache License, Version 2.0 (the "License");
 // you may not use this file except in compliance with the License.
@@ -35,10 +35,10 @@
 using namespace std;
 
 
-namespace clr
+namespace llvm
 {
 
-class ClrBackend;
+class LlvmBackend;
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -402,7 +402,7 @@ class TypeGen : public ts::Visitor
     };
 
 public:
-    TypeGen(ClrBackend* pBackend) : m_pBackend(pBackend)
+    TypeGen(LlvmBackend* pBackend) : m_pBackend(pBackend)
     {
     }
 
@@ -518,7 +518,7 @@ private:
     FieldsDef _fieldsDef(const ts::RecordFields* pFields, int offset = 0);
 
 private:
-    ClrBackend* m_pBackend = nullptr;
+    LlvmBackend* m_pBackend = nullptr;
 };
 
 
@@ -571,7 +571,7 @@ struct NewObjExpr : public ast::Expr
 
 ///////////////////////////////////////////////////////////////////////////////
 //
-class ClrBackend : public Backend, public ast::Visitor
+class LlvmBackend : public Backend, public ast::Visitor
 {
     friend class TypeGen;
     friend struct TmpExpr;
@@ -613,9 +613,9 @@ private:
     int m_tempVarGen = 0;
 
 public:
-    ClrBackend() = default;
+    LlvmBackend() = default;
 
-    const char* targetName() const override { return "clr"; }
+    const char* targetName() const override { return "llvm"; }
 
 private:
     // sets the current scope name
@@ -691,7 +691,7 @@ private:
     // backend interface
     //
 private:
-    const char* _outputExt() const override { return ".il"; }
+    const char* _outputExt() const override { return ".ll"; }
 
     void _start() override
     {
@@ -3870,6 +3870,5 @@ private:
 };
 
 
-} // end namespace clr
-
+} // end namespace llvm
 

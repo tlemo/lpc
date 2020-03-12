@@ -381,10 +381,10 @@ public:
     }
 
 public:
-    virtual const char* targetName() const { return "cpp"; }
+    const char* targetName() const override { return "cpp"; }
 
 private:
-    virtual const char* _outputExt() const { return ".cpp"; }
+    const char* _outputExt() const override { return ".cpp"; }
 
     // sets the current scope name
     //
@@ -438,7 +438,7 @@ private:
 
     // generating the output file header
     //
-    virtual void _start()
+    void _start() override
     {
         std::stringstream code;
         
@@ -468,7 +468,7 @@ private:
         write(code);
     }
 
-    virtual void _end()
+    void _end() override
     {
     }
 
@@ -481,7 +481,7 @@ private:
     // locals struct
     // function body (if any)
     //
-    virtual void _generate(Scope* pScope, bool postOrder)
+    void _generate(Scope* pScope, bool postOrder) override
     {
         assert(pScope->category != Scope::scRecord);
 
@@ -1129,12 +1129,12 @@ private:
         }
     }
 
-    virtual VarPtr visit(const ast::ConstExpr* pConstExpr)
+    VarPtr visit(const ast::ConstExpr* pConstExpr) override
     {
         return allocStr(genConst(pConstExpr->pConstant).c_str());
     }
 
-    virtual VarPtr visit(const ast::Intrinsic*)
+    VarPtr visit(const ast::Intrinsic*) override
     {
         assert(!"not implemented");
         return VarPtr();
@@ -1182,7 +1182,7 @@ private:
             "_F." : (_genFramePtr(targetLevel) + "->");
     }
 
-    virtual VarPtr visit(const ast::VarExpr* pVarExpr)
+    VarPtr visit(const ast::VarExpr* pVarExpr) override
     {
         auto pVar = pVarExpr->pVariable;
         auto targetLevel = pVar->pScope->level;
@@ -1201,7 +1201,7 @@ private:
         return allocStr(code);
     }
 
-    virtual VarPtr visit(const ast::ParamExpr* pParamExpr)
+    VarPtr visit(const ast::ParamExpr* pParamExpr) override
     {
         auto pParam = pParamExpr->pParameter;
         assert(pParam->pScope->level > Scope::PROGRAM_SCOPE_LEVEL);
@@ -1211,7 +1211,7 @@ private:
         return allocStr(code);
     }
 
-    virtual VarPtr visit(const ast::FuncPtr* pFuncPtr)
+    VarPtr visit(const ast::FuncPtr* pFuncPtr) override
     {
         auto pExt = subroutineExt(pFuncPtr->pFunc);
         assert(!pExt->genName.empty());
@@ -1225,7 +1225,7 @@ private:
 
     // generate an explicit cast
     //
-    virtual VarPtr visit(const ast::TypeCast* pTypeCast)
+    VarPtr visit(const ast::TypeCast* pTypeCast) override
     {
         auto pDstType = pTypeCast->pType;
 
@@ -1245,7 +1245,7 @@ private:
         return allocStr(code);
     }
 
-    virtual VarPtr visit(const ast::BinaryOp* pBinaryOp)
+    VarPtr visit(const ast::BinaryOp* pBinaryOp) override
     {
         string lhs = gen(pBinaryOp->pLeft);
         string rhs = gen(pBinaryOp->pRight);
@@ -1320,7 +1320,7 @@ private:
         return allocStr(code);
     }
 
-    virtual VarPtr visit(const ast::UnaryOp* pUnaryOp)
+    VarPtr visit(const ast::UnaryOp* pUnaryOp) override
     {
         string op = "$";
         string value = gen(pUnaryOp->pExpr);
@@ -1340,7 +1340,7 @@ private:
         return allocStr(code);
     }
 
-    virtual VarPtr visit(const ast::ArrayIndex* pArrayIndex)
+    VarPtr visit(const ast::ArrayIndex* pArrayIndex) override
     {
         std::stringstream code;
         code << gen(pArrayIndex->pObject);
@@ -1348,7 +1348,7 @@ private:
         return allocStr(code);
     }
 
-    virtual VarPtr visit(const ast::FieldExpr* pFieldExpr)
+    VarPtr visit(const ast::FieldExpr* pFieldExpr) override
     {
         std::stringstream code;
         code << gen(pFieldExpr->pField->pRecord) << ".";
@@ -1356,7 +1356,7 @@ private:
         return allocStr(code);
     }
 
-    virtual VarPtr visit(const ast::Indirection* pIndirection)
+    VarPtr visit(const ast::Indirection* pIndirection) override
     {
         auto expr = gen(pIndirection->pObject);
         std::stringstream code;
@@ -1642,14 +1642,14 @@ private:
         return code.str();
     }
 
-    virtual VarPtr visit(const ast::FuncCall* pFuncCall)
+    VarPtr visit(const ast::FuncCall* pFuncCall) override
     {
         std::stringstream code;
         code << _genCall(pFuncCall->pFunc, pFuncCall->pArguments, false);
         return allocStr(code);
     }
 
-    virtual VarPtr visit(const ast::Set* pSet)
+    VarPtr visit(const ast::Set* pSet) override
     {
         auto name = _genLocalName("_setLiteral");
 
@@ -1690,7 +1690,7 @@ private:
         return allocStr(name.c_str());
     }
 
-    virtual VarPtr visit(const ast::WriteArgExpr*)
+    VarPtr visit(const ast::WriteArgExpr*) override
     {
         // WriteArgExpr should only appear as an argument to the write intrinsics
         //
@@ -1698,12 +1698,12 @@ private:
         return VarPtr();
     }
 
-    virtual VarPtr visit(const ast::NopStm*)
+    VarPtr visit(const ast::NopStm*) override
     {
         return allocStr("{ /* NOP */ }\n");
     }
 
-    virtual VarPtr visit(const ast::CompoundStm* pCompoundStm)
+    VarPtr visit(const ast::CompoundStm* pCompoundStm) override
     {
         std::stringstream code;
 
@@ -1718,7 +1718,7 @@ private:
         return allocStr(code);
     }
 
-    virtual VarPtr visit(const ast::IfStm* pIfStm)
+    VarPtr visit(const ast::IfStm* pIfStm) override
     {
         auto condCode = gen(pIfStm->pCondition);
         auto thenCode = gen(pIfStm->pThenStm);
@@ -1737,7 +1737,7 @@ private:
         return allocStr(code);
     }
 
-    virtual VarPtr visit(const ast::CaseStm* pCaseStm)
+    VarPtr visit(const ast::CaseStm* pCaseStm) override
     {
         std::stringstream code;
 
@@ -1768,7 +1768,7 @@ private:
         return allocStr(code);
     }
 
-    virtual VarPtr visit(const ast::AssignStm* pAssignStm)
+    VarPtr visit(const ast::AssignStm* pAssignStm) override
     {
         std::stringstream code;
         code << gen(pAssignStm->pLValue) << " = ";
@@ -1776,7 +1776,7 @@ private:
         return allocStr(code);
     }
 
-    virtual VarPtr visit(const ast::WhileStm* pWhileStm)
+    VarPtr visit(const ast::WhileStm* pWhileStm) override
     {
         auto loopCode = gen(pWhileStm->pStm);
         auto condCode = gen(pWhileStm->pCondition);
@@ -1789,7 +1789,7 @@ private:
         return allocStr(code);
     }
 
-    virtual VarPtr visit(const ast::RepeatStm* pRepeatStm)
+    VarPtr visit(const ast::RepeatStm* pRepeatStm) override
     {
         auto loopCode = gen(pRepeatStm->pStm);
         auto condCode = gen(pRepeatStm->pCondition);
@@ -1802,7 +1802,7 @@ private:
         return allocStr(code);
     }
 
-    virtual VarPtr visit(const ast::ForStm* pForStm)
+    VarPtr visit(const ast::ForStm* pForStm) override
     {
         auto loopCode = gen(pForStm->pStm);
         auto startValue = gen(pForStm->pStartValue);
@@ -1820,7 +1820,7 @@ private:
         return allocStr(code);
     }
 
-    virtual VarPtr visit(const ast::GotoStm* pGotoStm)
+    VarPtr visit(const ast::GotoStm* pGotoStm) override
     {
         auto pExt = labelExt(pGotoStm->pTargetLabel);
         std::stringstream code;
@@ -1839,7 +1839,7 @@ private:
         return allocStr(code);
     }
 
-    virtual VarPtr visit(const ast::ProcCallStm* pProcCallStm)
+    VarPtr visit(const ast::ProcCallStm* pProcCallStm) override
     {
         std::stringstream code;
         code << _genCall(pProcCallStm->pProc, pProcCallStm->pArguments, true);
