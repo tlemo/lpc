@@ -1,0 +1,16 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 11: non-local goto
+  warning on line 20: non-local goto
+  warning on line 22: non-local goto
+
+0 error(s), 3 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = cpp)
+-----------------------------------------------------
+nonlocalGoto2.cpp
+
+P2 errcode = 0
