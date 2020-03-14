@@ -51,35 +51,23 @@ struct TypeExt
     //
     string genName;
 
-    // the IL type name (this can be a IL built-in type or
-    //  the same as genName for some defined types like structures and arrays)
+    // the LLVM IR type name
     //
-    string ilName;
-
-    // built-in CTS types have a short name when used as an instruction suffix
-    //
-    string suffix;
+    string irName;
 
     // the IL definition of the type
     // (can be empty if we map it to a built-in CLR type)
     //
     string def;
 
-    // the size and alignment in bytes
-    //
-    int size;
-    int alignment;
-
     // optional destructor/assignment helpers
     //
     string destructor;
     string assignment;
 
-    TypeExt() : size(-1), alignment(-1) {}
-
     // "non-trivial" types require explicit assign/destroy calls 
     // 
-    bool isTrivial() const
+    bool isTrivial() const // TODO: do we need this?
     {
         assert(destructor.empty() == assignment.empty());
         return destructor.empty();
@@ -383,20 +371,11 @@ string genQualifiedName(const obj::Subroutine* pSubroutine)
 //
 class TypeGen : public ts::Visitor
 {
-    // the size/alignment of a managed reference
-    // (we use 8 bytes to make thing run across 32/64bit platforms)
-    //
-    static const int REF_SIZE = 8;
-    static const int REF_ALIGNMENT = 8;
-
-    struct FieldsDef
+    struct FieldsDef // TODO: it's now just a string
     {
         string def;
-        int size;
-        int alignment;
 
-        FieldsDef(const string& def, int size, int alignment) :
-            def(def), size(size), alignment(alignment)
+        FieldsDef(const string& def) : def(def)
         {
         }
     };
@@ -410,73 +389,54 @@ public:
     void gen(ts::Type* pType)
     {
         assert(!ext(pType)->genName.empty());
-        assert(ext(pType)->ilName.empty());
+        assert(ext(pType)->irName.empty());
         assert(ext(pType)->def.empty());
         
         pType->accept(this);
         
-        assert(!ext(pType)->ilName.empty());
-        assert(ext(pType)->size >= 0);
-        assert(ext(pType)->alignment >= 0);
+        assert(!ext(pType)->irName.empty());
     }
 
 private:
     VarPtr visit(ts::VoidType* pType) override
     {
         auto pExt = ext(pType);
-        pExt->size = 0;
-        pExt->alignment = 0;
-        pExt->ilName = "void";
+        pExt->irName = "void";
         return VarPtr();
     }
 
     VarPtr visit(ts::IntegerType* pType) override
     {
         auto pExt = ext(pType);
-        pExt->size = 4;
-        pExt->alignment = 4;
-        pExt->ilName = "int32";
-        pExt->suffix = "i4";
+        pExt->irName = "int32";
         return VarPtr();
     }
 
     VarPtr visit(ts::CharType* pType) override
     {
         auto pExt = ext(pType);
-        pExt->size = 1;
-        pExt->alignment = 1;
-        pExt->ilName = "uint8";
-        pExt->suffix = "u1";
+        pExt->irName = "uint8";
         return VarPtr();
     }
 
     VarPtr visit(ts::BoolType* pType) override
     {
         auto pExt = ext(pType);
-        pExt->size = 1;
-        pExt->alignment = 1;
-        pExt->ilName = "bool";
-        pExt->suffix = "u1";
+        pExt->irName = "%bool";
         return VarPtr();
     }
 
     VarPtr visit(ts::RealType* pType) override
     {
         auto pExt = ext(pType);
-        pExt->size = 8;
-        pExt->alignment = 8;
-        pExt->ilName = "float64";
-        pExt->suffix = "r8";
+        pExt->irName = "double";
         return VarPtr();
     }
 
     VarPtr visit(ts::EnumType* pType) override
     {
         auto pExt = ext(pType);
-        pExt->size = 4;
-        pExt->alignment = 4;
-        pExt->ilName = "int32";
-        pExt->suffix = "i4";
+        pExt->irName = "int32";
         return VarPtr();
     }
 
@@ -489,9 +449,7 @@ private:
     VarPtr visit(ts::PointerType* pType) override
     {
         auto pExt = ext(pType);
-        pExt->size = REF_SIZE;
-        pExt->alignment = REF_ALIGNMENT;
-        pExt->ilName = "void*";
+        pExt->irName = "void*";
         return VarPtr();
     }
 
@@ -503,9 +461,7 @@ private:
         }
 
         auto pExt = ext(pType);
-        pExt->size = REF_SIZE;
-        pExt->alignment = REF_ALIGNMENT;
-        pExt->ilName = "valuetype [lpcRuntime]LPC.File";
+        pExt->irName = "valuetype [lpcRuntime]LPC.File";
         pExt->destructor = "File::Close()";
         pExt->assignment = "File::Assign(valuetype [lpcRuntime]LPC.File)";
         return VarPtr();
@@ -515,7 +471,7 @@ private:
     VarPtr visit(ts::RangeType* pType) override;
 
 private:
-    FieldsDef _fieldsDef(const ts::RecordFields* pFields, int offset = 0);
+    FieldsDef _fieldsDef(const ts::RecordFields* pFields);
 
 private:
     LlvmBackend* m_pBackend = nullptr;
@@ -775,7 +731,7 @@ private:
             for(auto& literal : m_stringLiterals)
             {
                 string value = literal.first;
-                string typeName = ext(literal.second.pType)->ilName;
+                string typeName = ext(literal.second.pType)->irName;
                 string name = literal.second.literalName;
                 string dataName = name + "_DATA";
 
@@ -807,9 +763,7 @@ private:
     {
         assert(pScope->category != Scope::scRecord);
 
-        // the CLR backend works post-order since it needs to emit 
-        // the nested routines as members of the current "frame" class
-        //
+        // TODO: review this
         if(!postOrder)
             return;
         
@@ -1056,7 +1010,7 @@ private:
         if(pType->isFunction())
         {
             _generateType(pType->returnType());
-            proto << ext(pType->returnType())->ilName << " ";
+            proto << ext(pType->returnType())->irName << " ";
         }
         else
             proto << "void ";
@@ -1077,7 +1031,7 @@ private:
             if(it != pParamList->begin())
                 proto << ", ";
 
-            proto << ext(it->pType)->ilName;
+            proto << ext(it->pType)->irName;
             if(it->byRef)
                 proto << "&";
             proto << " " << genSimpleName(it->pId->name);
@@ -1106,7 +1060,7 @@ private:
             auto pOverloadType = pVar->pInitializer->pType;
             _generateType(pOverloadType);
 
-            string overload = ext(pOverloadType)->ilName;
+            string overload = ext(pOverloadType)->irName;
 
             code << _genLValueAccess(new ast::VarExpr(pVar, pSubroutine->defLine));
 
@@ -1146,13 +1100,13 @@ private:
             if(it != m_tempVarList.begin())
                 code << ",";
 
-            code << "\n" << TAB << ext((*it)->pType)->ilName << " " << (*it)->name;
+            code << "\n" << TAB << ext((*it)->pType)->irName << " " << (*it)->name;
         }
 
         for(auto pParam : m_paramList)
         {
             if(pParam->byRef)
-                code << ",\n" << TAB << ext(pParam->pType)->ilName << "& pinned $" << ext(pParam)->genName;
+                code << ",\n" << TAB << ext(pParam->pType)->irName << "& pinned $" << ext(pParam)->genName;
         }
 
         code << ")\n";
@@ -1203,11 +1157,11 @@ private:
                 if(pTypeExt->isTrivial() || pParam->byRef)
                 {
                     code << "ldarg " << ext(pParam)->genName << "\n";
-                    code << "stfld " << pTypeExt->ilName << (pParam->byRef ? "* " : " ") << fieldName << "\n";
+                    code << "stfld " << pTypeExt->irName << (pParam->byRef ? "* " : " ") << fieldName << "\n";
                 }
                 else
                 {
-                    code << "ldflda " << pTypeExt->ilName << " " << fieldName << "\n";
+                    code << "ldflda " << pTypeExt->irName << " " << fieldName << "\n";
                     code << "ldarg " << ext(pParam)->genName << "\n";
                     code << "call instance void [lpcRuntime]LPC." << pTypeExt->assignment << "\n";
                 }
@@ -1512,31 +1466,16 @@ private:
         auto pSrcExt = ext(pSrcType);
         auto pDstExt = ext(pDstType);
 
-        assert(pDstExt->ilName != pSrcExt->ilName);
+        assert(pDstExt->irName != pSrcExt->irName);
 
         // prototype
         //
         stringstream proto;
-        proto << pDstExt->ilName << " _SetCastTo_" << pDstExt->genName << "(" << pSrcExt->ilName << " s)";
+        proto << pDstExt->irName << " _SetCastTo_" << pDstExt->genName << "(" << pSrcExt->irName << " s)";
 
         // body
         //
-        if(m_deferredHelpers.find(proto.str()) == m_deferredHelpers.end())
-        {
-            stringstream code;
-
-            code << "{\n";
-            code << TAB << ".locals init (" << ext(pDstType)->ilName << " result)\n\n";
-            code << TAB << "ldloca result\n";
-            code << TAB << "ldarga s\n";
-            code << TAB << "ldc.i4 " << min(pSrcExt->size, pDstExt->size) << "\n";
-            code << TAB << "cpblk\n";
-            code << TAB << "ldloc result\n";
-            code << TAB << "ret\n";
-            code << "}\n";
-
-            m_deferredHelpers[proto.str()] = code.str();
-        }
+        // TODO
 
         return proto.str();
     }
@@ -1546,7 +1485,7 @@ private:
     //
     string _genSetHelper(ts::Type* pType, string helper, bool isPredicate)
     {
-        string setName = ext(pType)->ilName;
+        string setName = ext(pType)->irName;
         string returnTypeName = isPredicate ? "bool" : setName;
 
         // prototype
@@ -1564,22 +1503,11 @@ private:
 
             if(isPredicate)
             {
-                code << TAB << "ldarga a\n";
-                code << TAB << "ldarga b\n";
-                code << TAB << "ldc.i4 " << ext(pType)->size << "\n";
-                code << TAB << "call bool [lpcRuntime]LPC.Set::" << helper << "(uint8*, uint8*, int32)\n";
-                code << TAB << "ret\n";
+                // TODO
             }
             else
             {
-                code << TAB << ".locals init (" << setName << " result)\n\n";
-                code << TAB << "ldarga a\n";
-                code << TAB << "ldarga b\n";
-                code << TAB << "ldloca result\n";
-                code << TAB << "ldc.i4 " << ext(pType)->size << "\n";
-                code << TAB << "call void [lpcRuntime]LPC.Set::" << helper << "(uint8*, uint8*, uint8*, int32)\n";
-                code << TAB << "ldloc result\n";
-                code << TAB << "ret\n";
+                // TODO
             }
 
             code << "}\n";
@@ -1597,7 +1525,7 @@ private:
         // prototype
         //
         stringstream proto;
-        proto << "bool _SetContains(" << ext(pType)->ilName << " s, int32 val)";
+        proto << "bool _SetContains(" << ext(pType)->irName << " s, int32 val)";
 
         // body
         //
@@ -1606,11 +1534,7 @@ private:
             stringstream code;
 
             code << "{\n";
-            code << TAB << "ldarga s\n";
-            code << TAB << "ldc.i4 " << ext(pType)->size << "\n";
-            code << TAB << "ldarg val\n";
-            code << TAB << "call bool [lpcRuntime]LPC.Set::Contains(uint8*, int32, int32)\n";
-            code << TAB << "ret\n";
+            // TODO
             code << "}\n";
 
             m_deferredHelpers[proto.str()] = code.str();
@@ -1626,7 +1550,7 @@ private:
         // prototype
         //
         stringstream proto;
-        proto << "void _SetCheck(" << ext(pType)->ilName << " s, int32 min, int32 max)";
+        proto << "void _SetCheck(" << ext(pType)->irName << " s, int32 min, int32 max)";
 
         // body
         //
@@ -1635,12 +1559,7 @@ private:
             stringstream code;
 
             code << "{\n";
-            code << TAB << "ldarga s\n";
-            code << TAB << "ldc.i4 " << ext(pType)->size << "\n";
-            code << TAB << "ldarg min\n";
-            code << TAB << "ldarg max\n";
-            code << TAB << "call void [lpcRuntime]LPC.Set::RTCheck(uint8*, int32, int32, int32)\n";
-            code << TAB << "ret\n";
+            // TODO
             code << "}\n";
 
             m_deferredHelpers[proto.str()] = code.str();
@@ -1657,7 +1576,7 @@ private:
         //
         if(pExt->genName.empty())
         {
-            pExt->genName = _genName(pType->typeId(), "T_", pType->scope());
+            pExt->genName = _genName(pType->typeId(), "@T_", pType->scope());
 
             TypeGen(this).gen(pType);
 
@@ -1734,7 +1653,7 @@ private:
 
         std::stringstream def;
 
-        def << ext(pParam->pType)->ilName;
+        def << ext(pParam->pType)->irName;
         if(pParam->byRef)
             def << "*";
         def << " " << pExt->genName << "\n";
@@ -1756,7 +1675,7 @@ private:
 
         std::stringstream def;
 
-        def << ext(pVar->pType)->ilName << " " << pExt->genName << "\n";
+        def << ext(pVar->pType)->irName << " " << pExt->genName << "\n";
 
         assert(pExt->def.empty());
         pExt->def = def.str();
@@ -1793,7 +1712,7 @@ private:
                 m_stringLiterals.insert(make_pair(value, StringLiteral{ pConstExpr->pType, name }));
             }
 
-            code << TAB << "ldsfld " << ext(pConstExpr->pType)->ilName << " " << name;
+            code << TAB << "ldsfld " << ext(pConstExpr->pType)->irName << " " << name;
             code << TAB << "// \"" << genStrLiteral(value) << "\"\n";
         }
         else
@@ -1856,7 +1775,7 @@ private:
     {
         _generateType(pType);
 
-        string typeName = ext(pType)->ilName;
+        string typeName = ext(pType)->irName;
 
         // since we're generating scopes in post-order
         // the variables from parents may not be generated yet
@@ -1925,7 +1844,7 @@ private:
         if(pParam->byRef)
         {
             code << _genLocalAccess(pParam->pId->name, pParam->pScope, pParam->pType, AccessType::LoadByRef);
-            code << TAB << "ldobj " << ext(pParam->pType)->ilName << "\n";
+            code << TAB << "ldobj " << ext(pParam->pType)->irName << "\n";
         }
         else
         {
@@ -2024,7 +1943,7 @@ private:
 
             // no need for a cast if the underlaying implementation is the same
             //
-            if(ext(pSrcType)->ilName != ext(pDstType)->ilName)
+            if(ext(pSrcType)->irName != ext(pDstType)->irName)
             {
                 code << TAB << "call " << _genSetCast(pSrcType, pDstType) << "\n";
             }
@@ -2290,10 +2209,10 @@ private:
         code << gen(pArrayIndex->pIndex);
 
         code << TAB << "call instance " <<
-            ext(pElemType)->ilName << "& " <<
+            ext(pElemType)->irName << "& " <<
             ext(pArrayType)->genName << "::ldadr(int32)\n";
 
-        code << TAB << "ldobj " << ext(pElemType)->ilName << "\n";
+        code << TAB << "ldobj " << ext(pElemType)->irName << "\n";
 
         return allocStr(code);
     }
@@ -2309,7 +2228,7 @@ private:
         _generateType(pFieldType);
         _generateType(pRecordType);
 
-        auto typeName = ext(pFieldType)->ilName;
+        auto typeName = ext(pFieldType)->irName;
         auto fieldId = genSimpleName(pFieldUse->pField->pId->name);
         auto fieldName = ext(pRecordType)->genName + "::" + fieldId;
 
@@ -2329,7 +2248,7 @@ private:
 
         stringstream code;
         code << _genLValueAccess(pIndirection, nullptr);
-        code << TAB << "ldobj " << ext(pType)->ilName << "\n";
+        code << TAB << "ldobj " << ext(pType)->irName << "\n";
         return allocStr(code);
     }
 
@@ -2356,7 +2275,7 @@ private:
 
             auto pType = pLValue->pType;
             auto pExt = ext(pType);
-            string overload = pExt->ilName + "*";
+            string overload = pExt->irName + "*";
 
             // string type?
             //
@@ -3503,7 +3422,7 @@ private:
                 if(pRValue != nullptr)
                 {
                     code << gen(pRValue);
-                    code << TAB << "stobj " << ext(pParam->pType)->ilName << "\n";
+                    code << TAB << "stobj " << ext(pParam->pType)->irName << "\n";
                 }
             }
             else
@@ -3548,7 +3467,7 @@ private:
                 _generateType(pType);
 
                 code << gen(pRValue);
-                code << TAB << "stobj " << ext(pType)->ilName << "\n";
+                code << TAB << "stobj " << ext(pType)->irName << "\n";
             }
         }
         // array element?
@@ -3571,13 +3490,13 @@ private:
             code << gen(pArrayIndex->pIndex);
 
             code << TAB << "call instance " <<
-                ext(pElemType)->ilName << "& " <<
+                ext(pElemType)->irName << "& " <<
                 ext(pArrayType)->genName << "::ldadr(int32)\n";
 
             if(pRValue != nullptr)
             {
                 code << gen(pRValue);
-                code << TAB << "stobj " << ext(pElemType)->ilName << "\n";
+                code << TAB << "stobj " << ext(pElemType)->irName << "\n";
             }
         }
         // field?
@@ -3594,7 +3513,7 @@ private:
             _generateType(pFieldType);
             _generateType(pRecordType);
 
-            auto typeName = ext(pFieldType)->ilName;
+            auto typeName = ext(pFieldType)->irName;
             auto fieldId = genSimpleName(pFieldDst->pField->pId->name);
             auto fieldName = ext(pRecordType)->genName + "::" + fieldId;
 
@@ -3731,7 +3650,7 @@ private:
             {
                 code << _genLocalAccess(pParam->pId->name, pParam->pScope, pParam->pType, AccessType::LoadByRef);
                 code << TAB << "ldloc " << pIndexValueTmp->name << "\n";
-                code << TAB << "stobj " << ext(pParam->pType)->ilName << "\n";
+                code << TAB << "stobj " << ext(pParam->pType)->irName << "\n";
             }
             else
             {
@@ -3863,7 +3782,8 @@ private:
         _generateType(pType);
 
         stringstream code;
-        code << TAB << "ldc.i4 " << ext(pType)->size << "\n";
+        // TODO - sizeof() definition in llvm
+        //code << TAB << "ldc.i4 " << ext(pType)->size << "\n";
         code << TAB << "call void* [lpcRuntime]LPC.Heap::Malloc(int32)\n";
         return allocStr(code);
     }

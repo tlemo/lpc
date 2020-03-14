@@ -43,36 +43,10 @@ VarPtr NewObjExpr::accept(ast::Visitor* pVisitor) const
 
 ///////////////////////////////////////////////////////////////////////////////
 //
-// compute LCM(a, b) = (a * b) / GCD(a, b)
-//
-static
-int LCM(int a, int b)
-{
-    assert(a > 0 && b > 0);
-
-    const int p = a * b;
-
-    // compute GCD
-    //
-    while(b > 0)
-    {
-        const int tmp = b;
-        b = a % b;
-        a = tmp;
-    }
-
-    assert(p % a == 0);
-    return p / a;
-}
-
-
-///////////////////////////////////////////////////////////////////////////////
-//
 // the recursive helper for generating "record" definitions
 //
-TypeGen::FieldsDef TypeGen::_fieldsDef(const ts::RecordFields* pFields, int offset)
+TypeGen::FieldsDef TypeGen::_fieldsDef(const ts::RecordFields* pFields)
 {
-    int alignment = 1;
     stringstream def;
 
     // add field helper
@@ -81,24 +55,12 @@ TypeGen::FieldsDef TypeGen::_fieldsDef(const ts::RecordFields* pFields, int offs
     {
         auto pExt = ext(pType);
 
-        assert(pExt->size > 0);
-        assert(pExt->alignment > 0);
-        assert(!pExt->ilName.empty());
+        assert(!pExt->irName.empty());
 
-        // align the offset
-        //
-        offset += pExt->alignment - 1;
-        offset -= offset % pExt->alignment;
-
-        def << ".field [" << offset << "] public ";
-        def << pExt->ilName << " ";
+        // TODO
+        def << ".field public ";
+        def << pExt->irName << " ";
         def << genSimpleName(pId->name) << "\n";
-
-        offset += pExt->size;
-
-        // update the alignment
-        //
-        alignment = LCM(alignment, pExt->alignment);
     };
 
     // fixed fields
@@ -133,8 +95,6 @@ TypeGen::FieldsDef TypeGen::_fieldsDef(const ts::RecordFields* pFields, int offs
             addField(pSelField->pId, pSelField->pType);
         }
 
-        int varFieldsSize = 0;
-
         for (const auto& variantSection : *pFields->pVariableFields->pVariantFields)
         {
             def << "\n";
@@ -159,18 +119,13 @@ TypeGen::FieldsDef TypeGen::_fieldsDef(const ts::RecordFields* pFields, int offs
                 }
             }
 
-            auto varFieldsDef = _fieldsDef(variantSection->pFields, offset);
+            auto varFieldsDef = _fieldsDef(variantSection->pFields);
             
             def << indentBlock(varFieldsDef.def);
-
-            varFieldsSize = max(varFieldsSize, varFieldsDef.size);
-            alignment = LCM(alignment, varFieldsDef.alignment);
         }
-
-        offset += varFieldsSize;
     }
 
-    return FieldsDef(def.str(), offset, alignment);
+    return FieldsDef(def.str());
 }
 
 
@@ -185,36 +140,13 @@ VarPtr TypeGen::visit(ts::RecordType* pType)
     def << "\n" << genLine(HIDDEN_CODE, m_pBackend->emitDebugInfo()) << "\n";
     def << "// TYPE " << pType->typeId() << " = record;\n";
     def << ".class value explicit " << pExt->genName << "\n{\n";
-    def << TAB << "// alignment = " << fieldsDef.alignment << "\n";
-    def << TAB << ".size " << fieldsDef.size << "\n";
     def << indentBlock(fieldsDef.def);
     def << "}\n";
 
     pExt->def = def.str();
-    pExt->ilName = "valuetype " + pExt->genName;
-    pExt->size = fieldsDef.size;
-    pExt->alignment = fieldsDef.alignment;
+    pExt->irName = "valuetype " + pExt->genName;
 
     return VarPtr();
-}
-
-
-///////////////////////////////////////////////////////////////////////////////
-//
-// calculate an array element size taking the alignment of the element into account
-// (size must be a multiple of the alignment)
-//
-static
-int arrayElemSize(ts::Type* pType)
-{
-    auto pExt = ext(pType);
-    int size = pExt->size;
-    int align = pExt->alignment;
-
-    assert(size > 0);
-    assert(align > 0);
-
-    return (size + (align - 1)) / align * align;
 }
 
 
@@ -251,7 +183,7 @@ string arrayLdadrMethod(ts::Type* pElemType, ts::Type* pIndexType)
 {
     stringstream code;
 
-    code << ".method public " << ext(pElemType)->ilName << "& ldadr(int32 index)\n";
+    code << ".method public " << ext(pElemType)->irName << "& ldadr(int32 index)\n";
     code << "{\n";
 
     code << TAB << "// check(index >= " << pIndexType->minValue() << ")\n";
@@ -273,13 +205,7 @@ string arrayLdadrMethod(ts::Type* pElemType, ts::Type* pIndexType)
         code << TAB << "sub\n";
     }
 
-    auto elemSize = arrayElemSize(pElemType);
-
-    if(elemSize != 1)
-    {
-        code << TAB << "ldc.i4 " << elemSize << "\n";
-        code << TAB << "mul\n";
-    }
+    // TODO
 
     code << TAB << "add\n";
     code << TAB << "ret\n\n";
@@ -308,23 +234,15 @@ VarPtr TypeGen::visit(ts::ArrayType* pType)
 
     auto minValue = pIndexType->minValue();
     auto maxValue = pIndexType->maxValue();
-    auto count = maxValue - minValue + 1;
-    auto elemSize = arrayElemSize(pElemType);
-    assert(elemSize > 0);
+    //auto count = maxValue - minValue + 1; TODO
     
-    pExt->size = count * elemSize;
-    pExt->alignment = pElemExt->alignment;
-
     // did we already generate an identical array wrapper?
     //
-    if(auto pOrigExt = m_pBackend->_findArrayType(pElemExt->ilName, minValue, maxValue))
+    if(auto pOrigExt = m_pBackend->_findArrayType(pElemExt->irName, minValue, maxValue))
     {
         assert(pExt->def.empty());
-        assert(pExt->size == pOrigExt->size);
-        assert(pExt->alignment == pOrigExt->alignment);
-
         pExt->genName = pOrigExt->genName;
-        pExt->ilName = pOrigExt->ilName;
+        pExt->irName = pOrigExt->irName;
         return VarPtr();
     }
 
@@ -335,14 +253,10 @@ VarPtr TypeGen::visit(ts::ArrayType* pType)
     def << "\n" << genLine(HIDDEN_CODE, m_pBackend->emitDebugInfo()) << "\n";
     def << "// TYPE " << pType->typeId() << " = ";
     def << "array [" << minValue << " .. " << maxValue << "] of ";
-    def << pElemExt->ilName << ";\n";
+    def << pElemExt->irName << ";\n";
 
     def << ".class value explicit " << pExt->genName << "\n{\n";
-    def << TAB << "// elem size = " << elemSize << "\n";
-    def << TAB << "// alignment = " << pExt->alignment << "\n";
-    def << TAB << ".size " << pExt->size   << "\n\n";
-
-    def << TAB << ".field [0] public " << pElemExt->ilName << " elem\n\n";
+    def << TAB << ".field [0] public " << pElemExt->irName << " elem\n\n";
 
     def << indentBlock(arrayLdadrMethod(pElemType, pIndexType));
 
@@ -355,9 +269,9 @@ VarPtr TypeGen::visit(ts::ArrayType* pType)
     def << "}\n";
 
     pExt->def = def.str();
-    pExt->ilName = "valuetype " + pExt->genName;
+    pExt->irName = "valuetype " + pExt->genName;
 
-    m_pBackend->_cacheArrayType(pElemExt->ilName, minValue, maxValue, pExt);
+    m_pBackend->_cacheArrayType(pElemExt->irName, minValue, maxValue, pExt);
 
     return VarPtr();
 }
@@ -500,8 +414,8 @@ VarPtr TypeGen::visit(ts::SetType* pType)
 {
     auto pExt = ext(pType);
 
-    int minValue = pType->minValue();
-    int maxValue = pType->maxValue();
+    const int minValue = pType->minValue();
+    const int maxValue = pType->maxValue();
     assert(minValue <= maxValue);
     assert(minValue >= 0);
     assert(maxValue < 256);
@@ -512,19 +426,13 @@ VarPtr TypeGen::visit(ts::SetType* pType)
     const int count = maxValue + 1;
     const int units = (count + 31) / 32; 
 
-    pExt->size = units * 4;
-    pExt->alignment = 4;
-
     // did we already generate an identical set wrapper?
     //
     if(auto pOrigExt = m_pBackend->_findSetType(minValue, maxValue))
     {
         assert(pExt->def.empty());
-        assert(pExt->size == pOrigExt->size);
-        assert(pExt->alignment == pOrigExt->alignment);
-
         pExt->genName = pOrigExt->genName;
-        pExt->ilName = pOrigExt->ilName;
+        pExt->irName = pOrigExt->irName;
         return VarPtr();
     }
 
@@ -548,12 +456,12 @@ VarPtr TypeGen::visit(ts::SetType* pType)
     //
     def << "\n" << indentBlock(setAddValueMethod(minValue, maxValue));
     def << "\n" << indentBlock(setAddRangeMethod(pExt->genName));
-    def << "\n" << indentBlock(setClearMethod(pExt->size));
+    def << "\n" << indentBlock(setClearMethod(1)); // TODO size
 
     def << "}\n";
 
     pExt->def = def.str();
-    pExt->ilName = "valuetype " + pExt->genName;
+    pExt->irName = "valuetype " + pExt->genName;
 
     m_pBackend->_cacheSetType(minValue, maxValue, pExt);
 
@@ -566,8 +474,6 @@ VarPtr TypeGen::visit(ts::SetType* pType)
 VarPtr TypeGen::visit(ts::SubroutineType* pType)
 {
     auto pExt = ext(pType);
-    pExt->size = REF_SIZE;
-    pExt->alignment = REF_ALIGNMENT;
 
     stringstream def;
     
@@ -582,7 +488,7 @@ VarPtr TypeGen::visit(ts::SubroutineType* pType)
     def << "}\n";
 
     pExt->def = def.str();
-    pExt->ilName = "class " + pExt->genName;
+    pExt->irName = "class " + pExt->genName;
 
     return VarPtr();
 }
@@ -606,47 +512,29 @@ VarPtr TypeGen::visit(ts::RangeType* pType)
 {
     auto pExt = ext(pType);
 
-    if(pType->baseType()->isChar())
+    if(pType->baseType()->isChar()) // TODO: review the unsigned variants
     {
-        pExt->alignment = 1;
-        pExt->size = 1;
-        pExt->ilName = "uint8";
-        pExt->suffix = "u1";
+        pExt->irName = "int8";
     }
     else if(_fits<signed __int8>(pType))
     {
-        pExt->alignment = 1;
-        pExt->size = 1;
-        pExt->ilName = "int8";
-        pExt->suffix = "i1";
+        pExt->irName = "int8";
     }
     else if(_fits<unsigned __int8>(pType))
     {
-        pExt->alignment = 1;
-        pExt->size = 1;
-        pExt->ilName = "uint8";
-        pExt->suffix = "u1";
+        pExt->irName = "int8";
     }
     else if(_fits<signed __int16>(pType))
     {
-        pExt->alignment = 2;
-        pExt->size = 2;
-        pExt->ilName = "int16";
-        pExt->suffix = "i2";
+        pExt->irName = "int16";
     }
     else if(_fits<unsigned __int16>(pType))
     {
-        pExt->alignment = 2;
-        pExt->size = 2;
-        pExt->ilName = "uint16";
-        pExt->suffix = "u2";
+        pExt->irName = "uint16";
     }
     else
     {
-        pExt->alignment = 4;
-        pExt->size = 4;
-        pExt->ilName = "int32";
-        pExt->suffix = "i4";
+        pExt->irName = "int32";
     }
 
     return VarPtr();
