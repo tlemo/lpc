@@ -590,6 +590,8 @@ VarPtr TypeGen::visit(ts::SubroutineType* pType)
 
 ///////////////////////////////////////////////////////////////////////////////
 //
+// returns true if the range type can fit into T (which should be an integral type)
+//
 template<typename T>
 bool _fits(const ts::RangeType* pType)
 {
