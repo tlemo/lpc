@@ -47,7 +47,14 @@ class LlvmBackend;
 //
 struct TypeExt
 {
+    // type name (it may be one of the LLVM built-in type names)
+    //
     string genName;
+
+    // the LLVM IR definition of the type
+    // (may be empty if it maps to a built-in type)
+    //
+    string def;
 };
 
 struct ConstExt
@@ -68,7 +75,7 @@ struct ParamExt
 struct SubroutineExt
 {
     string genName;
-    string code;
+    string frameName;
 };
 
 struct ScopeExt
@@ -123,9 +130,9 @@ string genBlock(const string& str)
 //
 constexpr int HIDDEN_CODE = 0xfeefee;
 
-// generates a .line directive
+// outputs a line # comment
 inline
-string genLine(int line, bool usePragma)
+string genLine(int line)
 {
     if(line == -1)
         line = 0;
@@ -197,7 +204,7 @@ string genScopeName(Scope* pScope)
 // a type definition generator
 //
 // NOTE: this implementation of the ts::Visitor doesn't use the return value
-//  from the "visit()" methods
+//  from the "visit()" methods (it sets the appropriate TypeExt fields instead)
 //
 class TypeGen : public ts::Visitor
 {
@@ -207,51 +214,42 @@ public:
     }
 
 public:
-    void gen(ts::Type* pType)
-    {
-        pType->accept(this);
-    }
+    void gen(ts::Type* pType);
 
 private:
     VarPtr visit(ts::VoidType* pType) override
     {
-        auto pExt = ext(pType);
-        // TODO
+        ext(pType)->def = "void";
         return VarPtr();
     }
 
     VarPtr visit(ts::IntegerType* pType) override
     {
-        auto pExt = ext(pType);
-        // TODO
+        ext(pType)->def = "i32";
         return VarPtr();
     }
 
     VarPtr visit(ts::CharType* pType) override
     {
-        auto pExt = ext(pType);
-        // TODO
+        ext(pType)->def = "i8";
         return VarPtr();
     }
 
     VarPtr visit(ts::BoolType* pType) override
     {
-        auto pExt = ext(pType);
-        // TODO
+        ext(pType)->def = "i1";
         return VarPtr();
     }
 
     VarPtr visit(ts::RealType* pType) override
     {
-        auto pExt = ext(pType);
-        // TODO
+        ext(pType)->def = "double";
         return VarPtr();
     }
 
     VarPtr visit(ts::EnumType* pType) override
     {
-        auto pExt = ext(pType);
-        // TODO
+        ext(pType)->def = "i32";
         return VarPtr();
     }
 
@@ -272,8 +270,16 @@ private:
 //
 class LlvmBackend : public Backend, public ast::Visitor
 {
+    friend class TypeGen;
+
 private:
     Scope* m_pCurrentScope = nullptr;
+
+    // per scope state
+    //
+    ts::TypeList m_typeList;
+    obj::VarList m_varList;
+    obj::ParamList m_paramList;
 
 public:
     LlvmBackend() = default;
@@ -302,10 +308,24 @@ private:
             friendlyName.c_str(), pScope->level);
         
         stringstream code;
-        code << "\n" << genLine(m_pCurrentScope->line, emitDebugInfo());
+        code << "\n" << genLine(m_pCurrentScope->line);
         code << ";================================================================================\n";
         code << "; scope: " << friendlyName << " (level : " << m_pCurrentScope->level << ")\n";
         write(code);
+    }
+
+    // generates a identifier annotated name for code generation
+    // ( the format pattern is : [prefix][scopeName]idName )
+    //
+    string _genName(const string& idName, const string& prefix, Scope* pScope = nullptr) const
+    {
+        string scopeName = genScopeName(nullptr != pScope ? pScope : m_pCurrentScope);
+
+        return scopeName.empty() ?
+            prefix + idName :
+            (idName.empty() ? 
+                prefix + scopeName :
+                prefix + scopeName + "_" + idName);
     }
 
     // a friendly wrapper around the AST visitor pattern
@@ -325,7 +345,7 @@ private:
         // (line number and optional label)
         //
         if(NO_LOCATION != pStm->line)
-            code << TAB << genLine(pStm->line, emitDebugInfo());
+            code << TAB << genLine(pStm->line);
 
         if(nullptr != pStm->pLabel)
         {
@@ -362,13 +382,16 @@ private:
     {
         assert(pScope->category != Scope::scRecord);
 
-        if(!postOrder)
+        if(postOrder)
             return;
         
         _setCurrentScope(pScope);
 
         // reset per-function state
         //
+        m_typeList.clear();
+        m_varList.clear();
+        m_paramList.clear();
         // TODO
 
         // generate symbols (types, consts, locals...)
@@ -402,13 +425,16 @@ private:
         //
         // TODO
 
-        // generate the subroutine body
+        _outputTypes();
+
+        // generate the subroutine definition
+        // (including the activation record)
         //
         if(pScope->category == Scope::scProgram ||
             pScope->category == Scope::scSubroutine)
         {
             assert(pScope->pSubroutine->pScope == pScope);
-            _genSubroutine(pScope->pSubroutine);
+            _outputSubroutine(pScope->pSubroutine);
         }
     }
 
@@ -454,41 +480,107 @@ private:
         return proto.str();
     }
 
-    void _genSubroutine(obj::Subroutine* pSubroutine)
+    void _outputFrame(obj::Subroutine* pSubroutine)
     {
-        stringstream code;
-
-        auto pExt = ext(pSubroutine);
-        assert(pExt->genName.empty());
-        assert(pExt->code.empty());
+        std::stringstream code;
 
         if(pSubroutine->pScope->category == Scope::scProgram)
-            pExt->genName = "@Program";
+        {
+            assert(m_paramList.empty());
+            assert(!pSubroutine->hasSlink());
+
+            code << "\n; program variables\n";
+            for (const auto pVar : m_varList)
+            {
+                code << ext(pVar)->genName << " = dso_local global " <<
+                    ext(pVar->pType)->genName << " zeroinitializer\n";
+            }
+        }
         else
-            pExt->genName = pSubroutine->pId->name;
-        
-        // generate the body, which may update
-        // backend global state as well
-        //
-        auto body = gen(pSubroutine->pBody);
+        {
+            /* TODO
+            auto pExt = ext(pSubroutine);
 
-        // prototype
-        //
-        code << "define " << _genPrototype(pSubroutine->pType, pExt->genName) << "\n";
+            assert(pExt->frameName.empty());
+            pExt->frameName = _genName("", "%Frame_");
 
-        // body
-        //
-        code << "{\n";
+            code << "\n; activation record\n";
+            code << pExt->frameName << " = type\n{\n";
+
+            if(pSubroutine->hasSlink())
+            {
+                auto* pParentExt = subroutineExt(pSubroutine->parent());
+                assert(!pParentExt->frameName.empty());
+                code << "\n   " << pParentExt->frameName << "* _slink;\n";
+            }
+
+            if(!m_paramMap.empty())
+            {
+                // NOTE: we have to make sure the parameters are generated
+                //   in the exact order to allow initializer lists for frame
+                //
+                // CONSIDER: this could be simplified by refactoring the
+                //   ts::ParamList and obj::ParamList and related data structures
+                //
+                code << "\n    // parameters\n";
+                auto pType = pSubroutine->pType;
+                auto pParamList = pType->paramList();
+                for(auto it = pParamList->begin(); it != pParamList->end(); ++it)
+                {
+                    auto pParam = m_paramMap[it->pId->name];
+                    code << "    " << paramExt(pParam)->code;
+                }
+            }
+
+            if(!m_varList.empty())
+            {
+                code << "\n    // locals\n";
+                for(auto it = m_varList.begin(); it != m_varList.end(); ++it)
+                    code << "    " << varExt(*it)->code;
+            }
+
+            code << "};\n";
+            */
+        }
+
+        write(code);
+    }
+
+    void _outputSubroutine(obj::Subroutine* pSubroutine)
+    {
+        _outputFrame(pSubroutine);
+
         // TODO
-        code << "}\n";
+    }
 
-        pExt->code = code.str();
+    void _outputTypes()
+    {
+        std::stringstream code;
+
+        code << "\n; types\n";
+
+        for (auto pType : m_typeList)
+        {
+            const auto pExt = ext(pType);
+            code << pExt->genName << " = type " << pExt->def << "\n";
+        }
+
+        write(code);
     }
 
     void _generateType(ts::Type* pType)
     {
         auto pExt = ext(pType);
-        // TODO
+
+        // if it has a name we can assume it's been already generated
+        //
+        if(pExt->genName.empty())
+        {
+            TypeGen(this).gen(pType);
+            assert(!pExt->genName.empty());
+            assert(!pExt->def.empty());
+            m_typeList.push_back(pType);
+        }
     }
 
     void _generateLabel(obj::Label* pLabel)
@@ -513,6 +605,8 @@ private:
 
         auto pExt = ext(pParam);
         // TODO
+
+        m_paramList.push_back(pParam);
     }
 
     void _generateVar(const string& idName, obj::Variable* pVar)
@@ -520,7 +614,10 @@ private:
         _generateType(pVar->pType);
 
         auto pExt = ext(pVar);
-        // TODO
+        assert(pExt->genName.empty());
+        pExt->genName = "@" + idName;
+
+        m_varList.push_back(pVar);
     }
 
     // AST visitor interface

@@ -80,6 +80,9 @@ def clrVerifyCmd(exeName):
     options = r' -nologo -il -ignore=@.peverify.ignore '
     return cmd + options + exeName
     
+def llvmBuildCmd(p2Source, exeName):
+    return f'llc -O3 --frame-pointer=all -filetype=obj {p2Source}'
+    
 targetDef = {
     'cpp' :
     {
@@ -94,6 +97,14 @@ targetDef = {
         'p2ext' : '.il',
         'p2cmd' : clrBuildCmd,
         'verifyCmd' : clrVerifyCmd,
+    },
+    
+    'llvm' :
+    {
+        'outDir' : 'out.llvm',
+        'p2ext' : '.ll',
+        'p2cmd' : llvmBuildCmd,
+        # TODO: verify cmd
     },
 }
 

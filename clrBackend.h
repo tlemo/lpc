@@ -379,7 +379,7 @@ string genQualifiedName(const obj::Subroutine* pSubroutine)
 // a type definition generator
 //
 // NOTE: this implementation of the ts::Visitor doesn't use the return value
-//  from the "visit()" methods
+//  from the "visit()" methods (it sets the appropriate TypeExt fields instead)
 //
 class TypeGen : public ts::Visitor
 {
@@ -1653,7 +1653,7 @@ private:
     {
         auto pExt = ext(pType);
 
-        // if it has a name we can assume it's been generated
+        // if it has a name we can assume it's been already generated
         //
         if(pExt->genName.empty())
         {

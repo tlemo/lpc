@@ -26,10 +26,20 @@ namespace llvm
 
 ///////////////////////////////////////////////////////////////////////////////
 //
-VarPtr TypeGen::visit(ts::SetType* pType)
+void TypeGen::gen(ts::Type* pType)
 {
     auto pExt = ext(pType);
+    assert(pExt->genName.empty());
+    pExt->genName = m_pBackend->_genName(pType->typeId(), "%T_");
+    pType->accept(this);
+}
+
+///////////////////////////////////////////////////////////////////////////////
+//
+VarPtr TypeGen::visit(ts::SetType* pType)
+{
     // TODO
+    ext(pType)->def = "<set>";
     return VarPtr();
 }
 
@@ -38,8 +48,8 @@ VarPtr TypeGen::visit(ts::SetType* pType)
 //
 VarPtr TypeGen::visit(ts::RecordType* pType)
 {
-    auto pExt = ext(pType);
     // TODO
+    ext(pType)->def = "<record>";
     return VarPtr();
 }
 
@@ -48,8 +58,8 @@ VarPtr TypeGen::visit(ts::RecordType* pType)
 //
 VarPtr TypeGen::visit(ts::ArrayType* pType)
 {
-    auto pExt = ext(pType);
     // TODO
+    ext(pType)->def = "<array>";
     return VarPtr();
 }
 
@@ -58,8 +68,16 @@ VarPtr TypeGen::visit(ts::ArrayType* pType)
 //
 VarPtr TypeGen::visit(ts::PointerType* pType)
 {
-    auto pExt = ext(pType);
-    // TODO
+    const auto pBaseType = pType->baseType();
+    m_pBackend->_generateType(pBaseType);
+
+    stringstream def;
+    if (pBaseType->isVoid())
+        def << "i8*";
+    else
+        def << ext(pBaseType)->genName << "*";
+    ext(pType)->def = def.str();
+
     return VarPtr();
 }
 
@@ -68,8 +86,8 @@ VarPtr TypeGen::visit(ts::PointerType* pType)
 //
 VarPtr TypeGen::visit(ts::FileType* pType)
 {
-    auto pExt = ext(pType);
     // TODO
+    ext(pType)->def = "<file>";
     return VarPtr();
 }
 
@@ -78,8 +96,8 @@ VarPtr TypeGen::visit(ts::FileType* pType)
 //
 VarPtr TypeGen::visit(ts::SubroutineType* pType)
 {
-    auto pExt = ext(pType);
     // TODO
+    ext(pType)->def = "<subroutine>";
     return VarPtr();
 }
 
@@ -88,8 +106,8 @@ VarPtr TypeGen::visit(ts::SubroutineType* pType)
 //
 VarPtr TypeGen::visit(ts::RangeType* pType)
 {
-    auto pExt = ext(pType);
     // TODO
+    ext(pType)->def = "<range>";
     return VarPtr();
 }
 

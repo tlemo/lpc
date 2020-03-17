@@ -61,6 +61,7 @@ public:
     VarPtr ext;
 
 public:
+    virtual bool isVoid() const { return false; }
     virtual bool isPOD() const { return false; }
     virtual bool isOrdinal() const { return false; }
     virtual bool isInteger() const { return false; }
@@ -201,6 +202,7 @@ public:
     DummyType(int line) : Type(nullptr, line) {}
 
 public:
+    virtual bool isVoid() const { return true; }
     virtual bool isPOD() const { return true; }
     virtual bool isOrdinal() const { return true; }
     virtual bool isInteger() const { return true; }
@@ -231,6 +233,8 @@ class VoidType : public Type
 {
 public:
     VoidType() : Type(nullptr, PREDEFINED_LOCATION) {}
+
+    virtual bool isVoid() const { return true; }
     virtual VarPtr accept(Visitor* pVisitor);
     virtual std::string typeDef() const { return "void"; }
 };

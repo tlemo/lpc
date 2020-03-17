@@ -423,7 +423,7 @@ private:
     }
 
     // generates a identifier annotated name for code generation
-    // ( generic format is : [prefix][scopeName]idName )
+    // ( the format pattern is : [prefix][scopeName]idName )
     //
     string _genName(const string& idName, const string& prefix, Scope* pScope = nullptr) const
     {
@@ -542,7 +542,8 @@ private:
         //
         _outputSymbols();
 
-        // generate the subroutine body
+        // generate the subroutine definition
+        // (including the activation record)
         //
         if(pScope->category == Scope::scProgram ||
             pScope->category == Scope::scSubroutine)
