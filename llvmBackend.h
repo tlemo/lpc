@@ -219,37 +219,37 @@ public:
 private:
     VarPtr visit(ts::VoidType* pType) override
     {
-        ext(pType)->def = "void";
+        ext(pType)->genName = "void";
         return VarPtr();
     }
 
     VarPtr visit(ts::IntegerType* pType) override
     {
-        ext(pType)->def = "i32";
+        ext(pType)->genName = "i32";
         return VarPtr();
     }
 
     VarPtr visit(ts::CharType* pType) override
     {
-        ext(pType)->def = "i8";
+        ext(pType)->genName = "i8";
         return VarPtr();
     }
 
     VarPtr visit(ts::BoolType* pType) override
     {
-        ext(pType)->def = "i1";
+        ext(pType)->genName = "%bool";
         return VarPtr();
     }
 
     VarPtr visit(ts::RealType* pType) override
     {
-        ext(pType)->def = "double";
+        ext(pType)->genName = "double";
         return VarPtr();
     }
 
     VarPtr visit(ts::EnumType* pType) override
     {
-        ext(pType)->def = "i32";
+        ext(pType)->genName = "i32";
         return VarPtr();
     }
 
@@ -578,8 +578,9 @@ private:
         {
             TypeGen(this).gen(pType);
             assert(!pExt->genName.empty());
-            assert(!pExt->def.empty());
-            m_typeList.push_back(pType);
+
+            if(!pExt->def.empty())
+                m_typeList.push_back(pType);
         }
     }
 

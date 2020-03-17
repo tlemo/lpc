@@ -30,7 +30,11 @@ void TypeGen::gen(ts::Type* pType)
 {
     auto pExt = ext(pType);
     assert(pExt->genName.empty());
+    
+    // types may override this generic name
+    //
     pExt->genName = m_pBackend->_genName(pType->typeId(), "%T_");
+
     pType->accept(this);
 }
 
