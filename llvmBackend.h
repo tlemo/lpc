@@ -434,6 +434,7 @@ private:
             pScope->category == Scope::scSubroutine)
         {
             assert(pScope->pSubroutine->pScope == pScope);
+            _outputFrame(pScope->pSubroutine);
             _outputSubroutine(pScope->pSubroutine);
         }
     }
@@ -548,13 +549,14 @@ private:
 
     void _outputSubroutine(obj::Subroutine* pSubroutine)
     {
-        _outputFrame(pSubroutine);
-
         // TODO
     }
 
     void _outputTypes()
     {
+        if (m_typeList.empty())
+            return;
+
         std::stringstream code;
 
         code << "\n; types\n";

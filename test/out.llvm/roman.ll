@@ -11,8 +11,6 @@
 ;================================================================================
 ; scope: program scope (level : 1)
 
-; types
-
 ; program variables
 @_input = dso_local global %T_text zeroinitializer
 @output = dso_local global %T_text zeroinitializer

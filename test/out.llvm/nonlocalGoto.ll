@@ -11,8 +11,6 @@
 ;================================================================================
 ; scope: program scope (level : 1)
 
-; types
-
 ; program variables
 @_input = dso_local global %T_text zeroinitializer
 @_output = dso_local global %T_text zeroinitializer
@@ -23,16 +21,10 @@
 ;================================================================================
 ; scope: foo (level : 2)
 
-; types
-
 ; line 23
 ;================================================================================
 ; scope: bar (level : 2)
 
-; types
-
 ; line 27
 ;================================================================================
 ; scope: bar_moo (level : 3)
-
-; types
