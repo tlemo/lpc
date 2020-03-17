@@ -1,0 +1,29 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 132: 'str' hiding existing declaration on line 128
+  warning on line 134: 'i' hiding existing declaration on line 130
+  warning on line 134: 'j' hiding existing declaration on line 130
+  warning on line 199: non-local goto
+  warning on line 459: 'i1' hiding existing declaration on line 452
+  warning on line 459: 'i2' hiding existing declaration on line 452
+  warning on line 460: 'f' hiding existing declaration on line 453
+  warning on line 788: 'c' hiding existing declaration on line 781
+  warning on line 809: 'c' hiding existing declaration on line 788
+  warning on line 809: 'c' hiding existing declaration on line 781
+  warning on line 1177: non-local goto
+  warning on line 1191: non-local goto
+  warning on line 1203: non-local goto
+  warning on line 1207: non-local goto
+  warning on line 1209: non-local goto
+  warning on line 1229: non-local goto
+  warning on line 1233: non-local goto
+
+0 error(s), 17 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = llvm)
+-----------------------------------------------------
+
+P2 errcode = 1

@@ -1,0 +1,79 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 317: 'INPUTFILE' hiding existing declaration on line 288
+  warning on line 318: 'NEXTCHAR' hiding existing declaration on line 294
+  warning on line 319: 'CURRCHAR' hiding existing declaration on line 293
+  warning on line 369: 'INPUTFILE' hiding existing declaration on line 288
+  warning on line 371: 'CURRCHAR' hiding existing declaration on line 293
+  warning on line 372: 'NEXTCHAR' hiding existing declaration on line 294
+  warning on line 392: 'INPUTFILE' hiding existing declaration on line 288
+  warning on line 393: 'CURRCHAR' hiding existing declaration on line 293
+  warning on line 394: 'NEXTCHAR' hiding existing declaration on line 294
+  warning on line 426: 'INPUTFILE' hiding existing declaration on line 288
+  warning on line 427: 'CURRCHAR' hiding existing declaration on line 293
+  warning on line 428: 'NEXTCHAR' hiding existing declaration on line 294
+  warning on line 508: 'INPUTFILE' hiding existing declaration on line 288
+  warning on line 509: 'CURRCHAR' hiding existing declaration on line 293
+  warning on line 510: 'NEXTCHAR' hiding existing declaration on line 294
+  warning on line 546: 'INPUTFILE' hiding existing declaration on line 288
+  warning on line 547: 'CURRCHAR' hiding existing declaration on line 293
+  warning on line 548: 'NEXTCHAR' hiding existing declaration on line 294
+  warning on line 568: 'INPUTFILE' hiding existing declaration on line 288
+  warning on line 569: 'CURRCHAR' hiding existing declaration on line 293
+  warning on line 570: 'NEXTCHAR' hiding existing declaration on line 294
+  warning on line 608: 'CURRCHAR' hiding existing declaration on line 293
+  warning on line 609: 'NEXTCHAR' hiding existing declaration on line 294
+  warning on line 654: 'INPUTFILE' hiding existing declaration on line 288
+  warning on line 655: 'CURRCHAR' hiding existing declaration on line 293
+  warning on line 656: 'NEXTCHAR' hiding existing declaration on line 294
+  warning on line 682: 'INPUTFILE' hiding existing declaration on line 288
+  warning on line 683: 'CURRCHAR' hiding existing declaration on line 293
+  warning on line 684: 'NEXTCHAR' hiding existing declaration on line 294
+  warning on line 741: 'INPUTFILE' hiding existing declaration on line 288
+  warning on line 742: 'NEXTSYM' hiding existing declaration on line 297
+  warning on line 743: 'CURRSYM' hiding existing declaration on line 296
+  warning on line 785: 'INPUTFILE' hiding existing declaration on line 288
+  warning on line 786: 'OUTPUTFILE' hiding existing declaration on line 289
+  warning on line 790: 'CURRLINEPOS' hiding existing declaration on line 313
+  warning on line 791: 'CURRMARGIN' hiding existing declaration on line 314
+  warning on line 793: 'KEYWORD' hiding existing declaration on line 303
+  warning on line 795: 'DBLCHARS' hiding existing declaration on line 305
+  warning on line 797: 'DBLCHAR' hiding existing declaration on line 307
+  warning on line 799: 'SGLCHAR' hiding existing declaration on line 308
+  warning on line 801: 'RECORDSEEN' hiding existing declaration on line 291
+  warning on line 803: 'CURRCHAR' hiding existing declaration on line 293
+  warning on line 804: 'NEXTCHAR' hiding existing declaration on line 294
+  warning on line 806: 'CURRSYM' hiding existing declaration on line 296
+  warning on line 807: 'NEXTSYM' hiding existing declaration on line 297
+  warning on line 809: 'PPOPTION' hiding existing declaration on line 301
+  warning on line 1236: 'CURRLINEPOS' hiding existing declaration on line 313
+  warning on line 1237: 'OUTPUTFILE' hiding existing declaration on line 289
+  warning on line 1256: 'CURRSYM' hiding existing declaration on line 296
+  warning on line 1257: 'OUTPUTFILE' hiding existing declaration on line 289
+  warning on line 1276: 'CURRSYM' hiding existing declaration on line 296
+  warning on line 1277: 'OUTPUTFILE' hiding existing declaration on line 289
+  warning on line 1352: 'SYMBOL' hiding existing declaration on line 258
+  warning on line 1353: 'OUTPUTFILE' hiding existing declaration on line 289
+  warning on line 1373: 'CURRLINEPOS' hiding existing declaration on line 313
+  warning on line 1374: 'OUTPUTFILE' hiding existing declaration on line 289
+  warning on line 1389: 'CURRSYM' hiding existing declaration on line 296
+  warning on line 1390: 'CURRLINEPOS' hiding existing declaration on line 313
+  warning on line 1391: 'OUTPUTFILE' hiding existing declaration on line 289
+  warning on line 1410: 'CURRSYM' hiding existing declaration on line 296
+  warning on line 1411: 'OUTPUTFILE' hiding existing declaration on line 289
+  warning on line 1465: 'INPUTFILE' hiding existing declaration on line 288
+  warning on line 1467: 'CURRSYM' hiding existing declaration on line 296
+  warning on line 1468: 'NEXTSYM' hiding existing declaration on line 297
+  warning on line 1469: 'OUTPUTFILE' hiding existing declaration on line 289
+  warning on line 1491: 'CURRSYM' hiding existing declaration on line 296
+  warning on line 1461: 'CURRSYM' hiding existing declaration on line 296
+
+0 error(s), 67 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = llvm)
+-----------------------------------------------------
+
+P2 errcode = 1

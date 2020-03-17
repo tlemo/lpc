@@ -1,0 +1,86 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 507: 'i' hiding existing declaration on line 472
+  warning on line 525: 'i' hiding existing declaration on line 472
+  warning on line 542: 'i' hiding existing declaration on line 472
+  warning on line 559: 'i' hiding existing declaration on line 472
+  warning on line 570: 'b' hiding existing declaration on line 471
+  warning on line 579: 'b' hiding existing declaration on line 471
+  warning on line 595: 'i' hiding existing declaration on line 472
+  warning on line 612: 'i' hiding existing declaration on line 472
+  warning on line 629: 'c' hiding existing declaration on line 473
+  warning on line 645: 'i' hiding existing declaration on line 472
+  warning on line 654: 'ad' hiding existing declaration on line 470
+  warning on line 662: 'i' hiding existing declaration on line 472
+  warning on line 676: 'p' hiding existing declaration on line 440
+  warning on line 677: 'i' hiding existing declaration on line 472
+  warning on line 700: 'i' hiding existing declaration on line 472
+  warning on line 701: 'i' hiding existing declaration on line 472
+  warning on line 712: 'p' hiding existing declaration on line 440
+  warning on line 712: 'i' hiding existing declaration on line 472
+  warning on line 726: 'ad' hiding existing declaration on line 470
+  warning on line 729: 'op' hiding existing declaration on line 440
+  warning on line 729: 'p' hiding existing declaration on line 440
+  warning on line 729: 'q' hiding existing declaration on line 440
+  warning on line 764: 'i' hiding existing declaration on line 472
+  warning on line 820: 'i' hiding existing declaration on line 472
+  warning on line 1050: non-local goto
+  warning on line 1055: 'i' hiding existing declaration on line 472
+  warning on line 1074: redefining predefined identifier 'succ'
+  warning on line 1074: 'ad' hiding existing declaration on line 470
+  warning on line 1077: 'op' hiding existing declaration on line 440
+  warning on line 1077: 'q' hiding existing declaration on line 440
+  warning on line 1162: 'i' hiding existing declaration on line 472
+  warning on line 1162: 's1' hiding existing declaration on line 478
+  warning on line 1162: 'c' hiding existing declaration on line 473
+  warning on line 1166: 'x' hiding existing declaration on line 1162
+  warning on line 1176: 'x' hiding existing declaration on line 1162
+  warning on line 1182: 'i' hiding existing declaration on line 1162
+  warning on line 1182: 'i' hiding existing declaration on line 472
+  warning on line 1437: 'i' hiding existing declaration on line 472
+  warning on line 1486: non-local goto
+  warning on line 1490: 'ad' hiding existing declaration on line 470
+  warning on line 1508: 'i' hiding existing declaration on line 472
+  warning on line 1586: 'ad' hiding existing declaration on line 470
+  warning on line 1603: 'b' hiding existing declaration on line 471
+  warning on line 1628: 'ad' hiding existing declaration on line 470
+  warning on line 1628: 'ad1' hiding existing declaration on line 470
+  warning on line 1656: 'ad' hiding existing declaration on line 470
+  warning on line 1656: 'ad1' hiding existing declaration on line 470
+  warning on line 1674: 'ad' hiding existing declaration on line 470
+  warning on line 1699: 'i' hiding existing declaration on line 472
+  warning on line 1699: 'j' hiding existing declaration on line 472
+  warning on line 1700: 'c' hiding existing declaration on line 473
+  warning on line 1701: 'b' hiding existing declaration on line 471
+  warning on line 1702: 'ad' hiding existing declaration on line 470
+  warning on line 1702: 'ad1' hiding existing declaration on line 470
+  warning on line 1704: 'fn' hiding existing declaration on line 481
+  warning on line 1706: 'f' hiding existing declaration on line 1699
+  warning on line 1706: 'i' hiding existing declaration on line 1699
+  warning on line 1706: 'i' hiding existing declaration on line 472
+  warning on line 1711: 'f' hiding existing declaration on line 1699
+  warning on line 1711: 'r' hiding existing declaration on line 1703
+  warning on line 1716: 'f' hiding existing declaration on line 1699
+  warning on line 1716: 'c' hiding existing declaration on line 1700
+  warning on line 1716: 'c' hiding existing declaration on line 473
+  warning on line 1721: 'f' hiding existing declaration on line 1699
+  warning on line 1721: 'ad' hiding existing declaration on line 1702
+  warning on line 1721: 'ad' hiding existing declaration on line 470
+  warning on line 1721: 'w' hiding existing declaration on line 1699
+  warning on line 1721: 'l' hiding existing declaration on line 1699
+  warning on line 1722: 'i' hiding existing declaration on line 1699
+  warning on line 1722: 'i' hiding existing declaration on line 472
+  warning on line 1729: 'f' hiding existing declaration on line 1699
+  warning on line 1734: 'f' hiding existing declaration on line 1699
+  warning on line 1734: 'ad' hiding existing declaration on line 1702
+  warning on line 1734: 'ad' hiding existing declaration on line 470
+
+0 error(s), 74 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = llvm)
+-----------------------------------------------------
+
+P2 errcode = 1

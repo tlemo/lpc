@@ -1,0 +1,96 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 315: non-local goto
+  warning on line 346: non-local goto
+  warning on line 365: 't' hiding existing declaration on line 242
+  warning on line 519: 'b' hiding existing declaration on line 242
+  warning on line 526: 'a' hiding existing declaration on line 242
+  warning on line 526: 'b' hiding existing declaration on line 242
+  warning on line 587: 'fsys' hiding existing declaration on line 574
+  warning on line 606: 'enter' hiding existing declaration on line 477
+  warning on line 606: 'id' hiding existing declaration on line 224
+  warning on line 624: 'id' hiding existing declaration on line 224
+  warning on line 641: 'fsys' hiding existing declaration on line 574
+  warning on line 642: 'x' hiding existing declaration on line 585
+  warning on line 679: 'fsys' hiding existing declaration on line 574
+  warning on line 680: 'x' hiding existing declaration on line 585
+  warning on line 685: 'eltp' hiding existing declaration on line 681
+  warning on line 687: 'elrf' hiding existing declaration on line 681
+  warning on line 687: 'elsz' hiding existing declaration on line 682
+  warning on line 709: 'high' hiding existing declaration on line 686
+  warning on line 709: 'low' hiding existing declaration on line 686
+  warning on line 722: 'typ' hiding existing declaration on line 679
+  warning on line 754: 'typ' hiding existing declaration on line 679
+  warning on line 777: 'x' hiding existing declaration on line 585
+  warning on line 794: 'typ' hiding existing declaration on line 679
+  warning on line 805: 'typ' hiding existing declaration on line 679
+  warning on line 856: 'typ' hiding existing declaration on line 679
+  warning on line 877: 'typ' hiding existing declaration on line 679
+  warning on line 888: 'isfun' hiding existing declaration on line 574
+  warning on line 900: 'fsys' hiding existing declaration on line 574
+  warning on line 904: 'fsys' hiding existing declaration on line 900
+  warning on line 904: 'fsys' hiding existing declaration on line 574
+  warning on line 905: 'x' hiding existing declaration on line 585
+  warning on line 905: 'a' hiding existing declaration on line 242
+  warning on line 942: 'fsys' hiding existing declaration on line 900
+  warning on line 942: 'fsys' hiding existing declaration on line 574
+  warning on line 942: 'i' hiding existing declaration on line 901
+  warning on line 943: 'x' hiding existing declaration on line 585
+  warning on line 992: 'a' hiding existing declaration on line 242
+  warning on line 992: 'b' hiding existing declaration on line 242
+  warning on line 902: 'fsys' hiding existing declaration on line 900
+  warning on line 902: 'fsys' hiding existing declaration on line 574
+  warning on line 902: 'x' hiding existing declaration on line 585
+  warning on line 1011: 'fsys' hiding existing declaration on line 902
+  warning on line 1011: 'fsys' hiding existing declaration on line 900
+  warning on line 1011: 'fsys' hiding existing declaration on line 574
+  warning on line 1011: 'x' hiding existing declaration on line 902
+  warning on line 1011: 'x' hiding existing declaration on line 585
+  warning on line 1012: 'y' hiding existing declaration on line 1009
+  warning on line 1012: 'op' hiding existing declaration on line 1009
+  warning on line 1014: 'fsys' hiding existing declaration on line 1011
+  warning on line 1014: 'fsys' hiding existing declaration on line 902
+  warning on line 1014: 'fsys' hiding existing declaration on line 900
+  warning on line 1014: 'fsys' hiding existing declaration on line 574
+  warning on line 1014: 'x' hiding existing declaration on line 1011
+  warning on line 1014: 'x' hiding existing declaration on line 902
+  warning on line 1014: 'x' hiding existing declaration on line 585
+  warning on line 1015: 'y' hiding existing declaration on line 1012
+  warning on line 1015: 'y' hiding existing declaration on line 1009
+  warning on line 1015: 'op' hiding existing declaration on line 1012
+  warning on line 1015: 'op' hiding existing declaration on line 1009
+  warning on line 1017: 'fsys' hiding existing declaration on line 1014
+  warning on line 1017: 'fsys' hiding existing declaration on line 1011
+  warning on line 1017: 'fsys' hiding existing declaration on line 902
+  warning on line 1017: 'fsys' hiding existing declaration on line 900
+  warning on line 1017: 'fsys' hiding existing declaration on line 574
+  warning on line 1017: 'x' hiding existing declaration on line 1014
+  warning on line 1017: 'x' hiding existing declaration on line 1011
+  warning on line 1017: 'x' hiding existing declaration on line 902
+  warning on line 1017: 'x' hiding existing declaration on line 585
+  warning on line 1018: 'i' hiding existing declaration on line 901
+  warning on line 1057: 'typ' hiding existing declaration on line 679
+  warning on line 1230: 'x' hiding existing declaration on line 585
+  warning on line 1264: 'x' hiding existing declaration on line 585
+  warning on line 1281: 'x' hiding existing declaration on line 585
+  warning on line 1282: 'i' hiding existing declaration on line 901
+  warning on line 1288: 'k' hiding existing declaration on line 1282
+  warning on line 1330: 'x' hiding existing declaration on line 585
+  warning on line 1346: 'x' hiding existing declaration on line 585
+  warning on line 1356: 'x' hiding existing declaration on line 585
+  warning on line 1357: 'i' hiding existing declaration on line 901
+  warning on line 1388: 'i' hiding existing declaration on line 901
+  warning on line 1389: 'x' hiding existing declaration on line 585
+  warning on line 1521: 't' hiding existing declaration on line 242
+  warning on line 1522: 'b' hiding existing declaration on line 242
+  warning on line 1527: 'display' hiding existing declaration on line 244
+
+0 error(s), 84 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = llvm)
+-----------------------------------------------------
+
+P2 errcode = 1

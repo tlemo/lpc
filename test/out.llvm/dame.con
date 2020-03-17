@@ -1,0 +1,14 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 8: 'x' hiding existing declaration on line 5
+  warning on line 8: 'i' hiding existing declaration on line 6
+
+0 error(s), 2 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = llvm)
+-----------------------------------------------------
+
+P2 errcode = 1

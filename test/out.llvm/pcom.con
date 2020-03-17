@@ -1,0 +1,113 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 755: 'intsize' hiding existing declaration on line 96
+  warning on line 769: 'i' hiding existing declaration on line 757
+  warning on line 863: 'i' hiding existing declaration on line 757
+  warning on line 942: 'fsys' hiding existing declaration on line 939
+  warning on line 951: 'constant' hiding existing declaration on line 160
+  warning on line 951: 'fsys' hiding existing declaration on line 939
+  warning on line 1112: 'fsys' hiding existing declaration on line 939
+  warning on line 1116: 'fsys' hiding existing declaration on line 1112
+  warning on line 1116: 'fsys' hiding existing declaration on line 939
+  warning on line 1116: 'fsp' hiding existing declaration on line 1112
+  warning on line 1116: 'fsize' hiding existing declaration on line 1112
+  warning on line 1117: 'lsp' hiding existing declaration on line 1113
+  warning on line 1117: 'lsp1' hiding existing declaration on line 1113
+  warning on line 1117: 'lcp' hiding existing declaration on line 1113
+  warning on line 1201: 'fsys' hiding existing declaration on line 1112
+  warning on line 1201: 'fsys' hiding existing declaration on line 939
+  warning on line 1202: 'lcp' hiding existing declaration on line 1113
+  warning on line 1202: 'lsp' hiding existing declaration on line 1113
+  warning on line 1202: 'lsp1' hiding existing declaration on line 1113
+  warning on line 1202: 'lsp2' hiding existing declaration on line 1113
+  warning on line 1203: 'lsize' hiding existing declaration on line 1114
+  warning on line 1615: 'fsy' hiding existing declaration on line 939
+  warning on line 1620: 'fsy' hiding existing declaration on line 1615
+  warning on line 1620: 'fsy' hiding existing declaration on line 939
+  warning on line 1621: 'lcp' hiding existing declaration on line 1616
+  warning on line 1621: 'lcp1' hiding existing declaration on line 1616
+  warning on line 1621: 'lsp' hiding existing declaration on line 1616
+  warning on line 1622: 'llc' hiding existing declaration on line 1618
+  warning on line 1895: 'fsys' hiding existing declaration on line 939
+  warning on line 2167: 'fsys' hiding existing declaration on line 1895
+  warning on line 2167: 'fsys' hiding existing declaration on line 939
+  warning on line 2169: 'lcp' hiding existing declaration on line 1908
+  warning on line 2169: 'llp' hiding existing declaration on line 1909
+  warning on line 2173: 'fsys' hiding existing declaration on line 2167
+  warning on line 2173: 'fsys' hiding existing declaration on line 1895
+  warning on line 2173: 'fsys' hiding existing declaration on line 939
+  warning on line 2174: 'lcp' hiding existing declaration on line 2169
+  warning on line 2174: 'lcp' hiding existing declaration on line 1908
+  warning on line 2299: 'access' hiding existing declaration on line 2295
+  warning on line 2299: 'cval' hiding existing declaration on line 2295
+  warning on line 2299: 'dplmt' hiding existing declaration on line 2295
+  warning on line 2299: 'idplmt' hiding existing declaration on line 2295
+  warning on line 2299: 'kind' hiding existing declaration on line 2295
+  warning on line 2299: 'typtr' hiding existing declaration on line 2295
+  warning on line 2299: 'vlevel' hiding existing declaration on line 2295
+  warning on line 2314: 'fsys' hiding existing declaration on line 2167
+  warning on line 2314: 'fsys' hiding existing declaration on line 1895
+  warning on line 2314: 'fsys' hiding existing declaration on line 939
+  warning on line 2317: 'fsys' hiding existing declaration on line 2314
+  warning on line 2317: 'fsys' hiding existing declaration on line 2167
+  warning on line 2317: 'fsys' hiding existing declaration on line 1895
+  warning on line 2317: 'fsys' hiding existing declaration on line 939
+  warning on line 2318: 'lcp' hiding existing declaration on line 2169
+  warning on line 2318: 'lcp' hiding existing declaration on line 1908
+  warning on line 2334: redefining predefined identifier 'read'
+  warning on line 2391: redefining predefined identifier 'write'
+  warning on line 2485: redefining predefined identifier 'pack'
+  warning on line 2513: redefining predefined identifier 'unpack'
+  warning on line 2541: redefining predefined identifier 'new'
+  warning on line 2586: 'mark' hiding existing declaration on line 366
+  warning on line 2594: 'release' hiding existing declaration on line 367
+  warning on line 2604: redefining predefined identifier 'abs'
+  warning on line 2613: redefining predefined identifier 'sqr'
+  warning on line 2622: redefining predefined identifier 'trunc'
+  warning on line 2630: redefining predefined identifier 'odd'
+  warning on line 2638: redefining predefined identifier 'ord'
+  warning on line 2646: redefining predefined identifier 'chr'
+  warning on line 2662: redefining predefined identifier 'eof'
+  warning on line 2683: 'lcp' hiding existing declaration on line 2169
+  warning on line 2683: 'lcp' hiding existing declaration on line 1908
+  warning on line 2171: 'fsys' hiding existing declaration on line 2167
+  warning on line 2171: 'fsys' hiding existing declaration on line 1895
+  warning on line 2171: 'fsys' hiding existing declaration on line 939
+  warning on line 2829: 'fsys' hiding existing declaration on line 2171
+  warning on line 2829: 'fsys' hiding existing declaration on line 2167
+  warning on line 2829: 'fsys' hiding existing declaration on line 1895
+  warning on line 2829: 'fsys' hiding existing declaration on line 939
+  warning on line 2830: 'lattr' hiding existing declaration on line 2827
+  warning on line 2830: 'lop' hiding existing declaration on line 2827
+  warning on line 2832: 'fsys' hiding existing declaration on line 2829
+  warning on line 2832: 'fsys' hiding existing declaration on line 2171
+  warning on line 2832: 'fsys' hiding existing declaration on line 2167
+  warning on line 2832: 'fsys' hiding existing declaration on line 1895
+  warning on line 2832: 'fsys' hiding existing declaration on line 939
+  warning on line 2833: 'lattr' hiding existing declaration on line 2830
+  warning on line 2833: 'lattr' hiding existing declaration on line 2827
+  warning on line 2833: 'lop' hiding existing declaration on line 2830
+  warning on line 2833: 'lop' hiding existing declaration on line 2827
+  warning on line 2835: 'fsys' hiding existing declaration on line 2832
+  warning on line 2835: 'fsys' hiding existing declaration on line 2829
+  warning on line 2835: 'fsys' hiding existing declaration on line 2171
+  warning on line 2835: 'fsys' hiding existing declaration on line 2167
+  warning on line 2835: 'fsys' hiding existing declaration on line 1895
+  warning on line 2835: 'fsys' hiding existing declaration on line 939
+  warning on line 2836: 'lcp' hiding existing declaration on line 2169
+  warning on line 2836: 'lcp' hiding existing declaration on line 1908
+  warning on line 3234: 'llp' hiding existing declaration on line 2169
+  warning on line 3234: 'llp' hiding existing declaration on line 1909
+  warning on line 3405: 'lsy' hiding existing declaration on line 940
+  warning on line 3478: 'lcp' hiding existing declaration on line 2169
+  warning on line 3478: 'lcp' hiding existing declaration on line 1908
+
+0 error(s), 101 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = llvm)
+-----------------------------------------------------
+
+P2 errcode = 1

@@ -1,0 +1,20 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+! error on line 19: 'a' already declared on line 17
+  warning on line 27: 'A' hiding existing declaration on line 17
+! error on line 27: unknown type 'x'
+  warning on line 27: 'b' hiding existing declaration on line 20
+! error on line 28: 'a' already declared on line 27
+  warning on line 29: 'REC' hiding existing declaration on line 10
+  warning on line 32: 'v1' hiding existing declaration on line 24
+  warning on line 32: 'v2' hiding existing declaration on line 24
+! error on line 33: 'a' already declared on line 27
+  warning on line 38: 'b' hiding existing declaration on line 20
+  warning on line 40: 'v1' hiding existing declaration on line 24
+  warning on line 40: 'v2' hiding existing declaration on line 24
+  warning on line 41: 'a' hiding existing declaration on line 17
+
+4 error(s), 9 warning(s)
+
+P1 errcode = 1

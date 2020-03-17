@@ -1,0 +1,13 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 4: 'myName' hiding existing declaration on line 2
+
+0 error(s), 1 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = llvm)
+-----------------------------------------------------
+
+P2 errcode = 1

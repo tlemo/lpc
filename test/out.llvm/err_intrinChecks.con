@@ -1,0 +1,28 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+! error on line 40: missing arguments for new()
+! error on line 41: the first argument to new() must be a pointer lvalue
+! error on line 42: variant selectors can be specified only for record types
+! error on line 43: variant selector values must be constants
+! error on line 44: invalid variant selector values
+! error on line 45: invalid variant selector values
+! error on line 46: invalid variant selector values
+! error on line 47: invalid variant selector values
+! error on line 48: invalid variant selector values
+! error on line 51: pack() requires exactly three arguments
+! error on line 52: pack() requires exactly three arguments
+! error on line 53: base index expression must be an ordinal for pack()
+! error on line 54: pack() requires exactly three arguments
+! error on line 55: pack() only supports single dimension arrays
+! error on line 56: incompatible array base types for pack()
+! error on line 58: unpack() requires exactly three arguments
+! error on line 59: unpack() requires exactly three arguments
+! error on line 60: base index expression must be an ordinal for unpack()
+! error on line 61: unpack() requires exactly three arguments
+! error on line 62: unpack() only supports single dimension arrays
+! error on line 63: incompatible array base types for unpack()
+
+21 error(s), 0 warning(s)
+
+P1 errcode = 1

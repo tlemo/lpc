@@ -1,0 +1,27 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+! error on line 77: value type incompatible with the assignment destination
+! error on line 80: value type incompatible with the assignment destination
+! error on line 81: value type incompatible with the assignment destination
+! error on line 82: value type incompatible with the assignment destination
+! error on line 83: value type incompatible with the assignment destination
+! error on line 87: value type incompatible with the assignment destination
+! error on line 88: value type incompatible with the assignment destination
+! error on line 92: value type incompatible with the assignment destination
+! error on line 93: value type incompatible with the assignment destination
+! error on line 97: value type incompatible with the assignment destination
+! error on line 98: value type incompatible with the assignment destination
+! error on line 100: value type incompatible with the assignment destination
+! error on line 101: value type incompatible with the assignment destination
+! error on line 105: value type incompatible with the assignment destination
+! error on line 106: value type incompatible with the assignment destination
+! error on line 110: value type incompatible with the assignment destination
+! error on line 111: value type incompatible with the assignment destination
+! error on line 115: invalid argument value for 'pfn' when calling 'test1'
+! error on line 116: invalid argument value for 'pfn' when calling 'test2'
+! error on line 117: invalid argument value for 'pfn' when calling 'test3'
+
+20 error(s), 0 warning(s)
+
+P1 errcode = 1
