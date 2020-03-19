@@ -43,6 +43,17 @@ class LlvmBackend;
 
 ///////////////////////////////////////////////////////////////////////////////
 //
+// LLVM metadata
+//
+struct Metadata
+{
+    string id;
+    string def;
+};
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
 // backend specific information for various data structures
 //
 struct TypeExt
@@ -329,12 +340,35 @@ private:
     obj::VarList m_varList;
     obj::ParamList m_paramList;
 
+    // global (per program) state
+    //
+    vector<const Metadata*> m_metadata;
+    int m_metadataIdGen = 0;
+
+    const Metadata* m_sourceFileMd = nullptr;
+    const Metadata* m_enumsMd = nullptr;
+    const Metadata* m_typesMd = nullptr;
+    const Metadata* m_globalsMd = nullptr;
+    const Metadata* m_compileUnitMd = nullptr;
+    const Metadata* m_versionMd = nullptr;
+
 public:
     LlvmBackend() = default;
 
     const char* targetName() const override { return "llvm"; }
 
 private:
+    const Metadata* _newMetadata(const string& def)
+    {
+        stringstream newMetadataId;
+        newMetadataId << "!" << m_metadataIdGen++;
+
+        auto pMetadata = new Metadata{ newMetadataId.str(), def };
+        m_metadata.push_back(pMetadata);
+
+        return pMetadata;
+    }
+
     // sets the current scope name
     //
     void _setCurrentScope(Scope* pScope)
@@ -416,12 +450,61 @@ private:
 
     void _start() override
     {
+        m_metadata.clear();
+        m_metadataIdGen = 0;
+
+        // source file metadata
+        stringstream srcFile;
+        srcFile << "!DIFile(filename: \"" <<
+            ::PathFindFileName(context()->commandLine()->getInputName()) <<
+            "\", checksumkind: CSK_None)";
+        m_sourceFileMd = _newMetadata(srcFile.str());
+
         // TODO
+        m_enumsMd = _newMetadata("!{}");
+        m_typesMd = _newMetadata("!{}");
+        m_globalsMd = _newMetadata("!{}");
+
+        // version
+        stringstream version;
+        version << "!{!\"" << BUILD_STRING << "\"}";
+        m_versionMd = _newMetadata(version.str());
+
+        // compile unit metadata
+        stringstream compileUnit;
+        compileUnit << "distinct !DICompileUnit(" <<
+            "language: DW_LANG_Pascal83, " <<
+            "file: " << m_sourceFileMd->id << ", " <<
+            "producer: \"" << BUILD_STRING << "\", " <<
+            "isOptimized: true, " <<
+            "runtimeVersion: 0, " <<
+            "emissionKind: FullDebug, " <<
+            "enums: " << m_enumsMd->id << ", " <<
+            "retainedTypes: " << m_typesMd->id << ", " <<
+            "globals: " << m_globalsMd->id << ", " <<
+            "nameTableKind: None)";
+        m_compileUnitMd = _newMetadata(compileUnit.str());
     }
 
     void _end() override
     {
-        // TODO
+        std::stringstream code;
+
+        // output metadata
+        code << ";================================================================================\n";
+        code << "; metadata\n";
+        code << "\n";
+        code << "!llvm.dbg.cu = !{" << m_compileUnitMd->id << "}\n";
+        code << "!llvm.module.flags = !{}\n";
+        code << "!llvm.ident = !{" << m_versionMd->id << "}\n";
+        code << "\n";
+        for (auto pMetadata : m_metadata)
+        {
+            code << pMetadata->id << " = " << pMetadata->def << "\n";
+        }
+        code << "\n";
+
+        write(code);
     }
 
     // this is the main entry point for generating code for a scope

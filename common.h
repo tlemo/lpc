@@ -31,7 +31,7 @@
 
 // BUILD_VERSION
 //
-#define BUILD_VERSION   "1.0"
+#define BUILD_VERSION   "1.1"
 
 
 // BUILD_STRING

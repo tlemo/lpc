@@ -53,6 +53,10 @@ The tests are under the `test` directory (Python3 is required to run the tests)
 
     `python runtest.py debug clr`
 
+## TODO ##
+
+- Generate LLVM debug info metadata
+
 ## Resources ##
 
 * [standardpascal.org](http://www.standardpascal.org)
