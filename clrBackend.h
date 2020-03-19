@@ -384,10 +384,10 @@ string genQualifiedName(const obj::Subroutine* pSubroutine)
 class TypeGen : public ts::Visitor
 {
     // the size/alignment of a managed reference
-    // (we use 8 bytes to make thing run across 32/64bit platforms)
+    // (we use 8 bytes to make things run across 32/64bit platforms)
     //
-    static const int REF_SIZE = 8;
-    static const int REF_ALIGNMENT = 8;
+    static constexpr int REF_SIZE = 8;
+    static constexpr int REF_ALIGNMENT = 8;
 
     struct FieldsDef
     {
@@ -418,6 +418,7 @@ public:
         assert(!ext(pType)->ilName.empty());
         assert(ext(pType)->size >= 0);
         assert(ext(pType)->alignment >= 0);
+        assert(ext(pType)->size % ext(pType)->alignment == 0);
     }
 
 private:
@@ -514,7 +515,6 @@ private:
     VarPtr visit(ts::SubroutineType* pType) override;
     VarPtr visit(ts::RangeType* pType) override;
 
-private:
     FieldsDef _fieldsDef(const ts::RecordFields* pFields, int offset = 0);
 
 private:

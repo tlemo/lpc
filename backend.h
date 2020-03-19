@@ -52,6 +52,53 @@ VarPtr allocStr(const char* str)
 
 ///////////////////////////////////////////////////////////////////////////////
 //
+// compute LCM(a, b) = (a * b) / GCD(a, b)
+//
+inline
+int LCM(int a, int b)
+{
+    assert(a > 0 && b > 0);
+
+    const int p = a * b;
+
+    // compute GCD
+    //
+    while(b > 0)
+    {
+        const int tmp = b;
+        b = a % b;
+        a = tmp;
+    }
+
+    assert(p % a == 0);
+    return p / a;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+inline
+int roundDown(int value, int alignment)
+{
+    assert(value >= 0);
+    assert(alignment > 0);
+    return value - value % alignment;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+inline
+int roundUp(int value, int alignment)
+{
+    assert(value >= 0);
+    assert(alignment > 0);
+    return roundDown(value + alignment - 1, alignment);
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
 // helpers for outputing formated text
 //
 const char* const TAB = "    ";

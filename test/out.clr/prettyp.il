@@ -39,7 +39,7 @@
 .class value explicit T_CHARINFO
 {
     // alignment = 4
-    .size 5
+    .size 8
     
     .field [0] public int32 NAME
     .field [4] public uint8 VALUE

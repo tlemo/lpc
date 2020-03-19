@@ -252,7 +252,7 @@
 .class value explicit T_recs
 {
     // alignment = 4
-    .size 5
+    .size 8
     
     .field [0] public int32 a
     .field [4] public uint8 b
@@ -376,7 +376,7 @@
 .class value explicit T_recv
 {
     // alignment = 4
-    .size 22
+    .size 24
     
     .field [0] public int32 a
     .field [4] public uint8 b
@@ -1961,7 +1961,7 @@
 .class value explicit T_record_111
 {
     // alignment = 4
-    .size 23
+    .size 24
     
     .field [0] public int32 Rx
     .field [4] public uint8 Rc
@@ -2662,7 +2662,7 @@
 .class value explicit T_record_134
 {
     // alignment = 8
-    .size 60
+    .size 64
     
     .field [0] public int32 i
     
@@ -2736,7 +2736,7 @@
 .class value explicit T_record_135
 {
     // alignment = 4
-    .size 9
+    .size 12
     
     // variable fields selector
     .field [0] public bool Vt
@@ -2784,7 +2784,7 @@
 .class value explicit T_record_137
 {
     // alignment = 4
-    .size 9
+    .size 12
     
     // variable fields selector
     .field [0] public int8 Vt
@@ -2806,7 +2806,7 @@
 .class value explicit T_record_138
 {
     // alignment = 4
-    .size 9
+    .size 12
     
     // variable fields selector
     .field [0] public int8 Vt
@@ -22577,7 +22577,7 @@ L_for_end_929:
     pop
     // line 1852
     // line 1852
-    ldc.i4 5
+    ldc.i4 8
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ptrc
     // line 1853

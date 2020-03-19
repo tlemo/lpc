@@ -1568,7 +1568,7 @@
 .class value explicit T_block_conrec
 {
     // alignment = 8
-    .size 20
+    .size 24
     
     // variable fields selector
     .field [0] public int32 Tp

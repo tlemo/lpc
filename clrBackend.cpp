@@ -43,31 +43,6 @@ VarPtr NewObjExpr::accept(ast::Visitor* pVisitor) const
 
 ///////////////////////////////////////////////////////////////////////////////
 //
-// compute LCM(a, b) = (a * b) / GCD(a, b)
-//
-static
-int LCM(int a, int b)
-{
-    assert(a > 0 && b > 0);
-
-    const int p = a * b;
-
-    // compute GCD
-    //
-    while(b > 0)
-    {
-        const int tmp = b;
-        b = a % b;
-        a = tmp;
-    }
-
-    assert(p % a == 0);
-    return p / a;
-}
-
-
-///////////////////////////////////////////////////////////////////////////////
-//
 // the recursive helper for generating "record" definitions
 //
 TypeGen::FieldsDef TypeGen::_fieldsDef(const ts::RecordFields* pFields, int offset)
@@ -178,22 +153,24 @@ TypeGen::FieldsDef TypeGen::_fieldsDef(const ts::RecordFields* pFields, int offs
 //
 VarPtr TypeGen::visit(ts::RecordType* pType)
 {
+    const auto fieldsDef = _fieldsDef(pType->fields());
+
     auto pExt = ext(pType);
-    auto fieldsDef = _fieldsDef(pType->fields());
+
+    pExt->ilName = "valuetype " + pExt->genName;
+    pExt->alignment = fieldsDef.alignment;
+    pExt->size = roundUp(fieldsDef.size, fieldsDef.alignment);
 
     stringstream def;
     def << "\n" << genLine(HIDDEN_CODE, m_pBackend->emitDebugInfo()) << "\n";
     def << "// TYPE " << pType->typeId() << " = record;\n";
     def << ".class value explicit " << pExt->genName << "\n{\n";
-    def << TAB << "// alignment = " << fieldsDef.alignment << "\n";
-    def << TAB << ".size " << fieldsDef.size << "\n";
+    def << TAB << "// alignment = " << pExt->alignment << "\n";
+    def << TAB << ".size " << pExt->size << "\n";
     def << indentBlock(fieldsDef.def);
     def << "}\n";
 
     pExt->def = def.str();
-    pExt->ilName = "valuetype " + pExt->genName;
-    pExt->size = fieldsDef.size;
-    pExt->alignment = fieldsDef.alignment;
 
     return VarPtr();
 }
