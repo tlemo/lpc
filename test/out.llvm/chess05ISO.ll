@@ -5,87 +5,90 @@
 
 ; types
 %T_pointer_1 = type i8*
-%T_text = type <file>
+%T_text = type __file
 
 ; line 1
 ;================================================================================
 ; scope: program scope (level : 1)
 
 ; types
-%T_arraytmofrs = type <array>
-%T_arraytkofrs = type <array>
-%T_arraytfofrs = type <array>
-%T_arraytkoftw = type <array>
-%T_arraytpofte = type <array>
-%T_arraytqofrs = type <array>
-%T_arraytrofrs = type <array>
-%T_RX = type <array>
-%T_RB = type <record>
-%T_array_2 = type <array>
-%T_RS = type <record>
-%T_array_3 = type <array>
-%T_array_4 = type <array>
-%T_RJ = type <array>
-%T_array_5 = type <array>
-%T_TJ = type <range>
-%T_TK = type <range>
-%T_TW = type <range>
-%T_array_6 = type <array>
-%T_RM = type <record>
-%T_TV = type <range>
-%T_RC = type <array>
-%T_array_7 = type <array>
-%T_array_8 = type <array>
-%T_RF = type <array>
-%T_RN = type <array>
-%T_array_9 = type <array>
-%T_array_10 = type <array>
-%T_RA = type <array>
-%T_RD = type <record>
-%T_RE = type <array>
-%T_RY = type <record>
-%T_SC = type <set>
-%T_SF = type <set>
-%T_SQ = type <set>
-%T_SR = type <set>
-%T_array_11 = type <array>
-%T_SX = type <set>
-%T_array_12 = type <array>
-%T_TA = type <range>
-%T_TD = type <range>
-%T_TL = type <range>
-%T_TN = type <range>
-%T_array_13 = type <array>
-%T_TS = type <range>
-%T_TT = type <range>
-%T_TX = type <range>
-%T_TY = type <range>
-%T_array_14 = type <array>
-%T_array_15 = type <array>
-%T_array_16 = type <array>
-%T_array_17 = type <array>
-%T_array_18 = type <array>
-%T_array_19 = type <array>
-%T_array_20 = type <array>
-%T_array_21 = type <array>
-%T_array_22 = type <array>
-%T_array_23 = type <array>
-%T_array_24 = type <array>
-%T_array_25 = type <array>
-%T_array_26 = type <array>
-%T_array_27 = type <array>
-%T_array_28 = type <array>
-%T_array_29 = type <array>
-%T_array_30 = type <array>
-%T_array_31 = type <array>
-%T_array_32 = type <array>
-%T_array_33 = type <array>
-%T_array_34 = type <array>
-%T_array_35 = type <array>
-%T_array_36 = type <array>
-%T_array_37 = type <array>
-%T_array_38 = type <array>
-%T_array_39 = type <array>
+%T_arraytmofrs = type __array
+%T_arraytkofrs = type __array
+%T_arraytfofrs = type __array
+%T_arraytkoftw = type __array
+%T_arraytpofte = type __array
+%T_arraytqofrs = type __array
+%T_arraytrofrs = type __array
+%T_RX = type __array
+%T_TT = type __range
+%T_SQ = type __set
+%T_RC = type __array
+%T_array_2 = type __array
+%T_RB = type [27 x i8]
+%T_array_3 = type __array
+%T_array_4 = type __array
+%T_array_5 = type __array
+%T_RS = type [1 x i8]
+%T_array_6 = type __array
+%T_array_7 = type __array
+%T_RJ = type __array
+%T_array_8 = type __array
+%T_TJ = type __range
+%T_TK = type __range
+%T_TW = type __range
+%T_array_9 = type __array
+%T_TS = type __range
+%T_RM = type [48 x i8]
+%T_TV = type __range
+%T_array_10 = type __array
+%T_array_11 = type __array
+%T_RF = type __array
+%T_RN = type __array
+%T_array_12 = type __array
+%T_array_13 = type __array
+%T_RA = type __array
+%T_RD = type [5 x i8]
+%T_RE = type __array
+%T_RY = type [11 x i8]
+%T_SC = type __set
+%T_SF = type __set
+%T_SR = type __set
+%T_array_14 = type __array
+%T_SX = type __set
+%T_array_15 = type __array
+%T_TA = type __range
+%T_TD = type __range
+%T_TL = type __range
+%T_TN = type __range
+%T_array_16 = type __array
+%T_TX = type __range
+%T_TY = type __range
+%T_array_17 = type __array
+%T_array_18 = type __array
+%T_array_19 = type __array
+%T_array_20 = type __array
+%T_array_21 = type __array
+%T_array_22 = type __array
+%T_array_23 = type __array
+%T_array_24 = type __array
+%T_array_25 = type __array
+%T_array_26 = type __array
+%T_array_27 = type __array
+%T_array_28 = type __array
+%T_array_29 = type __array
+%T_array_30 = type __array
+%T_array_31 = type __array
+%T_array_32 = type __array
+%T_array_33 = type __array
+%T_array_34 = type __array
+%T_array_35 = type __array
+%T_array_36 = type __array
+%T_array_37 = type __array
+%T_array_38 = type __array
+%T_array_39 = type __array
+%T_array_40 = type __array
+%T_array_41 = type __array
+%T_array_42 = type __array
 
 ; program variables
 @ALATK = dso_local global %T_arraytmofrs zeroinitializer
@@ -94,16 +97,16 @@
 @ATKTO = dso_local global %T_RX zeroinitializer
 @BOARD = dso_local global %T_RB zeroinitializer
 @BSTMV = dso_local global %T_arraytkoftw zeroinitializer
-@BSTVL = dso_local global %T_array_2 zeroinitializer
+@BSTVL = dso_local global %T_array_3 zeroinitializer
 @CORNR = dso_local global %T_RS zeroinitializer
 @CSTAT = dso_local global %T_arraytkofrs zeroinitializer
-@EDGE = dso_local global %T_array_3 zeroinitializer
+@EDGE = dso_local global %T_array_6 zeroinitializer
 @ENPAS = dso_local global %T_arraytkofrs zeroinitializer
 @FKPSHD = dso_local global i32 zeroinitializer
 @FKSANQ = dso_local global i32 zeroinitializer
 @FMAXMT = dso_local global i32 zeroinitializer
 @FNODEL = dso_local global i32 zeroinitializer
-@FPADCR = dso_local global %T_array_4 zeroinitializer
+@FPADCR = dso_local global %T_array_7 zeroinitializer
 @FPBLOK = dso_local global i32 zeroinitializer
 @FPCONN = dso_local global i32 zeroinitializer
 @FPFLNX = dso_local global i32 zeroinitializer
@@ -124,7 +127,7 @@
 @GOING = dso_local global i32 zeroinitializer
 @ICARD = dso_local global %T_RJ zeroinitializer
 @ILINE = dso_local global %T_RJ zeroinitializer
-@INDEX = dso_local global %T_array_5 zeroinitializer
+@INDEX = dso_local global %T_array_8 zeroinitializer
 @input = dso_local global %T_text zeroinitializer
 @JMTJ = dso_local global %T_TJ zeroinitializer
 @JMTK = dso_local global %T_TK zeroinitializer
@@ -132,71 +135,71 @@
 @JNTK = dso_local global %T_TK zeroinitializer
 @JNTM = dso_local global i32 zeroinitializer
 @JNTW = dso_local global %T_TW zeroinitializer
-@jumpin = dso_local global %bool zeroinitializer
-@KILLR = dso_local global %T_array_6 zeroinitializer
+@jumpin = dso_local global i1 zeroinitializer
+@KILLR = dso_local global %T_array_9 zeroinitializer
 @LINDX = dso_local global %T_arraytkoftw zeroinitializer
 @LSTMV = dso_local global %T_RM zeroinitializer
 @MAXPS = dso_local global %T_TV zeroinitializer
 @MBLTE = dso_local global %T_TV zeroinitializer
 @MBORD = dso_local global %T_RC zeroinitializer
-@MBPWN = dso_local global %T_array_7 zeroinitializer
+@MBPWN = dso_local global %T_array_10 zeroinitializer
 @MBTOT = dso_local global %T_TV zeroinitializer
-@MBVAL = dso_local global %T_array_8 zeroinitializer
+@MBVAL = dso_local global %T_array_11 zeroinitializer
 @MOVES = dso_local global %T_RF zeroinitializer
 @MOVMS = dso_local global %T_RN zeroinitializer
-@MVSEL = dso_local global %T_array_9 zeroinitializer
+@MVSEL = dso_local global %T_array_12 zeroinitializer
 @NODES = dso_local global i32 zeroinitializer
 @NULMV = dso_local global %T_RM zeroinitializer
-@OTHER = dso_local global %T_array_10 zeroinitializer
+@OTHER = dso_local global %T_array_13 zeroinitializer
 @output = dso_local global %T_text zeroinitializer
-@SRCHM = dso_local global %T_array_11 zeroinitializer
-@SWEC = dso_local global %bool zeroinitializer
-@SWPA = dso_local global %bool zeroinitializer
-@SWPS = dso_local global %bool zeroinitializer
-@SWRE = dso_local global %bool zeroinitializer
-@SWSU = dso_local global %bool zeroinitializer
-@SWTR = dso_local global %bool zeroinitializer
-@SYNTX = dso_local global %T_array_12 zeroinitializer
+@SRCHM = dso_local global %T_array_14 zeroinitializer
+@SWEC = dso_local global i1 zeroinitializer
+@SWPA = dso_local global i1 zeroinitializer
+@SWPS = dso_local global i1 zeroinitializer
+@SWRE = dso_local global i1 zeroinitializer
+@SWSU = dso_local global i1 zeroinitializer
+@SWTR = dso_local global i1 zeroinitializer
+@SYNTX = dso_local global %T_array_15 zeroinitializer
 @TMLOC = dso_local global %T_arraytmofrs zeroinitializer
-@TPLOC = dso_local global %T_array_13 zeroinitializer
+@TPLOC = dso_local global %T_array_16 zeroinitializer
 @VALUE = dso_local global %T_RE zeroinitializer
 @WINDOW = dso_local global i32 zeroinitializer
 @XFPE = dso_local global %T_arraytpofte zeroinitializer
-@XLLD = dso_local global %T_array_14 zeroinitializer
+@XLLD = dso_local global %T_array_17 zeroinitializer
 @XLPE = dso_local global %T_arraytpofte zeroinitializer
 @XNFS = dso_local global %T_arraytfofrs zeroinitializer
 @XNRS = dso_local global %T_arraytrofrs zeroinitializer
 @XRFS = dso_local global %T_arraytfofrs zeroinitializer
-@XRQM = dso_local global %T_array_15 zeroinitializer
+@XRQM = dso_local global %T_array_18 zeroinitializer
 @XRQSA = dso_local global %T_arraytqofrs zeroinitializer
 @XRQSO = dso_local global %T_arraytqofrs zeroinitializer
 @XRRS = dso_local global %T_arraytrofrs zeroinitializer
 @XRSS = dso_local global %T_RX zeroinitializer
-@XSPB = dso_local global %T_array_16 zeroinitializer
+@XSPB = dso_local global %T_array_19 zeroinitializer
 @XSQS = dso_local global %T_arraytqofrs zeroinitializer
-@XSSX = dso_local global %T_array_17 zeroinitializer
-@XTBC = dso_local global %T_array_18 zeroinitializer
-@XTED = dso_local global %T_array_19 zeroinitializer
-@XTGC = dso_local global %T_array_20 zeroinitializer
-@XTGMP = dso_local global %T_array_21 zeroinitializer
-@XTLS = dso_local global %T_array_22 zeroinitializer
-@XTMA = dso_local global %T_array_23 zeroinitializer
-@XTMQ = dso_local global %T_array_24 zeroinitializer
-@XTMV = dso_local global %T_array_25 zeroinitializer
-@XTPC = dso_local global %T_array_26 zeroinitializer
-@XTPM = dso_local global %T_array_27 zeroinitializer
-@XTPU = dso_local global %T_array_28 zeroinitializer
-@XTPV = dso_local global %T_array_29 zeroinitializer
-@XTQA = dso_local global %T_array_30 zeroinitializer
-@XTQS = dso_local global %T_array_31 zeroinitializer
-@XTRFS = dso_local global %T_array_32 zeroinitializer
-@XTSF = dso_local global %T_array_33 zeroinitializer
-@XTSL = dso_local global %T_array_34 zeroinitializer
-@XTSR = dso_local global %T_array_35 zeroinitializer
-@XTSX = dso_local global %T_array_36 zeroinitializer
-@XTSY = dso_local global %T_array_37 zeroinitializer
-@XTUC = dso_local global %T_array_38 zeroinitializer
-@XTUMP = dso_local global %T_array_39 zeroinitializer
+@XSSX = dso_local global %T_array_20 zeroinitializer
+@XTBC = dso_local global %T_array_21 zeroinitializer
+@XTED = dso_local global %T_array_22 zeroinitializer
+@XTGC = dso_local global %T_array_23 zeroinitializer
+@XTGMP = dso_local global %T_array_24 zeroinitializer
+@XTLS = dso_local global %T_array_25 zeroinitializer
+@XTMA = dso_local global %T_array_26 zeroinitializer
+@XTMQ = dso_local global %T_array_27 zeroinitializer
+@XTMV = dso_local global %T_array_28 zeroinitializer
+@XTPC = dso_local global %T_array_29 zeroinitializer
+@XTPM = dso_local global %T_array_30 zeroinitializer
+@XTPU = dso_local global %T_array_31 zeroinitializer
+@XTPV = dso_local global %T_array_32 zeroinitializer
+@XTQA = dso_local global %T_array_33 zeroinitializer
+@XTQS = dso_local global %T_array_34 zeroinitializer
+@XTRFS = dso_local global %T_array_35 zeroinitializer
+@XTSF = dso_local global %T_array_36 zeroinitializer
+@XTSL = dso_local global %T_array_37 zeroinitializer
+@XTSR = dso_local global %T_array_38 zeroinitializer
+@XTSX = dso_local global %T_array_39 zeroinitializer
+@XTSY = dso_local global %T_array_40 zeroinitializer
+@XTUC = dso_local global %T_array_41 zeroinitializer
+@XTUMP = dso_local global %T_array_42 zeroinitializer
 
 ; line 290
 ;================================================================================
@@ -507,7 +510,7 @@
 ; scope: READER_RDRCMD (level : 3)
 
 ; types
-%T_READER_RDRCMD_subroutine_40 = type <subroutine>
+%T_READER_RDRCMD_subroutine_43 = type __subroutine
 
 ; line 2840
 ;================================================================================
@@ -626,7 +629,7 @@
 ; scope: READER_STACMD_STAOPT (level : 4)
 
 ; types
-%T_READER_STACMD_STAOPT_subroutine_41 = type <subroutine>
+%T_READER_STACMD_STAOPT_subroutine_44 = type __subroutine
 
 ; line 3368
 ;================================================================================
@@ -733,4 +736,4 @@
 ; scope: YRMOVE_NCHIN (level : 3)
 
 ; types
-%T_YRMOVE_NCHIN_subroutine_42 = type <subroutine>
+%T_YRMOVE_NCHIN_subroutine_45 = type __subroutine

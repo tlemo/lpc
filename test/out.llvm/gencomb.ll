@@ -5,14 +5,14 @@
 
 ; types
 %T_pointer_1 = type i8*
-%T_text = type <file>
+%T_text = type __file
 
 ; line 1
 ;================================================================================
 ; scope: program scope (level : 1)
 
 ; types
-%T_vec = type <array>
+%T_vec = type __array
 
 ; program variables
 @_input = dso_local global %T_text zeroinitializer
@@ -29,7 +29,7 @@
 ; scope: gen (level : 2)
 
 ; types
-%T_gen_range_2 = type <range>
+%T_gen_range_2 = type __range
 
 ; line 23
 ;================================================================================

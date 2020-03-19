@@ -5,7 +5,7 @@
 
 ; types
 %T_pointer_1 = type i8*
-%T_text = type <file>
+%T_text = type __file
 
 ; line 3
 ;================================================================================
@@ -15,9 +15,12 @@
 %T_A = type i32*
 %T_C = type %T_B*
 %T_B = type %T_C*
-%T_R1 = type <record>
-%T_R2 = type <record>
-%T_R3 = type <record>
+%T_pointer_3 = type %T_R1*
+%T_R2 = type [8 x i8]
+%T_pointer_2 = type %T_R2*
+%T_R1 = type [8 x i8]
+%T_pointer_4 = type %T_R3*
+%T_R3 = type [16 x i8]
 
 ; program variables
 @_input = dso_local global %T_text zeroinitializer

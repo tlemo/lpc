@@ -5,16 +5,16 @@
 
 ; types
 %T_pointer_1 = type i8*
-%T_text = type <file>
+%T_text = type __file
 
 ; line 4
 ;================================================================================
 ; scope: program scope (level : 1)
 
 ; types
-%T_t1 = type <array>
-%T_t2 = type <range>
-%T_array_3 = type <array>
+%T_t1 = type __array
+%T_t2 = type __range
+%T_array_3 = type __array
 
 ; program variables
 @_input = dso_local global %T_text zeroinitializer

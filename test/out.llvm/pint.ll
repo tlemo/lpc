@@ -5,31 +5,31 @@
 
 ; types
 %T_pointer_1 = type i8*
-%T_text = type <file>
+%T_text = type __file
 
 ; line 6
 ;================================================================================
 ; scope: program scope (level : 1)
 
 ; types
-%T_address = type <range>
-%T_alfa = type <array>
-%T_beta = type <array>
-%T_bit20 = type <range>
-%T_bit4 = type <range>
-%T_bit6 = type <range>
-%T_array_2 = type <array>
-%T_array_3 = type <array>
-%T_array_4 = type <array>
-%T_range_5 = type <range>
-%T_settype = type <set>
-%T_array_6 = type <array>
-%T_array_7 = type <array>
+%T_address = type __range
+%T_alfa = type __array
+%T_beta = type __array
+%T_bit20 = type __range
+%T_bit4 = type __range
+%T_bit6 = type __range
+%T_array_2 = type __array
+%T_array_3 = type __array
+%T_array_4 = type __array
+%T_range_5 = type __range
+%T_settype = type __set
+%T_array_6 = type __array
+%T_array_7 = type __array
 
 ; program variables
 @ad = dso_local global %T_address zeroinitializer
 @ad1 = dso_local global %T_address zeroinitializer
-@b = dso_local global %bool zeroinitializer
+@b = dso_local global i1 zeroinitializer
 @c = dso_local global i8 zeroinitializer
 @code = dso_local global %T_array_2 zeroinitializer
 @cop = dso_local global %T_array_3 zeroinitializer
@@ -40,7 +40,7 @@
 @i3 = dso_local global i32 zeroinitializer
 @input = dso_local global %T_text zeroinitializer
 @instr = dso_local global %T_array_4 zeroinitializer
-@interpreting = dso_local global %bool zeroinitializer
+@interpreting = dso_local global i1 zeroinitializer
 @j = dso_local global i32 zeroinitializer
 @mp = dso_local global %T_address zeroinitializer
 @np = dso_local global %T_address zeroinitializer
@@ -60,10 +60,10 @@
 ; scope: load (level : 2)
 
 ; types
-%T_load_labelrec = type <record>
-%T_load_labelrg = type <range>
-%T_load_array_8 = type <array>
-%T_load_array_9 = type <array>
+%T_load_labelrec = type [8 x i8]
+%T_load_labelrg = type __range
+%T_load_array_8 = type __array
+%T_load_array_9 = type __array
 
 ; line 138
 ;================================================================================
@@ -78,7 +78,7 @@
 ; scope: load_update (level : 3)
 
 ; types
-%T_load_update_range_10 = type <range>
+%T_load_update_range_10 = type __range
 
 ; line 237
 ;================================================================================

@@ -5,19 +5,19 @@
 
 ; types
 %T_pointer_1 = type i8*
-%T_text = type <file>
+%T_text = type __file
 
 ; line 4
 ;================================================================================
 ; scope: program scope (level : 1)
 
 ; types
-%T_R1 = type <range>
-%T_R2 = type <range>
-%T_R3 = type <range>
-%T_R4 = type <range>
-%T_R5 = type <range>
-%T_R6 = type <range>
+%T_R1 = type __range
+%T_R2 = type __range
+%T_R3 = type __range
+%T_R4 = type __range
+%T_R5 = type __range
+%T_R6 = type __range
 
 ; program variables
 @_input = dso_local global %T_text zeroinitializer

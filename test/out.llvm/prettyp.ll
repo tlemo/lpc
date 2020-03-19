@@ -5,34 +5,34 @@
 
 ; types
 %T_pointer_1 = type i8*
-%T_text = type <file>
+%T_text = type __file
 
 ; line 167
 ;================================================================================
 ; scope: program scope (level : 1)
 
 ; types
-%T_CHARINFO = type <record>
-%T_SYMBOL = type <record>
+%T_CHARINFO = type [5 x i8]
+%T_STRING = type __array
+%T_SYMBOL = type [20 x i8]
 %T_SYMBOLINFO = type %T_SYMBOL*
-%T_DBLCHARTABLE = type <array>
-%T_DBLCHRSET = type <set>
-%T_KEY = type <array>
-%T_KEYSYMSET = type <set>
-%T_KEYWORDTABLE = type <array>
-%T_OPTIONSET = type <set>
-%T_OPTIONTABLE = type <array>
-%T_SGLCHARTABLE = type <array>
-%T_SPECIALCHAR = type <array>
-%T_SYMBOLSTACK = type <array>
-%T_STACKENTRY = type <record>
-%T_STRING = type <array>
-%T_TABLEENTRY = type <record>
+%T_DBLCHARTABLE = type __array
+%T_DBLCHRSET = type __set
+%T_KEY = type __array
+%T_KEYSYMSET = type __set
+%T_KEYWORDTABLE = type __array
+%T_OPTIONSET = type __set
+%T_OPTIONTABLE = type __array
+%T_SGLCHARTABLE = type __array
+%T_SPECIALCHAR = type __array
+%T_SYMBOLSTACK = type __array
+%T_STACKENTRY = type [8 x i8]
+%T_TABLEENTRY = type [3 x i8]
 
 ; program variables
 @_input = dso_local global %T_text zeroinitializer
 @_output = dso_local global %T_text zeroinitializer
-@CRPENDING = dso_local global %bool zeroinitializer
+@CRPENDING = dso_local global i1 zeroinitializer
 @CURRCHAR = dso_local global %T_CHARINFO zeroinitializer
 @CURRLINEPOS = dso_local global i32 zeroinitializer
 @CURRMARGIN = dso_local global i32 zeroinitializer
@@ -45,7 +45,7 @@
 @NEXTSYM = dso_local global %T_SYMBOLINFO zeroinitializer
 @OUTPUTFILE = dso_local global %T_text zeroinitializer
 @PPOPTION = dso_local global %T_OPTIONTABLE zeroinitializer
-@RECORDSEEN = dso_local global %bool zeroinitializer
+@RECORDSEEN = dso_local global i1 zeroinitializer
 @SGLCHAR = dso_local global %T_SGLCHARTABLE zeroinitializer
 @STACK = dso_local global %T_SYMBOLSTACK zeroinitializer
 @TOP = dso_local global i32 zeroinitializer

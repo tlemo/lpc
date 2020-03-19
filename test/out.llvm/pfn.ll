@@ -5,7 +5,7 @@
 
 ; types
 %T_pointer_1 = type i8*
-%T_text = type <file>
+%T_text = type __file
 
 ; line 4
 ;================================================================================
@@ -29,21 +29,21 @@
 ; scope: foo_bar1 (level : 3)
 
 ; types
-%T_foo_bar1_subroutine_2 = type <subroutine>
+%T_foo_bar1_subroutine_2 = type __subroutine
 
 ; line 29
 ;================================================================================
 ; scope: foo_bar2 (level : 3)
 
 ; types
-%T_foo_bar2_subroutine_3 = type <subroutine>
+%T_foo_bar2_subroutine_3 = type __subroutine
 
 ; line 32
 ;================================================================================
 ; scope: foo_bar2_moo (level : 4)
 
 ; types
-%T_foo_bar2_moo_subroutine_4 = type <subroutine>
+%T_foo_bar2_moo_subroutine_4 = type __subroutine
 
 ; line 44
 ;================================================================================

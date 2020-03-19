@@ -30,12 +30,17 @@ void TypeGen::gen(ts::Type* pType)
 {
     auto pExt = ext(pType);
     assert(pExt->genName.empty());
+    assert(pExt->def.empty());
     
     // types may override this generic name
     //
     pExt->genName = m_pBackend->_genName(pType->typeId(), "%T_");
 
     pType->accept(this);
+
+    assert(pExt->size >= 0);
+    assert(pExt->alignment > 0);
+    assert(pExt->size % pExt->alignment == 0);
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -43,17 +48,120 @@ void TypeGen::gen(ts::Type* pType)
 VarPtr TypeGen::visit(ts::SetType* pType)
 {
     // TODO
-    ext(pType)->def = "<set>";
+    auto pExt = ext(pType);
+    pExt->size = 1;
+    pExt->alignment = 1;
+    pExt->def = "__set";
     return VarPtr();
 }
 
 
 ///////////////////////////////////////////////////////////////////////////////
 //
+// the recursive helper for generating "record" definitions
+//
+TypeGen::FieldsLayout TypeGen::_fieldsLayout(const ts::RecordFields* pFields, int offset)
+{
+    vector<FieldOffset> fieldOffsets;
+    int alignment = 1;
+
+    // add field helper
+    //
+    const auto addField = [&](const Identifier* pId, ts::Type* pType)
+    {
+        auto pExt = ext(pType);
+
+        assert(pExt->size > 0);
+        assert(pExt->alignment > 0);
+        assert(!pExt->genName.empty());
+
+        // align the offset
+        //
+        offset += pExt->alignment - 1;
+        offset -= offset % pExt->alignment;
+
+        fieldOffsets.push_back({ pId->name, offset });
+
+        // update the offset & alignment
+        //
+        offset += pExt->size;
+        alignment = LCM(alignment, pExt->alignment);
+    };
+
+    // fixed fields
+    //
+    if(pFields->pFixedFields != nullptr)
+    {
+        for (const auto& fieldSet : *pFields->pFixedFields)
+        {
+            const auto pFieldType = fieldSet->pType;
+            m_pBackend->_generateType(pFieldType);
+
+            for (const auto& id : *fieldSet->pNames)
+            {
+                addField(id, pFieldType);
+            }
+        }
+    }
+
+    // variable fields & tag
+    //
+    if(pFields->pVariableFields != nullptr)
+    {
+        const auto pSelField = pFields->pVariableFields->pVariantSelector;
+
+        if(pSelField->pId != nullptr)
+        {
+            m_pBackend->_generateType(pSelField->pType);
+            addField(pSelField->pId, pSelField->pType);
+        }
+
+        int varFieldsSize = 0;
+
+        for (const auto& variantSection : *pFields->pVariableFields->pVariantFields)
+        {
+            const auto varFieldsLayout = _fieldsLayout(variantSection->pFields, offset);
+
+            fieldOffsets.insert(fieldOffsets.end(),
+                varFieldsLayout.fields.begin(), varFieldsLayout.fields.end());
+
+            varFieldsSize = max(varFieldsSize, varFieldsLayout.size);
+            alignment = LCM(alignment, varFieldsLayout.alignment);
+        }
+
+        offset += varFieldsSize;
+    }
+
+    return { fieldOffsets, offset, alignment };
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// the records map to an LLVM IR, so we can
+// control the precise layout (including variant fields)
+//
 VarPtr TypeGen::visit(ts::RecordType* pType)
 {
-    // TODO
-    ext(pType)->def = "<record>";
+    auto pExt = ext(pType);
+    const auto fieldsLayout = _fieldsLayout(pType->fields());
+
+    stringstream def;
+
+    def << "[" << fieldsLayout.size << " x i8]";
+
+    pExt->def = def.str();
+    pExt->alignment = fieldsLayout.alignment;
+    pExt->size = roundUp(fieldsLayout.size, fieldsLayout.alignment);
+
+    // build the name -> offset map
+    //
+    for(const auto& [name, offset] : fieldsLayout.fields)
+    {
+        const bool inserted = pExt->fields.insert({ name, offset }).second;
+        assert(inserted);
+    }
+
     return VarPtr();
 }
 
@@ -63,7 +171,10 @@ VarPtr TypeGen::visit(ts::RecordType* pType)
 VarPtr TypeGen::visit(ts::ArrayType* pType)
 {
     // TODO
-    ext(pType)->def = "<array>";
+    auto pExt = ext(pType);
+    pExt->size = 1;
+    pExt->alignment = 1;
+    pExt->def = "__array";
     return VarPtr();
 }
 
@@ -75,12 +186,17 @@ VarPtr TypeGen::visit(ts::PointerType* pType)
     const auto pBaseType = pType->baseType();
     m_pBackend->_generateType(pBaseType);
 
+    auto pExt = ext(pType);
+
     stringstream def;
     if (pBaseType->isVoid())
         def << "i8*";
     else
         def << ext(pBaseType)->genName << "*";
-    ext(pType)->def = def.str();
+    pExt->def = def.str();
+
+    pExt->size = PTR_SIZE;
+    pExt->alignment = PTR_ALIGNMENT;
 
     return VarPtr();
 }
@@ -91,7 +207,10 @@ VarPtr TypeGen::visit(ts::PointerType* pType)
 VarPtr TypeGen::visit(ts::FileType* pType)
 {
     // TODO
-    ext(pType)->def = "<file>";
+    auto pExt = ext(pType);
+    pExt->size = 1;
+    pExt->alignment = 1;
+    pExt->def = "__file";
     return VarPtr();
 }
 
@@ -101,7 +220,10 @@ VarPtr TypeGen::visit(ts::FileType* pType)
 VarPtr TypeGen::visit(ts::SubroutineType* pType)
 {
     // TODO
-    ext(pType)->def = "<subroutine>";
+    auto pExt = ext(pType);
+    pExt->size = 1;
+    pExt->alignment = 1;
+    pExt->def = "__subroutine";
     return VarPtr();
 }
 
@@ -111,7 +233,10 @@ VarPtr TypeGen::visit(ts::SubroutineType* pType)
 VarPtr TypeGen::visit(ts::RangeType* pType)
 {
     // TODO
-    ext(pType)->def = "<range>";
+    auto pExt = ext(pType);
+    pExt->size = 1;
+    pExt->alignment = 1;
+    pExt->def = "__range";
     return VarPtr();
 }
 

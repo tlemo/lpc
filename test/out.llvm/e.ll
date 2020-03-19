@@ -5,15 +5,15 @@
 
 ; types
 %T_pointer_1 = type i8*
-%T_text = type <file>
+%T_text = type __file
 
 ; line 2
 ;================================================================================
 ; scope: program scope (level : 1)
 
 ; types
-%T_digit = type <range>
-%T_digitarray = type <array>
+%T_digit = type __range
+%T_digitarray = type __array
 %T_pointer_2 = type %T_digitarray*
 
 ; program variables

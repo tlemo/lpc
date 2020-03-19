@@ -5,32 +5,32 @@
 
 ; types
 %T_pointer_1 = type i8*
-%T_text = type <file>
+%T_text = type __file
 
 ; line 262
 ;================================================================================
 ; scope: program scope (level : 1)
 
 ; types
-%T_address = type <range>
-%T_alfa = type <array>
-%T_alfainx = type <range>
-%T_beta = type <array>
-%T_array_2 = type <array>
-%T_byte = type <range>
-%T_bytfil = type <file>
-%T_array_4 = type <array>
-%T_fileno = type <range>
-%T_array_5 = type <array>
-%T_array_6 = type <array>
-%T_array_7 = type <array>
-%T_array_8 = type <array>
-%T_array_9 = type <array>
-%T_instyp = type <range>
-%T_lvltyp = type <range>
-%T_settype = type <set>
-%T_array_10 = type <array>
-%T_array_11 = type <array>
+%T_address = type __range
+%T_alfa = type __array
+%T_alfainx = type __range
+%T_beta = type __array
+%T_array_2 = type __array
+%T_byte = type __range
+%T_bytfil = type __file
+%T_array_4 = type __array
+%T_fileno = type __range
+%T_array_5 = type __array
+%T_array_6 = type __array
+%T_array_7 = type __array
+%T_array_8 = type __array
+%T_array_9 = type __array
+%T_instyp = type __range
+%T_lvltyp = type __range
+%T_settype = type __set
+%T_array_10 = type __array
+%T_array_11 = type __array
 
 ; program variables
 @a1 = dso_local global %T_address zeroinitializer
@@ -38,9 +38,9 @@
 @a3 = dso_local global %T_address zeroinitializer
 @ad = dso_local global %T_address zeroinitializer
 @ad1 = dso_local global %T_address zeroinitializer
-@b = dso_local global %bool zeroinitializer
-@b1 = dso_local global %bool zeroinitializer
-@b2 = dso_local global %bool zeroinitializer
+@b = dso_local global i1 zeroinitializer
+@b1 = dso_local global i1 zeroinitializer
+@b2 = dso_local global i1 zeroinitializer
 @bfiltable = dso_local global %T_array_2 zeroinitializer
 @c = dso_local global i8 zeroinitializer
 @c1 = dso_local global i8 zeroinitializer
@@ -60,7 +60,7 @@
 @insp = dso_local global %T_array_7 zeroinitializer
 @insq = dso_local global %T_array_8 zeroinitializer
 @instr = dso_local global %T_array_9 zeroinitializer
-@interpreting = dso_local global %bool zeroinitializer
+@interpreting = dso_local global i1 zeroinitializer
 @j = dso_local global i32 zeroinitializer
 @mp = dso_local global %T_address zeroinitializer
 @np = dso_local global %T_address zeroinitializer
@@ -89,32 +89,36 @@
 ; scope: getint (level : 2)
 
 ; types
-%T_getint_range_12 = type <range>
-%T_getint_record_13 = type <record>
+%T_getint_range_12 = type __range
+%T_getint_array_14 = type __array
+%T_getint_record_13 = type [4 x i8]
 
 ; line 517
 ;================================================================================
 ; scope: putint (level : 2)
 
 ; types
-%T_putint_range_14 = type <range>
-%T_putint_record_15 = type <record>
+%T_putint_range_15 = type __range
+%T_putint_array_17 = type __array
+%T_putint_record_16 = type [4 x i8]
 
 ; line 534
 ;================================================================================
 ; scope: getrel (level : 2)
 
 ; types
-%T_getrel_range_16 = type <range>
-%T_getrel_record_17 = type <record>
+%T_getrel_range_18 = type __range
+%T_getrel_array_20 = type __array
+%T_getrel_record_19 = type [8 x i8]
 
 ; line 551
 ;================================================================================
 ; scope: putrel (level : 2)
 
 ; types
-%T_putrel_range_18 = type <range>
-%T_putrel_record_19 = type <record>
+%T_putrel_range_21 = type __range
+%T_putrel_array_23 = type __array
+%T_putrel_record_22 = type [8 x i8]
 
 ; line 568
 ;================================================================================
@@ -129,16 +133,18 @@
 ; scope: getset (level : 2)
 
 ; types
-%T_getset_range_20 = type <range>
-%T_getset_record_21 = type <record>
+%T_getset_range_24 = type __range
+%T_getset_array_26 = type __array
+%T_getset_record_25 = type [1 x i8]
 
 ; line 604
 ;================================================================================
 ; scope: putset (level : 2)
 
 ; types
-%T_putset_range_22 = type <range>
-%T_putset_record_23 = type <record>
+%T_putset_range_27 = type __range
+%T_putset_array_29 = type __array
+%T_putset_record_28 = type [1 x i8]
 
 ; line 621
 ;================================================================================
@@ -153,24 +159,26 @@
 ; scope: getadr (level : 2)
 
 ; types
-%T_getadr_range_24 = type <range>
-%T_getadr_record_25 = type <record>
+%T_getadr_range_30 = type __range
+%T_getadr_array_32 = type __array
+%T_getadr_record_31 = type [1 x i8]
 
 ; line 654
 ;================================================================================
 ; scope: putadr (level : 2)
 
 ; types
-%T_putadr_range_26 = type <range>
-%T_putadr_record_27 = type <record>
+%T_putadr_range_33 = type __range
+%T_putadr_array_35 = type __array
+%T_putadr_record_34 = type [1 x i8]
 
 ; line 673
 ;================================================================================
 ; scope: swpstk (level : 2)
 
 ; types
-%T_swpstk_range_28 = type <range>
-%T_swpstk_array_29 = type <array>
+%T_swpstk_range_36 = type __range
+%T_swpstk_array_37 = type __array
 
 ; line 700
 ;================================================================================
@@ -229,10 +237,10 @@
 ; scope: load (level : 2)
 
 ; types
-%T_load_labelrec = type <record>
-%T_load_labelrg = type <range>
-%T_load_array_30 = type <array>
-%T_load_array_31 = type <array>
+%T_load_labelrec = type [8 x i8]
+%T_load_labelrg = type __range
+%T_load_array_38 = type __array
+%T_load_array_39 = type __array
 
 ; line 819
 ;================================================================================
@@ -271,7 +279,7 @@
 ; scope: load_assemble (level : 3)
 
 ; types
-%T_load_assemble_array_32 = type <array>
+%T_load_assemble_array_40 = type __array
 
 ; line 1166
 ;================================================================================

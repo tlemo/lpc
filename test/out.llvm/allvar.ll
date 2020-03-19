@@ -5,14 +5,14 @@
 
 ; types
 %T_pointer_1 = type i8*
-%T_text = type <file>
+%T_text = type __file
 
 ; line 2
 ;================================================================================
 ; scope: program scope (level : 1)
 
 ; types
-%T_range_2 = type <range>
+%T_range_2 = type __range
 
 ; program variables
 @_input = dso_local global %T_text zeroinitializer
@@ -23,4 +23,4 @@
 @C = dso_local global %T_range_2 zeroinitializer
 @D = dso_local global %T_range_2 zeroinitializer
 @DogTail = dso_local global double zeroinitializer
-@Puppy = dso_local global %bool zeroinitializer
+@Puppy = dso_local global i1 zeroinitializer

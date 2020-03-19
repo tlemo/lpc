@@ -26,8 +26,8 @@
 #include "_parser.h"
 
 #include <string>
-#include <list>
-#include <map>
+#include <vector>
+#include <unordered_map>
 #include <sstream>
 #include <tuple>
 #include <iomanip>
@@ -55,6 +55,16 @@ struct TypeExt
     // (may be empty if it maps to a built-in type)
     //
     string def;
+
+    // the size and alignment in bytes
+    //
+    int size = -1;
+    int alignment = -1;
+
+    // field -> offset mapping
+    // (for record types)
+    //
+    unordered_map<string, int> fields;
 };
 
 struct ConstExt
@@ -208,6 +218,24 @@ string genScopeName(Scope* pScope)
 //
 class TypeGen : public ts::Visitor
 {
+    // the size/alignment of a pointer
+    // (we use 8 bytes to make things run across 32/64bit platforms)
+    //
+    static constexpr int PTR_SIZE = 8;
+    static constexpr int PTR_ALIGNMENT = 8;
+
+    struct FieldOffset {
+        string name;
+        int offset = -1;
+    };
+
+    struct FieldsLayout
+    {
+        vector<FieldOffset> fields;
+        int size = -1;
+        int alignment = -1;
+    };
+
 public:
     TypeGen(LlvmBackend* pBackend) : m_pBackend(pBackend)
     {
@@ -219,37 +247,55 @@ public:
 private:
     VarPtr visit(ts::VoidType* pType) override
     {
-        ext(pType)->genName = "void";
+        auto pExt = ext(pType);
+        pExt->genName = "void";
+        pExt->size = 0;
+        pExt->alignment = 1;
         return VarPtr();
     }
 
     VarPtr visit(ts::IntegerType* pType) override
     {
-        ext(pType)->genName = "i32";
+        auto pExt = ext(pType);
+        pExt->genName = "i32";
+        pExt->size = 4;
+        pExt->alignment = 4;
         return VarPtr();
     }
 
     VarPtr visit(ts::CharType* pType) override
     {
-        ext(pType)->genName = "i8";
+        auto pExt = ext(pType);
+        pExt->genName = "i8";
+        pExt->size = 1;
+        pExt->alignment = 1;
         return VarPtr();
     }
 
     VarPtr visit(ts::BoolType* pType) override
     {
-        ext(pType)->genName = "%bool";
+        auto pExt = ext(pType);
+        pExt->genName = "i1";
+        pExt->size = 1;
+        pExt->alignment = 1;
         return VarPtr();
     }
 
     VarPtr visit(ts::RealType* pType) override
     {
-        ext(pType)->genName = "double";
+        auto pExt = ext(pType);
+        pExt->genName = "double";
+        pExt->size = 8;
+        pExt->alignment = 8;
         return VarPtr();
     }
 
     VarPtr visit(ts::EnumType* pType) override
     {
-        ext(pType)->genName = "i32";
+        auto pExt = ext(pType);
+        pExt->genName = "i32";
+        pExt->size = 4;
+        pExt->alignment = 4;
         return VarPtr();
     }
 
@@ -260,6 +306,8 @@ private:
     VarPtr visit(ts::FileType* pType) override;
     VarPtr visit(ts::SubroutineType* pType) override;
     VarPtr visit(ts::RangeType* pType) override;
+
+    FieldsLayout _fieldsLayout(const ts::RecordFields* pFields, int offset = 0);
 
 private:
     LlvmBackend* m_pBackend = nullptr;
@@ -973,7 +1021,7 @@ private:
 
     string _expandFileIntrinsic(obj::IntrinsicId intrinsicId, ast::ExprList* pArguments)
     {
-        const static map<obj::IntrinsicId, string> fileIntrinsics = 
+        const static unordered_map<obj::IntrinsicId, string> fileIntrinsics = 
         {
             { obj::IN_EOF,      "bool [lpcRuntime]LPC.File::Eof()" },
             { obj::IN_EOLN,     "bool [lpcRuntime]LPC.File::Eoln()" },

@@ -5,19 +5,20 @@
 
 ; types
 %T_pointer_1 = type i8*
-%T_text = type <file>
+%T_text = type __file
 
 ; line 4
 ;================================================================================
 ; scope: program scope (level : 1)
 
 ; types
-%T_array_2 = type <array>
-%T_array_3 = type <array>
-%T_array_4 = type <array>
-%T_array_5 = type <array>
+%T_array_2 = type __array
+%T_array_3 = type __array
+%T_array_4 = type __array
+%T_array_5 = type __array
 %T_pointer_6 = type double*
-%T_rec = type <record>
+%T_set_8 = type __set
+%T_rec = type [48 x i8]
 %T_pointer_7 = type %T_rec*
 
 ; program variables

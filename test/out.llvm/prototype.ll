@@ -5,18 +5,19 @@
 
 ; types
 %T_pointer_1 = type i8*
-%T_text = type <file>
+%T_text = type __file
 
 ; line 7
 ;================================================================================
 ; scope: program scope (level : 1)
 
 ; types
-%T_A = type <array>
-%T_BYTE = type <range>
-%T_REC = type <record>
-%T_array_2 = type <array>
-%T_UNION = type <record>
+%T_A = type __array
+%T_BYTE = type __range
+%T_REC = type [17 x i8]
+%T_array_2 = type __array
+%T_array_3 = type __array
+%T_UNION = type [9 x i8]
 
 ; program variables
 @_input = dso_local global %T_text zeroinitializer
@@ -30,8 +31,8 @@
 ; scope: foo (level : 2)
 
 ; types
-%T_foo_pointer_3 = type %T_BYTE*
-%T_foo_subroutine_4 = type <subroutine>
+%T_foo_pointer_4 = type %T_BYTE*
+%T_foo_subroutine_5 = type __subroutine
 
 ; line 54
 ;================================================================================

@@ -5,27 +5,28 @@
 
 ; types
 %T_pointer_1 = type i8*
-%T_text = type <file>
+%T_text = type __file
 
 ; line 1
 ;================================================================================
 ; scope: program scope (level : 1)
 
 ; types
-%T_array_2 = type <array>
-%T_quadxy = type <record>
-%T_sectxy = type <record>
-%T_array_3 = type <array>
-%T_devicerec = type <record>
-%T_digits = type <range>
-%T_array_4 = type <array>
-%T_klingonrec = type <record>
-%T_array_5 = type <array>
-%T_quadrange = type <range>
-%T_array_6 = type <array>
-%T_quadrec = type <record>
-%T_sectrange = type <range>
-%T_array_7 = type <array>
+%T_array_2 = type __array
+%T_quadrange = type __range
+%T_quadxy = type [2 x i8]
+%T_sectrange = type __range
+%T_sectxy = type [2 x i8]
+%T_array_3 = type __array
+%T_array_4 = type __array
+%T_devicerec = type [8 x i8]
+%T_digits = type __range
+%T_array_5 = type __array
+%T_klingonrec = type [8 x i8]
+%T_array_6 = type __array
+%T_array_7 = type __array
+%T_quadrec = type [5 x i8]
+%T_array_8 = type __array
 
 ; program variables
 @badpoints = dso_local global i32 zeroinitializer
@@ -39,15 +40,15 @@
 @curyear = dso_local global i32 zeroinitializer
 @device = dso_local global %T_array_3 zeroinitializer
 @endyear = dso_local global i32 zeroinitializer
-@galaxy = dso_local global %T_array_4 zeroinitializer
+@galaxy = dso_local global %T_array_5 zeroinitializer
 @input = dso_local global %T_text zeroinitializer
-@klingons = dso_local global %T_array_5 zeroinitializer
+@klingons = dso_local global %T_array_6 zeroinitializer
 @output = dso_local global %T_text zeroinitializer
-@quadrant = dso_local global %T_array_6 zeroinitializer
+@quadrant = dso_local global %T_array_7 zeroinitializer
 @rndseq = dso_local global i32 zeroinitializer
 @startklingons = dso_local global i32 zeroinitializer
 @startyear = dso_local global i32 zeroinitializer
-@symbols = dso_local global %T_array_7 zeroinitializer
+@symbols = dso_local global %T_array_8 zeroinitializer
 @totalkbases = dso_local global i32 zeroinitializer
 @totalklingons = dso_local global i32 zeroinitializer
 
@@ -88,7 +89,7 @@
 ; scope: klingonattack (level : 2)
 
 ; types
-%T_klingonattack_array_8 = type <array>
+%T_klingonattack_array_9 = type __array
 
 ; line 241
 ;================================================================================

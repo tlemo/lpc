@@ -5,23 +5,25 @@
 
 ; types
 %T_pointer_1 = type i8*
-%T_text = type <file>
+%T_text = type __file
 
 ; line 1
 ;================================================================================
 ; scope: program scope (level : 1)
 
 ; types
-%T_alfa = type <array>
-%T_array_2 = type <array>
-%T_symset = type <set>
-%T_instruction = type <record>
-%T_array_3 = type <array>
-%T_array_4 = type <array>
-%T_array_5 = type <array>
-%T_array_6 = type <array>
-%T_array_7 = type <array>
-%T_array_8 = type <array>
+%T_alfa = type __array
+%T_array_2 = type __array
+%T_symset = type __set
+%T_range_3 = type __range
+%T_range_4 = type __range
+%T_instruction = type [6 x i8]
+%T_array_5 = type __array
+%T_array_6 = type __array
+%T_array_7 = type __array
+%T_array_8 = type __array
+%T_array_9 = type __array
+%T_array_10 = type __array
 
 ; program variables
 @a = dso_local global %T_alfa zeroinitializer
@@ -35,17 +37,17 @@
 @id = dso_local global %T_alfa zeroinitializer
 @input = dso_local global %T_text zeroinitializer
 @kk = dso_local global i32 zeroinitializer
-@line = dso_local global %T_array_3 zeroinitializer
+@line = dso_local global %T_array_5 zeroinitializer
 @ll = dso_local global i32 zeroinitializer
-@mnemonic = dso_local global %T_array_4 zeroinitializer
+@mnemonic = dso_local global %T_array_6 zeroinitializer
 @num = dso_local global i32 zeroinitializer
 @output = dso_local global %T_text zeroinitializer
-@ssym = dso_local global %T_array_5 zeroinitializer
+@ssym = dso_local global %T_array_7 zeroinitializer
 @statbegsys = dso_local global %T_symset zeroinitializer
 @sym = dso_local global i32 zeroinitializer
-@table = dso_local global %T_array_6 zeroinitializer
-@word = dso_local global %T_array_7 zeroinitializer
-@wsym = dso_local global %T_array_8 zeroinitializer
+@table = dso_local global %T_array_8 zeroinitializer
+@word = dso_local global %T_array_9 zeroinitializer
+@wsym = dso_local global %T_array_10 zeroinitializer
 
 ; line 56
 ;================================================================================
@@ -116,7 +118,7 @@
 ; scope: interpret (level : 2)
 
 ; types
-%T_interpret_array_9 = type <array>
+%T_interpret_array_11 = type __array
 
 ; line 361
 ;================================================================================
