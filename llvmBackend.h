@@ -47,8 +47,11 @@ class LlvmBackend;
 //
 struct Metadata
 {
+    enum class Kind { None, Generic, Type, Enum, Global };
+
     string id;
     string def;
+    Kind kind = Kind::None;
 };
 
 
@@ -71,6 +74,10 @@ struct TypeExt
     //
     int size = -1;
     int alignment = -1;
+
+    // debug information
+    //
+    const Metadata* pMetadata = nullptr;
 
     // field -> offset mapping
     // (for record types)
@@ -248,68 +255,18 @@ class TypeGen : public ts::Visitor
     };
 
 public:
-    TypeGen(LlvmBackend* pBackend) : m_pBackend(pBackend)
-    {
-    }
+    TypeGen(LlvmBackend* pBackend) : m_pBackend(pBackend) {}
 
 public:
     void gen(ts::Type* pType);
 
 private:
-    VarPtr visit(ts::VoidType* pType) override
-    {
-        auto pExt = ext(pType);
-        pExt->genName = "void";
-        pExt->size = 0;
-        pExt->alignment = 1;
-        return VarPtr();
-    }
-
-    VarPtr visit(ts::IntegerType* pType) override
-    {
-        auto pExt = ext(pType);
-        pExt->genName = "i32";
-        pExt->size = 4;
-        pExt->alignment = 4;
-        return VarPtr();
-    }
-
-    VarPtr visit(ts::CharType* pType) override
-    {
-        auto pExt = ext(pType);
-        pExt->genName = "i8";
-        pExt->size = 1;
-        pExt->alignment = 1;
-        return VarPtr();
-    }
-
-    VarPtr visit(ts::BoolType* pType) override
-    {
-        auto pExt = ext(pType);
-        pExt->genName = "i1";
-        pExt->size = 1;
-        pExt->alignment = 1;
-        return VarPtr();
-    }
-
-    VarPtr visit(ts::RealType* pType) override
-    {
-        auto pExt = ext(pType);
-        pExt->genName = "double";
-        pExt->size = 8;
-        pExt->alignment = 8;
-        return VarPtr();
-    }
-
-    VarPtr visit(ts::EnumType* pType) override
-    {
-        auto pExt = ext(pType);
-        pExt->genName = "i32";
-        pExt->size = 4;
-        pExt->alignment = 4;
-        return VarPtr();
-    }
-
+    VarPtr visit(ts::VoidType* pType) override;
+    VarPtr visit(ts::IntegerType* pType) override;
+    VarPtr visit(ts::CharType* pType) override;
+    VarPtr visit(ts::BoolType* pType) override;
+    VarPtr visit(ts::RealType* pType) override;
+    VarPtr visit(ts::EnumType* pType) override;
     VarPtr visit(ts::SetType* pType) override;
     VarPtr visit(ts::RecordType* pType) override;
     VarPtr visit(ts::ArrayType* pType) override;
@@ -346,11 +303,6 @@ private:
     int m_metadataIdGen = 0;
 
     const Metadata* m_sourceFileMd = nullptr;
-    const Metadata* m_enumsMd = nullptr;
-    const Metadata* m_typesMd = nullptr;
-    const Metadata* m_globalsMd = nullptr;
-    const Metadata* m_compileUnitMd = nullptr;
-    const Metadata* m_versionMd = nullptr;
 
 public:
     LlvmBackend() = default;
@@ -358,12 +310,12 @@ public:
     const char* targetName() const override { return "llvm"; }
 
 private:
-    const Metadata* _newMetadata(const string& def)
+    const Metadata* _newMetadata(Metadata::Kind kind, const string& def)
     {
         stringstream newMetadataId;
         newMetadataId << "!" << m_metadataIdGen++;
 
-        auto pMetadata = new Metadata{ newMetadataId.str(), def };
+        auto pMetadata = new Metadata{ newMetadataId.str(), def, kind };
         m_metadata.push_back(pMetadata);
 
         return pMetadata;
@@ -448,6 +400,8 @@ private:
 private:
     const char* _outputExt() const override { return ".ll"; }
 
+    void _outputMetadata();
+
     void _start() override
     {
         m_metadata.clear();
@@ -458,53 +412,12 @@ private:
         srcFile << "!DIFile(filename: \"" <<
             ::PathFindFileName(context()->commandLine()->getInputName()) <<
             "\", checksumkind: CSK_None)";
-        m_sourceFileMd = _newMetadata(srcFile.str());
-
-        // TODO
-        m_enumsMd = _newMetadata("!{}");
-        m_typesMd = _newMetadata("!{}");
-        m_globalsMd = _newMetadata("!{}");
-
-        // version
-        stringstream version;
-        version << "!{!\"" << BUILD_STRING << "\"}";
-        m_versionMd = _newMetadata(version.str());
-
-        // compile unit metadata
-        stringstream compileUnit;
-        compileUnit << "distinct !DICompileUnit(" <<
-            "language: DW_LANG_Pascal83, " <<
-            "file: " << m_sourceFileMd->id << ", " <<
-            "producer: \"" << BUILD_STRING << "\", " <<
-            "isOptimized: true, " <<
-            "runtimeVersion: 0, " <<
-            "emissionKind: FullDebug, " <<
-            "enums: " << m_enumsMd->id << ", " <<
-            "retainedTypes: " << m_typesMd->id << ", " <<
-            "globals: " << m_globalsMd->id << ", " <<
-            "nameTableKind: None)";
-        m_compileUnitMd = _newMetadata(compileUnit.str());
+        m_sourceFileMd = _newMetadata(Metadata::Kind::Generic, srcFile.str());
     }
 
     void _end() override
     {
-        std::stringstream code;
-
-        // output metadata
-        code << ";================================================================================\n";
-        code << "; metadata\n";
-        code << "\n";
-        code << "!llvm.dbg.cu = !{" << m_compileUnitMd->id << "}\n";
-        code << "!llvm.module.flags = !{}\n";
-        code << "!llvm.ident = !{" << m_versionMd->id << "}\n";
-        code << "\n";
-        for (auto pMetadata : m_metadata)
-        {
-            code << pMetadata->id << " = " << pMetadata->def << "\n";
-        }
-        code << "\n";
-
-        write(code);
+        _outputMetadata();
     }
 
     // this is the main entry point for generating code for a scope

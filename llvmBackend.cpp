@@ -31,8 +31,9 @@ void TypeGen::gen(ts::Type* pType)
     auto pExt = ext(pType);
     assert(pExt->genName.empty());
     assert(pExt->def.empty());
+    assert(pExt->pMetadata == nullptr);
     
-    // types may override this generic name
+    // types may this generic name
     //
     pExt->genName = m_pBackend->_genName(pType->typeId(), "%T_");
 
@@ -41,6 +42,91 @@ void TypeGen::gen(ts::Type* pType)
     assert(pExt->size >= 0);
     assert(pExt->alignment > 0);
     assert(pExt->size % pExt->alignment == 0);
+    //assert(pExt->pMetadata != nullptr); TODO
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+VarPtr TypeGen::visit(ts::VoidType* pType)
+{
+    auto pExt = ext(pType);
+    pExt->genName = "void";
+    pExt->size = 0;
+    pExt->alignment = 1;
+    pExt->pMetadata = m_pBackend->_newMetadata(Metadata::Kind::Type,
+        "!DIBasicType(name: \"void\", size: 0, encoding: DW_ATE_void)");
+    return VarPtr();
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+VarPtr TypeGen::visit(ts::IntegerType* pType)
+{
+    auto pExt = ext(pType);
+    pExt->genName = "i32";
+    pExt->size = 4;
+    pExt->alignment = 4;
+    pExt->pMetadata = m_pBackend->_newMetadata(Metadata::Kind::Type,
+        "!DIBasicType(name: \"integer\", size: 32, encoding: DW_ATE_signed)");
+    return VarPtr();
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+VarPtr TypeGen::visit(ts::CharType* pType)
+{
+    auto pExt = ext(pType);
+    pExt->genName = "i8";
+    pExt->size = 1;
+    pExt->alignment = 1;
+    pExt->pMetadata = m_pBackend->_newMetadata(Metadata::Kind::Type,
+        "!DIBasicType(name: \"char\", size: 8, encoding: DW_ATE_unsigned_char)");
+    return VarPtr();
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+VarPtr TypeGen::visit(ts::BoolType* pType)
+{
+    auto pExt = ext(pType);
+    pExt->genName = "i1";
+    pExt->size = 1;
+    pExt->alignment = 1;
+    pExt->pMetadata = m_pBackend->_newMetadata(Metadata::Kind::Type,
+        "!DIBasicType(name: \"boolean\", size: 8, encoding: DW_ATE_boolean)");
+    return VarPtr();
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+VarPtr TypeGen::visit(ts::RealType* pType)
+{
+    auto pExt = ext(pType);
+    pExt->genName = "double";
+    pExt->size = 8;
+    pExt->alignment = 8;
+    pExt->pMetadata = m_pBackend->_newMetadata(Metadata::Kind::Type,
+        "!DIBasicType(name: \"real\", size: 64, encoding: DW_ATE_float)");
+    return VarPtr();
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+VarPtr TypeGen::visit(ts::EnumType* pType)
+{
+    auto pExt = ext(pType);
+    pExt->genName = "i32";
+    pExt->size = 4;
+    pExt->alignment = 4;
+    pExt->pMetadata = m_pBackend->_newMetadata(Metadata::Kind::Type,
+        "!DIBasicType(name: \"enum\", size: 32, encoding: DW_ATE_signed)");
+    return VarPtr();
 }
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -52,6 +138,8 @@ VarPtr TypeGen::visit(ts::SetType* pType)
     pExt->size = 1;
     pExt->alignment = 1;
     pExt->def = "__set";
+    pExt->pMetadata = m_pBackend->_newMetadata(Metadata::Kind::Type,
+        "!DIBasicType(name: \"enum\", size: 32, encoding: DW_ATE_signed)");
     return VarPtr();
 }
 
@@ -240,6 +328,78 @@ VarPtr TypeGen::visit(ts::RangeType* pType)
     return VarPtr();
 }
 
+
+///////////////////////////////////////////////////////////////////////////////
+//
+void LlvmBackend::_outputMetadata()
+{
+    auto filterMetadata = [&](Metadata::Kind kind)
+    {
+        stringstream md;
+        md << "!{";
+        bool first = true;
+        for (auto pMetadata : m_metadata)
+        {
+            if (pMetadata->kind == kind)
+            {
+                if (!first)
+                    md << ",";
+                md << pMetadata->id;
+                first = false;
+            }
+        }
+        md << "}";
+        return md.str();
+    };
+
+    auto typesMd = _newMetadata(Metadata::Kind::Generic,
+        filterMetadata(Metadata::Kind::Type));
+
+    auto enumsMd = _newMetadata(Metadata::Kind::Generic,
+        filterMetadata(Metadata::Kind::Enum));
+
+    auto globalsMd = _newMetadata(Metadata::Kind::Generic,
+        filterMetadata(Metadata::Kind::Global));
+
+    // version
+    //
+    stringstream version;
+    version << "!{!\"" << BUILD_STRING << "\"}";
+    auto versionMd = _newMetadata(Metadata::Kind::Generic, version.str());
+
+    // compile unit metadata
+    //
+    stringstream compileUnit;
+    compileUnit << "distinct !DICompileUnit(" <<
+        "language: DW_LANG_Pascal83, " <<
+        "file: " << m_sourceFileMd->id << ", " <<
+        "producer: \"" << BUILD_STRING << "\", " <<
+        "isOptimized: true, " <<
+        "runtimeVersion: 0, " <<
+        "emissionKind: FullDebug, " <<
+        "enums: " << enumsMd->id << ", " <<
+        "retainedTypes: " << typesMd->id << ", " <<
+        "globals: " << globalsMd->id << ", " <<
+        "nameTableKind: None)";
+    auto compileUnitMd = _newMetadata(Metadata::Kind::Generic, compileUnit.str());
+
+    std::stringstream code;
+
+    code << ";================================================================================\n";
+    code << "; metadata\n";
+    code << "\n";
+    code << "!llvm.dbg.cu = !{" << compileUnitMd->id << "}\n";
+    code << "!llvm.module.flags = !{}\n";
+    code << "!llvm.ident = !{" << versionMd->id << "}\n";
+    code << "\n";
+    for (auto pMetadata : m_metadata)
+    {
+        code << pMetadata->id << " = " << pMetadata->def << "\n";
+    }
+    code << "\n";
+
+    write(code);
+}
 
 } // end namespace llvm
 
