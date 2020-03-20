@@ -33,16 +33,20 @@ void TypeGen::gen(ts::Type* pType)
     assert(pExt->def.empty());
     assert(pExt->pMetadata == nullptr);
     
-    // types may this generic name
+    // set the name and a metadata placeholder early on,
+    // so recursive type references can peek at their dependencies
+    //
+    // types must update the metadata definition and may also update the generic name
     //
     pExt->genName = m_pBackend->_genName(pType->typeId(), "%T_");
+    pExt->pMetadata = m_pBackend->_newMetadata(Metadata::Kind::Type, "TODO");
 
     pType->accept(this);
 
     assert(pExt->size >= 0);
     assert(pExt->alignment > 0);
     assert(pExt->size % pExt->alignment == 0);
-    //assert(pExt->pMetadata != nullptr); TODO
+    assert(!pExt->pMetadata->def.empty());
 }
 
 
@@ -54,8 +58,7 @@ VarPtr TypeGen::visit(ts::VoidType* pType)
     pExt->genName = "void";
     pExt->size = 0;
     pExt->alignment = 1;
-    pExt->pMetadata = m_pBackend->_newMetadata(Metadata::Kind::Type,
-        "!DIBasicType(name: \"void\", size: 0, encoding: DW_ATE_void)");
+    pExt->pMetadata->def = "!DIBasicType(name: \"void\", size: 0, encoding: DW_ATE_void)";
     return VarPtr();
 }
 
@@ -68,8 +71,7 @@ VarPtr TypeGen::visit(ts::IntegerType* pType)
     pExt->genName = "i32";
     pExt->size = 4;
     pExt->alignment = 4;
-    pExt->pMetadata = m_pBackend->_newMetadata(Metadata::Kind::Type,
-        "!DIBasicType(name: \"integer\", size: 32, encoding: DW_ATE_signed)");
+    pExt->pMetadata->def = "!DIBasicType(name: \"integer\", size: 32, encoding: DW_ATE_signed)";
     return VarPtr();
 }
 
@@ -82,8 +84,7 @@ VarPtr TypeGen::visit(ts::CharType* pType)
     pExt->genName = "i8";
     pExt->size = 1;
     pExt->alignment = 1;
-    pExt->pMetadata = m_pBackend->_newMetadata(Metadata::Kind::Type,
-        "!DIBasicType(name: \"char\", size: 8, encoding: DW_ATE_unsigned_char)");
+    pExt->pMetadata->def = "!DIBasicType(name: \"char\", size: 8, encoding: DW_ATE_unsigned_char)";
     return VarPtr();
 }
 
@@ -96,8 +97,7 @@ VarPtr TypeGen::visit(ts::BoolType* pType)
     pExt->genName = "i1";
     pExt->size = 1;
     pExt->alignment = 1;
-    pExt->pMetadata = m_pBackend->_newMetadata(Metadata::Kind::Type,
-        "!DIBasicType(name: \"boolean\", size: 8, encoding: DW_ATE_boolean)");
+    pExt->pMetadata->def = "!DIBasicType(name: \"boolean\", size: 8, encoding: DW_ATE_boolean)";
     return VarPtr();
 }
 
@@ -110,8 +110,7 @@ VarPtr TypeGen::visit(ts::RealType* pType)
     pExt->genName = "double";
     pExt->size = 8;
     pExt->alignment = 8;
-    pExt->pMetadata = m_pBackend->_newMetadata(Metadata::Kind::Type,
-        "!DIBasicType(name: \"real\", size: 64, encoding: DW_ATE_float)");
+    pExt->pMetadata->def = "!DIBasicType(name: \"real\", size: 64, encoding: DW_ATE_float)";
     return VarPtr();
 }
 
@@ -124,8 +123,7 @@ VarPtr TypeGen::visit(ts::EnumType* pType)
     pExt->genName = "i32";
     pExt->size = 4;
     pExt->alignment = 4;
-    pExt->pMetadata = m_pBackend->_newMetadata(Metadata::Kind::Type,
-        "!DIBasicType(name: \"enum\", size: 32, encoding: DW_ATE_signed)");
+    pExt->pMetadata->def = "!DIBasicType(name: \"enum\", size: 32, encoding: DW_ATE_signed)";
     return VarPtr();
 }
 
@@ -138,8 +136,6 @@ VarPtr TypeGen::visit(ts::SetType* pType)
     pExt->size = 1;
     pExt->alignment = 1;
     pExt->def = "__set";
-    pExt->pMetadata = m_pBackend->_newMetadata(Metadata::Kind::Type,
-        "!DIBasicType(name: \"enum\", size: 32, encoding: DW_ATE_signed)");
     return VarPtr();
 }
 
@@ -150,7 +146,7 @@ VarPtr TypeGen::visit(ts::SetType* pType)
 //
 TypeGen::FieldsLayout TypeGen::_fieldsLayout(const ts::RecordFields* pFields, int offset)
 {
-    vector<FieldOffset> fieldOffsets;
+    vector<Field> fieldsDef;
     int alignment = 1;
 
     // add field helper
@@ -168,7 +164,7 @@ TypeGen::FieldsLayout TypeGen::_fieldsLayout(const ts::RecordFields* pFields, in
         offset += pExt->alignment - 1;
         offset -= offset % pExt->alignment;
 
-        fieldOffsets.push_back({ pId->name, offset });
+        fieldsDef.push_back({ pId, pType, offset });
 
         // update the offset & alignment
         //
@@ -210,7 +206,7 @@ TypeGen::FieldsLayout TypeGen::_fieldsLayout(const ts::RecordFields* pFields, in
         {
             const auto varFieldsLayout = _fieldsLayout(variantSection->pFields, offset);
 
-            fieldOffsets.insert(fieldOffsets.end(),
+            fieldsDef.insert(fieldsDef.end(),
                 varFieldsLayout.fields.begin(), varFieldsLayout.fields.end());
 
             varFieldsSize = max(varFieldsSize, varFieldsLayout.size);
@@ -220,7 +216,7 @@ TypeGen::FieldsLayout TypeGen::_fieldsLayout(const ts::RecordFields* pFields, in
         offset += varFieldsSize;
     }
 
-    return { fieldOffsets, offset, alignment };
+    return { fieldsDef, offset, alignment };
 }
 
 
@@ -244,11 +240,52 @@ VarPtr TypeGen::visit(ts::RecordType* pType)
 
     // build the name -> offset map
     //
-    for(const auto& [name, offset] : fieldsLayout.fields)
+    for(const auto& [pId, _, offset] : fieldsLayout.fields)
     {
-        const bool inserted = pExt->fields.insert({ name, offset }).second;
+        const bool inserted = pExt->fields.insert({ pId->name, offset }).second;
         assert(inserted);
     }
+
+    // debug information
+    //
+    stringstream fieldsList;
+    fieldsList << "!{";
+    bool firstField = true;
+    for(const auto& [pId, pFieldType, offset] : fieldsLayout.fields)
+    {
+        stringstream def;
+        def << "!DIDerivedType(tag: DW_TAG_member, " <<
+            "name: \"" << pId->name << "\", " <<
+            "scope: " << pExt->pMetadata->id << ", " <<
+            "file: " << m_pBackend->m_sourceFileMd->id << ", " <<
+            "line: " << pId->line << ", " <<
+            "baseType: " << ext(pFieldType)->pMetadata->id << ", " <<
+            "size: " << ext(pFieldType)->size * 8 << ", " <<
+            "offset: " << offset * 8 << ")";
+        
+        auto fieldMd = m_pBackend->_newMetadata(Metadata::Kind::Field, def.str());
+        if (!firstField)
+            fieldsList << ",";
+        fieldsList << fieldMd->id;
+        firstField = false;
+    }
+    fieldsList << "}";
+
+    auto elementsMd = m_pBackend->_newMetadata(Metadata::Kind::Generic, fieldsList.str());
+
+    stringstream typeName;
+    if (pType->isUserDeclared())
+        typeName << "name: \"" << pType->typeId() << "\", ";
+
+    stringstream md;
+    md << "distinct !DICompositeType(tag: DW_TAG_structure_type, " <<
+        typeName.str() <<
+        "file: " << m_pBackend->m_sourceFileMd->id << ", " <<
+        "line: " << pType->line() << ", " <<
+        "size: " << pExt->size * 8 << ", " <<
+        "flags: DIFlagTypePassByValue, " <<
+        "elements: " << elementsMd->id << ")";
+    pExt->pMetadata->def = md.str();
 
     return VarPtr();
 }
@@ -285,6 +322,21 @@ VarPtr TypeGen::visit(ts::PointerType* pType)
 
     pExt->size = PTR_SIZE;
     pExt->alignment = PTR_ALIGNMENT;
+
+    // debug information
+    //
+    stringstream typeName;
+    if (pType->isUserDeclared())
+        typeName << "name: \"" << pType->typeId() << "\", ";
+
+    stringstream md;
+    md << "!DIDerivedType(tag: DW_TAG_pointer_type, " <<
+        typeName.str() <<
+        "file: " << m_pBackend->m_sourceFileMd->id << ", " <<
+        "line: " << pType->line() << ", " <<
+        "baseType: " << ext(pBaseType)->pMetadata->id << ", " <<
+        "size: 64)";
+    pExt->pMetadata->def = md.str();
 
     return VarPtr();
 }

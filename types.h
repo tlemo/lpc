@@ -93,6 +93,8 @@ public:
         }
     }
 
+    bool isUserDeclared() const { return m_pId != nullptr;  }
+
     // brief type name (ex. for error messages or generating anonymous names)
     //
     virtual std::string typeDef() const = 0;

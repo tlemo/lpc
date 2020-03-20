@@ -47,7 +47,7 @@ class LlvmBackend;
 //
 struct Metadata
 {
-    enum class Kind { None, Generic, Type, Enum, Global };
+    enum class Kind { None, Generic, Type, Enum, Global, Field };
 
     string id;
     string def;
@@ -77,7 +77,7 @@ struct TypeExt
 
     // debug information
     //
-    const Metadata* pMetadata = nullptr;
+    Metadata* pMetadata = nullptr;
 
     // field -> offset mapping
     // (for record types)
@@ -242,14 +242,16 @@ class TypeGen : public ts::Visitor
     static constexpr int PTR_SIZE = 8;
     static constexpr int PTR_ALIGNMENT = 8;
 
-    struct FieldOffset {
-        string name;
+    struct Field
+    {
+        const Identifier* pId = nullptr;
+        ts::Type* pType = nullptr;
         int offset = -1;
     };
 
     struct FieldsLayout
     {
-        vector<FieldOffset> fields;
+        vector<Field> fields;
         int size = -1;
         int alignment = -1;
     };
@@ -299,7 +301,7 @@ private:
 
     // global (per program) state
     //
-    vector<const Metadata*> m_metadata;
+    vector<Metadata*> m_metadata;
     int m_metadataIdGen = 0;
 
     const Metadata* m_sourceFileMd = nullptr;
@@ -310,7 +312,7 @@ public:
     const char* targetName() const override { return "llvm"; }
 
 private:
-    const Metadata* _newMetadata(Metadata::Kind kind, const string& def)
+    Metadata* _newMetadata(Metadata::Kind kind, const string& def)
     {
         stringstream newMetadataId;
         newMetadataId << "!" << m_metadataIdGen++;

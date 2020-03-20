@@ -190,3 +190,60 @@
 ; line 913
 ;================================================================================
 ; scope: finishgame (level : 2)
+;================================================================================
+; metadata
+
+!llvm.dbg.cu = !{!48}
+!llvm.module.flags = !{}
+!llvm.ident = !{!47}
+
+!0 = !DIFile(filename: "startrek.pas", checksumkind: CSK_None)
+!1 = !DIBasicType(name: "boolean", size: 8, encoding: DW_ATE_boolean)
+!2 = !DIBasicType(name: "char", size: 8, encoding: DW_ATE_unsigned_char)
+!3 = !DIBasicType(name: "integer", size: 32, encoding: DW_ATE_signed)
+!4 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: -1, baseType: !5, size: 64)
+!5 = !DIBasicType(name: "void", size: 0, encoding: DW_ATE_void)
+!6 = !DIBasicType(name: "real", size: 64, encoding: DW_ATE_float)
+!7 = TODO
+!8 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
+!9 = TODO
+!10 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "quadxy", file: !0, line: 39, size: 16, flags: DIFlagTypePassByValue, elements: !14)
+!11 = TODO
+!12 = !DIDerivedType(tag: DW_TAG_member, name: "x", scope: !10, file: !0, line: 40, baseType: !11, size: 8, offset: 0)
+!13 = !DIDerivedType(tag: DW_TAG_member, name: "y", scope: !10, file: !0, line: 40, baseType: !11, size: 8, offset: 8)
+!14 = !{!12,!13}
+!15 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "sectxy", file: !0, line: 36, size: 16, flags: DIFlagTypePassByValue, elements: !19)
+!16 = TODO
+!17 = !DIDerivedType(tag: DW_TAG_member, name: "x", scope: !15, file: !0, line: 37, baseType: !16, size: 8, offset: 0)
+!18 = !DIDerivedType(tag: DW_TAG_member, name: "y", scope: !15, file: !0, line: 37, baseType: !16, size: 8, offset: 8)
+!19 = !{!17,!18}
+!20 = TODO
+!21 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "devicerec", file: !0, line: 46, size: 64, flags: DIFlagTypePassByValue, elements: !25)
+!22 = TODO
+!23 = !DIDerivedType(tag: DW_TAG_member, name: "name", scope: !21, file: !0, line: 47, baseType: !22, size: 8, offset: 0)
+!24 = !DIDerivedType(tag: DW_TAG_member, name: "downtime", scope: !21, file: !0, line: 48, baseType: !3, size: 32, offset: 32)
+!25 = !{!23,!24}
+!26 = TODO
+!27 = TODO
+!28 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "klingonrec", file: !0, line: 42, size: 64, flags: DIFlagTypePassByValue, elements: !31)
+!29 = !DIDerivedType(tag: DW_TAG_member, name: "position", scope: !28, file: !0, line: 43, baseType: !15, size: 16, offset: 0)
+!30 = !DIDerivedType(tag: DW_TAG_member, name: "energyleft", scope: !28, file: !0, line: 44, baseType: !3, size: 32, offset: 32)
+!31 = !{!29,!30}
+!32 = TODO
+!33 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
+!34 = TODO
+!35 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "quadrec", file: !0, line: 26, size: 40, flags: DIFlagTypePassByValue, elements: !41)
+!36 = !DIDerivedType(tag: DW_TAG_member, name: "ishistory", scope: !35, file: !0, line: 27, baseType: !1, size: 8, offset: 0)
+!37 = !DIDerivedType(tag: DW_TAG_member, name: "klingbasenum", scope: !35, file: !0, line: 28, baseType: !26, size: 8, offset: 8)
+!38 = !DIDerivedType(tag: DW_TAG_member, name: "klingnum", scope: !35, file: !0, line: 29, baseType: !26, size: 8, offset: 16)
+!39 = !DIDerivedType(tag: DW_TAG_member, name: "fedbasenum", scope: !35, file: !0, line: 30, baseType: !26, size: 8, offset: 24)
+!40 = !DIDerivedType(tag: DW_TAG_member, name: "starnum", scope: !35, file: !0, line: 31, baseType: !26, size: 8, offset: 32)
+!41 = !{!36,!37,!38,!39,!40}
+!42 = TODO
+!43 = TODO
+!44 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9,!10,!11,!15,!16,!20,!21,!22,!26,!27,!28,!32,!33,!34,!35,!42,!43}
+!45 = !{}
+!46 = !{}
+!47 = !{!"LPC 1.1 (debug) - built on Mar 19 2020"}
+!48 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1 (debug) - built on Mar 19 2020", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !45, retainedTypes: !44, globals: !46, nameTableKind: None)
+

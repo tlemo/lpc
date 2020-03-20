@@ -151,3 +151,47 @@
 ; line 575
 ;================================================================================
 ; scope: callsp_putfile (level : 3)
+;================================================================================
+; metadata
+
+!llvm.dbg.cu = !{!35}
+!llvm.module.flags = !{}
+!llvm.ident = !{!34}
+
+!0 = !DIFile(filename: "pint.pas", checksumkind: CSK_None)
+!1 = !DIBasicType(name: "boolean", size: 8, encoding: DW_ATE_boolean)
+!2 = !DIBasicType(name: "char", size: 8, encoding: DW_ATE_unsigned_char)
+!3 = !DIBasicType(name: "integer", size: 32, encoding: DW_ATE_signed)
+!4 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: -1, baseType: !5, size: 64)
+!5 = !DIBasicType(name: "void", size: 0, encoding: DW_ATE_void)
+!6 = !DIBasicType(name: "real", size: 64, encoding: DW_ATE_float)
+!7 = TODO
+!8 = TODO
+!9 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
+!10 = TODO
+!11 = TODO
+!12 = TODO
+!13 = TODO
+!14 = TODO
+!15 = TODO
+!16 = TODO
+!17 = TODO
+!18 = TODO
+!19 = TODO
+!20 = TODO
+!21 = TODO
+!22 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
+!23 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "labelrec", file: !0, line: 128, size: 64, flags: DIFlagTypePassByValue, elements: !26)
+!24 = !DIDerivedType(tag: DW_TAG_member, name: "val", scope: !23, file: !0, line: 129, baseType: !8, size: 8, offset: 0)
+!25 = !DIDerivedType(tag: DW_TAG_member, name: "st", scope: !23, file: !0, line: 130, baseType: !22, size: 32, offset: 32)
+!26 = !{!24,!25}
+!27 = TODO
+!28 = TODO
+!29 = TODO
+!30 = TODO
+!31 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9,!10,!11,!12,!13,!14,!15,!16,!17,!18,!19,!20,!21,!22,!23,!27,!28,!29,!30}
+!32 = !{}
+!33 = !{}
+!34 = !{!"LPC 1.1 (debug) - built on Mar 19 2020"}
+!35 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1 (debug) - built on Mar 19 2020", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !32, retainedTypes: !31, globals: !33, nameTableKind: None)
+

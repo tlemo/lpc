@@ -123,3 +123,44 @@
 ; line 361
 ;================================================================================
 ; scope: interpret_base (level : 3)
+;================================================================================
+; metadata
+
+!llvm.dbg.cu = !{!32}
+!llvm.module.flags = !{}
+!llvm.ident = !{!31}
+
+!0 = !DIFile(filename: "plzero.pas", checksumkind: CSK_None)
+!1 = !DIBasicType(name: "boolean", size: 8, encoding: DW_ATE_boolean)
+!2 = !DIBasicType(name: "char", size: 8, encoding: DW_ATE_unsigned_char)
+!3 = !DIBasicType(name: "integer", size: 32, encoding: DW_ATE_signed)
+!4 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: -1, baseType: !5, size: 64)
+!5 = !DIBasicType(name: "void", size: 0, encoding: DW_ATE_void)
+!6 = !DIBasicType(name: "real", size: 64, encoding: DW_ATE_float)
+!7 = TODO
+!8 = TODO
+!9 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
+!10 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
+!11 = TODO
+!12 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
+!13 = TODO
+!14 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "instruction", file: !0, line: 20, size: 64, flags: DIFlagTypePassByValue, elements: !20)
+!15 = TODO
+!16 = TODO
+!17 = !DIDerivedType(tag: DW_TAG_member, name: "f", scope: !14, file: !0, line: 21, baseType: !10, size: 32, offset: 0)
+!18 = !DIDerivedType(tag: DW_TAG_member, name: "l", scope: !14, file: !0, line: 22, baseType: !15, size: 8, offset: 32)
+!19 = !DIDerivedType(tag: DW_TAG_member, name: "a", scope: !14, file: !0, line: 23, baseType: !16, size: 8, offset: 40)
+!20 = !{!17,!18,!19}
+!21 = TODO
+!22 = TODO
+!23 = TODO
+!24 = TODO
+!25 = TODO
+!26 = TODO
+!27 = TODO
+!28 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9,!10,!11,!12,!13,!14,!15,!16,!21,!22,!23,!24,!25,!26,!27}
+!29 = !{}
+!30 = !{}
+!31 = !{!"LPC 1.1 (debug) - built on Mar 19 2020"}
+!32 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1 (debug) - built on Mar 19 2020", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !29, retainedTypes: !28, globals: !30, nameTableKind: None)
+
