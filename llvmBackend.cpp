@@ -26,6 +26,15 @@ namespace llvm
 
 ///////////////////////////////////////////////////////////////////////////////
 //
+static
+int mdLineNumber(int line)
+{
+    return line > 0 ? line : 0;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
 void TypeGen::gen(ts::Type* pType)
 {
     auto pExt = ext(pType);
@@ -39,7 +48,10 @@ void TypeGen::gen(ts::Type* pType)
     // types must update the metadata definition and may also update the generic name
     //
     pExt->genName = m_pBackend->_genName(pType->typeId(), "%T_");
-    pExt->pMetadata = m_pBackend->_newMetadata(Metadata::Kind::Type, "TODO");
+    pExt->pMetadata = m_pBackend->_newMetadata(Metadata::Kind::Type, "");
+
+    // TODO
+    pExt->pMetadata->def = "!DIBasicType(name: \"void\", size: 0)";
 
     pType->accept(this);
 
@@ -58,7 +70,7 @@ VarPtr TypeGen::visit(ts::VoidType* pType)
     pExt->genName = "void";
     pExt->size = 0;
     pExt->alignment = 1;
-    pExt->pMetadata->def = "!DIBasicType(name: \"void\", size: 0, encoding: DW_ATE_void)";
+    pExt->pMetadata->def = "!DIBasicType(name: \"void\", size: 0)";
     return VarPtr();
 }
 
@@ -135,7 +147,7 @@ VarPtr TypeGen::visit(ts::SetType* pType)
     auto pExt = ext(pType);
     pExt->size = 1;
     pExt->alignment = 1;
-    pExt->def = "__set";
+    pExt->def = "i8";
     return VarPtr();
 }
 
@@ -259,7 +271,7 @@ VarPtr TypeGen::visit(ts::RecordType* pType)
             "name: \"" << pId->name << "\", " <<
             "scope: " << pExt->pMetadata->id << ", " <<
             "file: " << m_pBackend->m_sourceFileMd->id << ", " <<
-            "line: " << pId->line << ", " <<
+            "line: " << mdLineNumber(pId->line) << ", " <<
             "baseType: " << ext(pFieldType)->pMetadata->id << ", " <<
             "size: " << ext(pFieldType)->size * 8 << ", " <<
             "offset: " << offset * 8 << ")";
@@ -282,7 +294,7 @@ VarPtr TypeGen::visit(ts::RecordType* pType)
     md << "distinct !DICompositeType(tag: DW_TAG_structure_type, " <<
         typeName.str() <<
         "file: " << m_pBackend->m_sourceFileMd->id << ", " <<
-        "line: " << pType->line() << ", " <<
+        "line: " << mdLineNumber(pType->line()) << ", " <<
         "size: " << pExt->size * 8 << ", " <<
         "flags: DIFlagTypePassByValue, " <<
         "elements: " << elementsMd->id << ")";
@@ -321,9 +333,10 @@ VarPtr TypeGen::visit(ts::ArrayType* pType)
 
     // debug information
     //
+    // NOTE: CodeView doesn't support lowerBound
+    //
     stringstream indexRange;
-    indexRange << "!DISubrange(" <<
-        "count: " << count << ", lowerBound: " << minIndex << ")";
+    indexRange << "!DISubrange(" << "count: " << count << ")";
     auto rangeMd = m_pBackend->_newMetadata(Metadata::Kind::Generic, indexRange.str());
 
     stringstream elements;
@@ -338,7 +351,7 @@ VarPtr TypeGen::visit(ts::ArrayType* pType)
     md << "!DICompositeType(tag: DW_TAG_array_type, " <<
         typeName.str() <<
         "file: " << m_pBackend->m_sourceFileMd->id << ", " <<
-        "line: " << pType->line() << ", " <<
+        "line: " << mdLineNumber(pType->line()) << ", " <<
         "baseType: " << pElemExt->pMetadata->id << ", " <<
         "size: " << pExt->size * 8 << ", " <<
         "elements: " << elementsMd->id << ")";
@@ -352,20 +365,24 @@ VarPtr TypeGen::visit(ts::ArrayType* pType)
 //
 VarPtr TypeGen::visit(ts::PointerType* pType)
 {
-    const auto pBaseType = pType->baseType();
-    m_pBackend->_generateType(pBaseType);
-
     auto pExt = ext(pType);
 
-    stringstream def;
-    if (pBaseType->isVoid())
-        def << "i8*";
-    else
-        def << ext(pBaseType)->genName << "*";
-    pExt->def = def.str();
-
+    // set the size & alignment early, before generating the base type
+    // (since the base type may reference back this pointer type)
+    //
     pExt->size = PTR_SIZE;
     pExt->alignment = PTR_ALIGNMENT;
+
+    // Ideally, we'd define pointers as 'BaseType*'. Unfortunately, LLVM IR
+    // only allows forward/recursive type definitions for structures:
+    //
+    // %T_C = type %T_B* ; error: forward references to non-struct type
+    // %T_B = type %T_C*
+    //
+    pExt->def = "i8*";
+
+    const auto pBaseType = pType->baseType();
+    m_pBackend->_generateType(pBaseType);
 
     // debug information
     //
@@ -373,12 +390,17 @@ VarPtr TypeGen::visit(ts::PointerType* pType)
     if (pType->isUserDeclared())
         typeName << "name: \"" << pType->typeId() << "\", ";
 
+    // this is an ugly hack, to work around the poor
+    // support for recursive type definitions in LLVM/CodeView
+    //
+    auto baseTypeId = pBaseType->isPointer() ? "null" : ext(pBaseType)->pMetadata->id;
+
     stringstream md;
     md << "!DIDerivedType(tag: DW_TAG_pointer_type, " <<
         typeName.str() <<
         "file: " << m_pBackend->m_sourceFileMd->id << ", " <<
-        "line: " << pType->line() << ", " <<
-        "baseType: " << ext(pBaseType)->pMetadata->id << ", " <<
+        "line: " << mdLineNumber(pType->line()) << ", " <<
+        "baseType: " << baseTypeId << ", " <<
         "size: 64)";
     pExt->pMetadata->def = md.str();
 
@@ -394,7 +416,7 @@ VarPtr TypeGen::visit(ts::FileType* pType)
     auto pExt = ext(pType);
     pExt->size = 1;
     pExt->alignment = 1;
-    pExt->def = "__file";
+    pExt->def = "i8";
     return VarPtr();
 }
 
@@ -407,7 +429,7 @@ VarPtr TypeGen::visit(ts::SubroutineType* pType)
     auto pExt = ext(pType);
     pExt->size = 1;
     pExt->alignment = 1;
-    pExt->def = "__subroutine";
+    pExt->def = "i8";
     return VarPtr();
 }
 
@@ -420,7 +442,7 @@ VarPtr TypeGen::visit(ts::RangeType* pType)
     auto pExt = ext(pType);
     pExt->size = 1;
     pExt->alignment = 1;
-    pExt->def = "__range";
+    pExt->def = "i8";
     return VarPtr();
 }
 
@@ -479,13 +501,16 @@ void LlvmBackend::_outputMetadata()
         "nameTableKind: None)";
     auto compileUnitMd = _newMetadata(Metadata::Kind::Generic, compileUnit.str());
 
+    auto cvVersionMd = _newMetadata(Metadata::Kind::Generic, "!{i32 2, !\"CodeView\", i32 1}");
+    auto dbgInfoVersionMd = _newMetadata(Metadata::Kind::Generic, "!{i32 2, !\"Debug Info Version\", i32 3}");
+
     std::stringstream code;
 
     code << ";================================================================================\n";
     code << "; metadata\n";
     code << "\n";
     code << "!llvm.dbg.cu = !{" << compileUnitMd->id << "}\n";
-    code << "!llvm.module.flags = !{}\n";
+    code << "!llvm.module.flags = !{" << cvVersionMd->id << ", " << dbgInfoVersionMd->id << "}\n";
     code << "!llvm.ident = !{" << versionMd->id << "}\n";
     code << "\n";
     for (auto pMetadata : m_metadata)

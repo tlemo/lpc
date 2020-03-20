@@ -8,4 +8,4 @@ P1 errcode = 0
 compiling pass 2 (target = llvm)
 -----------------------------------------------------
 
-P2 errcode = 1
+P2 errcode = 0

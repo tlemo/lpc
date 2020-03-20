@@ -117,4 +117,37 @@ compiling pass 1 (LPC)
   warning on line 4023: 'fsys' hiding existing declaration on line 3224
   warning on line 4023: 'fsys' hiding existing declaration on line 2910
   warning on line 4023: 'fsys' hiding existing declaration on line 1921
-  warning on line 4024:P1 errcode = 3
+  warning on line 4024: 'lattr' hiding existing declaration on line 4021
+  warning on line 4024: 'lattr' hiding existing declaration on line 4018
+  warning on line 4024: 'lop' hiding existing declaration on line 4021
+  warning on line 4024: 'lop' hiding existing declaration on line 4018
+  warning on line 4026: 'fsys' hiding existing declaration on line 4023
+  warning on line 4026: 'fsys' hiding existing declaration on line 4020
+  warning on line 4026: 'fsys' hiding existing declaration on line 3227
+  warning on line 4026: 'fsys' hiding existing declaration on line 3224
+  warning on line 4026: 'fsys' hiding existing declaration on line 2910
+  warning on line 4026: 'fsys' hiding existing declaration on line 1921
+  warning on line 4027: 'lcp' hiding existing declaration on line 3225
+  warning on line 4027: 'lcp' hiding existing declaration on line 2923
+  warning on line 4030: 'test' hiding existing declaration on line 2926
+  warning on line 4480: 'llp' hiding existing declaration on line 3225
+  warning on line 4480: 'llp' hiding existing declaration on line 2924
+  warning on line 4519: 'test' hiding existing declaration on line 2926
+  warning on line 4556: 'test' hiding existing declaration on line 2926
+  warning on line 4687: 'lsy' hiding existing declaration on line 1922
+  warning on line 4779: 'lcp' hiding existing declaration on line 3225
+  warning on line 4779: 'lcp' hiding existing declaration on line 2923
+  warning on line 4780: 'test' hiding existing declaration on line 2926
+  warning on line 5104: 'i' hiding existing declaration on line 620
+  warning on line 5262: 'i' hiding existing declaration on line 620
+  warning on line 5341: 'i' hiding existing declaration on line 620
+  warning on line 5396: 'i' hiding existing declaration on line 620
+
+0 error(s), 141 warning(s)
+
+P1 errcode = 0
+
+compiling pass 2 (target = llvm)
+-----------------------------------------------------
+
+P2 errcode = 0

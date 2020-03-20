@@ -1,3 +1,7 @@
+; ModuleID = 'basics.pas'
+source_filename = "C:\Users\lemo\work\compilers\lpc\test\basics.pas"
+target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
+
 
 ; line 0
 ;================================================================================
@@ -5,7 +9,7 @@
 
 ; types
 %T_pointer_1 = type i8*
-%T_text = type __file
+%T_text = type i8
 
 ; line 80
 ;================================================================================
@@ -201,39 +205,39 @@
 ; metadata
 
 !llvm.dbg.cu = !{!44}
-!llvm.module.flags = !{}
+!llvm.module.flags = !{!45, !46}
 !llvm.ident = !{!43}
 
-!0 = !DIFile(filename: "basics.pas", checksumkind: CSK_None)
+!0 = !DIFile(filename: "basics.pas", directory: "C:\Users\lemo\work\compilers\lpc\test")
 !1 = !DIBasicType(name: "boolean", size: 8, encoding: DW_ATE_boolean)
 !2 = !DIBasicType(name: "char", size: 8, encoding: DW_ATE_unsigned_char)
 !3 = !DIBasicType(name: "integer", size: 32, encoding: DW_ATE_signed)
-!4 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: -1, baseType: !5, size: 64)
-!5 = !DIBasicType(name: "void", size: 0, encoding: DW_ATE_void)
+!4 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 0, baseType: !5, size: 64)
+!5 = !DIBasicType(name: "void", size: 0)
 !6 = !DIBasicType(name: "real", size: 64, encoding: DW_ATE_float)
-!7 = TODO
+!7 = !DIBasicType(name: "void", size: 0)
 !8 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "bstring80", file: !0, line: 102, size: 672, flags: DIFlagTypePassByValue, elements: !14)
 !9 = !DICompositeType(tag: DW_TAG_array_type, name: "string80", file: !0, line: 101, baseType: !2, size: 640, elements: !11)
-!10 = !DISubrange(count: 80, lowerBound: 1)
+!10 = !DISubrange(count: 80)
 !11 = !{!10}
 !12 = !DIDerivedType(tag: DW_TAG_member, name: "len", scope: !8, file: !0, line: 103, baseType: !3, size: 32, offset: 0)
 !13 = !DIDerivedType(tag: DW_TAG_member, name: "str", scope: !8, file: !0, line: 104, baseType: !9, size: 640, offset: 32)
 !14 = !{!12,!13}
 !15 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
 !16 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 115, baseType: !3, size: 832, elements: !18)
-!17 = !DISubrange(count: 26, lowerBound: 97)
+!17 = !DISubrange(count: 26)
 !18 = !{!17}
 !19 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 116, baseType: !20, size: 2320, elements: !24)
 !20 = !DICompositeType(tag: DW_TAG_array_type, name: "string10", file: !0, line: 100, baseType: !2, size: 80, elements: !22)
-!21 = !DISubrange(count: 10, lowerBound: 1)
+!21 = !DISubrange(count: 10)
 !22 = !{!21}
-!23 = !DISubrange(count: 29, lowerBound: 1)
+!23 = !DISubrange(count: 29)
 !24 = !{!23}
 !25 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 113, baseType: !9, size: 64640, elements: !27)
-!26 = !DISubrange(count: 101, lowerBound: 0)
+!26 = !DISubrange(count: 101)
 !27 = !{!26}
 !28 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 114, baseType: !8, size: 17472, elements: !30)
-!29 = !DISubrange(count: 26, lowerBound: 97)
+!29 = !DISubrange(count: 26)
 !30 = !{!29}
 !31 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 117, baseType: !32, size: 7360, elements: !39)
 !32 = distinct !DICompositeType(tag: DW_TAG_structure_type, file: !0, line: 117, size: 736, flags: DIFlagTypePassByValue, elements: !37)
@@ -242,11 +246,13 @@
 !35 = !DIDerivedType(tag: DW_TAG_member, name: "int", scope: !32, file: !0, line: 119, baseType: !3, size: 32, offset: 32)
 !36 = !DIDerivedType(tag: DW_TAG_member, name: "bstr", scope: !32, file: !0, line: 120, baseType: !8, size: 672, offset: 64)
 !37 = !{!34,!35,!36}
-!38 = !DISubrange(count: 10, lowerBound: 1)
+!38 = !DISubrange(count: 10)
 !39 = !{!38}
 !40 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9,!15,!16,!19,!20,!25,!28,!31,!32,!33}
 !41 = !{}
 !42 = !{}
 !43 = !{!"LPC 1.1 (debug) - built on Mar 20 2020"}
 !44 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1 (debug) - built on Mar 20 2020", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !41, retainedTypes: !40, globals: !42, nameTableKind: None)
+!45 = !{i32 2, !"CodeView", i32 1}
+!46 = !{i32 2, !"Debug Info Version", i32 3}
 

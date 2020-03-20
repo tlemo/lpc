@@ -81,7 +81,10 @@ def clrVerifyCmd(exeName):
     return cmd + options + exeName
     
 def llvmBuildCmd(p2Source, exeName):
-    return f'llc -O3 --frame-pointer=all -filetype=obj {p2Source}'
+    base, _ = os.path.splitext(exeName)
+    objFileName = base + '.obj'
+    options = '-O3 --frame-pointer=all -filetype=obj --mtriple=x86_64-pc-windows-msvc19'
+    return f'llc {options} {p2Source} -o {objFileName}'
     
 targetDef = {
     'cpp' :
@@ -161,6 +164,8 @@ def runTest(test):
                 
             if errcode != 0:
                 status = 'FAILED_P2'
+            elif not os.path.exists(exeName):
+                status = 'NO_BINARY'
             else:
                 # optionally validate the executable
                 #
@@ -188,7 +193,8 @@ def runTest(test):
                 
                 errCode = os.system(cmd)
                 
-                if errCode != 0: status = 'FAILED_RUN'
+                if errCode != 0:
+                    status = 'FAILED_RUN'
 
     # finally, compare the output against the checked in (golden) version
     #

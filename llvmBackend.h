@@ -31,6 +31,7 @@
 #include <sstream>
 #include <tuple>
 #include <iomanip>
+#include <filesystem>
 
 using namespace std;
 
@@ -410,11 +411,22 @@ private:
         m_metadataIdGen = 0;
 
         // source file metadata
+        //
         stringstream srcFile;
-        srcFile << "!DIFile(filename: \"" <<
-            ::PathFindFileName(context()->commandLine()->getInputName()) <<
-            "\", checksumkind: CSK_None)";
+        const auto path = filesystem::path(context()->commandLine()->getInputName());
+        srcFile << "!DIFile(" <<
+            "filename: \"" << path.filename().string() << "\", " <<
+            "directory: \"" << path.parent_path().string() << "\")";
         m_sourceFileMd = _newMetadata(Metadata::Kind::Generic, srcFile.str());
+
+        // module header
+        //
+        std::stringstream code;
+        code << "; ModuleID = '" << path.filename().string() << "'\n";
+        code << "source_filename = \"" << path.string() << "\"\n";
+        code << "target datalayout = \"e-m:w-i64:64-f80:128-n8:16:32:64-S128\"\n";
+        code << "\n";
+        write(code);
     }
 
     void _end() override

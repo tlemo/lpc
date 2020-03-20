@@ -1,3 +1,7 @@
+; ModuleID = 'startrek.pas'
+source_filename = "C:\Users\lemo\work\compilers\lpc\test\startrek.pas"
+target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
+
 
 ; line 0
 ;================================================================================
@@ -5,7 +9,7 @@
 
 ; types
 %T_pointer_1 = type i8*
-%T_text = type __file
+%T_text = type i8
 
 ; line 1
 ;================================================================================
@@ -14,14 +18,14 @@
 ; types
 %T_array_3 = type [10 x i8]
 %T_array_2 = type [5 x %T_array_3]
-%T_quadrange = type __range
+%T_quadrange = type i8
 %T_quadxy = type [2 x i8]
-%T_sectrange = type __range
+%T_sectrange = type i8
 %T_sectxy = type [2 x i8]
 %T_array_5 = type [20 x i8]
 %T_devicerec = type [24 x i8]
 %T_array_4 = type [8 x %T_devicerec]
-%T_digits = type __range
+%T_digits = type i8
 %T_quadrec = type [5 x i8]
 %T_array_7 = type [8 x %T_quadrec]
 %T_array_6 = type [8 x %T_array_7]
@@ -197,45 +201,45 @@
 ; metadata
 
 !llvm.dbg.cu = !{!73}
-!llvm.module.flags = !{}
+!llvm.module.flags = !{!74, !75}
 !llvm.ident = !{!72}
 
-!0 = !DIFile(filename: "startrek.pas", checksumkind: CSK_None)
+!0 = !DIFile(filename: "startrek.pas", directory: "C:\Users\lemo\work\compilers\lpc\test")
 !1 = !DIBasicType(name: "boolean", size: 8, encoding: DW_ATE_boolean)
 !2 = !DIBasicType(name: "char", size: 8, encoding: DW_ATE_unsigned_char)
 !3 = !DIBasicType(name: "integer", size: 32, encoding: DW_ATE_signed)
-!4 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: -1, baseType: !5, size: 64)
-!5 = !DIBasicType(name: "void", size: 0, encoding: DW_ATE_void)
+!4 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 0, baseType: !5, size: 64)
+!5 = !DIBasicType(name: "void", size: 0)
 !6 = !DIBasicType(name: "real", size: 64, encoding: DW_ATE_float)
-!7 = TODO
+!7 = !DIBasicType(name: "void", size: 0)
 !8 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
 !9 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 62, baseType: !10, size: 400, elements: !14)
 !10 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 62, baseType: !2, size: 80, elements: !12)
-!11 = !DISubrange(count: 10, lowerBound: 1)
+!11 = !DISubrange(count: 10)
 !12 = !{!11}
-!13 = !DISubrange(count: 5, lowerBound: 0)
+!13 = !DISubrange(count: 5)
 !14 = !{!13}
 !15 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "quadxy", file: !0, line: 39, size: 16, flags: DIFlagTypePassByValue, elements: !19)
-!16 = TODO
+!16 = !DIBasicType(name: "void", size: 0)
 !17 = !DIDerivedType(tag: DW_TAG_member, name: "x", scope: !15, file: !0, line: 40, baseType: !16, size: 8, offset: 0)
 !18 = !DIDerivedType(tag: DW_TAG_member, name: "y", scope: !15, file: !0, line: 40, baseType: !16, size: 8, offset: 8)
 !19 = !{!17,!18}
 !20 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "sectxy", file: !0, line: 36, size: 16, flags: DIFlagTypePassByValue, elements: !24)
-!21 = TODO
+!21 = !DIBasicType(name: "void", size: 0)
 !22 = !DIDerivedType(tag: DW_TAG_member, name: "x", scope: !20, file: !0, line: 37, baseType: !21, size: 8, offset: 0)
 !23 = !DIDerivedType(tag: DW_TAG_member, name: "y", scope: !20, file: !0, line: 37, baseType: !21, size: 8, offset: 8)
 !24 = !{!22,!23}
 !25 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 57, baseType: !26, size: 1536, elements: !34)
 !26 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "devicerec", file: !0, line: 46, size: 192, flags: DIFlagTypePassByValue, elements: !32)
 !27 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 47, baseType: !2, size: 160, elements: !29)
-!28 = !DISubrange(count: 20, lowerBound: 1)
+!28 = !DISubrange(count: 20)
 !29 = !{!28}
 !30 = !DIDerivedType(tag: DW_TAG_member, name: "name", scope: !26, file: !0, line: 47, baseType: !27, size: 160, offset: 0)
 !31 = !DIDerivedType(tag: DW_TAG_member, name: "downtime", scope: !26, file: !0, line: 48, baseType: !3, size: 32, offset: 160)
 !32 = !{!30,!31}
-!33 = !DISubrange(count: 8, lowerBound: 48)
+!33 = !DISubrange(count: 8)
 !34 = !{!33}
-!35 = TODO
+!35 = !DIBasicType(name: "void", size: 0)
 !36 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 59, baseType: !37, size: 2560, elements: !48)
 !37 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 59, baseType: !38, size: 320, elements: !46)
 !38 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "quadrec", file: !0, line: 26, size: 40, flags: DIFlagTypePassByValue, elements: !44)
@@ -245,33 +249,35 @@
 !42 = !DIDerivedType(tag: DW_TAG_member, name: "fedbasenum", scope: !38, file: !0, line: 30, baseType: !35, size: 8, offset: 24)
 !43 = !DIDerivedType(tag: DW_TAG_member, name: "starnum", scope: !38, file: !0, line: 31, baseType: !35, size: 8, offset: 32)
 !44 = !{!39,!40,!41,!42,!43}
-!45 = !DISubrange(count: 8, lowerBound: 0)
+!45 = !DISubrange(count: 8)
 !46 = !{!45}
-!47 = !DISubrange(count: 8, lowerBound: 0)
+!47 = !DISubrange(count: 8)
 !48 = !{!47}
 !49 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "klingonrec", file: !0, line: 42, size: 64, flags: DIFlagTypePassByValue, elements: !52)
 !50 = !DIDerivedType(tag: DW_TAG_member, name: "position", scope: !49, file: !0, line: 43, baseType: !20, size: 16, offset: 0)
 !51 = !DIDerivedType(tag: DW_TAG_member, name: "energyleft", scope: !49, file: !0, line: 44, baseType: !3, size: 32, offset: 32)
 !52 = !{!50,!51}
 !53 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 60, baseType: !49, size: 768, elements: !55)
-!54 = !DISubrange(count: 12, lowerBound: 0)
+!54 = !DISubrange(count: 12)
 !55 = !{!54}
 !56 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
 !57 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 58, baseType: !58, size: 2048, elements: !62)
 !58 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 58, baseType: !56, size: 256, elements: !60)
-!59 = !DISubrange(count: 8, lowerBound: 0)
+!59 = !DISubrange(count: 8)
 !60 = !{!59}
-!61 = !DISubrange(count: 8, lowerBound: 0)
+!61 = !DISubrange(count: 8)
 !62 = !{!61}
 !63 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 61, baseType: !2, size: 56, elements: !65)
-!64 = !DISubrange(count: 7, lowerBound: 0)
+!64 = !DISubrange(count: 7)
 !65 = !{!64}
 !66 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 213, baseType: !2, size: 64, elements: !68)
-!67 = !DISubrange(count: 8, lowerBound: 1)
+!67 = !DISubrange(count: 8)
 !68 = !{!67}
 !69 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9,!10,!15,!16,!20,!21,!25,!26,!27,!35,!36,!37,!38,!49,!53,!56,!57,!58,!63,!66}
 !70 = !{}
 !71 = !{}
 !72 = !{!"LPC 1.1 (debug) - built on Mar 20 2020"}
 !73 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1 (debug) - built on Mar 20 2020", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !70, retainedTypes: !69, globals: !71, nameTableKind: None)
+!74 = !{i32 2, !"CodeView", i32 1}
+!75 = !{i32 2, !"Debug Info Version", i32 3}
 

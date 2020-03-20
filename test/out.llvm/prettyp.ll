@@ -1,3 +1,7 @@
+; ModuleID = 'prettyp.pas'
+source_filename = "C:\Users\lemo\work\compilers\lpc\test\prettyp.pas"
+target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
+
 
 ; line 0
 ;================================================================================
@@ -5,7 +9,7 @@
 
 ; types
 %T_pointer_1 = type i8*
-%T_text = type __file
+%T_text = type i8
 
 ; line 167
 ;================================================================================
@@ -15,14 +19,14 @@
 %T_CHARINFO = type [5 x i8]
 %T_STRING = type [200 x i8]
 %T_SYMBOL = type [216 x i8]
-%T_SYMBOLINFO = type %T_SYMBOL*
+%T_SYMBOLINFO = type i8*
 %T_SPECIALCHAR = type [2 x i8]
 %T_DBLCHARTABLE = type [2 x %T_SPECIALCHAR]
-%T_DBLCHRSET = type __set
+%T_DBLCHRSET = type i8
 %T_KEY = type [10 x i8]
-%T_KEYSYMSET = type __set
+%T_KEYSYMSET = type i8
 %T_KEYWORDTABLE = type [22 x %T_KEY]
-%T_OPTIONSET = type __set
+%T_OPTIONSET = type i8
 %T_TABLEENTRY = type [3 x i8]
 %T_OPTIONTABLE = type [33 x %T_TABLEENTRY]
 %T_SGLCHARTABLE = type [6 x i8]
@@ -169,17 +173,17 @@
 ; metadata
 
 !llvm.dbg.cu = !{!63}
-!llvm.module.flags = !{}
+!llvm.module.flags = !{!64, !65}
 !llvm.ident = !{!62}
 
-!0 = !DIFile(filename: "prettyp.pas", checksumkind: CSK_None)
+!0 = !DIFile(filename: "prettyp.pas", directory: "C:\Users\lemo\work\compilers\lpc\test")
 !1 = !DIBasicType(name: "boolean", size: 8, encoding: DW_ATE_boolean)
 !2 = !DIBasicType(name: "char", size: 8, encoding: DW_ATE_unsigned_char)
 !3 = !DIBasicType(name: "integer", size: 32, encoding: DW_ATE_signed)
-!4 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: -1, baseType: !5, size: 64)
-!5 = !DIBasicType(name: "void", size: 0, encoding: DW_ATE_void)
+!4 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 0, baseType: !5, size: 64)
+!5 = !DIBasicType(name: "void", size: 0)
 !6 = !DIBasicType(name: "real", size: 64, encoding: DW_ATE_float)
-!7 = TODO
+!7 = !DIBasicType(name: "void", size: 0)
 !8 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
 !9 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
 !10 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
@@ -190,7 +194,7 @@
 !15 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "SYMBOLINFO", file: !0, line: 266, baseType: !16, size: 64)
 !16 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "SYMBOL", file: !0, line: 258, size: 1728, flags: DIFlagTypePassByValue, elements: !25)
 !17 = !DICompositeType(tag: DW_TAG_array_type, name: "STRING", file: !0, line: 256, baseType: !2, size: 1600, elements: !19)
-!18 = !DISubrange(count: 200, lowerBound: 1)
+!18 = !DISubrange(count: 200)
 !19 = !{!18}
 !20 = !DIDerivedType(tag: DW_TAG_member, name: "NAME", scope: !16, file: !0, line: 259, baseType: !8, size: 32, offset: 0)
 !21 = !DIDerivedType(tag: DW_TAG_member, name: "VALUE", scope: !16, file: !0, line: 260, baseType: !17, size: 1600, offset: 32)
@@ -200,40 +204,42 @@
 !25 = !{!20,!21,!22,!23,!24}
 !26 = !DICompositeType(tag: DW_TAG_array_type, name: "DBLCHARTABLE", file: !0, line: 251, baseType: !27, size: 32, elements: !31)
 !27 = !DICompositeType(tag: DW_TAG_array_type, name: "SPECIALCHAR", file: !0, line: 247, baseType: !2, size: 16, elements: !29)
-!28 = !DISubrange(count: 2, lowerBound: 1)
+!28 = !DISubrange(count: 2)
 !29 = !{!28}
-!30 = !DISubrange(count: 2, lowerBound: 22)
+!30 = !DISubrange(count: 2)
 !31 = !{!30}
-!32 = TODO
+!32 = !DIBasicType(name: "void", size: 0)
 !33 = !DICompositeType(tag: DW_TAG_array_type, name: "KEY", file: !0, line: 241, baseType: !2, size: 80, elements: !35)
-!34 = !DISubrange(count: 10, lowerBound: 1)
+!34 = !DISubrange(count: 10)
 !35 = !{!34}
-!36 = TODO
+!36 = !DIBasicType(name: "void", size: 0)
 !37 = !DICompositeType(tag: DW_TAG_array_type, name: "KEYWORDTABLE", file: !0, line: 244, baseType: !33, size: 1760, elements: !39)
-!38 = !DISubrange(count: 22, lowerBound: 0)
+!38 = !DISubrange(count: 22)
 !39 = !{!38}
-!40 = TODO
+!40 = !DIBasicType(name: "void", size: 0)
 !41 = !DICompositeType(tag: DW_TAG_array_type, name: "OPTIONTABLE", file: !0, line: 238, baseType: !42, size: 792, elements: !48)
 !42 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "TABLEENTRY", file: !0, line: 232, size: 24, flags: DIFlagTypePassByValue, elements: !46)
 !43 = !DIDerivedType(tag: DW_TAG_member, name: "OPTIONSSELECTED", scope: !42, file: !0, line: 233, baseType: !40, size: 8, offset: 0)
 !44 = !DIDerivedType(tag: DW_TAG_member, name: "DINDENTSYMBOLS", scope: !42, file: !0, line: 234, baseType: !36, size: 8, offset: 8)
 !45 = !DIDerivedType(tag: DW_TAG_member, name: "GOBBLETERMINATORS", scope: !42, file: !0, line: 235, baseType: !36, size: 8, offset: 16)
 !46 = !{!43,!44,!45}
-!47 = !DISubrange(count: 33, lowerBound: 0)
+!47 = !DISubrange(count: 33)
 !48 = !{!47}
 !49 = !DICompositeType(tag: DW_TAG_array_type, name: "SGLCHARTABLE", file: !0, line: 253, baseType: !2, size: 48, elements: !51)
-!50 = !DISubrange(count: 6, lowerBound: 25)
+!50 = !DISubrange(count: 6)
 !51 = !{!50}
 !52 = !DICompositeType(tag: DW_TAG_array_type, name: "SYMBOLSTACK", file: !0, line: 283, baseType: !53, size: 6400, elements: !58)
 !53 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "STACKENTRY", file: !0, line: 278, size: 64, flags: DIFlagTypePassByValue, elements: !56)
 !54 = !DIDerivedType(tag: DW_TAG_member, name: "INDENTSYMBOL", scope: !53, file: !0, line: 279, baseType: !8, size: 32, offset: 0)
 !55 = !DIDerivedType(tag: DW_TAG_member, name: "PREVMARGIN", scope: !53, file: !0, line: 280, baseType: !3, size: 32, offset: 32)
 !56 = !{!54,!55}
-!57 = !DISubrange(count: 100, lowerBound: 1)
+!57 = !DISubrange(count: 100)
 !58 = !{!57}
 !59 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9,!10,!11,!15,!16,!17,!26,!27,!32,!33,!36,!37,!40,!41,!42,!49,!52,!53}
 !60 = !{}
 !61 = !{}
 !62 = !{!"LPC 1.1 (debug) - built on Mar 20 2020"}
 !63 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1 (debug) - built on Mar 20 2020", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !60, retainedTypes: !59, globals: !61, nameTableKind: None)
+!64 = !{i32 2, !"CodeView", i32 1}
+!65 = !{i32 2, !"Debug Info Version", i32 3}
 

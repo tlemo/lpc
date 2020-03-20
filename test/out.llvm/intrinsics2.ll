@@ -1,3 +1,7 @@
+; ModuleID = 'intrinsics2.pas'
+source_filename = "C:\Users\lemo\work\compilers\lpc\test\intrinsics2.pas"
+target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
+
 
 ; line 0
 ;================================================================================
@@ -5,7 +9,7 @@
 
 ; types
 %T_pointer_1 = type i8*
-%T_text = type __file
+%T_text = type i8
 
 ; line 4
 ;================================================================================
@@ -16,12 +20,12 @@
 %T_array_3 = type [40 x i32]
 %T_array_5 = type [3 x i32]
 %T_array_4 = type [100 x %T_array_5]
-%T_pointer_7 = type i32*
+%T_pointer_7 = type i8*
 %T_array_6 = type [100 x %T_pointer_7]
-%T_pointer_8 = type double*
-%T_set_10 = type __set
+%T_pointer_8 = type i8*
+%T_set_10 = type i8
 %T_rec = type [48 x i8]
-%T_pointer_9 = type %T_rec*
+%T_pointer_9 = type i8*
 
 ; program variables
 @_input = dso_local global %T_text zeroinitializer
@@ -37,37 +41,37 @@
 ; metadata
 
 !llvm.dbg.cu = !{!39}
-!llvm.module.flags = !{}
+!llvm.module.flags = !{!40, !41}
 !llvm.ident = !{!38}
 
-!0 = !DIFile(filename: "intrinsics2.pas", checksumkind: CSK_None)
+!0 = !DIFile(filename: "intrinsics2.pas", directory: "C:\Users\lemo\work\compilers\lpc\test")
 !1 = !DIBasicType(name: "boolean", size: 8, encoding: DW_ATE_boolean)
 !2 = !DIBasicType(name: "char", size: 8, encoding: DW_ATE_unsigned_char)
 !3 = !DIBasicType(name: "integer", size: 32, encoding: DW_ATE_signed)
-!4 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: -1, baseType: !5, size: 64)
-!5 = !DIBasicType(name: "void", size: 0, encoding: DW_ATE_void)
+!4 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 0, baseType: !5, size: 64)
+!5 = !DIBasicType(name: "void", size: 0)
 !6 = !DIBasicType(name: "real", size: 64, encoding: DW_ATE_float)
-!7 = TODO
+!7 = !DIBasicType(name: "void", size: 0)
 !8 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 22, baseType: !3, size: 3200, elements: !10)
-!9 = !DISubrange(count: 100, lowerBound: 0)
+!9 = !DISubrange(count: 100)
 !10 = !{!9}
 !11 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 23, baseType: !3, size: 1280, elements: !13)
-!12 = !DISubrange(count: 40, lowerBound: 10)
+!12 = !DISubrange(count: 40)
 !13 = !{!12}
 !14 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 24, baseType: !15, size: 9600, elements: !19)
 !15 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 24, baseType: !3, size: 96, elements: !17)
-!16 = !DISubrange(count: 3, lowerBound: 1)
+!16 = !DISubrange(count: 3)
 !17 = !{!16}
-!18 = !DISubrange(count: 100, lowerBound: 0)
+!18 = !DISubrange(count: 100)
 !19 = !{!18}
 !20 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 25, baseType: !21, size: 6400, elements: !23)
 !21 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 25, baseType: !3, size: 64)
-!22 = !DISubrange(count: 100, lowerBound: 0)
+!22 = !DISubrange(count: 100)
 !23 = !{!22}
 !24 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 18, baseType: !6, size: 64)
 !25 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 19, baseType: !26, size: 64)
 !26 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "rec", file: !0, line: 9, size: 384, flags: DIFlagTypePassByValue, elements: !34)
-!27 = TODO
+!27 = !DIBasicType(name: "void", size: 0)
 !28 = !DIDerivedType(tag: DW_TAG_member, name: "a", scope: !26, file: !0, line: 10, baseType: !3, size: 32, offset: 0)
 !29 = !DIDerivedType(tag: DW_TAG_member, name: "b", scope: !26, file: !0, line: 10, baseType: !3, size: 32, offset: 32)
 !30 = !DIDerivedType(tag: DW_TAG_member, name: "tag", scope: !26, file: !0, line: 11, baseType: !3, size: 32, offset: 64)
@@ -80,4 +84,6 @@
 !37 = !{}
 !38 = !{!"LPC 1.1 (debug) - built on Mar 20 2020"}
 !39 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1 (debug) - built on Mar 20 2020", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !36, retainedTypes: !35, globals: !37, nameTableKind: None)
+!40 = !{i32 2, !"CodeView", i32 1}
+!41 = !{i32 2, !"Debug Info Version", i32 3}
 
