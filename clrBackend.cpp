@@ -159,7 +159,7 @@ VarPtr TypeGen::visit(ts::RecordType* pType)
 
     pExt->ilName = "valuetype " + pExt->genName;
     pExt->alignment = fieldsDef.alignment;
-    pExt->size = roundUp(fieldsDef.size, fieldsDef.alignment);
+    pExt->size = fieldsDef.size;
 
     stringstream def;
     def << "\n" << genLine(HIDDEN_CODE, m_pBackend->emitDebugInfo()) << "\n";
@@ -283,10 +283,10 @@ VarPtr TypeGen::visit(ts::ArrayType* pType)
     m_pBackend->_generateType(pElemType);
     auto pElemExt = ext(pElemType);
 
-    auto minValue = pIndexType->minValue();
-    auto maxValue = pIndexType->maxValue();
-    auto count = maxValue - minValue + 1;
-    auto elemSize = arrayElemSize(pElemType);
+    const auto minValue = pIndexType->minValue();
+    const auto maxValue = pIndexType->maxValue();
+    const auto count = maxValue - minValue + 1;
+    const auto elemSize = arrayElemSize(pElemType);
     assert(elemSize > 0);
     
     pExt->size = count * elemSize;

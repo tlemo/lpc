@@ -75,7 +75,7 @@
 .class value explicit T_record_2
 {
     // alignment = 4
-    .size 8
+    .size 6
     
     .field [0] public int32 Pos
     .field [4] public int16 Nmr
@@ -616,7 +616,7 @@
 .class value explicit T_constant
 {
     // alignment = 4
-    .size 112
+    .size 109
     
     // variable fields selector
     .field [0] public int32 Cclass
@@ -641,7 +641,7 @@
 .class value explicit T_valu
 {
     // alignment = 8
-    .size 24
+    .size 17
     
     // variable fields selector
     .field [0] public bool Intval
@@ -890,7 +890,7 @@
 .class value explicit T_identifier
 {
     // alignment = 8
-    .size 216
+    .size 214
     
     .field [0] public valuetype T_alpha Name
     .field [8] public void* Llink
@@ -1163,7 +1163,7 @@
 .class value explicit T_structure
 {
     // alignment = 8
-    .size 88
+    .size 77
     
     .field [0] public bool Marked
     .field [4] public int32 Size
@@ -3611,7 +3611,7 @@
         // line 1127
         // line 1127
         ldloc _F
-        ldc.i4 88
+        ldc.i4 77
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ_simpletype::Lsp
         // line 1127
@@ -3663,7 +3663,7 @@
         // line 1135
         // line 1135
         ldloc _F
-        ldc.i4 216
+        ldc.i4 214
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ_simpletype::Lcp
         // line 1135
@@ -3809,7 +3809,7 @@
         // line 1157
         // line 1157
         ldloc _F
-        ldc.i4 88
+        ldc.i4 77
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ_simpletype::Lsp
         // line 1157
@@ -3937,7 +3937,7 @@
         // line 1175
         // line 1175
         ldloc _F
-        ldc.i4 88
+        ldc.i4 77
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ_simpletype::Lsp
         // line 1175
@@ -4354,7 +4354,7 @@
         // line 1211
         // line 1211
         ldloc _F
-        ldc.i4 216
+        ldc.i4 214
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ_fieldlist::Lcp
         // line 1211
@@ -4635,7 +4635,7 @@
         // line 1247
         // line 1247
         ldloc _F
-        ldc.i4 88
+        ldc.i4 77
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ_fieldlist::Lsp
         // line 1247
@@ -4674,7 +4674,7 @@
         // line 1253
         // line 1253
         ldloc _F
-        ldc.i4 216
+        ldc.i4 214
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ_fieldlist::Lcp
         // line 1253
@@ -5002,7 +5002,7 @@
         // line 1289
         // line 1289
         ldloc _F
-        ldc.i4 88
+        ldc.i4 77
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ_fieldlist::Lsp3
         // line 1289
@@ -5315,7 +5315,7 @@
 .class value explicit T_labl
 {
     // alignment = 8
-    .size 24
+    .size 20
     
     .field [0] public void* Nextlab
     .field [8] public bool Defined
@@ -5881,7 +5881,7 @@
         // line 1637
         // line 1637
         ldloc _F
-        ldc.i4 216
+        ldc.i4 214
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_procdeclaration_parameterlist::Lcp
         // line 1637
@@ -6024,7 +6024,7 @@
         // line 1660
         // line 1660
         ldloc _F
-        ldc.i4 216
+        ldc.i4 214
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_procdeclaration_parameterlist::Lcp
         // line 1660
@@ -6318,7 +6318,7 @@
         // line 1708
         // line 1708
         ldloc _F
-        ldc.i4 216
+        ldc.i4 214
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_procdeclaration_parameterlist::Lcp
         // line 1708
@@ -7314,7 +7314,7 @@
 .class value explicit T_attr
 {
     // alignment = 8
-    .size 56
+    .size 52
     
     .field [0] public void* Typtr
     
@@ -12060,7 +12060,7 @@
         // line 2894
         // line 2894
         ldloc _F
-        ldc.i4 88
+        ldc.i4 77
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_body_statement_expression_simpleexpression_term_factor::Lsp
         // line 2894
@@ -12231,7 +12231,7 @@
         // line 2918
         // line 2918
         ldloc _F
-        ldc.i4 88
+        ldc.i4 77
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_body_statement_expression_simpleexpression_term_factor::Lsp
         // line 2918
@@ -12551,7 +12551,7 @@
         // line 2962
         // line 2962
         ldloc _F
-        ldc.i4 112
+        ldc.i4 109
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_body_statement_expression_simpleexpression_term_factor::Lvp
         // line 2962
@@ -12671,7 +12671,7 @@
         // line 2974
         // line 2974
         ldloc _F
-        ldc.i4 112
+        ldc.i4 109
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_body_statement_expression_simpleexpression_term_factor::Lvp
         // line 2974
@@ -21535,7 +21535,7 @@
         // line 964
         // line 964
         ldloc _F
-        ldc.i4 88
+        ldc.i4 77
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_constant::Lsp
         // line 964
@@ -21683,7 +21683,7 @@
         // line 990
         // line 990
         ldloc _F
-        ldc.i4 112
+        ldc.i4 109
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_constant::Lvp
         // line 990
@@ -22641,7 +22641,7 @@
         // line 1341
         // line 1341
         ldloc _F
-        ldc.i4 88
+        ldc.i4 77
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ::Lsp
         // line 1341
@@ -22701,7 +22701,7 @@
         // line 1349
         // line 1349
         ldloc _F
-        ldc.i4 216
+        ldc.i4 214
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ::Lcp
         // line 1349
@@ -22836,7 +22836,7 @@
         // line 1379
         // line 1379
         ldloc _F
-        ldc.i4 88
+        ldc.i4 77
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ::Lsp
         // line 1379
@@ -23170,7 +23170,7 @@
         // line 1430
         // line 1430
         ldloc _F
-        ldc.i4 88
+        ldc.i4 77
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ::Lsp
         // line 1430
@@ -23339,7 +23339,7 @@
         // line 1456
         // line 1456
         ldloc _F
-        ldc.i4 88
+        ldc.i4 77
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ::Lsp
         // line 1456
@@ -23566,7 +23566,7 @@
         // line 1486
         // line 1486
         ldloc _F
-        ldc.i4 24
+        ldc.i4 20
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_labeldeclaration::Llp
         // line 1488
@@ -23759,7 +23759,7 @@
         // line 1510
         // line 1510
         ldloc _F
-        ldc.i4 216
+        ldc.i4 214
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_constdeclaration::Lcp
         // line 1510
@@ -23972,7 +23972,7 @@
         // line 1533
         // line 1533
         ldloc _F
-        ldc.i4 216
+        ldc.i4 214
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typedeclaration::Lcp
         // line 1533
@@ -24294,7 +24294,7 @@
         // line 1576
         // line 1576
         ldloc _F
-        ldc.i4 216
+        ldc.i4 214
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_vardeclaration::Lcp
         // line 1576
@@ -24819,7 +24819,7 @@
         // line 1805
         // line 1805
         ldloc _F
-        ldc.i4 216
+        ldc.i4 214
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_procdeclaration::Lcp
         // line 1805
@@ -24842,7 +24842,7 @@
         // line 1806
         // line 1806
         ldloc _F
-        ldc.i4 216
+        ldc.i4 214
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_procdeclaration::Lcp
         // line 1806
@@ -30184,7 +30184,7 @@ L_if_end_32:
     // line 520
     // line 520
     ldloc _F
-    ldc.i4 112
+    ldc.i4 109
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @insymbol::Lvp
     // line 520
@@ -30512,7 +30512,7 @@ L_else_62:
     // line 559
     // line 559
     ldloc _F
-    ldc.i4 112
+    ldc.i4 109
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @insymbol::Lvp
     // line 559
@@ -32515,7 +32515,7 @@ void Enterstdtypes()
 L_Entry:
     // line 3733
     // line 3733
-    ldc.i4 88
+    ldc.i4 77
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Intptr
     // line 3733
@@ -32544,7 +32544,7 @@ L_Entry:
     stfld int32 T_structure::Scalkind
     // line 3736
     // line 3736
-    ldc.i4 88
+    ldc.i4 77
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Realptr
     // line 3736
@@ -32573,7 +32573,7 @@ L_Entry:
     stfld int32 T_structure::Scalkind
     // line 3739
     // line 3739
-    ldc.i4 88
+    ldc.i4 77
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Charptr
     // line 3739
@@ -32602,7 +32602,7 @@ L_Entry:
     stfld int32 T_structure::Scalkind
     // line 3742
     // line 3742
-    ldc.i4 88
+    ldc.i4 77
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Boolptr
     // line 3742
@@ -32631,7 +32631,7 @@ L_Entry:
     stfld int32 T_structure::Scalkind
     // line 3745
     // line 3745
-    ldc.i4 88
+    ldc.i4 77
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Nilptr
     // line 3745
@@ -32656,7 +32656,7 @@ L_Entry:
     stfld int32 T_structure::Form
     // line 3748
     // line 3748
-    ldc.i4 88
+    ldc.i4 77
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Parmptr
     // line 3748
@@ -32685,7 +32685,7 @@ L_Entry:
     stfld int32 T_structure::Scalkind
     // line 3751
     // line 3751
-    ldc.i4 88
+    ldc.i4 77
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Textptr
     // line 3751
@@ -32748,7 +32748,7 @@ L_Entry:
     // line 3761
     // line 3761
     ldloc _F
-    ldc.i4 216
+    ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp
     // line 3761
@@ -32778,7 +32778,7 @@ L_Entry:
     // line 3765
     // line 3765
     ldloc _F
-    ldc.i4 216
+    ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp
     // line 3765
@@ -32808,7 +32808,7 @@ L_Entry:
     // line 3769
     // line 3769
     ldloc _F
-    ldc.i4 216
+    ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp
     // line 3769
@@ -32838,7 +32838,7 @@ L_Entry:
     // line 3773
     // line 3773
     ldloc _F
-    ldc.i4 216
+    ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp
     // line 3773
@@ -32884,7 +32884,7 @@ L_for_loop_1:
     // line 3779
     // line 3779
     ldloc _F
-    ldc.i4 216
+    ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp
     // line 3779
@@ -32957,7 +32957,7 @@ L_for_end_2:
     // line 3787
     // line 3787
     ldloc _F
-    ldc.i4 216
+    ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp
     // line 3787
@@ -33010,7 +33010,7 @@ L_for_loop_3:
     // line 3794
     // line 3794
     ldloc _F
-    ldc.i4 216
+    ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp
     // line 3794
@@ -33106,7 +33106,7 @@ L_for_loop_5:
     // line 3803
     // line 3803
     ldloc _F
-    ldc.i4 216
+    ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp
     // line 3803
@@ -33202,7 +33202,7 @@ L_for_loop_7:
     // line 3812
     // line 3812
     ldloc _F
-    ldc.i4 216
+    ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp
     // line 3812
@@ -33277,7 +33277,7 @@ L_for_end_8:
     // line 3820
     // line 3820
     ldloc _F
-    ldc.i4 216
+    ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp
     // line 3820
@@ -33346,7 +33346,7 @@ L_for_loop_9:
     // line 3827
     // line 3827
     ldloc _F
-    ldc.i4 216
+    ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp
     // line 3827
@@ -33421,7 +33421,7 @@ L_for_end_10:
     // line 3835
     // line 3835
     ldloc _F
-    ldc.i4 216
+    ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp
     // line 3835
@@ -33487,7 +33487,7 @@ L_for_loop_11:
     // line 3841
     // line 3841
     ldloc _F
-    ldc.i4 216
+    ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp1
     // line 3841
@@ -33605,7 +33605,7 @@ void Enterundecl()
 L_Entry:
     // line 3853
     // line 3853
-    ldc.i4 216
+    ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Utypptr
     // line 3853
@@ -33626,7 +33626,7 @@ L_Entry:
     stfld int32 T_identifier::Klass
     // line 3856
     // line 3856
-    ldc.i4 216
+    ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ucstptr
     // line 3856
@@ -33656,7 +33656,7 @@ L_Entry:
     stfld int32 T_identifier::Klass
     // line 3861
     // line 3861
-    ldc.i4 216
+    ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Uvarptr
     // line 3861
@@ -33701,7 +33701,7 @@ L_Entry:
     stfld int32 T_identifier::Klass
     // line 3866
     // line 3866
-    ldc.i4 216
+    ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ufldptr
     // line 3866
@@ -33734,7 +33734,7 @@ L_Entry:
     stfld int32 T_identifier::Klass
     // line 3871
     // line 3871
-    ldc.i4 216
+    ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Uprcptr
     // line 3871
@@ -33795,7 +33795,7 @@ L_Entry:
     stfld int32 T_identifier::Pfkind
     // line 3877
     // line 3877
-    ldc.i4 216
+    ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ufctptr
     // line 3877

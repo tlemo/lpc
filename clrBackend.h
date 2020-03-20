@@ -418,7 +418,6 @@ public:
         assert(!ext(pType)->ilName.empty());
         assert(ext(pType)->size >= 0);
         assert(ext(pType)->alignment >= 0);
-        assert(ext(pType)->size % ext(pType)->alignment == 0);
     }
 
 private:
