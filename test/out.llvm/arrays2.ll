@@ -12,8 +12,10 @@
 ; scope: program scope (level : 1)
 
 ; types
-%T_array_2 = type __array
-%T_array_3 = type __array
+%T_array_3 = type [8 x i32]
+%T_array_2 = type [8 x %T_array_3]
+%T_array_5 = type [8 x i32]
+%T_array_4 = type [8 x %T_array_5]
 
 ; program variables
 @_input = dso_local global %T_text zeroinitializer
@@ -21,13 +23,13 @@
 @Checkerboard = dso_local global %T_array_2 zeroinitializer
 @Count = dso_local global i32 zeroinitializer
 @Index = dso_local global i32 zeroinitializer
-@Value = dso_local global %T_array_3 zeroinitializer
+@Value = dso_local global %T_array_4 zeroinitializer
 ;================================================================================
 ; metadata
 
-!llvm.dbg.cu = !{!14}
+!llvm.dbg.cu = !{!24}
 !llvm.module.flags = !{}
-!llvm.ident = !{!13}
+!llvm.ident = !{!23}
 
 !0 = !DIFile(filename: "arrays2.pas", checksumkind: CSK_None)
 !1 = !DIBasicType(name: "boolean", size: 8, encoding: DW_ATE_boolean)
@@ -37,11 +39,21 @@
 !5 = !DIBasicType(name: "void", size: 0, encoding: DW_ATE_void)
 !6 = !DIBasicType(name: "real", size: 64, encoding: DW_ATE_float)
 !7 = TODO
-!8 = TODO
-!9 = TODO
-!10 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9}
-!11 = !{}
-!12 = !{}
-!13 = !{!"LPC 1.1 (debug) - built on Mar 19 2020"}
-!14 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1 (debug) - built on Mar 19 2020", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !11, retainedTypes: !10, globals: !12, nameTableKind: None)
+!8 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 5, baseType: !9, size: 2048, elements: !13)
+!9 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 5, baseType: !3, size: 256, elements: !11)
+!10 = !DISubrange(count: 8, lowerBound: 1)
+!11 = !{!10}
+!12 = !DISubrange(count: 8, lowerBound: 1)
+!13 = !{!12}
+!14 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 6, baseType: !15, size: 2048, elements: !19)
+!15 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 6, baseType: !3, size: 256, elements: !17)
+!16 = !DISubrange(count: 8, lowerBound: 1)
+!17 = !{!16}
+!18 = !DISubrange(count: 8, lowerBound: 1)
+!19 = !{!18}
+!20 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9,!14,!15}
+!21 = !{}
+!22 = !{}
+!23 = !{!"LPC 1.1 (debug) - built on Mar 20 2020"}
+!24 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1 (debug) - built on Mar 20 2020", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !21, retainedTypes: !20, globals: !22, nameTableKind: None)
 

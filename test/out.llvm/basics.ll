@@ -12,14 +12,15 @@
 ; scope: program scope (level : 1)
 
 ; types
-%T_string80 = type __array
-%T_bstring80 = type [5 x i8]
-%T_array_2 = type __array
-%T_array_3 = type __array
-%T_array_4 = type __array
-%T_string10 = type __array
-%T_array_5 = type __array
-%T_array_6 = type __array
+%T_string80 = type [80 x i8]
+%T_bstring80 = type [84 x i8]
+%T_array_2 = type [26 x i32]
+%T_string10 = type [10 x i8]
+%T_array_3 = type [29 x %T_string10]
+%T_array_4 = type [101 x %T_string80]
+%T_array_5 = type [26 x %T_bstring80]
+%T_record_7 = type [92 x i8]
+%T_array_6 = type [10 x %T_record_7]
 
 ; program variables
 @input = dso_local global %T_text zeroinitializer
@@ -199,9 +200,9 @@
 ;================================================================================
 ; metadata
 
-!llvm.dbg.cu = !{!25}
+!llvm.dbg.cu = !{!44}
 !llvm.module.flags = !{}
-!llvm.ident = !{!24}
+!llvm.ident = !{!43}
 
 !0 = !DIFile(filename: "basics.pas", checksumkind: CSK_None)
 !1 = !DIBasicType(name: "boolean", size: 8, encoding: DW_ATE_boolean)
@@ -211,22 +212,41 @@
 !5 = !DIBasicType(name: "void", size: 0, encoding: DW_ATE_void)
 !6 = !DIBasicType(name: "real", size: 64, encoding: DW_ATE_float)
 !7 = TODO
-!8 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "bstring80", file: !0, line: 102, size: 64, flags: DIFlagTypePassByValue, elements: !12)
-!9 = TODO
-!10 = !DIDerivedType(tag: DW_TAG_member, name: "len", scope: !8, file: !0, line: 103, baseType: !3, size: 32, offset: 0)
-!11 = !DIDerivedType(tag: DW_TAG_member, name: "str", scope: !8, file: !0, line: 104, baseType: !9, size: 8, offset: 32)
-!12 = !{!10,!11}
-!13 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
-!14 = TODO
-!15 = TODO
-!16 = TODO
-!17 = TODO
-!18 = TODO
-!19 = TODO
-!20 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
-!21 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9,!13,!14,!15,!16,!17,!18,!19,!20}
-!22 = !{}
-!23 = !{}
-!24 = !{!"LPC 1.1 (debug) - built on Mar 19 2020"}
-!25 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1 (debug) - built on Mar 19 2020", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !22, retainedTypes: !21, globals: !23, nameTableKind: None)
+!8 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "bstring80", file: !0, line: 102, size: 672, flags: DIFlagTypePassByValue, elements: !14)
+!9 = !DICompositeType(tag: DW_TAG_array_type, name: "string80", file: !0, line: 101, baseType: !2, size: 640, elements: !11)
+!10 = !DISubrange(count: 80, lowerBound: 1)
+!11 = !{!10}
+!12 = !DIDerivedType(tag: DW_TAG_member, name: "len", scope: !8, file: !0, line: 103, baseType: !3, size: 32, offset: 0)
+!13 = !DIDerivedType(tag: DW_TAG_member, name: "str", scope: !8, file: !0, line: 104, baseType: !9, size: 640, offset: 32)
+!14 = !{!12,!13}
+!15 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
+!16 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 115, baseType: !3, size: 832, elements: !18)
+!17 = !DISubrange(count: 26, lowerBound: 97)
+!18 = !{!17}
+!19 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 116, baseType: !20, size: 2320, elements: !24)
+!20 = !DICompositeType(tag: DW_TAG_array_type, name: "string10", file: !0, line: 100, baseType: !2, size: 80, elements: !22)
+!21 = !DISubrange(count: 10, lowerBound: 1)
+!22 = !{!21}
+!23 = !DISubrange(count: 29, lowerBound: 1)
+!24 = !{!23}
+!25 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 113, baseType: !9, size: 64640, elements: !27)
+!26 = !DISubrange(count: 101, lowerBound: 0)
+!27 = !{!26}
+!28 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 114, baseType: !8, size: 17472, elements: !30)
+!29 = !DISubrange(count: 26, lowerBound: 97)
+!30 = !{!29}
+!31 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 117, baseType: !32, size: 7360, elements: !39)
+!32 = distinct !DICompositeType(tag: DW_TAG_structure_type, file: !0, line: 117, size: 736, flags: DIFlagTypePassByValue, elements: !37)
+!33 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
+!34 = !DIDerivedType(tag: DW_TAG_member, name: "typ", scope: !32, file: !0, line: 118, baseType: !33, size: 32, offset: 0)
+!35 = !DIDerivedType(tag: DW_TAG_member, name: "int", scope: !32, file: !0, line: 119, baseType: !3, size: 32, offset: 32)
+!36 = !DIDerivedType(tag: DW_TAG_member, name: "bstr", scope: !32, file: !0, line: 120, baseType: !8, size: 672, offset: 64)
+!37 = !{!34,!35,!36}
+!38 = !DISubrange(count: 10, lowerBound: 1)
+!39 = !{!38}
+!40 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9,!15,!16,!19,!20,!25,!28,!31,!32,!33}
+!41 = !{}
+!42 = !{}
+!43 = !{!"LPC 1.1 (debug) - built on Mar 20 2020"}
+!44 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1 (debug) - built on Mar 20 2020", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !41, retainedTypes: !40, globals: !42, nameTableKind: None)
 

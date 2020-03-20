@@ -230,13 +230,14 @@ VarPtr TypeGen::visit(ts::RecordType* pType)
     auto pExt = ext(pType);
     const auto fieldsLayout = _fieldsLayout(pType->fields());
 
-    stringstream def;
-
-    def << "[" << fieldsLayout.size << " x i8]";
-
-    pExt->def = def.str();
     pExt->alignment = fieldsLayout.alignment;
     pExt->size = roundUp(fieldsLayout.size, fieldsLayout.alignment);
+
+    // definition
+    //
+    stringstream def;
+    def << "[" << fieldsLayout.size << " x i8]";
+    pExt->def = def.str();
 
     // build the name -> offset map
     //
@@ -295,11 +296,54 @@ VarPtr TypeGen::visit(ts::RecordType* pType)
 //
 VarPtr TypeGen::visit(ts::ArrayType* pType)
 {
-    // TODO
     auto pExt = ext(pType);
-    pExt->size = 1;
-    pExt->alignment = 1;
-    pExt->def = "__array";
+    auto pIndexType = pType->indexType();
+    auto pElemType = pType->elemType();
+
+    m_pBackend->_generateType(pElemType);
+    auto pElemExt = ext(pElemType);
+    assert(pElemExt->size > 0);
+    assert(pElemExt->size % pElemExt->alignment == 0);
+
+    const auto minIndex = pIndexType->minValue();
+    const auto maxIndex = pIndexType->maxValue();
+    const auto count = maxIndex - minIndex + 1;
+    assert(count > 0);
+
+    pExt->size = count * pElemExt->size;
+    pExt->alignment = pElemExt->alignment;
+
+    // definition
+    //
+    stringstream def;
+    def << "[" << count << " x " << pElemExt->genName << "]";
+    pExt->def = def.str();
+
+    // debug information
+    //
+    stringstream indexRange;
+    indexRange << "!DISubrange(" <<
+        "count: " << count << ", lowerBound: " << minIndex << ")";
+    auto rangeMd = m_pBackend->_newMetadata(Metadata::Kind::Generic, indexRange.str());
+
+    stringstream elements;
+    elements << "!{" << rangeMd->id << "}";
+    auto elementsMd = m_pBackend->_newMetadata(Metadata::Kind::Generic, elements.str());
+
+    stringstream typeName;
+    if (pType->isUserDeclared())
+        typeName << "name: \"" << pType->typeId() << "\", ";
+
+    stringstream md;
+    md << "!DICompositeType(tag: DW_TAG_array_type, " <<
+        typeName.str() <<
+        "file: " << m_pBackend->m_sourceFileMd->id << ", " <<
+        "line: " << pType->line() << ", " <<
+        "baseType: " << pElemExt->pMetadata->id << ", " <<
+        "size: " << pExt->size * 8 << ", " <<
+        "elements: " << elementsMd->id << ")";
+    pExt->pMetadata->def = md.str();
+
     return VarPtr();
 }
 

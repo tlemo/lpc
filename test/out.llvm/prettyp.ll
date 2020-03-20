@@ -13,21 +13,21 @@
 
 ; types
 %T_CHARINFO = type [5 x i8]
-%T_STRING = type __array
-%T_SYMBOL = type [20 x i8]
+%T_STRING = type [200 x i8]
+%T_SYMBOL = type [216 x i8]
 %T_SYMBOLINFO = type %T_SYMBOL*
-%T_DBLCHARTABLE = type __array
+%T_SPECIALCHAR = type [2 x i8]
+%T_DBLCHARTABLE = type [2 x %T_SPECIALCHAR]
 %T_DBLCHRSET = type __set
-%T_KEY = type __array
+%T_KEY = type [10 x i8]
 %T_KEYSYMSET = type __set
-%T_KEYWORDTABLE = type __array
+%T_KEYWORDTABLE = type [22 x %T_KEY]
 %T_OPTIONSET = type __set
-%T_OPTIONTABLE = type __array
-%T_SGLCHARTABLE = type __array
-%T_SPECIALCHAR = type __array
-%T_SYMBOLSTACK = type __array
-%T_STACKENTRY = type [8 x i8]
 %T_TABLEENTRY = type [3 x i8]
+%T_OPTIONTABLE = type [33 x %T_TABLEENTRY]
+%T_SGLCHARTABLE = type [6 x i8]
+%T_STACKENTRY = type [8 x i8]
+%T_SYMBOLSTACK = type [100 x %T_STACKENTRY]
 
 ; program variables
 @_input = dso_local global %T_text zeroinitializer
@@ -168,9 +168,9 @@
 ;================================================================================
 ; metadata
 
-!llvm.dbg.cu = !{!47}
+!llvm.dbg.cu = !{!63}
 !llvm.module.flags = !{}
-!llvm.ident = !{!46}
+!llvm.ident = !{!62}
 
 !0 = !DIFile(filename: "prettyp.pas", checksumkind: CSK_None)
 !1 = !DIBasicType(name: "boolean", size: 8, encoding: DW_ATE_boolean)
@@ -188,36 +188,52 @@
 !13 = !DIDerivedType(tag: DW_TAG_member, name: "VALUE", scope: !11, file: !0, line: 274, baseType: !2, size: 8, offset: 32)
 !14 = !{!12,!13}
 !15 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "SYMBOLINFO", file: !0, line: 266, baseType: !16, size: 64)
-!16 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "SYMBOL", file: !0, line: 258, size: 160, flags: DIFlagTypePassByValue, elements: !23)
-!17 = TODO
-!18 = !DIDerivedType(tag: DW_TAG_member, name: "NAME", scope: !16, file: !0, line: 259, baseType: !8, size: 32, offset: 0)
-!19 = !DIDerivedType(tag: DW_TAG_member, name: "VALUE", scope: !16, file: !0, line: 260, baseType: !17, size: 8, offset: 32)
-!20 = !DIDerivedType(tag: DW_TAG_member, name: "LENGTH", scope: !16, file: !0, line: 261, baseType: !3, size: 32, offset: 64)
-!21 = !DIDerivedType(tag: DW_TAG_member, name: "SPACESBEFORE", scope: !16, file: !0, line: 262, baseType: !3, size: 32, offset: 96)
-!22 = !DIDerivedType(tag: DW_TAG_member, name: "CRSBEFORE", scope: !16, file: !0, line: 263, baseType: !3, size: 32, offset: 128)
-!23 = !{!18,!19,!20,!21,!22}
-!24 = TODO
-!25 = TODO
-!26 = TODO
-!27 = TODO
-!28 = TODO
-!29 = TODO
-!30 = TODO
-!31 = TODO
+!16 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "SYMBOL", file: !0, line: 258, size: 1728, flags: DIFlagTypePassByValue, elements: !25)
+!17 = !DICompositeType(tag: DW_TAG_array_type, name: "STRING", file: !0, line: 256, baseType: !2, size: 1600, elements: !19)
+!18 = !DISubrange(count: 200, lowerBound: 1)
+!19 = !{!18}
+!20 = !DIDerivedType(tag: DW_TAG_member, name: "NAME", scope: !16, file: !0, line: 259, baseType: !8, size: 32, offset: 0)
+!21 = !DIDerivedType(tag: DW_TAG_member, name: "VALUE", scope: !16, file: !0, line: 260, baseType: !17, size: 1600, offset: 32)
+!22 = !DIDerivedType(tag: DW_TAG_member, name: "LENGTH", scope: !16, file: !0, line: 261, baseType: !3, size: 32, offset: 1632)
+!23 = !DIDerivedType(tag: DW_TAG_member, name: "SPACESBEFORE", scope: !16, file: !0, line: 262, baseType: !3, size: 32, offset: 1664)
+!24 = !DIDerivedType(tag: DW_TAG_member, name: "CRSBEFORE", scope: !16, file: !0, line: 263, baseType: !3, size: 32, offset: 1696)
+!25 = !{!20,!21,!22,!23,!24}
+!26 = !DICompositeType(tag: DW_TAG_array_type, name: "DBLCHARTABLE", file: !0, line: 251, baseType: !27, size: 32, elements: !31)
+!27 = !DICompositeType(tag: DW_TAG_array_type, name: "SPECIALCHAR", file: !0, line: 247, baseType: !2, size: 16, elements: !29)
+!28 = !DISubrange(count: 2, lowerBound: 1)
+!29 = !{!28}
+!30 = !DISubrange(count: 2, lowerBound: 22)
+!31 = !{!30}
 !32 = TODO
-!33 = TODO
-!34 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "STACKENTRY", file: !0, line: 278, size: 64, flags: DIFlagTypePassByValue, elements: !37)
-!35 = !DIDerivedType(tag: DW_TAG_member, name: "INDENTSYMBOL", scope: !34, file: !0, line: 279, baseType: !8, size: 32, offset: 0)
-!36 = !DIDerivedType(tag: DW_TAG_member, name: "PREVMARGIN", scope: !34, file: !0, line: 280, baseType: !3, size: 32, offset: 32)
-!37 = !{!35,!36}
-!38 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "TABLEENTRY", file: !0, line: 232, size: 24, flags: DIFlagTypePassByValue, elements: !42)
-!39 = !DIDerivedType(tag: DW_TAG_member, name: "OPTIONSSELECTED", scope: !38, file: !0, line: 233, baseType: !29, size: 8, offset: 0)
-!40 = !DIDerivedType(tag: DW_TAG_member, name: "DINDENTSYMBOLS", scope: !38, file: !0, line: 234, baseType: !27, size: 8, offset: 8)
-!41 = !DIDerivedType(tag: DW_TAG_member, name: "GOBBLETERMINATORS", scope: !38, file: !0, line: 235, baseType: !27, size: 8, offset: 16)
-!42 = !{!39,!40,!41}
-!43 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9,!10,!11,!15,!16,!17,!24,!25,!26,!27,!28,!29,!30,!31,!32,!33,!34,!38}
-!44 = !{}
-!45 = !{}
-!46 = !{!"LPC 1.1 (debug) - built on Mar 19 2020"}
-!47 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1 (debug) - built on Mar 19 2020", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !44, retainedTypes: !43, globals: !45, nameTableKind: None)
+!33 = !DICompositeType(tag: DW_TAG_array_type, name: "KEY", file: !0, line: 241, baseType: !2, size: 80, elements: !35)
+!34 = !DISubrange(count: 10, lowerBound: 1)
+!35 = !{!34}
+!36 = TODO
+!37 = !DICompositeType(tag: DW_TAG_array_type, name: "KEYWORDTABLE", file: !0, line: 244, baseType: !33, size: 1760, elements: !39)
+!38 = !DISubrange(count: 22, lowerBound: 0)
+!39 = !{!38}
+!40 = TODO
+!41 = !DICompositeType(tag: DW_TAG_array_type, name: "OPTIONTABLE", file: !0, line: 238, baseType: !42, size: 792, elements: !48)
+!42 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "TABLEENTRY", file: !0, line: 232, size: 24, flags: DIFlagTypePassByValue, elements: !46)
+!43 = !DIDerivedType(tag: DW_TAG_member, name: "OPTIONSSELECTED", scope: !42, file: !0, line: 233, baseType: !40, size: 8, offset: 0)
+!44 = !DIDerivedType(tag: DW_TAG_member, name: "DINDENTSYMBOLS", scope: !42, file: !0, line: 234, baseType: !36, size: 8, offset: 8)
+!45 = !DIDerivedType(tag: DW_TAG_member, name: "GOBBLETERMINATORS", scope: !42, file: !0, line: 235, baseType: !36, size: 8, offset: 16)
+!46 = !{!43,!44,!45}
+!47 = !DISubrange(count: 33, lowerBound: 0)
+!48 = !{!47}
+!49 = !DICompositeType(tag: DW_TAG_array_type, name: "SGLCHARTABLE", file: !0, line: 253, baseType: !2, size: 48, elements: !51)
+!50 = !DISubrange(count: 6, lowerBound: 25)
+!51 = !{!50}
+!52 = !DICompositeType(tag: DW_TAG_array_type, name: "SYMBOLSTACK", file: !0, line: 283, baseType: !53, size: 6400, elements: !58)
+!53 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "STACKENTRY", file: !0, line: 278, size: 64, flags: DIFlagTypePassByValue, elements: !56)
+!54 = !DIDerivedType(tag: DW_TAG_member, name: "INDENTSYMBOL", scope: !53, file: !0, line: 279, baseType: !8, size: 32, offset: 0)
+!55 = !DIDerivedType(tag: DW_TAG_member, name: "PREVMARGIN", scope: !53, file: !0, line: 280, baseType: !3, size: 32, offset: 32)
+!56 = !{!54,!55}
+!57 = !DISubrange(count: 100, lowerBound: 1)
+!58 = !{!57}
+!59 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9,!10,!11,!15,!16,!17,!26,!27,!32,!33,!36,!37,!40,!41,!42,!49,!52,!53}
+!60 = !{}
+!61 = !{}
+!62 = !{!"LPC 1.1 (debug) - built on Mar 20 2020"}
+!63 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1 (debug) - built on Mar 20 2020", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !60, retainedTypes: !59, globals: !61, nameTableKind: None)
 

@@ -12,7 +12,7 @@
 ; scope: program scope (level : 1)
 
 ; types
-%T_A = type __array
+%T_A = type [4 x i32]
 %T_R = type [8 x i8]
 %T_S = type __set
 
@@ -38,9 +38,9 @@
 ;================================================================================
 ; metadata
 
-!llvm.dbg.cu = !{!18}
+!llvm.dbg.cu = !{!20}
 !llvm.module.flags = !{}
-!llvm.ident = !{!17}
+!llvm.ident = !{!19}
 
 !0 = !DIFile(filename: "udtReturn.pas", checksumkind: CSK_None)
 !1 = !DIBasicType(name: "boolean", size: 8, encoding: DW_ATE_boolean)
@@ -50,15 +50,17 @@
 !5 = !DIBasicType(name: "void", size: 0, encoding: DW_ATE_void)
 !6 = !DIBasicType(name: "real", size: 64, encoding: DW_ATE_float)
 !7 = TODO
-!8 = TODO
-!9 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "R", file: !0, line: 9, size: 64, flags: DIFlagTypePassByValue, elements: !12)
-!10 = !DIDerivedType(tag: DW_TAG_member, name: "a", scope: !9, file: !0, line: 10, baseType: !3, size: 32, offset: 0)
-!11 = !DIDerivedType(tag: DW_TAG_member, name: "b", scope: !9, file: !0, line: 10, baseType: !3, size: 32, offset: 32)
-!12 = !{!10,!11}
-!13 = TODO
-!14 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9,!13}
-!15 = !{}
-!16 = !{}
-!17 = !{!"LPC 1.1 (debug) - built on Mar 19 2020"}
-!18 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1 (debug) - built on Mar 19 2020", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !15, retainedTypes: !14, globals: !16, nameTableKind: None)
+!8 = !DICompositeType(tag: DW_TAG_array_type, name: "A", file: !0, line: 5, baseType: !3, size: 128, elements: !10)
+!9 = !DISubrange(count: 4, lowerBound: 0)
+!10 = !{!9}
+!11 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "R", file: !0, line: 9, size: 64, flags: DIFlagTypePassByValue, elements: !14)
+!12 = !DIDerivedType(tag: DW_TAG_member, name: "a", scope: !11, file: !0, line: 10, baseType: !3, size: 32, offset: 0)
+!13 = !DIDerivedType(tag: DW_TAG_member, name: "b", scope: !11, file: !0, line: 10, baseType: !3, size: 32, offset: 32)
+!14 = !{!12,!13}
+!15 = TODO
+!16 = !{!1,!2,!3,!4,!5,!6,!7,!8,!11,!15}
+!17 = !{}
+!18 = !{}
+!19 = !{!"LPC 1.1 (debug) - built on Mar 20 2020"}
+!20 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1 (debug) - built on Mar 20 2020", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !17, retainedTypes: !16, globals: !18, nameTableKind: None)
 

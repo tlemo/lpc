@@ -12,7 +12,7 @@
 ; scope: program scope (level : 1)
 
 ; types
-%T_vec = type __array
+%T_vec = type [50 x i32]
 
 ; program variables
 @_input = dso_local global %T_text zeroinitializer
@@ -37,9 +37,9 @@
 ;================================================================================
 ; metadata
 
-!llvm.dbg.cu = !{!14}
+!llvm.dbg.cu = !{!16}
 !llvm.module.flags = !{}
-!llvm.ident = !{!13}
+!llvm.ident = !{!15}
 
 !0 = !DIFile(filename: "gencomb.pas", checksumkind: CSK_None)
 !1 = !DIBasicType(name: "boolean", size: 8, encoding: DW_ATE_boolean)
@@ -49,11 +49,13 @@
 !5 = !DIBasicType(name: "void", size: 0, encoding: DW_ATE_void)
 !6 = !DIBasicType(name: "real", size: 64, encoding: DW_ATE_float)
 !7 = TODO
-!8 = TODO
-!9 = TODO
-!10 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9}
-!11 = !{}
-!12 = !{}
-!13 = !{!"LPC 1.1 (debug) - built on Mar 19 2020"}
-!14 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1 (debug) - built on Mar 19 2020", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !11, retainedTypes: !10, globals: !12, nameTableKind: None)
+!8 = !DICompositeType(tag: DW_TAG_array_type, name: "vec", file: !0, line: 3, baseType: !3, size: 1600, elements: !10)
+!9 = !DISubrange(count: 50, lowerBound: 1)
+!10 = !{!9}
+!11 = TODO
+!12 = !{!1,!2,!3,!4,!5,!6,!7,!8,!11}
+!13 = !{}
+!14 = !{}
+!15 = !{!"LPC 1.1 (debug) - built on Mar 20 2020"}
+!16 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1 (debug) - built on Mar 20 2020", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !13, retainedTypes: !12, globals: !14, nameTableKind: None)
 

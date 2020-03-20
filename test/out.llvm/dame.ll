@@ -12,7 +12,8 @@
 ; scope: program scope (level : 1)
 
 ; types
-%T_vec = type __array
+%T_range_2 = type __range
+%T_vec = type [8 x %T_range_2]
 
 ; program variables
 @_input = dso_local global %T_text zeroinitializer
@@ -27,9 +28,9 @@
 ;================================================================================
 ; metadata
 
-!llvm.dbg.cu = !{!13}
+!llvm.dbg.cu = !{!16}
 !llvm.module.flags = !{}
-!llvm.ident = !{!12}
+!llvm.ident = !{!15}
 
 !0 = !DIFile(filename: "dame.pas", checksumkind: CSK_None)
 !1 = !DIBasicType(name: "boolean", size: 8, encoding: DW_ATE_boolean)
@@ -39,10 +40,13 @@
 !5 = !DIBasicType(name: "void", size: 0, encoding: DW_ATE_void)
 !6 = !DIBasicType(name: "real", size: 64, encoding: DW_ATE_float)
 !7 = TODO
-!8 = TODO
-!9 = !{!1,!2,!3,!4,!5,!6,!7,!8}
-!10 = !{}
-!11 = !{}
-!12 = !{!"LPC 1.1 (debug) - built on Mar 19 2020"}
-!13 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1 (debug) - built on Mar 19 2020", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !10, retainedTypes: !9, globals: !11, nameTableKind: None)
+!8 = !DICompositeType(tag: DW_TAG_array_type, name: "vec", file: !0, line: 4, baseType: !9, size: 64, elements: !11)
+!9 = TODO
+!10 = !DISubrange(count: 8, lowerBound: 1)
+!11 = !{!10}
+!12 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9}
+!13 = !{}
+!14 = !{}
+!15 = !{!"LPC 1.1 (debug) - built on Mar 20 2020"}
+!16 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1 (debug) - built on Mar 20 2020", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !13, retainedTypes: !12, globals: !14, nameTableKind: None)
 

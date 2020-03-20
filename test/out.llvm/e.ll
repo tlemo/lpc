@@ -13,7 +13,7 @@
 
 ; types
 %T_digit = type __range
-%T_digitarray = type __array
+%T_digitarray = type [1008 x %T_digit]
 %T_pointer_2 = type %T_digitarray*
 
 ; program variables
@@ -44,9 +44,9 @@
 ;================================================================================
 ; metadata
 
-!llvm.dbg.cu = !{!15}
+!llvm.dbg.cu = !{!17}
 !llvm.module.flags = !{}
-!llvm.ident = !{!14}
+!llvm.ident = !{!16}
 
 !0 = !DIFile(filename: "e.pas", checksumkind: CSK_None)
 !1 = !DIBasicType(name: "boolean", size: 8, encoding: DW_ATE_boolean)
@@ -57,11 +57,13 @@
 !6 = !DIBasicType(name: "real", size: 64, encoding: DW_ATE_float)
 !7 = TODO
 !8 = TODO
-!9 = TODO
-!10 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 13, baseType: !9, size: 64)
-!11 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9,!10}
-!12 = !{}
-!13 = !{}
-!14 = !{!"LPC 1.1 (debug) - built on Mar 19 2020"}
-!15 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1 (debug) - built on Mar 19 2020", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !12, retainedTypes: !11, globals: !13, nameTableKind: None)
+!9 = !DICompositeType(tag: DW_TAG_array_type, name: "digitarray", file: !0, line: 10, baseType: !8, size: 8064, elements: !11)
+!10 = !DISubrange(count: 1008, lowerBound: 0)
+!11 = !{!10}
+!12 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 13, baseType: !9, size: 64)
+!13 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9,!12}
+!14 = !{}
+!15 = !{}
+!16 = !{!"LPC 1.1 (debug) - built on Mar 20 2020"}
+!17 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1 (debug) - built on Mar 20 2020", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !14, retainedTypes: !13, globals: !15, nameTableKind: None)
 
