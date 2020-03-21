@@ -1,7 +1,6 @@
 @echo off
 
 echo Cleaning up temporary files...
-git clean -dxfq tmp
+git clean -dxfq -e lpcRuntime.* tmp
 
-echo Running tests...
 python runTests.py %*
