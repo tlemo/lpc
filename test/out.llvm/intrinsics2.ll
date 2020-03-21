@@ -8,7 +8,6 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; scope: global scope (level : 0)
 
 ; types
-%T_pointer_1 = type i8*
 %T_text = type i8
 
 ; line 4
@@ -20,12 +19,9 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %T_array_3 = type [40 x i32]
 %T_array_5 = type [3 x i32]
 %T_array_4 = type [100 x %T_array_5]
-%T_pointer_7 = type i8*
-%T_array_6 = type [100 x %T_pointer_7]
-%T_pointer_8 = type i8*
+%T_array_6 = type [100 x i8*]
 %T_set_10 = type i8
 %T_rec = type [48 x i8]
-%T_pointer_9 = type i8*
 
 ; program variables
 @_input = dso_local global %T_text zeroinitializer
@@ -35,8 +31,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @a3 = dso_local global %T_array_4 zeroinitializer
 @a4 = dso_local global %T_array_6 zeroinitializer
 @i = dso_local global i32 zeroinitializer
-@p = dso_local global %T_pointer_8 zeroinitializer
-@pr = dso_local global %T_pointer_9 zeroinitializer
+@p = dso_local global i8* zeroinitializer
+@pr = dso_local global i8* zeroinitializer
 ;================================================================================
 ; metadata
 

@@ -379,7 +379,7 @@ VarPtr TypeGen::visit(ts::PointerType* pType)
     // %T_C = type %T_B* ; error: forward references to non-struct type
     // %T_B = type %T_C*
     //
-    pExt->def = "i8*";
+    pExt->genName = "i8*";
 
     const auto pBaseType = pType->baseType();
     m_pBackend->_generateType(pBaseType);

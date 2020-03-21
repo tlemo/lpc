@@ -8,7 +8,6 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; scope: global scope (level : 0)
 
 ; types
-%T_pointer_1 = type i8*
 %T_text = type i8
 
 ; line 93
@@ -23,21 +22,17 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %T_range_3 = type i8
 %T_array_4 = type [100 x i8]
 %T_constant = type [109 x i8]
-%T_csp = type i8*
 %T_valu = type [17 x i8]
 %T_levrange = type i8
 %T_range_5 = type i8
 %T_identifier = type [214 x i8]
-%T_ctp = type i8*
 %T_structure = type [72 x i8]
-%T_stp = type i8*
 %T_attr = type [52 x i8]
 %T_setofsys = type i8
 %T_range_7 = type i8
 %T_array_6 = type [61 x %T_range_7]
 %T_array_8 = type [256 x i32]
 %T_labl = type [20 x i8]
-%T_lbp = type i8*
 %T_record_10 = type [42 x i8]
 %T_array_9 = type [21 x %T_record_10]
 %T_disprange = type i8
@@ -46,13 +41,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %T_record_13 = type [5 x i8]
 %T_array_12 = type [10 x %T_record_13]
 %T_filerec = type [16 x i8]
-%T_extfilep = type i8*
 %T_range_16 = type i8
 %T_array_15 = type [9 x %T_range_16]
 %T_testpointer = type [24 x i8]
-%T_testp = type i8*
 %T_range_17 = type i8
-%T_marktype = type i8*
 %T_array_19 = type [4 x i8]
 %T_array_18 = type [61 x %T_array_19]
 %T_array_20 = type [35 x %T_alpha]
@@ -71,10 +63,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; program variables
 @_input = dso_local global %T_text zeroinitializer
 @blockbegsys = dso_local global %T_setofsys zeroinitializer
-@boolptr = dso_local global %T_stp zeroinitializer
+@boolptr = dso_local global i8* zeroinitializer
 @cdx = dso_local global %T_array_6 zeroinitializer
 @ch = dso_local global i8 zeroinitializer
-@charptr = dso_local global %T_stp zeroinitializer
+@charptr = dso_local global i8* zeroinitializer
 @chartp = dso_local global %T_array_8 zeroinitializer
 @chcnt = dso_local global i32 zeroinitializer
 @constbegsys = dso_local global %T_setofsys zeroinitializer
@@ -87,15 +79,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @errinx = dso_local global %T_range_11 zeroinitializer
 @errlist = dso_local global %T_array_12 zeroinitializer
 @facbegsys = dso_local global %T_setofsys zeroinitializer
-@fextfilep = dso_local global %T_extfilep zeroinitializer
+@fextfilep = dso_local global i8* zeroinitializer
 @frw = dso_local global %T_array_15 zeroinitializer
-@fwptr = dso_local global %T_ctp zeroinitializer
+@fwptr = dso_local global i8* zeroinitializer
 @gattr = dso_local global %T_attr zeroinitializer
-@globtestp = dso_local global %T_testp zeroinitializer
+@globtestp = dso_local global i8* zeroinitializer
 @ic = dso_local global %T_addrrange zeroinitializer
 @id = dso_local global %T_alpha zeroinitializer
 @intlabel = dso_local global i32 zeroinitializer
-@intptr = dso_local global %T_stp zeroinitializer
+@intptr = dso_local global i8* zeroinitializer
 @kk = dso_local global %T_range_17 zeroinitializer
 @lc = dso_local global %T_addrrange zeroinitializer
 @level = dso_local global %T_levrange zeroinitializer
@@ -105,17 +97,17 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @mn = dso_local global %T_array_18 zeroinitializer
 @mxint10 = dso_local global i32 zeroinitializer
 @na = dso_local global %T_array_20 zeroinitializer
-@nilptr = dso_local global %T_stp zeroinitializer
+@nilptr = dso_local global i8* zeroinitializer
 @op = dso_local global i32 zeroinitializer
 @ordint = dso_local global %T_array_21 zeroinitializer
 @output = dso_local global %T_text zeroinitializer
-@parmptr = dso_local global %T_stp zeroinitializer
+@parmptr = dso_local global i8* zeroinitializer
 @pdx = dso_local global %T_array_22 zeroinitializer
 @prcode = dso_local global i1 zeroinitializer
 @prr = dso_local global %T_text zeroinitializer
 @prtables = dso_local global i1 zeroinitializer
 @prterr = dso_local global i1 zeroinitializer
-@realptr = dso_local global %T_stp zeroinitializer
+@realptr = dso_local global i8* zeroinitializer
 @rop = dso_local global %T_array_24 zeroinitializer
 @rsy = dso_local global %T_array_25 zeroinitializer
 @rw = dso_local global %T_array_26 zeroinitializer
@@ -127,16 +119,16 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @ssy = dso_local global %T_array_30 zeroinitializer
 @statbegsys = dso_local global %T_setofsys zeroinitializer
 @sy = dso_local global i32 zeroinitializer
-@textptr = dso_local global %T_stp zeroinitializer
+@textptr = dso_local global i8* zeroinitializer
 @top = dso_local global %T_disprange zeroinitializer
 @typebegsys = dso_local global %T_setofsys zeroinitializer
 @typedels = dso_local global %T_setofsys zeroinitializer
-@ucstptr = dso_local global %T_ctp zeroinitializer
-@ufctptr = dso_local global %T_ctp zeroinitializer
-@ufldptr = dso_local global %T_ctp zeroinitializer
-@uprcptr = dso_local global %T_ctp zeroinitializer
-@utypptr = dso_local global %T_ctp zeroinitializer
-@uvarptr = dso_local global %T_ctp zeroinitializer
+@ucstptr = dso_local global i8* zeroinitializer
+@ufctptr = dso_local global i8* zeroinitializer
+@ufldptr = dso_local global i8* zeroinitializer
+@uprcptr = dso_local global i8* zeroinitializer
+@utypptr = dso_local global i8* zeroinitializer
+@uvarptr = dso_local global i8* zeroinitializer
 @val = dso_local global %T_valu zeroinitializer
 
 ; line 366
@@ -308,7 +300,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; scope: block_body (level : 3)
 
 ; types
-%T_block_body_array_38 = type [65 x %T_csp]
+%T_block_body_array_38 = type [65 x i8*]
 %T_block_body_range_39 = type i8
 %T_block_body_oprange = type i8
 
@@ -507,7 +499,6 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; scope: block_body_statement_casestatement (level : 5)
 
 ; types
-%T_block_body_statement_casestatement_cip = type i8*
 %T_block_body_statement_casestatement_caseinfo = type [16 x i8]
 
 ; line 3378

@@ -8,21 +8,17 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; scope: global scope (level : 0)
 
 ; types
-%T_pointer_1 = type i8*
 %T_text = type i8
 
 ; line 4
 ;================================================================================
 ; scope: program scope (level : 1)
 
-; types
-%T_ptr = type i8*
-
 ; program variables
 @_input = dso_local global %T_text zeroinitializer
 @_output = dso_local global %T_text zeroinitializer
 @i = dso_local global i32 zeroinitializer
-@p = dso_local global %T_ptr zeroinitializer
+@p = dso_local global i8* zeroinitializer
 
 ; line 11
 ;================================================================================

@@ -8,7 +8,6 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; scope: global scope (level : 0)
 
 ; types
-%T_pointer_1 = type i8*
 %T_text = type i8
 
 ; line 7
@@ -36,7 +35,6 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; scope: foo (level : 2)
 
 ; types
-%T_foo_pointer_5 = type i8*
 %T_foo_subroutine_6 = type i8
 
 ; line 54

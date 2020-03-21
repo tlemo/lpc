@@ -8,7 +8,6 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; scope: global scope (level : 0)
 
 ; types
-%T_pointer_1 = type i8*
 %T_text = type i8
 
 ; line 167
@@ -19,7 +18,6 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %T_CHARINFO = type [5 x i8]
 %T_STRING = type [200 x i8]
 %T_SYMBOL = type [216 x i8]
-%T_SYMBOLINFO = type i8*
 %T_SPECIALCHAR = type [2 x i8]
 %T_DBLCHARTABLE = type [2 x %T_SPECIALCHAR]
 %T_DBLCHRSET = type i8
@@ -40,13 +38,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @CURRCHAR = dso_local global %T_CHARINFO zeroinitializer
 @CURRLINEPOS = dso_local global i32 zeroinitializer
 @CURRMARGIN = dso_local global i32 zeroinitializer
-@CURRSYM = dso_local global %T_SYMBOLINFO zeroinitializer
+@CURRSYM = dso_local global i8* zeroinitializer
 @DBLCHAR = dso_local global %T_DBLCHARTABLE zeroinitializer
 @DBLCHARS = dso_local global %T_DBLCHRSET zeroinitializer
 @INPUTFILE = dso_local global %T_text zeroinitializer
 @KEYWORD = dso_local global %T_KEYWORDTABLE zeroinitializer
 @NEXTCHAR = dso_local global %T_CHARINFO zeroinitializer
-@NEXTSYM = dso_local global %T_SYMBOLINFO zeroinitializer
+@NEXTSYM = dso_local global i8* zeroinitializer
 @OUTPUTFILE = dso_local global %T_text zeroinitializer
 @PPOPTION = dso_local global %T_OPTIONTABLE zeroinitializer
 @RECORDSEEN = dso_local global i1 zeroinitializer

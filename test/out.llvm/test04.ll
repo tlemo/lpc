@@ -8,7 +8,6 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; scope: global scope (level : 0)
 
 ; types
-%T_pointer_1 = type i8*
 %T_text = type i8
 
 ; line 3
@@ -16,14 +15,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; scope: program scope (level : 1)
 
 ; types
-%T_A = type i8*
-%T_C = type i8*
-%T_B = type i8*
-%T_pointer_3 = type i8*
 %T_R2 = type [8 x i8]
-%T_pointer_2 = type i8*
 %T_R1 = type [8 x i8]
-%T_pointer_4 = type i8*
 %T_R3 = type [16 x i8]
 
 ; program variables
