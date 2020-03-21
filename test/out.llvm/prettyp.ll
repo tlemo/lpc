@@ -245,8 +245,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !68 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9,!10,!11,!15,!16,!17,!26,!27,!32,!36,!39,!43,!46,!50,!51,!58,!61,!62}
 !69 = !{}
 !70 = !{}
-!71 = !{!"LPC 1.1 (debug) - built on Mar 20 2020"}
-!72 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1 (debug) - built on Mar 20 2020", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !69, retainedTypes: !68, globals: !70, nameTableKind: None)
+!71 = !{!"LPC 1.1"}
+!72 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !69, retainedTypes: !68, globals: !70, nameTableKind: None)
 !73 = !{i32 2, !"CodeView", i32 1}
 !74 = !{i32 2, !"Debug Info Version", i32 3}
 
