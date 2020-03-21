@@ -446,7 +446,7 @@ VarPtr TypeGen::visit(ts::PointerType* pType)
         "file: " << m_pBackend->m_sourceFileMd->id << ", " <<
         "line: " << mdLineNumber(pType->line()) << ", " <<
         "baseType: " << baseTypeId << ", " <<
-        "size: 64)";
+        "size: " << pExt->size * 8 << ")";
     pExt->pMetadata->def = md.str();
 
     return VarPtr();
@@ -457,11 +457,34 @@ VarPtr TypeGen::visit(ts::PointerType* pType)
 //
 VarPtr TypeGen::visit(ts::FileType* pType)
 {
-    // TODO
+    const auto pElemType = pType->elemType();
+    m_pBackend->_generateType(pElemType);
+    
+    if(!pElemType->isChar())
+    {
+        context()->warning(pType->line(), "only Text files are supported");
+    }
+
     auto pExt = ext(pType);
-    pExt->size = 1;
-    pExt->alignment = 1;
-    pExt->def = "i8";
+    pExt->size = PTR_SIZE;
+    pExt->alignment = PTR_ALIGNMENT;
+    pExt->def = "i8*";
+
+    // debug information
+    //
+    stringstream typeName;
+    if (pType->isUserDeclared())
+        typeName << "name: \"" << pType->typeId() << "\", ";
+
+    stringstream md;
+    md << "!DIDerivedType(tag: DW_TAG_pointer_type, " <<
+        typeName.str() <<
+        "file: " << m_pBackend->m_sourceFileMd->id << ", " <<
+        "line: " << mdLineNumber(pType->line()) << ", " <<
+        "baseType: null, " <<
+        "size: " << pExt->size * 8 << ")";
+    pExt->pMetadata->def = md.str();
+
     return VarPtr();
 }
 

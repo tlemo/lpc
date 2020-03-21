@@ -8,7 +8,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; scope: global scope (level : 0)
 
 ; types
-%T_text = type i8
+%T_text = type i8*
 
 ; line 3
 ;================================================================================
@@ -40,7 +40,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !4 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 0, baseType: !5, size: 64)
 !5 = !DIBasicType(name: "void", size: 0)
 !6 = !DIBasicType(name: "real", size: 64, encoding: DW_ATE_float)
-!7 = !DIBasicType(name: "void", size: 0)
+!7 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "text", file: !0, line: 0, baseType: null, size: 64)
 !8 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "A", file: !0, line: 6, baseType: !3, size: 64)
 !9 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "B", file: !0, line: 9, baseType: null, size: 64)
 !10 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "C", file: !0, line: 10, baseType: null, size: 64)

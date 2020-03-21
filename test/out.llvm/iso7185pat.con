@@ -173,8 +173,30 @@ compiling pass 1 (LPC)
   warning on line 2623: 'b' hiding existing declaration on line 2620
   warning on line 2628: 'a' hiding existing declaration on line 158
   warning on line 2629: 'a' hiding existing declaration on line 158
+  warning on line 368: only Text files are supported
+  warning on line 354: only Text files are supported
+  warning on line 358: only Text files are supported
+  warning on line 360: only Text files are supported
+  warning on line 352: only Text files are supported
+  warning on line 374: only Text files are supported
+  warning on line 364: only Text files are supported
+  warning on line 370: only Text files are supported
+  warning on line 362: only Text files are supported
+  warning on line 366: only Text files are supported
+  warning on line 372: only Text files are supported
+  warning on line 369: only Text files are supported
+  warning on line 355: only Text files are supported
+  warning on line 359: only Text files are supported
+  warning on line 361: only Text files are supported
+  warning on line 353: only Text files are supported
+  warning on line 375: only Text files are supported
+  warning on line 365: only Text files are supported
+  warning on line 371: only Text files are supported
+  warning on line 363: only Text files are supported
+  warning on line 367: only Text files are supported
+  warning on line 373: only Text files are supported
 
-0 error(s), 172 warning(s)
+0 error(s), 194 warning(s)
 
 P1 errcode = 0
 

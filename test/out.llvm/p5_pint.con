@@ -75,8 +75,9 @@ compiling pass 1 (LPC)
   warning on line 1734: 'f' hiding existing declaration on line 1699
   warning on line 1734: 'ad' hiding existing declaration on line 1702
   warning on line 1734: 'ad' hiding existing declaration on line 470
+  warning on line 435: only Text files are supported
 
-0 error(s), 74 warning(s)
+0 error(s), 75 warning(s)
 
 P1 errcode = 0
 
