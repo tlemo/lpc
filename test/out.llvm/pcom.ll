@@ -15,42 +15,31 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; scope: program scope (level : 1)
 
 ; types
-%T_addrrange = type i8
 %T_alpha = type [8 x i8]
 %T_array_2 = type [100 x i8]
 %T_setty = type [2 x i32]
-%T_range_3 = type i8
 %T_array_4 = type [100 x i8]
-%T_constant = type [109 x i8]
+%T_constant = type [112 x i8]
 %T_valu = type [17 x i8]
-%T_levrange = type i8
-%T_range_5 = type i8
 %T_identifier = type [214 x i8]
-%T_structure = type [72 x i8]
+%T_structure = type [84 x i8]
 %T_attr = type [52 x i8]
 %T_setofsys = type [2 x i32]
-%T_range_7 = type i8
-%T_array_6 = type [61 x %T_range_7]
+%T_array_6 = type [61 x i32]
 %T_array_8 = type [256 x i32]
 %T_labl = type [20 x i8]
-%T_record_10 = type [42 x i8]
+%T_record_10 = type [48 x i8]
 %T_array_9 = type [21 x %T_record_10]
-%T_disprange = type i8
-%T_range_11 = type i8
-%T_range_14 = type i8
-%T_record_13 = type [5 x i8]
+%T_record_13 = type [8 x i8]
 %T_array_12 = type [10 x %T_record_13]
 %T_filerec = type [16 x i8]
-%T_range_16 = type i8
-%T_array_15 = type [9 x %T_range_16]
+%T_array_15 = type [9 x i32]
 %T_testpointer = type [24 x i8]
-%T_range_17 = type i8
 %T_array_19 = type [4 x i8]
 %T_array_18 = type [61 x %T_array_19]
 %T_array_20 = type [35 x %T_alpha]
 %T_array_21 = type [256 x i32]
-%T_range_23 = type i8
-%T_array_22 = type [23 x %T_range_23]
+%T_array_22 = type [23 x i32]
 %T_array_24 = type [35 x i32]
 %T_array_25 = type [35 x i32]
 %T_array_26 = type [35 x %T_alpha]
@@ -73,10 +62,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @debug = dso_local global i1 zeroinitializer
 @digmax = dso_local global i32 zeroinitializer
 @display = dso_local global %T_array_9 zeroinitializer
-@disx = dso_local global %T_disprange zeroinitializer
+@disx = dso_local global i32 zeroinitializer
 @dp = dso_local global i1 zeroinitializer
 @eol = dso_local global i1 zeroinitializer
-@errinx = dso_local global %T_range_11 zeroinitializer
+@errinx = dso_local global i32 zeroinitializer
 @errlist = dso_local global %T_array_12 zeroinitializer
 @facbegsys = dso_local global %T_setofsys zeroinitializer
 @fextfilep = dso_local global i8* zeroinitializer
@@ -84,13 +73,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @fwptr = dso_local global i8* zeroinitializer
 @gattr = dso_local global %T_attr zeroinitializer
 @globtestp = dso_local global i8* zeroinitializer
-@ic = dso_local global %T_addrrange zeroinitializer
+@ic = dso_local global i32 zeroinitializer
 @id = dso_local global %T_alpha zeroinitializer
 @intlabel = dso_local global i32 zeroinitializer
 @intptr = dso_local global i8* zeroinitializer
-@kk = dso_local global %T_range_17 zeroinitializer
-@lc = dso_local global %T_addrrange zeroinitializer
-@level = dso_local global %T_levrange zeroinitializer
+@kk = dso_local global i32 zeroinitializer
+@lc = dso_local global i32 zeroinitializer
+@level = dso_local global i32 zeroinitializer
 @lgth = dso_local global i32 zeroinitializer
 @linecount = dso_local global i32 zeroinitializer
 @list = dso_local global i1 zeroinitializer
@@ -120,7 +109,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @statbegsys = dso_local global %T_setofsys zeroinitializer
 @sy = dso_local global i32 zeroinitializer
 @textptr = dso_local global i8* zeroinitializer
-@top = dso_local global %T_disprange zeroinitializer
+@top = dso_local global i32 zeroinitializer
 @typebegsys = dso_local global %T_setofsys zeroinitializer
 @typedels = dso_local global %T_setofsys zeroinitializer
 @ucstptr = dso_local global i8* zeroinitializer
@@ -241,9 +230,6 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ;================================================================================
 ; scope: block_constant (level : 3)
 
-; types
-%T_block_constant_range_35 = type i8
-
 ; line 1021
 ;================================================================================
 ; scope: block_equalbounds (level : 3)
@@ -288,9 +274,6 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ;================================================================================
 ; scope: block_procdeclaration (level : 3)
 
-; types
-%T_block_procdeclaration_range_37 = type i8
-
 ; line 1620
 ;================================================================================
 ; scope: block_procdeclaration_parameterlist (level : 4)
@@ -301,8 +284,6 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 
 ; types
 %T_block_body_array_38 = type [65 x i8*]
-%T_block_body_range_39 = type i8
-%T_block_body_oprange = type i8
 
 ; line 1912
 ;================================================================================
@@ -384,9 +365,6 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ;================================================================================
 ; scope: block_body_statement_call (level : 5)
 
-; types
-%T_block_body_statement_call_range_40 = type i8
-
 ; line 2317
 ;================================================================================
 ; scope: block_body_statement_call_variable (level : 6)
@@ -402,9 +380,6 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; line 2391
 ;================================================================================
 ; scope: block_body_statement_call_write (level : 6)
-
-; types
-%T_block_body_statement_call_write_range_41 = type i8
 
 ; line 2485
 ;================================================================================
@@ -593,7 +568,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !7 = !DIBasicType(name: "void", size: 0)
 !8 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
 !9 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
-!10 = !DIBasicType(name: "void", size: 0)
+!10 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !11 = !DICompositeType(tag: DW_TAG_array_type, name: "alpha", file: !0, line: 202, baseType: !2, size: 64, elements: !13)
 !12 = !DISubrange(count: 8)
 !13 = !{!12}
@@ -601,7 +576,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !15 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
 !16 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "attr", file: !0, line: 229, size: 448, flags: DIFlagTypePassByValue, elements: !99)
 !17 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "stp", file: !0, line: 178, baseType: !18, size: 64)
-!18 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "structure", file: !0, line: 180, size: 576, flags: DIFlagTypePassByValue, elements: !89)
+!18 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "structure", file: !0, line: 180, size: 704, flags: DIFlagTypePassByValue, elements: !89)
 !19 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
 !20 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "ctp", file: !0, line: 178, baseType: !21, size: 64)
 !21 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "identifier", file: !0, line: 204, size: 1728, flags: DIFlagTypePassByValue, elements: !68)
@@ -617,22 +592,22 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !31 = !DISubrange(count: 48)
 !32 = !{!31}
 !33 = !DIBasicType(size: 1, encoding: DW_ATE_boolean)
-!34 = !DIBasicType(name: "void", size: 0)
+!34 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !35 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 164, baseType: !2, size: 800, elements: !37)
 !36 = !DISubrange(count: 100)
 !37 = !{!36}
 !38 = !DIDerivedType(tag: DW_TAG_member, name: "cclass", scope: !25, file: !0, line: 160, baseType: !26, size: 32, offset: 0)
 !39 = !DIDerivedType(tag: DW_TAG_member, name: "rval", scope: !25, file: !0, line: 161, baseType: !27, size: 800, offset: 32)
 !40 = !DIDerivedType(tag: DW_TAG_member, name: "pval", scope: !25, file: !0, line: 162, baseType: !30, size: 64, offset: 32)
-!41 = !DIDerivedType(tag: DW_TAG_member, name: "slgth", scope: !25, file: !0, line: 163, baseType: !34, size: 8, offset: 32)
-!42 = !DIDerivedType(tag: DW_TAG_member, name: "sval", scope: !25, file: !0, line: 164, baseType: !35, size: 800, offset: 40)
+!41 = !DIDerivedType(tag: DW_TAG_member, name: "slgth", scope: !25, file: !0, line: 163, baseType: !34, size: 32, offset: 32)
+!42 = !DIDerivedType(tag: DW_TAG_member, name: "sval", scope: !25, file: !0, line: 164, baseType: !35, size: 800, offset: 64)
 !43 = !{!38,!39,!40,!41,!42}
 !44 = !DIDerivedType(tag: DW_TAG_member, name: "intval", scope: !23, file: !0, line: 167, baseType: !1, size: 8, offset: 0)
 !45 = !DIDerivedType(tag: DW_TAG_member, name: "ival", scope: !23, file: !0, line: 168, baseType: !3, size: 32, offset: 32)
 !46 = !DIDerivedType(tag: DW_TAG_member, name: "valp", scope: !23, file: !0, line: 169, baseType: !24, size: 64, offset: 64)
 !47 = !{!44,!45,!46}
-!48 = !DIBasicType(name: "void", size: 0)
-!49 = !DIBasicType(name: "void", size: 0)
+!48 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!49 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !50 = !DIDerivedType(tag: DW_TAG_member, name: "name", scope: !21, file: !0, line: 205, baseType: !11, size: 64, offset: 0)
 !51 = !DIDerivedType(tag: DW_TAG_member, name: "llink", scope: !21, file: !0, line: 205, baseType: !20, size: 64, offset: 64)
 !52 = !DIDerivedType(tag: DW_TAG_member, name: "rlink", scope: !21, file: !0, line: 205, baseType: !20, size: 64, offset: 128)
@@ -641,37 +616,37 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !55 = !DIDerivedType(tag: DW_TAG_member, name: "klass", scope: !21, file: !0, line: 207, baseType: !22, size: 32, offset: 320)
 !56 = !DIDerivedType(tag: DW_TAG_member, name: "values", scope: !21, file: !0, line: 209, baseType: !23, size: 192, offset: 384)
 !57 = !DIDerivedType(tag: DW_TAG_member, name: "vkind", scope: !21, file: !0, line: 210, baseType: !8, size: 32, offset: 352)
-!58 = !DIDerivedType(tag: DW_TAG_member, name: "vlev", scope: !21, file: !0, line: 210, baseType: !48, size: 8, offset: 384)
-!59 = !DIDerivedType(tag: DW_TAG_member, name: "vaddr", scope: !21, file: !0, line: 210, baseType: !10, size: 8, offset: 392)
-!60 = !DIDerivedType(tag: DW_TAG_member, name: "fldaddr", scope: !21, file: !0, line: 211, baseType: !10, size: 8, offset: 352)
+!58 = !DIDerivedType(tag: DW_TAG_member, name: "vlev", scope: !21, file: !0, line: 210, baseType: !48, size: 32, offset: 384)
+!59 = !DIDerivedType(tag: DW_TAG_member, name: "vaddr", scope: !21, file: !0, line: 210, baseType: !10, size: 32, offset: 416)
+!60 = !DIDerivedType(tag: DW_TAG_member, name: "fldaddr", scope: !21, file: !0, line: 211, baseType: !10, size: 32, offset: 352)
 !61 = !DIDerivedType(tag: DW_TAG_member, name: "pfdeckind", scope: !21, file: !0, line: 212, baseType: !19, size: 32, offset: 352)
-!62 = !DIDerivedType(tag: DW_TAG_member, name: "key", scope: !21, file: !0, line: 213, baseType: !49, size: 8, offset: 384)
-!63 = !DIDerivedType(tag: DW_TAG_member, name: "pflev", scope: !21, file: !0, line: 214, baseType: !48, size: 8, offset: 384)
+!62 = !DIDerivedType(tag: DW_TAG_member, name: "key", scope: !21, file: !0, line: 213, baseType: !49, size: 32, offset: 384)
+!63 = !DIDerivedType(tag: DW_TAG_member, name: "pflev", scope: !21, file: !0, line: 214, baseType: !48, size: 32, offset: 384)
 !64 = !DIDerivedType(tag: DW_TAG_member, name: "pfname", scope: !21, file: !0, line: 214, baseType: !3, size: 32, offset: 416)
 !65 = !DIDerivedType(tag: DW_TAG_member, name: "pfkind", scope: !21, file: !0, line: 215, baseType: !8, size: 32, offset: 448)
 !66 = !DIDerivedType(tag: DW_TAG_member, name: "forwdecl", scope: !21, file: !0, line: 216, baseType: !1, size: 8, offset: 480)
 !67 = !DIDerivedType(tag: DW_TAG_member, name: "externl", scope: !21, file: !0, line: 216, baseType: !1, size: 8, offset: 488)
 !68 = !{!50,!51,!52,!53,!54,!55,!56,!57,!58,!59,!60,!61,!62,!63,!64,!65,!66,!67}
 !69 = !DIDerivedType(tag: DW_TAG_member, name: "marked", scope: !18, file: !0, line: 181, baseType: !1, size: 8, offset: 0)
-!70 = !DIDerivedType(tag: DW_TAG_member, name: "size", scope: !18, file: !0, line: 182, baseType: !10, size: 8, offset: 8)
-!71 = !DIDerivedType(tag: DW_TAG_member, name: "form", scope: !18, file: !0, line: 183, baseType: !15, size: 32, offset: 32)
-!72 = !DIDerivedType(tag: DW_TAG_member, name: "scalkind", scope: !18, file: !0, line: 184, baseType: !19, size: 32, offset: 64)
+!70 = !DIDerivedType(tag: DW_TAG_member, name: "size", scope: !18, file: !0, line: 182, baseType: !10, size: 32, offset: 32)
+!71 = !DIDerivedType(tag: DW_TAG_member, name: "form", scope: !18, file: !0, line: 183, baseType: !15, size: 32, offset: 64)
+!72 = !DIDerivedType(tag: DW_TAG_member, name: "scalkind", scope: !18, file: !0, line: 184, baseType: !19, size: 32, offset: 96)
 !73 = !DIDerivedType(tag: DW_TAG_member, name: "fconst", scope: !18, file: !0, line: 185, baseType: !20, size: 64, offset: 128)
-!74 = !DIDerivedType(tag: DW_TAG_member, name: "rangetype", scope: !18, file: !0, line: 186, baseType: !17, size: 64, offset: 64)
-!75 = !DIDerivedType(tag: DW_TAG_member, name: "min", scope: !18, file: !0, line: 186, baseType: !23, size: 192, offset: 128)
-!76 = !DIDerivedType(tag: DW_TAG_member, name: "max", scope: !18, file: !0, line: 186, baseType: !23, size: 192, offset: 320)
-!77 = !DIDerivedType(tag: DW_TAG_member, name: "eltype", scope: !18, file: !0, line: 187, baseType: !17, size: 64, offset: 64)
-!78 = !DIDerivedType(tag: DW_TAG_member, name: "elset", scope: !18, file: !0, line: 188, baseType: !17, size: 64, offset: 64)
-!79 = !DIDerivedType(tag: DW_TAG_member, name: "aeltype", scope: !18, file: !0, line: 189, baseType: !17, size: 64, offset: 64)
-!80 = !DIDerivedType(tag: DW_TAG_member, name: "inxtype", scope: !18, file: !0, line: 189, baseType: !17, size: 64, offset: 128)
-!81 = !DIDerivedType(tag: DW_TAG_member, name: "fstfld", scope: !18, file: !0, line: 190, baseType: !20, size: 64, offset: 64)
-!82 = !DIDerivedType(tag: DW_TAG_member, name: "recvar", scope: !18, file: !0, line: 190, baseType: !17, size: 64, offset: 128)
-!83 = !DIDerivedType(tag: DW_TAG_member, name: "filtype", scope: !18, file: !0, line: 191, baseType: !17, size: 64, offset: 64)
-!84 = !DIDerivedType(tag: DW_TAG_member, name: "tagfieldp", scope: !18, file: !0, line: 192, baseType: !20, size: 64, offset: 64)
-!85 = !DIDerivedType(tag: DW_TAG_member, name: "fstvar", scope: !18, file: !0, line: 192, baseType: !17, size: 64, offset: 128)
-!86 = !DIDerivedType(tag: DW_TAG_member, name: "nxtvar", scope: !18, file: !0, line: 193, baseType: !17, size: 64, offset: 64)
-!87 = !DIDerivedType(tag: DW_TAG_member, name: "subvar", scope: !18, file: !0, line: 193, baseType: !17, size: 64, offset: 128)
-!88 = !DIDerivedType(tag: DW_TAG_member, name: "varval", scope: !18, file: !0, line: 193, baseType: !23, size: 192, offset: 192)
+!74 = !DIDerivedType(tag: DW_TAG_member, name: "rangetype", scope: !18, file: !0, line: 186, baseType: !17, size: 64, offset: 128)
+!75 = !DIDerivedType(tag: DW_TAG_member, name: "min", scope: !18, file: !0, line: 186, baseType: !23, size: 192, offset: 192)
+!76 = !DIDerivedType(tag: DW_TAG_member, name: "max", scope: !18, file: !0, line: 186, baseType: !23, size: 192, offset: 384)
+!77 = !DIDerivedType(tag: DW_TAG_member, name: "eltype", scope: !18, file: !0, line: 187, baseType: !17, size: 64, offset: 128)
+!78 = !DIDerivedType(tag: DW_TAG_member, name: "elset", scope: !18, file: !0, line: 188, baseType: !17, size: 64, offset: 128)
+!79 = !DIDerivedType(tag: DW_TAG_member, name: "aeltype", scope: !18, file: !0, line: 189, baseType: !17, size: 64, offset: 128)
+!80 = !DIDerivedType(tag: DW_TAG_member, name: "inxtype", scope: !18, file: !0, line: 189, baseType: !17, size: 64, offset: 192)
+!81 = !DIDerivedType(tag: DW_TAG_member, name: "fstfld", scope: !18, file: !0, line: 190, baseType: !20, size: 64, offset: 128)
+!82 = !DIDerivedType(tag: DW_TAG_member, name: "recvar", scope: !18, file: !0, line: 190, baseType: !17, size: 64, offset: 192)
+!83 = !DIDerivedType(tag: DW_TAG_member, name: "filtype", scope: !18, file: !0, line: 191, baseType: !17, size: 64, offset: 128)
+!84 = !DIDerivedType(tag: DW_TAG_member, name: "tagfieldp", scope: !18, file: !0, line: 192, baseType: !20, size: 64, offset: 128)
+!85 = !DIDerivedType(tag: DW_TAG_member, name: "fstvar", scope: !18, file: !0, line: 192, baseType: !17, size: 64, offset: 192)
+!86 = !DIDerivedType(tag: DW_TAG_member, name: "nxtvar", scope: !18, file: !0, line: 193, baseType: !17, size: 64, offset: 128)
+!87 = !DIDerivedType(tag: DW_TAG_member, name: "subvar", scope: !18, file: !0, line: 193, baseType: !17, size: 64, offset: 192)
+!88 = !DIDerivedType(tag: DW_TAG_member, name: "varval", scope: !18, file: !0, line: 193, baseType: !23, size: 192, offset: 256)
 !89 = !{!69,!70,!71,!72,!73,!74,!75,!76,!77,!78,!79,!80,!81,!82,!83,!84,!85,!86,!87,!88}
 !90 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
 !91 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
@@ -679,17 +654,17 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !93 = !DIDerivedType(tag: DW_TAG_member, name: "kind", scope: !16, file: !0, line: 230, baseType: !90, size: 32, offset: 64)
 !94 = !DIDerivedType(tag: DW_TAG_member, name: "cval", scope: !16, file: !0, line: 231, baseType: !23, size: 192, offset: 128)
 !95 = !DIDerivedType(tag: DW_TAG_member, name: "access", scope: !16, file: !0, line: 232, baseType: !91, size: 32, offset: 96)
-!96 = !DIDerivedType(tag: DW_TAG_member, name: "vlevel", scope: !16, file: !0, line: 233, baseType: !48, size: 8, offset: 128)
-!97 = !DIDerivedType(tag: DW_TAG_member, name: "dplmt", scope: !16, file: !0, line: 233, baseType: !10, size: 8, offset: 136)
-!98 = !DIDerivedType(tag: DW_TAG_member, name: "idplmt", scope: !16, file: !0, line: 234, baseType: !10, size: 8, offset: 128)
+!96 = !DIDerivedType(tag: DW_TAG_member, name: "vlevel", scope: !16, file: !0, line: 233, baseType: !48, size: 32, offset: 128)
+!97 = !DIDerivedType(tag: DW_TAG_member, name: "dplmt", scope: !16, file: !0, line: 233, baseType: !10, size: 32, offset: 160)
+!98 = !DIDerivedType(tag: DW_TAG_member, name: "idplmt", scope: !16, file: !0, line: 234, baseType: !10, size: 32, offset: 128)
 !99 = !{!92,!93,!94,!95,!96,!97,!98}
 !100 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
 !101 = !DICompositeType(tag: DW_TAG_array_type, name: "setofsys", file: !0, line: 151, baseType: !104, size: 64, elements: !103)
 !102 = !DISubrange(count: 48)
 !103 = !{!102}
 !104 = !DIBasicType(size: 1, encoding: DW_ATE_boolean)
-!105 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 360, baseType: !106, size: 488, elements: !108)
-!106 = !DIBasicType(name: "void", size: 0)
+!105 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 360, baseType: !106, size: 1952, elements: !108)
+!106 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !107 = !DISubrange(count: 61)
 !108 = !{!107}
 !109 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 350, baseType: !110, size: 8192, elements: !112)
@@ -708,19 +683,19 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !122 = !DIDerivedType(tag: DW_TAG_member, name: "fname", scope: !114, file: !0, line: 317, baseType: !20, size: 64, offset: 0)
 !123 = !DIDerivedType(tag: DW_TAG_member, name: "flabel", scope: !114, file: !0, line: 317, baseType: !115, size: 64, offset: 64)
 !124 = !DIDerivedType(tag: DW_TAG_member, name: "occur", scope: !114, file: !0, line: 318, baseType: !100, size: 32, offset: 128)
-!125 = !DIDerivedType(tag: DW_TAG_member, name: "clev", scope: !114, file: !0, line: 319, baseType: !48, size: 8, offset: 160)
-!126 = !DIDerivedType(tag: DW_TAG_member, name: "cdspl", scope: !114, file: !0, line: 320, baseType: !10, size: 8, offset: 168)
-!127 = !DIDerivedType(tag: DW_TAG_member, name: "vdspl", scope: !114, file: !0, line: 321, baseType: !10, size: 8, offset: 160)
+!125 = !DIDerivedType(tag: DW_TAG_member, name: "clev", scope: !114, file: !0, line: 319, baseType: !48, size: 32, offset: 160)
+!126 = !DIDerivedType(tag: DW_TAG_member, name: "cdspl", scope: !114, file: !0, line: 320, baseType: !10, size: 32, offset: 192)
+!127 = !DIDerivedType(tag: DW_TAG_member, name: "vdspl", scope: !114, file: !0, line: 321, baseType: !10, size: 32, offset: 160)
 !128 = !{!122,!123,!124,!125,!126,!127}
 !129 = !DISubrange(count: 21)
 !130 = !{!129}
-!131 = !DIBasicType(name: "void", size: 0)
-!132 = !DIBasicType(name: "void", size: 0)
+!131 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!132 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !133 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 332, baseType: !134, size: 640, elements: !140)
 !134 = distinct !DICompositeType(tag: DW_TAG_structure_type, file: !0, line: 333, size: 64, flags: DIFlagTypePassByValue, elements: !138)
-!135 = !DIBasicType(name: "void", size: 0)
+!135 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !136 = !DIDerivedType(tag: DW_TAG_member, name: "pos", scope: !134, file: !0, line: 333, baseType: !3, size: 32, offset: 0)
-!137 = !DIDerivedType(tag: DW_TAG_member, name: "nmr", scope: !134, file: !0, line: 334, baseType: !135, size: 8, offset: 32)
+!137 = !DIDerivedType(tag: DW_TAG_member, name: "nmr", scope: !134, file: !0, line: 334, baseType: !135, size: 32, offset: 32)
 !138 = !{!136,!137}
 !139 = !DISubrange(count: 10)
 !140 = !{!139}
@@ -729,8 +704,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !143 = !DIDerivedType(tag: DW_TAG_member, name: "filename", scope: !142, file: !0, line: 253, baseType: !11, size: 64, offset: 0)
 !144 = !DIDerivedType(tag: DW_TAG_member, name: "nextfile", scope: !142, file: !0, line: 253, baseType: !141, size: 64, offset: 64)
 !145 = !{!143,!144}
-!146 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 352, baseType: !147, size: 72, elements: !149)
-!147 = !DIBasicType(name: "void", size: 0)
+!146 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 352, baseType: !147, size: 288, elements: !149)
+!147 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !148 = !DISubrange(count: 9)
 !149 = !{!148}
 !150 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "testp", file: !0, line: 239, baseType: !151, size: 64)
@@ -739,7 +714,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !153 = !DIDerivedType(tag: DW_TAG_member, name: "elt2", scope: !151, file: !0, line: 241, baseType: !17, size: 64, offset: 64)
 !154 = !DIDerivedType(tag: DW_TAG_member, name: "lasttestp", scope: !151, file: !0, line: 242, baseType: !150, size: 64, offset: 128)
 !155 = !{!152,!153,!154}
-!156 = !DIBasicType(name: "void", size: 0)
+!156 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !157 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "marktype", file: !0, line: 138, baseType: !3, size: 64)
 !158 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 358, baseType: !159, size: 1952, elements: !163)
 !159 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 358, baseType: !2, size: 32, elements: !161)
@@ -753,8 +728,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !167 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 362, baseType: !3, size: 8192, elements: !169)
 !168 = !DISubrange(count: 256)
 !169 = !{!168}
-!170 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 361, baseType: !171, size: 184, elements: !173)
-!171 = !DIBasicType(name: "void", size: 0)
+!170 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 361, baseType: !171, size: 736, elements: !173)
+!171 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !172 = !DISubrange(count: 23)
 !173 = !{!172}
 !174 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 355, baseType: !14, size: 1120, elements: !176)
@@ -796,16 +771,16 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !210 = !DIDerivedType(tag: DW_TAG_member, name: "p", scope: !209, file: !0, line: 764, baseType: !20, size: 64, offset: 0)
 !211 = !DIDerivedType(tag: DW_TAG_member, name: "i", scope: !209, file: !0, line: 764, baseType: !3, size: 32, offset: 0)
 !212 = !{!210,!211}
-!213 = !DIBasicType(name: "void", size: 0)
+!213 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !214 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
-!215 = !DIBasicType(name: "void", size: 0)
+!215 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !216 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 1900, baseType: !24, size: 4160, elements: !218)
 !217 = !DISubrange(count: 65)
 !218 = !{!217}
-!219 = !DIBasicType(name: "void", size: 0)
-!220 = !DIBasicType(name: "void", size: 0)
-!221 = !DIBasicType(name: "void", size: 0)
-!222 = !DIBasicType(name: "void", size: 0)
+!219 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!220 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!221 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!222 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !223 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "caseinfo", file: !0, line: 3291, size: 128, flags: DIFlagTypePassByValue, elements: !228)
 !224 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "cip", file: !0, line: 3289, baseType: !223, size: 64)
 !225 = !DIDerivedType(tag: DW_TAG_member, name: "next", scope: !223, file: !0, line: 3291, baseType: !224, size: 64, offset: 0)

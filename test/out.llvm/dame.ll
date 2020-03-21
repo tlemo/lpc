@@ -15,8 +15,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; scope: program scope (level : 1)
 
 ; types
-%T_range_2 = type i8
-%T_vec = type [8 x %T_range_2]
+%T_vec = type [8 x i32]
 
 ; program variables
 @_input = dso_local global %T_text zeroinitializer
@@ -43,8 +42,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !5 = !DIBasicType(name: "void", size: 0)
 !6 = !DIBasicType(name: "real", size: 64, encoding: DW_ATE_float)
 !7 = !DIBasicType(name: "void", size: 0)
-!8 = !DICompositeType(tag: DW_TAG_array_type, name: "vec", file: !0, line: 4, baseType: !9, size: 64, elements: !11)
-!9 = !DIBasicType(name: "void", size: 0)
+!8 = !DICompositeType(tag: DW_TAG_array_type, name: "vec", file: !0, line: 4, baseType: !9, size: 256, elements: !11)
+!9 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !10 = !DISubrange(count: 8)
 !11 = !{!10}
 !12 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9}

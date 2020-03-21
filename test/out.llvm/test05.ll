@@ -17,7 +17,6 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; types
 %T_array_3 = type [256 x i32]
 %T_t1 = type [3 x %T_array_3]
-%T_t2 = type i8
 %T_array_7 = type [5 x i8]
 %T_array_6 = type [256 x %T_array_7]
 %T_array_5 = type [3 x %T_array_6]
@@ -62,7 +61,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !12 = !{!11}
 !13 = !DISubrange(count: 3)
 !14 = !{!13}
-!15 = !DIBasicType(name: "void", size: 0)
+!15 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !16 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 11, baseType: !17, size: 307200, elements: !27)
 !17 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 11, baseType: !18, size: 30720, elements: !25)
 !18 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 11, baseType: !19, size: 10240, elements: !23)

@@ -15,30 +15,25 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; scope: program scope (level : 1)
 
 ; types
-%T_address = type i8
 %T_alfa = type [10 x i8]
 %T_beta = type [25 x i8]
-%T_bit20 = type i8
-%T_bit4 = type i8
-%T_bit6 = type i8
-%T_record_3 = type [6 x i8]
+%T_record_3 = type [24 x i8]
 %T_array_2 = type [8651 x %T_record_3]
 %T_array_4 = type [128 x i32]
 %T_array_5 = type [128 x %T_alfa]
-%T_range_6 = type i8
 %T_settype = type [2 x i32]
 %T_array_7 = type [21 x %T_alfa]
 %T_record_9 = type [8 x i8]
 %T_array_8 = type [18001 x %T_record_9]
 
 ; program variables
-@ad = dso_local global %T_address zeroinitializer
-@ad1 = dso_local global %T_address zeroinitializer
+@ad = dso_local global i32 zeroinitializer
+@ad1 = dso_local global i32 zeroinitializer
 @b = dso_local global i1 zeroinitializer
 @c = dso_local global i8 zeroinitializer
 @code = dso_local global %T_array_2 zeroinitializer
 @cop = dso_local global %T_array_4 zeroinitializer
-@ep = dso_local global %T_address zeroinitializer
+@ep = dso_local global i32 zeroinitializer
 @i = dso_local global i32 zeroinitializer
 @i1 = dso_local global i32 zeroinitializer
 @i2 = dso_local global i32 zeroinitializer
@@ -47,16 +42,16 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @instr = dso_local global %T_array_5 zeroinitializer
 @interpreting = dso_local global i1 zeroinitializer
 @j = dso_local global i32 zeroinitializer
-@mp = dso_local global %T_address zeroinitializer
-@np = dso_local global %T_address zeroinitializer
-@op = dso_local global %T_bit6 zeroinitializer
+@mp = dso_local global i32 zeroinitializer
+@np = dso_local global i32 zeroinitializer
+@op = dso_local global i32 zeroinitializer
 @output = dso_local global %T_text zeroinitializer
-@p = dso_local global %T_bit4 zeroinitializer
-@pc = dso_local global %T_range_6 zeroinitializer
+@p = dso_local global i32 zeroinitializer
+@pc = dso_local global i32 zeroinitializer
 @prd = dso_local global %T_text zeroinitializer
 @prr = dso_local global %T_text zeroinitializer
-@q = dso_local global %T_bit20 zeroinitializer
-@sp = dso_local global %T_address zeroinitializer
+@q = dso_local global i32 zeroinitializer
+@sp = dso_local global i32 zeroinitializer
 @sptable = dso_local global %T_array_7 zeroinitializer
 @store = dso_local global %T_array_8 zeroinitializer
 
@@ -66,7 +61,6 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 
 ; types
 %T_load_labelrec = type [8 x i8]
-%T_load_labelrg = type i8
 %T_load_array_10 = type [1851 x %T_load_labelrec]
 %T_load_array_11 = type [10 x i8]
 
@@ -81,9 +75,6 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; line 208
 ;================================================================================
 ; scope: load_update (level : 3)
-
-; types
-%T_load_update_range_12 = type i8
 
 ; line 237
 ;================================================================================
@@ -171,7 +162,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !5 = !DIBasicType(name: "void", size: 0)
 !6 = !DIBasicType(name: "real", size: 64, encoding: DW_ATE_float)
 !7 = !DIBasicType(name: "void", size: 0)
-!8 = !DIBasicType(name: "void", size: 0)
+!8 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !9 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
 !10 = !DICompositeType(tag: DW_TAG_array_type, name: "alfa", file: !0, line: 76, baseType: !2, size: 80, elements: !12)
 !11 = !DISubrange(count: 10)
@@ -179,17 +170,17 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !13 = !DICompositeType(tag: DW_TAG_array_type, name: "beta", file: !0, line: 74, baseType: !2, size: 200, elements: !15)
 !14 = !DISubrange(count: 25)
 !15 = !{!14}
-!16 = !DIBasicType(name: "void", size: 0)
-!17 = !DIBasicType(name: "void", size: 0)
-!18 = !DIBasicType(name: "void", size: 0)
-!19 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 78, baseType: !20, size: 415248, elements: !29)
-!20 = distinct !DICompositeType(tag: DW_TAG_structure_type, file: !0, line: 79, size: 48, flags: DIFlagTypePassByValue, elements: !27)
-!21 = !DIDerivedType(tag: DW_TAG_member, name: "op1", scope: !20, file: !0, line: 79, baseType: !18, size: 8, offset: 0)
-!22 = !DIDerivedType(tag: DW_TAG_member, name: "p1", scope: !20, file: !0, line: 80, baseType: !17, size: 8, offset: 8)
-!23 = !DIDerivedType(tag: DW_TAG_member, name: "q1", scope: !20, file: !0, line: 81, baseType: !16, size: 8, offset: 16)
-!24 = !DIDerivedType(tag: DW_TAG_member, name: "op2", scope: !20, file: !0, line: 82, baseType: !18, size: 8, offset: 24)
-!25 = !DIDerivedType(tag: DW_TAG_member, name: "p2", scope: !20, file: !0, line: 83, baseType: !17, size: 8, offset: 32)
-!26 = !DIDerivedType(tag: DW_TAG_member, name: "q2", scope: !20, file: !0, line: 84, baseType: !16, size: 8, offset: 40)
+!16 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!17 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!18 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!19 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 78, baseType: !20, size: 1660992, elements: !29)
+!20 = distinct !DICompositeType(tag: DW_TAG_structure_type, file: !0, line: 79, size: 192, flags: DIFlagTypePassByValue, elements: !27)
+!21 = !DIDerivedType(tag: DW_TAG_member, name: "op1", scope: !20, file: !0, line: 79, baseType: !18, size: 32, offset: 0)
+!22 = !DIDerivedType(tag: DW_TAG_member, name: "p1", scope: !20, file: !0, line: 80, baseType: !17, size: 32, offset: 32)
+!23 = !DIDerivedType(tag: DW_TAG_member, name: "q1", scope: !20, file: !0, line: 81, baseType: !16, size: 32, offset: 64)
+!24 = !DIDerivedType(tag: DW_TAG_member, name: "op2", scope: !20, file: !0, line: 82, baseType: !18, size: 32, offset: 96)
+!25 = !DIDerivedType(tag: DW_TAG_member, name: "p2", scope: !20, file: !0, line: 83, baseType: !17, size: 32, offset: 128)
+!26 = !DIDerivedType(tag: DW_TAG_member, name: "q2", scope: !20, file: !0, line: 84, baseType: !16, size: 32, offset: 160)
 !27 = !{!21,!22,!23,!24,!25,!26}
 !28 = !DISubrange(count: 8651)
 !29 = !{!28}
@@ -199,7 +190,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !33 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 111, baseType: !10, size: 10240, elements: !35)
 !34 = !DISubrange(count: 128)
 !35 = !{!34}
-!36 = !DIBasicType(name: "void", size: 0)
+!36 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !37 = !DICompositeType(tag: DW_TAG_array_type, name: "settype", file: !0, line: 75, baseType: !40, size: 64, elements: !39)
 !38 = !DISubrange(count: 59)
 !39 = !{!38}
@@ -214,24 +205,24 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !48 = !DIDerivedType(tag: DW_TAG_member, name: "vb", scope: !45, file: !0, line: 95, baseType: !1, size: 8, offset: 0)
 !49 = !DIDerivedType(tag: DW_TAG_member, name: "vs", scope: !45, file: !0, line: 96, baseType: !37, size: 64, offset: 0)
 !50 = !DIDerivedType(tag: DW_TAG_member, name: "vc", scope: !45, file: !0, line: 97, baseType: !2, size: 8, offset: 0)
-!51 = !DIDerivedType(tag: DW_TAG_member, name: "va", scope: !45, file: !0, line: 98, baseType: !8, size: 8, offset: 0)
+!51 = !DIDerivedType(tag: DW_TAG_member, name: "va", scope: !45, file: !0, line: 98, baseType: !8, size: 32, offset: 0)
 !52 = !DIDerivedType(tag: DW_TAG_member, name: "vm", scope: !45, file: !0, line: 100, baseType: !3, size: 32, offset: 0)
 !53 = !{!46,!47,!48,!49,!50,!51,!52}
 !54 = !DISubrange(count: 18001)
 !55 = !{!54}
 !56 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
 !57 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "labelrec", file: !0, line: 128, size: 64, flags: DIFlagTypePassByValue, elements: !60)
-!58 = !DIDerivedType(tag: DW_TAG_member, name: "val", scope: !57, file: !0, line: 129, baseType: !8, size: 8, offset: 0)
+!58 = !DIDerivedType(tag: DW_TAG_member, name: "val", scope: !57, file: !0, line: 129, baseType: !8, size: 32, offset: 0)
 !59 = !DIDerivedType(tag: DW_TAG_member, name: "st", scope: !57, file: !0, line: 130, baseType: !56, size: 32, offset: 32)
 !60 = !{!58,!59}
-!61 = !DIBasicType(name: "void", size: 0)
+!61 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !62 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 135, baseType: !57, size: 118464, elements: !64)
 !63 = !DISubrange(count: 1851)
 !64 = !{!63}
 !65 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 134, baseType: !2, size: 80, elements: !67)
 !66 = !DISubrange(count: 10)
 !67 = !{!66}
-!68 = !DIBasicType(name: "void", size: 0)
+!68 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !69 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9,!10,!13,!16,!17,!18,!19,!20,!30,!33,!36,!37,!41,!44,!45,!56,!57,!61,!62,!65,!68}
 !70 = !{}
 !71 = !{}

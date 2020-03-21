@@ -14,21 +14,17 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ;================================================================================
 ; scope: program scope (level : 1)
 
-; types
-%T_range_2 = type i8
-%T_range_3 = type i8
-
 ; program variables
 @_input = dso_local global %T_text zeroinitializer
 @_output = dso_local global %T_text zeroinitializer
 @AnnualAccumInterest = dso_local global double zeroinitializer
 @Balance = dso_local global double zeroinitializer
 @InterestRate = dso_local global double zeroinitializer
-@Month = dso_local global %T_range_2 zeroinitializer
+@Month = dso_local global i32 zeroinitializer
 @NumberOfYears = dso_local global i32 zeroinitializer
 @OriginalLoan = dso_local global double zeroinitializer
 @Payment = dso_local global double zeroinitializer
-@StartingMonth = dso_local global %T_range_3 zeroinitializer
+@StartingMonth = dso_local global i32 zeroinitializer
 @Year = dso_local global i32 zeroinitializer
 
 ; line 15
@@ -65,8 +61,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !5 = !DIBasicType(name: "void", size: 0)
 !6 = !DIBasicType(name: "real", size: 64, encoding: DW_ATE_float)
 !7 = !DIBasicType(name: "void", size: 0)
-!8 = !DIBasicType(name: "void", size: 0)
-!9 = !DIBasicType(name: "void", size: 0)
+!8 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!9 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !10 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9}
 !11 = !{}
 !12 = !{}

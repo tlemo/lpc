@@ -14,30 +14,22 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ;================================================================================
 ; scope: program scope (level : 1)
 
-; types
-%T_R1 = type i8
-%T_R2 = type i8
-%T_R3 = type i8
-%T_R4 = type i8
-%T_R5 = type i8
-%T_R6 = type i8
-
 ; program variables
 @_input = dso_local global %T_text zeroinitializer
 @_output = dso_local global %T_text zeroinitializer
-@t1 = dso_local global %T_R1 zeroinitializer
-@t2 = dso_local global %T_R2 zeroinitializer
-@t3 = dso_local global %T_R3 zeroinitializer
-@t4 = dso_local global %T_R4 zeroinitializer
-@t5 = dso_local global %T_R5 zeroinitializer
-@t6 = dso_local global %T_R6 zeroinitializer
+@t1 = dso_local global i32 zeroinitializer
+@t2 = dso_local global i32 zeroinitializer
+@t3 = dso_local global i32 zeroinitializer
+@t4 = dso_local global i32 zeroinitializer
+@t5 = dso_local global i32 zeroinitializer
+@t6 = dso_local global i32 zeroinitializer
 @tmp = dso_local global %T_text zeroinitializer
-@v1 = dso_local global %T_R1 zeroinitializer
-@v2 = dso_local global %T_R2 zeroinitializer
-@v3 = dso_local global %T_R3 zeroinitializer
-@v4 = dso_local global %T_R4 zeroinitializer
-@v5 = dso_local global %T_R5 zeroinitializer
-@v6 = dso_local global %T_R6 zeroinitializer
+@v1 = dso_local global i32 zeroinitializer
+@v2 = dso_local global i32 zeroinitializer
+@v3 = dso_local global i32 zeroinitializer
+@v4 = dso_local global i32 zeroinitializer
+@v5 = dso_local global i32 zeroinitializer
+@v6 = dso_local global i32 zeroinitializer
 ;================================================================================
 ; metadata
 
@@ -53,12 +45,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !5 = !DIBasicType(name: "void", size: 0)
 !6 = !DIBasicType(name: "real", size: 64, encoding: DW_ATE_float)
 !7 = !DIBasicType(name: "void", size: 0)
-!8 = !DIBasicType(name: "void", size: 0)
-!9 = !DIBasicType(name: "void", size: 0)
-!10 = !DIBasicType(name: "void", size: 0)
-!11 = !DIBasicType(name: "void", size: 0)
-!12 = !DIBasicType(name: "void", size: 0)
-!13 = !DIBasicType(name: "void", size: 0)
+!8 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!9 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!10 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!11 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!12 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!13 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !14 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9,!10,!11,!12,!13}
 !15 = !{}
 !16 = !{}

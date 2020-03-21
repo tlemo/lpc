@@ -483,11 +483,11 @@ VarPtr TypeGen::visit(ts::SubroutineType* pType)
 //
 VarPtr TypeGen::visit(ts::RangeType* pType)
 {
-    // TODO
     auto pExt = ext(pType);
-    pExt->size = 1;
-    pExt->alignment = 1;
-    pExt->def = "i8";
+    pExt->genName = "i32";
+    pExt->size = 4;
+    pExt->alignment = 4;
+    pExt->pMetadata->def = "!DIBasicType(name: \"range\", size: 32, encoding: DW_ATE_signed)";
     return VarPtr();
 }
 
@@ -527,7 +527,7 @@ void LlvmBackend::_outputMetadata()
     // version
     //
     stringstream version;
-    version << "!{!\"" << BUILD_STRING << "\"}";
+    version << "!{!\"LPC " << BUILD_VERSION << "\"}";
     auto versionMd = _newMetadata(Metadata::Kind::Generic, version.str());
 
     // compile unit metadata
@@ -536,7 +536,7 @@ void LlvmBackend::_outputMetadata()
     compileUnit << "distinct !DICompileUnit(" <<
         "language: DW_LANG_Pascal83, " <<
         "file: " << m_sourceFileMd->id << ", " <<
-        "producer: \"" << BUILD_STRING << "\", " <<
+        "producer: \"LPC " << BUILD_VERSION << "\", " <<
         "isOptimized: true, " <<
         "runtimeVersion: 0, " <<
         "emissionKind: FullDebug, " <<

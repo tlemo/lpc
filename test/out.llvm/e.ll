@@ -15,8 +15,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; scope: program scope (level : 1)
 
 ; types
-%T_digit = type i8
-%T_digitarray = type [1008 x %T_digit]
+%T_digitarray = type [1008 x i32]
 
 ; program variables
 @i = dso_local global i32 zeroinitializer
@@ -58,8 +57,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !5 = !DIBasicType(name: "void", size: 0)
 !6 = !DIBasicType(name: "real", size: 64, encoding: DW_ATE_float)
 !7 = !DIBasicType(name: "void", size: 0)
-!8 = !DIBasicType(name: "void", size: 0)
-!9 = !DICompositeType(tag: DW_TAG_array_type, name: "digitarray", file: !0, line: 10, baseType: !8, size: 8064, elements: !11)
+!8 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!9 = !DICompositeType(tag: DW_TAG_array_type, name: "digitarray", file: !0, line: 10, baseType: !8, size: 32256, elements: !11)
 !10 = !DISubrange(count: 1008)
 !11 = !{!10}
 !12 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 13, baseType: !9, size: 64)

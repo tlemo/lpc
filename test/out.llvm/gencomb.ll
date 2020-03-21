@@ -31,9 +31,6 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ;================================================================================
 ; scope: gen (level : 2)
 
-; types
-%T_gen_range_2 = type i8
-
 ; line 23
 ;================================================================================
 ; scope: prel (level : 2)
@@ -55,7 +52,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !8 = !DICompositeType(tag: DW_TAG_array_type, name: "vec", file: !0, line: 3, baseType: !3, size: 1600, elements: !10)
 !9 = !DISubrange(count: 50)
 !10 = !{!9}
-!11 = !DIBasicType(name: "void", size: 0)
+!11 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !12 = !{!1,!2,!3,!4,!5,!6,!7,!8,!11}
 !13 = !{}
 !14 = !{}
