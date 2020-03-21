@@ -17,7 +17,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; types
 %T_A = type [4 x i32]
 %T_R = type [8 x i8]
-%T_S = type i8
+%T_S = type [1 x i32]
 
 ; program variables
 @_input = dso_local global %T_text zeroinitializer
@@ -41,9 +41,9 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ;================================================================================
 ; metadata
 
-!llvm.dbg.cu = !{!20}
-!llvm.module.flags = !{!21, !22}
-!llvm.ident = !{!19}
+!llvm.dbg.cu = !{!23}
+!llvm.module.flags = !{!24, !25}
+!llvm.ident = !{!22}
 
 !0 = !DIFile(filename: "udtReturn.pas", directory: "C:\Users\lemo\work\compilers\lpc\test")
 !1 = !DIBasicType(name: "boolean", size: 8, encoding: DW_ATE_boolean)
@@ -60,12 +60,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !12 = !DIDerivedType(tag: DW_TAG_member, name: "a", scope: !11, file: !0, line: 10, baseType: !3, size: 32, offset: 0)
 !13 = !DIDerivedType(tag: DW_TAG_member, name: "b", scope: !11, file: !0, line: 10, baseType: !3, size: 32, offset: 32)
 !14 = !{!12,!13}
-!15 = !DIBasicType(name: "void", size: 0)
-!16 = !{!1,!2,!3,!4,!5,!6,!7,!8,!11,!15}
-!17 = !{}
-!18 = !{}
-!19 = !{!"LPC 1.1 (debug) - built on Mar 20 2020"}
-!20 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1 (debug) - built on Mar 20 2020", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !17, retainedTypes: !16, globals: !18, nameTableKind: None)
-!21 = !{i32 2, !"CodeView", i32 1}
-!22 = !{i32 2, !"Debug Info Version", i32 3}
+!15 = !DICompositeType(tag: DW_TAG_array_type, name: "S", file: !0, line: 7, baseType: !18, size: 32, elements: !17)
+!16 = !DISubrange(count: 11)
+!17 = !{!16}
+!18 = !DIBasicType(size: 1, encoding: DW_ATE_boolean)
+!19 = !{!1,!2,!3,!4,!5,!6,!7,!8,!11,!15}
+!20 = !{}
+!21 = !{}
+!22 = !{!"LPC 1.1 (debug) - built on Mar 20 2020"}
+!23 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1 (debug) - built on Mar 20 2020", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !20, retainedTypes: !19, globals: !21, nameTableKind: None)
+!24 = !{i32 2, !"CodeView", i32 1}
+!25 = !{i32 2, !"Debug Info Version", i32 3}
 

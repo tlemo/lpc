@@ -143,11 +143,56 @@ VarPtr TypeGen::visit(ts::EnumType* pType)
 //
 VarPtr TypeGen::visit(ts::SetType* pType)
 {
-    // TODO
     auto pExt = ext(pType);
-    pExt->size = 1;
-    pExt->alignment = 1;
-    pExt->def = "i8";
+
+    const int minValue = pType->minValue();
+    const int maxValue = pType->maxValue();
+    assert(minValue <= maxValue);
+    assert(minValue >= 0);
+    assert(maxValue < 256);
+
+    // the set representation is always [0, maxValue] as packed bits into 32bit "units"
+    // (so there are "maxValue + 1" bits)
+    //
+    const int count = maxValue + 1;
+    const int units = (count + 31) / 32; 
+
+    pExt->size = units * 4;
+    pExt->alignment = 4;
+
+    // definition
+    //
+    stringstream def;
+    def << "[" << units << " x i32]";
+    pExt->def = def.str();
+
+    // debug information
+    //
+    stringstream indexRange;
+    indexRange << "!DISubrange(" << "count: " << count << ")";
+    auto rangeMd = m_pBackend->_newMetadata(Metadata::Kind::Generic, indexRange.str());
+
+    stringstream elements;
+    elements << "!{" << rangeMd->id << "}";
+    auto elementsMd = m_pBackend->_newMetadata(Metadata::Kind::Generic, elements.str());
+
+    auto bitTypeMd = m_pBackend->_newMetadata(Metadata::Kind::Generic,
+        "!DIBasicType(size: 1, encoding: DW_ATE_boolean)");
+
+    stringstream typeName;
+    if (pType->isUserDeclared())
+        typeName << "name: \"" << pType->typeId() << "\", ";
+
+    stringstream md;
+    md << "!DICompositeType(tag: DW_TAG_array_type, " <<
+        typeName.str() <<
+        "file: " << m_pBackend->m_sourceFileMd->id << ", " <<
+        "line: " << mdLineNumber(pType->line()) << ", " <<
+        "baseType: " << bitTypeMd->id << ", " <<
+        "size: " << pExt->size * 8 << ", " <<
+        "elements: " << elementsMd->id << ")";
+    pExt->pMetadata->def = md.str();
+
     return VarPtr();
 }
 

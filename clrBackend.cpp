@@ -477,8 +477,8 @@ VarPtr TypeGen::visit(ts::SetType* pType)
 {
     auto pExt = ext(pType);
 
-    int minValue = pType->minValue();
-    int maxValue = pType->maxValue();
+    const int minValue = pType->minValue();
+    const int maxValue = pType->maxValue();
     assert(minValue <= maxValue);
     assert(minValue >= 0);
     assert(maxValue < 256);
