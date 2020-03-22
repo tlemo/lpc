@@ -505,7 +505,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; scope: READER_RDRCMD (level : 3)
 
 ; types
-%T_READER_RDRCMD_subroutine_47 = type i8
+%T_READER_RDRCMD_subroutine_47 = type void (i8*)*
 
 ; line 2840
 ;================================================================================
@@ -624,7 +624,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; scope: READER_STACMD_STAOPT (level : 4)
 
 ; types
-%T_READER_STACMD_STAOPT_subroutine_48 = type i8
+%T_READER_STACMD_STAOPT_subroutine_48 = type void (i8*)*
 
 ; line 3368
 ;================================================================================
@@ -731,13 +731,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; scope: YRMOVE_NCHIN (level : 3)
 
 ; types
-%T_YRMOVE_NCHIN_subroutine_49 = type i8
+%T_YRMOVE_NCHIN_subroutine_49 = type void (i8*)*
 ;================================================================================
 ; metadata
 
-!llvm.dbg.cu = !{!273}
-!llvm.module.flags = !{!274, !275}
-!llvm.ident = !{!272}
+!llvm.dbg.cu = !{!279}
+!llvm.module.flags = !{!280, !281}
+!llvm.ident = !{!278}
 
 !0 = !DIFile(filename: "chess05ISO.pas", directory: "C:\Users\lemo\work\compilers\lpc\test")
 !1 = !DIBasicType(name: "boolean", size: 8, encoding: DW_ATE_boolean)
@@ -1005,14 +1005,20 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !263 = !{!262}
 !264 = !DISubrange(count: 6)
 !265 = !{!264}
-!266 = !DIBasicType(name: "void", size: 0)
-!267 = !DIBasicType(name: "void", size: 0)
-!268 = !DIBasicType(name: "void", size: 0)
-!269 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9,!10,!11,!17,!25,!28,!31,!32,!35,!36,!39,!42,!45,!48,!49,!50,!51,!55,!56,!59,!60,!72,!73,!76,!77,!78,!81,!82,!85,!86,!89,!92,!93,!94,!95,!96,!97,!115,!118,!121,!124,!127,!130,!133,!134,!137,!144,!147,!152,!156,!160,!164,!167,!170,!171,!172,!173,!174,!177,!178,!179,!182,!185,!188,!191,!194,!197,!200,!201,!206,!209,!212,!215,!218,!221,!224,!227,!230,!233,!236,!237,!242,!245,!248,!251,!254,!257,!260,!261,!266,!267,!268}
-!270 = !{}
-!271 = !{}
-!272 = !{!"LPC 1.1"}
-!273 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !270, retainedTypes: !269, globals: !271, nameTableKind: None)
-!274 = !{i32 2, !"CodeView", i32 1}
-!275 = !{i32 2, !"Debug Info Version", i32 3}
+!266 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 2829, baseType: !268, size: 64)
+!267 = !{null}
+!268 = !DISubroutineType(types: !267)
+!269 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 3338, baseType: !271, size: 64)
+!270 = !{null}
+!271 = !DISubroutineType(types: !270)
+!272 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 3910, baseType: !274, size: 64)
+!273 = !{null}
+!274 = !DISubroutineType(types: !273)
+!275 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9,!10,!11,!17,!25,!28,!31,!32,!35,!36,!39,!42,!45,!48,!49,!50,!51,!55,!56,!59,!60,!72,!73,!76,!77,!78,!81,!82,!85,!86,!89,!92,!93,!94,!95,!96,!97,!115,!118,!121,!124,!127,!130,!133,!134,!137,!144,!147,!152,!156,!160,!164,!167,!170,!171,!172,!173,!174,!177,!178,!179,!182,!185,!188,!191,!194,!197,!200,!201,!206,!209,!212,!215,!218,!221,!224,!227,!230,!233,!236,!237,!242,!245,!248,!251,!254,!257,!260,!261,!266,!268,!269,!271,!272,!274}
+!276 = !{}
+!277 = !{}
+!278 = !{!"LPC 1.1"}
+!279 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !276, retainedTypes: !275, globals: !277, nameTableKind: None)
+!280 = !{i32 2, !"CodeView", i32 1}
+!281 = !{i32 2, !"Debug Info Version", i32 3}
 

@@ -50,9 +50,6 @@ void TypeGen::gen(ts::Type* pType)
     pExt->genName = m_pBackend->_genName(pType->typeId(), "%T_");
     pExt->pMetadata = m_pBackend->_newMetadata(Metadata::Kind::Type, "");
 
-    // TODO
-    pExt->pMetadata->def = "!DIBasicType(name: \"void\", size: 0)";
-
     pType->accept(this);
 
     assert(pExt->size >= 0);
@@ -493,11 +490,64 @@ VarPtr TypeGen::visit(ts::FileType* pType)
 //
 VarPtr TypeGen::visit(ts::SubroutineType* pType)
 {
-    // TODO
     auto pExt = ext(pType);
-    pExt->size = 1;
-    pExt->alignment = 1;
-    pExt->def = "i8";
+
+    pExt->size = PTR_SIZE;
+    pExt->alignment = PTR_ALIGNMENT;
+
+    stringstream def;
+
+    // return type
+    //
+    if(pType->isFunction())
+    {
+        m_pBackend->_generateType(pType->returnType());
+        def << ext(pType->returnType())->genName;
+    }
+    else
+        def << "void";
+
+    // parameter types
+    //
+    def << " (i8*"; // TODO: real slink type?
+    for (const auto& param : *pType->paramList())
+    {
+        m_pBackend->_generateType(param.pType);
+        def << ", " << ext(param.pType)->genName;
+    }
+    def << ")*";
+    
+    pExt->def = def.str();
+
+    // debug information
+    //
+    stringstream proto;
+    proto << "!{";
+    proto << (pType->isFunction() ? ext(pType->returnType())->pMetadata->id : "null");
+    for (const auto& param : *pType->paramList())
+    {
+        proto << ", " << ext(param.pType)->pMetadata->id;
+    }
+    proto << "}";
+    auto protoMd = m_pBackend->_newMetadata(Metadata::Kind::Generic, proto.str());
+
+    stringstream pfn;
+    pfn << "!DISubroutineType(types: " << protoMd->id << ")";
+    auto pfnMd = m_pBackend->_newMetadata(Metadata::Kind::Type, pfn.str());
+
+    stringstream typeName;
+    if (pType->isUserDeclared())
+        typeName << "name: \"" << pType->typeId() << "\", ";
+
+    stringstream md;
+    md << "!DIDerivedType(tag: DW_TAG_pointer_type, " <<
+        typeName.str() <<
+        "file: " << m_pBackend->m_sourceFileMd->id << ", " <<
+        "line: " << mdLineNumber(pType->line()) << ", " <<
+        "baseType: " << pfnMd->id << ", " <<
+        "size: " << pExt->size * 8 << ")";
+    pExt->pMetadata->def = md.str();
+
     return VarPtr();
 }
 

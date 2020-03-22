@@ -34,7 +34,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; scope: foo (level : 2)
 
 ; types
-%T_foo_subroutine_6 = type i8
+%T_foo_subroutine_6 = type i32 (i8*, i32, %T_REC, %T_UNION)*
 
 ; line 54
 ;================================================================================
@@ -46,9 +46,9 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ;================================================================================
 ; metadata
 
-!llvm.dbg.cu = !{!37}
-!llvm.module.flags = !{!38, !39}
-!llvm.ident = !{!36}
+!llvm.dbg.cu = !{!39}
+!llvm.module.flags = !{!40, !41}
+!llvm.ident = !{!38}
 
 !0 = !DIFile(filename: "prototype.pas", directory: "C:\Users\lemo\work\compilers\lpc\test")
 !1 = !DIBasicType(name: "boolean", size: 8, encoding: DW_ATE_boolean)
@@ -82,12 +82,14 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !29 = !DIDerivedType(tag: DW_TAG_member, name: "b", scope: !20, file: !0, line: 27, baseType: !21, size: 512, offset: 32)
 !30 = !{!27,!28,!29}
 !31 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 38, baseType: !9, size: 64)
-!32 = !DIBasicType(name: "void", size: 0)
-!33 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9,!12,!17,!20,!21,!22,!31,!32}
-!34 = !{}
-!35 = !{}
-!36 = !{!"LPC 1.1"}
-!37 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !34, retainedTypes: !33, globals: !35, nameTableKind: None)
-!38 = !{i32 2, !"CodeView", i32 1}
-!39 = !{i32 2, !"Debug Info Version", i32 3}
+!32 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 34, baseType: !34, size: 64)
+!33 = !{!3, !3, !12, !20}
+!34 = !DISubroutineType(types: !33)
+!35 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9,!12,!17,!20,!21,!22,!31,!32,!34}
+!36 = !{}
+!37 = !{}
+!38 = !{!"LPC 1.1"}
+!39 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !36, retainedTypes: !35, globals: !37, nameTableKind: None)
+!40 = !{i32 2, !"CodeView", i32 1}
+!41 = !{i32 2, !"Debug Info Version", i32 3}
 

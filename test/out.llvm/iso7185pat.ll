@@ -350,8 +350,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; scope: junk9 (level : 2)
 
 ; types
-%T_junk9_subroutine_131 = type i8
-%T_junk9_subroutine_132 = type i8
+%T_junk9_subroutine_131 = type void (i8*, i32, i32, i8)*
+%T_junk9_subroutine_132 = type i32 (i8*, i32)*
 
 ; line 504
 ;================================================================================
@@ -366,15 +366,16 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; scope: junk12 (level : 2)
 
 ; types
-%T_junk12_subroutine_133 = type i8
-%T_junk12_subroutine_134 = type i8
+%T_junk12_subroutine_133 = type i32 (i8*, i32)*
+%T_junk12_subroutine_135 = type i32 (i8*, i32)*
+%T_junk12_subroutine_134 = type void (i8*, %T_junk12_subroutine_135)*
 
 ; line 529
 ;================================================================================
 ; scope: junk13 (level : 2)
 
 ; types
-%T_junk13_subroutine_135 = type i8
+%T_junk13_subroutine_136 = type i32 (i8*, i32)*
 
 ; line 537
 ;================================================================================
@@ -393,7 +394,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; scope: junk17 (level : 2)
 
 ; types
-%T_junk17_subroutine_136 = type i8
+%T_junk17_subroutine_137 = type void (i8*)*
 
 ; line 561
 ;================================================================================
@@ -417,9 +418,9 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ;================================================================================
 ; metadata
 
-!llvm.dbg.cu = !{!432}
-!llvm.module.flags = !{!433, !434}
-!llvm.ident = !{!431}
+!llvm.dbg.cu = !{!447}
+!llvm.module.flags = !{!448, !449}
+!llvm.ident = !{!446}
 
 !0 = !DIFile(filename: "iso7185pat.pas", directory: "C:\Users\lemo\work\compilers\lpc\test")
 !1 = !DIBasicType(name: "boolean", size: 8, encoding: DW_ATE_boolean)
@@ -842,18 +843,33 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 !418 = !DIDerivedType(tag: DW_TAG_member, name: "vi", scope: !416, file: !0, line: 264, baseType: !3, size: 32, offset: 32)
 !419 = !DIDerivedType(tag: DW_TAG_member, name: "vb", scope: !416, file: !0, line: 265, baseType: !1, size: 8, offset: 32)
 !420 = !{!417,!418,!419}
-!421 = !DIBasicType(name: "void", size: 0)
-!422 = !DIBasicType(name: "void", size: 0)
-!423 = !DIBasicType(name: "void", size: 0)
-!424 = !DIBasicType(name: "void", size: 0)
-!425 = !DIBasicType(name: "void", size: 0)
-!426 = !DIBasicType(name: "void", size: 0)
-!427 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "pt", file: !0, line: 580, baseType: !2, size: 64)
-!428 = !{!1,!2,!3,!4,!5,!6,!7,!8,!11,!14,!15,!21,!22,!23,!24,!25,!28,!32,!46,!47,!48,!49,!50,!51,!64,!67,!70,!71,!74,!77,!80,!83,!84,!87,!90,!93,!96,!99,!102,!105,!108,!111,!115,!119,!123,!127,!128,!133,!136,!139,!140,!141,!142,!143,!144,!145,!146,!147,!148,!149,!150,!151,!152,!153,!156,!157,!158,!159,!160,!161,!162,!163,!164,!165,!166,!196,!210,!213,!216,!217,!220,!223,!226,!229,!232,!233,!236,!239,!242,!245,!248,!251,!254,!257,!260,!263,!264,!265,!266,!267,!268,!269,!270,!271,!272,!273,!274,!275,!276,!277,!278,!279,!280,!281,!282,!283,!284,!285,!286,!287,!288,!289,!298,!301,!308,!309,!312,!313,!318,!322,!326,!330,!334,!337,!341,!345,!349,!353,!354,!355,!359,!363,!367,!371,!372,!373,!401,!406,!411,!416,!421,!422,!423,!424,!425,!426,!427}
-!429 = !{}
-!430 = !{}
-!431 = !{!"LPC 1.1"}
-!432 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !429, retainedTypes: !428, globals: !430, nameTableKind: None)
-!433 = !{i32 2, !"CodeView", i32 1}
-!434 = !{i32 2, !"Debug Info Version", i32 3}
+!421 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 494, baseType: !423, size: 64)
+!422 = !{null, !3, !3, !2}
+!423 = !DISubroutineType(types: !422)
+!424 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 495, baseType: !426, size: 64)
+!425 = !{!3, !3}
+!426 = !DISubroutineType(types: !425)
+!427 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 521, baseType: !429, size: 64)
+!428 = !{!3, !3}
+!429 = !DISubroutineType(types: !428)
+!430 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 520, baseType: !435, size: 64)
+!431 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 520, baseType: !433, size: 64)
+!432 = !{!3, !3}
+!433 = !DISubroutineType(types: !432)
+!434 = !{null, !431}
+!435 = !DISubroutineType(types: !434)
+!436 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 529, baseType: !438, size: 64)
+!437 = !{!3, !3}
+!438 = !DISubroutineType(types: !437)
+!439 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 559, baseType: !441, size: 64)
+!440 = !{null}
+!441 = !DISubroutineType(types: !440)
+!442 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "pt", file: !0, line: 580, baseType: !2, size: 64)
+!443 = !{!1,!2,!3,!4,!5,!6,!7,!8,!11,!14,!15,!21,!22,!23,!24,!25,!28,!32,!46,!47,!48,!49,!50,!51,!64,!67,!70,!71,!74,!77,!80,!83,!84,!87,!90,!93,!96,!99,!102,!105,!108,!111,!115,!119,!123,!127,!128,!133,!136,!139,!140,!141,!142,!143,!144,!145,!146,!147,!148,!149,!150,!151,!152,!153,!156,!157,!158,!159,!160,!161,!162,!163,!164,!165,!166,!196,!210,!213,!216,!217,!220,!223,!226,!229,!232,!233,!236,!239,!242,!245,!248,!251,!254,!257,!260,!263,!264,!265,!266,!267,!268,!269,!270,!271,!272,!273,!274,!275,!276,!277,!278,!279,!280,!281,!282,!283,!284,!285,!286,!287,!288,!289,!298,!301,!308,!309,!312,!313,!318,!322,!326,!330,!334,!337,!341,!345,!349,!353,!354,!355,!359,!363,!367,!371,!372,!373,!401,!406,!411,!416,!421,!423,!424,!426,!427,!429,!430,!431,!433,!435,!436,!438,!439,!441,!442}
+!444 = !{}
+!445 = !{}
+!446 = !{!"LPC 1.1"}
+!447 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !444, retainedTypes: !443, globals: !445, nameTableKind: None)
+!448 = !{i32 2, !"CodeView", i32 1}
+!449 = !{i32 2, !"Debug Info Version", i32 3}
 
