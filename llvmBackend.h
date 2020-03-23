@@ -603,7 +603,8 @@ private:
         _generateType(pParam->pType);
 
         auto pExt = ext(pParam);
-        // TODO
+        assert(pExt->genName.empty());
+        pExt->genName = "%" + idName;
 
         m_paramList.push_back(pParam);
     }

@@ -55,7 +55,8 @@ The tests are under the `test` directory (Python3 is required to run the tests)
 
 ## TODO ##
 
-- Generate LLVM debug info metadata
+- Optimize out slinks
+- Generate LLVM debug info metadata for the activation record
 
 ## Resources ##
 
