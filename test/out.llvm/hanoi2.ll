@@ -34,9 +34,32 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ;================================================================================
 ; scope: punere (level : 2)
 
+; activation record
+%Frame_punere = type
+{
+    ; parameters
+    i32,    ; x
+    i32,    ; y
+    i32,    ; z
+
+    ; variables
+    i8*,    ; p
+
+    ; dummy
+    i8*
+};
+
 ; line 23
 ;================================================================================
 ; scope: scoatere (level : 2)
+
+; activation record
+%Frame_scoatere = type
+{
+    ; dummy
+    i8*
+};
+
 ;================================================================================
 ; metadata
 

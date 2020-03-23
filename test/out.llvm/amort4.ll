@@ -31,21 +31,65 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ;================================================================================
 ; scope: CalculatePayment (level : 2)
 
+; activation record
+%Frame_CalculatePayment = type
+{
+    ; variables
+    i32,    ; Index
+    double,    ; Temp
+
+    ; dummy
+    i8*
+};
+
 ; line 25
 ;================================================================================
 ; scope: InitializeData (level : 2)
+
+; activation record
+%Frame_InitializeData = type
+{
+    ; dummy
+    i8*
+};
 
 ; line 45
 ;================================================================================
 ; scope: PrintAnnualHeader (level : 2)
 
+; activation record
+%Frame_PrintAnnualHeader = type
+{
+    ; dummy
+    i8*
+};
+
 ; line 56
 ;================================================================================
 ; scope: CalculateAndPrint (level : 2)
 
+; activation record
+%Frame_CalculateAndPrint = type
+{
+    ; variables
+    double,    ; InterestPayment
+    double,    ; PrincipalPayment
+
+    ; dummy
+    i8*
+};
+
 ; line 78
 ;================================================================================
 ; scope: PrintAnnualSummary (level : 2)
+
+; activation record
+%Frame_PrintAnnualSummary = type
+{
+    ; dummy
+    i8*
+};
+
 ;================================================================================
 ; metadata
 

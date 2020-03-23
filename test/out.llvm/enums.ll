@@ -24,6 +24,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @Time = dso_local global i32 zeroinitializer
 @TotalPay = dso_local global double zeroinitializer
 @WeekendPremium = dso_local global double zeroinitializer
+
 ;================================================================================
 ; metadata
 

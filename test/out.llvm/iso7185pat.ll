@@ -317,33 +317,138 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ;================================================================================
 ; scope: junk1 (level : 2)
 
+; activation record
+%Frame_junk1 = type
+{
+    ; parameters
+    i32,    ; q
+    i32,    ; z
+
+    ; dummy
+    i8*
+};
+
 ; line 406
 ;================================================================================
 ; scope: junk2 (level : 2)
+
+; activation record
+%Frame_junk2 = type
+{
+    ; parameters
+    i32,    ; z
+
+    ; dummy
+    i8*
+};
 
 ; line 414
 ;================================================================================
 ; scope: junk3 (level : 2)
 
+; activation record
+%Frame_junk3 = type
+{
+    ; parameters
+    %T_string10,    ; p
+
+    ; dummy
+    i8*
+};
+
 ; line 422
 ;================================================================================
 ; scope: junk4 (level : 2)
+
+; activation record
+%Frame_junk4 = type
+{
+    ; parameters
+    %T_string10,    ; p
+
+    ; dummy
+    i8*
+};
 
 ; line 431
 ;================================================================================
 ; scope: junk5 (level : 2)
 
+; activation record
+%Frame_junk5 = type
+{
+    ; parameters
+    i32,    ; x
+
+    ; variables
+    i32,    ; _fnvalue
+
+    ; dummy
+    i8*
+};
+
 ; line 439
 ;================================================================================
 ; scope: junk6 (level : 2)
+
+; activation record
+%Frame_junk6 = type
+{
+    ; dummy
+    i8*
+};
 
 ; line 449
 ;================================================================================
 ; scope: junk7 (level : 2)
 
+; activation record
+%Frame_junk7 = type
+{
+    ; parameters
+    i32,    ; a
+    i32,    ; b
+    i32,    ; c
+
+    ; variables
+    i32,    ; _fnvalue
+    i32,    ; x
+    i32,    ; y
+    i32,    ; z
+
+    ; dummy
+    i8*
+};
+
 ; line 467
 ;================================================================================
 ; scope: junk8 (level : 2)
+
+; activation record
+%Frame_junk8 = type
+{
+    ; parameters
+    i32,    ; a
+    %T_arri,    ; ar
+    i1,    ; b
+    i8,    ; c
+    i32,    ; e
+    i32,    ; es
+    i8*,    ; p
+    double,    ; r
+    %T_rec,    ; rc
+    %T_recv,    ; rv
+    i32,    ; s
+    %T_string10,    ; st
+    %T_cset,    ; stc
+
+    ; variables
+    i8,    ; ci
+    i32,    ; i
+
+    ; dummy
+    i8*
+};
 
 ; line 494
 ;================================================================================
@@ -353,13 +458,49 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %T_junk9_subroutine_131 = type void (i8*, i32, i32, i8)*
 %T_junk9_subroutine_132 = type i32 (i8*, i32)*
 
+; activation record
+%Frame_junk9 = type
+{
+    ; parameters
+    %T_junk9_subroutine_131,    ; junk9
+    %T_junk9_subroutine_132,    ; y
+
+    ; dummy
+    i8*
+};
+
 ; line 504
 ;================================================================================
 ; scope: junk10 (level : 2)
 
+; activation record
+%Frame_junk10 = type
+{
+    ; parameters
+    i8,    ; junk10
+    i32,    ; x
+    i32,    ; y
+
+    ; dummy
+    i8*
+};
+
 ; line 512
 ;================================================================================
 ; scope: junk11 (level : 2)
+
+; activation record
+%Frame_junk11 = type
+{
+    ; parameters
+    i32,    ; x
+
+    ; variables
+    i32,    ; _fnvalue
+
+    ; dummy
+    i8*
+};
 
 ; line 520
 ;================================================================================
@@ -370,6 +511,17 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %T_junk12_subroutine_135 = type i32 (i8*, i32)*
 %T_junk12_subroutine_134 = type void (i8*, %T_junk12_subroutine_135)*
 
+; activation record
+%Frame_junk12 = type
+{
+    ; parameters
+    %T_junk12_subroutine_133,    ; q
+    %T_junk12_subroutine_134,    ; xq
+
+    ; dummy
+    i8*
+};
+
 ; line 529
 ;================================================================================
 ; scope: junk13 (level : 2)
@@ -377,17 +529,52 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; types
 %T_junk13_subroutine_136 = type i32 (i8*, i32)*
 
+; activation record
+%Frame_junk13 = type
+{
+    ; parameters
+    %T_junk13_subroutine_136,    ; xz
+
+    ; dummy
+    i8*
+};
+
 ; line 537
 ;================================================================================
 ; scope: junk14 (level : 2)
+
+; activation record
+%Frame_junk14 = type
+{
+    ; variables
+    i32,    ; i
+    i32,    ; x
+
+    ; dummy
+    i8*
+};
 
 ; line 541
 ;================================================================================
 ; scope: junk14_junk15 (level : 3)
 
+; activation record
+%Frame_junk14_junk15 = type
+{
+    ; slink
+    %Frame_junk14*
+};
+
 ; line 557
 ;================================================================================
 ; scope: junk16 (level : 2)
+
+; activation record
+%Frame_junk16 = type
+{
+    ; dummy
+    i8*
+};
 
 ; line 559
 ;================================================================================
@@ -396,25 +583,89 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; types
 %T_junk17_subroutine_137 = type void (i8*)*
 
+; activation record
+%Frame_junk17 = type
+{
+    ; parameters
+    i32,    ; i
+    %T_junk17_subroutine_137,    ; x
+
+    ; dummy
+    i8*
+};
+
 ; line 561
 ;================================================================================
 ; scope: junk17_junk18 (level : 3)
+
+; activation record
+%Frame_junk17_junk18 = type
+{
+    ; slink
+    %Frame_junk17*
+};
 
 ; line 578
 ;================================================================================
 ; scope: junk19 (level : 2)
 
+; activation record
+%Frame_junk19 = type
+{
+    ; variables
+    i8*,    ; p
+
+    ; dummy
+    i8*
+};
+
 ; line 596
 ;================================================================================
 ; scope: junk20 (level : 2)
+
+; activation record
+%Frame_junk20 = type
+{
+    ; variables
+    i32,    ; _fnvalue
+
+    ; dummy
+    i8*
+};
 
 ; line 598
 ;================================================================================
 ; scope: junk20_inner (level : 3)
 
+; activation record
+%Frame_junk20_inner = type
+{
+    ; variables
+    i32,    ; _fnvalue
+
+    ; slink
+    %Frame_junk20*
+};
+
 ; line 613
 ;================================================================================
 ; scope: random (level : 2)
+
+; activation record
+%Frame_random = type
+{
+    ; parameters
+    i32,    ; hi
+    i32,    ; low
+
+    ; variables
+    i32,    ; _fnvalue
+    i32,    ; gamma
+
+    ; dummy
+    i8*
+};
+
 ;================================================================================
 ; metadata
 

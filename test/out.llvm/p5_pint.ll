@@ -89,6 +89,21 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %T_getint_array_15 = type [4 x i32]
 %T_getint_record_14 = type [16 x i8]
 
+; activation record
+%Frame_getint = type
+{
+    ; parameters
+    i32,    ; a
+
+    ; variables
+    i32,    ; _fnvalue
+    i32,    ; i
+    %T_getint_record_14,    ; r
+
+    ; dummy
+    i8*
+};
+
 ; line 517
 ;================================================================================
 ; scope: putint (level : 2)
@@ -96,6 +111,21 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; types
 %T_putint_array_18 = type [4 x i32]
 %T_putint_record_17 = type [16 x i8]
+
+; activation record
+%Frame_putint = type
+{
+    ; parameters
+    i32,    ; a
+    i32,    ; x
+
+    ; variables
+    i32,    ; i
+    %T_putint_record_17,    ; r
+
+    ; dummy
+    i8*
+};
 
 ; line 534
 ;================================================================================
@@ -105,6 +135,21 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %T_getrel_array_21 = type [8 x i32]
 %T_getrel_record_20 = type [32 x i8]
 
+; activation record
+%Frame_getrel = type
+{
+    ; parameters
+    i32,    ; a
+
+    ; variables
+    double,    ; _fnvalue
+    i32,    ; i
+    %T_getrel_record_20,    ; r
+
+    ; dummy
+    i8*
+};
+
 ; line 551
 ;================================================================================
 ; scope: putrel (level : 2)
@@ -113,13 +158,53 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %T_putrel_array_24 = type [8 x i32]
 %T_putrel_record_23 = type [32 x i8]
 
+; activation record
+%Frame_putrel = type
+{
+    ; parameters
+    i32,    ; a
+    double,    ; f
+
+    ; variables
+    i32,    ; i
+    %T_putrel_record_23,    ; r
+
+    ; dummy
+    i8*
+};
+
 ; line 568
 ;================================================================================
 ; scope: getbol (level : 2)
 
+; activation record
+%Frame_getbol = type
+{
+    ; parameters
+    i32,    ; a
+
+    ; variables
+    i1,    ; _fnvalue
+    i1,    ; b
+
+    ; dummy
+    i8*
+};
+
 ; line 579
 ;================================================================================
 ; scope: putbol (level : 2)
+
+; activation record
+%Frame_putbol = type
+{
+    ; parameters
+    i32,    ; a
+    i1,    ; b
+
+    ; dummy
+    i8*
+};
 
 ; line 587
 ;================================================================================
@@ -129,6 +214,21 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %T_getset_array_27 = type [32 x i32]
 %T_getset_record_26 = type [128 x i8]
 
+; activation record
+%Frame_getset = type
+{
+    ; parameters
+    i32,    ; a
+    %T_settype,    ; s
+
+    ; variables
+    i32,    ; i
+    %T_getset_record_26,    ; r
+
+    ; dummy
+    i8*
+};
+
 ; line 604
 ;================================================================================
 ; scope: putset (level : 2)
@@ -137,13 +237,52 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %T_putset_array_30 = type [32 x i32]
 %T_putset_record_29 = type [128 x i8]
 
+; activation record
+%Frame_putset = type
+{
+    ; parameters
+    i32,    ; a
+    %T_settype,    ; s
+
+    ; variables
+    i32,    ; i
+    %T_putset_record_29,    ; r
+
+    ; dummy
+    i8*
+};
+
 ; line 621
 ;================================================================================
 ; scope: getchr (level : 2)
 
+; activation record
+%Frame_getchr = type
+{
+    ; parameters
+    i32,    ; a
+
+    ; variables
+    i8,    ; _fnvalue
+
+    ; dummy
+    i8*
+};
+
 ; line 629
 ;================================================================================
 ; scope: putchr (level : 2)
+
+; activation record
+%Frame_putchr = type
+{
+    ; parameters
+    i32,    ; a
+    i8,    ; c
+
+    ; dummy
+    i8*
+};
 
 ; line 637
 ;================================================================================
@@ -153,6 +292,21 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %T_getadr_array_33 = type [4 x i32]
 %T_getadr_record_32 = type [16 x i8]
 
+; activation record
+%Frame_getadr = type
+{
+    ; parameters
+    i32,    ; a
+
+    ; variables
+    i32,    ; _fnvalue
+    i32,    ; i
+    %T_getadr_record_32,    ; r
+
+    ; dummy
+    i8*
+};
+
 ; line 654
 ;================================================================================
 ; scope: putadr (level : 2)
@@ -161,6 +315,21 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %T_putadr_array_36 = type [4 x i32]
 %T_putadr_record_35 = type [16 x i8]
 
+; activation record
+%Frame_putadr = type
+{
+    ; parameters
+    i32,    ; a
+    i32,    ; ad
+
+    ; variables
+    i32,    ; i
+    %T_putadr_record_35,    ; r
+
+    ; dummy
+    i8*
+};
+
 ; line 673
 ;================================================================================
 ; scope: swpstk (level : 2)
@@ -168,57 +337,222 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; types
 %T_swpstk_array_38 = type [32 x i32]
 
+; activation record
+%Frame_swpstk = type
+{
+    ; parameters
+    i32,    ; l
+
+    ; variables
+    i32,    ; i
+    i32,    ; p
+    %T_swpstk_array_38,    ; sb
+
+    ; dummy
+    i8*
+};
+
 ; line 700
 ;================================================================================
 ; scope: popint (level : 2)
+
+; activation record
+%Frame_popint = type
+{
+    ; parameters
+    i32,    ; i
+
+    ; dummy
+    i8*
+};
 
 ; line 701
 ;================================================================================
 ; scope: pshint (level : 2)
 
+; activation record
+%Frame_pshint = type
+{
+    ; parameters
+    i32,    ; i
+
+    ; dummy
+    i8*
+};
+
 ; line 702
 ;================================================================================
 ; scope: poprel (level : 2)
+
+; activation record
+%Frame_poprel = type
+{
+    ; parameters
+    double,    ; r
+
+    ; dummy
+    i8*
+};
 
 ; line 703
 ;================================================================================
 ; scope: pshrel (level : 2)
 
+; activation record
+%Frame_pshrel = type
+{
+    ; parameters
+    double,    ; r
+
+    ; dummy
+    i8*
+};
+
 ; line 704
 ;================================================================================
 ; scope: popset (level : 2)
+
+; activation record
+%Frame_popset = type
+{
+    ; parameters
+    %T_settype,    ; s
+
+    ; dummy
+    i8*
+};
 
 ; line 705
 ;================================================================================
 ; scope: pshset (level : 2)
 
+; activation record
+%Frame_pshset = type
+{
+    ; parameters
+    %T_settype,    ; s
+
+    ; dummy
+    i8*
+};
+
 ; line 706
 ;================================================================================
 ; scope: popadr (level : 2)
+
+; activation record
+%Frame_popadr = type
+{
+    ; parameters
+    i32,    ; a
+
+    ; dummy
+    i8*
+};
 
 ; line 707
 ;================================================================================
 ; scope: pshadr (level : 2)
 
+; activation record
+%Frame_pshadr = type
+{
+    ; parameters
+    i32,    ; a
+
+    ; dummy
+    i8*
+};
+
 ; line 711
 ;================================================================================
 ; scope: wrthex (level : 2)
+
+; activation record
+%Frame_wrthex = type
+{
+    ; parameters
+    i32,    ; f
+    i32,    ; v
+
+    ; variables
+    i32,    ; d
+    i32,    ; i
+    i32,    ; p
+
+    ; dummy
+    i8*
+};
 
 ; line 726
 ;================================================================================
 ; scope: lstins (level : 2)
 
+; activation record
+%Frame_lstins = type
+{
+    ; parameters
+    i32,    ; ad
+
+    ; variables
+    i32,    ; ads
+    i32,    ; op
+    i32,    ; p
+    i32,    ; q
+
+    ; dummy
+    i8*
+};
+
 ; line 762
 ;================================================================================
 ; scope: dmpins (level : 2)
+
+; activation record
+%Frame_dmpins = type
+{
+    ; variables
+    i32,    ; i
+
+    ; dummy
+    i8*
+};
 
 ; line 787
 ;================================================================================
 ; scope: alignu (level : 2)
 
+; activation record
+%Frame_alignu = type
+{
+    ; parameters
+    i32,    ; algn
+    i32,    ; flc
+
+    ; variables
+    i32,    ; l
+
+    ; dummy
+    i8*
+};
+
 ; line 796
 ;================================================================================
 ; scope: alignd (level : 2)
+
+; activation record
+%Frame_alignd = type
+{
+    ; parameters
+    i32,    ; algn
+    i32,    ; flc
+
+    ; variables
+    i32,    ; l
+
+    ; dummy
+    i8*
+};
 
 ; line 807
 ;================================================================================
@@ -229,37 +563,131 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %T_load_array_39 = type [5001 x %T_load_labelrec]
 %T_load_array_40 = type [10 x i8]
 
+; activation record
+%Frame_load = type
+{
+    ; variables
+    i8,    ; ch
+    i32,    ; iline
+    %T_load_array_39,    ; labeltab
+    i32,    ; labelvalue
+    %T_load_array_40,    ; word
+
+    ; dummy
+    i8*
+};
+
 ; line 819
 ;================================================================================
 ; scope: load_init (level : 3)
+
+; activation record
+%Frame_load_init = type
+{
+    ; variables
+    i32,    ; i
+
+    ; slink
+    %Frame_load*
+};
 
 ; line 1047
 ;================================================================================
 ; scope: load_errorl (level : 3)
 
+; activation record
+%Frame_load_errorl = type
+{
+    ; parameters
+    %T_beta,    ; string
+
+    ; slink
+    %Frame_load*
+};
+
 ; line 1053
 ;================================================================================
 ; scope: load_dmplabs (level : 3)
+
+; activation record
+%Frame_load_dmplabs = type
+{
+    ; variables
+    i32,    ; i
+
+    ; slink
+    %Frame_load*
+};
 
 ; line 1073
 ;================================================================================
 ; scope: load_update (level : 3)
 
+; activation record
+%Frame_load_update = type
+{
+    ; parameters
+    i32,    ; x
+
+    ; variables
+    i32,    ; ad
+    i32,    ; curr
+    i1,    ; endlist
+    i32,    ; op
+    i32,    ; q
+    i32,    ; succ
+
+    ; slink
+    %Frame_load*
+};
+
 ; line 1100
 ;================================================================================
 ; scope: load_getnxt (level : 3)
+
+; activation record
+%Frame_load_getnxt = type
+{
+    ; slink
+    %Frame_load*
+};
 
 ; line 1106
 ;================================================================================
 ; scope: load_skpspc (level : 3)
 
+; activation record
+%Frame_load_skpspc = type
+{
+    ; slink
+    %Frame_load*
+};
+
 ; line 1111
 ;================================================================================
 ; scope: load_getlin (level : 3)
 
+; activation record
+%Frame_load_getlin = type
+{
+    ; slink
+    %Frame_load*
+};
+
 ; line 1119
 ;================================================================================
 ; scope: load_generate (level : 3)
+
+; activation record
+%Frame_load_generate = type
+{
+    ; variables
+    i1,    ; again
+    i32,    ; x
+
+    ; slink
+    %Frame_load*
+};
 
 ; line 1160
 ;================================================================================
@@ -268,133 +696,497 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; types
 %T_load_assemble_array_41 = type [1000 x i8]
 
+; activation record
+%Frame_load_assemble = type
+{
+    ; variables
+    i8,    ; c
+    i32,    ; i
+    i32,    ; l
+    i32,    ; lb
+    %T_alfa,    ; name
+    double,    ; r
+    %T_settype,    ; s
+    i32,    ; s1
+    %T_load_assemble_array_41,    ; str
+    i32,    ; t
+    i32,    ; ub
+    i32,    ; x
+
+    ; slink
+    %Frame_load*
+};
+
 ; line 1166
 ;================================================================================
 ; scope: load_assemble_lookup (level : 4)
+
+; activation record
+%Frame_load_assemble_lookup = type
+{
+    ; parameters
+    i32,    ; x
+
+    ; slink
+    %Frame_load_assemble*
+};
 
 ; line 1175
 ;================================================================================
 ; scope: load_assemble_labelsearch (level : 4)
 
+; activation record
+%Frame_load_assemble_labelsearch = type
+{
+    ; variables
+    i32,    ; x
+
+    ; slink
+    %Frame_load_assemble*
+};
+
 ; line 1181
 ;================================================================================
 ; scope: load_assemble_getname (level : 4)
+
+; activation record
+%Frame_load_assemble_getname = type
+{
+    ; variables
+    i32,    ; i
+
+    ; slink
+    %Frame_load_assemble*
+};
 
 ; line 1196
 ;================================================================================
 ; scope: load_assemble_storeop (level : 4)
 
+; activation record
+%Frame_load_assemble_storeop = type
+{
+    ; slink
+    %Frame_load_assemble*
+};
+
 ; line 1202
 ;================================================================================
 ; scope: load_assemble_storep (level : 4)
+
+; activation record
+%Frame_load_assemble_storep = type
+{
+    ; slink
+    %Frame_load_assemble*
+};
 
 ; line 1208
 ;================================================================================
 ; scope: load_assemble_storeq (level : 4)
 
+; activation record
+%Frame_load_assemble_storeq = type
+{
+    ; slink
+    %Frame_load_assemble*
+};
+
 ; line 1214
 ;================================================================================
 ; scope: load_assemble_storeq1 (level : 4)
+
+; activation record
+%Frame_load_assemble_storeq1 = type
+{
+    ; slink
+    %Frame_load_assemble*
+};
 
 ; line 1436
 ;================================================================================
 ; scope: pmd (level : 2)
 
+; activation record
+%Frame_pmd = type
+{
+    ; variables
+    i32,    ; i
+    i32,    ; s
+
+    ; dummy
+    i8*
+};
+
 ; line 1439
 ;================================================================================
 ; scope: pmd_pt (level : 3)
+
+; activation record
+%Frame_pmd_pt = type
+{
+    ; slink
+    %Frame_pmd*
+};
 
 ; line 1482
 ;================================================================================
 ; scope: errori (level : 2)
 
+; activation record
+%Frame_errori = type
+{
+    ; parameters
+    %T_beta,    ; string
+
+    ; dummy
+    i8*
+};
+
 ; line 1489
 ;================================================================================
 ; scope: base (level : 2)
+
+; activation record
+%Frame_base = type
+{
+    ; parameters
+    i32,    ; ld
+
+    ; variables
+    i32,    ; _fnvalue
+    i32,    ; ad
+
+    ; dummy
+    i8*
+};
 
 ; line 1496
 ;================================================================================
 ; scope: compare (level : 2)
 
+; activation record
+%Frame_compare = type
+{
+    ; dummy
+    i8*
+};
+
 ; line 1507
 ;================================================================================
 ; scope: valfil (level : 2)
+
+; activation record
+%Frame_valfil = type
+{
+    ; parameters
+    i32,    ; fa
+
+    ; variables
+    i32,    ; ff
+    i32,    ; i
+
+    ; dummy
+    i8*
+};
 
 ; line 1528
 ;================================================================================
 ; scope: valfilwm (level : 2)
 
+; activation record
+%Frame_valfilwm = type
+{
+    ; parameters
+    i32,    ; fa
+
+    ; dummy
+    i8*
+};
+
 ; line 1534
 ;================================================================================
 ; scope: valfilrm (level : 2)
+
+; activation record
+%Frame_valfilrm = type
+{
+    ; parameters
+    i32,    ; fa
+
+    ; dummy
+    i8*
+};
 
 ; line 1540
 ;================================================================================
 ; scope: getop (level : 2)
 
+; activation record
+%Frame_getop = type
+{
+    ; dummy
+    i8*
+};
+
 ; line 1548
 ;================================================================================
 ; scope: getp (level : 2)
+
+; activation record
+%Frame_getp = type
+{
+    ; dummy
+    i8*
+};
 
 ; line 1556
 ;================================================================================
 ; scope: getq (level : 2)
 
+; activation record
+%Frame_getq = type
+{
+    ; dummy
+    i8*
+};
+
 ; line 1564
 ;================================================================================
 ; scope: getq1 (level : 2)
+
+; activation record
+%Frame_getq1 = type
+{
+    ; dummy
+    i8*
+};
 
 ; line 1585
 ;================================================================================
 ; scope: repspc (level : 2)
 
+; activation record
+%Frame_repspc = type
+{
+    ; variables
+    i32,    ; ad
+    i32,    ; l
+
+    ; dummy
+    i8*
+};
+
 ; line 1602
 ;================================================================================
 ; scope: fndfre (level : 2)
+
+; activation record
+%Frame_fndfre = type
+{
+    ; parameters
+    i32,    ; blk
+    i32,    ; len
+
+    ; variables
+    i32,    ; b
+    i32,    ; l
+
+    ; dummy
+    i8*
+};
 
 ; line 1626
 ;================================================================================
 ; scope: cscspc (level : 2)
 
+; activation record
+%Frame_cscspc = type
+{
+    ; variables
+    i32,    ; ad
+    i32,    ; ad1
+    i1,    ; done
+    i32,    ; l
+    i32,    ; l1
+
+    ; dummy
+    i8*
+};
+
 ; line 1655
 ;================================================================================
 ; scope: newspc (level : 2)
+
+; activation record
+%Frame_newspc = type
+{
+    ; parameters
+    i32,    ; blk
+    i32,    ; len
+
+    ; variables
+    i32,    ; ad
+    i32,    ; ad1
+
+    ; dummy
+    i8*
+};
 
 ; line 1673
 ;================================================================================
 ; scope: dspspc (level : 2)
 
+; activation record
+%Frame_dspspc = type
+{
+    ; parameters
+    i32,    ; blk
+    i32,    ; len
+
+    ; variables
+    i32,    ; ad
+
+    ; dummy
+    i8*
+};
+
 ; line 1690
 ;================================================================================
 ; scope: isfree (level : 2)
+
+; activation record
+%Frame_isfree = type
+{
+    ; parameters
+    i32,    ; blk
+
+    ; variables
+    i1,    ; _fnvalue
+
+    ; dummy
+    i8*
+};
 
 ; line 1697
 ;================================================================================
 ; scope: callsp (level : 2)
 
+; activation record
+%Frame_callsp = type
+{
+    ; variables
+    i32,    ; ad
+    i32,    ; ad1
+    i1,    ; b
+    i8,    ; c
+    i32,    ; f
+    i32,    ; fn
+    i32,    ; i
+    i32,    ; j
+    i32,    ; l
+    i1,    ; line
+    double,    ; r
+    i32,    ; w
+
+    ; dummy
+    i8*
+};
+
 ; line 1706
 ;================================================================================
 ; scope: callsp_readi (level : 3)
+
+; activation record
+%Frame_callsp_readi = type
+{
+    ; parameters
+    %T_text,    ; f
+    i32,    ; i
+
+    ; slink
+    %Frame_callsp*
+};
 
 ; line 1711
 ;================================================================================
 ; scope: callsp_readr (level : 3)
 
+; activation record
+%Frame_callsp_readr = type
+{
+    ; parameters
+    %T_text,    ; f
+    double,    ; r
+
+    ; slink
+    %Frame_callsp*
+};
+
 ; line 1716
 ;================================================================================
 ; scope: callsp_readc (level : 3)
+
+; activation record
+%Frame_callsp_readc = type
+{
+    ; parameters
+    i8,    ; c
+    %T_text,    ; f
+
+    ; slink
+    %Frame_callsp*
+};
 
 ; line 1721
 ;================================================================================
 ; scope: callsp_writestr (level : 3)
 
+; activation record
+%Frame_callsp_writestr = type
+{
+    ; parameters
+    i32,    ; ad
+    %T_text,    ; f
+    i32,    ; l
+    i32,    ; w
+
+    ; variables
+    i32,    ; i
+
+    ; slink
+    %Frame_callsp*
+};
+
 ; line 1729
 ;================================================================================
 ; scope: callsp_getfile (level : 3)
 
+; activation record
+%Frame_callsp_getfile = type
+{
+    ; parameters
+    %T_text,    ; f
+
+    ; slink
+    %Frame_callsp*
+};
+
 ; line 1734
 ;================================================================================
 ; scope: callsp_putfile (level : 3)
+
+; activation record
+%Frame_callsp_putfile = type
+{
+    ; parameters
+    i32,    ; ad
+    %T_text,    ; f
+
+    ; slink
+    %Frame_callsp*
+};
+
 ;================================================================================
 ; metadata
 

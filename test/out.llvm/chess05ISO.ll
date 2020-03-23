@@ -200,305 +200,1300 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ;================================================================================
 ; scope: MAX (level : 2)
 
+; activation record
+%Frame_MAX = type
+{
+    ; parameters
+    i32,    ; A
+    i32,    ; B
+
+    ; variables
+    i32,    ; _fnvalue
+
+    ; dummy
+    i8*
+};
+
 ; line 300
 ;================================================================================
 ; scope: MIN (level : 2)
+
+; activation record
+%Frame_MIN = type
+{
+    ; parameters
+    i32,    ; A
+    i32,    ; B
+
+    ; variables
+    i32,    ; _fnvalue
+
+    ; dummy
+    i8*
+};
 
 ; line 310
 ;================================================================================
 ; scope: SIGN (level : 2)
 
+; activation record
+%Frame_SIGN = type
+{
+    ; parameters
+    i32,    ; A
+    i32,    ; B
+
+    ; variables
+    i32,    ; _fnvalue
+
+    ; dummy
+    i8*
+};
+
 ; line 320
 ;================================================================================
 ; scope: SORTIT (level : 2)
+
+; activation record
+%Frame_SORTIT = type
+{
+    ; parameters
+    %T_RE,    ; A
+    %T_RF,    ; B
+    i32,    ; C
+
+    ; variables
+    %T_RM,    ; INRM
+    i1,    ; INTB
+    i32,    ; INTI
+    i32,    ; INTV
+    i32,    ; INTW
+
+    ; dummy
+    i8*
+};
 
 ; line 354
 ;================================================================================
 ; scope: ANDRS (level : 2)
 
+; activation record
+%Frame_ANDRS = type
+{
+    ; parameters
+    %T_RS,    ; A
+    %T_RS,    ; B
+    %T_RS,    ; C
+
+    ; variables
+    i32,    ; INTY
+
+    ; dummy
+    i8*
+};
+
 ; line 368
 ;================================================================================
 ; scope: CLRRS (level : 2)
+
+; activation record
+%Frame_CLRRS = type
+{
+    ; parameters
+    i32,    ; A
+    %T_RS,    ; C
+
+    ; dummy
+    i8*
+};
 
 ; line 377
 ;================================================================================
 ; scope: CPYRS (level : 2)
 
+; activation record
+%Frame_CPYRS = type
+{
+    ; parameters
+    %T_RS,    ; A
+    %T_RS,    ; C
+
+    ; variables
+    i32,    ; INTY
+
+    ; dummy
+    i8*
+};
+
 ; line 390
 ;================================================================================
 ; scope: IORRS (level : 2)
+
+; activation record
+%Frame_IORRS = type
+{
+    ; parameters
+    %T_RS,    ; A
+    %T_RS,    ; B
+    %T_RS,    ; C
+
+    ; variables
+    i32,    ; INTY
+
+    ; dummy
+    i8*
+};
 
 ; line 403
 ;================================================================================
 ; scope: NEWRS (level : 2)
 
+; activation record
+%Frame_NEWRS = type
+{
+    ; parameters
+    %T_RS,    ; A
+
+    ; variables
+    i32,    ; INTY
+
+    ; dummy
+    i8*
+};
+
 ; line 415
 ;================================================================================
 ; scope: NOTRS (level : 2)
+
+; activation record
+%Frame_NOTRS = type
+{
+    ; parameters
+    %T_RS,    ; A
+    %T_RS,    ; C
+
+    ; variables
+    i32,    ; INTY
+
+    ; dummy
+    i8*
+};
 
 ; line 427
 ;================================================================================
 ; scope: NXTTS (level : 2)
 
+; activation record
+%Frame_NXTTS = type
+{
+    ; parameters
+    %T_RS,    ; A
+    i32,    ; B
+
+    ; variables
+    i1,    ; _fnvalue
+    i32,    ; INTX
+    i32,    ; INTY
+
+    ; dummy
+    i8*
+};
+
 ; line 477
 ;================================================================================
 ; scope: CNTRS (level : 2)
+
+; activation record
+%Frame_CNTRS = type
+{
+    ; parameters
+    %T_RS,    ; A
+
+    ; variables
+    i32,    ; _fnvalue
+    i32,    ; IMTS
+    %T_RS,    ; INRS
+    i32,    ; INTS
+
+    ; dummy
+    i8*
+};
 
 ; line 502
 ;================================================================================
 ; scope: SETRS (level : 2)
 
+; activation record
+%Frame_SETRS = type
+{
+    ; parameters
+    i32,    ; A
+    %T_RS,    ; C
+
+    ; dummy
+    i8*
+};
+
 ; line 511
 ;================================================================================
 ; scope: SFTRS (level : 2)
+
+; activation record
+%Frame_SFTRS = type
+{
+    ; parameters
+    %T_RS,    ; A
+    %T_RS,    ; B
+    i32,    ; C
+
+    ; variables
+    i32,    ; INTS
+
+    ; dummy
+    i8*
+};
 
 ; line 619
 ;================================================================================
 ; scope: INRSTB (level : 2)
 
+; activation record
+%Frame_INRSTB = type
+{
+    ; parameters
+    %T_RS,    ; A
+    i32,    ; B
+
+    ; variables
+    i1,    ; _fnvalue
+
+    ; dummy
+    i8*
+};
+
 ; line 627
 ;================================================================================
 ; scope: NULRS (level : 2)
+
+; activation record
+%Frame_NULRS = type
+{
+    ; parameters
+    %T_RS,    ; A
+
+    ; variables
+    i1,    ; _fnvalue
+    i1,    ; INTB
+    i32,    ; INTY
+
+    ; dummy
+    i8*
+};
 
 ; line 643
 ;================================================================================
 ; scope: NULMVB (level : 2)
 
+; activation record
+%Frame_NULMVB = type
+{
+    ; parameters
+    %T_RM,    ; A
+
+    ; variables
+    i1,    ; _fnvalue
+
+    ; dummy
+    i8*
+};
+
 ; line 653
 ;================================================================================
 ; scope: INICON (level : 2)
+
+; activation record
+%Frame_INICON = type
+{
+    ; variables
+    i32,    ; IMTI
+    %T_RS,    ; INRS
+    i32,    ; INTD
+    i32,    ; INTE
+    i32,    ; INTF
+    i32,    ; INTI
+    i32,    ; INTI1
+    i32,    ; INTL
+    i32,    ; INTQ
+    i32,    ; INTR
+    i32,    ; INTT
+    i32,    ; INTX
+    i32,    ; INTY
+
+    ; dummy
+    i8*
+};
 
 ; line 670
 ;================================================================================
 ; scope: INICON_INISYN (level : 3)
 
+; activation record
+%Frame_INICON_INISYN = type
+{
+    ; parameters
+    %T_RA,    ; A
+
+    ; slink
+    %Frame_INICON*
+};
+
 ; line 698
 ;================================================================================
 ; scope: INICON_INIXTP (level : 3)
+
+; activation record
+%Frame_INICON_INIXTP = type
+{
+    ; parameters
+    i32,    ; A
+    i8,    ; B
+    i32,    ; C
+    i32,    ; D
+    i1,    ; E
+    i32,    ; F
+    i32,    ; G
+    i32,    ; H
+
+    ; slink
+    %Frame_INICON*
+};
 
 ; line 1057
 ;================================================================================
 ; scope: INITAL (level : 2)
 
+; activation record
+%Frame_INITAL = type
+{
+    ; parameters
+    %T_RB,    ; A
+
+    ; variables
+    i32,    ; INTF
+    i32,    ; INTR
+
+    ; dummy
+    i8*
+};
+
 ; line 1101
 ;================================================================================
 ; scope: PAUSER (level : 2)
+
+; activation record
+%Frame_PAUSER = type
+{
+    ; dummy
+    i8*
+};
 
 ; line 1112
 ;================================================================================
 ; scope: PRIMOV (level : 2)
 
+; activation record
+%Frame_PRIMOV = type
+{
+    ; parameters
+    %T_RM,    ; A
+
+    ; dummy
+    i8*
+};
+
 ; line 1168
 ;================================================================================
 ; scope: PRINTB (level : 2)
+
+; activation record
+%Frame_PRINTB = type
+{
+    ; parameters
+    %T_RC,    ; A
+
+    ; variables
+    i32,    ; INTF
+    i32,    ; INTR
+
+    ; dummy
+    i8*
+};
 
 ; line 1208
 ;================================================================================
 ; scope: PRINAM (level : 2)
 
+; activation record
+%Frame_PRINAM = type
+{
+    ; parameters
+    %T_RX,    ; A
+
+    ; variables
+    i32,    ; INTF
+    i32,    ; INTR
+    i32,    ; JNTF
+    i32,    ; JNTR
+
+    ; dummy
+    i8*
+};
+
 ; line 1237
 ;================================================================================
 ; scope: PRISWI (level : 2)
+
+; activation record
+%Frame_PRISWI = type
+{
+    ; parameters
+    %T_RA,    ; A
+    i1,    ; B
+
+    ; dummy
+    i8*
+};
 
 ; line 1248
 ;================================================================================
 ; scope: MBEVAL (level : 2)
 
+; activation record
+%Frame_MBEVAL = type
+{
+    ; variables
+    i32,    ; INTI
+
+    ; dummy
+    i8*
+};
+
 ; line 1267
 ;================================================================================
 ; scope: MBCAPT (level : 2)
+
+; activation record
+%Frame_MBCAPT = type
+{
+    ; parameters
+    i32,    ; A
+
+    ; dummy
+    i8*
+};
 
 ; line 1281
 ;================================================================================
 ; scope: MBTPAC (level : 2)
 
+; activation record
+%Frame_MBTPAC = type
+{
+    ; parameters
+    i32,    ; A
+
+    ; dummy
+    i8*
+};
+
 ; line 1294
 ;================================================================================
 ; scope: MBPROM (level : 2)
+
+; activation record
+%Frame_MBPROM = type
+{
+    ; parameters
+    i32,    ; A
+
+    ; dummy
+    i8*
+};
 
 ; line 1308
 ;================================================================================
 ; scope: MBMORP (level : 2)
 
+; activation record
+%Frame_MBMORP = type
+{
+    ; parameters
+    i32,    ; A
+
+    ; dummy
+    i8*
+};
+
 ; line 1321
 ;================================================================================
 ; scope: ADDATK (level : 2)
+
+; activation record
+%Frame_ADDATK = type
+{
+    ; parameters
+    i32,    ; A
+
+    ; variables
+    i1,    ; INTB
+    i32,    ; INTD
+    i32,    ; INTE
+    i32,    ; INTM
+    i32,    ; INTP
+    i32,    ; INTT
+
+    ; dummy
+    i8*
+};
 
 ; line 1359
 ;================================================================================
 ; scope: ADDLOC (level : 2)
 
+; activation record
+%Frame_ADDLOC = type
+{
+    ; parameters
+    i32,    ; A
+    i32,    ; B
+
+    ; dummy
+    i8*
+};
+
 ; line 1372
 ;================================================================================
 ; scope: CLSTAT (level : 2)
+
+; activation record
+%Frame_CLSTAT = type
+{
+    ; dummy
+    i8*
+};
 
 ; line 1384
 ;================================================================================
 ; scope: CUTATK (level : 2)
 
+; activation record
+%Frame_CUTATK = type
+{
+    ; parameters
+    i32,    ; A
+
+    ; variables
+    %T_RS,    ; IMRS
+    %T_RS,    ; INRS
+    i32,    ; INTD
+    i32,    ; INTL
+    i32,    ; INTM
+    i32,    ; INTS
+    i32,    ; INTT
+
+    ; dummy
+    i8*
+};
+
 ; line 1428
 ;================================================================================
 ; scope: DELATK (level : 2)
+
+; activation record
+%Frame_DELATK = type
+{
+    ; parameters
+    i32,    ; A
+
+    ; variables
+    %T_RS,    ; IMRS
+    %T_RS,    ; INRS
+    i32,    ; INTM
+    i32,    ; INTS
+
+    ; dummy
+    i8*
+};
 
 ; line 1462
 ;================================================================================
 ; scope: PRPATK (level : 2)
 
+; activation record
+%Frame_PRPATK = type
+{
+    ; parameters
+    i32,    ; A
+
+    ; variables
+    %T_RS,    ; INRS
+    i32,    ; INTD
+    i32,    ; INTL
+    i32,    ; INTM
+    i32,    ; INTS
+    i32,    ; INTT
+
+    ; dummy
+    i8*
+};
+
 ; line 1502
 ;================================================================================
 ; scope: GAINIT (level : 2)
+
+; activation record
+%Frame_GAINIT = type
+{
+    ; parameters
+    %T_RM,    ; A
+
+    ; dummy
+    i8*
+};
 
 ; line 1520
 ;================================================================================
 ; scope: LOSEIT (level : 2)
 
+; activation record
+%Frame_LOSEIT = type
+{
+    ; parameters
+    %T_RM,    ; A
+
+    ; dummy
+    i8*
+};
+
 ; line 1540
 ;================================================================================
 ; scope: MOVEIT (level : 2)
+
+; activation record
+%Frame_MOVEIT = type
+{
+    ; parameters
+    %T_RM,    ; A
+
+    ; dummy
+    i8*
+};
 
 ; line 1558
 ;================================================================================
 ; scope: RTRKIT (level : 2)
 
+; activation record
+%Frame_RTRKIT = type
+{
+    ; parameters
+    %T_RM,    ; A
+
+    ; dummy
+    i8*
+};
+
 ; line 1578
 ;================================================================================
 ; scope: PAWNIT (level : 2)
+
+; activation record
+%Frame_PAWNIT = type
+{
+    ; parameters
+    %T_RM,    ; A
+
+    ; dummy
+    i8*
+};
 
 ; line 1590
 ;================================================================================
 ; scope: PROACA (level : 2)
 
+; activation record
+%Frame_PROACA = type
+{
+    ; parameters
+    i32,    ; A
+
+    ; variables
+    %T_RS,    ; IMRS
+    %T_RS,    ; INRS
+
+    ; dummy
+    i8*
+};
+
 ; line 1614
 ;================================================================================
 ; scope: PROACS (level : 2)
+
+; activation record
+%Frame_PROACS = type
+{
+    ; parameters
+    %T_RM,    ; A
+
+    ; dummy
+    i8*
+};
 
 ; line 1629
 ;================================================================================
 ; scope: PROMOT (level : 2)
 
+; activation record
+%Frame_PROMOT = type
+{
+    ; parameters
+    %T_RM,    ; A
+
+    ; dummy
+    i8*
+};
+
 ; line 1641
 ;================================================================================
 ; scope: CREATE (level : 2)
+
+; activation record
+%Frame_CREATE = type
+{
+    ; variables
+    %T_RS,    ; INRS
+    i32,    ; INTM
+    i32,    ; INTP
+    i32,    ; INTQ
+    i32,    ; INTS
+
+    ; dummy
+    i8*
+};
 
 ; line 1718
 ;================================================================================
 ; scope: DNDATE (level : 2)
 
+; activation record
+%Frame_DNDATE = type
+{
+    ; parameters
+    %T_RM,    ; A
+
+    ; variables
+    i32,    ; INTF
+    i32,    ; INTR
+    i32,    ; INTS
+    i32,    ; RKFR
+    i32,    ; RKTO
+
+    ; dummy
+    i8*
+};
+
 ; line 1792
 ;================================================================================
 ; scope: UPDATE (level : 2)
+
+; activation record
+%Frame_UPDATE = type
+{
+    ; parameters
+    %T_RM,    ; A
+
+    ; variables
+    i1,    ; _fnvalue
+    %T_RS,    ; IMRS
+    %T_RS,    ; INRS
+    i32,    ; INTF
+    i32,    ; INTR
+    i32,    ; INTS
+    i32,    ; RKFR
+    i32,    ; RKTO
+
+    ; dummy
+    i8*
+};
 
 ; line 1919
 ;================================================================================
 ; scope: GENONE (level : 2)
 
+; activation record
+%Frame_GENONE = type
+{
+    ; parameters
+    i32,    ; A
+    i32,    ; B
+
+    ; variables
+    %T_RS,    ; INRS
+
+    ; dummy
+    i8*
+};
+
 ; line 1950
 ;================================================================================
 ; scope: PWNPRO (level : 2)
+
+; activation record
+%Frame_PWNPRO = type
+{
+    ; variables
+    i32,    ; INTG
+
+    ; dummy
+    i8*
+};
 
 ; line 1967
 ;================================================================================
 ; scope: GENPWN (level : 2)
 
+; activation record
+%Frame_GENPWN = type
+{
+    ; parameters
+    %T_RS,    ; A
+    %T_RS,    ; B
+
+    ; variables
+    %T_RS,    ; IMRS
+    %T_RS,    ; INRS
+    i32,    ; INTS
+
+    ; dummy
+    i8*
+};
+
 ; line 2095
 ;================================================================================
 ; scope: GENFSL (level : 2)
+
+; activation record
+%Frame_GENFSL = type
+{
+    ; parameters
+    %T_RS,    ; A
+
+    ; variables
+    %T_RS,    ; IMRS
+    i32,    ; IMTS
+    %T_RS,    ; INRS
+    i32,    ; INTS
+    %T_RS,    ; IPRS
+
+    ; dummy
+    i8*
+};
 
 ; line 2124
 ;================================================================================
 ; scope: GENTSL (level : 2)
 
+; activation record
+%Frame_GENTSL = type
+{
+    ; parameters
+    %T_RS,    ; A
+
+    ; variables
+    %T_RS,    ; IMRS
+    i32,    ; IMTS
+    %T_RS,    ; INRS
+    i32,    ; INTS
+    %T_RS,    ; IPRS
+
+    ; dummy
+    i8*
+};
+
 ; line 2151
 ;================================================================================
 ; scope: GENCAP (level : 2)
+
+; activation record
+%Frame_GENCAP = type
+{
+    ; variables
+    %T_RS,    ; INRS
+
+    ; dummy
+    i8*
+};
 
 ; line 2163
 ;================================================================================
 ; scope: GENCAS (level : 2)
 
+; activation record
+%Frame_GENCAS = type
+{
+    ; variables
+    %T_RS,    ; IMRS
+    %T_RS,    ; INRS
+    i32,    ; INTQ
+
+    ; dummy
+    i8*
+};
+
 ; line 2191
 ;================================================================================
 ; scope: GENALL (level : 2)
+
+; activation record
+%Frame_GENALL = type
+{
+    ; dummy
+    i8*
+};
 
 ; line 2199
 ;================================================================================
 ; scope: LSTMOV (level : 2)
 
+; activation record
+%Frame_LSTMOV = type
+{
+    ; variables
+    i32,    ; INTW
+
+    ; dummy
+    i8*
+};
+
 ; line 2215
 ;================================================================================
 ; scope: THEMOV (level : 2)
+
+; activation record
+%Frame_THEMOV = type
+{
+    ; parameters
+    %T_RM,    ; A
+
+    ; variables
+    %T_RS,    ; INRS
+    i1,    ; INTB
+    i32,    ; INTQ
+    i32,    ; INTS
+
+    ; dummy
+    i8*
+};
 
 ; line 2249
 ;================================================================================
 ; scope: EVALU8 (level : 2)
 
+; activation record
+%Frame_EVALU8 = type
+{
+    ; variables
+    i32,    ; INTV
+
+    ; dummy
+    i8*
+};
+
 ; line 2254
 ;================================================================================
 ; scope: EVALU8_EVKING (level : 3)
+
+; activation record
+%Frame_EVALU8_EVKING = type
+{
+    ; parameters
+    %T_RS,    ; A
+    %T_RS,    ; B
+
+    ; variables
+    i32,    ; _fnvalue
+    %T_RS,    ; INRS
+    i32,    ; INTS
+    i32,    ; INTV
+
+    ; slink
+    %Frame_EVALU8*
+};
 
 ; line 2280
 ;================================================================================
 ; scope: EVALU8_EVMOBL (level : 3)
 
+; activation record
+%Frame_EVALU8_EVMOBL = type
+{
+    ; parameters
+    i32,    ; A
+    i32,    ; B
+
+    ; variables
+    i32,    ; _fnvalue
+    %T_RS,    ; INRS
+    i32,    ; INTS
+    i32,    ; INTV
+
+    ; slink
+    %Frame_EVALU8*
+};
+
 ; line 2297
 ;================================================================================
 ; scope: EVALU8_EVPAWN (level : 3)
+
+; activation record
+%Frame_EVALU8_EVPAWN = type
+{
+    ; parameters
+    %T_RS,    ; A
+    i32,    ; B
+    i32,    ; C
+
+    ; variables
+    i32,    ; _fnvalue
+    %T_RS,    ; IMRS
+    %T_RS,    ; INRS
+    i32,    ; INTS
+    i32,    ; INTV
+
+    ; slink
+    %Frame_EVALU8*
+};
 
 ; line 2332
 ;================================================================================
 ; scope: EVALU8_EVROOK (level : 3)
 
+; activation record
+%Frame_EVALU8_EVROOK = type
+{
+    ; parameters
+    %T_RS,    ; A
+    %T_RS,    ; B
+
+    ; variables
+    i32,    ; _fnvalue
+    %T_RS,    ; INRS
+    i32,    ; INTI
+    i32,    ; INTS
+    i32,    ; INTV
+
+    ; slink
+    %Frame_EVALU8*
+};
+
 ; line 2382
 ;================================================================================
 ; scope: SEARCH (level : 2)
+
+; activation record
+%Frame_SEARCH = type
+{
+    ; variables
+    i32,    ; _fnvalue
+    i1,    ; jumpin
+
+    ; dummy
+    i8*
+};
 
 ; line 2395
 ;================================================================================
 ; scope: SEARCH_NEWBST (level : 3)
 
+; activation record
+%Frame_SEARCH_NEWBST = type
+{
+    ; parameters
+    i32,    ; A
+
+    ; variables
+    %T_RM,    ; INRM
+    i32,    ; INTW
+
+    ; slink
+    %Frame_SEARCH*
+};
+
 ; line 2418
 ;================================================================================
 ; scope: SEARCH_MINMAX (level : 3)
+
+; activation record
+%Frame_SEARCH_MINMAX = type
+{
+    ; parameters
+    i32,    ; A
+
+    ; variables
+    i1,    ; _fnvalue
+
+    ; slink
+    %Frame_SEARCH*
+};
 
 ; line 2440
 ;================================================================================
 ; scope: SEARCH_SCOREM (level : 3)
 
+; activation record
+%Frame_SEARCH_SCOREM = type
+{
+    ; slink
+    %Frame_SEARCH*
+};
+
 ; line 2453
 ;================================================================================
 ; scope: SEARCH_SELECT (level : 3)
+
+; activation record
+%Frame_SEARCH_SELECT = type
+{
+    ; variables
+    i1,    ; _fnvalue
+    i32,    ; IMTW
+    i1,    ; INTB
+    i32,    ; INTK
+    i32,    ; INTV
+    i32,    ; INTW
+
+    ; slink
+    %Frame_SEARCH*
+};
 
 ; line 2467
 ;================================================================================
 ; scope: SEARCH_SELECT_SELDON (level : 4)
 
+; activation record
+%Frame_SEARCH_SELECT_SELDON = type
+{
+    ; slink
+    %Frame_SEARCH_SELECT*
+};
+
 ; line 2482
 ;================================================================================
 ; scope: SEARCH_SELECT_SELMOV (level : 4)
+
+; activation record
+%Frame_SEARCH_SELECT_SELMOV = type
+{
+    ; parameters
+    i32,    ; A
+
+    ; slink
+    %Frame_SEARCH_SELECT*
+};
 
 ; line 2501
 ;================================================================================
 ; scope: SEARCH_SELECT_SELNXT (level : 4)
 
+; activation record
+%Frame_SEARCH_SELECT_SELNXT = type
+{
+    ; parameters
+    i32,    ; A
+
+    ; slink
+    %Frame_SEARCH_SELECT*
+};
+
 ; line 2513
 ;================================================================================
 ; scope: SEARCH_SELECT_SELANY (level : 4)
+
+; activation record
+%Frame_SEARCH_SELECT_SELANY = type
+{
+    ; variables
+    i32,    ; INTW
+
+    ; slink
+    %Frame_SEARCH_SELECT*
+};
 
 ; line 2748
 ;================================================================================
 ; scope: READER (level : 2)
 
+; activation record
+%Frame_READER = type
+{
+    ; variables
+    %T_RA,    ; INRA
+    i32,    ; INTJ
+
+    ; dummy
+    i8*
+};
+
 ; line 2757
 ;================================================================================
 ; scope: READER_RDRERR (level : 3)
+
+; activation record
+%Frame_READER_RDRERR = type
+{
+    ; parameters
+    %T_RN,    ; A
+
+    ; variables
+    i32,    ; INTJ
+    i32,    ; INTN
+
+    ; slink
+    %Frame_READER*
+};
 
 ; line 2782
 ;================================================================================
 ; scope: READER_RDRGNT (level : 3)
 
+; activation record
+%Frame_READER_RDRGNT = type
+{
+    ; parameters
+    %T_RA,    ; A
+
+    ; variables
+    i1,    ; _fnvalue
+    i32,    ; INTJ
+
+    ; slink
+    %Frame_READER*
+};
+
 ; line 2812
 ;================================================================================
 ; scope: READER_RDRSFT (level : 3)
+
+; activation record
+%Frame_READER_RDRSFT = type
+{
+    ; variables
+    %T_RA,    ; INRA
+    i1,    ; INTB
+
+    ; slink
+    %Frame_READER*
+};
 
 ; line 2825
 ;================================================================================
@@ -507,117 +1502,377 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; types
 %T_READER_RDRCMD_subroutine_47 = type void (i8*)*
 
+; activation record
+%Frame_READER_RDRCMD = type
+{
+    ; parameters
+    %T_RA,    ; A
+    %T_READER_RDRCMD_subroutine_47,    ; XXXCMD
+
+    ; slink
+    %Frame_READER*
+};
+
 ; line 2840
 ;================================================================================
 ; scope: READER_RDLINE (level : 3)
+
+; activation record
+%Frame_READER_RDLINE = type
+{
+    ; variables
+    i8,    ; INTC
+    i32,    ; INTJ
+
+    ; slink
+    %Frame_READER*
+};
 
 ; line 2867
 ;================================================================================
 ; scope: READER_RDRMOV (level : 3)
 
+; activation record
+%Frame_READER_RDRMOV = type
+{
+    ; variables
+    i1,    ; _fnvalue
+    i32,    ; IMTJ
+
+    ; slink
+    %Frame_READER*
+};
+
 ; line 2898
 ;================================================================================
 ; scope: READER_RDRNUM (level : 3)
+
+; activation record
+%Frame_READER_RDRNUM = type
+{
+    ; variables
+    i32,    ; _fnvalue
+    i1,    ; INTB
+    i32,    ; INTI
+
+    ; slink
+    %Frame_READER*
+};
 
 ; line 2938
 ;================================================================================
 ; scope: READER_BOACMD (level : 3)
 
+; activation record
+%Frame_READER_BOACMD = type
+{
+    ; variables
+    i32,    ; INTM
+    i32,    ; INTS
+    i32,    ; INTS1
+
+    ; slink
+    %Frame_READER*
+};
+
 ; line 2946
 ;================================================================================
 ; scope: READER_BOACMD_BOAADV (level : 4)
+
+; activation record
+%Frame_READER_BOACMD_BOAADV = type
+{
+    ; parameters
+    i32,    ; A
+
+    ; slink
+    %Frame_READER_BOACMD*
+};
 
 ; line 2956
 ;================================================================================
 ; scope: READER_BOACMD_BOASTO (level : 4)
 
+; activation record
+%Frame_READER_BOACMD_BOASTO = type
+{
+    ; parameters
+    i32,    ; A
+
+    ; slink
+    %Frame_READER_BOACMD*
+};
+
 ; line 2996
 ;================================================================================
 ; scope: READER_ENDCMD (level : 3)
+
+; activation record
+%Frame_READER_ENDCMD = type
+{
+    ; slink
+    %Frame_READER*
+};
 
 ; line 3003
 ;================================================================================
 ; scope: READER_GONCMD (level : 3)
 
+; activation record
+%Frame_READER_GONCMD = type
+{
+    ; slink
+    %Frame_READER*
+};
+
 ; line 3015
 ;================================================================================
 ; scope: READER_INICMD (level : 3)
+
+; activation record
+%Frame_READER_INICMD = type
+{
+    ; slink
+    %Frame_READER*
+};
 
 ; line 3022
 ;================================================================================
 ; scope: READER_LETCMD (level : 3)
 
+; activation record
+%Frame_READER_LETCMD = type
+{
+    ; slink
+    %Frame_READER*
+};
+
 ; line 3027
 ;================================================================================
 ; scope: READER_LETCMD_LETONE (level : 4)
+
+; activation record
+%Frame_READER_LETCMD_LETONE = type
+{
+    ; parameters
+    %T_RA,    ; A
+    i32,    ; B
+
+    ; slink
+    %Frame_READER_LETCMD*
+};
 
 ; line 3076
 ;================================================================================
 ; scope: READER_PLECMD (level : 3)
 
+; activation record
+%Frame_READER_PLECMD = type
+{
+    ; slink
+    %Frame_READER*
+};
+
 ; line 3081
 ;================================================================================
 ; scope: READER_PLECMD_PRIONE (level : 4)
+
+; activation record
+%Frame_READER_PLECMD_PRIONE = type
+{
+    ; parameters
+    %T_RA,    ; A
+    i32,    ; B
+
+    ; slink
+    %Frame_READER_PLECMD*
+};
 
 ; line 3131
 ;================================================================================
 ; scope: READER_PRICMD (level : 3)
 
+; activation record
+%Frame_READER_PRICMD = type
+{
+    ; slink
+    %Frame_READER*
+};
+
 ; line 3141
 ;================================================================================
 ; scope: READER_PAMCMD (level : 3)
+
+; activation record
+%Frame_READER_PAMCMD = type
+{
+    ; slink
+    %Frame_READER*
+};
 
 ; line 3155
 ;================================================================================
 ; scope: READER_POPCMD (level : 3)
 
+; activation record
+%Frame_READER_POPCMD = type
+{
+    ; variables
+    i32,    ; INTQ
+
+    ; slink
+    %Frame_READER*
+};
+
 ; line 3173
 ;================================================================================
 ; scope: READER_PMVCMD (level : 3)
+
+; activation record
+%Frame_READER_PMVCMD = type
+{
+    ; variables
+    i32,    ; INTW
+
+    ; slink
+    %Frame_READER*
+};
 
 ; line 3190
 ;================================================================================
 ; scope: READER_SWICMD (level : 3)
 
+; activation record
+%Frame_READER_SWICMD = type
+{
+    ; slink
+    %Frame_READER*
+};
+
 ; line 3195
 ;================================================================================
 ; scope: READER_SWICMD_SWIONE (level : 4)
+
+; activation record
+%Frame_READER_SWICMD_SWIONE = type
+{
+    ; parameters
+    %T_RA,    ; A
+    i1,    ; B
+
+    ; variables
+    i32,    ; IMTJ
+
+    ; slink
+    %Frame_READER_SWICMD*
+};
 
 ; line 3241
 ;================================================================================
 ; scope: READER_STACMD (level : 3)
 
+; activation record
+%Frame_READER_STACMD = type
+{
+    ; variables
+    %T_RA,    ; INRA
+    i32,    ; INTM
+
+    ; slink
+    %Frame_READER*
+};
+
 ; line 3250
 ;================================================================================
 ; scope: READER_STACMD_STAEPF (level : 4)
+
+; activation record
+%Frame_READER_STACMD_STAEPF = type
+{
+    ; parameters
+    %T_RA,    ; A
+    i32,    ; B
+
+    ; slink
+    %Frame_READER_STACMD*
+};
 
 ; line 3266
 ;================================================================================
 ; scope: READER_STACMD_STACAK (level : 4)
 
+; activation record
+%Frame_READER_STACMD_STACAK = type
+{
+    ; slink
+    %Frame_READER_STACMD*
+};
+
 ; line 3276
 ;================================================================================
 ; scope: READER_STACMD_STACAQ (level : 4)
+
+; activation record
+%Frame_READER_STACMD_STACAQ = type
+{
+    ; slink
+    %Frame_READER_STACMD*
+};
 
 ; line 3286
 ;================================================================================
 ; scope: READER_STACMD_STADRK (level : 4)
 
+; activation record
+%Frame_READER_STACMD_STADRK = type
+{
+    ; slink
+    %Frame_READER_STACMD*
+};
+
 ; line 3293
 ;================================================================================
 ; scope: READER_STACMD_STAENP (level : 4)
+
+; activation record
+%Frame_READER_STACMD_STAENP = type
+{
+    ; slink
+    %Frame_READER_STACMD*
+};
 
 ; line 3314
 ;================================================================================
 ; scope: READER_STACMD_STAGOS (level : 4)
 
+; activation record
+%Frame_READER_STACMD_STAGOS = type
+{
+    ; slink
+    %Frame_READER_STACMD*
+};
+
 ; line 3322
 ;================================================================================
 ; scope: READER_STACMD_STALIT (level : 4)
 
+; activation record
+%Frame_READER_STACMD_STALIT = type
+{
+    ; slink
+    %Frame_READER_STACMD*
+};
+
 ; line 3329
 ;================================================================================
 ; scope: READER_STACMD_STANUM (level : 4)
+
+; activation record
+%Frame_READER_STACMD_STANUM = type
+{
+    ; slink
+    %Frame_READER_STACMD*
+};
 
 ; line 3336
 ;================================================================================
@@ -626,105 +1881,366 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; types
 %T_READER_STACMD_STAOPT_subroutine_48 = type void (i8*)*
 
+; activation record
+%Frame_READER_STACMD_STAOPT = type
+{
+    ; parameters
+    %T_RA,    ; A
+    %T_READER_STACMD_STAOPT_subroutine_48,    ; STAXXX
+
+    ; slink
+    %Frame_READER_STACMD*
+};
+
 ; line 3368
 ;================================================================================
 ; scope: READER_WHACMD (level : 3)
+
+; activation record
+%Frame_READER_WHACMD = type
+{
+    ; slink
+    %Frame_READER*
+};
 
 ; line 3410
 ;================================================================================
 ; scope: MINENG (level : 2)
 
+; activation record
+%Frame_MINENG = type
+{
+    ; parameters
+    %T_RM,    ; A
+    %T_RA,    ; B
+
+    ; variables
+    i32,    ; INTN
+
+    ; dummy
+    i8*
+};
+
 ; line 3418
 ;================================================================================
 ; scope: MINENG_ADDCHR (level : 3)
+
+; activation record
+%Frame_MINENG_ADDCHR = type
+{
+    ; parameters
+    i8,    ; A
+
+    ; slink
+    %Frame_MINENG*
+};
 
 ; line 3428
 ;================================================================================
 ; scope: MINENG_ADDSQR (level : 3)
 
+; activation record
+%Frame_MINENG_ADDSQR = type
+{
+    ; parameters
+    i32,    ; A
+    %T_RD,    ; B
+
+    ; slink
+    %Frame_MINENG*
+};
+
 ; line 3478
 ;================================================================================
 ; scope: MINENG_ADDWRD (level : 3)
+
+; activation record
+%Frame_MINENG_ADDWRD = type
+{
+    ; parameters
+    %T_RA,    ; A
+    i32,    ; B
+
+    ; variables
+    i32,    ; INTA
+
+    ; slink
+    %Frame_MINENG*
+};
 
 ; line 3491
 ;================================================================================
 ; scope: MINENG_DIFFER (level : 3)
 
+; activation record
+%Frame_MINENG_DIFFER = type
+{
+    ; parameters
+    %T_RM,    ; A
+    %T_RM,    ; B
+
+    ; variables
+    i1,    ; _fnvalue
+    i1,    ; INTB
+
+    ; slink
+    %Frame_MINENG*
+};
+
 ; line 3516
 ;================================================================================
 ; scope: MINENG_SETSQD (level : 3)
+
+; activation record
+%Frame_MINENG_SETSQD = type
+{
+    ; parameters
+    i32,    ; A
+    %T_RD,    ; B
+    %T_SR,    ; C
+    %T_SF,    ; O
+
+    ; slink
+    %Frame_MINENG*
+};
 
 ; line 3544
 ;================================================================================
 ; scope: MINENG_MINGEN (level : 3)
 
+; activation record
+%Frame_MINENG_MINGEN = type
+{
+    ; parameters
+    %T_RM,    ; A
+    i32,    ; B
+    i32,    ; C
+
+    ; variables
+    %T_SF,    ; INLF
+    %T_SR,    ; INLR
+    %T_SF,    ; INRF
+    %T_SR,    ; INRR
+    i32,    ; INTG
+    i32,    ; INTI
+    i32,    ; INTW
+
+    ; slink
+    %Frame_MINENG*
+};
+
 ; line 3635
 ;================================================================================
 ; scope: MYMOVE (level : 2)
+
+; activation record
+%Frame_MYMOVE = type
+{
+    ; variables
+    %T_RM,    ; INRM
+
+    ; dummy
+    i8*
+};
 
 ; line 3662
 ;================================================================================
 ; scope: YRMOVE (level : 2)
 
+; activation record
+%Frame_YRMOVE = type
+{
+    ; variables
+    i1,    ; IFCA
+    i1,    ; IFLD
+    i1,    ; IFLF
+    i1,    ; IFMV
+    i1,    ; IFOO
+    i1,    ; IFPR
+    i1,    ; IFQS
+    i1,    ; IFRD
+    i1,    ; IFRF
+    i32,    ; INCP
+    %T_SF,    ; INLF
+    %T_SR,    ; INLR
+    %T_SF,    ; INRF
+    %T_RM,    ; INRM
+    %T_SR,    ; INRR
+    i1,    ; INTB
+    i8,    ; INTC
+    i32,    ; INTG
+    i32,    ; INTP
+    i32,    ; INTW
+    i1,    ; jumpin
+
+    ; dummy
+    i8*
+};
+
 ; line 3696
 ;================================================================================
 ; scope: YRMOVE_YRMHIT (level : 3)
+
+; activation record
+%Frame_YRMOVE_YRMHIT = type
+{
+    ; slink
+    %Frame_YRMOVE*
+};
 
 ; line 3714
 ;================================================================================
 ; scope: YRMOVE_YRMCOM (level : 3)
 
+; activation record
+%Frame_YRMOVE_YRMCOM = type
+{
+    ; slink
+    %Frame_YRMOVE*
+};
+
 ; line 3738
 ;================================================================================
 ; scope: YRMOVE_YRMCAP (level : 3)
+
+; activation record
+%Frame_YRMOVE_YRMCAP = type
+{
+    ; slink
+    %Frame_YRMOVE*
+};
 
 ; line 3745
 ;================================================================================
 ; scope: YRMOVE_YRMCAS (level : 3)
 
+; activation record
+%Frame_YRMOVE_YRMCAS = type
+{
+    ; slink
+    %Frame_YRMOVE*
+};
+
 ; line 3752
 ;================================================================================
 ; scope: YRMOVE_YRMCPC (level : 3)
+
+; activation record
+%Frame_YRMOVE_YRMCPC = type
+{
+    ; slink
+    %Frame_YRMOVE*
+};
 
 ; line 3765
 ;================================================================================
 ; scope: YRMOVE_YRMCQS (level : 3)
 
+; activation record
+%Frame_YRMOVE_YRMCQS = type
+{
+    ; slink
+    %Frame_YRMOVE*
+};
+
 ; line 3772
 ;================================================================================
 ; scope: YRMOVE_YRMLKQ (level : 3)
+
+; activation record
+%Frame_YRMOVE_YRMLKQ = type
+{
+    ; slink
+    %Frame_YRMOVE*
+};
 
 ; line 3783
 ;================================================================================
 ; scope: YRMOVE_YRMLRB (level : 3)
 
+; activation record
+%Frame_YRMOVE_YRMLRB = type
+{
+    ; slink
+    %Frame_YRMOVE*
+};
+
 ; line 3795
 ;================================================================================
 ; scope: YRMOVE_YRMLRK (level : 3)
+
+; activation record
+%Frame_YRMOVE_YRMLRK = type
+{
+    ; slink
+    %Frame_YRMOVE*
+};
 
 ; line 3823
 ;================================================================================
 ; scope: YRMOVE_YRMNUL (level : 3)
 
+; activation record
+%Frame_YRMOVE_YRMNUL = type
+{
+    ; slink
+    %Frame_YRMOVE*
+};
+
 ; line 3829
 ;================================================================================
 ; scope: YRMOVE_YRMPCM (level : 3)
+
+; activation record
+%Frame_YRMOVE_YRMPCM = type
+{
+    ; slink
+    %Frame_YRMOVE*
+};
 
 ; line 3842
 ;================================================================================
 ; scope: YRMOVE_YRMPRO (level : 3)
 
+; activation record
+%Frame_YRMOVE_YRMPRO = type
+{
+    ; slink
+    %Frame_YRMOVE*
+};
+
 ; line 3855
 ;================================================================================
 ; scope: YRMOVE_YRMRKQ (level : 3)
+
+; activation record
+%Frame_YRMOVE_YRMRKQ = type
+{
+    ; slink
+    %Frame_YRMOVE*
+};
 
 ; line 3866
 ;================================================================================
 ; scope: YRMOVE_YRMRRB (level : 3)
 
+; activation record
+%Frame_YRMOVE_YRMRRB = type
+{
+    ; slink
+    %Frame_YRMOVE*
+};
+
 ; line 3878
 ;================================================================================
 ; scope: YRMOVE_YRMRRK (level : 3)
+
+; activation record
+%Frame_YRMOVE_YRMRRK = type
+{
+    ; slink
+    %Frame_YRMOVE*
+};
 
 ; line 3906
 ;================================================================================
@@ -732,6 +2248,22 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 
 ; types
 %T_YRMOVE_NCHIN_subroutine_49 = type void (i8*)*
+
+; activation record
+%Frame_YRMOVE_NCHIN = type
+{
+    ; parameters
+    %T_SC,    ; A
+    %T_YRMOVE_NCHIN_subroutine_49,    ; YRMXXX
+
+    ; variables
+    i1,    ; _fnvalue
+    i1,    ; INTB
+
+    ; slink
+    %Frame_YRMOVE*
+};
+
 ;================================================================================
 ; metadata
 

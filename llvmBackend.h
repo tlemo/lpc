@@ -557,7 +557,6 @@ private:
         }
         else
         {
-            /* TODO
             auto pExt = ext(pSubroutine);
 
             assert(pExt->frameName.empty());
@@ -566,40 +565,54 @@ private:
             code << "\n; activation record\n";
             code << pExt->frameName << " = type\n{\n";
 
-            if(pSubroutine->hasSlink())
+            // parameters
+            //
+            if (!m_paramList.empty())
             {
-                auto* pParentExt = subroutineExt(pSubroutine->parent());
-                assert(!pParentExt->frameName.empty());
-                code << "\n   " << pParentExt->frameName << "* _slink;\n";
-            }
-
-            if(!m_paramMap.empty())
-            {
-                // NOTE: we have to make sure the parameters are generated
-                //   in the exact order to allow initializer lists for frame
-                //
-                // CONSIDER: this could be simplified by refactoring the
-                //   ts::ParamList and obj::ParamList and related data structures
-                //
-                code << "\n    // parameters\n";
-                auto pType = pSubroutine->pType;
-                auto pParamList = pType->paramList();
-                for(auto it = pParamList->begin(); it != pParamList->end(); ++it)
+                code << TAB << "; parameters\n";
+                for (const auto pParam : m_paramList)
                 {
-                    auto pParam = m_paramMap[it->pId->name];
-                    code << "    " << paramExt(pParam)->code;
+                    const auto* pParamTypeExt = ext(pParam->pType);
+                    assert(!pParamTypeExt->genName.empty());
+                    code << TAB << pParamTypeExt->genName << ",";
+                    code << TAB << "; " << pParam->pId->name << "\n";
                 }
+                code << "\n";
             }
 
-            if(!m_varList.empty())
+            // variables
+            //
+            if (!m_varList.empty())
             {
-                code << "\n    // locals\n";
-                for(auto it = m_varList.begin(); it != m_varList.end(); ++it)
-                    code << "    " << varExt(*it)->code;
+                code << TAB << "; variables\n";
+                for (const auto pVar : m_varList)
+                {
+                    const auto* pVarTypeExt = ext(pVar->pType);
+                    assert(!pVarTypeExt->genName.empty());
+                    code << TAB << pVarTypeExt->genName << ",";
+                    code << TAB << "; " << pVar->pId->name << "\n";
+                }
+                code << "\n";
+            }
+
+            // slink
+            //
+            if (pSubroutine->hasSlink())
+            {
+                const auto* pParentExt = ext(pSubroutine->parent());
+                assert(!pParentExt->frameName.empty());
+                code << TAB << "; slink\n";
+                code << TAB << pParentExt->frameName << "*\n";
+            }
+            else
+            {
+                // just to make the LLVM struct well formed
+                //
+                code << TAB << "; dummy\n";
+                code << TAB << "i8*\n";
             }
 
             code << "};\n";
-            */
         }
 
         write(code);

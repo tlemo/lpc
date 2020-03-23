@@ -23,9 +23,32 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ;================================================================================
 ; scope: foo (level : 2)
 
+; activation record
+%Frame_foo = type
+{
+    ; variables
+    i32,    ; fooV
+
+    ; dummy
+    i8*
+};
+
 ; line 11
 ;================================================================================
 ; scope: foo_testPfn (level : 3)
+
+; activation record
+%Frame_foo_testPfn = type
+{
+    ; parameters
+    i32,    ; i
+
+    ; variables
+    i32,    ; _fnvalue
+
+    ; slink
+    %Frame_foo*
+};
 
 ; line 17
 ;================================================================================
@@ -34,12 +57,40 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; types
 %T_foo_bar1_subroutine_2 = type i32 (i8*, i32)*
 
+; activation record
+%Frame_foo_bar1 = type
+{
+    ; parameters
+    i32,    ; i
+    %T_foo_bar1_subroutine_2,    ; pfn
+
+    ; variables
+    i32,    ; bar1V
+    i32,    ; tmp
+
+    ; slink
+    %Frame_foo*
+};
+
 ; line 29
 ;================================================================================
 ; scope: foo_bar2 (level : 3)
 
 ; types
 %T_foo_bar2_subroutine_3 = type void (i8*, i32)*
+
+; activation record
+%Frame_foo_bar2 = type
+{
+    ; parameters
+    %T_foo_bar2_subroutine_3,    ; pfn
+
+    ; variables
+    i32,    ; bar2V
+
+    ; slink
+    %Frame_foo*
+};
 
 ; line 32
 ;================================================================================
@@ -48,13 +99,51 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; types
 %T_foo_bar2_moo_subroutine_4 = type i32 (i8*, i32)*
 
+; activation record
+%Frame_foo_bar2_moo = type
+{
+    ; parameters
+    %T_foo_bar2_moo_subroutine_4,    ; pfn
+
+    ; variables
+    i32,    ; mooV
+    i32,    ; tmp
+
+    ; slink
+    %Frame_foo_bar2*
+};
+
 ; line 44
 ;================================================================================
 ; scope: foo_bar2_testPfn (level : 4)
 
+; activation record
+%Frame_foo_bar2_testPfn = type
+{
+    ; parameters
+    i32,    ; i
+
+    ; variables
+    i32,    ; _fnvalue
+
+    ; slink
+    %Frame_foo_bar2*
+};
+
 ; line 59
 ;================================================================================
 ; scope: foo_procPfn (level : 3)
+
+; activation record
+%Frame_foo_procPfn = type
+{
+    ; parameters
+    i32,    ; i
+
+    ; slink
+    %Frame_foo*
+};
+
 ;================================================================================
 ; metadata
 

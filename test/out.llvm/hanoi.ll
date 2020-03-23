@@ -34,13 +34,60 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ;================================================================================
 ; scope: hanoi1 (level : 2)
 
+; activation record
+%Frame_hanoi1 = type
+{
+    ; variables
+    i32,    ; i
+    i32,    ; j
+    i32,    ; k
+    i32,    ; k1
+    i32,    ; k2
+    i32,    ; k3
+    i32,    ; l
+    i32,    ; w
+
+    ; dummy
+    i8*
+};
+
 ; line 19
 ;================================================================================
 ; scope: hanoi2 (level : 2)
 
+; activation record
+%Frame_hanoi2 = type
+{
+    ; variables
+    i32,    ; i
+    i32,    ; j
+    i32,    ; k
+    i32,    ; niv
+    i32,    ; ns
+
+    ; dummy
+    i8*
+};
+
 ; line 38
 ;================================================================================
 ; scope: hanoi3 (level : 2)
+
+; activation record
+%Frame_hanoi3 = type
+{
+    ; parameters
+    i32,    ; i
+    i32,    ; j
+    i32,    ; n
+
+    ; variables
+    i32,    ; k
+
+    ; dummy
+    i8*
+};
+
 ;================================================================================
 ; metadata
 

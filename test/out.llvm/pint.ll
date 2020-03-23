@@ -64,89 +64,348 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %T_load_array_10 = type [1851 x %T_load_labelrec]
 %T_load_array_11 = type [10 x i8]
 
+; activation record
+%Frame_load = type
+{
+    ; variables
+    i32,    ; bcp
+    i8,    ; ch
+    i32,    ; icp
+    %T_load_array_10,    ; labeltab
+    i32,    ; labelvalue
+    i32,    ; mcp
+    i32,    ; rcp
+    i32,    ; scp
+    %T_load_array_11,    ; word
+
+    ; dummy
+    i8*
+};
+
 ; line 138
 ;================================================================================
 ; scope: load_init (level : 3)
+
+; activation record
+%Frame_load_init = type
+{
+    ; variables
+    i32,    ; i
+
+    ; slink
+    %Frame_load*
+};
 
 ; line 202
 ;================================================================================
 ; scope: load_errorl (level : 3)
 
+; activation record
+%Frame_load_errorl = type
+{
+    ; parameters
+    %T_beta,    ; string
+
+    ; slink
+    %Frame_load*
+};
+
 ; line 208
 ;================================================================================
 ; scope: load_update (level : 3)
+
+; activation record
+%Frame_load_update = type
+{
+    ; parameters
+    i32,    ; x
+
+    ; variables
+    i32,    ; curr
+    i1,    ; endlist
+    i32,    ; succ
+
+    ; slink
+    %Frame_load*
+};
 
 ; line 237
 ;================================================================================
 ; scope: load_generate (level : 3)
 
+; activation record
+%Frame_load_generate = type
+{
+    ; variables
+    i1,    ; again
+    i32,    ; x
+
+    ; slink
+    %Frame_load*
+};
+
 ; line 259
 ;================================================================================
 ; scope: load_assemble (level : 3)
+
+; activation record
+%Frame_load_assemble = type
+{
+    ; variables
+    i32,    ; i
+    i32,    ; lb
+    %T_alfa,    ; name
+    double,    ; r
+    %T_settype,    ; s
+    i32,    ; s1
+    i32,    ; ub
+
+    ; slink
+    %Frame_load*
+};
 
 ; line 264
 ;================================================================================
 ; scope: load_assemble_lookup (level : 4)
 
+; activation record
+%Frame_load_assemble_lookup = type
+{
+    ; parameters
+    i32,    ; x
+
+    ; slink
+    %Frame_load_assemble*
+};
+
 ; line 273
 ;================================================================================
 ; scope: load_assemble_labelsearch (level : 4)
+
+; activation record
+%Frame_load_assemble_labelsearch = type
+{
+    ; variables
+    i32,    ; x
+
+    ; slink
+    %Frame_load_assemble*
+};
 
 ; line 279
 ;================================================================================
 ; scope: load_assemble_getname (level : 4)
 
+; activation record
+%Frame_load_assemble_getname = type
+{
+    ; slink
+    %Frame_load_assemble*
+};
+
 ; line 286
 ;================================================================================
 ; scope: load_assemble_typesymbol (level : 4)
+
+; activation record
+%Frame_load_assemble_typesymbol = type
+{
+    ; variables
+    i32,    ; i
+
+    ; slink
+    %Frame_load_assemble*
+};
 
 ; line 476
 ;================================================================================
 ; scope: pmd (level : 2)
 
+; activation record
+%Frame_pmd = type
+{
+    ; variables
+    i32,    ; i
+    i32,    ; s
+
+    ; dummy
+    i8*
+};
+
 ; line 479
 ;================================================================================
 ; scope: pmd_pt (level : 3)
+
+; activation record
+%Frame_pmd_pt = type
+{
+    ; slink
+    %Frame_pmd*
+};
 
 ; line 500
 ;================================================================================
 ; scope: errori (level : 2)
 
+; activation record
+%Frame_errori = type
+{
+    ; parameters
+    %T_beta,    ; string
+
+    ; dummy
+    i8*
+};
+
 ; line 505
 ;================================================================================
 ; scope: base (level : 2)
+
+; activation record
+%Frame_base = type
+{
+    ; parameters
+    i32,    ; ld
+
+    ; variables
+    i32,    ; _fnvalue
+    i32,    ; ad
+
+    ; dummy
+    i8*
+};
 
 ; line 514
 ;================================================================================
 ; scope: compare (level : 2)
 
+; activation record
+%Frame_compare = type
+{
+    ; dummy
+    i8*
+};
+
 ; line 526
 ;================================================================================
 ; scope: callsp (level : 2)
+
+; activation record
+%Frame_callsp = type
+{
+    ; variables
+    i1,    ; line
+
+    ; dummy
+    i8*
+};
 
 ; line 530
 ;================================================================================
 ; scope: callsp_readi (level : 3)
 
+; activation record
+%Frame_callsp_readi = type
+{
+    ; parameters
+    %T_text,    ; f
+
+    ; variables
+    i32,    ; ad
+
+    ; slink
+    %Frame_callsp*
+};
+
 ; line 538
 ;================================================================================
 ; scope: callsp_readr (level : 3)
+
+; activation record
+%Frame_callsp_readr = type
+{
+    ; parameters
+    %T_text,    ; f
+
+    ; variables
+    i32,    ; ad
+
+    ; slink
+    %Frame_callsp*
+};
 
 ; line 546
 ;================================================================================
 ; scope: callsp_readc (level : 3)
 
+; activation record
+%Frame_callsp_readc = type
+{
+    ; parameters
+    %T_text,    ; f
+
+    ; variables
+    i32,    ; ad
+    i8,    ; c
+
+    ; slink
+    %Frame_callsp*
+};
+
 ; line 556
 ;================================================================================
 ; scope: callsp_writestr (level : 3)
+
+; activation record
+%Frame_callsp_writestr = type
+{
+    ; parameters
+    %T_text,    ; f
+
+    ; variables
+    i32,    ; ad
+    i32,    ; i
+    i32,    ; j
+    i32,    ; k
+
+    ; slink
+    %Frame_callsp*
+};
 
 ; line 568
 ;================================================================================
 ; scope: callsp_getfile (level : 3)
 
+; activation record
+%Frame_callsp_getfile = type
+{
+    ; parameters
+    %T_text,    ; f
+
+    ; variables
+    i32,    ; ad
+
+    ; slink
+    %Frame_callsp*
+};
+
 ; line 575
 ;================================================================================
 ; scope: callsp_putfile (level : 3)
+
+; activation record
+%Frame_callsp_putfile = type
+{
+    ; parameters
+    %T_text,    ; f
+
+    ; variables
+    i32,    ; ad
+
+    ; slink
+    %Frame_callsp*
+};
+
 ;================================================================================
 ; metadata
 

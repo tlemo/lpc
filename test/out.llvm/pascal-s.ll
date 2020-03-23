@@ -85,13 +85,41 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; types
 %T_errormsg_array_21 = type [59 x %T_alfa]
 
+; activation record
+%Frame_errormsg = type
+{
+    ; variables
+    i32,    ; k
+    %T_errormsg_array_21,    ; msg
+
+    ; dummy
+    i8*
+};
+
 ; line 310
 ;================================================================================
 ; scope: nextch (level : 2)
 
+; activation record
+%Frame_nextch = type
+{
+    ; dummy
+    i8*
+};
+
 ; line 330
 ;================================================================================
 ; scope: error (level : 2)
+
+; activation record
+%Frame_error = type
+{
+    ; parameters
+    i32,    ; n
+
+    ; dummy
+    i8*
+};
 
 ; line 338
 ;================================================================================
@@ -100,49 +128,184 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; types
 %T_fatal_array_22 = type [7 x %T_alfa]
 
+; activation record
+%Frame_fatal = type
+{
+    ; parameters
+    i32,    ; n
+
+    ; variables
+    %T_fatal_array_22,    ; msg
+
+    ; dummy
+    i8*
+};
+
 ; line 349
 ;================================================================================
 ; scope: insymbol (level : 2)
+
+; activation record
+%Frame_insymbol = type
+{
+    ; variables
+    i32,    ; e
+    i32,    ; i
+    i32,    ; j
+    i32,    ; k
+
+    ; dummy
+    i8*
+};
 
 ; line 353
 ;================================================================================
 ; scope: insymbol_readscale (level : 3)
 
+; activation record
+%Frame_insymbol_readscale = type
+{
+    ; variables
+    i32,    ; s
+    i32,    ; sign
+
+    ; slink
+    %Frame_insymbol*
+};
+
 ; line 364
 ;================================================================================
 ; scope: insymbol_adjustscale (level : 3)
+
+; activation record
+%Frame_insymbol_adjustscale = type
+{
+    ; variables
+    double,    ; d
+    i32,    ; s
+    double,    ; t
+
+    ; slink
+    %Frame_insymbol*
+};
 
 ; line 477
 ;================================================================================
 ; scope: enter (level : 2)
 
+; activation record
+%Frame_enter = type
+{
+    ; parameters
+    %T_alfa,    ; x0
+    i32,    ; x1
+    i32,    ; x2
+    i32,    ; x3
+
+    ; dummy
+    i8*
+};
+
 ; line 487
 ;================================================================================
 ; scope: enterarray (level : 2)
+
+; activation record
+%Frame_enterarray = type
+{
+    ; parameters
+    i32,    ; h
+    i32,    ; l
+    i32,    ; tp
+
+    ; dummy
+    i8*
+};
 
 ; line 500
 ;================================================================================
 ; scope: enterblock (level : 2)
 
+; activation record
+%Frame_enterblock = type
+{
+    ; dummy
+    i8*
+};
+
 ; line 506
 ;================================================================================
 ; scope: enterreal (level : 2)
+
+; activation record
+%Frame_enterreal = type
+{
+    ; parameters
+    double,    ; x
+
+    ; dummy
+    i8*
+};
 
 ; line 514
 ;================================================================================
 ; scope: emit (level : 2)
 
+; activation record
+%Frame_emit = type
+{
+    ; parameters
+    i32,    ; fct
+
+    ; dummy
+    i8*
+};
+
 ; line 519
 ;================================================================================
 ; scope: emit1 (level : 2)
+
+; activation record
+%Frame_emit1 = type
+{
+    ; parameters
+    i32,    ; b
+    i32,    ; fct
+
+    ; dummy
+    i8*
+};
 
 ; line 526
 ;================================================================================
 ; scope: emit2 (level : 2)
 
+; activation record
+%Frame_emit2 = type
+{
+    ; parameters
+    i32,    ; a
+    i32,    ; b
+    i32,    ; fct
+
+    ; dummy
+    i8*
+};
+
 ; line 533
 ;================================================================================
 ; scope: printtables (level : 2)
+
+; activation record
+%Frame_printtables = type
+{
+    ; variables
+    i32,    ; i
+    %T_order,    ; o
+
+    ; dummy
+    i8*
+};
 
 ; line 574
 ;================================================================================
@@ -151,109 +314,479 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; types
 %T_block_conrec = type [20 x i8]
 
+; activation record
+%Frame_block = type
+{
+    ; parameters
+    %T_symset,    ; fsys
+    i1,    ; isfun
+    i32,    ; level
+
+    ; variables
+    i32,    ; dx
+    i32,    ; prb
+    i32,    ; prt
+    i32,    ; x
+
+    ; dummy
+    i8*
+};
+
 ; line 587
 ;================================================================================
 ; scope: block_skip (level : 3)
+
+; activation record
+%Frame_block_skip = type
+{
+    ; parameters
+    %T_symset,    ; fsys
+    i32,    ; n
+
+    ; slink
+    %Frame_block*
+};
 
 ; line 592
 ;================================================================================
 ; scope: block_test (level : 3)
 
+; activation record
+%Frame_block_test = type
+{
+    ; parameters
+    i32,    ; n
+    %T_symset,    ; s1
+    %T_symset,    ; s2
+
+    ; slink
+    %Frame_block*
+};
+
 ; line 597
 ;================================================================================
 ; scope: block_testsemicolon (level : 3)
+
+; activation record
+%Frame_block_testsemicolon = type
+{
+    ; slink
+    %Frame_block*
+};
 
 ; line 606
 ;================================================================================
 ; scope: block_enter (level : 3)
 
+; activation record
+%Frame_block_enter = type
+{
+    ; parameters
+    %T_alfa,    ; id
+    i32,    ; k
+
+    ; variables
+    i32,    ; j
+    i32,    ; l
+
+    ; slink
+    %Frame_block*
+};
+
 ; line 624
 ;================================================================================
 ; scope: block_loc (level : 3)
+
+; activation record
+%Frame_block_loc = type
+{
+    ; parameters
+    %T_alfa,    ; id
+
+    ; variables
+    i32,    ; _fnvalue
+    i32,    ; i
+    i32,    ; j
+
+    ; slink
+    %Frame_block*
+};
 
 ; line 634
 ;================================================================================
 ; scope: block_entervariable (level : 3)
 
+; activation record
+%Frame_block_entervariable = type
+{
+    ; slink
+    %Frame_block*
+};
+
 ; line 641
 ;================================================================================
 ; scope: block_constant (level : 3)
+
+; activation record
+%Frame_block_constant = type
+{
+    ; parameters
+    %T_block_conrec,    ; c
+    %T_symset,    ; fsys
+
+    ; variables
+    i32,    ; sign
+    i32,    ; x
+
+    ; slink
+    %Frame_block*
+};
 
 ; line 679
 ;================================================================================
 ; scope: block_typ (level : 3)
 
+; activation record
+%Frame_block_typ = type
+{
+    ; parameters
+    %T_symset,    ; fsys
+    i32,    ; rf
+    i32,    ; sz
+    i32,    ; tp
+
+    ; variables
+    i32,    ; elrf
+    i32,    ; elsz
+    i32,    ; eltp
+    i32,    ; offset
+    i32,    ; t0
+    i32,    ; t1
+    i32,    ; x
+
+    ; slink
+    %Frame_block*
+};
+
 ; line 684
 ;================================================================================
 ; scope: block_typ_arraytyp (level : 4)
+
+; activation record
+%Frame_block_typ_arraytyp = type
+{
+    ; parameters
+    i32,    ; aref
+    i32,    ; arsz
+
+    ; variables
+    i32,    ; elrf
+    i32,    ; elsz
+    i32,    ; eltp
+    %T_block_conrec,    ; high
+    %T_block_conrec,    ; low
+
+    ; slink
+    %Frame_block_typ*
+};
 
 ; line 775
 ;================================================================================
 ; scope: block_parameterlist (level : 3)
 
+; activation record
+%Frame_block_parameterlist = type
+{
+    ; variables
+    i32,    ; rf
+    i32,    ; sz
+    i32,    ; t0
+    i32,    ; tp
+    i1,    ; valpar
+    i32,    ; x
+
+    ; slink
+    %Frame_block*
+};
+
 ; line 826
 ;================================================================================
 ; scope: block_constantdeclaration (level : 3)
+
+; activation record
+%Frame_block_constantdeclaration = type
+{
+    ; variables
+    %T_block_conrec,    ; c
+
+    ; slink
+    %Frame_block*
+};
 
 ; line 845
 ;================================================================================
 ; scope: block_typedeclaration (level : 3)
 
+; activation record
+%Frame_block_typedeclaration = type
+{
+    ; variables
+    i32,    ; rf
+    i32,    ; sz
+    i32,    ; t1
+    i32,    ; tp
+
+    ; slink
+    %Frame_block*
+};
+
 ; line 863
 ;================================================================================
 ; scope: block_variabledeclaration (level : 3)
+
+; activation record
+%Frame_block_variabledeclaration = type
+{
+    ; variables
+    i32,    ; rf
+    i32,    ; sz
+    i32,    ; t0
+    i32,    ; t1
+    i32,    ; tp
+
+    ; slink
+    %Frame_block*
+};
 
 ; line 887
 ;================================================================================
 ; scope: block_procdeclaration (level : 3)
 
+; activation record
+%Frame_block_procdeclaration = type
+{
+    ; variables
+    i1,    ; isfun
+
+    ; slink
+    %Frame_block*
+};
+
 ; line 900
 ;================================================================================
 ; scope: block_statement (level : 3)
+
+; activation record
+%Frame_block_statement = type
+{
+    ; parameters
+    %T_symset,    ; fsys
+
+    ; variables
+    i32,    ; i
+
+    ; slink
+    %Frame_block*
+};
 
 ; line 904
 ;================================================================================
 ; scope: block_statement_selector (level : 4)
 
+; activation record
+%Frame_block_statement_selector = type
+{
+    ; parameters
+    %T_symset,    ; fsys
+    %T_item,    ; v
+
+    ; variables
+    i32,    ; a
+    i32,    ; j
+    %T_item,    ; x
+
+    ; slink
+    %Frame_block_statement*
+};
+
 ; line 942
 ;================================================================================
 ; scope: block_statement_call (level : 4)
+
+; activation record
+%Frame_block_statement_call = type
+{
+    ; parameters
+    %T_symset,    ; fsys
+    i32,    ; i
+
+    ; variables
+    i32,    ; cp
+    i32,    ; k
+    i32,    ; lastp
+    %T_item,    ; x
+
+    ; slink
+    %Frame_block_statement*
+};
 
 ; line 992
 ;================================================================================
 ; scope: block_statement_resulttype (level : 4)
 
+; activation record
+%Frame_block_statement_resulttype = type
+{
+    ; parameters
+    i32,    ; a
+    i32,    ; b
+
+    ; variables
+    i32,    ; _fnvalue
+
+    ; slink
+    %Frame_block_statement*
+};
+
 ; line 1008
 ;================================================================================
 ; scope: block_statement_expression (level : 4)
+
+; activation record
+%Frame_block_statement_expression = type
+{
+    ; parameters
+    %T_symset,    ; fsys
+    %T_item,    ; x
+
+    ; variables
+    i32,    ; op
+    %T_item,    ; y
+
+    ; slink
+    %Frame_block_statement*
+};
 
 ; line 1011
 ;================================================================================
 ; scope: block_statement_expression_simpleexpression (level : 5)
 
+; activation record
+%Frame_block_statement_expression_simpleexpression = type
+{
+    ; parameters
+    %T_symset,    ; fsys
+    %T_item,    ; x
+
+    ; variables
+    i32,    ; op
+    %T_item,    ; y
+
+    ; slink
+    %Frame_block_statement_expression*
+};
+
 ; line 1014
 ;================================================================================
 ; scope: block_statement_expression_simpleexpression_term (level : 6)
+
+; activation record
+%Frame_block_statement_expression_simpleexpression_term = type
+{
+    ; parameters
+    %T_symset,    ; fsys
+    %T_item,    ; x
+
+    ; variables
+    i32,    ; op
+    %T_item,    ; y
+
+    ; slink
+    %Frame_block_statement_expression_simpleexpression*
+};
 
 ; line 1017
 ;================================================================================
 ; scope: block_statement_expression_simpleexpression_term_factor (level : 7)
 
+; activation record
+%Frame_block_statement_expression_simpleexpression_term_factor = type
+{
+    ; parameters
+    %T_symset,    ; fsys
+    %T_item,    ; x
+
+    ; variables
+    i32,    ; f
+    i32,    ; i
+
+    ; slink
+    %Frame_block_statement_expression_simpleexpression_term*
+};
+
 ; line 1020
 ;================================================================================
 ; scope: block_statement_expression_simpleexpression_term_factor_standfct (level : 8)
+
+; activation record
+%Frame_block_statement_expression_simpleexpression_term_factor_standfct = type
+{
+    ; parameters
+    i32,    ; n
+
+    ; variables
+    %T_typset,    ; ts
+
+    ; slink
+    %Frame_block_statement_expression_simpleexpression_term_factor*
+};
 
 ; line 1229
 ;================================================================================
 ; scope: block_statement_assignment (level : 4)
 
+; activation record
+%Frame_block_statement_assignment = type
+{
+    ; parameters
+    i32,    ; ad
+    i32,    ; lv
+
+    ; variables
+    i32,    ; f
+    %T_item,    ; x
+    %T_item,    ; y
+
+    ; slink
+    %Frame_block_statement*
+};
+
 ; line 1253
 ;================================================================================
 ; scope: block_statement_compoundstatement (level : 4)
 
+; activation record
+%Frame_block_statement_compoundstatement = type
+{
+    ; slink
+    %Frame_block_statement*
+};
+
 ; line 1263
 ;================================================================================
 ; scope: block_statement_ifstatement (level : 4)
+
+; activation record
+%Frame_block_statement_ifstatement = type
+{
+    ; variables
+    i32,    ; lc1
+    i32,    ; lc2
+    %T_item,    ; x
+
+    ; slink
+    %Frame_block_statement*
+};
 
 ; line 1280
 ;================================================================================
@@ -264,29 +797,117 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %T_block_statement_casestatement_array_23 = type [100 x %T_block_statement_casestatement_record_24]
 %T_block_statement_casestatement_array_25 = type [100 x i32]
 
+; activation record
+%Frame_block_statement_casestatement = type
+{
+    ; variables
+    %T_block_statement_casestatement_array_23,    ; casetab
+    %T_block_statement_casestatement_array_25,    ; exittab
+    i32,    ; i
+    i32,    ; j
+    i32,    ; k
+    i32,    ; lc1
+    %T_item,    ; x
+
+    ; slink
+    %Frame_block_statement*
+};
+
 ; line 1287
 ;================================================================================
 ; scope: block_statement_casestatement_caselabel (level : 5)
+
+; activation record
+%Frame_block_statement_casestatement_caselabel = type
+{
+    ; variables
+    i32,    ; k
+    %T_block_conrec,    ; lab
+
+    ; slink
+    %Frame_block_statement_casestatement*
+};
 
 ; line 1299
 ;================================================================================
 ; scope: block_statement_casestatement_onecase (level : 5)
 
+; activation record
+%Frame_block_statement_casestatement_onecase = type
+{
+    ; slink
+    %Frame_block_statement_casestatement*
+};
+
 ; line 1329
 ;================================================================================
 ; scope: block_statement_repeatstatement (level : 4)
+
+; activation record
+%Frame_block_statement_repeatstatement = type
+{
+    ; variables
+    i32,    ; lc1
+    %T_item,    ; x
+
+    ; slink
+    %Frame_block_statement*
+};
 
 ; line 1345
 ;================================================================================
 ; scope: block_statement_whilestatement (level : 4)
 
+; activation record
+%Frame_block_statement_whilestatement = type
+{
+    ; variables
+    i32,    ; lc1
+    i32,    ; lc2
+    %T_item,    ; x
+
+    ; slink
+    %Frame_block_statement*
+};
+
 ; line 1355
 ;================================================================================
 ; scope: block_statement_forstatement (level : 4)
 
+; activation record
+%Frame_block_statement_forstatement = type
+{
+    ; variables
+    i32,    ; cvt
+    i32,    ; f
+    i32,    ; i
+    i32,    ; lc1
+    i32,    ; lc2
+    %T_item,    ; x
+
+    ; slink
+    %Frame_block_statement*
+};
+
 ; line 1387
 ;================================================================================
 ; scope: block_statement_standproc (level : 4)
+
+; activation record
+%Frame_block_statement_standproc = type
+{
+    ; parameters
+    i32,    ; n
+
+    ; variables
+    i32,    ; f
+    i32,    ; i
+    %T_item,    ; x
+    %T_item,    ; y
+
+    ; slink
+    %Frame_block_statement*
+};
 
 ; line 1515
 ;================================================================================
@@ -297,6 +918,32 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %T_interpret_array_28 = type [4 x i32]
 %T_interpret_record_30 = type [8 x i8]
 %T_interpret_array_29 = type [10000 x %T_interpret_record_30]
+
+; activation record
+%Frame_interpret = type
+{
+    ; variables
+    i32,    ; b
+    i32,    ; blkcnt
+    i32,    ; chrcnt
+    %T_interpret_array_27,    ; display
+    %T_interpret_array_28,    ; fld
+    i32,    ; h1
+    i32,    ; h2
+    i32,    ; h3
+    i32,    ; h4
+    %T_order,    ; ir
+    i32,    ; lncnt
+    i32,    ; ocnt
+    i32,    ; pc
+    i32,    ; ps
+    %T_interpret_array_29,    ; s
+    i32,    ; t
+
+    ; dummy
+    i8*
+};
+
 ;================================================================================
 ; metadata
 

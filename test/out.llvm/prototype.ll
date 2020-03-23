@@ -36,13 +36,55 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; types
 %T_foo_subroutine_6 = type i32 (i8*, i32, %T_REC, %T_UNION)*
 
+; activation record
+%Frame_foo = type
+{
+    ; parameters
+    %T_foo_subroutine_6,    ; pfn
+
+    ; variables
+    i32,    ; _fnvalue
+    i32,    ; i
+    i8*,    ; p
+    %T_UNION,    ; u
+
+    ; dummy
+    i8*
+};
+
 ; line 54
 ;================================================================================
 ; scope: test (level : 2)
 
+; activation record
+%Frame_test = type
+{
+    ; parameters
+    i32,    ; y
+
+    ; dummy
+    i8*
+};
+
 ; line 56
 ;================================================================================
 ; scope: test_bar (level : 3)
+
+; activation record
+%Frame_test_bar = type
+{
+    ; parameters
+    %T_REC,    ; r
+    %T_UNION,    ; u
+    i32,    ; x
+
+    ; variables
+    i32,    ; _fnvalue
+
+    ; slink
+    %Frame_test*
+};
+
 ;================================================================================
 ; metadata
 

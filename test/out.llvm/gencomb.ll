@@ -31,9 +31,37 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ;================================================================================
 ; scope: gen (level : 2)
 
+; activation record
+%Frame_gen = type
+{
+    ; parameters
+    %T_vec,    ; v
+
+    ; variables
+    i32,    ; i
+    i32,    ; j
+
+    ; dummy
+    i8*
+};
+
 ; line 23
 ;================================================================================
 ; scope: prel (level : 2)
+
+; activation record
+%Frame_prel = type
+{
+    ; parameters
+    %T_vec,    ; v
+
+    ; variables
+    i32,    ; i
+
+    ; dummy
+    i8*
+};
+
 ;================================================================================
 ; metadata
 

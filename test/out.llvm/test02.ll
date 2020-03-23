@@ -21,6 +21,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @_input = dso_local global %T_text zeroinitializer
 @_output = dso_local global %T_text zeroinitializer
 @myName = dso_local global %T_array_2 zeroinitializer
+
 ;================================================================================
 ; metadata
 

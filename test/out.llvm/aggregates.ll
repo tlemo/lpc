@@ -25,6 +25,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @v2 = dso_local global %T_A zeroinitializer
 @v3 = dso_local global %T_R zeroinitializer
 @v4 = dso_local global %T_R zeroinitializer
+
 ;================================================================================
 ; metadata
 

@@ -32,13 +32,50 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ;================================================================================
 ; scope: outter (level : 2)
 
+; activation record
+%Frame_outter = type
+{
+    ; parameters
+    i32,    ; x
+
+    ; variables
+    i32,    ; _fnvalue
+
+    ; dummy
+    i8*
+};
+
 ; line 15
 ;================================================================================
 ; scope: outter_inner (level : 3)
 
+; activation record
+%Frame_outter_inner = type
+{
+    ; parameters
+    i32,    ; x
+
+    ; variables
+    i32,    ; _fnvalue
+
+    ; slink
+    %Frame_outter*
+};
+
 ; line 16
 ;================================================================================
 ; scope: outter_inner_setOutter (level : 4)
+
+; activation record
+%Frame_outter_inner_setOutter = type
+{
+    ; parameters
+    i32,    ; x
+
+    ; slink
+    %Frame_outter_inner*
+};
+
 ;================================================================================
 ; metadata
 

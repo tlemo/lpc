@@ -31,17 +31,82 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ;================================================================================
 ; scope: initinteger (level : 2)
 
+; activation record
+%Frame_initinteger = type
+{
+    ; parameters
+    i32,    ; n
+    %T_digitarray,    ; x
+
+    ; variables
+    i32,    ; i
+
+    ; dummy
+    i8*
+};
+
 ; line 25
 ;================================================================================
 ; scope: divide (level : 2)
+
+; activation record
+%Frame_divide = type
+{
+    ; parameters
+    i32,    ; n
+    %T_digitarray,    ; x
+    i32,    ; xs
+    %T_digitarray,    ; y
+    i32,    ; ys
+
+    ; variables
+    i32,    ; c
+    i32,    ; i
+
+    ; dummy
+    i8*
+};
 
 ; line 41
 ;================================================================================
 ; scope: add (level : 2)
 
+; activation record
+%Frame_add = type
+{
+    ; parameters
+    %T_digitarray,    ; s
+    %T_digitarray,    ; x
+    i32,    ; xs
+
+    ; variables
+    i32,    ; c
+    i32,    ; i
+
+    ; dummy
+    i8*
+};
+
 ; line 71
 ;================================================================================
 ; scope: sub (level : 2)
+
+; activation record
+%Frame_sub = type
+{
+    ; parameters
+    %T_digitarray,    ; s
+    %T_digitarray,    ; x
+    i32,    ; xs
+
+    ; variables
+    i32,    ; c
+    i32,    ; i
+
+    ; dummy
+    i8*
+};
+
 ;================================================================================
 ; metadata
 

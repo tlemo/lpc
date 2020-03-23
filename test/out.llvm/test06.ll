@@ -24,13 +24,45 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ;================================================================================
 ; scope: init (level : 2)
 
+; activation record
+%Frame_init = type
+{
+    ; parameters
+    i8*,    ; pointer
+
+    ; dummy
+    i8*
+};
+
 ; line 16
 ;================================================================================
 ; scope: setValue (level : 2)
 
+; activation record
+%Frame_setValue = type
+{
+    ; parameters
+    i8*,    ; pointer
+    i32,    ; value
+
+    ; dummy
+    i8*
+};
+
 ; line 22
 ;================================================================================
 ; scope: free (level : 2)
+
+; activation record
+%Frame_free = type
+{
+    ; parameters
+    i8*,    ; pointer
+
+    ; dummy
+    i8*
+};
+
 ;================================================================================
 ; metadata
 

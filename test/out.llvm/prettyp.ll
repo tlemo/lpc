@@ -56,117 +56,515 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ;================================================================================
 ; scope: GETCHAR (level : 2)
 
+; activation record
+%Frame_GETCHAR = type
+{
+    ; parameters
+    %T_CHARINFO,    ; CURRCHAR
+    %T_text,    ; INPUTFILE
+    %T_CHARINFO,    ; NEXTCHAR
+
+    ; dummy
+    i8*
+};
+
 ; line 369
 ;================================================================================
 ; scope: STORENEXTCHAR (level : 2)
+
+; activation record
+%Frame_STORENEXTCHAR = type
+{
+    ; parameters
+    %T_CHARINFO,    ; CURRCHAR
+    %T_text,    ; INPUTFILE
+    i32,    ; LENGTH
+    %T_CHARINFO,    ; NEXTCHAR
+    %T_STRING,    ; VALUE
+
+    ; dummy
+    i8*
+};
 
 ; line 392
 ;================================================================================
 ; scope: SKIPSPACES (level : 2)
 
+; activation record
+%Frame_SKIPSPACES = type
+{
+    ; parameters
+    i32,    ; CRSBEFORE
+    %T_CHARINFO,    ; CURRCHAR
+    %T_text,    ; INPUTFILE
+    %T_CHARINFO,    ; NEXTCHAR
+    i32,    ; SPACESBEFORE
+
+    ; dummy
+    i8*
+};
+
 ; line 426
 ;================================================================================
 ; scope: GETCOMMENT (level : 2)
+
+; activation record
+%Frame_GETCOMMENT = type
+{
+    ; parameters
+    %T_CHARINFO,    ; CURRCHAR
+    %T_text,    ; INPUTFILE
+    i32,    ; LENGTH
+    i32,    ; NAME
+    %T_CHARINFO,    ; NEXTCHAR
+    %T_STRING,    ; VALUE
+
+    ; dummy
+    i8*
+};
 
 ; line 465
 ;================================================================================
 ; scope: IDTYPE (level : 2)
 
+; activation record
+%Frame_IDTYPE = type
+{
+    ; parameters
+    i32,    ; LENGTH
+    %T_STRING,    ; VALUE
+
+    ; variables
+    i32,    ; _fnvalue
+    i1,    ; HIT
+    i32,    ; I
+    %T_KEY,    ; KEYVALUE
+    i32,    ; THISKEY
+
+    ; dummy
+    i8*
+};
+
 ; line 508
 ;================================================================================
 ; scope: GETIDENTIFIER (level : 2)
+
+; activation record
+%Frame_GETIDENTIFIER = type
+{
+    ; parameters
+    %T_CHARINFO,    ; CURRCHAR
+    %T_text,    ; INPUTFILE
+    i32,    ; LENGTH
+    i32,    ; NAME
+    %T_CHARINFO,    ; NEXTCHAR
+    %T_STRING,    ; VALUE
+
+    ; dummy
+    i8*
+};
 
 ; line 546
 ;================================================================================
 ; scope: GETNUMBER (level : 2)
 
+; activation record
+%Frame_GETNUMBER = type
+{
+    ; parameters
+    %T_CHARINFO,    ; CURRCHAR
+    %T_text,    ; INPUTFILE
+    i32,    ; LENGTH
+    i32,    ; NAME
+    %T_CHARINFO,    ; NEXTCHAR
+    %T_STRING,    ; VALUE
+
+    ; dummy
+    i8*
+};
+
 ; line 568
 ;================================================================================
 ; scope: GETCHARLITERAL (level : 2)
+
+; activation record
+%Frame_GETCHARLITERAL = type
+{
+    ; parameters
+    %T_CHARINFO,    ; CURRCHAR
+    %T_text,    ; INPUTFILE
+    i32,    ; LENGTH
+    i32,    ; NAME
+    %T_CHARINFO,    ; NEXTCHAR
+    %T_STRING,    ; VALUE
+
+    ; dummy
+    i8*
+};
 
 ; line 608
 ;================================================================================
 ; scope: CHARTYPE (level : 2)
 
+; activation record
+%Frame_CHARTYPE = type
+{
+    ; parameters
+    %T_CHARINFO,    ; CURRCHAR
+    %T_CHARINFO,    ; NEXTCHAR
+
+    ; variables
+    i32,    ; _fnvalue
+    i1,    ; HIT
+    %T_SPECIALCHAR,    ; NEXTTWOCHARS
+    i32,    ; THISCHAR
+
+    ; dummy
+    i8*
+};
+
 ; line 654
 ;================================================================================
 ; scope: GETSPECIALCHAR (level : 2)
+
+; activation record
+%Frame_GETSPECIALCHAR = type
+{
+    ; parameters
+    %T_CHARINFO,    ; CURRCHAR
+    %T_text,    ; INPUTFILE
+    i32,    ; LENGTH
+    i32,    ; NAME
+    %T_CHARINFO,    ; NEXTCHAR
+    %T_STRING,    ; VALUE
+
+    ; dummy
+    i8*
+};
 
 ; line 682
 ;================================================================================
 ; scope: GETNEXTSYMBOL (level : 2)
 
+; activation record
+%Frame_GETNEXTSYMBOL = type
+{
+    ; parameters
+    %T_CHARINFO,    ; CURRCHAR
+    %T_text,    ; INPUTFILE
+    i32,    ; LENGTH
+    i32,    ; NAME
+    %T_CHARINFO,    ; NEXTCHAR
+    %T_STRING,    ; VALUE
+
+    ; dummy
+    i8*
+};
+
 ; line 741
 ;================================================================================
 ; scope: GETSYMBOL (level : 2)
+
+; activation record
+%Frame_GETSYMBOL = type
+{
+    ; parameters
+    i8*,    ; CURRSYM
+    %T_text,    ; INPUTFILE
+    i8*,    ; NEXTSYM
+
+    ; variables
+    i8*,    ; DUMMY
+
+    ; dummy
+    i8*
+};
 
 ; line 784
 ;================================================================================
 ; scope: INITIALISE (level : 2)
 
+; activation record
+%Frame_INITIALISE = type
+{
+    ; parameters
+    %T_CHARINFO,    ; CURRCHAR
+    i32,    ; CURRLINEPOS
+    i32,    ; CURRMARGIN
+    i8*,    ; CURRSYM
+    %T_DBLCHARTABLE,    ; DBLCHAR
+    %T_DBLCHRSET,    ; DBLCHARS
+    %T_text,    ; INPUTFILE
+    %T_KEYWORDTABLE,    ; KEYWORD
+    %T_CHARINFO,    ; NEXTCHAR
+    i8*,    ; NEXTSYM
+    %T_text,    ; OUTPUTFILE
+    %T_OPTIONTABLE,    ; PPOPTION
+    i1,    ; RECORDSEEN
+    %T_SGLCHARTABLE,    ; SGLCHAR
+    i32,    ; TOPOFSTACK
+
+    ; dummy
+    i8*
+};
+
 ; line 1175
 ;================================================================================
 ; scope: STACKEMPTY (level : 2)
+
+; activation record
+%Frame_STACKEMPTY = type
+{
+    ; variables
+    i1,    ; _fnvalue
+
+    ; dummy
+    i8*
+};
 
 ; line 1187
 ;================================================================================
 ; scope: STACKFULL (level : 2)
 
+; activation record
+%Frame_STACKFULL = type
+{
+    ; variables
+    i1,    ; _fnvalue
+
+    ; dummy
+    i8*
+};
+
 ; line 1199
 ;================================================================================
 ; scope: POPSTACK (level : 2)
+
+; activation record
+%Frame_POPSTACK = type
+{
+    ; parameters
+    i32,    ; INDENTSYMBOL
+    i32,    ; PREVMARGIN
+
+    ; dummy
+    i8*
+};
 
 ; line 1222
 ;================================================================================
 ; scope: PUSHSTACK (level : 2)
 
+; activation record
+%Frame_PUSHSTACK = type
+{
+    ; parameters
+    i32,    ; INDENTSYMBOL
+    i32,    ; PREVMARGIN
+
+    ; dummy
+    i8*
+};
+
 ; line 1235
 ;================================================================================
 ; scope: WRITECRS (level : 2)
+
+; activation record
+%Frame_WRITECRS = type
+{
+    ; parameters
+    i32,    ; CURRLINEPOS
+    i32,    ; NUMBEROFCRS
+    %T_text,    ; OUTPUTFILE
+
+    ; variables
+    i32,    ; I
+
+    ; dummy
+    i8*
+};
 
 ; line 1256
 ;================================================================================
 ; scope: INSERTCR (level : 2)
 
+; activation record
+%Frame_INSERTCR = type
+{
+    ; parameters
+    i8*,    ; CURRSYM
+    %T_text,    ; OUTPUTFILE
+
+    ; dummy
+    i8*
+};
+
 ; line 1276
 ;================================================================================
 ; scope: INSERTBLANKLINE (level : 2)
+
+; activation record
+%Frame_INSERTBLANKLINE = type
+{
+    ; parameters
+    i8*,    ; CURRSYM
+    %T_text,    ; OUTPUTFILE
+
+    ; dummy
+    i8*
+};
 
 ; line 1306
 ;================================================================================
 ; scope: LSHIFTON (level : 2)
 
+; activation record
+%Frame_LSHIFTON = type
+{
+    ; parameters
+    %T_KEYSYMSET,    ; DINDENTSYMBOLS
+
+    ; variables
+    i32,    ; INDENTSYMBOL
+    i32,    ; PREVMARGIN
+
+    ; dummy
+    i8*
+};
+
 ; line 1335
 ;================================================================================
 ; scope: LSHIFT (level : 2)
+
+; activation record
+%Frame_LSHIFT = type
+{
+    ; variables
+    i32,    ; INDENTSYMBOL
+    i32,    ; PREVMARGIN
+
+    ; dummy
+    i8*
+};
 
 ; line 1352
 ;================================================================================
 ; scope: INSERTSPACE (level : 2)
 
+; activation record
+%Frame_INSERTSPACE = type
+{
+    ; parameters
+    %T_text,    ; OUTPUTFILE
+    i8*,    ; SYMBOL
+
+    ; dummy
+    i8*
+};
+
 ; line 1372
 ;================================================================================
 ; scope: MOVELINEPOS (level : 2)
+
+; activation record
+%Frame_MOVELINEPOS = type
+{
+    ; parameters
+    i32,    ; CURRLINEPOS
+    i32,    ; NEWLINEPOS
+    %T_text,    ; OUTPUTFILE
+
+    ; variables
+    i32,    ; I
+
+    ; dummy
+    i8*
+};
 
 ; line 1389
 ;================================================================================
 ; scope: PRINTSYMBOL (level : 2)
 
+; activation record
+%Frame_PRINTSYMBOL = type
+{
+    ; parameters
+    i32,    ; CURRLINEPOS
+    i8*,    ; CURRSYM
+    %T_text,    ; OUTPUTFILE
+
+    ; variables
+    i32,    ; I
+
+    ; dummy
+    i8*
+};
+
 ; line 1410
 ;================================================================================
 ; scope: PPSYMBOL (level : 2)
+
+; activation record
+%Frame_PPSYMBOL = type
+{
+    ; parameters
+    i8*,    ; CURRSYM
+    %T_text,    ; OUTPUTFILE
+
+    ; variables
+    i32,    ; NEWLINEPOS
+
+    ; dummy
+    i8*
+};
 
 ; line 1465
 ;================================================================================
 ; scope: GOBBLE (level : 2)
 
+; activation record
+%Frame_GOBBLE = type
+{
+    ; parameters
+    i8*,    ; CURRSYM
+    %T_text,    ; INPUTFILE
+    i8*,    ; NEXTSYM
+    %T_text,    ; OUTPUTFILE
+    %T_KEYSYMSET,    ; TERMINATORS
+
+    ; dummy
+    i8*
+};
+
 ; line 1491
 ;================================================================================
 ; scope: RSHIFT (level : 2)
 
+; activation record
+%Frame_RSHIFT = type
+{
+    ; parameters
+    i32,    ; CURRSYM
+
+    ; dummy
+    i8*
+};
+
 ; line 1508
 ;================================================================================
 ; scope: RSHIFTTOCLP (level : 2)
+
+; activation record
+%Frame_RSHIFTTOCLP = type
+{
+    ; parameters
+    i32,    ; CURRSYM
+
+    ; dummy
+    i8*
+};
+
 ;================================================================================
 ; metadata
 

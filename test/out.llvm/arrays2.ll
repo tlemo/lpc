@@ -27,6 +27,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @Count = dso_local global i32 zeroinitializer
 @Index = dso_local global i32 zeroinitializer
 @Value = dso_local global %T_array_4 zeroinitializer
+
 ;================================================================================
 ; metadata
 

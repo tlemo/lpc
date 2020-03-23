@@ -27,6 +27,22 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; line 8
 ;================================================================================
 ; scope: f (level : 2)
+
+; activation record
+%Frame_f = type
+{
+    ; parameters
+    i32,    ; i
+    %T_vec,    ; x
+
+    ; variables
+    i1,    ; _fnvalue
+    i32,    ; j
+
+    ; dummy
+    i8*
+};
+
 ;================================================================================
 ; metadata
 

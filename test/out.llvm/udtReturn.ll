@@ -31,13 +31,46 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ;================================================================================
 ; scope: fooA (level : 2)
 
+; activation record
+%Frame_fooA = type
+{
+    ; variables
+    %T_A,    ; _fnvalue
+    %T_A,    ; tmp
+
+    ; dummy
+    i8*
+};
+
 ; line 29
 ;================================================================================
 ; scope: fooS (level : 2)
 
+; activation record
+%Frame_fooS = type
+{
+    ; variables
+    %T_S,    ; _fnvalue
+
+    ; dummy
+    i8*
+};
+
 ; line 34
 ;================================================================================
 ; scope: fooR (level : 2)
+
+; activation record
+%Frame_fooR = type
+{
+    ; variables
+    %T_R,    ; _fnvalue
+    %T_R,    ; tmp
+
+    ; dummy
+    i8*
+};
+
 ;================================================================================
 ; metadata
 

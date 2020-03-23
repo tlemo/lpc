@@ -59,33 +59,141 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ;================================================================================
 ; scope: expp (level : 2)
 
+; activation record
+%Frame_expp = type
+{
+    ; parameters
+    double,    ; r
+
+    ; variables
+    double,    ; _fnvalue
+    i32,    ; i
+    double,    ; m
+    double,    ; t
+
+    ; dummy
+    i8*
+};
+
 ; line 84
 ;================================================================================
 ; scope: random (level : 2)
+
+; activation record
+%Frame_random = type
+{
+    ; parameters
+    i32,    ; hi
+    i32,    ; low
+
+    ; variables
+    i32,    ; _fnvalue
+    i32,    ; gamma
+
+    ; dummy
+    i8*
+};
 
 ; line 95
 ;================================================================================
 ; scope: distance (level : 2)
 
+; activation record
+%Frame_distance = type
+{
+    ; parameters
+    i32,    ; pos1x
+    i32,    ; pos1y
+    %T_sectxy,    ; pos2
+
+    ; variables
+    i32,    ; _fnvalue
+
+    ; dummy
+    i8*
+};
+
 ; line 100
 ;================================================================================
 ; scope: radians (level : 2)
+
+; activation record
+%Frame_radians = type
+{
+    ; parameters
+    i32,    ; degrees
+
+    ; variables
+    double,    ; _fnvalue
+
+    ; dummy
+    i8*
+};
 
 ; line 105
 ;================================================================================
 ; scope: interval (level : 2)
 
+; activation record
+%Frame_interval = type
+{
+    ; parameters
+    i32,    ; maxvalue
+    i32,    ; minvalue
+    i32,    ; number
+
+    ; variables
+    i32,    ; _fnvalue
+
+    ; dummy
+    i8*
+};
+
 ; line 116
 ;================================================================================
 ; scope: reinitialize (level : 2)
+
+; activation record
+%Frame_reinitialize = type
+{
+    ; variables
+    i8,    ; ch
+
+    ; dummy
+    i8*
+};
 
 ; line 125
 ;================================================================================
 ; scope: initialize (level : 2)
 
+; activation record
+%Frame_initialize = type
+{
+    ; variables
+    i32,    ; i
+    i32,    ; j
+    i32,    ; rnum
+    i32,    ; totalfedbase
+
+    ; dummy
+    i8*
+};
+
 ; line 191
 ;================================================================================
 ; scope: setcondition (level : 2)
+
+; activation record
+%Frame_setcondition = type
+{
+    ; variables
+    i32,    ; i
+    i32,    ; j
+
+    ; dummy
+    i8*
+};
 
 ; line 211
 ;================================================================================
@@ -94,105 +202,404 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; types
 %T_klingonattack_array_12 = type [8 x i8]
 
+; activation record
+%Frame_klingonattack = type
+{
+    ; variables
+    i32,    ; hit
+    i32,    ; i
+    %T_klingonattack_array_12,    ; shiptype
+
+    ; dummy
+    i8*
+};
+
 ; line 241
 ;================================================================================
 ; scope: printdigit (level : 2)
+
+; activation record
+%Frame_printdigit = type
+{
+    ; parameters
+    i1,    ; mustprint
+    i32,    ; number
+
+    ; dummy
+    i8*
+};
 
 ; line 250
 ;================================================================================
 ; scope: setupquad (level : 2)
 
+; activation record
+%Frame_setupquad = type
+{
+    ; parameters
+    %T_sectxy,    ; entsect
+    %T_quadxy,    ; quad
+
+    ; variables
+    i32,    ; i
+    i32,    ; j
+    i32,    ; klingindex
+    i32,    ; novacount
+
+    ; dummy
+    i8*
+};
+
 ; line 253
 ;================================================================================
 ; scope: setupquad_setupstuff (level : 3)
+
+; activation record
+%Frame_setupquad_setupstuff = type
+{
+    ; parameters
+    i32,    ; count
+    i32,    ; object
+
+    ; variables
+    i32,    ; x
+    i32,    ; y
+
+    ; slink
+    %Frame_setupquad*
+};
 
 ; line 301
 ;================================================================================
 ; scope: printquadrant (level : 2)
 
+; activation record
+%Frame_printquadrant = type
+{
+    ; variables
+    i32,    ; i
+    i32,    ; j
+
+    ; dummy
+    i8*
+};
+
 ; line 330
 ;================================================================================
 ; scope: printgalaxy (level : 2)
+
+; activation record
+%Frame_printgalaxy = type
+{
+    ; parameters
+    i32,    ; lefty
+    i1,    ; markhistory
+    i32,    ; size
+    i32,    ; topx
+
+    ; variables
+    i32,    ; i
+    i32,    ; j
+    i1,    ; mustprint
+
+    ; dummy
+    i8*
+};
 
 ; line 335
 ;================================================================================
 ; scope: printgalaxy_printseparator (level : 3)
 
+; activation record
+%Frame_printgalaxy_printseparator = type
+{
+    ; parameters
+    i32,    ; entries
+
+    ; variables
+    i32,    ; count
+
+    ; slink
+    %Frame_printgalaxy*
+};
+
 ; line 380
 ;================================================================================
 ; scope: printdamage (level : 2)
+
+; activation record
+%Frame_printdamage = type
+{
+    ; variables
+    i8,    ; ch
+
+    ; dummy
+    i8*
+};
 
 ; line 388
 ;================================================================================
 ; scope: moveenterprise (level : 2)
 
+; activation record
+%Frame_moveenterprise = type
+{
+    ; variables
+    i32,    ; course
+    double,    ; warp
+    double,    ; xinc
+    double,    ; xpos
+    double,    ; yinc
+    double,    ; ypos
+
+    ; dummy
+    i8*
+};
+
 ; line 392
 ;================================================================================
 ; scope: moveenterprise_handledamage (level : 3)
+
+; activation record
+%Frame_moveenterprise_handledamage = type
+{
+    ; variables
+    i8,    ; ch
+    i8,    ; startch
+
+    ; slink
+    %Frame_moveenterprise*
+};
 
 ; line 425
 ;================================================================================
 ; scope: moveenterprise_moveintra (level : 3)
 
+; activation record
+%Frame_moveenterprise_moveintra = type
+{
+    ; parameters
+    i32,    ; course
+    double,    ; warp
+    double,    ; xinc
+    double,    ; xpos
+    double,    ; yinc
+    double,    ; ypos
+
+    ; slink
+    %Frame_moveenterprise*
+};
+
 ; line 496
 ;================================================================================
 ; scope: firephasers (level : 2)
+
+; activation record
+%Frame_firephasers = type
+{
+    ; variables
+    i32,    ; fireamount
+    i32,    ; hit
+    i32,    ; i
+
+    ; dummy
+    i8*
+};
 
 ; line 533
 ;================================================================================
 ; scope: firetorpedoes (level : 2)
 
+; activation record
+%Frame_firetorpedoes = type
+{
+    ; variables
+    i32,    ; course
+    i1,    ; hitsomething
+    i32,    ; i
+    double,    ; xinc
+    double,    ; xpos
+    double,    ; yinc
+    double,    ; ypos
+
+    ; dummy
+    i8*
+};
+
 ; line 538
 ;================================================================================
 ; scope: firetorpedoes_hitnova (level : 3)
+
+; activation record
+%Frame_firetorpedoes_hitnova = type
+{
+    ; parameters
+    i32,    ; klingnum
+    i32,    ; novax
+    i32,    ; novay
+
+    ; variables
+    i32,    ; hit
+    i32,    ; i
+
+    ; slink
+    %Frame_firetorpedoes*
+};
 
 ; line 564
 ;================================================================================
 ; scope: firetorpedoes_hitklingbase (level : 3)
 
+; activation record
+%Frame_firetorpedoes_hitklingbase = type
+{
+    ; parameters
+    i32,    ; klingbasenum
+
+    ; variables
+    i32,    ; i
+    i32,    ; kdocked
+    i32,    ; quadx
+    i32,    ; quady
+
+    ; slink
+    %Frame_firetorpedoes*
+};
+
 ; line 656
 ;================================================================================
 ; scope: selfdestruct (level : 2)
+
+; activation record
+%Frame_selfdestruct = type
+{
+    ; variables
+    i8,    ; ch
+
+    ; dummy
+    i8*
+};
 
 ; line 668
 ;================================================================================
 ; scope: command (level : 2)
 
+; activation record
+%Frame_command = type
+{
+    ; variables
+    i8,    ; ch
+    i1,    ; validcommand
+
+    ; dummy
+    i8*
+};
+
 ; line 712
 ;================================================================================
 ; scope: instructions (level : 2)
+
+; activation record
+%Frame_instructions = type
+{
+    ; variables
+    i8,    ; ch
+
+    ; dummy
+    i8*
+};
 
 ; line 715
 ;================================================================================
 ; scope: instructions_spacewait (level : 3)
 
+; activation record
+%Frame_instructions_spacewait = type
+{
+    ; slink
+    %Frame_instructions*
+};
+
 ; line 723
 ;================================================================================
 ; scope: instructions_page1 (level : 3)
+
+; activation record
+%Frame_instructions_page1 = type
+{
+    ; slink
+    %Frame_instructions*
+};
 
 ; line 750
 ;================================================================================
 ; scope: instructions_page2 (level : 3)
 
+; activation record
+%Frame_instructions_page2 = type
+{
+    ; slink
+    %Frame_instructions*
+};
+
 ; line 778
 ;================================================================================
 ; scope: instructions_page3 (level : 3)
+
+; activation record
+%Frame_instructions_page3 = type
+{
+    ; slink
+    %Frame_instructions*
+};
 
 ; line 805
 ;================================================================================
 ; scope: instructions_page4 (level : 3)
 
+; activation record
+%Frame_instructions_page4 = type
+{
+    ; slink
+    %Frame_instructions*
+};
+
 ; line 832
 ;================================================================================
 ; scope: instructions_page5 (level : 3)
+
+; activation record
+%Frame_instructions_page5 = type
+{
+    ; slink
+    %Frame_instructions*
+};
 
 ; line 859
 ;================================================================================
 ; scope: instructions_page6 (level : 3)
 
+; activation record
+%Frame_instructions_page6 = type
+{
+    ; slink
+    %Frame_instructions*
+};
+
 ; line 913
 ;================================================================================
 ; scope: finishgame (level : 2)
+
+; activation record
+%Frame_finishgame = type
+{
+    ; variables
+    i32,    ; rating
+
+    ; dummy
+    i8*
+};
+
 ;================================================================================
 ; metadata
 

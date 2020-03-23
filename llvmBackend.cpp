@@ -624,6 +624,7 @@ void LlvmBackend::_outputMetadata()
 
     std::stringstream code;
 
+    code << "\n";
     code << ";================================================================================\n";
     code << "; metadata\n";
     code << "\n";
