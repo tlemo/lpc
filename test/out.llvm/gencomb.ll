@@ -35,11 +35,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_gen = type
 {
     ; parameters
-    %T_vec,    ; v
+    %T_vec,    ; 0: v
 
     ; variables
-    i32,    ; i
-    i32,    ; j
+    i32,    ; 1: i
+    i32,    ; 2: j
 
     ; dummy
     i8*
@@ -53,10 +53,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_prel = type
 {
     ; parameters
-    %T_vec,    ; v
+    %T_vec,    ; 0: v
 
     ; variables
-    i32,    ; i
+    i32,    ; 1: i
 
     ; dummy
     i8*

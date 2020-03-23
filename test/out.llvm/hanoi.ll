@@ -38,14 +38,14 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_hanoi1 = type
 {
     ; variables
-    i32,    ; i
-    i32,    ; j
-    i32,    ; k
-    i32,    ; k1
-    i32,    ; k2
-    i32,    ; k3
-    i32,    ; l
-    i32,    ; w
+    i32,    ; 0: i
+    i32,    ; 1: j
+    i32,    ; 2: k
+    i32,    ; 3: k1
+    i32,    ; 4: k2
+    i32,    ; 5: k3
+    i32,    ; 6: l
+    i32,    ; 7: w
 
     ; dummy
     i8*
@@ -59,11 +59,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_hanoi2 = type
 {
     ; variables
-    i32,    ; i
-    i32,    ; j
-    i32,    ; k
-    i32,    ; niv
-    i32,    ; ns
+    i32,    ; 0: i
+    i32,    ; 1: j
+    i32,    ; 2: k
+    i32,    ; 3: niv
+    i32,    ; 4: ns
 
     ; dummy
     i8*
@@ -77,12 +77,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_hanoi3 = type
 {
     ; parameters
-    i32,    ; i
-    i32,    ; j
-    i32,    ; n
+    i32,    ; 0: i
+    i32,    ; 1: j
+    i32,    ; 2: n
 
     ; variables
-    i32,    ; k
+    i32,    ; 3: k
 
     ; dummy
     i8*

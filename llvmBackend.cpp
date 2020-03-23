@@ -664,6 +664,8 @@ void LlvmBackend::_outputFrame(obj::Subroutine* pSubroutine)
     {
         auto pExt = ext(pSubroutine);
 
+        int fieldIndex = 0;
+
         assert(pExt->frameName.empty());
         pExt->frameName = _genName("", "%Frame_");
 
@@ -680,7 +682,11 @@ void LlvmBackend::_outputFrame(obj::Subroutine* pSubroutine)
                 const auto* pParamTypeExt = ext(pParam->pType);
                 assert(!pParamTypeExt->genName.empty());
                 code << TAB << pParamTypeExt->genName << ",";
-                code << TAB << "; " << pParam->pId->name << "\n";
+                code << TAB << "; " << fieldIndex << ": " << pParam->pId->name << "\n";
+
+                auto pParamExt = ext(pParam);
+                assert(pParamExt->frameIndex == -1);
+                pParamExt->frameIndex = fieldIndex++;
             }
             code << "\n";
         }
@@ -695,7 +701,11 @@ void LlvmBackend::_outputFrame(obj::Subroutine* pSubroutine)
                 const auto* pVarTypeExt = ext(pVar->pType);
                 assert(!pVarTypeExt->genName.empty());
                 code << TAB << pVarTypeExt->genName << ",";
-                code << TAB << "; " << pVar->pId->name << "\n";
+                code << TAB << "; " << fieldIndex << ": " << pVar->pId->name << "\n";
+
+                auto pVarExt = ext(pVar);
+                assert(pVarExt->frameIndex == -1);
+                pVarExt->frameIndex = fieldIndex++;
             }
             code << "\n";
         }
@@ -707,7 +717,8 @@ void LlvmBackend::_outputFrame(obj::Subroutine* pSubroutine)
             const auto* pParentExt = ext(pSubroutine->parent());
             assert(!pParentExt->frameName.empty());
             code << TAB << "; slink\n";
-            code << TAB << pParentExt->frameName << "*\n";
+            code << TAB << pParentExt->frameName << "*";
+            code << TAB << "; " << fieldIndex << "\n";
         }
         else
         {

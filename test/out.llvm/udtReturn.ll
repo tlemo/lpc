@@ -35,8 +35,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_fooA = type
 {
     ; variables
-    %T_A,    ; _fnvalue
-    %T_A,    ; tmp
+    %T_A,    ; 0: _fnvalue
+    %T_A,    ; 1: tmp
 
     ; dummy
     i8*
@@ -50,7 +50,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_fooS = type
 {
     ; variables
-    %T_S,    ; _fnvalue
+    %T_S,    ; 0: _fnvalue
 
     ; dummy
     i8*
@@ -64,8 +64,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_fooR = type
 {
     ; variables
-    %T_R,    ; _fnvalue
-    %T_R,    ; tmp
+    %T_R,    ; 0: _fnvalue
+    %T_R,    ; 1: tmp
 
     ; dummy
     i8*

@@ -45,11 +45,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_prtlin = type
 {
     ; parameters
-    %T_string80,    ; str
+    %T_string80,    ; 0: str
 
     ; variables
-    i32,    ; i
-    i32,    ; j
+    i32,    ; 1: i
+    i32,    ; 2: j
 
     ; dummy
     i8*
@@ -63,14 +63,14 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_prtlin_prtkey = type
 {
     ; parameters
-    %T_string10,    ; str
+    %T_string10,    ; 0: str
 
     ; variables
-    i32,    ; i
-    i32,    ; j
+    i32,    ; 1: i
+    i32,    ; 2: j
 
     ; slink
-    %Frame_prtlin*
+    %Frame_prtlin*    ; 3
 };
 
 ; line 165
@@ -81,7 +81,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_prterr = type
 {
     ; parameters
-    i32,    ; err
+    i32,    ; 0: err
 
     ; dummy
     i8*
@@ -95,8 +95,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_chkchr = type
 {
     ; variables
-    i8,    ; _fnvalue
-    i8,    ; c
+    i8,    ; 0: _fnvalue
+    i8,    ; 1: c
 
     ; dummy
     i8*
@@ -110,7 +110,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_chkend = type
 {
     ; variables
-    i1,    ; _fnvalue
+    i1,    ; 0: _fnvalue
 
     ; dummy
     i8*
@@ -124,7 +124,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_getchr = type
 {
     ; variables
-    i8,    ; _fnvalue
+    i8,    ; 0: _fnvalue
 
     ; dummy
     i8*
@@ -138,10 +138,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_chknxt = type
 {
     ; parameters
-    i8,    ; c
+    i8,    ; 0: c
 
     ; variables
-    i1,    ; _fnvalue
+    i1,    ; 1: _fnvalue
 
     ; dummy
     i8*
@@ -155,7 +155,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_skpspc = type
 {
     ; variables
-    i8,    ; c
+    i8,    ; 0: c
 
     ; dummy
     i8*
@@ -169,7 +169,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_chksend = type
 {
     ; variables
-    i1,    ; _fnvalue
+    i1,    ; 0: _fnvalue
 
     ; dummy
     i8*
@@ -183,12 +183,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_null = type
 {
     ; parameters
-    %T_string80,    ; str
+    %T_string80,    ; 0: str
 
     ; variables
-    i1,    ; _fnvalue
-    i1,    ; f
-    i32,    ; i
+    i1,    ; 1: _fnvalue
+    i1,    ; 2: f
+    i32,    ; 3: i
 
     ; dummy
     i8*
@@ -202,10 +202,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_digit = type
 {
     ; parameters
-    i8,    ; c
+    i8,    ; 0: c
 
     ; variables
-    i1,    ; _fnvalue
+    i1,    ; 1: _fnvalue
 
     ; dummy
     i8*
@@ -219,10 +219,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_lcase = type
 {
     ; parameters
-    i8,    ; c
+    i8,    ; 0: c
 
     ; variables
-    i8,    ; _fnvalue
+    i8,    ; 1: _fnvalue
 
     ; dummy
     i8*
@@ -236,10 +236,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_alpha = type
 {
     ; parameters
-    i8,    ; c
+    i8,    ; 0: c
 
     ; variables
-    i1,    ; _fnvalue
+    i1,    ; 1: _fnvalue
 
     ; dummy
     i8*
@@ -253,13 +253,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_lint = type
 {
     ; parameters
-    %T_string80,    ; str
+    %T_string80,    ; 0: str
 
     ; variables
-    i32,    ; _fnvalue
-    i1,    ; b
-    i32,    ; i
-    i32,    ; v
+    i32,    ; 1: _fnvalue
+    i1,    ; 2: b
+    i32,    ; 3: i
+    i32,    ; 4: v
 
     ; dummy
     i8*
@@ -273,11 +273,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_schlab = type
 {
     ; parameters
-    i32,    ; lab
+    i32,    ; 0: lab
 
     ; variables
-    i32,    ; _fnvalue
-    i32,    ; i
+    i32,    ; 1: _fnvalue
+    i32,    ; 2: i
 
     ; dummy
     i8*
@@ -291,10 +291,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_inpstr = type
 {
     ; parameters
-    %T_string80,    ; str
+    %T_string80,    ; 0: str
 
     ; variables
-    i32,    ; i
+    i32,    ; 1: i
 
     ; dummy
     i8*
@@ -308,7 +308,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_getvar = type
 {
     ; variables
-    i8,    ; _fnvalue
+    i8,    ; 0: _fnvalue
 
     ; dummy
     i8*
@@ -322,14 +322,14 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_enter = type
 {
     ; parameters
-    %T_string80,    ; str
+    %T_string80,    ; 0: str
 
     ; variables
-    i1,    ; f
-    i32,    ; i
-    i32,    ; j
-    i32,    ; k
-    i32,    ; line
+    i1,    ; 1: f
+    i32,    ; 2: i
+    i32,    ; 3: j
+    i32,    ; 4: k
+    i32,    ; 5: line
 
     ; dummy
     i8*
@@ -343,15 +343,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_keycom = type
 {
     ; parameters
-    %T_string80,    ; str
+    %T_string80,    ; 0: str
 
     ; variables
-    i8,    ; c
-    i1,    ; f
-    i32,    ; i1
-    i32,    ; i2
-    i32,    ; k
-    %T_string80,    ; ts
+    i8,    ; 1: c
+    i1,    ; 2: f
+    i32,    ; 3: i1
+    i32,    ; 4: i2
+    i32,    ; 5: k
+    %T_string80,    ; 6: ts
 
     ; dummy
     i8*
@@ -365,18 +365,18 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_keycom_matstr = type
 {
     ; parameters
-    i32,    ; i
-    %T_string80,    ; stra
-    %T_string10,    ; strb
+    i32,    ; 0: i
+    %T_string80,    ; 1: stra
+    %T_string10,    ; 2: strb
 
     ; variables
-    i1,    ; _fnvalue
-    i1,    ; f
-    i32,    ; i1
-    i32,    ; i2
+    i1,    ; 3: _fnvalue
+    i1,    ; 4: f
+    i32,    ; 5: i1
+    i32,    ; 6: i2
 
     ; slink
-    %Frame_keycom*
+    %Frame_keycom*    ; 7
 };
 
 ; line 540
@@ -387,8 +387,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_getint = type
 {
     ; variables
-    i32,    ; _fnvalue
-    i32,    ; v
+    i32,    ; 0: _fnvalue
+    i32,    ; 1: v
 
     ; dummy
     i8*
@@ -402,11 +402,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_getval = type
 {
     ; parameters
-    %T_string80,    ; str
+    %T_string80,    ; 0: str
 
     ; variables
-    i32,    ; _fnvalue
-    i32,    ; i
+    i32,    ; 1: _fnvalue
+    i32,    ; 2: i
 
     ; dummy
     i8*
@@ -420,12 +420,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_getbval = type
 {
     ; parameters
-    %T_bstring80,    ; str
+    %T_bstring80,    ; 0: str
 
     ; variables
-    i32,    ; _fnvalue
-    i32,    ; i
-    i32,    ; v
+    i32,    ; 1: _fnvalue
+    i32,    ; 2: i
+    i32,    ; 3: v
 
     ; dummy
     i8*
@@ -439,12 +439,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_putbval = type
 {
     ; parameters
-    %T_bstring80,    ; str
-    i32,    ; v
+    %T_bstring80,    ; 0: str
+    i32,    ; 1: v
 
     ; variables
-    i32,    ; i
-    i32,    ; p
+    i32,    ; 2: i
+    i32,    ; 3: p
 
     ; dummy
     i8*
@@ -458,10 +458,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_prtbstr = type
 {
     ; parameters
-    %T_bstring80,    ; bstr
+    %T_bstring80,    ; 0: bstr
 
     ; variables
-    i32,    ; i
+    i32,    ; 1: i
 
     ; dummy
     i8*
@@ -475,10 +475,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_inpbstr = type
 {
     ; parameters
-    %T_bstring80,    ; bstr
+    %T_bstring80,    ; 0: bstr
 
     ; variables
-    i32,    ; i
+    i32,    ; 1: i
 
     ; dummy
     i8*
@@ -492,11 +492,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_cat = type
 {
     ; parameters
-    %T_bstring80,    ; bstra
-    %T_bstring80,    ; bstrb
+    %T_bstring80,    ; 0: bstra
+    %T_bstring80,    ; 1: bstrb
 
     ; variables
-    i32,    ; i
+    i32,    ; 2: i
 
     ; dummy
     i8*
@@ -510,7 +510,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_chkequ = type
 {
     ; variables
-    i1,    ; _fnvalue
+    i1,    ; 0: _fnvalue
 
     ; dummy
     i8*
@@ -524,7 +524,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_chkltn = type
 {
     ; variables
-    i1,    ; _fnvalue
+    i1,    ; 0: _fnvalue
 
     ; dummy
     i8*
@@ -538,7 +538,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_chkgtn = type
 {
     ; variables
-    i1,    ; _fnvalue
+    i1,    ; 0: _fnvalue
 
     ; dummy
     i8*
@@ -574,9 +574,9 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_clear = type
 {
     ; variables
-    i8,    ; c
-    i32,    ; x
-    i32,    ; y
+    i8,    ; 0: c
+    i32,    ; 1: x
+    i32,    ; 2: y
 
     ; dummy
     i8*
@@ -590,7 +590,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_clrvar = type
 {
     ; variables
-    i8,    ; c
+    i8,    ; 0: c
 
     ; dummy
     i8*
@@ -604,7 +604,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_exec = type
 {
     ; variables
-    i8,    ; c
+    i8,    ; 0: c
 
     ; dummy
     i8*
@@ -618,14 +618,14 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_exec_stat = type
 {
     ; variables
-    i1,    ; b
-    i8,    ; c
-    %T_string80,    ; s
-    i32,    ; x
-    i32,    ; y
+    i1,    ; 0: b
+    i8,    ; 1: c
+    %T_string80,    ; 2: s
+    i32,    ; 3: x
+    i32,    ; 4: y
 
     ; slink
-    %Frame_exec*
+    %Frame_exec*    ; 5
 };
 
 ; line 794
@@ -636,7 +636,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_exec_stat_expr = type
 {
     ; slink
-    %Frame_exec_stat*
+    %Frame_exec_stat*    ; 0
 };
 
 ; line 798
@@ -647,7 +647,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_exec_stat_expr_sexpr = type
 {
     ; slink
-    %Frame_exec_stat_expr*
+    %Frame_exec_stat_expr*    ; 0
 };
 
 ; line 802
@@ -658,7 +658,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_exec_stat_expr_sexpr_term = type
 {
     ; slink
-    %Frame_exec_stat_expr_sexpr*
+    %Frame_exec_stat_expr_sexpr*    ; 0
 };
 
 ; line 806
@@ -669,11 +669,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_exec_stat_expr_sexpr_term_factor = type
 {
     ; variables
-    i8,    ; c
-    i32,    ; i
+    i8,    ; 0: c
+    i32,    ; 1: i
 
     ; slink
-    %Frame_exec_stat_expr_sexpr_term*
+    %Frame_exec_stat_expr_sexpr_term*    ; 2
 };
 
 ; line 1105
@@ -684,7 +684,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_exec_stat_let = type
 {
     ; slink
-    %Frame_exec_stat*
+    %Frame_exec_stat*    ; 0
 };
 
 ;================================================================================

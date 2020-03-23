@@ -36,10 +36,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_outter = type
 {
     ; parameters
-    i32,    ; x
+    i32,    ; 0: x
 
     ; variables
-    i32,    ; _fnvalue
+    i32,    ; 1: _fnvalue
 
     ; dummy
     i8*
@@ -53,13 +53,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_outter_inner = type
 {
     ; parameters
-    i32,    ; x
+    i32,    ; 0: x
 
     ; variables
-    i32,    ; _fnvalue
+    i32,    ; 1: _fnvalue
 
     ; slink
-    %Frame_outter*
+    %Frame_outter*    ; 2
 };
 
 ; line 16
@@ -70,10 +70,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_outter_inner_setOutter = type
 {
     ; parameters
-    i32,    ; x
+    i32,    ; 0: x
 
     ; slink
-    %Frame_outter_inner*
+    %Frame_outter_inner*    ; 1
 };
 
 ;================================================================================

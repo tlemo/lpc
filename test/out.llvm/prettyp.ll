@@ -60,9 +60,9 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_GETCHAR = type
 {
     ; parameters
-    %T_CHARINFO,    ; CURRCHAR
-    %T_text,    ; INPUTFILE
-    %T_CHARINFO,    ; NEXTCHAR
+    %T_CHARINFO,    ; 0: CURRCHAR
+    %T_text,    ; 1: INPUTFILE
+    %T_CHARINFO,    ; 2: NEXTCHAR
 
     ; dummy
     i8*
@@ -76,11 +76,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_STORENEXTCHAR = type
 {
     ; parameters
-    %T_CHARINFO,    ; CURRCHAR
-    %T_text,    ; INPUTFILE
-    i32,    ; LENGTH
-    %T_CHARINFO,    ; NEXTCHAR
-    %T_STRING,    ; VALUE
+    %T_CHARINFO,    ; 0: CURRCHAR
+    %T_text,    ; 1: INPUTFILE
+    i32,    ; 2: LENGTH
+    %T_CHARINFO,    ; 3: NEXTCHAR
+    %T_STRING,    ; 4: VALUE
 
     ; dummy
     i8*
@@ -94,11 +94,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_SKIPSPACES = type
 {
     ; parameters
-    i32,    ; CRSBEFORE
-    %T_CHARINFO,    ; CURRCHAR
-    %T_text,    ; INPUTFILE
-    %T_CHARINFO,    ; NEXTCHAR
-    i32,    ; SPACESBEFORE
+    i32,    ; 0: CRSBEFORE
+    %T_CHARINFO,    ; 1: CURRCHAR
+    %T_text,    ; 2: INPUTFILE
+    %T_CHARINFO,    ; 3: NEXTCHAR
+    i32,    ; 4: SPACESBEFORE
 
     ; dummy
     i8*
@@ -112,12 +112,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_GETCOMMENT = type
 {
     ; parameters
-    %T_CHARINFO,    ; CURRCHAR
-    %T_text,    ; INPUTFILE
-    i32,    ; LENGTH
-    i32,    ; NAME
-    %T_CHARINFO,    ; NEXTCHAR
-    %T_STRING,    ; VALUE
+    %T_CHARINFO,    ; 0: CURRCHAR
+    %T_text,    ; 1: INPUTFILE
+    i32,    ; 2: LENGTH
+    i32,    ; 3: NAME
+    %T_CHARINFO,    ; 4: NEXTCHAR
+    %T_STRING,    ; 5: VALUE
 
     ; dummy
     i8*
@@ -131,15 +131,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_IDTYPE = type
 {
     ; parameters
-    i32,    ; LENGTH
-    %T_STRING,    ; VALUE
+    i32,    ; 0: LENGTH
+    %T_STRING,    ; 1: VALUE
 
     ; variables
-    i32,    ; _fnvalue
-    i1,    ; HIT
-    i32,    ; I
-    %T_KEY,    ; KEYVALUE
-    i32,    ; THISKEY
+    i32,    ; 2: _fnvalue
+    i1,    ; 3: HIT
+    i32,    ; 4: I
+    %T_KEY,    ; 5: KEYVALUE
+    i32,    ; 6: THISKEY
 
     ; dummy
     i8*
@@ -153,12 +153,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_GETIDENTIFIER = type
 {
     ; parameters
-    %T_CHARINFO,    ; CURRCHAR
-    %T_text,    ; INPUTFILE
-    i32,    ; LENGTH
-    i32,    ; NAME
-    %T_CHARINFO,    ; NEXTCHAR
-    %T_STRING,    ; VALUE
+    %T_CHARINFO,    ; 0: CURRCHAR
+    %T_text,    ; 1: INPUTFILE
+    i32,    ; 2: LENGTH
+    i32,    ; 3: NAME
+    %T_CHARINFO,    ; 4: NEXTCHAR
+    %T_STRING,    ; 5: VALUE
 
     ; dummy
     i8*
@@ -172,12 +172,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_GETNUMBER = type
 {
     ; parameters
-    %T_CHARINFO,    ; CURRCHAR
-    %T_text,    ; INPUTFILE
-    i32,    ; LENGTH
-    i32,    ; NAME
-    %T_CHARINFO,    ; NEXTCHAR
-    %T_STRING,    ; VALUE
+    %T_CHARINFO,    ; 0: CURRCHAR
+    %T_text,    ; 1: INPUTFILE
+    i32,    ; 2: LENGTH
+    i32,    ; 3: NAME
+    %T_CHARINFO,    ; 4: NEXTCHAR
+    %T_STRING,    ; 5: VALUE
 
     ; dummy
     i8*
@@ -191,12 +191,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_GETCHARLITERAL = type
 {
     ; parameters
-    %T_CHARINFO,    ; CURRCHAR
-    %T_text,    ; INPUTFILE
-    i32,    ; LENGTH
-    i32,    ; NAME
-    %T_CHARINFO,    ; NEXTCHAR
-    %T_STRING,    ; VALUE
+    %T_CHARINFO,    ; 0: CURRCHAR
+    %T_text,    ; 1: INPUTFILE
+    i32,    ; 2: LENGTH
+    i32,    ; 3: NAME
+    %T_CHARINFO,    ; 4: NEXTCHAR
+    %T_STRING,    ; 5: VALUE
 
     ; dummy
     i8*
@@ -210,14 +210,14 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_CHARTYPE = type
 {
     ; parameters
-    %T_CHARINFO,    ; CURRCHAR
-    %T_CHARINFO,    ; NEXTCHAR
+    %T_CHARINFO,    ; 0: CURRCHAR
+    %T_CHARINFO,    ; 1: NEXTCHAR
 
     ; variables
-    i32,    ; _fnvalue
-    i1,    ; HIT
-    %T_SPECIALCHAR,    ; NEXTTWOCHARS
-    i32,    ; THISCHAR
+    i32,    ; 2: _fnvalue
+    i1,    ; 3: HIT
+    %T_SPECIALCHAR,    ; 4: NEXTTWOCHARS
+    i32,    ; 5: THISCHAR
 
     ; dummy
     i8*
@@ -231,12 +231,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_GETSPECIALCHAR = type
 {
     ; parameters
-    %T_CHARINFO,    ; CURRCHAR
-    %T_text,    ; INPUTFILE
-    i32,    ; LENGTH
-    i32,    ; NAME
-    %T_CHARINFO,    ; NEXTCHAR
-    %T_STRING,    ; VALUE
+    %T_CHARINFO,    ; 0: CURRCHAR
+    %T_text,    ; 1: INPUTFILE
+    i32,    ; 2: LENGTH
+    i32,    ; 3: NAME
+    %T_CHARINFO,    ; 4: NEXTCHAR
+    %T_STRING,    ; 5: VALUE
 
     ; dummy
     i8*
@@ -250,12 +250,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_GETNEXTSYMBOL = type
 {
     ; parameters
-    %T_CHARINFO,    ; CURRCHAR
-    %T_text,    ; INPUTFILE
-    i32,    ; LENGTH
-    i32,    ; NAME
-    %T_CHARINFO,    ; NEXTCHAR
-    %T_STRING,    ; VALUE
+    %T_CHARINFO,    ; 0: CURRCHAR
+    %T_text,    ; 1: INPUTFILE
+    i32,    ; 2: LENGTH
+    i32,    ; 3: NAME
+    %T_CHARINFO,    ; 4: NEXTCHAR
+    %T_STRING,    ; 5: VALUE
 
     ; dummy
     i8*
@@ -269,12 +269,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_GETSYMBOL = type
 {
     ; parameters
-    i8*,    ; CURRSYM
-    %T_text,    ; INPUTFILE
-    i8*,    ; NEXTSYM
+    i8*,    ; 0: CURRSYM
+    %T_text,    ; 1: INPUTFILE
+    i8*,    ; 2: NEXTSYM
 
     ; variables
-    i8*,    ; DUMMY
+    i8*,    ; 3: DUMMY
 
     ; dummy
     i8*
@@ -288,21 +288,21 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_INITIALISE = type
 {
     ; parameters
-    %T_CHARINFO,    ; CURRCHAR
-    i32,    ; CURRLINEPOS
-    i32,    ; CURRMARGIN
-    i8*,    ; CURRSYM
-    %T_DBLCHARTABLE,    ; DBLCHAR
-    %T_DBLCHRSET,    ; DBLCHARS
-    %T_text,    ; INPUTFILE
-    %T_KEYWORDTABLE,    ; KEYWORD
-    %T_CHARINFO,    ; NEXTCHAR
-    i8*,    ; NEXTSYM
-    %T_text,    ; OUTPUTFILE
-    %T_OPTIONTABLE,    ; PPOPTION
-    i1,    ; RECORDSEEN
-    %T_SGLCHARTABLE,    ; SGLCHAR
-    i32,    ; TOPOFSTACK
+    %T_CHARINFO,    ; 0: CURRCHAR
+    i32,    ; 1: CURRLINEPOS
+    i32,    ; 2: CURRMARGIN
+    i8*,    ; 3: CURRSYM
+    %T_DBLCHARTABLE,    ; 4: DBLCHAR
+    %T_DBLCHRSET,    ; 5: DBLCHARS
+    %T_text,    ; 6: INPUTFILE
+    %T_KEYWORDTABLE,    ; 7: KEYWORD
+    %T_CHARINFO,    ; 8: NEXTCHAR
+    i8*,    ; 9: NEXTSYM
+    %T_text,    ; 10: OUTPUTFILE
+    %T_OPTIONTABLE,    ; 11: PPOPTION
+    i1,    ; 12: RECORDSEEN
+    %T_SGLCHARTABLE,    ; 13: SGLCHAR
+    i32,    ; 14: TOPOFSTACK
 
     ; dummy
     i8*
@@ -316,7 +316,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_STACKEMPTY = type
 {
     ; variables
-    i1,    ; _fnvalue
+    i1,    ; 0: _fnvalue
 
     ; dummy
     i8*
@@ -330,7 +330,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_STACKFULL = type
 {
     ; variables
-    i1,    ; _fnvalue
+    i1,    ; 0: _fnvalue
 
     ; dummy
     i8*
@@ -344,8 +344,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_POPSTACK = type
 {
     ; parameters
-    i32,    ; INDENTSYMBOL
-    i32,    ; PREVMARGIN
+    i32,    ; 0: INDENTSYMBOL
+    i32,    ; 1: PREVMARGIN
 
     ; dummy
     i8*
@@ -359,8 +359,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_PUSHSTACK = type
 {
     ; parameters
-    i32,    ; INDENTSYMBOL
-    i32,    ; PREVMARGIN
+    i32,    ; 0: INDENTSYMBOL
+    i32,    ; 1: PREVMARGIN
 
     ; dummy
     i8*
@@ -374,12 +374,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_WRITECRS = type
 {
     ; parameters
-    i32,    ; CURRLINEPOS
-    i32,    ; NUMBEROFCRS
-    %T_text,    ; OUTPUTFILE
+    i32,    ; 0: CURRLINEPOS
+    i32,    ; 1: NUMBEROFCRS
+    %T_text,    ; 2: OUTPUTFILE
 
     ; variables
-    i32,    ; I
+    i32,    ; 3: I
 
     ; dummy
     i8*
@@ -393,8 +393,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_INSERTCR = type
 {
     ; parameters
-    i8*,    ; CURRSYM
-    %T_text,    ; OUTPUTFILE
+    i8*,    ; 0: CURRSYM
+    %T_text,    ; 1: OUTPUTFILE
 
     ; dummy
     i8*
@@ -408,8 +408,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_INSERTBLANKLINE = type
 {
     ; parameters
-    i8*,    ; CURRSYM
-    %T_text,    ; OUTPUTFILE
+    i8*,    ; 0: CURRSYM
+    %T_text,    ; 1: OUTPUTFILE
 
     ; dummy
     i8*
@@ -423,11 +423,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_LSHIFTON = type
 {
     ; parameters
-    %T_KEYSYMSET,    ; DINDENTSYMBOLS
+    %T_KEYSYMSET,    ; 0: DINDENTSYMBOLS
 
     ; variables
-    i32,    ; INDENTSYMBOL
-    i32,    ; PREVMARGIN
+    i32,    ; 1: INDENTSYMBOL
+    i32,    ; 2: PREVMARGIN
 
     ; dummy
     i8*
@@ -441,8 +441,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_LSHIFT = type
 {
     ; variables
-    i32,    ; INDENTSYMBOL
-    i32,    ; PREVMARGIN
+    i32,    ; 0: INDENTSYMBOL
+    i32,    ; 1: PREVMARGIN
 
     ; dummy
     i8*
@@ -456,8 +456,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_INSERTSPACE = type
 {
     ; parameters
-    %T_text,    ; OUTPUTFILE
-    i8*,    ; SYMBOL
+    %T_text,    ; 0: OUTPUTFILE
+    i8*,    ; 1: SYMBOL
 
     ; dummy
     i8*
@@ -471,12 +471,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_MOVELINEPOS = type
 {
     ; parameters
-    i32,    ; CURRLINEPOS
-    i32,    ; NEWLINEPOS
-    %T_text,    ; OUTPUTFILE
+    i32,    ; 0: CURRLINEPOS
+    i32,    ; 1: NEWLINEPOS
+    %T_text,    ; 2: OUTPUTFILE
 
     ; variables
-    i32,    ; I
+    i32,    ; 3: I
 
     ; dummy
     i8*
@@ -490,12 +490,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_PRINTSYMBOL = type
 {
     ; parameters
-    i32,    ; CURRLINEPOS
-    i8*,    ; CURRSYM
-    %T_text,    ; OUTPUTFILE
+    i32,    ; 0: CURRLINEPOS
+    i8*,    ; 1: CURRSYM
+    %T_text,    ; 2: OUTPUTFILE
 
     ; variables
-    i32,    ; I
+    i32,    ; 3: I
 
     ; dummy
     i8*
@@ -509,11 +509,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_PPSYMBOL = type
 {
     ; parameters
-    i8*,    ; CURRSYM
-    %T_text,    ; OUTPUTFILE
+    i8*,    ; 0: CURRSYM
+    %T_text,    ; 1: OUTPUTFILE
 
     ; variables
-    i32,    ; NEWLINEPOS
+    i32,    ; 2: NEWLINEPOS
 
     ; dummy
     i8*
@@ -527,11 +527,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_GOBBLE = type
 {
     ; parameters
-    i8*,    ; CURRSYM
-    %T_text,    ; INPUTFILE
-    i8*,    ; NEXTSYM
-    %T_text,    ; OUTPUTFILE
-    %T_KEYSYMSET,    ; TERMINATORS
+    i8*,    ; 0: CURRSYM
+    %T_text,    ; 1: INPUTFILE
+    i8*,    ; 2: NEXTSYM
+    %T_text,    ; 3: OUTPUTFILE
+    %T_KEYSYMSET,    ; 4: TERMINATORS
 
     ; dummy
     i8*
@@ -545,7 +545,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_RSHIFT = type
 {
     ; parameters
-    i32,    ; CURRSYM
+    i32,    ; 0: CURRSYM
 
     ; dummy
     i8*
@@ -559,7 +559,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_RSHIFTTOCLP = type
 {
     ; parameters
-    i32,    ; CURRSYM
+    i32,    ; 0: CURRSYM
 
     ; dummy
     i8*

@@ -68,15 +68,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_load = type
 {
     ; variables
-    i32,    ; bcp
-    i8,    ; ch
-    i32,    ; icp
-    %T_load_array_10,    ; labeltab
-    i32,    ; labelvalue
-    i32,    ; mcp
-    i32,    ; rcp
-    i32,    ; scp
-    %T_load_array_11,    ; word
+    i32,    ; 0: bcp
+    i8,    ; 1: ch
+    i32,    ; 2: icp
+    %T_load_array_10,    ; 3: labeltab
+    i32,    ; 4: labelvalue
+    i32,    ; 5: mcp
+    i32,    ; 6: rcp
+    i32,    ; 7: scp
+    %T_load_array_11,    ; 8: word
 
     ; dummy
     i8*
@@ -90,10 +90,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_load_init = type
 {
     ; variables
-    i32,    ; i
+    i32,    ; 0: i
 
     ; slink
-    %Frame_load*
+    %Frame_load*    ; 1
 };
 
 ; line 202
@@ -104,10 +104,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_load_errorl = type
 {
     ; parameters
-    %T_beta,    ; string
+    %T_beta,    ; 0: string
 
     ; slink
-    %Frame_load*
+    %Frame_load*    ; 1
 };
 
 ; line 208
@@ -118,15 +118,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_load_update = type
 {
     ; parameters
-    i32,    ; x
+    i32,    ; 0: x
 
     ; variables
-    i32,    ; curr
-    i1,    ; endlist
-    i32,    ; succ
+    i32,    ; 1: curr
+    i1,    ; 2: endlist
+    i32,    ; 3: succ
 
     ; slink
-    %Frame_load*
+    %Frame_load*    ; 4
 };
 
 ; line 237
@@ -137,11 +137,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_load_generate = type
 {
     ; variables
-    i1,    ; again
-    i32,    ; x
+    i1,    ; 0: again
+    i32,    ; 1: x
 
     ; slink
-    %Frame_load*
+    %Frame_load*    ; 2
 };
 
 ; line 259
@@ -152,16 +152,16 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_load_assemble = type
 {
     ; variables
-    i32,    ; i
-    i32,    ; lb
-    %T_alfa,    ; name
-    double,    ; r
-    %T_settype,    ; s
-    i32,    ; s1
-    i32,    ; ub
+    i32,    ; 0: i
+    i32,    ; 1: lb
+    %T_alfa,    ; 2: name
+    double,    ; 3: r
+    %T_settype,    ; 4: s
+    i32,    ; 5: s1
+    i32,    ; 6: ub
 
     ; slink
-    %Frame_load*
+    %Frame_load*    ; 7
 };
 
 ; line 264
@@ -172,10 +172,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_load_assemble_lookup = type
 {
     ; parameters
-    i32,    ; x
+    i32,    ; 0: x
 
     ; slink
-    %Frame_load_assemble*
+    %Frame_load_assemble*    ; 1
 };
 
 ; line 273
@@ -186,10 +186,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_load_assemble_labelsearch = type
 {
     ; variables
-    i32,    ; x
+    i32,    ; 0: x
 
     ; slink
-    %Frame_load_assemble*
+    %Frame_load_assemble*    ; 1
 };
 
 ; line 279
@@ -200,7 +200,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_load_assemble_getname = type
 {
     ; slink
-    %Frame_load_assemble*
+    %Frame_load_assemble*    ; 0
 };
 
 ; line 286
@@ -211,10 +211,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_load_assemble_typesymbol = type
 {
     ; variables
-    i32,    ; i
+    i32,    ; 0: i
 
     ; slink
-    %Frame_load_assemble*
+    %Frame_load_assemble*    ; 1
 };
 
 ; line 476
@@ -225,8 +225,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_pmd = type
 {
     ; variables
-    i32,    ; i
-    i32,    ; s
+    i32,    ; 0: i
+    i32,    ; 1: s
 
     ; dummy
     i8*
@@ -240,7 +240,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_pmd_pt = type
 {
     ; slink
-    %Frame_pmd*
+    %Frame_pmd*    ; 0
 };
 
 ; line 500
@@ -251,7 +251,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_errori = type
 {
     ; parameters
-    %T_beta,    ; string
+    %T_beta,    ; 0: string
 
     ; dummy
     i8*
@@ -265,11 +265,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_base = type
 {
     ; parameters
-    i32,    ; ld
+    i32,    ; 0: ld
 
     ; variables
-    i32,    ; _fnvalue
-    i32,    ; ad
+    i32,    ; 1: _fnvalue
+    i32,    ; 2: ad
 
     ; dummy
     i8*
@@ -294,7 +294,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_callsp = type
 {
     ; variables
-    i1,    ; line
+    i1,    ; 0: line
 
     ; dummy
     i8*
@@ -308,13 +308,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_callsp_readi = type
 {
     ; parameters
-    %T_text,    ; f
+    %T_text,    ; 0: f
 
     ; variables
-    i32,    ; ad
+    i32,    ; 1: ad
 
     ; slink
-    %Frame_callsp*
+    %Frame_callsp*    ; 2
 };
 
 ; line 538
@@ -325,13 +325,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_callsp_readr = type
 {
     ; parameters
-    %T_text,    ; f
+    %T_text,    ; 0: f
 
     ; variables
-    i32,    ; ad
+    i32,    ; 1: ad
 
     ; slink
-    %Frame_callsp*
+    %Frame_callsp*    ; 2
 };
 
 ; line 546
@@ -342,14 +342,14 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_callsp_readc = type
 {
     ; parameters
-    %T_text,    ; f
+    %T_text,    ; 0: f
 
     ; variables
-    i32,    ; ad
-    i8,    ; c
+    i32,    ; 1: ad
+    i8,    ; 2: c
 
     ; slink
-    %Frame_callsp*
+    %Frame_callsp*    ; 3
 };
 
 ; line 556
@@ -360,16 +360,16 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_callsp_writestr = type
 {
     ; parameters
-    %T_text,    ; f
+    %T_text,    ; 0: f
 
     ; variables
-    i32,    ; ad
-    i32,    ; i
-    i32,    ; j
-    i32,    ; k
+    i32,    ; 1: ad
+    i32,    ; 2: i
+    i32,    ; 3: j
+    i32,    ; 4: k
 
     ; slink
-    %Frame_callsp*
+    %Frame_callsp*    ; 5
 };
 
 ; line 568
@@ -380,13 +380,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_callsp_getfile = type
 {
     ; parameters
-    %T_text,    ; f
+    %T_text,    ; 0: f
 
     ; variables
-    i32,    ; ad
+    i32,    ; 1: ad
 
     ; slink
-    %Frame_callsp*
+    %Frame_callsp*    ; 2
 };
 
 ; line 575
@@ -397,13 +397,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_callsp_putfile = type
 {
     ; parameters
-    %T_text,    ; f
+    %T_text,    ; 0: f
 
     ; variables
-    i32,    ; ad
+    i32,    ; 1: ad
 
     ; slink
-    %Frame_callsp*
+    %Frame_callsp*    ; 2
 };
 
 ;================================================================================

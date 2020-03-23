@@ -321,8 +321,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_junk1 = type
 {
     ; parameters
-    i32,    ; q
-    i32,    ; z
+    i32,    ; 0: q
+    i32,    ; 1: z
 
     ; dummy
     i8*
@@ -336,7 +336,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_junk2 = type
 {
     ; parameters
-    i32,    ; z
+    i32,    ; 0: z
 
     ; dummy
     i8*
@@ -350,7 +350,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_junk3 = type
 {
     ; parameters
-    %T_string10,    ; p
+    %T_string10,    ; 0: p
 
     ; dummy
     i8*
@@ -364,7 +364,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_junk4 = type
 {
     ; parameters
-    %T_string10,    ; p
+    %T_string10,    ; 0: p
 
     ; dummy
     i8*
@@ -378,10 +378,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_junk5 = type
 {
     ; parameters
-    i32,    ; x
+    i32,    ; 0: x
 
     ; variables
-    i32,    ; _fnvalue
+    i32,    ; 1: _fnvalue
 
     ; dummy
     i8*
@@ -406,15 +406,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_junk7 = type
 {
     ; parameters
-    i32,    ; a
-    i32,    ; b
-    i32,    ; c
+    i32,    ; 0: a
+    i32,    ; 1: b
+    i32,    ; 2: c
 
     ; variables
-    i32,    ; _fnvalue
-    i32,    ; x
-    i32,    ; y
-    i32,    ; z
+    i32,    ; 3: _fnvalue
+    i32,    ; 4: x
+    i32,    ; 5: y
+    i32,    ; 6: z
 
     ; dummy
     i8*
@@ -428,23 +428,23 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_junk8 = type
 {
     ; parameters
-    i32,    ; a
-    %T_arri,    ; ar
-    i1,    ; b
-    i8,    ; c
-    i32,    ; e
-    i32,    ; es
-    i8*,    ; p
-    double,    ; r
-    %T_rec,    ; rc
-    %T_recv,    ; rv
-    i32,    ; s
-    %T_string10,    ; st
-    %T_cset,    ; stc
+    i32,    ; 0: a
+    %T_arri,    ; 1: ar
+    i1,    ; 2: b
+    i8,    ; 3: c
+    i32,    ; 4: e
+    i32,    ; 5: es
+    i8*,    ; 6: p
+    double,    ; 7: r
+    %T_rec,    ; 8: rc
+    %T_recv,    ; 9: rv
+    i32,    ; 10: s
+    %T_string10,    ; 11: st
+    %T_cset,    ; 12: stc
 
     ; variables
-    i8,    ; ci
-    i32,    ; i
+    i8,    ; 13: ci
+    i32,    ; 14: i
 
     ; dummy
     i8*
@@ -462,8 +462,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_junk9 = type
 {
     ; parameters
-    %T_junk9_subroutine_131,    ; junk9
-    %T_junk9_subroutine_132,    ; y
+    %T_junk9_subroutine_131,    ; 0: junk9
+    %T_junk9_subroutine_132,    ; 1: y
 
     ; dummy
     i8*
@@ -477,9 +477,9 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_junk10 = type
 {
     ; parameters
-    i8,    ; junk10
-    i32,    ; x
-    i32,    ; y
+    i8,    ; 0: junk10
+    i32,    ; 1: x
+    i32,    ; 2: y
 
     ; dummy
     i8*
@@ -493,10 +493,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_junk11 = type
 {
     ; parameters
-    i32,    ; x
+    i32,    ; 0: x
 
     ; variables
-    i32,    ; _fnvalue
+    i32,    ; 1: _fnvalue
 
     ; dummy
     i8*
@@ -515,8 +515,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_junk12 = type
 {
     ; parameters
-    %T_junk12_subroutine_133,    ; q
-    %T_junk12_subroutine_134,    ; xq
+    %T_junk12_subroutine_133,    ; 0: q
+    %T_junk12_subroutine_134,    ; 1: xq
 
     ; dummy
     i8*
@@ -533,7 +533,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_junk13 = type
 {
     ; parameters
-    %T_junk13_subroutine_136,    ; xz
+    %T_junk13_subroutine_136,    ; 0: xz
 
     ; dummy
     i8*
@@ -547,8 +547,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_junk14 = type
 {
     ; variables
-    i32,    ; i
-    i32,    ; x
+    i32,    ; 0: i
+    i32,    ; 1: x
 
     ; dummy
     i8*
@@ -562,7 +562,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_junk14_junk15 = type
 {
     ; slink
-    %Frame_junk14*
+    %Frame_junk14*    ; 0
 };
 
 ; line 557
@@ -587,8 +587,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_junk17 = type
 {
     ; parameters
-    i32,    ; i
-    %T_junk17_subroutine_137,    ; x
+    i32,    ; 0: i
+    %T_junk17_subroutine_137,    ; 1: x
 
     ; dummy
     i8*
@@ -602,7 +602,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_junk17_junk18 = type
 {
     ; slink
-    %Frame_junk17*
+    %Frame_junk17*    ; 0
 };
 
 ; line 578
@@ -613,7 +613,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_junk19 = type
 {
     ; variables
-    i8*,    ; p
+    i8*,    ; 0: p
 
     ; dummy
     i8*
@@ -627,7 +627,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_junk20 = type
 {
     ; variables
-    i32,    ; _fnvalue
+    i32,    ; 0: _fnvalue
 
     ; dummy
     i8*
@@ -641,10 +641,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_junk20_inner = type
 {
     ; variables
-    i32,    ; _fnvalue
+    i32,    ; 0: _fnvalue
 
     ; slink
-    %Frame_junk20*
+    %Frame_junk20*    ; 1
 };
 
 ; line 613
@@ -655,12 +655,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_random = type
 {
     ; parameters
-    i32,    ; hi
-    i32,    ; low
+    i32,    ; 0: hi
+    i32,    ; 1: low
 
     ; variables
-    i32,    ; _fnvalue
-    i32,    ; gamma
+    i32,    ; 2: _fnvalue
+    i32,    ; 3: gamma
 
     ; dummy
     i8*

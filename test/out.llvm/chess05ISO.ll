@@ -204,11 +204,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_MAX = type
 {
     ; parameters
-    i32,    ; A
-    i32,    ; B
+    i32,    ; 0: A
+    i32,    ; 1: B
 
     ; variables
-    i32,    ; _fnvalue
+    i32,    ; 2: _fnvalue
 
     ; dummy
     i8*
@@ -222,11 +222,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_MIN = type
 {
     ; parameters
-    i32,    ; A
-    i32,    ; B
+    i32,    ; 0: A
+    i32,    ; 1: B
 
     ; variables
-    i32,    ; _fnvalue
+    i32,    ; 2: _fnvalue
 
     ; dummy
     i8*
@@ -240,11 +240,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_SIGN = type
 {
     ; parameters
-    i32,    ; A
-    i32,    ; B
+    i32,    ; 0: A
+    i32,    ; 1: B
 
     ; variables
-    i32,    ; _fnvalue
+    i32,    ; 2: _fnvalue
 
     ; dummy
     i8*
@@ -258,16 +258,16 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_SORTIT = type
 {
     ; parameters
-    %T_RE,    ; A
-    %T_RF,    ; B
-    i32,    ; C
+    %T_RE,    ; 0: A
+    %T_RF,    ; 1: B
+    i32,    ; 2: C
 
     ; variables
-    %T_RM,    ; INRM
-    i1,    ; INTB
-    i32,    ; INTI
-    i32,    ; INTV
-    i32,    ; INTW
+    %T_RM,    ; 3: INRM
+    i1,    ; 4: INTB
+    i32,    ; 5: INTI
+    i32,    ; 6: INTV
+    i32,    ; 7: INTW
 
     ; dummy
     i8*
@@ -281,12 +281,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_ANDRS = type
 {
     ; parameters
-    %T_RS,    ; A
-    %T_RS,    ; B
-    %T_RS,    ; C
+    %T_RS,    ; 0: A
+    %T_RS,    ; 1: B
+    %T_RS,    ; 2: C
 
     ; variables
-    i32,    ; INTY
+    i32,    ; 3: INTY
 
     ; dummy
     i8*
@@ -300,8 +300,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_CLRRS = type
 {
     ; parameters
-    i32,    ; A
-    %T_RS,    ; C
+    i32,    ; 0: A
+    %T_RS,    ; 1: C
 
     ; dummy
     i8*
@@ -315,11 +315,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_CPYRS = type
 {
     ; parameters
-    %T_RS,    ; A
-    %T_RS,    ; C
+    %T_RS,    ; 0: A
+    %T_RS,    ; 1: C
 
     ; variables
-    i32,    ; INTY
+    i32,    ; 2: INTY
 
     ; dummy
     i8*
@@ -333,12 +333,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_IORRS = type
 {
     ; parameters
-    %T_RS,    ; A
-    %T_RS,    ; B
-    %T_RS,    ; C
+    %T_RS,    ; 0: A
+    %T_RS,    ; 1: B
+    %T_RS,    ; 2: C
 
     ; variables
-    i32,    ; INTY
+    i32,    ; 3: INTY
 
     ; dummy
     i8*
@@ -352,10 +352,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_NEWRS = type
 {
     ; parameters
-    %T_RS,    ; A
+    %T_RS,    ; 0: A
 
     ; variables
-    i32,    ; INTY
+    i32,    ; 1: INTY
 
     ; dummy
     i8*
@@ -369,11 +369,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_NOTRS = type
 {
     ; parameters
-    %T_RS,    ; A
-    %T_RS,    ; C
+    %T_RS,    ; 0: A
+    %T_RS,    ; 1: C
 
     ; variables
-    i32,    ; INTY
+    i32,    ; 2: INTY
 
     ; dummy
     i8*
@@ -387,13 +387,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_NXTTS = type
 {
     ; parameters
-    %T_RS,    ; A
-    i32,    ; B
+    %T_RS,    ; 0: A
+    i32,    ; 1: B
 
     ; variables
-    i1,    ; _fnvalue
-    i32,    ; INTX
-    i32,    ; INTY
+    i1,    ; 2: _fnvalue
+    i32,    ; 3: INTX
+    i32,    ; 4: INTY
 
     ; dummy
     i8*
@@ -407,13 +407,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_CNTRS = type
 {
     ; parameters
-    %T_RS,    ; A
+    %T_RS,    ; 0: A
 
     ; variables
-    i32,    ; _fnvalue
-    i32,    ; IMTS
-    %T_RS,    ; INRS
-    i32,    ; INTS
+    i32,    ; 1: _fnvalue
+    i32,    ; 2: IMTS
+    %T_RS,    ; 3: INRS
+    i32,    ; 4: INTS
 
     ; dummy
     i8*
@@ -427,8 +427,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_SETRS = type
 {
     ; parameters
-    i32,    ; A
-    %T_RS,    ; C
+    i32,    ; 0: A
+    %T_RS,    ; 1: C
 
     ; dummy
     i8*
@@ -442,12 +442,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_SFTRS = type
 {
     ; parameters
-    %T_RS,    ; A
-    %T_RS,    ; B
-    i32,    ; C
+    %T_RS,    ; 0: A
+    %T_RS,    ; 1: B
+    i32,    ; 2: C
 
     ; variables
-    i32,    ; INTS
+    i32,    ; 3: INTS
 
     ; dummy
     i8*
@@ -461,11 +461,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_INRSTB = type
 {
     ; parameters
-    %T_RS,    ; A
-    i32,    ; B
+    %T_RS,    ; 0: A
+    i32,    ; 1: B
 
     ; variables
-    i1,    ; _fnvalue
+    i1,    ; 2: _fnvalue
 
     ; dummy
     i8*
@@ -479,12 +479,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_NULRS = type
 {
     ; parameters
-    %T_RS,    ; A
+    %T_RS,    ; 0: A
 
     ; variables
-    i1,    ; _fnvalue
-    i1,    ; INTB
-    i32,    ; INTY
+    i1,    ; 1: _fnvalue
+    i1,    ; 2: INTB
+    i32,    ; 3: INTY
 
     ; dummy
     i8*
@@ -498,10 +498,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_NULMVB = type
 {
     ; parameters
-    %T_RM,    ; A
+    %T_RM,    ; 0: A
 
     ; variables
-    i1,    ; _fnvalue
+    i1,    ; 1: _fnvalue
 
     ; dummy
     i8*
@@ -515,19 +515,19 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_INICON = type
 {
     ; variables
-    i32,    ; IMTI
-    %T_RS,    ; INRS
-    i32,    ; INTD
-    i32,    ; INTE
-    i32,    ; INTF
-    i32,    ; INTI
-    i32,    ; INTI1
-    i32,    ; INTL
-    i32,    ; INTQ
-    i32,    ; INTR
-    i32,    ; INTT
-    i32,    ; INTX
-    i32,    ; INTY
+    i32,    ; 0: IMTI
+    %T_RS,    ; 1: INRS
+    i32,    ; 2: INTD
+    i32,    ; 3: INTE
+    i32,    ; 4: INTF
+    i32,    ; 5: INTI
+    i32,    ; 6: INTI1
+    i32,    ; 7: INTL
+    i32,    ; 8: INTQ
+    i32,    ; 9: INTR
+    i32,    ; 10: INTT
+    i32,    ; 11: INTX
+    i32,    ; 12: INTY
 
     ; dummy
     i8*
@@ -541,10 +541,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_INICON_INISYN = type
 {
     ; parameters
-    %T_RA,    ; A
+    %T_RA,    ; 0: A
 
     ; slink
-    %Frame_INICON*
+    %Frame_INICON*    ; 1
 };
 
 ; line 698
@@ -555,17 +555,17 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_INICON_INIXTP = type
 {
     ; parameters
-    i32,    ; A
-    i8,    ; B
-    i32,    ; C
-    i32,    ; D
-    i1,    ; E
-    i32,    ; F
-    i32,    ; G
-    i32,    ; H
+    i32,    ; 0: A
+    i8,    ; 1: B
+    i32,    ; 2: C
+    i32,    ; 3: D
+    i1,    ; 4: E
+    i32,    ; 5: F
+    i32,    ; 6: G
+    i32,    ; 7: H
 
     ; slink
-    %Frame_INICON*
+    %Frame_INICON*    ; 8
 };
 
 ; line 1057
@@ -576,11 +576,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_INITAL = type
 {
     ; parameters
-    %T_RB,    ; A
+    %T_RB,    ; 0: A
 
     ; variables
-    i32,    ; INTF
-    i32,    ; INTR
+    i32,    ; 1: INTF
+    i32,    ; 2: INTR
 
     ; dummy
     i8*
@@ -605,7 +605,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_PRIMOV = type
 {
     ; parameters
-    %T_RM,    ; A
+    %T_RM,    ; 0: A
 
     ; dummy
     i8*
@@ -619,11 +619,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_PRINTB = type
 {
     ; parameters
-    %T_RC,    ; A
+    %T_RC,    ; 0: A
 
     ; variables
-    i32,    ; INTF
-    i32,    ; INTR
+    i32,    ; 1: INTF
+    i32,    ; 2: INTR
 
     ; dummy
     i8*
@@ -637,13 +637,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_PRINAM = type
 {
     ; parameters
-    %T_RX,    ; A
+    %T_RX,    ; 0: A
 
     ; variables
-    i32,    ; INTF
-    i32,    ; INTR
-    i32,    ; JNTF
-    i32,    ; JNTR
+    i32,    ; 1: INTF
+    i32,    ; 2: INTR
+    i32,    ; 3: JNTF
+    i32,    ; 4: JNTR
 
     ; dummy
     i8*
@@ -657,8 +657,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_PRISWI = type
 {
     ; parameters
-    %T_RA,    ; A
-    i1,    ; B
+    %T_RA,    ; 0: A
+    i1,    ; 1: B
 
     ; dummy
     i8*
@@ -672,7 +672,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_MBEVAL = type
 {
     ; variables
-    i32,    ; INTI
+    i32,    ; 0: INTI
 
     ; dummy
     i8*
@@ -686,7 +686,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_MBCAPT = type
 {
     ; parameters
-    i32,    ; A
+    i32,    ; 0: A
 
     ; dummy
     i8*
@@ -700,7 +700,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_MBTPAC = type
 {
     ; parameters
-    i32,    ; A
+    i32,    ; 0: A
 
     ; dummy
     i8*
@@ -714,7 +714,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_MBPROM = type
 {
     ; parameters
-    i32,    ; A
+    i32,    ; 0: A
 
     ; dummy
     i8*
@@ -728,7 +728,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_MBMORP = type
 {
     ; parameters
-    i32,    ; A
+    i32,    ; 0: A
 
     ; dummy
     i8*
@@ -742,15 +742,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_ADDATK = type
 {
     ; parameters
-    i32,    ; A
+    i32,    ; 0: A
 
     ; variables
-    i1,    ; INTB
-    i32,    ; INTD
-    i32,    ; INTE
-    i32,    ; INTM
-    i32,    ; INTP
-    i32,    ; INTT
+    i1,    ; 1: INTB
+    i32,    ; 2: INTD
+    i32,    ; 3: INTE
+    i32,    ; 4: INTM
+    i32,    ; 5: INTP
+    i32,    ; 6: INTT
 
     ; dummy
     i8*
@@ -764,8 +764,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_ADDLOC = type
 {
     ; parameters
-    i32,    ; A
-    i32,    ; B
+    i32,    ; 0: A
+    i32,    ; 1: B
 
     ; dummy
     i8*
@@ -790,16 +790,16 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_CUTATK = type
 {
     ; parameters
-    i32,    ; A
+    i32,    ; 0: A
 
     ; variables
-    %T_RS,    ; IMRS
-    %T_RS,    ; INRS
-    i32,    ; INTD
-    i32,    ; INTL
-    i32,    ; INTM
-    i32,    ; INTS
-    i32,    ; INTT
+    %T_RS,    ; 1: IMRS
+    %T_RS,    ; 2: INRS
+    i32,    ; 3: INTD
+    i32,    ; 4: INTL
+    i32,    ; 5: INTM
+    i32,    ; 6: INTS
+    i32,    ; 7: INTT
 
     ; dummy
     i8*
@@ -813,13 +813,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_DELATK = type
 {
     ; parameters
-    i32,    ; A
+    i32,    ; 0: A
 
     ; variables
-    %T_RS,    ; IMRS
-    %T_RS,    ; INRS
-    i32,    ; INTM
-    i32,    ; INTS
+    %T_RS,    ; 1: IMRS
+    %T_RS,    ; 2: INRS
+    i32,    ; 3: INTM
+    i32,    ; 4: INTS
 
     ; dummy
     i8*
@@ -833,15 +833,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_PRPATK = type
 {
     ; parameters
-    i32,    ; A
+    i32,    ; 0: A
 
     ; variables
-    %T_RS,    ; INRS
-    i32,    ; INTD
-    i32,    ; INTL
-    i32,    ; INTM
-    i32,    ; INTS
-    i32,    ; INTT
+    %T_RS,    ; 1: INRS
+    i32,    ; 2: INTD
+    i32,    ; 3: INTL
+    i32,    ; 4: INTM
+    i32,    ; 5: INTS
+    i32,    ; 6: INTT
 
     ; dummy
     i8*
@@ -855,7 +855,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_GAINIT = type
 {
     ; parameters
-    %T_RM,    ; A
+    %T_RM,    ; 0: A
 
     ; dummy
     i8*
@@ -869,7 +869,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_LOSEIT = type
 {
     ; parameters
-    %T_RM,    ; A
+    %T_RM,    ; 0: A
 
     ; dummy
     i8*
@@ -883,7 +883,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_MOVEIT = type
 {
     ; parameters
-    %T_RM,    ; A
+    %T_RM,    ; 0: A
 
     ; dummy
     i8*
@@ -897,7 +897,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_RTRKIT = type
 {
     ; parameters
-    %T_RM,    ; A
+    %T_RM,    ; 0: A
 
     ; dummy
     i8*
@@ -911,7 +911,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_PAWNIT = type
 {
     ; parameters
-    %T_RM,    ; A
+    %T_RM,    ; 0: A
 
     ; dummy
     i8*
@@ -925,11 +925,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_PROACA = type
 {
     ; parameters
-    i32,    ; A
+    i32,    ; 0: A
 
     ; variables
-    %T_RS,    ; IMRS
-    %T_RS,    ; INRS
+    %T_RS,    ; 1: IMRS
+    %T_RS,    ; 2: INRS
 
     ; dummy
     i8*
@@ -943,7 +943,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_PROACS = type
 {
     ; parameters
-    %T_RM,    ; A
+    %T_RM,    ; 0: A
 
     ; dummy
     i8*
@@ -957,7 +957,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_PROMOT = type
 {
     ; parameters
-    %T_RM,    ; A
+    %T_RM,    ; 0: A
 
     ; dummy
     i8*
@@ -971,11 +971,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_CREATE = type
 {
     ; variables
-    %T_RS,    ; INRS
-    i32,    ; INTM
-    i32,    ; INTP
-    i32,    ; INTQ
-    i32,    ; INTS
+    %T_RS,    ; 0: INRS
+    i32,    ; 1: INTM
+    i32,    ; 2: INTP
+    i32,    ; 3: INTQ
+    i32,    ; 4: INTS
 
     ; dummy
     i8*
@@ -989,14 +989,14 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_DNDATE = type
 {
     ; parameters
-    %T_RM,    ; A
+    %T_RM,    ; 0: A
 
     ; variables
-    i32,    ; INTF
-    i32,    ; INTR
-    i32,    ; INTS
-    i32,    ; RKFR
-    i32,    ; RKTO
+    i32,    ; 1: INTF
+    i32,    ; 2: INTR
+    i32,    ; 3: INTS
+    i32,    ; 4: RKFR
+    i32,    ; 5: RKTO
 
     ; dummy
     i8*
@@ -1010,17 +1010,17 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_UPDATE = type
 {
     ; parameters
-    %T_RM,    ; A
+    %T_RM,    ; 0: A
 
     ; variables
-    i1,    ; _fnvalue
-    %T_RS,    ; IMRS
-    %T_RS,    ; INRS
-    i32,    ; INTF
-    i32,    ; INTR
-    i32,    ; INTS
-    i32,    ; RKFR
-    i32,    ; RKTO
+    i1,    ; 1: _fnvalue
+    %T_RS,    ; 2: IMRS
+    %T_RS,    ; 3: INRS
+    i32,    ; 4: INTF
+    i32,    ; 5: INTR
+    i32,    ; 6: INTS
+    i32,    ; 7: RKFR
+    i32,    ; 8: RKTO
 
     ; dummy
     i8*
@@ -1034,11 +1034,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_GENONE = type
 {
     ; parameters
-    i32,    ; A
-    i32,    ; B
+    i32,    ; 0: A
+    i32,    ; 1: B
 
     ; variables
-    %T_RS,    ; INRS
+    %T_RS,    ; 2: INRS
 
     ; dummy
     i8*
@@ -1052,7 +1052,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_PWNPRO = type
 {
     ; variables
-    i32,    ; INTG
+    i32,    ; 0: INTG
 
     ; dummy
     i8*
@@ -1066,13 +1066,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_GENPWN = type
 {
     ; parameters
-    %T_RS,    ; A
-    %T_RS,    ; B
+    %T_RS,    ; 0: A
+    %T_RS,    ; 1: B
 
     ; variables
-    %T_RS,    ; IMRS
-    %T_RS,    ; INRS
-    i32,    ; INTS
+    %T_RS,    ; 2: IMRS
+    %T_RS,    ; 3: INRS
+    i32,    ; 4: INTS
 
     ; dummy
     i8*
@@ -1086,14 +1086,14 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_GENFSL = type
 {
     ; parameters
-    %T_RS,    ; A
+    %T_RS,    ; 0: A
 
     ; variables
-    %T_RS,    ; IMRS
-    i32,    ; IMTS
-    %T_RS,    ; INRS
-    i32,    ; INTS
-    %T_RS,    ; IPRS
+    %T_RS,    ; 1: IMRS
+    i32,    ; 2: IMTS
+    %T_RS,    ; 3: INRS
+    i32,    ; 4: INTS
+    %T_RS,    ; 5: IPRS
 
     ; dummy
     i8*
@@ -1107,14 +1107,14 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_GENTSL = type
 {
     ; parameters
-    %T_RS,    ; A
+    %T_RS,    ; 0: A
 
     ; variables
-    %T_RS,    ; IMRS
-    i32,    ; IMTS
-    %T_RS,    ; INRS
-    i32,    ; INTS
-    %T_RS,    ; IPRS
+    %T_RS,    ; 1: IMRS
+    i32,    ; 2: IMTS
+    %T_RS,    ; 3: INRS
+    i32,    ; 4: INTS
+    %T_RS,    ; 5: IPRS
 
     ; dummy
     i8*
@@ -1128,7 +1128,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_GENCAP = type
 {
     ; variables
-    %T_RS,    ; INRS
+    %T_RS,    ; 0: INRS
 
     ; dummy
     i8*
@@ -1142,9 +1142,9 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_GENCAS = type
 {
     ; variables
-    %T_RS,    ; IMRS
-    %T_RS,    ; INRS
-    i32,    ; INTQ
+    %T_RS,    ; 0: IMRS
+    %T_RS,    ; 1: INRS
+    i32,    ; 2: INTQ
 
     ; dummy
     i8*
@@ -1169,7 +1169,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_LSTMOV = type
 {
     ; variables
-    i32,    ; INTW
+    i32,    ; 0: INTW
 
     ; dummy
     i8*
@@ -1183,13 +1183,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_THEMOV = type
 {
     ; parameters
-    %T_RM,    ; A
+    %T_RM,    ; 0: A
 
     ; variables
-    %T_RS,    ; INRS
-    i1,    ; INTB
-    i32,    ; INTQ
-    i32,    ; INTS
+    %T_RS,    ; 1: INRS
+    i1,    ; 2: INTB
+    i32,    ; 3: INTQ
+    i32,    ; 4: INTS
 
     ; dummy
     i8*
@@ -1203,7 +1203,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_EVALU8 = type
 {
     ; variables
-    i32,    ; INTV
+    i32,    ; 0: INTV
 
     ; dummy
     i8*
@@ -1217,17 +1217,17 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_EVALU8_EVKING = type
 {
     ; parameters
-    %T_RS,    ; A
-    %T_RS,    ; B
+    %T_RS,    ; 0: A
+    %T_RS,    ; 1: B
 
     ; variables
-    i32,    ; _fnvalue
-    %T_RS,    ; INRS
-    i32,    ; INTS
-    i32,    ; INTV
+    i32,    ; 2: _fnvalue
+    %T_RS,    ; 3: INRS
+    i32,    ; 4: INTS
+    i32,    ; 5: INTV
 
     ; slink
-    %Frame_EVALU8*
+    %Frame_EVALU8*    ; 6
 };
 
 ; line 2280
@@ -1238,17 +1238,17 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_EVALU8_EVMOBL = type
 {
     ; parameters
-    i32,    ; A
-    i32,    ; B
+    i32,    ; 0: A
+    i32,    ; 1: B
 
     ; variables
-    i32,    ; _fnvalue
-    %T_RS,    ; INRS
-    i32,    ; INTS
-    i32,    ; INTV
+    i32,    ; 2: _fnvalue
+    %T_RS,    ; 3: INRS
+    i32,    ; 4: INTS
+    i32,    ; 5: INTV
 
     ; slink
-    %Frame_EVALU8*
+    %Frame_EVALU8*    ; 6
 };
 
 ; line 2297
@@ -1259,19 +1259,19 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_EVALU8_EVPAWN = type
 {
     ; parameters
-    %T_RS,    ; A
-    i32,    ; B
-    i32,    ; C
+    %T_RS,    ; 0: A
+    i32,    ; 1: B
+    i32,    ; 2: C
 
     ; variables
-    i32,    ; _fnvalue
-    %T_RS,    ; IMRS
-    %T_RS,    ; INRS
-    i32,    ; INTS
-    i32,    ; INTV
+    i32,    ; 3: _fnvalue
+    %T_RS,    ; 4: IMRS
+    %T_RS,    ; 5: INRS
+    i32,    ; 6: INTS
+    i32,    ; 7: INTV
 
     ; slink
-    %Frame_EVALU8*
+    %Frame_EVALU8*    ; 8
 };
 
 ; line 2332
@@ -1282,18 +1282,18 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_EVALU8_EVROOK = type
 {
     ; parameters
-    %T_RS,    ; A
-    %T_RS,    ; B
+    %T_RS,    ; 0: A
+    %T_RS,    ; 1: B
 
     ; variables
-    i32,    ; _fnvalue
-    %T_RS,    ; INRS
-    i32,    ; INTI
-    i32,    ; INTS
-    i32,    ; INTV
+    i32,    ; 2: _fnvalue
+    %T_RS,    ; 3: INRS
+    i32,    ; 4: INTI
+    i32,    ; 5: INTS
+    i32,    ; 6: INTV
 
     ; slink
-    %Frame_EVALU8*
+    %Frame_EVALU8*    ; 7
 };
 
 ; line 2382
@@ -1304,8 +1304,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_SEARCH = type
 {
     ; variables
-    i32,    ; _fnvalue
-    i1,    ; jumpin
+    i32,    ; 0: _fnvalue
+    i1,    ; 1: jumpin
 
     ; dummy
     i8*
@@ -1319,14 +1319,14 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_SEARCH_NEWBST = type
 {
     ; parameters
-    i32,    ; A
+    i32,    ; 0: A
 
     ; variables
-    %T_RM,    ; INRM
-    i32,    ; INTW
+    %T_RM,    ; 1: INRM
+    i32,    ; 2: INTW
 
     ; slink
-    %Frame_SEARCH*
+    %Frame_SEARCH*    ; 3
 };
 
 ; line 2418
@@ -1337,13 +1337,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_SEARCH_MINMAX = type
 {
     ; parameters
-    i32,    ; A
+    i32,    ; 0: A
 
     ; variables
-    i1,    ; _fnvalue
+    i1,    ; 1: _fnvalue
 
     ; slink
-    %Frame_SEARCH*
+    %Frame_SEARCH*    ; 2
 };
 
 ; line 2440
@@ -1354,7 +1354,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_SEARCH_SCOREM = type
 {
     ; slink
-    %Frame_SEARCH*
+    %Frame_SEARCH*    ; 0
 };
 
 ; line 2453
@@ -1365,15 +1365,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_SEARCH_SELECT = type
 {
     ; variables
-    i1,    ; _fnvalue
-    i32,    ; IMTW
-    i1,    ; INTB
-    i32,    ; INTK
-    i32,    ; INTV
-    i32,    ; INTW
+    i1,    ; 0: _fnvalue
+    i32,    ; 1: IMTW
+    i1,    ; 2: INTB
+    i32,    ; 3: INTK
+    i32,    ; 4: INTV
+    i32,    ; 5: INTW
 
     ; slink
-    %Frame_SEARCH*
+    %Frame_SEARCH*    ; 6
 };
 
 ; line 2467
@@ -1384,7 +1384,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_SEARCH_SELECT_SELDON = type
 {
     ; slink
-    %Frame_SEARCH_SELECT*
+    %Frame_SEARCH_SELECT*    ; 0
 };
 
 ; line 2482
@@ -1395,10 +1395,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_SEARCH_SELECT_SELMOV = type
 {
     ; parameters
-    i32,    ; A
+    i32,    ; 0: A
 
     ; slink
-    %Frame_SEARCH_SELECT*
+    %Frame_SEARCH_SELECT*    ; 1
 };
 
 ; line 2501
@@ -1409,10 +1409,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_SEARCH_SELECT_SELNXT = type
 {
     ; parameters
-    i32,    ; A
+    i32,    ; 0: A
 
     ; slink
-    %Frame_SEARCH_SELECT*
+    %Frame_SEARCH_SELECT*    ; 1
 };
 
 ; line 2513
@@ -1423,10 +1423,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_SEARCH_SELECT_SELANY = type
 {
     ; variables
-    i32,    ; INTW
+    i32,    ; 0: INTW
 
     ; slink
-    %Frame_SEARCH_SELECT*
+    %Frame_SEARCH_SELECT*    ; 1
 };
 
 ; line 2748
@@ -1437,8 +1437,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER = type
 {
     ; variables
-    %T_RA,    ; INRA
-    i32,    ; INTJ
+    %T_RA,    ; 0: INRA
+    i32,    ; 1: INTJ
 
     ; dummy
     i8*
@@ -1452,14 +1452,14 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_RDRERR = type
 {
     ; parameters
-    %T_RN,    ; A
+    %T_RN,    ; 0: A
 
     ; variables
-    i32,    ; INTJ
-    i32,    ; INTN
+    i32,    ; 1: INTJ
+    i32,    ; 2: INTN
 
     ; slink
-    %Frame_READER*
+    %Frame_READER*    ; 3
 };
 
 ; line 2782
@@ -1470,14 +1470,14 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_RDRGNT = type
 {
     ; parameters
-    %T_RA,    ; A
+    %T_RA,    ; 0: A
 
     ; variables
-    i1,    ; _fnvalue
-    i32,    ; INTJ
+    i1,    ; 1: _fnvalue
+    i32,    ; 2: INTJ
 
     ; slink
-    %Frame_READER*
+    %Frame_READER*    ; 3
 };
 
 ; line 2812
@@ -1488,11 +1488,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_RDRSFT = type
 {
     ; variables
-    %T_RA,    ; INRA
-    i1,    ; INTB
+    %T_RA,    ; 0: INRA
+    i1,    ; 1: INTB
 
     ; slink
-    %Frame_READER*
+    %Frame_READER*    ; 2
 };
 
 ; line 2825
@@ -1506,11 +1506,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_RDRCMD = type
 {
     ; parameters
-    %T_RA,    ; A
-    %T_READER_RDRCMD_subroutine_47,    ; XXXCMD
+    %T_RA,    ; 0: A
+    %T_READER_RDRCMD_subroutine_47,    ; 1: XXXCMD
 
     ; slink
-    %Frame_READER*
+    %Frame_READER*    ; 2
 };
 
 ; line 2840
@@ -1521,11 +1521,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_RDLINE = type
 {
     ; variables
-    i8,    ; INTC
-    i32,    ; INTJ
+    i8,    ; 0: INTC
+    i32,    ; 1: INTJ
 
     ; slink
-    %Frame_READER*
+    %Frame_READER*    ; 2
 };
 
 ; line 2867
@@ -1536,11 +1536,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_RDRMOV = type
 {
     ; variables
-    i1,    ; _fnvalue
-    i32,    ; IMTJ
+    i1,    ; 0: _fnvalue
+    i32,    ; 1: IMTJ
 
     ; slink
-    %Frame_READER*
+    %Frame_READER*    ; 2
 };
 
 ; line 2898
@@ -1551,12 +1551,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_RDRNUM = type
 {
     ; variables
-    i32,    ; _fnvalue
-    i1,    ; INTB
-    i32,    ; INTI
+    i32,    ; 0: _fnvalue
+    i1,    ; 1: INTB
+    i32,    ; 2: INTI
 
     ; slink
-    %Frame_READER*
+    %Frame_READER*    ; 3
 };
 
 ; line 2938
@@ -1567,12 +1567,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_BOACMD = type
 {
     ; variables
-    i32,    ; INTM
-    i32,    ; INTS
-    i32,    ; INTS1
+    i32,    ; 0: INTM
+    i32,    ; 1: INTS
+    i32,    ; 2: INTS1
 
     ; slink
-    %Frame_READER*
+    %Frame_READER*    ; 3
 };
 
 ; line 2946
@@ -1583,10 +1583,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_BOACMD_BOAADV = type
 {
     ; parameters
-    i32,    ; A
+    i32,    ; 0: A
 
     ; slink
-    %Frame_READER_BOACMD*
+    %Frame_READER_BOACMD*    ; 1
 };
 
 ; line 2956
@@ -1597,10 +1597,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_BOACMD_BOASTO = type
 {
     ; parameters
-    i32,    ; A
+    i32,    ; 0: A
 
     ; slink
-    %Frame_READER_BOACMD*
+    %Frame_READER_BOACMD*    ; 1
 };
 
 ; line 2996
@@ -1611,7 +1611,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_ENDCMD = type
 {
     ; slink
-    %Frame_READER*
+    %Frame_READER*    ; 0
 };
 
 ; line 3003
@@ -1622,7 +1622,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_GONCMD = type
 {
     ; slink
-    %Frame_READER*
+    %Frame_READER*    ; 0
 };
 
 ; line 3015
@@ -1633,7 +1633,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_INICMD = type
 {
     ; slink
-    %Frame_READER*
+    %Frame_READER*    ; 0
 };
 
 ; line 3022
@@ -1644,7 +1644,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_LETCMD = type
 {
     ; slink
-    %Frame_READER*
+    %Frame_READER*    ; 0
 };
 
 ; line 3027
@@ -1655,11 +1655,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_LETCMD_LETONE = type
 {
     ; parameters
-    %T_RA,    ; A
-    i32,    ; B
+    %T_RA,    ; 0: A
+    i32,    ; 1: B
 
     ; slink
-    %Frame_READER_LETCMD*
+    %Frame_READER_LETCMD*    ; 2
 };
 
 ; line 3076
@@ -1670,7 +1670,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_PLECMD = type
 {
     ; slink
-    %Frame_READER*
+    %Frame_READER*    ; 0
 };
 
 ; line 3081
@@ -1681,11 +1681,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_PLECMD_PRIONE = type
 {
     ; parameters
-    %T_RA,    ; A
-    i32,    ; B
+    %T_RA,    ; 0: A
+    i32,    ; 1: B
 
     ; slink
-    %Frame_READER_PLECMD*
+    %Frame_READER_PLECMD*    ; 2
 };
 
 ; line 3131
@@ -1696,7 +1696,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_PRICMD = type
 {
     ; slink
-    %Frame_READER*
+    %Frame_READER*    ; 0
 };
 
 ; line 3141
@@ -1707,7 +1707,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_PAMCMD = type
 {
     ; slink
-    %Frame_READER*
+    %Frame_READER*    ; 0
 };
 
 ; line 3155
@@ -1718,10 +1718,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_POPCMD = type
 {
     ; variables
-    i32,    ; INTQ
+    i32,    ; 0: INTQ
 
     ; slink
-    %Frame_READER*
+    %Frame_READER*    ; 1
 };
 
 ; line 3173
@@ -1732,10 +1732,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_PMVCMD = type
 {
     ; variables
-    i32,    ; INTW
+    i32,    ; 0: INTW
 
     ; slink
-    %Frame_READER*
+    %Frame_READER*    ; 1
 };
 
 ; line 3190
@@ -1746,7 +1746,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_SWICMD = type
 {
     ; slink
-    %Frame_READER*
+    %Frame_READER*    ; 0
 };
 
 ; line 3195
@@ -1757,14 +1757,14 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_SWICMD_SWIONE = type
 {
     ; parameters
-    %T_RA,    ; A
-    i1,    ; B
+    %T_RA,    ; 0: A
+    i1,    ; 1: B
 
     ; variables
-    i32,    ; IMTJ
+    i32,    ; 2: IMTJ
 
     ; slink
-    %Frame_READER_SWICMD*
+    %Frame_READER_SWICMD*    ; 3
 };
 
 ; line 3241
@@ -1775,11 +1775,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_STACMD = type
 {
     ; variables
-    %T_RA,    ; INRA
-    i32,    ; INTM
+    %T_RA,    ; 0: INRA
+    i32,    ; 1: INTM
 
     ; slink
-    %Frame_READER*
+    %Frame_READER*    ; 2
 };
 
 ; line 3250
@@ -1790,11 +1790,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_STACMD_STAEPF = type
 {
     ; parameters
-    %T_RA,    ; A
-    i32,    ; B
+    %T_RA,    ; 0: A
+    i32,    ; 1: B
 
     ; slink
-    %Frame_READER_STACMD*
+    %Frame_READER_STACMD*    ; 2
 };
 
 ; line 3266
@@ -1805,7 +1805,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_STACMD_STACAK = type
 {
     ; slink
-    %Frame_READER_STACMD*
+    %Frame_READER_STACMD*    ; 0
 };
 
 ; line 3276
@@ -1816,7 +1816,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_STACMD_STACAQ = type
 {
     ; slink
-    %Frame_READER_STACMD*
+    %Frame_READER_STACMD*    ; 0
 };
 
 ; line 3286
@@ -1827,7 +1827,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_STACMD_STADRK = type
 {
     ; slink
-    %Frame_READER_STACMD*
+    %Frame_READER_STACMD*    ; 0
 };
 
 ; line 3293
@@ -1838,7 +1838,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_STACMD_STAENP = type
 {
     ; slink
-    %Frame_READER_STACMD*
+    %Frame_READER_STACMD*    ; 0
 };
 
 ; line 3314
@@ -1849,7 +1849,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_STACMD_STAGOS = type
 {
     ; slink
-    %Frame_READER_STACMD*
+    %Frame_READER_STACMD*    ; 0
 };
 
 ; line 3322
@@ -1860,7 +1860,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_STACMD_STALIT = type
 {
     ; slink
-    %Frame_READER_STACMD*
+    %Frame_READER_STACMD*    ; 0
 };
 
 ; line 3329
@@ -1871,7 +1871,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_STACMD_STANUM = type
 {
     ; slink
-    %Frame_READER_STACMD*
+    %Frame_READER_STACMD*    ; 0
 };
 
 ; line 3336
@@ -1885,11 +1885,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_STACMD_STAOPT = type
 {
     ; parameters
-    %T_RA,    ; A
-    %T_READER_STACMD_STAOPT_subroutine_48,    ; STAXXX
+    %T_RA,    ; 0: A
+    %T_READER_STACMD_STAOPT_subroutine_48,    ; 1: STAXXX
 
     ; slink
-    %Frame_READER_STACMD*
+    %Frame_READER_STACMD*    ; 2
 };
 
 ; line 3368
@@ -1900,7 +1900,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_READER_WHACMD = type
 {
     ; slink
-    %Frame_READER*
+    %Frame_READER*    ; 0
 };
 
 ; line 3410
@@ -1911,11 +1911,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_MINENG = type
 {
     ; parameters
-    %T_RM,    ; A
-    %T_RA,    ; B
+    %T_RM,    ; 0: A
+    %T_RA,    ; 1: B
 
     ; variables
-    i32,    ; INTN
+    i32,    ; 2: INTN
 
     ; dummy
     i8*
@@ -1929,10 +1929,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_MINENG_ADDCHR = type
 {
     ; parameters
-    i8,    ; A
+    i8,    ; 0: A
 
     ; slink
-    %Frame_MINENG*
+    %Frame_MINENG*    ; 1
 };
 
 ; line 3428
@@ -1943,11 +1943,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_MINENG_ADDSQR = type
 {
     ; parameters
-    i32,    ; A
-    %T_RD,    ; B
+    i32,    ; 0: A
+    %T_RD,    ; 1: B
 
     ; slink
-    %Frame_MINENG*
+    %Frame_MINENG*    ; 2
 };
 
 ; line 3478
@@ -1958,14 +1958,14 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_MINENG_ADDWRD = type
 {
     ; parameters
-    %T_RA,    ; A
-    i32,    ; B
+    %T_RA,    ; 0: A
+    i32,    ; 1: B
 
     ; variables
-    i32,    ; INTA
+    i32,    ; 2: INTA
 
     ; slink
-    %Frame_MINENG*
+    %Frame_MINENG*    ; 3
 };
 
 ; line 3491
@@ -1976,15 +1976,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_MINENG_DIFFER = type
 {
     ; parameters
-    %T_RM,    ; A
-    %T_RM,    ; B
+    %T_RM,    ; 0: A
+    %T_RM,    ; 1: B
 
     ; variables
-    i1,    ; _fnvalue
-    i1,    ; INTB
+    i1,    ; 2: _fnvalue
+    i1,    ; 3: INTB
 
     ; slink
-    %Frame_MINENG*
+    %Frame_MINENG*    ; 4
 };
 
 ; line 3516
@@ -1995,13 +1995,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_MINENG_SETSQD = type
 {
     ; parameters
-    i32,    ; A
-    %T_RD,    ; B
-    %T_SR,    ; C
-    %T_SF,    ; O
+    i32,    ; 0: A
+    %T_RD,    ; 1: B
+    %T_SR,    ; 2: C
+    %T_SF,    ; 3: O
 
     ; slink
-    %Frame_MINENG*
+    %Frame_MINENG*    ; 4
 };
 
 ; line 3544
@@ -2012,21 +2012,21 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_MINENG_MINGEN = type
 {
     ; parameters
-    %T_RM,    ; A
-    i32,    ; B
-    i32,    ; C
+    %T_RM,    ; 0: A
+    i32,    ; 1: B
+    i32,    ; 2: C
 
     ; variables
-    %T_SF,    ; INLF
-    %T_SR,    ; INLR
-    %T_SF,    ; INRF
-    %T_SR,    ; INRR
-    i32,    ; INTG
-    i32,    ; INTI
-    i32,    ; INTW
+    %T_SF,    ; 3: INLF
+    %T_SR,    ; 4: INLR
+    %T_SF,    ; 5: INRF
+    %T_SR,    ; 6: INRR
+    i32,    ; 7: INTG
+    i32,    ; 8: INTI
+    i32,    ; 9: INTW
 
     ; slink
-    %Frame_MINENG*
+    %Frame_MINENG*    ; 10
 };
 
 ; line 3635
@@ -2037,7 +2037,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_MYMOVE = type
 {
     ; variables
-    %T_RM,    ; INRM
+    %T_RM,    ; 0: INRM
 
     ; dummy
     i8*
@@ -2051,27 +2051,27 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_YRMOVE = type
 {
     ; variables
-    i1,    ; IFCA
-    i1,    ; IFLD
-    i1,    ; IFLF
-    i1,    ; IFMV
-    i1,    ; IFOO
-    i1,    ; IFPR
-    i1,    ; IFQS
-    i1,    ; IFRD
-    i1,    ; IFRF
-    i32,    ; INCP
-    %T_SF,    ; INLF
-    %T_SR,    ; INLR
-    %T_SF,    ; INRF
-    %T_RM,    ; INRM
-    %T_SR,    ; INRR
-    i1,    ; INTB
-    i8,    ; INTC
-    i32,    ; INTG
-    i32,    ; INTP
-    i32,    ; INTW
-    i1,    ; jumpin
+    i1,    ; 0: IFCA
+    i1,    ; 1: IFLD
+    i1,    ; 2: IFLF
+    i1,    ; 3: IFMV
+    i1,    ; 4: IFOO
+    i1,    ; 5: IFPR
+    i1,    ; 6: IFQS
+    i1,    ; 7: IFRD
+    i1,    ; 8: IFRF
+    i32,    ; 9: INCP
+    %T_SF,    ; 10: INLF
+    %T_SR,    ; 11: INLR
+    %T_SF,    ; 12: INRF
+    %T_RM,    ; 13: INRM
+    %T_SR,    ; 14: INRR
+    i1,    ; 15: INTB
+    i8,    ; 16: INTC
+    i32,    ; 17: INTG
+    i32,    ; 18: INTP
+    i32,    ; 19: INTW
+    i1,    ; 20: jumpin
 
     ; dummy
     i8*
@@ -2085,7 +2085,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_YRMOVE_YRMHIT = type
 {
     ; slink
-    %Frame_YRMOVE*
+    %Frame_YRMOVE*    ; 0
 };
 
 ; line 3714
@@ -2096,7 +2096,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_YRMOVE_YRMCOM = type
 {
     ; slink
-    %Frame_YRMOVE*
+    %Frame_YRMOVE*    ; 0
 };
 
 ; line 3738
@@ -2107,7 +2107,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_YRMOVE_YRMCAP = type
 {
     ; slink
-    %Frame_YRMOVE*
+    %Frame_YRMOVE*    ; 0
 };
 
 ; line 3745
@@ -2118,7 +2118,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_YRMOVE_YRMCAS = type
 {
     ; slink
-    %Frame_YRMOVE*
+    %Frame_YRMOVE*    ; 0
 };
 
 ; line 3752
@@ -2129,7 +2129,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_YRMOVE_YRMCPC = type
 {
     ; slink
-    %Frame_YRMOVE*
+    %Frame_YRMOVE*    ; 0
 };
 
 ; line 3765
@@ -2140,7 +2140,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_YRMOVE_YRMCQS = type
 {
     ; slink
-    %Frame_YRMOVE*
+    %Frame_YRMOVE*    ; 0
 };
 
 ; line 3772
@@ -2151,7 +2151,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_YRMOVE_YRMLKQ = type
 {
     ; slink
-    %Frame_YRMOVE*
+    %Frame_YRMOVE*    ; 0
 };
 
 ; line 3783
@@ -2162,7 +2162,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_YRMOVE_YRMLRB = type
 {
     ; slink
-    %Frame_YRMOVE*
+    %Frame_YRMOVE*    ; 0
 };
 
 ; line 3795
@@ -2173,7 +2173,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_YRMOVE_YRMLRK = type
 {
     ; slink
-    %Frame_YRMOVE*
+    %Frame_YRMOVE*    ; 0
 };
 
 ; line 3823
@@ -2184,7 +2184,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_YRMOVE_YRMNUL = type
 {
     ; slink
-    %Frame_YRMOVE*
+    %Frame_YRMOVE*    ; 0
 };
 
 ; line 3829
@@ -2195,7 +2195,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_YRMOVE_YRMPCM = type
 {
     ; slink
-    %Frame_YRMOVE*
+    %Frame_YRMOVE*    ; 0
 };
 
 ; line 3842
@@ -2206,7 +2206,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_YRMOVE_YRMPRO = type
 {
     ; slink
-    %Frame_YRMOVE*
+    %Frame_YRMOVE*    ; 0
 };
 
 ; line 3855
@@ -2217,7 +2217,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_YRMOVE_YRMRKQ = type
 {
     ; slink
-    %Frame_YRMOVE*
+    %Frame_YRMOVE*    ; 0
 };
 
 ; line 3866
@@ -2228,7 +2228,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_YRMOVE_YRMRRB = type
 {
     ; slink
-    %Frame_YRMOVE*
+    %Frame_YRMOVE*    ; 0
 };
 
 ; line 3878
@@ -2239,7 +2239,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_YRMOVE_YRMRRK = type
 {
     ; slink
-    %Frame_YRMOVE*
+    %Frame_YRMOVE*    ; 0
 };
 
 ; line 3906
@@ -2253,15 +2253,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_YRMOVE_NCHIN = type
 {
     ; parameters
-    %T_SC,    ; A
-    %T_YRMOVE_NCHIN_subroutine_49,    ; YRMXXX
+    %T_SC,    ; 0: A
+    %T_YRMOVE_NCHIN_subroutine_49,    ; 1: YRMXXX
 
     ; variables
-    i1,    ; _fnvalue
-    i1,    ; INTB
+    i1,    ; 2: _fnvalue
+    i1,    ; 3: INTB
 
     ; slink
-    %Frame_YRMOVE*
+    %Frame_YRMOVE*    ; 4
 };
 
 ;================================================================================

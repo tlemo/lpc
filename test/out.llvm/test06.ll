@@ -28,7 +28,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_init = type
 {
     ; parameters
-    i8*,    ; pointer
+    i8*,    ; 0: pointer
 
     ; dummy
     i8*
@@ -42,8 +42,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_setValue = type
 {
     ; parameters
-    i8*,    ; pointer
-    i32,    ; value
+    i8*,    ; 0: pointer
+    i32,    ; 1: value
 
     ; dummy
     i8*
@@ -57,7 +57,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_free = type
 {
     ; parameters
-    i8*,    ; pointer
+    i8*,    ; 0: pointer
 
     ; dummy
     i8*

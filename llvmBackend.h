@@ -94,11 +94,13 @@ struct ConstExt
 struct VarExt
 {
     string genName;
+    int frameIndex = -1;
 };
 
 struct ParamExt
 {
     string genName;
+    int frameIndex = -1;
 };
 
 struct SubroutineExt

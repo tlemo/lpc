@@ -31,7 +31,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_foo = type
 {
     ; variables
-    i8*,    ; p
+    i8*,    ; 0: p
 
     ; dummy
     i8*

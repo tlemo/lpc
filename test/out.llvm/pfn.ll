@@ -27,7 +27,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_foo = type
 {
     ; variables
-    i32,    ; fooV
+    i32,    ; 0: fooV
 
     ; dummy
     i8*
@@ -41,13 +41,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_foo_testPfn = type
 {
     ; parameters
-    i32,    ; i
+    i32,    ; 0: i
 
     ; variables
-    i32,    ; _fnvalue
+    i32,    ; 1: _fnvalue
 
     ; slink
-    %Frame_foo*
+    %Frame_foo*    ; 2
 };
 
 ; line 17
@@ -61,15 +61,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_foo_bar1 = type
 {
     ; parameters
-    i32,    ; i
-    %T_foo_bar1_subroutine_2,    ; pfn
+    i32,    ; 0: i
+    %T_foo_bar1_subroutine_2,    ; 1: pfn
 
     ; variables
-    i32,    ; bar1V
-    i32,    ; tmp
+    i32,    ; 2: bar1V
+    i32,    ; 3: tmp
 
     ; slink
-    %Frame_foo*
+    %Frame_foo*    ; 4
 };
 
 ; line 29
@@ -83,13 +83,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_foo_bar2 = type
 {
     ; parameters
-    %T_foo_bar2_subroutine_3,    ; pfn
+    %T_foo_bar2_subroutine_3,    ; 0: pfn
 
     ; variables
-    i32,    ; bar2V
+    i32,    ; 1: bar2V
 
     ; slink
-    %Frame_foo*
+    %Frame_foo*    ; 2
 };
 
 ; line 32
@@ -103,14 +103,14 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_foo_bar2_moo = type
 {
     ; parameters
-    %T_foo_bar2_moo_subroutine_4,    ; pfn
+    %T_foo_bar2_moo_subroutine_4,    ; 0: pfn
 
     ; variables
-    i32,    ; mooV
-    i32,    ; tmp
+    i32,    ; 1: mooV
+    i32,    ; 2: tmp
 
     ; slink
-    %Frame_foo_bar2*
+    %Frame_foo_bar2*    ; 3
 };
 
 ; line 44
@@ -121,13 +121,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_foo_bar2_testPfn = type
 {
     ; parameters
-    i32,    ; i
+    i32,    ; 0: i
 
     ; variables
-    i32,    ; _fnvalue
+    i32,    ; 1: _fnvalue
 
     ; slink
-    %Frame_foo_bar2*
+    %Frame_foo_bar2*    ; 2
 };
 
 ; line 59
@@ -138,10 +138,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_foo_procPfn = type
 {
     ; parameters
-    i32,    ; i
+    i32,    ; 0: i
 
     ; slink
-    %Frame_foo*
+    %Frame_foo*    ; 1
 };
 
 ;================================================================================

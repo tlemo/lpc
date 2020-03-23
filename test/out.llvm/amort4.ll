@@ -35,8 +35,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_CalculatePayment = type
 {
     ; variables
-    i32,    ; Index
-    double,    ; Temp
+    i32,    ; 0: Index
+    double,    ; 1: Temp
 
     ; dummy
     i8*
@@ -72,8 +72,8 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_CalculateAndPrint = type
 {
     ; variables
-    double,    ; InterestPayment
-    double,    ; PrincipalPayment
+    double,    ; 0: InterestPayment
+    double,    ; 1: PrincipalPayment
 
     ; dummy
     i8*

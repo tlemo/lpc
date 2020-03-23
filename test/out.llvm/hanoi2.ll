@@ -38,12 +38,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_punere = type
 {
     ; parameters
-    i32,    ; x
-    i32,    ; y
-    i32,    ; z
+    i32,    ; 0: x
+    i32,    ; 1: y
+    i32,    ; 2: z
 
     ; variables
-    i8*,    ; p
+    i8*,    ; 3: p
 
     ; dummy
     i8*

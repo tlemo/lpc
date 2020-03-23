@@ -35,11 +35,11 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_initinteger = type
 {
     ; parameters
-    i32,    ; n
-    %T_digitarray,    ; x
+    i32,    ; 0: n
+    %T_digitarray,    ; 1: x
 
     ; variables
-    i32,    ; i
+    i32,    ; 2: i
 
     ; dummy
     i8*
@@ -53,15 +53,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_divide = type
 {
     ; parameters
-    i32,    ; n
-    %T_digitarray,    ; x
-    i32,    ; xs
-    %T_digitarray,    ; y
-    i32,    ; ys
+    i32,    ; 0: n
+    %T_digitarray,    ; 1: x
+    i32,    ; 2: xs
+    %T_digitarray,    ; 3: y
+    i32,    ; 4: ys
 
     ; variables
-    i32,    ; c
-    i32,    ; i
+    i32,    ; 5: c
+    i32,    ; 6: i
 
     ; dummy
     i8*
@@ -75,13 +75,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_add = type
 {
     ; parameters
-    %T_digitarray,    ; s
-    %T_digitarray,    ; x
-    i32,    ; xs
+    %T_digitarray,    ; 0: s
+    %T_digitarray,    ; 1: x
+    i32,    ; 2: xs
 
     ; variables
-    i32,    ; c
-    i32,    ; i
+    i32,    ; 3: c
+    i32,    ; 4: i
 
     ; dummy
     i8*
@@ -95,13 +95,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_sub = type
 {
     ; parameters
-    %T_digitarray,    ; s
-    %T_digitarray,    ; x
-    i32,    ; xs
+    %T_digitarray,    ; 0: s
+    %T_digitarray,    ; 1: x
+    i32,    ; 2: xs
 
     ; variables
-    i32,    ; c
-    i32,    ; i
+    i32,    ; 3: c
+    i32,    ; 4: i
 
     ; dummy
     i8*

@@ -32,12 +32,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_f = type
 {
     ; parameters
-    i32,    ; i
-    %T_vec,    ; x
+    i32,    ; 0: i
+    %T_vec,    ; 1: x
 
     ; variables
-    i1,    ; _fnvalue
-    i32,    ; j
+    i1,    ; 2: _fnvalue
+    i32,    ; 3: j
 
     ; dummy
     i8*

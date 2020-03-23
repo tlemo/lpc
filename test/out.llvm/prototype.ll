@@ -40,13 +40,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_foo = type
 {
     ; parameters
-    %T_foo_subroutine_6,    ; pfn
+    %T_foo_subroutine_6,    ; 0: pfn
 
     ; variables
-    i32,    ; _fnvalue
-    i32,    ; i
-    i8*,    ; p
-    %T_UNION,    ; u
+    i32,    ; 1: _fnvalue
+    i32,    ; 2: i
+    i8*,    ; 3: p
+    %T_UNION,    ; 4: u
 
     ; dummy
     i8*
@@ -60,7 +60,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_test = type
 {
     ; parameters
-    i32,    ; y
+    i32,    ; 0: y
 
     ; dummy
     i8*
@@ -74,15 +74,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 %Frame_test_bar = type
 {
     ; parameters
-    %T_REC,    ; r
-    %T_UNION,    ; u
-    i32,    ; x
+    %T_REC,    ; 0: r
+    %T_UNION,    ; 1: u
+    i32,    ; 2: x
 
     ; variables
-    i32,    ; _fnvalue
+    i32,    ; 3: _fnvalue
 
     ; slink
-    %Frame_test*
+    %Frame_test*    ; 4
 };
 
 ;================================================================================
