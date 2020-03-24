@@ -707,6 +707,8 @@ void LlvmBackend::_outputFrame(obj::Subroutine* pSubroutine)
                 assert(pVarExt->frameIndex == -1);
                 pVarExt->frameIndex = fieldIndex++;
 
+                // TODO: a better way to locate fnvalue?
+                //
                 if (pVar->pId->name == "_fnvalue")
                 {
                     assert(m_pFnValue == nullptr);
