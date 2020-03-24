@@ -302,6 +302,9 @@ void declareParams(obj::Subroutine* pSubroutine)
             context()->symbolTable()->currentScope());
         Symbol* pSymbol = new Symbol(pId, pVar);
         context()->symbolTable()->addSymbol(pSymbol);
+        
+        assert(pSubroutine->pFnValue == nullptr || context()->illFormed());
+        pSubroutine->pFnValue = pVar;
     }
 }
 

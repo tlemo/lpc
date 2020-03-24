@@ -417,7 +417,8 @@ AssignStm::AssignStm(Expr* pLValue, Expr* pRValue, int line) :
 
         if(pFunc->pType->isFunction())
         {
-            pLValue = lookupObject(new Identifier("_fnvalue", line), false, pFunc->pScope);
+            assert(pFunc->pFnValue != nullptr);
+            pLValue = new ast::VarExpr(pFunc->pFnValue, line);
         }
         else
         {

@@ -37,8 +37,9 @@ protected:
 public:
     virtual void error(int line, const char* msg, ...) = 0;
     virtual void warning(int line, const char* msg, ...) = 0;
-
     virtual void info(const char* msg, ...) = 0;
+
+    virtual bool illFormed() const = 0;
     
     virtual SymbolTable* symbolTable() = 0;
     virtual CommandLine* commandLine() = 0;

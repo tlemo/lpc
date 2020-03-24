@@ -117,12 +117,10 @@ public:
         setContext(nullptr);
     }
 
-    int errorsCount() const { return m_errorsCount; }
-    
     // implementation of the CompilationContext interface
     //
 public:
-    virtual void error(int line, const char* msg, ...)
+    void error(int line, const char* msg, ...) override
     {
         printf("! error on line %d: ", line);
 
@@ -136,7 +134,7 @@ public:
         ++m_errorsCount;
     }
 
-    virtual void warning(int line, const char* msg, ...)
+    void warning(int line, const char* msg, ...) override
     {
         if(m_enableWarnings)
         {
@@ -153,7 +151,7 @@ public:
         ++m_warningsCount;
     }
     
-    virtual void info(const char* msg, ...)
+    void info(const char* msg, ...) override
     {
         if(m_enableLogging)
         {
@@ -167,18 +165,23 @@ public:
             printf("\n");
         }
     }
+
+    bool illFormed() const override
+    {
+        return m_errorsCount > 0;
+    }
     
-    virtual SymbolTable* symbolTable()
+    SymbolTable* symbolTable() override
     {
         return &m_symbolTable;
     }
 
-    virtual CommandLine* commandLine()
+    CommandLine* commandLine() override
     {
         return &m_cmdLine;
     }
 
-    virtual HeapManager* heapManager()
+    HeapManager* heapManager() override
     {
         return &m_heapManager;
     }

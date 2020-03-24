@@ -63,7 +63,7 @@ int main(int argc, const char* argv[])
     {
         Compiler compiler;
         compiler.compile(argc, argv);
-        errcode = compiler.errorsCount() != 0;
+        errcode = compiler.illFormed() ? 1 : 0;
     }
     catch(const Exception& e)
     {

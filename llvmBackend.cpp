@@ -706,14 +706,6 @@ void LlvmBackend::_outputFrame(obj::Subroutine* pSubroutine)
                 auto pVarExt = ext(pVar);
                 assert(pVarExt->frameIndex == -1);
                 pVarExt->frameIndex = fieldIndex++;
-
-                // TODO: a better way to locate fnvalue?
-                //
-                if (pVar->pId->name == "_fnvalue")
-                {
-                    assert(m_pFnValue == nullptr);
-                    m_pFnValue = pVar;
-                }
             }
             code << "\n";
         }
@@ -793,11 +785,11 @@ void LlvmBackend::_outputSubroutine(obj::Subroutine* pSubroutine)
     
     if (pType->isFunction())
     {
-        assert(m_pFnValue != nullptr);
+        assert(pSubroutine->pFnValue != nullptr);
         const auto& returnType = ext(pType->returnType())->genName;
         code << TAB << "%2 = getelementptr inbounds " << pExt->frameName << ", " <<
             pExt->frameName << "* %1, i32 0, " <<
-            "i32 " << ext(m_pFnValue)->frameIndex << "\n";
+            "i32 " << ext(pSubroutine->pFnValue)->frameIndex << "\n";
         code << TAB << "%3 = load " << returnType << ", " << returnType << "* %2\n";
         code << TAB << "ret " << returnType << " %3\n";
     }

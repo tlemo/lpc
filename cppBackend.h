@@ -901,8 +901,9 @@ private:
 
         if(pSubroutine->pType->isFunction())
         {
+            assert(pSubroutine->pFnValue != nullptr);
             statements << "\n// epilogue\n";
-            statements << "return _F._fnvalue;\n";
+            statements << "return _F." << pSubroutine->pFnValue->pId->name << ";\n";
         }
 
         code << _nonlocalGotoWrapper(statements.str());

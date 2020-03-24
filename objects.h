@@ -221,15 +221,19 @@ typedef std::list<Parameter*> ParamList;
 //
 struct Subroutine : private _DontCopy
 {
-    Identifier* pId;
-    ts::SubroutineType* pType;
-    ast::Stm* pBody;
-    int defLine;
+    Identifier* pId = nullptr;
+    ts::SubroutineType* pType = nullptr;
+    ast::Stm* pBody = nullptr;
+    int defLine = -1;
 
     // the subroutine's own scope
     // (the visibility scope is the parent scope)
     //
-    Scope* pScope;
+    Scope* pScope = nullptr;
+
+    // return value (functions only)
+    //
+    obj::Variable* pFnValue = nullptr;
 
 public:
     // extension point (backend-specific information for example)
@@ -240,9 +244,7 @@ public:
     Subroutine(Identifier* pId, ts::SubroutineType* pType) :
         pId(pId), 
         pType(pType),
-        defLine(pId->line), 
-        pBody(nullptr),
-        pScope(nullptr)
+        defLine(pId->line)
     {
     }
 

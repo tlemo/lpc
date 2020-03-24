@@ -1224,10 +1224,8 @@ private:
 
         if(pSubroutine->pType->isFunction())
         {
-            auto id = new Identifier("_fnvalue");
-            auto pReturnType = pSubroutine->pType->returnType();
-            auto pFnValue = new obj::Variable(id, pReturnType, pSubroutine->pScope);
-            auto pFnValueExpr = new ast::VarExpr(pFnValue, NO_LOCATION);
+            assert(pSubroutine->pFnValue != nullptr);
+            auto pFnValueExpr = new ast::VarExpr(pSubroutine->pFnValue, NO_LOCATION);
             code << gen(pFnValueExpr);
         }
 

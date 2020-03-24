@@ -301,7 +301,6 @@ private:
     ts::TypeList m_typeList;
     obj::VarList m_varList;
     obj::ParamList m_paramList;
-    obj::Variable* m_pFnValue = nullptr;
 
     // global (per program) state
     //
@@ -453,7 +452,6 @@ private:
         m_typeList.clear();
         m_varList.clear();
         m_paramList.clear();
-        m_pFnValue = nullptr;
 
         // generate symbols (types, consts, locals...)
         //
