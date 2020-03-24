@@ -30,6 +30,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @nn = dso_local global i32 zeroinitializer
 @S = dso_local global %T_array_4 zeroinitializer
 
+; procedure body
+define void @P_()
+{
+    ret void
+}
+
 ; line 5
 ;================================================================================
 ; scope: hanoi1 (level : 2)
@@ -51,6 +57,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_hanoi1()
+{
+    %1 = alloca %Frame_hanoi1, align 8
+    ret void
+}
+
 ; line 19
 ;================================================================================
 ; scope: hanoi2 (level : 2)
@@ -68,6 +81,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_hanoi2()
+{
+    %1 = alloca %Frame_hanoi2, align 8
+    ret void
+}
 
 ; line 38
 ;================================================================================
@@ -87,6 +107,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_hanoi3()
+{
+    %1 = alloca %Frame_hanoi3, align 8
+    ret void
+}
 
 ;================================================================================
 ; metadata

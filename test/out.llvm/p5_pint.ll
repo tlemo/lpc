@@ -81,6 +81,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @srclin = dso_local global i32 zeroinitializer
 @store = dso_local global %T_array_12 zeroinitializer
 
+; procedure body
+define void @P_()
+{
+    ret void
+}
+
 ; line 499
 ;================================================================================
 ; scope: getint (level : 2)
@@ -103,6 +109,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; function body
+define i32 @F_getint()
+{
+    %1 = alloca %Frame_getint, align 8
+    %2 = getelementptr inbounds %Frame_getint, %Frame_getint* %1, i32 0, i32 1
+    %3 = load i32, i32* %2
+    ret i32 %3
+}
 
 ; line 517
 ;================================================================================
@@ -127,6 +142,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_putint()
+{
+    %1 = alloca %Frame_putint, align 8
+    ret void
+}
+
 ; line 534
 ;================================================================================
 ; scope: getrel (level : 2)
@@ -149,6 +171,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; function body
+define double @F_getrel()
+{
+    %1 = alloca %Frame_getrel, align 8
+    %2 = getelementptr inbounds %Frame_getrel, %Frame_getrel* %1, i32 0, i32 1
+    %3 = load double, double* %2
+    ret double %3
+}
 
 ; line 551
 ;================================================================================
@@ -173,6 +204,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_putrel()
+{
+    %1 = alloca %Frame_putrel, align 8
+    ret void
+}
+
 ; line 568
 ;================================================================================
 ; scope: getbol (level : 2)
@@ -191,6 +229,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; function body
+define i1 @F_getbol()
+{
+    %1 = alloca %Frame_getbol, align 8
+    %2 = getelementptr inbounds %Frame_getbol, %Frame_getbol* %1, i32 0, i32 1
+    %3 = load i1, i1* %2
+    ret i1 %3
+}
+
 ; line 579
 ;================================================================================
 ; scope: putbol (level : 2)
@@ -205,6 +252,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_putbol()
+{
+    %1 = alloca %Frame_putbol, align 8
+    ret void
+}
 
 ; line 587
 ;================================================================================
@@ -229,6 +283,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_getset()
+{
+    %1 = alloca %Frame_getset, align 8
+    ret void
+}
+
 ; line 604
 ;================================================================================
 ; scope: putset (level : 2)
@@ -252,6 +313,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_putset()
+{
+    %1 = alloca %Frame_putset, align 8
+    ret void
+}
+
 ; line 621
 ;================================================================================
 ; scope: getchr (level : 2)
@@ -269,6 +337,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; function body
+define i8 @F_getchr()
+{
+    %1 = alloca %Frame_getchr, align 8
+    %2 = getelementptr inbounds %Frame_getchr, %Frame_getchr* %1, i32 0, i32 1
+    %3 = load i8, i8* %2
+    ret i8 %3
+}
+
 ; line 629
 ;================================================================================
 ; scope: putchr (level : 2)
@@ -283,6 +360,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_putchr()
+{
+    %1 = alloca %Frame_putchr, align 8
+    ret void
+}
 
 ; line 637
 ;================================================================================
@@ -307,6 +391,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; function body
+define i32 @F_getadr()
+{
+    %1 = alloca %Frame_getadr, align 8
+    %2 = getelementptr inbounds %Frame_getadr, %Frame_getadr* %1, i32 0, i32 1
+    %3 = load i32, i32* %2
+    ret i32 %3
+}
+
 ; line 654
 ;================================================================================
 ; scope: putadr (level : 2)
@@ -330,6 +423,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_putadr()
+{
+    %1 = alloca %Frame_putadr, align 8
+    ret void
+}
+
 ; line 673
 ;================================================================================
 ; scope: swpstk (level : 2)
@@ -352,6 +452,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_swpstk()
+{
+    %1 = alloca %Frame_swpstk, align 8
+    ret void
+}
+
 ; line 700
 ;================================================================================
 ; scope: popint (level : 2)
@@ -365,6 +472,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_popint()
+{
+    %1 = alloca %Frame_popint, align 8
+    ret void
+}
 
 ; line 701
 ;================================================================================
@@ -380,6 +494,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_pshint()
+{
+    %1 = alloca %Frame_pshint, align 8
+    ret void
+}
+
 ; line 702
 ;================================================================================
 ; scope: poprel (level : 2)
@@ -393,6 +514,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_poprel()
+{
+    %1 = alloca %Frame_poprel, align 8
+    ret void
+}
 
 ; line 703
 ;================================================================================
@@ -408,6 +536,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_pshrel()
+{
+    %1 = alloca %Frame_pshrel, align 8
+    ret void
+}
+
 ; line 704
 ;================================================================================
 ; scope: popset (level : 2)
@@ -421,6 +556,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_popset()
+{
+    %1 = alloca %Frame_popset, align 8
+    ret void
+}
 
 ; line 705
 ;================================================================================
@@ -436,6 +578,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_pshset()
+{
+    %1 = alloca %Frame_pshset, align 8
+    ret void
+}
+
 ; line 706
 ;================================================================================
 ; scope: popadr (level : 2)
@@ -450,6 +599,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_popadr()
+{
+    %1 = alloca %Frame_popadr, align 8
+    ret void
+}
+
 ; line 707
 ;================================================================================
 ; scope: pshadr (level : 2)
@@ -463,6 +619,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_pshadr()
+{
+    %1 = alloca %Frame_pshadr, align 8
+    ret void
+}
 
 ; line 711
 ;================================================================================
@@ -484,6 +647,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_wrthex()
+{
+    %1 = alloca %Frame_wrthex, align 8
+    ret void
+}
+
 ; line 726
 ;================================================================================
 ; scope: lstins (level : 2)
@@ -504,6 +674,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_lstins()
+{
+    %1 = alloca %Frame_lstins, align 8
+    ret void
+}
+
 ; line 762
 ;================================================================================
 ; scope: dmpins (level : 2)
@@ -517,6 +694,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_dmpins()
+{
+    %1 = alloca %Frame_dmpins, align 8
+    ret void
+}
 
 ; line 787
 ;================================================================================
@@ -536,6 +720,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_alignu()
+{
+    %1 = alloca %Frame_alignu, align 8
+    ret void
+}
+
 ; line 796
 ;================================================================================
 ; scope: alignd (level : 2)
@@ -553,6 +744,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_alignd()
+{
+    %1 = alloca %Frame_alignd, align 8
+    ret void
+}
 
 ; line 807
 ;================================================================================
@@ -577,6 +775,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_load()
+{
+    %1 = alloca %Frame_load, align 8
+    ret void
+}
+
 ; line 819
 ;================================================================================
 ; scope: load_init (level : 3)
@@ -590,6 +795,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_load*    ; 1
 };
+
+; procedure body
+define void @P_load_init()
+{
+    %1 = alloca %Frame_load_init, align 8
+    ret void
+}
 
 ; line 1047
 ;================================================================================
@@ -605,6 +817,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_load*    ; 1
 };
 
+; procedure body
+define void @P_load_errorl()
+{
+    %1 = alloca %Frame_load_errorl, align 8
+    ret void
+}
+
 ; line 1053
 ;================================================================================
 ; scope: load_dmplabs (level : 3)
@@ -618,6 +837,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_load*    ; 1
 };
+
+; procedure body
+define void @P_load_dmplabs()
+{
+    %1 = alloca %Frame_load_dmplabs, align 8
+    ret void
+}
 
 ; line 1073
 ;================================================================================
@@ -641,6 +867,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_load*    ; 7
 };
 
+; procedure body
+define void @P_load_update()
+{
+    %1 = alloca %Frame_load_update, align 8
+    ret void
+}
+
 ; line 1100
 ;================================================================================
 ; scope: load_getnxt (level : 3)
@@ -651,6 +884,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_load*    ; 0
 };
+
+; procedure body
+define void @P_load_getnxt()
+{
+    %1 = alloca %Frame_load_getnxt, align 8
+    ret void
+}
 
 ; line 1106
 ;================================================================================
@@ -663,6 +903,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_load*    ; 0
 };
 
+; procedure body
+define void @P_load_skpspc()
+{
+    %1 = alloca %Frame_load_skpspc, align 8
+    ret void
+}
+
 ; line 1111
 ;================================================================================
 ; scope: load_getlin (level : 3)
@@ -673,6 +920,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_load*    ; 0
 };
+
+; procedure body
+define void @P_load_getlin()
+{
+    %1 = alloca %Frame_load_getlin, align 8
+    ret void
+}
 
 ; line 1119
 ;================================================================================
@@ -688,6 +942,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_load*    ; 2
 };
+
+; procedure body
+define void @P_load_generate()
+{
+    %1 = alloca %Frame_load_generate, align 8
+    ret void
+}
 
 ; line 1160
 ;================================================================================
@@ -717,6 +978,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_load*    ; 12
 };
 
+; procedure body
+define void @P_load_assemble()
+{
+    %1 = alloca %Frame_load_assemble, align 8
+    ret void
+}
+
 ; line 1166
 ;================================================================================
 ; scope: load_assemble_lookup (level : 4)
@@ -730,6 +998,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_load_assemble*    ; 1
 };
+
+; procedure body
+define void @P_load_assemble_lookup()
+{
+    %1 = alloca %Frame_load_assemble_lookup, align 8
+    ret void
+}
 
 ; line 1175
 ;================================================================================
@@ -745,6 +1020,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_load_assemble*    ; 1
 };
 
+; procedure body
+define void @P_load_assemble_labelsearch()
+{
+    %1 = alloca %Frame_load_assemble_labelsearch, align 8
+    ret void
+}
+
 ; line 1181
 ;================================================================================
 ; scope: load_assemble_getname (level : 4)
@@ -759,6 +1041,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_load_assemble*    ; 1
 };
 
+; procedure body
+define void @P_load_assemble_getname()
+{
+    %1 = alloca %Frame_load_assemble_getname, align 8
+    ret void
+}
+
 ; line 1196
 ;================================================================================
 ; scope: load_assemble_storeop (level : 4)
@@ -769,6 +1058,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_load_assemble*    ; 0
 };
+
+; procedure body
+define void @P_load_assemble_storeop()
+{
+    %1 = alloca %Frame_load_assemble_storeop, align 8
+    ret void
+}
 
 ; line 1202
 ;================================================================================
@@ -781,6 +1077,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_load_assemble*    ; 0
 };
 
+; procedure body
+define void @P_load_assemble_storep()
+{
+    %1 = alloca %Frame_load_assemble_storep, align 8
+    ret void
+}
+
 ; line 1208
 ;================================================================================
 ; scope: load_assemble_storeq (level : 4)
@@ -792,6 +1095,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_load_assemble*    ; 0
 };
 
+; procedure body
+define void @P_load_assemble_storeq()
+{
+    %1 = alloca %Frame_load_assemble_storeq, align 8
+    ret void
+}
+
 ; line 1214
 ;================================================================================
 ; scope: load_assemble_storeq1 (level : 4)
@@ -802,6 +1112,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_load_assemble*    ; 0
 };
+
+; procedure body
+define void @P_load_assemble_storeq1()
+{
+    %1 = alloca %Frame_load_assemble_storeq1, align 8
+    ret void
+}
 
 ; line 1436
 ;================================================================================
@@ -818,6 +1135,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_pmd()
+{
+    %1 = alloca %Frame_pmd, align 8
+    ret void
+}
+
 ; line 1439
 ;================================================================================
 ; scope: pmd_pt (level : 3)
@@ -828,6 +1152,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_pmd*    ; 0
 };
+
+; procedure body
+define void @P_pmd_pt()
+{
+    %1 = alloca %Frame_pmd_pt, align 8
+    ret void
+}
 
 ; line 1482
 ;================================================================================
@@ -842,6 +1173,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_errori()
+{
+    %1 = alloca %Frame_errori, align 8
+    ret void
+}
 
 ; line 1489
 ;================================================================================
@@ -861,6 +1199,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; function body
+define i32 @F_base()
+{
+    %1 = alloca %Frame_base, align 8
+    %2 = getelementptr inbounds %Frame_base, %Frame_base* %1, i32 0, i32 1
+    %3 = load i32, i32* %2
+    ret i32 %3
+}
+
 ; line 1496
 ;================================================================================
 ; scope: compare (level : 2)
@@ -871,6 +1218,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_compare()
+{
+    %1 = alloca %Frame_compare, align 8
+    ret void
+}
 
 ; line 1507
 ;================================================================================
@@ -890,6 +1244,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_valfil()
+{
+    %1 = alloca %Frame_valfil, align 8
+    ret void
+}
+
 ; line 1528
 ;================================================================================
 ; scope: valfilwm (level : 2)
@@ -903,6 +1264,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_valfilwm()
+{
+    %1 = alloca %Frame_valfilwm, align 8
+    ret void
+}
 
 ; line 1534
 ;================================================================================
@@ -918,6 +1286,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_valfilrm()
+{
+    %1 = alloca %Frame_valfilrm, align 8
+    ret void
+}
+
 ; line 1540
 ;================================================================================
 ; scope: getop (level : 2)
@@ -928,6 +1303,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_getop()
+{
+    %1 = alloca %Frame_getop, align 8
+    ret void
+}
 
 ; line 1548
 ;================================================================================
@@ -940,6 +1322,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_getp()
+{
+    %1 = alloca %Frame_getp, align 8
+    ret void
+}
+
 ; line 1556
 ;================================================================================
 ; scope: getq (level : 2)
@@ -951,6 +1340,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_getq()
+{
+    %1 = alloca %Frame_getq, align 8
+    ret void
+}
+
 ; line 1564
 ;================================================================================
 ; scope: getq1 (level : 2)
@@ -961,6 +1357,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_getq1()
+{
+    %1 = alloca %Frame_getq1, align 8
+    ret void
+}
 
 ; line 1585
 ;================================================================================
@@ -976,6 +1379,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_repspc()
+{
+    %1 = alloca %Frame_repspc, align 8
+    ret void
+}
 
 ; line 1602
 ;================================================================================
@@ -996,6 +1406,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_fndfre()
+{
+    %1 = alloca %Frame_fndfre, align 8
+    ret void
+}
+
 ; line 1626
 ;================================================================================
 ; scope: cscspc (level : 2)
@@ -1013,6 +1430,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_cscspc()
+{
+    %1 = alloca %Frame_cscspc, align 8
+    ret void
+}
 
 ; line 1655
 ;================================================================================
@@ -1033,6 +1457,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_newspc()
+{
+    %1 = alloca %Frame_newspc, align 8
+    ret void
+}
+
 ; line 1673
 ;================================================================================
 ; scope: dspspc (level : 2)
@@ -1051,6 +1482,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_dspspc()
+{
+    %1 = alloca %Frame_dspspc, align 8
+    ret void
+}
+
 ; line 1690
 ;================================================================================
 ; scope: isfree (level : 2)
@@ -1067,6 +1505,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; function body
+define i1 @F_isfree()
+{
+    %1 = alloca %Frame_isfree, align 8
+    %2 = getelementptr inbounds %Frame_isfree, %Frame_isfree* %1, i32 0, i32 1
+    %3 = load i1, i1* %2
+    ret i1 %3
+}
 
 ; line 1697
 ;================================================================================
@@ -1093,6 +1540,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_callsp()
+{
+    %1 = alloca %Frame_callsp, align 8
+    ret void
+}
+
 ; line 1706
 ;================================================================================
 ; scope: callsp_readi (level : 3)
@@ -1107,6 +1561,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_callsp*    ; 2
 };
+
+; procedure body
+define void @P_callsp_readi()
+{
+    %1 = alloca %Frame_callsp_readi, align 8
+    ret void
+}
 
 ; line 1711
 ;================================================================================
@@ -1123,6 +1584,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_callsp*    ; 2
 };
 
+; procedure body
+define void @P_callsp_readr()
+{
+    %1 = alloca %Frame_callsp_readr, align 8
+    ret void
+}
+
 ; line 1716
 ;================================================================================
 ; scope: callsp_readc (level : 3)
@@ -1137,6 +1605,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_callsp*    ; 2
 };
+
+; procedure body
+define void @P_callsp_readc()
+{
+    %1 = alloca %Frame_callsp_readc, align 8
+    ret void
+}
 
 ; line 1721
 ;================================================================================
@@ -1158,6 +1633,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_callsp*    ; 5
 };
 
+; procedure body
+define void @P_callsp_writestr()
+{
+    %1 = alloca %Frame_callsp_writestr, align 8
+    ret void
+}
+
 ; line 1729
 ;================================================================================
 ; scope: callsp_getfile (level : 3)
@@ -1171,6 +1653,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_callsp*    ; 1
 };
+
+; procedure body
+define void @P_callsp_getfile()
+{
+    %1 = alloca %Frame_callsp_getfile, align 8
+    ret void
+}
 
 ; line 1734
 ;================================================================================
@@ -1186,6 +1675,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_callsp*    ; 2
 };
+
+; procedure body
+define void @P_callsp_putfile()
+{
+    %1 = alloca %Frame_callsp_putfile, align 8
+    ret void
+}
 
 ;================================================================================
 ; metadata

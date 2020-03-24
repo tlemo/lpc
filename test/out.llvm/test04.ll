@@ -23,6 +23,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @_input = dso_local global %T_text zeroinitializer
 @_output = dso_local global %T_text zeroinitializer
 
+; procedure body
+define void @P_()
+{
+    ret void
+}
+
 ; line 27
 ;================================================================================
 ; scope: foo (level : 2)
@@ -36,6 +42,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_foo()
+{
+    %1 = alloca %Frame_foo, align 8
+    ret void
+}
 
 ;================================================================================
 ; metadata

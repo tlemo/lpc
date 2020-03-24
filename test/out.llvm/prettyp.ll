@@ -52,6 +52,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @STACK = dso_local global %T_SYMBOLSTACK zeroinitializer
 @TOP = dso_local global i32 zeroinitializer
 
+; procedure body
+define void @P_()
+{
+    ret void
+}
+
 ; line 317
 ;================================================================================
 ; scope: GETCHAR (level : 2)
@@ -67,6 +73,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_GETCHAR()
+{
+    %1 = alloca %Frame_GETCHAR, align 8
+    ret void
+}
 
 ; line 369
 ;================================================================================
@@ -86,6 +99,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_STORENEXTCHAR()
+{
+    %1 = alloca %Frame_STORENEXTCHAR, align 8
+    ret void
+}
+
 ; line 392
 ;================================================================================
 ; scope: SKIPSPACES (level : 2)
@@ -103,6 +123,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_SKIPSPACES()
+{
+    %1 = alloca %Frame_SKIPSPACES, align 8
+    ret void
+}
 
 ; line 426
 ;================================================================================
@@ -122,6 +149,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_GETCOMMENT()
+{
+    %1 = alloca %Frame_GETCOMMENT, align 8
+    ret void
+}
 
 ; line 465
 ;================================================================================
@@ -145,6 +179,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; function body
+define i32 @F_IDTYPE()
+{
+    %1 = alloca %Frame_IDTYPE, align 8
+    %2 = getelementptr inbounds %Frame_IDTYPE, %Frame_IDTYPE* %1, i32 0, i32 2
+    %3 = load i32, i32* %2
+    ret i32 %3
+}
+
 ; line 508
 ;================================================================================
 ; scope: GETIDENTIFIER (level : 2)
@@ -163,6 +206,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_GETIDENTIFIER()
+{
+    %1 = alloca %Frame_GETIDENTIFIER, align 8
+    ret void
+}
 
 ; line 546
 ;================================================================================
@@ -183,6 +233,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_GETNUMBER()
+{
+    %1 = alloca %Frame_GETNUMBER, align 8
+    ret void
+}
+
 ; line 568
 ;================================================================================
 ; scope: GETCHARLITERAL (level : 2)
@@ -201,6 +258,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_GETCHARLITERAL()
+{
+    %1 = alloca %Frame_GETCHARLITERAL, align 8
+    ret void
+}
 
 ; line 608
 ;================================================================================
@@ -223,6 +287,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; function body
+define i32 @F_CHARTYPE()
+{
+    %1 = alloca %Frame_CHARTYPE, align 8
+    %2 = getelementptr inbounds %Frame_CHARTYPE, %Frame_CHARTYPE* %1, i32 0, i32 2
+    %3 = load i32, i32* %2
+    ret i32 %3
+}
+
 ; line 654
 ;================================================================================
 ; scope: GETSPECIALCHAR (level : 2)
@@ -241,6 +314,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_GETSPECIALCHAR()
+{
+    %1 = alloca %Frame_GETSPECIALCHAR, align 8
+    ret void
+}
 
 ; line 682
 ;================================================================================
@@ -261,6 +341,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_GETNEXTSYMBOL()
+{
+    %1 = alloca %Frame_GETNEXTSYMBOL, align 8
+    ret void
+}
+
 ; line 741
 ;================================================================================
 ; scope: GETSYMBOL (level : 2)
@@ -279,6 +366,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_GETSYMBOL()
+{
+    %1 = alloca %Frame_GETSYMBOL, align 8
+    ret void
+}
 
 ; line 784
 ;================================================================================
@@ -308,6 +402,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_INITIALISE()
+{
+    %1 = alloca %Frame_INITIALISE, align 8
+    ret void
+}
+
 ; line 1175
 ;================================================================================
 ; scope: STACKEMPTY (level : 2)
@@ -322,6 +423,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; function body
+define i1 @F_STACKEMPTY()
+{
+    %1 = alloca %Frame_STACKEMPTY, align 8
+    %2 = getelementptr inbounds %Frame_STACKEMPTY, %Frame_STACKEMPTY* %1, i32 0, i32 0
+    %3 = load i1, i1* %2
+    ret i1 %3
+}
+
 ; line 1187
 ;================================================================================
 ; scope: STACKFULL (level : 2)
@@ -335,6 +445,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; function body
+define i1 @F_STACKFULL()
+{
+    %1 = alloca %Frame_STACKFULL, align 8
+    %2 = getelementptr inbounds %Frame_STACKFULL, %Frame_STACKFULL* %1, i32 0, i32 0
+    %3 = load i1, i1* %2
+    ret i1 %3
+}
 
 ; line 1199
 ;================================================================================
@@ -351,6 +470,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_POPSTACK()
+{
+    %1 = alloca %Frame_POPSTACK, align 8
+    ret void
+}
+
 ; line 1222
 ;================================================================================
 ; scope: PUSHSTACK (level : 2)
@@ -365,6 +491,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_PUSHSTACK()
+{
+    %1 = alloca %Frame_PUSHSTACK, align 8
+    ret void
+}
 
 ; line 1235
 ;================================================================================
@@ -385,6 +518,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_WRITECRS()
+{
+    %1 = alloca %Frame_WRITECRS, align 8
+    ret void
+}
+
 ; line 1256
 ;================================================================================
 ; scope: INSERTCR (level : 2)
@@ -400,6 +540,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_INSERTCR()
+{
+    %1 = alloca %Frame_INSERTCR, align 8
+    ret void
+}
+
 ; line 1276
 ;================================================================================
 ; scope: INSERTBLANKLINE (level : 2)
@@ -414,6 +561,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_INSERTBLANKLINE()
+{
+    %1 = alloca %Frame_INSERTBLANKLINE, align 8
+    ret void
+}
 
 ; line 1306
 ;================================================================================
@@ -433,6 +587,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_LSHIFTON()
+{
+    %1 = alloca %Frame_LSHIFTON, align 8
+    ret void
+}
+
 ; line 1335
 ;================================================================================
 ; scope: LSHIFT (level : 2)
@@ -448,6 +609,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_LSHIFT()
+{
+    %1 = alloca %Frame_LSHIFT, align 8
+    ret void
+}
+
 ; line 1352
 ;================================================================================
 ; scope: INSERTSPACE (level : 2)
@@ -462,6 +630,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_INSERTSPACE()
+{
+    %1 = alloca %Frame_INSERTSPACE, align 8
+    ret void
+}
 
 ; line 1372
 ;================================================================================
@@ -482,6 +657,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_MOVELINEPOS()
+{
+    %1 = alloca %Frame_MOVELINEPOS, align 8
+    ret void
+}
+
 ; line 1389
 ;================================================================================
 ; scope: PRINTSYMBOL (level : 2)
@@ -501,6 +683,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_PRINTSYMBOL()
+{
+    %1 = alloca %Frame_PRINTSYMBOL, align 8
+    ret void
+}
+
 ; line 1410
 ;================================================================================
 ; scope: PPSYMBOL (level : 2)
@@ -518,6 +707,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_PPSYMBOL()
+{
+    %1 = alloca %Frame_PPSYMBOL, align 8
+    ret void
+}
 
 ; line 1465
 ;================================================================================
@@ -537,6 +733,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_GOBBLE()
+{
+    %1 = alloca %Frame_GOBBLE, align 8
+    ret void
+}
+
 ; line 1491
 ;================================================================================
 ; scope: RSHIFT (level : 2)
@@ -551,6 +754,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_RSHIFT()
+{
+    %1 = alloca %Frame_RSHIFT, align 8
+    ret void
+}
+
 ; line 1508
 ;================================================================================
 ; scope: RSHIFTTOCLP (level : 2)
@@ -564,6 +774,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_RSHIFTTOCLP()
+{
+    %1 = alloca %Frame_RSHIFTTOCLP, align 8
+    ret void
+}
 
 ;================================================================================
 ; metadata

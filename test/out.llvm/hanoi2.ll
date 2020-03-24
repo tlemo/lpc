@@ -30,6 +30,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @ns = dso_local global i32 zeroinitializer
 @virf = dso_local global i8* zeroinitializer
 
+; procedure body
+define void @P_()
+{
+    ret void
+}
+
 ; line 12
 ;================================================================================
 ; scope: punere (level : 2)
@@ -49,6 +55,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_punere()
+{
+    %1 = alloca %Frame_punere, align 8
+    ret void
+}
+
 ; line 23
 ;================================================================================
 ; scope: scoatere (level : 2)
@@ -59,6 +72,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_scoatere()
+{
+    %1 = alloca %Frame_scoatere, align 8
+    ret void
+}
 
 ;================================================================================
 ; metadata

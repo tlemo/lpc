@@ -19,6 +19,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @_output = dso_local global %T_text zeroinitializer
 @v = dso_local global i32 zeroinitializer
 
+; procedure body
+define void @P_()
+{
+    ret void
+}
+
 ; line 8
 ;================================================================================
 ; scope: foo (level : 2)
@@ -32,6 +38,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_foo()
+{
+    %1 = alloca %Frame_foo, align 8
+    ret void
+}
 
 ; line 11
 ;================================================================================
@@ -50,6 +63,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_foo*    ; 2
 };
 
+; procedure body
+define void @P_foo_bar1()
+{
+    %1 = alloca %Frame_foo_bar1, align 8
+    ret void
+}
+
 ; line 19
 ;================================================================================
 ; scope: foo_bar2 (level : 3)
@@ -67,6 +87,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_foo*    ; 2
 };
 
+; procedure body
+define void @P_foo_bar2()
+{
+    %1 = alloca %Frame_foo_bar2, align 8
+    ret void
+}
+
 ; line 22
 ;================================================================================
 ; scope: foo_bar2_moo (level : 4)
@@ -80,6 +107,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_foo_bar2*    ; 1
 };
+
+; procedure body
+define void @P_foo_bar2_moo()
+{
+    %1 = alloca %Frame_foo_bar2_moo, align 8
+    ret void
+}
 
 ;================================================================================
 ; metadata

@@ -24,6 +24,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @k = dso_local global i32 zeroinitializer
 @x = dso_local global %T_vec zeroinitializer
 
+; procedure body
+define void @P_()
+{
+    ret void
+}
+
 ; line 8
 ;================================================================================
 ; scope: f (level : 2)
@@ -42,6 +48,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; function body
+define i1 @F_f()
+{
+    %1 = alloca %Frame_f, align 8
+    %2 = getelementptr inbounds %Frame_f, %Frame_f* %1, i32 0, i32 2
+    %3 = load i1, i1* %2
+    ret i1 %3
+}
 
 ;================================================================================
 ; metadata

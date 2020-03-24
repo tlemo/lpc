@@ -28,6 +28,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @x = dso_local global %T_array_4 zeroinitializer
 @y = dso_local global %T_t1 zeroinitializer
 
+; procedure body
+define void @P_()
+{
+    ret void
+}
+
 ; line 14
 ;================================================================================
 ; scope: outter (level : 2)
@@ -44,6 +50,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; function body
+define i32 @F_outter()
+{
+    %1 = alloca %Frame_outter, align 8
+    %2 = getelementptr inbounds %Frame_outter, %Frame_outter* %1, i32 0, i32 1
+    %3 = load i32, i32* %2
+    ret i32 %3
+}
 
 ; line 15
 ;================================================================================
@@ -62,6 +77,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_outter*    ; 2
 };
 
+; function body
+define i32 @F_outter_inner()
+{
+    %1 = alloca %Frame_outter_inner, align 8
+    %2 = getelementptr inbounds %Frame_outter_inner, %Frame_outter_inner* %1, i32 0, i32 1
+    %3 = load i32, i32* %2
+    ret i32 %3
+}
+
 ; line 16
 ;================================================================================
 ; scope: outter_inner_setOutter (level : 4)
@@ -75,6 +99,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_outter_inner*    ; 1
 };
+
+; procedure body
+define void @P_outter_inner_setOutter()
+{
+    %1 = alloca %Frame_outter_inner_setOutter, align 8
+    ret void
+}
 
 ;================================================================================
 ; metadata

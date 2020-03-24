@@ -313,6 +313,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @y = dso_local global i32 zeroinitializer
 @z = dso_local global i32 zeroinitializer
 
+; procedure body
+define void @P_()
+{
+    ret void
+}
+
 ; line 398
 ;================================================================================
 ; scope: junk1 (level : 2)
@@ -328,6 +334,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_junk1()
+{
+    %1 = alloca %Frame_junk1, align 8
+    ret void
+}
+
 ; line 406
 ;================================================================================
 ; scope: junk2 (level : 2)
@@ -341,6 +354,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_junk2()
+{
+    %1 = alloca %Frame_junk2, align 8
+    ret void
+}
 
 ; line 414
 ;================================================================================
@@ -356,6 +376,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_junk3()
+{
+    %1 = alloca %Frame_junk3, align 8
+    ret void
+}
+
 ; line 422
 ;================================================================================
 ; scope: junk4 (level : 2)
@@ -369,6 +396,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_junk4()
+{
+    %1 = alloca %Frame_junk4, align 8
+    ret void
+}
 
 ; line 431
 ;================================================================================
@@ -387,6 +421,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; function body
+define i32 @F_junk5()
+{
+    %1 = alloca %Frame_junk5, align 8
+    %2 = getelementptr inbounds %Frame_junk5, %Frame_junk5* %1, i32 0, i32 1
+    %3 = load i32, i32* %2
+    ret i32 %3
+}
+
 ; line 439
 ;================================================================================
 ; scope: junk6 (level : 2)
@@ -397,6 +440,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_junk6()
+{
+    %1 = alloca %Frame_junk6, align 8
+    ret void
+}
 
 ; line 449
 ;================================================================================
@@ -419,6 +469,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; function body
+define i32 @F_junk7()
+{
+    %1 = alloca %Frame_junk7, align 8
+    %2 = getelementptr inbounds %Frame_junk7, %Frame_junk7* %1, i32 0, i32 3
+    %3 = load i32, i32* %2
+    ret i32 %3
+}
 
 ; line 467
 ;================================================================================
@@ -450,6 +509,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_junk8()
+{
+    %1 = alloca %Frame_junk8, align 8
+    ret void
+}
+
 ; line 494
 ;================================================================================
 ; scope: junk9 (level : 2)
@@ -469,6 +535,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_junk9()
+{
+    %1 = alloca %Frame_junk9, align 8
+    ret void
+}
+
 ; line 504
 ;================================================================================
 ; scope: junk10 (level : 2)
@@ -484,6 +557,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_junk10()
+{
+    %1 = alloca %Frame_junk10, align 8
+    ret void
+}
 
 ; line 512
 ;================================================================================
@@ -501,6 +581,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; function body
+define i32 @F_junk11()
+{
+    %1 = alloca %Frame_junk11, align 8
+    %2 = getelementptr inbounds %Frame_junk11, %Frame_junk11* %1, i32 0, i32 1
+    %3 = load i32, i32* %2
+    ret i32 %3
+}
 
 ; line 520
 ;================================================================================
@@ -522,6 +611,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_junk12()
+{
+    %1 = alloca %Frame_junk12, align 8
+    ret void
+}
+
 ; line 529
 ;================================================================================
 ; scope: junk13 (level : 2)
@@ -539,6 +635,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_junk13()
+{
+    %1 = alloca %Frame_junk13, align 8
+    ret void
+}
+
 ; line 537
 ;================================================================================
 ; scope: junk14 (level : 2)
@@ -554,6 +657,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_junk14()
+{
+    %1 = alloca %Frame_junk14, align 8
+    ret void
+}
+
 ; line 541
 ;================================================================================
 ; scope: junk14_junk15 (level : 3)
@@ -565,6 +675,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_junk14*    ; 0
 };
 
+; procedure body
+define void @P_junk14_junk15()
+{
+    %1 = alloca %Frame_junk14_junk15, align 8
+    ret void
+}
+
 ; line 557
 ;================================================================================
 ; scope: junk16 (level : 2)
@@ -575,6 +692,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_junk16()
+{
+    %1 = alloca %Frame_junk16, align 8
+    ret void
+}
 
 ; line 559
 ;================================================================================
@@ -594,6 +718,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_junk17()
+{
+    %1 = alloca %Frame_junk17, align 8
+    ret void
+}
+
 ; line 561
 ;================================================================================
 ; scope: junk17_junk18 (level : 3)
@@ -604,6 +735,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_junk17*    ; 0
 };
+
+; procedure body
+define void @P_junk17_junk18()
+{
+    %1 = alloca %Frame_junk17_junk18, align 8
+    ret void
+}
 
 ; line 578
 ;================================================================================
@@ -619,6 +757,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_junk19()
+{
+    %1 = alloca %Frame_junk19, align 8
+    ret void
+}
+
 ; line 596
 ;================================================================================
 ; scope: junk20 (level : 2)
@@ -633,6 +778,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; function body
+define i32 @F_junk20()
+{
+    %1 = alloca %Frame_junk20, align 8
+    %2 = getelementptr inbounds %Frame_junk20, %Frame_junk20* %1, i32 0, i32 0
+    %3 = load i32, i32* %2
+    ret i32 %3
+}
+
 ; line 598
 ;================================================================================
 ; scope: junk20_inner (level : 3)
@@ -646,6 +800,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_junk20*    ; 1
 };
+
+; function body
+define i32 @F_junk20_inner()
+{
+    %1 = alloca %Frame_junk20_inner, align 8
+    %2 = getelementptr inbounds %Frame_junk20_inner, %Frame_junk20_inner* %1, i32 0, i32 0
+    %3 = load i32, i32* %2
+    ret i32 %3
+}
 
 ; line 613
 ;================================================================================
@@ -665,6 +828,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; function body
+define i32 @F_random()
+{
+    %1 = alloca %Frame_random, align 8
+    %2 = getelementptr inbounds %Frame_random, %Frame_random* %1, i32 0, i32 2
+    %3 = load i32, i32* %2
+    ret i32 %3
+}
 
 ;================================================================================
 ; metadata

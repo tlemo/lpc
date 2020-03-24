@@ -20,6 +20,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @i = dso_local global i32 zeroinitializer
 @p = dso_local global i8* zeroinitializer
 
+; procedure body
+define void @P_()
+{
+    ret void
+}
+
 ; line 11
 ;================================================================================
 ; scope: init (level : 2)
@@ -33,6 +39,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_init()
+{
+    %1 = alloca %Frame_init, align 8
+    ret void
+}
 
 ; line 16
 ;================================================================================
@@ -49,6 +62,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_setValue()
+{
+    %1 = alloca %Frame_setValue, align 8
+    ret void
+}
+
 ; line 22
 ;================================================================================
 ; scope: free (level : 2)
@@ -62,6 +82,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_free()
+{
+    %1 = alloca %Frame_free, align 8
+    ret void
+}
 
 ;================================================================================
 ; metadata

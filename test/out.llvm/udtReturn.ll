@@ -27,6 +27,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @vR = dso_local global %T_R zeroinitializer
 @vS = dso_local global %T_S zeroinitializer
 
+; procedure body
+define void @P_()
+{
+    ret void
+}
+
 ; line 19
 ;================================================================================
 ; scope: fooA (level : 2)
@@ -42,6 +48,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; function body
+define %T_A @F_fooA()
+{
+    %1 = alloca %Frame_fooA, align 8
+    %2 = getelementptr inbounds %Frame_fooA, %Frame_fooA* %1, i32 0, i32 0
+    %3 = load %T_A, %T_A* %2
+    ret %T_A %3
+}
+
 ; line 29
 ;================================================================================
 ; scope: fooS (level : 2)
@@ -55,6 +70,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; function body
+define %T_S @F_fooS()
+{
+    %1 = alloca %Frame_fooS, align 8
+    %2 = getelementptr inbounds %Frame_fooS, %Frame_fooS* %1, i32 0, i32 0
+    %3 = load %T_S, %T_S* %2
+    ret %T_S %3
+}
 
 ; line 34
 ;================================================================================
@@ -70,6 +94,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; function body
+define %T_R @F_fooR()
+{
+    %1 = alloca %Frame_fooR, align 8
+    %2 = getelementptr inbounds %Frame_fooR, %Frame_fooR* %1, i32 0, i32 0
+    %3 = load %T_R, %T_R* %2
+    ret %T_R %3
+}
 
 ;================================================================================
 ; metadata

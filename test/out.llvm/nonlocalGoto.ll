@@ -20,6 +20,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @p1 = dso_local global i32 zeroinitializer
 @p2 = dso_local global i32 zeroinitializer
 
+; procedure body
+define void @P_()
+{
+    ret void
+}
+
 ; line 12
 ;================================================================================
 ; scope: foo (level : 2)
@@ -37,6 +43,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; function body
+define i32 @F_foo()
+{
+    %1 = alloca %Frame_foo, align 8
+    %2 = getelementptr inbounds %Frame_foo, %Frame_foo* %1, i32 0, i32 1
+    %3 = load i32, i32* %2
+    ret i32 %3
+}
+
 ; line 23
 ;================================================================================
 ; scope: bar (level : 2)
@@ -51,6 +66,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_bar()
+{
+    %1 = alloca %Frame_bar, align 8
+    ret void
+}
+
 ; line 27
 ;================================================================================
 ; scope: bar_moo (level : 3)
@@ -61,6 +83,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_bar*    ; 0
 };
+
+; procedure body
+define void @P_bar_moo()
+{
+    %1 = alloca %Frame_bar_moo, align 8
+    ret void
+}
 
 ;================================================================================
 ; metadata

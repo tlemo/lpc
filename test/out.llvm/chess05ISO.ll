@@ -196,6 +196,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @XTUC = dso_local global %T_array_44 zeroinitializer
 @XTUMP = dso_local global %T_array_45 zeroinitializer
 
+; procedure body
+define void @P_()
+{
+    ret void
+}
+
 ; line 290
 ;================================================================================
 ; scope: MAX (level : 2)
@@ -213,6 +219,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; function body
+define i32 @F_MAX()
+{
+    %1 = alloca %Frame_MAX, align 8
+    %2 = getelementptr inbounds %Frame_MAX, %Frame_MAX* %1, i32 0, i32 2
+    %3 = load i32, i32* %2
+    ret i32 %3
+}
 
 ; line 300
 ;================================================================================
@@ -232,6 +247,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; function body
+define i32 @F_MIN()
+{
+    %1 = alloca %Frame_MIN, align 8
+    %2 = getelementptr inbounds %Frame_MIN, %Frame_MIN* %1, i32 0, i32 2
+    %3 = load i32, i32* %2
+    ret i32 %3
+}
+
 ; line 310
 ;================================================================================
 ; scope: SIGN (level : 2)
@@ -249,6 +273,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; function body
+define i32 @F_SIGN()
+{
+    %1 = alloca %Frame_SIGN, align 8
+    %2 = getelementptr inbounds %Frame_SIGN, %Frame_SIGN* %1, i32 0, i32 2
+    %3 = load i32, i32* %2
+    ret i32 %3
+}
 
 ; line 320
 ;================================================================================
@@ -273,6 +306,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_SORTIT()
+{
+    %1 = alloca %Frame_SORTIT, align 8
+    ret void
+}
+
 ; line 354
 ;================================================================================
 ; scope: ANDRS (level : 2)
@@ -292,6 +332,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_ANDRS()
+{
+    %1 = alloca %Frame_ANDRS, align 8
+    ret void
+}
+
 ; line 368
 ;================================================================================
 ; scope: CLRRS (level : 2)
@@ -306,6 +353,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_CLRRS()
+{
+    %1 = alloca %Frame_CLRRS, align 8
+    ret void
+}
 
 ; line 377
 ;================================================================================
@@ -324,6 +378,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_CPYRS()
+{
+    %1 = alloca %Frame_CPYRS, align 8
+    ret void
+}
 
 ; line 390
 ;================================================================================
@@ -344,6 +405,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_IORRS()
+{
+    %1 = alloca %Frame_IORRS, align 8
+    ret void
+}
+
 ; line 403
 ;================================================================================
 ; scope: NEWRS (level : 2)
@@ -360,6 +428,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_NEWRS()
+{
+    %1 = alloca %Frame_NEWRS, align 8
+    ret void
+}
 
 ; line 415
 ;================================================================================
@@ -378,6 +453,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_NOTRS()
+{
+    %1 = alloca %Frame_NOTRS, align 8
+    ret void
+}
 
 ; line 427
 ;================================================================================
@@ -399,6 +481,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; function body
+define i1 @F_NXTTS()
+{
+    %1 = alloca %Frame_NXTTS, align 8
+    %2 = getelementptr inbounds %Frame_NXTTS, %Frame_NXTTS* %1, i32 0, i32 2
+    %3 = load i1, i1* %2
+    ret i1 %3
+}
+
 ; line 477
 ;================================================================================
 ; scope: CNTRS (level : 2)
@@ -419,6 +510,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; function body
+define i32 @F_CNTRS()
+{
+    %1 = alloca %Frame_CNTRS, align 8
+    %2 = getelementptr inbounds %Frame_CNTRS, %Frame_CNTRS* %1, i32 0, i32 1
+    %3 = load i32, i32* %2
+    ret i32 %3
+}
+
 ; line 502
 ;================================================================================
 ; scope: SETRS (level : 2)
@@ -433,6 +533,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_SETRS()
+{
+    %1 = alloca %Frame_SETRS, align 8
+    ret void
+}
 
 ; line 511
 ;================================================================================
@@ -453,6 +560,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_SFTRS()
+{
+    %1 = alloca %Frame_SFTRS, align 8
+    ret void
+}
+
 ; line 619
 ;================================================================================
 ; scope: INRSTB (level : 2)
@@ -470,6 +584,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; function body
+define i1 @F_INRSTB()
+{
+    %1 = alloca %Frame_INRSTB, align 8
+    %2 = getelementptr inbounds %Frame_INRSTB, %Frame_INRSTB* %1, i32 0, i32 2
+    %3 = load i1, i1* %2
+    ret i1 %3
+}
 
 ; line 627
 ;================================================================================
@@ -490,6 +613,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; function body
+define i1 @F_NULRS()
+{
+    %1 = alloca %Frame_NULRS, align 8
+    %2 = getelementptr inbounds %Frame_NULRS, %Frame_NULRS* %1, i32 0, i32 1
+    %3 = load i1, i1* %2
+    ret i1 %3
+}
+
 ; line 643
 ;================================================================================
 ; scope: NULMVB (level : 2)
@@ -506,6 +638,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; function body
+define i1 @F_NULMVB()
+{
+    %1 = alloca %Frame_NULMVB, align 8
+    %2 = getelementptr inbounds %Frame_NULMVB, %Frame_NULMVB* %1, i32 0, i32 1
+    %3 = load i1, i1* %2
+    ret i1 %3
+}
 
 ; line 653
 ;================================================================================
@@ -533,6 +674,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_INICON()
+{
+    %1 = alloca %Frame_INICON, align 8
+    ret void
+}
+
 ; line 670
 ;================================================================================
 ; scope: INICON_INISYN (level : 3)
@@ -546,6 +694,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_INICON*    ; 1
 };
+
+; procedure body
+define void @P_INICON_INISYN()
+{
+    %1 = alloca %Frame_INICON_INISYN, align 8
+    ret void
+}
 
 ; line 698
 ;================================================================================
@@ -568,6 +723,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_INICON*    ; 8
 };
 
+; procedure body
+define void @P_INICON_INIXTP()
+{
+    %1 = alloca %Frame_INICON_INIXTP, align 8
+    ret void
+}
+
 ; line 1057
 ;================================================================================
 ; scope: INITAL (level : 2)
@@ -586,6 +748,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_INITAL()
+{
+    %1 = alloca %Frame_INITAL, align 8
+    ret void
+}
+
 ; line 1101
 ;================================================================================
 ; scope: PAUSER (level : 2)
@@ -596,6 +765,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_PAUSER()
+{
+    %1 = alloca %Frame_PAUSER, align 8
+    ret void
+}
 
 ; line 1112
 ;================================================================================
@@ -610,6 +786,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_PRIMOV()
+{
+    %1 = alloca %Frame_PRIMOV, align 8
+    ret void
+}
 
 ; line 1168
 ;================================================================================
@@ -628,6 +811,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_PRINTB()
+{
+    %1 = alloca %Frame_PRINTB, align 8
+    ret void
+}
 
 ; line 1208
 ;================================================================================
@@ -649,6 +839,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_PRINAM()
+{
+    %1 = alloca %Frame_PRINAM, align 8
+    ret void
+}
+
 ; line 1237
 ;================================================================================
 ; scope: PRISWI (level : 2)
@@ -664,6 +861,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_PRISWI()
+{
+    %1 = alloca %Frame_PRISWI, align 8
+    ret void
+}
+
 ; line 1248
 ;================================================================================
 ; scope: MBEVAL (level : 2)
@@ -677,6 +881,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_MBEVAL()
+{
+    %1 = alloca %Frame_MBEVAL, align 8
+    ret void
+}
 
 ; line 1267
 ;================================================================================
@@ -692,6 +903,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_MBCAPT()
+{
+    %1 = alloca %Frame_MBCAPT, align 8
+    ret void
+}
+
 ; line 1281
 ;================================================================================
 ; scope: MBTPAC (level : 2)
@@ -705,6 +923,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_MBTPAC()
+{
+    %1 = alloca %Frame_MBTPAC, align 8
+    ret void
+}
 
 ; line 1294
 ;================================================================================
@@ -720,6 +945,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_MBPROM()
+{
+    %1 = alloca %Frame_MBPROM, align 8
+    ret void
+}
+
 ; line 1308
 ;================================================================================
 ; scope: MBMORP (level : 2)
@@ -733,6 +965,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_MBMORP()
+{
+    %1 = alloca %Frame_MBMORP, align 8
+    ret void
+}
 
 ; line 1321
 ;================================================================================
@@ -756,6 +995,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_ADDATK()
+{
+    %1 = alloca %Frame_ADDATK, align 8
+    ret void
+}
+
 ; line 1359
 ;================================================================================
 ; scope: ADDLOC (level : 2)
@@ -771,6 +1017,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_ADDLOC()
+{
+    %1 = alloca %Frame_ADDLOC, align 8
+    ret void
+}
+
 ; line 1372
 ;================================================================================
 ; scope: CLSTAT (level : 2)
@@ -781,6 +1034,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_CLSTAT()
+{
+    %1 = alloca %Frame_CLSTAT, align 8
+    ret void
+}
 
 ; line 1384
 ;================================================================================
@@ -805,6 +1065,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_CUTATK()
+{
+    %1 = alloca %Frame_CUTATK, align 8
+    ret void
+}
+
 ; line 1428
 ;================================================================================
 ; scope: DELATK (level : 2)
@@ -824,6 +1091,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_DELATK()
+{
+    %1 = alloca %Frame_DELATK, align 8
+    ret void
+}
 
 ; line 1462
 ;================================================================================
@@ -847,6 +1121,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_PRPATK()
+{
+    %1 = alloca %Frame_PRPATK, align 8
+    ret void
+}
+
 ; line 1502
 ;================================================================================
 ; scope: GAINIT (level : 2)
@@ -860,6 +1141,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_GAINIT()
+{
+    %1 = alloca %Frame_GAINIT, align 8
+    ret void
+}
 
 ; line 1520
 ;================================================================================
@@ -875,6 +1163,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_LOSEIT()
+{
+    %1 = alloca %Frame_LOSEIT, align 8
+    ret void
+}
+
 ; line 1540
 ;================================================================================
 ; scope: MOVEIT (level : 2)
@@ -888,6 +1183,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_MOVEIT()
+{
+    %1 = alloca %Frame_MOVEIT, align 8
+    ret void
+}
 
 ; line 1558
 ;================================================================================
@@ -903,6 +1205,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_RTRKIT()
+{
+    %1 = alloca %Frame_RTRKIT, align 8
+    ret void
+}
+
 ; line 1578
 ;================================================================================
 ; scope: PAWNIT (level : 2)
@@ -916,6 +1225,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_PAWNIT()
+{
+    %1 = alloca %Frame_PAWNIT, align 8
+    ret void
+}
 
 ; line 1590
 ;================================================================================
@@ -935,6 +1251,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_PROACA()
+{
+    %1 = alloca %Frame_PROACA, align 8
+    ret void
+}
+
 ; line 1614
 ;================================================================================
 ; scope: PROACS (level : 2)
@@ -949,6 +1272,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_PROACS()
+{
+    %1 = alloca %Frame_PROACS, align 8
+    ret void
+}
+
 ; line 1629
 ;================================================================================
 ; scope: PROMOT (level : 2)
@@ -962,6 +1292,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_PROMOT()
+{
+    %1 = alloca %Frame_PROMOT, align 8
+    ret void
+}
 
 ; line 1641
 ;================================================================================
@@ -980,6 +1317,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_CREATE()
+{
+    %1 = alloca %Frame_CREATE, align 8
+    ret void
+}
 
 ; line 1718
 ;================================================================================
@@ -1001,6 +1345,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_DNDATE()
+{
+    %1 = alloca %Frame_DNDATE, align 8
+    ret void
+}
 
 ; line 1792
 ;================================================================================
@@ -1026,6 +1377,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; function body
+define i1 @F_UPDATE()
+{
+    %1 = alloca %Frame_UPDATE, align 8
+    %2 = getelementptr inbounds %Frame_UPDATE, %Frame_UPDATE* %1, i32 0, i32 1
+    %3 = load i1, i1* %2
+    ret i1 %3
+}
+
 ; line 1919
 ;================================================================================
 ; scope: GENONE (level : 2)
@@ -1044,6 +1404,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_GENONE()
+{
+    %1 = alloca %Frame_GENONE, align 8
+    ret void
+}
+
 ; line 1950
 ;================================================================================
 ; scope: PWNPRO (level : 2)
@@ -1057,6 +1424,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_PWNPRO()
+{
+    %1 = alloca %Frame_PWNPRO, align 8
+    ret void
+}
 
 ; line 1967
 ;================================================================================
@@ -1077,6 +1451,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_GENPWN()
+{
+    %1 = alloca %Frame_GENPWN, align 8
+    ret void
+}
 
 ; line 2095
 ;================================================================================
@@ -1099,6 +1480,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_GENFSL()
+{
+    %1 = alloca %Frame_GENFSL, align 8
+    ret void
+}
+
 ; line 2124
 ;================================================================================
 ; scope: GENTSL (level : 2)
@@ -1120,6 +1508,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_GENTSL()
+{
+    %1 = alloca %Frame_GENTSL, align 8
+    ret void
+}
+
 ; line 2151
 ;================================================================================
 ; scope: GENCAP (level : 2)
@@ -1133,6 +1528,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_GENCAP()
+{
+    %1 = alloca %Frame_GENCAP, align 8
+    ret void
+}
 
 ; line 2163
 ;================================================================================
@@ -1150,6 +1552,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_GENCAS()
+{
+    %1 = alloca %Frame_GENCAS, align 8
+    ret void
+}
+
 ; line 2191
 ;================================================================================
 ; scope: GENALL (level : 2)
@@ -1160,6 +1569,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_GENALL()
+{
+    %1 = alloca %Frame_GENALL, align 8
+    ret void
+}
 
 ; line 2199
 ;================================================================================
@@ -1174,6 +1590,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_LSTMOV()
+{
+    %1 = alloca %Frame_LSTMOV, align 8
+    ret void
+}
 
 ; line 2215
 ;================================================================================
@@ -1195,6 +1618,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_THEMOV()
+{
+    %1 = alloca %Frame_THEMOV, align 8
+    ret void
+}
+
 ; line 2249
 ;================================================================================
 ; scope: EVALU8 (level : 2)
@@ -1208,6 +1638,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_EVALU8()
+{
+    %1 = alloca %Frame_EVALU8, align 8
+    ret void
+}
 
 ; line 2254
 ;================================================================================
@@ -1230,6 +1667,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_EVALU8*    ; 6
 };
 
+; function body
+define i32 @F_EVALU8_EVKING()
+{
+    %1 = alloca %Frame_EVALU8_EVKING, align 8
+    %2 = getelementptr inbounds %Frame_EVALU8_EVKING, %Frame_EVALU8_EVKING* %1, i32 0, i32 2
+    %3 = load i32, i32* %2
+    ret i32 %3
+}
+
 ; line 2280
 ;================================================================================
 ; scope: EVALU8_EVMOBL (level : 3)
@@ -1250,6 +1696,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_EVALU8*    ; 6
 };
+
+; function body
+define i32 @F_EVALU8_EVMOBL()
+{
+    %1 = alloca %Frame_EVALU8_EVMOBL, align 8
+    %2 = getelementptr inbounds %Frame_EVALU8_EVMOBL, %Frame_EVALU8_EVMOBL* %1, i32 0, i32 2
+    %3 = load i32, i32* %2
+    ret i32 %3
+}
 
 ; line 2297
 ;================================================================================
@@ -1274,6 +1729,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_EVALU8*    ; 8
 };
 
+; function body
+define i32 @F_EVALU8_EVPAWN()
+{
+    %1 = alloca %Frame_EVALU8_EVPAWN, align 8
+    %2 = getelementptr inbounds %Frame_EVALU8_EVPAWN, %Frame_EVALU8_EVPAWN* %1, i32 0, i32 3
+    %3 = load i32, i32* %2
+    ret i32 %3
+}
+
 ; line 2332
 ;================================================================================
 ; scope: EVALU8_EVROOK (level : 3)
@@ -1296,6 +1760,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_EVALU8*    ; 7
 };
 
+; function body
+define i32 @F_EVALU8_EVROOK()
+{
+    %1 = alloca %Frame_EVALU8_EVROOK, align 8
+    %2 = getelementptr inbounds %Frame_EVALU8_EVROOK, %Frame_EVALU8_EVROOK* %1, i32 0, i32 2
+    %3 = load i32, i32* %2
+    ret i32 %3
+}
+
 ; line 2382
 ;================================================================================
 ; scope: SEARCH (level : 2)
@@ -1310,6 +1783,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; function body
+define i32 @F_SEARCH()
+{
+    %1 = alloca %Frame_SEARCH, align 8
+    %2 = getelementptr inbounds %Frame_SEARCH, %Frame_SEARCH* %1, i32 0, i32 0
+    %3 = load i32, i32* %2
+    ret i32 %3
+}
 
 ; line 2395
 ;================================================================================
@@ -1329,6 +1811,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_SEARCH*    ; 3
 };
 
+; procedure body
+define void @P_SEARCH_NEWBST()
+{
+    %1 = alloca %Frame_SEARCH_NEWBST, align 8
+    ret void
+}
+
 ; line 2418
 ;================================================================================
 ; scope: SEARCH_MINMAX (level : 3)
@@ -1346,6 +1835,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_SEARCH*    ; 2
 };
 
+; function body
+define i1 @F_SEARCH_MINMAX()
+{
+    %1 = alloca %Frame_SEARCH_MINMAX, align 8
+    %2 = getelementptr inbounds %Frame_SEARCH_MINMAX, %Frame_SEARCH_MINMAX* %1, i32 0, i32 1
+    %3 = load i1, i1* %2
+    ret i1 %3
+}
+
 ; line 2440
 ;================================================================================
 ; scope: SEARCH_SCOREM (level : 3)
@@ -1356,6 +1854,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_SEARCH*    ; 0
 };
+
+; procedure body
+define void @P_SEARCH_SCOREM()
+{
+    %1 = alloca %Frame_SEARCH_SCOREM, align 8
+    ret void
+}
 
 ; line 2453
 ;================================================================================
@@ -1376,6 +1881,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_SEARCH*    ; 6
 };
 
+; function body
+define i1 @F_SEARCH_SELECT()
+{
+    %1 = alloca %Frame_SEARCH_SELECT, align 8
+    %2 = getelementptr inbounds %Frame_SEARCH_SELECT, %Frame_SEARCH_SELECT* %1, i32 0, i32 0
+    %3 = load i1, i1* %2
+    ret i1 %3
+}
+
 ; line 2467
 ;================================================================================
 ; scope: SEARCH_SELECT_SELDON (level : 4)
@@ -1386,6 +1900,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_SEARCH_SELECT*    ; 0
 };
+
+; procedure body
+define void @P_SEARCH_SELECT_SELDON()
+{
+    %1 = alloca %Frame_SEARCH_SELECT_SELDON, align 8
+    ret void
+}
 
 ; line 2482
 ;================================================================================
@@ -1401,6 +1922,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_SEARCH_SELECT*    ; 1
 };
 
+; procedure body
+define void @P_SEARCH_SELECT_SELMOV()
+{
+    %1 = alloca %Frame_SEARCH_SELECT_SELMOV, align 8
+    ret void
+}
+
 ; line 2501
 ;================================================================================
 ; scope: SEARCH_SELECT_SELNXT (level : 4)
@@ -1414,6 +1942,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_SEARCH_SELECT*    ; 1
 };
+
+; procedure body
+define void @P_SEARCH_SELECT_SELNXT()
+{
+    %1 = alloca %Frame_SEARCH_SELECT_SELNXT, align 8
+    ret void
+}
 
 ; line 2513
 ;================================================================================
@@ -1429,6 +1964,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_SEARCH_SELECT*    ; 1
 };
 
+; procedure body
+define void @P_SEARCH_SELECT_SELANY()
+{
+    %1 = alloca %Frame_SEARCH_SELECT_SELANY, align 8
+    ret void
+}
+
 ; line 2748
 ;================================================================================
 ; scope: READER (level : 2)
@@ -1443,6 +1985,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_READER()
+{
+    %1 = alloca %Frame_READER, align 8
+    ret void
+}
 
 ; line 2757
 ;================================================================================
@@ -1462,6 +2011,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_READER*    ; 3
 };
 
+; procedure body
+define void @P_READER_RDRERR()
+{
+    %1 = alloca %Frame_READER_RDRERR, align 8
+    ret void
+}
+
 ; line 2782
 ;================================================================================
 ; scope: READER_RDRGNT (level : 3)
@@ -1480,6 +2036,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_READER*    ; 3
 };
 
+; function body
+define i1 @F_READER_RDRGNT()
+{
+    %1 = alloca %Frame_READER_RDRGNT, align 8
+    %2 = getelementptr inbounds %Frame_READER_RDRGNT, %Frame_READER_RDRGNT* %1, i32 0, i32 1
+    %3 = load i1, i1* %2
+    ret i1 %3
+}
+
 ; line 2812
 ;================================================================================
 ; scope: READER_RDRSFT (level : 3)
@@ -1494,6 +2059,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_READER*    ; 2
 };
+
+; procedure body
+define void @P_READER_RDRSFT()
+{
+    %1 = alloca %Frame_READER_RDRSFT, align 8
+    ret void
+}
 
 ; line 2825
 ;================================================================================
@@ -1513,6 +2085,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_READER*    ; 2
 };
 
+; procedure body
+define void @P_READER_RDRCMD()
+{
+    %1 = alloca %Frame_READER_RDRCMD, align 8
+    ret void
+}
+
 ; line 2840
 ;================================================================================
 ; scope: READER_RDLINE (level : 3)
@@ -1528,6 +2107,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_READER*    ; 2
 };
 
+; procedure body
+define void @P_READER_RDLINE()
+{
+    %1 = alloca %Frame_READER_RDLINE, align 8
+    ret void
+}
+
 ; line 2867
 ;================================================================================
 ; scope: READER_RDRMOV (level : 3)
@@ -1542,6 +2128,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_READER*    ; 2
 };
+
+; function body
+define i1 @F_READER_RDRMOV()
+{
+    %1 = alloca %Frame_READER_RDRMOV, align 8
+    %2 = getelementptr inbounds %Frame_READER_RDRMOV, %Frame_READER_RDRMOV* %1, i32 0, i32 0
+    %3 = load i1, i1* %2
+    ret i1 %3
+}
 
 ; line 2898
 ;================================================================================
@@ -1559,6 +2154,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_READER*    ; 3
 };
 
+; function body
+define i32 @F_READER_RDRNUM()
+{
+    %1 = alloca %Frame_READER_RDRNUM, align 8
+    %2 = getelementptr inbounds %Frame_READER_RDRNUM, %Frame_READER_RDRNUM* %1, i32 0, i32 0
+    %3 = load i32, i32* %2
+    ret i32 %3
+}
+
 ; line 2938
 ;================================================================================
 ; scope: READER_BOACMD (level : 3)
@@ -1575,6 +2179,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_READER*    ; 3
 };
 
+; procedure body
+define void @P_READER_BOACMD()
+{
+    %1 = alloca %Frame_READER_BOACMD, align 8
+    ret void
+}
+
 ; line 2946
 ;================================================================================
 ; scope: READER_BOACMD_BOAADV (level : 4)
@@ -1588,6 +2199,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_READER_BOACMD*    ; 1
 };
+
+; procedure body
+define void @P_READER_BOACMD_BOAADV()
+{
+    %1 = alloca %Frame_READER_BOACMD_BOAADV, align 8
+    ret void
+}
 
 ; line 2956
 ;================================================================================
@@ -1603,6 +2221,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_READER_BOACMD*    ; 1
 };
 
+; procedure body
+define void @P_READER_BOACMD_BOASTO()
+{
+    %1 = alloca %Frame_READER_BOACMD_BOASTO, align 8
+    ret void
+}
+
 ; line 2996
 ;================================================================================
 ; scope: READER_ENDCMD (level : 3)
@@ -1613,6 +2238,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_READER*    ; 0
 };
+
+; procedure body
+define void @P_READER_ENDCMD()
+{
+    %1 = alloca %Frame_READER_ENDCMD, align 8
+    ret void
+}
 
 ; line 3003
 ;================================================================================
@@ -1625,6 +2257,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_READER*    ; 0
 };
 
+; procedure body
+define void @P_READER_GONCMD()
+{
+    %1 = alloca %Frame_READER_GONCMD, align 8
+    ret void
+}
+
 ; line 3015
 ;================================================================================
 ; scope: READER_INICMD (level : 3)
@@ -1636,6 +2275,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_READER*    ; 0
 };
 
+; procedure body
+define void @P_READER_INICMD()
+{
+    %1 = alloca %Frame_READER_INICMD, align 8
+    ret void
+}
+
 ; line 3022
 ;================================================================================
 ; scope: READER_LETCMD (level : 3)
@@ -1646,6 +2292,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_READER*    ; 0
 };
+
+; procedure body
+define void @P_READER_LETCMD()
+{
+    %1 = alloca %Frame_READER_LETCMD, align 8
+    ret void
+}
 
 ; line 3027
 ;================================================================================
@@ -1662,6 +2315,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_READER_LETCMD*    ; 2
 };
 
+; procedure body
+define void @P_READER_LETCMD_LETONE()
+{
+    %1 = alloca %Frame_READER_LETCMD_LETONE, align 8
+    ret void
+}
+
 ; line 3076
 ;================================================================================
 ; scope: READER_PLECMD (level : 3)
@@ -1672,6 +2332,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_READER*    ; 0
 };
+
+; procedure body
+define void @P_READER_PLECMD()
+{
+    %1 = alloca %Frame_READER_PLECMD, align 8
+    ret void
+}
 
 ; line 3081
 ;================================================================================
@@ -1688,6 +2355,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_READER_PLECMD*    ; 2
 };
 
+; procedure body
+define void @P_READER_PLECMD_PRIONE()
+{
+    %1 = alloca %Frame_READER_PLECMD_PRIONE, align 8
+    ret void
+}
+
 ; line 3131
 ;================================================================================
 ; scope: READER_PRICMD (level : 3)
@@ -1699,6 +2373,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_READER*    ; 0
 };
 
+; procedure body
+define void @P_READER_PRICMD()
+{
+    %1 = alloca %Frame_READER_PRICMD, align 8
+    ret void
+}
+
 ; line 3141
 ;================================================================================
 ; scope: READER_PAMCMD (level : 3)
@@ -1709,6 +2390,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_READER*    ; 0
 };
+
+; procedure body
+define void @P_READER_PAMCMD()
+{
+    %1 = alloca %Frame_READER_PAMCMD, align 8
+    ret void
+}
 
 ; line 3155
 ;================================================================================
@@ -1724,6 +2412,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_READER*    ; 1
 };
 
+; procedure body
+define void @P_READER_POPCMD()
+{
+    %1 = alloca %Frame_READER_POPCMD, align 8
+    ret void
+}
+
 ; line 3173
 ;================================================================================
 ; scope: READER_PMVCMD (level : 3)
@@ -1738,6 +2433,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_READER*    ; 1
 };
 
+; procedure body
+define void @P_READER_PMVCMD()
+{
+    %1 = alloca %Frame_READER_PMVCMD, align 8
+    ret void
+}
+
 ; line 3190
 ;================================================================================
 ; scope: READER_SWICMD (level : 3)
@@ -1748,6 +2450,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_READER*    ; 0
 };
+
+; procedure body
+define void @P_READER_SWICMD()
+{
+    %1 = alloca %Frame_READER_SWICMD, align 8
+    ret void
+}
 
 ; line 3195
 ;================================================================================
@@ -1767,6 +2476,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_READER_SWICMD*    ; 3
 };
 
+; procedure body
+define void @P_READER_SWICMD_SWIONE()
+{
+    %1 = alloca %Frame_READER_SWICMD_SWIONE, align 8
+    ret void
+}
+
 ; line 3241
 ;================================================================================
 ; scope: READER_STACMD (level : 3)
@@ -1781,6 +2497,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_READER*    ; 2
 };
+
+; procedure body
+define void @P_READER_STACMD()
+{
+    %1 = alloca %Frame_READER_STACMD, align 8
+    ret void
+}
 
 ; line 3250
 ;================================================================================
@@ -1797,6 +2520,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_READER_STACMD*    ; 2
 };
 
+; procedure body
+define void @P_READER_STACMD_STAEPF()
+{
+    %1 = alloca %Frame_READER_STACMD_STAEPF, align 8
+    ret void
+}
+
 ; line 3266
 ;================================================================================
 ; scope: READER_STACMD_STACAK (level : 4)
@@ -1807,6 +2537,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_READER_STACMD*    ; 0
 };
+
+; procedure body
+define void @P_READER_STACMD_STACAK()
+{
+    %1 = alloca %Frame_READER_STACMD_STACAK, align 8
+    ret void
+}
 
 ; line 3276
 ;================================================================================
@@ -1819,6 +2556,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_READER_STACMD*    ; 0
 };
 
+; procedure body
+define void @P_READER_STACMD_STACAQ()
+{
+    %1 = alloca %Frame_READER_STACMD_STACAQ, align 8
+    ret void
+}
+
 ; line 3286
 ;================================================================================
 ; scope: READER_STACMD_STADRK (level : 4)
@@ -1829,6 +2573,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_READER_STACMD*    ; 0
 };
+
+; procedure body
+define void @P_READER_STACMD_STADRK()
+{
+    %1 = alloca %Frame_READER_STACMD_STADRK, align 8
+    ret void
+}
 
 ; line 3293
 ;================================================================================
@@ -1841,6 +2592,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_READER_STACMD*    ; 0
 };
 
+; procedure body
+define void @P_READER_STACMD_STAENP()
+{
+    %1 = alloca %Frame_READER_STACMD_STAENP, align 8
+    ret void
+}
+
 ; line 3314
 ;================================================================================
 ; scope: READER_STACMD_STAGOS (level : 4)
@@ -1851,6 +2609,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_READER_STACMD*    ; 0
 };
+
+; procedure body
+define void @P_READER_STACMD_STAGOS()
+{
+    %1 = alloca %Frame_READER_STACMD_STAGOS, align 8
+    ret void
+}
 
 ; line 3322
 ;================================================================================
@@ -1863,6 +2628,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_READER_STACMD*    ; 0
 };
 
+; procedure body
+define void @P_READER_STACMD_STALIT()
+{
+    %1 = alloca %Frame_READER_STACMD_STALIT, align 8
+    ret void
+}
+
 ; line 3329
 ;================================================================================
 ; scope: READER_STACMD_STANUM (level : 4)
@@ -1873,6 +2645,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_READER_STACMD*    ; 0
 };
+
+; procedure body
+define void @P_READER_STACMD_STANUM()
+{
+    %1 = alloca %Frame_READER_STACMD_STANUM, align 8
+    ret void
+}
 
 ; line 3336
 ;================================================================================
@@ -1892,6 +2671,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_READER_STACMD*    ; 2
 };
 
+; procedure body
+define void @P_READER_STACMD_STAOPT()
+{
+    %1 = alloca %Frame_READER_STACMD_STAOPT, align 8
+    ret void
+}
+
 ; line 3368
 ;================================================================================
 ; scope: READER_WHACMD (level : 3)
@@ -1902,6 +2688,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_READER*    ; 0
 };
+
+; procedure body
+define void @P_READER_WHACMD()
+{
+    %1 = alloca %Frame_READER_WHACMD, align 8
+    ret void
+}
 
 ; line 3410
 ;================================================================================
@@ -1921,6 +2714,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_MINENG()
+{
+    %1 = alloca %Frame_MINENG, align 8
+    ret void
+}
+
 ; line 3418
 ;================================================================================
 ; scope: MINENG_ADDCHR (level : 3)
@@ -1934,6 +2734,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_MINENG*    ; 1
 };
+
+; procedure body
+define void @P_MINENG_ADDCHR()
+{
+    %1 = alloca %Frame_MINENG_ADDCHR, align 8
+    ret void
+}
 
 ; line 3428
 ;================================================================================
@@ -1949,6 +2756,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_MINENG*    ; 2
 };
+
+; procedure body
+define void @P_MINENG_ADDSQR()
+{
+    %1 = alloca %Frame_MINENG_ADDSQR, align 8
+    ret void
+}
 
 ; line 3478
 ;================================================================================
@@ -1967,6 +2781,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_MINENG*    ; 3
 };
+
+; procedure body
+define void @P_MINENG_ADDWRD()
+{
+    %1 = alloca %Frame_MINENG_ADDWRD, align 8
+    ret void
+}
 
 ; line 3491
 ;================================================================================
@@ -1987,6 +2808,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_MINENG*    ; 4
 };
 
+; function body
+define i1 @F_MINENG_DIFFER()
+{
+    %1 = alloca %Frame_MINENG_DIFFER, align 8
+    %2 = getelementptr inbounds %Frame_MINENG_DIFFER, %Frame_MINENG_DIFFER* %1, i32 0, i32 2
+    %3 = load i1, i1* %2
+    ret i1 %3
+}
+
 ; line 3516
 ;================================================================================
 ; scope: MINENG_SETSQD (level : 3)
@@ -2003,6 +2833,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_MINENG*    ; 4
 };
+
+; procedure body
+define void @P_MINENG_SETSQD()
+{
+    %1 = alloca %Frame_MINENG_SETSQD, align 8
+    ret void
+}
 
 ; line 3544
 ;================================================================================
@@ -2029,6 +2866,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_MINENG*    ; 10
 };
 
+; procedure body
+define void @P_MINENG_MINGEN()
+{
+    %1 = alloca %Frame_MINENG_MINGEN, align 8
+    ret void
+}
+
 ; line 3635
 ;================================================================================
 ; scope: MYMOVE (level : 2)
@@ -2042,6 +2886,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_MYMOVE()
+{
+    %1 = alloca %Frame_MYMOVE, align 8
+    ret void
+}
 
 ; line 3662
 ;================================================================================
@@ -2077,6 +2928,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_YRMOVE()
+{
+    %1 = alloca %Frame_YRMOVE, align 8
+    ret void
+}
+
 ; line 3696
 ;================================================================================
 ; scope: YRMOVE_YRMHIT (level : 3)
@@ -2087,6 +2945,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_YRMOVE*    ; 0
 };
+
+; procedure body
+define void @P_YRMOVE_YRMHIT()
+{
+    %1 = alloca %Frame_YRMOVE_YRMHIT, align 8
+    ret void
+}
 
 ; line 3714
 ;================================================================================
@@ -2099,6 +2964,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_YRMOVE*    ; 0
 };
 
+; procedure body
+define void @P_YRMOVE_YRMCOM()
+{
+    %1 = alloca %Frame_YRMOVE_YRMCOM, align 8
+    ret void
+}
+
 ; line 3738
 ;================================================================================
 ; scope: YRMOVE_YRMCAP (level : 3)
@@ -2109,6 +2981,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_YRMOVE*    ; 0
 };
+
+; procedure body
+define void @P_YRMOVE_YRMCAP()
+{
+    %1 = alloca %Frame_YRMOVE_YRMCAP, align 8
+    ret void
+}
 
 ; line 3745
 ;================================================================================
@@ -2121,6 +3000,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_YRMOVE*    ; 0
 };
 
+; procedure body
+define void @P_YRMOVE_YRMCAS()
+{
+    %1 = alloca %Frame_YRMOVE_YRMCAS, align 8
+    ret void
+}
+
 ; line 3752
 ;================================================================================
 ; scope: YRMOVE_YRMCPC (level : 3)
@@ -2131,6 +3017,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_YRMOVE*    ; 0
 };
+
+; procedure body
+define void @P_YRMOVE_YRMCPC()
+{
+    %1 = alloca %Frame_YRMOVE_YRMCPC, align 8
+    ret void
+}
 
 ; line 3765
 ;================================================================================
@@ -2143,6 +3036,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_YRMOVE*    ; 0
 };
 
+; procedure body
+define void @P_YRMOVE_YRMCQS()
+{
+    %1 = alloca %Frame_YRMOVE_YRMCQS, align 8
+    ret void
+}
+
 ; line 3772
 ;================================================================================
 ; scope: YRMOVE_YRMLKQ (level : 3)
@@ -2153,6 +3053,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_YRMOVE*    ; 0
 };
+
+; procedure body
+define void @P_YRMOVE_YRMLKQ()
+{
+    %1 = alloca %Frame_YRMOVE_YRMLKQ, align 8
+    ret void
+}
 
 ; line 3783
 ;================================================================================
@@ -2165,6 +3072,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_YRMOVE*    ; 0
 };
 
+; procedure body
+define void @P_YRMOVE_YRMLRB()
+{
+    %1 = alloca %Frame_YRMOVE_YRMLRB, align 8
+    ret void
+}
+
 ; line 3795
 ;================================================================================
 ; scope: YRMOVE_YRMLRK (level : 3)
@@ -2175,6 +3089,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_YRMOVE*    ; 0
 };
+
+; procedure body
+define void @P_YRMOVE_YRMLRK()
+{
+    %1 = alloca %Frame_YRMOVE_YRMLRK, align 8
+    ret void
+}
 
 ; line 3823
 ;================================================================================
@@ -2187,6 +3108,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_YRMOVE*    ; 0
 };
 
+; procedure body
+define void @P_YRMOVE_YRMNUL()
+{
+    %1 = alloca %Frame_YRMOVE_YRMNUL, align 8
+    ret void
+}
+
 ; line 3829
 ;================================================================================
 ; scope: YRMOVE_YRMPCM (level : 3)
@@ -2197,6 +3125,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_YRMOVE*    ; 0
 };
+
+; procedure body
+define void @P_YRMOVE_YRMPCM()
+{
+    %1 = alloca %Frame_YRMOVE_YRMPCM, align 8
+    ret void
+}
 
 ; line 3842
 ;================================================================================
@@ -2209,6 +3144,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_YRMOVE*    ; 0
 };
 
+; procedure body
+define void @P_YRMOVE_YRMPRO()
+{
+    %1 = alloca %Frame_YRMOVE_YRMPRO, align 8
+    ret void
+}
+
 ; line 3855
 ;================================================================================
 ; scope: YRMOVE_YRMRKQ (level : 3)
@@ -2219,6 +3161,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_YRMOVE*    ; 0
 };
+
+; procedure body
+define void @P_YRMOVE_YRMRKQ()
+{
+    %1 = alloca %Frame_YRMOVE_YRMRKQ, align 8
+    ret void
+}
 
 ; line 3866
 ;================================================================================
@@ -2231,6 +3180,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     %Frame_YRMOVE*    ; 0
 };
 
+; procedure body
+define void @P_YRMOVE_YRMRRB()
+{
+    %1 = alloca %Frame_YRMOVE_YRMRRB, align 8
+    ret void
+}
+
 ; line 3878
 ;================================================================================
 ; scope: YRMOVE_YRMRRK (level : 3)
@@ -2241,6 +3197,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_YRMOVE*    ; 0
 };
+
+; procedure body
+define void @P_YRMOVE_YRMRRK()
+{
+    %1 = alloca %Frame_YRMOVE_YRMRRK, align 8
+    ret void
+}
 
 ; line 3906
 ;================================================================================
@@ -2263,6 +3226,15 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; slink
     %Frame_YRMOVE*    ; 4
 };
+
+; function body
+define i1 @F_YRMOVE_NCHIN()
+{
+    %1 = alloca %Frame_YRMOVE_NCHIN, align 8
+    %2 = getelementptr inbounds %Frame_YRMOVE_NCHIN, %Frame_YRMOVE_NCHIN* %1, i32 0, i32 2
+    %3 = load i1, i1* %2
+    ret i1 %3
+}
 
 ;================================================================================
 ; metadata

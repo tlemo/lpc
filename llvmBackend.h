@@ -301,6 +301,7 @@ private:
     ts::TypeList m_typeList;
     obj::VarList m_varList;
     obj::ParamList m_paramList;
+    obj::Variable* m_pFnValue = nullptr;
 
     // global (per program) state
     //
@@ -452,7 +453,7 @@ private:
         m_typeList.clear();
         m_varList.clear();
         m_paramList.clear();
-        // TODO
+        m_pFnValue = nullptr;
 
         // generate symbols (types, consts, locals...)
         //
@@ -480,10 +481,6 @@ private:
                 break;
             }
         }
-
-        // set up the frame name for subroutines
-        //
-        // TODO
 
         _outputTypes();
 
@@ -543,10 +540,7 @@ private:
 
     void _outputFrame(obj::Subroutine* pSubroutine);
 
-    void _outputSubroutine(obj::Subroutine* pSubroutine)
-    {
-        // TODO
-    }
+    void _outputSubroutine(obj::Subroutine* pSubroutine);
 
     void _outputTypes()
     {

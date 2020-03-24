@@ -706,6 +706,12 @@ void LlvmBackend::_outputFrame(obj::Subroutine* pSubroutine)
                 auto pVarExt = ext(pVar);
                 assert(pVarExt->frameIndex == -1);
                 pVarExt->frameIndex = fieldIndex++;
+
+                if (pVar->pId->name == "_fnvalue")
+                {
+                    assert(m_pFnValue == nullptr);
+                    m_pFnValue = pVar;
+                }
             }
             code << "\n";
         }
@@ -730,6 +736,75 @@ void LlvmBackend::_outputFrame(obj::Subroutine* pSubroutine)
 
         code << "};\n";
     }
+
+    write(code);
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+void LlvmBackend::_outputSubroutine(obj::Subroutine* pSubroutine)
+{
+    auto pExt = ext(pSubroutine);
+
+    const auto* pType = pSubroutine->pType;
+    const char* prefix = nullptr;
+
+    std::stringstream code;
+
+    // return type
+    //
+    if (pType->isFunction())
+    {
+        _generateType(pType->returnType());
+        code << "\n; function body\n";
+        code << "define " << ext(pType->returnType())->genName << " ";
+        prefix = "@F_";
+    }
+    else
+    {
+        code << "\n; procedure body\n";
+        code << "define void ";
+        prefix = "@P_";
+    }
+
+    // name
+    //
+    assert(pExt->genName.empty());
+    pExt->genName = _genName("", prefix, pSubroutine->pScope);
+    code << pExt->genName;
+
+    // parameters
+    //
+    code << "(";
+    // TODO
+    code << ")\n";
+
+    // TODO: body
+    //
+    code << "{\n";
+    
+    if (!pExt->frameName.empty())
+    {
+        code << TAB << "%1 = alloca " << pExt->frameName << ", align 8\n";
+    }
+    
+    if (pType->isFunction())
+    {
+        assert(m_pFnValue != nullptr);
+        const auto& returnType = ext(pType->returnType())->genName;
+        code << TAB << "%2 = getelementptr inbounds " << pExt->frameName << ", " <<
+            pExt->frameName << "* %1, i32 0, " <<
+            "i32 " << ext(m_pFnValue)->frameIndex << "\n";
+        code << TAB << "%3 = load " << returnType << ", " << returnType << "* %2\n";
+        code << TAB << "ret " << returnType << " %3\n";
+    }
+    else
+    {
+        code << TAB << "ret void\n";
+    }
+    
+    code << "}\n";
 
     write(code);
 }

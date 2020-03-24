@@ -27,6 +27,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 @StartingMonth = dso_local global i32 zeroinitializer
 @Year = dso_local global i32 zeroinitializer
 
+; procedure body
+define void @P_()
+{
+    ret void
+}
+
 ; line 15
 ;================================================================================
 ; scope: CalculatePayment (level : 2)
@@ -42,6 +48,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_CalculatePayment()
+{
+    %1 = alloca %Frame_CalculatePayment, align 8
+    ret void
+}
+
 ; line 25
 ;================================================================================
 ; scope: InitializeData (level : 2)
@@ -53,6 +66,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_InitializeData()
+{
+    %1 = alloca %Frame_InitializeData, align 8
+    ret void
+}
+
 ; line 45
 ;================================================================================
 ; scope: PrintAnnualHeader (level : 2)
@@ -63,6 +83,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_PrintAnnualHeader()
+{
+    %1 = alloca %Frame_PrintAnnualHeader, align 8
+    ret void
+}
 
 ; line 56
 ;================================================================================
@@ -79,6 +106,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     i8*
 };
 
+; procedure body
+define void @P_CalculateAndPrint()
+{
+    %1 = alloca %Frame_CalculateAndPrint, align 8
+    ret void
+}
+
 ; line 78
 ;================================================================================
 ; scope: PrintAnnualSummary (level : 2)
@@ -89,6 +123,13 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
     ; dummy
     i8*
 };
+
+; procedure body
+define void @P_PrintAnnualSummary()
+{
+    %1 = alloca %Frame_PrintAnnualSummary, align 8
+    ret void
+}
 
 ;================================================================================
 ; metadata
