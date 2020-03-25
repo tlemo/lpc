@@ -142,14 +142,14 @@ def run_test(test):
     lpc_options += lpc_out_path
     cmd = lpc_cmd + lpc_options + test + ' >> ' + console_out
 
-    with open(console_out, 'w') as file:
-        file.write('\ncompiling pass 1 (LPC)\n')
-        file.write('-----------------------------------------------------\n')
+    with open(console_out, 'w') as log:
+        log.write('\ncompiling pass 1 (LPC)\n')
+        log.write('-----------------------------------------------------\n')
 
     errcode = os.system(cmd)
 
-    with open(console_out, 'a') as file:
-        file.write('P1 errcode = %d\n' % errcode)
+    with open(console_out, 'a') as log:
+        log.write('P1 errcode = %d\n' % errcode)
 
     if errcode == 0:
         # compile pass 2 (target specific)
@@ -161,15 +161,15 @@ def run_test(test):
         if os.path.exists(p2_source):
             cmd = target['p2cmd'](p2_source, exe_name) + ' >> ' + console_out
 
-            with open(console_out, 'a') as file:
-                file.write('\ncompiling pass 2 (target = %s)\n' % target_name)
-                file.write(
+            with open(console_out, 'a') as log:
+                log.write('\ncompiling pass 2 (target = %s)\n' % target_name)
+                log.write(
                     '-----------------------------------------------------\n')
 
             errcode = os.system(cmd)
 
-            with open(console_out, 'a') as file:
-                file.write('\nP2 errcode = %d\n' % errcode)
+            with open(console_out, 'a') as log:
+                log.write('\nP2 errcode = %d\n' % errcode)
 
             if errcode != 0:
                 status = 'FAILED_P2'
@@ -181,9 +181,9 @@ def run_test(test):
                 if 'verifyCmd' in target:
                     print_dot()
 
-                    with open(console_out, 'a') as file:
-                        file.write('\nverifying the resulting binary\n')
-                        file.write(
+                    with open(console_out, 'a') as log:
+                        log.write('\nverifying the resulting binary\n')
+                        log.write(
                             '-----------------------------------------------------\n')
 
                         exe_path, exe_base_name = os.path.split(exe_name)
@@ -191,7 +191,7 @@ def run_test(test):
                             exe_base_name), cwd=exe_path)
                         result = re.sub(re.escape(exe_name),
                                         exe_base_name, result)
-                        file.write(result)
+                        log.write(result)
 
                 # shell_cmd the executable
                 #
