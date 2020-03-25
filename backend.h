@@ -150,7 +150,7 @@ public:
 
     virtual void generateCode(Scope* pGlobalScope)
     {
-        m_debugInfo = context()->commandLine()->getFlag("-debugInfo");
+        m_debugInfo = context()->commandLine()->getFlag("-debuginfo");
 
         assert(pGlobalScope != nullptr);
         assert(pGlobalScope->category == Scope::scGlobal);
@@ -216,7 +216,7 @@ private:
 
         char outputName[MAX_PATH + 1] = {};
 
-        const char* outputPath = context()->commandLine()->getString("-outPath=");
+        const char* outputPath = context()->commandLine()->getString("-outpath=");
         const char* inputName = context()->commandLine()->getInputName();
 
         // combine the specified output path + input file name

@@ -213,8 +213,8 @@ private:
         m_cmdLine.addFlag("-nologo", "supresses the compiler banner");
         m_cmdLine.addFlag("-warnings", "enables the warning messages");
         m_cmdLine.addFlag("-logging", "enables the informational messages");
-        m_cmdLine.addFlag("-debugInfo", "generates debug information");
-        m_cmdLine.addOption("-outPath=", "changes the output location");
+        m_cmdLine.addFlag("-debuginfo", "generates debug information");
+        m_cmdLine.addOption("-outpath=", "changes the output location");
         m_cmdLine.addOption("-target=", "selects the code generation target");
 
         for (const auto& backend : m_backends)
