@@ -1,7 +1,7 @@
 
 #include <lpcRuntime.h>
 
-// "prototype.pas"
+#line 0 "prototype.pas"
 
 //================================================================================
 // command line argument map
@@ -15,7 +15,7 @@ _Filename* _FilenameMap = _FilenameMapEntries;
 const int _FilenameMapSize = _countof(_FilenameMapEntries);
 
 
-// line 0
+#line 0
 //================================================================================
 // scope: global scope (level : 0)
 
@@ -31,7 +31,7 @@ const T_boolean C_false = 0;
 const T_integer C_maxint = 2147483647;
 const T_boolean C_true = 1;
 
-// line 7
+#line 7
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -83,20 +83,20 @@ void P_()
     _output.init(1);
     
     // subroutine body
-    // line 72
+    #line 72
     Gv2 = 1;
     
-    // line 73
+    #line 73
     P_test(nullptr, Gv2);
     
-    // line 74
+    #line 74
     _output << "done, gv2 = " << Gv2 << _WRITELN;
     
     { /* NOP */ }
 }
 
 
-// line 34
+#line 34
 //================================================================================
 // scope: foo (level : 2)
 
@@ -125,30 +125,30 @@ T_integer F_foo(void* _slink, T_subroutine_4 Pfn)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 40
+    #line 40
     _F.u.i = C_VALUE;
     
-    // line 42
+    #line 42
     _FOR_TO(_F.i, 0, 15)
     {
-        // line 42
+        #line 42
         _F.u.a[_F.i] = _F.i;
     }
     _FOR_END(_F.i)
     
-    // line 44
+    #line 44
     _F._fnvalue = (*_F.Pfn._pfn)(_F.Pfn._slink, Gv, Gr, _F.u);
     
-    // line 46
+    #line 46
     _new(_F.p._ptr);
     
-    // line 47
+    #line 47
     if((_F.p != nullptr))
     {
-        // line 49
+        #line 49
         (*_F.p._ptr) = _mod(Gv , 256);
         
-        // line 50
+        #line 50
         _dispose(_F.p._ptr);
         
         { /* NOP */ }
@@ -161,7 +161,7 @@ T_integer F_foo(void* _slink, T_subroutine_4 Pfn)
 }
 
 
-// line 54
+#line 54
 //================================================================================
 // scope: test (level : 2)
 
@@ -184,26 +184,26 @@ void P_test(void* _slink, T_integer& y)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 62
+    #line 62
     Gv = 1000;
     
-    // line 63
+    #line 63
     Gr.a[0] = 100;
     
-    // line 64
+    #line 64
     Gv2 = 10000;
     
-    // line 66
+    #line 66
     _output << C_STR << " = " << F_foo(nullptr, _makePfn(F_test_bar, &_F)) << _WRITELN;
     
-    // line 68
+    #line 68
     _F.y = (_F.y + 2345);
     
     { /* NOP */ }
 }
 
 
-// line 56
+#line 56
 //================================================================================
 // scope: test_bar (level : 3)
 
@@ -228,7 +228,7 @@ T_integer F_test_bar(void* _slink, T_integer x, T_REC r, T_UNION u)
     Frame_test_bar _F = { (Frame_test*)_slink, x, r, u };
     
     // subroutine body
-    // line 58
+    #line 58
     _F._fnvalue = ((((_F.x + _F.r.a[0]) + _F.u.b[1][3]) + _F.u.i) + _F._slink->y);
     
     { /* NOP */ }

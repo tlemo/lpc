@@ -19,13 +19,13 @@
     ret
 }
 
-// "udtReturn.pas"
+.line 0 "udtReturn.pas"
 
-// line 19
+.line 19
 //================================================================================
 // scope: fooA (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE A = array [0 .. 3] of int32;
 .class value explicit T_A
@@ -77,11 +77,11 @@
 }
 
 
-// line 29
+.line 29
 //================================================================================
 // scope: fooS (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE S = set of 1 .. 10
 .class value explicit T_S
@@ -164,7 +164,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_1 = set of 0 .. 255
 .class value explicit T_set_1
@@ -268,11 +268,11 @@
 }
 
 
-// line 34
+.line 34
 //================================================================================
 // scope: fooR (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE R = record;
 .class value explicit T_R
@@ -299,7 +299,7 @@
 }
 
 
-// line 2
+.line 2
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -314,7 +314,7 @@
     .field public static valuetype T_S VS
 }
 
-// line 19
+.line 19
 
 .method static
 valuetype T_A FooA()
@@ -327,35 +327,35 @@ valuetype T_A FooA()
     stloc _F
 
 L_Entry:
-    // line 22
+    .line 22
     ldloc _F
     ldflda valuetype T_A @fooA::Tmp
     ldc.i4 0
     call instance int32& T_A::ldadr(int32)
     ldc.i4 0
     stobj int32
-    // line 23
+    .line 23
     ldloc _F
     ldflda valuetype T_A @fooA::Tmp
     ldc.i4 1
     call instance int32& T_A::ldadr(int32)
     ldc.i4 1
     stobj int32
-    // line 24
+    .line 24
     ldloc _F
     ldflda valuetype T_A @fooA::Tmp
     ldc.i4 2
     call instance int32& T_A::ldadr(int32)
     ldc.i4 2
     stobj int32
-    // line 25
+    .line 25
     ldloc _F
     ldflda valuetype T_A @fooA::Tmp
     ldc.i4 3
     call instance int32& T_A::ldadr(int32)
     ldc.i4 3
     stobj int32
-    // line 26
+    .line 26
     ldloc _F
     ldloc _F
     ldfld valuetype T_A @fooA::Tmp
@@ -368,7 +368,7 @@ L_Epilogue:
     ret
 }
 
-// line 29
+.line 29
 
 .method static
 valuetype T_S FooS()
@@ -399,7 +399,7 @@ valuetype T_S FooS()
     call instance void T_set_1::addValue(int32)
 
 L_Entry:
-    // line 31
+    .line 31
     ldloc _F
     ldloc $tmpSetLiteral1
     dup
@@ -416,7 +416,7 @@ L_Epilogue:
     ret
 }
 
-// line 34
+.line 34
 
 .method static
 valuetype T_R FooR()
@@ -429,17 +429,17 @@ valuetype T_R FooR()
     stloc _F
 
 L_Entry:
-    // line 37
+    .line 37
     ldloc _F
     ldflda valuetype T_R @fooR::Tmp
     ldc.i4 11
     stfld int32 T_R::a
-    // line 38
+    .line 38
     ldloc _F
     ldflda valuetype T_R @fooR::Tmp
     ldc.i4 22
     stfld int32 T_R::b
-    // line 39
+    .line 39
     ldloc _F
     ldloc _F
     ldfld valuetype T_R @fooR::Tmp
@@ -452,11 +452,11 @@ L_Epilogue:
     ret
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 2
+.line 2
 
 .method static
 void _Program()
@@ -486,16 +486,16 @@ void _Program()
     call instance void T_set_1::addRange(int32, int32)
 
 L_Entry:
-    // line 43
+    .line 43
     call valuetype T_A FooA()
     stsfld valuetype T_A _G::VA
-    // line 44
+    .line 44
     call valuetype T_S FooS()
     stsfld valuetype T_S _G::VS
-    // line 45
+    .line 45
     call valuetype T_R FooR()
     stsfld valuetype T_R _G::VR
-    // line 47
+    .line 47
     ldc.i4 3
     stloc $tmpEndValue1
     ldc.i4 0
@@ -506,7 +506,7 @@ L_Entry:
     ldloc $tmpIndex2
     stsfld int32 _G::i
 L_for_loop_1:
-    // line 48
+    .line 48
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "a["
@@ -536,16 +536,16 @@ L_for_loop_1:
     br L_for_loop_1
 L_for_end_2:
     pop
-    // line 50
+    .line 50
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 52
+    .line 52
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "s = [ "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 53
+    .line 53
     ldc.i4 10
     stloc $tmpEndValue4
     ldc.i4 1
@@ -556,7 +556,7 @@ L_for_end_2:
     ldloc $tmpIndex5
     stsfld int32 _G::i
 L_for_loop_3:
-    // line 54
+    .line 54
     ldsfld valuetype T_S _G::VS
     call valuetype T_set_1 _SetCastTo_T_set_1(valuetype T_S s)
     ldloc $tmpSetLiteral6
@@ -564,7 +564,7 @@ L_for_loop_3:
     ldsfld int32 _G::i
     call bool _SetContains(valuetype T_set_1 s, int32 val)
     brfalse L_if_end_5
-    // line 55
+    .line 55
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldsfld int32 _G::i
@@ -586,16 +586,16 @@ L_if_end_5:
     br L_for_loop_3
 L_for_end_4:
     pop
-    // line 56
+    .line 56
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldc.i4 93 // ']'
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 58
+    .line 58
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 60
+    .line 60
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "r.a = "
@@ -631,7 +631,7 @@ L_Epilogue:
 
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 //================================================================================
 // internal helpers

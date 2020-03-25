@@ -19,9 +19,9 @@
     ret
 }
 
-// "test05.pas"
+.line 0 "test05.pas"
 
-// line 16
+.line 16
 //================================================================================
 // scope: outter_inner_setOutter (level : 4)
 
@@ -42,7 +42,7 @@
 }
 
 
-// line 15
+.line 15
 //================================================================================
 // scope: outter_inner (level : 3)
 
@@ -64,7 +64,7 @@
         ret
     }
 
-// line 16
+.line 16
 
     .method public
     void SetOutter(int32 x)
@@ -85,7 +85,7 @@
         stfld int32 @outter_inner_setOutter::x
     
     L_Entry:
-        // line 18
+        .line 18
         ldloc _F
         ldfld class @outter_inner @outter_inner_setOutter::_slink
         ldfld class @outter @outter_inner::_slink
@@ -100,7 +100,7 @@
 }
 
 
-// line 14
+.line 14
 //================================================================================
 // scope: outter (level : 2)
 
@@ -119,7 +119,7 @@
         ret
     }
 
-// line 15
+.line 15
 
     .method public
     int32 Inner(int32 x)
@@ -140,19 +140,19 @@
         stfld int32 @outter_inner::x
     
     L_Entry:
-        // line 21
+        .line 21
         ldloc _F
         ldloc _F
         ldfld int32 @outter_inner::x
         ldc.i4 2
         mul
         stfld int32 @outter_inner::_fnvalue
-        // line 22
+        .line 22
         ldloc _F
         ldfld class @outter @outter_inner::_slink
         ldc.i4 7
         stfld int32 @outter::_fnvalue
-        // line 23
+        .line 23
         ldloc _F
         ldc.i4 100
         ldloc _F
@@ -169,11 +169,11 @@
 }
 
 
-// line 4
+.line 4
 //================================================================================
 // scope: program scope (level : 1)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_2 = array [0 .. 255] of int32;
 .class value explicit T_array_2
@@ -210,7 +210,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE t1 = array [1 .. 3] of valuetype T_array_2;
 .class value explicit T_t1
@@ -249,7 +249,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_6 = array [1 .. 5] of uint8;
 .class value explicit T_array_6
@@ -296,7 +296,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_5 = array [0 .. 255] of valuetype T_array_6;
 .class value explicit T_array_5
@@ -333,7 +333,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_4 = array [0 .. 2] of valuetype T_array_5;
 .class value explicit T_array_4
@@ -370,7 +370,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_3 = array [1 .. 10] of valuetype T_array_4;
 .class value explicit T_array_3
@@ -418,7 +418,7 @@
     .field public static valuetype T_t1 y
 }
 
-// line 14
+.line 14
 
 .method static
 int32 Outter(int32 x)
@@ -435,11 +435,11 @@ int32 Outter(int32 x)
     stfld int32 @outter::x
 
 L_Entry:
-    // line 26
+    .line 26
     ldloc _F
     ldc.i4 1
     stfld int32 @outter::_fnvalue
-    // line 27
+    .line 27
     ldloc _F
     ldloc _F
     ldfld int32 @outter::x
@@ -447,7 +447,7 @@ L_Entry:
     ldc.i4 7
     ceq
     brfalse L_if_end_1
-    // line 27
+    .line 27
     ldloc _F
     ldc.i4 2
     stfld int32 @outter::_fnvalue
@@ -460,11 +460,11 @@ L_Epilogue:
     ret
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 4
+.line 4
 
 .method static
 void _Program()
@@ -482,13 +482,13 @@ void _Program()
     call instance void [lpcRuntime]LPC.File::Init(int32)
 
 L_Entry:
-    // line 31
+    .line 31
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "hello, world"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 32
+    .line 32
     ldsflda valuetype T_array_3 _G::x
     ldc.i4 3
     call instance valuetype T_array_4& T_array_3::ldadr(int32)
@@ -500,7 +500,7 @@ L_Entry:
     call instance uint8& T_array_6::ldadr(int32)
     ldc.i4 33 // '!'
     stobj uint8
-    // line 33
+    .line 33
     ldsflda valuetype T_t1 _G::y
     ldc.i4 2
     call instance valuetype T_array_2& T_t1::ldadr(int32)
@@ -517,7 +517,7 @@ L_Entry:
     call instance uint8& T_array_6::ldadr(int32)
     ldobj uint8
     stobj int32
-    // line 34
+    .line 34
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "outter = "
@@ -527,7 +527,7 @@ L_Entry:
     call int32 Outter(int32 x)
     call instance void [lpcRuntime]LPC.File::Write(int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 35
+    .line 35
     ldsflda valuetype [lpcRuntime]LPC.File _G::_input
     call instance void [lpcRuntime]LPC.File::ReadLn()
     /* nop */

@@ -1,7 +1,7 @@
 
 #include <lpcRuntime.h>
 
-// "udtReturn.pas"
+#line 0 "udtReturn.pas"
 
 //================================================================================
 // command line argument map
@@ -15,7 +15,7 @@ _Filename* _FilenameMap = _FilenameMapEntries;
 const int _FilenameMapSize = _countof(_FilenameMapEntries);
 
 
-// line 0
+#line 0
 //================================================================================
 // scope: global scope (level : 0)
 
@@ -31,7 +31,7 @@ const T_boolean C_false = 0;
 const T_integer C_maxint = 2147483647;
 const T_boolean C_true = 1;
 
-// line 2
+#line 2
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -70,55 +70,55 @@ void P_()
     _setLiteral1.set(2, 10);
     
     // subroutine body
-    // line 43
+    #line 43
     VA = F_fooA(nullptr);
     
-    // line 44
+    #line 44
     VS = F_fooS(nullptr);
     
-    // line 45
+    #line 45
     VR = F_fooR(nullptr);
     
-    // line 47
+    #line 47
     _FOR_TO(i, 0, 3)
     {
-        // line 48
+        #line 48
         _output << "a[" << i << "] = " << VA[i] << _WRITELN;
     }
     _FOR_END(i)
     
-    // line 50
+    #line 50
     _output << _WRITELN;
     
-    // line 52
+    #line 52
     _output << "s = [ ";
     
-    // line 53
+    #line 53
     _FOR_TO(i, 1, 10)
     {
-        // line 54
+        #line 54
         if(((VS * _setLiteral1) & i))
         {
-            // line 55
+            #line 55
             _output << i << ' ';
         }
     }
     _FOR_END(i)
     
-    // line 56
+    #line 56
     _output << ']' << _WRITELN;
     
-    // line 58
+    #line 58
     _output << _WRITELN;
     
-    // line 60
+    #line 60
     _output << "r.a = " << VR.a << ", r.b = " << VR.b << _WRITELN;
     
     { /* NOP */ }
 }
 
 
-// line 19
+#line 19
 //================================================================================
 // scope: fooA (level : 2)
 
@@ -139,19 +139,19 @@ T_A F_fooA(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 22
+    #line 22
     _F.Tmp[0] = 0;
     
-    // line 23
+    #line 23
     _F.Tmp[1] = 1;
     
-    // line 24
+    #line 24
     _F.Tmp[2] = 2;
     
-    // line 25
+    #line 25
     _F.Tmp[3] = 3;
     
-    // line 26
+    #line 26
     _F._fnvalue = _F.Tmp;
     
     { /* NOP */ }
@@ -161,7 +161,7 @@ T_A F_fooA(void* _slink)
 }
 
 
-// line 29
+#line 29
 //================================================================================
 // scope: fooS (level : 2)
 
@@ -189,7 +189,7 @@ T_S F_fooS(void* _slink)
     _setLiteral1.set(7);
     
     // subroutine body
-    // line 31
+    #line 31
     _F._fnvalue = _setLiteral1;
     
     { /* NOP */ }
@@ -199,7 +199,7 @@ T_S F_fooS(void* _slink)
 }
 
 
-// line 34
+#line 34
 //================================================================================
 // scope: fooR (level : 2)
 
@@ -220,13 +220,13 @@ T_R F_fooR(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 37
+    #line 37
     _F.Tmp.a = 11;
     
-    // line 38
+    #line 38
     _F.Tmp.b = 22;
     
-    // line 39
+    #line 39
     _F._fnvalue = _F.Tmp;
     
     { /* NOP */ }

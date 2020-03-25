@@ -19,9 +19,9 @@
     ret
 }
 
-// "chess05ISO.pas"
+.line 0 "chess05ISO.pas"
 
-// line 290
+.line 290
 //================================================================================
 // scope: MAX (level : 2)
 
@@ -43,7 +43,7 @@
 }
 
 
-// line 300
+.line 300
 //================================================================================
 // scope: MIN (level : 2)
 
@@ -65,7 +65,7 @@
 }
 
 
-// line 310
+.line 310
 //================================================================================
 // scope: SIGN (level : 2)
 
@@ -87,11 +87,11 @@
 }
 
 
-// line 320
+.line 320
 //================================================================================
 // scope: SORTIT (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE RE = array [1 .. 500] of int16;
 .class value explicit T_RE
@@ -130,7 +130,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE RM = record;
 .class value explicit T_RM
@@ -169,7 +169,7 @@
         .field [16] public int32 RMPP
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE RF = array [1 .. 500] of valuetype T_RM;
 .class value explicit T_RF
@@ -231,11 +231,11 @@
 }
 
 
-// line 354
+.line 354
 //================================================================================
 // scope: ANDRS (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE SX = set of 0 .. 31
 .class value explicit T_SX
@@ -318,7 +318,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_1 = array [0 .. 1] of valuetype T_SX;
 .class value explicit T_array_1
@@ -355,7 +355,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_2 = array [0 .. 1] of int32;
 .class value explicit T_array_2
@@ -392,7 +392,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE RS = record;
 .class value explicit T_RS
@@ -428,11 +428,11 @@
 }
 
 
-// line 368
+.line 368
 //================================================================================
 // scope: CLRRS (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_3 = array [0 .. 63] of int8;
 .class value explicit T_array_3
@@ -467,7 +467,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_4 = array [0 .. 63] of valuetype T_SX;
 .class value explicit T_array_4
@@ -519,7 +519,7 @@
 }
 
 
-// line 377
+.line 377
 //================================================================================
 // scope: CPYRS (level : 2)
 
@@ -541,7 +541,7 @@
 }
 
 
-// line 390
+.line 390
 //================================================================================
 // scope: IORRS (level : 2)
 
@@ -564,11 +564,11 @@
 }
 
 
-// line 403
+.line 403
 //================================================================================
 // scope: NEWRS (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_5 = set of 0 .. 255
 .class value explicit T_set_5
@@ -675,7 +675,7 @@
 }
 
 
-// line 415
+.line 415
 //================================================================================
 // scope: NOTRS (level : 2)
 
@@ -697,7 +697,7 @@
 }
 
 
-// line 427
+.line 427
 //================================================================================
 // scope: NXTTS (level : 2)
 
@@ -721,7 +721,7 @@
 }
 
 
-// line 477
+.line 477
 //================================================================================
 // scope: CNTRS (level : 2)
 
@@ -745,7 +745,7 @@
 }
 
 
-// line 502
+.line 502
 //================================================================================
 // scope: SETRS (level : 2)
 
@@ -764,11 +764,11 @@
 }
 
 
-// line 511
+.line 511
 //================================================================================
 // scope: SFTRS (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_9 = array [0 .. 119] of int8;
 .class value explicit T_array_9
@@ -803,7 +803,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_11 = array [0 .. 15] of int8;
 .class value explicit T_array_11
@@ -857,7 +857,7 @@
 }
 
 
-// line 619
+.line 619
 //================================================================================
 // scope: INRSTB (level : 2)
 
@@ -879,7 +879,7 @@
 }
 
 
-// line 627
+.line 627
 //================================================================================
 // scope: NULRS (level : 2)
 
@@ -902,7 +902,7 @@
 }
 
 
-// line 643
+.line 643
 //================================================================================
 // scope: NULMVB (level : 2)
 
@@ -923,11 +923,11 @@
 }
 
 
-// line 670
+.line 670
 //================================================================================
 // scope: INICON_INISYN (level : 3)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE RA = array [1 .. 10] of uint8;
 .class value explicit T_RA
@@ -974,7 +974,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE RD = record;
 .class value explicit T_RD
@@ -989,7 +989,7 @@
     .field [4] public bool RDRK
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE RY = record;
 .class value explicit T_RY
@@ -1002,7 +1002,7 @@
     .field [6] public valuetype T_RD RYRS
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_12 = array [1 .. 47] of valuetype T_RY;
 .class value explicit T_array_12
@@ -1058,11 +1058,11 @@
 }
 
 
-// line 698
+.line 698
 //================================================================================
 // scope: INICON_INIXTP (level : 3)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_13 = array [0 .. 12] of uint8;
 .class value explicit T_array_13
@@ -1097,7 +1097,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_14 = array [0 .. 12] of int32;
 .class value explicit T_array_14
@@ -1134,7 +1134,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_15 = array [0 .. 12] of bool;
 .class value explicit T_array_15
@@ -1169,7 +1169,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_17 = array [0 .. 12] of int16;
 .class value explicit T_array_17
@@ -1206,7 +1206,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_18 = array [0 .. 2] of int32;
 .class value explicit T_array_18
@@ -1243,7 +1243,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_19 = array [0 .. 5] of valuetype T_array_18;
 .class value explicit T_array_19
@@ -1304,11 +1304,11 @@
 }
 
 
-// line 653
+.line 653
 //================================================================================
 // scope: INICON (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_21 = array [0 .. 3] of valuetype T_array_18;
 .class value explicit T_array_21
@@ -1345,7 +1345,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_22 = array [0 .. 3] of uint8;
 .class value explicit T_array_22
@@ -1380,7 +1380,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_23 = array [0 .. 5] of uint8;
 .class value explicit T_array_23
@@ -1415,7 +1415,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_24 = array [0 .. 1] of uint8;
 .class value explicit T_array_24
@@ -1450,7 +1450,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_26 = array [0 .. 2] of int16;
 .class value explicit T_array_26
@@ -1487,7 +1487,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_27 = array [0 .. 2] of valuetype T_RA;
 .class value explicit T_array_27
@@ -1524,7 +1524,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_31 = array [0 .. 3] of valuetype T_RA;
 .class value explicit T_array_31
@@ -1561,7 +1561,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_36 = array [0 .. 7] of int8;
 .class value explicit T_array_36
@@ -1596,7 +1596,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_37 = array [0 .. 7] of valuetype T_array_36;
 .class value explicit T_array_37
@@ -1633,7 +1633,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_38 = array [0 .. 63] of int32;
 .class value explicit T_array_38
@@ -1670,7 +1670,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE RX = array [0 .. 63] of valuetype T_RS;
 .class value explicit T_RX
@@ -1707,7 +1707,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE arraytrofrs = array [0 .. 7] of valuetype T_RS;
 .class value explicit T_arraytrofrs
@@ -1744,7 +1744,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_43 = array [0 .. 15] of valuetype T_RS;
 .class value explicit T_array_43
@@ -1781,7 +1781,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_44 = array [-119 .. 119] of int8;
 .class value explicit T_array_44
@@ -1818,7 +1818,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE arraytqofrs = array [0 .. 3] of valuetype T_RS;
 .class value explicit T_arraytqofrs
@@ -1855,7 +1855,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_45 = array [0 .. 3] of valuetype T_RM;
 .class value explicit T_array_45
@@ -1892,7 +1892,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_47 = array [0 .. 3] of int8;
 .class value explicit T_array_47
@@ -1927,7 +1927,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE RJ = array [0 .. 73] of uint8;
 .class value explicit T_RJ
@@ -1962,7 +1962,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_95 = array [0 .. 7] of int32;
 .class value explicit T_array_95
@@ -2023,7 +2023,7 @@
         ret
     }
 
-// line 670
+.line 670
 
     .method public
     void INISYN(valuetype T_RA A)
@@ -2044,7 +2044,7 @@
         stfld valuetype T_RA @INICON_INISYN::A
     
     L_Entry:
-        // line 678
+        .line 678
         ldsflda valuetype T_array_12 _G::SYNTX
         ldloc _F
         ldfld class @INICON @INICON_INISYN::_slink
@@ -2053,7 +2053,7 @@
         ldflda valuetype T_RD T_RY::RYLS
         ldc.i4 1 // (true)
         stfld bool T_RD::RDPC
-        // line 679
+        .line 679
         ldsflda valuetype T_array_12 _G::SYNTX
         ldloc _F
         ldfld class @INICON @INICON_INISYN::_slink
@@ -2072,7 +2072,7 @@
         ldc.i4.0
         ceq
         stfld bool T_RD::RDSL
-        // line 680
+        .line 680
         ldsflda valuetype T_array_12 _G::SYNTX
         ldloc _F
         ldfld class @INICON @INICON_INISYN::_slink
@@ -2091,7 +2091,7 @@
         ldc.i4.0
         ceq
         stfld bool T_RD::RDKQ
-        // line 681
+        .line 681
         ldsflda valuetype T_array_12 _G::SYNTX
         ldloc _F
         ldfld class @INICON @INICON_INISYN::_slink
@@ -2110,7 +2110,7 @@
         ldc.i4.0
         ceq
         stfld bool T_RD::RDNB
-        // line 682
+        .line 682
         ldsflda valuetype T_array_12 _G::SYNTX
         ldloc _F
         ldfld class @INICON @INICON_INISYN::_slink
@@ -2130,7 +2130,7 @@
         ceq
         stfld bool T_RD::RDRK
         /* nop */
-        // line 684
+        .line 684
         ldsflda valuetype T_array_12 _G::SYNTX
         ldloc _F
         ldfld class @INICON @INICON_INISYN::_slink
@@ -2144,7 +2144,7 @@
         call instance uint8& T_RA::ldadr(int32)
         ldobj uint8
         stfld uint8 T_RY::RYCH
-        // line 687
+        .line 687
         ldsflda valuetype T_array_12 _G::SYNTX
         ldloc _F
         ldfld class @INICON @INICON_INISYN::_slink
@@ -2163,7 +2163,7 @@
         ldc.i4.0
         ceq
         stfld bool T_RD::RDPC
-        // line 688
+        .line 688
         ldsflda valuetype T_array_12 _G::SYNTX
         ldloc _F
         ldfld class @INICON @INICON_INISYN::_slink
@@ -2182,7 +2182,7 @@
         ldc.i4.0
         ceq
         stfld bool T_RD::RDSL
-        // line 689
+        .line 689
         ldsflda valuetype T_array_12 _G::SYNTX
         ldloc _F
         ldfld class @INICON @INICON_INISYN::_slink
@@ -2201,7 +2201,7 @@
         ldc.i4.0
         ceq
         stfld bool T_RD::RDKQ
-        // line 690
+        .line 690
         ldsflda valuetype T_array_12 _G::SYNTX
         ldloc _F
         ldfld class @INICON @INICON_INISYN::_slink
@@ -2220,7 +2220,7 @@
         ldc.i4.0
         ceq
         stfld bool T_RD::RDNB
-        // line 691
+        .line 691
         ldsflda valuetype T_array_12 _G::SYNTX
         ldloc _F
         ldfld class @INICON @INICON_INISYN::_slink
@@ -2241,7 +2241,7 @@
         stfld bool T_RD::RDRK
         /* nop */
         /* nop */
-        // line 694
+        .line 694
         ldloc _F
         ldfld class @INICON @INICON_INISYN::_slink
         ldloc _F
@@ -2256,7 +2256,7 @@
         ret
     }
 
-// line 698
+.line 698
 
     .method public
     void INIXTP(int32 A, uint8 B, int32 C, int32 D, bool E, int32 F, int32 G, int16 H)
@@ -2305,7 +2305,7 @@
         stfld int16 @INICON_INIXTP::H
     
     L_Entry:
-        // line 710
+        .line 710
         ldsflda valuetype T_array_13 _G::XTPC
         ldloc _F
         ldfld int32 @INICON_INIXTP::A
@@ -2313,7 +2313,7 @@
         ldloc _F
         ldfld uint8 @INICON_INIXTP::B
         stobj uint8
-        // line 711
+        .line 711
         ldsflda valuetype T_array_14 _G::XTPM
         ldloc _F
         ldfld int32 @INICON_INIXTP::A
@@ -2321,7 +2321,7 @@
         ldloc _F
         ldfld int32 @INICON_INIXTP::C
         stobj int32
-        // line 712
+        .line 712
         ldsflda valuetype T_array_15 _G::XSPB
         ldloc _F
         ldfld int32 @INICON_INIXTP::A
@@ -2329,7 +2329,7 @@
         ldloc _F
         ldfld bool @INICON_INIXTP::E
         stobj bool
-        // line 713
+        .line 713
         ldsflda valuetype T_array_14 _G::XFPE
         ldloc _F
         ldfld int32 @INICON_INIXTP::A
@@ -2337,7 +2337,7 @@
         ldloc _F
         ldfld int32 @INICON_INIXTP::F
         stobj int32
-        // line 714
+        .line 714
         ldsflda valuetype T_array_14 _G::XLPE
         ldloc _F
         ldfld int32 @INICON_INIXTP::A
@@ -2345,7 +2345,7 @@
         ldloc _F
         ldfld int32 @INICON_INIXTP::G
         stobj int32
-        // line 715
+        .line 715
         ldsflda valuetype T_array_14 _G::XTPU
         ldloc _F
         ldfld int32 @INICON_INIXTP::A
@@ -2353,7 +2353,7 @@
         ldloc _F
         ldfld int32 @INICON_INIXTP::D
         stobj int32
-        // line 716
+        .line 716
         ldsflda valuetype T_array_17 _G::XTPV
         ldloc _F
         ldfld int32 @INICON_INIXTP::A
@@ -2361,7 +2361,7 @@
         ldloc _F
         ldfld int16 @INICON_INIXTP::H
         stobj int16
-        // line 717
+        .line 717
         ldloc _F
         ldfld int32 @INICON_INIXTP::A
         ldc.i4 12
@@ -2369,7 +2369,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 718
+        .line 718
         ldsflda valuetype T_array_19 _G::XTUMP
         ldloc _F
         ldfld int32 @INICON_INIXTP::D
@@ -2389,11 +2389,11 @@
 }
 
 
-// line 1057
+.line 1057
 //================================================================================
 // scope: INITAL (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE SQ = set of 0 .. 3
 .class value explicit T_SQ
@@ -2476,7 +2476,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_96 = array [0 .. 7] of valuetype T_array_95;
 .class value explicit T_array_96
@@ -2513,7 +2513,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE RB = record;
 .class value explicit T_RB
@@ -2535,7 +2535,7 @@
         .field [16] public valuetype T_array_96 RBIRF
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_99 = array [1 .. 30] of uint8;
 .class value explicit T_array_99
@@ -2600,7 +2600,7 @@
 }
 
 
-// line 1101
+.line 1101
 //================================================================================
 // scope: PAUSER (level : 2)
 
@@ -2615,7 +2615,7 @@
 }
 
 
-// line 1112
+.line 1112
 //================================================================================
 // scope: PRIMOV (level : 2)
 
@@ -2633,7 +2633,7 @@
 }
 
 
-// line 1168
+.line 1168
 //================================================================================
 // scope: PRINTB (level : 2)
 
@@ -2655,11 +2655,11 @@
 }
 
 
-// line 1208
+.line 1208
 //================================================================================
 // scope: PRINAM (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_100 = set of 0 .. 7
 .class value explicit T_set_100
@@ -2762,7 +2762,7 @@
 }
 
 
-// line 1237
+.line 1237
 //================================================================================
 // scope: PRISWI (level : 2)
 
@@ -2781,11 +2781,11 @@
 }
 
 
-// line 1248
+.line 1248
 //================================================================================
 // scope: MBEVAL (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_102 = array [0 .. 16] of int16;
 .class value explicit T_array_102
@@ -2836,7 +2836,7 @@
 }
 
 
-// line 1267
+.line 1267
 //================================================================================
 // scope: MBCAPT (level : 2)
 
@@ -2854,7 +2854,7 @@
 }
 
 
-// line 1281
+.line 1281
 //================================================================================
 // scope: MBTPAC (level : 2)
 
@@ -2872,7 +2872,7 @@
 }
 
 
-// line 1294
+.line 1294
 //================================================================================
 // scope: MBPROM (level : 2)
 
@@ -2890,7 +2890,7 @@
 }
 
 
-// line 1308
+.line 1308
 //================================================================================
 // scope: MBMORP (level : 2)
 
@@ -2908,11 +2908,11 @@
 }
 
 
-// line 1321
+.line 1321
 //================================================================================
 // scope: ADDATK (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE arraytmofrs = array [0 .. 2] of valuetype T_RS;
 .class value explicit T_arraytmofrs
@@ -2971,11 +2971,11 @@
 }
 
 
-// line 1359
+.line 1359
 //================================================================================
 // scope: ADDLOC (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_103 = array [0 .. 12] of valuetype T_RS;
 .class value explicit T_array_103
@@ -3012,7 +3012,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE arraytkofrs = array [0 .. 16] of valuetype T_RS;
 .class value explicit T_arraytkofrs
@@ -3064,7 +3064,7 @@
 }
 
 
-// line 1372
+.line 1372
 //================================================================================
 // scope: CLSTAT (level : 2)
 
@@ -3079,7 +3079,7 @@
 }
 
 
-// line 1384
+.line 1384
 //================================================================================
 // scope: CUTATK (level : 2)
 
@@ -3106,7 +3106,7 @@
 }
 
 
-// line 1428
+.line 1428
 //================================================================================
 // scope: DELATK (level : 2)
 
@@ -3130,7 +3130,7 @@
 }
 
 
-// line 1462
+.line 1462
 //================================================================================
 // scope: PRPATK (level : 2)
 
@@ -3156,7 +3156,7 @@
 }
 
 
-// line 1502
+.line 1502
 //================================================================================
 // scope: GAINIT (level : 2)
 
@@ -3174,7 +3174,7 @@
 }
 
 
-// line 1520
+.line 1520
 //================================================================================
 // scope: LOSEIT (level : 2)
 
@@ -3192,7 +3192,7 @@
 }
 
 
-// line 1540
+.line 1540
 //================================================================================
 // scope: MOVEIT (level : 2)
 
@@ -3210,7 +3210,7 @@
 }
 
 
-// line 1558
+.line 1558
 //================================================================================
 // scope: RTRKIT (level : 2)
 
@@ -3228,7 +3228,7 @@
 }
 
 
-// line 1578
+.line 1578
 //================================================================================
 // scope: PAWNIT (level : 2)
 
@@ -3246,7 +3246,7 @@
 }
 
 
-// line 1590
+.line 1590
 //================================================================================
 // scope: PROACA (level : 2)
 
@@ -3268,7 +3268,7 @@
 }
 
 
-// line 1614
+.line 1614
 //================================================================================
 // scope: PROACS (level : 2)
 
@@ -3286,7 +3286,7 @@
 }
 
 
-// line 1629
+.line 1629
 //================================================================================
 // scope: PROMOT (level : 2)
 
@@ -3304,11 +3304,11 @@
 }
 
 
-// line 1641
+.line 1641
 //================================================================================
 // scope: CREATE (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_105 = array [0 .. 16] of int32;
 .class value explicit T_array_105
@@ -3363,7 +3363,7 @@
 }
 
 
-// line 1718
+.line 1718
 //================================================================================
 // scope: DNDATE (level : 2)
 
@@ -3388,7 +3388,7 @@
 }
 
 
-// line 1792
+.line 1792
 //================================================================================
 // scope: UPDATE (level : 2)
 
@@ -3416,7 +3416,7 @@
 }
 
 
-// line 1919
+.line 1919
 //================================================================================
 // scope: GENONE (level : 2)
 
@@ -3438,7 +3438,7 @@
 }
 
 
-// line 1950
+.line 1950
 //================================================================================
 // scope: PWNPRO (level : 2)
 
@@ -3456,7 +3456,7 @@
 }
 
 
-// line 1967
+.line 1967
 //================================================================================
 // scope: GENPWN (level : 2)
 
@@ -3480,7 +3480,7 @@
 }
 
 
-// line 2095
+.line 2095
 //================================================================================
 // scope: GENFSL (level : 2)
 
@@ -3505,7 +3505,7 @@
 }
 
 
-// line 2124
+.line 2124
 //================================================================================
 // scope: GENTSL (level : 2)
 
@@ -3530,7 +3530,7 @@
 }
 
 
-// line 2151
+.line 2151
 //================================================================================
 // scope: GENCAP (level : 2)
 
@@ -3548,7 +3548,7 @@
 }
 
 
-// line 2163
+.line 2163
 //================================================================================
 // scope: GENCAS (level : 2)
 
@@ -3568,7 +3568,7 @@
 }
 
 
-// line 2191
+.line 2191
 //================================================================================
 // scope: GENALL (level : 2)
 
@@ -3583,7 +3583,7 @@
 }
 
 
-// line 2199
+.line 2199
 //================================================================================
 // scope: LSTMOV (level : 2)
 
@@ -3601,7 +3601,7 @@
 }
 
 
-// line 2215
+.line 2215
 //================================================================================
 // scope: THEMOV (level : 2)
 
@@ -3625,7 +3625,7 @@
 }
 
 
-// line 2254
+.line 2254
 //================================================================================
 // scope: EVALU8_EVKING (level : 3)
 
@@ -3653,7 +3653,7 @@
 }
 
 
-// line 2280
+.line 2280
 //================================================================================
 // scope: EVALU8_EVMOBL (level : 3)
 
@@ -3681,7 +3681,7 @@
 }
 
 
-// line 2297
+.line 2297
 //================================================================================
 // scope: EVALU8_EVPAWN (level : 3)
 
@@ -3711,7 +3711,7 @@
 }
 
 
-// line 2332
+.line 2332
 //================================================================================
 // scope: EVALU8_EVROOK (level : 3)
 
@@ -3740,11 +3740,11 @@
 }
 
 
-// line 2249
+.line 2249
 //================================================================================
 // scope: EVALU8 (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_109 = array [-2 .. 17] of int16;
 .class value explicit T_array_109
@@ -3783,7 +3783,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_110 = array [0 .. 17] of int16;
 .class value explicit T_array_110
@@ -3832,7 +3832,7 @@
         ret
     }
 
-// line 2254
+.line 2254
 
     .method public
     int16 EVKING(valuetype T_RS A, valuetype T_RS B)
@@ -3857,19 +3857,19 @@
         stfld valuetype T_RS @EVALU8_EVKING::B
     
     L_Entry:
-        // line 2264
+        .line 2264
         ldloc _F
         ldflda valuetype T_RS @EVALU8_EVKING::INRS
         ldloc _F
         ldfld valuetype T_RS @EVALU8_EVKING::A
         ldsfld valuetype T_RS _G::CORNR
         call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-        // line 2265
+        .line 2265
         ldloc _F
         ldfld valuetype T_RS @EVALU8_EVKING::INRS
         call bool NULRS(valuetype T_RS A)
         brfalse L_else_1
-        // line 2266
+        .line 2266
         ldloc _F
         ldc.i4 0
         dup
@@ -3879,7 +3879,7 @@
         stfld int16 @EVALU8_EVKING::INTV
         br L_if_end_2
     L_else_1:
-        // line 2268
+        .line 2268
         ldloc _F
         ldsfld int32 _G::FKSANQ
         dup
@@ -3888,19 +3888,19 @@
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @EVALU8_EVKING::INTV
     L_if_end_2:
-        // line 2269
+        .line 2269
         ldloc _F
         ldloc _F
         ldfld valuetype T_RS @EVALU8_EVKING::A
         stfld valuetype T_RS @EVALU8_EVKING::INRS
-        // line 2270
+        .line 2270
         ldloc _F
         ldflda valuetype T_RS @EVALU8_EVKING::INRS
         ldloc _F
         ldflda int8 @EVALU8_EVKING::INTS
         call bool NXTTS(valuetype T_RS& A, int8& B)
         brfalse L_if_end_3
-        // line 2272
+        .line 2272
         ldloc _F
         ldflda valuetype T_RS @EVALU8_EVKING::INRS
         ldsflda valuetype T_RX _G::ATKFR
@@ -3911,7 +3911,7 @@
         ldloc _F
         ldfld valuetype T_RS @EVALU8_EVKING::B
         call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-        // line 2273
+        .line 2273
         ldloc _F
         ldloc _F
         ldfld int16 @EVALU8_EVKING::INTV
@@ -3928,7 +3928,7 @@
         stfld int16 @EVALU8_EVKING::INTV
         /* nop */
     L_if_end_3:
-        // line 2276
+        .line 2276
         ldloc _F
         ldloc _F
         ldfld int16 @EVALU8_EVKING::INTV
@@ -3941,7 +3941,7 @@
         ret
     }
 
-// line 2280
+.line 2280
 
     .method public
     int16 EVMOBL(int32 A, int32 B)
@@ -3966,7 +3966,7 @@
         stfld int32 @EVALU8_EVMOBL::B
     
     L_Entry:
-        // line 2289
+        .line 2289
         ldloc _F
         ldflda valuetype T_RS @EVALU8_EVMOBL::INRS
         ldsflda valuetype T_array_103 _G::TPLOC
@@ -3980,7 +3980,7 @@
         call instance valuetype T_RS& T_array_103::ldadr(int32)
         ldobj valuetype T_RS
         call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-        // line 2290
+        .line 2290
         ldloc _F
         ldc.i4 0
         dup
@@ -3988,10 +3988,10 @@
         ldc.i4 32767
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @EVALU8_EVMOBL::INTV
-        // line 2291
+        .line 2291
         br L_while_test_2
     L_while_1:
-        // line 2292
+        .line 2292
         ldloc _F
         ldloc _F
         ldfld int16 @EVALU8_EVMOBL::INTV
@@ -4014,7 +4014,7 @@
         ldflda int8 @EVALU8_EVMOBL::INTS
         call bool NXTTS(valuetype T_RS& A, int8& B)
         brtrue L_while_1
-        // line 2293
+        .line 2293
         ldloc _F
         ldloc _F
         ldfld int16 @EVALU8_EVMOBL::INTV
@@ -4027,7 +4027,7 @@
         ret
     }
 
-// line 2297
+.line 2297
 
     .method public
     int16 EVPAWN(valuetype T_RS A, int32 B, int32 C)
@@ -4056,14 +4056,14 @@
         stfld int32 @EVALU8_EVPAWN::C
     
     L_Entry:
-        // line 2309
+        .line 2309
         ldloc _F
         ldflda valuetype T_RS @EVALU8_EVPAWN::INRS
         ldloc _F
         ldfld valuetype T_RS @EVALU8_EVPAWN::A
         ldc.i4 4
         call void SFTRS(valuetype T_RS& A, valuetype T_RS B, int32 C)
-        // line 2310
+        .line 2310
         ldloc _F
         ldflda valuetype T_RS @EVALU8_EVPAWN::INRS
         ldloc _F
@@ -4071,7 +4071,7 @@
         ldloc _F
         ldfld valuetype T_RS @EVALU8_EVPAWN::A
         call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-        // line 2311
+        .line 2311
         ldloc _F
         ldloc _F
         ldfld valuetype T_RS @EVALU8_EVPAWN::INRS
@@ -4083,14 +4083,14 @@
         ldc.i4 32767
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @EVALU8_EVPAWN::INTV
-        // line 2312
+        .line 2312
         ldloc _F
         ldflda valuetype T_RS @EVALU8_EVPAWN::INRS
         ldloc _F
         ldfld valuetype T_RS @EVALU8_EVPAWN::A
         ldc.i4 0
         call void SFTRS(valuetype T_RS& A, valuetype T_RS B, int32 C)
-        // line 2313
+        .line 2313
         ldloc _F
         ldflda valuetype T_RS @EVALU8_EVPAWN::INRS
         ldloc _F
@@ -4098,7 +4098,7 @@
         ldloc _F
         ldfld valuetype T_RS @EVALU8_EVPAWN::A
         call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-        // line 2314
+        .line 2314
         ldloc _F
         ldloc _F
         ldfld int16 @EVALU8_EVPAWN::INTV
@@ -4113,14 +4113,14 @@
         ldc.i4 32767
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @EVALU8_EVPAWN::INTV
-        // line 2315
+        .line 2315
         ldloc _F
         ldflda valuetype T_RS @EVALU8_EVPAWN::INRS
         ldloc _F
         ldfld valuetype T_RS @EVALU8_EVPAWN::A
         ldc.i4 1
         call void SFTRS(valuetype T_RS& A, valuetype T_RS B, int32 C)
-        // line 2316
+        .line 2316
         ldloc _F
         ldflda valuetype T_RS @EVALU8_EVPAWN::INRS
         ldloc _F
@@ -4128,7 +4128,7 @@
         ldloc _F
         ldfld valuetype T_RS @EVALU8_EVPAWN::A
         call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-        // line 2317
+        .line 2317
         ldloc _F
         ldloc _F
         ldfld int16 @EVALU8_EVPAWN::INTV
@@ -4143,7 +4143,7 @@
         ldc.i4 32767
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @EVALU8_EVPAWN::INTV
-        // line 2319
+        .line 2319
         ldloc _F
         ldflda valuetype T_RS @EVALU8_EVPAWN::INRS
         ldloc _F
@@ -4151,7 +4151,7 @@
         ldloc _F
         ldfld int32 @EVALU8_EVPAWN::B
         call void SFTRS(valuetype T_RS& A, valuetype T_RS B, int32 C)
-        // line 2320
+        .line 2320
         ldloc _F
         ldflda valuetype T_RS @EVALU8_EVPAWN::IMRS
         ldsflda valuetype T_array_103 _G::TPLOC
@@ -4159,7 +4159,7 @@
         call instance valuetype T_RS& T_array_103::ldadr(int32)
         ldobj valuetype T_RS
         call void NOTRS(valuetype T_RS& C, valuetype T_RS A)
-        // line 2321
+        .line 2321
         ldloc _F
         ldflda valuetype T_RS @EVALU8_EVPAWN::INRS
         ldloc _F
@@ -4167,7 +4167,7 @@
         ldloc _F
         ldfld valuetype T_RS @EVALU8_EVPAWN::IMRS
         call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-        // line 2322
+        .line 2322
         ldloc _F
         ldloc _F
         ldfld int16 @EVALU8_EVPAWN::INTV
@@ -4182,16 +4182,16 @@
         ldc.i4 32767
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @EVALU8_EVPAWN::INTV
-        // line 2324
+        .line 2324
         ldloc _F
         ldflda valuetype T_RS @EVALU8_EVPAWN::INRS
         ldloc _F
         ldfld valuetype T_RS @EVALU8_EVPAWN::A
         call void CPYRS(valuetype T_RS& C, valuetype T_RS A)
-        // line 2325
+        .line 2325
         br L_while_test_2
     L_while_1:
-        // line 2326
+        .line 2326
         ldloc _F
         ldloc _F
         ldfld int16 @EVALU8_EVPAWN::INTV
@@ -4230,7 +4230,7 @@
         ldflda int8 @EVALU8_EVPAWN::INTS
         call bool NXTTS(valuetype T_RS& A, int8& B)
         brtrue L_while_1
-        // line 2328
+        .line 2328
         ldloc _F
         ldloc _F
         ldfld int16 @EVALU8_EVPAWN::INTV
@@ -4243,7 +4243,7 @@
         ret
     }
 
-// line 2332
+.line 2332
 
     .method public
     int16 EVROOK(valuetype T_RS A, valuetype T_RS B)
@@ -4268,7 +4268,7 @@
         stfld valuetype T_RS @EVALU8_EVROOK::B
     
     L_Entry:
-        // line 2343
+        .line 2343
         ldloc _F
         ldc.i4 0
         dup
@@ -4276,19 +4276,19 @@
         ldc.i4 32767
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @EVALU8_EVROOK::INTV
-        // line 2344
+        .line 2344
         ldloc _F
         ldloc _F
         ldfld valuetype T_RS @EVALU8_EVROOK::A
         stfld valuetype T_RS @EVALU8_EVROOK::INRS
-        // line 2345
+        .line 2345
         ldloc _F
         ldflda valuetype T_RS @EVALU8_EVROOK::INRS
         ldloc _F
         ldflda int8 @EVALU8_EVROOK::INTS
         call bool NXTTS(valuetype T_RS& A, int8& B)
         brfalse L_if_end_1
-        // line 2347
+        .line 2347
         ldloc _F
         ldflda valuetype T_RS @EVALU8_EVROOK::INRS
         ldloc _F
@@ -4299,14 +4299,14 @@
         call instance valuetype T_RS& T_RX::ldadr(int32)
         ldobj valuetype T_RS
         call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-        // line 2348
+        .line 2348
         ldloc _F
         ldfld valuetype T_RS @EVALU8_EVROOK::INRS
         call bool NULRS(valuetype T_RS A)
         ldc.i4.0
         ceq
         brfalse L_if_end_2
-        // line 2349
+        .line 2349
         ldloc _F
         ldloc _F
         ldfld int16 @EVALU8_EVROOK::INTV
@@ -4320,7 +4320,7 @@
     L_if_end_2:
         /* nop */
     L_if_end_1:
-        // line 2351
+        .line 2351
         ldloc _F
         ldflda valuetype T_RS @EVALU8_EVROOK::INRS
         ldloc _F
@@ -4328,13 +4328,13 @@
         ldloc _F
         ldfld valuetype T_RS @EVALU8_EVROOK::B
         call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-        // line 2352
+        .line 2352
         ldloc _F
         ldloc _F
         ldfld valuetype T_RS @EVALU8_EVROOK::INRS
         call int8 CNTRS(valuetype T_RS A)
         stfld int32 @EVALU8_EVROOK::INTI
-        // line 2353
+        .line 2353
         ldloc _F
         ldloc _F
         ldfld int16 @EVALU8_EVROOK::INTV
@@ -4361,11 +4361,11 @@
 }
 
 
-// line 2395
+.line 2395
 //================================================================================
 // scope: SEARCH_NEWBST (level : 3)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_111 = array [0 .. 16] of valuetype T_RM;
 .class value explicit T_array_111
@@ -4423,7 +4423,7 @@
 }
 
 
-// line 2418
+.line 2418
 //================================================================================
 // scope: SEARCH_MINMAX (level : 3)
 
@@ -4447,7 +4447,7 @@
 }
 
 
-// line 2440
+.line 2440
 //================================================================================
 // scope: SEARCH_SCOREM (level : 3)
 
@@ -4465,7 +4465,7 @@
 }
 
 
-// line 2467
+.line 2467
 //================================================================================
 // scope: SEARCH_SELECT_SELDON (level : 4)
 
@@ -4483,7 +4483,7 @@
 }
 
 
-// line 2482
+.line 2482
 //================================================================================
 // scope: SEARCH_SELECT_SELMOV (level : 4)
 
@@ -4504,7 +4504,7 @@
 }
 
 
-// line 2501
+.line 2501
 //================================================================================
 // scope: SEARCH_SELECT_SELNXT (level : 4)
 
@@ -4525,7 +4525,7 @@
 }
 
 
-// line 2513
+.line 2513
 //================================================================================
 // scope: SEARCH_SELECT_SELANY (level : 4)
 
@@ -4546,7 +4546,7 @@
 }
 
 
-// line 2453
+.line 2453
 //================================================================================
 // scope: SEARCH_SELECT (level : 3)
 
@@ -4570,7 +4570,7 @@
         ret
     }
 
-// line 2467
+.line 2467
 
     .method public
     void SELDON()
@@ -4587,15 +4587,15 @@
         stfld class @SEARCH_SELECT @SEARCH_SELECT_SELDON::_slink
     
     L_Entry:
-        // line 2475
+        .line 2475
         ldloc _F
         ldfld class @SEARCH_SELECT @SEARCH_SELECT_SELDON::_slink
         ldc.i4 0 // (false)
         stfld bool @SEARCH_SELECT::INTB
-        // line 2476
+        .line 2476
         ldsfld bool _G::SWTR
         brfalse L_if_end_1
-        // line 2477
+        .line 2477
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr " SELECT"
@@ -4608,7 +4608,7 @@
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
     L_if_end_1:
-        // line 2478
+        .line 2478
         ldc.i4 1
         newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
         throw
@@ -4618,7 +4618,7 @@
         ret
     }
 
-// line 2482
+.line 2482
 
     .method public
     void SELMOV(int16 A)
@@ -4639,12 +4639,12 @@
         stfld int16 @SEARCH_SELECT_SELMOV::A
     
     L_Entry:
-        // line 2489
+        .line 2489
         ldloc _F
         ldfld class @SEARCH_SELECT @SEARCH_SELECT_SELMOV::_slink
         ldc.i4 1 // (true)
         stfld bool @SEARCH_SELECT::INTB
-        // line 2490
+        .line 2490
         ldsflda valuetype T_array_110 _G::INDEX
         ldsfld int8 _G::JNTK
         ldc.i4 1
@@ -4653,17 +4653,17 @@
         ldloc _F
         ldfld int16 @SEARCH_SELECT_SELMOV::A
         stobj int16
-        // line 2491
+        .line 2491
         ldsflda valuetype T_RF _G::MOVES
         ldloc _F
         ldfld int16 @SEARCH_SELECT_SELMOV::A
         call instance valuetype T_RM& T_RF::ldadr(int32)
         ldc.i4 1 // (true)
         stfld bool T_RM::RMSU
-        // line 2492
+        .line 2492
         ldsfld bool _G::SWTR
         brfalse L_if_end_1
-        // line 2494
+        .line 2494
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr " SELECT"
@@ -4682,7 +4682,7 @@
         ldfld int16 @SEARCH_SELECT_SELMOV::A
         call instance void [lpcRuntime]LPC.File::Write(int32)
         pop
-        // line 2495
+        .line 2495
         ldsflda valuetype T_RF _G::MOVES
         ldloc _F
         ldfld int16 @SEARCH_SELECT_SELMOV::A
@@ -4691,7 +4691,7 @@
         call void PRIMOV(valuetype T_RM A)
         /* nop */
     L_if_end_1:
-        // line 2497
+        .line 2497
         ldc.i4 1
         newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
         throw
@@ -4701,7 +4701,7 @@
         ret
     }
 
-// line 2501
+.line 2501
 
     .method public
     void SELNXT(int32 A)
@@ -4722,7 +4722,7 @@
         stfld int32 @SEARCH_SELECT_SELNXT::A
     
     L_Entry:
-        // line 2507
+        .line 2507
         ldsflda valuetype T_array_110 _G::INDEX
         ldsfld int8 _G::JNTK
         ldc.i4 1
@@ -4739,14 +4739,14 @@
         ldc.i4 500
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int16
-        // line 2508
+        .line 2508
         ldsflda valuetype T_array_105 _G::SRCHM
         ldsfld int8 _G::JNTK
         call instance int32& T_array_105::ldadr(int32)
         ldloc _F
         ldfld int32 @SEARCH_SELECT_SELNXT::A
         stobj int32
-        // line 2509
+        .line 2509
         ldc.i4 2
         newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
         throw
@@ -4756,7 +4756,7 @@
         ret
     }
 
-// line 2513
+.line 2513
 
     .method public
     void SELANY()
@@ -4777,7 +4777,7 @@
         stfld class @SEARCH_SELECT @SEARCH_SELECT_SELANY::_slink
     
     L_Entry:
-        // line 2520
+        .line 2520
         ldsfld int16 _G::JNTW
         ldc.i4 1
         sub
@@ -4802,7 +4802,7 @@
         ldloc $tmpIndex2
         stfld int16 @SEARCH_SELECT_SELANY::INTW
     L_for_loop_1:
-        // line 2521
+        .line 2521
         ldsflda valuetype T_RF _G::MOVES
         ldloc _F
         ldfld int16 @SEARCH_SELECT_SELANY::INTW
@@ -4811,7 +4811,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_3
-        // line 2522
+        .line 2522
         ldloc _F
         ldfld class @SEARCH_SELECT @SEARCH_SELECT_SELANY::_slink
         ldloc _F
@@ -4844,7 +4844,7 @@
 }
 
 
-// line 2382
+.line 2382
 //================================================================================
 // scope: SEARCH (level : 2)
 
@@ -4861,7 +4861,7 @@
         ret
     }
 
-// line 2395
+.line 2395
 
     .method public
     void NEWBST(int8 A)
@@ -4886,7 +4886,7 @@
         stfld int8 @SEARCH_NEWBST::A
     
     L_Entry:
-        // line 2403
+        .line 2403
         ldsflda valuetype T_array_102 _G::BSTMV
         ldloc _F
         ldfld int8 @SEARCH_NEWBST::A
@@ -4899,13 +4899,13 @@
         call instance int16& T_array_110::ldadr(int32)
         ldobj int16
         stobj int16
-        // line 2404
+        .line 2404
         ldloc _F
         ldfld int8 @SEARCH_NEWBST::A
         ldc.i4 0
         ceq
         brfalse L_else_1
-        // line 2406
+        .line 2406
         ldloc _F
         ldsflda valuetype T_RF _G::MOVES
         ldsflda valuetype T_array_102 _G::BSTMV
@@ -4916,7 +4916,7 @@
         call instance valuetype T_RM& T_RF::ldadr(int32)
         ldobj valuetype T_RM
         stfld valuetype T_RM @SEARCH_NEWBST::INRM
-        // line 2407
+        .line 2407
         ldc.i4 1
         ldc.i4 1
         add
@@ -4940,7 +4940,7 @@
         ldloc $tmpIndex2
         stfld int16 @SEARCH_NEWBST::INTW
     L_for_loop_3:
-        // line 2408
+        .line 2408
         ldsflda valuetype T_RF _G::MOVES
         ldloc _F
         ldfld int16 @SEARCH_NEWBST::INTW
@@ -4971,7 +4971,7 @@
         br L_for_loop_3
     L_for_end_4:
         pop
-        // line 2409
+        .line 2409
         ldsflda valuetype T_RF _G::MOVES
         ldc.i4 1
         ldc.i4 1
@@ -4980,7 +4980,7 @@
         ldloc _F
         ldfld valuetype T_RM @SEARCH_NEWBST::INRM
         stobj valuetype T_RM
-        // line 2410
+        .line 2410
         ldsflda valuetype T_array_102 _G::BSTMV
         ldc.i4 0
         call instance int16& T_array_102::ldadr(int32)
@@ -4995,7 +4995,7 @@
         /* nop */
         br L_if_end_2
     L_else_1:
-        // line 2413
+        .line 2413
         ldsflda valuetype T_RF _G::MOVES
         ldsflda valuetype T_array_102 _G::BSTMV
         ldloc _F
@@ -5007,7 +5007,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_5
-        // line 2414
+        .line 2414
         ldsflda valuetype T_array_111 _G::KILLR
         ldsfld int8 _G::JNTK
         call instance valuetype T_RM& T_array_111::ldadr(int32)
@@ -5028,7 +5028,7 @@
         ret
     }
 
-// line 2418
+.line 2418
 
     .method public
     bool MINMAX(int8 A)
@@ -5049,14 +5049,14 @@
         stfld int8 @SEARCH_MINMAX::A
     
     L_Entry:
-        // line 2423
+        .line 2423
         ldloc _F
         ldc.i4 0 // (false)
         stfld bool @SEARCH_MINMAX::_fnvalue
-        // line 2424
+        .line 2424
         ldsfld bool _G::SWTR
         brfalse L_if_end_1
-        // line 2425
+        .line 2425
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr " MINMAX"
@@ -5094,7 +5094,7 @@
         call instance void [lpcRuntime]LPC.File::Write(int32)
         pop
     L_if_end_1:
-        // line 2426
+        .line 2426
         ldsflda valuetype T_array_109 _G::BSTVL
         ldloc _F
         ldfld int8 @SEARCH_MINMAX::A
@@ -5110,7 +5110,7 @@
         ldobj int16
         cgt
         brfalse L_if_end_2
-        // line 2428
+        .line 2428
         ldsflda valuetype T_array_109 _G::BSTVL
         ldloc _F
         ldfld int8 @SEARCH_MINMAX::A
@@ -5124,13 +5124,13 @@
         ldobj int16
         neg
         stobj int16
-        // line 2429
+        .line 2429
         ldloc _F
         ldfld class @SEARCH @SEARCH_MINMAX::_slink
         ldloc _F
         ldfld int8 @SEARCH_MINMAX::A
         call instance void @SEARCH::NEWBST(int8 A)
-        // line 2430
+        .line 2430
         ldloc _F
         ldsflda valuetype T_array_109 _G::BSTVL
         ldloc _F
@@ -5150,10 +5150,10 @@
         ldc.i4.0
         ceq
         stfld bool @SEARCH_MINMAX::_fnvalue
-        // line 2432
+        .line 2432
         ldsfld bool _G::SWTR
         brfalse L_if_end_3
-        // line 2433
+        .line 2433
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr " NEW BEST. PRUNE: "
@@ -5187,10 +5187,10 @@
     L_if_end_3:
         /* nop */
     L_if_end_2:
-        // line 2435
+        .line 2435
         ldsfld bool _G::SWTR
         brfalse L_if_end_6
-        // line 2436
+        .line 2436
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
     L_if_end_6:
@@ -5202,7 +5202,7 @@
         ret
     }
 
-// line 2440
+.line 2440
 
     .method public
     void SCOREM()
@@ -5219,7 +5219,7 @@
         stfld class @SEARCH @SEARCH_SCOREM::_slink
     
     L_Entry:
-        // line 2443
+        .line 2443
         ldsflda valuetype T_RF _G::MOVES
         ldsflda valuetype T_array_110 _G::INDEX
         ldsfld int8 _G::JNTK
@@ -5228,7 +5228,7 @@
         call instance valuetype T_RM& T_RF::ldadr(int32)
         ldc.i4 1 // (true)
         stfld bool T_RM::RMMT
-        // line 2444
+        .line 2444
         ldsflda valuetype T_RF _G::MOVES
         ldsflda valuetype T_array_110 _G::INDEX
         ldsfld int8 _G::JNTK
@@ -5237,7 +5237,7 @@
         call instance valuetype T_RM& T_RF::ldadr(int32)
         ldfld bool T_RM::RMCH
         brfalse L_else_1
-        // line 2445
+        .line 2445
         ldsflda valuetype T_RE _G::VALUE
         ldsflda valuetype T_array_110 _G::INDEX
         ldsfld int8 _G::JNTK
@@ -5256,7 +5256,7 @@
         stobj int16
         br L_if_end_2
     L_else_1:
-        // line 2447
+        .line 2447
         ldsflda valuetype T_RE _G::VALUE
         ldsflda valuetype T_array_110 _G::INDEX
         ldsfld int8 _G::JNTK
@@ -5270,10 +5270,10 @@
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int16
     L_if_end_2:
-        // line 2448
+        .line 2448
         ldsfld bool _G::SWTR
         brfalse L_if_end_3
-        // line 2449
+        .line 2449
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr " SCOREM"
@@ -5307,7 +5307,7 @@
         ret
     }
 
-// line 2453
+.line 2453
 
     .method public
     bool SELECT()
@@ -5349,7 +5349,7 @@
     L_Entry:
     .try
     {
-        // line 2528
+        .line 2528
     L_21:
         ldsflda valuetype T_array_105 _G::SRCHM
         ldsfld int8 _G::JNTK
@@ -5359,13 +5359,13 @@
         ldloc $tmpSwitchValue1
         ldc.i4 0
         bne.un L_check_case_2
-        // line 2532
+        .line 2532
         ldsflda valuetype T_array_105 _G::MVSEL
         ldsfld int8 _G::JNTK
         call instance int32& T_array_105::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 2533
+        .line 2533
         ldloc _F
         ldsflda valuetype T_array_109 _G::BSTVL
         ldsfld int8 _G::JNTK
@@ -5374,7 +5374,7 @@
         call instance int16& T_array_109::ldadr(int32)
         ldobj int16
         stfld int16 @SEARCH_SELECT::INTV
-        // line 2534
+        .line 2534
         ldsflda valuetype T_array_109 _G::BSTVL
         ldsfld int8 _G::JNTK
         ldc.i4 2
@@ -5387,16 +5387,16 @@
         ldc.i4 32767
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int16
-        // line 2535
+        .line 2535
         ldc.i4 0
         dup
         ldc.i4 -32767
         ldc.i4 32767
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int16 _G::MAXPS
-        // line 2537
+        .line 2537
         call void GENALL()
-        // line 2538
+        .line 2538
         ldsfld int16 _G::JNTW
         ldc.i4 1
         sub
@@ -5416,25 +5416,25 @@
         ldloc $tmpIndex3
         stfld int16 @SEARCH_SELECT::INTW
     L_for_loop_3:
-        // line 2540
+        .line 2540
         ldsflda valuetype T_RF _G::MOVES
         ldloc _F
         ldfld int16 @SEARCH_SELECT::INTW
         call instance valuetype T_RM& T_RF::ldadr(int32)
         call bool UPDATE(valuetype T_RM& A)
         brfalse L_if_end_5
-        // line 2542
+        .line 2542
         ldsflda valuetype T_array_110 _G::INDEX
         ldsfld int8 _G::JNTK
         call instance int16& T_array_110::ldadr(int32)
         ldloc _F
         ldfld int16 @SEARCH_SELECT::INTW
         stobj int16
-        // line 2543
+        .line 2543
         call void EVALU8()
         /* nop */
     L_if_end_5:
-        // line 2545
+        .line 2545
         ldsflda valuetype T_RF _G::MOVES
         ldloc _F
         ldfld int16 @SEARCH_SELECT::INTW
@@ -5460,7 +5460,7 @@
         br L_for_loop_3
     L_for_end_4:
         pop
-        // line 2547
+        .line 2547
         ldsflda valuetype T_array_109 _G::BSTVL
         ldsfld int8 _G::JNTK
         ldc.i4 2
@@ -5469,7 +5469,7 @@
         ldloc _F
         ldfld int16 @SEARCH_SELECT::INTV
         stobj int16
-        // line 2548
+        .line 2548
         ldsflda valuetype T_RE _G::VALUE
         ldsflda valuetype T_RF _G::MOVES
         ldsfld int16 _G::JNTW
@@ -5480,7 +5480,7 @@
         ldc.i4 500
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         call void SORTIT(valuetype T_RE& A, valuetype T_RF& B, int16 C)
-        // line 2550
+        .line 2550
         ldc.i4 16
         stloc $tmpEndValue5
         ldc.i4 0
@@ -5496,7 +5496,7 @@
         ldloc $tmpIndex6
         stfld int8 @SEARCH_SELECT::INTK
     L_for_loop_6:
-        // line 2551
+        .line 2551
         ldsflda valuetype T_array_111 _G::KILLR
         ldloc _F
         ldfld int8 @SEARCH_SELECT::INTK
@@ -5521,7 +5521,7 @@
         br L_for_loop_6
     L_for_end_7:
         pop
-        // line 2552
+        .line 2552
         ldsfld bool _G::SWTR
         dup
         brtrue L_OR_shortcut_8
@@ -5529,7 +5529,7 @@
         ldsfld bool _G::SWPS
     L_OR_shortcut_8:
         brfalse L_if_end_9
-        // line 2553
+        .line 2553
         ldsfld int16 _G::JNTW
         ldc.i4 1
         sub
@@ -5549,7 +5549,7 @@
         ldloc $tmpIndex9
         stfld int16 @SEARCH_SELECT::INTW
     L_for_loop_10:
-        // line 2555
+        .line 2555
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr " PRELIM"
@@ -5566,14 +5566,14 @@
         ldobj int16
         call instance void [lpcRuntime]LPC.File::Write(int32)
         pop
-        // line 2556
+        .line 2556
         ldsflda valuetype T_RF _G::MOVES
         ldloc _F
         ldfld int16 @SEARCH_SELECT::INTW
         call instance valuetype T_RM& T_RF::ldadr(int32)
         ldobj valuetype T_RM
         call void PRIMOV(valuetype T_RM A)
-        // line 2557
+        .line 2557
         ldloc _F
         ldfld int16 @SEARCH_SELECT::INTW
         conv.r8
@@ -5587,7 +5587,7 @@
         conv.r8
         ceq
         brfalse L_if_end_12
-        // line 2558
+        .line 2558
         call void PAUSER()
     L_if_end_12:
         /* nop */
@@ -5610,7 +5610,7 @@
     L_for_end_11:
         pop
     L_if_end_9:
-        // line 2560
+        .line 2560
         ldloc _F
         ldc.i4 6
         call instance void @SEARCH_SELECT::SELNXT(int32 A)
@@ -5620,20 +5620,20 @@
         ldloc $tmpSwitchValue1
         ldc.i4 1
         bne.un L_check_case_13
-        // line 2565
+        .line 2565
         ldsflda valuetype T_array_105 _G::MVSEL
         ldsfld int8 _G::JNTK
         call instance int32& T_array_105::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 2566
+        .line 2566
         ldsfld int8 _G::JNTK
         ldsfld int8 _G::JMTK
         cgt
         brfalse L_else_14
-        // line 2568
+        .line 2568
         call void EVALU8()
-        // line 2569
+        .line 2569
         ldsflda valuetype T_array_110 _G::INDEX
         ldsfld int8 _G::JNTK
         ldc.i4 1
@@ -5645,7 +5645,7 @@
         ldc.i4 500
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int16
-        // line 2570
+        .line 2570
         ldsflda valuetype T_array_109 _G::BSTVL
         ldsfld int8 _G::JNTK
         ldc.i4 1
@@ -5660,7 +5660,7 @@
         ldobj int16
         neg
         stobj int16
-        // line 2571
+        .line 2571
         ldloc _F
         ldfld class @SEARCH @SEARCH_SELECT::_slink
         ldsfld int8 _G::JNTK
@@ -5673,11 +5673,11 @@
         ceq
     L_OR_shortcut_16:
         brfalse L_if_end_17
-        // line 2572
+        .line 2572
         ldloc _F
         call instance void @SEARCH_SELECT::SELDON()
     L_if_end_17:
-        // line 2573
+        .line 2573
         ldsflda valuetype T_array_105 _G::SRCHM
         ldsfld int8 _G::JNTK
         call instance int32& T_array_105::ldadr(int32)
@@ -5686,16 +5686,16 @@
         /* nop */
         br L_if_end_15
     L_else_14:
-        // line 2576
+        .line 2576
         ldsflda valuetype T_array_105 _G::SRCHM
         ldsfld int8 _G::JNTK
         call instance int32& T_array_105::ldadr(int32)
         ldc.i4 3
         stobj int32
     L_if_end_15:
-        // line 2577
+        .line 2577
         call void GENCAP()
-        // line 2578
+        .line 2578
         ldloc _F
         ldsflda valuetype T_array_105 _G::SRCHM
         ldsfld int8 _G::JNTK
@@ -5708,7 +5708,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 2
         bne.un L_check_case_18
-        // line 2583
+        .line 2583
         ldloc _F
         ldc.i4 1
         dup
@@ -5716,7 +5716,7 @@
         ldc.i4 500
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @SEARCH_SELECT::INTW
-        // line 2584
+        .line 2584
         ldloc _F
         ldc.i4 -32767
         dup
@@ -5724,7 +5724,7 @@
         ldc.i4 32767
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @SEARCH_SELECT::INTV
-        // line 2585
+        .line 2585
         ldsfld int16 _G::JNTW
         ldc.i4 1
         sub
@@ -5745,7 +5745,7 @@
         ldloc $tmpIndex12
         stfld int16 @SEARCH_SELECT::IMTW
     L_for_loop_19:
-        // line 2587
+        .line 2587
         ldsflda valuetype T_RF _G::MOVES
         ldloc _F
         ldfld int16 @SEARCH_SELECT::IMTW
@@ -5754,7 +5754,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_21
-        // line 2588
+        .line 2588
         ldsflda valuetype T_array_17 _G::XTPV
         ldsflda valuetype T_RF _G::MOVES
         ldloc _F
@@ -5772,7 +5772,7 @@
         ldfld int16 @SEARCH_SELECT::INTV
         cgt
         brfalse L_if_end_23
-        // line 2590
+        .line 2590
         ldloc _F
         ldsflda valuetype T_array_17 _G::XTPV
         ldsflda valuetype T_RF _G::MOVES
@@ -5792,7 +5792,7 @@
         ldc.i4 32767
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @SEARCH_SELECT::INTV
-        // line 2591
+        .line 2591
         ldloc _F
         ldloc _F
         ldfld int16 @SEARCH_SELECT::IMTW
@@ -5818,7 +5818,7 @@
         br L_for_loop_19
     L_for_end_20:
         pop
-        // line 2593
+        .line 2593
         ldloc _F
         ldfld int16 @SEARCH_SELECT::INTW
         ldc.i4 1
@@ -5826,14 +5826,14 @@
         ldc.i4.0
         ceq
         brfalse L_else_25
-        // line 2594
+        .line 2594
         ldloc _F
         ldloc _F
         ldfld int16 @SEARCH_SELECT::INTW
         call instance void @SEARCH_SELECT::SELMOV(int16 A)
         br L_if_end_26
     L_else_25:
-        // line 2596
+        .line 2596
         ldloc _F
         call instance void @SEARCH_SELECT::SELDON()
     L_if_end_26:
@@ -5843,7 +5843,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 3
         bne.un L_check_case_27
-        // line 2601
+        .line 2601
         ldloc _F
         ldc.i4 1
         dup
@@ -5851,7 +5851,7 @@
         ldc.i4 500
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @SEARCH_SELECT::INTW
-        // line 2602
+        .line 2602
         ldloc _F
         ldc.i4 -32767
         dup
@@ -5859,7 +5859,7 @@
         ldc.i4 32767
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @SEARCH_SELECT::INTV
-        // line 2603
+        .line 2603
         ldsfld int16 _G::JNTW
         ldc.i4 1
         sub
@@ -5880,7 +5880,7 @@
         ldloc $tmpIndex15
         stfld int16 @SEARCH_SELECT::IMTW
     L_for_loop_28:
-        // line 2605
+        .line 2605
         ldsflda valuetype T_RF _G::MOVES
         ldloc _F
         ldfld int16 @SEARCH_SELECT::IMTW
@@ -5889,7 +5889,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_30
-        // line 2606
+        .line 2606
         ldsflda valuetype T_array_17 _G::XTPV
         ldsflda valuetype T_RF _G::MOVES
         ldloc _F
@@ -5907,7 +5907,7 @@
         ldfld int16 @SEARCH_SELECT::INTV
         cgt
         brfalse L_if_end_32
-        // line 2608
+        .line 2608
         ldloc _F
         ldsflda valuetype T_array_17 _G::XTPV
         ldsflda valuetype T_RF _G::MOVES
@@ -5927,7 +5927,7 @@
         ldc.i4 32767
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @SEARCH_SELECT::INTV
-        // line 2609
+        .line 2609
         ldloc _F
         ldloc _F
         ldfld int16 @SEARCH_SELECT::IMTW
@@ -5953,7 +5953,7 @@
         br L_for_loop_28
     L_for_end_29:
         pop
-        // line 2611
+        .line 2611
         ldloc _F
         ldfld int16 @SEARCH_SELECT::INTW
         ldc.i4 1
@@ -5961,14 +5961,14 @@
         ldc.i4.0
         ceq
         brfalse L_else_34
-        // line 2612
+        .line 2612
         ldloc _F
         ldloc _F
         ldfld int16 @SEARCH_SELECT::INTW
         call instance void @SEARCH_SELECT::SELMOV(int16 A)
         br L_if_end_35
     L_else_34:
-        // line 2614
+        .line 2614
         ldsflda valuetype T_array_111 _G::KILLR
         ldsfld int8 _G::JNTK
         call instance valuetype T_RM& T_array_111::ldadr(int32)
@@ -5977,11 +5977,11 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_36
-        // line 2616
+        .line 2616
         ldloc _F
         ldsfld int16 _G::JNTW
         stfld int16 @SEARCH_SELECT::IMTW
-        // line 2617
+        .line 2617
         ldsflda valuetype T_RX _G::XRSS
         ldsflda valuetype T_array_111 _G::KILLR
         ldsfld int8 _G::JNTK
@@ -5990,13 +5990,13 @@
         call instance valuetype T_RS& T_RX::ldadr(int32)
         ldobj valuetype T_RS
         call void GENFSL(valuetype T_RS A)
-        // line 2619
+        .line 2619
         ldsflda valuetype T_array_105 _G::SRCHM
         ldsfld int8 _G::JNTK
         call instance int32& T_array_105::ldadr(int32)
         ldc.i4 4
         stobj int32
-        // line 2620
+        .line 2620
         ldsfld int16 _G::JNTW
         ldc.i4 1
         sub
@@ -6015,7 +6015,7 @@
         ldloc $tmpIndex18
         stfld int16 @SEARCH_SELECT::INTW
     L_for_loop_37:
-        // line 2622
+        .line 2622
         ldsflda valuetype T_array_111 _G::KILLR
         ldsfld int8 _G::JNTK
         call instance valuetype T_RM& T_array_111::ldadr(int32)
@@ -6027,7 +6027,7 @@
         ldfld int8 T_RM::RMTO
         ceq
         brfalse L_if_end_39
-        // line 2623
+        .line 2623
         ldloc _F
         ldloc _F
         ldfld int16 @SEARCH_SELECT::INTW
@@ -6054,7 +6054,7 @@
         /* nop */
     L_if_end_36:
     L_if_end_35:
-        // line 2625
+        .line 2625
         ldloc _F
         ldc.i4 4
         call instance void @SEARCH_SELECT::SELNXT(int32 A)
@@ -6064,9 +6064,9 @@
         ldloc $tmpSwitchValue1
         ldc.i4 4
         bne.un L_check_case_40
-        // line 2631
+        .line 2631
         call void GENCAS()
-        // line 2632
+        .line 2632
         ldloc _F
         ldc.i4 5
         call instance void @SEARCH_SELECT::SELNXT(int32 A)
@@ -6076,16 +6076,16 @@
         ldloc $tmpSwitchValue1
         ldc.i4 5
         bne.un L_check_case_41
-        // line 2638
+        .line 2638
         ldloc _F
         call instance void @SEARCH_SELECT::SELANY()
-        // line 2639
+        .line 2639
         ldsflda valuetype T_arraytkofrs _G::ALLOC
         ldsfld int8 _G::JNTK
         call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
         ldobj valuetype T_RS
         call void GENFSL(valuetype T_RS A)
-        // line 2640
+        .line 2640
         ldloc _F
         ldc.i4 6
         call instance void @SEARCH_SELECT::SELNXT(int32 A)
@@ -6095,10 +6095,10 @@
         ldloc $tmpSwitchValue1
         ldc.i4 6
         bne.un L_check_case_42
-        // line 2645
+        .line 2645
         ldloc _F
         call instance void @SEARCH_SELECT::SELANY()
-        // line 2646
+        .line 2646
         ldsflda valuetype T_array_105 _G::MVSEL
         ldsfld int8 _G::JNTK
         call instance int32& T_array_105::ldadr(int32)
@@ -6106,12 +6106,12 @@
         ldc.i4 0
         ceq
         brfalse L_if_end_43
-        // line 2647
+        .line 2647
         ldloc _F
         ldfld class @SEARCH @SEARCH_SELECT::_slink
         call instance void @SEARCH::SCOREM()
     L_if_end_43:
-        // line 2648
+        .line 2648
         ldloc _F
         call instance void @SEARCH_SELECT::SELDON()
         /* nop */
@@ -6120,7 +6120,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 7
         bne.un L_case_end_1
-        // line 2653
+        .line 2653
         ldsflda valuetype T_array_102 _G::LINDX
         ldc.i4 0
         ldc.i4 1
@@ -6128,13 +6128,13 @@
         call instance int16& T_array_102::ldadr(int32)
         ldobj int16
         stsfld int16 _G::JNTW
-        // line 2654
+        .line 2654
         ldsflda valuetype T_array_105 _G::MVSEL
         ldc.i4 0
         call instance int32& T_array_105::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 2655
+        .line 2655
         ldsfld int16 _G::JNTW
         ldc.i4 1
         sub
@@ -6154,7 +6154,7 @@
         ldloc $tmpIndex21
         stfld int16 @SEARCH_SELECT::INTW
     L_for_loop_44:
-        // line 2656
+        .line 2656
         ldsflda valuetype T_RF _G::MOVES
         ldloc _F
         ldfld int16 @SEARCH_SELECT::INTW
@@ -6179,10 +6179,10 @@
         br L_for_loop_44
     L_for_end_45:
         pop
-        // line 2658
+        .line 2658
         ldsfld bool _G::SWTR
         brfalse L_if_end_46
-        // line 2659
+        .line 2659
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr " REDO "
@@ -6208,13 +6208,13 @@
         call instance void [lpcRuntime]LPC.File::Write(int32)
         call instance void [lpcRuntime]LPC.File::WriteLn()
     L_if_end_46:
-        // line 2660
+        .line 2660
         ldloc _F
         ldc.i4 6
         call instance void @SEARCH_SELECT::SELNXT(int32 A)
         /* nop */
     L_case_end_1:
-        // line 2665
+        .line 2665
     L_22:
         ldloc _F
         ldloc _F
@@ -6247,7 +6247,7 @@
 }
 
 
-// line 2757
+.line 2757
 //================================================================================
 // scope: READER_RDRERR (level : 3)
 
@@ -6272,7 +6272,7 @@
 }
 
 
-// line 2782
+.line 2782
 //================================================================================
 // scope: READER_RDRGNT (level : 3)
 
@@ -6297,7 +6297,7 @@
 }
 
 
-// line 2812
+.line 2812
 //================================================================================
 // scope: READER_RDRSFT (level : 3)
 
@@ -6319,11 +6319,11 @@
 }
 
 
-// line 2825
+.line 2825
 //================================================================================
 // scope: READER_RDRCMD (level : 3)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_115 = procedure^;
 .class sealed T_READER_subroutine_115 extends [mscorlib]System.MulticastDelegate
@@ -6350,7 +6350,7 @@
 }
 
 
-// line 2840
+.line 2840
 //================================================================================
 // scope: READER_RDLINE (level : 3)
 
@@ -6372,7 +6372,7 @@
 }
 
 
-// line 2867
+.line 2867
 //================================================================================
 // scope: READER_RDRMOV (level : 3)
 
@@ -6394,7 +6394,7 @@
 }
 
 
-// line 2898
+.line 2898
 //================================================================================
 // scope: READER_RDRNUM (level : 3)
 
@@ -6417,7 +6417,7 @@
 }
 
 
-// line 2946
+.line 2946
 //================================================================================
 // scope: READER_BOACMD_BOAADV (level : 4)
 
@@ -6438,7 +6438,7 @@
 }
 
 
-// line 2956
+.line 2956
 //================================================================================
 // scope: READER_BOACMD_BOASTO (level : 4)
 
@@ -6459,7 +6459,7 @@
 }
 
 
-// line 2938
+.line 2938
 //================================================================================
 // scope: READER_BOACMD (level : 3)
 
@@ -6480,7 +6480,7 @@
         ret
     }
 
-// line 2946
+.line 2946
 
     .method public
     void BOAADV(int32 A)
@@ -6501,7 +6501,7 @@
         stfld int32 @READER_BOACMD_BOAADV::A
     
     L_Entry:
-        // line 2949
+        .line 2949
         ldloc _F
         ldfld class @READER_BOACMD @READER_BOACMD_BOAADV::_slink
         ldfld int8 @READER_BOACMD::INTS
@@ -6511,7 +6511,7 @@
         ldc.i4 63
         clt
         brfalse L_else_1
-        // line 2950
+        .line 2950
         ldloc _F
         ldfld class @READER_BOACMD @READER_BOACMD_BOAADV::_slink
         ldloc _F
@@ -6527,7 +6527,7 @@
         stfld int8 @READER_BOACMD::INTS
         br L_if_end_2
     L_else_1:
-        // line 2952
+        .line 2952
         ldloc _F
         ldfld class @READER_BOACMD @READER_BOACMD_BOAADV::_slink
         ldc.i4 63
@@ -6543,7 +6543,7 @@
         ret
     }
 
-// line 2956
+.line 2956
 
     .method public
     void BOASTO(int32 A)
@@ -6564,7 +6564,7 @@
         stfld int32 @READER_BOACMD_BOASTO::A
     
     L_Entry:
-        // line 2959
+        .line 2959
         ldsflda valuetype T_RB _G::BOARD
         ldflda valuetype T_array_38 T_RB::RBIS
         ldloc _F
@@ -6574,14 +6574,14 @@
         ldloc _F
         ldfld int32 @READER_BOACMD_BOASTO::A
         stobj int32
-        // line 2960
+        .line 2960
         ldloc _F
         ldfld class @READER_BOACMD @READER_BOACMD_BOASTO::_slink
         ldfld int8 @READER_BOACMD::INTS
         ldc.i4 63
         clt
         brfalse L_if_end_1
-        // line 2960
+        .line 2960
         ldloc _F
         ldfld class @READER_BOACMD @READER_BOACMD_BOASTO::_slink
         ldloc _F
@@ -6603,7 +6603,7 @@
 }
 
 
-// line 2996
+.line 2996
 //================================================================================
 // scope: READER_ENDCMD (level : 3)
 
@@ -6621,7 +6621,7 @@
 }
 
 
-// line 3003
+.line 3003
 //================================================================================
 // scope: READER_GONCMD (level : 3)
 
@@ -6639,7 +6639,7 @@
 }
 
 
-// line 3015
+.line 3015
 //================================================================================
 // scope: READER_INICMD (level : 3)
 
@@ -6657,7 +6657,7 @@
 }
 
 
-// line 3027
+.line 3027
 //================================================================================
 // scope: READER_LETCMD_LETONE (level : 4)
 
@@ -6679,7 +6679,7 @@
 }
 
 
-// line 3022
+.line 3022
 //================================================================================
 // scope: READER_LETCMD (level : 3)
 
@@ -6695,7 +6695,7 @@
         ret
     }
 
-// line 3027
+.line 3027
 
     .method public
     void LETONE(valuetype T_RA A, int32& B)
@@ -6724,7 +6724,7 @@
         stfld int32* @READER_LETCMD_LETONE::B
     
     L_Entry:
-        // line 3032
+        .line 3032
         ldloc _F
         ldfld valuetype T_RA @READER_LETCMD_LETONE::A
         call string T_RA::arrayToString(valuetype T_RA)
@@ -6735,7 +6735,7 @@
         call string T_RA::arrayToString(valuetype T_RA)
         call bool [lpcRuntime]LPC.Helpers::StrcmpEQ(string, string)
         brfalse L_if_end_1
-        // line 3034
+        .line 3034
         ldloc _F
         ldfld int32* @READER_LETCMD_LETONE::B
         ldloc _F
@@ -6743,7 +6743,7 @@
         ldfld class @READER @READER_LETCMD::_slink
         call instance int32 @READER::RDRNUM()
         stobj int32
-        // line 3035
+        .line 3035
         ldc.i4 7
         newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
         throw
@@ -6757,7 +6757,7 @@
 }
 
 
-// line 3081
+.line 3081
 //================================================================================
 // scope: READER_PLECMD_PRIONE (level : 4)
 
@@ -6779,7 +6779,7 @@
 }
 
 
-// line 3076
+.line 3076
 //================================================================================
 // scope: READER_PLECMD (level : 3)
 
@@ -6795,7 +6795,7 @@
         ret
     }
 
-// line 3081
+.line 3081
 
     .method public
     void PRIONE(valuetype T_RA A, int32 B)
@@ -6820,7 +6820,7 @@
         stfld int32 @READER_PLECMD_PRIONE::B
     
     L_Entry:
-        // line 3086
+        .line 3086
         ldloc _F
         ldfld class @READER_PLECMD @READER_PLECMD_PRIONE::_slink
         ldfld class @READER @READER_PLECMD::_slink
@@ -6831,7 +6831,7 @@
         call string T_RA::arrayToString(valuetype T_RA)
         call bool [lpcRuntime]LPC.Helpers::StrcmpEQ(string, string)
         brfalse L_if_end_1
-        // line 3088
+        .line 3088
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldloc _F
@@ -6843,7 +6843,7 @@
         ldfld int32 @READER_PLECMD_PRIONE::B
         call instance void [lpcRuntime]LPC.File::Write(int32)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 3089
+        .line 3089
         ldc.i4 8
         newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
         throw
@@ -6857,7 +6857,7 @@
 }
 
 
-// line 3131
+.line 3131
 //================================================================================
 // scope: READER_PRICMD (level : 3)
 
@@ -6875,7 +6875,7 @@
 }
 
 
-// line 3141
+.line 3141
 //================================================================================
 // scope: READER_PAMCMD (level : 3)
 
@@ -6893,7 +6893,7 @@
 }
 
 
-// line 3155
+.line 3155
 //================================================================================
 // scope: READER_POPCMD (level : 3)
 
@@ -6914,7 +6914,7 @@
 }
 
 
-// line 3173
+.line 3173
 //================================================================================
 // scope: READER_PMVCMD (level : 3)
 
@@ -6935,7 +6935,7 @@
 }
 
 
-// line 3195
+.line 3195
 //================================================================================
 // scope: READER_SWICMD_SWIONE (level : 4)
 
@@ -6960,7 +6960,7 @@
 }
 
 
-// line 3190
+.line 3190
 //================================================================================
 // scope: READER_SWICMD (level : 3)
 
@@ -6976,7 +6976,7 @@
         ret
     }
 
-// line 3195
+.line 3195
 
     .method public
     void SWIONE(valuetype T_RA A, bool& B)
@@ -7005,7 +7005,7 @@
         stfld bool* @READER_SWICMD_SWIONE::B
     
     L_Entry:
-        // line 3203
+        .line 3203
         ldloc _F
         ldfld class @READER_SWICMD @READER_SWICMD_SWIONE::_slink
         ldfld class @READER @READER_SWICMD::_slink
@@ -7016,11 +7016,11 @@
         call string T_RA::arrayToString(valuetype T_RA)
         call bool [lpcRuntime]LPC.Helpers::StrcmpEQ(string, string)
         brfalse L_if_end_1
-        // line 3205
+        .line 3205
         ldloc _F
         ldsfld int8 _G::JNTJ
         stfld int8 @READER_SWICMD_SWIONE::IMTJ
-        // line 3206
+        .line 3206
         ldloc _F
         ldfld class @READER_SWICMD @READER_SWICMD_SWIONE::_slink
         ldfld class @READER @READER_SWICMD::_slink
@@ -7030,7 +7030,7 @@
         ldflda valuetype T_RA @READER::INRA
         call instance bool @READER::RDRGNT(valuetype T_RA& A)
         brfalse L_else_2
-        // line 3208
+        .line 3208
         ldloc _F
         ldfld class @READER_SWICMD @READER_SWICMD_SWIONE::_slink
         ldfld class @READER @READER_SWICMD::_slink
@@ -7039,14 +7039,14 @@
         ldstr "ON        "
         call bool [lpcRuntime]LPC.Helpers::StrcmpEQ(string, string)
         brfalse L_else_4
-        // line 3209
+        .line 3209
         ldloc _F
         ldfld bool* @READER_SWICMD_SWIONE::B
         ldc.i4 1 // (true)
         stobj bool
         br L_if_end_5
     L_else_4:
-        // line 3211
+        .line 3211
         ldloc _F
         ldfld class @READER_SWICMD @READER_SWICMD_SWIONE::_slink
         ldfld class @READER @READER_SWICMD::_slink
@@ -7055,20 +7055,20 @@
         ldstr "OFF       "
         call bool [lpcRuntime]LPC.Helpers::StrcmpEQ(string, string)
         brfalse L_else_6
-        // line 3212
+        .line 3212
         ldloc _F
         ldfld bool* @READER_SWICMD_SWIONE::B
         ldc.i4 0 // (false)
         stobj bool
         br L_if_end_7
     L_else_6:
-        // line 3214
+        .line 3214
         ldloc _F
         ldfld int8 @READER_SWICMD_SWIONE::IMTJ
         stsfld int8 _G::JNTJ
     L_if_end_7:
     L_if_end_5:
-        // line 3215
+        .line 3215
         ldloc _F
         ldfld valuetype T_RA @READER_SWICMD_SWIONE::A
         ldloc _F
@@ -7078,7 +7078,7 @@
         /* nop */
         br L_if_end_3
     L_else_2:
-        // line 3219
+        .line 3219
         ldloc _F
         ldfld valuetype T_RA @READER_SWICMD_SWIONE::A
         ldloc _F
@@ -7087,7 +7087,7 @@
         call void PRISWI(valuetype T_RA A, bool B)
         /* nop */
     L_if_end_3:
-        // line 3221
+        .line 3221
         ldc.i4 9
         newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
         throw
@@ -7101,7 +7101,7 @@
 }
 
 
-// line 3250
+.line 3250
 //================================================================================
 // scope: READER_STACMD_STAEPF (level : 4)
 
@@ -7123,7 +7123,7 @@
 }
 
 
-// line 3266
+.line 3266
 //================================================================================
 // scope: READER_STACMD_STACAK (level : 4)
 
@@ -7141,7 +7141,7 @@
 }
 
 
-// line 3276
+.line 3276
 //================================================================================
 // scope: READER_STACMD_STACAQ (level : 4)
 
@@ -7159,7 +7159,7 @@
 }
 
 
-// line 3286
+.line 3286
 //================================================================================
 // scope: READER_STACMD_STADRK (level : 4)
 
@@ -7177,7 +7177,7 @@
 }
 
 
-// line 3293
+.line 3293
 //================================================================================
 // scope: READER_STACMD_STAENP (level : 4)
 
@@ -7195,7 +7195,7 @@
 }
 
 
-// line 3314
+.line 3314
 //================================================================================
 // scope: READER_STACMD_STAGOS (level : 4)
 
@@ -7213,7 +7213,7 @@
 }
 
 
-// line 3322
+.line 3322
 //================================================================================
 // scope: READER_STACMD_STALIT (level : 4)
 
@@ -7231,7 +7231,7 @@
 }
 
 
-// line 3329
+.line 3329
 //================================================================================
 // scope: READER_STACMD_STANUM (level : 4)
 
@@ -7249,11 +7249,11 @@
 }
 
 
-// line 3336
+.line 3336
 //================================================================================
 // scope: READER_STACMD_STAOPT (level : 4)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_201 = procedure^;
 .class sealed T_READER_STACMD_subroutine_201 extends [mscorlib]System.MulticastDelegate
@@ -7280,11 +7280,11 @@
 }
 
 
-// line 3241
+.line 3241
 //================================================================================
 // scope: READER_STACMD (level : 3)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_203 = procedure^;
 .class sealed T_READER_STACMD_subroutine_203 extends [mscorlib]System.MulticastDelegate
@@ -7293,7 +7293,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_205 = procedure^;
 .class sealed T_READER_STACMD_subroutine_205 extends [mscorlib]System.MulticastDelegate
@@ -7302,7 +7302,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_207 = procedure^;
 .class sealed T_READER_STACMD_subroutine_207 extends [mscorlib]System.MulticastDelegate
@@ -7311,7 +7311,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_209 = procedure^;
 .class sealed T_READER_STACMD_subroutine_209 extends [mscorlib]System.MulticastDelegate
@@ -7320,7 +7320,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_211 = procedure^;
 .class sealed T_READER_STACMD_subroutine_211 extends [mscorlib]System.MulticastDelegate
@@ -7329,7 +7329,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_213 = procedure^;
 .class sealed T_READER_STACMD_subroutine_213 extends [mscorlib]System.MulticastDelegate
@@ -7338,7 +7338,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_215 = procedure^;
 .class sealed T_READER_STACMD_subroutine_215 extends [mscorlib]System.MulticastDelegate
@@ -7363,7 +7363,7 @@
         ret
     }
 
-// line 3250
+.line 3250
 
     .method public
     void STAEPF(valuetype T_RA A, int32 B)
@@ -7388,7 +7388,7 @@
         stfld int32 @READER_STACMD_STAEPF::B
     
     L_Entry:
-        // line 3255
+        .line 3255
         ldloc _F
         ldfld valuetype T_RA @READER_STACMD_STAEPF::A
         call string T_RA::arrayToString(valuetype T_RA)
@@ -7398,14 +7398,14 @@
         call string T_RA::arrayToString(valuetype T_RA)
         call bool [lpcRuntime]LPC.Helpers::StrcmpEQ(string, string)
         brfalse L_if_end_1
-        // line 3257
+        .line 3257
         ldloc _F
         ldfld class @READER_STACMD @READER_STACMD_STAEPF::_slink
         ldfld int32 @READER_STACMD::INTM
         ldc.i4 0
         ceq
         brfalse L_else_2
-        // line 3258
+        .line 3258
         ldsflda valuetype T_RB _G::BOARD
         ldsflda valuetype T_array_37 _G::XTRFS
         ldc.i4 5
@@ -7417,7 +7417,7 @@
         stfld int8 T_RB::RBTS
         br L_if_end_3
     L_else_2:
-        // line 3260
+        .line 3260
         ldsflda valuetype T_RB _G::BOARD
         ldsflda valuetype T_array_37 _G::XTRFS
         ldc.i4 2
@@ -7428,7 +7428,7 @@
         ldobj int8
         stfld int8 T_RB::RBTS
     L_if_end_3:
-        // line 3261
+        .line 3261
         ldc.i4 10
         newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
         throw
@@ -7440,7 +7440,7 @@
         ret
     }
 
-// line 3266
+.line 3266
 
     .method public
     void STACAK()
@@ -7468,14 +7468,14 @@
         call instance void T_SQ::addValue(int32)
     
     L_Entry:
-        // line 3269
+        .line 3269
         ldloc _F
         ldfld class @READER_STACMD @READER_STACMD_STACAK::_slink
         ldfld int32 @READER_STACMD::INTM
         ldc.i4 0
         ceq
         brfalse L_else_1
-        // line 3270
+        .line 3270
         ldsflda valuetype T_RB _G::BOARD
         ldsflda valuetype T_RB _G::BOARD
         ldfld valuetype T_SQ T_RB::RBSQ
@@ -7491,7 +7491,7 @@
         stfld valuetype T_SQ T_RB::RBSQ
         br L_if_end_2
     L_else_1:
-        // line 3272
+        .line 3272
         ldsflda valuetype T_RB _G::BOARD
         ldsflda valuetype T_RB _G::BOARD
         ldfld valuetype T_SQ T_RB::RBSQ
@@ -7512,7 +7512,7 @@
         ret
     }
 
-// line 3276
+.line 3276
 
     .method public
     void STACAQ()
@@ -7540,14 +7540,14 @@
         call instance void T_SQ::addValue(int32)
     
     L_Entry:
-        // line 3279
+        .line 3279
         ldloc _F
         ldfld class @READER_STACMD @READER_STACMD_STACAQ::_slink
         ldfld int32 @READER_STACMD::INTM
         ldc.i4 0
         ceq
         brfalse L_else_1
-        // line 3280
+        .line 3280
         ldsflda valuetype T_RB _G::BOARD
         ldsflda valuetype T_RB _G::BOARD
         ldfld valuetype T_SQ T_RB::RBSQ
@@ -7563,7 +7563,7 @@
         stfld valuetype T_SQ T_RB::RBSQ
         br L_if_end_2
     L_else_1:
-        // line 3282
+        .line 3282
         ldsflda valuetype T_RB _G::BOARD
         ldsflda valuetype T_RB _G::BOARD
         ldfld valuetype T_SQ T_RB::RBSQ
@@ -7584,7 +7584,7 @@
         ret
     }
 
-// line 3286
+.line 3286
 
     .method public
     void STADRK()
@@ -7601,7 +7601,7 @@
         stfld class @READER_STACMD @READER_STACMD_STADRK::_slink
     
     L_Entry:
-        // line 3289
+        .line 3289
         ldloc _F
         ldfld class @READER_STACMD @READER_STACMD_STADRK::_slink
         ldc.i4 1
@@ -7612,7 +7612,7 @@
         ret
     }
 
-// line 3293
+.line 3293
 
     .method public
     void STAENP()
@@ -7629,7 +7629,7 @@
         stfld class @READER_STACMD @READER_STACMD_STAENP::_slink
     
     L_Entry:
-        // line 3296
+        .line 3296
         ldloc _F
         ldfld class @READER_STACMD @READER_STACMD_STAENP::_slink
         ldfld class @READER @READER_STACMD::_slink
@@ -7640,9 +7640,9 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 3298
+        .line 3298
         call void CLSTAT()
-        // line 3299
+        .line 3299
         ldloc _F
         ldfld class @READER_STACMD @READER_STACMD_STAENP::_slink
         ldfld class @READER @READER_STACMD::_slink
@@ -7650,57 +7650,57 @@
         call instance void @READER::RDRERR(valuetype T_array_99 A)
         /* nop */
     L_if_end_1:
-        // line 3301
+        .line 3301
         ldloc _F
         ldfld class @READER_STACMD @READER_STACMD_STAENP::_slink
         ldsfld valuetype T_RA STRING_99    // "QR        "
         ldc.i4 0
         call instance void @READER_STACMD::STAEPF(valuetype T_RA A, int32 B)
-        // line 3302
+        .line 3302
         ldloc _F
         ldfld class @READER_STACMD @READER_STACMD_STAENP::_slink
         ldsfld valuetype T_RA STRING_100    // "QN        "
         ldc.i4 1
         call instance void @READER_STACMD::STAEPF(valuetype T_RA A, int32 B)
-        // line 3303
+        .line 3303
         ldloc _F
         ldfld class @READER_STACMD @READER_STACMD_STAENP::_slink
         ldsfld valuetype T_RA STRING_101    // "QB        "
         ldc.i4 2
         call instance void @READER_STACMD::STAEPF(valuetype T_RA A, int32 B)
-        // line 3304
+        .line 3304
         ldloc _F
         ldfld class @READER_STACMD @READER_STACMD_STAENP::_slink
         ldsfld valuetype T_RA STRING_102    // "Q         "
         ldc.i4 3
         call instance void @READER_STACMD::STAEPF(valuetype T_RA A, int32 B)
-        // line 3305
+        .line 3305
         ldloc _F
         ldfld class @READER_STACMD @READER_STACMD_STAENP::_slink
         ldsfld valuetype T_RA STRING_103    // "K         "
         ldc.i4 4
         call instance void @READER_STACMD::STAEPF(valuetype T_RA A, int32 B)
-        // line 3306
+        .line 3306
         ldloc _F
         ldfld class @READER_STACMD @READER_STACMD_STAENP::_slink
         ldsfld valuetype T_RA STRING_104    // "KB        "
         ldc.i4 5
         call instance void @READER_STACMD::STAEPF(valuetype T_RA A, int32 B)
-        // line 3307
+        .line 3307
         ldloc _F
         ldfld class @READER_STACMD @READER_STACMD_STAENP::_slink
         ldsfld valuetype T_RA STRING_105    // "KN        "
         ldc.i4 6
         call instance void @READER_STACMD::STAEPF(valuetype T_RA A, int32 B)
-        // line 3308
+        .line 3308
         ldloc _F
         ldfld class @READER_STACMD @READER_STACMD_STAENP::_slink
         ldsfld valuetype T_RA STRING_106    // "KR        "
         ldc.i4 7
         call instance void @READER_STACMD::STAEPF(valuetype T_RA A, int32 B)
-        // line 3309
+        .line 3309
         call void CLSTAT()
-        // line 3310
+        .line 3310
         ldloc _F
         ldfld class @READER_STACMD @READER_STACMD_STAENP::_slink
         ldfld class @READER @READER_STACMD::_slink
@@ -7712,7 +7712,7 @@
         ret
     }
 
-// line 3314
+.line 3314
 
     .method public
     void STAGOS()
@@ -7729,13 +7729,13 @@
         stfld class @READER_STACMD @READER_STACMD_STAGOS::_slink
     
     L_Entry:
-        // line 3317
+        .line 3317
         ldsflda valuetype T_RB _G::BOARD
         ldloc _F
         ldfld class @READER_STACMD @READER_STACMD_STAGOS::_slink
         ldfld int32 @READER_STACMD::INTM
         stfld int32 T_RB::RBTM
-        // line 3318
+        .line 3318
         ldloc _F
         ldfld class @READER_STACMD @READER_STACMD_STAGOS::_slink
         ldfld int32 @READER_STACMD::INTM
@@ -7746,7 +7746,7 @@
         ret
     }
 
-// line 3322
+.line 3322
 
     .method public
     void STALIT()
@@ -7763,7 +7763,7 @@
         stfld class @READER_STACMD @READER_STACMD_STALIT::_slink
     
     L_Entry:
-        // line 3325
+        .line 3325
         ldloc _F
         ldfld class @READER_STACMD @READER_STACMD_STALIT::_slink
         ldc.i4 0
@@ -7774,7 +7774,7 @@
         ret
     }
 
-// line 3329
+.line 3329
 
     .method public
     void STANUM()
@@ -7791,7 +7791,7 @@
         stfld class @READER_STACMD @READER_STACMD_STANUM::_slink
     
     L_Entry:
-        // line 3332
+        .line 3332
         ldsflda valuetype T_RB _G::BOARD
         ldloc _F
         ldfld class @READER_STACMD @READER_STACMD_STANUM::_slink
@@ -7804,7 +7804,7 @@
         ret
     }
 
-// line 3336
+.line 3336
 
     .method public
     void STAOPT(valuetype T_RA A, class T_READER_STACMD_subroutine_201 STAXXX)
@@ -7829,7 +7829,7 @@
         stfld class T_READER_STACMD_subroutine_201 @READER_STACMD_STAOPT::STAXXX
     
     L_Entry:
-        // line 3341
+        .line 3341
         ldloc _F
         ldfld class @READER_STACMD @READER_STACMD_STAOPT::_slink
         ldfld valuetype T_RA @READER_STACMD::INRA
@@ -7839,11 +7839,11 @@
         call string T_RA::arrayToString(valuetype T_RA)
         call bool [lpcRuntime]LPC.Helpers::StrcmpEQ(string, string)
         brfalse L_if_end_1
-        // line 3343
+        .line 3343
         ldloc _F
         ldfld class T_READER_STACMD_subroutine_201 @READER_STACMD_STAOPT::STAXXX
         call instance void T_READER_STACMD_subroutine_201::Invoke()
-        // line 3344
+        .line 3344
         ldc.i4 10
         newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
         throw
@@ -7857,7 +7857,7 @@
 }
 
 
-// line 3368
+.line 3368
 //================================================================================
 // scope: READER_WHACMD (level : 3)
 
@@ -7875,11 +7875,11 @@
 }
 
 
-// line 2748
+.line 2748
 //================================================================================
 // scope: READER (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_220 = procedure^;
 .class sealed T_READER_subroutine_220 extends [mscorlib]System.MulticastDelegate
@@ -7888,7 +7888,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_222 = procedure^;
 .class sealed T_READER_subroutine_222 extends [mscorlib]System.MulticastDelegate
@@ -7897,7 +7897,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_224 = procedure^;
 .class sealed T_READER_subroutine_224 extends [mscorlib]System.MulticastDelegate
@@ -7906,7 +7906,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_226 = procedure^;
 .class sealed T_READER_subroutine_226 extends [mscorlib]System.MulticastDelegate
@@ -7915,7 +7915,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_228 = procedure^;
 .class sealed T_READER_subroutine_228 extends [mscorlib]System.MulticastDelegate
@@ -7924,7 +7924,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_230 = procedure^;
 .class sealed T_READER_subroutine_230 extends [mscorlib]System.MulticastDelegate
@@ -7933,7 +7933,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_232 = procedure^;
 .class sealed T_READER_subroutine_232 extends [mscorlib]System.MulticastDelegate
@@ -7942,7 +7942,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_234 = procedure^;
 .class sealed T_READER_subroutine_234 extends [mscorlib]System.MulticastDelegate
@@ -7951,7 +7951,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_236 = procedure^;
 .class sealed T_READER_subroutine_236 extends [mscorlib]System.MulticastDelegate
@@ -7960,7 +7960,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_238 = procedure^;
 .class sealed T_READER_subroutine_238 extends [mscorlib]System.MulticastDelegate
@@ -7969,7 +7969,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_240 = procedure^;
 .class sealed T_READER_subroutine_240 extends [mscorlib]System.MulticastDelegate
@@ -7978,7 +7978,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_242 = procedure^;
 .class sealed T_READER_subroutine_242 extends [mscorlib]System.MulticastDelegate
@@ -7987,7 +7987,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_244 = procedure^;
 .class sealed T_READER_subroutine_244 extends [mscorlib]System.MulticastDelegate
@@ -8009,7 +8009,7 @@
         ret
     }
 
-// line 2757
+.line 2757
 
     .method public
     void RDRERR(valuetype T_array_99 A)
@@ -8040,18 +8040,18 @@
         stfld valuetype T_array_99 @READER_RDRERR::A
     
     L_Entry:
-        // line 2764
+        .line 2764
         ldsfld bool _G::SWEC
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 2767
+        .line 2767
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 32 // ' '
         call instance void [lpcRuntime]LPC.File::Write(uint8)
         pop
-        // line 2768
+        .line 2768
         ldc.i4 73
         ldc.i4 1
         sub
@@ -8069,7 +8069,7 @@
         ldloc $tmpIndex2
         stfld int8 @READER_RDRERR::INTJ
     L_for_loop_2:
-        // line 2769
+        .line 2769
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldsflda valuetype T_RJ _G::ILINE
@@ -8097,7 +8097,7 @@
         br L_for_loop_2
     L_for_end_3:
         pop
-        // line 2770
+        .line 2770
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 32 // ' '
@@ -8105,7 +8105,7 @@
         call instance void [lpcRuntime]LPC.File::WriteLn()
         /* nop */
     L_if_end_1:
-        // line 2772
+        .line 2772
         ldsfld int8 _G::JNTJ
         stloc $tmpEndValue4
         ldc.i4 0
@@ -8121,7 +8121,7 @@
         ldloc $tmpIndex5
         stfld int8 @READER_RDRERR::INTJ
     L_for_loop_4:
-        // line 2773
+        .line 2773
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 32 // ' '
@@ -8145,13 +8145,13 @@
         br L_for_loop_4
     L_for_end_5:
         pop
-        // line 2774
+        .line 2774
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 94 // '^'
         call instance void [lpcRuntime]LPC.File::Write(uint8)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 2775
+        .line 2775
         ldc.i4 30
         stloc $tmpEndValue7
         ldc.i4 1
@@ -8167,7 +8167,7 @@
         ldloc $tmpIndex8
         stfld int8 @READER_RDRERR::INTN
     L_for_loop_6:
-        // line 2776
+        .line 2776
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldloc _F
@@ -8196,10 +8196,10 @@
         br L_for_loop_6
     L_for_end_7:
         pop
-        // line 2777
+        .line 2777
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 2778
+        .line 2778
         ldc.i4 3
         newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
         throw
@@ -8209,7 +8209,7 @@
         ret
     }
 
-// line 2782
+.line 2782
 
     .method public
     bool RDRGNT(valuetype T_RA& A)
@@ -8255,10 +8255,10 @@
         call instance void T_set_5::addRange(int32, int32)
     
     L_Entry:
-        // line 2796
+        .line 2796
         br L_while_test_2
     L_while_1:
-        // line 2797
+        .line 2797
         ldsfld int8 _G::JNTJ
         ldc.i4 1
         add
@@ -8284,12 +8284,12 @@
         ceq
     L_AND_shortcut_3:
         brtrue L_while_1
-        // line 2798
+        .line 2798
         ldloc _F
         ldfld valuetype T_RA* @READER_RDRGNT::A
         ldsfld valuetype T_RA STRING_56    // "          "
         stobj valuetype T_RA
-        // line 2799
+        .line 2799
         ldloc _F
         ldc.i4 1
         dup
@@ -8297,10 +8297,10 @@
         ldc.i4 73
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int8 @READER_RDRGNT::INTJ
-        // line 2800
+        .line 2800
         br L_while_test_5
     L_while_4:
-        // line 2802
+        .line 2802
         ldloc _F
         ldfld valuetype T_RA* @READER_RDRGNT::A
         ldloc _F
@@ -8311,7 +8311,7 @@
         call instance uint8& T_RJ::ldadr(int32)
         ldobj uint8
         stobj uint8
-        // line 2803
+        .line 2803
         ldloc _F
         ldloc _F
         ldfld int8 @READER_RDRGNT::INTJ
@@ -8322,7 +8322,7 @@
         ldc.i4 73
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int8 @READER_RDRGNT::INTJ
-        // line 2804
+        .line 2804
         ldsfld int8 _G::JNTJ
         ldc.i4 1
         add
@@ -8355,7 +8355,7 @@
         call bool _SetContains(valuetype T_set_5 s, int32 val)
     L_AND_shortcut_6:
         brtrue L_while_4
-        // line 2806
+        .line 2806
         ldloc _F
         ldloc _F
         ldfld int8 @READER_RDRGNT::INTJ
@@ -8364,10 +8364,10 @@
         ldc.i4.0
         ceq
         stfld bool @READER_RDRGNT::_fnvalue
-        // line 2807
+        .line 2807
         br L_while_test_9
     L_while_8:
-        // line 2808
+        .line 2808
         ldsfld int8 _G::JNTJ
         ldc.i4 1
         add
@@ -8407,7 +8407,7 @@
         ret
     }
 
-// line 2812
+.line 2812
 
     .method public
     void RDRSFT()
@@ -8424,14 +8424,14 @@
         stfld class @READER @READER_RDRSFT::_slink
     
     L_Entry:
-        // line 2820
+        .line 2820
         ldc.i4 0
         dup
         ldc.i4 0
         ldc.i4 73
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int8 _G::JNTJ
-        // line 2821
+        .line 2821
         ldloc _F
         ldloc _F
         ldfld class @READER @READER_RDRSFT::_slink
@@ -8445,7 +8445,7 @@
         ret
     }
 
-// line 2825
+.line 2825
 
     .method public
     void RDRCMD(valuetype T_RA A, class T_READER_subroutine_115 XXXCMD)
@@ -8470,7 +8470,7 @@
         stfld class T_READER_subroutine_115 @READER_RDRCMD::XXXCMD
     
     L_Entry:
-        // line 2832
+        .line 2832
         ldloc _F
         ldfld class @READER @READER_RDRCMD::_slink
         ldfld valuetype T_RA @READER::INRA
@@ -8480,11 +8480,11 @@
         call string T_RA::arrayToString(valuetype T_RA)
         call bool [lpcRuntime]LPC.Helpers::StrcmpEQ(string, string)
         brfalse L_if_end_1
-        // line 2834
+        .line 2834
         ldloc _F
         ldfld class T_READER_subroutine_115 @READER_RDRCMD::XXXCMD
         call instance void T_READER_subroutine_115::Invoke()
-        // line 2835
+        .line 2835
         ldc.i4 3
         newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
         throw
@@ -8496,7 +8496,7 @@
         ret
     }
 
-// line 2840
+.line 2840
 
     .method public
     void RDLINE()
@@ -8513,10 +8513,10 @@
         stfld class @READER @READER_RDLINE::_slink
     
     L_Entry:
-        // line 2848
+        .line 2848
         ldsflda valuetype [lpcRuntime]LPC.File _G::Input
         call instance void [lpcRuntime]LPC.File::ReadLn()
-        // line 2849
+        .line 2849
         ldloc _F
         ldc.i4 0
         dup
@@ -8524,10 +8524,10 @@
         ldc.i4 73
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int8 @READER_RDLINE::INTJ
-        // line 2850
+        .line 2850
         br L_while_test_2
     L_while_1:
-        // line 2852
+        .line 2852
         ldsflda valuetype [lpcRuntime]LPC.File _G::Input
         dup
         ldsflda valuetype T_RJ _G::ICARD
@@ -8538,7 +8538,7 @@
         ldc.i4 255
         call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
         pop
-        // line 2853
+        .line 2853
         ldloc _F
         ldloc _F
         ldfld int8 @READER_RDLINE::INTJ
@@ -8564,10 +8564,10 @@
         clt
     L_AND_shortcut_3:
         brtrue L_while_1
-        // line 2855
+        .line 2855
         br L_while_test_5
     L_while_4:
-        // line 2856
+        .line 2856
         ldsflda valuetype [lpcRuntime]LPC.File _G::Input
         dup
         ldloc _F
@@ -8582,17 +8582,17 @@
         ldc.i4.0
         ceq
         brtrue L_while_4
-        // line 2857
+        .line 2857
         br L_while_test_7
     L_while_6:
-        // line 2859
+        .line 2859
         ldsflda valuetype T_RJ _G::ICARD
         ldloc _F
         ldfld int8 @READER_RDLINE::INTJ
         call instance uint8& T_RJ::ldadr(int32)
         ldc.i4 32 // ' '
         stobj uint8
-        // line 2860
+        .line 2860
         ldloc _F
         ldloc _F
         ldfld int8 @READER_RDLINE::INTJ
@@ -8610,13 +8610,13 @@
         ldc.i4 73
         clt
         brtrue L_while_6
-        // line 2862
+        .line 2862
         ldsflda valuetype T_RJ _G::ICARD
         ldc.i4 73
         call instance uint8& T_RJ::ldadr(int32)
         ldc.i4 59 // ';'
         stobj uint8
-        // line 2863
+        .line 2863
         ldc.i4 0
         dup
         ldc.i4 0
@@ -8629,7 +8629,7 @@
         ret
     }
 
-// line 2867
+.line 2867
 
     .method public
     bool RDRMOV()
@@ -8646,10 +8646,10 @@
         stfld class @READER @READER_RDRMOV::_slink
     
     L_Entry:
-        // line 2876
+        .line 2876
         br L_while_test_2
     L_while_1:
-        // line 2877
+        .line 2877
         ldsfld int8 _G::JMTJ
         ldc.i4 1
         add
@@ -8673,7 +8673,7 @@
         ceq
     L_AND_shortcut_3:
         brtrue L_while_1
-        // line 2878
+        .line 2878
         ldloc _F
         ldc.i4 0
         dup
@@ -8681,10 +8681,10 @@
         ldc.i4 73
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int8 @READER_RDRMOV::IMTJ
-        // line 2879
+        .line 2879
         br L_while_test_5
     L_while_4:
-        // line 2881
+        .line 2881
         ldsflda valuetype T_RJ _G::ILINE
         ldloc _F
         ldfld int8 @READER_RDRMOV::IMTJ
@@ -8694,7 +8694,7 @@
         call instance uint8& T_RJ::ldadr(int32)
         ldobj uint8
         stobj uint8
-        // line 2882
+        .line 2882
         ldloc _F
         ldloc _F
         ldfld int8 @READER_RDRMOV::IMTJ
@@ -8705,7 +8705,7 @@
         ldc.i4 73
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int8 @READER_RDRMOV::IMTJ
-        // line 2883
+        .line 2883
         ldsfld int8 _G::JMTJ
         ldc.i4 1
         add
@@ -8732,7 +8732,7 @@
         ceq
     L_AND_shortcut_6:
         brtrue L_while_4
-        // line 2885
+        .line 2885
         ldsflda valuetype T_RJ _G::ICARD
         ldsfld int8 _G::JMTJ
         call instance uint8& T_RJ::ldadr(int32)
@@ -8747,7 +8747,7 @@
         clt
     L_AND_shortcut_7:
         brfalse L_if_end_8
-        // line 2886
+        .line 2886
         ldsfld int8 _G::JMTJ
         ldc.i4 1
         add
@@ -8757,7 +8757,7 @@
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int8 _G::JMTJ
     L_if_end_8:
-        // line 2887
+        .line 2887
         ldloc _F
         ldloc _F
         ldfld int8 @READER_RDRMOV::IMTJ
@@ -8766,17 +8766,17 @@
         ldc.i4.0
         ceq
         stfld bool @READER_RDRMOV::_fnvalue
-        // line 2888
+        .line 2888
         br L_while_test_10
     L_while_9:
-        // line 2890
+        .line 2890
         ldsflda valuetype T_RJ _G::ILINE
         ldloc _F
         ldfld int8 @READER_RDRMOV::IMTJ
         call instance uint8& T_RJ::ldadr(int32)
         ldc.i4 32 // ' '
         stobj uint8
-        // line 2891
+        .line 2891
         ldloc _F
         ldloc _F
         ldfld int8 @READER_RDRMOV::IMTJ
@@ -8794,13 +8794,13 @@
         ldc.i4 73
         clt
         brtrue L_while_9
-        // line 2893
+        .line 2893
         ldsflda valuetype T_RJ _G::ILINE
         ldc.i4 73
         call instance uint8& T_RJ::ldadr(int32)
         ldc.i4 59 // ';'
         stobj uint8
-        // line 2894
+        .line 2894
         ldc.i4 0
         dup
         ldc.i4 0
@@ -8815,7 +8815,7 @@
         ret
     }
 
-// line 2898
+.line 2898
 
     .method public
     int32 RDRNUM()
@@ -8845,10 +8845,10 @@
         call instance void T_set_5::addRange(int32, int32)
     
     L_Entry:
-        // line 2908
+        .line 2908
         br L_while_test_2
     L_while_1:
-        // line 2909
+        .line 2909
         ldsfld int8 _G::JNTJ
         ldc.i4 1
         add
@@ -8872,7 +8872,7 @@
         ceq
     L_AND_shortcut_3:
         brtrue L_while_1
-        // line 2910
+        .line 2910
         ldsflda valuetype T_RJ _G::ILINE
         ldsfld int8 _G::JNTJ
         call instance uint8& T_RJ::ldadr(int32)
@@ -8880,11 +8880,11 @@
         ldc.i4 45 // '-'
         ceq
         brfalse L_else_4
-        // line 2912
+        .line 2912
         ldloc _F
         ldc.i4 1 // (true)
         stfld bool @READER_RDRNUM::INTB
-        // line 2913
+        .line 2913
         ldsfld int8 _G::JNTJ
         ldc.i4 1
         add
@@ -8896,11 +8896,11 @@
         /* nop */
         br L_if_end_5
     L_else_4:
-        // line 2917
+        .line 2917
         ldloc _F
         ldc.i4 0 // (false)
         stfld bool @READER_RDRNUM::INTB
-        // line 2918
+        .line 2918
         ldsflda valuetype T_RJ _G::ILINE
         ldsfld int8 _G::JNTJ
         call instance uint8& T_RJ::ldadr(int32)
@@ -8908,7 +8908,7 @@
         ldc.i4 43 // '+'
         ceq
         brfalse L_if_end_6
-        // line 2919
+        .line 2919
         ldsfld int8 _G::JNTJ
         ldc.i4 1
         add
@@ -8920,14 +8920,14 @@
     L_if_end_6:
         /* nop */
     L_if_end_5:
-        // line 2921
+        .line 2921
         ldloc _F
         ldc.i4 0
         stfld int32 @READER_RDRNUM::INTI
-        // line 2922
+        .line 2922
         br L_while_test_8
     L_while_7:
-        // line 2924
+        .line 2924
         ldloc _F
         ldfld int32 @READER_RDRNUM::INTI
         conv.r8
@@ -8938,7 +8938,7 @@
         div
         clt
         brfalse L_else_9
-        // line 2925
+        .line 2925
         ldloc _F
         ldc.i4 10
         ldloc _F
@@ -8954,13 +8954,13 @@
         stfld int32 @READER_RDRNUM::INTI
         br L_if_end_10
     L_else_9:
-        // line 2927
+        .line 2927
         ldloc _F
         ldfld class @READER @READER_RDRNUM::_slink
         ldsfld valuetype T_array_99 STRING_57    // " NUMBER TOO LARGE             "
         call instance void @READER::RDRERR(valuetype T_array_99 A)
     L_if_end_10:
-        // line 2928
+        .line 2928
         ldsfld int8 _G::JNTJ
         ldc.i4 1
         add
@@ -8978,7 +8978,7 @@
         ldobj uint8
         call bool _SetContains(valuetype T_set_5 s, int32 val)
         brtrue L_while_7
-        // line 2930
+        .line 2930
         ldloc $tmpSetLiteral2
         ldsflda valuetype T_RJ _G::ILINE
         ldsfld int8 _G::JNTJ
@@ -8986,24 +8986,24 @@
         ldobj uint8
         call bool _SetContains(valuetype T_set_5 s, int32 val)
         brfalse L_if_end_11
-        // line 2931
+        .line 2931
         ldloc _F
         ldfld class @READER @READER_RDRNUM::_slink
         ldsfld valuetype T_array_99 STRING_58    // " DIGIT EXPECTED               "
         call instance void @READER::RDRERR(valuetype T_array_99 A)
     L_if_end_11:
-        // line 2932
+        .line 2932
         ldloc _F
         ldfld bool @READER_RDRNUM::INTB
         brfalse L_if_end_12
-        // line 2933
+        .line 2933
         ldloc _F
         ldloc _F
         ldfld int32 @READER_RDRNUM::INTI
         neg
         stfld int32 @READER_RDRNUM::INTI
     L_if_end_12:
-        // line 2934
+        .line 2934
         ldloc _F
         ldloc _F
         ldfld int32 @READER_RDRNUM::INTI
@@ -9016,7 +9016,7 @@
         ret
     }
 
-// line 2938
+.line 2938
 
     .method public
     void BOACMD()
@@ -9081,12 +9081,12 @@
         call instance void T_set_5::addRange(int32, int32)
     
     L_Entry:
-        // line 2964
+        .line 2964
         call void CLSTAT()
-        // line 2965
+        .line 2965
         ldsfld valuetype T_RM _G::NULMV
         stsfld valuetype T_RM _G::LSTMV
-        // line 2966
+        .line 2966
         ldc.i4 63
         stloc $tmpEndValue1
         ldc.i4 0
@@ -9102,7 +9102,7 @@
         ldloc $tmpIndex2
         stfld int8 @READER_BOACMD::INTS1
     L_for_loop_1:
-        // line 2967
+        .line 2967
         ldsflda valuetype T_RB _G::BOARD
         ldflda valuetype T_array_38 T_RB::RBIS
         ldloc _F
@@ -9128,11 +9128,11 @@
         br L_for_loop_1
     L_for_end_2:
         pop
-        // line 2968
+        .line 2968
         ldloc _F
         ldc.i4 0
         stfld int32 @READER_BOACMD::INTM
-        // line 2969
+        .line 2969
         ldloc _F
         ldc.i4 0
         dup
@@ -9140,9 +9140,9 @@
         ldc.i4 63
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int8 @READER_BOACMD::INTS
-        // line 2970
+        .line 2970
     L_repeat_3:
-        // line 2971
+        .line 2971
         ldloc $tmpSetLiteral4
         ldsflda valuetype T_RJ _G::ILINE
         ldsfld int8 _G::JNTJ
@@ -9150,7 +9150,7 @@
         ldobj uint8
         call bool _SetContains(valuetype T_set_5 s, int32 val)
         brfalse L_else_4
-        // line 2972
+        .line 2972
         ldsflda valuetype T_RJ _G::ILINE
         ldsfld int8 _G::JNTJ
         call instance uint8& T_RJ::ldadr(int32)
@@ -9159,7 +9159,7 @@
         ldloc $tmpSwitchValue5
         ldc.i4 80 // 'P'
         bne.un L_check_case_7
-        // line 2973
+        .line 2973
         ldloc _F
         ldsflda valuetype T_array_19 _G::XTUMP
         ldc.i4 0
@@ -9174,7 +9174,7 @@
         ldloc $tmpSwitchValue5
         ldc.i4 82 // 'R'
         bne.un L_check_case_8
-        // line 2974
+        .line 2974
         ldloc _F
         ldsflda valuetype T_array_19 _G::XTUMP
         ldc.i4 1
@@ -9189,7 +9189,7 @@
         ldloc $tmpSwitchValue5
         ldc.i4 78 // 'N'
         bne.un L_check_case_9
-        // line 2975
+        .line 2975
         ldloc _F
         ldsflda valuetype T_array_19 _G::XTUMP
         ldc.i4 2
@@ -9204,7 +9204,7 @@
         ldloc $tmpSwitchValue5
         ldc.i4 66 // 'B'
         bne.un L_check_case_10
-        // line 2976
+        .line 2976
         ldloc _F
         ldsflda valuetype T_array_19 _G::XTUMP
         ldc.i4 3
@@ -9219,7 +9219,7 @@
         ldloc $tmpSwitchValue5
         ldc.i4 81 // 'Q'
         bne.un L_check_case_11
-        // line 2977
+        .line 2977
         ldloc _F
         ldsflda valuetype T_array_19 _G::XTUMP
         ldc.i4 4
@@ -9234,7 +9234,7 @@
         ldloc $tmpSwitchValue5
         ldc.i4 75 // 'K'
         bne.un L_check_case_12
-        // line 2978
+        .line 2978
         ldloc _F
         ldsflda valuetype T_array_19 _G::XTUMP
         ldc.i4 5
@@ -9249,7 +9249,7 @@
         ldloc $tmpSwitchValue5
         ldc.i4 76 // 'L'
         bne.un L_check_case_13
-        // line 2979
+        .line 2979
         ldloc _F
         ldc.i4 0
         stfld int32 @READER_BOACMD::INTM
@@ -9258,7 +9258,7 @@
         ldloc $tmpSwitchValue5
         ldc.i4 68 // 'D'
         bne.un L_check_case_14
-        // line 2980
+        .line 2980
         ldloc _F
         ldc.i4 1
         stfld int32 @READER_BOACMD::INTM
@@ -9290,7 +9290,7 @@
         beq L_case_15
         br L_case_end_6
     L_case_15:
-        // line 2981
+        .line 2981
         ldloc _F
         ldsflda valuetype T_RJ _G::ILINE
         ldsfld int8 _G::JNTJ
@@ -9302,7 +9302,7 @@
     L_case_end_6:
         br L_if_end_5
     L_else_4:
-        // line 2984
+        .line 2984
         ldloc $tmpSetLiteral6
         ldsflda valuetype T_RJ _G::ILINE
         ldsfld int8 _G::JNTJ
@@ -9310,7 +9310,7 @@
         ldobj uint8
         call bool _SetContains(valuetype T_set_5 s, int32 val)
         brfalse L_if_end_16
-        // line 2986
+        .line 2986
         ldc.i4 63
         stloc $tmpEndValue7
         ldc.i4 0
@@ -9326,7 +9326,7 @@
         ldloc $tmpIndex8
         stfld int8 @READER_BOACMD::INTS1
     L_for_loop_17:
-        // line 2987
+        .line 2987
         ldsflda valuetype T_RB _G::BOARD
         ldflda valuetype T_array_38 T_RB::RBIS
         ldloc _F
@@ -9352,9 +9352,9 @@
         br L_for_loop_17
     L_for_end_18:
         pop
-        // line 2988
+        .line 2988
         call void CLSTAT()
-        // line 2989
+        .line 2989
         ldloc _F
         ldfld class @READER @READER_BOACMD::_slink
         ldsfld valuetype T_array_99 STRING_59    // " ILLEGAL BOARD OPTION         "
@@ -9362,7 +9362,7 @@
         /* nop */
     L_if_end_16:
     L_if_end_5:
-        // line 2991
+        .line 2991
         ldsfld int8 _G::JNTJ
         ldc.i4 1
         add
@@ -9382,7 +9382,7 @@
         ret
     }
 
-// line 2996
+.line 2996
 
     .method public
     void ENDCMD()
@@ -9399,7 +9399,7 @@
         stfld class @READER @READER_ENDCMD::_slink
     
     L_Entry:
-        // line 2999
+        .line 2999
         ldc.i4 4
         newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
         throw
@@ -9409,7 +9409,7 @@
         ret
     }
 
-// line 3003
+.line 3003
 
     .method public
     void GONCMD()
@@ -9426,26 +9426,26 @@
         stfld class @READER @READER_GONCMD::_slink
     
     L_Entry:
-        // line 3006
+        .line 3006
         ldloc _F
         ldfld class @READER @READER_GONCMD::_slink
         call instance int32 @READER::RDRNUM()
         stsfld int32 _G::GOING
-        // line 3007
+        .line 3007
         ldsfld int32 _G::GOING
         ldc.i4 0
         cgt
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 3007
+        .line 3007
         ldc.i4 1
         stsfld int32 _G::GOING
     L_if_end_1:
-        // line 3009
+        .line 3009
         ldc.i4 1 // (true)
         stsfld bool _G::Jumpin
-        // line 3011
+        .line 3011
         ldc.i4 5
         newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
         throw
@@ -9455,7 +9455,7 @@
         ret
     }
 
-// line 3015
+.line 3015
 
     .method public
     void INICMD()
@@ -9472,7 +9472,7 @@
         stfld class @READER @READER_INICMD::_slink
     
     L_Entry:
-        // line 3018
+        .line 3018
         ldc.i4 6
         newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
         throw
@@ -9482,7 +9482,7 @@
         ret
     }
 
-// line 3022
+.line 3022
 
     .method public
     void LETCMD()
@@ -9501,7 +9501,7 @@
     L_Entry:
     .try
     {
-        // line 3041
+        .line 3041
         ldloc _F
         ldfld class @READER @READER_LETCMD::_slink
         ldloc _F
@@ -9509,158 +9509,158 @@
         ldflda valuetype T_RA @READER::INRA
         call instance bool @READER::RDRGNT(valuetype T_RA& A)
         brfalse L_if_end_1
-        // line 3043
+        .line 3043
         ldloc _F
         ldsfld valuetype T_RA STRING_60    // "FKPSHD    "
         ldsflda int32 _G::FKPSHD
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3044
+        .line 3044
         ldloc _F
         ldsfld valuetype T_RA STRING_61    // "FKSANQ    "
         ldsflda int32 _G::FKSANQ
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3045
+        .line 3045
         ldloc _F
         ldsfld valuetype T_RA STRING_62    // "FMAXMT    "
         ldsflda int32 _G::FMAXMT
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3046
+        .line 3046
         ldloc _F
         ldsfld valuetype T_RA STRING_63    // "FNODEL    "
         ldsflda int32 _G::FNODEL
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3047
+        .line 3047
         ldloc _F
         ldsfld valuetype T_RA STRING_64    // "FPADQR    "
         ldsflda valuetype T_array_95 _G::FPADCR
         ldc.i4 0
         call instance int32& T_array_95::ldadr(int32)
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3048
+        .line 3048
         ldloc _F
         ldsfld valuetype T_RA STRING_65    // "FPADQN    "
         ldsflda valuetype T_array_95 _G::FPADCR
         ldc.i4 1
         call instance int32& T_array_95::ldadr(int32)
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3049
+        .line 3049
         ldloc _F
         ldsfld valuetype T_RA STRING_66    // "FPADQB    "
         ldsflda valuetype T_array_95 _G::FPADCR
         ldc.i4 2
         call instance int32& T_array_95::ldadr(int32)
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3050
+        .line 3050
         ldloc _F
         ldsfld valuetype T_RA STRING_67    // "FPADQF    "
         ldsflda valuetype T_array_95 _G::FPADCR
         ldc.i4 3
         call instance int32& T_array_95::ldadr(int32)
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3051
+        .line 3051
         ldloc _F
         ldsfld valuetype T_RA STRING_68    // "FPADKF    "
         ldsflda valuetype T_array_95 _G::FPADCR
         ldc.i4 4
         call instance int32& T_array_95::ldadr(int32)
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3052
+        .line 3052
         ldloc _F
         ldsfld valuetype T_RA STRING_69    // "FPADKB    "
         ldsflda valuetype T_array_95 _G::FPADCR
         ldc.i4 5
         call instance int32& T_array_95::ldadr(int32)
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3053
+        .line 3053
         ldloc _F
         ldsfld valuetype T_RA STRING_70    // "FPADKN    "
         ldsflda valuetype T_array_95 _G::FPADCR
         ldc.i4 6
         call instance int32& T_array_95::ldadr(int32)
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3054
+        .line 3054
         ldloc _F
         ldsfld valuetype T_RA STRING_71    // "FPADWR    "
         ldsflda valuetype T_array_95 _G::FPADCR
         ldc.i4 7
         call instance int32& T_array_95::ldadr(int32)
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3055
+        .line 3055
         ldloc _F
         ldsfld valuetype T_RA STRING_72    // "FPBLOK    "
         ldsflda int32 _G::FPBLOK
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3056
+        .line 3056
         ldloc _F
         ldsfld valuetype T_RA STRING_73    // "FPCONN    "
         ldsflda int32 _G::FPCONN
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3057
+        .line 3057
         ldloc _F
         ldsfld valuetype T_RA STRING_74    // "FPFLNX    "
         ldsflda int32 _G::FPFLNX
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3058
+        .line 3058
         ldloc _F
         ldsfld valuetype T_RA STRING_75    // "FRDUBL    "
         ldsflda int32 _G::FRDUBL
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3059
+        .line 3059
         ldloc _F
         ldsfld valuetype T_RA STRING_76    // "FRK7TH    "
         ldsflda int32 _G::FRK7TH
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3060
+        .line 3060
         ldloc _F
         ldsfld valuetype T_RA STRING_77    // "FTRADE    "
         ldsflda int32 _G::FTRADE
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3061
+        .line 3061
         ldloc _F
         ldsfld valuetype T_RA STRING_78    // "FTRDSL    "
         ldsflda int32 _G::FTRDSL
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3062
+        .line 3062
         ldloc _F
         ldsfld valuetype T_RA STRING_79    // "FTRPDK    "
         ldsflda int32 _G::FTRPDK
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3063
+        .line 3063
         ldloc _F
         ldsfld valuetype T_RA STRING_80    // "FTRPWN    "
         ldsflda int32 _G::FTRPWN
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3064
+        .line 3064
         ldloc _F
         ldsfld valuetype T_RA STRING_81    // "FWKING    "
         ldsflda int32 _G::FWKING
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3065
+        .line 3065
         ldloc _F
         ldsfld valuetype T_RA STRING_82    // "FWMAJM    "
         ldsflda int32 _G::FWMAJM
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3066
+        .line 3066
         ldloc _F
         ldsfld valuetype T_RA STRING_83    // "FWMINM    "
         ldsflda int32 _G::FWMINM
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3067
+        .line 3067
         ldloc _F
         ldsfld valuetype T_RA STRING_84    // "FWPAWN    "
         ldsflda int32 _G::FWPAWN
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3068
+        .line 3068
         ldloc _F
         ldsfld valuetype T_RA STRING_85    // "FWROOK    "
         ldsflda int32 _G::FWROOK
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3069
+        .line 3069
         ldloc _F
         ldsfld valuetype T_RA STRING_86    // "WINDOW    "
         ldsflda int32 _G::WINDOW
         call instance void @READER_LETCMD::LETONE(valuetype T_RA A, int32& B)
-        // line 3070
+        .line 3070
         ldloc _F
         ldfld class @READER @READER_LETCMD::_slink
         ldsfld valuetype T_array_99 STRING_87    // "ILLEGAL LET VARIABLE NAME     "
@@ -9686,7 +9686,7 @@
         ret
     }
 
-// line 3076
+.line 3076
 
     .method public
     void PLECMD()
@@ -9705,31 +9705,31 @@
     L_Entry:
     .try
     {
-        // line 3096
+        .line 3096
     L_21:
         br L_while_test_2
     L_while_1:
-        // line 3098
+        .line 3098
         ldloc _F
         ldsfld valuetype T_RA STRING_60    // "FKPSHD    "
         ldsfld int32 _G::FKPSHD
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3099
+        .line 3099
         ldloc _F
         ldsfld valuetype T_RA STRING_61    // "FKSANQ    "
         ldsfld int32 _G::FKSANQ
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3100
+        .line 3100
         ldloc _F
         ldsfld valuetype T_RA STRING_62    // "FMAXMT    "
         ldsfld int32 _G::FMAXMT
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3101
+        .line 3101
         ldloc _F
         ldsfld valuetype T_RA STRING_63    // "FNODEL    "
         ldsfld int32 _G::FNODEL
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3102
+        .line 3102
         ldloc _F
         ldsfld valuetype T_RA STRING_64    // "FPADQR    "
         ldsflda valuetype T_array_95 _G::FPADCR
@@ -9737,7 +9737,7 @@
         call instance int32& T_array_95::ldadr(int32)
         ldobj int32
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3103
+        .line 3103
         ldloc _F
         ldsfld valuetype T_RA STRING_65    // "FPADQN    "
         ldsflda valuetype T_array_95 _G::FPADCR
@@ -9745,7 +9745,7 @@
         call instance int32& T_array_95::ldadr(int32)
         ldobj int32
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3104
+        .line 3104
         ldloc _F
         ldsfld valuetype T_RA STRING_66    // "FPADQB    "
         ldsflda valuetype T_array_95 _G::FPADCR
@@ -9753,7 +9753,7 @@
         call instance int32& T_array_95::ldadr(int32)
         ldobj int32
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3105
+        .line 3105
         ldloc _F
         ldsfld valuetype T_RA STRING_67    // "FPADQF    "
         ldsflda valuetype T_array_95 _G::FPADCR
@@ -9761,7 +9761,7 @@
         call instance int32& T_array_95::ldadr(int32)
         ldobj int32
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3106
+        .line 3106
         ldloc _F
         ldsfld valuetype T_RA STRING_68    // "FPADKF    "
         ldsflda valuetype T_array_95 _G::FPADCR
@@ -9769,7 +9769,7 @@
         call instance int32& T_array_95::ldadr(int32)
         ldobj int32
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3107
+        .line 3107
         ldloc _F
         ldsfld valuetype T_RA STRING_69    // "FPADKB    "
         ldsflda valuetype T_array_95 _G::FPADCR
@@ -9777,7 +9777,7 @@
         call instance int32& T_array_95::ldadr(int32)
         ldobj int32
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3108
+        .line 3108
         ldloc _F
         ldsfld valuetype T_RA STRING_70    // "FPADKN    "
         ldsflda valuetype T_array_95 _G::FPADCR
@@ -9785,7 +9785,7 @@
         call instance int32& T_array_95::ldadr(int32)
         ldobj int32
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3109
+        .line 3109
         ldloc _F
         ldsfld valuetype T_RA STRING_88    // "FPADKR    "
         ldsflda valuetype T_array_95 _G::FPADCR
@@ -9793,82 +9793,82 @@
         call instance int32& T_array_95::ldadr(int32)
         ldobj int32
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3110
+        .line 3110
         ldloc _F
         ldsfld valuetype T_RA STRING_72    // "FPBLOK    "
         ldsfld int32 _G::FPBLOK
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3111
+        .line 3111
         ldloc _F
         ldsfld valuetype T_RA STRING_73    // "FPCONN    "
         ldsfld int32 _G::FPCONN
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3112
+        .line 3112
         ldloc _F
         ldsfld valuetype T_RA STRING_74    // "FPFLNX    "
         ldsfld int32 _G::FPFLNX
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3113
+        .line 3113
         ldloc _F
         ldsfld valuetype T_RA STRING_75    // "FRDUBL    "
         ldsfld int32 _G::FRDUBL
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3114
+        .line 3114
         ldloc _F
         ldsfld valuetype T_RA STRING_76    // "FRK7TH    "
         ldsfld int32 _G::FRK7TH
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3115
+        .line 3115
         ldloc _F
         ldsfld valuetype T_RA STRING_77    // "FTRADE    "
         ldsfld int32 _G::FTRADE
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3116
+        .line 3116
         ldloc _F
         ldsfld valuetype T_RA STRING_78    // "FTRDSL    "
         ldsfld int32 _G::FTRDSL
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3117
+        .line 3117
         ldloc _F
         ldsfld valuetype T_RA STRING_79    // "FTRPDK    "
         ldsfld int32 _G::FTRPDK
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3118
+        .line 3118
         ldloc _F
         ldsfld valuetype T_RA STRING_80    // "FTRPWN    "
         ldsfld int32 _G::FTRPWN
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3119
+        .line 3119
         ldloc _F
         ldsfld valuetype T_RA STRING_81    // "FWKING    "
         ldsfld int32 _G::FWKING
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3120
+        .line 3120
         ldloc _F
         ldsfld valuetype T_RA STRING_82    // "FWMAJM    "
         ldsfld int32 _G::FWMAJM
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3121
+        .line 3121
         ldloc _F
         ldsfld valuetype T_RA STRING_83    // "FWMINM    "
         ldsfld int32 _G::FWMINM
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3122
+        .line 3122
         ldloc _F
         ldsfld valuetype T_RA STRING_84    // "FWPAWN    "
         ldsfld int32 _G::FWPAWN
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3123
+        .line 3123
         ldloc _F
         ldsfld valuetype T_RA STRING_85    // "FWROOK    "
         ldsfld int32 _G::FWROOK
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3124
+        .line 3124
         ldloc _F
         ldsfld valuetype T_RA STRING_86    // "WINDOW    "
         ldsfld int32 _G::WINDOW
         call instance void @READER_PLECMD::PRIONE(valuetype T_RA A, int32 B)
-        // line 3125
+        .line 3125
         ldloc _F
         ldfld class @READER @READER_PLECMD::_slink
         ldsfld valuetype T_array_99 STRING_89    // " ILLEGAL  VARIABLE NAME       "
@@ -9900,7 +9900,7 @@
         ret
     }
 
-// line 3131
+.line 3131
 
     .method public
     void PRICMD()
@@ -9917,7 +9917,7 @@
         stfld class @READER @READER_PRICMD::_slink
     
     L_Entry:
-        // line 3134
+        .line 3134
         ldloc _F
         ldfld class @READER @READER_PRICMD::_slink
         ldloc _F
@@ -9925,12 +9925,12 @@
         ldflda valuetype T_RA @READER::INRA
         call instance bool @READER::RDRGNT(valuetype T_RA& A)
         brfalse L_else_1
-        // line 3135
+        .line 3135
         ldsfld valuetype T_array_38 _G::MBORD
         call void PRINTB(valuetype T_array_38 A)
         br L_if_end_2
     L_else_1:
-        // line 3137
+        .line 3137
         ldsflda valuetype T_RB _G::BOARD
         ldfld valuetype T_array_38 T_RB::RBIS
         call void PRINTB(valuetype T_array_38 A)
@@ -9941,7 +9941,7 @@
         ret
     }
 
-// line 3141
+.line 3141
 
     .method public
     void PAMCMD()
@@ -9958,10 +9958,10 @@
         stfld class @READER @READER_PAMCMD::_slink
     
     L_Entry:
-        // line 3144
+        .line 3144
         br L_while_test_2
     L_while_1:
-        // line 3145
+        .line 3145
         ldloc _F
         ldfld class @READER @READER_PAMCMD::_slink
         ldflda valuetype T_RA @READER::INRA
@@ -9971,12 +9971,12 @@
         ldc.i4 84 // 'T'
         ceq
         brfalse L_else_3
-        // line 3146
+        .line 3146
         ldsfld valuetype T_RX _G::ATKTO
         call void PRINAM(valuetype T_RX A)
         br L_if_end_4
     L_else_3:
-        // line 3148
+        .line 3148
         ldloc _F
         ldfld class @READER @READER_PAMCMD::_slink
         ldflda valuetype T_RA @READER::INRA
@@ -9986,12 +9986,12 @@
         ldc.i4 70 // 'F'
         ceq
         brfalse L_else_5
-        // line 3149
+        .line 3149
         ldsfld valuetype T_RX _G::ATKFR
         call void PRINAM(valuetype T_RX A)
         br L_if_end_6
     L_else_5:
-        // line 3151
+        .line 3151
         ldloc _F
         ldfld class @READER @READER_PAMCMD::_slink
         ldsfld valuetype T_array_99 STRING_90    // " ATTACK MAP NOT TO OR FROM    "
@@ -10012,7 +10012,7 @@
         ret
     }
 
-// line 3155
+.line 3155
 
     .method public
     void POPCMD()
@@ -10033,7 +10033,7 @@
         stfld class @READER @READER_POPCMD::_slink
     
     L_Entry:
-        // line 3163
+        .line 3163
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldsflda valuetype T_array_27 _G::XTMA
@@ -10047,7 +10047,7 @@
         ldstr " TO MOVE."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 3164
+        .line 3164
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldsflda valuetype T_RB _G::BOARD
@@ -10057,7 +10057,7 @@
         ldstr " ENPASSANT."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 3165
+        .line 3165
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "MOVE NUMBER "
@@ -10067,7 +10067,7 @@
         ldfld int32 T_RB::RBTI
         call instance void [lpcRuntime]LPC.File::Write(int32)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 3166
+        .line 3166
         ldc.i4 3
         stloc $tmpEndValue1
         ldc.i4 0
@@ -10083,14 +10083,14 @@
         ldloc $tmpIndex2
         stfld int32 @READER_POPCMD::INTQ
     L_for_loop_1:
-        // line 3167
+        .line 3167
         ldsflda valuetype T_RB _G::BOARD
         ldfld valuetype T_SQ T_RB::RBSQ
         ldloc _F
         ldfld int32 @READER_POPCMD::INTQ
         call bool _SetContains(valuetype T_SQ s, int32 val)
         brfalse L_if_end_3
-        // line 3168
+        .line 3168
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldsflda valuetype T_array_31 _G::XTQA
@@ -10130,7 +10130,7 @@
         ret
     }
 
-// line 3173
+.line 3173
 
     .method public
     void PMVCMD()
@@ -10151,9 +10151,9 @@
         stfld class @READER @READER_PMVCMD::_slink
     
     L_Entry:
-        // line 3179
+        .line 3179
         call void LSTMOV()
-        // line 3180
+        .line 3180
         ldsfld int16 _G::JNTW
         ldc.i4 1
         sub
@@ -10171,7 +10171,7 @@
         ldloc $tmpIndex2
         stfld int16 @READER_PMVCMD::INTW
     L_for_loop_1:
-        // line 3182
+        .line 3182
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 4
@@ -10183,14 +10183,14 @@
         ldstr "   "
         call instance void [lpcRuntime]LPC.File::Write(string)
         pop
-        // line 3183
+        .line 3183
         ldsflda valuetype T_RF _G::MOVES
         ldloc _F
         ldfld int16 @READER_PMVCMD::INTW
         call instance valuetype T_RM& T_RF::ldadr(int32)
         ldobj valuetype T_RM
         call void PRIMOV(valuetype T_RM A)
-        // line 3184
+        .line 3184
         ldloc _F
         ldfld int16 @READER_PMVCMD::INTW
         conv.r8
@@ -10204,7 +10204,7 @@
         conv.r8
         ceq
         brfalse L_if_end_3
-        // line 3185
+        .line 3185
         call void PAUSER()
     L_if_end_3:
         /* nop */
@@ -10232,7 +10232,7 @@
         ret
     }
 
-// line 3190
+.line 3190
 
     .method public
     void SWICMD()
@@ -10251,41 +10251,41 @@
     L_Entry:
     .try
     {
-        // line 3228
+        .line 3228
     L_21:
         br L_while_test_2
     L_while_1:
-        // line 3230
+        .line 3230
         ldloc _F
         ldsfld valuetype T_RA STRING_91    // "EC        "
         ldsflda bool _G::SWEC
         call instance void @READER_SWICMD::SWIONE(valuetype T_RA A, bool& B)
-        // line 3231
+        .line 3231
         ldloc _F
         ldsfld valuetype T_RA STRING_92    // "PA        "
         ldsflda bool _G::SWPA
         call instance void @READER_SWICMD::SWIONE(valuetype T_RA A, bool& B)
-        // line 3232
+        .line 3232
         ldloc _F
         ldsfld valuetype T_RA STRING_93    // "PS        "
         ldsflda bool _G::SWPS
         call instance void @READER_SWICMD::SWIONE(valuetype T_RA A, bool& B)
-        // line 3233
+        .line 3233
         ldloc _F
         ldsfld valuetype T_RA STRING_94    // "RE        "
         ldsflda bool _G::SWRE
         call instance void @READER_SWICMD::SWIONE(valuetype T_RA A, bool& B)
-        // line 3234
+        .line 3234
         ldloc _F
         ldsfld valuetype T_RA STRING_95    // "SU        "
         ldsflda bool _G::SWSU
         call instance void @READER_SWICMD::SWIONE(valuetype T_RA A, bool& B)
-        // line 3235
+        .line 3235
         ldloc _F
         ldsfld valuetype T_RA STRING_96    // "TR        "
         ldsflda bool _G::SWTR
         call instance void @READER_SWICMD::SWIONE(valuetype T_RA A, bool& B)
-        // line 3236
+        .line 3236
         ldloc _F
         ldfld class @READER @READER_SWICMD::_slink
         ldsfld valuetype T_array_99 STRING_97    // " INVALID SWITCH OPTION        "
@@ -10317,7 +10317,7 @@
         ret
     }
 
-// line 3241
+.line 3241
 
     .method public
     void STACMD()
@@ -10336,68 +10336,68 @@
     L_Entry:
     .try
     {
-        // line 3350
+        .line 3350
         call void CLSTAT()
-        // line 3351
+        .line 3351
         ldloc _F
         ldc.i4 0
         stfld int32 @READER_STACMD::INTM
-        // line 3353
+        .line 3353
     L_21:
         br L_while_test_2
     L_while_1:
-        // line 3355
+        .line 3355
         ldloc _F
         ldsfld valuetype T_RA STRING_108    // "D         "
         ldloc _F
         ldftn instance void @READER_STACMD::STADRK()
         newobj instance void T_READER_STACMD_subroutine_203::.ctor(object, native uint)
         call instance void @READER_STACMD::STAOPT(valuetype T_RA A, class T_READER_STACMD_subroutine_201 STAXXX)
-        // line 3356
+        .line 3356
         ldloc _F
         ldsfld valuetype T_RA STRING_109    // "EP        "
         ldloc _F
         ldftn instance void @READER_STACMD::STAENP()
         newobj instance void T_READER_STACMD_subroutine_205::.ctor(object, native uint)
         call instance void @READER_STACMD::STAOPT(valuetype T_RA A, class T_READER_STACMD_subroutine_201 STAXXX)
-        // line 3357
+        .line 3357
         ldloc _F
         ldsfld valuetype T_RA STRING_110    // "G         "
         ldloc _F
         ldftn instance void @READER_STACMD::STAGOS()
         newobj instance void T_READER_STACMD_subroutine_207::.ctor(object, native uint)
         call instance void @READER_STACMD::STAOPT(valuetype T_RA A, class T_READER_STACMD_subroutine_201 STAXXX)
-        // line 3358
+        .line 3358
         ldloc _F
         ldsfld valuetype T_RA STRING_111    // "L         "
         ldloc _F
         ldftn instance void @READER_STACMD::STALIT()
         newobj instance void T_READER_STACMD_subroutine_209::.ctor(object, native uint)
         call instance void @READER_STACMD::STAOPT(valuetype T_RA A, class T_READER_STACMD_subroutine_201 STAXXX)
-        // line 3359
+        .line 3359
         ldloc _F
         ldsfld valuetype T_RA STRING_112    // "N         "
         ldloc _F
         ldftn instance void @READER_STACMD::STANUM()
         newobj instance void T_READER_STACMD_subroutine_211::.ctor(object, native uint)
         call instance void @READER_STACMD::STAOPT(valuetype T_RA A, class T_READER_STACMD_subroutine_201 STAXXX)
-        // line 3360
+        .line 3360
         ldloc _F
         ldsfld valuetype T_RA STRING_113    // "OO        "
         ldloc _F
         ldftn instance void @READER_STACMD::STACAK()
         newobj instance void T_READER_STACMD_subroutine_213::.ctor(object, native uint)
         call instance void @READER_STACMD::STAOPT(valuetype T_RA A, class T_READER_STACMD_subroutine_201 STAXXX)
-        // line 3361
+        .line 3361
         ldloc _F
         ldsfld valuetype T_RA STRING_114    // "OOO       "
         ldloc _F
         ldftn instance void @READER_STACMD::STACAQ()
         newobj instance void T_READER_STACMD_subroutine_215::.ctor(object, native uint)
         call instance void @READER_STACMD::STAOPT(valuetype T_RA A, class T_READER_STACMD_subroutine_201 STAXXX)
-        // line 3362
+        .line 3362
         call void CLSTAT()
-        // line 3363
+        .line 3363
         ldloc _F
         ldfld class @READER @READER_STACMD::_slink
         ldsfld valuetype T_array_99 STRING_115    // " INVALID STATUS OPTION        "
@@ -10428,7 +10428,7 @@
         ret
     }
 
-// line 3368
+.line 3368
 
     .method public
     void WHACMD()
@@ -10445,7 +10445,7 @@
         stfld class @READER @READER_WHACMD::_slink
     
     L_Entry:
-        // line 3371
+        .line 3371
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldsfld valuetype T_array_99 _G::MOVMS
@@ -10460,7 +10460,7 @@
 }
 
 
-// line 3418
+.line 3418
 //================================================================================
 // scope: MINENG_ADDCHR (level : 3)
 
@@ -10481,7 +10481,7 @@
 }
 
 
-// line 3428
+.line 3428
 //================================================================================
 // scope: MINENG_ADDSQR (level : 3)
 
@@ -10503,7 +10503,7 @@
 }
 
 
-// line 3478
+.line 3478
 //================================================================================
 // scope: MINENG_ADDWRD (level : 3)
 
@@ -10528,7 +10528,7 @@
 }
 
 
-// line 3491
+.line 3491
 //================================================================================
 // scope: MINENG_DIFFER (level : 3)
 
@@ -10554,7 +10554,7 @@
 }
 
 
-// line 3516
+.line 3516
 //================================================================================
 // scope: MINENG_SETSQD (level : 3)
 
@@ -10578,7 +10578,7 @@
 }
 
 
-// line 3544
+.line 3544
 //================================================================================
 // scope: MINENG_MINGEN (level : 3)
 
@@ -10610,7 +10610,7 @@
 }
 
 
-// line 3410
+.line 3410
 //================================================================================
 // scope: MINENG (level : 2)
 
@@ -10630,7 +10630,7 @@
         ret
     }
 
-// line 3418
+.line 3418
 
     .method public
     void ADDCHR(uint8 A)
@@ -10651,7 +10651,7 @@
         stfld uint8 @MINENG_ADDCHR::A
     
     L_Entry:
-        // line 3422
+        .line 3422
         ldsflda valuetype T_array_99 _G::MOVMS
         ldloc _F
         ldfld class @MINENG @MINENG_ADDCHR::_slink
@@ -10660,14 +10660,14 @@
         ldloc _F
         ldfld uint8 @MINENG_ADDCHR::A
         stobj uint8
-        // line 3423
+        .line 3423
         ldloc _F
         ldfld class @MINENG @MINENG_ADDCHR::_slink
         ldfld int8 @MINENG::INTN
         ldc.i4 30
         clt
         brfalse L_if_end_1
-        // line 3424
+        .line 3424
         ldloc _F
         ldfld class @MINENG @MINENG_ADDCHR::_slink
         ldloc _F
@@ -10687,7 +10687,7 @@
         ret
     }
 
-// line 3428
+.line 3428
 
     .method public
     void ADDSQR(int8 A, valuetype T_RD B)
@@ -10722,12 +10722,12 @@
         call instance void T_set_100::addRange(int32, int32)
     
     L_Entry:
-        // line 3435
+        .line 3435
         ldloc _F
         ldflda valuetype T_RD @MINENG_ADDSQR::B
         ldfld bool T_RD::RDPC
         brfalse L_if_end_1
-        // line 3436
+        .line 3436
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldsflda valuetype T_array_23 _G::XTUC
@@ -10743,23 +10743,23 @@
         ldobj uint8
         call instance void @MINENG::ADDCHR(uint8 A)
     L_if_end_1:
-        // line 3437
+        .line 3437
         ldloc _F
         ldflda valuetype T_RD @MINENG_ADDSQR::B
         ldfld bool T_RD::RDSL
         brfalse L_if_end_2
-        // line 3438
+        .line 3438
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldc.i4 47 // '/'
         call instance void @MINENG::ADDCHR(uint8 A)
     L_if_end_2:
-        // line 3439
+        .line 3439
         ldloc _F
         ldflda valuetype T_RD @MINENG_ADDSQR::B
         ldfld bool T_RD::RDKQ
         brfalse L_if_end_3
-        // line 3440
+        .line 3440
         ldloc $tmpSetLiteral1
         ldsflda valuetype T_array_38 _G::XTSF
         ldloc _F
@@ -10768,26 +10768,26 @@
         ldobj int32
         call bool _SetContains(valuetype T_set_100 s, int32 val)
         brfalse L_else_4
-        // line 3441
+        .line 3441
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldc.i4 81 // 'Q'
         call instance void @MINENG::ADDCHR(uint8 A)
         br L_if_end_5
     L_else_4:
-        // line 3442
+        .line 3442
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldc.i4 75 // 'K'
         call instance void @MINENG::ADDCHR(uint8 A)
     L_if_end_5:
     L_if_end_3:
-        // line 3443
+        .line 3443
         ldloc _F
         ldflda valuetype T_RD @MINENG_ADDSQR::B
         ldfld bool T_RD::RDNB
         brfalse L_if_end_6
-        // line 3444
+        .line 3444
         ldsflda valuetype T_array_38 _G::XTSF
         ldloc _F
         ldfld int8 @MINENG_ADDSQR::A
@@ -10802,7 +10802,7 @@
         beq L_case_9
         br L_check_case_8
     L_case_9:
-        // line 3445
+        .line 3445
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldc.i4 82 // 'R'
@@ -10817,7 +10817,7 @@
         beq L_case_11
         br L_check_case_10
     L_case_11:
-        // line 3446
+        .line 3446
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldc.i4 78 // 'N'
@@ -10832,7 +10832,7 @@
         beq L_case_13
         br L_check_case_12
     L_case_13:
-        // line 3447
+        .line 3447
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldc.i4 66 // 'B'
@@ -10842,7 +10842,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 3
         bne.un L_check_case_14
-        // line 3448
+        .line 3448
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldc.i4 81 // 'Q'
@@ -10852,24 +10852,24 @@
         ldloc $tmpSwitchValue2
         ldc.i4 4
         bne.un L_case_end_7
-        // line 3449
+        .line 3449
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldc.i4 75 // 'K'
         call instance void @MINENG::ADDCHR(uint8 A)
     L_case_end_7:
     L_if_end_6:
-        // line 3451
+        .line 3451
         ldloc _F
         ldflda valuetype T_RD @MINENG_ADDSQR::B
         ldfld bool T_RD::RDRK
         brfalse L_if_end_15
-        // line 3452
+        .line 3452
         ldsfld int32 _G::JNTM
         ldc.i4 0
         ceq
         brfalse L_else_16
-        // line 3453
+        .line 3453
         ldsflda valuetype T_array_38 _G::XTSR
         ldloc _F
         ldfld int8 @MINENG_ADDSQR::A
@@ -10879,7 +10879,7 @@
         ldloc $tmpSwitchValue3
         ldc.i4 0
         bne.un L_check_case_19
-        // line 3454
+        .line 3454
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldc.i4 49 // '1'
@@ -10889,7 +10889,7 @@
         ldloc $tmpSwitchValue3
         ldc.i4 1
         bne.un L_check_case_20
-        // line 3455
+        .line 3455
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldc.i4 50 // '2'
@@ -10899,7 +10899,7 @@
         ldloc $tmpSwitchValue3
         ldc.i4 2
         bne.un L_check_case_21
-        // line 3456
+        .line 3456
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldc.i4 51 // '3'
@@ -10909,7 +10909,7 @@
         ldloc $tmpSwitchValue3
         ldc.i4 3
         bne.un L_check_case_22
-        // line 3457
+        .line 3457
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldc.i4 52 // '4'
@@ -10919,7 +10919,7 @@
         ldloc $tmpSwitchValue3
         ldc.i4 4
         bne.un L_check_case_23
-        // line 3458
+        .line 3458
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldc.i4 53 // '5'
@@ -10929,7 +10929,7 @@
         ldloc $tmpSwitchValue3
         ldc.i4 5
         bne.un L_check_case_24
-        // line 3459
+        .line 3459
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldc.i4 54 // '6'
@@ -10939,7 +10939,7 @@
         ldloc $tmpSwitchValue3
         ldc.i4 6
         bne.un L_check_case_25
-        // line 3460
+        .line 3460
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldc.i4 55 // '7'
@@ -10949,7 +10949,7 @@
         ldloc $tmpSwitchValue3
         ldc.i4 7
         bne.un L_case_end_18
-        // line 3461
+        .line 3461
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldc.i4 56 // '8'
@@ -10957,7 +10957,7 @@
     L_case_end_18:
         br L_if_end_17
     L_else_16:
-        // line 3464
+        .line 3464
         ldsflda valuetype T_array_38 _G::XTSR
         ldloc _F
         ldfld int8 @MINENG_ADDSQR::A
@@ -10967,7 +10967,7 @@
         ldloc $tmpSwitchValue4
         ldc.i4 0
         bne.un L_check_case_27
-        // line 3465
+        .line 3465
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldc.i4 56 // '8'
@@ -10977,7 +10977,7 @@
         ldloc $tmpSwitchValue4
         ldc.i4 1
         bne.un L_check_case_28
-        // line 3466
+        .line 3466
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldc.i4 55 // '7'
@@ -10987,7 +10987,7 @@
         ldloc $tmpSwitchValue4
         ldc.i4 2
         bne.un L_check_case_29
-        // line 3467
+        .line 3467
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldc.i4 54 // '6'
@@ -10997,7 +10997,7 @@
         ldloc $tmpSwitchValue4
         ldc.i4 3
         bne.un L_check_case_30
-        // line 3468
+        .line 3468
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldc.i4 53 // '5'
@@ -11007,7 +11007,7 @@
         ldloc $tmpSwitchValue4
         ldc.i4 4
         bne.un L_check_case_31
-        // line 3469
+        .line 3469
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldc.i4 52 // '4'
@@ -11017,7 +11017,7 @@
         ldloc $tmpSwitchValue4
         ldc.i4 5
         bne.un L_check_case_32
-        // line 3470
+        .line 3470
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldc.i4 51 // '3'
@@ -11027,7 +11027,7 @@
         ldloc $tmpSwitchValue4
         ldc.i4 6
         bne.un L_check_case_33
-        // line 3471
+        .line 3471
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldc.i4 50 // '2'
@@ -11037,7 +11037,7 @@
         ldloc $tmpSwitchValue4
         ldc.i4 7
         bne.un L_case_end_26
-        // line 3472
+        .line 3472
         ldloc _F
         ldfld class @MINENG @MINENG_ADDSQR::_slink
         ldc.i4 49 // '1'
@@ -11052,7 +11052,7 @@
         ret
     }
 
-// line 3478
+.line 3478
 
     .method public
     void ADDWRD(valuetype T_RA A, int8 B)
@@ -11081,7 +11081,7 @@
         stfld int8 @MINENG_ADDWRD::B
     
     L_Entry:
-        // line 3486
+        .line 3486
         ldloc _F
         ldfld int8 @MINENG_ADDWRD::B
         stloc $tmpEndValue1
@@ -11098,7 +11098,7 @@
         ldloc $tmpIndex2
         stfld int8 @MINENG_ADDWRD::INTA
     L_for_loop_1:
-        // line 3487
+        .line 3487
         ldloc _F
         ldfld class @MINENG @MINENG_ADDWRD::_slink
         ldloc _F
@@ -11132,7 +11132,7 @@
         ret
     }
 
-// line 3491
+.line 3491
 
     .method public
     bool DIFFER(valuetype T_RM A, valuetype T_RM B)
@@ -11157,7 +11157,7 @@
         stfld valuetype T_RM @MINENG_DIFFER::B
     
     L_Entry:
-        // line 3499
+        .line 3499
         ldloc _F
         ldloc _F
         ldflda valuetype T_RM @MINENG_DIFFER::A
@@ -11195,7 +11195,7 @@
         ceq
     L_OR_shortcut_1:
         stfld bool @MINENG_DIFFER::INTB
-        // line 3500
+        .line 3500
         ldloc _F
         ldflda valuetype T_RM @MINENG_DIFFER::A
         ldfld bool T_RM::RMPR
@@ -11204,12 +11204,12 @@
         ldfld bool T_RM::RMPR
         ceq
         brfalse L_else_3
-        // line 3501
+        .line 3501
         ldloc _F
         ldflda valuetype T_RM @MINENG_DIFFER::A
         ldfld bool T_RM::RMPR
         brfalse L_else_5
-        // line 3502
+        .line 3502
         ldloc _F
         ldloc _F
         ldfld bool @MINENG_DIFFER::INTB
@@ -11229,7 +11229,7 @@
         stfld bool @MINENG_DIFFER::_fnvalue
         br L_if_end_6
     L_else_5:
-        // line 3504
+        .line 3504
         ldloc _F
         ldflda valuetype T_RM @MINENG_DIFFER::A
         ldfld bool T_RM::RMOO
@@ -11238,12 +11238,12 @@
         ldfld bool T_RM::RMOO
         ceq
         brfalse L_else_8
-        // line 3505
+        .line 3505
         ldloc _F
         ldflda valuetype T_RM @MINENG_DIFFER::A
         ldfld bool T_RM::RMOO
         brfalse L_else_10
-        // line 3506
+        .line 3506
         ldloc _F
         ldloc _F
         ldfld bool @MINENG_DIFFER::INTB
@@ -11263,7 +11263,7 @@
         stfld bool @MINENG_DIFFER::_fnvalue
         br L_if_end_11
     L_else_10:
-        // line 3508
+        .line 3508
         ldloc _F
         ldloc _F
         ldfld bool @MINENG_DIFFER::INTB
@@ -11271,7 +11271,7 @@
     L_if_end_11:
         br L_if_end_9
     L_else_8:
-        // line 3510
+        .line 3510
         ldloc _F
         ldc.i4 1 // (true)
         stfld bool @MINENG_DIFFER::_fnvalue
@@ -11279,7 +11279,7 @@
     L_if_end_6:
         br L_if_end_4
     L_else_3:
-        // line 3512
+        .line 3512
         ldloc _F
         ldc.i4 1 // (true)
         stfld bool @MINENG_DIFFER::_fnvalue
@@ -11292,7 +11292,7 @@
         ret
     }
 
-// line 3516
+.line 3516
 
     .method public
     void SETSQD(int8 A, valuetype T_RD B, valuetype T_set_100& C, valuetype T_set_100& O)
@@ -11383,17 +11383,17 @@
         call instance void T_set_100::addValue(int32)
     
     L_Entry:
-        // line 3524
+        .line 3524
         ldloc _F
         ldfld valuetype T_set_100* @MINENG_SETSQD::C
         ldloc $tmpSetLiteral1
         stobj valuetype T_set_100
-        // line 3525
+        .line 3525
         ldloc _F
         ldfld valuetype T_set_100* @MINENG_SETSQD::O
         ldloc $tmpSetLiteral2
         stobj valuetype T_set_100
-        // line 3528
+        .line 3528
         ldloc _F
         ldflda valuetype T_RD @MINENG_SETSQD::B
         ldfld bool T_RD::RDKQ
@@ -11405,7 +11405,7 @@
         ldfld bool T_RD::RDNB
     L_AND_shortcut_1:
         brfalse L_if_end_2
-        // line 3529
+        .line 3529
         ldloca $tmpSetLiteral3
         call instance void T_set_100::clear()
         ldloca $tmpSetLiteral3
@@ -11420,7 +11420,7 @@
         ldloc $tmpSetLiteral3
         stobj valuetype T_set_100
     L_if_end_2:
-        // line 3530
+        .line 3530
         ldloc _F
         ldflda valuetype T_RD @MINENG_SETSQD::B
         ldfld bool T_RD::RDKQ
@@ -11434,7 +11434,7 @@
         ldfld bool T_RD::RDNB
     L_AND_shortcut_3:
         brfalse L_if_end_4
-        // line 3531
+        .line 3531
         ldsflda valuetype T_array_38 _G::XTSF
         ldloc _F
         ldfld int8 @MINENG_SETSQD::A
@@ -11449,7 +11449,7 @@
         beq L_case_7
         br L_check_case_6
     L_case_7:
-        // line 3532
+        .line 3532
         ldloc _F
         ldfld valuetype T_set_100* @MINENG_SETSQD::O
         ldloc $tmpSetLiteral5
@@ -11464,7 +11464,7 @@
         beq L_case_9
         br L_check_case_8
     L_case_9:
-        // line 3533
+        .line 3533
         ldloc _F
         ldfld valuetype T_set_100* @MINENG_SETSQD::O
         ldloc $tmpSetLiteral6
@@ -11479,7 +11479,7 @@
         beq L_case_11
         br L_check_case_10
     L_case_11:
-        // line 3534
+        .line 3534
         ldloc _F
         ldfld valuetype T_set_100* @MINENG_SETSQD::O
         ldloc $tmpSetLiteral7
@@ -11489,7 +11489,7 @@
         ldloc $tmpSwitchValue4
         ldc.i4 3
         bne.un L_check_case_12
-        // line 3535
+        .line 3535
         ldloc _F
         ldfld valuetype T_set_100* @MINENG_SETSQD::O
         ldloc $tmpSetLiteral8
@@ -11499,19 +11499,19 @@
         ldloc $tmpSwitchValue4
         ldc.i4 4
         bne.un L_case_end_5
-        // line 3536
+        .line 3536
         ldloc _F
         ldfld valuetype T_set_100* @MINENG_SETSQD::O
         ldloc $tmpSetLiteral9
         stobj valuetype T_set_100
     L_case_end_5:
     L_if_end_4:
-        // line 3538
+        .line 3538
         ldloc _F
         ldflda valuetype T_RD @MINENG_SETSQD::B
         ldfld bool T_RD::RDRK
         brfalse L_if_end_13
-        // line 3539
+        .line 3539
         ldloca $tmpSetLiteral10
         call instance void T_set_100::clear()
         ldloca $tmpSetLiteral10
@@ -11533,7 +11533,7 @@
         ret
     }
 
-// line 3544
+.line 3544
 
     .method public
     void MINGEN(valuetype T_RM A, int32 B, int32 C)
@@ -11569,7 +11569,7 @@
         stfld int32 @MINENG_MINGEN::C
     
     L_Entry:
-        // line 3565
+        .line 3565
         ldloc _F
         ldfld int32 @MINENG_MINGEN::C
         stloc $tmpEndValue1
@@ -11583,12 +11583,12 @@
         ldloc $tmpIndex2
         stfld int32 @MINENG_MINGEN::INTI
     L_for_loop_1:
-        // line 3568
+        .line 3568
         ldloc _F
         ldflda valuetype T_RM @MINENG_MINGEN::A
         ldfld bool T_RM::RMPR
         brfalse L_else_3
-        // line 3569
+        .line 3569
         ldloc _F
         ldloc _F
         ldflda valuetype T_RM @MINENG_MINGEN::A
@@ -11596,12 +11596,12 @@
         stfld int32 @MINENG_MINGEN::INTG
         br L_if_end_4
     L_else_3:
-        // line 3571
+        .line 3571
         ldloc _F
         ldc.i4 3
         stfld int32 @MINENG_MINGEN::INTG
     L_if_end_4:
-        // line 3572
+        .line 3572
         ldloc _F
         ldfld class @MINENG @MINENG_MINGEN::_slink
         ldloc _F
@@ -11617,7 +11617,7 @@
         ldloc _F
         ldflda valuetype T_set_100 @MINENG_MINGEN::INLF
         call instance void @MINENG::SETSQD(int8 A, valuetype T_RD B, valuetype T_set_100& C, valuetype T_set_100& O)
-        // line 3573
+        .line 3573
         ldloc _F
         ldfld class @MINENG @MINENG_MINGEN::_slink
         ldloc _F
@@ -11633,7 +11633,7 @@
         ldloc _F
         ldflda valuetype T_set_100 @MINENG_MINGEN::INRF
         call instance void @MINENG::SETSQD(int8 A, valuetype T_RD B, valuetype T_set_100& C, valuetype T_set_100& O)
-        // line 3574
+        .line 3574
         ldsfld int16 _G::JNTW
         ldc.i4 1
         sub
@@ -11653,7 +11653,7 @@
         ldloc $tmpIndex4
         stfld int16 @MINENG_MINGEN::INTW
     L_for_loop_5:
-        // line 3575
+        .line 3575
         ldloc _F
         ldfld class @MINENG @MINENG_MINGEN::_slink
         ldsflda valuetype T_RF _G::MOVES
@@ -11665,7 +11665,7 @@
         ldfld valuetype T_RM @MINENG_MINGEN::A
         call instance bool @MINENG::DIFFER(valuetype T_RM A, valuetype T_RM B)
         brfalse L_if_end_7
-        // line 3576
+        .line 3576
         ldsflda valuetype T_array_38 _G::MBORD
         ldloc _F
         ldflda valuetype T_RM @MINENG_MINGEN::A
@@ -11695,7 +11695,7 @@
         ceq
     L_AND_shortcut_8:
         brfalse L_if_end_9
-        // line 3579
+        .line 3579
         ldloc _F
         ldfld valuetype T_set_100 @MINENG_MINGEN::INLR
         ldsflda valuetype T_array_38 _G::XTSR
@@ -11785,7 +11785,7 @@
     L_OR_shortcut_14:
     L_AND_shortcut_10:
         brfalse L_if_end_16
-        // line 3584
+        .line 3584
         br L_21
     L_if_end_16:
     L_if_end_9:
@@ -11808,7 +11808,7 @@
         br L_for_loop_5
     L_for_end_6:
         pop
-        // line 3587
+        .line 3587
         ldloc _F
         ldfld class @MINENG @MINENG_MINGEN::_slink
         ldloc _F
@@ -11820,7 +11820,7 @@
         call instance valuetype T_RY& T_array_12::ldadr(int32)
         ldfld valuetype T_RD T_RY::RYLS
         call instance void @MINENG::ADDSQR(int8 A, valuetype T_RD B)
-        // line 3588
+        .line 3588
         ldloc _F
         ldfld class @MINENG @MINENG_MINGEN::_slink
         ldsflda valuetype T_array_12 _G::SYNTX
@@ -11829,7 +11829,7 @@
         call instance valuetype T_RY& T_array_12::ldadr(int32)
         ldfld uint8 T_RY::RYCH
         call instance void @MINENG::ADDCHR(uint8 A)
-        // line 3589
+        .line 3589
         ldloc _F
         ldfld class @MINENG @MINENG_MINGEN::_slink
         ldloc _F
@@ -11841,7 +11841,7 @@
         call instance valuetype T_RY& T_array_12::ldadr(int32)
         ldfld valuetype T_RD T_RY::RYRS
         call instance void @MINENG::ADDSQR(int8 A, valuetype T_RD B)
-        // line 3590
+        .line 3590
         br L_22
     L_21:
         /* nop */
@@ -11868,7 +11868,7 @@
 }
 
 
-// line 3635
+.line 3635
 //================================================================================
 // scope: MYMOVE (level : 2)
 
@@ -11886,7 +11886,7 @@
 }
 
 
-// line 3696
+.line 3696
 //================================================================================
 // scope: YRMOVE_YRMHIT (level : 3)
 
@@ -11904,7 +11904,7 @@
 }
 
 
-// line 3714
+.line 3714
 //================================================================================
 // scope: YRMOVE_YRMCOM (level : 3)
 
@@ -11922,7 +11922,7 @@
 }
 
 
-// line 3738
+.line 3738
 //================================================================================
 // scope: YRMOVE_YRMCAP (level : 3)
 
@@ -11940,7 +11940,7 @@
 }
 
 
-// line 3745
+.line 3745
 //================================================================================
 // scope: YRMOVE_YRMCAS (level : 3)
 
@@ -11958,7 +11958,7 @@
 }
 
 
-// line 3752
+.line 3752
 //================================================================================
 // scope: YRMOVE_YRMCPC (level : 3)
 
@@ -11976,7 +11976,7 @@
 }
 
 
-// line 3765
+.line 3765
 //================================================================================
 // scope: YRMOVE_YRMCQS (level : 3)
 
@@ -11994,7 +11994,7 @@
 }
 
 
-// line 3772
+.line 3772
 //================================================================================
 // scope: YRMOVE_YRMLKQ (level : 3)
 
@@ -12012,7 +12012,7 @@
 }
 
 
-// line 3783
+.line 3783
 //================================================================================
 // scope: YRMOVE_YRMLRB (level : 3)
 
@@ -12030,7 +12030,7 @@
 }
 
 
-// line 3795
+.line 3795
 //================================================================================
 // scope: YRMOVE_YRMLRK (level : 3)
 
@@ -12048,7 +12048,7 @@
 }
 
 
-// line 3823
+.line 3823
 //================================================================================
 // scope: YRMOVE_YRMNUL (level : 3)
 
@@ -12066,7 +12066,7 @@
 }
 
 
-// line 3829
+.line 3829
 //================================================================================
 // scope: YRMOVE_YRMPCM (level : 3)
 
@@ -12084,7 +12084,7 @@
 }
 
 
-// line 3842
+.line 3842
 //================================================================================
 // scope: YRMOVE_YRMPRO (level : 3)
 
@@ -12102,7 +12102,7 @@
 }
 
 
-// line 3855
+.line 3855
 //================================================================================
 // scope: YRMOVE_YRMRKQ (level : 3)
 
@@ -12120,7 +12120,7 @@
 }
 
 
-// line 3866
+.line 3866
 //================================================================================
 // scope: YRMOVE_YRMRRB (level : 3)
 
@@ -12138,7 +12138,7 @@
 }
 
 
-// line 3878
+.line 3878
 //================================================================================
 // scope: YRMOVE_YRMRRK (level : 3)
 
@@ -12156,11 +12156,11 @@
 }
 
 
-// line 3906
+.line 3906
 //================================================================================
 // scope: YRMOVE_NCHIN (level : 3)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_307 = procedure^;
 .class sealed T_YRMOVE_subroutine_307 extends [mscorlib]System.MulticastDelegate
@@ -12191,11 +12191,11 @@
 }
 
 
-// line 3662
+.line 3662
 //================================================================================
 // scope: YRMOVE (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_313 = procedure^;
 .class sealed T_YRMOVE_subroutine_313 extends [mscorlib]System.MulticastDelegate
@@ -12204,7 +12204,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_315 = procedure^;
 .class sealed T_YRMOVE_subroutine_315 extends [mscorlib]System.MulticastDelegate
@@ -12213,7 +12213,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_317 = procedure^;
 .class sealed T_YRMOVE_subroutine_317 extends [mscorlib]System.MulticastDelegate
@@ -12222,7 +12222,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_319 = procedure^;
 .class sealed T_YRMOVE_subroutine_319 extends [mscorlib]System.MulticastDelegate
@@ -12231,7 +12231,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_321 = procedure^;
 .class sealed T_YRMOVE_subroutine_321 extends [mscorlib]System.MulticastDelegate
@@ -12240,7 +12240,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_324 = procedure^;
 .class sealed T_YRMOVE_subroutine_324 extends [mscorlib]System.MulticastDelegate
@@ -12249,7 +12249,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_326 = procedure^;
 .class sealed T_YRMOVE_subroutine_326 extends [mscorlib]System.MulticastDelegate
@@ -12258,7 +12258,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_329 = procedure^;
 .class sealed T_YRMOVE_subroutine_329 extends [mscorlib]System.MulticastDelegate
@@ -12267,7 +12267,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_331 = procedure^;
 .class sealed T_YRMOVE_subroutine_331 extends [mscorlib]System.MulticastDelegate
@@ -12276,7 +12276,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_333 = procedure^;
 .class sealed T_YRMOVE_subroutine_333 extends [mscorlib]System.MulticastDelegate
@@ -12285,7 +12285,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_336 = procedure^;
 .class sealed T_YRMOVE_subroutine_336 extends [mscorlib]System.MulticastDelegate
@@ -12294,7 +12294,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_340 = procedure^;
 .class sealed T_YRMOVE_subroutine_340 extends [mscorlib]System.MulticastDelegate
@@ -12303,7 +12303,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_342 = procedure^;
 .class sealed T_YRMOVE_subroutine_342 extends [mscorlib]System.MulticastDelegate
@@ -12344,7 +12344,7 @@
         ret
     }
 
-// line 3696
+.line 3696
 
     .method public
     void YRMHIT()
@@ -12361,29 +12361,29 @@
         stfld class @YRMOVE @YRMOVE_YRMHIT::_slink
     
     L_Entry:
-        // line 3703
+        .line 3703
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMHIT::_slink
         ldfld bool @YRMOVE::IFMV
         brfalse L_if_end_1
-        // line 3705
+        .line 3705
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "   AMBIGUOUS MOVE."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 3706
+        .line 3706
         ldc.i4 11
         newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
         throw
         /* nop */
     L_if_end_1:
-        // line 3709
+        .line 3709
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMHIT::_slink
         ldc.i4 1 // (true)
         stfld bool @YRMOVE::IFMV
-        // line 3710
+        .line 3710
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMHIT::_slink
         ldsflda valuetype T_RF _G::MOVES
@@ -12399,7 +12399,7 @@
         ret
     }
 
-// line 3714
+.line 3714
 
     .method public
     void YRMCOM()
@@ -12416,7 +12416,7 @@
         stfld class @YRMOVE @YRMOVE_YRMCOM::_slink
     
     L_Entry:
-        // line 3723
+        .line 3723
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMCOM::_slink
         ldfld valuetype T_set_100 @YRMOVE::INLR
@@ -12512,7 +12512,7 @@
         ceq
     L_AND_shortcut_1:
         brfalse L_if_end_6
-        // line 3728
+        .line 3728
         ldsflda valuetype T_RF _G::MOVES
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMCOM::_slink
@@ -12524,7 +12524,7 @@
         ldfld bool @YRMOVE::IFCA
         ceq
         brfalse L_if_end_7
-        // line 3729
+        .line 3729
         ldsflda valuetype T_RF _G::MOVES
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMCOM::_slink
@@ -12532,7 +12532,7 @@
         call instance valuetype T_RM& T_RF::ldadr(int32)
         ldfld bool T_RM::RMCA
         brfalse L_else_8
-        // line 3730
+        .line 3730
         ldsflda valuetype T_RF _G::MOVES
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMCOM::_slink
@@ -12544,7 +12544,7 @@
         ldfld int32 @YRMOVE::INCP
         ceq
         brfalse L_else_10
-        // line 3731
+        .line 3731
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMCOM::_slink
         call instance void @YRMOVE::YRMHIT()
@@ -12554,7 +12554,7 @@
     L_if_end_11:
         br L_if_end_9
     L_else_8:
-        // line 3734
+        .line 3734
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMCOM::_slink
         call instance void @YRMOVE::YRMHIT()
@@ -12567,7 +12567,7 @@
         ret
     }
 
-// line 3738
+.line 3738
 
     .method public
     void YRMCAP()
@@ -12584,7 +12584,7 @@
         stfld class @YRMOVE @YRMOVE_YRMCAP::_slink
     
     L_Entry:
-        // line 3741
+        .line 3741
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMCAP::_slink
         ldc.i4 1 // (true)
@@ -12595,7 +12595,7 @@
         ret
     }
 
-// line 3745
+.line 3745
 
     .method public
     void YRMCAS()
@@ -12612,7 +12612,7 @@
         stfld class @YRMOVE @YRMOVE_YRMCAS::_slink
     
     L_Entry:
-        // line 3748
+        .line 3748
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMCAS::_slink
         ldc.i4 1 // (true)
@@ -12623,7 +12623,7 @@
         ret
     }
 
-// line 3752
+.line 3752
 
     .method public
     void YRMCPC()
@@ -12642,7 +12642,7 @@
         stfld class @YRMOVE @YRMOVE_YRMCPC::_slink
     
     L_Entry:
-        // line 3755
+        .line 3755
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMCPC::_slink
         ldfld uint8 @YRMOVE::INTC
@@ -12650,7 +12650,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 80 // 'P'
         bne.un L_check_case_2
-        // line 3756
+        .line 3756
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMCPC::_slink
         ldsflda valuetype T_array_19 _G::XTUMP
@@ -12668,7 +12668,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 82 // 'R'
         bne.un L_check_case_3
-        // line 3757
+        .line 3757
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMCPC::_slink
         ldsflda valuetype T_array_19 _G::XTUMP
@@ -12686,7 +12686,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 78 // 'N'
         bne.un L_check_case_4
-        // line 3758
+        .line 3758
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMCPC::_slink
         ldsflda valuetype T_array_19 _G::XTUMP
@@ -12704,7 +12704,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 66 // 'B'
         bne.un L_check_case_5
-        // line 3759
+        .line 3759
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMCPC::_slink
         ldsflda valuetype T_array_19 _G::XTUMP
@@ -12722,7 +12722,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 81 // 'Q'
         bne.un L_case_end_1
-        // line 3760
+        .line 3760
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMCPC::_slink
         ldsflda valuetype T_array_19 _G::XTUMP
@@ -12742,7 +12742,7 @@
         ret
     }
 
-// line 3765
+.line 3765
 
     .method public
     void YRMCQS()
@@ -12759,7 +12759,7 @@
         stfld class @YRMOVE @YRMOVE_YRMCQS::_slink
     
     L_Entry:
-        // line 3768
+        .line 3768
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMCQS::_slink
         ldc.i4 1 // (true)
@@ -12770,7 +12770,7 @@
         ret
     }
 
-// line 3772
+.line 3772
 
     .method public
     void YRMLKQ()
@@ -12801,7 +12801,7 @@
         call instance void T_set_100::addRange(int32, int32)
     
     L_Entry:
-        // line 3775
+        .line 3775
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLKQ::_slink
         ldfld uint8 @YRMOVE::INTC
@@ -12809,7 +12809,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 75 // 'K'
         bne.un L_check_case_2
-        // line 3776
+        .line 3776
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLKQ::_slink
         ldloc $tmpSetLiteral2
@@ -12830,7 +12830,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 81 // 'Q'
         bne.un L_case_end_1
-        // line 3777
+        .line 3777
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLKQ::_slink
         ldloc $tmpSetLiteral3
@@ -12847,7 +12847,7 @@
         call valuetype T_set_100 _SetCastTo_T_set_100(valuetype T_set_5 s)
         stfld valuetype T_set_100 @YRMOVE::INLF
     L_case_end_1:
-        // line 3779
+        .line 3779
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLKQ::_slink
         ldc.i4 1 // (true)
@@ -12858,7 +12858,7 @@
         ret
     }
 
-// line 3783
+.line 3783
 
     .method public
     void YRMLRB()
@@ -12901,7 +12901,7 @@
         call instance void T_set_100::addValue(int32)
     
     L_Entry:
-        // line 3786
+        .line 3786
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLRB::_slink
         ldfld uint8 @YRMOVE::INTC
@@ -12909,7 +12909,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 82 // 'R'
         bne.un L_check_case_2
-        // line 3787
+        .line 3787
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLRB::_slink
         ldloc $tmpSetLiteral2
@@ -12930,7 +12930,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 78 // 'N'
         bne.un L_check_case_3
-        // line 3788
+        .line 3788
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLRB::_slink
         ldloc $tmpSetLiteral3
@@ -12951,7 +12951,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 66 // 'B'
         bne.un L_case_end_1
-        // line 3789
+        .line 3789
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLRB::_slink
         ldloc $tmpSetLiteral4
@@ -12968,7 +12968,7 @@
         call valuetype T_set_100 _SetCastTo_T_set_100(valuetype T_set_5 s)
         stfld valuetype T_set_100 @YRMOVE::INLF
     L_case_end_1:
-        // line 3791
+        .line 3791
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLRB::_slink
         ldc.i4 1 // (true)
@@ -12979,7 +12979,7 @@
         ret
     }
 
-// line 3795
+.line 3795
 
     .method public
     void YRMLRK()
@@ -13079,12 +13079,12 @@
         call instance void T_set_100::addValue(int32)
     
     L_Entry:
-        // line 3798
+        .line 3798
         ldsfld int32 _G::JNTM
         ldc.i4 0
         ceq
         brfalse L_else_1
-        // line 3799
+        .line 3799
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLRK::_slink
         ldfld uint8 @YRMOVE::INTC
@@ -13092,7 +13092,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 49 // '1'
         bne.un L_check_case_4
-        // line 3800
+        .line 3800
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLRK::_slink
         ldloc $tmpSetLiteral2
@@ -13102,7 +13102,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 50 // '2'
         bne.un L_check_case_5
-        // line 3801
+        .line 3801
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLRK::_slink
         ldloc $tmpSetLiteral3
@@ -13112,7 +13112,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 51 // '3'
         bne.un L_check_case_6
-        // line 3802
+        .line 3802
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLRK::_slink
         ldloc $tmpSetLiteral4
@@ -13122,7 +13122,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 52 // '4'
         bne.un L_check_case_7
-        // line 3803
+        .line 3803
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLRK::_slink
         ldloc $tmpSetLiteral5
@@ -13132,7 +13132,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 53 // '5'
         bne.un L_check_case_8
-        // line 3804
+        .line 3804
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLRK::_slink
         ldloc $tmpSetLiteral6
@@ -13142,7 +13142,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 54 // '6'
         bne.un L_check_case_9
-        // line 3805
+        .line 3805
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLRK::_slink
         ldloc $tmpSetLiteral7
@@ -13152,7 +13152,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 55 // '7'
         bne.un L_check_case_10
-        // line 3806
+        .line 3806
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLRK::_slink
         ldloc $tmpSetLiteral8
@@ -13162,7 +13162,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 56 // '8'
         bne.un L_case_end_3
-        // line 3807
+        .line 3807
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLRK::_slink
         ldloc $tmpSetLiteral9
@@ -13170,7 +13170,7 @@
     L_case_end_3:
         br L_if_end_2
     L_else_1:
-        // line 3810
+        .line 3810
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLRK::_slink
         ldfld uint8 @YRMOVE::INTC
@@ -13178,7 +13178,7 @@
         ldloc $tmpSwitchValue10
         ldc.i4 49 // '1'
         bne.un L_check_case_12
-        // line 3811
+        .line 3811
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLRK::_slink
         ldloc $tmpSetLiteral11
@@ -13188,7 +13188,7 @@
         ldloc $tmpSwitchValue10
         ldc.i4 50 // '2'
         bne.un L_check_case_13
-        // line 3812
+        .line 3812
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLRK::_slink
         ldloc $tmpSetLiteral12
@@ -13198,7 +13198,7 @@
         ldloc $tmpSwitchValue10
         ldc.i4 51 // '3'
         bne.un L_check_case_14
-        // line 3813
+        .line 3813
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLRK::_slink
         ldloc $tmpSetLiteral13
@@ -13208,7 +13208,7 @@
         ldloc $tmpSwitchValue10
         ldc.i4 52 // '4'
         bne.un L_check_case_15
-        // line 3814
+        .line 3814
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLRK::_slink
         ldloc $tmpSetLiteral14
@@ -13218,7 +13218,7 @@
         ldloc $tmpSwitchValue10
         ldc.i4 53 // '5'
         bne.un L_check_case_16
-        // line 3815
+        .line 3815
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLRK::_slink
         ldloc $tmpSetLiteral15
@@ -13228,7 +13228,7 @@
         ldloc $tmpSwitchValue10
         ldc.i4 54 // '6'
         bne.un L_check_case_17
-        // line 3816
+        .line 3816
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLRK::_slink
         ldloc $tmpSetLiteral16
@@ -13238,7 +13238,7 @@
         ldloc $tmpSwitchValue10
         ldc.i4 55 // '7'
         bne.un L_check_case_18
-        // line 3817
+        .line 3817
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLRK::_slink
         ldloc $tmpSetLiteral17
@@ -13248,7 +13248,7 @@
         ldloc $tmpSwitchValue10
         ldc.i4 56 // '8'
         bne.un L_case_end_11
-        // line 3818
+        .line 3818
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMLRK::_slink
         ldloc $tmpSetLiteral18
@@ -13261,7 +13261,7 @@
         ret
     }
 
-// line 3823
+.line 3823
 
     .method public
     void YRMNUL()
@@ -13284,7 +13284,7 @@
         ret
     }
 
-// line 3829
+.line 3829
 
     .method public
     void YRMPCM()
@@ -13303,7 +13303,7 @@
         stfld class @YRMOVE @YRMOVE_YRMPCM::_slink
     
     L_Entry:
-        // line 3832
+        .line 3832
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMPCM::_slink
         ldfld uint8 @YRMOVE::INTC
@@ -13311,7 +13311,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 80 // 'P'
         bne.un L_check_case_2
-        // line 3833
+        .line 3833
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMPCM::_slink
         ldsflda valuetype T_array_19 _G::XTUMP
@@ -13326,7 +13326,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 82 // 'R'
         bne.un L_check_case_3
-        // line 3834
+        .line 3834
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMPCM::_slink
         ldsflda valuetype T_array_19 _G::XTUMP
@@ -13341,7 +13341,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 78 // 'N'
         bne.un L_check_case_4
-        // line 3835
+        .line 3835
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMPCM::_slink
         ldsflda valuetype T_array_19 _G::XTUMP
@@ -13356,7 +13356,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 66 // 'B'
         bne.un L_check_case_5
-        // line 3836
+        .line 3836
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMPCM::_slink
         ldsflda valuetype T_array_19 _G::XTUMP
@@ -13371,7 +13371,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 81 // 'Q'
         bne.un L_check_case_6
-        // line 3837
+        .line 3837
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMPCM::_slink
         ldsflda valuetype T_array_19 _G::XTUMP
@@ -13386,7 +13386,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 75 // 'K'
         bne.un L_case_end_1
-        // line 3838
+        .line 3838
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMPCM::_slink
         ldsflda valuetype T_array_19 _G::XTUMP
@@ -13403,7 +13403,7 @@
         ret
     }
 
-// line 3842
+.line 3842
 
     .method public
     void YRMPRO()
@@ -13422,7 +13422,7 @@
         stfld class @YRMOVE @YRMOVE_YRMPRO::_slink
     
     L_Entry:
-        // line 3845
+        .line 3845
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMPRO::_slink
         ldfld uint8 @YRMOVE::INTC
@@ -13430,7 +13430,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 82 // 'R'
         bne.un L_check_case_2
-        // line 3846
+        .line 3846
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMPRO::_slink
         ldc.i4 1
@@ -13440,7 +13440,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 78 // 'N'
         bne.un L_check_case_3
-        // line 3847
+        .line 3847
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMPRO::_slink
         ldc.i4 2
@@ -13450,7 +13450,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 66 // 'B'
         bne.un L_check_case_4
-        // line 3848
+        .line 3848
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMPRO::_slink
         ldc.i4 3
@@ -13460,13 +13460,13 @@
         ldloc $tmpSwitchValue1
         ldc.i4 81 // 'Q'
         bne.un L_case_end_1
-        // line 3849
+        .line 3849
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMPRO::_slink
         ldc.i4 0
         stfld int32 @YRMOVE::INTG
     L_case_end_1:
-        // line 3851
+        .line 3851
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMPRO::_slink
         ldc.i4 1 // (true)
@@ -13477,7 +13477,7 @@
         ret
     }
 
-// line 3855
+.line 3855
 
     .method public
     void YRMRKQ()
@@ -13508,7 +13508,7 @@
         call instance void T_set_100::addRange(int32, int32)
     
     L_Entry:
-        // line 3858
+        .line 3858
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRKQ::_slink
         ldfld uint8 @YRMOVE::INTC
@@ -13516,7 +13516,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 75 // 'K'
         bne.un L_check_case_2
-        // line 3859
+        .line 3859
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRKQ::_slink
         ldloc $tmpSetLiteral2
@@ -13537,7 +13537,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 81 // 'Q'
         bne.un L_case_end_1
-        // line 3860
+        .line 3860
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRKQ::_slink
         ldloc $tmpSetLiteral3
@@ -13554,7 +13554,7 @@
         call valuetype T_set_100 _SetCastTo_T_set_100(valuetype T_set_5 s)
         stfld valuetype T_set_100 @YRMOVE::INRF
     L_case_end_1:
-        // line 3862
+        .line 3862
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRKQ::_slink
         ldc.i4 1 // (true)
@@ -13565,7 +13565,7 @@
         ret
     }
 
-// line 3866
+.line 3866
 
     .method public
     void YRMRRB()
@@ -13608,7 +13608,7 @@
         call instance void T_set_100::addValue(int32)
     
     L_Entry:
-        // line 3869
+        .line 3869
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRRB::_slink
         ldfld uint8 @YRMOVE::INTC
@@ -13616,7 +13616,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 82 // 'R'
         bne.un L_check_case_2
-        // line 3870
+        .line 3870
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRRB::_slink
         ldloc $tmpSetLiteral2
@@ -13637,7 +13637,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 78 // 'N'
         bne.un L_check_case_3
-        // line 3871
+        .line 3871
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRRB::_slink
         ldloc $tmpSetLiteral3
@@ -13658,7 +13658,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 66 // 'B'
         bne.un L_case_end_1
-        // line 3872
+        .line 3872
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRRB::_slink
         ldloc $tmpSetLiteral4
@@ -13675,7 +13675,7 @@
         call valuetype T_set_100 _SetCastTo_T_set_100(valuetype T_set_5 s)
         stfld valuetype T_set_100 @YRMOVE::INRF
     L_case_end_1:
-        // line 3874
+        .line 3874
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRRB::_slink
         ldc.i4 1 // (true)
@@ -13686,7 +13686,7 @@
         ret
     }
 
-// line 3878
+.line 3878
 
     .method public
     void YRMRRK()
@@ -13786,12 +13786,12 @@
         call instance void T_set_100::addValue(int32)
     
     L_Entry:
-        // line 3881
+        .line 3881
         ldsfld int32 _G::JNTM
         ldc.i4 0
         ceq
         brfalse L_else_1
-        // line 3882
+        .line 3882
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRRK::_slink
         ldfld uint8 @YRMOVE::INTC
@@ -13799,7 +13799,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 49 // '1'
         bne.un L_check_case_4
-        // line 3883
+        .line 3883
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRRK::_slink
         ldloc $tmpSetLiteral2
@@ -13809,7 +13809,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 50 // '2'
         bne.un L_check_case_5
-        // line 3884
+        .line 3884
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRRK::_slink
         ldloc $tmpSetLiteral3
@@ -13819,7 +13819,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 51 // '3'
         bne.un L_check_case_6
-        // line 3885
+        .line 3885
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRRK::_slink
         ldloc $tmpSetLiteral4
@@ -13829,7 +13829,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 52 // '4'
         bne.un L_check_case_7
-        // line 3886
+        .line 3886
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRRK::_slink
         ldloc $tmpSetLiteral5
@@ -13839,7 +13839,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 53 // '5'
         bne.un L_check_case_8
-        // line 3887
+        .line 3887
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRRK::_slink
         ldloc $tmpSetLiteral6
@@ -13849,7 +13849,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 54 // '6'
         bne.un L_check_case_9
-        // line 3888
+        .line 3888
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRRK::_slink
         ldloc $tmpSetLiteral7
@@ -13859,7 +13859,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 55 // '7'
         bne.un L_check_case_10
-        // line 3889
+        .line 3889
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRRK::_slink
         ldloc $tmpSetLiteral8
@@ -13869,7 +13869,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 56 // '8'
         bne.un L_case_end_3
-        // line 3890
+        .line 3890
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRRK::_slink
         ldloc $tmpSetLiteral9
@@ -13877,7 +13877,7 @@
     L_case_end_3:
         br L_if_end_2
     L_else_1:
-        // line 3893
+        .line 3893
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRRK::_slink
         ldfld uint8 @YRMOVE::INTC
@@ -13885,7 +13885,7 @@
         ldloc $tmpSwitchValue10
         ldc.i4 49 // '1'
         bne.un L_check_case_12
-        // line 3894
+        .line 3894
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRRK::_slink
         ldloc $tmpSetLiteral11
@@ -13895,7 +13895,7 @@
         ldloc $tmpSwitchValue10
         ldc.i4 50 // '2'
         bne.un L_check_case_13
-        // line 3895
+        .line 3895
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRRK::_slink
         ldloc $tmpSetLiteral12
@@ -13905,7 +13905,7 @@
         ldloc $tmpSwitchValue10
         ldc.i4 51 // '3'
         bne.un L_check_case_14
-        // line 3896
+        .line 3896
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRRK::_slink
         ldloc $tmpSetLiteral13
@@ -13915,7 +13915,7 @@
         ldloc $tmpSwitchValue10
         ldc.i4 52 // '4'
         bne.un L_check_case_15
-        // line 3897
+        .line 3897
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRRK::_slink
         ldloc $tmpSetLiteral14
@@ -13925,7 +13925,7 @@
         ldloc $tmpSwitchValue10
         ldc.i4 53 // '5'
         bne.un L_check_case_16
-        // line 3898
+        .line 3898
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRRK::_slink
         ldloc $tmpSetLiteral15
@@ -13935,7 +13935,7 @@
         ldloc $tmpSwitchValue10
         ldc.i4 54 // '6'
         bne.un L_check_case_17
-        // line 3899
+        .line 3899
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRRK::_slink
         ldloc $tmpSetLiteral16
@@ -13945,7 +13945,7 @@
         ldloc $tmpSwitchValue10
         ldc.i4 55 // '7'
         bne.un L_check_case_18
-        // line 3900
+        .line 3900
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRRK::_slink
         ldloc $tmpSetLiteral17
@@ -13955,7 +13955,7 @@
         ldloc $tmpSwitchValue10
         ldc.i4 56 // '8'
         bne.un L_case_end_11
-        // line 3901
+        .line 3901
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_YRMRRK::_slink
         ldloc $tmpSetLiteral18
@@ -13968,7 +13968,7 @@
         ret
     }
 
-// line 3906
+.line 3906
 
     .method public
     bool NCHIN(valuetype T_set_5 A, class T_YRMOVE_subroutine_307 YRMXXX)
@@ -13993,7 +13993,7 @@
         stfld class T_YRMOVE_subroutine_307 @YRMOVE_NCHIN::YRMXXX
     
     L_Entry:
-        // line 3918
+        .line 3918
         ldloc _F
         ldloc _F
         ldfld valuetype T_set_5 @YRMOVE_NCHIN::A
@@ -14004,17 +14004,17 @@
         ldc.i4.0
         ceq
         stfld bool @YRMOVE_NCHIN::INTB
-        // line 3919
+        .line 3919
         ldloc _F
         ldfld bool @YRMOVE_NCHIN::INTB
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 3921
+        .line 3921
         ldloc _F
         ldfld class T_YRMOVE_subroutine_307 @YRMOVE_NCHIN::YRMXXX
         call instance void T_YRMOVE_subroutine_307::Invoke()
-        // line 3922
+        .line 3922
         ldsfld int8 _G::JNTJ
         ldc.i4 1
         add
@@ -14023,10 +14023,10 @@
         ldc.i4 73
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int8 _G::JNTJ
-        // line 3923
+        .line 3923
         br L_while_test_3
     L_while_2:
-        // line 3925
+        .line 3925
         ldsfld int8 _G::JNTJ
         ldc.i4 1
         add
@@ -14060,7 +14060,7 @@
     L_OR_shortcut_5:
     L_AND_shortcut_4:
         brtrue L_while_2
-        // line 3926
+        .line 3926
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_NCHIN::_slink
         ldsflda valuetype T_RJ _G::ILINE
@@ -14068,7 +14068,7 @@
         call instance uint8& T_RJ::ldadr(int32)
         ldobj uint8
         stfld uint8 @YRMOVE::INTC
-        // line 3927
+        .line 3927
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_NCHIN::_slink
         ldfld uint8 @YRMOVE::INTC
@@ -14084,19 +14084,19 @@
         ceq
     L_OR_shortcut_6:
         brfalse L_if_end_7
-        // line 3929
+        .line 3929
         ldloc _F
         ldfld class @YRMOVE @YRMOVE_NCHIN::_slink
         ldc.i4 1 // (true)
         stfld bool @YRMOVE::Jumpin
-        // line 3930
+        .line 3930
         ldc.i4 12
         newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
         throw
         /* nop */
     L_if_end_7:
     L_if_end_1:
-        // line 3934
+        .line 3934
         ldloc _F
         ldloc _F
         ldfld bool @YRMOVE_NCHIN::INTB
@@ -14111,7 +14111,7 @@
 }
 
 
-// line 1
+.line 1
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -14229,7 +14229,7 @@
     .field public static valuetype T_array_19 XTUMP
 }
 
-// line 290
+.line 290
 
 .method static
 int32 MAX(int32 A, int32 B)
@@ -14250,21 +14250,21 @@ int32 MAX(int32 A, int32 B)
     stfld int32 @MAX::B
 
 L_Entry:
-    // line 293
+    .line 293
     ldloc _F
     ldfld int32 @MAX::A
     ldloc _F
     ldfld int32 @MAX::B
     cgt
     brfalse L_else_1
-    // line 294
+    .line 294
     ldloc _F
     ldloc _F
     ldfld int32 @MAX::A
     stfld int32 @MAX::_fnvalue
     br L_if_end_2
 L_else_1:
-    // line 296
+    .line 296
     ldloc _F
     ldloc _F
     ldfld int32 @MAX::B
@@ -14278,7 +14278,7 @@ L_Epilogue:
     ret
 }
 
-// line 300
+.line 300
 
 .method static
 int32 MIN(int32 A, int32 B)
@@ -14299,21 +14299,21 @@ int32 MIN(int32 A, int32 B)
     stfld int32 @MIN::B
 
 L_Entry:
-    // line 303
+    .line 303
     ldloc _F
     ldfld int32 @MIN::A
     ldloc _F
     ldfld int32 @MIN::B
     clt
     brfalse L_else_1
-    // line 304
+    .line 304
     ldloc _F
     ldloc _F
     ldfld int32 @MIN::A
     stfld int32 @MIN::_fnvalue
     br L_if_end_2
 L_else_1:
-    // line 306
+    .line 306
     ldloc _F
     ldloc _F
     ldfld int32 @MIN::B
@@ -14327,7 +14327,7 @@ L_Epilogue:
     ret
 }
 
-// line 310
+.line 310
 
 .method static
 int32 SIGN(int32 A, int32 B)
@@ -14348,13 +14348,13 @@ int32 SIGN(int32 A, int32 B)
     stfld int32 @SIGN::B
 
 L_Entry:
-    // line 315
+    .line 315
     ldloc _F
     ldfld int32 @SIGN::B
     ldc.i4 0
     clt
     brfalse L_else_1
-    // line 315
+    .line 315
     ldloc _F
     ldloc _F
     ldfld int32 @SIGN::A
@@ -14369,7 +14369,7 @@ L_abs_question_3:
     stfld int32 @SIGN::_fnvalue
     br L_if_end_2
 L_else_1:
-    // line 315
+    .line 315
     ldloc _F
     ldloc _F
     ldfld int32 @SIGN::A
@@ -14389,7 +14389,7 @@ L_Epilogue:
     ret
 }
 
-// line 320
+.line 320
 
 .method static
 void SORTIT(valuetype T_RE& A, valuetype T_RF& B, int16 C)
@@ -14426,7 +14426,7 @@ void SORTIT(valuetype T_RE& A, valuetype T_RF& B, int16 C)
     stfld int16 @SORTIT::C
 
 L_Entry:
-    // line 333
+    .line 333
     ldloc _F
     ldfld int16 @SORTIT::C
     stloc $tmpEndValue1
@@ -14445,14 +14445,14 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int16 @SORTIT::INTW
 L_for_loop_1:
-    // line 335
+    .line 335
     ldloc _F
     ldloc _F
     ldfld int16 @SORTIT::INTW
     ldc.i4 1
     sub
     stfld int32 @SORTIT::INTI
-    // line 336
+    .line 336
     ldloc _F
     ldloc _F
     ldfld valuetype T_RE* @SORTIT::A
@@ -14461,7 +14461,7 @@ L_for_loop_1:
     call instance int16& T_RE::ldadr(int32)
     ldobj int16
     stfld int16 @SORTIT::INTV
-    // line 337
+    .line 337
     ldloc _F
     ldloc _F
     ldfld valuetype T_RF* @SORTIT::B
@@ -14470,14 +14470,14 @@ L_for_loop_1:
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldobj valuetype T_RM
     stfld valuetype T_RM @SORTIT::INRM
-    // line 338
+    .line 338
     ldloc _F
     ldc.i4 1 // (true)
     stfld bool @SORTIT::INTB
-    // line 339
+    .line 339
     br L_while_test_4
 L_while_3:
-    // line 340
+    .line 340
     ldloc _F
     ldfld int16 @SORTIT::INTV
     ldloc _F
@@ -14488,7 +14488,7 @@ L_while_3:
     ldobj int16
     clt
     brfalse L_else_5
-    // line 342
+    .line 342
     ldloc _F
     ldfld valuetype T_RE* @SORTIT::A
     ldloc _F
@@ -14503,7 +14503,7 @@ L_while_3:
     call instance int16& T_RE::ldadr(int32)
     ldobj int16
     stobj int16
-    // line 343
+    .line 343
     ldloc _F
     ldfld valuetype T_RF* @SORTIT::B
     ldloc _F
@@ -14518,7 +14518,7 @@ L_while_3:
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldobj valuetype T_RM
     stobj valuetype T_RM
-    // line 344
+    .line 344
     ldloc _F
     ldloc _F
     ldfld int32 @SORTIT::INTI
@@ -14528,7 +14528,7 @@ L_while_3:
     /* nop */
     br L_if_end_6
 L_else_5:
-    // line 347
+    .line 347
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @SORTIT::INTB
@@ -14545,7 +14545,7 @@ L_while_test_4:
     ldfld bool @SORTIT::INTB
 L_AND_shortcut_7:
     brtrue L_while_3
-    // line 348
+    .line 348
     ldloc _F
     ldfld valuetype T_RE* @SORTIT::A
     ldloc _F
@@ -14556,7 +14556,7 @@ L_AND_shortcut_7:
     ldloc _F
     ldfld int16 @SORTIT::INTV
     stobj int16
-    // line 349
+    .line 349
     ldloc _F
     ldfld valuetype T_RF* @SORTIT::B
     ldloc _F
@@ -14592,7 +14592,7 @@ L_Epilogue:
     ret
 }
 
-// line 354
+.line 354
 
 .method static
 void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
@@ -14625,7 +14625,7 @@ void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
     stfld valuetype T_RS* @ANDRS::C
 
 L_Entry:
-    // line 363
+    .line 363
     ldc.i4 1
     stloc $tmpEndValue1
     ldc.i4 0
@@ -14641,7 +14641,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int8 @ANDRS::INTY
 L_for_loop_1:
-    // line 364
+    .line 364
     ldloc _F
     ldfld valuetype T_RS* @ANDRS::C
     ldflda valuetype T_array_1 T_RS::RSSS
@@ -14688,7 +14688,7 @@ L_Epilogue:
     ret
 }
 
-// line 368
+.line 368
 
 .method static
 void CLRRS(valuetype T_RS& C, int8 A)
@@ -14713,7 +14713,7 @@ void CLRRS(valuetype T_RS& C, int8 A)
     stfld valuetype T_RS* @CLRRS::C
 
 L_Entry:
-    // line 373
+    .line 373
     ldloc _F
     ldfld valuetype T_RS* @CLRRS::C
     ldflda valuetype T_array_1 T_RS::RSSS
@@ -14746,7 +14746,7 @@ L_Epilogue:
     ret
 }
 
-// line 377
+.line 377
 
 .method static
 void CPYRS(valuetype T_RS& C, valuetype T_RS A)
@@ -14775,7 +14775,7 @@ void CPYRS(valuetype T_RS& C, valuetype T_RS A)
     stfld valuetype T_RS* @CPYRS::C
 
 L_Entry:
-    // line 385
+    .line 385
     ldc.i4 1
     stloc $tmpEndValue1
     ldc.i4 0
@@ -14791,7 +14791,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int8 @CPYRS::INTY
 L_for_loop_1:
-    // line 386
+    .line 386
     ldloc _F
     ldfld valuetype T_RS* @CPYRS::C
     ldflda valuetype T_array_1 T_RS::RSSS
@@ -14830,7 +14830,7 @@ L_Epilogue:
     ret
 }
 
-// line 390
+.line 390
 
 .method static
 void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
@@ -14863,7 +14863,7 @@ void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
     stfld valuetype T_RS* @IORRS::C
 
 L_Entry:
-    // line 398
+    .line 398
     ldc.i4 1
     stloc $tmpEndValue1
     ldc.i4 0
@@ -14879,7 +14879,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int8 @IORRS::INTY
 L_for_loop_1:
-    // line 399
+    .line 399
     ldloc _F
     ldfld valuetype T_RS* @IORRS::C
     ldflda valuetype T_array_1 T_RS::RSSS
@@ -14926,7 +14926,7 @@ L_Epilogue:
     ret
 }
 
-// line 403
+.line 403
 
 .method static
 void NEWRS(valuetype T_RS& A)
@@ -14953,7 +14953,7 @@ void NEWRS(valuetype T_RS& A)
 
 
 L_Entry:
-    // line 410
+    .line 410
     ldc.i4 1
     stloc $tmpEndValue1
     ldc.i4 0
@@ -14969,7 +14969,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int8 @NEWRS::INTY
 L_for_loop_1:
-    // line 411
+    .line 411
     ldloc _F
     ldfld valuetype T_RS* @NEWRS::A
     ldflda valuetype T_array_1 T_RS::RSSS
@@ -15007,7 +15007,7 @@ L_Epilogue:
     ret
 }
 
-// line 415
+.line 415
 
 .method static
 void NOTRS(valuetype T_RS& C, valuetype T_RS A)
@@ -15042,7 +15042,7 @@ void NOTRS(valuetype T_RS& C, valuetype T_RS A)
     call instance void T_set_5::addRange(int32, int32)
 
 L_Entry:
-    // line 423
+    .line 423
     ldc.i4 1
     stloc $tmpEndValue1
     ldc.i4 0
@@ -15058,7 +15058,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int8 @NOTRS::INTY
 L_for_loop_1:
-    // line 424
+    .line 424
     ldloc _F
     ldfld valuetype T_RS* @NOTRS::C
     ldflda valuetype T_array_1 T_RS::RSSS
@@ -15105,7 +15105,7 @@ L_Epilogue:
     ret
 }
 
-// line 427
+.line 427
 
 .method static
 bool NXTTS(valuetype T_RS& A, int8& B)
@@ -15142,7 +15142,7 @@ bool NXTTS(valuetype T_RS& A, int8& B)
     stfld int8* @NXTTS::B
 
 L_Entry:
-    // line 443
+    .line 443
     ldc.i4 0
     stloc $tmpEndValue1
     ldc.i4 1
@@ -15158,7 +15158,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int8 @NXTTS::INTY
 L_for_loop_1:
-    // line 444
+    .line 444
     ldloc _F
     ldfld valuetype T_RS* @NXTTS::A
     ldflda valuetype T_array_2 T_RS::RSTI
@@ -15171,7 +15171,7 @@ L_for_loop_1:
     ldc.i4.0
     ceq
     brfalse L_if_end_3
-    // line 461
+    .line 461
     ldc.i4 0
     stloc $tmpEndValue3
     ldc.i4 31
@@ -15187,7 +15187,7 @@ L_for_loop_1:
     ldloc $tmpIndex4
     stfld int8 @NXTTS::INTX
 L_for_loop_4:
-    // line 462
+    .line 462
     ldloc _F
     ldfld valuetype T_RS* @NXTTS::A
     ldflda valuetype T_array_1 T_RS::RSSS
@@ -15199,7 +15199,7 @@ L_for_loop_4:
     ldfld int8 @NXTTS::INTX
     call bool _SetContains(valuetype T_SX s, int32 val)
     brfalse L_if_end_6
-    // line 464
+    .line 464
     ldloc _F
     ldfld int8* @NXTTS::B
     ldloc _F
@@ -15216,7 +15216,7 @@ L_for_loop_4:
     ldc.i4 63
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int8
-    // line 465
+    .line 465
     ldloca $tmpSetLiteral5
     call instance void T_set_5::clear()
     ldloca $tmpSetLiteral5
@@ -15245,11 +15245,11 @@ L_for_loop_4:
     call void _SetCheck(valuetype T_set_5 s, int32 min, int32 max)
     call valuetype T_SX _SetCastTo_T_SX(valuetype T_set_5 s)
     stobj valuetype T_SX
-    // line 467
+    .line 467
     ldloc _F
     ldc.i4 1 // (true)
     stfld bool @NXTTS::_fnvalue
-    // line 468
+    .line 468
     br L_11
     /* nop */
 L_if_end_6:
@@ -15291,7 +15291,7 @@ L_if_end_3:
     br L_for_loop_1
 L_for_end_2:
     pop
-    // line 472
+    .line 472
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @NXTTS::_fnvalue
@@ -15304,7 +15304,7 @@ L_Epilogue:
     ret
 }
 
-// line 477
+.line 477
 
 .method static
 int8 CNTRS(valuetype T_RS A)
@@ -15321,7 +15321,7 @@ int8 CNTRS(valuetype T_RS A)
     stfld valuetype T_RS @CNTRS::A
 
 L_Entry:
-    // line 486
+    .line 486
     ldloc _F
     ldc.i4 0
     dup
@@ -15329,16 +15329,16 @@ L_Entry:
     ldc.i4 63
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 @CNTRS::INTS
-    // line 488
+    .line 488
     ldloc _F
     ldflda valuetype T_RS @CNTRS::INRS
     ldloc _F
     ldfld valuetype T_RS @CNTRS::A
     call void CPYRS(valuetype T_RS& C, valuetype T_RS A)
-    // line 489
+    .line 489
     br L_while_test_2
 L_while_1:
-    // line 490
+    .line 490
     ldloc _F
     ldloc _F
     ldfld int8 @CNTRS::INTS
@@ -15356,7 +15356,7 @@ L_while_test_2:
     ldflda int8 @CNTRS::IMTS
     call bool NXTTS(valuetype T_RS& A, int8& B)
     brtrue L_while_1
-    // line 498
+    .line 498
     ldloc _F
     ldloc _F
     ldfld int8 @CNTRS::INTS
@@ -15369,7 +15369,7 @@ L_Epilogue:
     ret
 }
 
-// line 502
+.line 502
 
 .method static
 void SETRS(valuetype T_RS& C, int8 A)
@@ -15394,7 +15394,7 @@ void SETRS(valuetype T_RS& C, int8 A)
     stfld valuetype T_RS* @SETRS::C
 
 L_Entry:
-    // line 507
+    .line 507
     ldloc _F
     ldfld valuetype T_RS* @SETRS::C
     ldflda valuetype T_array_1 T_RS::RSSS
@@ -15427,7 +15427,7 @@ L_Epilogue:
     ret
 }
 
-// line 511
+.line 511
 
 .method static
 void SFTRS(valuetype T_RS& A, valuetype T_RS B, int32 C)
@@ -15456,14 +15456,14 @@ void SFTRS(valuetype T_RS& A, valuetype T_RS B, int32 C)
     stfld int32 @SFTRS::C
 
 L_Entry:
-    // line 521
+    .line 521
     ldloc _F
     ldfld valuetype T_RS* @SFTRS::A
     call void NEWRS(valuetype T_RS& A)
-    // line 522
+    .line 522
     br L_while_test_2
 L_while_1:
-    // line 523
+    .line 523
     ldsflda valuetype T_array_9 _G::XTLS
     ldsflda valuetype T_array_3 _G::XTSL
     ldloc _F
@@ -15481,7 +15481,7 @@ L_while_1:
     ldc.i4 0
     cgt
     brfalse L_if_end_3
-    // line 525
+    .line 525
     ldloc _F
     ldfld valuetype T_RS* @SFTRS::A
     ldsflda valuetype T_array_9 _G::XTLS
@@ -15517,7 +15517,7 @@ L_Epilogue:
     ret
 }
 
-// line 619
+.line 619
 
 .method static
 bool INRSTB(valuetype T_RS A, int8 B)
@@ -15538,7 +15538,7 @@ bool INRSTB(valuetype T_RS A, int8 B)
     stfld int8 @INRSTB::B
 
 L_Entry:
-    // line 624
+    .line 624
     ldloc _F
     ldsflda valuetype T_array_4 _G::XSSX
     ldloc _F
@@ -15565,7 +15565,7 @@ L_Epilogue:
     ret
 }
 
-// line 627
+.line 627
 
 .method static
 bool NULRS(valuetype T_RS A)
@@ -15586,11 +15586,11 @@ bool NULRS(valuetype T_RS A)
     stfld valuetype T_RS @NULRS::A
 
 L_Entry:
-    // line 636
+    .line 636
     ldloc _F
     ldc.i4 1 // (true)
     stfld bool @NULRS::INTB
-    // line 637
+    .line 637
     ldc.i4 1
     stloc $tmpEndValue1
     ldc.i4 0
@@ -15606,7 +15606,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int8 @NULRS::INTY
 L_for_loop_1:
-    // line 638
+    .line 638
     ldloc _F
     ldloc _F
     ldfld bool @NULRS::INTB
@@ -15642,7 +15642,7 @@ L_AND_shortcut_3:
     br L_for_loop_1
 L_for_end_2:
     pop
-    // line 639
+    .line 639
     ldloc _F
     ldloc _F
     ldfld bool @NULRS::INTB
@@ -15655,7 +15655,7 @@ L_Epilogue:
     ret
 }
 
-// line 643
+.line 643
 
 .method static
 bool NULMVB(valuetype T_RM A)
@@ -15672,7 +15672,7 @@ bool NULMVB(valuetype T_RM A)
     stfld valuetype T_RM @NULMVB::A
 
 L_Entry:
-    // line 649
+    .line 649
     ldloc _F
     ldloc _F
     ldflda valuetype T_RM @NULMVB::A
@@ -15702,7 +15702,7 @@ L_Epilogue:
     ret
 }
 
-// line 653
+.line 653
 
 .method static
 void INICON()
@@ -15766,7 +15766,7 @@ void INICON()
     stloc _F
 
 L_Entry:
-    // line 726
+    .line 726
     ldloc _F
     ldc.i4 0
     ldc.i4 65 // 'A'
@@ -15783,7 +15783,7 @@ L_Entry:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call instance void @INICON::INIXTP(int32 A, uint8 B, int32 C, int32 D, bool E, int32 F, int32 G, int16 H)
-    // line 727
+    .line 727
     ldloc _F
     ldc.i4 1
     ldc.i4 66 // 'B'
@@ -15800,7 +15800,7 @@ L_Entry:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call instance void @INICON::INIXTP(int32 A, uint8 B, int32 C, int32 D, bool E, int32 F, int32 G, int16 H)
-    // line 728
+    .line 728
     ldloc _F
     ldc.i4 2
     ldc.i4 67 // 'C'
@@ -15817,7 +15817,7 @@ L_Entry:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call instance void @INICON::INIXTP(int32 A, uint8 B, int32 C, int32 D, bool E, int32 F, int32 G, int16 H)
-    // line 729
+    .line 729
     ldloc _F
     ldc.i4 3
     ldc.i4 68 // 'D'
@@ -15834,7 +15834,7 @@ L_Entry:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call instance void @INICON::INIXTP(int32 A, uint8 B, int32 C, int32 D, bool E, int32 F, int32 G, int16 H)
-    // line 730
+    .line 730
     ldloc _F
     ldc.i4 4
     ldc.i4 69 // 'E'
@@ -15851,7 +15851,7 @@ L_Entry:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call instance void @INICON::INIXTP(int32 A, uint8 B, int32 C, int32 D, bool E, int32 F, int32 G, int16 H)
-    // line 731
+    .line 731
     ldloc _F
     ldc.i4 5
     ldc.i4 70 // 'F'
@@ -15866,7 +15866,7 @@ L_Entry:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call instance void @INICON::INIXTP(int32 A, uint8 B, int32 C, int32 D, bool E, int32 F, int32 G, int16 H)
-    // line 732
+    .line 732
     ldloc _F
     ldc.i4 6
     ldc.i4 49 // '1'
@@ -15884,7 +15884,7 @@ L_Entry:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call instance void @INICON::INIXTP(int32 A, uint8 B, int32 C, int32 D, bool E, int32 F, int32 G, int16 H)
-    // line 733
+    .line 733
     ldloc _F
     ldc.i4 7
     ldc.i4 50 // '2'
@@ -15902,7 +15902,7 @@ L_Entry:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call instance void @INICON::INIXTP(int32 A, uint8 B, int32 C, int32 D, bool E, int32 F, int32 G, int16 H)
-    // line 734
+    .line 734
     ldloc _F
     ldc.i4 8
     ldc.i4 51 // '3'
@@ -15920,7 +15920,7 @@ L_Entry:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call instance void @INICON::INIXTP(int32 A, uint8 B, int32 C, int32 D, bool E, int32 F, int32 G, int16 H)
-    // line 735
+    .line 735
     ldloc _F
     ldc.i4 9
     ldc.i4 52 // '4'
@@ -15938,7 +15938,7 @@ L_Entry:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call instance void @INICON::INIXTP(int32 A, uint8 B, int32 C, int32 D, bool E, int32 F, int32 G, int16 H)
-    // line 736
+    .line 736
     ldloc _F
     ldc.i4 10
     ldc.i4 53 // '5'
@@ -15956,7 +15956,7 @@ L_Entry:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call instance void @INICON::INIXTP(int32 A, uint8 B, int32 C, int32 D, bool E, int32 F, int32 G, int16 H)
-    // line 737
+    .line 737
     ldloc _F
     ldc.i4 11
     ldc.i4 54 // '6'
@@ -15971,7 +15971,7 @@ L_Entry:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call instance void @INICON::INIXTP(int32 A, uint8 B, int32 C, int32 D, bool E, int32 F, int32 G, int16 H)
-    // line 738
+    .line 738
     ldloc _F
     ldc.i4 12
     ldc.i4 45 // '-'
@@ -15986,7 +15986,7 @@ L_Entry:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call instance void @INICON::INIXTP(int32 A, uint8 B, int32 C, int32 D, bool E, int32 F, int32 G, int16 H)
-    // line 740
+    .line 740
     ldsflda valuetype T_array_21 _G::XTGMP
     ldc.i4 0
     call instance valuetype T_array_18& T_array_21::ldadr(int32)
@@ -15994,7 +15994,7 @@ L_Entry:
     call instance int32& T_array_18::ldadr(int32)
     ldc.i4 4
     stobj int32
-    // line 740
+    .line 740
     ldsflda valuetype T_array_21 _G::XTGMP
     ldc.i4 0
     call instance valuetype T_array_18& T_array_21::ldadr(int32)
@@ -16002,13 +16002,13 @@ L_Entry:
     call instance int32& T_array_18::ldadr(int32)
     ldc.i4 10
     stobj int32
-    // line 740
+    .line 740
     ldsflda valuetype T_array_22 _G::XTGC
     ldc.i4 0
     call instance uint8& T_array_22::ldadr(int32)
     ldc.i4 81 // 'Q'
     stobj uint8
-    // line 741
+    .line 741
     ldsflda valuetype T_array_21 _G::XTGMP
     ldc.i4 1
     call instance valuetype T_array_18& T_array_21::ldadr(int32)
@@ -16016,7 +16016,7 @@ L_Entry:
     call instance int32& T_array_18::ldadr(int32)
     ldc.i4 1
     stobj int32
-    // line 741
+    .line 741
     ldsflda valuetype T_array_21 _G::XTGMP
     ldc.i4 1
     call instance valuetype T_array_18& T_array_21::ldadr(int32)
@@ -16024,13 +16024,13 @@ L_Entry:
     call instance int32& T_array_18::ldadr(int32)
     ldc.i4 7
     stobj int32
-    // line 741
+    .line 741
     ldsflda valuetype T_array_22 _G::XTGC
     ldc.i4 1
     call instance uint8& T_array_22::ldadr(int32)
     ldc.i4 82 // 'R'
     stobj uint8
-    // line 742
+    .line 742
     ldsflda valuetype T_array_21 _G::XTGMP
     ldc.i4 2
     call instance valuetype T_array_18& T_array_21::ldadr(int32)
@@ -16038,7 +16038,7 @@ L_Entry:
     call instance int32& T_array_18::ldadr(int32)
     ldc.i4 2
     stobj int32
-    // line 742
+    .line 742
     ldsflda valuetype T_array_21 _G::XTGMP
     ldc.i4 2
     call instance valuetype T_array_18& T_array_21::ldadr(int32)
@@ -16046,13 +16046,13 @@ L_Entry:
     call instance int32& T_array_18::ldadr(int32)
     ldc.i4 8
     stobj int32
-    // line 742
+    .line 742
     ldsflda valuetype T_array_22 _G::XTGC
     ldc.i4 2
     call instance uint8& T_array_22::ldadr(int32)
     ldc.i4 78 // 'N'
     stobj uint8
-    // line 743
+    .line 743
     ldsflda valuetype T_array_21 _G::XTGMP
     ldc.i4 3
     call instance valuetype T_array_18& T_array_21::ldadr(int32)
@@ -16060,7 +16060,7 @@ L_Entry:
     call instance int32& T_array_18::ldadr(int32)
     ldc.i4 3
     stobj int32
-    // line 743
+    .line 743
     ldsflda valuetype T_array_21 _G::XTGMP
     ldc.i4 3
     call instance valuetype T_array_18& T_array_21::ldadr(int32)
@@ -16068,67 +16068,67 @@ L_Entry:
     call instance int32& T_array_18::ldadr(int32)
     ldc.i4 9
     stobj int32
-    // line 743
+    .line 743
     ldsflda valuetype T_array_22 _G::XTGC
     ldc.i4 3
     call instance uint8& T_array_22::ldadr(int32)
     ldc.i4 66 // 'B'
     stobj uint8
-    // line 745
+    .line 745
     ldsflda valuetype T_array_23 _G::XTUC
     ldc.i4 5
     call instance uint8& T_array_23::ldadr(int32)
     ldc.i4 75 // 'K'
     stobj uint8
-    // line 746
+    .line 746
     ldsflda valuetype T_array_23 _G::XTUC
     ldc.i4 4
     call instance uint8& T_array_23::ldadr(int32)
     ldc.i4 81 // 'Q'
     stobj uint8
-    // line 747
+    .line 747
     ldsflda valuetype T_array_23 _G::XTUC
     ldc.i4 1
     call instance uint8& T_array_23::ldadr(int32)
     ldc.i4 82 // 'R'
     stobj uint8
-    // line 748
+    .line 748
     ldsflda valuetype T_array_23 _G::XTUC
     ldc.i4 2
     call instance uint8& T_array_23::ldadr(int32)
     ldc.i4 78 // 'N'
     stobj uint8
-    // line 749
+    .line 749
     ldsflda valuetype T_array_23 _G::XTUC
     ldc.i4 3
     call instance uint8& T_array_23::ldadr(int32)
     ldc.i4 66 // 'B'
     stobj uint8
-    // line 750
+    .line 750
     ldsflda valuetype T_array_23 _G::XTUC
     ldc.i4 0
     call instance uint8& T_array_23::ldadr(int32)
     ldc.i4 80 // 'P'
     stobj uint8
-    // line 754
+    .line 754
     ldsflda valuetype T_array_24 _G::XTBC
     ldc.i4 0 // (false)
     call instance uint8& T_array_24::ldadr(int32)
     ldc.i4 45 // '-'
     stobj uint8
-    // line 755
+    .line 755
     ldsflda valuetype T_array_24 _G::XTBC
     ldc.i4 1 // (true)
     call instance uint8& T_array_24::ldadr(int32)
     ldc.i4 42 // '*'
     stobj uint8
-    // line 757
+    .line 757
     ldsflda valuetype T_array_18 _G::OTHER
     ldc.i4 0
     call instance int32& T_array_18::ldadr(int32)
     ldc.i4 1
     stobj int32
-    // line 757
+    .line 757
     ldsflda valuetype T_array_26 _G::XTMV
     ldc.i4 0
     call instance int16& T_array_26::ldadr(int32)
@@ -16138,13 +16138,13 @@ L_Entry:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int16
-    // line 758
+    .line 758
     ldsflda valuetype T_array_18 _G::OTHER
     ldc.i4 1
     call instance int32& T_array_18::ldadr(int32)
     ldc.i4 0
     stobj int32
-    // line 758
+    .line 758
     ldsflda valuetype T_array_26 _G::XTMV
     ldc.i4 1
     call instance int16& T_array_26::ldadr(int32)
@@ -16155,55 +16155,55 @@ L_Entry:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int16
-    // line 759
+    .line 759
     ldsflda valuetype T_array_18 _G::OTHER
     ldc.i4 2
     call instance int32& T_array_18::ldadr(int32)
     ldc.i4 2
     stobj int32
-    // line 761
+    .line 761
     ldsflda valuetype T_array_27 _G::XTMA
     ldc.i4 0
     call instance valuetype T_RA& T_array_27::ldadr(int32)
     ldsfld valuetype T_RA STRING_1    // "    WHITE "
     stobj valuetype T_RA
-    // line 762
+    .line 762
     ldsflda valuetype T_array_27 _G::XTMA
     ldc.i4 1
     call instance valuetype T_RA& T_array_27::ldadr(int32)
     ldsfld valuetype T_RA STRING_2    // "    BLACK "
     stobj valuetype T_RA
-    // line 763
+    .line 763
     ldsflda valuetype T_array_27 _G::XTMA
     ldc.i4 2
     call instance valuetype T_RA& T_array_27::ldadr(int32)
     ldsfld valuetype T_RA STRING_3    // "   NO ONE "
     stobj valuetype T_RA
-    // line 765
+    .line 765
     ldsflda valuetype T_array_31 _G::XTQA
     ldc.i4 0
     call instance valuetype T_RA& T_array_31::ldadr(int32)
     ldsfld valuetype T_RA STRING_4    // "WHITE KING"
     stobj valuetype T_RA
-    // line 766
+    .line 766
     ldsflda valuetype T_array_31 _G::XTQA
     ldc.i4 1
     call instance valuetype T_RA& T_array_31::ldadr(int32)
     ldsfld valuetype T_RA STRING_5    // "WHITE LONG"
     stobj valuetype T_RA
-    // line 767
+    .line 767
     ldsflda valuetype T_array_31 _G::XTQA
     ldc.i4 2
     call instance valuetype T_RA& T_array_31::ldadr(int32)
     ldsfld valuetype T_RA STRING_6    // "BLACK KING"
     stobj valuetype T_RA
-    // line 768
+    .line 768
     ldsflda valuetype T_array_31 _G::XTQA
     ldc.i4 3
     call instance valuetype T_RA& T_array_31::ldadr(int32)
     ldsfld valuetype T_RA STRING_7    // "BLACK LONG"
     stobj valuetype T_RA
-    // line 772
+    .line 772
     ldc.i4 119
     stloc $tmpEndValue1
     ldc.i4 0
@@ -16219,7 +16219,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int8 @INICON::INTL
 L_for_loop_1:
-    // line 773
+    .line 773
     ldsflda valuetype T_array_9 _G::XTLS
     ldloc _F
     ldfld int8 @INICON::INTL
@@ -16249,7 +16249,7 @@ L_for_loop_1:
     br L_for_loop_1
 L_for_end_2:
     pop
-    // line 774
+    .line 774
     ldloc _F
     ldc.i4 21
     dup
@@ -16257,7 +16257,7 @@ L_for_end_2:
     ldc.i4 119
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 @INICON::INTL
-    // line 776
+    .line 776
     ldloc _F
     ldc.i4 1
     neg
@@ -16266,7 +16266,7 @@ L_for_end_2:
     ldc.i4 63
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 @INICON::INTT
-    // line 778
+    .line 778
     ldc.i4 7
     stloc $tmpEndValue4
     ldc.i4 0
@@ -16282,7 +16282,7 @@ L_for_end_2:
     ldloc $tmpIndex5
     stfld int32 @INICON::INTR
 L_for_loop_3:
-    // line 780
+    .line 780
     ldc.i4 7
     stloc $tmpEndValue6
     ldc.i4 0
@@ -16298,7 +16298,7 @@ L_for_loop_3:
     ldloc $tmpIndex7
     stfld int32 @INICON::INTF
 L_for_loop_5:
-    // line 782
+    .line 782
     ldloc _F
     ldloc _F
     ldfld int8 @INICON::INTT
@@ -16309,7 +16309,7 @@ L_for_loop_5:
     ldc.i4 63
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 @INICON::INTT
-    // line 783
+    .line 783
     ldsflda valuetype T_array_37 _G::XTRFS
     ldloc _F
     ldfld int32 @INICON::INTR
@@ -16324,7 +16324,7 @@ L_for_loop_5:
     ldc.i4 63
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int8
-    // line 785
+    .line 785
     ldsflda valuetype T_array_9 _G::XTLS
     ldloc _F
     ldfld int8 @INICON::INTL
@@ -16332,7 +16332,7 @@ L_for_loop_5:
     ldloc _F
     ldfld int8 @INICON::INTT
     stobj int8
-    // line 787
+    .line 787
     ldsflda valuetype T_array_3 _G::XTSL
     ldloc _F
     ldfld int8 @INICON::INTT
@@ -16340,7 +16340,7 @@ L_for_loop_5:
     ldloc _F
     ldfld int8 @INICON::INTL
     stobj int8
-    // line 789
+    .line 789
     ldsflda valuetype T_array_38 _G::XTSR
     ldloc _F
     ldfld int8 @INICON::INTT
@@ -16348,7 +16348,7 @@ L_for_loop_5:
     ldloc _F
     ldfld int32 @INICON::INTR
     stobj int32
-    // line 790
+    .line 790
     ldsflda valuetype T_array_38 _G::XTSF
     ldloc _F
     ldfld int8 @INICON::INTT
@@ -16356,7 +16356,7 @@ L_for_loop_5:
     ldloc _F
     ldfld int32 @INICON::INTF
     stobj int32
-    // line 791
+    .line 791
     ldloc _F
     ldloc _F
     ldfld int8 @INICON::INTL
@@ -16386,7 +16386,7 @@ L_for_loop_5:
     br L_for_loop_5
 L_for_end_6:
     pop
-    // line 793
+    .line 793
     ldloc _F
     ldloc _F
     ldfld int8 @INICON::INTL
@@ -16416,7 +16416,7 @@ L_for_end_6:
     br L_for_loop_3
 L_for_end_4:
     pop
-    // line 799
+    .line 799
     ldloc _F
     ldc.i4 1
     neg
@@ -16425,7 +16425,7 @@ L_for_end_4:
     ldc.i4 63
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 @INICON::INTT
-    // line 800
+    .line 800
     ldc.i4 1
     stloc $tmpEndValue10
     ldc.i4 0
@@ -16441,7 +16441,7 @@ L_for_end_4:
     ldloc $tmpIndex11
     stfld int8 @INICON::INTY
 L_for_loop_7:
-    // line 802
+    .line 802
     ldc.i4 31
     stloc $tmpEndValue12
     ldc.i4 0
@@ -16457,7 +16457,7 @@ L_for_loop_7:
     ldloc $tmpIndex13
     stfld int8 @INICON::INTX
 L_for_loop_9:
-    // line 804
+    .line 804
     ldloc _F
     ldloc _F
     ldfld int8 @INICON::INTT
@@ -16468,7 +16468,7 @@ L_for_loop_9:
     ldc.i4 63
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 @INICON::INTT
-    // line 805
+    .line 805
     ldsflda valuetype T_array_3 _G::XTSX
     ldloc _F
     ldfld int8 @INICON::INTT
@@ -16476,7 +16476,7 @@ L_for_loop_9:
     ldloc _F
     ldfld int8 @INICON::INTX
     stobj int8
-    // line 806
+    .line 806
     ldsflda valuetype T_array_3 _G::XTSY
     ldloc _F
     ldfld int8 @INICON::INTT
@@ -16484,7 +16484,7 @@ L_for_loop_9:
     ldloc _F
     ldfld int8 @INICON::INTY
     stobj int8
-    // line 807
+    .line 807
     ldloca $tmpSetLiteral14
     call instance void T_set_5::clear()
     ldloca $tmpSetLiteral14
@@ -16502,13 +16502,13 @@ L_for_loop_9:
     call void _SetCheck(valuetype T_set_5 s, int32 min, int32 max)
     call valuetype T_SX _SetCastTo_T_SX(valuetype T_set_5 s)
     stobj valuetype T_SX
-    // line 808
+    .line 808
     ldsflda valuetype T_RX _G::XRSS
     ldloc _F
     ldfld int8 @INICON::INTT
     call instance valuetype T_RS& T_RX::ldadr(int32)
     call void NEWRS(valuetype T_RS& A)
-    // line 809
+    .line 809
     ldloca $tmpSetLiteral15
     call instance void T_set_5::clear()
     ldloca $tmpSetLiteral15
@@ -16568,7 +16568,7 @@ L_for_end_10:
     br L_for_loop_7
 L_for_end_8:
     pop
-    // line 815
+    .line 815
     ldc.i4 7
     stloc $tmpEndValue18
     ldc.i4 0
@@ -16584,7 +16584,7 @@ L_for_end_8:
     ldloc $tmpIndex19
     stfld int32 @INICON::INTR
 L_for_loop_11:
-    // line 816
+    .line 816
     ldsflda valuetype T_arraytrofrs _G::XRRS
     ldloc _F
     ldfld int32 @INICON::INTR
@@ -16608,7 +16608,7 @@ L_for_loop_11:
     br L_for_loop_11
 L_for_end_12:
     pop
-    // line 817
+    .line 817
     ldc.i4 7
     stloc $tmpEndValue21
     ldc.i4 0
@@ -16624,7 +16624,7 @@ L_for_end_12:
     ldloc $tmpIndex22
     stfld int32 @INICON::INTF
 L_for_loop_13:
-    // line 818
+    .line 818
     ldsflda valuetype T_arraytrofrs _G::XRFS
     ldloc _F
     ldfld int32 @INICON::INTF
@@ -16648,7 +16648,7 @@ L_for_loop_13:
     br L_for_loop_13
 L_for_end_14:
     pop
-    // line 820
+    .line 820
     ldc.i4 7
     stloc $tmpEndValue24
     ldc.i4 0
@@ -16664,7 +16664,7 @@ L_for_end_14:
     ldloc $tmpIndex25
     stfld int32 @INICON::INTR
 L_for_loop_15:
-    // line 821
+    .line 821
     ldc.i4 7
     stloc $tmpEndValue26
     ldc.i4 0
@@ -16680,7 +16680,7 @@ L_for_loop_15:
     ldloc $tmpIndex27
     stfld int32 @INICON::INTF
 L_for_loop_17:
-    // line 823
+    .line 823
     ldsflda valuetype T_arraytrofrs _G::XRRS
     ldloc _F
     ldfld int32 @INICON::INTR
@@ -16694,7 +16694,7 @@ L_for_loop_17:
     call instance int8& T_array_36::ldadr(int32)
     ldobj int8
     call void SETRS(valuetype T_RS& C, int8 A)
-    // line 824
+    .line 824
     ldsflda valuetype T_arraytrofrs _G::XRFS
     ldloc _F
     ldfld int32 @INICON::INTF
@@ -16745,7 +16745,7 @@ L_for_end_18:
     br L_for_loop_15
 L_for_end_16:
     pop
-    // line 827
+    .line 827
     ldc.i4 7
     stloc $tmpEndValue30
     ldc.i4 0
@@ -16761,7 +16761,7 @@ L_for_end_16:
     ldloc $tmpIndex31
     stfld int32 @INICON::INTF
 L_for_loop_19:
-    // line 828
+    .line 828
     ldsflda valuetype T_arraytrofrs _G::XNFS
     ldloc _F
     ldfld int32 @INICON::INTF
@@ -16790,7 +16790,7 @@ L_for_loop_19:
     br L_for_loop_19
 L_for_end_20:
     pop
-    // line 830
+    .line 830
     ldc.i4 7
     stloc $tmpEndValue33
     ldc.i4 0
@@ -16806,7 +16806,7 @@ L_for_end_20:
     ldloc $tmpIndex34
     stfld int32 @INICON::INTR
 L_for_loop_21:
-    // line 831
+    .line 831
     ldsflda valuetype T_arraytrofrs _G::XNRS
     ldloc _F
     ldfld int32 @INICON::INTR
@@ -16835,7 +16835,7 @@ L_for_loop_21:
     br L_for_loop_21
 L_for_end_22:
     pop
-    // line 835
+    .line 835
     ldsflda valuetype T_array_43 _G::EDGE
     ldc.i4 4
     call instance valuetype T_RS& T_array_43::ldadr(int32)
@@ -16844,7 +16844,7 @@ L_for_end_22:
     call instance valuetype T_RS& T_arraytrofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void CPYRS(valuetype T_RS& C, valuetype T_RS A)
-    // line 836
+    .line 836
     ldsflda valuetype T_array_43 _G::EDGE
     ldc.i4 5
     call instance valuetype T_RS& T_array_43::ldadr(int32)
@@ -16853,7 +16853,7 @@ L_for_end_22:
     call instance valuetype T_RS& T_arraytrofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void CPYRS(valuetype T_RS& C, valuetype T_RS A)
-    // line 837
+    .line 837
     ldsflda valuetype T_array_43 _G::EDGE
     ldc.i4 6
     call instance valuetype T_RS& T_array_43::ldadr(int32)
@@ -16862,7 +16862,7 @@ L_for_end_22:
     call instance valuetype T_RS& T_arraytrofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void CPYRS(valuetype T_RS& C, valuetype T_RS A)
-    // line 838
+    .line 838
     ldsflda valuetype T_array_43 _G::EDGE
     ldc.i4 7
     call instance valuetype T_RS& T_array_43::ldadr(int32)
@@ -16871,7 +16871,7 @@ L_for_end_22:
     call instance valuetype T_RS& T_arraytrofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void CPYRS(valuetype T_RS& C, valuetype T_RS A)
-    // line 839
+    .line 839
     ldsflda valuetype T_array_43 _G::EDGE
     ldc.i4 0
     call instance valuetype T_RS& T_array_43::ldadr(int32)
@@ -16884,7 +16884,7 @@ L_for_end_22:
     call instance valuetype T_RS& T_array_43::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 840
+    .line 840
     ldsflda valuetype T_array_43 _G::EDGE
     ldc.i4 1
     call instance valuetype T_RS& T_array_43::ldadr(int32)
@@ -16897,7 +16897,7 @@ L_for_end_22:
     call instance valuetype T_RS& T_array_43::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 841
+    .line 841
     ldsflda valuetype T_array_43 _G::EDGE
     ldc.i4 2
     call instance valuetype T_RS& T_array_43::ldadr(int32)
@@ -16910,7 +16910,7 @@ L_for_end_22:
     call instance valuetype T_RS& T_array_43::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 842
+    .line 842
     ldsflda valuetype T_array_43 _G::EDGE
     ldc.i4 3
     call instance valuetype T_RS& T_array_43::ldadr(int32)
@@ -16923,7 +16923,7 @@ L_for_end_22:
     call instance valuetype T_RS& T_array_43::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 843
+    .line 843
     ldsflda valuetype T_array_43 _G::EDGE
     ldc.i4 8
     call instance valuetype T_RS& T_array_43::ldadr(int32)
@@ -16936,7 +16936,7 @@ L_for_end_22:
     call instance valuetype T_RS& T_arraytrofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 844
+    .line 844
     ldsflda valuetype T_array_43 _G::EDGE
     ldc.i4 9
     call instance valuetype T_RS& T_array_43::ldadr(int32)
@@ -16949,7 +16949,7 @@ L_for_end_22:
     call instance valuetype T_RS& T_arraytrofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 845
+    .line 845
     ldsflda valuetype T_array_43 _G::EDGE
     ldc.i4 10
     call instance valuetype T_RS& T_array_43::ldadr(int32)
@@ -16962,7 +16962,7 @@ L_for_end_22:
     call instance valuetype T_RS& T_arraytrofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 846
+    .line 846
     ldsflda valuetype T_array_43 _G::EDGE
     ldc.i4 11
     call instance valuetype T_RS& T_array_43::ldadr(int32)
@@ -16975,7 +16975,7 @@ L_for_end_22:
     call instance valuetype T_RS& T_arraytrofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 847
+    .line 847
     ldsflda valuetype T_array_43 _G::EDGE
     ldc.i4 12
     call instance valuetype T_RS& T_array_43::ldadr(int32)
@@ -16988,7 +16988,7 @@ L_for_end_22:
     call instance valuetype T_RS& T_arraytrofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 848
+    .line 848
     ldsflda valuetype T_array_43 _G::EDGE
     ldc.i4 13
     call instance valuetype T_RS& T_array_43::ldadr(int32)
@@ -17001,7 +17001,7 @@ L_for_end_22:
     call instance valuetype T_RS& T_arraytrofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 849
+    .line 849
     ldsflda valuetype T_array_43 _G::EDGE
     ldc.i4 14
     call instance valuetype T_RS& T_array_43::ldadr(int32)
@@ -17014,7 +17014,7 @@ L_for_end_22:
     call instance valuetype T_RS& T_arraytrofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 850
+    .line 850
     ldsflda valuetype T_array_43 _G::EDGE
     ldc.i4 15
     call instance valuetype T_RS& T_array_43::ldadr(int32)
@@ -17027,7 +17027,7 @@ L_for_end_22:
     call instance valuetype T_RS& T_arraytrofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 854
+    .line 854
     ldloc _F
     ldflda valuetype T_RS @INICON::INRS
     ldsflda valuetype T_arraytrofrs _G::XRRS
@@ -17039,7 +17039,7 @@ L_for_end_22:
     call instance valuetype T_RS& T_arraytrofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 855
+    .line 855
     ldloc _F
     ldflda valuetype T_RS @INICON::INRS
     ldloc _F
@@ -17049,7 +17049,7 @@ L_for_end_22:
     call instance valuetype T_RS& T_arraytrofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 856
+    .line 856
     ldloc _F
     ldflda valuetype T_RS @INICON::INRS
     ldloc _F
@@ -17059,7 +17059,7 @@ L_for_end_22:
     call instance valuetype T_RS& T_arraytrofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 857
+    .line 857
     ldsflda valuetype T_RS _G::CORNR
     ldsflda valuetype T_arraytrofrs _G::XRFS
     ldc.i4 0
@@ -17070,7 +17070,7 @@ L_for_end_22:
     call instance valuetype T_RS& T_arraytrofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 858
+    .line 858
     ldsflda valuetype T_RS _G::CORNR
     ldsfld valuetype T_RS _G::CORNR
     ldsflda valuetype T_arraytrofrs _G::XRFS
@@ -17078,7 +17078,7 @@ L_for_end_22:
     call instance valuetype T_RS& T_arraytrofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 859
+    .line 859
     ldsflda valuetype T_RS _G::CORNR
     ldsfld valuetype T_RS _G::CORNR
     ldsflda valuetype T_arraytrofrs _G::XRFS
@@ -17086,13 +17086,13 @@ L_for_end_22:
     call instance valuetype T_RS& T_arraytrofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 860
+    .line 860
     ldsflda valuetype T_RS _G::CORNR
     ldsfld valuetype T_RS _G::CORNR
     ldloc _F
     ldfld valuetype T_RS @INICON::INRS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 864
+    .line 864
     ldsflda valuetype T_array_11 _G::XTED
     ldc.i4 8
     call instance int8& T_array_11::ldadr(int32)
@@ -17102,7 +17102,7 @@ L_for_end_22:
     ldc.i4 21
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int8
-    // line 864
+    .line 864
     ldsflda valuetype T_array_11 _G::XTED
     ldc.i4 9
     call instance int8& T_array_11::ldadr(int32)
@@ -17112,7 +17112,7 @@ L_for_end_22:
     ldc.i4 21
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int8
-    // line 865
+    .line 865
     ldsflda valuetype T_array_11 _G::XTED
     ldc.i4 15
     call instance int8& T_array_11::ldadr(int32)
@@ -17122,7 +17122,7 @@ L_for_end_22:
     ldc.i4 21
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int8
-    // line 865
+    .line 865
     ldsflda valuetype T_array_11 _G::XTED
     ldc.i4 0
     call instance int8& T_array_11::ldadr(int32)
@@ -17132,7 +17132,7 @@ L_for_end_22:
     ldc.i4 21
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int8
-    // line 865
+    .line 865
     ldsflda valuetype T_array_11 _G::XTED
     ldc.i4 5
     call instance int8& T_array_11::ldadr(int32)
@@ -17142,7 +17142,7 @@ L_for_end_22:
     ldc.i4 21
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int8
-    // line 865
+    .line 865
     ldsflda valuetype T_array_11 _G::XTED
     ldc.i4 1
     call instance int8& T_array_11::ldadr(int32)
@@ -17152,7 +17152,7 @@ L_for_end_22:
     ldc.i4 21
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int8
-    // line 865
+    .line 865
     ldsflda valuetype T_array_11 _G::XTED
     ldc.i4 10
     call instance int8& T_array_11::ldadr(int32)
@@ -17162,7 +17162,7 @@ L_for_end_22:
     ldc.i4 21
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int8
-    // line 866
+    .line 866
     ldsflda valuetype T_array_11 _G::XTED
     ldc.i4 4
     call instance int8& T_array_11::ldadr(int32)
@@ -17173,7 +17173,7 @@ L_for_end_22:
     ldc.i4 21
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int8
-    // line 866
+    .line 866
     ldsflda valuetype T_array_11 _G::XTED
     ldc.i4 6
     call instance int8& T_array_11::ldadr(int32)
@@ -17183,7 +17183,7 @@ L_for_end_22:
     ldc.i4 21
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int8
-    // line 867
+    .line 867
     ldsflda valuetype T_array_11 _G::XTED
     ldc.i4 14
     call instance int8& T_array_11::ldadr(int32)
@@ -17194,7 +17194,7 @@ L_for_end_22:
     ldc.i4 21
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int8
-    // line 867
+    .line 867
     ldsflda valuetype T_array_11 _G::XTED
     ldc.i4 3
     call instance int8& T_array_11::ldadr(int32)
@@ -17205,7 +17205,7 @@ L_for_end_22:
     ldc.i4 21
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int8
-    // line 867
+    .line 867
     ldsflda valuetype T_array_11 _G::XTED
     ldc.i4 7
     call instance int8& T_array_11::ldadr(int32)
@@ -17216,7 +17216,7 @@ L_for_end_22:
     ldc.i4 21
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int8
-    // line 867
+    .line 867
     ldsflda valuetype T_array_11 _G::XTED
     ldc.i4 2
     call instance int8& T_array_11::ldadr(int32)
@@ -17227,7 +17227,7 @@ L_for_end_22:
     ldc.i4 21
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int8
-    // line 867
+    .line 867
     ldsflda valuetype T_array_11 _G::XTED
     ldc.i4 11
     call instance int8& T_array_11::ldadr(int32)
@@ -17238,7 +17238,7 @@ L_for_end_22:
     ldc.i4 21
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int8
-    // line 868
+    .line 868
     ldsflda valuetype T_array_11 _G::XTED
     ldc.i4 13
     call instance int8& T_array_11::ldadr(int32)
@@ -17249,7 +17249,7 @@ L_for_end_22:
     ldc.i4 21
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int8
-    // line 868
+    .line 868
     ldsflda valuetype T_array_11 _G::XTED
     ldc.i4 12
     call instance int8& T_array_11::ldadr(int32)
@@ -17260,7 +17260,7 @@ L_for_end_22:
     ldc.i4 21
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int8
-    // line 872
+    .line 872
     ldc.i4 119
     stloc $tmpEndValue36
     ldc.i4 -119
@@ -17272,7 +17272,7 @@ L_for_end_22:
     ldloc $tmpIndex37
     stfld int32 @INICON::INTI1
 L_for_loop_23:
-    // line 873
+    .line 873
     ldsflda valuetype T_array_44 _G::XLLD
     ldloc _F
     ldfld int32 @INICON::INTI1
@@ -17297,7 +17297,7 @@ L_for_loop_23:
     br L_for_loop_23
 L_for_end_24:
     pop
-    // line 875
+    .line 875
     ldc.i4 7
     stloc $tmpEndValue39
     ldc.i4 0
@@ -17313,7 +17313,7 @@ L_for_end_24:
     ldloc $tmpIndex40
     stfld int32 @INICON::INTE
 L_for_loop_25:
-    // line 877
+    .line 877
     ldloc _F
     ldsflda valuetype T_array_11 _G::XTED
     ldloc _F
@@ -17321,7 +17321,7 @@ L_for_loop_25:
     call instance int8& T_array_11::ldadr(int32)
     ldobj int8
     stfld int8 @INICON::INTD
-    // line 878
+    .line 878
     ldc.i4 7
     stloc $tmpEndValue41
     ldc.i4 1
@@ -17333,7 +17333,7 @@ L_for_loop_25:
     ldloc $tmpIndex42
     stfld int32 @INICON::IMTI
 L_for_loop_27:
-    // line 879
+    .line 879
     ldsflda valuetype T_array_44 _G::XLLD
     ldloc _F
     ldfld int32 @INICON::IMTI
@@ -17377,7 +17377,7 @@ L_for_end_28:
     br L_for_loop_25
 L_for_end_26:
     pop
-    // line 882
+    .line 882
     ldc.i4 15
     stloc $tmpEndValue45
     ldc.i4 8
@@ -17393,7 +17393,7 @@ L_for_end_26:
     ldloc $tmpIndex46
     stfld int32 @INICON::INTE
 L_for_loop_29:
-    // line 883
+    .line 883
     ldsflda valuetype T_array_44 _G::XLLD
     ldsflda valuetype T_array_11 _G::XTED
     ldloc _F
@@ -17425,7 +17425,7 @@ L_for_loop_29:
     br L_for_loop_29
 L_for_end_30:
     pop
-    // line 887
+    .line 887
     ldsflda valuetype T_arraytqofrs _G::XSQS
     ldc.i4 0
     call instance valuetype T_RS& T_arraytqofrs::ldadr(int32)
@@ -17448,7 +17448,7 @@ L_for_end_30:
     call instance valuetype T_RS& T_RX::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 888
+    .line 888
     ldsflda valuetype T_arraytqofrs _G::XSQS
     ldc.i4 1
     call instance valuetype T_RS& T_arraytqofrs::ldadr(int32)
@@ -17471,7 +17471,7 @@ L_for_end_30:
     call instance valuetype T_RS& T_RX::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 889
+    .line 889
     ldsflda valuetype T_arraytqofrs _G::XSQS
     ldc.i4 2
     call instance valuetype T_RS& T_arraytqofrs::ldadr(int32)
@@ -17494,7 +17494,7 @@ L_for_end_30:
     call instance valuetype T_RS& T_RX::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 890
+    .line 890
     ldsflda valuetype T_arraytqofrs _G::XSQS
     ldc.i4 3
     call instance valuetype T_RS& T_arraytqofrs::ldadr(int32)
@@ -17517,7 +17517,7 @@ L_for_end_30:
     call instance valuetype T_RS& T_RX::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 892
+    .line 892
     ldsflda valuetype T_arraytqofrs _G::XRQSO
     ldc.i4 0
     call instance valuetype T_RS& T_arraytqofrs::ldadr(int32)
@@ -17540,7 +17540,7 @@ L_for_end_30:
     call instance valuetype T_RS& T_RX::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 893
+    .line 893
     ldsflda valuetype T_arraytqofrs _G::XRQSO
     ldc.i4 1
     call instance valuetype T_RS& T_arraytqofrs::ldadr(int32)
@@ -17563,7 +17563,7 @@ L_for_end_30:
     call instance valuetype T_RS& T_RX::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 894
+    .line 894
     ldsflda valuetype T_arraytqofrs _G::XRQSA
     ldc.i4 0
     call instance valuetype T_RS& T_arraytqofrs::ldadr(int32)
@@ -17581,7 +17581,7 @@ L_for_end_30:
     call instance valuetype T_RS& T_arraytqofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 895
+    .line 895
     ldsflda valuetype T_arraytqofrs _G::XRQSA
     ldc.i4 1
     call instance valuetype T_RS& T_arraytqofrs::ldadr(int32)
@@ -17599,7 +17599,7 @@ L_for_end_30:
     call instance valuetype T_RS& T_arraytqofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 896
+    .line 896
     ldsflda valuetype T_arraytqofrs _G::XRQSO
     ldc.i4 1
     call instance valuetype T_RS& T_arraytqofrs::ldadr(int32)
@@ -17617,7 +17617,7 @@ L_for_end_30:
     call instance valuetype T_RS& T_arraytqofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 898
+    .line 898
     ldsflda valuetype T_arraytqofrs _G::XRQSO
     ldc.i4 2
     call instance valuetype T_RS& T_arraytqofrs::ldadr(int32)
@@ -17640,7 +17640,7 @@ L_for_end_30:
     call instance valuetype T_RS& T_RX::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 899
+    .line 899
     ldsflda valuetype T_arraytqofrs _G::XRQSO
     ldc.i4 3
     call instance valuetype T_RS& T_arraytqofrs::ldadr(int32)
@@ -17663,7 +17663,7 @@ L_for_end_30:
     call instance valuetype T_RS& T_RX::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 900
+    .line 900
     ldsflda valuetype T_arraytqofrs _G::XRQSO
     ldc.i4 2
     call instance valuetype T_RS& T_arraytqofrs::ldadr(int32)
@@ -17681,7 +17681,7 @@ L_for_end_30:
     call instance valuetype T_RS& T_arraytqofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 901
+    .line 901
     ldsflda valuetype T_arraytqofrs _G::XRQSA
     ldc.i4 3
     call instance valuetype T_RS& T_arraytqofrs::ldadr(int32)
@@ -17699,7 +17699,7 @@ L_for_end_30:
     call instance valuetype T_RS& T_arraytqofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 902
+    .line 902
     ldsflda valuetype T_arraytqofrs _G::XRQSO
     ldc.i4 3
     call instance valuetype T_RS& T_arraytqofrs::ldadr(int32)
@@ -17717,7 +17717,7 @@ L_for_end_30:
     call instance valuetype T_RS& T_arraytqofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 904
+    .line 904
     ldc.i4 3
     stloc $tmpEndValue48
     ldc.i4 0
@@ -17733,63 +17733,63 @@ L_for_end_30:
     ldloc $tmpIndex49
     stfld int32 @INICON::INTQ
 L_for_loop_31:
-    // line 907
+    .line 907
     ldsflda valuetype T_array_45 _G::XRQM
     ldloc _F
     ldfld int32 @INICON::INTQ
     call instance valuetype T_RM& T_array_45::ldadr(int32)
     ldc.i4 12
     stfld int32 T_RM::RMCP
-    // line 908
+    .line 908
     ldsflda valuetype T_array_45 _G::XRQM
     ldloc _F
     ldfld int32 @INICON::INTQ
     call instance valuetype T_RM& T_array_45::ldadr(int32)
     ldc.i4 0 // (false)
     stfld bool T_RM::RMCA
-    // line 909
+    .line 909
     ldsflda valuetype T_array_45 _G::XRQM
     ldloc _F
     ldfld int32 @INICON::INTQ
     call instance valuetype T_RM& T_array_45::ldadr(int32)
     ldc.i4 1 // (true)
     stfld bool T_RM::RMAC
-    // line 910
+    .line 910
     ldsflda valuetype T_array_45 _G::XRQM
     ldloc _F
     ldfld int32 @INICON::INTQ
     call instance valuetype T_RM& T_array_45::ldadr(int32)
     ldc.i4 0 // (false)
     stfld bool T_RM::RMCH
-    // line 911
+    .line 911
     ldsflda valuetype T_array_45 _G::XRQM
     ldloc _F
     ldfld int32 @INICON::INTQ
     call instance valuetype T_RM& T_array_45::ldadr(int32)
     ldc.i4 0 // (false)
     stfld bool T_RM::RMMT
-    // line 912
+    .line 912
     ldsflda valuetype T_array_45 _G::XRQM
     ldloc _F
     ldfld int32 @INICON::INTQ
     call instance valuetype T_RM& T_array_45::ldadr(int32)
     ldc.i4 0 // (false)
     stfld bool T_RM::RMIL
-    // line 913
+    .line 913
     ldsflda valuetype T_array_45 _G::XRQM
     ldloc _F
     ldfld int32 @INICON::INTQ
     call instance valuetype T_RM& T_array_45::ldadr(int32)
     ldc.i4 0 // (false)
     stfld bool T_RM::RMSU
-    // line 914
+    .line 914
     ldsflda valuetype T_array_45 _G::XRQM
     ldloc _F
     ldfld int32 @INICON::INTQ
     call instance valuetype T_RM& T_array_45::ldadr(int32)
     ldc.i4 0 // (false)
     stfld bool T_RM::RMPR
-    // line 915
+    .line 915
     ldsflda valuetype T_array_45 _G::XRQM
     ldloc _F
     ldfld int32 @INICON::INTQ
@@ -17815,7 +17815,7 @@ L_for_loop_31:
     br L_for_loop_31
 L_for_end_32:
     pop
-    // line 918
+    .line 918
     ldsflda valuetype T_array_45 _G::XRQM
     ldc.i4 0
     call instance valuetype T_RM& T_array_45::ldadr(int32)
@@ -17826,7 +17826,7 @@ L_for_end_32:
     call instance int8& T_array_36::ldadr(int32)
     ldobj int8
     stfld int8 T_RM::RMFR
-    // line 918
+    .line 918
     ldsflda valuetype T_array_45 _G::XRQM
     ldc.i4 0
     call instance valuetype T_RM& T_array_45::ldadr(int32)
@@ -17837,7 +17837,7 @@ L_for_end_32:
     call instance int8& T_array_36::ldadr(int32)
     ldobj int8
     stfld int8 T_RM::RMTO
-    // line 919
+    .line 919
     ldsflda valuetype T_array_45 _G::XRQM
     ldc.i4 1
     call instance valuetype T_RM& T_array_45::ldadr(int32)
@@ -17848,7 +17848,7 @@ L_for_end_32:
     call instance int8& T_array_36::ldadr(int32)
     ldobj int8
     stfld int8 T_RM::RMFR
-    // line 919
+    .line 919
     ldsflda valuetype T_array_45 _G::XRQM
     ldc.i4 1
     call instance valuetype T_RM& T_array_45::ldadr(int32)
@@ -17859,7 +17859,7 @@ L_for_end_32:
     call instance int8& T_array_36::ldadr(int32)
     ldobj int8
     stfld int8 T_RM::RMTO
-    // line 920
+    .line 920
     ldsflda valuetype T_array_45 _G::XRQM
     ldc.i4 2
     call instance valuetype T_RM& T_array_45::ldadr(int32)
@@ -17870,7 +17870,7 @@ L_for_end_32:
     call instance int8& T_array_36::ldadr(int32)
     ldobj int8
     stfld int8 T_RM::RMFR
-    // line 920
+    .line 920
     ldsflda valuetype T_array_45 _G::XRQM
     ldc.i4 2
     call instance valuetype T_RM& T_array_45::ldadr(int32)
@@ -17881,7 +17881,7 @@ L_for_end_32:
     call instance int8& T_array_36::ldadr(int32)
     ldobj int8
     stfld int8 T_RM::RMTO
-    // line 921
+    .line 921
     ldsflda valuetype T_array_45 _G::XRQM
     ldc.i4 3
     call instance valuetype T_RM& T_array_45::ldadr(int32)
@@ -17892,7 +17892,7 @@ L_for_end_32:
     call instance int8& T_array_36::ldadr(int32)
     ldobj int8
     stfld int8 T_RM::RMFR
-    // line 921
+    .line 921
     ldsflda valuetype T_array_45 _G::XRQM
     ldc.i4 3
     call instance valuetype T_RM& T_array_45::ldadr(int32)
@@ -17903,43 +17903,43 @@ L_for_end_32:
     call instance int8& T_array_36::ldadr(int32)
     ldobj int8
     stfld int8 T_RM::RMTO
-    // line 923
+    .line 923
     ldsflda valuetype T_array_45 _G::XRQM
     ldc.i4 0
     call instance valuetype T_RM& T_array_45::ldadr(int32)
     ldc.i4 0 // (false)
     stfld bool T_RM::RMQS
-    // line 924
+    .line 924
     ldsflda valuetype T_array_45 _G::XRQM
     ldc.i4 1
     call instance valuetype T_RM& T_array_45::ldadr(int32)
     ldc.i4 1 // (true)
     stfld bool T_RM::RMQS
-    // line 925
+    .line 925
     ldsflda valuetype T_array_45 _G::XRQM
     ldc.i4 2
     call instance valuetype T_RM& T_array_45::ldadr(int32)
     ldc.i4 0 // (false)
     stfld bool T_RM::RMQS
-    // line 926
+    .line 926
     ldsflda valuetype T_array_45 _G::XRQM
     ldc.i4 3
     call instance valuetype T_RM& T_array_45::ldadr(int32)
     ldc.i4 1 // (true)
     stfld bool T_RM::RMQS
-    // line 928
+    .line 928
     ldsflda valuetype T_array_18 _G::XTMQ
     ldc.i4 0
     call instance int32& T_array_18::ldadr(int32)
     ldc.i4 0
     stobj int32
-    // line 929
+    .line 929
     ldsflda valuetype T_array_18 _G::XTMQ
     ldc.i4 1
     call instance int32& T_array_18::ldadr(int32)
     ldc.i4 2
     stobj int32
-    // line 931
+    .line 931
     ldsflda valuetype T_array_47 _G::XTQS
     ldc.i4 0
     call instance int8& T_array_47::ldadr(int32)
@@ -17950,7 +17950,7 @@ L_for_end_32:
     call instance int8& T_array_36::ldadr(int32)
     ldobj int8
     stobj int8
-    // line 932
+    .line 932
     ldsflda valuetype T_array_47 _G::XTQS
     ldc.i4 1
     call instance int8& T_array_47::ldadr(int32)
@@ -17961,7 +17961,7 @@ L_for_end_32:
     call instance int8& T_array_36::ldadr(int32)
     ldobj int8
     stobj int8
-    // line 933
+    .line 933
     ldsflda valuetype T_array_47 _G::XTQS
     ldc.i4 2
     call instance int8& T_array_47::ldadr(int32)
@@ -17972,7 +17972,7 @@ L_for_end_32:
     call instance int8& T_array_36::ldadr(int32)
     ldobj int8
     stobj int8
-    // line 934
+    .line 934
     ldsflda valuetype T_array_47 _G::XTQS
     ldc.i4 3
     call instance int8& T_array_47::ldadr(int32)
@@ -17983,7 +17983,7 @@ L_for_end_32:
     call instance int8& T_array_36::ldadr(int32)
     ldobj int8
     stobj int8
-    // line 940
+    .line 940
     ldsflda valuetype T_RM _G::NULMV
     ldc.i4 0
     dup
@@ -17991,7 +17991,7 @@ L_for_end_32:
     ldc.i4 63
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_RM::RMFR
-    // line 941
+    .line 941
     ldsflda valuetype T_RM _G::NULMV
     ldc.i4 0
     dup
@@ -17999,378 +17999,378 @@ L_for_end_32:
     ldc.i4 63
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_RM::RMTO
-    // line 942
+    .line 942
     ldsflda valuetype T_RM _G::NULMV
     ldc.i4 12
     stfld int32 T_RM::RMCP
-    // line 943
+    .line 943
     ldsflda valuetype T_RM _G::NULMV
     ldc.i4 0 // (false)
     stfld bool T_RM::RMCA
-    // line 944
+    .line 944
     ldsflda valuetype T_RM _G::NULMV
     ldc.i4 1 // (true)
     stfld bool T_RM::RMAC
-    // line 945
+    .line 945
     ldsflda valuetype T_RM _G::NULMV
     ldc.i4 0 // (false)
     stfld bool T_RM::RMCH
-    // line 946
+    .line 946
     ldsflda valuetype T_RM _G::NULMV
     ldc.i4 0 // (false)
     stfld bool T_RM::RMMT
-    // line 947
+    .line 947
     ldsflda valuetype T_RM _G::NULMV
     ldc.i4 0 // (false)
     stfld bool T_RM::RMIL
-    // line 948
+    .line 948
     ldsflda valuetype T_RM _G::NULMV
     ldc.i4 0 // (false)
     stfld bool T_RM::RMSU
-    // line 949
+    .line 949
     ldsflda valuetype T_RM _G::NULMV
     ldc.i4 1 // (true)
     stfld bool T_RM::RMPR
-    // line 950
+    .line 950
     ldsflda valuetype T_RM _G::NULMV
     ldc.i4 3
     stfld int32 T_RM::RMPP
     /* nop */
-    // line 955
+    .line 955
     ldc.i4 73
     dup
     ldc.i4 0
     ldc.i4 73
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int8 _G::JMTJ
-    // line 956
+    .line 956
     ldsflda valuetype T_RJ _G::ICARD
     ldc.i4 73
     call instance uint8& T_RJ::ldadr(int32)
     ldc.i4 59 // ';'
     stobj uint8
-    // line 957
+    .line 957
     ldsflda valuetype T_RJ _G::ILINE
     ldc.i4 73
     call instance uint8& T_RJ::ldadr(int32)
     ldc.i4 59 // ';'
     stobj uint8
-    // line 961
+    .line 961
     ldloc _F
     ldc.i4 1
     stfld int32 @INICON::INTI
-    // line 962
+    .line 962
     ldloc _F
     ldsfld valuetype T_RA STRING_8    // "    *P    "
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 963
+    .line 963
     ldloc _F
     ldsfld valuetype T_RA STRING_9    // "    *P/  1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 964
+    .line 964
     ldloc _F
     ldsfld valuetype T_RA STRING_10    // "/  1*P    "
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 965
+    .line 965
     ldloc _F
     ldsfld valuetype T_RA STRING_11    // "    *P/ R "
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 966
+    .line 966
     ldloc _F
     ldsfld valuetype T_RA STRING_12    // "/ R *P    "
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 967
+    .line 967
     ldloc _F
     ldsfld valuetype T_RA STRING_13    // "    *P/ R1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 968
+    .line 968
     ldloc _F
     ldsfld valuetype T_RA STRING_14    // "/ R1*P    "
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 969
+    .line 969
     ldloc _F
     ldsfld valuetype T_RA STRING_15    // "    *P/KR "
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 970
+    .line 970
     ldloc _F
     ldsfld valuetype T_RA STRING_16    // "/KR *P    "
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 971
+    .line 971
     ldloc _F
     ldsfld valuetype T_RA STRING_17    // "    *P/KR1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 972
+    .line 972
     ldloc _F
     ldsfld valuetype T_RA STRING_18    // "/KR1*P    "
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 973
+    .line 973
     ldloc _F
     ldsfld valuetype T_RA STRING_19    // "/  1*P/  1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 974
+    .line 974
     ldloc _F
     ldsfld valuetype T_RA STRING_20    // "/ R *P/ R "
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 975
+    .line 975
     ldloc _F
     ldsfld valuetype T_RA STRING_21    // "/  1*P/ R "
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 976
+    .line 976
     ldloc _F
     ldsfld valuetype T_RA STRING_22    // "/ R *P/  1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 977
+    .line 977
     ldloc _F
     ldsfld valuetype T_RA STRING_23    // "/ R1*P/  1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 978
+    .line 978
     ldloc _F
     ldsfld valuetype T_RA STRING_24    // "/  1*P/ R1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 979
+    .line 979
     ldloc _F
     ldsfld valuetype T_RA STRING_25    // "/ R1*P/ R "
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 980
+    .line 980
     ldloc _F
     ldsfld valuetype T_RA STRING_26    // "/ R *P/ R1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 981
+    .line 981
     ldloc _F
     ldsfld valuetype T_RA STRING_27    // "/KR *P/  1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 982
+    .line 982
     ldloc _F
     ldsfld valuetype T_RA STRING_28    // "/  1*P/KR "
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 983
+    .line 983
     ldloc _F
     ldsfld valuetype T_RA STRING_29    // "/KR *P/ R "
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 984
+    .line 984
     ldloc _F
     ldsfld valuetype T_RA STRING_30    // "/ R *P/KR "
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 985
+    .line 985
     ldloc _F
     ldsfld valuetype T_RA STRING_31    // "/  1*P/KR1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 986
+    .line 986
     ldloc _F
     ldsfld valuetype T_RA STRING_32    // "/KR1*P/  1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 987
+    .line 987
     ldloc _F
     ldsfld valuetype T_RA STRING_33    // "  R *P/KR1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 988
+    .line 988
     ldloc _F
     ldsfld valuetype T_RA STRING_34    // "/KR1*P/ R "
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 989
+    .line 989
     ldloc _F
     ldsfld valuetype T_RA STRING_35    // "/ R1*P/ R1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 990
+    .line 990
     ldloc _F
     ldsfld valuetype T_RA STRING_36    // "/KR *P/ R1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 991
+    .line 991
     ldloc _F
     ldsfld valuetype T_RA STRING_37    // "/ R1*P/KR "
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 992
+    .line 992
     ldloc _F
     ldsfld valuetype T_RA STRING_38    // "/KR *P/KR "
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 993
+    .line 993
     ldloc _F
     ldsfld valuetype T_RA STRING_39    // "/KR1*P/ R1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 994
+    .line 994
     ldloc _F
     ldsfld valuetype T_RA STRING_40    // "/ R1*P/KR1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 995
+    .line 995
     ldloc _F
     ldsfld valuetype T_RA STRING_41    // "/KR1*P/KR "
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 996
+    .line 996
     ldloc _F
     ldsfld valuetype T_RA STRING_42    // "/KR *P/KR1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 997
+    .line 997
     ldloc _F
     ldsfld valuetype T_RA STRING_43    // "/KR1*P/KR1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 999
+    .line 999
     ldloc _F
     ldsfld valuetype T_RA STRING_44    // "    -   R1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 1000
+    .line 1000
     ldloc _F
     ldsfld valuetype T_RA STRING_45    // "    -  KR1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 1001
+    .line 1001
     ldloc _F
     ldsfld valuetype T_RA STRING_46    // "/  1-   R1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 1002
+    .line 1002
     ldloc _F
     ldsfld valuetype T_RA STRING_47    // "/ R -   R1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 1003
+    .line 1003
     ldloc _F
     ldsfld valuetype T_RA STRING_48    // "/  1-  KR1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 1004
+    .line 1004
     ldloc _F
     ldsfld valuetype T_RA STRING_49    // "/ R -  KR1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 1005
+    .line 1005
     ldloc _F
     ldsfld valuetype T_RA STRING_50    // "/ R1-   R1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 1006
+    .line 1006
     ldloc _F
     ldsfld valuetype T_RA STRING_51    // "/KR -   R1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 1007
+    .line 1007
     ldloc _F
     ldsfld valuetype T_RA STRING_52    // "/ R1-  KR1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 1008
+    .line 1008
     ldloc _F
     ldsfld valuetype T_RA STRING_53    // "/KR -  KR1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 1009
+    .line 1009
     ldloc _F
     ldsfld valuetype T_RA STRING_54    // "/KR1-  KR1"
     call instance void @INICON::INISYN(valuetype T_RA A)
-    // line 1013
+    .line 1013
     ldc.i4 10
     stsfld int32 _G::FKPSHD
-    // line 1014
+    .line 1014
     ldc.i4 150
     stsfld int32 _G::FKSANQ
-    // line 1015
+    .line 1015
     ldc.i4 256
     stsfld int32 _G::FMAXMT
-    // line 1016
+    .line 1016
     ldc.i4 18
     stsfld int32 _G::FNODEL
-    // line 1017
+    .line 1017
     ldsflda valuetype T_array_95 _G::FPADCR
     ldc.i4 0
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 0
     stobj int32
-    // line 1018
+    .line 1018
     ldsflda valuetype T_array_95 _G::FPADCR
     ldc.i4 1
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 0
     stobj int32
-    // line 1019
+    .line 1019
     ldsflda valuetype T_array_95 _G::FPADCR
     ldc.i4 2
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 5
     stobj int32
-    // line 1020
+    .line 1020
     ldsflda valuetype T_array_95 _G::FPADCR
     ldc.i4 3
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 10
     stobj int32
-    // line 1021
+    .line 1021
     ldsflda valuetype T_array_95 _G::FPADCR
     ldc.i4 4
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 15
     stobj int32
-    // line 1022
+    .line 1022
     ldsflda valuetype T_array_95 _G::FPADCR
     ldc.i4 5
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 5
     stobj int32
-    // line 1023
+    .line 1023
     ldsflda valuetype T_array_95 _G::FPADCR
     ldc.i4 6
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 0
     stobj int32
-    // line 1024
+    .line 1024
     ldsflda valuetype T_array_95 _G::FPADCR
     ldc.i4 7
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 0
     stobj int32
-    // line 1025
+    .line 1025
     ldc.i4 20
     stsfld int32 _G::FPBLOK
-    // line 1026
+    .line 1026
     ldc.i4 5
     stsfld int32 _G::FPCONN
-    // line 1027
+    .line 1027
     ldc.i4 12
     stsfld int32 _G::FPFLNX
-    // line 1028
+    .line 1028
     ldc.i4 60
     stsfld int32 _G::FRDUBL
-    // line 1029
+    .line 1029
     ldc.i4 120
     stsfld int32 _G::FRK7TH
-    // line 1030
+    .line 1030
     ldc.i4 36
     stsfld int32 _G::FTRADE
-    // line 1031
+    .line 1031
     ldc.i4 5156
     stsfld int32 _G::FTRDSL
-    // line 1032
+    .line 1032
     ldc.i4 2
     stsfld int32 _G::FTRPDK
-    // line 1033
+    .line 1033
     ldc.i4 8
     stsfld int32 _G::FTRPWN
-    // line 1034
+    .line 1034
     ldc.i4 50
     stsfld int32 _G::FWKING
-    // line 1035
+    .line 1035
     ldc.i4 1
     stsfld int32 _G::FWMAJM
-    // line 1036
+    .line 1036
     ldc.i4 200
     stsfld int32 _G::FWMINM
-    // line 1037
+    .line 1037
     ldc.i4 100
     stsfld int32 _G::FWPAWN
-    // line 1038
+    .line 1038
     ldc.i4 2
     stsfld int32 _G::FWROOK
-    // line 1039
+    .line 1039
     ldc.i4 30
     stsfld int32 _G::WINDOW
-    // line 1043
+    .line 1043
     ldc.i4 1 // (true)
     stsfld bool _G::SWEC
-    // line 1044
+    .line 1044
     ldc.i4 1 // (true)
     stsfld bool _G::SWPA
-    // line 1045
+    .line 1045
     ldc.i4 0 // (false)
     stsfld bool _G::SWPS
-    // line 1046
+    .line 1046
     ldc.i4 1 // (true)
     stsfld bool _G::SWRE
-    // line 1047
+    .line 1047
     ldc.i4 0 // (false)
     stsfld bool _G::SWSU
-    // line 1048
+    .line 1048
     ldc.i4 0 // (false)
     stsfld bool _G::SWTR
-    // line 1052
+    .line 1052
     ldc.i4 0
     stsfld int32 _G::GOING
     /* nop */
@@ -18379,7 +18379,7 @@ L_Epilogue:
     ret
 }
 
-// line 1057
+.line 1057
 
 .method static
 void INITAL(valuetype T_RB& A)
@@ -18421,12 +18421,12 @@ void INITAL(valuetype T_RB& A)
     call instance void T_SQ::addValue(int32)
 
 L_Entry:
-    // line 1066
+    .line 1066
     ldloc _F
     ldfld valuetype T_RB* @INITAL::A
     ldc.i4 0
     stfld int32 T_RB::RBTM
-    // line 1067
+    .line 1067
     ldloc _F
     ldfld valuetype T_RB* @INITAL::A
     ldc.i4 1
@@ -18436,17 +18436,17 @@ L_Entry:
     ldc.i4 63
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_RB::RBTS
-    // line 1068
+    .line 1068
     ldloc _F
     ldfld valuetype T_RB* @INITAL::A
     ldc.i4 0
     stfld int32 T_RB::RBTI
-    // line 1069
+    .line 1069
     ldloc _F
     ldfld valuetype T_RB* @INITAL::A
     ldloc $tmpSetLiteral1
     stfld valuetype T_SQ T_RB::RBSQ
-    // line 1070
+    .line 1070
     ldc.i4 7
     stloc $tmpEndValue2
     ldc.i4 0
@@ -18462,7 +18462,7 @@ L_Entry:
     ldloc $tmpIndex3
     stfld int32 @INITAL::INTF
 L_for_loop_1:
-    // line 1072
+    .line 1072
     ldloc _F
     ldfld valuetype T_RB* @INITAL::A
     ldflda valuetype T_array_96 T_RB::RBIRF
@@ -18473,7 +18473,7 @@ L_for_loop_1:
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 0
     stobj int32
-    // line 1073
+    .line 1073
     ldc.i4 5
     stloc $tmpEndValue4
     ldc.i4 2
@@ -18489,7 +18489,7 @@ L_for_loop_1:
     ldloc $tmpIndex5
     stfld int32 @INITAL::INTR
 L_for_loop_3:
-    // line 1074
+    .line 1074
     ldloc _F
     ldfld valuetype T_RB* @INITAL::A
     ldflda valuetype T_array_96 T_RB::RBIRF
@@ -18519,7 +18519,7 @@ L_for_loop_3:
     br L_for_loop_3
 L_for_end_4:
     pop
-    // line 1075
+    .line 1075
     ldloc _F
     ldfld valuetype T_RB* @INITAL::A
     ldflda valuetype T_array_96 T_RB::RBIRF
@@ -18549,7 +18549,7 @@ L_for_end_4:
     br L_for_loop_1
 L_for_end_2:
     pop
-    // line 1077
+    .line 1077
     ldloc _F
     ldfld valuetype T_RB* @INITAL::A
     ldflda valuetype T_array_96 T_RB::RBIRF
@@ -18559,7 +18559,7 @@ L_for_end_2:
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 1
     stobj int32
-    // line 1079
+    .line 1079
     ldloc _F
     ldfld valuetype T_RB* @INITAL::A
     ldflda valuetype T_array_96 T_RB::RBIRF
@@ -18569,7 +18569,7 @@ L_for_end_2:
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 2
     stobj int32
-    // line 1080
+    .line 1080
     ldloc _F
     ldfld valuetype T_RB* @INITAL::A
     ldflda valuetype T_array_96 T_RB::RBIRF
@@ -18579,7 +18579,7 @@ L_for_end_2:
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 3
     stobj int32
-    // line 1081
+    .line 1081
     ldloc _F
     ldfld valuetype T_RB* @INITAL::A
     ldflda valuetype T_array_96 T_RB::RBIRF
@@ -18589,7 +18589,7 @@ L_for_end_2:
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 4
     stobj int32
-    // line 1082
+    .line 1082
     ldloc _F
     ldfld valuetype T_RB* @INITAL::A
     ldflda valuetype T_array_96 T_RB::RBIRF
@@ -18599,7 +18599,7 @@ L_for_end_2:
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 5
     stobj int32
-    // line 1083
+    .line 1083
     ldloc _F
     ldfld valuetype T_RB* @INITAL::A
     ldflda valuetype T_array_96 T_RB::RBIRF
@@ -18609,7 +18609,7 @@ L_for_end_2:
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 3
     stobj int32
-    // line 1084
+    .line 1084
     ldloc _F
     ldfld valuetype T_RB* @INITAL::A
     ldflda valuetype T_array_96 T_RB::RBIRF
@@ -18619,7 +18619,7 @@ L_for_end_2:
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 2
     stobj int32
-    // line 1085
+    .line 1085
     ldloc _F
     ldfld valuetype T_RB* @INITAL::A
     ldflda valuetype T_array_96 T_RB::RBIRF
@@ -18629,7 +18629,7 @@ L_for_end_2:
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 1
     stobj int32
-    // line 1086
+    .line 1086
     ldloc _F
     ldfld valuetype T_RB* @INITAL::A
     ldflda valuetype T_array_96 T_RB::RBIRF
@@ -18639,7 +18639,7 @@ L_for_end_2:
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 7
     stobj int32
-    // line 1087
+    .line 1087
     ldloc _F
     ldfld valuetype T_RB* @INITAL::A
     ldflda valuetype T_array_96 T_RB::RBIRF
@@ -18649,7 +18649,7 @@ L_for_end_2:
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 8
     stobj int32
-    // line 1088
+    .line 1088
     ldloc _F
     ldfld valuetype T_RB* @INITAL::A
     ldflda valuetype T_array_96 T_RB::RBIRF
@@ -18659,7 +18659,7 @@ L_for_end_2:
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 9
     stobj int32
-    // line 1089
+    .line 1089
     ldloc _F
     ldfld valuetype T_RB* @INITAL::A
     ldflda valuetype T_array_96 T_RB::RBIRF
@@ -18669,7 +18669,7 @@ L_for_end_2:
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 10
     stobj int32
-    // line 1090
+    .line 1090
     ldloc _F
     ldfld valuetype T_RB* @INITAL::A
     ldflda valuetype T_array_96 T_RB::RBIRF
@@ -18679,7 +18679,7 @@ L_for_end_2:
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 11
     stobj int32
-    // line 1091
+    .line 1091
     ldloc _F
     ldfld valuetype T_RB* @INITAL::A
     ldflda valuetype T_array_96 T_RB::RBIRF
@@ -18689,7 +18689,7 @@ L_for_end_2:
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 9
     stobj int32
-    // line 1092
+    .line 1092
     ldloc _F
     ldfld valuetype T_RB* @INITAL::A
     ldflda valuetype T_array_96 T_RB::RBIRF
@@ -18699,7 +18699,7 @@ L_for_end_2:
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 8
     stobj int32
-    // line 1093
+    .line 1093
     ldloc _F
     ldfld valuetype T_RB* @INITAL::A
     ldflda valuetype T_array_96 T_RB::RBIRF
@@ -18709,17 +18709,17 @@ L_for_end_2:
     call instance int32& T_array_95::ldadr(int32)
     ldc.i4 7
     stobj int32
-    // line 1094
+    .line 1094
     ldsfld valuetype T_array_99 STRING_55    // " ENTER MOVE OR TYPE GO.       "
     stsfld valuetype T_array_99 _G::MOVMS
-    // line 1095
+    .line 1095
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld valuetype T_array_99 _G::MOVMS
     call string T_array_99::arrayToString(valuetype T_array_99)
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1096
+    .line 1096
     ldsfld valuetype T_RM _G::NULMV
     stsfld valuetype T_RM _G::LSTMV
     /* nop */
@@ -18729,7 +18729,7 @@ L_Epilogue:
     ret
 }
 
-// line 1101
+.line 1101
 
 .method static
 void PAUSER()
@@ -18742,16 +18742,16 @@ void PAUSER()
     stloc _F
 
 L_Entry:
-    // line 1104
+    .line 1104
     ldsfld bool _G::SWPA
     brfalse L_if_end_1
-    // line 1106
+    .line 1106
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " PAUSING "
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1107
+    .line 1107
     ldsflda valuetype [lpcRuntime]LPC.File _G::Input
     call instance void [lpcRuntime]LPC.File::ReadLn()
     /* nop */
@@ -18762,7 +18762,7 @@ L_Epilogue:
     ret
 }
 
-// line 1112
+.line 1112
 
 .method static
 void PRIMOV(valuetype T_RM A)
@@ -18783,7 +18783,7 @@ void PRIMOV(valuetype T_RM A)
     stfld valuetype T_RM @PRIMOV::A
 
 L_Entry:
-    // line 1117
+    .line 1117
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "   FROM   "
@@ -18806,12 +18806,12 @@ L_Entry:
     ldfld int8 T_RM::RMTO
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
-    // line 1118
+    .line 1118
     ldloc _F
     ldfld valuetype T_RM @PRIMOV::A
     call bool NULMVB(valuetype T_RM A)
     brfalse L_else_1
-    // line 1119
+    .line 1119
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr ",   NULL   MCVE"
@@ -18819,12 +18819,12 @@ L_Entry:
     pop
     br L_if_end_2
 L_else_1:
-    // line 1122
+    .line 1122
     ldloc _F
     ldflda valuetype T_RM @PRIMOV::A
     ldfld bool T_RM::RMCA
     brfalse L_else_3
-    // line 1123
+    .line 1123
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr ", CAPTURE "
@@ -18843,82 +18843,82 @@ L_else_1:
     pop
     br L_if_end_4
 L_else_3:
-    // line 1125
+    .line 1125
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr ", SIMPLE,"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
 L_if_end_4:
-    // line 1126
+    .line 1126
     ldloc _F
     ldflda valuetype T_RM @PRIMOV::A
     ldfld bool T_RM::RMAC
     ldc.i4.0
     ceq
     brfalse L_if_end_5
-    // line 1127
+    .line 1127
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " NO"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
 L_if_end_5:
-    // line 1128
+    .line 1128
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " ACS"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1129
+    .line 1129
     ldloc _F
     ldflda valuetype T_RM @PRIMOV::A
     ldfld bool T_RM::RMCH
     brfalse L_if_end_6
-    // line 1130
+    .line 1130
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr ", CHECK"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
 L_if_end_6:
-    // line 1131
+    .line 1131
     ldloc _F
     ldflda valuetype T_RM @PRIMOV::A
     ldfld bool T_RM::RMMT
     brfalse L_if_end_7
-    // line 1132
+    .line 1132
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr ",  MATE"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
 L_if_end_7:
-    // line 1133
+    .line 1133
     ldloc _F
     ldflda valuetype T_RM @PRIMOV::A
     ldfld bool T_RM::RMIL
     brfalse L_if_end_8
-    // line 1134
+    .line 1134
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr ", ILLEGAL"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
 L_if_end_8:
-    // line 1135
+    .line 1135
     ldloc _F
     ldflda valuetype T_RM @PRIMOV::A
     ldfld bool T_RM::RMSU
     brfalse L_if_end_9
-    // line 1136
+    .line 1136
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr ", SEARCHED"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
 L_if_end_9:
-    // line 1137
+    .line 1137
     ldloc _F
     ldflda valuetype T_RM @PRIMOV::A
     ldfld bool T_RM::RMPR
@@ -18926,7 +18926,7 @@ L_if_end_9:
     ldloc $tmpSwitchValue1
     ldc.i4 0 // (false)
     bne.un L_check_case_11
-    // line 1139
+    .line 1139
     ldloc _F
     ldflda valuetype T_RM @PRIMOV::A
     ldfld bool T_RM::RMOO
@@ -18934,12 +18934,12 @@ L_if_end_9:
     ldloc $tmpSwitchValue2
     ldc.i4 0 // (false)
     bne.un L_check_case_13
-    // line 1141
+    .line 1141
     ldloc _F
     ldflda valuetype T_RM @PRIMOV::A
     ldfld bool T_RM::RMEP
     brfalse L_if_end_14
-    // line 1142
+    .line 1142
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr ", ENPASSANT"
@@ -18951,18 +18951,18 @@ L_check_case_13:
     ldloc $tmpSwitchValue2
     ldc.i4 1 // (true)
     bne.un L_case_end_12
-    // line 1145
+    .line 1145
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr ", CASTLE "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1146
+    .line 1146
     ldloc _F
     ldflda valuetype T_RM @PRIMOV::A
     ldfld bool T_RM::RMQS
     brfalse L_else_15
-    // line 1147
+    .line 1147
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "LONG"
@@ -18970,7 +18970,7 @@ L_check_case_13:
     pop
     br L_if_end_16
 L_else_15:
-    // line 1148
+    .line 1148
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "SHORT"
@@ -18984,13 +18984,13 @@ L_check_case_11:
     ldloc $tmpSwitchValue1
     ldc.i4 1 // (true)
     bne.un L_case_end_10
-    // line 1153
+    .line 1153
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr ", PROMOTE TO "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1154
+    .line 1154
     ldloc _F
     ldflda valuetype T_RM @PRIMOV::A
     ldfld int32 T_RM::RMPP
@@ -18998,7 +18998,7 @@ L_check_case_11:
     ldloc $tmpSwitchValue3
     ldc.i4 0
     bne.un L_check_case_18
-    // line 1155
+    .line 1155
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "QUEEN"
@@ -19009,7 +19009,7 @@ L_check_case_18:
     ldloc $tmpSwitchValue3
     ldc.i4 1
     bne.un L_check_case_19
-    // line 1156
+    .line 1156
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "ROOK"
@@ -19020,7 +19020,7 @@ L_check_case_19:
     ldloc $tmpSwitchValue3
     ldc.i4 3
     bne.un L_check_case_20
-    // line 1157
+    .line 1157
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "BISHOP"
@@ -19031,7 +19031,7 @@ L_check_case_20:
     ldloc $tmpSwitchValue3
     ldc.i4 2
     bne.un L_case_end_17
-    // line 1158
+    .line 1158
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "KNIGHT"
@@ -19043,7 +19043,7 @@ L_case_end_10:
     /* nop */
 L_if_end_2:
     /* nop */
-    // line 1164
+    .line 1164
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 46 // '.'
@@ -19055,7 +19055,7 @@ L_Epilogue:
     ret
 }
 
-// line 1168
+.line 1168
 
 .method static
 void PRINTB(valuetype T_array_38 A)
@@ -19079,10 +19079,10 @@ void PRINTB(valuetype T_array_38 A)
     stfld valuetype T_array_38 @PRINTB::A
 
 L_Entry:
-    // line 1175
+    .line 1175
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1176
+    .line 1176
     ldc.i4 0
     stloc $tmpEndValue1
     ldc.i4 7
@@ -19098,7 +19098,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int32 @PRINTB::INTR
 L_for_loop_1:
-    // line 1178
+    .line 1178
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 32 // ' '
@@ -19115,7 +19115,7 @@ L_for_loop_1:
     ldc.i4 32 // ' '
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 1179
+    .line 1179
     ldc.i4 7
     stloc $tmpEndValue3
     ldc.i4 0
@@ -19131,7 +19131,7 @@ L_for_loop_1:
     ldloc $tmpIndex4
     stfld int32 @PRINTB::INTF
 L_for_loop_3:
-    // line 1180
+    .line 1180
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsflda valuetype T_array_13 _G::XTPC
@@ -19169,7 +19169,7 @@ L_for_loop_3:
     br L_for_loop_3
 L_for_end_4:
     pop
-    // line 1182
+    .line 1182
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
     /* nop */
@@ -19191,7 +19191,7 @@ L_for_end_4:
     br L_for_loop_1
 L_for_end_2:
     pop
-    // line 1184
+    .line 1184
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " W RNBQKBNR"
@@ -19203,7 +19203,7 @@ L_Epilogue:
     ret
 }
 
-// line 1208
+.line 1208
 
 .method static
 void PRINAM(valuetype T_RX A)
@@ -19247,10 +19247,10 @@ void PRINAM(valuetype T_RX A)
     call instance void T_set_100::addValue(int32)
 
 L_Entry:
-    // line 1215
+    .line 1215
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1216
+    .line 1216
     ldc.i4 0
     stloc $tmpEndValue1
     ldc.i4 7
@@ -19266,7 +19266,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int32 @PRINAM::INTR
 L_for_loop_1:
-    // line 1218
+    .line 1218
     ldc.i4 0
     stloc $tmpEndValue3
     ldc.i4 7
@@ -19282,7 +19282,7 @@ L_for_loop_1:
     ldloc $tmpIndex4
     stfld int32 @PRINAM::JNTR
 L_for_loop_3:
-    // line 1220
+    .line 1220
     ldc.i4 7
     stloc $tmpEndValue5
     ldc.i4 0
@@ -19298,13 +19298,13 @@ L_for_loop_3:
     ldloc $tmpIndex6
     stfld int32 @PRINAM::INTF
 L_for_loop_5:
-    // line 1222
+    .line 1222
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 32 // ' '
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 1223
+    .line 1223
     ldc.i4 7
     stloc $tmpEndValue7
     ldc.i4 0
@@ -19320,7 +19320,7 @@ L_for_loop_5:
     ldloc $tmpIndex8
     stfld int32 @PRINAM::JNTF
 L_for_loop_7:
-    // line 1225
+    .line 1225
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsflda valuetype T_array_24 _G::XTBC
@@ -19368,7 +19368,7 @@ L_for_loop_7:
     br L_for_loop_7
 L_for_end_8:
     pop
-    // line 1227
+    .line 1227
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 32 // ' '
@@ -19393,7 +19393,7 @@ L_for_end_8:
     br L_for_loop_5
 L_for_end_6:
     pop
-    // line 1229
+    .line 1229
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
     /* nop */
@@ -19415,16 +19415,16 @@ L_for_end_6:
     br L_for_loop_3
 L_for_end_4:
     pop
-    // line 1231
+    .line 1231
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1232
+    .line 1232
     ldloc $tmpSetLiteral12
     ldloc _F
     ldfld int32 @PRINAM::INTR
     call bool _SetContains(valuetype T_set_100 s, int32 val)
     brfalse L_if_end_9
-    // line 1232
+    .line 1232
     call void PAUSER()
 L_if_end_9:
     /* nop */
@@ -19452,7 +19452,7 @@ L_Epilogue:
     ret
 }
 
-// line 1237
+.line 1237
 
 .method static
 void PRISWI(valuetype T_RA A, bool B)
@@ -19473,7 +19473,7 @@ void PRISWI(valuetype T_RA A, bool B)
     stfld bool @PRISWI::B
 
 L_Entry:
-    // line 1240
+    .line 1240
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 32 // ' '
@@ -19495,11 +19495,11 @@ L_Entry:
     ldobj uint8
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 1241
+    .line 1241
     ldloc _F
     ldfld bool @PRISWI::B
     brfalse L_else_1
-    // line 1242
+    .line 1242
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " ON"
@@ -19507,7 +19507,7 @@ L_Entry:
     call instance void [lpcRuntime]LPC.File::WriteLn()
     br L_if_end_2
 L_else_1:
-    // line 1244
+    .line 1244
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " OFF"
@@ -19520,7 +19520,7 @@ L_Epilogue:
     ret
 }
 
-// line 1248
+.line 1248
 
 .method static
 void MBEVAL()
@@ -19533,19 +19533,19 @@ void MBEVAL()
     stloc _F
 
 L_Entry:
-    // line 1254
+    .line 1254
     ldsfld int16 _G::MBLTE
     ldc.i4 0
     ceq
     ldc.i4.0
     ceq
     brfalse L_else_1
-    // line 1255
+    .line 1255
     ldsfld int16 _G::MBLTE
     ldc.i4 0
     cgt
     brfalse L_else_3
-    // line 1256
+    .line 1256
     ldloc _F
     ldsflda valuetype T_array_18 _G::MBPWN
     ldc.i4 0
@@ -19554,7 +19554,7 @@ L_Entry:
     stfld int32 @MBEVAL::INTI
     br L_if_end_4
 L_else_3:
-    // line 1258
+    .line 1258
     ldloc _F
     ldsflda valuetype T_array_18 _G::MBPWN
     ldc.i4 1
@@ -19564,12 +19564,12 @@ L_else_3:
 L_if_end_4:
     br L_if_end_2
 L_else_1:
-    // line 1260
+    .line 1260
     ldloc _F
     ldc.i4 0
     stfld int32 @MBEVAL::INTI
 L_if_end_2:
-    // line 1261
+    .line 1261
     ldsflda valuetype T_array_102 _G::MBVAL
     ldsfld int8 _G::JNTK
     call instance int16& T_array_102::ldadr(int32)
@@ -19625,7 +19625,7 @@ L_Epilogue:
     ret
 }
 
-// line 1267
+.line 1267
 
 .method static
 void MBCAPT(int32 A)
@@ -19642,7 +19642,7 @@ void MBCAPT(int32 A)
     stfld int32 @MBCAPT::A
 
 L_Entry:
-    // line 1272
+    .line 1272
     ldsfld int16 _G::MBTOT
     ldsflda valuetype T_array_17 _G::XTPV
     ldloc _F
@@ -19660,7 +19660,7 @@ L_abs_question_1:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::MBTOT
-    // line 1273
+    .line 1273
     ldsflda valuetype T_array_14 _G::XTPU
     ldloc _F
     ldfld int32 @MBCAPT::A
@@ -19669,7 +19669,7 @@ L_abs_question_1:
     ldc.i4 0
     ceq
     brfalse L_if_end_2
-    // line 1274
+    .line 1274
     ldsflda valuetype T_array_18 _G::MBPWN
     ldsflda valuetype T_array_14 _G::XTPM
     ldloc _F
@@ -19689,7 +19689,7 @@ L_abs_question_1:
     sub
     stobj int32
 L_if_end_2:
-    // line 1276
+    .line 1276
     ldsfld int16 _G::MBLTE
     ldsflda valuetype T_array_17 _G::XTPV
     ldloc _F
@@ -19702,7 +19702,7 @@ L_if_end_2:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::MBLTE
-    // line 1277
+    .line 1277
     call void MBEVAL()
     /* nop */
 
@@ -19710,7 +19710,7 @@ L_Epilogue:
     ret
 }
 
-// line 1281
+.line 1281
 
 .method static
 void MBTPAC(int32 A)
@@ -19727,7 +19727,7 @@ void MBTPAC(int32 A)
     stfld int32 @MBTPAC::A
 
 L_Entry:
-    // line 1287
+    .line 1287
     ldsfld int16 _G::MBTOT
     ldsflda valuetype T_array_17 _G::XTPV
     ldloc _F
@@ -19745,7 +19745,7 @@ L_abs_question_1:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::MBTOT
-    // line 1288
+    .line 1288
     ldsflda valuetype T_array_14 _G::XTPU
     ldloc _F
     ldfld int32 @MBTPAC::A
@@ -19754,7 +19754,7 @@ L_abs_question_1:
     ldc.i4 0
     ceq
     brfalse L_if_end_2
-    // line 1289
+    .line 1289
     ldsflda valuetype T_array_18 _G::MBPWN
     ldsflda valuetype T_array_14 _G::XTPM
     ldloc _F
@@ -19774,7 +19774,7 @@ L_abs_question_1:
     add
     stobj int32
 L_if_end_2:
-    // line 1290
+    .line 1290
     ldsfld int16 _G::MBLTE
     ldsflda valuetype T_array_17 _G::XTPV
     ldloc _F
@@ -19793,7 +19793,7 @@ L_Epilogue:
     ret
 }
 
-// line 1294
+.line 1294
 
 .method static
 void MBPROM(int32 A)
@@ -19810,7 +19810,7 @@ void MBPROM(int32 A)
     stfld int32 @MBPROM::A
 
 L_Entry:
-    // line 1300
+    .line 1300
     ldsfld int16 _G::MBTOT
     ldsflda valuetype T_array_17 _G::XTPV
     ldloc _F
@@ -19842,7 +19842,7 @@ L_abs_question_1:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::MBTOT
-    // line 1302
+    .line 1302
     ldsflda valuetype T_array_18 _G::MBPWN
     ldsflda valuetype T_array_14 _G::XTPM
     ldloc _F
@@ -19861,7 +19861,7 @@ L_abs_question_1:
     ldc.i4 1
     sub
     stobj int32
-    // line 1303
+    .line 1303
     ldsfld int16 _G::MBLTE
     ldsflda valuetype T_array_17 _G::XTPV
     ldloc _F
@@ -19888,7 +19888,7 @@ L_abs_question_1:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::MBLTE
-    // line 1304
+    .line 1304
     call void MBEVAL()
     /* nop */
 
@@ -19896,7 +19896,7 @@ L_Epilogue:
     ret
 }
 
-// line 1308
+.line 1308
 
 .method static
 void MBMORP(int32 A)
@@ -19913,7 +19913,7 @@ void MBMORP(int32 A)
     stfld int32 @MBMORP::A
 
 L_Entry:
-    // line 1315
+    .line 1315
     ldsfld int16 _G::MBTOT
     ldsflda valuetype T_array_17 _G::XTPV
     ldloc _F
@@ -19945,7 +19945,7 @@ L_abs_question_1:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::MBTOT
-    // line 1316
+    .line 1316
     ldsflda valuetype T_array_18 _G::MBPWN
     ldsflda valuetype T_array_14 _G::XTPM
     ldloc _F
@@ -19964,7 +19964,7 @@ L_abs_question_1:
     ldc.i4 1
     add
     stobj int32
-    // line 1317
+    .line 1317
     ldsfld int16 _G::MBLTE
     ldsflda valuetype T_array_17 _G::XTPV
     ldloc _F
@@ -19997,7 +19997,7 @@ L_Epilogue:
     ret
 }
 
-// line 1321
+.line 1321
 
 .method static
 void ADDATK(int8 A)
@@ -20018,7 +20018,7 @@ void ADDATK(int8 A)
     stfld int8 @ADDATK::A
 
 L_Entry:
-    // line 1335
+    .line 1335
     ldloc _F
     ldsflda valuetype T_array_38 _G::MBORD
     ldloc _F
@@ -20026,7 +20026,7 @@ L_Entry:
     call instance int32& T_array_38::ldadr(int32)
     ldobj int32
     stfld int32 @ADDATK::INTP
-    // line 1336
+    .line 1336
     ldloc _F
     ldsflda valuetype T_array_14 _G::XTPM
     ldloc _F
@@ -20034,7 +20034,7 @@ L_Entry:
     call instance int32& T_array_14::ldadr(int32)
     ldobj int32
     stfld int32 @ADDATK::INTM
-    // line 1337
+    .line 1337
     ldsflda valuetype T_array_14 _G::XLPE
     ldloc _F
     ldfld int32 @ADDATK::INTP
@@ -20058,12 +20058,12 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int32 @ADDATK::INTE
 L_for_loop_1:
-    // line 1339
+    .line 1339
     ldloc _F
     ldloc _F
     ldfld int8 @ADDATK::A
     stfld int8 @ADDATK::INTT
-    // line 1340
+    .line 1340
     ldloc _F
     ldsflda valuetype T_array_15 _G::XSPB
     ldloc _F
@@ -20071,7 +20071,7 @@ L_for_loop_1:
     call instance bool& T_array_15::ldadr(int32)
     ldobj bool
     stfld bool @ADDATK::INTB
-    // line 1341
+    .line 1341
     ldloc _F
     ldsflda valuetype T_array_11 _G::XTED
     ldloc _F
@@ -20079,9 +20079,9 @@ L_for_loop_1:
     call instance int8& T_array_11::ldadr(int32)
     ldobj int8
     stfld int8 @ADDATK::INTD
-    // line 1342
+    .line 1342
 L_repeat_3:
-    // line 1343
+    .line 1343
     ldloc _F
     ldsflda valuetype T_array_9 _G::XTLS
     ldsflda valuetype T_array_3 _G::XTSL
@@ -20095,7 +20095,7 @@ L_repeat_3:
     call instance int8& T_array_9::ldadr(int32)
     ldobj int8
     stfld int8 @ADDATK::INTT
-    // line 1344
+    .line 1344
     ldloc _F
     ldfld int8 @ADDATK::INTT
     ldc.i4 0
@@ -20103,7 +20103,7 @@ L_repeat_3:
     ldc.i4.0
     ceq
     brfalse L_else_4
-    // line 1346
+    .line 1346
     ldsflda valuetype T_RX _G::ATKFR
     ldloc _F
     ldfld int8 @ADDATK::A
@@ -20115,7 +20115,7 @@ L_repeat_3:
     ldc.i4 63
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call void SETRS(valuetype T_RS& C, int8 A)
-    // line 1347
+    .line 1347
     ldsflda valuetype T_RX _G::ATKTO
     ldloc _F
     ldfld int8 @ADDATK::INTT
@@ -20123,7 +20123,7 @@ L_repeat_3:
     ldloc _F
     ldfld int8 @ADDATK::A
     call void SETRS(valuetype T_RS& C, int8 A)
-    // line 1348
+    .line 1348
     ldsflda valuetype T_arraytmofrs _G::ALATK
     ldloc _F
     ldfld int32 @ADDATK::INTM
@@ -20135,7 +20135,7 @@ L_repeat_3:
     ldc.i4 63
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call void SETRS(valuetype T_RS& C, int8 A)
-    // line 1349
+    .line 1349
     ldsflda valuetype T_array_38 _G::MBORD
     ldloc _F
     ldfld int8 @ADDATK::INTT
@@ -20146,7 +20146,7 @@ L_repeat_3:
     ldc.i4.0
     ceq
     brfalse L_if_end_6
-    // line 1350
+    .line 1350
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @ADDATK::INTB
@@ -20154,7 +20154,7 @@ L_if_end_6:
     /* nop */
     br L_if_end_5
 L_else_4:
-    // line 1353
+    .line 1353
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @ADDATK::INTB
@@ -20190,7 +20190,7 @@ L_Epilogue:
     ret
 }
 
-// line 1359
+.line 1359
 
 .method static
 void ADDLOC(int8 A, int32 B)
@@ -20211,14 +20211,14 @@ void ADDLOC(int8 A, int32 B)
     stfld int32 @ADDLOC::B
 
 L_Entry:
-    // line 1364
+    .line 1364
     ldsflda valuetype T_array_103 _G::TPLOC
     ldc.i4 12
     call instance valuetype T_RS& T_array_103::ldadr(int32)
     ldloc _F
     ldfld int8 @ADDLOC::A
     call void CLRRS(valuetype T_RS& C, int8 A)
-    // line 1365
+    .line 1365
     ldsflda valuetype T_array_103 _G::TPLOC
     ldloc _F
     ldfld int32 @ADDLOC::B
@@ -20226,7 +20226,7 @@ L_Entry:
     ldloc _F
     ldfld int8 @ADDLOC::A
     call void SETRS(valuetype T_RS& C, int8 A)
-    // line 1366
+    .line 1366
     ldsflda valuetype T_arraytmofrs _G::TMLOC
     ldsflda valuetype T_array_14 _G::XTPM
     ldloc _F
@@ -20237,14 +20237,14 @@ L_Entry:
     ldloc _F
     ldfld int8 @ADDLOC::A
     call void SETRS(valuetype T_RS& C, int8 A)
-    // line 1367
+    .line 1367
     ldsflda valuetype T_arraytkofrs _G::ALLOC
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     ldloc _F
     ldfld int8 @ADDLOC::A
     call void SETRS(valuetype T_RS& C, int8 A)
-    // line 1368
+    .line 1368
     ldsflda valuetype T_array_38 _G::MBORD
     ldloc _F
     ldfld int8 @ADDLOC::A
@@ -20258,7 +20258,7 @@ L_Epilogue:
     ret
 }
 
-// line 1372
+.line 1372
 
 .method static
 void CLSTAT()
@@ -20274,11 +20274,11 @@ void CLSTAT()
 
 
 L_Entry:
-    // line 1377
+    .line 1377
     ldsflda valuetype T_RB _G::BOARD
     ldc.i4 0
     stfld int32 T_RB::RBTM
-    // line 1378
+    .line 1378
     ldsflda valuetype T_RB _G::BOARD
     ldc.i4 1
     neg
@@ -20287,7 +20287,7 @@ L_Entry:
     ldc.i4 63
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_RB::RBTS
-    // line 1379
+    .line 1379
     ldsflda valuetype T_RB _G::BOARD
     ldloc $tmpSetLiteral1
     dup
@@ -20303,7 +20303,7 @@ L_Epilogue:
     ret
 }
 
-// line 1384
+.line 1384
 
 .method static
 void CUTATK(int8 A)
@@ -20320,7 +20320,7 @@ void CUTATK(int8 A)
     stfld int8 @CUTATK::A
 
 L_Entry:
-    // line 1397
+    .line 1397
     ldloc _F
     ldflda valuetype T_RS @CUTATK::INRS
     ldsflda valuetype T_RX _G::ATKTO
@@ -20329,10 +20329,10 @@ L_Entry:
     call instance valuetype T_RS& T_RX::ldadr(int32)
     ldobj valuetype T_RS
     call void CPYRS(valuetype T_RS& C, valuetype T_RS A)
-    // line 1398
+    .line 1398
     br L_while_test_2
 L_while_1:
-    // line 1399
+    .line 1399
     ldsflda valuetype T_array_15 _G::XSPB
     ldsflda valuetype T_array_38 _G::MBORD
     ldloc _F
@@ -20342,7 +20342,7 @@ L_while_1:
     call instance bool& T_array_15::ldadr(int32)
     ldobj bool
     brfalse L_if_end_3
-    // line 1401
+    .line 1401
     ldloc _F
     ldsflda valuetype T_array_44 _G::XLLD
     ldsflda valuetype T_array_3 _G::XTSL
@@ -20359,7 +20359,7 @@ L_while_1:
     call instance int8& T_array_44::ldadr(int32)
     ldobj int8
     stfld int8 @CUTATK::INTD
-    // line 1403
+    .line 1403
     ldloc _F
     ldsflda valuetype T_array_14 _G::XTPM
     ldsflda valuetype T_array_38 _G::MBORD
@@ -20370,7 +20370,7 @@ L_while_1:
     call instance int32& T_array_14::ldadr(int32)
     ldobj int32
     stfld int32 @CUTATK::INTM
-    // line 1404
+    .line 1404
     ldloc _F
     ldsflda valuetype T_array_3 _G::XTSL
     ldloc _F
@@ -20385,7 +20385,7 @@ L_while_1:
     ldc.i4 119
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 @CUTATK::INTL
-    // line 1405
+    .line 1405
     ldloc _F
     ldsflda valuetype T_array_9 _G::XTLS
     ldloc _F
@@ -20393,10 +20393,10 @@ L_while_1:
     call instance int8& T_array_9::ldadr(int32)
     ldobj int8
     stfld int8 @CUTATK::INTT
-    // line 1407
+    .line 1407
     br L_while_test_5
 L_while_4:
-    // line 1409
+    .line 1409
     ldsflda valuetype T_RX _G::ATKFR
     ldloc _F
     ldfld int8 @CUTATK::INTS
@@ -20408,7 +20408,7 @@ L_while_4:
     ldc.i4 63
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call void CLRRS(valuetype T_RS& C, int8 A)
-    // line 1410
+    .line 1410
     ldsflda valuetype T_RX _G::ATKTO
     ldloc _F
     ldfld int8 @CUTATK::INTT
@@ -20416,7 +20416,7 @@ L_while_4:
     ldloc _F
     ldfld int8 @CUTATK::INTS
     call void CLRRS(valuetype T_RS& C, int8 A)
-    // line 1411
+    .line 1411
     ldloc _F
     ldflda valuetype T_RS @CUTATK::IMRS
     ldsflda valuetype T_RX _G::ATKTO
@@ -20430,12 +20430,12 @@ L_while_4:
     call instance valuetype T_RS& T_arraytmofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 1414
+    .line 1414
     ldloc _F
     ldfld valuetype T_RS @CUTATK::IMRS
     call bool NULRS(valuetype T_RS A)
     brfalse L_if_end_6
-    // line 1415
+    .line 1415
     ldsflda valuetype T_arraytmofrs _G::ALATK
     ldloc _F
     ldfld int32 @CUTATK::INTM
@@ -20448,7 +20448,7 @@ L_while_4:
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call void CLRRS(valuetype T_RS& C, int8 A)
 L_if_end_6:
-    // line 1416
+    .line 1416
     ldsflda valuetype T_array_38 _G::MBORD
     ldloc _F
     ldfld int8 @CUTATK::INTT
@@ -20457,7 +20457,7 @@ L_if_end_6:
     ldc.i4 12
     ceq
     brfalse L_else_7
-    // line 1418
+    .line 1418
     ldloc _F
     ldloc _F
     ldfld int8 @CUTATK::INTL
@@ -20469,7 +20469,7 @@ L_if_end_6:
     ldc.i4 119
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 @CUTATK::INTL
-    // line 1419
+    .line 1419
     ldloc _F
     ldsflda valuetype T_array_9 _G::XTLS
     ldloc _F
@@ -20480,7 +20480,7 @@ L_if_end_6:
     /* nop */
     br L_if_end_8
 L_else_7:
-    // line 1422
+    .line 1422
     ldloc _F
     ldc.i4 -1
     dup
@@ -20511,7 +20511,7 @@ L_Epilogue:
     ret
 }
 
-// line 1428
+.line 1428
 
 .method static
 void DELATK(int8 A)
@@ -20528,7 +20528,7 @@ void DELATK(int8 A)
     stfld int8 @DELATK::A
 
 L_Entry:
-    // line 1440
+    .line 1440
     ldloc _F
     ldflda valuetype T_RS @DELATK::INRS
     ldsflda valuetype T_RX _G::ATKFR
@@ -20537,13 +20537,13 @@ L_Entry:
     call instance valuetype T_RS& T_RX::ldadr(int32)
     ldobj valuetype T_RS
     call void CPYRS(valuetype T_RS& C, valuetype T_RS A)
-    // line 1442
+    .line 1442
     ldsflda valuetype T_RX _G::ATKFR
     ldloc _F
     ldfld int8 @DELATK::A
     call instance valuetype T_RS& T_RX::ldadr(int32)
     call void NEWRS(valuetype T_RS& A)
-    // line 1443
+    .line 1443
     ldloc _F
     ldsflda valuetype T_array_14 _G::XTPM
     ldsflda valuetype T_array_38 _G::MBORD
@@ -20554,10 +20554,10 @@ L_Entry:
     call instance int32& T_array_14::ldadr(int32)
     ldobj int32
     stfld int32 @DELATK::INTM
-    // line 1444
+    .line 1444
     br L_while_test_2
 L_while_1:
-    // line 1447
+    .line 1447
     ldsflda valuetype T_RX _G::ATKTO
     ldloc _F
     ldfld int8 @DELATK::INTS
@@ -20565,7 +20565,7 @@ L_while_1:
     ldloc _F
     ldfld int8 @DELATK::A
     call void CLRRS(valuetype T_RS& C, int8 A)
-    // line 1449
+    .line 1449
     ldloc _F
     ldflda valuetype T_RS @DELATK::IMRS
     ldsflda valuetype T_RX _G::ATKTO
@@ -20579,12 +20579,12 @@ L_while_1:
     call instance valuetype T_RS& T_arraytmofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 1451
+    .line 1451
     ldloc _F
     ldfld valuetype T_RS @DELATK::IMRS
     call bool NULRS(valuetype T_RS A)
     brfalse L_if_end_3
-    // line 1452
+    .line 1452
     ldsflda valuetype T_arraytmofrs _G::ALATK
     ldloc _F
     ldfld int32 @DELATK::INTM
@@ -20593,7 +20593,7 @@ L_while_1:
     ldfld int8 @DELATK::INTS
     call void CLRRS(valuetype T_RS& C, int8 A)
 L_if_end_3:
-    // line 1453
+    .line 1453
     ldsflda valuetype T_array_103 _G::TPLOC
     ldsflda valuetype T_array_38 _G::MBORD
     ldloc _F
@@ -20604,7 +20604,7 @@ L_if_end_3:
     ldloc _F
     ldfld int8 @DELATK::A
     call void CLRRS(valuetype T_RS& C, int8 A)
-    // line 1454
+    .line 1454
     ldsflda valuetype T_arraytmofrs _G::TMLOC
     ldloc _F
     ldfld int32 @DELATK::INTM
@@ -20612,21 +20612,21 @@ L_if_end_3:
     ldloc _F
     ldfld int8 @DELATK::A
     call void CLRRS(valuetype T_RS& C, int8 A)
-    // line 1455
+    .line 1455
     ldsflda valuetype T_arraytkofrs _G::ALLOC
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     ldloc _F
     ldfld int8 @DELATK::A
     call void CLRRS(valuetype T_RS& C, int8 A)
-    // line 1456
+    .line 1456
     ldsflda valuetype T_array_103 _G::TPLOC
     ldc.i4 12
     call instance valuetype T_RS& T_array_103::ldadr(int32)
     ldloc _F
     ldfld int8 @DELATK::A
     call void SETRS(valuetype T_RS& C, int8 A)
-    // line 1457
+    .line 1457
     ldsflda valuetype T_array_38 _G::MBORD
     ldloc _F
     ldfld int8 @DELATK::A
@@ -20647,7 +20647,7 @@ L_Epilogue:
     ret
 }
 
-// line 1462
+.line 1462
 
 .method static
 void PRPATK(int8 A)
@@ -20664,7 +20664,7 @@ void PRPATK(int8 A)
     stfld int8 @PRPATK::A
 
 L_Entry:
-    // line 1475
+    .line 1475
     ldloc _F
     ldflda valuetype T_RS @PRPATK::INRS
     ldsflda valuetype T_RX _G::ATKTO
@@ -20673,10 +20673,10 @@ L_Entry:
     call instance valuetype T_RS& T_RX::ldadr(int32)
     ldobj valuetype T_RS
     call void CPYRS(valuetype T_RS& C, valuetype T_RS A)
-    // line 1476
+    .line 1476
     br L_while_test_2
 L_while_1:
-    // line 1477
+    .line 1477
     ldsflda valuetype T_array_15 _G::XSPB
     ldsflda valuetype T_array_38 _G::MBORD
     ldloc _F
@@ -20686,7 +20686,7 @@ L_while_1:
     call instance bool& T_array_15::ldadr(int32)
     ldobj bool
     brfalse L_if_end_3
-    // line 1479
+    .line 1479
     ldloc _F
     ldsflda valuetype T_array_44 _G::XLLD
     ldsflda valuetype T_array_3 _G::XTSL
@@ -20703,7 +20703,7 @@ L_while_1:
     call instance int8& T_array_44::ldadr(int32)
     ldobj int8
     stfld int8 @PRPATK::INTD
-    // line 1481
+    .line 1481
     ldloc _F
     ldsflda valuetype T_array_14 _G::XTPM
     ldsflda valuetype T_array_38 _G::MBORD
@@ -20714,7 +20714,7 @@ L_while_1:
     call instance int32& T_array_14::ldadr(int32)
     ldobj int32
     stfld int32 @PRPATK::INTM
-    // line 1482
+    .line 1482
     ldloc _F
     ldsflda valuetype T_array_3 _G::XTSL
     ldloc _F
@@ -20729,7 +20729,7 @@ L_while_1:
     ldc.i4 119
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 @PRPATK::INTL
-    // line 1483
+    .line 1483
     ldloc _F
     ldsflda valuetype T_array_9 _G::XTLS
     ldloc _F
@@ -20737,10 +20737,10 @@ L_while_1:
     call instance int8& T_array_9::ldadr(int32)
     ldobj int8
     stfld int8 @PRPATK::INTT
-    // line 1485
+    .line 1485
     br L_while_test_5
 L_while_4:
-    // line 1487
+    .line 1487
     ldsflda valuetype T_RX _G::ATKFR
     ldloc _F
     ldfld int8 @PRPATK::INTS
@@ -20752,7 +20752,7 @@ L_while_4:
     ldc.i4 63
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call void SETRS(valuetype T_RS& C, int8 A)
-    // line 1488
+    .line 1488
     ldsflda valuetype T_RX _G::ATKTO
     ldloc _F
     ldfld int8 @PRPATK::INTT
@@ -20760,7 +20760,7 @@ L_while_4:
     ldloc _F
     ldfld int8 @PRPATK::INTS
     call void SETRS(valuetype T_RS& C, int8 A)
-    // line 1489
+    .line 1489
     ldsflda valuetype T_arraytmofrs _G::ALATK
     ldloc _F
     ldfld int32 @PRPATK::INTM
@@ -20772,7 +20772,7 @@ L_while_4:
     ldc.i4 63
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call void SETRS(valuetype T_RS& C, int8 A)
-    // line 1490
+    .line 1490
     ldsflda valuetype T_array_38 _G::MBORD
     ldloc _F
     ldfld int8 @PRPATK::INTT
@@ -20781,7 +20781,7 @@ L_while_4:
     ldc.i4 12
     ceq
     brfalse L_else_6
-    // line 1492
+    .line 1492
     ldloc _F
     ldloc _F
     ldfld int8 @PRPATK::INTL
@@ -20793,7 +20793,7 @@ L_while_4:
     ldc.i4 119
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 @PRPATK::INTL
-    // line 1493
+    .line 1493
     ldloc _F
     ldsflda valuetype T_array_9 _G::XTLS
     ldloc _F
@@ -20804,7 +20804,7 @@ L_while_4:
     /* nop */
     br L_if_end_7
 L_else_6:
-    // line 1496
+    .line 1496
     ldloc _F
     ldc.i4 1
     neg
@@ -20838,7 +20838,7 @@ L_Epilogue:
     ret
 }
 
-// line 1502
+.line 1502
 
 .method static
 void GAINIT(valuetype T_RM A)
@@ -20855,7 +20855,7 @@ void GAINIT(valuetype T_RM A)
     stfld valuetype T_RM @GAINIT::A
 
 L_Entry:
-    // line 1508
+    .line 1508
     ldloc _F
     ldflda valuetype T_RM @GAINIT::A
     ldfld int8 T_RM::RMFR
@@ -20866,22 +20866,22 @@ L_Entry:
     call instance int32& T_array_38::ldadr(int32)
     ldobj int32
     call void ADDLOC(int8 A, int32 B)
-    // line 1509
+    .line 1509
     ldloc _F
     ldflda valuetype T_RM @GAINIT::A
     ldfld int8 T_RM::RMFR
     call void ADDATK(int8 A)
-    // line 1510
+    .line 1510
     ldloc _F
     ldflda valuetype T_RM @GAINIT::A
     ldfld int8 T_RM::RMFR
     call void CUTATK(int8 A)
-    // line 1511
+    .line 1511
     ldloc _F
     ldflda valuetype T_RM @GAINIT::A
     ldfld int8 T_RM::RMTO
     call void DELATK(int8 A)
-    // line 1513
+    .line 1513
     ldloc _F
     ldflda valuetype T_RM @GAINIT::A
     ldfld int8 T_RM::RMTO
@@ -20889,12 +20889,12 @@ L_Entry:
     ldflda valuetype T_RM @GAINIT::A
     ldfld int32 T_RM::RMCP
     call void ADDLOC(int8 A, int32 B)
-    // line 1514
+    .line 1514
     ldloc _F
     ldflda valuetype T_RM @GAINIT::A
     ldfld int8 T_RM::RMTO
     call void ADDATK(int8 A)
-    // line 1515
+    .line 1515
     ldsflda valuetype T_array_38 _G::MBORD
     ldloc _F
     ldflda valuetype T_RM @GAINIT::A
@@ -20909,7 +20909,7 @@ L_Epilogue:
     ret
 }
 
-// line 1520
+.line 1520
 
 .method static
 void LOSEIT(valuetype T_RM A)
@@ -20926,7 +20926,7 @@ void LOSEIT(valuetype T_RM A)
     stfld valuetype T_RM @LOSEIT::A
 
 L_Entry:
-    // line 1526
+    .line 1526
     ldsflda valuetype T_array_38 _G::MBORD
     ldloc _F
     ldflda valuetype T_RM @LOSEIT::A
@@ -20934,12 +20934,12 @@ L_Entry:
     call instance int32& T_array_38::ldadr(int32)
     ldobj int32
     call void MBCAPT(int32 A)
-    // line 1527
+    .line 1527
     ldloc _F
     ldflda valuetype T_RM @LOSEIT::A
     ldfld int8 T_RM::RMTO
     call void DELATK(int8 A)
-    // line 1529
+    .line 1529
     ldloc _F
     ldflda valuetype T_RM @LOSEIT::A
     ldfld int8 T_RM::RMTO
@@ -20950,17 +20950,17 @@ L_Entry:
     call instance int32& T_array_38::ldadr(int32)
     ldobj int32
     call void ADDLOC(int8 A, int32 B)
-    // line 1531
+    .line 1531
     ldloc _F
     ldflda valuetype T_RM @LOSEIT::A
     ldfld int8 T_RM::RMFR
     call void DELATK(int8 A)
-    // line 1533
+    .line 1533
     ldloc _F
     ldflda valuetype T_RM @LOSEIT::A
     ldfld int8 T_RM::RMFR
     call void PRPATK(int8 A)
-    // line 1535
+    .line 1535
     ldloc _F
     ldflda valuetype T_RM @LOSEIT::A
     ldfld int8 T_RM::RMTO
@@ -20972,7 +20972,7 @@ L_Epilogue:
     ret
 }
 
-// line 1540
+.line 1540
 
 .method static
 void MOVEIT(valuetype T_RM A)
@@ -20989,7 +20989,7 @@ void MOVEIT(valuetype T_RM A)
     stfld valuetype T_RM @MOVEIT::A
 
 L_Entry:
-    // line 1546
+    .line 1546
     ldloc _F
     ldflda valuetype T_RM @MOVEIT::A
     ldfld int8 T_RM::RMTO
@@ -21000,22 +21000,22 @@ L_Entry:
     call instance int32& T_array_38::ldadr(int32)
     ldobj int32
     call void ADDLOC(int8 A, int32 B)
-    // line 1547
+    .line 1547
     ldloc _F
     ldflda valuetype T_RM @MOVEIT::A
     ldfld int8 T_RM::RMTO
     call void CUTATK(int8 A)
-    // line 1549
+    .line 1549
     ldloc _F
     ldflda valuetype T_RM @MOVEIT::A
     ldfld int8 T_RM::RMFR
     call void DELATK(int8 A)
-    // line 1551
+    .line 1551
     ldloc _F
     ldflda valuetype T_RM @MOVEIT::A
     ldfld int8 T_RM::RMFR
     call void PRPATK(int8 A)
-    // line 1553
+    .line 1553
     ldloc _F
     ldflda valuetype T_RM @MOVEIT::A
     ldfld int8 T_RM::RMTO
@@ -21027,7 +21027,7 @@ L_Epilogue:
     ret
 }
 
-// line 1558
+.line 1558
 
 .method static
 void RTRKIT(valuetype T_RM A)
@@ -21044,7 +21044,7 @@ void RTRKIT(valuetype T_RM A)
     stfld valuetype T_RM @RTRKIT::A
 
 L_Entry:
-    // line 1564
+    .line 1564
     ldloc _F
     ldflda valuetype T_RM @RTRKIT::A
     ldfld int8 T_RM::RMFR
@@ -21055,22 +21055,22 @@ L_Entry:
     call instance int32& T_array_38::ldadr(int32)
     ldobj int32
     call void ADDLOC(int8 A, int32 B)
-    // line 1566
+    .line 1566
     ldloc _F
     ldflda valuetype T_RM @RTRKIT::A
     ldfld int8 T_RM::RMFR
     call void CUTATK(int8 A)
-    // line 1568
+    .line 1568
     ldloc _F
     ldflda valuetype T_RM @RTRKIT::A
     ldfld int8 T_RM::RMTO
     call void DELATK(int8 A)
-    // line 1570
+    .line 1570
     ldloc _F
     ldflda valuetype T_RM @RTRKIT::A
     ldfld int8 T_RM::RMTO
     call void PRPATK(int8 A)
-    // line 1572
+    .line 1572
     ldloc _F
     ldflda valuetype T_RM @RTRKIT::A
     ldfld int8 T_RM::RMFR
@@ -21082,7 +21082,7 @@ L_Epilogue:
     ret
 }
 
-// line 1578
+.line 1578
 
 .method static
 void PAWNIT(valuetype T_RM A)
@@ -21099,7 +21099,7 @@ void PAWNIT(valuetype T_RM A)
     stfld valuetype T_RM @PAWNIT::A
 
 L_Entry:
-    // line 1584
+    .line 1584
     ldsflda valuetype T_array_38 _G::MBORD
     ldloc _F
     ldflda valuetype T_RM @PAWNIT::A
@@ -21107,7 +21107,7 @@ L_Entry:
     call instance int32& T_array_38::ldadr(int32)
     ldobj int32
     call void MBMORP(int32 A)
-    // line 1585
+    .line 1585
     ldsflda valuetype T_array_38 _G::MBORD
     ldloc _F
     ldflda valuetype T_RM @PAWNIT::A
@@ -21135,7 +21135,7 @@ L_Epilogue:
     ret
 }
 
-// line 1590
+.line 1590
 
 .method static
 void PROACA(int8 A)
@@ -21152,14 +21152,14 @@ void PROACA(int8 A)
     stfld int8 @PROACA::A
 
 L_Entry:
-    // line 1598
+    .line 1598
     ldsflda valuetype T_arraytkofrs _G::CSTAT
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     ldloc _F
     ldfld int8 @PROACA::A
     call void CLRRS(valuetype T_RS& C, int8 A)
-    // line 1599
+    .line 1599
     ldloc _F
     ldflda valuetype T_RS @PROACA::INRS
     ldsflda valuetype T_arraytkofrs _G::CSTAT
@@ -21175,7 +21175,7 @@ L_Entry:
     call instance valuetype T_RS& T_arraytrofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 1601
+    .line 1601
     ldloc _F
     ldfld valuetype T_RS @PROACA::INRS
     ldsflda valuetype T_array_37 _G::XTRFS
@@ -21192,7 +21192,7 @@ L_Entry:
     ldc.i4.0
     ceq
     brfalse L_if_end_1
-    // line 1603
+    .line 1603
     ldsflda valuetype T_arraytkofrs _G::CSTAT
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
@@ -21210,7 +21210,7 @@ L_Entry:
     ldobj valuetype T_RS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
 L_if_end_1:
-    // line 1606
+    .line 1606
     ldloc _F
     ldflda valuetype T_RS @PROACA::IMRS
     ldloc _F
@@ -21220,7 +21220,7 @@ L_if_end_1:
     call instance valuetype T_RS& T_arraytrofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 1607
+    .line 1607
     ldloc _F
     ldflda valuetype T_RS @PROACA::INRS
     ldloc _F
@@ -21230,7 +21230,7 @@ L_if_end_1:
     call instance valuetype T_RS& T_arraytrofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 1608
+    .line 1608
     ldloc _F
     ldflda valuetype T_RS @PROACA::INRS
     ldloc _F
@@ -21238,12 +21238,12 @@ L_if_end_1:
     ldloc _F
     ldfld valuetype T_RS @PROACA::IMRS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 1609
+    .line 1609
     ldloc _F
     ldfld valuetype T_RS @PROACA::INRS
     call bool NULRS(valuetype T_RS A)
     brfalse L_if_end_2
-    // line 1610
+    .line 1610
     ldsflda valuetype T_arraytkofrs _G::CSTAT
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
@@ -21267,7 +21267,7 @@ L_Epilogue:
     ret
 }
 
-// line 1614
+.line 1614
 
 .method static
 void PROACS(valuetype T_RM A)
@@ -21284,7 +21284,7 @@ void PROACS(valuetype T_RM A)
     stfld valuetype T_RM @PROACS::A
 
 L_Entry:
-    // line 1621
+    .line 1621
     ldsflda valuetype T_arraytkofrs _G::CSTAT
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
@@ -21294,13 +21294,13 @@ L_Entry:
     ldfld int8 T_RM::RMFR
     call bool INRSTB(valuetype T_RS A, int8 B)
     brfalse L_if_end_1
-    // line 1622
+    .line 1622
     ldloc _F
     ldflda valuetype T_RM @PROACS::A
     ldfld int8 T_RM::RMFR
     call void PROACA(int8 A)
 L_if_end_1:
-    // line 1623
+    .line 1623
     ldsflda valuetype T_arraytkofrs _G::CSTAT
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
@@ -21310,7 +21310,7 @@ L_if_end_1:
     ldfld int8 T_RM::RMTO
     call bool INRSTB(valuetype T_RS A, int8 B)
     brfalse L_if_end_2
-    // line 1624
+    .line 1624
     ldloc _F
     ldflda valuetype T_RM @PROACS::A
     ldfld int8 T_RM::RMTO
@@ -21323,7 +21323,7 @@ L_Epilogue:
     ret
 }
 
-// line 1629
+.line 1629
 
 .method static
 void PROMOT(valuetype T_RM A)
@@ -21340,7 +21340,7 @@ void PROMOT(valuetype T_RM A)
     stfld valuetype T_RM @PROMOT::A
 
 L_Entry:
-    // line 1635
+    .line 1635
     ldsflda valuetype T_array_21 _G::XTGMP
     ldloc _F
     ldflda valuetype T_RM @PROMOT::A
@@ -21350,7 +21350,7 @@ L_Entry:
     call instance int32& T_array_18::ldadr(int32)
     ldobj int32
     call void MBPROM(int32 A)
-    // line 1636
+    .line 1636
     ldsflda valuetype T_array_38 _G::MBORD
     ldloc _F
     ldflda valuetype T_RM @PROMOT::A
@@ -21372,7 +21372,7 @@ L_Epilogue:
     ret
 }
 
-// line 1641
+.line 1641
 
 .method static
 void CREATE()
@@ -21401,7 +21401,7 @@ void CREATE()
     stloc _F
 
 L_Entry:
-    // line 1653
+    .line 1653
     ldc.i4 1
     ldc.i4 1
     add
@@ -21410,33 +21410,33 @@ L_Entry:
     ldc.i4 500
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::JNTW
-    // line 1655
+    .line 1655
     ldc.i4 0
     dup
     ldc.i4 0
     ldc.i4 16
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int8 _G::JNTK
-    // line 1656
+    .line 1656
     ldsflda valuetype T_RB _G::BOARD
     ldfld int32 T_RB::RBTM
     stsfld int32 _G::JNTM
-    // line 1658
+    .line 1658
     ldc.i4 0
     stsfld int32 _G::NODES
-    // line 1660
+    .line 1660
     ldsflda valuetype T_array_102 _G::LINDX
     ldsfld int8 _G::JNTK
     call instance int16& T_array_102::ldadr(int32)
     ldsfld int16 _G::JNTW
     stobj int16
-    // line 1661
+    .line 1661
     ldsflda valuetype T_array_105 _G::SRCHM
     ldsfld int8 _G::JNTK
     call instance int32& T_array_105::ldadr(int32)
     ldc.i4 0
     stobj int32
-    // line 1663
+    .line 1663
     ldc.i4 63
     stloc $tmpEndValue1
     ldc.i4 0
@@ -21452,19 +21452,19 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int8 @CREATE::INTS
 L_for_loop_1:
-    // line 1665
+    .line 1665
     ldsflda valuetype T_RX _G::ATKFR
     ldloc _F
     ldfld int8 @CREATE::INTS
     call instance valuetype T_RS& T_RX::ldadr(int32)
     call void NEWRS(valuetype T_RS& A)
-    // line 1666
+    .line 1666
     ldsflda valuetype T_RX _G::ATKTO
     ldloc _F
     ldfld int8 @CREATE::INTS
     call instance valuetype T_RS& T_RX::ldadr(int32)
     call void NEWRS(valuetype T_RS& A)
-    // line 1667
+    .line 1667
     ldsflda valuetype T_array_38 _G::MBORD
     ldloc _F
     ldfld int8 @CREATE::INTS
@@ -21490,12 +21490,12 @@ L_for_loop_1:
     br L_for_loop_1
 L_for_end_2:
     pop
-    // line 1670
+    .line 1670
     ldsflda valuetype T_arraytkofrs _G::ALLOC
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     call void NEWRS(valuetype T_RS& A)
-    // line 1672
+    .line 1672
     ldc.i4 12
     stloc $tmpEndValue4
     ldc.i4 0
@@ -21511,7 +21511,7 @@ L_for_end_2:
     ldloc $tmpIndex5
     stfld int32 @CREATE::INTP
 L_for_loop_3:
-    // line 1673
+    .line 1673
     ldsflda valuetype T_array_103 _G::TPLOC
     ldloc _F
     ldfld int32 @CREATE::INTP
@@ -21535,7 +21535,7 @@ L_for_loop_3:
     br L_for_loop_3
 L_for_end_4:
     pop
-    // line 1675
+    .line 1675
     ldc.i4 2
     stloc $tmpEndValue7
     ldc.i4 0
@@ -21551,13 +21551,13 @@ L_for_end_4:
     ldloc $tmpIndex8
     stfld int32 @CREATE::INTM
 L_for_loop_5:
-    // line 1677
+    .line 1677
     ldsflda valuetype T_arraytmofrs _G::TMLOC
     ldloc _F
     ldfld int32 @CREATE::INTM
     call instance valuetype T_RS& T_arraytmofrs::ldadr(int32)
     call void NEWRS(valuetype T_RS& A)
-    // line 1678
+    .line 1678
     ldsflda valuetype T_arraytmofrs _G::ALATK
     ldloc _F
     ldfld int32 @CREATE::INTM
@@ -21582,33 +21582,33 @@ L_for_loop_5:
     br L_for_loop_5
 L_for_end_6:
     pop
-    // line 1681
+    .line 1681
     ldc.i4 0
     dup
     ldc.i4 -32767
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::MBTOT
-    // line 1682
+    .line 1682
     ldsflda valuetype T_array_18 _G::MBPWN
     ldc.i4 0
     call instance int32& T_array_18::ldadr(int32)
     ldc.i4 0
     stobj int32
-    // line 1683
+    .line 1683
     ldsflda valuetype T_array_18 _G::MBPWN
     ldc.i4 1
     call instance int32& T_array_18::ldadr(int32)
     ldc.i4 0
     stobj int32
-    // line 1684
+    .line 1684
     ldc.i4 0
     dup
     ldc.i4 -32767
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::MBLTE
-    // line 1685
+    .line 1685
     ldc.i4 63
     stloc $tmpEndValue10
     ldc.i4 0
@@ -21624,7 +21624,7 @@ L_for_end_6:
     ldloc $tmpIndex11
     stfld int8 @CREATE::INTS
 L_for_loop_7:
-    // line 1686
+    .line 1686
     ldsflda valuetype T_RB _G::BOARD
     ldflda valuetype T_array_38 T_RB::RBIS
     ldloc _F
@@ -21636,7 +21636,7 @@ L_for_loop_7:
     ldc.i4.0
     ceq
     brfalse L_else_9
-    // line 1688
+    .line 1688
     ldloc _F
     ldfld int8 @CREATE::INTS
     ldsflda valuetype T_RB _G::BOARD
@@ -21646,7 +21646,7 @@ L_for_loop_7:
     call instance int32& T_array_38::ldadr(int32)
     ldobj int32
     call void ADDLOC(int8 A, int32 B)
-    // line 1689
+    .line 1689
     ldsflda valuetype T_RB _G::BOARD
     ldflda valuetype T_array_38 T_RB::RBIS
     ldloc _F
@@ -21657,7 +21657,7 @@ L_for_loop_7:
     /* nop */
     br L_if_end_10
 L_else_9:
-    // line 1692
+    .line 1692
     ldsflda valuetype T_array_103 _G::TPLOC
     ldc.i4 12
     call instance valuetype T_RS& T_array_103::ldadr(int32)
@@ -21683,9 +21683,9 @@ L_if_end_10:
     br L_for_loop_7
 L_for_end_8:
     pop
-    // line 1694
+    .line 1694
     call void MBEVAL()
-    // line 1696
+    .line 1696
     ldloc _F
     ldflda valuetype T_RS @CREATE::INRS
     ldsflda valuetype T_arraytkofrs _G::ALLOC
@@ -21693,10 +21693,10 @@ L_for_end_8:
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void CPYRS(valuetype T_RS& C, valuetype T_RS A)
-    // line 1698
+    .line 1698
     br L_while_test_12
 L_while_11:
-    // line 1699
+    .line 1699
     ldloc _F
     ldfld int8 @CREATE::INTS
     call void ADDATK(int8 A)
@@ -21707,12 +21707,12 @@ L_while_test_12:
     ldflda int8 @CREATE::INTS
     call bool NXTTS(valuetype T_RS& A, int8& B)
     brtrue L_while_11
-    // line 1701
+    .line 1701
     ldsflda valuetype T_arraytkofrs _G::CSTAT
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     call void NEWRS(valuetype T_RS& A)
-    // line 1702
+    .line 1702
     ldc.i4 3
     stloc $tmpEndValue13
     ldc.i4 0
@@ -21728,14 +21728,14 @@ L_while_test_12:
     ldloc $tmpIndex14
     stfld int32 @CREATE::INTQ
 L_for_loop_13:
-    // line 1703
+    .line 1703
     ldsflda valuetype T_RB _G::BOARD
     ldfld valuetype T_SQ T_RB::RBSQ
     ldloc _F
     ldfld int32 @CREATE::INTQ
     call bool _SetContains(valuetype T_SQ s, int32 val)
     brfalse L_if_end_15
-    // line 1704
+    .line 1704
     ldsflda valuetype T_arraytkofrs _G::CSTAT
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
@@ -21768,12 +21768,12 @@ L_if_end_15:
     br L_for_loop_13
 L_for_end_14:
     pop
-    // line 1706
+    .line 1706
     ldsflda valuetype T_arraytkofrs _G::ENPAS
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     call void NEWRS(valuetype T_RS& A)
-    // line 1707
+    .line 1707
     ldsflda valuetype T_RB _G::BOARD
     ldfld int8 T_RB::RBTS
     ldc.i4 0
@@ -21781,7 +21781,7 @@ L_for_end_14:
     ldc.i4.0
     ceq
     brfalse L_if_end_16
-    // line 1708
+    .line 1708
     ldsflda valuetype T_arraytkofrs _G::ENPAS
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
@@ -21793,7 +21793,7 @@ L_for_end_14:
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call void SETRS(valuetype T_RS& C, int8 A)
 L_if_end_16:
-    // line 1710
+    .line 1710
     ldsflda valuetype T_arraytkofrs _G::GENPN
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
@@ -21807,7 +21807,7 @@ L_if_end_16:
     call instance valuetype T_RS& T_array_103::ldadr(int32)
     ldobj valuetype T_RS
     call void CPYRS(valuetype T_RS& C, valuetype T_RS A)
-    // line 1711
+    .line 1711
     ldsflda valuetype T_arraytkofrs _G::GENTO
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
@@ -21816,7 +21816,7 @@ L_if_end_16:
     call instance valuetype T_RS& T_arraytmofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void NOTRS(valuetype T_RS& C, valuetype T_RS A)
-    // line 1712
+    .line 1712
     ldloc _F
     ldflda valuetype T_RS @CREATE::INRS
     ldsflda valuetype T_arraytkofrs _G::GENPN
@@ -21824,7 +21824,7 @@ L_if_end_16:
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void NOTRS(valuetype T_RS& C, valuetype T_RS A)
-    // line 1713
+    .line 1713
     ldsflda valuetype T_arraytkofrs _G::GENFR
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
@@ -21842,7 +21842,7 @@ L_Epilogue:
     ret
 }
 
-// line 1718
+.line 1718
 
 .method static
 void DNDATE(valuetype T_RM A)
@@ -21861,7 +21861,7 @@ void DNDATE(valuetype T_RM A)
     stfld valuetype T_RM @DNDATE::A
 
 L_Entry:
-    // line 1732
+    .line 1732
     ldloc _F
     ldflda valuetype T_RM @DNDATE::A
     ldfld bool T_RM::RMCA
@@ -21881,7 +21881,7 @@ L_Entry:
     ldloc $tmpSwitchValue1
     ldc.i4 0
     bne.un L_check_case_2
-    // line 1734
+    .line 1734
     ldloc _F
     ldfld valuetype T_RM @DNDATE::A
     call void RTRKIT(valuetype T_RM A)
@@ -21890,11 +21890,11 @@ L_check_case_2:
     ldloc $tmpSwitchValue1
     ldc.i4 1
     bne.un L_check_case_3
-    // line 1737
+    .line 1737
     ldloc _F
     ldfld valuetype T_RM @DNDATE::A
     call void PAWNIT(valuetype T_RM A)
-    // line 1738
+    .line 1738
     ldloc _F
     ldfld valuetype T_RM @DNDATE::A
     call void RTRKIT(valuetype T_RM A)
@@ -21904,28 +21904,28 @@ L_check_case_3:
     ldloc $tmpSwitchValue1
     ldc.i4 2
     bne.un L_check_case_4
-    // line 1741
+    .line 1741
     ldloc _F
     ldflda valuetype T_RM @DNDATE::A
     ldfld bool T_RM::RMOO
     brfalse L_else_5
-    // line 1743
+    .line 1743
     ldloc _F
     ldflda valuetype T_RM @DNDATE::A
     ldfld bool T_RM::RMQS
     brfalse L_else_7
-    // line 1744
+    .line 1744
     ldloc _F
     ldc.i4 0
     stfld int32 @DNDATE::INTF
     br L_if_end_8
 L_else_7:
-    // line 1746
+    .line 1746
     ldloc _F
     ldc.i4 7
     stfld int32 @DNDATE::INTF
 L_if_end_8:
-    // line 1747
+    .line 1747
     ldloc _F
     ldsflda valuetype T_array_38 _G::XTSR
     ldloc _F
@@ -21934,7 +21934,7 @@ L_if_end_8:
     call instance int32& T_array_38::ldadr(int32)
     ldobj int32
     stfld int32 @DNDATE::INTR
-    // line 1748
+    .line 1748
     ldloc _F
     ldsflda valuetype T_array_37 _G::XTRFS
     ldloc _F
@@ -21945,7 +21945,7 @@ L_if_end_8:
     call instance int8& T_array_36::ldadr(int32)
     ldobj int8
     stfld int8 @DNDATE::RKFR
-    // line 1749
+    .line 1749
     ldloc _F
     ldloc _F
     ldflda valuetype T_RM @DNDATE::A
@@ -21961,7 +21961,7 @@ L_if_end_8:
     ldc.i4 63
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 @DNDATE::RKTO
-    // line 1750
+    .line 1750
     ldloc _F
     ldfld int8 @DNDATE::RKFR
     ldsflda valuetype T_array_38 _G::MBORD
@@ -21970,26 +21970,26 @@ L_if_end_8:
     call instance int32& T_array_38::ldadr(int32)
     ldobj int32
     call void ADDLOC(int8 A, int32 B)
-    // line 1751
+    .line 1751
     ldloc _F
     ldfld int8 @DNDATE::RKTO
     call void DELATK(int8 A)
-    // line 1752
+    .line 1752
     ldloc _F
     ldfld int8 @DNDATE::RKTO
     call void PRPATK(int8 A)
-    // line 1753
+    .line 1753
     ldloc _F
     ldfld int8 @DNDATE::RKFR
     call void ADDATK(int8 A)
-    // line 1754
+    .line 1754
     ldloc _F
     ldfld valuetype T_RM @DNDATE::A
     call void RTRKIT(valuetype T_RM A)
     /* nop */
     br L_if_end_6
 L_else_5:
-    // line 1757
+    .line 1757
     ldloc _F
     ldfld valuetype T_RM @DNDATE::A
     call void RTRKIT(valuetype T_RM A)
@@ -22005,12 +22005,12 @@ L_check_case_9:
     ldloc $tmpSwitchValue1
     ldc.i4 4
     bne.un L_check_case_10
-    // line 1760
+    .line 1760
     ldloc _F
     ldflda valuetype T_RM @DNDATE::A
     ldfld bool T_RM::RMEP
     brfalse L_else_11
-    // line 1762
+    .line 1762
     ldloc _F
     ldsflda valuetype T_array_37 _G::XTRFS
     ldsflda valuetype T_array_38 _G::XTSR
@@ -22029,26 +22029,26 @@ L_check_case_9:
     call instance int8& T_array_36::ldadr(int32)
     ldobj int8
     stfld int8 @DNDATE::INTS
-    // line 1763
+    .line 1763
     ldloc _F
     ldfld int8 @DNDATE::INTS
     ldloc _F
     ldflda valuetype T_RM @DNDATE::A
     ldfld int32 T_RM::RMCP
     call void ADDLOC(int8 A, int32 B)
-    // line 1764
+    .line 1764
     ldloc _F
     ldfld int8 @DNDATE::INTS
     call void CUTATK(int8 A)
-    // line 1765
+    .line 1765
     ldloc _F
     ldfld int8 @DNDATE::INTS
     call void ADDATK(int8 A)
-    // line 1766
+    .line 1766
     ldloc _F
     ldfld valuetype T_RM @DNDATE::A
     call void RTRKIT(valuetype T_RM A)
-    // line 1767
+    .line 1767
     ldsflda valuetype T_array_38 _G::MBORD
     ldloc _F
     ldfld int8 @DNDATE::INTS
@@ -22058,7 +22058,7 @@ L_check_case_9:
     /* nop */
     br L_if_end_12
 L_else_11:
-    // line 1770
+    .line 1770
     ldloc _F
     ldfld valuetype T_RM @DNDATE::A
     call void GAINIT(valuetype T_RM A)
@@ -22068,11 +22068,11 @@ L_check_case_10:
     ldloc $tmpSwitchValue1
     ldc.i4 5
     bne.un L_check_case_13
-    // line 1773
+    .line 1773
     ldloc _F
     ldfld valuetype T_RM @DNDATE::A
     call void PAWNIT(valuetype T_RM A)
-    // line 1774
+    .line 1774
     ldloc _F
     ldfld valuetype T_RM @DNDATE::A
     call void GAINIT(valuetype T_RM A)
@@ -22082,7 +22082,7 @@ L_check_case_13:
     ldloc $tmpSwitchValue1
     ldc.i4 6
     bne.un L_check_case_14
-    // line 1777
+    .line 1777
     ldloc _F
     ldfld valuetype T_RM @DNDATE::A
     call void GAINIT(valuetype T_RM A)
@@ -22091,23 +22091,23 @@ L_check_case_14:
     ldloc $tmpSwitchValue1
     ldc.i4 7
     bne.un L_case_end_1
-    // line 1780
+    .line 1780
     ldloc _F
     ldfld valuetype T_RM @DNDATE::A
     call void PAWNIT(valuetype T_RM A)
-    // line 1781
+    .line 1781
     ldloc _F
     ldfld valuetype T_RM @DNDATE::A
     call void GAINIT(valuetype T_RM A)
     /* nop */
 L_case_end_1:
-    // line 1784
+    .line 1784
     ldsflda valuetype T_array_102 _G::LINDX
     ldsfld int8 _G::JNTK
     call instance int16& T_array_102::ldadr(int32)
     ldobj int16
     stsfld int16 _G::JNTW
-    // line 1786
+    .line 1786
     ldsfld int8 _G::JNTK
     ldc.i4 1
     sub
@@ -22116,7 +22116,7 @@ L_case_end_1:
     ldc.i4 16
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int8 _G::JNTK
-    // line 1787
+    .line 1787
     ldsflda valuetype T_array_18 _G::OTHER
     ldsfld int32 _G::JNTM
     call instance int32& T_array_18::ldadr(int32)
@@ -22129,7 +22129,7 @@ L_Epilogue:
     ret
 }
 
-// line 1792
+.line 1792
 
 .method static
 bool UPDATE(valuetype T_RM& A)
@@ -22152,7 +22152,7 @@ bool UPDATE(valuetype T_RM& A)
     stfld valuetype T_RM* @UPDATE::A
 
 L_Entry:
-    // line 1809
+    .line 1809
     ldsfld int8 _G::JNTK
     ldc.i4 1
     add
@@ -22161,12 +22161,12 @@ L_Entry:
     ldc.i4 16
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int8 _G::JNTK
-    // line 1810
+    .line 1810
     ldsflda valuetype T_arraytkofrs _G::ENPAS
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     call void NEWRS(valuetype T_RS& A)
-    // line 1811
+    .line 1811
     ldsflda valuetype T_arraytkofrs _G::CSTAT
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
@@ -22177,7 +22177,7 @@ L_Entry:
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void CPYRS(valuetype T_RS& C, valuetype T_RS A)
-    // line 1812
+    .line 1812
     ldsflda valuetype T_arraytkofrs _G::ALLOC
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
@@ -22188,7 +22188,7 @@ L_Entry:
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void CPYRS(valuetype T_RS& C, valuetype T_RS A)
-    // line 1813
+    .line 1813
     ldsflda valuetype T_array_102 _G::MBVAL
     ldsfld int8 _G::JNTK
     call instance int16& T_array_102::ldadr(int32)
@@ -22199,13 +22199,13 @@ L_Entry:
     call instance int16& T_array_102::ldadr(int32)
     ldobj int16
     stobj int16
-    // line 1814
+    .line 1814
     ldsflda valuetype T_array_102 _G::LINDX
     ldsfld int8 _G::JNTK
     call instance int16& T_array_102::ldadr(int32)
     ldsfld int16 _G::JNTW
     stobj int16
-    // line 1815
+    .line 1815
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
     ldfld bool T_RM::RMCA
@@ -22225,12 +22225,12 @@ L_Entry:
     ldloc $tmpSwitchValue1
     ldc.i4 0
     bne.un L_check_case_2
-    // line 1817
+    .line 1817
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
     ldfld bool T_RM::RMEP
     brfalse L_else_3
-    // line 1819
+    .line 1819
     ldloc _F
     ldflda valuetype T_RS @UPDATE::INRS
     ldsflda valuetype T_RX _G::XRSS
@@ -22241,7 +22241,7 @@ L_Entry:
     ldobj valuetype T_RS
     ldc.i4 4
     call void SFTRS(valuetype T_RS& A, valuetype T_RS B, int32 C)
-    // line 1820
+    .line 1820
     ldloc _F
     ldflda valuetype T_RS @UPDATE::IMRS
     ldsflda valuetype T_RX _G::XRSS
@@ -22252,7 +22252,7 @@ L_Entry:
     ldobj valuetype T_RS
     ldc.i4 6
     call void SFTRS(valuetype T_RS& A, valuetype T_RS B, int32 C)
-    // line 1821
+    .line 1821
     ldloc _F
     ldflda valuetype T_RS @UPDATE::INRS
     ldloc _F
@@ -22260,7 +22260,7 @@ L_Entry:
     ldloc _F
     ldfld valuetype T_RS @UPDATE::IMRS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 1822
+    .line 1822
     ldloc _F
     ldflda valuetype T_RS @UPDATE::INRS
     ldloc _F
@@ -22278,14 +22278,14 @@ L_Entry:
     call instance valuetype T_RS& T_array_103::ldadr(int32)
     ldobj valuetype T_RS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 1824
+    .line 1824
     ldloc _F
     ldfld valuetype T_RS @UPDATE::INRS
     call bool NULRS(valuetype T_RS A)
     ldc.i4.0
     ceq
     brfalse L_if_end_5
-    // line 1825
+    .line 1825
     ldsflda valuetype T_arraytkofrs _G::ENPAS
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
@@ -22304,7 +22304,7 @@ L_Entry:
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call void SETRS(valuetype T_RS& C, int8 A)
 L_if_end_5:
-    // line 1827
+    .line 1827
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
     ldobj valuetype T_RM
@@ -22312,7 +22312,7 @@ L_if_end_5:
     /* nop */
     br L_if_end_4
 L_else_3:
-    // line 1830
+    .line 1830
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
     ldobj valuetype T_RM
@@ -22323,12 +22323,12 @@ L_check_case_2:
     ldloc $tmpSwitchValue1
     ldc.i4 1
     bne.un L_check_case_6
-    // line 1833
+    .line 1833
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
     ldobj valuetype T_RM
     call void PROMOT(valuetype T_RM A)
-    // line 1834
+    .line 1834
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
     ldobj valuetype T_RM
@@ -22339,28 +22339,28 @@ L_check_case_6:
     ldloc $tmpSwitchValue1
     ldc.i4 2
     bne.un L_check_case_7
-    // line 1838
+    .line 1838
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
     ldfld bool T_RM::RMOO
     brfalse L_else_8
-    // line 1840
+    .line 1840
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
     ldfld bool T_RM::RMQS
     brfalse L_else_10
-    // line 1841
+    .line 1841
     ldloc _F
     ldc.i4 0
     stfld int32 @UPDATE::INTF
     br L_if_end_11
 L_else_10:
-    // line 1843
+    .line 1843
     ldloc _F
     ldc.i4 7
     stfld int32 @UPDATE::INTF
 L_if_end_11:
-    // line 1844
+    .line 1844
     ldloc _F
     ldsflda valuetype T_array_38 _G::XTSR
     ldloc _F
@@ -22369,7 +22369,7 @@ L_if_end_11:
     call instance int32& T_array_38::ldadr(int32)
     ldobj int32
     stfld int32 @UPDATE::INTR
-    // line 1845
+    .line 1845
     ldloc _F
     ldsflda valuetype T_array_37 _G::XTRFS
     ldloc _F
@@ -22380,7 +22380,7 @@ L_if_end_11:
     call instance int8& T_array_36::ldadr(int32)
     ldobj int8
     stfld int8 @UPDATE::RKFR
-    // line 1846
+    .line 1846
     ldloc _F
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
@@ -22396,7 +22396,7 @@ L_if_end_11:
     ldc.i4 63
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 @UPDATE::RKTO
-    // line 1847
+    .line 1847
     ldsflda valuetype T_arraytkofrs _G::CSTAT
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
@@ -22410,7 +22410,7 @@ L_if_end_11:
     call instance valuetype T_RS& T_arraytrofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 1850
+    .line 1850
     ldloc _F
     ldfld int8 @UPDATE::RKTO
     ldsflda valuetype T_array_38 _G::MBORD
@@ -22419,15 +22419,15 @@ L_if_end_11:
     call instance int32& T_array_38::ldadr(int32)
     ldobj int32
     call void ADDLOC(int8 A, int32 B)
-    // line 1851
+    .line 1851
     ldloc _F
     ldfld int8 @UPDATE::RKTO
     call void ADDATK(int8 A)
-    // line 1852
+    .line 1852
     ldloc _F
     ldfld int8 @UPDATE::RKFR
     call void DELATK(int8 A)
-    // line 1853
+    .line 1853
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
     ldobj valuetype T_RM
@@ -22435,12 +22435,12 @@ L_if_end_11:
     /* nop */
     br L_if_end_9
 L_else_8:
-    // line 1857
+    .line 1857
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
     ldobj valuetype T_RM
     call void PROACS(valuetype T_RM A)
-    // line 1858
+    .line 1858
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
     ldobj valuetype T_RM
@@ -22459,12 +22459,12 @@ L_check_case_12:
     ldloc $tmpSwitchValue1
     ldc.i4 4
     bne.un L_check_case_13
-    // line 1864
+    .line 1864
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
     ldfld bool T_RM::RMEP
     brfalse L_else_14
-    // line 1866
+    .line 1866
     ldloc _F
     ldsflda valuetype T_array_37 _G::XTRFS
     ldsflda valuetype T_array_38 _G::XTSR
@@ -22483,22 +22483,22 @@ L_check_case_12:
     call instance int8& T_array_36::ldadr(int32)
     ldobj int8
     stfld int8 @UPDATE::INTS
-    // line 1868
+    .line 1868
     ldsflda valuetype T_array_38 _G::MBORD
     ldloc _F
     ldfld int8 @UPDATE::INTS
     call instance int32& T_array_38::ldadr(int32)
     ldobj int32
     call void MBCAPT(int32 A)
-    // line 1869
+    .line 1869
     ldloc _F
     ldfld int8 @UPDATE::INTS
     call void DELATK(int8 A)
-    // line 1870
+    .line 1870
     ldloc _F
     ldfld int8 @UPDATE::INTS
     call void PRPATK(int8 A)
-    // line 1871
+    .line 1871
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
     ldobj valuetype T_RM
@@ -22506,7 +22506,7 @@ L_check_case_12:
     /* nop */
     br L_if_end_15
 L_else_14:
-    // line 1874
+    .line 1874
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
     ldobj valuetype T_RM
@@ -22517,12 +22517,12 @@ L_check_case_13:
     ldloc $tmpSwitchValue1
     ldc.i4 5
     bne.un L_check_case_16
-    // line 1877
+    .line 1877
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
     ldobj valuetype T_RM
     call void PROMOT(valuetype T_RM A)
-    // line 1878
+    .line 1878
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
     ldobj valuetype T_RM
@@ -22533,12 +22533,12 @@ L_check_case_16:
     ldloc $tmpSwitchValue1
     ldc.i4 6
     bne.un L_check_case_17
-    // line 1883
+    .line 1883
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
     ldobj valuetype T_RM
     call void PROACS(valuetype T_RM A)
-    // line 1884
+    .line 1884
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
     ldobj valuetype T_RM
@@ -22549,30 +22549,30 @@ L_check_case_17:
     ldloc $tmpSwitchValue1
     ldc.i4 7
     bne.un L_case_end_1
-    // line 1888
+    .line 1888
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
     ldobj valuetype T_RM
     call void PROMOT(valuetype T_RM A)
-    // line 1889
+    .line 1889
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
     ldobj valuetype T_RM
     call void PROACS(valuetype T_RM A)
-    // line 1890
+    .line 1890
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
     ldobj valuetype T_RM
     call void LOSEIT(valuetype T_RM A)
     /* nop */
 L_case_end_1:
-    // line 1896
+    .line 1896
     ldsflda valuetype T_array_18 _G::OTHER
     ldsfld int32 _G::JNTM
     call instance int32& T_array_18::ldadr(int32)
     ldobj int32
     stsfld int32 _G::JNTM
-    // line 1897
+    .line 1897
     ldsflda valuetype T_arraytkofrs _G::GENPN
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
@@ -22586,7 +22586,7 @@ L_case_end_1:
     call instance valuetype T_RS& T_array_103::ldadr(int32)
     ldobj valuetype T_RS
     call void CPYRS(valuetype T_RS& C, valuetype T_RS A)
-    // line 1898
+    .line 1898
     ldsflda valuetype T_arraytkofrs _G::GENTO
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
@@ -22595,7 +22595,7 @@ L_case_end_1:
     call instance valuetype T_RS& T_arraytmofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void NOTRS(valuetype T_RS& C, valuetype T_RS A)
-    // line 1899
+    .line 1899
     ldloc _F
     ldflda valuetype T_RS @UPDATE::INRS
     ldsflda valuetype T_arraytkofrs _G::GENPN
@@ -22603,7 +22603,7 @@ L_case_end_1:
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void NOTRS(valuetype T_RS& C, valuetype T_RS A)
-    // line 1900
+    .line 1900
     ldsflda valuetype T_arraytkofrs _G::GENFR
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
@@ -22614,7 +22614,7 @@ L_case_end_1:
     ldloc _F
     ldfld valuetype T_RS @UPDATE::INRS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 1904
+    .line 1904
     ldloc _F
     ldflda valuetype T_RS @UPDATE::INRS
     ldsflda valuetype T_array_103 _G::TPLOC
@@ -22634,7 +22634,7 @@ L_case_end_1:
     call instance valuetype T_RS& T_arraytmofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 1905
+    .line 1905
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
     ldloc _F
@@ -22643,7 +22643,7 @@ L_case_end_1:
     ldc.i4.0
     ceq
     stfld bool T_RM::RMCH
-    // line 1906
+    .line 1906
     ldloc _F
     ldflda valuetype T_RS @UPDATE::INRS
     ldsflda valuetype T_array_103 _G::TPLOC
@@ -22663,7 +22663,7 @@ L_case_end_1:
     call instance valuetype T_RS& T_arraytmofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 1907
+    .line 1907
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
     ldloc _F
@@ -22672,7 +22672,7 @@ L_case_end_1:
     ldc.i4.0
     ceq
     stfld bool T_RM::RMIL
-    // line 1908
+    .line 1908
     ldloc _F
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
@@ -22680,14 +22680,14 @@ L_case_end_1:
     ldc.i4.0
     ceq
     stfld bool @UPDATE::_fnvalue
-    // line 1909
+    .line 1909
     ldloc _F
     ldfld valuetype T_RM* @UPDATE::A
     ldfld bool T_RM::RMIL
     ldc.i4.0
     ceq
     brfalse L_if_end_18
-    // line 1910
+    .line 1910
     ldsflda valuetype T_array_105 _G::MVSEL
     ldsfld int8 _G::JNTK
     ldc.i4 1
@@ -22703,13 +22703,13 @@ L_case_end_1:
     add
     stobj int32
 L_if_end_18:
-    // line 1913
+    .line 1913
     ldsflda valuetype T_array_105 _G::SRCHM
     ldsfld int8 _G::JNTK
     call instance int32& T_array_105::ldadr(int32)
     ldc.i4 1
     stobj int32
-    // line 1914
+    .line 1914
     ldsfld int32 _G::NODES
     ldc.i4 1
     add
@@ -22723,7 +22723,7 @@ L_Epilogue:
     ret
 }
 
-// line 1919
+.line 1919
 
 .method static
 void GENONE(int8 A, int8 B)
@@ -22744,7 +22744,7 @@ void GENONE(int8 A, int8 B)
     stfld int8 @GENONE::B
 
 L_Entry:
-    // line 1929
+    .line 1929
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     call instance valuetype T_RM& T_RF::ldadr(int32)
@@ -22755,14 +22755,14 @@ L_Entry:
     ldc.i4 63
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_RM::RMFR
-    // line 1930
+    .line 1930
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldloc _F
     ldfld int8 @GENONE::B
     stfld int8 T_RM::RMTO
-    // line 1931
+    .line 1931
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     call instance valuetype T_RM& T_RF::ldadr(int32)
@@ -22772,7 +22772,7 @@ L_Entry:
     call instance int32& T_array_38::ldadr(int32)
     ldobj int32
     stfld int32 T_RM::RMCP
-    // line 1932
+    .line 1932
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     call instance valuetype T_RM& T_RF::ldadr(int32)
@@ -22786,7 +22786,7 @@ L_Entry:
     ldc.i4.0
     ceq
     stfld bool T_RM::RMCA
-    // line 1933
+    .line 1933
     ldloc _F
     ldflda valuetype T_RS @GENONE::INRS
     ldsflda valuetype T_RX _G::XRSS
@@ -22800,7 +22800,7 @@ L_Entry:
     call instance valuetype T_RS& T_RX::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 1934
+    .line 1934
     ldloc _F
     ldflda valuetype T_RS @GENONE::INRS
     ldloc _F
@@ -22810,7 +22810,7 @@ L_Entry:
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 1935
+    .line 1935
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     call instance valuetype T_RM& T_RF::ldadr(int32)
@@ -22820,50 +22820,50 @@ L_Entry:
     ldc.i4.0
     ceq
     stfld bool T_RM::RMAC
-    // line 1936
+    .line 1936
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldc.i4 0 // (false)
     stfld bool T_RM::RMCH
-    // line 1937
+    .line 1937
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldc.i4 0 // (false)
     stfld bool T_RM::RMMT
-    // line 1938
+    .line 1938
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldc.i4 0 // (false)
     stfld bool T_RM::RMIL
-    // line 1939
+    .line 1939
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldc.i4 0 // (false)
     stfld bool T_RM::RMSU
-    // line 1940
+    .line 1940
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldc.i4 0 // (false)
     stfld bool T_RM::RMPR
-    // line 1941
+    .line 1941
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldc.i4 0 // (false)
     stfld bool T_RM::RMOO
-    // line 1942
+    .line 1942
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldc.i4 0 // (false)
     stfld bool T_RM::RMEP
     /* nop */
-    // line 1944
+    .line 1944
     ldsflda valuetype T_RE _G::VALUE
     ldsfld int16 _G::JNTW
     call instance int16& T_RE::ldadr(int32)
@@ -22873,12 +22873,12 @@ L_Entry:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int16
-    // line 1945
+    .line 1945
     ldsfld int16 _G::JNTW
     ldc.i4 500
     clt
     brfalse L_if_end_1
-    // line 1946
+    .line 1946
     ldsfld int16 _G::JNTW
     ldc.i4 1
     add
@@ -22894,7 +22894,7 @@ L_Epilogue:
     ret
 }
 
-// line 1950
+.line 1950
 
 .method static
 void PWNPRO()
@@ -22911,7 +22911,7 @@ void PWNPRO()
     stloc _F
 
 L_Entry:
-    // line 1956
+    .line 1956
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     ldc.i4 1
@@ -22919,7 +22919,7 @@ L_Entry:
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldc.i4 1 // (true)
     stfld bool T_RM::RMPR
-    // line 1957
+    .line 1957
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     ldc.i4 1
@@ -22927,7 +22927,7 @@ L_Entry:
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldc.i4 0
     stfld int32 T_RM::RMPP
-    // line 1958
+    .line 1958
     ldc.i4 3
     stloc $tmpEndValue1
     ldc.i4 1
@@ -22943,7 +22943,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int32 @PWNPRO::INTG
 L_for_loop_1:
-    // line 1960
+    .line 1960
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     call instance valuetype T_RM& T_RF::ldadr(int32)
@@ -22954,14 +22954,14 @@ L_for_loop_1:
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldobj valuetype T_RM
     stobj valuetype T_RM
-    // line 1961
+    .line 1961
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldloc _F
     ldfld int32 @PWNPRO::INTG
     stfld int32 T_RM::RMPP
-    // line 1962
+    .line 1962
     ldsfld int16 _G::JNTW
     ldc.i4 1
     add
@@ -22995,7 +22995,7 @@ L_Epilogue:
     ret
 }
 
-// line 1967
+.line 1967
 
 .method static
 void GENPWN(valuetype T_RS A, valuetype T_RS B)
@@ -23016,19 +23016,19 @@ void GENPWN(valuetype T_RS A, valuetype T_RS B)
     stfld valuetype T_RS @GENPWN::B
 
 L_Entry:
-    // line 1976
+    .line 1976
     ldsfld int32 _G::JNTM
     ldc.i4 0
     ceq
     brfalse L_else_1
-    // line 1978
+    .line 1978
     ldloc _F
     ldflda valuetype T_RS @GENPWN::INRS
     ldloc _F
     ldfld valuetype T_RS @GENPWN::A
     ldc.i4 5
     call void SFTRS(valuetype T_RS& A, valuetype T_RS B, int32 C)
-    // line 1979
+    .line 1979
     ldloc _F
     ldflda valuetype T_RS @GENPWN::INRS
     ldsflda valuetype T_array_103 _G::TPLOC
@@ -23038,13 +23038,13 @@ L_Entry:
     ldloc _F
     ldfld valuetype T_RS @GENPWN::INRS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 1980
+    .line 1980
     ldloc _F
     ldflda valuetype T_RS @GENPWN::IMRS
     ldloc _F
     ldfld valuetype T_RS @GENPWN::INRS
     call void CPYRS(valuetype T_RS& C, valuetype T_RS A)
-    // line 1981
+    .line 1981
     ldloc _F
     ldflda valuetype T_RS @GENPWN::INRS
     ldloc _F
@@ -23052,10 +23052,10 @@ L_Entry:
     ldloc _F
     ldfld valuetype T_RS @GENPWN::INRS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 1982
+    .line 1982
     br L_while_test_4
 L_while_3:
-    // line 1984
+    .line 1984
     ldsflda valuetype T_array_9 _G::XTLS
     ldsflda valuetype T_array_3 _G::XTSL
     ldloc _F
@@ -23072,7 +23072,7 @@ L_while_3:
     ldloc _F
     ldfld int8 @GENPWN::INTS
     call void GENONE(int8 A, int8 B)
-    // line 1986
+    .line 1986
     ldloc _F
     ldfld int8 @GENPWN::INTS
     ldsflda valuetype T_array_37 _G::XTRFS
@@ -23085,7 +23085,7 @@ L_while_3:
     ldc.i4.0
     ceq
     brfalse L_if_end_5
-    // line 1987
+    .line 1987
     call void PWNPRO()
 L_if_end_5:
     /* nop */
@@ -23096,7 +23096,7 @@ L_while_test_4:
     ldflda int8 @GENPWN::INTS
     call bool NXTTS(valuetype T_RS& A, int8& B)
     brtrue L_while_3
-    // line 1989
+    .line 1989
     ldloc _F
     ldflda valuetype T_RS @GENPWN::INRS
     ldloc _F
@@ -23106,14 +23106,14 @@ L_while_test_4:
     call instance valuetype T_RS& T_arraytrofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 1990
+    .line 1990
     ldloc _F
     ldflda valuetype T_RS @GENPWN::INRS
     ldloc _F
     ldfld valuetype T_RS @GENPWN::INRS
     ldc.i4 5
     call void SFTRS(valuetype T_RS& A, valuetype T_RS B, int32 C)
-    // line 1991
+    .line 1991
     ldloc _F
     ldflda valuetype T_RS @GENPWN::INRS
     ldloc _F
@@ -23123,7 +23123,7 @@ L_while_test_4:
     call instance valuetype T_RS& T_array_103::ldadr(int32)
     ldobj valuetype T_RS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 1992
+    .line 1992
     ldloc _F
     ldflda valuetype T_RS @GENPWN::INRS
     ldloc _F
@@ -23131,10 +23131,10 @@ L_while_test_4:
     ldloc _F
     ldfld valuetype T_RS @GENPWN::B
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 1993
+    .line 1993
     br L_while_test_7
 L_while_6:
-    // line 1995
+    .line 1995
     ldsflda valuetype T_array_9 _G::XTLS
     ldsflda valuetype T_array_3 _G::XTSL
     ldloc _F
@@ -23153,7 +23153,7 @@ L_while_6:
     ldloc _F
     ldfld int8 @GENPWN::INTS
     call void GENONE(int8 A, int8 B)
-    // line 1997
+    .line 1997
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     ldc.i4 1
@@ -23169,14 +23169,14 @@ L_while_test_7:
     ldflda int8 @GENPWN::INTS
     call bool NXTTS(valuetype T_RS& A, int8& B)
     brtrue L_while_6
-    // line 1999
+    .line 1999
     ldloc _F
     ldflda valuetype T_RS @GENPWN::INRS
     ldloc _F
     ldfld valuetype T_RS @GENPWN::A
     ldc.i4 0
     call void SFTRS(valuetype T_RS& A, valuetype T_RS B, int32 C)
-    // line 2000
+    .line 2000
     ldloc _F
     ldflda valuetype T_RS @GENPWN::IMRS
     ldsflda valuetype T_arraytmofrs _G::TMLOC
@@ -23191,7 +23191,7 @@ L_while_test_7:
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2002
+    .line 2002
     ldloc _F
     ldflda valuetype T_RS @GENPWN::IMRS
     ldloc _F
@@ -23199,7 +23199,7 @@ L_while_test_7:
     ldloc _F
     ldfld valuetype T_RS @GENPWN::B
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2003
+    .line 2003
     ldloc _F
     ldflda valuetype T_RS @GENPWN::INRS
     ldloc _F
@@ -23207,10 +23207,10 @@ L_while_test_7:
     ldloc _F
     ldfld valuetype T_RS @GENPWN::IMRS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2004
+    .line 2004
     br L_while_test_9
 L_while_8:
-    // line 2006
+    .line 2006
     ldsflda valuetype T_array_9 _G::XTLS
     ldsflda valuetype T_array_3 _G::XTSL
     ldloc _F
@@ -23227,7 +23227,7 @@ L_while_8:
     ldloc _F
     ldfld int8 @GENPWN::INTS
     call void GENONE(int8 A, int8 B)
-    // line 2008
+    .line 2008
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     ldc.i4 1
@@ -23235,7 +23235,7 @@ L_while_8:
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldc.i4 1 // (true)
     stfld bool T_RM::RMCA
-    // line 2009
+    .line 2009
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     ldc.i4 1
@@ -23249,7 +23249,7 @@ L_while_8:
     ldfld int8 @GENPWN::INTS
     call bool INRSTB(valuetype T_RS A, int8 B)
     stfld bool T_RM::RMEP
-    // line 2011
+    .line 2011
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     ldc.i4 1
@@ -23257,7 +23257,7 @@ L_while_8:
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldfld bool T_RM::RMEP
     brfalse L_if_end_10
-    // line 2012
+    .line 2012
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     ldc.i4 1
@@ -23266,7 +23266,7 @@ L_while_8:
     ldc.i4 6
     stfld int32 T_RM::RMCP
 L_if_end_10:
-    // line 2013
+    .line 2013
     ldloc _F
     ldfld int8 @GENPWN::INTS
     ldsflda valuetype T_array_37 _G::XTRFS
@@ -23279,7 +23279,7 @@ L_if_end_10:
     ldc.i4.0
     ceq
     brfalse L_if_end_11
-    // line 2014
+    .line 2014
     call void PWNPRO()
 L_if_end_11:
     /* nop */
@@ -23290,14 +23290,14 @@ L_while_test_9:
     ldflda int8 @GENPWN::INTS
     call bool NXTTS(valuetype T_RS& A, int8& B)
     brtrue L_while_8
-    // line 2016
+    .line 2016
     ldloc _F
     ldflda valuetype T_RS @GENPWN::INRS
     ldloc _F
     ldfld valuetype T_RS @GENPWN::A
     ldc.i4 1
     call void SFTRS(valuetype T_RS& A, valuetype T_RS B, int32 C)
-    // line 2017
+    .line 2017
     ldloc _F
     ldflda valuetype T_RS @GENPWN::IMRS
     ldsflda valuetype T_arraytmofrs _G::TMLOC
@@ -23312,7 +23312,7 @@ L_while_test_9:
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2019
+    .line 2019
     ldloc _F
     ldflda valuetype T_RS @GENPWN::IMRS
     ldloc _F
@@ -23320,7 +23320,7 @@ L_while_test_9:
     ldloc _F
     ldfld valuetype T_RS @GENPWN::B
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2020
+    .line 2020
     ldloc _F
     ldflda valuetype T_RS @GENPWN::INRS
     ldloc _F
@@ -23328,10 +23328,10 @@ L_while_test_9:
     ldloc _F
     ldfld valuetype T_RS @GENPWN::IMRS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2021
+    .line 2021
     br L_while_test_13
 L_while_12:
-    // line 2023
+    .line 2023
     ldsflda valuetype T_array_9 _G::XTLS
     ldsflda valuetype T_array_3 _G::XTSL
     ldloc _F
@@ -23348,7 +23348,7 @@ L_while_12:
     ldloc _F
     ldfld int8 @GENPWN::INTS
     call void GENONE(int8 A, int8 B)
-    // line 2025
+    .line 2025
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     ldc.i4 1
@@ -23356,7 +23356,7 @@ L_while_12:
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldc.i4 1 // (true)
     stfld bool T_RM::RMCA
-    // line 2026
+    .line 2026
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     ldc.i4 1
@@ -23370,7 +23370,7 @@ L_while_12:
     ldfld int8 @GENPWN::INTS
     call bool INRSTB(valuetype T_RS A, int8 B)
     stfld bool T_RM::RMEP
-    // line 2028
+    .line 2028
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     ldc.i4 1
@@ -23378,7 +23378,7 @@ L_while_12:
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldfld bool T_RM::RMEP
     brfalse L_if_end_14
-    // line 2029
+    .line 2029
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     ldc.i4 1
@@ -23387,7 +23387,7 @@ L_while_12:
     ldc.i4 6
     stfld int32 T_RM::RMCP
 L_if_end_14:
-    // line 2030
+    .line 2030
     ldloc _F
     ldfld int8 @GENPWN::INTS
     ldsflda valuetype T_array_37 _G::XTRFS
@@ -23400,7 +23400,7 @@ L_if_end_14:
     ldc.i4.0
     ceq
     brfalse L_if_end_15
-    // line 2031
+    .line 2031
     call void PWNPRO()
 L_if_end_15:
     /* nop */
@@ -23414,14 +23414,14 @@ L_while_test_13:
     /* nop */
     br L_if_end_2
 L_else_1:
-    // line 2036
+    .line 2036
     ldloc _F
     ldflda valuetype T_RS @GENPWN::INRS
     ldloc _F
     ldfld valuetype T_RS @GENPWN::A
     ldc.i4 7
     call void SFTRS(valuetype T_RS& A, valuetype T_RS B, int32 C)
-    // line 2037
+    .line 2037
     ldloc _F
     ldflda valuetype T_RS @GENPWN::INRS
     ldsflda valuetype T_array_103 _G::TPLOC
@@ -23431,13 +23431,13 @@ L_else_1:
     ldloc _F
     ldfld valuetype T_RS @GENPWN::INRS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2038
+    .line 2038
     ldloc _F
     ldflda valuetype T_RS @GENPWN::IMRS
     ldloc _F
     ldfld valuetype T_RS @GENPWN::INRS
     call void CPYRS(valuetype T_RS& C, valuetype T_RS A)
-    // line 2039
+    .line 2039
     ldloc _F
     ldflda valuetype T_RS @GENPWN::INRS
     ldloc _F
@@ -23445,10 +23445,10 @@ L_else_1:
     ldloc _F
     ldfld valuetype T_RS @GENPWN::INRS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2040
+    .line 2040
     br L_while_test_17
 L_while_16:
-    // line 2042
+    .line 2042
     ldsflda valuetype T_array_9 _G::XTLS
     ldsflda valuetype T_array_3 _G::XTSL
     ldloc _F
@@ -23465,7 +23465,7 @@ L_while_16:
     ldloc _F
     ldfld int8 @GENPWN::INTS
     call void GENONE(int8 A, int8 B)
-    // line 2044
+    .line 2044
     ldloc _F
     ldfld int8 @GENPWN::INTS
     ldsflda valuetype T_array_37 _G::XTRFS
@@ -23478,7 +23478,7 @@ L_while_16:
     ldc.i4.0
     ceq
     brfalse L_if_end_18
-    // line 2045
+    .line 2045
     call void PWNPRO()
 L_if_end_18:
     /* nop */
@@ -23489,7 +23489,7 @@ L_while_test_17:
     ldflda int8 @GENPWN::INTS
     call bool NXTTS(valuetype T_RS& A, int8& B)
     brtrue L_while_16
-    // line 2047
+    .line 2047
     ldloc _F
     ldflda valuetype T_RS @GENPWN::INRS
     ldloc _F
@@ -23499,14 +23499,14 @@ L_while_test_17:
     call instance valuetype T_RS& T_arraytrofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2048
+    .line 2048
     ldloc _F
     ldflda valuetype T_RS @GENPWN::INRS
     ldloc _F
     ldfld valuetype T_RS @GENPWN::INRS
     ldc.i4 7
     call void SFTRS(valuetype T_RS& A, valuetype T_RS B, int32 C)
-    // line 2049
+    .line 2049
     ldloc _F
     ldflda valuetype T_RS @GENPWN::INRS
     ldloc _F
@@ -23516,7 +23516,7 @@ L_while_test_17:
     call instance valuetype T_RS& T_array_103::ldadr(int32)
     ldobj valuetype T_RS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2050
+    .line 2050
     ldloc _F
     ldflda valuetype T_RS @GENPWN::INRS
     ldloc _F
@@ -23524,10 +23524,10 @@ L_while_test_17:
     ldloc _F
     ldfld valuetype T_RS @GENPWN::B
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2051
+    .line 2051
     br L_while_test_20
 L_while_19:
-    // line 2053
+    .line 2053
     ldsflda valuetype T_array_9 _G::XTLS
     ldsflda valuetype T_array_3 _G::XTSL
     ldloc _F
@@ -23546,7 +23546,7 @@ L_while_19:
     ldloc _F
     ldfld int8 @GENPWN::INTS
     call void GENONE(int8 A, int8 B)
-    // line 2055
+    .line 2055
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     ldc.i4 1
@@ -23562,14 +23562,14 @@ L_while_test_20:
     ldflda int8 @GENPWN::INTS
     call bool NXTTS(valuetype T_RS& A, int8& B)
     brtrue L_while_19
-    // line 2057
+    .line 2057
     ldloc _F
     ldflda valuetype T_RS @GENPWN::INRS
     ldloc _F
     ldfld valuetype T_RS @GENPWN::A
     ldc.i4 2
     call void SFTRS(valuetype T_RS& A, valuetype T_RS B, int32 C)
-    // line 2058
+    .line 2058
     ldloc _F
     ldflda valuetype T_RS @GENPWN::IMRS
     ldsflda valuetype T_arraytmofrs _G::TMLOC
@@ -23584,7 +23584,7 @@ L_while_test_20:
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2060
+    .line 2060
     ldloc _F
     ldflda valuetype T_RS @GENPWN::IMRS
     ldloc _F
@@ -23592,7 +23592,7 @@ L_while_test_20:
     ldloc _F
     ldfld valuetype T_RS @GENPWN::B
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2061
+    .line 2061
     ldloc _F
     ldflda valuetype T_RS @GENPWN::INRS
     ldloc _F
@@ -23600,10 +23600,10 @@ L_while_test_20:
     ldloc _F
     ldfld valuetype T_RS @GENPWN::IMRS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2062
+    .line 2062
     br L_while_test_22
 L_while_21:
-    // line 2064
+    .line 2064
     ldsflda valuetype T_array_9 _G::XTLS
     ldsflda valuetype T_array_3 _G::XTSL
     ldloc _F
@@ -23620,7 +23620,7 @@ L_while_21:
     ldloc _F
     ldfld int8 @GENPWN::INTS
     call void GENONE(int8 A, int8 B)
-    // line 2066
+    .line 2066
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     ldc.i4 1
@@ -23628,7 +23628,7 @@ L_while_21:
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldc.i4 1 // (true)
     stfld bool T_RM::RMCA
-    // line 2067
+    .line 2067
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     ldc.i4 1
@@ -23642,7 +23642,7 @@ L_while_21:
     ldfld int8 @GENPWN::INTS
     call bool INRSTB(valuetype T_RS A, int8 B)
     stfld bool T_RM::RMEP
-    // line 2069
+    .line 2069
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     ldc.i4 1
@@ -23650,7 +23650,7 @@ L_while_21:
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldfld bool T_RM::RMEP
     brfalse L_if_end_23
-    // line 2070
+    .line 2070
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     ldc.i4 1
@@ -23659,7 +23659,7 @@ L_while_21:
     ldc.i4 0
     stfld int32 T_RM::RMCP
 L_if_end_23:
-    // line 2071
+    .line 2071
     ldloc _F
     ldfld int8 @GENPWN::INTS
     ldsflda valuetype T_array_37 _G::XTRFS
@@ -23672,7 +23672,7 @@ L_if_end_23:
     ldc.i4.0
     ceq
     brfalse L_if_end_24
-    // line 2072
+    .line 2072
     call void PWNPRO()
 L_if_end_24:
     /* nop */
@@ -23683,14 +23683,14 @@ L_while_test_22:
     ldflda int8 @GENPWN::INTS
     call bool NXTTS(valuetype T_RS& A, int8& B)
     brtrue L_while_21
-    // line 2074
+    .line 2074
     ldloc _F
     ldflda valuetype T_RS @GENPWN::INRS
     ldloc _F
     ldfld valuetype T_RS @GENPWN::A
     ldc.i4 3
     call void SFTRS(valuetype T_RS& A, valuetype T_RS B, int32 C)
-    // line 2075
+    .line 2075
     ldloc _F
     ldflda valuetype T_RS @GENPWN::IMRS
     ldsflda valuetype T_arraytmofrs _G::TMLOC
@@ -23705,7 +23705,7 @@ L_while_test_22:
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2077
+    .line 2077
     ldloc _F
     ldflda valuetype T_RS @GENPWN::IMRS
     ldloc _F
@@ -23713,7 +23713,7 @@ L_while_test_22:
     ldloc _F
     ldfld valuetype T_RS @GENPWN::B
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2078
+    .line 2078
     ldloc _F
     ldflda valuetype T_RS @GENPWN::INRS
     ldloc _F
@@ -23721,10 +23721,10 @@ L_while_test_22:
     ldloc _F
     ldfld valuetype T_RS @GENPWN::IMRS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2079
+    .line 2079
     br L_while_test_26
 L_while_25:
-    // line 2081
+    .line 2081
     ldsflda valuetype T_array_9 _G::XTLS
     ldsflda valuetype T_array_3 _G::XTSL
     ldloc _F
@@ -23741,7 +23741,7 @@ L_while_25:
     ldloc _F
     ldfld int8 @GENPWN::INTS
     call void GENONE(int8 A, int8 B)
-    // line 2083
+    .line 2083
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     ldc.i4 1
@@ -23749,7 +23749,7 @@ L_while_25:
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldc.i4 1 // (true)
     stfld bool T_RM::RMCA
-    // line 2084
+    .line 2084
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     ldc.i4 1
@@ -23763,7 +23763,7 @@ L_while_25:
     ldfld int8 @GENPWN::INTS
     call bool INRSTB(valuetype T_RS A, int8 B)
     stfld bool T_RM::RMEP
-    // line 2086
+    .line 2086
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     ldc.i4 1
@@ -23771,7 +23771,7 @@ L_while_25:
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldfld bool T_RM::RMEP
     brfalse L_if_end_27
-    // line 2087
+    .line 2087
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     ldc.i4 1
@@ -23780,7 +23780,7 @@ L_while_25:
     ldc.i4 0
     stfld int32 T_RM::RMCP
 L_if_end_27:
-    // line 2088
+    .line 2088
     ldloc _F
     ldfld int8 @GENPWN::INTS
     ldsflda valuetype T_array_37 _G::XTRFS
@@ -23793,7 +23793,7 @@ L_if_end_27:
     ldc.i4.0
     ceq
     brfalse L_if_end_28
-    // line 2089
+    .line 2089
     call void PWNPRO()
 L_if_end_28:
     /* nop */
@@ -23812,7 +23812,7 @@ L_Epilogue:
     ret
 }
 
-// line 2095
+.line 2095
 
 .method static
 void GENFSL(valuetype T_RS A)
@@ -23829,7 +23829,7 @@ void GENFSL(valuetype T_RS A)
     stfld valuetype T_RS @GENFSL::A
 
 L_Entry:
-    // line 2107
+    .line 2107
     ldloc _F
     ldflda valuetype T_RS @GENFSL::INRS
     ldloc _F
@@ -23839,13 +23839,13 @@ L_Entry:
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2108
+    .line 2108
     ldloc _F
     ldflda valuetype T_RS @GENFSL::IMRS
     ldloc _F
     ldfld valuetype T_RS @GENFSL::A
     call void NOTRS(valuetype T_RS& C, valuetype T_RS A)
-    // line 2109
+    .line 2109
     ldsflda valuetype T_arraytkofrs _G::GENFR
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
@@ -23856,7 +23856,7 @@ L_Entry:
     ldloc _F
     ldfld valuetype T_RS @GENFSL::IMRS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2110
+    .line 2110
     ldloc _F
     ldflda valuetype T_RS @GENFSL::IPRS
     ldloc _F
@@ -23866,7 +23866,7 @@ L_Entry:
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2111
+    .line 2111
     ldsflda valuetype T_arraytkofrs _G::GENPN
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
@@ -23877,10 +23877,10 @@ L_Entry:
     ldloc _F
     ldfld valuetype T_RS @GENFSL::IMRS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2112
+    .line 2112
     br L_while_test_2
 L_while_1:
-    // line 2114
+    .line 2114
     ldloc _F
     ldflda valuetype T_RS @GENFSL::IMRS
     ldsflda valuetype T_RX _G::ATKFR
@@ -23893,10 +23893,10 @@ L_while_1:
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2117
+    .line 2117
     br L_while_test_4
 L_while_3:
-    // line 2118
+    .line 2118
     ldloc _F
     ldfld int8 @GENFSL::INTS
     ldloc _F
@@ -23917,7 +23917,7 @@ L_while_test_2:
     ldflda int8 @GENFSL::INTS
     call bool NXTTS(valuetype T_RS& A, int8& B)
     brtrue L_while_1
-    // line 2120
+    .line 2120
     ldloc _F
     ldfld valuetype T_RS @GENFSL::IPRS
     ldsflda valuetype T_arraytkofrs _G::GENTO
@@ -23931,7 +23931,7 @@ L_Epilogue:
     ret
 }
 
-// line 2124
+.line 2124
 
 .method static
 void GENTSL(valuetype T_RS A)
@@ -23948,7 +23948,7 @@ void GENTSL(valuetype T_RS A)
     stfld valuetype T_RS @GENTSL::A
 
 L_Entry:
-    // line 2136
+    .line 2136
     ldloc _F
     ldflda valuetype T_RS @GENTSL::INRS
     ldloc _F
@@ -23958,13 +23958,13 @@ L_Entry:
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2137
+    .line 2137
     ldloc _F
     ldflda valuetype T_RS @GENTSL::IMRS
     ldloc _F
     ldfld valuetype T_RS @GENTSL::A
     call void NOTRS(valuetype T_RS& C, valuetype T_RS A)
-    // line 2138
+    .line 2138
     ldsflda valuetype T_arraytkofrs _G::GENTO
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
@@ -23975,16 +23975,16 @@ L_Entry:
     ldloc _F
     ldfld valuetype T_RS @GENTSL::IMRS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2139
+    .line 2139
     ldloc _F
     ldflda valuetype T_RS @GENTSL::IPRS
     ldloc _F
     ldfld valuetype T_RS @GENTSL::INRS
     call void CPYRS(valuetype T_RS& C, valuetype T_RS A)
-    // line 2140
+    .line 2140
     br L_while_test_2
 L_while_1:
-    // line 2142
+    .line 2142
     ldloc _F
     ldflda valuetype T_RS @GENTSL::IMRS
     ldsflda valuetype T_RX _G::ATKTO
@@ -23997,10 +23997,10 @@ L_while_1:
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2144
+    .line 2144
     br L_while_test_4
 L_while_3:
-    // line 2145
+    .line 2145
     ldloc _F
     ldfld int8 @GENTSL::IMTS
     ldloc _F
@@ -24021,7 +24021,7 @@ L_while_test_2:
     ldflda int8 @GENTSL::INTS
     call bool NXTTS(valuetype T_RS& A, int8& B)
     brtrue L_while_1
-    // line 2147
+    .line 2147
     ldsflda valuetype T_arraytkofrs _G::GENPN
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
@@ -24035,7 +24035,7 @@ L_Epilogue:
     ret
 }
 
-// line 2151
+.line 2151
 
 .method static
 void GENCAP()
@@ -24048,7 +24048,7 @@ void GENCAP()
     stloc _F
 
 L_Entry:
-    // line 2157
+    .line 2157
     ldloc _F
     ldflda valuetype T_RS @GENCAP::INRS
     ldsflda valuetype T_arraytkofrs _G::ENPAS
@@ -24063,7 +24063,7 @@ L_Entry:
     call instance valuetype T_RS& T_arraytmofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void IORRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2158
+    .line 2158
     ldloc _F
     ldfld valuetype T_RS @GENCAP::INRS
     call void GENTSL(valuetype T_RS A)
@@ -24073,7 +24073,7 @@ L_Epilogue:
     ret
 }
 
-// line 2163
+.line 2163
 
 .method static
 void GENCAS()
@@ -24090,7 +24090,7 @@ void GENCAS()
     stloc _F
 
 L_Entry:
-    // line 2171
+    .line 2171
     ldsflda valuetype T_array_18 _G::XTMQ
     ldsfld int32 _G::JNTM
     call instance int32& T_array_18::ldadr(int32)
@@ -24114,7 +24114,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int32 @GENCAS::INTQ
 L_for_loop_1:
-    // line 2172
+    .line 2172
     ldsflda valuetype T_arraytkofrs _G::CSTAT
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
@@ -24126,7 +24126,7 @@ L_for_loop_1:
     ldobj int8
     call bool INRSTB(valuetype T_RS A, int8 B)
     brfalse L_if_end_3
-    // line 2175
+    .line 2175
     ldloc _F
     ldflda valuetype T_RS @GENCAS::INRS
     ldsflda valuetype T_arraytqofrs _G::XRQSO
@@ -24139,7 +24139,7 @@ L_for_loop_1:
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2177
+    .line 2177
     ldloc _F
     ldflda valuetype T_RS @GENCAS::IMRS
     ldsflda valuetype T_arraytqofrs _G::XRQSA
@@ -24155,7 +24155,7 @@ L_for_loop_1:
     call instance valuetype T_RS& T_arraytmofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void ANDRS(valuetype T_RS& C, valuetype T_RS A, valuetype T_RS B)
-    // line 2179
+    .line 2179
     ldloc _F
     ldfld valuetype T_RS @GENCAS::INRS
     call bool NULRS(valuetype T_RS A)
@@ -24167,7 +24167,7 @@ L_for_loop_1:
     call bool NULRS(valuetype T_RS A)
 L_AND_shortcut_4:
     brfalse L_if_end_5
-    // line 2183
+    .line 2183
     ldsflda valuetype T_RF _G::MOVES
     ldsfld int16 _G::JNTW
     call instance valuetype T_RM& T_RF::ldadr(int32)
@@ -24177,7 +24177,7 @@ L_AND_shortcut_4:
     call instance valuetype T_RM& T_array_45::ldadr(int32)
     ldobj valuetype T_RM
     stobj valuetype T_RM
-    // line 2184
+    .line 2184
     ldsflda valuetype T_RE _G::VALUE
     ldsfld int16 _G::JNTW
     call instance int16& T_RE::ldadr(int32)
@@ -24187,7 +24187,7 @@ L_AND_shortcut_4:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int16
-    // line 2185
+    .line 2185
     ldsfld int16 _G::JNTW
     ldc.i4 1
     add
@@ -24224,7 +24224,7 @@ L_Epilogue:
     ret
 }
 
-// line 2191
+.line 2191
 
 .method static
 void GENALL()
@@ -24237,13 +24237,13 @@ void GENALL()
     stloc _F
 
 L_Entry:
-    // line 2194
+    .line 2194
     ldsflda valuetype T_arraytkofrs _G::ALLOC
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void GENFSL(valuetype T_RS A)
-    // line 2195
+    .line 2195
     call void GENCAS()
     /* nop */
 
@@ -24251,7 +24251,7 @@ L_Epilogue:
     ret
 }
 
-// line 2199
+.line 2199
 
 .method static
 void LSTMOV()
@@ -24268,11 +24268,11 @@ void LSTMOV()
     stloc _F
 
 L_Entry:
-    // line 2205
+    .line 2205
     call void CREATE()
-    // line 2206
+    .line 2206
     call void GENALL()
-    // line 2207
+    .line 2207
     ldsfld int16 _G::JNTW
     ldc.i4 1
     sub
@@ -24292,7 +24292,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int16 @LSTMOV::INTW
 L_for_loop_1:
-    // line 2209
+    .line 2209
     ldsflda valuetype T_RF _G::MOVES
     ldloc _F
     ldfld int16 @LSTMOV::INTW
@@ -24301,7 +24301,7 @@ L_for_loop_1:
     brfalse L_if_end_3
     /* nop */
 L_if_end_3:
-    // line 2210
+    .line 2210
     ldsflda valuetype T_RF _G::MOVES
     ldloc _F
     ldfld int16 @LSTMOV::INTW
@@ -24333,7 +24333,7 @@ L_Epilogue:
     ret
 }
 
-// line 2215
+.line 2215
 
 .method static
 void THEMOV(valuetype T_RM A)
@@ -24359,21 +24359,21 @@ void THEMOV(valuetype T_RM A)
     stfld valuetype T_RM @THEMOV::A
 
 L_Entry:
-    // line 2225
+    .line 2225
     ldloc _F
     ldfld valuetype T_RM @THEMOV::A
     stsfld valuetype T_RM _G::LSTMV
-    // line 2226
+    .line 2226
     ldloc _F
     ldloc _F
     ldflda valuetype T_RM @THEMOV::A
     call bool UPDATE(valuetype T_RM& A)
     stfld bool @THEMOV::INTB
-    // line 2230
+    .line 2230
     ldsflda valuetype T_RB _G::BOARD
     ldsfld int32 _G::JNTM
     stfld int32 T_RB::RBTM
-    // line 2231
+    .line 2231
     ldloc _F
     ldflda valuetype T_RS @THEMOV::INRS
     ldsflda valuetype T_arraytkofrs _G::ENPAS
@@ -24381,21 +24381,21 @@ L_Entry:
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
     ldobj valuetype T_RS
     call void CPYRS(valuetype T_RS& C, valuetype T_RS A)
-    // line 2232
+    .line 2232
     ldloc _F
     ldflda valuetype T_RS @THEMOV::INRS
     ldloc _F
     ldflda int8 @THEMOV::INTS
     call bool NXTTS(valuetype T_RS& A, int8& B)
     brfalse L_else_1
-    // line 2233
+    .line 2233
     ldsflda valuetype T_RB _G::BOARD
     ldloc _F
     ldfld int8 @THEMOV::INTS
     stfld int8 T_RB::RBTS
     br L_if_end_2
 L_else_1:
-    // line 2235
+    .line 2235
     ldsflda valuetype T_RB _G::BOARD
     ldc.i4 -1
     dup
@@ -24404,12 +24404,12 @@ L_else_1:
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_RB::RBTS
 L_if_end_2:
-    // line 2236
+    .line 2236
     ldsfld int32 _G::JNTM
     ldc.i4 1
     ceq
     brfalse L_if_end_3
-    // line 2237
+    .line 2237
     ldsflda valuetype T_RB _G::BOARD
     ldsflda valuetype T_RB _G::BOARD
     ldfld int32 T_RB::RBTI
@@ -24417,7 +24417,7 @@ L_if_end_2:
     add
     stfld int32 T_RB::RBTI
 L_if_end_3:
-    // line 2238
+    .line 2238
     ldc.i4 3
     stloc $tmpEndValue1
     ldc.i4 0
@@ -24433,7 +24433,7 @@ L_if_end_3:
     ldloc $tmpIndex2
     stfld int32 @THEMOV::INTQ
 L_for_loop_4:
-    // line 2239
+    .line 2239
     ldsflda valuetype T_arraytkofrs _G::CSTAT
     ldsfld int8 _G::JNTK
     call instance valuetype T_RS& T_arraytkofrs::ldadr(int32)
@@ -24445,7 +24445,7 @@ L_for_loop_4:
     ldobj int8
     call bool INRSTB(valuetype T_RS A, int8 B)
     brfalse L_else_6
-    // line 2240
+    .line 2240
     ldloca $tmpSetLiteral3
     call instance void T_SQ::clear()
     ldloca $tmpSetLiteral3
@@ -24467,7 +24467,7 @@ L_for_loop_4:
     stfld valuetype T_SQ T_RB::RBSQ
     br L_if_end_7
 L_else_6:
-    // line 2242
+    .line 2242
     ldloca $tmpSetLiteral4
     call instance void T_SQ::clear()
     ldloca $tmpSetLiteral4
@@ -24506,7 +24506,7 @@ L_if_end_7:
     br L_for_loop_4
 L_for_end_5:
     pop
-    // line 2243
+    .line 2243
     ldc.i4 63
     stloc $tmpEndValue6
     ldc.i4 0
@@ -24522,7 +24522,7 @@ L_for_end_5:
     ldloc $tmpIndex7
     stfld int8 @THEMOV::INTS
 L_for_loop_8:
-    // line 2244
+    .line 2244
     ldsflda valuetype T_RB _G::BOARD
     ldflda valuetype T_array_38 T_RB::RBIS
     ldloc _F
@@ -24559,7 +24559,7 @@ L_Epilogue:
     ret
 }
 
-// line 2249
+.line 2249
 
 .method static
 void EVALU8()
@@ -24572,7 +24572,7 @@ void EVALU8()
     stloc _F
 
 L_Entry:
-    // line 2357
+    .line 2357
     ldsflda valuetype T_array_26 _G::XTMV
     ldsfld int32 _G::JNTM
     call instance int16& T_array_26::ldadr(int32)
@@ -24594,7 +24594,7 @@ L_Entry:
     ldc.i4.0
     ceq
     brfalse L_else_1
-    // line 2359
+    .line 2359
     ldloc _F
     ldsflda valuetype T_array_26 _G::XTMV
     ldsfld int32 _G::JNTM
@@ -24612,7 +24612,7 @@ L_Entry:
     stfld int16 @EVALU8::INTV
     br L_if_end_2
 L_else_1:
-    // line 2362
+    .line 2362
     ldloc _F
     ldsfld int32 _G::FWPAWN
     ldloc _F
@@ -24712,7 +24712,7 @@ L_else_1:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int16 @EVALU8::INTV
-    // line 2370
+    .line 2370
     ldsfld int16 _G::MAXPS
     ldloc _F
     ldfld int16 @EVALU8::INTV
@@ -24727,7 +24727,7 @@ L_abs_question_3:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::MAXPS
-    // line 2371
+    .line 2371
     ldloc _F
     ldsflda valuetype T_array_26 _G::XTMV
     ldsfld int32 _G::JNTM
@@ -24748,10 +24748,10 @@ L_abs_question_3:
     stfld int16 @EVALU8::INTV
     /* nop */
 L_if_end_2:
-    // line 2373
+    .line 2373
     ldsfld bool _G::SWTR
     brfalse L_if_end_4
-    // line 2375
+    .line 2375
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " EVALU8"
@@ -24773,7 +24773,7 @@ L_if_end_2:
     ldfld int16 @EVALU8::INTV
     call instance void [lpcRuntime]LPC.File::Write(int32)
     pop
-    // line 2376
+    .line 2376
     ldsflda valuetype T_RF _G::MOVES
     ldsflda valuetype T_array_110 _G::INDEX
     ldsfld int8 _G::JNTK
@@ -24784,7 +24784,7 @@ L_if_end_2:
     call void PRIMOV(valuetype T_RM A)
     /* nop */
 L_if_end_4:
-    // line 2378
+    .line 2378
     ldsflda valuetype T_RE _G::VALUE
     ldsflda valuetype T_array_110 _G::INDEX
     ldsfld int8 _G::JNTK
@@ -24800,7 +24800,7 @@ L_Epilogue:
     ret
 }
 
-// line 2382
+.line 2382
 
 .method static
 int16 SEARCH()
@@ -24813,11 +24813,11 @@ int16 SEARCH()
     stloc _F
 
 L_Entry:
-    // line 2669
+    .line 2669
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @SEARCH::Jumpin
-    // line 2670
+    .line 2670
     ldsflda valuetype T_array_102 _G::BSTMV
     ldc.i4 0
     call instance int16& T_array_102::ldadr(int32)
@@ -24827,7 +24827,7 @@ L_Entry:
     ldc.i4 500
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int16
-    // line 2671
+    .line 2671
     ldsflda valuetype T_array_110 _G::INDEX
     ldsfld int8 _G::JNTK
     call instance int16& T_array_110::ldadr(int32)
@@ -24837,15 +24837,15 @@ L_Entry:
     ldc.i4 500
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int16
-    // line 2672
+    .line 2672
     ldsflda valuetype T_RF _G::MOVES
     ldc.i4 1
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldsfld valuetype T_RM _G::LSTMV
     stobj valuetype T_RM
-    // line 2673
+    .line 2673
     call void EVALU8()
-    // line 2674
+    .line 2674
     ldsflda valuetype T_array_109 _G::BSTVL
     ldc.i4 0
     ldc.i4 2
@@ -24862,7 +24862,7 @@ L_Entry:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int16
-    // line 2675
+    .line 2675
     ldsflda valuetype T_array_109 _G::BSTVL
     ldc.i4 0
     ldc.i4 1
@@ -24880,7 +24880,7 @@ L_Entry:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int16
-    // line 2676
+    .line 2676
     ldc.i4 0
     ldc.i4 1
     add
@@ -24889,10 +24889,10 @@ L_Entry:
     ldc.i4 16
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int8 _G::JMTK
-    // line 2677
+    .line 2677
     br L_while_test_2
 L_while_1:
-    // line 2681
+    .line 2681
 L_11:
     ldsflda valuetype T_array_109 _G::BSTVL
     ldsfld int8 _G::JNTK
@@ -24904,7 +24904,7 @@ L_11:
     call instance int16& T_array_109::ldadr(int32)
     ldobj int16
     stobj int16
-    // line 2684
+    .line 2684
 L_12:
     ldloc _F
     call instance bool @SEARCH::SELECT()
@@ -24919,7 +24919,7 @@ L_12:
     ceq
 L_AND_shortcut_3:
     brfalse L_else_4
-    // line 2686
+    .line 2686
     ldsflda valuetype T_array_109 _G::BSTVL
     ldsfld int8 _G::JNTK
     call instance int16& T_array_109::ldadr(int32)
@@ -24931,21 +24931,21 @@ L_AND_shortcut_3:
     call instance int16& T_RE::ldadr(int32)
     ldobj int16
     stobj int16
-    // line 2687
+    .line 2687
     ldloc _F
     ldsfld int8 _G::JNTK
     call instance void @SEARCH::NEWBST(int8 A)
     /* nop */
     br L_if_end_5
 L_else_4:
-    // line 2691
+    .line 2691
     ldloc _F
     ldfld bool @SEARCH::Jumpin
     brfalse L_if_end_6
-    // line 2691
+    .line 2691
     br L_13
 L_if_end_6:
-    // line 2692
+    .line 2692
     ldsflda valuetype T_RF _G::MOVES
     ldsflda valuetype T_array_110 _G::INDEX
     ldsfld int8 _G::JNTK
@@ -24956,11 +24956,11 @@ L_if_end_6:
     call instance valuetype T_RM& T_RF::ldadr(int32)
     call bool UPDATE(valuetype T_RM& A)
     brfalse L_else_7
-    // line 2693
+    .line 2693
     br L_11
     br L_if_end_8
 L_else_7:
-    // line 2696
+    .line 2696
     ldsflda valuetype T_RF _G::MOVES
     ldsflda valuetype T_array_110 _G::INDEX
     ldsfld int8 _G::JNTK
@@ -24969,29 +24969,29 @@ L_else_7:
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldobj valuetype T_RM
     call void DNDATE(valuetype T_RM A)
-    // line 2697
+    .line 2697
     br L_12
     /* nop */
 L_if_end_8:
-    // line 2701
+    .line 2701
 L_13:
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @SEARCH::Jumpin
-    // line 2702
+    .line 2702
     ldloc _F
     ldsfld int8 _G::JNTK
     call instance bool @SEARCH::MINMAX(int8 A)
     brfalse L_if_end_9
-    // line 2703
+    .line 2703
     br L_15
 L_if_end_9:
-    // line 2706
+    .line 2706
 L_14:
     ldloc _F
     call instance bool @SEARCH::SELECT()
     brfalse L_if_end_10
-    // line 2707
+    .line 2707
     ldsflda valuetype T_RF _G::MOVES
     ldsflda valuetype T_array_110 _G::INDEX
     ldsfld int8 _G::JNTK
@@ -25002,11 +25002,11 @@ L_14:
     call instance valuetype T_RM& T_RF::ldadr(int32)
     call bool UPDATE(valuetype T_RM& A)
     brfalse L_else_11
-    // line 2708
+    .line 2708
     br L_11
     br L_if_end_12
 L_else_11:
-    // line 2711
+    .line 2711
     ldsflda valuetype T_RF _G::MOVES
     ldsflda valuetype T_array_110 _G::INDEX
     ldsfld int8 _G::JNTK
@@ -25015,20 +25015,20 @@ L_else_11:
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldobj valuetype T_RM
     call void DNDATE(valuetype T_RM A)
-    // line 2712
+    .line 2712
     br L_14
     /* nop */
 L_if_end_12:
 L_if_end_10:
     /* nop */
 L_if_end_5:
-    // line 2717
+    .line 2717
 L_15:
     ldsfld int8 _G::JNTK
     ldc.i4 0
     cgt
     brfalse L_if_end_13
-    // line 2719
+    .line 2719
     ldsflda valuetype T_RF _G::MOVES
     ldsflda valuetype T_array_110 _G::INDEX
     ldsfld int8 _G::JNTK
@@ -25037,15 +25037,15 @@ L_15:
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldobj valuetype T_RM
     call void DNDATE(valuetype T_RM A)
-    // line 2720
+    .line 2720
     ldloc _F
     ldc.i4 1 // (true)
     stfld bool @SEARCH::Jumpin
-    // line 2721
+    .line 2721
     br L_12
     /* nop */
 L_if_end_13:
-    // line 2725
+    .line 2725
     ldsflda valuetype T_array_109 _G::BSTVL
     ldc.i4 0
     call instance int16& T_array_109::ldadr(int32)
@@ -25078,7 +25078,7 @@ L_if_end_13:
     ceq
 L_OR_shortcut_14:
     brfalse L_if_end_15
-    // line 2727
+    .line 2727
     ldsflda valuetype T_array_105 _G::MVSEL
     ldc.i4 0
     call instance int32& T_array_105::ldadr(int32)
@@ -25086,11 +25086,11 @@ L_OR_shortcut_14:
     ldc.i4 0
     ceq
     brfalse L_if_end_16
-    // line 2729
+    .line 2729
     br L_16
     /* nop */
 L_if_end_16:
-    // line 2731
+    .line 2731
     ldsflda valuetype T_array_109 _G::BSTVL
     ldc.i4 0
     ldc.i4 2
@@ -25103,7 +25103,7 @@ L_if_end_16:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int16
-    // line 2732
+    .line 2732
     ldsflda valuetype T_array_109 _G::BSTVL
     ldc.i4 0
     ldc.i4 1
@@ -25116,13 +25116,13 @@ L_if_end_16:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int16
-    // line 2733
+    .line 2733
     ldsflda valuetype T_array_105 _G::SRCHM
     ldc.i4 0
     call instance int32& T_array_105::ldadr(int32)
     ldc.i4 7
     stobj int32
-    // line 2734
+    .line 2734
     ldc.i4 0
     ldc.i4 1
     add
@@ -25131,11 +25131,11 @@ L_if_end_16:
     ldc.i4 500
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::JNTW
-    // line 2735
+    .line 2735
     br L_11
     /* nop */
 L_if_end_15:
-    // line 2737
+    .line 2737
     ldsflda valuetype T_array_109 _G::BSTVL
     ldc.i4 0
     ldc.i4 2
@@ -25152,7 +25152,7 @@ L_if_end_15:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int16
-    // line 2738
+    .line 2738
     ldsflda valuetype T_array_109 _G::BSTVL
     ldc.i4 0
     ldc.i4 1
@@ -25170,7 +25170,7 @@ L_if_end_15:
     ldc.i4 32767
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int16
-    // line 2739
+    .line 2739
     ldsfld int8 _G::JMTK
     ldc.i4 1
     add
@@ -25179,7 +25179,7 @@ L_if_end_15:
     ldc.i4 16
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int8 _G::JMTK
-    // line 2740
+    .line 2740
     ldsflda valuetype T_array_105 _G::SRCHM
     ldc.i4 0
     call instance int32& T_array_105::ldadr(int32)
@@ -25204,7 +25204,7 @@ L_while_test_2:
     clt
 L_AND_shortcut_17:
     brtrue L_while_1
-    // line 2744
+    .line 2744
 L_16:
     ldloc _F
     ldsflda valuetype T_array_102 _G::BSTMV
@@ -25220,7 +25220,7 @@ L_Epilogue:
     ret
 }
 
-// line 2748
+.line 2748
 
 .method static
 void READER()
@@ -25251,11 +25251,11 @@ void READER()
 L_Entry:
 .try
 {
-    // line 3377
+    .line 3377
 L_11:
     br L_while_test_2
 L_while_1:
-    // line 3378
+    .line 3378
     ldloc _F
     call instance void @READER::RDLINE()
 L_while_test_2:
@@ -25264,16 +25264,16 @@ L_while_test_2:
     ldc.i4.0
     ceq
     brtrue L_while_1
-    // line 3379
+    .line 3379
     ldsfld bool _G::SWEC
     brfalse L_if_end_3
-    // line 3381
+    .line 3381
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 32 // ' '
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 3382
+    .line 3382
     ldc.i4 73
     ldc.i4 1
     sub
@@ -25291,7 +25291,7 @@ L_while_test_2:
     ldloc $tmpIndex2
     stfld int8 @READER::INTJ
 L_for_loop_4:
-    // line 3383
+    .line 3383
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsflda valuetype T_RJ _G::ILINE
@@ -25319,7 +25319,7 @@ L_for_loop_4:
     br L_for_loop_4
 L_for_end_5:
     pop
-    // line 3384
+    .line 3384
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 32 // ' '
@@ -25327,7 +25327,7 @@ L_for_end_5:
     call instance void [lpcRuntime]LPC.File::WriteLn()
     /* nop */
 L_if_end_3:
-    // line 3386
+    .line 3386
     ldloc $tmpSetLiteral4
     ldsflda valuetype T_RJ _G::ILINE
     ldc.i4 0
@@ -25337,11 +25337,11 @@ L_if_end_3:
     ldobj uint8
     call bool _SetContains(valuetype T_set_5 s, int32 val)
     brfalse L_if_end_6
-    // line 3388
+    .line 3388
     ldloc _F
     ldsfld valuetype T_RA STRING_56    // "          "
     stfld valuetype T_RA @READER::INRA
-    // line 3389
+    .line 3389
     ldloc _F
     ldflda valuetype T_RA @READER::INRA
     ldc.i4 1
@@ -25351,7 +25351,7 @@ L_if_end_3:
     call instance uint8& T_RJ::ldadr(int32)
     ldobj uint8
     stobj uint8
-    // line 3390
+    .line 3390
     ldloc _F
     ldflda valuetype T_RA @READER::INRA
     ldc.i4 1
@@ -25365,101 +25365,101 @@ L_if_end_3:
     call instance uint8& T_RJ::ldadr(int32)
     ldobj uint8
     stobj uint8
-    // line 3391
+    .line 3391
     ldloc _F
     call instance void @READER::RDRSFT()
-    // line 3392
+    .line 3392
     ldloc _F
     ldsfld valuetype T_RA STRING_116    // "BO        "
     ldloc _F
     ldftn instance void @READER::BOACMD()
     newobj instance void T_READER_subroutine_220::.ctor(object, native uint)
     call instance void @READER::RDRCMD(valuetype T_RA A, class T_READER_subroutine_115 XXXCMD)
-    // line 3393
+    .line 3393
     ldloc _F
     ldsfld valuetype T_RA STRING_117    // "EN        "
     ldloc _F
     ldftn instance void @READER::ENDCMD()
     newobj instance void T_READER_subroutine_222::.ctor(object, native uint)
     call instance void @READER::RDRCMD(valuetype T_RA A, class T_READER_subroutine_115 XXXCMD)
-    // line 3394
+    .line 3394
     ldloc _F
     ldsfld valuetype T_RA STRING_118    // "GO        "
     ldloc _F
     ldftn instance void @READER::GONCMD()
     newobj instance void T_READER_subroutine_224::.ctor(object, native uint)
     call instance void @READER::RDRCMD(valuetype T_RA A, class T_READER_subroutine_115 XXXCMD)
-    // line 3395
+    .line 3395
     ldloc _F
     ldsfld valuetype T_RA STRING_119    // "IN        "
     ldloc _F
     ldftn instance void @READER::INICMD()
     newobj instance void T_READER_subroutine_226::.ctor(object, native uint)
     call instance void @READER::RDRCMD(valuetype T_RA A, class T_READER_subroutine_115 XXXCMD)
-    // line 3396
+    .line 3396
     ldloc _F
     ldsfld valuetype T_RA STRING_120    // "LE        "
     ldloc _F
     ldftn instance void @READER::LETCMD()
     newobj instance void T_READER_subroutine_228::.ctor(object, native uint)
     call instance void @READER::RDRCMD(valuetype T_RA A, class T_READER_subroutine_115 XXXCMD)
-    // line 3397
+    .line 3397
     ldloc _F
     ldsfld valuetype T_RA STRING_121    // "PB        "
     ldloc _F
     ldftn instance void @READER::PAMCMD()
     newobj instance void T_READER_subroutine_230::.ctor(object, native uint)
     call instance void @READER::RDRCMD(valuetype T_RA A, class T_READER_subroutine_115 XXXCMD)
-    // line 3398
+    .line 3398
     ldloc _F
     ldsfld valuetype T_RA STRING_122    // "PO        "
     ldloc _F
     ldftn instance void @READER::POPCMD()
     newobj instance void T_READER_subroutine_232::.ctor(object, native uint)
     call instance void @READER::RDRCMD(valuetype T_RA A, class T_READER_subroutine_115 XXXCMD)
-    // line 3399
+    .line 3399
     ldloc _F
     ldsfld valuetype T_RA STRING_123    // "PL        "
     ldloc _F
     ldftn instance void @READER::PLECMD()
     newobj instance void T_READER_subroutine_234::.ctor(object, native uint)
     call instance void @READER::RDRCMD(valuetype T_RA A, class T_READER_subroutine_115 XXXCMD)
-    // line 3400
+    .line 3400
     ldloc _F
     ldsfld valuetype T_RA STRING_124    // "PM        "
     ldloc _F
     ldftn instance void @READER::PMVCMD()
     newobj instance void T_READER_subroutine_236::.ctor(object, native uint)
     call instance void @READER::RDRCMD(valuetype T_RA A, class T_READER_subroutine_115 XXXCMD)
-    // line 3401
+    .line 3401
     ldloc _F
     ldsfld valuetype T_RA STRING_125    // "PR        "
     ldloc _F
     ldftn instance void @READER::PRICMD()
     newobj instance void T_READER_subroutine_238::.ctor(object, native uint)
     call instance void @READER::RDRCMD(valuetype T_RA A, class T_READER_subroutine_115 XXXCMD)
-    // line 3402
+    .line 3402
     ldloc _F
     ldsfld valuetype T_RA STRING_126    // "ST        "
     ldloc _F
     ldftn instance void @READER::STACMD()
     newobj instance void T_READER_subroutine_240::.ctor(object, native uint)
     call instance void @READER::RDRCMD(valuetype T_RA A, class T_READER_subroutine_115 XXXCMD)
-    // line 3403
+    .line 3403
     ldloc _F
     ldsfld valuetype T_RA STRING_127    // "SW        "
     ldloc _F
     ldftn instance void @READER::SWICMD()
     newobj instance void T_READER_subroutine_242::.ctor(object, native uint)
     call instance void @READER::RDRCMD(valuetype T_RA A, class T_READER_subroutine_115 XXXCMD)
-    // line 3404
+    .line 3404
     ldloc _F
     ldsfld valuetype T_RA STRING_128    // "WH        "
     ldloc _F
     ldftn instance void @READER::WHACMD()
     newobj instance void T_READER_subroutine_244::.ctor(object, native uint)
     call instance void @READER::RDRCMD(valuetype T_RA A, class T_READER_subroutine_115 XXXCMD)
-    // line 3405
+    .line 3405
     ldloc _F
     ldsfld valuetype T_array_99 STRING_129    // "* IMWALID COMMAND             "
     call instance void @READER::RDRERR(valuetype T_array_99 A)
@@ -25483,7 +25483,7 @@ L_Epilogue:
     ret
 }
 
-// line 3410
+.line 3410
 
 .method static
 void MINENG(valuetype T_RM A, valuetype T_RA B)
@@ -25504,10 +25504,10 @@ void MINENG(valuetype T_RM A, valuetype T_RA B)
     stfld valuetype T_RA @MINENG::B
 
 L_Entry:
-    // line 3597
+    .line 3597
     ldsfld valuetype T_array_99 STRING_130    // "                              "
     stsfld valuetype T_array_99 _G::MOVMS
-    // line 3599
+    .line 3599
     ldloc _F
     ldc.i4 1
     ldc.i4 1
@@ -25517,7 +25517,7 @@ L_Entry:
     ldc.i4 30
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 @MINENG::INTN
-    // line 3600
+    .line 3600
     ldloc _F
     ldloc _F
     ldfld valuetype T_RA @MINENG::B
@@ -25527,7 +25527,7 @@ L_Entry:
     ldc.i4 10
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call instance void @MINENG::ADDWRD(valuetype T_RA A, int8 B)
-    // line 3601
+    .line 3601
     ldloc _F
     ldsfld valuetype T_RA STRING_131    // "-         "
     ldc.i4 2
@@ -25536,12 +25536,12 @@ L_Entry:
     ldc.i4 10
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call instance void @MINENG::ADDWRD(valuetype T_RA A, int8 B)
-    // line 3604
+    .line 3604
     ldloc _F
     ldflda valuetype T_RM @MINENG::A
     ldfld bool T_RM::RMOO
     brfalse L_else_1
-    // line 3606
+    .line 3606
     ldloc _F
     ldsfld valuetype T_RA STRING_132    // "O-O       "
     ldc.i4 3
@@ -25550,12 +25550,12 @@ L_Entry:
     ldc.i4 10
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call instance void @MINENG::ADDWRD(valuetype T_RA A, int8 B)
-    // line 3607
+    .line 3607
     ldloc _F
     ldflda valuetype T_RM @MINENG::A
     ldfld bool T_RM::RMQS
     brfalse L_if_end_3
-    // line 3608
+    .line 3608
     ldloc _F
     ldsfld valuetype T_RA STRING_133    // "-O        "
     ldc.i4 2
@@ -25568,12 +25568,12 @@ L_if_end_3:
     /* nop */
     br L_if_end_2
 L_else_1:
-    // line 3611
+    .line 3611
     ldloc _F
     ldflda valuetype T_RM @MINENG::A
     ldfld bool T_RM::RMCA
     brfalse L_else_4
-    // line 3612
+    .line 3612
     ldloc _F
     ldloc _F
     ldfld valuetype T_RM @MINENG::A
@@ -25582,7 +25582,7 @@ L_else_1:
     call instance void @MINENG::MINGEN(valuetype T_RM A, int32 B, int32 C)
     br L_if_end_5
 L_else_4:
-    // line 3614
+    .line 3614
     ldloc _F
     ldloc _F
     ldfld valuetype T_RM @MINENG::A
@@ -25591,16 +25591,16 @@ L_else_4:
     call instance void @MINENG::MINGEN(valuetype T_RM A, int32 B, int32 C)
 L_if_end_5:
 L_if_end_2:
-    // line 3615
+    .line 3615
     ldloc _F
     ldflda valuetype T_RM @MINENG::A
     ldfld bool T_RM::RMPR
     brfalse L_if_end_6
-    // line 3617
+    .line 3617
     ldloc _F
     ldc.i4 61 // '='
     call instance void @MINENG::ADDCHR(uint8 A)
-    // line 3618
+    .line 3618
     ldloc _F
     ldsflda valuetype T_array_22 _G::XTGC
     ldloc _F
@@ -25611,7 +25611,7 @@ L_if_end_2:
     call instance void @MINENG::ADDCHR(uint8 A)
     /* nop */
 L_if_end_6:
-    // line 3620
+    .line 3620
     ldloc _F
     ldsfld valuetype T_RA STRING_134    // ".         "
     ldc.i4 3
@@ -25620,12 +25620,12 @@ L_if_end_6:
     ldc.i4 10
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call instance void @MINENG::ADDWRD(valuetype T_RA A, int8 B)
-    // line 3621
+    .line 3621
     ldloc _F
     ldflda valuetype T_RM @MINENG::A
     ldfld bool T_RM::RMCH
     brfalse L_else_7
-    // line 3623
+    .line 3623
     ldloc _F
     ldsfld valuetype T_RA STRING_135    // "CHECK     "
     ldc.i4 5
@@ -25634,12 +25634,12 @@ L_if_end_6:
     ldc.i4 10
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call instance void @MINENG::ADDWRD(valuetype T_RA A, int8 B)
-    // line 3624
+    .line 3624
     ldloc _F
     ldflda valuetype T_RM @MINENG::A
     ldfld bool T_RM::RMMT
     brfalse L_if_end_9
-    // line 3625
+    .line 3625
     ldloc _F
     ldsfld valuetype T_RA STRING_136    // "MATE      "
     ldc.i4 4
@@ -25649,19 +25649,19 @@ L_if_end_6:
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     call instance void @MINENG::ADDWRD(valuetype T_RA A, int8 B)
 L_if_end_9:
-    // line 3626
+    .line 3626
     ldloc _F
     ldc.i4 46 // '.'
     call instance void @MINENG::ADDCHR(uint8 A)
     /* nop */
     br L_if_end_8
 L_else_7:
-    // line 3629
+    .line 3629
     ldloc _F
     ldflda valuetype T_RM @MINENG::A
     ldfld bool T_RM::RMMT
     brfalse L_if_end_10
-    // line 3630
+    .line 3630
     ldloc _F
     ldsfld valuetype T_RA STRING_137    // "STALEMATE."
     ldc.i4 10
@@ -25679,7 +25679,7 @@ L_Epilogue:
     ret
 }
 
-// line 3635
+.line 3635
 
 .method static
 void MYMOVE()
@@ -25692,28 +25692,28 @@ void MYMOVE()
     stloc _F
 
 L_Entry:
-    // line 3641
+    .line 3641
     call void CREATE()
-    // line 3642
+    .line 3642
     ldloc _F
     ldsflda valuetype T_RF _G::MOVES
     call int16 SEARCH()
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldobj valuetype T_RM
     stfld valuetype T_RM @MYMOVE::INRM
-    // line 3643
+    .line 3643
     ldloc _F
     ldflda valuetype T_RM @MYMOVE::INRM
     ldfld bool T_RM::RMIL
     brfalse L_else_1
-    // line 3645
+    .line 3645
     ldc.i4 0
     stsfld int32 _G::GOING
-    // line 3646
+    .line 3646
     ldsflda valuetype T_RM _G::LSTMV
     ldfld bool T_RM::RMCH
     brfalse L_else_3
-    // line 3647
+    .line 3647
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " CONGRATULATIONS."
@@ -25721,7 +25721,7 @@ L_Entry:
     call instance void [lpcRuntime]LPC.File::WriteLn()
     br L_if_end_4
 L_else_3:
-    // line 3649
+    .line 3649
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " DRAWN. "
@@ -25731,26 +25731,26 @@ L_if_end_4:
     /* nop */
     br L_if_end_2
 L_else_1:
-    // line 3653
+    .line 3653
     ldloc _F
     ldfld valuetype T_RM @MYMOVE::INRM
     ldsfld valuetype T_RA STRING_138    // "  MY MOVE "
     call void MINENG(valuetype T_RM A, valuetype T_RA B)
-    // line 3654
+    .line 3654
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld valuetype T_array_99 _G::MOVMS
     call string T_array_99::arrayToString(valuetype T_array_99)
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 3655
+    .line 3655
     ldloc _F
     ldfld valuetype T_RM @MYMOVE::INRM
     call void THEMOV(valuetype T_RM A)
-    // line 3656
+    .line 3656
     ldsfld bool _G::SWSU
     brfalse L_if_end_5
-    // line 3657
+    .line 3657
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsflda valuetype T_RB _G::BOARD
@@ -25781,7 +25781,7 @@ L_Epilogue:
     ret
 }
 
-// line 3662
+.line 3662
 
 .method static
 void YRMOVE()
@@ -26000,93 +26000,93 @@ void YRMOVE()
 L_Entry:
 .try
 {
-    // line 3940
+    .line 3940
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @YRMOVE::Jumpin
-    // line 3941
+    .line 3941
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @YRMOVE::INTB
-    // line 3943
+    .line 3943
 L_19:
     br L_while_test_2
 L_while_1:
-    // line 3946
+    .line 3946
     ldloc _F
     ldfld bool @YRMOVE::Jumpin
     brfalse L_if_end_3
-    // line 3946
+    .line 3946
     br L_15
 L_if_end_3:
-    // line 3948
+    .line 3948
     call void READER()
-    // line 3949
+    .line 3949
     call void LSTMOV()
-    // line 3951
+    .line 3951
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @YRMOVE::IFCA
-    // line 3952
+    .line 3952
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @YRMOVE::IFPR
-    // line 3953
+    .line 3953
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @YRMOVE::IFOO
-    // line 3954
+    .line 3954
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @YRMOVE::IFQS
-    // line 3955
+    .line 3955
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @YRMOVE::IFLD
-    // line 3956
+    .line 3956
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @YRMOVE::IFLF
-    // line 3957
+    .line 3957
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @YRMOVE::IFRD
-    // line 3958
+    .line 3958
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @YRMOVE::IFRF
-    // line 3959
+    .line 3959
     ldloc _F
     ldc.i4 12
     stfld int32 @YRMOVE::INTP
-    // line 3960
+    .line 3960
     ldloc _F
     ldc.i4 12
     stfld int32 @YRMOVE::INCP
-    // line 3961
+    .line 3961
     ldloc _F
     ldloc $tmpSetLiteral1
     stfld valuetype T_set_100 @YRMOVE::INLF
-    // line 3962
+    .line 3962
     ldloc _F
     ldloc $tmpSetLiteral2
     stfld valuetype T_set_100 @YRMOVE::INRF
-    // line 3963
+    .line 3963
     ldloc _F
     ldloc $tmpSetLiteral3
     stfld valuetype T_set_100 @YRMOVE::INLR
-    // line 3964
+    .line 3964
     ldloc _F
     ldloc $tmpSetLiteral4
     stfld valuetype T_set_100 @YRMOVE::INRR
-    // line 3965
+    .line 3965
     ldloc _F
     ldsflda valuetype T_RJ _G::ILINE
     ldsfld int8 _G::JNTJ
     call instance uint8& T_RJ::ldadr(int32)
     ldobj uint8
     stfld uint8 @YRMOVE::INTC
-    // line 3967
+    .line 3967
     ldloc _F
     ldloc $tmpSetLiteral5
     ldloc _F
@@ -26094,10 +26094,10 @@ L_if_end_3:
     newobj instance void T_YRMOVE_subroutine_313::.ctor(object, native uint)
     call instance bool @YRMOVE::NCHIN(valuetype T_set_5 A, class T_YRMOVE_subroutine_307 YRMXXX)
     brfalse L_if_end_4
-    // line 3967
+    .line 3967
     br L_14
 L_if_end_4:
-    // line 3968
+    .line 3968
     ldloc _F
     ldloc $tmpSetLiteral6
     ldloc _F
@@ -26105,10 +26105,10 @@ L_if_end_4:
     newobj instance void T_YRMOVE_subroutine_315::.ctor(object, native uint)
     call instance bool @YRMOVE::NCHIN(valuetype T_set_5 A, class T_YRMOVE_subroutine_307 YRMXXX)
     brfalse L_if_end_5
-    // line 3968
+    .line 3968
     br L_11
 L_if_end_5:
-    // line 3969
+    .line 3969
     ldloc _F
     ldloc $tmpSetLiteral7
     ldloc _F
@@ -26118,7 +26118,7 @@ L_if_end_5:
     brfalse L_if_end_6
     /* nop */
 L_if_end_6:
-    // line 3970
+    .line 3970
     ldloc _F
     ldloc $tmpSetLiteral8
     ldloc _F
@@ -26128,7 +26128,7 @@ L_if_end_6:
     brfalse L_if_end_7
     /* nop */
 L_if_end_7:
-    // line 3971
+    .line 3971
     ldloc _F
     ldloc $tmpSetLiteral9
     ldloc _F
@@ -26138,7 +26138,7 @@ L_if_end_7:
     brfalse L_if_end_8
     /* nop */
 L_if_end_8:
-    // line 3973
+    .line 3973
 L_11:
     ldloc _F
     ldloc $tmpSetLiteral10
@@ -26149,10 +26149,10 @@ L_11:
     ldc.i4.0
     ceq
     brfalse L_if_end_9
-    // line 3973
+    .line 3973
     br L_12
 L_if_end_9:
-    // line 3974
+    .line 3974
     ldloc _F
     ldloc $tmpSetLiteral11
     ldloc _F
@@ -26160,10 +26160,10 @@ L_if_end_9:
     newobj instance void T_YRMOVE_subroutine_324::.ctor(object, native uint)
     call instance bool @YRMOVE::NCHIN(valuetype T_set_5 A, class T_YRMOVE_subroutine_307 YRMXXX)
     brfalse L_if_end_10
-    // line 3974
+    .line 3974
     br L_16
 L_if_end_10:
-    // line 3975
+    .line 3975
     ldloc _F
     ldloc $tmpSetLiteral12
     ldloc _F
@@ -26171,10 +26171,10 @@ L_if_end_10:
     newobj instance void T_YRMOVE_subroutine_326::.ctor(object, native uint)
     call instance bool @YRMOVE::NCHIN(valuetype T_set_5 A, class T_YRMOVE_subroutine_307 YRMXXX)
     brfalse L_if_end_11
-    // line 3975
+    .line 3975
     br L_16
 L_if_end_11:
-    // line 3976
+    .line 3976
     ldloc _F
     ldloc $tmpSetLiteral13
     ldloc _F
@@ -26182,10 +26182,10 @@ L_if_end_11:
     newobj instance void T_YRMOVE_subroutine_315::.ctor(object, native uint)
     call instance bool @YRMOVE::NCHIN(valuetype T_set_5 A, class T_YRMOVE_subroutine_307 YRMXXX)
     brfalse L_if_end_12
-    // line 3976
+    .line 3976
     br L_13
 L_if_end_12:
-    // line 3978
+    .line 3978
 L_12:
     ldloc _F
     ldloc $tmpSetLiteral14
@@ -26196,7 +26196,7 @@ L_12:
     brfalse L_if_end_13
     /* nop */
 L_if_end_13:
-    // line 3979
+    .line 3979
     ldloc _F
     ldloc $tmpSetLiteral15
     ldloc _F
@@ -26206,7 +26206,7 @@ L_if_end_13:
     brfalse L_if_end_14
     /* nop */
 L_if_end_14:
-    // line 3980
+    .line 3980
     ldloc _F
     ldloc $tmpSetLiteral16
     ldloc _F
@@ -26216,7 +26216,7 @@ L_if_end_14:
     brfalse L_if_end_15
     /* nop */
 L_if_end_15:
-    // line 3982
+    .line 3982
 L_13:
     ldloc _F
     ldloc $tmpSetLiteral17
@@ -26225,10 +26225,10 @@ L_13:
     newobj instance void T_YRMOVE_subroutine_315::.ctor(object, native uint)
     call instance bool @YRMOVE::NCHIN(valuetype T_set_5 A, class T_YRMOVE_subroutine_307 YRMXXX)
     brfalse L_if_end_16
-    // line 3982
+    .line 3982
     br L_15
 L_if_end_16:
-    // line 3983
+    .line 3983
     ldloc _F
     ldloc $tmpSetLiteral18
     ldloc _F
@@ -26236,12 +26236,12 @@ L_if_end_16:
     newobj instance void T_YRMOVE_subroutine_336::.ctor(object, native uint)
     call instance bool @YRMOVE::NCHIN(valuetype T_set_5 A, class T_YRMOVE_subroutine_307 YRMXXX)
     brfalse L_if_end_17
-    // line 3983
+    .line 3983
     br L_16
 L_if_end_17:
-    // line 3984
+    .line 3984
     br L_15
-    // line 3987
+    .line 3987
 L_14:
     ldloc _F
     ldloc $tmpSetLiteral19
@@ -26250,10 +26250,10 @@ L_14:
     newobj instance void T_YRMOVE_subroutine_315::.ctor(object, native uint)
     call instance bool @YRMOVE::NCHIN(valuetype T_set_5 A, class T_YRMOVE_subroutine_307 YRMXXX)
     brfalse L_if_end_18
-    // line 3987
+    .line 3987
     br L_16
 L_if_end_18:
-    // line 3988
+    .line 3988
     ldloc _F
     ldloc $tmpSetLiteral20
     ldloc _F
@@ -26261,10 +26261,10 @@ L_if_end_18:
     newobj instance void T_YRMOVE_subroutine_315::.ctor(object, native uint)
     call instance bool @YRMOVE::NCHIN(valuetype T_set_5 A, class T_YRMOVE_subroutine_307 YRMXXX)
     brfalse L_if_end_19
-    // line 3988
+    .line 3988
     br L_16
 L_if_end_19:
-    // line 3989
+    .line 3989
     ldloc _F
     ldloc $tmpSetLiteral21
     ldloc _F
@@ -26272,10 +26272,10 @@ L_if_end_19:
     newobj instance void T_YRMOVE_subroutine_340::.ctor(object, native uint)
     call instance bool @YRMOVE::NCHIN(valuetype T_set_5 A, class T_YRMOVE_subroutine_307 YRMXXX)
     brfalse L_if_end_20
-    // line 3989
+    .line 3989
     br L_16
 L_if_end_20:
-    // line 3990
+    .line 3990
     ldloc _F
     ldloc $tmpSetLiteral22
     ldloc _F
@@ -26283,10 +26283,10 @@ L_if_end_20:
     newobj instance void T_YRMOVE_subroutine_342::.ctor(object, native uint)
     call instance bool @YRMOVE::NCHIN(valuetype T_set_5 A, class T_YRMOVE_subroutine_307 YRMXXX)
     brfalse L_if_end_21
-    // line 3990
+    .line 3990
     br L_15
 L_if_end_21:
-    // line 3991
+    .line 3991
     ldloc _F
     ldloc $tmpSetLiteral23
     ldloc _F
@@ -26294,15 +26294,15 @@ L_if_end_21:
     newobj instance void T_YRMOVE_subroutine_315::.ctor(object, native uint)
     call instance bool @YRMOVE::NCHIN(valuetype T_set_5 A, class T_YRMOVE_subroutine_307 YRMXXX)
     brfalse L_if_end_22
-    // line 3991
+    .line 3991
     br L_16
 L_if_end_22:
-    // line 3993
+    .line 3993
 L_15:
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @YRMOVE::Jumpin
-    // line 3995
+    .line 3995
     ldloc _F
     ldfld bool @YRMOVE::IFRF
     dup
@@ -26314,7 +26314,7 @@ L_15:
     ceq
 L_AND_shortcut_23:
     brfalse L_if_end_24
-    // line 3996
+    .line 3996
     ldloc _F
     ldloc _F
     ldfld valuetype T_set_100 @YRMOVE::INRF
@@ -26329,7 +26329,7 @@ L_AND_shortcut_23:
     call valuetype T_set_100 _SetCastTo_T_set_100(valuetype T_set_5 s)
     stfld valuetype T_set_100 @YRMOVE::INRF
 L_if_end_24:
-    // line 3997
+    .line 3997
     ldloc _F
     ldfld bool @YRMOVE::IFLF
     dup
@@ -26341,7 +26341,7 @@ L_if_end_24:
     ceq
 L_AND_shortcut_25:
     brfalse L_if_end_26
-    // line 3998
+    .line 3998
     ldloc _F
     ldloc _F
     ldfld valuetype T_set_100 @YRMOVE::INLF
@@ -26356,11 +26356,11 @@ L_AND_shortcut_25:
     call valuetype T_set_100 _SetCastTo_T_set_100(valuetype T_set_5 s)
     stfld valuetype T_set_100 @YRMOVE::INLF
 L_if_end_26:
-    // line 3999
+    .line 3999
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @YRMOVE::IFMV
-    // line 4000
+    .line 4000
     ldloc _F
     ldc.i4 1
     dup
@@ -26368,10 +26368,10 @@ L_if_end_26:
     ldc.i4 73
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 @YRMOVE::INTW
-    // line 4001
+    .line 4001
     br L_while_test_28
 L_while_27:
-    // line 4004
+    .line 4004
     ldsflda valuetype T_RF _G::MOVES
     ldloc _F
     ldfld int8 @YRMOVE::INTW
@@ -26381,14 +26381,14 @@ L_while_27:
     ldfld bool @YRMOVE::IFPR
     ceq
     brfalse L_if_end_29
-    // line 4005
+    .line 4005
     ldsflda valuetype T_RF _G::MOVES
     ldloc _F
     ldfld int8 @YRMOVE::INTW
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldfld bool T_RM::RMPR
     brfalse L_else_30
-    // line 4006
+    .line 4006
     ldsflda valuetype T_RF _G::MOVES
     ldloc _F
     ldfld int8 @YRMOVE::INTW
@@ -26398,7 +26398,7 @@ L_while_27:
     ldfld int32 @YRMOVE::INTG
     ceq
     brfalse L_else_32
-    // line 4007
+    .line 4007
     ldloc _F
     call instance void @YRMOVE::YRMCOM()
     br L_if_end_33
@@ -26407,7 +26407,7 @@ L_else_32:
 L_if_end_33:
     br L_if_end_31
 L_else_30:
-    // line 4010
+    .line 4010
     ldsflda valuetype T_RF _G::MOVES
     ldloc _F
     ldfld int8 @YRMOVE::INTW
@@ -26417,14 +26417,14 @@ L_else_30:
     ldfld bool @YRMOVE::IFOO
     ceq
     brfalse L_if_end_34
-    // line 4011
+    .line 4011
     ldsflda valuetype T_RF _G::MOVES
     ldloc _F
     ldfld int8 @YRMOVE::INTW
     call instance valuetype T_RM& T_RF::ldadr(int32)
     ldfld bool T_RM::RMOO
     brfalse L_else_35
-    // line 4012
+    .line 4012
     ldsflda valuetype T_RF _G::MOVES
     ldloc _F
     ldfld int8 @YRMOVE::INTW
@@ -26434,7 +26434,7 @@ L_else_30:
     ldfld bool @YRMOVE::IFQS
     ceq
     brfalse L_else_37
-    // line 4013
+    .line 4013
     ldloc _F
     call instance void @YRMOVE::YRMHIT()
     br L_if_end_38
@@ -26443,14 +26443,14 @@ L_else_37:
 L_if_end_38:
     br L_if_end_36
 L_else_35:
-    // line 4016
+    .line 4016
     ldloc _F
     call instance void @YRMOVE::YRMCOM()
 L_if_end_36:
 L_if_end_34:
 L_if_end_31:
 L_if_end_29:
-    // line 4017
+    .line 4017
     ldloc _F
     ldloc _F
     ldfld int8 @YRMOVE::INTW
@@ -26468,50 +26468,50 @@ L_while_test_28:
     ldsfld int16 _G::JNTW
     clt
     brtrue L_while_27
-    // line 4019
+    .line 4019
     ldloc _F
     ldfld bool @YRMOVE::IFMV
     brfalse L_else_39
-    // line 4021
+    .line 4021
     ldloc _F
     ldfld valuetype T_RM @YRMOVE::INRM
     ldsfld valuetype T_RA STRING_139    // "YOUR MOVE "
     call void MINENG(valuetype T_RM A, valuetype T_RA B)
-    // line 4022
+    .line 4022
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld valuetype T_array_99 _G::MOVMS
     call string T_array_99::arrayToString(valuetype T_array_99)
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 4023
+    .line 4023
     ldloc _F
     ldfld valuetype T_RM @YRMOVE::INRM
     call void THEMOV(valuetype T_RM A)
-    // line 4024
+    .line 4024
     ldloc _F
     ldc.i4 1 // (true)
     stfld bool @YRMOVE::INTB
     /* nop */
     br L_if_end_40
 L_else_39:
-    // line 4027
+    .line 4027
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "   ILLEGAL MOVE."
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
 L_if_end_40:
-    // line 4028
+    .line 4028
     br L_18
-    // line 4030
+    .line 4030
 L_16:
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " SYNTAX ERROR."
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 4031
+    .line 4031
     br L_18
 L_18:
     /* nop */
@@ -26551,11 +26551,11 @@ L_Epilogue:
     ret
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 1
+.line 1
 
 .method static
 void _Program()
@@ -26575,51 +26575,51 @@ void _Program()
 L_Entry:
 .try
 {
-    // line 4041
+    .line 4041
     ldc.i4 0 // (false)
     stsfld bool _G::Jumpin
-    // line 4043
+    .line 4043
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " HI.  THIS IS CHESS .5"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 4044
+    .line 4044
     call void INICON()
-    // line 4046
+    .line 4046
 L_1:
     ldsflda valuetype T_RB _G::BOARD
     call void INITAL(valuetype T_RB& A)
-    // line 4048
+    .line 4048
 L_2:
 L_repeat_1:
-    // line 4050
+    .line 4050
     ldsfld bool _G::Jumpin
     brfalse L_if_end_2
-    // line 4050
+    .line 4050
     br L_3
 L_if_end_2:
-    // line 4052
+    .line 4052
 L_repeat_3:
-    // line 4053
+    .line 4053
     call void YRMOVE()
     /* nop */
     ldsfld bool _G::SWRE
     brfalse L_repeat_3
-    // line 4058
+    .line 4058
 L_3:
     ldc.i4 0 // (false)
     stsfld bool _G::Jumpin
-    // line 4060
+    .line 4060
 L_repeat_4:
-    // line 4061
+    .line 4061
     call void MYMOVE()
-    // line 4062
+    .line 4062
     ldsfld int32 _G::GOING
     ldc.i4 0
     cgt
     brfalse L_if_end_5
-    // line 4063
+    .line 4063
     ldsfld int32 _G::GOING
     ldc.i4 1
     sub
@@ -26673,7 +26673,7 @@ L_Epilogue:
 
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 //================================================================================
 // internal helpers
@@ -26885,7 +26885,7 @@ L_Epilogue:
 
 
 
-// line 0xfeefee
+.line 0xfeefee
 
 //================================================================================
 // global string literals

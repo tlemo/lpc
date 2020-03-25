@@ -19,9 +19,9 @@
     ret
 }
 
-// "nonlocalGoto2.pas"
+.line 0 "nonlocalGoto2.pas"
 
-// line 8
+.line 8
 //================================================================================
 // scope: foo (level : 2)
 
@@ -36,7 +36,7 @@
 }
 
 
-// line 17
+.line 17
 //================================================================================
 // scope: bar_moo (level : 3)
 
@@ -54,7 +54,7 @@
 }
 
 
-// line 15
+.line 15
 //================================================================================
 // scope: bar (level : 2)
 
@@ -67,7 +67,7 @@
         ret
     }
 
-// line 17
+.line 17
 
     .method public
     void Moo()
@@ -84,23 +84,23 @@
         stfld class @bar @bar_moo::_slink
     
     L_Entry:
-        // line 19
+        .line 19
         ldsflda valuetype [lpcRuntime]LPC.File _G::_output
         dup
         ldstr "moo"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 20
+        .line 20
         ldc.i4 2
         newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
         throw
-        // line 21
+        .line 21
         ldsflda valuetype [lpcRuntime]LPC.File _G::_output
         dup
         ldstr "UNEXPECTED"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 22
+        .line 22
         ldc.i4 3
         newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
         throw
@@ -112,7 +112,7 @@
 }
 
 
-// line 4
+.line 4
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -123,7 +123,7 @@
     .field public static valuetype [lpcRuntime]LPC.File _output
 }
 
-// line 8
+.line 8
 
 .method static
 void Foo()
@@ -136,17 +136,17 @@ void Foo()
     stloc _F
 
 L_Entry:
-    // line 10
+    .line 10
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "foo"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 11
+    .line 11
     ldc.i4 1
     newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
     throw
-    // line 12
+    .line 12
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "UNEXPECTED"
@@ -158,7 +158,7 @@ L_Epilogue:
     ret
 }
 
-// line 15
+.line 15
 
 .method static
 void Bar()
@@ -173,25 +173,25 @@ void Bar()
 L_Entry:
 .try
 {
-    // line 25
+    .line 25
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "bar"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 26
+    .line 26
     br L_1
-    // line 27
+    .line 27
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "UNEXPECTED"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 29
+    .line 29
 L_1:
     ldloc _F
     call instance void @bar::Moo()
-    // line 30
+    .line 30
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "UNEXPECTED"
@@ -215,11 +215,11 @@ L_Epilogue:
     ret
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 4
+.line 4
 
 .method static
 void _Program()
@@ -239,45 +239,45 @@ void _Program()
 L_Entry:
 .try
 {
-    // line 34
+    .line 34
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "entry"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 35
+    .line 35
     call void Foo()
-    // line 36
+    .line 36
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "UNEXPECTED"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 38
+    .line 38
 L_1:
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "P_L1"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 39
+    .line 39
     call void Bar()
-    // line 40
+    .line 40
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "UNEXPECTED"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 41
+    .line 41
     br L_1
-    // line 43
+    .line 43
 L_2:
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "P_L2"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 44
+    .line 44
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "done"

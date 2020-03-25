@@ -1,7 +1,7 @@
 
 #include <lpcRuntime.h>
 
-// "dame.pas"
+#line 0 "dame.pas"
 
 //================================================================================
 // command line argument map
@@ -15,7 +15,7 @@ _Filename* _FilenameMap = _FilenameMapEntries;
 const int _FilenameMapSize = _countof(_FilenameMapEntries);
 
 
-// line 0
+#line 0
 //================================================================================
 // scope: global scope (level : 0)
 
@@ -31,7 +31,7 @@ const T_boolean C_false = 0;
 const T_integer C_maxint = 2147483647;
 const T_boolean C_true = 1;
 
-// line 1
+#line 1
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -58,36 +58,36 @@ void P_()
     _output.init(1);
     
     // subroutine body
-    // line 19
+    #line 19
     _FOR_TO(i, 1, 8)
     {
-        // line 19
+        #line 19
         x[i] = 0;
     }
     _FOR_END(i)
     
-    // line 20
+    #line 20
     i = 1;
     
-    // line 21
+    #line 21
     while((i > 0))
     {
-        // line 22
+        #line 22
         k = 0;
         
-        // line 23
+        #line 23
         while((x[i] < 8))
         {
-            // line 24
+            #line 24
             x[i] = (x[i] + 1);
             
-            // line 25
+            #line 25
             if(F_f(nullptr, x, i))
             {
-                // line 25
+                #line 25
                 k = 1;
                 
-                // line 25
+                #line 25
                 goto L_1;
                 
                 { /* NOP */ }
@@ -96,33 +96,33 @@ void P_()
             { /* NOP */ }
         }
         
-        // line 27
+        #line 27
         L_1:
         if((k == 1))
         {
-            // line 27
+            #line 27
             if((i == 8))
             {
-                // line 28
+                #line 28
                 _output << " solutie : " << _WRITELN;
                 
-                // line 29
+                #line 29
                 _FOR_TO(i, 1, 8)
                 {
-                    // line 29
+                    #line 29
                     _output << x[i] << "  ";
                 }
                 _FOR_END(i)
                 
-                // line 31
+                #line 31
                 _output << _WRITELN;
             }
             else
             {
-                // line 33
+                #line 33
                 i = (i + 1);
                 
-                // line 33
+                #line 33
                 x[i] = 0;
                 
                 { /* NOP */ }
@@ -130,7 +130,7 @@ void P_()
         }
         else
         {
-            // line 34
+            #line 34
             i = (i - 1);
         }
         
@@ -141,7 +141,7 @@ void P_()
 }
 
 
-// line 8
+#line 8
 //================================================================================
 // scope: f (level : 2)
 
@@ -166,31 +166,31 @@ T_boolean F_f(void* _slink, T_vec x, T_integer i)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 12
+    #line 12
     _F._fnvalue = C_false;
     
-    // line 13
+    #line 13
     _FOR_TO(_F.j, 1, (_F.i - 1))
     {
-        // line 13
+        #line 13
         if((_F.x[_F.i] == _F.x[_F.j]))
         {
-            // line 13
+            #line 13
             goto L_10;
         }
         else
         {
-            // line 14
+            #line 14
             if(((_F.i - _F.j) == _abs((_F.x[_F.i] - _F.x[_F.j]))))
             {
-                // line 14
+                #line 14
                 goto L_10;
             }
         }
     }
     _FOR_END(_F.j)
     
-    // line 15
+    #line 15
     _F._fnvalue = C_true;
     
     L_10:

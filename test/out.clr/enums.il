@@ -19,9 +19,9 @@
     ret
 }
 
-// "enums.pas"
+.line 0 "enums.pas"
 
-// line 2
+.line 2
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -39,11 +39,11 @@
     .field public static float64 WeekendPremium
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 2
+.line 2
 
 .method static
 void _Program()
@@ -70,7 +70,7 @@ void _Program()
     call instance void [lpcRuntime]LPC.File::Init(int32)
 
 L_Entry:
-    // line 16
+    .line 16
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldc.i4 33
@@ -78,37 +78,37 @@ L_Entry:
     ldstr "Pay rate table"
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 17
+    .line 17
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 18
+    .line 18
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "  DAY        Morning  Afternoon"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 19
+    .line 19
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "  Evening    Night"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 20
+    .line 20
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 22
+    .line 22
     ldc.r8 12.0000
     stsfld float64 _G::RegularRate
-    // line 23
+    .line 23
     ldc.r8 1.10000
     stsfld float64 _G::EveningPremium
-    // line 24
+    .line 24
     ldc.r8 1.33000
     stsfld float64 _G::NightPremium
-    // line 25
+    .line 25
     ldc.r8 1.25000
     stsfld float64 _G::WeekendPremium
-    // line 27
+    .line 27
     ldc.i4 6 // Sun 
     stloc $tmpEndValue1
     ldc.i4 0 // Mon 
@@ -123,13 +123,13 @@ L_Entry:
     ldloc $tmpIndex2
     stsfld int32 _G::Day
 L_for_loop_1:
-    // line 28
+    .line 28
     ldsfld int32 _G::Day
     stloc $tmpSwitchValue3
     ldloc $tmpSwitchValue3
     ldc.i4 0 // Mon 
     bne.un L_check_case_4
-    // line 29
+    .line 29
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "Monday   "
@@ -140,7 +140,7 @@ L_check_case_4:
     ldloc $tmpSwitchValue3
     ldc.i4 1 // Tue 
     bne.un L_check_case_5
-    // line 30
+    .line 30
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "Tuesday  "
@@ -151,7 +151,7 @@ L_check_case_5:
     ldloc $tmpSwitchValue3
     ldc.i4 2 // Wed 
     bne.un L_check_case_6
-    // line 31
+    .line 31
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "Wednesday"
@@ -162,7 +162,7 @@ L_check_case_6:
     ldloc $tmpSwitchValue3
     ldc.i4 3 // Thu 
     bne.un L_check_case_7
-    // line 32
+    .line 32
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "Thursday "
@@ -173,7 +173,7 @@ L_check_case_7:
     ldloc $tmpSwitchValue3
     ldc.i4 4 // Fri 
     bne.un L_check_case_8
-    // line 33
+    .line 33
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "Friday   "
@@ -184,7 +184,7 @@ L_check_case_8:
     ldloc $tmpSwitchValue3
     ldc.i4 5 // Sat 
     bne.un L_check_case_9
-    // line 34
+    .line 34
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "Saturday "
@@ -195,14 +195,14 @@ L_check_case_9:
     ldloc $tmpSwitchValue3
     ldc.i4 6 // Sun 
     bne.un L_case_end_3
-    // line 35
+    .line 35
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "Sunday   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
 L_case_end_3:
-    // line 38
+    .line 38
     ldc.i4 3 // Night 
     stloc $tmpEndValue4
     ldc.i4 0 // Morning 
@@ -217,13 +217,13 @@ L_case_end_3:
     ldloc $tmpIndex5
     stsfld int32 _G::Time
 L_for_loop_10:
-    // line 39
+    .line 39
     ldsfld int32 _G::Time
     stloc $tmpSwitchValue6
     ldloc $tmpSwitchValue6
     ldc.i4 0 // Morning 
     bne.un L_check_case_13
-    // line 40
+    .line 40
     ldsfld float64 _G::RegularRate
     stsfld float64 _G::TotalPay
     br L_case_end_12
@@ -231,7 +231,7 @@ L_check_case_13:
     ldloc $tmpSwitchValue6
     ldc.i4 1 // Afternoon 
     bne.un L_check_case_14
-    // line 41
+    .line 41
     ldsfld float64 _G::RegularRate
     stsfld float64 _G::TotalPay
     br L_case_end_12
@@ -239,7 +239,7 @@ L_check_case_14:
     ldloc $tmpSwitchValue6
     ldc.i4 2 // Evening 
     bne.un L_check_case_15
-    // line 42
+    .line 42
     ldsfld float64 _G::RegularRate
     ldsfld float64 _G::EveningPremium
     mul
@@ -249,19 +249,19 @@ L_check_case_15:
     ldloc $tmpSwitchValue6
     ldc.i4 3 // Night 
     bne.un L_case_end_12
-    // line 43
+    .line 43
     ldsfld float64 _G::RegularRate
     ldsfld float64 _G::NightPremium
     mul
     stsfld float64 _G::TotalPay
 L_case_end_12:
-    // line 46
+    .line 46
     ldsfld int32 _G::Day
     stloc $tmpSwitchValue7
     ldloc $tmpSwitchValue7
     ldc.i4 5 // Sat 
     bne.un L_check_case_17
-    // line 47
+    .line 47
     ldsfld float64 _G::TotalPay
     ldsfld float64 _G::WeekendPremium
     mul
@@ -271,13 +271,13 @@ L_check_case_17:
     ldloc $tmpSwitchValue7
     ldc.i4 6 // Sun 
     bne.un L_case_end_16
-    // line 48
+    .line 48
     ldsfld float64 _G::TotalPay
     ldsfld float64 _G::WeekendPremium
     mul
     stsfld float64 _G::TotalPay
 L_case_end_16:
-    // line 51
+    .line 51
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldc.i4 10
@@ -302,7 +302,7 @@ L_case_end_16:
     br L_for_loop_10
 L_for_end_11:
     pop
-    // line 53
+    .line 53
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     call instance void [lpcRuntime]LPC.File::WriteLn()
     /* nop */

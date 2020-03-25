@@ -19,13 +19,13 @@
     ret
 }
 
-// "hanoi.pas"
+.line 0 "hanoi.pas"
 
-// line 5
+.line 5
 //================================================================================
 // scope: hanoi1 (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_1 = array [1 .. 1024] of int32;
 .class value explicit T_array_1
@@ -64,7 +64,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_2 = array [1 .. 2] of valuetype T_array_1;
 .class value explicit T_array_2
@@ -124,11 +124,11 @@
 }
 
 
-// line 19
+.line 19
 //================================================================================
 // scope: hanoi2 (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_4 = array [1 .. 3] of valuetype T_array_1;
 .class value explicit T_array_4
@@ -185,7 +185,7 @@
 }
 
 
-// line 38
+.line 38
 //================================================================================
 // scope: hanoi3 (level : 2)
 
@@ -208,7 +208,7 @@
 }
 
 
-// line 1
+.line 1
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -225,7 +225,7 @@
     .field public static valuetype T_array_4 S
 }
 
-// line 5
+.line 5
 
 .method static
 void Hanoi1()
@@ -242,27 +242,27 @@ void Hanoi1()
     stloc _F
 
 L_Entry:
-    // line 8
+    .line 8
     ldloc _F
     ldsfld int32 _G::Nn
     ldc.i4 1
     add
     stfld int32 @hanoi1::K1
-    // line 8
+    .line 8
     ldloc _F
     ldloc _F
     ldfld int32 @hanoi1::K1
     ldc.i4 2
     div
     stfld int32 @hanoi1::K2
-    // line 8
+    .line 8
     ldloc _F
     ldloc _F
     ldfld int32 @hanoi1::K2
     ldc.i4 2
     div
     stfld int32 @hanoi1::K3
-    // line 8
+    .line 8
     ldsflda valuetype T_array_2 _G::M
     ldc.i4 1
     call instance valuetype T_array_1& T_array_2::ldadr(int32)
@@ -271,7 +271,7 @@ L_Entry:
     call instance int32& T_array_1::ldadr(int32)
     ldc.i4 1
     stobj int32
-    // line 8
+    .line 8
     ldsflda valuetype T_array_2 _G::M
     ldc.i4 2
     call instance valuetype T_array_1& T_array_2::ldadr(int32)
@@ -280,7 +280,7 @@ L_Entry:
     call instance int32& T_array_1::ldadr(int32)
     ldc.i4 2
     stobj int32
-    // line 9
+    .line 9
     ldc.i4 2
     stloc $tmpEndValue1
     ldsfld int32 _G::n
@@ -292,15 +292,15 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int32 @hanoi1::w
 L_for_loop_1:
-    // line 10
+    .line 10
     ldloc _F
     ldloc _F
     ldfld int32 @hanoi1::K2
     stfld int32 @hanoi1::l
-    // line 11
+    .line 11
     br L_while_test_4
 L_while_3:
-    // line 12
+    .line 12
     ldloc _F
     ldsflda valuetype T_array_2 _G::M
     ldc.i4 1
@@ -310,7 +310,7 @@ L_while_3:
     call instance int32& T_array_1::ldadr(int32)
     ldobj int32
     stfld int32 @hanoi1::i
-    // line 12
+    .line 12
     ldloc _F
     ldsflda valuetype T_array_2 _G::M
     ldc.i4 2
@@ -320,7 +320,7 @@ L_while_3:
     call instance int32& T_array_1::ldadr(int32)
     ldobj int32
     stfld int32 @hanoi1::j
-    // line 12
+    .line 12
     ldloc _F
     ldc.i4 6
     ldloc _F
@@ -330,7 +330,7 @@ L_while_3:
     ldfld int32 @hanoi1::j
     sub
     stfld int32 @hanoi1::k
-    // line 13
+    .line 13
     ldsflda valuetype T_array_2 _G::M
     ldc.i4 1
     call instance valuetype T_array_1& T_array_2::ldadr(int32)
@@ -343,7 +343,7 @@ L_while_3:
     ldloc _F
     ldfld int32 @hanoi1::i
     stobj int32
-    // line 13
+    .line 13
     ldsflda valuetype T_array_2 _G::M
     ldc.i4 2
     call instance valuetype T_array_1& T_array_2::ldadr(int32)
@@ -356,7 +356,7 @@ L_while_3:
     ldloc _F
     ldfld int32 @hanoi1::k
     stobj int32
-    // line 14
+    .line 14
     ldsflda valuetype T_array_2 _G::M
     ldc.i4 1
     call instance valuetype T_array_1& T_array_2::ldadr(int32)
@@ -369,7 +369,7 @@ L_while_3:
     ldloc _F
     ldfld int32 @hanoi1::k
     stobj int32
-    // line 14
+    .line 14
     ldsflda valuetype T_array_2 _G::M
     ldc.i4 2
     call instance valuetype T_array_1& T_array_2::ldadr(int32)
@@ -382,7 +382,7 @@ L_while_3:
     ldloc _F
     ldfld int32 @hanoi1::j
     stobj int32
-    // line 15
+    .line 15
     ldloc _F
     ldloc _F
     ldfld int32 @hanoi1::l
@@ -399,17 +399,17 @@ L_while_test_4:
     ldc.i4.0
     ceq
     brtrue L_while_3
-    // line 16
+    .line 16
     ldloc _F
     ldloc _F
     ldfld int32 @hanoi1::K2
     stfld int32 @hanoi1::K1
-    // line 16
+    .line 16
     ldloc _F
     ldloc _F
     ldfld int32 @hanoi1::K3
     stfld int32 @hanoi1::K2
-    // line 16
+    .line 16
     ldloc _F
     ldloc _F
     ldfld int32 @hanoi1::K3
@@ -437,7 +437,7 @@ L_Epilogue:
     ret
 }
 
-// line 19
+.line 19
 
 .method static
 void Hanoi2()
@@ -450,25 +450,25 @@ void Hanoi2()
     stloc _F
 
 L_Entry:
-    // line 23
+    .line 23
     ldloc _F
     ldc.i4 1
     stfld int32 @hanoi2::i
-    // line 23
+    .line 23
     ldloc _F
     ldc.i4 2
     stfld int32 @hanoi2::j
-    // line 23
+    .line 23
     ldloc _F
     ldc.i4 0
     stfld int32 @hanoi2::Ns
-    // line 23
+    .line 23
     ldloc _F
     ldc.i4 1
     stfld int32 @hanoi2::Niv
-    // line 24
+    .line 24
 L_repeat_1:
-    // line 25
+    .line 25
     ldloc _F
     ldc.i4 6
     ldloc _F
@@ -478,17 +478,17 @@ L_repeat_1:
     ldfld int32 @hanoi2::j
     sub
     stfld int32 @hanoi2::k
-    // line 26
+    .line 26
     br L_while_test_3
 L_while_2:
-    // line 27
+    .line 27
     ldloc _F
     ldloc _F
     ldfld int32 @hanoi2::Ns
     ldc.i4 1
     add
     stfld int32 @hanoi2::Ns
-    // line 27
+    .line 27
     ldsflda valuetype T_array_4 _G::S
     ldc.i4 1
     call instance valuetype T_array_1& T_array_4::ldadr(int32)
@@ -498,7 +498,7 @@ L_while_2:
     ldloc _F
     ldfld int32 @hanoi2::i
     stobj int32
-    // line 27
+    .line 27
     ldsflda valuetype T_array_4 _G::S
     ldc.i4 2
     call instance valuetype T_array_1& T_array_4::ldadr(int32)
@@ -508,12 +508,12 @@ L_while_2:
     ldloc _F
     ldfld int32 @hanoi2::j
     stobj int32
-    // line 27
+    .line 27
     ldloc _F
     ldloc _F
     ldfld int32 @hanoi2::k
     stfld int32 @hanoi2::j
-    // line 28
+    .line 28
     ldloc _F
     ldc.i4 6
     ldloc _F
@@ -523,14 +523,14 @@ L_while_2:
     ldfld int32 @hanoi2::j
     sub
     stfld int32 @hanoi2::k
-    // line 28
+    .line 28
     ldloc _F
     ldloc _F
     ldfld int32 @hanoi2::Niv
     ldc.i4 1
     add
     stfld int32 @hanoi2::Niv
-    // line 28
+    .line 28
     ldsflda valuetype T_array_4 _G::S
     ldc.i4 3
     call instance valuetype T_array_1& T_array_4::ldadr(int32)
@@ -549,7 +549,7 @@ L_while_test_3:
     sub
     clt
     brtrue L_while_2
-    // line 30
+    .line 30
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldc.i4 40 // '('
@@ -603,16 +603,16 @@ L_while_test_3:
     ldc.i4 41 // ')'
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 31
+    .line 31
     ldloc _F
     ldfld int32 @hanoi2::Ns
     ldc.i4 0
     ceq
     brfalse L_if_end_4
-    // line 31
+    .line 31
     br L_1
 L_if_end_4:
-    // line 32
+    .line 32
     ldloc _F
     ldsflda valuetype T_array_4 _G::S
     ldc.i4 1
@@ -622,7 +622,7 @@ L_if_end_4:
     call instance int32& T_array_1::ldadr(int32)
     ldobj int32
     stfld int32 @hanoi2::i
-    // line 32
+    .line 32
     ldloc _F
     ldsflda valuetype T_array_4 _G::S
     ldc.i4 2
@@ -632,7 +632,7 @@ L_if_end_4:
     call instance int32& T_array_1::ldadr(int32)
     ldobj int32
     stfld int32 @hanoi2::j
-    // line 32
+    .line 32
     ldloc _F
     ldsflda valuetype T_array_4 _G::S
     ldc.i4 3
@@ -642,14 +642,14 @@ L_if_end_4:
     call instance int32& T_array_1::ldadr(int32)
     ldobj int32
     stfld int32 @hanoi2::Niv
-    // line 32
+    .line 32
     ldloc _F
     ldloc _F
     ldfld int32 @hanoi2::Ns
     ldc.i4 1
     sub
     stfld int32 @hanoi2::Ns
-    // line 33
+    .line 33
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldc.i4 40 // '('
@@ -669,7 +669,7 @@ L_if_end_4:
     ldc.i4 41 // ')'
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 34
+    .line 34
     ldloc _F
     ldc.i4 6
     ldloc _F
@@ -689,7 +689,7 @@ L_Epilogue:
     ret
 }
 
-// line 38
+.line 38
 
 .method static
 void Hanoi3(int32 n, int32 i, int32 j)
@@ -714,13 +714,13 @@ void Hanoi3(int32 n, int32 i, int32 j)
     stfld int32 @hanoi3::n
 
 L_Entry:
-    // line 41
+    .line 41
     ldloc _F
     ldfld int32 @hanoi3::n
     ldc.i4 1
     ceq
     brfalse L_else_1
-    // line 41
+    .line 41
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldc.i4 40 // '('
@@ -742,7 +742,7 @@ L_Entry:
     pop
     br L_if_end_2
 L_else_1:
-    // line 42
+    .line 42
     ldloc _F
     ldc.i4 6
     ldloc _F
@@ -752,7 +752,7 @@ L_else_1:
     ldfld int32 @hanoi3::j
     sub
     stfld int32 @hanoi3::k
-    // line 43
+    .line 43
     ldloc _F
     ldfld int32 @hanoi3::n
     ldc.i4 1
@@ -762,7 +762,7 @@ L_else_1:
     ldloc _F
     ldfld int32 @hanoi3::k
     call void Hanoi3(int32 n, int32 i, int32 j)
-    // line 43
+    .line 43
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldc.i4 40 // '('
@@ -782,7 +782,7 @@ L_else_1:
     ldc.i4 41 // ')'
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 43
+    .line 43
     ldloc _F
     ldfld int32 @hanoi3::n
     ldc.i4 1
@@ -800,11 +800,11 @@ L_Epilogue:
     ret
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 1
+.line 1
 
 .method static
 void _Program()
@@ -832,19 +832,19 @@ void _Program()
     call instance void [lpcRuntime]LPC.File::Init(int32)
 
 L_Entry:
-    // line 47
+    .line 47
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "HANOI"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 47
+    .line 47
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "n="
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 47
+    .line 47
     ldsflda valuetype [lpcRuntime]LPC.File _G::_input
     dup
     ldsflda int32 _G::n
@@ -852,28 +852,28 @@ L_Entry:
     ldc.i4 2147483647
     call instance void [lpcRuntime]LPC.File::Read(int32*, int32, int32)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 47
+    .line 47
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldsfld int32 _G::n
     call instance void [lpcRuntime]LPC.File::Write(int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 48
+    .line 48
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "1.HANOI1(umplerea matricii) 2.HANOI2(construire arbore complet)"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 49
+    .line 49
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "3.HANOI3(recursiv)  4.EXIT"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 50
+    .line 50
     ldc.i4 1
     stsfld int32 _G::Nn
-    // line 50
+    .line 50
     ldsfld int32 _G::n
     stloc $tmpEndValue1
     ldc.i4 1
@@ -884,7 +884,7 @@ L_Entry:
     ldloc $tmpIndex2
     stsfld int32 _G::i
 L_for_loop_1:
-    // line 50
+    .line 50
     ldc.i4 2
     ldsfld int32 _G::Nn
     mul
@@ -901,20 +901,20 @@ L_for_loop_1:
     br L_for_loop_1
 L_for_end_2:
     pop
-    // line 50
+    .line 50
     ldsfld int32 _G::Nn
     ldc.i4 1
     sub
     stsfld int32 _G::Nn
-    // line 51
+    .line 51
 L_repeat_3:
-    // line 52
+    .line 52
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "optiunea dvs:"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 52
+    .line 52
     ldsflda valuetype [lpcRuntime]LPC.File _G::_input
     dup
     ldsflda int32 _G::i
@@ -922,15 +922,15 @@ L_repeat_3:
     ldc.i4 2147483647
     call instance void [lpcRuntime]LPC.File::Read(int32*, int32, int32)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 53
+    .line 53
     ldsfld int32 _G::i
     stloc $tmpSwitchValue4
     ldloc $tmpSwitchValue4
     ldc.i4 1
     bne.un L_check_case_5
-    // line 54
+    .line 54
     call void Hanoi1()
-    // line 55
+    .line 55
     ldc.i4 2
     stloc $tmpEndValue5
     ldc.i4 1
@@ -941,7 +941,7 @@ L_repeat_3:
     ldloc $tmpIndex6
     stsfld int32 _G::i
 L_for_loop_6:
-    // line 56
+    .line 56
     ldsfld int32 _G::Nn
     stloc $tmpEndValue7
     ldc.i4 1
@@ -952,7 +952,7 @@ L_for_loop_6:
     ldloc $tmpIndex8
     stsfld int32 _G::j
 L_for_loop_8:
-    // line 56
+    .line 56
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldc.i4 4
@@ -977,7 +977,7 @@ L_for_loop_8:
     br L_for_loop_8
 L_for_end_9:
     pop
-    // line 57
+    .line 57
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     call instance void [lpcRuntime]LPC.File::WriteLn()
     /* nop */
@@ -999,9 +999,9 @@ L_check_case_5:
     ldloc $tmpSwitchValue4
     ldc.i4 2
     bne.un L_check_case_10
-    // line 58
+    .line 58
     call void Hanoi2()
-    // line 58
+    .line 58
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     call instance void [lpcRuntime]LPC.File::WriteLn()
     /* nop */
@@ -1010,12 +1010,12 @@ L_check_case_10:
     ldloc $tmpSwitchValue4
     ldc.i4 3
     bne.un L_check_case_11
-    // line 59
+    .line 59
     ldsfld int32 _G::n
     ldc.i4 1
     ldc.i4 2
     call void Hanoi3(int32 n, int32 i, int32 j)
-    // line 59
+    .line 59
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     call instance void [lpcRuntime]LPC.File::WriteLn()
     br L_case_end_4
@@ -1023,7 +1023,7 @@ L_check_case_11:
     ldloc $tmpSwitchValue4
     ldc.i4 4
     bne.un L_case_end_4
-    // line 60
+    .line 60
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "BYE-BYE!"

@@ -19,13 +19,13 @@
     ret
 }
 
-// "e.pas"
+.line 0 "e.pas"
 
-// line 17
+.line 17
 //================================================================================
 // scope: initinteger (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE digitarray = array [0 .. 1007] of uint8;
 .class value explicit T_digitarray
@@ -78,7 +78,7 @@
 }
 
 
-// line 25
+.line 25
 //================================================================================
 // scope: divide (level : 2)
 
@@ -104,7 +104,7 @@
 }
 
 
-// line 41
+.line 41
 //================================================================================
 // scope: add (level : 2)
 
@@ -128,7 +128,7 @@
 }
 
 
-// line 71
+.line 71
 //================================================================================
 // scope: sub (level : 2)
 
@@ -152,7 +152,7 @@
 }
 
 
-// line 2
+.line 2
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -169,7 +169,7 @@
     .field public static int32 Xs
 }
 
-// line 17
+.line 17
 
 .method static
 void Initinteger(valuetype T_digitarray& x, int32 n)
@@ -198,7 +198,7 @@ void Initinteger(valuetype T_digitarray& x, int32 n)
     stfld valuetype T_digitarray* @initinteger::x
 
 L_Entry:
-    // line 21
+    .line 21
     ldloc _F
     ldfld valuetype T_digitarray* @initinteger::x
     ldc.i4 0
@@ -210,7 +210,7 @@ L_Entry:
     ldc.i4 255
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj uint8
-    // line 22
+    .line 22
     ldc.i4 1007
     stloc $tmpEndValue1
     ldc.i4 1
@@ -222,7 +222,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int32 @initinteger::i
 L_for_loop_1:
-    // line 22
+    .line 22
     ldloc _F
     ldfld valuetype T_digitarray* @initinteger::x
     ldloc _F
@@ -254,7 +254,7 @@ L_Epilogue:
     ret
 }
 
-// line 25
+.line 25
 
 .method static
 void Divide(valuetype T_digitarray& x, int32 Xs, int32 n, valuetype T_digitarray& y, int32& Ys)
@@ -303,11 +303,11 @@ void Divide(valuetype T_digitarray& x, int32 Xs, int32 n, valuetype T_digitarray
     stfld int32* @divide::Ys
 
 L_Entry:
-    // line 31
+    .line 31
     ldloc _F
     ldc.i4 0
     stfld int32 @divide::c
-    // line 32
+    .line 32
     ldc.i4 1007
     stloc $tmpEndValue1
     ldloc _F
@@ -320,7 +320,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int32 @divide::i
 L_for_loop_1:
-    // line 33
+    .line 33
     ldloc _F
     ldc.i4 10
     ldloc _F
@@ -334,7 +334,7 @@ L_for_loop_1:
     ldobj uint8
     add
     stfld int32 @divide::c
-    // line 34
+    .line 34
     ldloc _F
     ldfld valuetype T_digitarray* @divide::y
     ldloc _F
@@ -350,7 +350,7 @@ L_for_loop_1:
     ldc.i4 255
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj uint8
-    // line 35
+    .line 35
     ldloc _F
     ldloc _F
     ldfld int32 @divide::c
@@ -373,16 +373,16 @@ L_for_loop_1:
     br L_for_loop_1
 L_for_end_2:
     pop
-    // line 37
+    .line 37
     ldloc _F
     ldfld int32* @divide::Ys
     ldloc _F
     ldfld int32 @divide::Xs
     stobj int32
-    // line 38
+    .line 38
     br L_while_test_4
 L_while_3:
-    // line 38
+    .line 38
     ldloc _F
     ldfld int32* @divide::Ys
     ldloc _F
@@ -419,7 +419,7 @@ L_Epilogue:
     ret
 }
 
-// line 41
+.line 41
 
 .method static
 void Add(valuetype T_digitarray& s, valuetype T_digitarray& x, int32 Xs)
@@ -456,11 +456,11 @@ void Add(valuetype T_digitarray& s, valuetype T_digitarray& x, int32 Xs)
     stfld int32 @add::Xs
 
 L_Entry:
-    // line 46
+    .line 46
     ldloc _F
     ldc.i4 0
     stfld int32 @add::c
-    // line 47
+    .line 47
     ldloc _F
     ldfld int32 @add::Xs
     stloc $tmpEndValue1
@@ -473,7 +473,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int32 @add::i
 L_for_loop_1:
-    // line 48
+    .line 48
     ldloc _F
     ldloc _F
     ldfld valuetype T_digitarray* @add::s
@@ -492,7 +492,7 @@ L_for_loop_1:
     ldfld int32 @add::c
     add
     stfld int32 @add::c
-    // line 49
+    .line 49
     ldloc _F
     ldfld int32 @add::c
     ldc.i4 10
@@ -500,7 +500,7 @@ L_for_loop_1:
     ldc.i4.0
     ceq
     brfalse L_else_3
-    // line 50
+    .line 50
     ldloc _F
     ldfld valuetype T_digitarray* @add::s
     ldloc _F
@@ -515,14 +515,14 @@ L_for_loop_1:
     ldc.i4 255
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj uint8
-    // line 51
+    .line 51
     ldloc _F
     ldc.i4 1
     stfld int32 @add::c
     /* nop */
     br L_if_end_4
 L_else_3:
-    // line 53
+    .line 53
     ldloc _F
     ldfld valuetype T_digitarray* @add::s
     ldloc _F
@@ -535,7 +535,7 @@ L_else_3:
     ldc.i4 255
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj uint8
-    // line 54
+    .line 54
     ldloc _F
     ldc.i4 0
     stfld int32 @add::c
@@ -556,22 +556,22 @@ L_if_end_4:
     br L_for_loop_1
 L_for_end_2:
     pop
-    // line 57
+    .line 57
     ldloc _F
     ldloc _F
     ldfld int32 @add::Xs
     stfld int32 @add::i
-    // line 58
+    .line 58
     br L_while_test_6
 L_while_5:
-    // line 59
+    .line 59
     ldloc _F
     ldloc _F
     ldfld int32 @add::i
     ldc.i4 1
     sub
     stfld int32 @add::i
-    // line 60
+    .line 60
     ldloc _F
     ldloc _F
     ldfld valuetype T_digitarray* @add::s
@@ -583,7 +583,7 @@ L_while_5:
     ldfld int32 @add::c
     add
     stfld int32 @add::c
-    // line 61
+    .line 61
     ldloc _F
     ldfld int32 @add::c
     ldc.i4 10
@@ -591,7 +591,7 @@ L_while_5:
     ldc.i4.0
     ceq
     brfalse L_else_7
-    // line 62
+    .line 62
     ldloc _F
     ldfld valuetype T_digitarray* @add::s
     ldloc _F
@@ -606,14 +606,14 @@ L_while_5:
     ldc.i4 255
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj uint8
-    // line 63
+    .line 63
     ldloc _F
     ldc.i4 1
     stfld int32 @add::c
     /* nop */
     br L_if_end_8
 L_else_7:
-    // line 65
+    .line 65
     ldloc _F
     ldfld valuetype T_digitarray* @add::s
     ldloc _F
@@ -626,7 +626,7 @@ L_else_7:
     ldc.i4 255
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj uint8
-    // line 66
+    .line 66
     ldloc _F
     ldc.i4 0
     stfld int32 @add::c
@@ -647,7 +647,7 @@ L_Epilogue:
     ret
 }
 
-// line 71
+.line 71
 
 .method static
 void Sub(valuetype T_digitarray& s, valuetype T_digitarray& x, int32 Xs)
@@ -684,11 +684,11 @@ void Sub(valuetype T_digitarray& s, valuetype T_digitarray& x, int32 Xs)
     stfld int32 @sub::Xs
 
 L_Entry:
-    // line 76
+    .line 76
     ldloc _F
     ldc.i4 0
     stfld int32 @sub::c
-    // line 77
+    .line 77
     ldloc _F
     ldfld int32 @sub::Xs
     stloc $tmpEndValue1
@@ -701,7 +701,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int32 @sub::i
 L_for_loop_1:
-    // line 78
+    .line 78
     ldloc _F
     ldloc _F
     ldfld valuetype T_digitarray* @sub::s
@@ -720,13 +720,13 @@ L_for_loop_1:
     ldfld int32 @sub::c
     add
     stfld int32 @sub::c
-    // line 79
+    .line 79
     ldloc _F
     ldfld int32 @sub::c
     ldc.i4 0
     clt
     brfalse L_else_3
-    // line 80
+    .line 80
     ldloc _F
     ldfld valuetype T_digitarray* @sub::s
     ldloc _F
@@ -741,7 +741,7 @@ L_for_loop_1:
     ldc.i4 255
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj uint8
-    // line 81
+    .line 81
     ldloc _F
     ldc.i4 1
     neg
@@ -749,7 +749,7 @@ L_for_loop_1:
     /* nop */
     br L_if_end_4
 L_else_3:
-    // line 83
+    .line 83
     ldloc _F
     ldfld valuetype T_digitarray* @sub::s
     ldloc _F
@@ -762,7 +762,7 @@ L_else_3:
     ldc.i4 255
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj uint8
-    // line 84
+    .line 84
     ldloc _F
     ldc.i4 0
     stfld int32 @sub::c
@@ -783,22 +783,22 @@ L_if_end_4:
     br L_for_loop_1
 L_for_end_2:
     pop
-    // line 87
+    .line 87
     ldloc _F
     ldloc _F
     ldfld int32 @sub::Xs
     stfld int32 @sub::i
-    // line 88
+    .line 88
     br L_while_test_6
 L_while_5:
-    // line 89
+    .line 89
     ldloc _F
     ldloc _F
     ldfld int32 @sub::i
     ldc.i4 1
     sub
     stfld int32 @sub::i
-    // line 90
+    .line 90
     ldloc _F
     ldloc _F
     ldfld valuetype T_digitarray* @sub::s
@@ -810,13 +810,13 @@ L_while_5:
     ldfld int32 @sub::c
     add
     stfld int32 @sub::c
-    // line 91
+    .line 91
     ldloc _F
     ldfld int32 @sub::c
     ldc.i4 0
     clt
     brfalse L_else_7
-    // line 92
+    .line 92
     ldloc _F
     ldfld valuetype T_digitarray* @sub::s
     ldloc _F
@@ -831,7 +831,7 @@ L_while_5:
     ldc.i4 255
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj uint8
-    // line 93
+    .line 93
     ldloc _F
     ldc.i4 1
     neg
@@ -839,7 +839,7 @@ L_while_5:
     /* nop */
     br L_if_end_8
 L_else_7:
-    // line 95
+    .line 95
     ldloc _F
     ldfld valuetype T_digitarray* @sub::s
     ldloc _F
@@ -852,7 +852,7 @@ L_else_7:
     ldc.i4 255
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj uint8
-    // line 96
+    .line 96
     ldloc _F
     ldc.i4 0
     stfld int32 @sub::c
@@ -873,11 +873,11 @@ L_Epilogue:
     ret
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 2
+.line 2
 
 .method static
 void _Program()
@@ -901,55 +901,55 @@ void _Program()
     call instance void [lpcRuntime]LPC.File::Init(int32)
 
 L_Entry:
-    // line 102
-    // line 102
+    .line 102
+    .line 102
     ldc.i4 1008
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::s
-    // line 102
-    // line 102
+    .line 102
+    .line 102
     ldc.i4 1008
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::x
-    // line 103
+    .line 103
     ldsfld void* _G::s
     ldc.i4 0
     call void Initinteger(valuetype T_digitarray& x, int32 n)
-    // line 104
+    .line 104
     ldsfld void* _G::x
     ldc.i4 1
     call void Initinteger(valuetype T_digitarray& x, int32 n)
-    // line 105
+    .line 105
     ldc.i4 0
     stsfld int32 _G::Xs
-    // line 106
+    .line 106
     ldsfld void* _G::s
     ldsfld void* _G::x
     ldsfld int32 _G::Xs
     call void Add(valuetype T_digitarray& s, valuetype T_digitarray& x, int32 Xs)
-    // line 107
+    .line 107
     ldc.i4 0
     stsfld int32 _G::i
-    // line 108
+    .line 108
 L_repeat_1:
-    // line 109
+    .line 109
     ldsfld int32 _G::i
     ldc.i4 1
     add
     stsfld int32 _G::i
-    // line 110
+    .line 110
     ldsfld void* _G::x
     ldsfld int32 _G::Xs
     ldsfld int32 _G::i
     ldsfld void* _G::x
     ldsflda int32 _G::Xs
     call void Divide(valuetype T_digitarray& x, int32 Xs, int32 n, valuetype T_digitarray& y, int32& Ys)
-    // line 111
+    .line 111
     ldsfld void* _G::s
     ldsfld void* _G::x
     ldsfld int32 _G::Xs
     call void Add(valuetype T_digitarray& s, valuetype T_digitarray& x, int32 Xs)
-    // line 112
+    .line 112
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Series: "
@@ -976,10 +976,10 @@ L_repeat_1:
     ldc.i4 1007 // NDIGITS 
     cgt
     brfalse L_repeat_1
-    // line 114
+    .line 114
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 115
+    .line 115
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 45
@@ -1001,10 +1001,10 @@ L_repeat_1:
     ldc.i4 46 // '.'
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 116
+    .line 116
     ldc.i4 0
     stsfld int32 _G::i
-    // line 117
+    .line 117
     ldc.i4 1000 // NPRINT 
     stloc $tmpEndValue1
     ldc.i4 1
@@ -1015,7 +1015,7 @@ L_repeat_1:
     ldloc $tmpIndex2
     stsfld int32 _G::i
 L_for_loop_2:
-    // line 118
+    .line 118
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -1026,37 +1026,37 @@ L_for_loop_2:
     ldobj uint8
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
-    // line 119
+    .line 119
     ldsfld int32 _G::i
     ldc.i4 1000
     call int32 [lpcRuntime]LPC.Helpers::Mod(int32, int32)
     ldc.i4 0
     ceq
     brfalse L_if_end_4
-    // line 119
+    .line 119
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
 L_if_end_4:
-    // line 120
+    .line 120
     ldsfld int32 _G::i
     ldc.i4 100
     call int32 [lpcRuntime]LPC.Helpers::Mod(int32, int32)
     ldc.i4 0
     ceq
     brfalse L_else_5
-    // line 120
+    .line 120
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
     br L_if_end_6
 L_else_5:
-    // line 121
+    .line 121
     ldsfld int32 _G::i
     ldc.i4 10
     call int32 [lpcRuntime]LPC.Helpers::Mod(int32, int32)
     ldc.i4 0
     ceq
     brfalse L_if_end_7
-    // line 121
+    .line 121
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 32 // ' '
@@ -1077,16 +1077,16 @@ L_if_end_6:
     br L_for_loop_2
 L_for_end_3:
     pop
-    // line 123
+    .line 123
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 124
+    .line 124
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Final digits: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 125
+    .line 125
     ldc.i4 1007 // NDIGITS 
     stloc $tmpEndValue4
     ldc.i4 1000 // NPRINT 
@@ -1099,7 +1099,7 @@ L_for_end_3:
     ldloc $tmpIndex5
     stsfld int32 _G::i
 L_for_loop_8:
-    // line 126
+    .line 126
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -1123,7 +1123,7 @@ L_for_loop_8:
     br L_for_loop_8
 L_for_end_9:
     pop
-    // line 128
+    .line 128
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
     /* nop */

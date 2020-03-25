@@ -1,7 +1,7 @@
 
 #include <lpcRuntime.h>
 
-// "test02.pas"
+#line 0 "test02.pas"
 
 //================================================================================
 // command line argument map
@@ -15,7 +15,7 @@ _Filename* _FilenameMap = _FilenameMapEntries;
 const int _FilenameMapSize = _countof(_FilenameMapEntries);
 
 
-// line 0
+#line 0
 //================================================================================
 // scope: global scope (level : 0)
 
@@ -31,7 +31,7 @@ const T_boolean C_false = 0;
 const T_integer C_maxint = 2147483647;
 const T_boolean C_true = 1;
 
-// line 2
+#line 2
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -52,13 +52,13 @@ void P_()
     _output.init(1);
     
     // subroutine body
-    // line 6
+    #line 6
     _output << "What is your name?" << _WRITELN;
     
-    // line 7
+    #line 7
     _input >> MyName >> _READLN;
     
-    // line 8
+    #line 8
     _output << "Hello," << MyName << '!' << _WRITELN;
     
     { /* NOP */ }

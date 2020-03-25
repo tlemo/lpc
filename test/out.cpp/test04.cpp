@@ -1,7 +1,7 @@
 
 #include <lpcRuntime.h>
 
-// "test04.pas"
+#line 0 "test04.pas"
 
 //================================================================================
 // command line argument map
@@ -15,7 +15,7 @@ _Filename* _FilenameMap = _FilenameMapEntries;
 const int _FilenameMapSize = _countof(_FilenameMapEntries);
 
 
-// line 0
+#line 0
 //================================================================================
 // scope: global scope (level : 0)
 
@@ -31,7 +31,7 @@ const T_boolean C_false = 0;
 const T_integer C_maxint = 2147483647;
 const T_boolean C_true = 1;
 
-// line 3
+#line 3
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -79,7 +79,7 @@ void P_()
 }
 
 
-// line 27
+#line 27
 //================================================================================
 // scope: foo (level : 2)
 

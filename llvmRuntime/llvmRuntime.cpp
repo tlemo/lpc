@@ -15,3 +15,28 @@
 
 #include "llvmRuntime.h"
 
+#include <stdio.h>
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Entry point for the generated code 
+//
+extern "C" void P_();
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Real entry point
+//
+// - it will map the arguments to the program(a1, a2, .. an) arguments in order
+// - additionally it supports -input=<filename> and -output=<filename>
+//
+int main(int argc, const char* argv[])
+{
+    // TODO
+    printf("\nCalling P_()...\n");
+    P_();
+    printf("\nDone.\n");
+    return 0;
+}
+

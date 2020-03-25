@@ -1,7 +1,7 @@
 
 #include <lpcRuntime.h>
 
-// "nonlocalGoto2.pas"
+#line 0 "nonlocalGoto2.pas"
 
 //================================================================================
 // command line argument map
@@ -15,7 +15,7 @@ _Filename* _FilenameMap = _FilenameMapEntries;
 const int _FilenameMapSize = _countof(_FilenameMapEntries);
 
 
-// line 0
+#line 0
 //================================================================================
 // scope: global scope (level : 0)
 
@@ -31,7 +31,7 @@ const T_boolean C_false = 0;
 const T_integer C_maxint = 2147483647;
 const T_boolean C_true = 1;
 
-// line 4
+#line 4
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -69,33 +69,33 @@ void P_()
         }
         
         // subroutine body
-        // line 34
+        #line 34
         _output << "entry" << _WRITELN;
         
-        // line 35
+        #line 35
         P_foo(nullptr);
         
-        // line 36
+        #line 36
         _output << "UNEXPECTED" << _WRITELN;
         
-        // line 38
+        #line 38
         L_1:
         _output << "P_L1" << _WRITELN;
         
-        // line 39
+        #line 39
         P_bar(nullptr);
         
-        // line 40
+        #line 40
         _output << "UNEXPECTED" << _WRITELN;
         
-        // line 41
+        #line 41
         goto L_1;
         
-        // line 43
+        #line 43
         L_2:
         _output << "P_L2" << _WRITELN;
         
-        // line 44
+        #line 44
         _output << "done" << _WRITELN;
         
         { /* NOP */ }
@@ -114,7 +114,7 @@ void P_()
 }
 
 
-// line 8
+#line 8
 //================================================================================
 // scope: foo (level : 2)
 
@@ -131,20 +131,20 @@ void P_foo(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 10
+    #line 10
     _output << "foo" << _WRITELN;
     
-    // line 11
+    #line 11
     throw NL_1;
     
-    // line 12
+    #line 12
     _output << "UNEXPECTED" << _WRITELN;
     
     { /* NOP */ }
 }
 
 
-// line 15
+#line 15
 //================================================================================
 // scope: bar (level : 2)
 
@@ -179,20 +179,20 @@ void P_bar(void* _slink)
         }
         
         // subroutine body
-        // line 25
+        #line 25
         _output << "bar" << _WRITELN;
         
-        // line 26
+        #line 26
         goto L_1;
         
-        // line 27
+        #line 27
         _output << "UNEXPECTED" << _WRITELN;
         
-        // line 29
+        #line 29
         L_1:
         P_bar_moo(&_F);
         
-        // line 30
+        #line 30
         _output << "UNEXPECTED" << _WRITELN;
         
         { /* NOP */ }
@@ -210,7 +210,7 @@ void P_bar(void* _slink)
 }
 
 
-// line 17
+#line 17
 //================================================================================
 // scope: bar_moo (level : 3)
 
@@ -227,16 +227,16 @@ void P_bar_moo(void* _slink)
     Frame_bar_moo _F = { (Frame_bar*)_slink };
     
     // subroutine body
-    // line 19
+    #line 19
     _output << "moo" << _WRITELN;
     
-    // line 20
+    #line 20
     throw NL_2;
     
-    // line 21
+    #line 21
     _output << "UNEXPECTED" << _WRITELN;
     
-    // line 22
+    #line 22
     throw NL_bar_1;
     
     { /* NOP */ }

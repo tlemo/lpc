@@ -1,7 +1,7 @@
 
 #include <lpcRuntime.h>
 
-// "ranges.pas"
+#line 0 "ranges.pas"
 
 //================================================================================
 // command line argument map
@@ -15,7 +15,7 @@ _Filename* _FilenameMap = _FilenameMapEntries;
 const int _FilenameMapSize = _countof(_FilenameMapEntries);
 
 
-// line 0
+#line 0
 //================================================================================
 // scope: global scope (level : 0)
 
@@ -31,7 +31,7 @@ const T_boolean C_false = 0;
 const T_integer C_maxint = 2147483647;
 const T_boolean C_true = 1;
 
-// line 4
+#line 4
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -70,64 +70,64 @@ void P_()
     Tmp.init("tmp");
     
     // subroutine body
-    // line 22
+    #line 22
     V1 = 'x';
     
-    // line 23
+    #line 23
     V2 = 1;
     
-    // line 24
+    #line 24
     V3 = 200;
     
-    // line 25
+    #line 25
     V4 = 123;
     
-    // line 26
+    #line 26
     V5 = 32768;
     
-    // line 27
+    #line 27
     V6 = (-1);
     
-    // line 29
+    #line 29
     _output << "initial   : " << V1 << ' ' << V2 << ' ' << V3 << ' ' << V4 << ' ' << V5 << ' ' << V6 << _WRITELN;
     
-    // line 31
+    #line 31
     _output << "write part  1 ..." << _WRITELN;
     
-    // line 32
+    #line 32
     _rewrite(Tmp);
     
-    // line 33
+    #line 33
     Tmp << V1 << ' ' << V2 << ' ' << V3 << _WRITELN;
     
-    // line 35
+    #line 35
     _output << "read part   1 ..." << _WRITELN;
     
-    // line 36
+    #line 36
     _reset(Tmp);
     
-    // line 37
+    #line 37
     Tmp >> T1 >> T2 >> T3 >> _READLN;
     
-    // line 39
+    #line 39
     _output << "write part  2 ..." << _WRITELN;
     
-    // line 40
+    #line 40
     _rewrite(Tmp);
     
-    // line 41
+    #line 41
     Tmp << V4 << ' ' << V5 << ' ' << V6 << _WRITELN;
     
-    // line 43
+    #line 43
     _output << "read part   2 ..." << _WRITELN;
     
-    // line 44
+    #line 44
     _reset(Tmp);
     
-    // line 45
+    #line 45
     Tmp >> T4 >> T5 >> T6 >> _READLN;
     
-    // line 47
+    #line 47
     _output << "final     : " << T1 << ' ' << T2 << ' ' << T3 << ' ' << T4 << ' ' << T5 << ' ' << T6 << _WRITELN;
     
     { /* NOP */ }

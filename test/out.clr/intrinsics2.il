@@ -19,13 +19,13 @@
     ret
 }
 
-// "intrinsics2.pas"
+.line 0 "intrinsics2.pas"
 
-// line 4
+.line 4
 //================================================================================
 // scope: program scope (level : 1)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_1 = array [0 .. 99] of int32;
 .class value explicit T_array_1
@@ -62,7 +62,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_2 = array [10 .. 49] of int32;
 .class value explicit T_array_2
@@ -101,7 +101,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_4 = array [1 .. 3] of int32;
 .class value explicit T_array_4
@@ -140,7 +140,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_3 = array [0 .. 99] of valuetype T_array_4;
 .class value explicit T_array_3
@@ -177,7 +177,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_5 = array [0 .. 99] of void*;
 .class value explicit T_array_5
@@ -214,7 +214,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_9 = set of 1 .. 5
 .class value explicit T_set_9
@@ -297,7 +297,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE rec = record;
 .class value explicit T_rec
@@ -343,11 +343,11 @@
     .field public static void* Pr
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 4
+.line 4
 
 .method static
 void _Program()
@@ -369,21 +369,21 @@ void _Program()
     call instance void [lpcRuntime]LPC.File::Init(int32)
 
 L_Entry:
-    // line 28
-    // line 28
+    .line 28
+    .line 28
     ldc.i4 8
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::p
-    // line 29
-    // line 29
+    .line 29
+    .line 29
     ldc.i4 48
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Pr
-    // line 29
+    .line 29
     ldsfld void* _G::Pr
     ldc.i4 1
     stfld int32 T_rec::Tag
-    // line 30
+    .line 30
     ldsfld void* _G::Pr
     ldfld int32 T_rec::Tag
     ldc.i4 1
@@ -392,19 +392,19 @@ L_Entry:
     call void [lpcRuntime]LPC.Runtime::RTCheck(bool, string)
     ldsfld void* _G::Pr
     call void [lpcRuntime]LPC.Heap::Free(void*)
-    // line 30
+    .line 30
     ldnull
     stsfld void* _G::Pr
-    // line 31
-    // line 31
+    .line 31
+    .line 31
     ldc.i4 48
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Pr
-    // line 31
+    .line 31
     ldsfld void* _G::Pr
     ldc.i4 3 // THREE 
     stfld int32 T_rec::Tag
-    // line 32
+    .line 32
     ldsfld void* _G::Pr
     ldfld int32 T_rec::Tag
     ldc.i4 3 // THREE 
@@ -413,25 +413,25 @@ L_Entry:
     call void [lpcRuntime]LPC.Runtime::RTCheck(bool, string)
     ldsfld void* _G::Pr
     call void [lpcRuntime]LPC.Heap::Free(void*)
-    // line 32
+    .line 32
     ldnull
     stsfld void* _G::Pr
-    // line 33
+    .line 33
     ldsfld void* _G::p
     call void [lpcRuntime]LPC.Heap::Free(void*)
-    // line 33
+    .line 33
     ldnull
     stsfld void* _G::p
-    // line 35
+    .line 35
     ldc.i4 5
     stsfld int32 _G::i
-    // line 36
+    .line 36
     ldc.i4 0
     stloc $tmpSrcIndex1
     ldc.i4 10
     stloc $tmpDstIndex2
 L_pack_loop_1:
-    // line 36
+    .line 36
     ldsflda valuetype T_array_2 _G::A2
     ldloc $tmpDstIndex2
     call instance int32& T_array_2::ldadr(int32)
@@ -451,13 +451,13 @@ L_pack_loop_1:
     stloc $tmpDstIndex2
     ldc.i4 49
     ble L_pack_loop_1
-    // line 37
+    .line 37
     ldsfld int32 _G::i
     stloc $tmpDstIndex4
     ldc.i4 10
     stloc $tmpSrcIndex3
 L_unpack_loop_2:
-    // line 37
+    .line 37
     ldsflda valuetype T_array_1 _G::A1
     ldloc $tmpDstIndex4
     call instance int32& T_array_1::ldadr(int32)

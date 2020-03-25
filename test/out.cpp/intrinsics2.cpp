@@ -1,7 +1,7 @@
 
 #include <lpcRuntime.h>
 
-// "intrinsics2.pas"
+#line 0 "intrinsics2.pas"
 
 //================================================================================
 // command line argument map
@@ -15,7 +15,7 @@ _Filename* _FilenameMap = _FilenameMapEntries;
 const int _FilenameMapSize = _countof(_FilenameMapEntries);
 
 
-// line 0
+#line 0
 //================================================================================
 // scope: global scope (level : 0)
 
@@ -31,7 +31,7 @@ const T_boolean C_false = 0;
 const T_integer C_maxint = 2147483647;
 const T_boolean C_true = 1;
 
-// line 4
+#line 4
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -90,45 +90,45 @@ void P_()
     _output.init(1);
     
     // subroutine body
-    // line 28
+    #line 28
     _new(p._ptr);
     
-    // line 29
+    #line 29
     {
         _new(Pr._ptr);
         _setValue(Pr._ptr->Tag, 1);
         // unnamed tag = 'a'
     }
     
-    // line 30
+    #line 30
     {
         _checkValue(Pr._ptr->Tag, 1);
         // unnamed tag = 'a'
         _dispose(Pr._ptr);
     }
     
-    // line 31
+    #line 31
     {
         _new(Pr._ptr);
         _setValue(Pr._ptr->Tag, C_THREE);
     }
     
-    // line 32
+    #line 32
     {
         _checkValue(Pr._ptr->Tag, C_THREE);
         _dispose(Pr._ptr);
     }
     
-    // line 33
+    #line 33
     _dispose(p._ptr);
     
-    // line 35
+    #line 35
     i = 5;
     
-    // line 36
+    #line 36
     _pack(A1, 0, A2);
     
-    // line 37
+    #line 37
     _unpack(A2, A1, i);
     
     { /* NOP */ }

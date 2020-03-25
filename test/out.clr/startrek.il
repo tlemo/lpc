@@ -19,9 +19,9 @@
     ret
 }
 
-// "startrek.pas"
+.line 0 "startrek.pas"
 
-// line 65
+.line 65
 //================================================================================
 // scope: expp (level : 2)
 
@@ -45,7 +45,7 @@
 }
 
 
-// line 84
+.line 84
 //================================================================================
 // scope: random (level : 2)
 
@@ -68,11 +68,11 @@
 }
 
 
-// line 95
+.line 95
 //================================================================================
 // scope: distance (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE sectxy = record;
 .class value explicit T_sectxy
@@ -103,7 +103,7 @@
 }
 
 
-// line 100
+.line 100
 //================================================================================
 // scope: radians (level : 2)
 
@@ -124,7 +124,7 @@
 }
 
 
-// line 105
+.line 105
 //================================================================================
 // scope: interval (level : 2)
 
@@ -147,11 +147,11 @@
 }
 
 
-// line 116
+.line 116
 //================================================================================
 // scope: reinitialize (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_1 = array [1 .. 20] of uint8;
 .class value explicit T_array_1
@@ -198,7 +198,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE devicerec = record;
 .class value explicit T_devicerec
@@ -210,7 +210,7 @@
     .field [20] public int32 Downtime
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_2 = array [48 .. 55] of valuetype T_devicerec;
 .class value explicit T_array_2
@@ -263,11 +263,11 @@
 }
 
 
-// line 125
+.line 125
 //================================================================================
 // scope: initialize (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_11 = array [0 .. 6] of uint8;
 .class value explicit T_array_11
@@ -302,7 +302,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_12 = array [1 .. 10] of uint8;
 .class value explicit T_array_12
@@ -349,7 +349,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_13 = array [0 .. 4] of valuetype T_array_12;
 .class value explicit T_array_13
@@ -386,7 +386,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE quadxy = record;
 .class value explicit T_quadxy
@@ -398,7 +398,7 @@
     .field [1] public int8 y
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE quadrec = record;
 .class value explicit T_quadrec
@@ -413,7 +413,7 @@
     .field [4] public int8 Starnum
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_19 = array [0 .. 7] of valuetype T_quadrec;
 .class value explicit T_array_19
@@ -450,7 +450,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_20 = array [0 .. 7] of valuetype T_array_19;
 .class value explicit T_array_20
@@ -504,11 +504,11 @@
 }
 
 
-// line 191
+.line 191
 //================================================================================
 // scope: setcondition (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_21 = array [0 .. 7] of int32;
 .class value explicit T_array_21
@@ -545,7 +545,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_22 = array [0 .. 7] of valuetype T_array_21;
 .class value explicit T_array_22
@@ -597,11 +597,11 @@
 }
 
 
-// line 211
+.line 211
 //================================================================================
 // scope: klingonattack (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_23 = array [1 .. 8] of uint8;
 .class value explicit T_klingonattack_array_23
@@ -648,7 +648,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE klingonrec = record;
 .class value explicit T_klingonrec
@@ -660,7 +660,7 @@
     .field [4] public int32 Energyleft
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_24 = array [0 .. 11] of valuetype T_klingonrec;
 .class value explicit T_array_24
@@ -713,7 +713,7 @@
 }
 
 
-// line 241
+.line 241
 //================================================================================
 // scope: printdigit (level : 2)
 
@@ -732,7 +732,7 @@
 }
 
 
-// line 253
+.line 253
 //================================================================================
 // scope: setupquad_setupstuff (level : 3)
 
@@ -758,11 +758,11 @@
 }
 
 
-// line 250
+.line 250
 //================================================================================
 // scope: setupquad (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_27 = set of 0 .. 6
 .class value explicit T_set_27
@@ -864,7 +864,7 @@
         ret
     }
 
-// line 253
+.line 253
 
     .method public
     void Setupstuff(int32 Object, int32 Count)
@@ -889,18 +889,18 @@
         stfld int32 @setupquad_setupstuff::Object
     
     L_Entry:
-        // line 256
+        .line 256
         br L_while_test_2
     L_while_1:
-        // line 258
+        .line 258
     L_repeat_3:
-        // line 259
+        .line 259
         ldloc _F
         ldc.i4 0
         ldc.i4 7
         call int32 Random(int32 Low, int32 Hi)
         stfld int32 @setupquad_setupstuff::x
-        // line 260
+        .line 260
         ldloc _F
         ldc.i4 0
         ldc.i4 7
@@ -918,7 +918,7 @@
         ldc.i4 0
         ceq
         brfalse L_repeat_3
-        // line 262
+        .line 262
         ldsflda valuetype T_array_22 _G::Quadrant
         ldloc _F
         ldfld int32 @setupquad_setupstuff::x
@@ -929,7 +929,7 @@
         ldloc _F
         ldfld int32 @setupquad_setupstuff::Object
         stobj int32
-        // line 263
+        .line 263
         ldloc _F
         ldloc _F
         ldfld int32 @setupquad_setupstuff::Count
@@ -953,7 +953,7 @@
 }
 
 
-// line 301
+.line 301
 //================================================================================
 // scope: printquadrant (level : 2)
 
@@ -972,7 +972,7 @@
 }
 
 
-// line 335
+.line 335
 //================================================================================
 // scope: printgalaxy_printseparator (level : 3)
 
@@ -996,11 +996,11 @@
 }
 
 
-// line 330
+.line 330
 //================================================================================
 // scope: printgalaxy (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_28 = set of 0 .. 255
 .class value explicit T_set_28
@@ -1110,7 +1110,7 @@
         ret
     }
 
-// line 335
+.line 335
 
     .method public
     void Printseparator(int32 Entries)
@@ -1135,7 +1135,7 @@
         stfld int32 @printgalaxy_printseparator::Entries
     
     L_Entry:
-        // line 338
+        .line 338
         ldloc _F
         ldfld int32 @printgalaxy_printseparator::Entries
         stloc $tmpEndValue1
@@ -1148,7 +1148,7 @@
         ldloc $tmpIndex2
         stfld int32 @printgalaxy_printseparator::Count
     L_for_loop_1:
-        // line 339
+        .line 339
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "|-----"
@@ -1168,7 +1168,7 @@
         br L_for_loop_1
     L_for_end_2:
         pop
-        // line 340
+        .line 340
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 124 // '|'
@@ -1182,7 +1182,7 @@
 }
 
 
-// line 380
+.line 380
 //================================================================================
 // scope: printdamage (level : 2)
 
@@ -1200,7 +1200,7 @@
 }
 
 
-// line 392
+.line 392
 //================================================================================
 // scope: moveenterprise_handledamage (level : 3)
 
@@ -1222,7 +1222,7 @@
 }
 
 
-// line 425
+.line 425
 //================================================================================
 // scope: moveenterprise_moveintra (level : 3)
 
@@ -1248,7 +1248,7 @@
 }
 
 
-// line 388
+.line 388
 //================================================================================
 // scope: moveenterprise (level : 2)
 
@@ -1269,7 +1269,7 @@
         ret
     }
 
-// line 392
+.line 392
 
     .method public
     void Handledamage()
@@ -1290,7 +1290,7 @@
         stfld class @moveenterprise @moveenterprise_handledamage::_slink
     
     L_Entry:
-        // line 395
+        .line 395
         ldc.i4 55 // '7'
         stloc $tmpEndValue1
         ldc.i4 48 // '0'
@@ -1302,7 +1302,7 @@
         ldloc $tmpIndex2
         stfld uint8 @moveenterprise_handledamage::Ch
     L_for_loop_1:
-        // line 396
+        .line 396
         ldsflda valuetype T_array_2 _G::Device
         ldloc _F
         ldfld uint8 @moveenterprise_handledamage::Ch
@@ -1313,7 +1313,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_3
-        // line 397
+        .line 397
         ldsflda valuetype T_array_2 _G::Device
         ldloc _F
         ldfld uint8 @moveenterprise_handledamage::Ch
@@ -1341,20 +1341,20 @@
         br L_for_loop_1
     L_for_end_2:
         pop
-        // line 398
+        .line 398
         ldc.i4 0
         ldc.i4 100
         call int32 Random(int32 Low, int32 Hi)
         ldc.i4 6
         clt
         brfalse L_else_4
-        // line 400
+        .line 400
         ldloc _F
         ldc.i4 48 // '0'
         ldc.i4 55 // '7'
         call int32 Random(int32 Low, int32 Hi)
         stfld uint8 @moveenterprise_handledamage::Ch
-        // line 401
+        .line 401
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "*** Space storm, "
@@ -1371,7 +1371,7 @@
         ldstr " damaged ***"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 402
+        .line 402
         ldsflda valuetype T_array_2 _G::Device
         ldloc _F
         ldfld uint8 @moveenterprise_handledamage::Ch
@@ -1387,39 +1387,39 @@
         /* nop */
         br L_if_end_5
     L_else_4:
-        // line 405
+        .line 405
         ldc.i4 0
         ldc.i4 100
         call int32 Random(int32 Low, int32 Hi)
         ldc.i4 12
         clt
         brfalse L_if_end_6
-        // line 407
+        .line 407
         ldloc _F
         ldc.i4 48 // '0'
         ldc.i4 55 // '7'
         call int32 Random(int32 Low, int32 Hi)
         stfld uint8 @moveenterprise_handledamage::Ch
-        // line 408
+        .line 408
         ldloc _F
         ldloc _F
         ldfld uint8 @moveenterprise_handledamage::Ch
         stfld uint8 @moveenterprise_handledamage::Startch
-        // line 409
+        .line 409
     L_repeat_7:
-        // line 410
+        .line 410
         ldloc _F
         ldfld uint8 @moveenterprise_handledamage::Ch
         ldc.i4 55 // '7'
         ceq
         brfalse L_else_8
-        // line 411
+        .line 411
         ldloc _F
         ldc.i4 48 // '0'
         stfld uint8 @moveenterprise_handledamage::Ch
         br L_if_end_9
     L_else_8:
-        // line 413
+        .line 413
         ldloc _F
         ldloc _F
         ldfld uint8 @moveenterprise_handledamage::Ch
@@ -1447,7 +1447,7 @@
         ceq
     L_OR_shortcut_10:
         brfalse L_repeat_7
-        // line 416
+        .line 416
         ldsflda valuetype T_array_2 _G::Device
         ldloc _F
         ldfld uint8 @moveenterprise_handledamage::Ch
@@ -1458,7 +1458,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_11
-        // line 418
+        .line 418
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "*** Truce, "
@@ -1475,7 +1475,7 @@
         ldstr " state of repair improved ***"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 420
+        .line 420
         ldsflda valuetype T_array_2 _G::Device
         ldloc _F
         ldfld uint8 @moveenterprise_handledamage::Ch
@@ -1501,7 +1501,7 @@
         ret
     }
 
-// line 425
+.line 425
 
     .method public
     void Moveintra(float64& Xpos, float64& Ypos, float64& Xinc, float64& Yinc, int32 Course, float64 Warp)
@@ -1571,7 +1571,7 @@
         call instance void T_set_28::addRange(int32, int32)
     
     L_Entry:
-        // line 428
+        .line 428
         ldloc _F
         ldfld float64* @moveenterprise_moveintra::Xinc
         ldloc _F
@@ -1580,7 +1580,7 @@
         call float64 [lpcRuntime]LPC.Helpers::Cos(float64)
         neg
         stobj float64
-        // line 429
+        .line 429
         ldloc _F
         ldfld float64* @moveenterprise_moveintra::Yinc
         ldloc _F
@@ -1588,24 +1588,24 @@
         call float64 Radians(int32 Degrees)
         call float64 [lpcRuntime]LPC.Helpers::Sin(float64)
         stobj float64
-        // line 430
+        .line 430
         ldloc _F
         ldfld float64* @moveenterprise_moveintra::Xpos
         ldsflda valuetype T_sectxy _G::Cursect
         ldfld int8 T_sectxy::x
         conv.r8
         stobj float64
-        // line 431
+        .line 431
         ldloc _F
         ldfld float64* @moveenterprise_moveintra::Ypos
         ldsflda valuetype T_sectxy _G::Cursect
         ldfld int8 T_sectxy::y
         conv.r8
         stobj float64
-        // line 432
+        .line 432
         br L_while_test_2
     L_while_1:
-        // line 434
+        .line 434
         ldsflda valuetype T_array_22 _G::Quadrant
         ldloc _F
         ldfld float64* @moveenterprise_moveintra::Xpos
@@ -1621,7 +1621,7 @@
         ldc.i4 0
         ceq
         brfalse L_else_3
-        // line 436
+        .line 436
         ldloc _F
         ldfld float64* @moveenterprise_moveintra::Xpos
         ldloc _F
@@ -1632,7 +1632,7 @@
         ldobj float64
         add
         stobj float64
-        // line 437
+        .line 437
         ldloc _F
         ldfld float64* @moveenterprise_moveintra::Ypos
         ldloc _F
@@ -1643,7 +1643,7 @@
         ldobj float64
         add
         stobj float64
-        // line 438
+        .line 438
         ldloc _F
         ldloc _F
         ldfld float64 @moveenterprise_moveintra::Warp
@@ -1653,7 +1653,7 @@
         /* nop */
         br L_if_end_4
     L_else_3:
-        // line 441
+        .line 441
         ldloc _F
         ldc.r8 0.000000
         stfld float64 @moveenterprise_moveintra::Warp
@@ -1694,7 +1694,7 @@
 }
 
 
-// line 496
+.line 496
 //================================================================================
 // scope: firephasers (level : 2)
 
@@ -1714,7 +1714,7 @@
 }
 
 
-// line 538
+.line 538
 //================================================================================
 // scope: firetorpedoes_hitnova (level : 3)
 
@@ -1741,7 +1741,7 @@
 }
 
 
-// line 564
+.line 564
 //================================================================================
 // scope: firetorpedoes_hitklingbase (level : 3)
 
@@ -1768,7 +1768,7 @@
 }
 
 
-// line 533
+.line 533
 //================================================================================
 // scope: firetorpedoes (level : 2)
 
@@ -1790,7 +1790,7 @@
         ret
     }
 
-// line 538
+.line 538
 
     .method public
     void Hitnova(int8 Novax, int8 Novay, int8& Klingnum)
@@ -1827,20 +1827,20 @@
         stfld int8 @firetorpedoes_hitnova::Novay
     
     L_Entry:
-        // line 541
+        .line 541
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "Torpedo causes unstable star to nova"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 542
+        .line 542
         ldsfld int32 _G::Condition
         ldc.i4 4
         ceq
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 544
+        .line 544
         ldloc _F
         ldc.i4 600
         ldc.i4 0
@@ -1855,13 +1855,13 @@
         call int32 Distance(int8 Pos1x, int8 Pos1y, valuetype T_sectxy Pos2)
         div
         stfld int32 @firetorpedoes_hitnova::Hit
-        // line 545
+        .line 545
         ldloc _F
         ldfld int32 @firetorpedoes_hitnova::Hit
         ldc.i4 0
         cgt
         brfalse L_if_end_2
-        // line 546
+        .line 546
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "Enterprise loses "
@@ -1877,7 +1877,7 @@
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
     L_if_end_2:
-        // line 547
+        .line 547
         ldsfld int32 _G::Curenergy
         ldloc _F
         ldfld int32 @firetorpedoes_hitnova::Hit
@@ -1885,7 +1885,7 @@
         stsfld int32 _G::Curenergy
         /* nop */
     L_if_end_1:
-        // line 549
+        .line 549
         ldc.i4 11
         stloc $tmpEndValue1
         ldc.i4 0
@@ -1897,7 +1897,7 @@
         ldloc $tmpIndex2
         stfld int32 @firetorpedoes_hitnova::i
     L_for_loop_3:
-        // line 551
+        .line 551
         ldsflda valuetype T_array_24 _G::Klingons
         ldloc _F
         ldfld int32 @firetorpedoes_hitnova::i
@@ -1906,7 +1906,7 @@
         ldc.i4 0
         cgt
         brfalse L_if_end_5
-        // line 553
+        .line 553
         ldsflda valuetype T_array_24 _G::Klingons
         ldloc _F
         ldfld int32 @firetorpedoes_hitnova::i
@@ -1934,7 +1934,7 @@
         div
         sub
         stfld int32 T_klingonrec::Energyleft
-        // line 555
+        .line 555
         ldsflda valuetype T_array_24 _G::Klingons
         ldloc _F
         ldfld int32 @firetorpedoes_hitnova::i
@@ -1945,7 +1945,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_6
-        // line 557
+        .line 557
         ldsflda valuetype T_array_22 _G::Quadrant
         ldsflda valuetype T_array_24 _G::Klingons
         ldloc _F
@@ -1963,12 +1963,12 @@
         call instance int32& T_array_21::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 558
+        .line 558
         ldsfld int32 _G::Totalklingons
         ldc.i4 1
         sub
         stsfld int32 _G::Totalklingons
-        // line 559
+        .line 559
         ldloc _F
         ldfld int8* @firetorpedoes_hitnova::Klingnum
         ldloc _F
@@ -2005,7 +2005,7 @@
         ret
     }
 
-// line 564
+.line 564
 
     .method public
     void Hitklingbase(int8& Klingbasenum)
@@ -2034,7 +2034,7 @@
         stfld int8* @firetorpedoes_hitklingbase::Klingbasenum
     
     L_Entry:
-        // line 568
+        .line 568
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "*** Klingon Starbase DESTROYED ***"
@@ -2043,7 +2043,7 @@
         ldsfld uint8 _G::Bell
         call instance void [lpcRuntime]LPC.File::Write(uint8)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 569
+        .line 569
         ldloc _F
         ldfld int8* @firetorpedoes_hitklingbase::Klingbasenum
         ldloc _F
@@ -2056,11 +2056,11 @@
         ldc.i4 9
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 570
+        .line 570
         ldloc _F
         ldc.i4 0
         stfld int32 @firetorpedoes_hitklingbase::Kdocked
-        // line 571
+        .line 571
         ldc.i4 0
         ldc.i4 7
         dup
@@ -2076,9 +2076,9 @@
         ldloc $tmpIndex2
         stfld int32 @firetorpedoes_hitklingbase::i
     L_for_loop_1:
-        // line 573
+        .line 573
     L_repeat_3:
-        // line 574
+        .line 574
         ldloc _F
         ldc.i4 0
         ldc.i4 7
@@ -2088,7 +2088,7 @@
         ldc.i4 7
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int8 @firetorpedoes_hitklingbase::Quadx
-        // line 575
+        .line 575
         ldloc _F
         ldc.i4 0
         ldc.i4 7
@@ -2118,7 +2118,7 @@
         ceq
     L_OR_shortcut_4:
         brfalse L_repeat_3
-        // line 577
+        .line 577
         ldloc _F
         ldloc _F
         ldfld int32 @firetorpedoes_hitklingbase::Kdocked
@@ -2132,7 +2132,7 @@
         ldfld int8 T_quadrec::Klingnum
         add
         stfld int32 @firetorpedoes_hitklingbase::Kdocked
-        // line 578
+        .line 578
         ldsflda valuetype T_array_20 _G::Galaxy
         ldloc _F
         ldfld int8 @firetorpedoes_hitklingbase::Quadx
@@ -2161,7 +2161,7 @@
         br L_for_loop_1
     L_for_end_2:
         pop
-        // line 580
+        .line 580
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 1
@@ -2173,7 +2173,7 @@
         ldstr " Klingons were killed while docked"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 581
+        .line 581
         ldsfld int32 _G::Totalklingons
         ldloc _F
         ldfld int32 @firetorpedoes_hitklingbase::Kdocked
@@ -2187,7 +2187,7 @@
 }
 
 
-// line 656
+.line 656
 //================================================================================
 // scope: selfdestruct (level : 2)
 
@@ -2205,7 +2205,7 @@
 }
 
 
-// line 668
+.line 668
 //================================================================================
 // scope: command (level : 2)
 
@@ -2224,7 +2224,7 @@
 }
 
 
-// line 715
+.line 715
 //================================================================================
 // scope: instructions_spacewait (level : 3)
 
@@ -2242,7 +2242,7 @@
 }
 
 
-// line 723
+.line 723
 //================================================================================
 // scope: instructions_page1 (level : 3)
 
@@ -2260,7 +2260,7 @@
 }
 
 
-// line 750
+.line 750
 //================================================================================
 // scope: instructions_page2 (level : 3)
 
@@ -2278,7 +2278,7 @@
 }
 
 
-// line 778
+.line 778
 //================================================================================
 // scope: instructions_page3 (level : 3)
 
@@ -2296,7 +2296,7 @@
 }
 
 
-// line 805
+.line 805
 //================================================================================
 // scope: instructions_page4 (level : 3)
 
@@ -2314,7 +2314,7 @@
 }
 
 
-// line 832
+.line 832
 //================================================================================
 // scope: instructions_page5 (level : 3)
 
@@ -2332,7 +2332,7 @@
 }
 
 
-// line 859
+.line 859
 //================================================================================
 // scope: instructions_page6 (level : 3)
 
@@ -2350,7 +2350,7 @@
 }
 
 
-// line 712
+.line 712
 //================================================================================
 // scope: instructions (level : 2)
 
@@ -2366,7 +2366,7 @@
         ret
     }
 
-// line 715
+.line 715
 
     .method public
     void Spacewait()
@@ -2383,19 +2383,19 @@
         stfld class @instructions @instructions_spacewait::_slink
     
     L_Entry:
-        // line 717
+        .line 717
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 718
+        .line 718
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "Hit <return> to continue"
         call instance void [lpcRuntime]LPC.File::Write(string)
         pop
-        // line 719
+        .line 719
         ldsflda valuetype [lpcRuntime]LPC.File _G::Input
         call instance void [lpcRuntime]LPC.File::ReadLn()
-        // line 720
+        .line 720
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
         /* nop */
@@ -2404,7 +2404,7 @@
         ret
     }
 
-// line 723
+.line 723
 
     .method public
     void Page1()
@@ -2421,133 +2421,133 @@
         stfld class @instructions @instructions_page1::_slink
     
     L_Entry:
-        // line 725
+        .line 725
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "The galaxy is divided into 64 quadrants with the"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 726
+        .line 726
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "following coordinates:"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 727
+        .line 727
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 728
+        .line 728
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  0   1   2   3   4   5   6   7"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 729
+        .line 729
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "---------------------------------"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 730
+        .line 730
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "|   |   |   |   |   |   |   |   |  0"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 731
+        .line 731
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "---------------------------------"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 732
+        .line 732
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "|   |   |   |   |   |   |   |   |  1"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 733
+        .line 733
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "---------------------------------"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 734
+        .line 734
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "|   |   |   |   |   |   |   |   |  2"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 735
+        .line 735
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "---------------------------------"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 736
+        .line 736
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "|   |   |   |   |   |   |   |   |  3"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 737
+        .line 737
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "---------------------------------"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 738
+        .line 738
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "|   |   |   |   |   |   |   |   |  4"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 739
+        .line 739
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "---------------------------------"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 740
+        .line 740
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "|   |   |   |   |   |   |   |   |  5"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 741
+        .line 741
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "---------------------------------"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 742
+        .line 742
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "|   |   |   |   |   |   |   |   |  6"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 743
+        .line 743
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "---------------------------------"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 744
+        .line 744
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "|   |   |   |   |   |   |   |   |  7"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 745
+        .line 745
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 746
+        .line 746
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "Each quadrant is similarly divided into 64 sectors."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 747
+        .line 747
         ldloc _F
         ldfld class @instructions @instructions_page1::_slink
         call instance void @instructions::Spacewait()
@@ -2557,7 +2557,7 @@
         ret
     }
 
-// line 750
+.line 750
 
     .method public
     void Page2()
@@ -2574,130 +2574,130 @@
         stfld class @instructions @instructions_page2::_slink
     
     L_Entry:
-        // line 752
+        .line 752
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 753
+        .line 753
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "::: DEVICES :::"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 754
+        .line 754
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 755
+        .line 755
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr " :: Warp Engines ::"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 756
+        .line 756
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 757
+        .line 757
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr " Course = a number in degrees."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 758
+        .line 758
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "   Numbers indicate direction starting at the top and"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 759
+        .line 759
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "   going counter clockwise."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 760
+        .line 760
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 761
+        .line 761
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "                     0"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 762
+        .line 762
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "                 315 | 45"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 763
+        .line 763
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "                    \\\\|/"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 764
+        .line 764
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "               270 --*-- 90"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 765
+        .line 765
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "                    /|\\\\"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 766
+        .line 766
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "                 225 | 135"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 767
+        .line 767
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "                    180"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 768
+        .line 768
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 769
+        .line 769
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr " Warp Factor = a REAL number from 0 to 12."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 770
+        .line 770
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "   Distance traveled = <warp factor> quadrants."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 771
+        .line 771
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "     Warp  .2  =  The Enterprise travels 1 sector."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 772
+        .line 772
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "           .5  =                         4 sectors."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 773
+        .line 773
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "            1  =                         1 quadrant."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 774
+        .line 774
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "            2  =                         2 quadrants."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 775
+        .line 775
         ldloc _F
         ldfld class @instructions @instructions_page2::_slink
         call instance void @instructions::Spacewait()
@@ -2707,7 +2707,7 @@
         ret
     }
 
-// line 778
+.line 778
 
     .method public
     void Page3()
@@ -2724,85 +2724,85 @@
         stfld class @instructions @instructions_page3::_slink
     
     L_Entry:
-        // line 780
+        .line 780
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 781
+        .line 781
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "   For example, if you travel from quadrant 1-1 in the"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 782
+        .line 782
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "   direction of 90 degrees at warp 2, you would stop at"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 783
+        .line 783
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "   quadrant 1-3 in the next stardate.  NOTE: every use of"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 784
+        .line 784
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "   the warp engines takes one stardate.  If the Enterprise"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 785
+        .line 785
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "   is blocked by something during an intra-quadrant travel,"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 786
+        .line 786
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "   it will stop in front of it (and waste a stardate)."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 787
+        .line 787
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 788
+        .line 788
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr " :: Short Range Sensors ::"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 789
+        .line 789
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 790
+        .line 790
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  The short range sensors display a detailed view of the "
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 791
+        .line 791
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  quadrant currently occupied by the Enterprise.  The "
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 792
+        .line 792
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  The following symbols have meanings as follows:"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 793
+        .line 793
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 794
+        .line 794
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "          Symbol          Meaning"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 795
+        .line 795
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "             "
@@ -2814,7 +2814,7 @@
         ldstr "            empty space"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 796
+        .line 796
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "             "
@@ -2826,7 +2826,7 @@
         ldstr "            a stable star"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 797
+        .line 797
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "             "
@@ -2838,7 +2838,7 @@
         ldstr "            an unstable star"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 798
+        .line 798
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "             "
@@ -2850,7 +2850,7 @@
         ldstr "            the Enterprise"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 799
+        .line 799
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "             "
@@ -2862,7 +2862,7 @@
         ldstr "            a Federation base"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 800
+        .line 800
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "             "
@@ -2874,7 +2874,7 @@
         ldstr "            a Klingon ship"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 801
+        .line 801
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "             "
@@ -2886,7 +2886,7 @@
         ldstr "            a Klingon base"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 802
+        .line 802
         ldloc _F
         ldfld class @instructions @instructions_page3::_slink
         call instance void @instructions::Spacewait()
@@ -2896,7 +2896,7 @@
         ret
     }
 
-// line 805
+.line 805
 
     .method public
     void Page4()
@@ -2913,121 +2913,121 @@
         stfld class @instructions @instructions_page4::_slink
     
     L_Entry:
-        // line 807
+        .line 807
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 808
+        .line 808
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr " :: Long Range Sensors ::"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 809
+        .line 809
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 810
+        .line 810
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  The long range sensors display the objects in the nine"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 811
+        .line 811
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  closest quadrants.  Each digit in each box means "
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 812
+        .line 812
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  means something:"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 813
+        .line 813
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 814
+        .line 814
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "    The ONES digit represents the number of STARS."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 815
+        .line 815
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "        TENS                                FEDERATION BASES."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 816
+        .line 816
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "        HUNDREDS                            KLINGON SHIPS"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 817
+        .line 817
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "        THOUSANDS                           KLINGON BASES"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 818
+        .line 818
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 819
+        .line 819
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  For example:"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 820
+        .line 820
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "    319 means 3 Klingons, 1 Federation base, and 9 stars."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 821
+        .line 821
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "    206 means 2 Klingons, 0 Federation bases, and 6 stars."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 822
+        .line 822
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "   1007 means 1 Klingon base and 7 stars."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 823
+        .line 823
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 824
+        .line 824
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr " :: Phasers ::"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 825
+        .line 825
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 826
+        .line 826
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  Any portion of the energy available can be fired.  The"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 827
+        .line 827
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  battle computer divides this amount among the Klingon"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 828
+        .line 828
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  ships in the quadrant and determines the various directions"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 829
+        .line 829
         ldloc _F
         ldfld class @instructions @instructions_page4::_slink
         call instance void @instructions::Spacewait()
@@ -3037,7 +3037,7 @@
         ret
     }
 
-// line 832
+.line 832
 
     .method public
     void Page5()
@@ -3054,22 +3054,22 @@
         stfld class @instructions @instructions_page5::_slink
     
     L_Entry:
-        // line 834
+        .line 834
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 835
+        .line 835
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  of fire.  The effectiveness of a hit depends mostly on the"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 836
+        .line 836
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  distance to the target.  A Klingon battle cruiser starts with"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 837
+        .line 837
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 5
@@ -3080,31 +3080,31 @@
         ldstr " units of energy.  It can fire an amount equal to"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 838
+        .line 838
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  whatever energy is left.  Note that phasers are ineffective "
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 839
+        .line 839
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  against stars, Klingon bases, and Federation bases."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 840
+        .line 840
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 841
+        .line 841
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr " :: Photon Torpedoes ::"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 842
+        .line 842
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 843
+        .line 843
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  Initially the Enterprise has "
@@ -3116,73 +3116,73 @@
         ldstr " photon torpedoes."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 844
+        .line 844
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  One torpedo destroys whatever it hits.  The range of the"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 845
+        .line 845
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  photon torpedoes (like phasers) is limited to the current"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 846
+        .line 846
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  quadrant.  The course of a photon torpedo is set the same"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 847
+        .line 847
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  way as that of the Enterprise.  Torpedoes and phasers are"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 848
+        .line 848
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  restocked when the Enterprise docks at a Federation base."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 849
+        .line 849
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 850
+        .line 850
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr " :: Damage Control Report ::"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 851
+        .line 851
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 852
+        .line 852
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  The damage control report lists the state of repair of each"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 853
+        .line 853
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  device.  A non-zero state indicates the number of stardates"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 854
+        .line 854
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  required to repair the device.  Devices can be damaged by"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 855
+        .line 855
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  space storms, and are repaired by time and truces."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 856
+        .line 856
         ldloc _F
         ldfld class @instructions @instructions_page5::_slink
         call instance void @instructions::Spacewait()
@@ -3192,7 +3192,7 @@
         ret
     }
 
-// line 859
+.line 859
 
     .method public
     void Page6()
@@ -3209,109 +3209,109 @@
         stfld class @instructions @instructions_page6::_slink
     
     L_Entry:
-        // line 861
+        .line 861
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 862
+        .line 862
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr " :: History Computers ::"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 863
+        .line 863
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 864
+        .line 864
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  The history computers keep a record of all the quadrants"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 865
+        .line 865
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  scanned with the long range scanners.  The history report"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 866
+        .line 866
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  uses the same display format as the long range scanners,"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 867
+        .line 867
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  except that the entire galaxy is displayed.  A quadrant"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 868
+        .line 868
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  that has not been scanned is printed as \"+++++\"."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 869
+        .line 869
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 870
+        .line 870
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr " :: Suicide Device ::"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 871
+        .line 871
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 872
+        .line 872
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  It is possible to implement a self-destruct sequence merely"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 873
+        .line 873
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "  by invoking this command.  The game is terminated."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 874
+        .line 874
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 875
+        .line 875
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "To get a list of all commands, type \"9\" when asked for a"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 876
+        .line 876
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "command.  All commands are terminated by the [RETURN] key."
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 877
+        .line 877
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "You have at least on supporting starbase.  Your energy and"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 878
+        .line 878
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "photon torpedoes are replenished when you are docked at a"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 879
+        .line 879
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "Federation starbase.  G O O D   L U C K !"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 880
+        .line 880
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 881
+        .line 881
         ldloc _F
         ldfld class @instructions @instructions_page6::_slink
         call instance void @instructions::Spacewait()
@@ -3323,7 +3323,7 @@
 }
 
 
-// line 913
+.line 913
 //================================================================================
 // scope: finishgame (level : 2)
 
@@ -3341,7 +3341,7 @@
 }
 
 
-// line 1
+.line 1
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -3372,7 +3372,7 @@
     .field public static int32 Totalklingons
 }
 
-// line 65
+.line 65
 
 .method static
 float64 Expp(float64 r)
@@ -3393,15 +3393,15 @@ float64 Expp(float64 r)
     stfld float64 @expp::r
 
 L_Entry:
-    // line 72
+    .line 72
     ldloc _F
     ldc.r8 0.000000
     stfld float64 @expp::t
-    // line 73
+    .line 73
     ldloc _F
     ldc.r8 1.00000
     stfld float64 @expp::m
-    // line 74
+    .line 74
     ldc.i4 55
     stloc $tmpEndValue1
     ldc.i4 1
@@ -3413,7 +3413,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int32 @expp::i
 L_for_loop_1:
-    // line 76
+    .line 76
     ldloc _F
     ldloc _F
     ldfld float64 @expp::t
@@ -3421,7 +3421,7 @@ L_for_loop_1:
     ldfld float64 @expp::m
     add
     stfld float64 @expp::t
-    // line 77
+    .line 77
     ldloc _F
     ldloc _F
     ldfld float64 @expp::m
@@ -3447,7 +3447,7 @@ L_for_loop_1:
     br L_for_loop_1
 L_for_end_2:
     pop
-    // line 80
+    .line 80
     ldloc _F
     ldloc _F
     ldfld float64 @expp::t
@@ -3459,7 +3459,7 @@ L_Epilogue:
     ret
 }
 
-// line 84
+.line 84
 
 .method static
 int32 Random(int32 Low, int32 Hi)
@@ -3480,7 +3480,7 @@ int32 Random(int32 Low, int32 Hi)
     stfld int32 @random::Low
 
 L_Entry:
-    // line 90
+    .line 90
     ldloc _F
     ldc.i4 16807 // a 
     ldsfld int32 _G::Rndseq
@@ -3500,26 +3500,26 @@ L_Entry:
     mul
     sub
     stfld int32 @random::Gamma
-    // line 91
+    .line 91
     ldloc _F
     ldfld int32 @random::Gamma
     ldc.i4 0
     cgt
     brfalse L_else_1
-    // line 91
+    .line 91
     ldloc _F
     ldfld int32 @random::Gamma
     stsfld int32 _G::Rndseq
     br L_if_end_2
 L_else_1:
-    // line 91
+    .line 91
     ldloc _F
     ldfld int32 @random::Gamma
     ldc.i4 2147483647 // m 
     add
     stsfld int32 _G::Rndseq
 L_if_end_2:
-    // line 92
+    .line 92
     ldloc _F
     ldsfld int32 _G::Rndseq
     ldc.i4 2147483647
@@ -3543,7 +3543,7 @@ L_Epilogue:
     ret
 }
 
-// line 95
+.line 95
 
 .method static
 int32 Distance(int8 Pos1x, int8 Pos1y, valuetype T_sectxy Pos2)
@@ -3568,7 +3568,7 @@ int32 Distance(int8 Pos1x, int8 Pos1y, valuetype T_sectxy Pos2)
     stfld valuetype T_sectxy @distance::Pos2
 
 L_Entry:
-    // line 97
+    .line 97
     ldloc _F
     ldloc _F
     ldfld int8 @distance::Pos1x
@@ -3599,7 +3599,7 @@ L_Epilogue:
     ret
 }
 
-// line 100
+.line 100
 
 .method static
 float64 Radians(int32 Degrees)
@@ -3616,7 +3616,7 @@ float64 Radians(int32 Degrees)
     stfld int32 @radians::Degrees
 
 L_Entry:
-    // line 102
+    .line 102
     ldloc _F
     ldloc _F
     ldfld int32 @radians::Degrees
@@ -3632,7 +3632,7 @@ L_Epilogue:
     ret
 }
 
-// line 105
+.line 105
 
 .method static
 int32 Interval(int32 Number, int32 Minvalue, int32 Maxvalue)
@@ -3657,35 +3657,35 @@ int32 Interval(int32 Number, int32 Minvalue, int32 Maxvalue)
     stfld int32 @interval::Number
 
 L_Entry:
-    // line 107
+    .line 107
     ldloc _F
     ldfld int32 @interval::Number
     ldloc _F
     ldfld int32 @interval::Minvalue
     clt
     brfalse L_else_1
-    // line 108
+    .line 108
     ldloc _F
     ldloc _F
     ldfld int32 @interval::Minvalue
     stfld int32 @interval::_fnvalue
     br L_if_end_2
 L_else_1:
-    // line 110
+    .line 110
     ldloc _F
     ldfld int32 @interval::Number
     ldloc _F
     ldfld int32 @interval::Maxvalue
     cgt
     brfalse L_else_3
-    // line 111
+    .line 111
     ldloc _F
     ldloc _F
     ldfld int32 @interval::Maxvalue
     stfld int32 @interval::_fnvalue
     br L_if_end_4
 L_else_3:
-    // line 113
+    .line 113
     ldloc _F
     ldloc _F
     ldfld int32 @interval::Number
@@ -3700,7 +3700,7 @@ L_Epilogue:
     ret
 }
 
-// line 116
+.line 116
 
 .method static
 void Reinitialize()
@@ -3717,13 +3717,13 @@ void Reinitialize()
     stloc _F
 
 L_Entry:
-    // line 119
+    .line 119
     ldc.i4 5000
     stsfld int32 _G::Curenergy
-    // line 120
+    .line 120
     ldc.i4 10
     stsfld int32 _G::Curtorps
-    // line 121
+    .line 121
     ldc.i4 55 // '7'
     stloc $tmpEndValue1
     ldc.i4 48 // '0'
@@ -3735,7 +3735,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld uint8 @reinitialize::Ch
 L_for_loop_1:
-    // line 122
+    .line 122
     ldsflda valuetype T_array_2 _G::Device
     ldloc _F
     ldfld uint8 @reinitialize::Ch
@@ -3762,7 +3762,7 @@ L_Epilogue:
     ret
 }
 
-// line 125
+.line 125
 
 .method static
 void Initialize()
@@ -3782,127 +3782,127 @@ void Initialize()
     stloc _F
 
 L_Entry:
-    // line 128
+    .line 128
     ldsflda valuetype T_array_2 _G::Device
     ldc.i4 48 // '0'
     call instance valuetype T_devicerec& T_array_2::ldadr(int32)
     ldsfld valuetype T_array_1 STRING_1    // "Warp Engines        "
     stfld valuetype T_array_1 T_devicerec::Name
-    // line 129
+    .line 129
     ldsflda valuetype T_array_2 _G::Device
     ldc.i4 49 // '1'
     call instance valuetype T_devicerec& T_array_2::ldadr(int32)
     ldsfld valuetype T_array_1 STRING_2    // "Short Range Sensors "
     stfld valuetype T_array_1 T_devicerec::Name
-    // line 130
+    .line 130
     ldsflda valuetype T_array_2 _G::Device
     ldc.i4 50 // '2'
     call instance valuetype T_devicerec& T_array_2::ldadr(int32)
     ldsfld valuetype T_array_1 STRING_3    // "Long Range Sensors  "
     stfld valuetype T_array_1 T_devicerec::Name
-    // line 131
+    .line 131
     ldsflda valuetype T_array_2 _G::Device
     ldc.i4 51 // '3'
     call instance valuetype T_devicerec& T_array_2::ldadr(int32)
     ldsfld valuetype T_array_1 STRING_4    // "Phaser Control      "
     stfld valuetype T_array_1 T_devicerec::Name
-    // line 132
+    .line 132
     ldsflda valuetype T_array_2 _G::Device
     ldc.i4 52 // '4'
     call instance valuetype T_devicerec& T_array_2::ldadr(int32)
     ldsfld valuetype T_array_1 STRING_5    // "Photon Tubes        "
     stfld valuetype T_array_1 T_devicerec::Name
-    // line 133
+    .line 133
     ldsflda valuetype T_array_2 _G::Device
     ldc.i4 53 // '5'
     call instance valuetype T_devicerec& T_array_2::ldadr(int32)
     ldsfld valuetype T_array_1 STRING_6    // "Damage Control      "
     stfld valuetype T_array_1 T_devicerec::Name
-    // line 134
+    .line 134
     ldsflda valuetype T_array_2 _G::Device
     ldc.i4 54 // '6'
     call instance valuetype T_devicerec& T_array_2::ldadr(int32)
     ldsfld valuetype T_array_1 STRING_7    // "History Computers   "
     stfld valuetype T_array_1 T_devicerec::Name
-    // line 135
+    .line 135
     ldsflda valuetype T_array_2 _G::Device
     ldc.i4 55 // '7'
     call instance valuetype T_devicerec& T_array_2::ldadr(int32)
     ldsfld valuetype T_array_1 STRING_8    // "Self Destruct       "
     stfld valuetype T_array_1 T_devicerec::Name
-    // line 136
+    .line 136
     ldsflda valuetype T_array_11 _G::Symbols
     ldc.i4 0
     call instance uint8& T_array_11::ldadr(int32)
     ldc.i4 46 // '.'
     stobj uint8
-    // line 137
+    .line 137
     ldsflda valuetype T_array_11 _G::Symbols
     ldc.i4 1
     call instance uint8& T_array_11::ldadr(int32)
     ldc.i4 42 // '*'
     stobj uint8
-    // line 138
+    .line 138
     ldsflda valuetype T_array_11 _G::Symbols
     ldc.i4 2
     call instance uint8& T_array_11::ldadr(int32)
     ldc.i4 69 // 'E'
     stobj uint8
-    // line 139
+    .line 139
     ldsflda valuetype T_array_11 _G::Symbols
     ldc.i4 3
     call instance uint8& T_array_11::ldadr(int32)
     ldc.i4 43 // '+'
     stobj uint8
-    // line 140
+    .line 140
     ldsflda valuetype T_array_11 _G::Symbols
     ldc.i4 4
     call instance uint8& T_array_11::ldadr(int32)
     ldc.i4 75 // 'K'
     stobj uint8
-    // line 141
+    .line 141
     ldsflda valuetype T_array_11 _G::Symbols
     ldc.i4 5
     call instance uint8& T_array_11::ldadr(int32)
     ldc.i4 66 // 'B'
     stobj uint8
-    // line 142
+    .line 142
     ldsflda valuetype T_array_11 _G::Symbols
     ldc.i4 6
     call instance uint8& T_array_11::ldadr(int32)
     ldc.i4 64 // '@'
     stobj uint8
-    // line 143
+    .line 143
     ldsflda valuetype T_array_13 _G::Condnames
     ldc.i4 1
     call instance valuetype T_array_12& T_array_13::ldadr(int32)
     ldsfld valuetype T_array_12 STRING_9    // "Red       "
     stobj valuetype T_array_12
-    // line 144
+    .line 144
     ldsflda valuetype T_array_13 _G::Condnames
     ldc.i4 0
     call instance valuetype T_array_12& T_array_13::ldadr(int32)
     ldsfld valuetype T_array_12 STRING_10    // "Green     "
     stobj valuetype T_array_12
-    // line 145
+    .line 145
     ldsflda valuetype T_array_13 _G::Condnames
     ldc.i4 2
     call instance valuetype T_array_12& T_array_13::ldadr(int32)
     ldsfld valuetype T_array_12 STRING_11    // "Yellow    "
     stobj valuetype T_array_12
-    // line 146
+    .line 146
     ldsflda valuetype T_array_13 _G::Condnames
     ldc.i4 3
     call instance valuetype T_array_12& T_array_13::ldadr(int32)
     ldsfld valuetype T_array_12 STRING_12    // "Black     "
     stobj valuetype T_array_12
-    // line 147
+    .line 147
     ldsflda valuetype T_array_13 _G::Condnames
     ldc.i4 4
     call instance valuetype T_array_12& T_array_13::ldadr(int32)
     ldsfld valuetype T_array_12 STRING_13    // "Docked    "
     stobj valuetype T_array_12
-    // line 148
+    .line 148
     ldsflda valuetype T_sectxy _G::Cursect
     ldc.i4 0
     ldc.i4 7
@@ -3912,7 +3912,7 @@ L_Entry:
     ldc.i4 7
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_sectxy::x
-    // line 149
+    .line 149
     ldsflda valuetype T_sectxy _G::Cursect
     ldc.i4 0
     ldc.i4 7
@@ -3922,7 +3922,7 @@ L_Entry:
     ldc.i4 7
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_sectxy::y
-    // line 150
+    .line 150
     ldsflda valuetype T_quadxy _G::Curquad
     ldc.i4 0
     ldc.i4 7
@@ -3932,7 +3932,7 @@ L_Entry:
     ldc.i4 7
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_quadxy::x
-    // line 151
+    .line 151
     ldsflda valuetype T_quadxy _G::Curquad
     ldc.i4 0
     ldc.i4 7
@@ -3942,13 +3942,13 @@ L_Entry:
     ldc.i4 7
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_quadxy::y
-    // line 152
+    .line 152
     ldc.i4 0
     stsfld int32 _G::Totalklingons
-    // line 153
+    .line 153
     ldc.i4 0
     stsfld int32 _G::Totalkbases
-    // line 154
+    .line 154
     ldc.i4 7
     stloc $tmpEndValue1
     ldc.i4 0
@@ -3960,7 +3960,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int32 @initialize::i
 L_for_loop_1:
-    // line 155
+    .line 155
     ldc.i4 7
     stloc $tmpEndValue3
     ldc.i4 0
@@ -3972,7 +3972,7 @@ L_for_loop_1:
     ldloc $tmpIndex4
     stfld int32 @initialize::j
 L_for_loop_3:
-    // line 158
+    .line 158
     ldsflda valuetype T_array_20 _G::Galaxy
     ldloc _F
     ldfld int32 @initialize::i
@@ -3982,7 +3982,7 @@ L_for_loop_3:
     call instance valuetype T_quadrec& T_array_19::ldadr(int32)
     ldc.i4 0 // (false)
     stfld bool T_quadrec::Ishistory
-    // line 159
+    .line 159
     ldloc _F
     ldc.i4 0
     ldc.i4 7
@@ -3990,7 +3990,7 @@ L_for_loop_3:
     mul
     call int32 Random(int32 Low, int32 Hi)
     stfld int32 @initialize::Rnum
-    // line 160
+    .line 160
     ldc.i4 0
     ldc.i4 7
     dup
@@ -4001,7 +4001,7 @@ L_for_loop_3:
     ldc.i4.0
     ceq
     brfalse L_else_5
-    // line 161
+    .line 161
     ldsflda valuetype T_array_20 _G::Galaxy
     ldloc _F
     ldfld int32 @initialize::i
@@ -4017,7 +4017,7 @@ L_for_loop_3:
     stfld int8 T_quadrec::Klingbasenum
     br L_if_end_6
 L_else_5:
-    // line 163
+    .line 163
     ldsflda valuetype T_array_20 _G::Galaxy
     ldloc _F
     ldfld int32 @initialize::i
@@ -4032,7 +4032,7 @@ L_else_5:
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_quadrec::Klingbasenum
 L_if_end_6:
-    // line 164
+    .line 164
     ldsfld int32 _G::Totalkbases
     ldsflda valuetype T_array_20 _G::Galaxy
     ldloc _F
@@ -4044,7 +4044,7 @@ L_if_end_6:
     ldfld int8 T_quadrec::Klingbasenum
     add
     stsfld int32 _G::Totalkbases
-    // line 165
+    .line 165
     ldsflda valuetype T_array_20 _G::Galaxy
     ldloc _F
     ldfld int32 @initialize::i
@@ -4069,7 +4069,7 @@ L_if_end_6:
     ldc.i4 9
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_quadrec::Klingnum
-    // line 166
+    .line 166
     ldsfld int32 _G::Totalklingons
     ldsflda valuetype T_array_20 _G::Galaxy
     ldloc _F
@@ -4081,7 +4081,7 @@ L_if_end_6:
     ldfld int8 T_quadrec::Klingnum
     add
     stsfld int32 _G::Totalklingons
-    // line 167
+    .line 167
     ldc.i4 0
     ldc.i4 7
     dup
@@ -4090,7 +4090,7 @@ L_if_end_6:
     ldc.i4 3
     clt
     brfalse L_else_7
-    // line 168
+    .line 168
     ldsflda valuetype T_array_20 _G::Galaxy
     ldloc _F
     ldfld int32 @initialize::i
@@ -4106,7 +4106,7 @@ L_if_end_6:
     stfld int8 T_quadrec::Fedbasenum
     br L_if_end_8
 L_else_7:
-    // line 170
+    .line 170
     ldsflda valuetype T_array_20 _G::Galaxy
     ldloc _F
     ldfld int32 @initialize::i
@@ -4121,7 +4121,7 @@ L_else_7:
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_quadrec::Fedbasenum
 L_if_end_8:
-    // line 171
+    .line 171
     ldloc _F
     ldloc _F
     ldfld int32 @initialize::Totalfedbase
@@ -4135,7 +4135,7 @@ L_if_end_8:
     ldfld int8 T_quadrec::Fedbasenum
     add
     stfld int32 @initialize::Totalfedbase
-    // line 172
+    .line 172
     ldsflda valuetype T_array_20 _G::Galaxy
     ldloc _F
     ldfld int32 @initialize::i
@@ -4180,16 +4180,16 @@ L_for_end_4:
     br L_for_loop_1
 L_for_end_2:
     pop
-    // line 174
+    .line 174
     ldsfld int32 _G::Totalklingons
     stsfld int32 _G::Startklingons
-    // line 175
+    .line 175
     ldloc _F
     ldfld int32 @initialize::Totalfedbase
     ldc.i4 0
     ceq
     brfalse L_if_end_9
-    // line 176
+    .line 176
     ldsflda valuetype T_array_20 _G::Galaxy
     ldc.i4 0
     ldc.i4 7
@@ -4206,12 +4206,12 @@ L_for_end_2:
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_quadrec::Fedbasenum
 L_if_end_9:
-    // line 177
+    .line 177
     ldsfld int32 _G::Totalkbases
     ldc.i4 0
     ceq
     brfalse L_if_end_10
-    // line 179
+    .line 179
     ldsflda valuetype T_array_20 _G::Galaxy
     ldc.i4 0
     ldc.i4 7
@@ -4227,33 +4227,33 @@ L_if_end_9:
     ldc.i4 9
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_quadrec::Klingbasenum
-    // line 181
+    .line 181
     ldc.i4 1
     stsfld int32 _G::Totalkbases
     /* nop */
 L_if_end_10:
-    // line 183
+    .line 183
     ldc.i4 3000
     ldc.i4 4000
     call int32 Random(int32 Low, int32 Hi)
     stsfld int32 _G::Curyear
-    // line 184
+    .line 184
     ldsfld int32 _G::Curyear
     stsfld int32 _G::Startyear
-    // line 185
+    .line 185
     ldsfld int32 _G::Startyear
     ldc.i4 10
     ldc.i4 40
     call int32 Random(int32 Low, int32 Hi)
     add
     stsfld int32 _G::Endyear
-    // line 186
+    .line 186
     ldc.i4 0
     stsfld int32 _G::Badpoints
-    // line 187
+    .line 187
     ldc.i4 7
     stsfld uint8 _G::Bell
-    // line 188
+    .line 188
     call void Reinitialize()
     /* nop */
 
@@ -4261,7 +4261,7 @@ L_Epilogue:
     ret
 }
 
-// line 191
+.line 191
 
 .method static
 void Setcondition()
@@ -4281,7 +4281,7 @@ void Setcondition()
     stloc _F
 
 L_Entry:
-    // line 194
+    .line 194
     ldsflda valuetype T_array_20 _G::Galaxy
     ldsflda valuetype T_quadxy _G::Curquad
     ldfld int8 T_quadxy::x
@@ -4295,12 +4295,12 @@ L_Entry:
     ldc.i4.0
     ceq
     brfalse L_else_1
-    // line 195
+    .line 195
     ldc.i4 3
     stsfld int32 _G::Condition
     br L_if_end_2
 L_else_1:
-    // line 197
+    .line 197
     ldsflda valuetype T_array_20 _G::Galaxy
     ldsflda valuetype T_quadxy _G::Curquad
     ldfld int8 T_quadxy::x
@@ -4314,30 +4314,30 @@ L_else_1:
     ldc.i4.0
     ceq
     brfalse L_else_3
-    // line 198
+    .line 198
     ldc.i4 1
     stsfld int32 _G::Condition
     br L_if_end_4
 L_else_3:
-    // line 200
+    .line 200
     ldsfld int32 _G::Curenergy
     ldc.i4 5000
     ldc.i4 10
     div
     clt
     brfalse L_else_5
-    // line 201
+    .line 201
     ldc.i4 2
     stsfld int32 _G::Condition
     br L_if_end_6
 L_else_5:
-    // line 203
+    .line 203
     ldc.i4 0
     stsfld int32 _G::Condition
 L_if_end_6:
 L_if_end_4:
 L_if_end_2:
-    // line 204
+    .line 204
     ldsflda valuetype T_sectxy _G::Cursect
     ldfld int8 T_sectxy::x
     ldc.i4 1
@@ -4355,7 +4355,7 @@ L_if_end_2:
     ldloc $tmpIndex2
     stfld int32 @setcondition::i
 L_for_loop_7:
-    // line 205
+    .line 205
     ldsflda valuetype T_sectxy _G::Cursect
     ldfld int8 T_sectxy::y
     ldc.i4 1
@@ -4373,7 +4373,7 @@ L_for_loop_7:
     ldloc $tmpIndex4
     stfld int32 @setcondition::j
 L_for_loop_9:
-    // line 206
+    .line 206
     ldsflda valuetype T_array_22 _G::Quadrant
     ldloc _F
     ldfld int32 @setcondition::i
@@ -4391,7 +4391,7 @@ L_for_loop_9:
     ldc.i4 5
     ceq
     brfalse L_if_end_11
-    // line 208
+    .line 208
     ldc.i4 4
     stsfld int32 _G::Condition
 L_if_end_11:
@@ -4429,7 +4429,7 @@ L_Epilogue:
     ret
 }
 
-// line 211
+.line 211
 
 .method static
 void Klingonattack()
@@ -4446,7 +4446,7 @@ void Klingonattack()
     stloc _F
 
 L_Entry:
-    // line 216
+    .line 216
     ldsflda valuetype T_array_20 _G::Galaxy
     ldsflda valuetype T_quadxy _G::Curquad
     ldfld int8 T_quadxy::x
@@ -4476,12 +4476,12 @@ L_Entry:
     ceq
 L_OR_shortcut_1:
     brfalse L_if_end_2
-    // line 218
+    .line 218
     ldsfld int32 _G::Condition
     ldc.i4 4
     ceq
     brfalse L_else_3
-    // line 219
+    .line 219
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Starbase shields protect the Enterprise"
@@ -4489,7 +4489,7 @@ L_OR_shortcut_1:
     call instance void [lpcRuntime]LPC.File::WriteLn()
     br L_if_end_4
 L_else_3:
-    // line 221
+    .line 221
     ldc.i4 11
     stloc $tmpEndValue1
     ldc.i4 0
@@ -4501,7 +4501,7 @@ L_else_3:
     ldloc $tmpIndex2
     stfld int32 @klingonattack::i
 L_for_loop_5:
-    // line 223
+    .line 223
     ldsflda valuetype T_array_24 _G::Klingons
     ldloc _F
     ldfld int32 @klingonattack::i
@@ -4510,7 +4510,7 @@ L_for_loop_5:
     ldc.i4 0
     cgt
     brfalse L_if_end_7
-    // line 225
+    .line 225
     ldloc _F
     ldsflda valuetype T_array_24 _G::Klingons
     ldloc _F
@@ -4546,13 +4546,13 @@ L_for_loop_5:
     div
     call int32 [lpcRuntime]LPC.Helpers::Trunc(float64)
     stfld int32 @klingonattack::Hit
-    // line 228
+    .line 228
     ldsfld int32 _G::Curenergy
     ldloc _F
     ldfld int32 @klingonattack::Hit
     sub
     stsfld int32 _G::Curenergy
-    // line 229
+    .line 229
     ldsflda valuetype T_array_24 _G::Klingons
     ldloc _F
     ldfld int32 @klingonattack::i
@@ -4561,18 +4561,18 @@ L_for_loop_5:
     ldc.i4 5000
     ceq
     brfalse L_else_8
-    // line 230
+    .line 230
     ldloc _F
     ldsfld valuetype T_klingonattack_array_23 STRING_14    // "Starbase"
     stfld valuetype T_klingonattack_array_23 @klingonattack::Shiptype
     br L_if_end_9
 L_else_8:
-    // line 232
+    .line 232
     ldloc _F
     ldsfld valuetype T_klingonattack_array_23 STRING_15    // "        "
     stfld valuetype T_klingonattack_array_23 @klingonattack::Shiptype
 L_if_end_9:
-    // line 233
+    .line 233
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -4584,7 +4584,7 @@ L_if_end_9:
     ldstr " unit hit on Enterprise from Klingon "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 234
+    .line 234
     ldloc _F
     ldflda valuetype T_klingonattack_array_23 @klingonattack::Shiptype
     ldc.i4 1
@@ -4595,7 +4595,7 @@ L_if_end_9:
     ldc.i4.0
     ceq
     brfalse L_if_end_10
-    // line 234
+    .line 234
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -4607,7 +4607,7 @@ L_if_end_9:
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
 L_if_end_10:
-    // line 235
+    .line 235
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "at sector "
@@ -4672,7 +4672,7 @@ L_Epilogue:
     ret
 }
 
-// line 241
+.line 241
 
 .method static
 void Printdigit(int32 Number, bool& Mustprint)
@@ -4697,7 +4697,7 @@ void Printdigit(int32 Number, bool& Mustprint)
     stfld int32 @printdigit::Number
 
 L_Entry:
-    // line 243
+    .line 243
     ldloc _F
     ldfld bool* @printdigit::Mustprint
     ldloc _F
@@ -4714,12 +4714,12 @@ L_Entry:
     ceq
 L_OR_shortcut_1:
     stobj bool
-    // line 244
+    .line 244
     ldloc _F
     ldfld bool* @printdigit::Mustprint
     ldobj bool
     brfalse L_else_2
-    // line 245
+    .line 245
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -4730,7 +4730,7 @@ L_OR_shortcut_1:
     pop
     br L_if_end_3
 L_else_2:
-    // line 247
+    .line 247
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 32 // ' '
@@ -4743,7 +4743,7 @@ L_Epilogue:
     ret
 }
 
-// line 250
+.line 250
 
 .method static
 void Setupquad(valuetype T_quadxy Quad, valuetype T_sectxy& Entsect)
@@ -4792,7 +4792,7 @@ void Setupquad(valuetype T_quadxy Quad, valuetype T_sectxy& Entsect)
     call instance void T_set_27::addValue(int32)
 
 L_Entry:
-    // line 268
+    .line 268
     ldc.i4 7
     stloc $tmpEndValue1
     ldc.i4 0
@@ -4804,7 +4804,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int32 @setupquad::i
 L_for_loop_1:
-    // line 269
+    .line 269
     ldc.i4 7
     stloc $tmpEndValue3
     ldc.i4 0
@@ -4816,7 +4816,7 @@ L_for_loop_1:
     ldloc $tmpIndex4
     stfld int32 @setupquad::j
 L_for_loop_3:
-    // line 270
+    .line 270
     ldsflda valuetype T_array_22 _G::Quadrant
     ldloc _F
     ldfld int32 @setupquad::i
@@ -4854,7 +4854,7 @@ L_for_end_4:
     br L_for_loop_1
 L_for_end_2:
     pop
-    // line 271
+    .line 271
     ldloc _F
     ldfld valuetype T_sectxy* @setupquad::Entsect
     ldc.i4 0
@@ -4865,7 +4865,7 @@ L_for_end_2:
     ldc.i4 7
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_sectxy::x
-    // line 272
+    .line 272
     ldloc _F
     ldfld valuetype T_sectxy* @setupquad::Entsect
     ldc.i4 0
@@ -4876,7 +4876,7 @@ L_for_end_2:
     ldc.i4 7
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_sectxy::y
-    // line 273
+    .line 273
     ldsflda valuetype T_array_22 _G::Quadrant
     ldloc _F
     ldfld valuetype T_sectxy* @setupquad::Entsect
@@ -4888,7 +4888,7 @@ L_for_end_2:
     call instance int32& T_array_21::ldadr(int32)
     ldc.i4 2
     stobj int32
-    // line 276
+    .line 276
     ldloc _F
     ldc.i4 0
     ldsflda valuetype T_array_20 _G::Galaxy
@@ -4905,7 +4905,7 @@ L_for_end_2:
     div
     call int32 Random(int32 Low, int32 Hi)
     stfld int32 @setupquad::Novacount
-    // line 277
+    .line 277
     ldloc _F
     ldc.i4 1
     ldsflda valuetype T_array_20 _G::Galaxy
@@ -4922,13 +4922,13 @@ L_for_end_2:
     ldfld int32 @setupquad::Novacount
     sub
     call instance void @setupquad::Setupstuff(int32 Object, int32 Count)
-    // line 278
+    .line 278
     ldloc _F
     ldc.i4 3
     ldloc _F
     ldfld int32 @setupquad::Novacount
     call instance void @setupquad::Setupstuff(int32 Object, int32 Count)
-    // line 279
+    .line 279
     ldloc _F
     ldc.i4 4
     ldsflda valuetype T_array_20 _G::Galaxy
@@ -4942,7 +4942,7 @@ L_for_end_2:
     call instance valuetype T_quadrec& T_array_19::ldadr(int32)
     ldfld int8 T_quadrec::Klingnum
     call instance void @setupquad::Setupstuff(int32 Object, int32 Count)
-    // line 280
+    .line 280
     ldloc _F
     ldc.i4 5
     ldsflda valuetype T_array_20 _G::Galaxy
@@ -4956,7 +4956,7 @@ L_for_end_2:
     call instance valuetype T_quadrec& T_array_19::ldadr(int32)
     ldfld int8 T_quadrec::Fedbasenum
     call instance void @setupquad::Setupstuff(int32 Object, int32 Count)
-    // line 281
+    .line 281
     ldloc _F
     ldc.i4 6
     ldsflda valuetype T_array_20 _G::Galaxy
@@ -4971,11 +4971,11 @@ L_for_end_2:
     ldfld int8 T_quadrec::Klingbasenum
     call instance void @setupquad::Setupstuff(int32 Object, int32 Count)
     /* nop */
-    // line 283
+    .line 283
     ldloc _F
     ldc.i4 0
     stfld int32 @setupquad::Klingindex
-    // line 284
+    .line 284
     ldc.i4 7
     stloc $tmpEndValue7
     ldc.i4 0
@@ -4987,7 +4987,7 @@ L_for_end_2:
     ldloc $tmpIndex8
     stfld int32 @setupquad::i
 L_for_loop_5:
-    // line 285
+    .line 285
     ldc.i4 7
     stloc $tmpEndValue9
     ldc.i4 0
@@ -4999,7 +4999,7 @@ L_for_loop_5:
     ldloc $tmpIndex10
     stfld int32 @setupquad::j
 L_for_loop_7:
-    // line 286
+    .line 286
     ldloc $tmpSetLiteral11
     ldsflda valuetype T_array_22 _G::Quadrant
     ldloc _F
@@ -5011,7 +5011,7 @@ L_for_loop_7:
     ldobj int32
     call bool _SetContains(valuetype T_set_27 s, int32 val)
     brfalse L_if_end_9
-    // line 289
+    .line 289
     ldsflda valuetype T_array_24 _G::Klingons
     ldloc _F
     ldfld int32 @setupquad::Klingindex
@@ -5024,7 +5024,7 @@ L_for_loop_7:
     ldc.i4 7
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_sectxy::x
-    // line 290
+    .line 290
     ldsflda valuetype T_array_24 _G::Klingons
     ldloc _F
     ldfld int32 @setupquad::Klingindex
@@ -5037,7 +5037,7 @@ L_for_loop_7:
     ldc.i4 7
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_sectxy::y
-    // line 291
+    .line 291
     ldsflda valuetype T_array_22 _G::Quadrant
     ldloc _F
     ldfld int32 @setupquad::i
@@ -5049,7 +5049,7 @@ L_for_loop_7:
     ldc.i4 6
     ceq
     brfalse L_else_10
-    // line 292
+    .line 292
     ldsflda valuetype T_array_24 _G::Klingons
     ldloc _F
     ldfld int32 @setupquad::Klingindex
@@ -5058,7 +5058,7 @@ L_for_loop_7:
     stfld int32 T_klingonrec::Energyleft
     br L_if_end_11
 L_else_10:
-    // line 294
+    .line 294
     ldsflda valuetype T_array_24 _G::Klingons
     ldloc _F
     ldfld int32 @setupquad::Klingindex
@@ -5066,7 +5066,7 @@ L_else_10:
     ldc.i4 300
     stfld int32 T_klingonrec::Energyleft
 L_if_end_11:
-    // line 295
+    .line 295
     ldloc _F
     ldloc _F
     ldfld int32 @setupquad::Klingindex
@@ -5103,7 +5103,7 @@ L_for_end_8:
     br L_for_loop_5
 L_for_end_6:
     pop
-    // line 297
+    .line 297
     ldc.i4 11
     stloc $tmpEndValue14
     ldloc _F
@@ -5116,7 +5116,7 @@ L_for_end_6:
     ldloc $tmpIndex15
     stfld int32 @setupquad::Klingindex
 L_for_loop_12:
-    // line 298
+    .line 298
     ldsflda valuetype T_array_24 _G::Klingons
     ldloc _F
     ldfld int32 @setupquad::Klingindex
@@ -5143,7 +5143,7 @@ L_Epilogue:
     ret
 }
 
-// line 301
+.line 301
 
 .method static
 void Printquadrant()
@@ -5164,9 +5164,9 @@ void Printquadrant()
     stloc _F
 
 L_Entry:
-    // line 304
+    .line 304
     call void Setcondition()
-    // line 305
+    .line 305
     ldsflda valuetype T_array_2 _G::Device
     ldc.i4 49 // '1'
     call instance valuetype T_devicerec& T_array_2::ldadr(int32)
@@ -5176,7 +5176,7 @@ L_Entry:
     ldc.i4.0
     ceq
     brfalse L_else_1
-    // line 306
+    .line 306
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "*** Short Range Sensors Inoperable ***"
@@ -5184,13 +5184,13 @@ L_Entry:
     call instance void [lpcRuntime]LPC.File::WriteLn()
     br L_if_end_2
 L_else_1:
-    // line 309
+    .line 309
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "----------------------"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 310
+    .line 310
     ldc.i4 7
     stloc $tmpEndValue1
     ldc.i4 0
@@ -5206,7 +5206,7 @@ L_else_1:
     ldloc $tmpIndex2
     stfld int8 @printquadrant::i
 L_for_loop_3:
-    // line 312
+    .line 312
     ldc.i4 7
     stloc $tmpEndValue3
     ldc.i4 0
@@ -5222,7 +5222,7 @@ L_for_loop_3:
     ldloc $tmpIndex4
     stfld int8 @printquadrant::j
 L_for_loop_5:
-    // line 313
+    .line 313
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsflda valuetype T_array_11 _G::Symbols
@@ -5259,20 +5259,20 @@ L_for_loop_5:
     br L_for_loop_5
 L_for_end_6:
     pop
-    // line 314
+    .line 314
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 315
+    .line 315
     ldloc _F
     ldfld int8 @printquadrant::i
     stloc $tmpSwitchValue6
     ldloc $tmpSwitchValue6
     ldc.i4 0
     bne.un L_check_case_8
-    // line 316
+    .line 316
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Stardate         "
@@ -5288,7 +5288,7 @@ L_check_case_8:
     ldloc $tmpSwitchValue6
     ldc.i4 1
     bne.un L_check_case_9
-    // line 317
+    .line 317
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Condition        "
@@ -5306,7 +5306,7 @@ L_check_case_9:
     ldloc $tmpSwitchValue6
     ldc.i4 2
     bne.un L_check_case_10
-    // line 318
+    .line 318
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Quadrant         "
@@ -5332,7 +5332,7 @@ L_check_case_10:
     ldloc $tmpSwitchValue6
     ldc.i4 3
     bne.un L_check_case_11
-    // line 319
+    .line 319
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Sector           "
@@ -5358,7 +5358,7 @@ L_check_case_11:
     ldloc $tmpSwitchValue6
     ldc.i4 4
     bne.un L_check_case_12
-    // line 320
+    .line 320
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Energy           "
@@ -5374,7 +5374,7 @@ L_check_case_12:
     ldloc $tmpSwitchValue6
     ldc.i4 5
     bne.un L_check_case_13
-    // line 321
+    .line 321
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Photon torpedoes "
@@ -5390,7 +5390,7 @@ L_check_case_13:
     ldloc $tmpSwitchValue6
     ldc.i4 6
     bne.un L_check_case_14
-    // line 322
+    .line 322
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Klingons left    "
@@ -5406,7 +5406,7 @@ L_check_case_14:
     ldloc $tmpSwitchValue6
     ldc.i4 7
     bne.un L_case_end_7
-    // line 323
+    .line 323
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
 L_case_end_7:
@@ -5429,7 +5429,7 @@ L_case_end_7:
     br L_for_loop_3
 L_for_end_4:
     pop
-    // line 326
+    .line 326
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "----------------------"
@@ -5443,7 +5443,7 @@ L_Epilogue:
     ret
 }
 
-// line 330
+.line 330
 
 .method static
 void Printgalaxy(int32 Topx, int32 Lefty, int32 Size, bool Markhistory)
@@ -5491,11 +5491,11 @@ void Printgalaxy(int32 Topx, int32 Lefty, int32 Size, bool Markhistory)
     call instance void T_set_28::addRange(int32, int32)
 
 L_Entry:
-    // line 344
+    .line 344
     ldloc _F
     ldfld bool @printgalaxy::Markhistory
     brfalse L_else_1
-    // line 345
+    .line 345
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Long Range Sensor Scan For Quadrant "
@@ -5518,7 +5518,7 @@ L_Entry:
     call instance void [lpcRuntime]LPC.File::WriteLn()
     br L_if_end_2
 L_else_1:
-    // line 349
+    .line 349
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "History Computer Report; Stardate "
@@ -5529,14 +5529,14 @@ L_else_1:
     ldsfld int32 _G::Curyear
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 350
+    .line 350
     ldsfld int32 _G::Condition
     ldc.i4 4
     ceq
     ldc.i4.0
     ceq
     brfalse L_if_end_3
-    // line 351
+    .line 351
     ldsfld int32 _G::Curenergy
     ldc.i4 100
     sub
@@ -5544,12 +5544,12 @@ L_else_1:
 L_if_end_3:
     /* nop */
 L_if_end_2:
-    // line 353
+    .line 353
     ldloc _F
     ldloc _F
     ldfld int32 @printgalaxy::Size
     call instance void @printgalaxy::Printseparator(int32 Entries)
-    // line 354
+    .line 354
     ldloc _F
     ldfld int32 @printgalaxy::Topx
     ldloc _F
@@ -5566,7 +5566,7 @@ L_if_end_2:
     ldloc $tmpIndex2
     stfld int32 @printgalaxy::i
 L_for_loop_4:
-    // line 356
+    .line 356
     ldloc _F
     ldfld int32 @printgalaxy::Lefty
     ldloc _F
@@ -5583,7 +5583,7 @@ L_for_loop_4:
     ldloc $tmpIndex4
     stfld int32 @printgalaxy::j
 L_for_loop_6:
-    // line 357
+    .line 357
     ldloc $tmpSetLiteral5
     ldloc _F
     ldfld int32 @printgalaxy::i
@@ -5597,7 +5597,7 @@ L_for_loop_6:
     call bool _SetContains(valuetype T_set_28 s, int32 val)
 L_AND_shortcut_8:
     brfalse L_else_9
-    // line 359
+    .line 359
     ldloc _F
     ldfld bool @printgalaxy::Markhistory
     dup
@@ -5613,7 +5613,7 @@ L_AND_shortcut_8:
     ldfld bool T_quadrec::Ishistory
 L_OR_shortcut_11:
     brfalse L_else_12
-    // line 361
+    .line 361
     ldsflda valuetype T_array_20 _G::Galaxy
     ldloc _F
     ldfld int32 @printgalaxy::i
@@ -5640,17 +5640,17 @@ L_OR_shortcut_11:
     ceq
 L_OR_shortcut_14:
     stfld bool T_quadrec::Ishistory
-    // line 362
+    .line 362
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @printgalaxy::Mustprint
-    // line 363
+    .line 363
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 124 // '|'
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 364
+    .line 364
     ldsflda valuetype T_array_20 _G::Galaxy
     ldloc _F
     ldfld int32 @printgalaxy::i
@@ -5662,7 +5662,7 @@ L_OR_shortcut_14:
     ldloc _F
     ldflda bool @printgalaxy::Mustprint
     call void Printdigit(int32 Number, bool& Mustprint)
-    // line 365
+    .line 365
     ldsflda valuetype T_array_20 _G::Galaxy
     ldloc _F
     ldfld int32 @printgalaxy::i
@@ -5674,7 +5674,7 @@ L_OR_shortcut_14:
     ldloc _F
     ldflda bool @printgalaxy::Mustprint
     call void Printdigit(int32 Number, bool& Mustprint)
-    // line 366
+    .line 366
     ldsflda valuetype T_array_20 _G::Galaxy
     ldloc _F
     ldfld int32 @printgalaxy::i
@@ -5686,11 +5686,11 @@ L_OR_shortcut_14:
     ldloc _F
     ldflda bool @printgalaxy::Mustprint
     call void Printdigit(int32 Number, bool& Mustprint)
-    // line 367
+    .line 367
     ldloc _F
     ldc.i4 1 // (true)
     stfld bool @printgalaxy::Mustprint
-    // line 368
+    .line 368
     ldsflda valuetype T_array_20 _G::Galaxy
     ldloc _F
     ldfld int32 @printgalaxy::i
@@ -5702,7 +5702,7 @@ L_OR_shortcut_14:
     ldloc _F
     ldflda bool @printgalaxy::Mustprint
     call void Printdigit(int32 Number, bool& Mustprint)
-    // line 369
+    .line 369
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 32 // ' '
@@ -5711,7 +5711,7 @@ L_OR_shortcut_14:
     /* nop */
     br L_if_end_13
 L_else_12:
-    // line 372
+    .line 372
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "|+++++"
@@ -5720,7 +5720,7 @@ L_else_12:
 L_if_end_13:
     br L_if_end_10
 L_else_9:
-    // line 374
+    .line 374
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "|xxxxx"
@@ -5741,13 +5741,13 @@ L_if_end_10:
     br L_for_loop_6
 L_for_end_7:
     pop
-    // line 375
+    .line 375
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 124 // '|'
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 376
+    .line 376
     ldloc _F
     ldloc _F
     ldfld int32 @printgalaxy::Size
@@ -5773,7 +5773,7 @@ L_Epilogue:
     ret
 }
 
-// line 380
+.line 380
 
 .method static
 void Printdamage()
@@ -5790,13 +5790,13 @@ void Printdamage()
     stloc _F
 
 L_Entry:
-    // line 383
+    .line 383
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Device name:      Repair Time:"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 384
+    .line 384
     ldc.i4 55 // '7'
     stloc $tmpEndValue1
     ldc.i4 48 // '0'
@@ -5808,7 +5808,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld uint8 @printdamage::Ch
 L_for_loop_1:
-    // line 385
+    .line 385
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 20
@@ -5850,7 +5850,7 @@ L_Epilogue:
     ret
 }
 
-// line 388
+.line 388
 
 .method static
 void Moveenterprise()
@@ -5902,13 +5902,13 @@ void Moveenterprise()
     call instance void T_set_27::addValue(int32)
 
 L_Entry:
-    // line 445
+    .line 445
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Course: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 446
+    .line 446
     ldsflda valuetype [lpcRuntime]LPC.File _G::Input
     dup
     ldloc _F
@@ -5917,20 +5917,20 @@ L_Entry:
     ldc.i4 2147483647
     call instance void [lpcRuntime]LPC.File::Read(int32*, int32, int32)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 447
+    .line 447
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Warp factor (0-12): "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 448
+    .line 448
     ldsflda valuetype [lpcRuntime]LPC.File _G::Input
     dup
     ldloc _F
     ldflda float64 @moveenterprise::Warp
     call instance void [lpcRuntime]LPC.File::Read(float64*)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 449
+    .line 449
     ldloc _F
     ldfld float64 @moveenterprise::Warp
     ldc.r8 0.000000
@@ -5964,7 +5964,7 @@ L_OR_shortcut_2:
 L_AND_shortcut_3:
 L_OR_shortcut_1:
     brfalse L_else_4
-    // line 451
+    .line 451
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Can't move that fast !!"
@@ -5972,12 +5972,12 @@ L_OR_shortcut_1:
     call instance void [lpcRuntime]LPC.File::WriteLn()
     br L_if_end_5
 L_else_4:
-    // line 454
+    .line 454
     ldsfld int32 _G::Curyear
     ldc.i4 1
     add
     stsfld int32 _G::Curyear
-    // line 455
+    .line 455
     ldsfld int32 _G::Curenergy
     conv.r8
     ldc.i4 8
@@ -5988,10 +5988,10 @@ L_else_4:
     sub
     call int32 [lpcRuntime]LPC.Helpers::Trunc(float64)
     stsfld int32 _G::Curenergy
-    // line 456
+    .line 456
     ldloc _F
     call instance void @moveenterprise::Handledamage()
-    // line 457
+    .line 457
     ldsflda valuetype T_array_22 _G::Quadrant
     ldsflda valuetype T_sectxy _G::Cursect
     ldfld int8 T_sectxy::x
@@ -6001,7 +6001,7 @@ L_else_4:
     call instance int32& T_array_21::ldadr(int32)
     ldc.i4 0
     stobj int32
-    // line 458
+    .line 458
     ldloc _F
     ldloc _F
     ldflda float64 @moveenterprise::Xpos
@@ -6016,7 +6016,7 @@ L_else_4:
     ldloc _F
     ldfld float64 @moveenterprise::Warp
     call instance void @moveenterprise::Moveintra(float64& Xpos, float64& Ypos, float64& Xinc, float64& Yinc, int32 Course, float64 Warp)
-    // line 459
+    .line 459
     ldloc $tmpSetLiteral1
     ldloc _F
     ldfld float64 @moveenterprise::Xpos
@@ -6032,7 +6032,7 @@ L_else_4:
     call bool _SetContains(valuetype T_set_28 s, int32 val)
 L_AND_shortcut_6:
     brfalse L_if_end_7
-    // line 461
+    .line 461
     ldsflda valuetype T_array_22 _G::Quadrant
     ldloc _F
     ldfld float64 @moveenterprise::Xpos
@@ -6046,7 +6046,7 @@ L_AND_shortcut_6:
     ldc.i4 5
     ceq
     brfalse L_if_end_8
-    // line 463
+    .line 463
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Collision with starbase's elastic shields at sector "
@@ -6069,7 +6069,7 @@ L_AND_shortcut_6:
     call int32 [lpcRuntime]LPC.Helpers::Round(float64)
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 465
+    .line 465
     ldloc _F
     ldloc _F
     ldflda float64 @moveenterprise::Xpos
@@ -6091,7 +6091,7 @@ L_AND_shortcut_6:
     /* nop */
 L_if_end_8:
 L_if_end_7:
-    // line 467
+    .line 467
     ldloc $tmpSetLiteral3
     ldloc _F
     ldfld float64 @moveenterprise::Xpos
@@ -6107,7 +6107,7 @@ L_if_end_7:
     call bool _SetContains(valuetype T_set_28 s, int32 val)
 L_AND_shortcut_9:
     brfalse L_else_10
-    // line 470
+    .line 470
     ldloc $tmpSetLiteral5
     ldsflda valuetype T_array_22 _G::Quadrant
     ldloc _F
@@ -6121,7 +6121,7 @@ L_AND_shortcut_9:
     ldobj int32
     call bool _SetContains(valuetype T_set_27 s, int32 val)
     brfalse L_if_end_12
-    // line 473
+    .line 473
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Enterprise blocked by object at sector "
@@ -6144,7 +6144,7 @@ L_AND_shortcut_9:
     call int32 [lpcRuntime]LPC.Helpers::Round(float64)
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 475
+    .line 475
     ldloc _F
     ldloc _F
     ldfld float64 @moveenterprise::Xpos
@@ -6152,7 +6152,7 @@ L_AND_shortcut_9:
     ldfld float64 @moveenterprise::Xinc
     sub
     stfld float64 @moveenterprise::Xpos
-    // line 476
+    .line 476
     ldloc _F
     ldloc _F
     ldfld float64 @moveenterprise::Ypos
@@ -6162,7 +6162,7 @@ L_AND_shortcut_9:
     stfld float64 @moveenterprise::Ypos
     /* nop */
 L_if_end_12:
-    // line 478
+    .line 478
     ldsflda valuetype T_sectxy _G::Cursect
     ldloc _F
     ldfld float64 @moveenterprise::Xpos
@@ -6175,7 +6175,7 @@ L_if_end_12:
     ldc.i4 7
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_sectxy::x
-    // line 479
+    .line 479
     ldsflda valuetype T_sectxy _G::Cursect
     ldloc _F
     ldfld float64 @moveenterprise::Ypos
@@ -6188,7 +6188,7 @@ L_if_end_12:
     ldc.i4 7
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_sectxy::y
-    // line 480
+    .line 480
     ldsflda valuetype T_array_22 _G::Quadrant
     ldsflda valuetype T_sectxy _G::Cursect
     ldfld int8 T_sectxy::x
@@ -6201,7 +6201,7 @@ L_if_end_12:
     /* nop */
     br L_if_end_11
 L_else_10:
-    // line 484
+    .line 484
     ldsflda valuetype T_quadxy _G::Curquad
     ldsflda valuetype T_quadxy _G::Curquad
     ldfld int8 T_quadxy::x
@@ -6227,7 +6227,7 @@ L_else_10:
     ldc.i4 7
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_quadxy::x
-    // line 486
+    .line 486
     ldsflda valuetype T_quadxy _G::Curquad
     ldsflda valuetype T_quadxy _G::Curquad
     ldfld int8 T_quadxy::y
@@ -6253,7 +6253,7 @@ L_else_10:
     ldc.i4 7
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_quadxy::y
-    // line 488
+    .line 488
     ldsfld valuetype T_quadxy _G::Curquad
     ldsflda valuetype T_sectxy _G::Cursect
     call void Setupquad(valuetype T_quadxy Quad, valuetype T_sectxy& Entsect)
@@ -6261,14 +6261,14 @@ L_else_10:
 L_if_end_11:
     /* nop */
 L_if_end_5:
-    // line 491
+    .line 491
     call void Setcondition()
-    // line 492
+    .line 492
     ldsfld int32 _G::Condition
     ldc.i4 4
     ceq
     brfalse L_if_end_13
-    // line 493
+    .line 493
     call void Reinitialize()
 L_if_end_13:
     /* nop */
@@ -6277,7 +6277,7 @@ L_Epilogue:
     ret
 }
 
-// line 496
+.line 496
 
 .method static
 void Firephasers()
@@ -6294,7 +6294,7 @@ void Firephasers()
     stloc _F
 
 L_Entry:
-    // line 499
+    .line 499
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Phasers locked on target.  Energy available = "
@@ -6305,13 +6305,13 @@ L_Entry:
     ldsfld int32 _G::Curenergy
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 500
+    .line 500
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Number of units to fire: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 501
+    .line 501
     ldsflda valuetype [lpcRuntime]LPC.File _G::Input
     dup
     ldloc _F
@@ -6320,13 +6320,13 @@ L_Entry:
     ldc.i4 2147483647
     call instance void [lpcRuntime]LPC.File::Read(int32*, int32, int32)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 502
+    .line 502
     ldloc _F
     ldfld int32 @firephasers::Fireamount
     ldsfld int32 _G::Curenergy
     cgt
     brfalse L_else_1
-    // line 503
+    .line 503
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Unable to fire."
@@ -6334,27 +6334,27 @@ L_Entry:
     call instance void [lpcRuntime]LPC.File::WriteLn()
     br L_if_end_2
 L_else_1:
-    // line 505
+    .line 505
     ldloc _F
     ldfld int32 @firephasers::Fireamount
     ldc.i4 0
     cgt
     brfalse L_if_end_3
-    // line 507
+    .line 507
     ldsfld int32 _G::Condition
     ldc.i4 4
     ceq
     ldc.i4.0
     ceq
     brfalse L_if_end_4
-    // line 508
+    .line 508
     ldsfld int32 _G::Curenergy
     ldloc _F
     ldfld int32 @firephasers::Fireamount
     sub
     stsfld int32 _G::Curenergy
 L_if_end_4:
-    // line 509
+    .line 509
     ldc.i4 11
     stloc $tmpEndValue1
     ldc.i4 0
@@ -6366,7 +6366,7 @@ L_if_end_4:
     ldloc $tmpIndex2
     stfld int32 @firephasers::i
 L_for_loop_5:
-    // line 511
+    .line 511
     ldsflda valuetype T_array_24 _G::Klingons
     ldloc _F
     ldfld int32 @firephasers::i
@@ -6375,7 +6375,7 @@ L_for_loop_5:
     ldc.i4 0
     cgt
     brfalse L_if_end_7
-    // line 513
+    .line 513
     ldloc _F
     ldloc _F
     ldfld int32 @firephasers::Fireamount
@@ -6407,7 +6407,7 @@ L_for_loop_5:
     ldc.i4 10
     div
     stfld int32 @firephasers::Hit
-    // line 516
+    .line 516
     ldsflda valuetype T_array_24 _G::Klingons
     ldloc _F
     ldfld int32 @firephasers::i
@@ -6421,7 +6421,7 @@ L_for_loop_5:
     ldfld int32 @firephasers::Hit
     sub
     stfld int32 T_klingonrec::Energyleft
-    // line 517
+    .line 517
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -6454,7 +6454,7 @@ L_for_loop_5:
     ldfld int8 T_sectxy::y
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
-    // line 519
+    .line 519
     ldsflda valuetype T_array_24 _G::Klingons
     ldloc _F
     ldfld int32 @firephasers::i
@@ -6463,7 +6463,7 @@ L_for_loop_5:
     ldc.i4 0
     cgt
     brfalse L_else_8
-    // line 520
+    .line 520
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " ("
@@ -6483,7 +6483,7 @@ L_for_loop_5:
     call instance void [lpcRuntime]LPC.File::WriteLn()
     br L_if_end_9
 L_else_8:
-    // line 523
+    .line 523
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr ".  Klingon DESTROYED"
@@ -6492,12 +6492,12 @@ L_else_8:
     ldsfld uint8 _G::Bell
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 524
+    .line 524
     ldsfld int32 _G::Totalklingons
     ldc.i4 1
     sub
     stsfld int32 _G::Totalklingons
-    // line 525
+    .line 525
     ldsflda valuetype T_array_20 _G::Galaxy
     ldsflda valuetype T_quadxy _G::Curquad
     ldfld int8 T_quadxy::x
@@ -6520,7 +6520,7 @@ L_else_8:
     ldc.i4 9
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_quadrec::Klingnum
-    // line 527
+    .line 527
     ldsflda valuetype T_array_22 _G::Quadrant
     ldsflda valuetype T_array_24 _G::Klingons
     ldloc _F
@@ -6564,7 +6564,7 @@ L_Epilogue:
     ret
 }
 
-// line 533
+.line 533
 
 .method static
 void Firetorpedoes()
@@ -6594,12 +6594,12 @@ void Firetorpedoes()
     call instance void T_set_28::addRange(int32, int32)
 
 L_Entry:
-    // line 585
+    .line 585
     ldsfld int32 _G::Curtorps
     ldc.i4 0
     ceq
     brfalse L_else_1
-    // line 586
+    .line 586
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "All photon torpedoes expended."
@@ -6607,13 +6607,13 @@ L_Entry:
     call instance void [lpcRuntime]LPC.File::WriteLn()
     br L_if_end_2
 L_else_1:
-    // line 589
+    .line 589
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Torpedo course: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 590
+    .line 590
     ldsflda valuetype [lpcRuntime]LPC.File _G::Input
     dup
     ldloc _F
@@ -6622,20 +6622,20 @@ L_else_1:
     ldc.i4 2147483647
     call instance void [lpcRuntime]LPC.File::Read(int32*, int32, int32)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 591
+    .line 591
     ldsfld int32 _G::Condition
     ldc.i4 4
     ceq
     ldc.i4.0
     ceq
     brfalse L_if_end_3
-    // line 592
+    .line 592
     ldsfld int32 _G::Curtorps
     ldc.i4 1
     sub
     stsfld int32 _G::Curtorps
 L_if_end_3:
-    // line 593
+    .line 593
     ldloc _F
     ldloc _F
     ldfld int32 @firetorpedoes::Course
@@ -6643,39 +6643,39 @@ L_if_end_3:
     call float64 [lpcRuntime]LPC.Helpers::Cos(float64)
     neg
     stfld float64 @firetorpedoes::Xinc
-    // line 594
+    .line 594
     ldloc _F
     ldloc _F
     ldfld int32 @firetorpedoes::Course
     call float64 Radians(int32 Degrees)
     call float64 [lpcRuntime]LPC.Helpers::Sin(float64)
     stfld float64 @firetorpedoes::Yinc
-    // line 595
+    .line 595
     ldloc _F
     ldsflda valuetype T_sectxy _G::Cursect
     ldfld int8 T_sectxy::x
     conv.r8
     stfld float64 @firetorpedoes::Xpos
-    // line 596
+    .line 596
     ldloc _F
     ldsflda valuetype T_sectxy _G::Cursect
     ldfld int8 T_sectxy::y
     conv.r8
     stfld float64 @firetorpedoes::Ypos
-    // line 597
+    .line 597
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @firetorpedoes::Hitsomething
-    // line 598
+    .line 598
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Torpedo track:"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 600
+    .line 600
     br L_while_test_5
 L_while_4:
-    // line 602
+    .line 602
     ldsflda valuetype T_array_22 _G::Quadrant
     ldloc _F
     ldfld float64 @firetorpedoes::Xpos
@@ -6695,7 +6695,7 @@ L_while_4:
     beq L_case_8
     br L_check_case_7
 L_case_8:
-    // line 605
+    .line 605
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -6715,7 +6715,7 @@ L_case_8:
     call int32 [lpcRuntime]LPC.Helpers::Round(float64)
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 606
+    .line 606
     ldloc _F
     ldloc _F
     ldfld float64 @firetorpedoes::Xpos
@@ -6723,7 +6723,7 @@ L_case_8:
     ldfld float64 @firetorpedoes::Xinc
     add
     stfld float64 @firetorpedoes::Xpos
-    // line 607
+    .line 607
     ldloc _F
     ldloc _F
     ldfld float64 @firetorpedoes::Ypos
@@ -6737,11 +6737,11 @@ L_check_case_7:
     ldloc $tmpSwitchValue1
     ldc.i4 1
     bne.un L_check_case_9
-    // line 610
+    .line 610
     ldloc _F
     ldc.i4 1 // (true)
     stfld bool @firetorpedoes::Hitsomething
-    // line 611
+    .line 611
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Star destroyed, you got the planets, "
@@ -6750,14 +6750,14 @@ L_check_case_7:
     ldstr "too!  Nice shot!"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 613
+    .line 613
     ldsfld int32 _G::Badpoints
     ldc.i4 0
     ldc.i4 500
     call int32 Random(int32 Low, int32 Hi)
     add
     stsfld int32 _G::Badpoints
-    // line 614
+    .line 614
     ldsflda valuetype T_array_20 _G::Galaxy
     ldsflda valuetype T_quadxy _G::Curquad
     ldfld int8 T_quadxy::x
@@ -6786,11 +6786,11 @@ L_check_case_9:
     ldloc $tmpSwitchValue1
     ldc.i4 3
     bne.un L_check_case_10
-    // line 617
+    .line 617
     ldloc _F
     ldc.i4 1 // (true)
     stfld bool @firetorpedoes::Hitsomething
-    // line 618
+    .line 618
     ldsflda valuetype T_array_20 _G::Galaxy
     ldsflda valuetype T_quadxy _G::Curquad
     ldfld int8 T_quadxy::x
@@ -6813,7 +6813,7 @@ L_check_case_9:
     ldc.i4 9
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_quadrec::Starnum
-    // line 619
+    .line 619
     ldloc _F
     ldloc _F
     ldfld float64 @firetorpedoes::Xpos
@@ -6844,11 +6844,11 @@ L_check_case_10:
     ldloc $tmpSwitchValue1
     ldc.i4 4
     bne.un L_check_case_11
-    // line 622
+    .line 622
     ldloc _F
     ldc.i4 1 // (true)
     stfld bool @firetorpedoes::Hitsomething
-    // line 623
+    .line 623
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "*** Klingon DESTROYED ***"
@@ -6857,14 +6857,14 @@ L_check_case_10:
     ldsfld uint8 _G::Bell
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 624
+    .line 624
     ldc.i4 0
     ldc.i4 100
     call int32 Random(int32 Low, int32 Hi)
     ldc.i4 30
     clt
     brfalse L_if_end_12
-    // line 625
+    .line 625
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " (The only good Klingon is a dead"
@@ -6874,10 +6874,10 @@ L_check_case_10:
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
 L_if_end_12:
-    // line 627
+    .line 627
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 628
+    .line 628
     ldsflda valuetype T_array_20 _G::Galaxy
     ldsflda valuetype T_quadxy _G::Curquad
     ldfld int8 T_quadxy::x
@@ -6900,12 +6900,12 @@ L_if_end_12:
     ldc.i4 9
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_quadrec::Klingnum
-    // line 629
+    .line 629
     ldsfld int32 _G::Totalklingons
     ldc.i4 1
     sub
     stsfld int32 _G::Totalklingons
-    // line 630
+    .line 630
     ldc.i4 11
     stloc $tmpEndValue2
     ldc.i4 0
@@ -6917,7 +6917,7 @@ L_if_end_12:
     ldloc $tmpIndex3
     stfld int32 @firetorpedoes::i
 L_for_loop_13:
-    // line 632
+    .line 632
     ldsflda valuetype T_array_24 _G::Klingons
     ldloc _F
     ldfld int32 @firetorpedoes::i
@@ -6954,7 +6954,7 @@ L_AND_shortcut_16:
     ceq
 L_AND_shortcut_15:
     brfalse L_if_end_17
-    // line 635
+    .line 635
     ldsflda valuetype T_array_24 _G::Klingons
     ldloc _F
     ldfld int32 @firetorpedoes::i
@@ -6982,24 +6982,24 @@ L_check_case_11:
     ldloc $tmpSwitchValue1
     ldc.i4 5
     bne.un L_check_case_18
-    // line 638
+    .line 638
     ldloc _F
     ldc.i4 1 // (true)
     stfld bool @firetorpedoes::Hitsomething
-    // line 639
+    .line 639
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "*** Starbase destroyed ... Not good ***"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 640
+    .line 640
     ldsfld int32 _G::Badpoints
     ldc.i4 0
     ldc.i4 500
     call int32 Random(int32 Low, int32 Hi)
     add
     stsfld int32 _G::Badpoints
-    // line 641
+    .line 641
     ldsflda valuetype T_array_20 _G::Galaxy
     ldsflda valuetype T_quadxy _G::Curquad
     ldfld int8 T_quadxy::x
@@ -7028,11 +7028,11 @@ L_check_case_18:
     ldloc $tmpSwitchValue1
     ldc.i4 6
     bne.un L_case_end_6
-    // line 644
+    .line 644
     ldloc _F
     ldc.i4 1 // (true)
     stfld bool @firetorpedoes::Hitsomething
-    // line 645
+    .line 645
     ldloc _F
     ldsflda valuetype T_array_20 _G::Galaxy
     ldsflda valuetype T_quadxy _G::Curquad
@@ -7043,7 +7043,7 @@ L_check_case_18:
     call instance valuetype T_quadrec& T_array_19::ldadr(int32)
     ldflda int8 T_quadrec::Klingbasenum
     call instance void @firetorpedoes::Hitklingbase(int8& Klingbasenum)
-    // line 646
+    .line 646
     ldsfld int32 _G::Totalkbases
     ldc.i4 1
     sub
@@ -7074,11 +7074,11 @@ L_AND_shortcut_20:
     call bool _SetContains(valuetype T_set_28 s, int32 val)
 L_AND_shortcut_19:
     brtrue L_while_4
-    // line 649
+    .line 649
     ldloc _F
     ldfld bool @firetorpedoes::Hitsomething
     brfalse L_else_21
-    // line 650
+    .line 650
     ldsflda valuetype T_array_22 _G::Quadrant
     ldloc _F
     ldfld float64 @firetorpedoes::Xpos
@@ -7092,7 +7092,7 @@ L_AND_shortcut_19:
     stobj int32
     br L_if_end_22
 L_else_21:
-    // line 652
+    .line 652
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Torpedo missed."
@@ -7107,7 +7107,7 @@ L_Epilogue:
     ret
 }
 
-// line 656
+.line 656
 
 .method static
 void Selfdestruct()
@@ -7143,15 +7143,15 @@ void Selfdestruct()
     call instance void T_set_28::addValue(int32)
 
 L_Entry:
-    // line 659
+    .line 659
 L_repeat_1:
-    // line 660
+    .line 660
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Are you SURE ? "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 661
+    .line 661
     ldsflda valuetype [lpcRuntime]LPC.File _G::Input
     dup
     ldloc _F
@@ -7160,7 +7160,7 @@ L_repeat_1:
     ldc.i4 255
     call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 662
+    .line 662
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
     /* nop */
@@ -7169,13 +7169,13 @@ L_repeat_1:
     ldfld uint8 @selfdestruct::Ch
     call bool _SetContains(valuetype T_set_28 s, int32 val)
     brfalse L_repeat_1
-    // line 664
+    .line 664
     ldloc $tmpSetLiteral2
     ldloc _F
     ldfld uint8 @selfdestruct::Ch
     call bool _SetContains(valuetype T_set_28 s, int32 val)
     brfalse L_if_end_2
-    // line 665
+    .line 665
     ldc.i4 1
     newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
     throw
@@ -7185,7 +7185,7 @@ L_Epilogue:
     ret
 }
 
-// line 668
+.line 668
 
 .method static
 void Command()
@@ -7217,15 +7217,15 @@ void Command()
     call instance void T_set_28::addValue(int32)
 
 L_Entry:
-    // line 672
+    .line 672
 L_repeat_1:
-    // line 673
+    .line 673
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Command: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 674
+    .line 674
     ldsflda valuetype [lpcRuntime]LPC.File _G::Input
     dup
     ldloc _F
@@ -7234,21 +7234,21 @@ L_repeat_1:
     ldc.i4 255
     call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 675
+    .line 675
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 676
+    .line 676
     ldloc _F
     ldloc $tmpSetLiteral1
     ldloc _F
     ldfld uint8 @command::Ch
     call bool _SetContains(valuetype T_set_28 s, int32 val)
     stfld bool @command::Validcommand
-    // line 677
+    .line 677
     ldloc _F
     ldfld bool @command::Validcommand
     brfalse L_else_2
-    // line 679
+    .line 679
     ldsflda valuetype T_array_2 _G::Device
     ldloc _F
     ldfld uint8 @command::Ch
@@ -7269,7 +7269,7 @@ L_repeat_1:
     cgt
 L_AND_shortcut_4:
     brfalse L_else_5
-    // line 680
+    .line 680
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "*** "
@@ -7288,28 +7288,28 @@ L_AND_shortcut_4:
     call instance void [lpcRuntime]LPC.File::WriteLn()
     br L_if_end_6
 L_else_5:
-    // line 682
+    .line 682
     ldloc _F
     ldfld uint8 @command::Ch
     stloc $tmpSwitchValue2
     ldloc $tmpSwitchValue2
     ldc.i4 48 // '0'
     bne.un L_check_case_8
-    // line 683
+    .line 683
     call void Moveenterprise()
     br L_case_end_7
 L_check_case_8:
     ldloc $tmpSwitchValue2
     ldc.i4 49 // '1'
     bne.un L_check_case_9
-    // line 684
+    .line 684
     call void Printquadrant()
     br L_case_end_7
 L_check_case_9:
     ldloc $tmpSwitchValue2
     ldc.i4 50 // '2'
     bne.un L_check_case_10
-    // line 685
+    .line 685
     ldsflda valuetype T_quadxy _G::Curquad
     ldfld int8 T_quadxy::x
     ldc.i4 1
@@ -7326,28 +7326,28 @@ L_check_case_10:
     ldloc $tmpSwitchValue2
     ldc.i4 51 // '3'
     bne.un L_check_case_11
-    // line 686
+    .line 686
     call void Firephasers()
     br L_case_end_7
 L_check_case_11:
     ldloc $tmpSwitchValue2
     ldc.i4 52 // '4'
     bne.un L_check_case_12
-    // line 687
+    .line 687
     call void Firetorpedoes()
     br L_case_end_7
 L_check_case_12:
     ldloc $tmpSwitchValue2
     ldc.i4 53 // '5'
     bne.un L_check_case_13
-    // line 688
+    .line 688
     call void Printdamage()
     br L_case_end_7
 L_check_case_13:
     ldloc $tmpSwitchValue2
     ldc.i4 54 // '6'
     bne.un L_check_case_14
-    // line 689
+    .line 689
     ldc.i4 0
     ldc.i4 0
     ldc.i4 7
@@ -7358,56 +7358,56 @@ L_check_case_14:
     ldloc $tmpSwitchValue2
     ldc.i4 55 // '7'
     bne.un L_case_end_7
-    // line 690
+    .line 690
     call void Selfdestruct()
 L_case_end_7:
 L_if_end_6:
     /* nop */
     br L_if_end_3
 L_else_2:
-    // line 695
+    .line 695
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "0 = Set course"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 696
+    .line 696
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "1 = Short range sensor scan"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 697
+    .line 697
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "2 = Long range sensor scan"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 698
+    .line 698
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "3 = Fire phasors"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 699
+    .line 699
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "4 = Fire photon torpedoes"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 700
+    .line 700
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "5 = Damage control report"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 701
+    .line 701
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "6 = History computer report"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 702
+    .line 702
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "7 = Self destruct"
@@ -7419,15 +7419,15 @@ L_if_end_3:
     ldloc _F
     ldfld bool @command::Validcommand
     brfalse L_repeat_1
-    // line 705
+    .line 705
     ldloc $tmpSetLiteral3
     ldloc _F
     ldfld uint8 @command::Ch
     call bool _SetContains(valuetype T_set_28 s, int32 val)
     brfalse L_if_end_15
-    // line 707
+    .line 707
     call void Klingonattack()
-    // line 708
+    .line 708
     call void Printquadrant()
     /* nop */
 L_if_end_15:
@@ -7437,7 +7437,7 @@ L_Epilogue:
     ret
 }
 
-// line 712
+.line 712
 
 .method static
 void Instructions()
@@ -7459,7 +7459,7 @@ void Instructions()
     call instance void T_set_28::addValue(int32)
 
 L_Entry:
-    // line 885
+    .line 885
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Orders:  Stardate "
@@ -7470,28 +7470,28 @@ L_Entry:
     ldsfld int32 _G::Curyear
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 886
+    .line 886
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 887
+    .line 887
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "As commander of the United Starship Enterprise,"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 888
+    .line 888
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "your mission is to rid the galaxy of the deadly"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 889
+    .line 889
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Klingon menace.  To do this, you must destroy the "
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 890
+    .line 890
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Klingon invasion force of "
@@ -7505,7 +7505,7 @@ L_Entry:
     ldstr " battle cruisers."
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 891
+    .line 891
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "You have "
@@ -7523,7 +7523,7 @@ L_Entry:
     ldstr " solar years to complete"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 892
+    .line 892
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "your mission (i.e. until stardate "
@@ -7537,7 +7537,7 @@ L_Entry:
     ldstr ").  The "
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 893
+    .line 893
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Enterprise is currently in quadrant "
@@ -7579,16 +7579,16 @@ L_Entry:
     ldc.i4 46 // '.'
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 895
+    .line 895
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 896
+    .line 896
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Do you need further instructions (y/n) ? "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 897
+    .line 897
     ldsflda valuetype [lpcRuntime]LPC.File _G::Input
     dup
     ldloc _F
@@ -7597,40 +7597,40 @@ L_Entry:
     ldc.i4 255
     call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
     pop
-    // line 898
+    .line 898
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 899
+    .line 899
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 900
+    .line 900
     ldloc $tmpSetLiteral1
     ldloc _F
     ldfld uint8 @instructions::Ch
     call bool _SetContains(valuetype T_set_28 s, int32 val)
     brfalse L_if_end_1
-    // line 902
+    .line 902
     ldloc _F
     call instance void @instructions::Page1()
-    // line 903
+    .line 903
     ldloc _F
     call instance void @instructions::Page2()
-    // line 904
+    .line 904
     ldloc _F
     call instance void @instructions::Page3()
-    // line 905
+    .line 905
     ldloc _F
     call instance void @instructions::Page4()
-    // line 906
+    .line 906
     ldloc _F
     call instance void @instructions::Page5()
-    // line 907
+    .line 907
     ldloc _F
     call instance void @instructions::Page6()
-    // line 908
+    .line 908
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 909
+    .line 909
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
     /* nop */
@@ -7641,7 +7641,7 @@ L_Epilogue:
     ret
 }
 
-// line 913
+.line 913
 
 .method static
 void Finishgame()
@@ -7654,7 +7654,7 @@ void Finishgame()
     stloc _F
 
 L_Entry:
-    // line 916
+    .line 916
     ldsfld int32 _G::Curenergy
     ldc.i4 0
     cgt
@@ -7670,7 +7670,7 @@ L_Entry:
     ceq
 L_OR_shortcut_1:
     brfalse L_else_2
-    // line 918
+    .line 918
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "It is stardate "
@@ -7684,13 +7684,13 @@ L_OR_shortcut_1:
     ldstr ".  The Enterprise has been"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 919
+    .line 919
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "destroyed.  The Federation will be conquered.  There"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 920
+    .line 920
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "are still "
@@ -7704,7 +7704,7 @@ L_OR_shortcut_1:
     ldstr " Klingon battle cruisers."
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 921
+    .line 921
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "You are dead."
@@ -7713,7 +7713,7 @@ L_OR_shortcut_1:
     /* nop */
     br L_if_end_3
 L_else_2:
-    // line 925
+    .line 925
     ldloc _F
     ldsfld int32 _G::Startklingons
     ldsfld int32 _G::Curyear
@@ -7723,7 +7723,7 @@ L_else_2:
     ldc.i4 100
     mul
     stfld int32 @finishgame::Rating
-    // line 926
+    .line 926
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "It is stardate "
@@ -7737,43 +7737,43 @@ L_else_2:
     ldstr ".  The last Klingon battle"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 927
+    .line 927
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "cruiser in the galaxy has been destroyed.  The Federation"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 928
+    .line 928
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "has been saved.  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 929
+    .line 929
     ldsfld int32 _G::Badpoints
     ldloc _F
     ldfld int32 @finishgame::Rating
     cgt
     brfalse L_else_4
-    // line 931
+    .line 931
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "However, because of your wanton "
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 932
+    .line 932
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "destruction of Federation bases and planet systems,"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 933
+    .line 933
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "you have been thrown in the brig never to see the"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 934
+    .line 934
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "light of day again."
@@ -7782,13 +7782,13 @@ L_else_2:
     /* nop */
     br L_if_end_5
 L_else_4:
-    // line 938
+    .line 938
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "You are a hero and a new admiral."
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 939
+    .line 939
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -7825,11 +7825,11 @@ L_Epilogue:
     ret
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 1
+.line 1
 
 .method static
 void _Program()
@@ -7849,27 +7849,27 @@ void _Program()
 L_Entry:
 .try
 {
-    // line 946
+    .line 946
     ldc.i4 1
     stsfld int32 _G::Rndseq
-    // line 947
+    .line 947
     call void Initialize()
-    // line 948
+    .line 948
     ldsfld valuetype T_quadxy _G::Curquad
     ldsflda valuetype T_sectxy _G::Cursect
     call void Setupquad(valuetype T_quadxy Quad, valuetype T_sectxy& Entsect)
-    // line 949
+    .line 949
     call void Setcondition()
-    // line 950
+    .line 950
     call void Instructions()
-    // line 951
+    .line 951
     call void Klingonattack()
-    // line 952
+    .line 952
     call void Printquadrant()
-    // line 953
+    .line 953
     br L_while_test_2
 L_while_1:
-    // line 955
+    .line 955
     call void Command()
 L_while_test_2:
     ldsfld int32 _G::Curenergy
@@ -7899,7 +7899,7 @@ L_AND_shortcut_4:
     ceq
 L_AND_shortcut_3:
     brtrue L_while_1
-    // line 956
+    .line 956
     call void Finishgame()
 L_99:
     /* nop */
@@ -7932,7 +7932,7 @@ L_Epilogue:
 
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 //================================================================================
 // internal helpers
@@ -7957,7 +7957,7 @@ L_Epilogue:
 
 
 
-// line 0xfeefee
+.line 0xfeefee
 
 //================================================================================
 // global string literals

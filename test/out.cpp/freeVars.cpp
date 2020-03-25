@@ -1,7 +1,7 @@
 
 #include <lpcRuntime.h>
 
-// "freeVars.pas"
+#line 0 "freeVars.pas"
 
 //================================================================================
 // command line argument map
@@ -15,7 +15,7 @@ _Filename* _FilenameMap = _FilenameMapEntries;
 const int _FilenameMapSize = _countof(_FilenameMapEntries);
 
 
-// line 0
+#line 0
 //================================================================================
 // scope: global scope (level : 0)
 
@@ -31,7 +31,7 @@ const T_boolean C_false = 0;
 const T_integer C_maxint = 2147483647;
 const T_boolean C_true = 1;
 
-// line 4
+#line 4
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -52,17 +52,17 @@ void P_()
     _output.init(1);
     
     // subroutine body
-    // line 44
+    #line 44
     P_foo(nullptr);
     
-    // line 45
+    #line 45
     _output << v << _WRITELN;
     
     { /* NOP */ }
 }
 
 
-// line 8
+#line 8
 //================================================================================
 // scope: foo (level : 2)
 
@@ -86,20 +86,20 @@ void P_foo(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 38
+    #line 38
     P_foo_bar1(&_F, 0);
     
-    // line 39
+    #line 39
     P_foo_bar2(&_F, 1000);
     
-    // line 40
+    #line 40
     _output << _F.FooV << ' ' << v << _WRITELN;
     
     { /* NOP */ }
 }
 
 
-// line 11
+#line 11
 //================================================================================
 // scope: foo_bar1 (level : 3)
 
@@ -122,24 +122,24 @@ void P_foo_bar1(void* _slink, T_integer i)
     Frame_foo_bar1 _F = { (Frame_foo*)_slink, i };
     
     // subroutine body
-    // line 14
+    #line 14
     _F.Bar1V = _F.i;
     
-    // line 15
+    #line 15
     if((_F.i < 3))
     {
-        // line 15
+        #line 15
         P_foo_bar1(_F._slink, (_F.i + 1));
     }
     
-    // line 16
+    #line 16
     _output << _F.Bar1V << ' ' << _F._slink->FooV << ' ' << v << _WRITELN;
     
     { /* NOP */ }
 }
 
 
-// line 19
+#line 19
 //================================================================================
 // scope: foo_bar2 (level : 3)
 
@@ -165,23 +165,23 @@ void P_foo_bar2(void* _slink, T_integer i)
     Frame_foo_bar2 _F = { (Frame_foo*)_slink, i };
     
     // subroutine body
-    // line 31
+    #line 31
     _F.Bar2V = _F.i;
     
-    // line 32
+    #line 32
     P_foo_bar1(_F._slink, 1);
     
-    // line 33
+    #line 33
     P_foo_bar2_moo(&_F);
     
-    // line 34
+    #line 34
     _output << _F.Bar2V << ' ' << _F._slink->FooV << ' ' << v << _WRITELN;
     
     { /* NOP */ }
 }
 
 
-// line 22
+#line 22
 //================================================================================
 // scope: foo_bar2_moo (level : 4)
 
@@ -201,13 +201,13 @@ void P_foo_bar2_moo(void* _slink)
     Frame_foo_bar2_moo _F = { (Frame_foo_bar2*)_slink };
     
     // subroutine body
-    // line 25
+    #line 25
     _F.MooV = 100;
     
-    // line 26
+    #line 26
     P_foo_bar1(_F._slink->_slink, 2);
     
-    // line 27
+    #line 27
     _output << _F.MooV << ' ' << _F._slink->Bar2V << ' ' << _F._slink->i << ' ' << _F._slink->_slink->FooV << ' ' << v << _WRITELN;
     
     { /* NOP */ }

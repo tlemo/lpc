@@ -23,13 +23,13 @@
     ret
 }
 
-// "pascal-s.pas"
+.line 0 "pascal-s.pas"
 
-// line 268
+.line 268
 //================================================================================
 // scope: errormsg (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE alfa = array [1 .. 10] of uint8;
 .class value explicit T_alfa
@@ -76,7 +76,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_1 = array [0 .. 58] of valuetype T_alfa;
 .class value explicit T_errormsg_array_1
@@ -113,7 +113,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_61 = set of 0 .. 58
 .class value explicit T_set_61
@@ -197,7 +197,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_62 = set of 0 .. 255
 .class value explicit T_set_62
@@ -302,11 +302,11 @@
 }
 
 
-// line 310
+.line 310
 //================================================================================
 // scope: nextch (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_65 = array [1 .. 250] of uint8;
 .class value explicit T_array_65
@@ -364,7 +364,7 @@
 }
 
 
-// line 330
+.line 330
 //================================================================================
 // scope: error (level : 2)
 
@@ -382,11 +382,11 @@
 }
 
 
-// line 338
+.line 338
 //================================================================================
 // scope: fatal (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_67 = array [1 .. 7] of valuetype T_alfa;
 .class value explicit T_fatal_array_67
@@ -442,7 +442,7 @@
 }
 
 
-// line 353
+.line 353
 //================================================================================
 // scope: insymbol_readscale (level : 3)
 
@@ -464,7 +464,7 @@
 }
 
 
-// line 364
+.line 364
 //================================================================================
 // scope: insymbol_adjustscale (level : 3)
 
@@ -487,11 +487,11 @@
 }
 
 
-// line 349
+.line 349
 //================================================================================
 // scope: insymbol (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_79 = array [1 .. 27] of valuetype T_alfa;
 .class value explicit T_array_79
@@ -530,7 +530,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_80 = array [1 .. 27] of int32;
 .class value explicit T_array_80
@@ -569,7 +569,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_84 = array [0 .. 10000] of uint8;
 .class value explicit T_array_84
@@ -604,7 +604,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_85 = array [0 .. 255] of int32;
 .class value explicit T_array_85
@@ -656,7 +656,7 @@
         ret
     }
 
-// line 353
+.line 353
 
     .method public
     void Readscale()
@@ -680,43 +680,43 @@
         call instance void T_set_62::addRange(int32, int32)
     
     L_Entry:
-        // line 355
+        .line 355
         call void Nextch()
-        // line 355
+        .line 355
         ldloc _F
         ldc.i4 1
         stfld int32 @insymbol_readscale::Sign
-        // line 355
+        .line 355
         ldloc _F
         ldc.i4 0
         stfld int32 @insymbol_readscale::s
-        // line 356
+        .line 356
         ldsfld uint8 _G::Ch
         ldc.i4 43 // '+'
         ceq
         brfalse L_else_1
-        // line 356
+        .line 356
         call void Nextch()
         br L_if_end_2
     L_else_1:
-        // line 357
+        .line 357
         ldsfld uint8 _G::Ch
         ldc.i4 45 // '-'
         ceq
         brfalse L_if_end_3
-        // line 357
+        .line 357
         call void Nextch()
-        // line 357
+        .line 357
         ldloc _F
         ldc.i4 1
         neg
         stfld int32 @insymbol_readscale::Sign
     L_if_end_3:
     L_if_end_2:
-        // line 358
+        .line 358
         br L_while_test_5
     L_while_4:
-        // line 359
+        .line 359
         ldloc _F
         ldc.i4 10
         ldloc _F
@@ -727,14 +727,14 @@
         ldc.i4 48 // '0'
         sub
         stfld int32 @insymbol_readscale::s
-        // line 359
+        .line 359
         call void Nextch()
     L_while_test_5:
         ldloc $tmpSetLiteral1
         ldsfld uint8 _G::Ch
         call bool _SetContains(valuetype T_set_62 s, int32 val)
         brtrue L_while_4
-        // line 361
+        .line 361
         ldloc _F
         ldfld class @insymbol @insymbol_readscale::_slink
         ldloc _F
@@ -752,7 +752,7 @@
         ret
     }
 
-// line 364
+.line 364
 
     .method public
     void Adjustscale()
@@ -769,7 +769,7 @@
         stfld class @insymbol @insymbol_adjustscale::_slink
     
     L_Entry:
-        // line 366
+        .line 366
         ldloc _F
         ldfld class @insymbol @insymbol_adjustscale::_slink
         ldfld int32 @insymbol::k
@@ -780,12 +780,12 @@
         ldc.i4 308
         cgt
         brfalse L_else_1
-        // line 366
+        .line 366
         ldc.i4 21
         call void Error(int32 n)
         br L_if_end_2
     L_else_1:
-        // line 367
+        .line 367
         ldloc _F
         ldfld class @insymbol @insymbol_adjustscale::_slink
         ldfld int32 @insymbol::k
@@ -796,13 +796,13 @@
         ldc.i4 -308
         clt
         brfalse L_else_3
-        // line 367
+        .line 367
         ldc.i4 0
         conv.r8
         stsfld float64 _G::Rnum
         br L_if_end_4
     L_else_3:
-        // line 368
+        .line 368
         ldloc _F
         ldloc _F
         ldfld class @insymbol @insymbol_adjustscale::_slink
@@ -813,27 +813,27 @@
         neg
     L_abs_question_5:
         stfld int32 @insymbol_adjustscale::s
-        // line 368
+        .line 368
         ldloc _F
         ldc.r8 1.00000
         stfld float64 @insymbol_adjustscale::t
-        // line 368
+        .line 368
         ldloc _F
         ldc.r8 10.0000
         stfld float64 @insymbol_adjustscale::d
-        // line 369
+        .line 369
     L_repeat_6:
-        // line 370
+        .line 370
         br L_while_test_8
     L_while_7:
-        // line 371
+        .line 371
         ldloc _F
         ldloc _F
         ldfld int32 @insymbol_adjustscale::s
         ldc.i4 2
         div
         stfld int32 @insymbol_adjustscale::s
-        // line 371
+        .line 371
         ldloc _F
         ldloc _F
         ldfld float64 @insymbol_adjustscale::d
@@ -848,14 +848,14 @@
         ldc.i4.0
         ceq
         brtrue L_while_7
-        // line 373
+        .line 373
         ldloc _F
         ldloc _F
         ldfld int32 @insymbol_adjustscale::s
         ldc.i4 1
         sub
         stfld int32 @insymbol_adjustscale::s
-        // line 373
+        .line 373
         ldloc _F
         ldloc _F
         ldfld float64 @insymbol_adjustscale::d
@@ -868,7 +868,7 @@
         ldc.i4 0
         ceq
         brfalse L_repeat_6
-        // line 375
+        .line 375
         ldloc _F
         ldfld class @insymbol @insymbol_adjustscale::_slink
         ldfld int32 @insymbol::e
@@ -877,7 +877,7 @@
         ldc.i4.0
         ceq
         brfalse L_else_9
-        // line 375
+        .line 375
         ldsfld float64 _G::Rnum
         ldloc _F
         ldfld float64 @insymbol_adjustscale::t
@@ -885,7 +885,7 @@
         stsfld float64 _G::Rnum
         br L_if_end_10
     L_else_9:
-        // line 375
+        .line 375
         ldsfld float64 _G::Rnum
         ldloc _F
         ldfld float64 @insymbol_adjustscale::t
@@ -901,11 +901,11 @@
 }
 
 
-// line 477
+.line 477
 //================================================================================
 // scope: enter (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_86 = record;
 .class value explicit T_record_86
@@ -923,7 +923,7 @@
     .field [32] public int32 Adr
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_88 = array [0 .. 1000] of valuetype T_record_86;
 .class value explicit T_array_88
@@ -977,11 +977,11 @@
 }
 
 
-// line 487
+.line 487
 //================================================================================
 // scope: enterarray (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_89 = record;
 .class value explicit T_record_89
@@ -998,7 +998,7 @@
     .field [24] public int32 Size
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_90 = array [1 .. 100] of valuetype T_record_89;
 .class value explicit T_array_90
@@ -1053,11 +1053,11 @@
 }
 
 
-// line 500
+.line 500
 //================================================================================
 // scope: enterblock (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_91 = record;
 .class value explicit T_record_91
@@ -1071,7 +1071,7 @@
     .field [12] public int32 Vsize
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_92 = array [1 .. 100] of valuetype T_record_91;
 .class value explicit T_array_92
@@ -1121,11 +1121,11 @@
 }
 
 
-// line 506
+.line 506
 //================================================================================
 // scope: enterreal (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_93 = array [1 .. 100] of float64;
 .class value explicit T_array_93
@@ -1178,11 +1178,11 @@
 }
 
 
-// line 514
+.line 514
 //================================================================================
 // scope: emit (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE order = record;
 .class value explicit T_order
@@ -1195,7 +1195,7 @@
     .field [4] public int32 y
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_97 = array [0 .. 10000] of valuetype T_order;
 .class value explicit T_array_97
@@ -1246,7 +1246,7 @@
 }
 
 
-// line 519
+.line 519
 //================================================================================
 // scope: emit1 (level : 2)
 
@@ -1265,7 +1265,7 @@
 }
 
 
-// line 526
+.line 526
 //================================================================================
 // scope: emit2 (level : 2)
 
@@ -1285,7 +1285,7 @@
 }
 
 
-// line 533
+.line 533
 //================================================================================
 // scope: printtables (level : 2)
 
@@ -1304,11 +1304,11 @@
 }
 
 
-// line 587
+.line 587
 //================================================================================
 // scope: block_skip (level : 3)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE symset = set of 0 .. 50
 .class value explicit T_symset
@@ -1410,7 +1410,7 @@
 }
 
 
-// line 592
+.line 592
 //================================================================================
 // scope: block_test (level : 3)
 
@@ -1433,7 +1433,7 @@
 }
 
 
-// line 597
+.line 597
 //================================================================================
 // scope: block_testsemicolon (level : 3)
 
@@ -1451,11 +1451,11 @@
 }
 
 
-// line 606
+.line 606
 //================================================================================
 // scope: block_enter (level : 3)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_100 = array [0 .. 100] of int32;
 .class value explicit T_array_100
@@ -1514,7 +1514,7 @@
 }
 
 
-// line 624
+.line 624
 //================================================================================
 // scope: block_loc (level : 3)
 
@@ -1540,7 +1540,7 @@
 }
 
 
-// line 634
+.line 634
 //================================================================================
 // scope: block_entervariable (level : 3)
 
@@ -1558,11 +1558,11 @@
 }
 
 
-// line 641
+.line 641
 //================================================================================
 // scope: block_constant (level : 3)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE conrec = record;
 .class value explicit T_block_conrec
@@ -1610,7 +1610,7 @@
 }
 
 
-// line 684
+.line 684
 //================================================================================
 // scope: block_typ_arraytyp (level : 4)
 
@@ -1639,7 +1639,7 @@
 }
 
 
-// line 679
+.line 679
 //================================================================================
 // scope: block_typ (level : 3)
 
@@ -1670,7 +1670,7 @@
         ret
     }
 
-// line 684
+.line 684
 
     .method public
     void Arraytyp(int32& Aref, int32& Arsz)
@@ -1732,7 +1732,7 @@
         call instance void T_symset::addValue(int32)
     
     L_Entry:
-        // line 688
+        .line 688
         ldloc _F
         ldfld class @block_typ @block_typ_arraytyp::_slink
         ldfld class @block @block_typ::_slink
@@ -1751,41 +1751,41 @@
         ldloc _F
         ldflda valuetype T_block_conrec @block_typ_arraytyp::Low
         call instance void @block::Constant(valuetype T_symset Fsys, valuetype T_block_conrec& c)
-        // line 689
+        .line 689
         ldloc _F
         ldflda valuetype T_block_conrec @block_typ_arraytyp::Low
         ldfld int32 T_block_conrec::Tp
         ldc.i4 2
         ceq
         brfalse L_if_end_1
-        // line 690
+        .line 690
         ldc.i4 27
         call void Error(int32 n)
-        // line 690
+        .line 690
         ldloc _F
         ldflda valuetype T_block_conrec @block_typ_arraytyp::Low
         ldc.i4 1
         stfld int32 T_block_conrec::Tp
-        // line 690
+        .line 690
         ldloc _F
         ldflda valuetype T_block_conrec @block_typ_arraytyp::Low
         ldc.i4 0
         stfld int32 T_block_conrec::i
     L_if_end_1:
-        // line 692
+        .line 692
         ldsfld int32 _G::Sy
         ldc.i4 26
         ceq
         brfalse L_else_2
-        // line 692
+        .line 692
         call void Insymbol()
         br L_if_end_3
     L_else_2:
-        // line 692
+        .line 692
         ldc.i4 13
         call void Error(int32 n)
     L_if_end_3:
-        // line 693
+        .line 693
         ldloc _F
         ldfld class @block_typ @block_typ_arraytyp::_slink
         ldfld class @block @block_typ::_slink
@@ -1804,7 +1804,7 @@
         ldloc _F
         ldflda valuetype T_block_conrec @block_typ_arraytyp::High
         call instance void @block::Constant(valuetype T_symset Fsys, valuetype T_block_conrec& c)
-        // line 694
+        .line 694
         ldloc _F
         ldflda valuetype T_block_conrec @block_typ_arraytyp::High
         ldfld int32 T_block_conrec::Tp
@@ -1815,10 +1815,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_4
-        // line 695
+        .line 695
         ldc.i4 27
         call void Error(int32 n)
-        // line 695
+        .line 695
         ldloc _F
         ldflda valuetype T_block_conrec @block_typ_arraytyp::High
         ldloc _F
@@ -1826,7 +1826,7 @@
         ldfld int32 T_block_conrec::i
         stfld int32 T_block_conrec::i
     L_if_end_4:
-        // line 697
+        .line 697
         ldloc _F
         ldflda valuetype T_block_conrec @block_typ_arraytyp::Low
         ldfld int32 T_block_conrec::Tp
@@ -1837,23 +1837,23 @@
         ldflda valuetype T_block_conrec @block_typ_arraytyp::High
         ldfld int32 T_block_conrec::i
         call void Enterarray(int32 Tp, int32 l, int32 h)
-        // line 697
+        .line 697
         ldloc _F
         ldfld int32* @block_typ_arraytyp::Aref
         ldsfld int32 _G::a
         stobj int32
-        // line 698
+        .line 698
         ldsfld int32 _G::Sy
         ldc.i4 23
         ceq
         brfalse L_else_5
-        // line 699
+        .line 699
         call void Insymbol()
-        // line 699
+        .line 699
         ldloc _F
         ldc.i4 5
         stfld int32 @block_typ_arraytyp::Eltp
-        // line 699
+        .line 699
         ldloc _F
         ldfld class @block_typ @block_typ_arraytyp::_slink
         ldloc _F
@@ -1863,41 +1863,41 @@
         call instance void @block_typ::Arraytyp(int32& Aref, int32& Arsz)
         br L_if_end_6
     L_else_5:
-        // line 702
+        .line 702
         ldsfld int32 _G::Sy
         ldc.i4 22
         ceq
         brfalse L_else_7
-        // line 702
+        .line 702
         call void Insymbol()
         br L_if_end_8
     L_else_7:
-        // line 703
+        .line 703
         ldc.i4 12
         call void Error(int32 n)
-        // line 704
+        .line 704
         ldsfld int32 _G::Sy
         ldc.i4 20
         ceq
         brfalse L_if_end_9
-        // line 704
+        .line 704
         call void Insymbol()
     L_if_end_9:
     L_if_end_8:
-        // line 706
+        .line 706
         ldsfld int32 _G::Sy
         ldc.i4 46
         ceq
         brfalse L_else_10
-        // line 706
+        .line 706
         call void Insymbol()
         br L_if_end_11
     L_else_10:
-        // line 706
+        .line 706
         ldc.i4 8
         call void Error(int32 n)
     L_if_end_11:
-        // line 707
+        .line 707
         ldloc _F
         ldfld class @block_typ @block_typ_arraytyp::_slink
         ldfld class @block @block_typ::_slink
@@ -1912,7 +1912,7 @@
         ldflda int32 @block_typ_arraytyp::Elsz
         call instance void @block::Typ(valuetype T_symset Fsys, int32& Tp, int32& Rf, int32& Sz)
     L_if_end_6:
-        // line 710
+        .line 710
         ldloc _F
         ldfld int32* @block_typ_arraytyp::Arsz
         ldsflda valuetype T_array_90 _G::Atab
@@ -1934,7 +1934,7 @@
         ldfld int32 @block_typ_arraytyp::Elsz
         mul
         stobj int32
-        // line 710
+        .line 710
         ldsflda valuetype T_array_90 _G::Atab
         ldloc _F
         ldfld int32* @block_typ_arraytyp::Aref
@@ -1948,7 +1948,7 @@
         ldc.i4 131071
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_record_89::Size
-        // line 711
+        .line 711
         ldsflda valuetype T_array_90 _G::Atab
         ldloc _F
         ldfld int32* @block_typ_arraytyp::Aref
@@ -1957,7 +1957,7 @@
         ldloc _F
         ldfld int32 @block_typ_arraytyp::Eltp
         stfld int32 T_record_89::Eltyp
-        // line 711
+        .line 711
         ldsflda valuetype T_array_90 _G::Atab
         ldloc _F
         ldfld int32* @block_typ_arraytyp::Aref
@@ -1970,7 +1970,7 @@
         ldc.i4 131071
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_record_89::Elref
-        // line 711
+        .line 711
         ldsflda valuetype T_array_90 _G::Atab
         ldloc _F
         ldfld int32* @block_typ_arraytyp::Aref
@@ -1991,7 +1991,7 @@
 }
 
 
-// line 775
+.line 775
 //================================================================================
 // scope: block_parameterlist (level : 3)
 
@@ -2017,7 +2017,7 @@
 }
 
 
-// line 826
+.line 826
 //================================================================================
 // scope: block_constantdeclaration (level : 3)
 
@@ -2038,7 +2038,7 @@
 }
 
 
-// line 845
+.line 845
 //================================================================================
 // scope: block_typedeclaration (level : 3)
 
@@ -2062,7 +2062,7 @@
 }
 
 
-// line 863
+.line 863
 //================================================================================
 // scope: block_variabledeclaration (level : 3)
 
@@ -2087,7 +2087,7 @@
 }
 
 
-// line 887
+.line 887
 //================================================================================
 // scope: block_procdeclaration (level : 3)
 
@@ -2108,11 +2108,11 @@
 }
 
 
-// line 904
+.line 904
 //================================================================================
 // scope: block_statement_selector (level : 4)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE item = record;
 .class value explicit T_item
@@ -2147,7 +2147,7 @@
 }
 
 
-// line 942
+.line 942
 //================================================================================
 // scope: block_statement_call (level : 4)
 
@@ -2175,7 +2175,7 @@
 }
 
 
-// line 992
+.line 992
 //================================================================================
 // scope: block_statement_resulttype (level : 4)
 
@@ -2200,11 +2200,11 @@
 }
 
 
-// line 1020
+.line 1020
 //================================================================================
 // scope: block_statement_expression_simpleexpression_term_factor_standfct (level : 8)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE typset = set of 0 .. 6
 .class value explicit T_typset
@@ -2307,7 +2307,7 @@
 }
 
 
-// line 1017
+.line 1017
 //================================================================================
 // scope: block_statement_expression_simpleexpression_term_factor (level : 7)
 
@@ -2331,7 +2331,7 @@
         ret
     }
 
-// line 1020
+.line 1020
 
     .method public
     void Standfct(int32 n)
@@ -2396,26 +2396,26 @@
         call instance void T_typset::addValue(int32)
     
     L_Entry:
-        // line 1023
+        .line 1023
         ldsfld int32 _G::Sy
         ldc.i4 19
         ceq
         brfalse L_else_1
-        // line 1023
+        .line 1023
         call void Insymbol()
         br L_if_end_2
     L_else_1:
-        // line 1023
+        .line 1023
         ldc.i4 9
         call void Error(int32 n)
     L_if_end_2:
-        // line 1024
+        .line 1024
         ldloc _F
         ldfld int32 @block_statement_expression_simpleexpression_term_factor_standfct::n
         ldc.i4 17
         clt
         brfalse L_else_3
-        // line 1025
+        .line 1025
         ldloc _F
         ldfld class @block_statement_expression_simpleexpression_term_factor @block_statement_expression_simpleexpression_term_factor_standfct::_slink
         ldfld class @block_statement_expression_simpleexpression_term @block_statement_expression_simpleexpression_term_factor::_slink
@@ -2438,7 +2438,7 @@
         ldfld class @block_statement_expression_simpleexpression_term_factor @block_statement_expression_simpleexpression_term_factor_standfct::_slink
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
         call instance void @block_statement::Expression(valuetype T_symset Fsys, valuetype T_item& x)
-        // line 1026
+        .line 1026
         ldloc _F
         ldfld int32 @block_statement_expression_simpleexpression_term_factor_standfct::n
         stloc $tmpSwitchValue2
@@ -2450,11 +2450,11 @@
         beq L_case_7
         br L_check_case_6
     L_case_7:
-        // line 1027
+        .line 1027
         ldloc _F
         ldloc $tmpSetLiteral3
         stfld valuetype T_typset @block_statement_expression_simpleexpression_term_factor_standfct::Ts
-        // line 1028
+        .line 1028
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld class @block_statement_expression_simpleexpression_term_factor @block_statement_expression_simpleexpression_term_factor_standfct::_slink
@@ -2465,7 +2465,7 @@
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
         ldfld int32 T_item::Typ
         stfld int32 T_record_86::Typ
-        // line 1029
+        .line 1029
         ldloc _F
         ldfld class @block_statement_expression_simpleexpression_term_factor @block_statement_expression_simpleexpression_term_factor_standfct::_slink
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
@@ -2473,7 +2473,7 @@
         ldc.i4 2
         ceq
         brfalse L_if_end_8
-        // line 1029
+        .line 1029
         ldloc _F
         ldloc _F
         ldfld int32 @block_statement_expression_simpleexpression_term_factor_standfct::n
@@ -2491,7 +2491,7 @@
         beq L_case_10
         br L_check_case_9
     L_case_10:
-        // line 1031
+        .line 1031
         ldloc _F
         ldloc $tmpSetLiteral4
         stfld valuetype T_typset @block_statement_expression_simpleexpression_term_factor_standfct::Ts
@@ -2500,7 +2500,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 6
         bne.un L_check_case_11
-        // line 1032
+        .line 1032
         ldloc _F
         ldloc $tmpSetLiteral5
         stfld valuetype T_typset @block_statement_expression_simpleexpression_term_factor_standfct::Ts
@@ -2514,7 +2514,7 @@
         beq L_case_13
         br L_check_case_12
     L_case_13:
-        // line 1033
+        .line 1033
         ldloc _F
         ldloc $tmpSetLiteral6
         stfld valuetype T_typset @block_statement_expression_simpleexpression_term_factor_standfct::Ts
@@ -2546,11 +2546,11 @@
         beq L_case_14
         br L_case_end_5
     L_case_14:
-        // line 1035
+        .line 1035
         ldloc _F
         ldloc $tmpSetLiteral7
         stfld valuetype T_typset @block_statement_expression_simpleexpression_term_factor_standfct::Ts
-        // line 1036
+        .line 1036
         ldloc _F
         ldfld class @block_statement_expression_simpleexpression_term_factor @block_statement_expression_simpleexpression_term_factor_standfct::_slink
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
@@ -2558,13 +2558,13 @@
         ldc.i4 1
         ceq
         brfalse L_if_end_15
-        // line 1036
+        .line 1036
         ldc.i4 26
         ldc.i4 0
         call void Emit1(int32 Fct, int32 b)
     L_if_end_15:
     L_case_end_5:
-        // line 1039
+        .line 1039
         ldloc _F
         ldfld valuetype T_typset @block_statement_expression_simpleexpression_term_factor_standfct::Ts
         ldloc _F
@@ -2573,14 +2573,14 @@
         ldfld int32 T_item::Typ
         call bool _SetContains(valuetype T_typset s, int32 val)
         brfalse L_else_16
-        // line 1039
+        .line 1039
         ldc.i4 8
         ldloc _F
         ldfld int32 @block_statement_expression_simpleexpression_term_factor_standfct::n
         call void Emit1(int32 Fct, int32 b)
         br L_if_end_17
     L_else_16:
-        // line 1040
+        .line 1040
         ldloc _F
         ldfld class @block_statement_expression_simpleexpression_term_factor @block_statement_expression_simpleexpression_term_factor_standfct::_slink
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
@@ -2590,48 +2590,48 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_18
-        // line 1040
+        .line 1040
         ldc.i4 48
         call void Error(int32 n)
     L_if_end_18:
     L_if_end_17:
         br L_if_end_4
     L_else_3:
-        // line 1043
+        .line 1043
         ldsfld int32 _G::Sy
         ldc.i4 36
         ceq
         ldc.i4.0
         ceq
         brfalse L_else_19
-        // line 1043
+        .line 1043
         ldc.i4 2
         call void Error(int32 n)
         br L_if_end_20
     L_else_19:
-        // line 1044
+        .line 1044
         ldsfld valuetype T_alfa _G::Id
         call string T_alfa::arrayToString(valuetype T_alfa)
         ldstr "input     "
         call bool [lpcRuntime]LPC.Helpers::StrcmpNE(string, string)
         brfalse L_else_21
-        // line 1044
+        .line 1044
         ldc.i4 0
         call void Error(int32 n)
         br L_if_end_22
     L_else_21:
-        // line 1044
+        .line 1044
         call void Insymbol()
     L_if_end_22:
     L_if_end_20:
-        // line 1045
+        .line 1045
         ldc.i4 8
         ldloc _F
         ldfld int32 @block_statement_expression_simpleexpression_term_factor_standfct::n
         call void Emit1(int32 Fct, int32 b)
         /* nop */
     L_if_end_4:
-        // line 1047
+        .line 1047
         ldloc _F
         ldfld class @block_statement_expression_simpleexpression_term_factor @block_statement_expression_simpleexpression_term_factor_standfct::_slink
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
@@ -2642,16 +2642,16 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld int32 T_record_86::Typ
         stfld int32 T_item::Typ
-        // line 1048
+        .line 1048
         ldsfld int32 _G::Sy
         ldc.i4 20
         ceq
         brfalse L_else_23
-        // line 1048
+        .line 1048
         call void Insymbol()
         br L_if_end_24
     L_else_23:
-        // line 1048
+        .line 1048
         ldc.i4 4
         call void Error(int32 n)
     L_if_end_24:
@@ -2662,7 +2662,7 @@
 }
 
 
-// line 1014
+.line 1014
 //================================================================================
 // scope: block_statement_expression_simpleexpression_term (level : 6)
 
@@ -2686,7 +2686,7 @@
         ret
     }
 
-// line 1017
+.line 1017
 
     .method public
     void Factor(valuetype T_symset Fsys, valuetype T_item& x)
@@ -2744,12 +2744,12 @@
         call instance void T_symset::addValue(int32)
     
     L_Entry:
-        // line 1051
+        .line 1051
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
         ldc.i4 0
         stfld int32 T_item::Typ
-        // line 1051
+        .line 1051
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
         ldc.i4 0
@@ -2758,7 +2758,7 @@
         ldc.i4 131071
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_item::Ref
-        // line 1052
+        .line 1052
         ldloc _F
         ldfld class @block_statement_expression_simpleexpression_term @block_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_statement_expression_simpleexpression @block_statement_expression_simpleexpression_term::_slink
@@ -2770,15 +2770,15 @@
         ldfld valuetype T_symset @block_statement_expression_simpleexpression_term_factor::Fsys
         ldc.i4 58
         call instance void @block::Test(valuetype T_symset S1, valuetype T_symset S2, int32 n)
-        // line 1053
+        .line 1053
         br L_while_test_2
     L_while_1:
-        // line 1055
+        .line 1055
         ldsfld int32 _G::Sy
         ldc.i4 36
         ceq
         brfalse L_else_3
-        // line 1056
+        .line 1056
         ldloc _F
         ldloc _F
         ldfld class @block_statement_expression_simpleexpression_term @block_statement_expression_simpleexpression_term_factor::_slink
@@ -2789,9 +2789,9 @@
         ldsfld valuetype T_alfa _G::Id
         call instance int32 @block::Loc(valuetype T_alfa Id)
         stfld int32 @block_statement_expression_simpleexpression_term_factor::i
-        // line 1056
+        .line 1056
         call void Insymbol()
-        // line 1058
+        .line 1058
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_statement_expression_simpleexpression_term_factor::i
@@ -2801,7 +2801,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 0
         bne.un L_check_case_6
-        // line 1059
+        .line 1059
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
         ldsflda valuetype T_array_88 _G::Tab
@@ -2810,7 +2810,7 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld int32 T_record_86::Typ
         stfld int32 T_item::Typ
-        // line 1059
+        .line 1059
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
         ldc.i4 0
@@ -2819,14 +2819,14 @@
         ldc.i4 131071
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_item::Ref
-        // line 1060
+        .line 1060
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
         ldfld int32 T_item::Typ
         ldc.i4 2
         ceq
         brfalse L_else_7
-        // line 1061
+        .line 1061
         ldc.i4 25
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
@@ -2836,7 +2836,7 @@
         call void Emit1(int32 Fct, int32 b)
         br L_if_end_8
     L_else_7:
-        // line 1062
+        .line 1062
         ldc.i4 24
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
@@ -2850,7 +2850,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 1
         bne.un L_check_case_9
-        // line 1065
+        .line 1065
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
         ldsflda valuetype T_array_88 _G::Tab
@@ -2859,7 +2859,7 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld int32 T_record_86::Typ
         stfld int32 T_item::Typ
-        // line 1065
+        .line 1065
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
         ldsflda valuetype T_array_88 _G::Tab
@@ -2868,30 +2868,30 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld int32 T_record_86::Ref
         stfld int32 T_item::Ref
-        // line 1066
+        .line 1066
         ldloc $tmpSetLiteral2
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_symset s, int32 val)
         brfalse L_else_10
-        // line 1067
+        .line 1067
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_statement_expression_simpleexpression_term_factor::i
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld bool T_record_86::Normal
         brfalse L_else_12
-        // line 1067
+        .line 1067
         ldloc _F
         ldc.i4 0
         stfld int32 @block_statement_expression_simpleexpression_term_factor::f
         br L_if_end_13
     L_else_12:
-        // line 1067
+        .line 1067
         ldloc _F
         ldc.i4 1
         stfld int32 @block_statement_expression_simpleexpression_term_factor::f
     L_if_end_13:
-        // line 1068
+        .line 1068
         ldloc _F
         ldfld int32 @block_statement_expression_simpleexpression_term_factor::f
         ldsflda valuetype T_array_88 _G::Tab
@@ -2905,7 +2905,7 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld int32 T_record_86::Adr
         call void Emit2(int32 Fct, int32 a, int32 b)
-        // line 1069
+        .line 1069
         ldloc _F
         ldfld class @block_statement_expression_simpleexpression_term @block_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_statement_expression_simpleexpression @block_statement_expression_simpleexpression_term::_slink
@@ -2916,66 +2916,66 @@
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
         call instance void @block_statement::Selector(valuetype T_symset Fsys, valuetype T_item& v)
-        // line 1070
+        .line 1070
         ldsfld valuetype T_typset _G::Stantyps
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
         ldfld int32 T_item::Typ
         call bool _SetContains(valuetype T_typset s, int32 val)
         brfalse L_if_end_14
-        // line 1070
+        .line 1070
         ldc.i4 34
         call void Emit(int32 Fct)
     L_if_end_14:
         br L_if_end_11
     L_else_10:
-        // line 1073
+        .line 1073
         ldsfld valuetype T_typset _G::Stantyps
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
         ldfld int32 T_item::Typ
         call bool _SetContains(valuetype T_typset s, int32 val)
         brfalse L_else_15
-        // line 1074
+        .line 1074
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_statement_expression_simpleexpression_term_factor::i
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld bool T_record_86::Normal
         brfalse L_else_17
-        // line 1074
+        .line 1074
         ldloc _F
         ldc.i4 1
         stfld int32 @block_statement_expression_simpleexpression_term_factor::f
         br L_if_end_18
     L_else_17:
-        // line 1074
+        .line 1074
         ldloc _F
         ldc.i4 2
         stfld int32 @block_statement_expression_simpleexpression_term_factor::f
     L_if_end_18:
         br L_if_end_16
     L_else_15:
-        // line 1076
+        .line 1076
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_statement_expression_simpleexpression_term_factor::i
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld bool T_record_86::Normal
         brfalse L_else_19
-        // line 1076
+        .line 1076
         ldloc _F
         ldc.i4 0
         stfld int32 @block_statement_expression_simpleexpression_term_factor::f
         br L_if_end_20
     L_else_19:
-        // line 1076
+        .line 1076
         ldloc _F
         ldc.i4 1
         stfld int32 @block_statement_expression_simpleexpression_term_factor::f
     L_if_end_20:
     L_if_end_16:
-        // line 1077
+        .line 1077
         ldloc _F
         ldfld int32 @block_statement_expression_simpleexpression_term_factor::f
         ldsflda valuetype T_array_88 _G::Tab
@@ -3000,7 +3000,7 @@
         beq L_case_22
         br L_check_case_21
     L_case_22:
-        // line 1080
+        .line 1080
         ldc.i4 44
         call void Error(int32 n)
         br L_case_end_5
@@ -3008,7 +3008,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 4
         bne.un L_case_end_5
-        // line 1081
+        .line 1081
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
         ldsflda valuetype T_array_88 _G::Tab
@@ -3017,7 +3017,7 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld int32 T_record_86::Typ
         stfld int32 T_item::Typ
-        // line 1082
+        .line 1082
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_statement_expression_simpleexpression_term_factor::i
@@ -3028,7 +3028,7 @@
         ldc.i4.0
         ceq
         brfalse L_else_23
-        // line 1082
+        .line 1082
         ldloc _F
         ldfld class @block_statement_expression_simpleexpression_term @block_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_statement_expression_simpleexpression @block_statement_expression_simpleexpression_term::_slink
@@ -3041,7 +3041,7 @@
         call instance void @block_statement::Call(valuetype T_symset Fsys, int32 i)
         br L_if_end_24
     L_else_23:
-        // line 1083
+        .line 1083
         ldloc _F
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
@@ -3053,54 +3053,54 @@
     L_case_end_5:
         br L_if_end_4
     L_else_3:
-        // line 1087
+        .line 1087
         ldloc $tmpSetLiteral3
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_symset s, int32 val)
         brfalse L_else_25
-        // line 1089
+        .line 1089
         ldsfld int32 _G::Sy
         ldc.i4 1
         ceq
         brfalse L_else_27
-        // line 1090
+        .line 1090
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
         ldc.i4 2
         stfld int32 T_item::Typ
-        // line 1090
+        .line 1090
         ldsfld float64 _G::Rnum
         call void Enterreal(float64 x)
-        // line 1091
+        .line 1091
         ldc.i4 25
         ldsfld int32 _G::C1
         call void Emit1(int32 Fct, int32 b)
         br L_if_end_28
     L_else_27:
-        // line 1093
+        .line 1093
         ldsfld int32 _G::Sy
         ldc.i4 2
         ceq
         brfalse L_else_29
-        // line 1093
+        .line 1093
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
         ldc.i4 4
         stfld int32 T_item::Typ
         br L_if_end_30
     L_else_29:
-        // line 1094
+        .line 1094
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
         ldc.i4 1
         stfld int32 T_item::Typ
     L_if_end_30:
-        // line 1095
+        .line 1095
         ldc.i4 24
         ldsfld int32 _G::Inum
         call void Emit1(int32 Fct, int32 b)
     L_if_end_28:
-        // line 1097
+        .line 1097
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
         ldc.i4 0
@@ -3109,18 +3109,18 @@
         ldc.i4 131071
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_item::Ref
-        // line 1097
+        .line 1097
         call void Insymbol()
         br L_if_end_26
     L_else_25:
-        // line 1099
+        .line 1099
         ldsfld int32 _G::Sy
         ldc.i4 19
         ceq
         brfalse L_else_31
-        // line 1100
+        .line 1100
         call void Insymbol()
-        // line 1100
+        .line 1100
         ldloc _F
         ldfld class @block_statement_expression_simpleexpression_term @block_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_statement_expression_simpleexpression @block_statement_expression_simpleexpression_term::_slink
@@ -3140,29 +3140,29 @@
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
         call instance void @block_statement::Expression(valuetype T_symset Fsys, valuetype T_item& x)
-        // line 1101
+        .line 1101
         ldsfld int32 _G::Sy
         ldc.i4 20
         ceq
         brfalse L_else_33
-        // line 1101
+        .line 1101
         call void Insymbol()
         br L_if_end_34
     L_else_33:
-        // line 1101
+        .line 1101
         ldc.i4 4
         call void Error(int32 n)
     L_if_end_34:
         br L_if_end_32
     L_else_31:
-        // line 1103
+        .line 1103
         ldsfld int32 _G::Sy
         ldc.i4 4
         ceq
         brfalse L_if_end_35
-        // line 1104
+        .line 1104
         call void Insymbol()
-        // line 1104
+        .line 1104
         ldloc _F
         ldfld class @block_statement_expression_simpleexpression_term @block_statement_expression_simpleexpression_term_factor::_slink
         ldloc _F
@@ -3170,19 +3170,19 @@
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
         call instance void @block_statement_expression_simpleexpression_term::Factor(valuetype T_symset Fsys, valuetype T_item& x)
-        // line 1105
+        .line 1105
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
         ldfld int32 T_item::Typ
         ldc.i4 3
         ceq
         brfalse L_else_36
-        // line 1105
+        .line 1105
         ldc.i4 35
         call void Emit(int32 Fct)
         br L_if_end_37
     L_else_36:
-        // line 1106
+        .line 1106
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term_factor::x
         ldfld int32 T_item::Typ
@@ -3191,7 +3191,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_38
-        // line 1106
+        .line 1106
         ldc.i4 32
         call void Error(int32 n)
     L_if_end_38:
@@ -3200,7 +3200,7 @@
     L_if_end_32:
     L_if_end_26:
     L_if_end_4:
-        // line 1108
+        .line 1108
         ldloc _F
         ldfld class @block_statement_expression_simpleexpression_term @block_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_statement_expression_simpleexpression @block_statement_expression_simpleexpression_term::_slink
@@ -3224,7 +3224,7 @@
 }
 
 
-// line 1011
+.line 1011
 //================================================================================
 // scope: block_statement_expression_simpleexpression (level : 5)
 
@@ -3248,7 +3248,7 @@
         ret
     }
 
-// line 1014
+.line 1014
 
     .method public
     void Term(valuetype T_symset Fsys, valuetype T_item& x)
@@ -3330,7 +3330,7 @@
         call instance void T_symset::addValue(int32)
     
     L_Entry:
-        // line 1113
+        .line 1113
         ldloc _F
         ldloc _F
         ldfld valuetype T_symset @block_statement_expression_simpleexpression_term::Fsys
@@ -3346,16 +3346,16 @@
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term::x
         call instance void @block_statement_expression_simpleexpression_term::Factor(valuetype T_symset Fsys, valuetype T_item& x)
-        // line 1114
+        .line 1114
         br L_while_test_2
     L_while_1:
-        // line 1115
+        .line 1115
         ldloc _F
         ldsfld int32 _G::Sy
         stfld int32 @block_statement_expression_simpleexpression_term::Op
-        // line 1115
+        .line 1115
         call void Insymbol()
-        // line 1116
+        .line 1116
         ldloc _F
         ldloc _F
         ldfld valuetype T_symset @block_statement_expression_simpleexpression_term::Fsys
@@ -3371,13 +3371,13 @@
         ldloc _F
         ldflda valuetype T_item @block_statement_expression_simpleexpression_term::y
         call instance void @block_statement_expression_simpleexpression_term::Factor(valuetype T_symset Fsys, valuetype T_item& x)
-        // line 1117
+        .line 1117
         ldloc _F
         ldfld int32 @block_statement_expression_simpleexpression_term::Op
         ldc.i4 7
         ceq
         brfalse L_else_3
-        // line 1118
+        .line 1118
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term::x
         ldloc _F
@@ -3392,7 +3392,7 @@
         ldfld int32 T_item::Typ
         call instance int32 @block_statement::Resulttype(int32 a, int32 b)
         stfld int32 T_item::Typ
-        // line 1119
+        .line 1119
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term::x
         ldfld int32 T_item::Typ
@@ -3406,7 +3406,7 @@
         ldloc $tmpSwitchValue3
         ldc.i4 1
         bne.un L_check_case_7
-        // line 1121
+        .line 1121
         ldc.i4 57
         call void Emit(int32 Fct)
         br L_case_end_5
@@ -3414,53 +3414,53 @@
         ldloc $tmpSwitchValue3
         ldc.i4 2
         bne.un L_case_end_5
-        // line 1122
+        .line 1122
         ldc.i4 60
         call void Emit(int32 Fct)
     L_case_end_5:
         br L_if_end_4
     L_else_3:
-        // line 1125
+        .line 1125
         ldloc _F
         ldfld int32 @block_statement_expression_simpleexpression_term::Op
         ldc.i4 9
         ceq
         brfalse L_else_8
-        // line 1127
+        .line 1127
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term::x
         ldfld int32 T_item::Typ
         ldc.i4 1
         ceq
         brfalse L_if_end_10
-        // line 1128
+        .line 1128
         ldc.i4 26
         ldc.i4 1
         call void Emit1(int32 Fct, int32 b)
-        // line 1128
+        .line 1128
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term::x
         ldc.i4 2
         stfld int32 T_item::Typ
     L_if_end_10:
-        // line 1130
+        .line 1130
         ldloc _F
         ldflda valuetype T_item @block_statement_expression_simpleexpression_term::y
         ldfld int32 T_item::Typ
         ldc.i4 1
         ceq
         brfalse L_if_end_11
-        // line 1131
+        .line 1131
         ldc.i4 26
         ldc.i4 0
         call void Emit1(int32 Fct, int32 b)
-        // line 1131
+        .line 1131
         ldloc _F
         ldflda valuetype T_item @block_statement_expression_simpleexpression_term::y
         ldc.i4 2
         stfld int32 T_item::Typ
     L_if_end_11:
-        // line 1133
+        .line 1133
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term::x
         ldfld int32 T_item::Typ
@@ -3476,12 +3476,12 @@
         ceq
     L_AND_shortcut_12:
         brfalse L_else_13
-        // line 1134
+        .line 1134
         ldc.i4 61
         call void Emit(int32 Fct)
         br L_if_end_14
     L_else_13:
-        // line 1135
+        .line 1135
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term::x
         ldfld int32 T_item::Typ
@@ -3501,11 +3501,11 @@
         ceq
     L_AND_shortcut_15:
         brfalse L_if_end_16
-        // line 1136
+        .line 1136
         ldc.i4 32
         call void Error(int32 n)
     L_if_end_16:
-        // line 1137
+        .line 1137
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term::x
         ldc.i4 0
@@ -3513,13 +3513,13 @@
     L_if_end_14:
         br L_if_end_9
     L_else_8:
-        // line 1140
+        .line 1140
         ldloc _F
         ldfld int32 @block_statement_expression_simpleexpression_term::Op
         ldc.i4 11
         ceq
         brfalse L_else_17
-        // line 1141
+        .line 1141
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term::x
         ldfld int32 T_item::Typ
@@ -3535,12 +3535,12 @@
         ceq
     L_AND_shortcut_19:
         brfalse L_else_20
-        // line 1142
+        .line 1142
         ldc.i4 56
         call void Emit(int32 Fct)
         br L_if_end_21
     L_else_20:
-        // line 1143
+        .line 1143
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term::x
         ldfld int32 T_item::Typ
@@ -3560,11 +3560,11 @@
         ceq
     L_AND_shortcut_22:
         brfalse L_if_end_23
-        // line 1144
+        .line 1144
         ldc.i4 32
         call void Error(int32 n)
     L_if_end_23:
-        // line 1145
+        .line 1145
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term::x
         ldc.i4 0
@@ -3572,7 +3572,7 @@
     L_if_end_21:
         br L_if_end_18
     L_else_17:
-        // line 1149
+        .line 1149
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term::x
         ldfld int32 T_item::Typ
@@ -3588,24 +3588,24 @@
         ceq
     L_AND_shortcut_24:
         brfalse L_else_25
-        // line 1150
+        .line 1150
         ldloc _F
         ldfld int32 @block_statement_expression_simpleexpression_term::Op
         ldc.i4 8
         ceq
         brfalse L_else_27
-        // line 1150
+        .line 1150
         ldc.i4 58
         call void Emit(int32 Fct)
         br L_if_end_28
     L_else_27:
-        // line 1151
+        .line 1151
         ldc.i4 59
         call void Emit(int32 Fct)
     L_if_end_28:
         br L_if_end_26
     L_else_25:
-        // line 1152
+        .line 1152
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term::x
         ldfld int32 T_item::Typ
@@ -3625,11 +3625,11 @@
         ceq
     L_AND_shortcut_29:
         brfalse L_if_end_30
-        // line 1153
+        .line 1153
         ldc.i4 34
         call void Error(int32 n)
     L_if_end_30:
-        // line 1154
+        .line 1154
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression_term::x
         ldc.i4 0
@@ -3650,7 +3650,7 @@
 }
 
 
-// line 1008
+.line 1008
 //================================================================================
 // scope: block_statement_expression (level : 4)
 
@@ -3674,7 +3674,7 @@
         ret
     }
 
-// line 1011
+.line 1011
 
     .method public
     void Simpleexpression(valuetype T_symset Fsys, valuetype T_item& x)
@@ -3754,18 +3754,18 @@
         call instance void T_symset::addValue(int32)
     
     L_Entry:
-        // line 1161
+        .line 1161
         ldloc $tmpSetLiteral1
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_symset s, int32 val)
         brfalse L_else_1
-        // line 1162
+        .line 1162
         ldloc _F
         ldsfld int32 _G::Sy
         stfld int32 @block_statement_expression_simpleexpression::Op
-        // line 1162
+        .line 1162
         call void Insymbol()
-        // line 1163
+        .line 1163
         ldloc _F
         ldloc _F
         ldfld valuetype T_symset @block_statement_expression_simpleexpression::Fsys
@@ -3781,25 +3781,25 @@
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression::x
         call instance void @block_statement_expression_simpleexpression::Term(valuetype T_symset Fsys, valuetype T_item& x)
-        // line 1164
+        .line 1164
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression::x
         ldfld int32 T_item::Typ
         ldc.i4 2
         cgt
         brfalse L_else_3
-        // line 1164
+        .line 1164
         ldc.i4 33
         call void Error(int32 n)
         br L_if_end_4
     L_else_3:
-        // line 1167
+        .line 1167
         ldloc _F
         ldfld int32 @block_statement_expression_simpleexpression::Op
         ldc.i4 6
         ceq
         brfalse L_if_end_5
-        // line 1167
+        .line 1167
         ldc.i4 36
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression::x
@@ -3809,7 +3809,7 @@
     L_if_end_4:
         br L_if_end_2
     L_else_1:
-        // line 1169
+        .line 1169
         ldloc _F
         ldloc _F
         ldfld valuetype T_symset @block_statement_expression_simpleexpression::Fsys
@@ -3826,16 +3826,16 @@
         ldfld valuetype T_item* @block_statement_expression_simpleexpression::x
         call instance void @block_statement_expression_simpleexpression::Term(valuetype T_symset Fsys, valuetype T_item& x)
     L_if_end_2:
-        // line 1170
+        .line 1170
         br L_while_test_7
     L_while_6:
-        // line 1171
+        .line 1171
         ldloc _F
         ldsfld int32 _G::Sy
         stfld int32 @block_statement_expression_simpleexpression::Op
-        // line 1171
+        .line 1171
         call void Insymbol()
-        // line 1172
+        .line 1172
         ldloc _F
         ldloc _F
         ldfld valuetype T_symset @block_statement_expression_simpleexpression::Fsys
@@ -3851,13 +3851,13 @@
         ldloc _F
         ldflda valuetype T_item @block_statement_expression_simpleexpression::y
         call instance void @block_statement_expression_simpleexpression::Term(valuetype T_symset Fsys, valuetype T_item& x)
-        // line 1173
+        .line 1173
         ldloc _F
         ldfld int32 @block_statement_expression_simpleexpression::Op
         ldc.i4 12
         ceq
         brfalse L_else_8
-        // line 1175
+        .line 1175
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression::x
         ldfld int32 T_item::Typ
@@ -3873,12 +3873,12 @@
         ceq
     L_AND_shortcut_10:
         brfalse L_else_11
-        // line 1175
+        .line 1175
         ldc.i4 51
         call void Emit(int32 Fct)
         br L_if_end_12
     L_else_11:
-        // line 1176
+        .line 1176
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression::x
         ldfld int32 T_item::Typ
@@ -3898,11 +3898,11 @@
         ceq
     L_AND_shortcut_13:
         brfalse L_if_end_14
-        // line 1177
+        .line 1177
         ldc.i4 32
         call void Error(int32 n)
     L_if_end_14:
-        // line 1178
+        .line 1178
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression::x
         ldc.i4 0
@@ -3910,7 +3910,7 @@
     L_if_end_12:
         br L_if_end_9
     L_else_8:
-        // line 1181
+        .line 1181
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression::x
         ldloc _F
@@ -3924,7 +3924,7 @@
         ldfld int32 T_item::Typ
         call instance int32 @block_statement::Resulttype(int32 a, int32 b)
         stfld int32 T_item::Typ
-        // line 1182
+        .line 1182
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression_simpleexpression::x
         ldfld int32 T_item::Typ
@@ -3938,18 +3938,18 @@
         ldloc $tmpSwitchValue5
         ldc.i4 1
         bne.un L_check_case_17
-        // line 1184
+        .line 1184
         ldloc _F
         ldfld int32 @block_statement_expression_simpleexpression::Op
         ldc.i4 5
         ceq
         brfalse L_else_18
-        // line 1184
+        .line 1184
         ldc.i4 52
         call void Emit(int32 Fct)
         br L_if_end_19
     L_else_18:
-        // line 1185
+        .line 1185
         ldc.i4 53
         call void Emit(int32 Fct)
     L_if_end_19:
@@ -3958,18 +3958,18 @@
         ldloc $tmpSwitchValue5
         ldc.i4 2
         bne.un L_case_end_15
-        // line 1186
+        .line 1186
         ldloc _F
         ldfld int32 @block_statement_expression_simpleexpression::Op
         ldc.i4 5
         ceq
         brfalse L_else_20
-        // line 1186
+        .line 1186
         ldc.i4 54
         call void Emit(int32 Fct)
         br L_if_end_21
     L_else_20:
-        // line 1187
+        .line 1187
         ldc.i4 55
         call void Emit(int32 Fct)
     L_if_end_21:
@@ -3987,7 +3987,7 @@
 }
 
 
-// line 1229
+.line 1229
 //================================================================================
 // scope: block_statement_assignment (level : 4)
 
@@ -4014,7 +4014,7 @@
 }
 
 
-// line 1253
+.line 1253
 //================================================================================
 // scope: block_statement_compoundstatement (level : 4)
 
@@ -4032,7 +4032,7 @@
 }
 
 
-// line 1263
+.line 1263
 //================================================================================
 // scope: block_statement_ifstatement (level : 4)
 
@@ -4055,11 +4055,11 @@
 }
 
 
-// line 1287
+.line 1287
 //================================================================================
 // scope: block_statement_casestatement_caselabel (level : 5)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_159 = record;
 .class value explicit T_block_statement_casestatement_record_159
@@ -4071,7 +4071,7 @@
     .field [4] public int32 Lc
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_160 = array [1 .. 100] of valuetype T_block_statement_casestatement_record_159;
 .class value explicit T_block_statement_casestatement_array_160
@@ -4128,11 +4128,11 @@
 }
 
 
-// line 1299
+.line 1299
 //================================================================================
 // scope: block_statement_casestatement_onecase (level : 5)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_162 = array [1 .. 100] of int32;
 .class value explicit T_block_statement_casestatement_array_162
@@ -4185,7 +4185,7 @@
 }
 
 
-// line 1280
+.line 1280
 //================================================================================
 // scope: block_statement_casestatement (level : 4)
 
@@ -4210,7 +4210,7 @@
         ret
     }
 
-// line 1287
+.line 1287
 
     .method public
     void Caselabel()
@@ -4236,7 +4236,7 @@
         call instance void T_symset::addValue(int32)
     
     L_Entry:
-        // line 1289
+        .line 1289
         ldloc _F
         ldfld class @block_statement_casestatement @block_statement_casestatement_caselabel::_slink
         ldfld class @block_statement @block_statement_casestatement::_slink
@@ -4257,7 +4257,7 @@
         ldloc _F
         ldflda valuetype T_block_conrec @block_statement_casestatement_caselabel::Lab
         call instance void @block::Constant(valuetype T_symset Fsys, valuetype T_block_conrec& c)
-        // line 1290
+        .line 1290
         ldloc _F
         ldflda valuetype T_block_conrec @block_statement_casestatement_caselabel::Lab
         ldfld int32 T_block_conrec::Tp
@@ -4269,24 +4269,24 @@
         ldc.i4.0
         ceq
         brfalse L_else_1
-        // line 1290
+        .line 1290
         ldc.i4 47
         call void Error(int32 n)
         br L_if_end_2
     L_else_1:
-        // line 1291
+        .line 1291
         ldloc _F
         ldfld class @block_statement_casestatement @block_statement_casestatement_caselabel::_slink
         ldfld int32 @block_statement_casestatement::i
         ldc.i4 100
         ceq
         brfalse L_else_3
-        // line 1291
+        .line 1291
         ldc.i4 6
         call void Fatal(int32 n)
         br L_if_end_4
     L_else_3:
-        // line 1292
+        .line 1292
         ldloc _F
         ldfld class @block_statement_casestatement @block_statement_casestatement_caselabel::_slink
         ldloc _F
@@ -4295,11 +4295,11 @@
         ldc.i4 1
         add
         stfld int32 @block_statement_casestatement::i
-        // line 1292
+        .line 1292
         ldloc _F
         ldc.i4 0
         stfld int32 @block_statement_casestatement_caselabel::k
-        // line 1293
+        .line 1293
         ldloc _F
         ldfld class @block_statement_casestatement @block_statement_casestatement_caselabel::_slink
         ldflda valuetype T_block_statement_casestatement_array_160 @block_statement_casestatement::Casetab
@@ -4315,7 +4315,7 @@
         ldc.i4 131071
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_block_statement_casestatement_record_159::Val
-        // line 1293
+        .line 1293
         ldloc _F
         ldfld class @block_statement_casestatement @block_statement_casestatement_caselabel::_slink
         ldflda valuetype T_block_statement_casestatement_array_160 @block_statement_casestatement::Casetab
@@ -4329,9 +4329,9 @@
         ldc.i4 131071
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_block_statement_casestatement_record_159::Lc
-        // line 1294
+        .line 1294
     L_repeat_5:
-        // line 1294
+        .line 1294
         ldloc _F
         ldloc _F
         ldfld int32 @block_statement_casestatement_caselabel::k
@@ -4350,7 +4350,7 @@
         ldfld int32 T_block_conrec::i
         ceq
         brfalse L_repeat_5
-        // line 1295
+        .line 1295
         ldloc _F
         ldfld int32 @block_statement_casestatement_caselabel::k
         ldloc _F
@@ -4358,7 +4358,7 @@
         ldfld int32 @block_statement_casestatement::i
         clt
         brfalse L_if_end_6
-        // line 1295
+        .line 1295
         ldc.i4 1
         call void Error(int32 n)
     L_if_end_6:
@@ -4370,7 +4370,7 @@
         ret
     }
 
-// line 1299
+.line 1299
 
     .method public
     void Onecase()
@@ -4396,21 +4396,21 @@
         call instance void T_symset::addValue(int32)
     
     L_Entry:
-        // line 1300
+        .line 1300
         ldsfld valuetype T_symset _G::Constbegsys
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_symset s, int32 val)
         brfalse L_if_end_1
-        // line 1301
+        .line 1301
         ldloc _F
         ldfld class @block_statement_casestatement @block_statement_casestatement_onecase::_slink
         call instance void @block_statement_casestatement::Caselabel()
-        // line 1302
+        .line 1302
         br L_while_test_3
     L_while_2:
-        // line 1303
+        .line 1303
         call void Insymbol()
-        // line 1303
+        .line 1303
         ldloc _F
         ldfld class @block_statement_casestatement @block_statement_casestatement_onecase::_slink
         call instance void @block_statement_casestatement::Caselabel()
@@ -4419,20 +4419,20 @@
         ldc.i4 23
         ceq
         brtrue L_while_2
-        // line 1305
+        .line 1305
         ldsfld int32 _G::Sy
         ldc.i4 26
         ceq
         brfalse L_else_4
-        // line 1305
+        .line 1305
         call void Insymbol()
         br L_if_end_5
     L_else_4:
-        // line 1305
+        .line 1305
         ldc.i4 5
         call void Error(int32 n)
     L_if_end_5:
-        // line 1306
+        .line 1306
         ldloc _F
         ldfld class @block_statement_casestatement @block_statement_casestatement_onecase::_slink
         ldfld class @block_statement @block_statement_casestatement::_slink
@@ -4451,7 +4451,7 @@
         call void _SetCheck(valuetype T_set_62 s, int32 min, int32 max)
         call valuetype T_symset _SetCastTo_T_symset(valuetype T_set_62 s)
         call instance void @block::Statement(valuetype T_symset Fsys)
-        // line 1307
+        .line 1307
         ldloc _F
         ldfld class @block_statement_casestatement @block_statement_casestatement_onecase::_slink
         ldloc _F
@@ -4460,7 +4460,7 @@
         ldc.i4 1
         add
         stfld int32 @block_statement_casestatement::j
-        // line 1307
+        .line 1307
         ldloc _F
         ldfld class @block_statement_casestatement @block_statement_casestatement_onecase::_slink
         ldflda valuetype T_block_statement_casestatement_array_162 @block_statement_casestatement::Exittab
@@ -4470,7 +4470,7 @@
         call instance int32& T_block_statement_casestatement_array_162::ldadr(int32)
         ldsfld int32 _G::Lc
         stobj int32
-        // line 1307
+        .line 1307
         ldc.i4 10
         call void Emit(int32 Fct)
     L_if_end_1:
@@ -4481,7 +4481,7 @@
 }
 
 
-// line 1329
+.line 1329
 //================================================================================
 // scope: block_statement_repeatstatement (level : 4)
 
@@ -4503,7 +4503,7 @@
 }
 
 
-// line 1345
+.line 1345
 //================================================================================
 // scope: block_statement_whilestatement (level : 4)
 
@@ -4526,7 +4526,7 @@
 }
 
 
-// line 1355
+.line 1355
 //================================================================================
 // scope: block_statement_forstatement (level : 4)
 
@@ -4552,7 +4552,7 @@
 }
 
 
-// line 1387
+.line 1387
 //================================================================================
 // scope: block_statement_standproc (level : 4)
 
@@ -4579,7 +4579,7 @@
 }
 
 
-// line 900
+.line 900
 //================================================================================
 // scope: block_statement (level : 3)
 
@@ -4601,7 +4601,7 @@
         ret
     }
 
-// line 904
+.line 904
 
     .method public
     void Selector(valuetype T_symset Fsys, valuetype T_item& v)
@@ -4652,28 +4652,28 @@
     
     
     L_Entry:
-        // line 907
+        .line 907
     L_repeat_1:
-        // line 907
+        .line 907
         ldsfld int32 _G::Sy
         ldc.i4 25
         ceq
         brfalse L_else_2
-        // line 908
+        .line 908
         call void Insymbol()
-        // line 909
+        .line 909
         ldsfld int32 _G::Sy
         ldc.i4 36
         ceq
         ldc.i4.0
         ceq
         brfalse L_else_4
-        // line 909
+        .line 909
         ldc.i4 2
         call void Error(int32 n)
         br L_if_end_5
     L_else_4:
-        // line 911
+        .line 911
         ldloc _F
         ldfld valuetype T_item* @block_statement_selector::v
         ldfld int32 T_item::Typ
@@ -4682,12 +4682,12 @@
         ldc.i4.0
         ceq
         brfalse L_else_6
-        // line 911
+        .line 911
         ldc.i4 31
         call void Error(int32 n)
         br L_if_end_7
     L_else_6:
-        // line 913
+        .line 913
         ldloc _F
         ldsflda valuetype T_array_92 _G::Btab
         ldloc _F
@@ -4696,16 +4696,16 @@
         call instance valuetype T_record_91& T_array_92::ldadr(int32)
         ldfld int32 T_record_91::Last
         stfld int32 @block_statement_selector::j
-        // line 913
+        .line 913
         ldsflda valuetype T_array_88 _G::Tab
         ldc.i4 0
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldsfld valuetype T_alfa _G::Id
         stfld valuetype T_alfa T_record_86::Name
-        // line 914
+        .line 914
         br L_while_test_9
     L_while_8:
-        // line 914
+        .line 914
         ldloc _F
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
@@ -4724,17 +4724,17 @@
         call string T_alfa::arrayToString(valuetype T_alfa)
         call bool [lpcRuntime]LPC.Helpers::StrcmpNE(string, string)
         brtrue L_while_8
-        // line 915
+        .line 915
         ldloc _F
         ldfld int32 @block_statement_selector::j
         ldc.i4 0
         ceq
         brfalse L_if_end_10
-        // line 915
+        .line 915
         ldc.i4 0
         call void Error(int32 n)
     L_if_end_10:
-        // line 916
+        .line 916
         ldloc _F
         ldfld valuetype T_item* @block_statement_selector::v
         ldsflda valuetype T_array_88 _G::Tab
@@ -4743,7 +4743,7 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld int32 T_record_86::Typ
         stfld int32 T_item::Typ
-        // line 916
+        .line 916
         ldloc _F
         ldfld valuetype T_item* @block_statement_selector::v
         ldsflda valuetype T_array_88 _G::Tab
@@ -4752,7 +4752,7 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld int32 T_record_86::Ref
         stfld int32 T_item::Ref
-        // line 917
+        .line 917
         ldloc _F
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
@@ -4760,7 +4760,7 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld int32 T_record_86::Adr
         stfld int32 @block_statement_selector::a
-        // line 917
+        .line 917
         ldloc _F
         ldfld int32 @block_statement_selector::a
         ldc.i4 0
@@ -4768,34 +4768,34 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_11
-        // line 917
+        .line 917
         ldc.i4 9
         ldloc _F
         ldfld int32 @block_statement_selector::a
         call void Emit1(int32 Fct, int32 b)
     L_if_end_11:
     L_if_end_7:
-        // line 919
+        .line 919
         call void Insymbol()
     L_if_end_5:
         br L_if_end_3
     L_else_2:
-        // line 923
+        .line 923
         ldsfld int32 _G::Sy
         ldc.i4 21
         ceq
         ldc.i4.0
         ceq
         brfalse L_if_end_12
-        // line 923
+        .line 923
         ldc.i4 11
         call void Error(int32 n)
     L_if_end_12:
-        // line 924
+        .line 924
     L_repeat_13:
-        // line 924
+        .line 924
         call void Insymbol()
-        // line 925
+        .line 925
         ldloc _F
         ldfld class @block_statement @block_statement_selector::_slink
         ldloc _F
@@ -4812,7 +4812,7 @@
         ldloc _F
         ldflda valuetype T_item @block_statement_selector::x
         call instance void @block_statement::Expression(valuetype T_symset Fsys, valuetype T_item& x)
-        // line 926
+        .line 926
         ldloc _F
         ldfld valuetype T_item* @block_statement_selector::v
         ldfld int32 T_item::Typ
@@ -4821,18 +4821,18 @@
         ldc.i4.0
         ceq
         brfalse L_else_14
-        // line 926
+        .line 926
         ldc.i4 28
         call void Error(int32 n)
         br L_if_end_15
     L_else_14:
-        // line 927
+        .line 927
         ldloc _F
         ldloc _F
         ldfld valuetype T_item* @block_statement_selector::v
         ldfld int32 T_item::Ref
         stfld int32 @block_statement_selector::a
-        // line 928
+        .line 928
         ldsflda valuetype T_array_90 _G::Atab
         ldloc _F
         ldfld int32 @block_statement_selector::a
@@ -4845,12 +4845,12 @@
         ldc.i4.0
         ceq
         brfalse L_else_16
-        // line 928
+        .line 928
         ldc.i4 26
         call void Error(int32 n)
         br L_if_end_17
     L_else_16:
-        // line 929
+        .line 929
         ldsflda valuetype T_array_90 _G::Atab
         ldloc _F
         ldfld int32 @block_statement_selector::a
@@ -4859,21 +4859,21 @@
         ldc.i4 1
         ceq
         brfalse L_else_18
-        // line 929
+        .line 929
         ldc.i4 20
         ldloc _F
         ldfld int32 @block_statement_selector::a
         call void Emit1(int32 Fct, int32 b)
         br L_if_end_19
     L_else_18:
-        // line 930
+        .line 930
         ldc.i4 21
         ldloc _F
         ldfld int32 @block_statement_selector::a
         call void Emit1(int32 Fct, int32 b)
     L_if_end_19:
     L_if_end_17:
-        // line 931
+        .line 931
         ldloc _F
         ldfld valuetype T_item* @block_statement_selector::v
         ldsflda valuetype T_array_90 _G::Atab
@@ -4882,7 +4882,7 @@
         call instance valuetype T_record_89& T_array_90::ldadr(int32)
         ldfld int32 T_record_89::Eltyp
         stfld int32 T_item::Typ
-        // line 931
+        .line 931
         ldloc _F
         ldfld valuetype T_item* @block_statement_selector::v
         ldsflda valuetype T_array_90 _G::Atab
@@ -4898,24 +4898,24 @@
         ldc.i4.0
         ceq
         brfalse L_repeat_13
-        // line 934
+        .line 934
         ldsfld int32 _G::Sy
         ldc.i4 22
         ceq
         brfalse L_else_20
-        // line 934
+        .line 934
         call void Insymbol()
         br L_if_end_21
     L_else_20:
-        // line 935
+        .line 935
         ldc.i4 12
         call void Error(int32 n)
-        // line 935
+        .line 935
         ldsfld int32 _G::Sy
         ldc.i4 20
         ceq
         brfalse L_if_end_22
-        // line 935
+        .line 935
         call void Insymbol()
     L_if_end_22:
     L_if_end_21:
@@ -4926,7 +4926,7 @@
         ldc.i4.0
         ceq
         brfalse L_repeat_1
-        // line 939
+        .line 939
         ldloc _F
         ldfld class @block_statement @block_statement_selector::_slink
         ldfld class @block @block_statement::_slink
@@ -4945,7 +4945,7 @@
         ret
     }
 
-// line 942
+.line 942
 
     .method public
     void Call(valuetype T_symset Fsys, int32 i)
@@ -5012,12 +5012,12 @@
         call instance void T_symset::addValue(int32)
     
     L_Entry:
-        // line 945
+        .line 945
         ldc.i4 18
         ldloc _F
         ldfld int32 @block_statement_call::i
         call void Emit1(int32 Fct, int32 b)
-        // line 946
+        .line 946
         ldloc _F
         ldsflda valuetype T_array_92 _G::Btab
         ldsflda valuetype T_array_88 _G::Tab
@@ -5028,21 +5028,21 @@
         call instance valuetype T_record_91& T_array_92::ldadr(int32)
         ldfld int32 T_record_91::Lastpar
         stfld int32 @block_statement_call::Lastp
-        // line 946
+        .line 946
         ldloc _F
         ldloc _F
         ldfld int32 @block_statement_call::i
         stfld int32 @block_statement_call::Cp
-        // line 947
+        .line 947
         ldsfld int32 _G::Sy
         ldc.i4 19
         ceq
         brfalse L_if_end_1
-        // line 949
+        .line 949
     L_repeat_2:
-        // line 949
+        .line 949
         call void Insymbol()
-        // line 950
+        .line 950
         ldloc _F
         ldfld int32 @block_statement_call::Cp
         ldloc _F
@@ -5051,26 +5051,26 @@
         ldc.i4.0
         ceq
         brfalse L_else_3
-        // line 950
+        .line 950
         ldc.i4 39
         call void Error(int32 n)
         br L_if_end_4
     L_else_3:
-        // line 951
+        .line 951
         ldloc _F
         ldloc _F
         ldfld int32 @block_statement_call::Cp
         ldc.i4 1
         add
         stfld int32 @block_statement_call::Cp
-        // line 952
+        .line 952
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_statement_call::Cp
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld bool T_record_86::Normal
         brfalse L_else_5
-        // line 954
+        .line 954
         ldloc _F
         ldfld class @block_statement @block_statement_call::_slink
         ldloc _F
@@ -5087,7 +5087,7 @@
         ldloc _F
         ldflda valuetype T_item @block_statement_call::x
         call instance void @block_statement::Expression(valuetype T_symset Fsys, valuetype T_item& x)
-        // line 955
+        .line 955
         ldloc _F
         ldflda valuetype T_item @block_statement_call::x
         ldfld int32 T_item::Typ
@@ -5098,7 +5098,7 @@
         ldfld int32 T_record_86::Typ
         ceq
         brfalse L_else_7
-        // line 957
+        .line 957
         ldloc _F
         ldflda valuetype T_item @block_statement_call::x
         ldfld int32 T_item::Ref
@@ -5111,19 +5111,19 @@
         ldc.i4.0
         ceq
         brfalse L_else_9
-        // line 957
+        .line 957
         ldc.i4 36
         call void Error(int32 n)
         br L_if_end_10
     L_else_9:
-        // line 958
+        .line 958
         ldloc _F
         ldflda valuetype T_item @block_statement_call::x
         ldfld int32 T_item::Typ
         ldc.i4 5
         ceq
         brfalse L_else_11
-        // line 958
+        .line 958
         ldc.i4 22
         ldsflda valuetype T_array_90 _G::Atab
         ldloc _F
@@ -5134,14 +5134,14 @@
         call void Emit1(int32 Fct, int32 b)
         br L_if_end_12
     L_else_11:
-        // line 959
+        .line 959
         ldloc _F
         ldflda valuetype T_item @block_statement_call::x
         ldfld int32 T_item::Typ
         ldc.i4 6
         ceq
         brfalse L_if_end_13
-        // line 959
+        .line 959
         ldc.i4 22
         ldsflda valuetype T_array_92 _G::Btab
         ldloc _F
@@ -5155,7 +5155,7 @@
     L_if_end_10:
         br L_if_end_8
     L_else_7:
-        // line 962
+        .line 962
         ldloc _F
         ldflda valuetype T_item @block_statement_call::x
         ldfld int32 T_item::Typ
@@ -5173,13 +5173,13 @@
         ceq
     L_AND_shortcut_14:
         brfalse L_else_15
-        // line 963
+        .line 963
         ldc.i4 26
         ldc.i4 0
         call void Emit1(int32 Fct, int32 b)
         br L_if_end_16
     L_else_15:
-        // line 964
+        .line 964
         ldloc _F
         ldflda valuetype T_item @block_statement_call::x
         ldfld int32 T_item::Typ
@@ -5188,7 +5188,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_17
-        // line 964
+        .line 964
         ldc.i4 36
         call void Error(int32 n)
     L_if_end_17:
@@ -5197,19 +5197,19 @@
         /* nop */
         br L_if_end_6
     L_else_5:
-        // line 967
+        .line 967
         ldsfld int32 _G::Sy
         ldc.i4 36
         ceq
         ldc.i4.0
         ceq
         brfalse L_else_18
-        // line 967
+        .line 967
         ldc.i4 2
         call void Error(int32 n)
         br L_if_end_19
     L_else_18:
-        // line 968
+        .line 968
         ldloc _F
         ldloc _F
         ldfld class @block_statement @block_statement_call::_slink
@@ -5217,9 +5217,9 @@
         ldsfld valuetype T_alfa _G::Id
         call instance int32 @block::Loc(valuetype T_alfa Id)
         stfld int32 @block_statement_call::k
-        // line 968
+        .line 968
         call void Insymbol()
-        // line 969
+        .line 969
         ldloc _F
         ldfld int32 @block_statement_call::k
         ldc.i4 0
@@ -5227,7 +5227,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_20
-        // line 970
+        .line 970
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_statement_call::k
@@ -5238,11 +5238,11 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_21
-        // line 970
+        .line 970
         ldc.i4 37
         call void Error(int32 n)
     L_if_end_21:
-        // line 971
+        .line 971
         ldloc _F
         ldflda valuetype T_item @block_statement_call::x
         ldsflda valuetype T_array_88 _G::Tab
@@ -5251,7 +5251,7 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld int32 T_record_86::Typ
         stfld int32 T_item::Typ
-        // line 971
+        .line 971
         ldloc _F
         ldflda valuetype T_item @block_statement_call::x
         ldsflda valuetype T_array_88 _G::Tab
@@ -5260,14 +5260,14 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld int32 T_record_86::Ref
         stfld int32 T_item::Ref
-        // line 972
+        .line 972
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_statement_call::k
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld bool T_record_86::Normal
         brfalse L_else_22
-        // line 973
+        .line 973
         ldc.i4 0
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
@@ -5282,7 +5282,7 @@
         call void Emit2(int32 Fct, int32 a, int32 b)
         br L_if_end_23
     L_else_22:
-        // line 974
+        .line 974
         ldc.i4 1
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
@@ -5296,12 +5296,12 @@
         ldfld int32 T_record_86::Adr
         call void Emit2(int32 Fct, int32 a, int32 b)
     L_if_end_23:
-        // line 975
+        .line 975
         ldloc $tmpSetLiteral2
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_symset s, int32 val)
         brfalse L_if_end_24
-        // line 976
+        .line 976
         ldloc _F
         ldfld class @block_statement @block_statement_call::_slink
         ldloc _F
@@ -5319,7 +5319,7 @@
         ldflda valuetype T_item @block_statement_call::x
         call instance void @block_statement::Selector(valuetype T_symset Fsys, valuetype T_item& v)
     L_if_end_24:
-        // line 977
+        .line 977
         ldloc _F
         ldflda valuetype T_item @block_statement_call::x
         ldfld int32 T_item::Typ
@@ -5347,7 +5347,7 @@
         ceq
     L_OR_shortcut_25:
         brfalse L_if_end_26
-        // line 978
+        .line 978
         ldc.i4 36
         call void Error(int32 n)
     L_if_end_26:
@@ -5355,7 +5355,7 @@
     L_if_end_19:
     L_if_end_6:
     L_if_end_4:
-        // line 983
+        .line 983
         ldloc _F
         ldfld class @block_statement @block_statement_call::_slink
         ldfld class @block @block_statement::_slink
@@ -5370,32 +5370,32 @@
         ldc.i4.0
         ceq
         brfalse L_repeat_2
-        // line 985
+        .line 985
         ldsfld int32 _G::Sy
         ldc.i4 20
         ceq
         brfalse L_else_27
-        // line 985
+        .line 985
         call void Insymbol()
         br L_if_end_28
     L_else_27:
-        // line 985
+        .line 985
         ldc.i4 4
         call void Error(int32 n)
     L_if_end_28:
     L_if_end_1:
-        // line 987
+        .line 987
         ldloc _F
         ldfld int32 @block_statement_call::Cp
         ldloc _F
         ldfld int32 @block_statement_call::Lastp
         clt
         brfalse L_if_end_29
-        // line 987
+        .line 987
         ldc.i4 39
         call void Error(int32 n)
     L_if_end_29:
-        // line 988
+        .line 988
         ldc.i4 19
         ldsflda valuetype T_array_92 _G::Btab
         ldsflda valuetype T_array_88 _G::Tab
@@ -5408,7 +5408,7 @@
         ldc.i4 1
         sub
         call void Emit1(int32 Fct, int32 b)
-        // line 989
+        .line 989
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_statement_call::i
@@ -5420,7 +5420,7 @@
         ldfld int32 @block::Level
         clt
         brfalse L_if_end_30
-        // line 989
+        .line 989
         ldc.i4 3
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
@@ -5438,7 +5438,7 @@
         ret
     }
 
-// line 992
+.line 992
 
     .method public
     int32 Resulttype(int32 a, int32 b)
@@ -5463,7 +5463,7 @@
         stfld int32 @block_statement_resulttype::b
     
     L_Entry:
-        // line 994
+        .line 994
         ldloc _F
         ldfld int32 @block_statement_resulttype::a
         ldc.i4 2
@@ -5477,16 +5477,16 @@
         cgt
     L_OR_shortcut_1:
         brfalse L_else_2
-        // line 995
+        .line 995
         ldc.i4 33
         call void Error(int32 n)
-        // line 995
+        .line 995
         ldloc _F
         ldc.i4 0
         stfld int32 @block_statement_resulttype::_fnvalue
         br L_if_end_3
     L_else_2:
-        // line 997
+        .line 997
         ldloc _F
         ldfld int32 @block_statement_resulttype::a
         ldc.i4 0
@@ -5500,52 +5500,52 @@
         ceq
     L_OR_shortcut_4:
         brfalse L_else_5
-        // line 997
+        .line 997
         ldloc _F
         ldc.i4 0
         stfld int32 @block_statement_resulttype::_fnvalue
         br L_if_end_6
     L_else_5:
-        // line 998
+        .line 998
         ldloc _F
         ldfld int32 @block_statement_resulttype::a
         ldc.i4 1
         ceq
         brfalse L_else_7
-        // line 999
+        .line 999
         ldloc _F
         ldfld int32 @block_statement_resulttype::b
         ldc.i4 1
         ceq
         brfalse L_else_9
-        // line 999
+        .line 999
         ldloc _F
         ldc.i4 1
         stfld int32 @block_statement_resulttype::_fnvalue
         br L_if_end_10
     L_else_9:
-        // line 1000
+        .line 1000
         ldloc _F
         ldc.i4 2
         stfld int32 @block_statement_resulttype::_fnvalue
-        // line 1000
+        .line 1000
         ldc.i4 26
         ldc.i4 1
         call void Emit1(int32 Fct, int32 b)
     L_if_end_10:
         br L_if_end_8
     L_else_7:
-        // line 1003
+        .line 1003
         ldloc _F
         ldc.i4 2
         stfld int32 @block_statement_resulttype::_fnvalue
-        // line 1004
+        .line 1004
         ldloc _F
         ldfld int32 @block_statement_resulttype::b
         ldc.i4 1
         ceq
         brfalse L_if_end_11
-        // line 1004
+        .line 1004
         ldc.i4 26
         ldc.i4 0
         call void Emit1(int32 Fct, int32 b)
@@ -5560,7 +5560,7 @@
         ret
     }
 
-// line 1008
+.line 1008
 
     .method public
     void Expression(valuetype T_symset Fsys, valuetype T_item& x)
@@ -5646,7 +5646,7 @@
         call instance void T_typset::addValue(int32)
     
     L_Entry:
-        // line 1194
+        .line 1194
         ldloc _F
         ldloc _F
         ldfld valuetype T_symset @block_statement_expression::Fsys
@@ -5662,25 +5662,25 @@
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression::x
         call instance void @block_statement_expression::Simpleexpression(valuetype T_symset Fsys, valuetype T_item& x)
-        // line 1195
+        .line 1195
         ldloc $tmpSetLiteral2
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_symset s, int32 val)
         brfalse L_if_end_1
-        // line 1196
+        .line 1196
         ldloc _F
         ldsfld int32 _G::Sy
         stfld int32 @block_statement_expression::Op
-        // line 1196
+        .line 1196
         call void Insymbol()
-        // line 1197
+        .line 1197
         ldloc _F
         ldloc _F
         ldfld valuetype T_symset @block_statement_expression::Fsys
         ldloc _F
         ldflda valuetype T_item @block_statement_expression::y
         call instance void @block_statement_expression::Simpleexpression(valuetype T_symset Fsys, valuetype T_item& x)
-        // line 1198
+        .line 1198
         ldloc $tmpSetLiteral3
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression::x
@@ -5698,14 +5698,14 @@
         ceq
     L_AND_shortcut_2:
         brfalse L_else_3
-        // line 1200
+        .line 1200
         ldloc _F
         ldfld int32 @block_statement_expression::Op
         stloc $tmpSwitchValue4
         ldloc $tmpSwitchValue4
         ldc.i4 13
         bne.un L_check_case_6
-        // line 1201
+        .line 1201
         ldc.i4 45
         call void Emit(int32 Fct)
         br L_case_end_5
@@ -5713,7 +5713,7 @@
         ldloc $tmpSwitchValue4
         ldc.i4 14
         bne.un L_check_case_7
-        // line 1202
+        .line 1202
         ldc.i4 46
         call void Emit(int32 Fct)
         br L_case_end_5
@@ -5721,7 +5721,7 @@
         ldloc $tmpSwitchValue4
         ldc.i4 17
         bne.un L_check_case_8
-        // line 1203
+        .line 1203
         ldc.i4 47
         call void Emit(int32 Fct)
         br L_case_end_5
@@ -5729,7 +5729,7 @@
         ldloc $tmpSwitchValue4
         ldc.i4 18
         bne.un L_check_case_9
-        // line 1204
+        .line 1204
         ldc.i4 48
         call void Emit(int32 Fct)
         br L_case_end_5
@@ -5737,7 +5737,7 @@
         ldloc $tmpSwitchValue4
         ldc.i4 15
         bne.un L_check_case_10
-        // line 1205
+        .line 1205
         ldc.i4 49
         call void Emit(int32 Fct)
         br L_case_end_5
@@ -5745,49 +5745,49 @@
         ldloc $tmpSwitchValue4
         ldc.i4 16
         bne.un L_case_end_5
-        // line 1206
+        .line 1206
         ldc.i4 50
         call void Emit(int32 Fct)
     L_case_end_5:
         br L_if_end_4
     L_else_3:
-        // line 1208
+        .line 1208
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression::x
         ldfld int32 T_item::Typ
         ldc.i4 1
         ceq
         brfalse L_else_11
-        // line 1209
+        .line 1209
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression::x
         ldc.i4 2
         stfld int32 T_item::Typ
-        // line 1209
+        .line 1209
         ldc.i4 26
         ldc.i4 1
         call void Emit1(int32 Fct, int32 b)
         br L_if_end_12
     L_else_11:
-        // line 1211
+        .line 1211
         ldloc _F
         ldflda valuetype T_item @block_statement_expression::y
         ldfld int32 T_item::Typ
         ldc.i4 1
         ceq
         brfalse L_if_end_13
-        // line 1212
+        .line 1212
         ldloc _F
         ldflda valuetype T_item @block_statement_expression::y
         ldc.i4 2
         stfld int32 T_item::Typ
-        // line 1212
+        .line 1212
         ldc.i4 26
         ldc.i4 0
         call void Emit1(int32 Fct, int32 b)
     L_if_end_13:
     L_if_end_12:
-        // line 1214
+        .line 1214
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression::x
         ldfld int32 T_item::Typ
@@ -5803,14 +5803,14 @@
         ceq
     L_AND_shortcut_14:
         brfalse L_else_15
-        // line 1215
+        .line 1215
         ldloc _F
         ldfld int32 @block_statement_expression::Op
         stloc $tmpSwitchValue5
         ldloc $tmpSwitchValue5
         ldc.i4 13
         bne.un L_check_case_18
-        // line 1216
+        .line 1216
         ldc.i4 39
         call void Emit(int32 Fct)
         br L_case_end_17
@@ -5818,7 +5818,7 @@
         ldloc $tmpSwitchValue5
         ldc.i4 14
         bne.un L_check_case_19
-        // line 1217
+        .line 1217
         ldc.i4 40
         call void Emit(int32 Fct)
         br L_case_end_17
@@ -5826,7 +5826,7 @@
         ldloc $tmpSwitchValue5
         ldc.i4 17
         bne.un L_check_case_20
-        // line 1218
+        .line 1218
         ldc.i4 41
         call void Emit(int32 Fct)
         br L_case_end_17
@@ -5834,7 +5834,7 @@
         ldloc $tmpSwitchValue5
         ldc.i4 18
         bne.un L_check_case_21
-        // line 1219
+        .line 1219
         ldc.i4 42
         call void Emit(int32 Fct)
         br L_case_end_17
@@ -5842,7 +5842,7 @@
         ldloc $tmpSwitchValue5
         ldc.i4 15
         bne.un L_check_case_22
-        // line 1220
+        .line 1220
         ldc.i4 43
         call void Emit(int32 Fct)
         br L_case_end_17
@@ -5850,18 +5850,18 @@
         ldloc $tmpSwitchValue5
         ldc.i4 16
         bne.un L_case_end_17
-        // line 1221
+        .line 1221
         ldc.i4 44
         call void Emit(int32 Fct)
     L_case_end_17:
         br L_if_end_16
     L_else_15:
-        // line 1223
+        .line 1223
         ldc.i4 35
         call void Error(int32 n)
     L_if_end_16:
     L_if_end_4:
-        // line 1225
+        .line 1225
         ldloc _F
         ldfld valuetype T_item* @block_statement_expression::x
         ldc.i4 3
@@ -5872,7 +5872,7 @@
         ret
     }
 
-// line 1229
+.line 1229
 
     .method public
     void Assignment(int32 Lv, int32 Ad)
@@ -5917,7 +5917,7 @@
         call instance void T_symset::addValue(int32)
     
     L_Entry:
-        // line 1232
+        .line 1232
         ldloc _F
         ldflda valuetype T_item @block_statement_assignment::x
         ldsflda valuetype T_array_88 _G::Tab
@@ -5927,7 +5927,7 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld int32 T_record_86::Typ
         stfld int32 T_item::Typ
-        // line 1232
+        .line 1232
         ldloc _F
         ldflda valuetype T_item @block_statement_assignment::x
         ldsflda valuetype T_array_88 _G::Tab
@@ -5937,7 +5937,7 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld int32 T_record_86::Ref
         stfld int32 T_item::Ref
-        // line 1233
+        .line 1233
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld class @block_statement @block_statement_assignment::_slink
@@ -5945,18 +5945,18 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld bool T_record_86::Normal
         brfalse L_else_1
-        // line 1233
+        .line 1233
         ldloc _F
         ldc.i4 0
         stfld int32 @block_statement_assignment::f
         br L_if_end_2
     L_else_1:
-        // line 1233
+        .line 1233
         ldloc _F
         ldc.i4 1
         stfld int32 @block_statement_assignment::f
     L_if_end_2:
-        // line 1234
+        .line 1234
         ldloc _F
         ldfld int32 @block_statement_assignment::f
         ldloc _F
@@ -5964,12 +5964,12 @@
         ldloc _F
         ldfld int32 @block_statement_assignment::Ad
         call void Emit2(int32 Fct, int32 a, int32 b)
-        // line 1235
+        .line 1235
         ldloc $tmpSetLiteral1
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_symset s, int32 val)
         brfalse L_if_end_3
-        // line 1236
+        .line 1236
         ldloc _F
         ldfld class @block_statement @block_statement_assignment::_slink
         ldloc $tmpSetLiteral2
@@ -5988,28 +5988,28 @@
         ldflda valuetype T_item @block_statement_assignment::x
         call instance void @block_statement::Selector(valuetype T_symset Fsys, valuetype T_item& v)
     L_if_end_3:
-        // line 1237
+        .line 1237
         ldsfld int32 _G::Sy
         ldc.i4 27
         ceq
         brfalse L_else_4
-        // line 1237
+        .line 1237
         call void Insymbol()
         br L_if_end_5
     L_else_4:
-        // line 1238
+        .line 1238
         ldc.i4 51
         call void Error(int32 n)
-        // line 1238
+        .line 1238
         ldsfld int32 _G::Sy
         ldc.i4 13
         ceq
         brfalse L_if_end_6
-        // line 1238
+        .line 1238
         call void Insymbol()
     L_if_end_6:
     L_if_end_5:
-        // line 1240
+        .line 1240
         ldloc _F
         ldfld class @block_statement @block_statement_assignment::_slink
         ldloc _F
@@ -6018,7 +6018,7 @@
         ldloc _F
         ldflda valuetype T_item @block_statement_assignment::y
         call instance void @block_statement::Expression(valuetype T_symset Fsys, valuetype T_item& x)
-        // line 1241
+        .line 1241
         ldloc _F
         ldflda valuetype T_item @block_statement_assignment::x
         ldfld int32 T_item::Typ
@@ -6027,19 +6027,19 @@
         ldfld int32 T_item::Typ
         ceq
         brfalse L_else_7
-        // line 1242
+        .line 1242
         ldsfld valuetype T_typset _G::Stantyps
         ldloc _F
         ldflda valuetype T_item @block_statement_assignment::x
         ldfld int32 T_item::Typ
         call bool _SetContains(valuetype T_typset s, int32 val)
         brfalse L_else_9
-        // line 1242
+        .line 1242
         ldc.i4 38
         call void Emit(int32 Fct)
         br L_if_end_10
     L_else_9:
-        // line 1243
+        .line 1243
         ldloc _F
         ldflda valuetype T_item @block_statement_assignment::x
         ldfld int32 T_item::Ref
@@ -6050,19 +6050,19 @@
         ldc.i4.0
         ceq
         brfalse L_else_11
-        // line 1243
+        .line 1243
         ldc.i4 46
         call void Error(int32 n)
         br L_if_end_12
     L_else_11:
-        // line 1244
+        .line 1244
         ldloc _F
         ldflda valuetype T_item @block_statement_assignment::x
         ldfld int32 T_item::Typ
         ldc.i4 5
         ceq
         brfalse L_else_13
-        // line 1244
+        .line 1244
         ldc.i4 23
         ldsflda valuetype T_array_90 _G::Atab
         ldloc _F
@@ -6073,7 +6073,7 @@
         call void Emit1(int32 Fct, int32 b)
         br L_if_end_14
     L_else_13:
-        // line 1245
+        .line 1245
         ldc.i4 23
         ldsflda valuetype T_array_92 _G::Btab
         ldloc _F
@@ -6087,7 +6087,7 @@
     L_if_end_10:
         br L_if_end_8
     L_else_7:
-        // line 1247
+        .line 1247
         ldloc _F
         ldflda valuetype T_item @block_statement_assignment::x
         ldfld int32 T_item::Typ
@@ -6103,16 +6103,16 @@
         ceq
     L_AND_shortcut_15:
         brfalse L_else_16
-        // line 1248
+        .line 1248
         ldc.i4 26
         ldc.i4 0
         call void Emit1(int32 Fct, int32 b)
-        // line 1248
+        .line 1248
         ldc.i4 38
         call void Emit(int32 Fct)
         br L_if_end_17
     L_else_16:
-        // line 1250
+        .line 1250
         ldloc _F
         ldflda valuetype T_item @block_statement_assignment::x
         ldfld int32 T_item::Typ
@@ -6132,7 +6132,7 @@
         ceq
     L_AND_shortcut_18:
         brfalse L_if_end_19
-        // line 1250
+        .line 1250
         ldc.i4 46
         call void Error(int32 n)
     L_if_end_19:
@@ -6143,7 +6143,7 @@
         ret
     }
 
-// line 1253
+.line 1253
 
     .method public
     void Compoundstatement()
@@ -6182,9 +6182,9 @@
         call instance void T_symset::addValue(int32)
     
     L_Entry:
-        // line 1254
+        .line 1254
         call void Insymbol()
-        // line 1255
+        .line 1255
         ldloc _F
         ldfld class @block_statement @block_statement_compoundstatement::_slink
         ldfld class @block @block_statement::_slink
@@ -6201,23 +6201,23 @@
         call void _SetCheck(valuetype T_set_62 s, int32 min, int32 max)
         call valuetype T_symset _SetCastTo_T_symset(valuetype T_set_62 s)
         call instance void @block::Statement(valuetype T_symset Fsys)
-        // line 1256
+        .line 1256
         br L_while_test_2
     L_while_1:
-        // line 1257
+        .line 1257
         ldsfld int32 _G::Sy
         ldc.i4 24
         ceq
         brfalse L_else_3
-        // line 1257
+        .line 1257
         call void Insymbol()
         br L_if_end_4
     L_else_3:
-        // line 1257
+        .line 1257
         ldc.i4 14
         call void Error(int32 n)
     L_if_end_4:
-        // line 1258
+        .line 1258
         ldloc _F
         ldfld class @block_statement @block_statement_compoundstatement::_slink
         ldfld class @block @block_statement::_slink
@@ -6243,16 +6243,16 @@
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_set_62 s, int32 val)
         brtrue L_while_1
-        // line 1260
+        .line 1260
         ldsfld int32 _G::Sy
         ldc.i4 43
         ceq
         brfalse L_else_5
-        // line 1260
+        .line 1260
         call void Insymbol()
         br L_if_end_6
     L_else_5:
-        // line 1260
+        .line 1260
         ldc.i4 57
         call void Error(int32 n)
     L_if_end_6:
@@ -6261,7 +6261,7 @@
         ret
     }
 
-// line 1263
+.line 1263
 
     .method public
     void Ifstatement()
@@ -6300,9 +6300,9 @@
         call instance void T_symset::addValue(int32)
     
     L_Entry:
-        // line 1265
+        .line 1265
         call void Insymbol()
-        // line 1266
+        .line 1266
         ldloc _F
         ldfld class @block_statement @block_statement_ifstatement::_slink
         ldloc _F
@@ -6320,7 +6320,7 @@
         ldloc _F
         ldflda valuetype T_item @block_statement_ifstatement::x
         call instance void @block_statement::Expression(valuetype T_symset Fsys, valuetype T_item& x)
-        // line 1267
+        .line 1267
         ldloc $tmpSetLiteral2
         ldloc _F
         ldflda valuetype T_item @block_statement_ifstatement::x
@@ -6329,39 +6329,39 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 1267
+        .line 1267
         ldc.i4 17
         call void Error(int32 n)
     L_if_end_1:
-        // line 1268
+        .line 1268
         ldloc _F
         ldsfld int32 _G::Lc
         stfld int32 @block_statement_ifstatement::Lc1
-        // line 1268
+        .line 1268
         ldc.i4 11
         call void Emit(int32 Fct)
-        // line 1269
+        .line 1269
         ldsfld int32 _G::Sy
         ldc.i4 50
         ceq
         brfalse L_else_2
-        // line 1269
+        .line 1269
         call void Insymbol()
         br L_if_end_3
     L_else_2:
-        // line 1270
+        .line 1270
         ldc.i4 52
         call void Error(int32 n)
-        // line 1270
+        .line 1270
         ldsfld int32 _G::Sy
         ldc.i4 47
         ceq
         brfalse L_if_end_4
-        // line 1270
+        .line 1270
         call void Insymbol()
     L_if_end_4:
     L_if_end_3:
-        // line 1272
+        .line 1272
         ldloc _F
         ldfld class @block_statement @block_statement_ifstatement::_slink
         ldfld class @block @block_statement::_slink
@@ -6378,21 +6378,21 @@
         call void _SetCheck(valuetype T_set_62 s, int32 min, int32 max)
         call valuetype T_symset _SetCastTo_T_symset(valuetype T_set_62 s)
         call instance void @block::Statement(valuetype T_symset Fsys)
-        // line 1273
+        .line 1273
         ldsfld int32 _G::Sy
         ldc.i4 44
         ceq
         brfalse L_else_5
-        // line 1274
+        .line 1274
         call void Insymbol()
-        // line 1274
+        .line 1274
         ldloc _F
         ldsfld int32 _G::Lc
         stfld int32 @block_statement_ifstatement::Lc2
-        // line 1274
+        .line 1274
         ldc.i4 10
         call void Emit(int32 Fct)
-        // line 1275
+        .line 1275
         ldsflda valuetype T_array_97 _G::Code
         ldloc _F
         ldfld int32 @block_statement_ifstatement::Lc1
@@ -6403,7 +6403,7 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_order::y
-        // line 1275
+        .line 1275
         ldloc _F
         ldfld class @block_statement @block_statement_ifstatement::_slink
         ldfld class @block @block_statement::_slink
@@ -6411,7 +6411,7 @@
         ldfld class @block_statement @block_statement_ifstatement::_slink
         ldfld valuetype T_symset @block_statement::Fsys
         call instance void @block::Statement(valuetype T_symset Fsys)
-        // line 1275
+        .line 1275
         ldsflda valuetype T_array_97 _G::Code
         ldloc _F
         ldfld int32 @block_statement_ifstatement::Lc2
@@ -6424,7 +6424,7 @@
         stfld int32 T_order::y
         br L_if_end_6
     L_else_5:
-        // line 1277
+        .line 1277
         ldsflda valuetype T_array_97 _G::Code
         ldloc _F
         ldfld int32 @block_statement_ifstatement::Lc1
@@ -6441,7 +6441,7 @@
         ret
     }
 
-// line 1280
+.line 1280
 
     .method public
     void Casestatement()
@@ -6490,17 +6490,17 @@
         call instance void T_typset::addValue(int32)
     
     L_Entry:
-        // line 1311
+        .line 1311
         call void Insymbol()
-        // line 1311
+        .line 1311
         ldloc _F
         ldc.i4 0
         stfld int32 @block_statement_casestatement::i
-        // line 1311
+        .line 1311
         ldloc _F
         ldc.i4 0
         stfld int32 @block_statement_casestatement::j
-        // line 1312
+        .line 1312
         ldloc _F
         ldfld class @block_statement @block_statement_casestatement::_slink
         ldloc _F
@@ -6518,7 +6518,7 @@
         ldloc _F
         ldflda valuetype T_item @block_statement_casestatement::x
         call instance void @block_statement::Expression(valuetype T_symset Fsys, valuetype T_item& x)
-        // line 1313
+        .line 1313
         ldloc $tmpSetLiteral2
         ldloc _F
         ldflda valuetype T_item @block_statement_casestatement::x
@@ -6527,39 +6527,39 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 1313
+        .line 1313
         ldc.i4 23
         call void Error(int32 n)
     L_if_end_1:
-        // line 1314
+        .line 1314
         ldloc _F
         ldsfld int32 _G::Lc
         stfld int32 @block_statement_casestatement::Lc1
-        // line 1314
+        .line 1314
         ldc.i4 12
         call void Emit(int32 Fct)
-        // line 1315
+        .line 1315
         ldsfld int32 _G::Sy
         ldc.i4 46
         ceq
         brfalse L_else_2
-        // line 1315
+        .line 1315
         call void Insymbol()
         br L_if_end_3
     L_else_2:
-        // line 1315
+        .line 1315
         ldc.i4 8
         call void Error(int32 n)
     L_if_end_3:
-        // line 1316
+        .line 1316
         ldloc _F
         call instance void @block_statement_casestatement::Onecase()
-        // line 1317
+        .line 1317
         br L_while_test_5
     L_while_4:
-        // line 1318
+        .line 1318
         call void Insymbol()
-        // line 1318
+        .line 1318
         ldloc _F
         call instance void @block_statement_casestatement::Onecase()
     L_while_test_5:
@@ -6567,7 +6567,7 @@
         ldc.i4 24
         ceq
         brtrue L_while_4
-        // line 1320
+        .line 1320
         ldsflda valuetype T_array_97 _G::Code
         ldloc _F
         ldfld int32 @block_statement_casestatement::Lc1
@@ -6578,7 +6578,7 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_order::y
-        // line 1321
+        .line 1321
         ldloc _F
         ldfld int32 @block_statement_casestatement::i
         stloc $tmpEndValue3
@@ -6591,7 +6591,7 @@
         ldloc $tmpIndex4
         stfld int32 @block_statement_casestatement::k
     L_for_loop_6:
-        // line 1322
+        .line 1322
         ldc.i4 13
         ldloc _F
         ldflda valuetype T_block_statement_casestatement_array_160 @block_statement_casestatement::Casetab
@@ -6600,7 +6600,7 @@
         call instance valuetype T_block_statement_casestatement_record_159& T_block_statement_casestatement_array_160::ldadr(int32)
         ldfld int32 T_block_statement_casestatement_record_159::Val
         call void Emit1(int32 Fct, int32 b)
-        // line 1322
+        .line 1322
         ldc.i4 13
         ldloc _F
         ldflda valuetype T_block_statement_casestatement_array_160 @block_statement_casestatement::Casetab
@@ -6623,11 +6623,11 @@
         br L_for_loop_6
     L_for_end_7:
         pop
-        // line 1324
+        .line 1324
         ldc.i4 10
         ldc.i4 0
         call void Emit1(int32 Fct, int32 b)
-        // line 1325
+        .line 1325
         ldloc _F
         ldfld int32 @block_statement_casestatement::j
         stloc $tmpEndValue6
@@ -6640,7 +6640,7 @@
         ldloc $tmpIndex7
         stfld int32 @block_statement_casestatement::k
     L_for_loop_8:
-        // line 1325
+        .line 1325
         ldsflda valuetype T_array_97 _G::Code
         ldloc _F
         ldflda valuetype T_block_statement_casestatement_array_162 @block_statement_casestatement::Exittab
@@ -6669,16 +6669,16 @@
         br L_for_loop_8
     L_for_end_9:
         pop
-        // line 1326
+        .line 1326
         ldsfld int32 _G::Sy
         ldc.i4 43
         ceq
         brfalse L_else_10
-        // line 1326
+        .line 1326
         call void Insymbol()
         br L_if_end_11
     L_else_10:
-        // line 1326
+        .line 1326
         ldc.i4 57
         call void Error(int32 n)
     L_if_end_11:
@@ -6687,7 +6687,7 @@
         ret
     }
 
-// line 1329
+.line 1329
 
     .method public
     void Repeatstatement()
@@ -6734,13 +6734,13 @@
         call instance void T_typset::addValue(int32)
     
     L_Entry:
-        // line 1331
+        .line 1331
         ldloc _F
         ldsfld int32 _G::Lc
         stfld int32 @block_statement_repeatstatement::Lc1
-        // line 1332
+        .line 1332
         call void Insymbol()
-        // line 1332
+        .line 1332
         ldloc _F
         ldfld class @block_statement @block_statement_repeatstatement::_slink
         ldfld class @block @block_statement::_slink
@@ -6757,23 +6757,23 @@
         call void _SetCheck(valuetype T_set_62 s, int32 min, int32 max)
         call valuetype T_symset _SetCastTo_T_symset(valuetype T_set_62 s)
         call instance void @block::Statement(valuetype T_symset Fsys)
-        // line 1333
+        .line 1333
         br L_while_test_2
     L_while_1:
-        // line 1334
+        .line 1334
         ldsfld int32 _G::Sy
         ldc.i4 24
         ceq
         brfalse L_else_3
-        // line 1334
+        .line 1334
         call void Insymbol()
         br L_if_end_4
     L_else_3:
-        // line 1334
+        .line 1334
         ldc.i4 14
         call void Error(int32 n)
     L_if_end_4:
-        // line 1335
+        .line 1335
         ldloc _F
         ldfld class @block_statement @block_statement_repeatstatement::_slink
         ldfld class @block @block_statement::_slink
@@ -6799,14 +6799,14 @@
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_set_62 s, int32 val)
         brtrue L_while_1
-        // line 1337
+        .line 1337
         ldsfld int32 _G::Sy
         ldc.i4 45
         ceq
         brfalse L_else_5
-        // line 1338
+        .line 1338
         call void Insymbol()
-        // line 1338
+        .line 1338
         ldloc _F
         ldfld class @block_statement @block_statement_repeatstatement::_slink
         ldloc _F
@@ -6815,7 +6815,7 @@
         ldloc _F
         ldflda valuetype T_item @block_statement_repeatstatement::x
         call instance void @block_statement::Expression(valuetype T_symset Fsys, valuetype T_item& x)
-        // line 1339
+        .line 1339
         ldloc $tmpSetLiteral4
         ldloc _F
         ldflda valuetype T_item @block_statement_repeatstatement::x
@@ -6824,18 +6824,18 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_7
-        // line 1339
+        .line 1339
         ldc.i4 17
         call void Error(int32 n)
     L_if_end_7:
-        // line 1340
+        .line 1340
         ldc.i4 11
         ldloc _F
         ldfld int32 @block_statement_repeatstatement::Lc1
         call void Emit1(int32 Fct, int32 b)
         br L_if_end_6
     L_else_5:
-        // line 1342
+        .line 1342
         ldc.i4 53
         call void Error(int32 n)
     L_if_end_6:
@@ -6844,7 +6844,7 @@
         ret
     }
 
-// line 1345
+.line 1345
 
     .method public
     void Whilestatement()
@@ -6875,13 +6875,13 @@
         call instance void T_typset::addValue(int32)
     
     L_Entry:
-        // line 1347
+        .line 1347
         call void Insymbol()
-        // line 1347
+        .line 1347
         ldloc _F
         ldsfld int32 _G::Lc
         stfld int32 @block_statement_whilestatement::Lc1
-        // line 1348
+        .line 1348
         ldloc _F
         ldfld class @block_statement @block_statement_whilestatement::_slink
         ldloc _F
@@ -6899,7 +6899,7 @@
         ldloc _F
         ldflda valuetype T_item @block_statement_whilestatement::x
         call instance void @block_statement::Expression(valuetype T_symset Fsys, valuetype T_item& x)
-        // line 1349
+        .line 1349
         ldloc $tmpSetLiteral2
         ldloc _F
         ldflda valuetype T_item @block_statement_whilestatement::x
@@ -6908,31 +6908,31 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 1349
+        .line 1349
         ldc.i4 17
         call void Error(int32 n)
     L_if_end_1:
-        // line 1350
+        .line 1350
         ldloc _F
         ldsfld int32 _G::Lc
         stfld int32 @block_statement_whilestatement::Lc2
-        // line 1350
+        .line 1350
         ldc.i4 11
         call void Emit(int32 Fct)
-        // line 1351
+        .line 1351
         ldsfld int32 _G::Sy
         ldc.i4 47
         ceq
         brfalse L_else_2
-        // line 1351
+        .line 1351
         call void Insymbol()
         br L_if_end_3
     L_else_2:
-        // line 1351
+        .line 1351
         ldc.i4 54
         call void Error(int32 n)
     L_if_end_3:
-        // line 1352
+        .line 1352
         ldloc _F
         ldfld class @block_statement @block_statement_whilestatement::_slink
         ldfld class @block @block_statement::_slink
@@ -6940,12 +6940,12 @@
         ldfld class @block_statement @block_statement_whilestatement::_slink
         ldfld valuetype T_symset @block_statement::Fsys
         call instance void @block::Statement(valuetype T_symset Fsys)
-        // line 1352
+        .line 1352
         ldc.i4 10
         ldloc _F
         ldfld int32 @block_statement_whilestatement::Lc1
         call void Emit1(int32 Fct, int32 b)
-        // line 1352
+        .line 1352
         ldsflda valuetype T_array_97 _G::Code
         ldloc _F
         ldfld int32 @block_statement_whilestatement::Lc2
@@ -6961,7 +6961,7 @@
         ret
     }
 
-// line 1355
+.line 1355
 
     .method public
     void Forstatement()
@@ -7047,14 +7047,14 @@
         call instance void T_symset::addValue(int32)
     
     L_Entry:
-        // line 1358
+        .line 1358
         call void Insymbol()
-        // line 1359
+        .line 1359
         ldsfld int32 _G::Sy
         ldc.i4 36
         ceq
         brfalse L_else_1
-        // line 1360
+        .line 1360
         ldloc _F
         ldloc _F
         ldfld class @block_statement @block_statement_forstatement::_slink
@@ -7062,21 +7062,21 @@
         ldsfld valuetype T_alfa _G::Id
         call instance int32 @block::Loc(valuetype T_alfa Id)
         stfld int32 @block_statement_forstatement::i
-        // line 1360
+        .line 1360
         call void Insymbol()
-        // line 1361
+        .line 1361
         ldloc _F
         ldfld int32 @block_statement_forstatement::i
         ldc.i4 0
         ceq
         brfalse L_else_3
-        // line 1361
+        .line 1361
         ldloc _F
         ldc.i4 1
         stfld int32 @block_statement_forstatement::Cvt
         br L_if_end_4
     L_else_3:
-        // line 1362
+        .line 1362
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_statement_forstatement::i
@@ -7085,7 +7085,7 @@
         ldc.i4 1
         ceq
         brfalse L_else_5
-        // line 1363
+        .line 1363
         ldloc _F
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
@@ -7093,7 +7093,7 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld int32 T_record_86::Typ
         stfld int32 @block_statement_forstatement::Cvt
-        // line 1364
+        .line 1364
         ldc.i4 0
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
@@ -7106,7 +7106,7 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld int32 T_record_86::Adr
         call void Emit2(int32 Fct, int32 a, int32 b)
-        // line 1365
+        .line 1365
         ldloc $tmpSetLiteral1
         ldloc _F
         ldfld int32 @block_statement_forstatement::Cvt
@@ -7114,16 +7114,16 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_7
-        // line 1366
+        .line 1366
         ldc.i4 18
         call void Error(int32 n)
     L_if_end_7:
         br L_if_end_6
     L_else_5:
-        // line 1368
+        .line 1368
         ldc.i4 37
         call void Error(int32 n)
-        // line 1368
+        .line 1368
         ldloc _F
         ldc.i4 1
         stfld int32 @block_statement_forstatement::Cvt
@@ -7131,7 +7131,7 @@
     L_if_end_4:
         br L_if_end_2
     L_else_1:
-        // line 1370
+        .line 1370
         ldloc _F
         ldfld class @block_statement @block_statement_forstatement::_slink
         ldfld class @block @block_statement::_slink
@@ -7150,14 +7150,14 @@
         ldc.i4 2
         call instance void @block::Skip(valuetype T_symset Fsys, int32 n)
     L_if_end_2:
-        // line 1371
+        .line 1371
         ldsfld int32 _G::Sy
         ldc.i4 27
         ceq
         brfalse L_else_8
-        // line 1372
+        .line 1372
         call void Insymbol()
-        // line 1372
+        .line 1372
         ldloc _F
         ldfld class @block_statement @block_statement_forstatement::_slink
         ldloc $tmpSetLiteral3
@@ -7175,7 +7175,7 @@
         ldloc _F
         ldflda valuetype T_item @block_statement_forstatement::x
         call instance void @block_statement::Expression(valuetype T_symset Fsys, valuetype T_item& x)
-        // line 1373
+        .line 1373
         ldloc _F
         ldflda valuetype T_item @block_statement_forstatement::x
         ldfld int32 T_item::Typ
@@ -7185,14 +7185,14 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_10
-        // line 1373
+        .line 1373
         ldc.i4 19
         call void Error(int32 n)
     L_if_end_10:
         /* nop */
         br L_if_end_9
     L_else_8:
-        // line 1374
+        .line 1374
         ldloc _F
         ldfld class @block_statement @block_statement_forstatement::_slink
         ldfld class @block @block_statement::_slink
@@ -7211,28 +7211,28 @@
         ldc.i4 51
         call instance void @block::Skip(valuetype T_symset Fsys, int32 n)
     L_if_end_9:
-        // line 1375
+        .line 1375
         ldloc _F
         ldc.i4 14
         stfld int32 @block_statement_forstatement::f
-        // line 1376
+        .line 1376
         ldloc $tmpSetLiteral5
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_symset s, int32 val)
         brfalse L_else_11
-        // line 1377
+        .line 1377
         ldsfld int32 _G::Sy
         ldc.i4 49
         ceq
         brfalse L_if_end_13
-        // line 1377
+        .line 1377
         ldloc _F
         ldc.i4 16
         stfld int32 @block_statement_forstatement::f
     L_if_end_13:
-        // line 1378
+        .line 1378
         call void Insymbol()
-        // line 1378
+        .line 1378
         ldloc _F
         ldfld class @block_statement @block_statement_forstatement::_slink
         ldloc $tmpSetLiteral6
@@ -7250,7 +7250,7 @@
         ldloc _F
         ldflda valuetype T_item @block_statement_forstatement::x
         call instance void @block_statement::Expression(valuetype T_symset Fsys, valuetype T_item& x)
-        // line 1379
+        .line 1379
         ldloc _F
         ldflda valuetype T_item @block_statement_forstatement::x
         ldfld int32 T_item::Typ
@@ -7260,13 +7260,13 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_14
-        // line 1379
+        .line 1379
         ldc.i4 19
         call void Error(int32 n)
     L_if_end_14:
         br L_if_end_12
     L_else_11:
-        // line 1380
+        .line 1380
         ldloc _F
         ldfld class @block_statement @block_statement_forstatement::_slink
         ldfld class @block @block_statement::_slink
@@ -7285,32 +7285,32 @@
         ldc.i4 55
         call instance void @block::Skip(valuetype T_symset Fsys, int32 n)
     L_if_end_12:
-        // line 1381
+        .line 1381
         ldloc _F
         ldsfld int32 _G::Lc
         stfld int32 @block_statement_forstatement::Lc1
-        // line 1381
+        .line 1381
         ldloc _F
         ldfld int32 @block_statement_forstatement::f
         call void Emit(int32 Fct)
-        // line 1382
+        .line 1382
         ldsfld int32 _G::Sy
         ldc.i4 47
         ceq
         brfalse L_else_15
-        // line 1382
+        .line 1382
         call void Insymbol()
         br L_if_end_16
     L_else_15:
-        // line 1382
+        .line 1382
         ldc.i4 54
         call void Error(int32 n)
     L_if_end_16:
-        // line 1383
+        .line 1383
         ldloc _F
         ldsfld int32 _G::Lc
         stfld int32 @block_statement_forstatement::Lc2
-        // line 1383
+        .line 1383
         ldloc _F
         ldfld class @block_statement @block_statement_forstatement::_slink
         ldfld class @block @block_statement::_slink
@@ -7318,7 +7318,7 @@
         ldfld class @block_statement @block_statement_forstatement::_slink
         ldfld valuetype T_symset @block_statement::Fsys
         call instance void @block::Statement(valuetype T_symset Fsys)
-        // line 1384
+        .line 1384
         ldloc _F
         ldfld int32 @block_statement_forstatement::f
         ldc.i4 1
@@ -7326,7 +7326,7 @@
         ldloc _F
         ldfld int32 @block_statement_forstatement::Lc2
         call void Emit1(int32 Fct, int32 b)
-        // line 1384
+        .line 1384
         ldsflda valuetype T_array_97 _G::Code
         ldloc _F
         ldfld int32 @block_statement_forstatement::Lc1
@@ -7342,7 +7342,7 @@
         ret
     }
 
-// line 1387
+.line 1387
 
     .method public
     void Standproc(int32 n)
@@ -7436,7 +7436,7 @@
         call instance void T_symset::addValue(int32)
     
     L_Entry:
-        // line 1391
+        .line 1391
         ldloc _F
         ldfld int32 @block_statement_standproc::n
         stloc $tmpSwitchValue1
@@ -7448,40 +7448,40 @@
         beq L_case_3
         br L_check_case_2
     L_case_3:
-        // line 1393
+        .line 1393
         ldsfld bool _G::Iflag
         ldc.i4.0
         ceq
         brfalse L_if_end_4
-        // line 1394
+        .line 1394
         ldc.i4 20
         call void Error(int32 n)
-        // line 1394
+        .line 1394
         ldc.i4 1 // (true)
         stsfld bool _G::Iflag
     L_if_end_4:
-        // line 1396
+        .line 1396
         ldsfld int32 _G::Sy
         ldc.i4 19
         ceq
         brfalse L_if_end_5
-        // line 1398
+        .line 1398
     L_repeat_6:
-        // line 1398
+        .line 1398
         call void Insymbol()
-        // line 1399
+        .line 1399
         ldsfld int32 _G::Sy
         ldc.i4 36
         ceq
         ldc.i4.0
         ceq
         brfalse L_else_7
-        // line 1399
+        .line 1399
         ldc.i4 2
         call void Error(int32 n)
         br L_if_end_8
     L_else_7:
-        // line 1400
+        .line 1400
         ldloc _F
         ldloc _F
         ldfld class @block_statement @block_statement_standproc::_slink
@@ -7489,9 +7489,9 @@
         ldsfld valuetype T_alfa _G::Id
         call instance int32 @block::Loc(valuetype T_alfa Id)
         stfld int32 @block_statement_standproc::i
-        // line 1400
+        .line 1400
         call void Insymbol()
-        // line 1401
+        .line 1401
         ldloc _F
         ldfld int32 @block_statement_standproc::i
         ldc.i4 0
@@ -7499,7 +7499,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_9
-        // line 1402
+        .line 1402
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_statement_standproc::i
@@ -7510,12 +7510,12 @@
         ldc.i4.0
         ceq
         brfalse L_else_10
-        // line 1402
+        .line 1402
         ldc.i4 37
         call void Error(int32 n)
         br L_if_end_11
     L_else_10:
-        // line 1403
+        .line 1403
         ldloc _F
         ldflda valuetype T_item @block_statement_standproc::x
         ldsflda valuetype T_array_88 _G::Tab
@@ -7524,7 +7524,7 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld int32 T_record_86::Typ
         stfld int32 T_item::Typ
-        // line 1403
+        .line 1403
         ldloc _F
         ldflda valuetype T_item @block_statement_standproc::x
         ldsflda valuetype T_array_88 _G::Tab
@@ -7533,25 +7533,25 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld int32 T_record_86::Ref
         stfld int32 T_item::Ref
-        // line 1404
+        .line 1404
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_statement_standproc::i
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld bool T_record_86::Normal
         brfalse L_else_12
-        // line 1404
+        .line 1404
         ldloc _F
         ldc.i4 0
         stfld int32 @block_statement_standproc::f
         br L_if_end_13
     L_else_12:
-        // line 1404
+        .line 1404
         ldloc _F
         ldc.i4 1
         stfld int32 @block_statement_standproc::f
     L_if_end_13:
-        // line 1405
+        .line 1405
         ldloc _F
         ldfld int32 @block_statement_standproc::f
         ldsflda valuetype T_array_88 _G::Tab
@@ -7565,12 +7565,12 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld int32 T_record_86::Adr
         call void Emit2(int32 Fct, int32 a, int32 b)
-        // line 1406
+        .line 1406
         ldloc $tmpSetLiteral2
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_symset s, int32 val)
         brfalse L_if_end_14
-        // line 1407
+        .line 1407
         ldloc _F
         ldfld class @block_statement @block_statement_standproc::_slink
         ldloc _F
@@ -7589,14 +7589,14 @@
         ldflda valuetype T_item @block_statement_standproc::x
         call instance void @block_statement::Selector(valuetype T_symset Fsys, valuetype T_item& v)
     L_if_end_14:
-        // line 1408
+        .line 1408
         ldloc $tmpSetLiteral4
         ldloc _F
         ldflda valuetype T_item @block_statement_standproc::x
         ldfld int32 T_item::Typ
         call bool _SetContains(valuetype T_typset s, int32 val)
         brfalse L_else_15
-        // line 1409
+        .line 1409
         ldc.i4 27
         ldloc _F
         ldflda valuetype T_item @block_statement_standproc::x
@@ -7604,14 +7604,14 @@
         call void Emit1(int32 Fct, int32 b)
         br L_if_end_16
     L_else_15:
-        // line 1409
+        .line 1409
         ldc.i4 40
         call void Error(int32 n)
     L_if_end_16:
     L_if_end_11:
     L_if_end_9:
     L_if_end_8:
-        // line 1412
+        .line 1412
         ldloc _F
         ldfld class @block_statement @block_statement_standproc::_slink
         ldfld class @block @block_statement::_slink
@@ -7628,27 +7628,27 @@
         ldc.i4.0
         ceq
         brfalse L_repeat_6
-        // line 1414
+        .line 1414
         ldsfld int32 _G::Sy
         ldc.i4 20
         ceq
         brfalse L_else_17
-        // line 1414
+        .line 1414
         call void Insymbol()
         br L_if_end_18
     L_else_17:
-        // line 1414
+        .line 1414
         ldc.i4 4
         call void Error(int32 n)
     L_if_end_18:
     L_if_end_5:
-        // line 1416
+        .line 1416
         ldloc _F
         ldfld int32 @block_statement_standproc::n
         ldc.i4 2
         ceq
         brfalse L_if_end_19
-        // line 1416
+        .line 1416
         ldc.i4 62
         call void Emit(int32 Fct)
     L_if_end_19:
@@ -7662,33 +7662,33 @@
         beq L_case_20
         br L_case_end_1
     L_case_20:
-        // line 1419
+        .line 1419
         ldsfld int32 _G::Sy
         ldc.i4 19
         ceq
         brfalse L_if_end_21
-        // line 1421
+        .line 1421
     L_repeat_22:
-        // line 1421
+        .line 1421
         call void Insymbol()
-        // line 1422
+        .line 1422
         ldsfld int32 _G::Sy
         ldc.i4 3
         ceq
         brfalse L_else_23
-        // line 1423
+        .line 1423
         ldc.i4 24
         ldsfld int32 _G::Sleng
         call void Emit1(int32 Fct, int32 b)
-        // line 1423
+        .line 1423
         ldc.i4 28
         ldsfld int32 _G::Inum
         call void Emit1(int32 Fct, int32 b)
-        // line 1423
+        .line 1423
         call void Insymbol()
         br L_if_end_24
     L_else_23:
-        // line 1425
+        .line 1425
         ldloc _F
         ldfld class @block_statement @block_statement_standproc::_slink
         ldloc _F
@@ -7706,7 +7706,7 @@
         ldloc _F
         ldflda valuetype T_item @block_statement_standproc::x
         call instance void @block_statement::Expression(valuetype T_symset Fsys, valuetype T_item& x)
-        // line 1426
+        .line 1426
         ldsfld valuetype T_typset _G::Stantyps
         ldloc _F
         ldflda valuetype T_item @block_statement_standproc::x
@@ -7715,18 +7715,18 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_25
-        // line 1426
+        .line 1426
         ldc.i4 41
         call void Error(int32 n)
     L_if_end_25:
-        // line 1427
+        .line 1427
         ldsfld int32 _G::Sy
         ldc.i4 26
         ceq
         brfalse L_else_26
-        // line 1428
+        .line 1428
         call void Insymbol()
-        // line 1429
+        .line 1429
         ldloc _F
         ldfld class @block_statement @block_statement_standproc::_slink
         ldloc _F
@@ -7744,7 +7744,7 @@
         ldloc _F
         ldflda valuetype T_item @block_statement_standproc::y
         call instance void @block_statement::Expression(valuetype T_symset Fsys, valuetype T_item& x)
-        // line 1430
+        .line 1430
         ldloc _F
         ldflda valuetype T_item @block_statement_standproc::y
         ldfld int32 T_item::Typ
@@ -7753,16 +7753,16 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_28
-        // line 1430
+        .line 1430
         ldc.i4 43
         call void Error(int32 n)
     L_if_end_28:
-        // line 1431
+        .line 1431
         ldsfld int32 _G::Sy
         ldc.i4 26
         ceq
         brfalse L_else_29
-        // line 1432
+        .line 1432
         ldloc _F
         ldflda valuetype T_item @block_statement_standproc::x
         ldfld int32 T_item::Typ
@@ -7771,13 +7771,13 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_31
-        // line 1432
+        .line 1432
         ldc.i4 42
         call void Error(int32 n)
     L_if_end_31:
-        // line 1433
+        .line 1433
         call void Insymbol()
-        // line 1433
+        .line 1433
         ldloc _F
         ldfld class @block_statement @block_statement_standproc::_slink
         ldloc _F
@@ -7795,7 +7795,7 @@
         ldloc _F
         ldflda valuetype T_item @block_statement_standproc::y
         call instance void @block_statement::Expression(valuetype T_symset Fsys, valuetype T_item& x)
-        // line 1434
+        .line 1434
         ldloc _F
         ldflda valuetype T_item @block_statement_standproc::y
         ldfld int32 T_item::Typ
@@ -7804,16 +7804,16 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_32
-        // line 1434
+        .line 1434
         ldc.i4 43
         call void Error(int32 n)
     L_if_end_32:
-        // line 1435
+        .line 1435
         ldc.i4 37
         call void Emit(int32 Fct)
         br L_if_end_30
     L_else_29:
-        // line 1437
+        .line 1437
         ldc.i4 30
         ldloc _F
         ldflda valuetype T_item @block_statement_standproc::x
@@ -7822,7 +7822,7 @@
     L_if_end_30:
         br L_if_end_27
     L_else_26:
-        // line 1439
+        .line 1439
         ldc.i4 29
         ldloc _F
         ldflda valuetype T_item @block_statement_standproc::x
@@ -7836,27 +7836,27 @@
         ldc.i4.0
         ceq
         brfalse L_repeat_22
-        // line 1442
+        .line 1442
         ldsfld int32 _G::Sy
         ldc.i4 20
         ceq
         brfalse L_else_33
-        // line 1442
+        .line 1442
         call void Insymbol()
         br L_if_end_34
     L_else_33:
-        // line 1442
+        .line 1442
         ldc.i4 4
         call void Error(int32 n)
     L_if_end_34:
     L_if_end_21:
-        // line 1444
+        .line 1444
         ldloc _F
         ldfld int32 @block_statement_standproc::n
         ldc.i4 4
         ceq
         brfalse L_if_end_35
-        // line 1444
+        .line 1444
         ldc.i4 63
         call void Emit(int32 Fct)
     L_if_end_35:
@@ -7868,7 +7868,7 @@
 }
 
 
-// line 574
+.line 574
 //================================================================================
 // scope: block (level : 2)
 
@@ -7892,7 +7892,7 @@
         ret
     }
 
-// line 587
+.line 587
 
     .method public
     void Skip(valuetype T_symset Fsys, int32 n)
@@ -7917,14 +7917,14 @@
         stfld int32 @block_skip::n
     
     L_Entry:
-        // line 588
+        .line 588
         ldloc _F
         ldfld int32 @block_skip::n
         call void Error(int32 n)
-        // line 589
+        .line 589
         br L_while_test_2
     L_while_1:
-        // line 589
+        .line 589
         call void Insymbol()
     L_while_test_2:
         ldloc _F
@@ -7939,7 +7939,7 @@
         ret
     }
 
-// line 592
+.line 592
 
     .method public
     void Test(valuetype T_symset S1, valuetype T_symset S2, int32 n)
@@ -7968,7 +7968,7 @@
         stfld valuetype T_symset @block_test::S2
     
     L_Entry:
-        // line 593
+        .line 593
         ldloc _F
         ldfld valuetype T_symset @block_test::S1
         ldsfld int32 _G::Sy
@@ -7976,7 +7976,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 594
+        .line 594
         ldloc _F
         ldfld class @block @block_test::_slink
         ldloc _F
@@ -7993,7 +7993,7 @@
         ret
     }
 
-// line 597
+.line 597
 
     .method public
     void Testsemicolon()
@@ -8024,28 +8024,28 @@
         call instance void T_symset::addValue(int32)
     
     L_Entry:
-        // line 599
+        .line 599
         ldsfld int32 _G::Sy
         ldc.i4 24
         ceq
         brfalse L_else_1
-        // line 599
+        .line 599
         call void Insymbol()
         br L_if_end_2
     L_else_1:
-        // line 600
+        .line 600
         ldc.i4 14
         call void Error(int32 n)
-        // line 601
+        .line 601
         ldloc $tmpSetLiteral1
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_symset s, int32 val)
         brfalse L_if_end_3
-        // line 601
+        .line 601
         call void Insymbol()
     L_if_end_3:
     L_if_end_2:
-        // line 603
+        .line 603
         ldloc _F
         ldfld class @block @block_testsemicolon::_slink
         ldloc $tmpSetLiteral2
@@ -8068,7 +8068,7 @@
         ret
     }
 
-// line 606
+.line 606
 
     .method public
     void Enter(valuetype T_alfa Id, int32 k)
@@ -8093,24 +8093,24 @@
         stfld int32 @block_enter::k
     
     L_Entry:
-        // line 608
+        .line 608
         ldsfld int32 _G::t
         ldc.i4 1000
         ceq
         brfalse L_else_1
-        // line 608
+        .line 608
         ldc.i4 1
         call void Fatal(int32 n)
         br L_if_end_2
     L_else_1:
-        // line 609
+        .line 609
         ldsflda valuetype T_array_88 _G::Tab
         ldc.i4 0
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldloc _F
         ldfld valuetype T_alfa @block_enter::Id
         stfld valuetype T_alfa T_record_86::Name
-        // line 610
+        .line 610
         ldloc _F
         ldsflda valuetype T_array_92 _G::Btab
         ldsflda valuetype T_array_100 _G::Display
@@ -8122,15 +8122,15 @@
         call instance valuetype T_record_91& T_array_92::ldadr(int32)
         ldfld int32 T_record_91::Last
         stfld int32 @block_enter::j
-        // line 610
+        .line 610
         ldloc _F
         ldloc _F
         ldfld int32 @block_enter::j
         stfld int32 @block_enter::l
-        // line 611
+        .line 611
         br L_while_test_4
     L_while_3:
-        // line 611
+        .line 611
         ldloc _F
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
@@ -8150,7 +8150,7 @@
         call string T_alfa::arrayToString(valuetype T_alfa)
         call bool [lpcRuntime]LPC.Helpers::StrcmpNE(string, string)
         brtrue L_while_3
-        // line 612
+        .line 612
         ldloc _F
         ldfld int32 @block_enter::j
         ldc.i4 0
@@ -8158,24 +8158,24 @@
         ldc.i4.0
         ceq
         brfalse L_else_5
-        // line 612
+        .line 612
         ldc.i4 1
         call void Error(int32 n)
         br L_if_end_6
     L_else_5:
-        // line 613
+        .line 613
         ldsfld int32 _G::t
         ldc.i4 1
         add
         stsfld int32 _G::t
-        // line 615
+        .line 615
         ldsflda valuetype T_array_88 _G::Tab
         ldsfld int32 _G::t
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldloc _F
         ldfld valuetype T_alfa @block_enter::Id
         stfld valuetype T_alfa T_record_86::Name
-        // line 615
+        .line 615
         ldsflda valuetype T_array_88 _G::Tab
         ldsfld int32 _G::t
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
@@ -8186,20 +8186,20 @@
         ldc.i4 131071
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_record_86::Link
-        // line 616
+        .line 616
         ldsflda valuetype T_array_88 _G::Tab
         ldsfld int32 _G::t
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldloc _F
         ldfld int32 @block_enter::k
         stfld int32 T_record_86::Obj
-        // line 616
+        .line 616
         ldsflda valuetype T_array_88 _G::Tab
         ldsfld int32 _G::t
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldc.i4 0
         stfld int32 T_record_86::Typ
-        // line 616
+        .line 616
         ldsflda valuetype T_array_88 _G::Tab
         ldsfld int32 _G::t
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
@@ -8209,7 +8209,7 @@
         ldc.i4 131071
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_record_86::Ref
-        // line 616
+        .line 616
         ldsflda valuetype T_array_88 _G::Tab
         ldsfld int32 _G::t
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
@@ -8221,13 +8221,13 @@
         ldc.i4 100
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int8 T_record_86::Lev
-        // line 617
+        .line 617
         ldsflda valuetype T_array_88 _G::Tab
         ldsfld int32 _G::t
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldc.i4 0
         stfld int32 T_record_86::Adr
-        // line 619
+        .line 619
         ldsflda valuetype T_array_92 _G::Btab
         ldsflda valuetype T_array_100 _G::Display
         ldloc _F
@@ -8249,7 +8249,7 @@
         ret
     }
 
-// line 624
+.line 624
 
     .method public
     int32 Loc(valuetype T_alfa Id)
@@ -8270,22 +8270,22 @@
         stfld valuetype T_alfa @block_loc::Id
     
     L_Entry:
-        // line 626
+        .line 626
         ldloc _F
         ldloc _F
         ldfld class @block @block_loc::_slink
         ldfld int32 @block::Level
         stfld int32 @block_loc::i
-        // line 626
+        .line 626
         ldsflda valuetype T_array_88 _G::Tab
         ldc.i4 0
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldloc _F
         ldfld valuetype T_alfa @block_loc::Id
         stfld valuetype T_alfa T_record_86::Name
-        // line 627
+        .line 627
     L_repeat_1:
-        // line 627
+        .line 627
         ldloc _F
         ldsflda valuetype T_array_92 _G::Btab
         ldsflda valuetype T_array_100 _G::Display
@@ -8296,10 +8296,10 @@
         call instance valuetype T_record_91& T_array_92::ldadr(int32)
         ldfld int32 T_record_91::Last
         stfld int32 @block_loc::j
-        // line 628
+        .line 628
         br L_while_test_3
     L_while_2:
-        // line 628
+        .line 628
         ldloc _F
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
@@ -8319,7 +8319,7 @@
         call string T_alfa::arrayToString(valuetype T_alfa)
         call bool [lpcRuntime]LPC.Helpers::StrcmpNE(string, string)
         brtrue L_while_2
-        // line 629
+        .line 629
         ldloc _F
         ldloc _F
         ldfld int32 @block_loc::i
@@ -8342,17 +8342,17 @@
         ceq
     L_OR_shortcut_4:
         brfalse L_repeat_1
-        // line 631
+        .line 631
         ldloc _F
         ldfld int32 @block_loc::j
         ldc.i4 0
         ceq
         brfalse L_if_end_5
-        // line 631
+        .line 631
         ldc.i4 0
         call void Error(int32 n)
     L_if_end_5:
-        // line 631
+        .line 631
         ldloc _F
         ldloc _F
         ldfld int32 @block_loc::j
@@ -8364,7 +8364,7 @@
         ret
     }
 
-// line 634
+.line 634
 
     .method public
     void Entervariable()
@@ -8381,22 +8381,22 @@
         stfld class @block @block_entervariable::_slink
     
     L_Entry:
-        // line 635
+        .line 635
         ldsfld int32 _G::Sy
         ldc.i4 36
         ceq
         brfalse L_else_1
-        // line 636
+        .line 636
         ldloc _F
         ldfld class @block @block_entervariable::_slink
         ldsfld valuetype T_alfa _G::Id
         ldc.i4 1
         call instance void @block::Enter(valuetype T_alfa Id, int32 k)
-        // line 636
+        .line 636
         call void Insymbol()
         br L_if_end_2
     L_else_1:
-        // line 638
+        .line 638
         ldc.i4 2
         call void Error(int32 n)
     L_if_end_2:
@@ -8405,7 +8405,7 @@
         ret
     }
 
-// line 641
+.line 641
 
     .method public
     void Constant(valuetype T_symset Fsys, valuetype T_block_conrec& c)
@@ -8445,17 +8445,17 @@
     
     
     L_Entry:
-        // line 643
+        .line 643
         ldloc _F
         ldfld valuetype T_block_conrec* @block_constant::c
         ldc.i4 0
         stfld int32 T_block_conrec::Tp
-        // line 643
+        .line 643
         ldloc _F
         ldfld valuetype T_block_conrec* @block_constant::c
         ldc.i4 0
         stfld int32 T_block_conrec::i
-        // line 644
+        .line 644
         ldloc _F
         ldfld class @block @block_constant::_slink
         ldsfld valuetype T_symset _G::Constbegsys
@@ -8463,66 +8463,66 @@
         ldfld valuetype T_symset @block_constant::Fsys
         ldc.i4 50
         call instance void @block::Test(valuetype T_symset S1, valuetype T_symset S2, int32 n)
-        // line 645
+        .line 645
         ldsfld valuetype T_symset _G::Constbegsys
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_symset s, int32 val)
         brfalse L_if_end_1
-        // line 647
+        .line 647
         ldsfld int32 _G::Sy
         ldc.i4 2
         ceq
         brfalse L_else_2
-        // line 648
+        .line 648
         ldloc _F
         ldfld valuetype T_block_conrec* @block_constant::c
         ldc.i4 4
         stfld int32 T_block_conrec::Tp
-        // line 648
+        .line 648
         ldloc _F
         ldfld valuetype T_block_conrec* @block_constant::c
         ldsfld int32 _G::Inum
         stfld int32 T_block_conrec::i
-        // line 648
+        .line 648
         call void Insymbol()
         br L_if_end_3
     L_else_2:
-        // line 651
+        .line 651
         ldloc _F
         ldc.i4 1
         stfld int32 @block_constant::Sign
-        // line 652
+        .line 652
         ldloc $tmpSetLiteral1
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_symset s, int32 val)
         brfalse L_if_end_4
-        // line 653
+        .line 653
         ldsfld int32 _G::Sy
         ldc.i4 6
         ceq
         brfalse L_if_end_5
-        // line 653
+        .line 653
         ldloc _F
         ldc.i4 1
         neg
         stfld int32 @block_constant::Sign
     L_if_end_5:
-        // line 654
+        .line 654
         call void Insymbol()
     L_if_end_4:
-        // line 656
+        .line 656
         ldsfld int32 _G::Sy
         ldc.i4 36
         ceq
         brfalse L_else_6
-        // line 657
+        .line 657
         ldloc _F
         ldloc _F
         ldfld class @block @block_constant::_slink
         ldsfld valuetype T_alfa _G::Id
         call instance int32 @block::Loc(valuetype T_alfa Id)
         stfld int32 @block_constant::x
-        // line 658
+        .line 658
         ldloc _F
         ldfld int32 @block_constant::x
         ldc.i4 0
@@ -8530,7 +8530,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_8
-        // line 659
+        .line 659
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_constant::x
@@ -8541,12 +8541,12 @@
         ldc.i4.0
         ceq
         brfalse L_else_9
-        // line 659
+        .line 659
         ldc.i4 25
         call void Error(int32 n)
         br L_if_end_10
     L_else_9:
-        // line 660
+        .line 660
         ldloc _F
         ldfld valuetype T_block_conrec* @block_constant::c
         ldsflda valuetype T_array_88 _G::Tab
@@ -8555,14 +8555,14 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld int32 T_record_86::Typ
         stfld int32 T_block_conrec::Tp
-        // line 661
+        .line 661
         ldloc _F
         ldfld valuetype T_block_conrec* @block_constant::c
         ldfld int32 T_block_conrec::Tp
         ldc.i4 2
         ceq
         brfalse L_else_11
-        // line 662
+        .line 662
         ldloc _F
         ldfld valuetype T_block_conrec* @block_constant::c
         ldloc _F
@@ -8580,7 +8580,7 @@
         stfld float64 T_block_conrec::r
         br L_if_end_12
     L_else_11:
-        // line 663
+        .line 663
         ldloc _F
         ldfld valuetype T_block_conrec* @block_constant::c
         ldloc _F
@@ -8595,21 +8595,21 @@
     L_if_end_12:
     L_if_end_10:
     L_if_end_8:
-        // line 665
+        .line 665
         call void Insymbol()
         br L_if_end_7
     L_else_6:
-        // line 668
+        .line 668
         ldsfld int32 _G::Sy
         ldc.i4 0
         ceq
         brfalse L_else_13
-        // line 669
+        .line 669
         ldloc _F
         ldfld valuetype T_block_conrec* @block_constant::c
         ldc.i4 1
         stfld int32 T_block_conrec::Tp
-        // line 669
+        .line 669
         ldloc _F
         ldfld valuetype T_block_conrec* @block_constant::c
         ldloc _F
@@ -8617,21 +8617,21 @@
         ldsfld int32 _G::Inum
         mul
         stfld int32 T_block_conrec::i
-        // line 669
+        .line 669
         call void Insymbol()
         br L_if_end_14
     L_else_13:
-        // line 671
+        .line 671
         ldsfld int32 _G::Sy
         ldc.i4 1
         ceq
         brfalse L_else_15
-        // line 672
+        .line 672
         ldloc _F
         ldfld valuetype T_block_conrec* @block_constant::c
         ldc.i4 2
         stfld int32 T_block_conrec::Tp
-        // line 672
+        .line 672
         ldloc _F
         ldfld valuetype T_block_conrec* @block_constant::c
         ldloc _F
@@ -8640,11 +8640,11 @@
         ldsfld float64 _G::Rnum
         mul
         stfld float64 T_block_conrec::r
-        // line 672
+        .line 672
         call void Insymbol()
         br L_if_end_16
     L_else_15:
-        // line 673
+        .line 673
         ldloc _F
         ldfld class @block @block_constant::_slink
         ldloc _F
@@ -8655,7 +8655,7 @@
     L_if_end_14:
     L_if_end_7:
     L_if_end_3:
-        // line 675
+        .line 675
         ldloc _F
         ldfld class @block @block_constant::_slink
         ldloc _F
@@ -8674,7 +8674,7 @@
         ret
     }
 
-// line 679
+.line 679
 
     .method public
     void Typ(valuetype T_symset Fsys, int32& Tp, int32& Rf, int32& Sz)
@@ -8747,22 +8747,22 @@
     
     
     L_Entry:
-        // line 715
+        .line 715
         ldloc _F
         ldfld int32* @block_typ::Tp
         ldc.i4 0
         stobj int32
-        // line 715
+        .line 715
         ldloc _F
         ldfld int32* @block_typ::Rf
         ldc.i4 0
         stobj int32
-        // line 715
+        .line 715
         ldloc _F
         ldfld int32* @block_typ::Sz
         ldc.i4 0
         stobj int32
-        // line 716
+        .line 716
         ldloc _F
         ldfld class @block @block_typ::_slink
         ldsfld valuetype T_symset _G::Typebegsys
@@ -8770,24 +8770,24 @@
         ldfld valuetype T_symset @block_typ::Fsys
         ldc.i4 10
         call instance void @block::Test(valuetype T_symset S1, valuetype T_symset S2, int32 n)
-        // line 717
+        .line 717
         ldsfld valuetype T_symset _G::Typebegsys
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_symset s, int32 val)
         brfalse L_if_end_1
-        // line 719
+        .line 719
         ldsfld int32 _G::Sy
         ldc.i4 36
         ceq
         brfalse L_else_2
-        // line 720
+        .line 720
         ldloc _F
         ldloc _F
         ldfld class @block @block_typ::_slink
         ldsfld valuetype T_alfa _G::Id
         call instance int32 @block::Loc(valuetype T_alfa Id)
         stfld int32 @block_typ::x
-        // line 721
+        .line 721
         ldloc _F
         ldfld int32 @block_typ::x
         ldc.i4 0
@@ -8795,7 +8795,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_4
-        // line 723
+        .line 723
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_typ::x
@@ -8806,12 +8806,12 @@
         ldc.i4.0
         ceq
         brfalse L_else_5
-        // line 723
+        .line 723
         ldc.i4 29
         call void Error(int32 n)
         br L_if_end_6
     L_else_5:
-        // line 724
+        .line 724
         ldloc _F
         ldfld int32* @block_typ::Tp
         ldsflda valuetype T_array_88 _G::Tab
@@ -8820,7 +8820,7 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld int32 T_record_86::Typ
         stobj int32
-        // line 724
+        .line 724
         ldloc _F
         ldfld int32* @block_typ::Rf
         ldsflda valuetype T_array_88 _G::Tab
@@ -8829,7 +8829,7 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld int32 T_record_86::Ref
         stobj int32
-        // line 724
+        .line 724
         ldloc _F
         ldfld int32* @block_typ::Sz
         ldsflda valuetype T_array_88 _G::Tab
@@ -8838,57 +8838,57 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld int32 T_record_86::Adr
         stobj int32
-        // line 725
+        .line 725
         ldloc _F
         ldfld int32* @block_typ::Tp
         ldobj int32
         ldc.i4 0
         ceq
         brfalse L_if_end_7
-        // line 725
+        .line 725
         ldc.i4 30
         call void Error(int32 n)
     L_if_end_7:
     L_if_end_6:
     L_if_end_4:
-        // line 727
+        .line 727
         call void Insymbol()
         br L_if_end_3
     L_else_2:
-        // line 729
+        .line 729
         ldsfld int32 _G::Sy
         ldc.i4 33
         ceq
         brfalse L_else_8
-        // line 730
+        .line 730
         call void Insymbol()
-        // line 731
+        .line 731
         ldsfld int32 _G::Sy
         ldc.i4 21
         ceq
         brfalse L_else_10
-        // line 731
+        .line 731
         call void Insymbol()
         br L_if_end_11
     L_else_10:
-        // line 732
+        .line 732
         ldc.i4 11
         call void Error(int32 n)
-        // line 733
+        .line 733
         ldsfld int32 _G::Sy
         ldc.i4 19
         ceq
         brfalse L_if_end_12
-        // line 733
+        .line 733
         call void Insymbol()
     L_if_end_12:
     L_if_end_11:
-        // line 735
+        .line 735
         ldloc _F
         ldfld int32* @block_typ::Tp
         ldc.i4 5
         stobj int32
-        // line 735
+        .line 735
         ldloc _F
         ldloc _F
         ldfld int32* @block_typ::Rf
@@ -8897,32 +8897,32 @@
         call instance void @block_typ::Arraytyp(int32& Aref, int32& Arsz)
         br L_if_end_9
     L_else_8:
-        // line 737
+        .line 737
         call void Insymbol()
-        // line 738
+        .line 738
         call void Enterblock()
-        // line 738
+        .line 738
         ldloc _F
         ldfld int32* @block_typ::Tp
         ldc.i4 6
         stobj int32
-        // line 738
+        .line 738
         ldloc _F
         ldfld int32* @block_typ::Rf
         ldsfld int32 _G::b
         stobj int32
-        // line 739
+        .line 739
         ldloc _F
         ldfld class @block @block_typ::_slink
         ldfld int32 @block::Level
         ldc.i4 100
         ceq
         brfalse L_if_end_13
-        // line 739
+        .line 739
         ldc.i4 5
         call void Fatal(int32 n)
     L_if_end_13:
-        // line 740
+        .line 740
         ldloc _F
         ldfld class @block @block_typ::_slink
         ldloc _F
@@ -8931,7 +8931,7 @@
         ldc.i4 1
         add
         stfld int32 @block::Level
-        // line 740
+        .line 740
         ldsflda valuetype T_array_100 _G::Display
         ldloc _F
         ldfld class @block @block_typ::_slink
@@ -8939,32 +8939,32 @@
         call instance int32& T_array_100::ldadr(int32)
         ldsfld int32 _G::b
         stobj int32
-        // line 740
+        .line 740
         ldloc _F
         ldc.i4 0
         stfld int32 @block_typ::Offset
-        // line 741
+        .line 741
         br L_while_test_15
     L_while_14:
-        // line 743
+        .line 743
         ldsfld int32 _G::Sy
         ldc.i4 36
         ceq
         brfalse L_if_end_16
-        // line 744
+        .line 744
         ldloc _F
         ldsfld int32 _G::t
         stfld int32 @block_typ::T0
-        // line 744
+        .line 744
         ldloc _F
         ldfld class @block @block_typ::_slink
         call instance void @block::Entervariable()
-        // line 745
+        .line 745
         br L_while_test_18
     L_while_17:
-        // line 746
+        .line 746
         call void Insymbol()
-        // line 746
+        .line 746
         ldloc _F
         ldfld class @block @block_typ::_slink
         call instance void @block::Entervariable()
@@ -8973,24 +8973,24 @@
         ldc.i4 23
         ceq
         brtrue L_while_17
-        // line 748
+        .line 748
         ldsfld int32 _G::Sy
         ldc.i4 26
         ceq
         brfalse L_else_19
-        // line 748
+        .line 748
         call void Insymbol()
         br L_if_end_20
     L_else_19:
-        // line 748
+        .line 748
         ldc.i4 5
         call void Error(int32 n)
     L_if_end_20:
-        // line 749
+        .line 749
         ldloc _F
         ldsfld int32 _G::t
         stfld int32 @block_typ::T1
-        // line 750
+        .line 750
         ldloc _F
         ldfld class @block @block_typ::_slink
         ldloc _F
@@ -9011,17 +9011,17 @@
         ldloc _F
         ldflda int32 @block_typ::Elsz
         call instance void @block::Typ(valuetype T_symset Fsys, int32& Tp, int32& Rf, int32& Sz)
-        // line 752
+        .line 752
         br L_while_test_22
     L_while_21:
-        // line 753
+        .line 753
         ldloc _F
         ldloc _F
         ldfld int32 @block_typ::T0
         ldc.i4 1
         add
         stfld int32 @block_typ::T0
-        // line 755
+        .line 755
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_typ::T0
@@ -9029,7 +9029,7 @@
         ldloc _F
         ldfld int32 @block_typ::Eltp
         stfld int32 T_record_86::Typ
-        // line 755
+        .line 755
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_typ::T0
@@ -9041,14 +9041,14 @@
         ldc.i4 131071
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_record_86::Ref
-        // line 755
+        .line 755
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_typ::T0
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldc.i4 1 // (true)
         stfld bool T_record_86::Normal
-        // line 756
+        .line 756
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_typ::T0
@@ -9056,7 +9056,7 @@
         ldloc _F
         ldfld int32 @block_typ::Offset
         stfld int32 T_record_86::Adr
-        // line 756
+        .line 756
         ldloc _F
         ldloc _F
         ldfld int32 @block_typ::Offset
@@ -9072,35 +9072,35 @@
         clt
         brtrue L_while_21
     L_if_end_16:
-        // line 760
+        .line 760
         ldsfld int32 _G::Sy
         ldc.i4 43
         ceq
         ldc.i4.0
         ceq
         brfalse L_if_end_23
-        // line 761
+        .line 761
         ldsfld int32 _G::Sy
         ldc.i4 24
         ceq
         brfalse L_else_24
-        // line 761
+        .line 761
         call void Insymbol()
         br L_if_end_25
     L_else_24:
-        // line 762
+        .line 762
         ldc.i4 14
         call void Error(int32 n)
-        // line 763
+        .line 763
         ldsfld int32 _G::Sy
         ldc.i4 23
         ceq
         brfalse L_if_end_26
-        // line 763
+        .line 763
         call void Insymbol()
     L_if_end_26:
     L_if_end_25:
-        // line 765
+        .line 765
         ldloc _F
         ldfld class @block @block_typ::_slink
         ldloc $tmpSetLiteral2
@@ -9116,7 +9116,7 @@
         ldc.i4.0
         ceq
         brtrue L_while_14
-        // line 768
+        .line 768
         ldsflda valuetype T_array_92 _G::Btab
         ldloc _F
         ldfld int32* @block_typ::Rf
@@ -9129,13 +9129,13 @@
         ldc.i4 131071
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_record_91::Vsize
-        // line 768
+        .line 768
         ldloc _F
         ldfld int32* @block_typ::Sz
         ldloc _F
         ldfld int32 @block_typ::Offset
         stobj int32
-        // line 769
+        .line 769
         ldsflda valuetype T_array_92 _G::Btab
         ldloc _F
         ldfld int32* @block_typ::Rf
@@ -9147,9 +9147,9 @@
         ldc.i4 131071
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_record_91::Psize
-        // line 769
+        .line 769
         call void Insymbol()
-        // line 769
+        .line 769
         ldloc _F
         ldfld class @block @block_typ::_slink
         ldloc _F
@@ -9160,7 +9160,7 @@
         stfld int32 @block::Level
     L_if_end_9:
     L_if_end_3:
-        // line 771
+        .line 771
         ldloc _F
         ldfld class @block @block_typ::_slink
         ldloc _F
@@ -9179,7 +9179,7 @@
         ret
     }
 
-// line 775
+.line 775
 
     .method public
     void Parameterlist()
@@ -9255,21 +9255,21 @@
         call instance void T_symset::addValue(int32)
     
     L_Entry:
-        // line 779
+        .line 779
         call void Insymbol()
-        // line 779
+        .line 779
         ldloc _F
         ldc.i4 0
         stfld int32 @block_parameterlist::Tp
-        // line 779
+        .line 779
         ldloc _F
         ldc.i4 0
         stfld int32 @block_parameterlist::Rf
-        // line 779
+        .line 779
         ldloc _F
         ldc.i4 0
         stfld int32 @block_parameterlist::Sz
-        // line 780
+        .line 780
         ldloc _F
         ldfld class @block @block_parameterlist::_slink
         ldloc $tmpSetLiteral1
@@ -9287,43 +9287,43 @@
         call valuetype T_symset _SetCastTo_T_symset(valuetype T_set_62 s)
         ldc.i4 7
         call instance void @block::Test(valuetype T_symset S1, valuetype T_symset S2, int32 n)
-        // line 781
+        .line 781
         br L_while_test_2
     L_while_1:
-        // line 782
+        .line 782
         ldsfld int32 _G::Sy
         ldc.i4 30
         ceq
         ldc.i4.0
         ceq
         brfalse L_else_3
-        // line 782
+        .line 782
         ldloc _F
         ldc.i4 1 // (true)
         stfld bool @block_parameterlist::Valpar
         br L_if_end_4
     L_else_3:
-        // line 783
+        .line 783
         call void Insymbol()
-        // line 783
+        .line 783
         ldloc _F
         ldc.i4 0 // (false)
         stfld bool @block_parameterlist::Valpar
     L_if_end_4:
-        // line 785
+        .line 785
         ldloc _F
         ldsfld int32 _G::t
         stfld int32 @block_parameterlist::T0
-        // line 785
+        .line 785
         ldloc _F
         ldfld class @block @block_parameterlist::_slink
         call instance void @block::Entervariable()
-        // line 786
+        .line 786
         br L_while_test_6
     L_while_5:
-        // line 787
+        .line 787
         call void Insymbol()
-        // line 787
+        .line 787
         ldloc _F
         ldfld class @block @block_parameterlist::_slink
         call instance void @block::Entervariable()
@@ -9333,35 +9333,35 @@
         ldc.i4 23
         ceq
         brtrue L_while_5
-        // line 789
+        .line 789
         ldsfld int32 _G::Sy
         ldc.i4 26
         ceq
         brfalse L_else_7
-        // line 790
+        .line 790
         call void Insymbol()
-        // line 791
+        .line 791
         ldsfld int32 _G::Sy
         ldc.i4 36
         ceq
         ldc.i4.0
         ceq
         brfalse L_else_9
-        // line 791
+        .line 791
         ldc.i4 2
         call void Error(int32 n)
         br L_if_end_10
     L_else_9:
-        // line 792
+        .line 792
         ldloc _F
         ldloc _F
         ldfld class @block @block_parameterlist::_slink
         ldsfld valuetype T_alfa _G::Id
         call instance int32 @block::Loc(valuetype T_alfa Id)
         stfld int32 @block_parameterlist::x
-        // line 792
+        .line 792
         call void Insymbol()
-        // line 793
+        .line 793
         ldloc _F
         ldfld int32 @block_parameterlist::x
         ldc.i4 0
@@ -9369,7 +9369,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_11
-        // line 795
+        .line 795
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_parameterlist::x
@@ -9380,12 +9380,12 @@
         ldc.i4.0
         ceq
         brfalse L_else_12
-        // line 795
+        .line 795
         ldc.i4 29
         call void Error(int32 n)
         br L_if_end_13
     L_else_12:
-        // line 796
+        .line 796
         ldloc _F
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
@@ -9393,7 +9393,7 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld int32 T_record_86::Typ
         stfld int32 @block_parameterlist::Tp
-        // line 796
+        .line 796
         ldloc _F
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
@@ -9401,11 +9401,11 @@
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldfld int32 T_record_86::Ref
         stfld int32 @block_parameterlist::Rf
-        // line 797
+        .line 797
         ldloc _F
         ldfld bool @block_parameterlist::Valpar
         brfalse L_else_14
-        // line 797
+        .line 797
         ldloc _F
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
@@ -9415,7 +9415,7 @@
         stfld int32 @block_parameterlist::Sz
         br L_if_end_15
     L_else_14:
-        // line 797
+        .line 797
         ldloc _F
         ldc.i4 1
         stfld int32 @block_parameterlist::Sz
@@ -9424,7 +9424,7 @@
     L_if_end_11:
         /* nop */
     L_if_end_10:
-        // line 800
+        .line 800
         ldloc _F
         ldfld class @block @block_parameterlist::_slink
         ldloc $tmpSetLiteral3
@@ -9444,21 +9444,21 @@
         call instance void @block::Test(valuetype T_symset S1, valuetype T_symset S2, int32 n)
         br L_if_end_8
     L_else_7:
-        // line 802
+        .line 802
         ldc.i4 5
         call void Error(int32 n)
     L_if_end_8:
-        // line 803
+        .line 803
         br L_while_test_17
     L_while_16:
-        // line 804
+        .line 804
         ldloc _F
         ldloc _F
         ldfld int32 @block_parameterlist::T0
         ldc.i4 1
         add
         stfld int32 @block_parameterlist::T0
-        // line 806
+        .line 806
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_parameterlist::T0
@@ -9466,7 +9466,7 @@
         ldloc _F
         ldfld int32 @block_parameterlist::Tp
         stfld int32 T_record_86::Typ
-        // line 806
+        .line 806
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_parameterlist::T0
@@ -9478,7 +9478,7 @@
         ldc.i4 131071
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_record_86::Ref
-        // line 807
+        .line 807
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_parameterlist::T0
@@ -9486,7 +9486,7 @@
         ldloc _F
         ldfld bool @block_parameterlist::Valpar
         stfld bool T_record_86::Normal
-        // line 807
+        .line 807
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_parameterlist::T0
@@ -9495,7 +9495,7 @@
         ldfld class @block @block_parameterlist::_slink
         ldfld int32 @block::Dx
         stfld int32 T_record_86::Adr
-        // line 807
+        .line 807
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_parameterlist::T0
@@ -9508,7 +9508,7 @@
         ldc.i4 100
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int8 T_record_86::Lev
-        // line 808
+        .line 808
         ldloc _F
         ldfld class @block @block_parameterlist::_slink
         ldloc _F
@@ -9524,35 +9524,35 @@
         ldsfld int32 _G::t
         clt
         brtrue L_while_16
-        // line 811
+        .line 811
         ldsfld int32 _G::Sy
         ldc.i4 20
         ceq
         ldc.i4.0
         ceq
         brfalse L_if_end_18
-        // line 812
+        .line 812
         ldsfld int32 _G::Sy
         ldc.i4 24
         ceq
         brfalse L_else_19
-        // line 812
+        .line 812
         call void Insymbol()
         br L_if_end_20
     L_else_19:
-        // line 813
+        .line 813
         ldc.i4 14
         call void Error(int32 n)
-        // line 814
+        .line 814
         ldsfld int32 _G::Sy
         ldc.i4 23
         ceq
         brfalse L_if_end_21
-        // line 814
+        .line 814
         call void Insymbol()
     L_if_end_21:
     L_if_end_20:
-        // line 816
+        .line 816
         ldloc _F
         ldfld class @block @block_parameterlist::_slink
         ldloc $tmpSetLiteral5
@@ -9576,14 +9576,14 @@
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_symset s, int32 val)
         brtrue L_while_1
-        // line 819
+        .line 819
         ldsfld int32 _G::Sy
         ldc.i4 20
         ceq
         brfalse L_else_22
-        // line 820
+        .line 820
         call void Insymbol()
-        // line 821
+        .line 821
         ldloc _F
         ldfld class @block @block_parameterlist::_slink
         ldloc $tmpSetLiteral8
@@ -9594,7 +9594,7 @@
         call instance void @block::Test(valuetype T_symset S1, valuetype T_symset S2, int32 n)
         br L_if_end_23
     L_else_22:
-        // line 823
+        .line 823
         ldc.i4 4
         call void Error(int32 n)
     L_if_end_23:
@@ -9603,7 +9603,7 @@
         ret
     }
 
-// line 826
+.line 826
 
     .method public
     void Constantdeclaration()
@@ -9637,48 +9637,48 @@
         call instance void T_symset::addValue(int32)
     
     L_Entry:
-        // line 828
+        .line 828
         call void Insymbol()
-        // line 829
+        .line 829
         ldloc _F
         ldfld class @block @block_constantdeclaration::_slink
         ldloc $tmpSetLiteral1
         ldsfld valuetype T_symset _G::Blockbegsys
         ldc.i4 2
         call instance void @block::Test(valuetype T_symset S1, valuetype T_symset S2, int32 n)
-        // line 830
+        .line 830
         br L_while_test_2
     L_while_1:
-        // line 831
+        .line 831
         ldloc _F
         ldfld class @block @block_constantdeclaration::_slink
         ldsfld valuetype T_alfa _G::Id
         ldc.i4 0
         call instance void @block::Enter(valuetype T_alfa Id, int32 k)
-        // line 831
+        .line 831
         call void Insymbol()
-        // line 832
+        .line 832
         ldsfld int32 _G::Sy
         ldc.i4 13
         ceq
         brfalse L_else_3
-        // line 832
+        .line 832
         call void Insymbol()
         br L_if_end_4
     L_else_3:
-        // line 833
+        .line 833
         ldc.i4 16
         call void Error(int32 n)
-        // line 834
+        .line 834
         ldsfld int32 _G::Sy
         ldc.i4 27
         ceq
         brfalse L_if_end_5
-        // line 834
+        .line 834
         call void Insymbol()
     L_if_end_5:
     L_if_end_4:
-        // line 836
+        .line 836
         ldloc _F
         ldfld class @block @block_constantdeclaration::_slink
         ldloc $tmpSetLiteral2
@@ -9696,7 +9696,7 @@
         ldloc _F
         ldflda valuetype T_block_conrec @block_constantdeclaration::c
         call instance void @block::Constant(valuetype T_symset Fsys, valuetype T_block_conrec& c)
-        // line 837
+        .line 837
         ldsflda valuetype T_array_88 _G::Tab
         ldsfld int32 _G::t
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
@@ -9704,7 +9704,7 @@
         ldflda valuetype T_block_conrec @block_constantdeclaration::c
         ldfld int32 T_block_conrec::Tp
         stfld int32 T_record_86::Typ
-        // line 837
+        .line 837
         ldsflda valuetype T_array_88 _G::Tab
         ldsfld int32 _G::t
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
@@ -9714,19 +9714,19 @@
         ldc.i4 131071
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_record_86::Ref
-        // line 838
+        .line 838
         ldloc _F
         ldflda valuetype T_block_conrec @block_constantdeclaration::c
         ldfld int32 T_block_conrec::Tp
         ldc.i4 2
         ceq
         brfalse L_else_6
-        // line 839
+        .line 839
         ldloc _F
         ldflda valuetype T_block_conrec @block_constantdeclaration::c
         ldfld float64 T_block_conrec::r
         call void Enterreal(float64 x)
-        // line 839
+        .line 839
         ldsflda valuetype T_array_88 _G::Tab
         ldsfld int32 _G::t
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
@@ -9734,7 +9734,7 @@
         stfld int32 T_record_86::Adr
         br L_if_end_7
     L_else_6:
-        // line 840
+        .line 840
         ldsflda valuetype T_array_88 _G::Tab
         ldsfld int32 _G::t
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
@@ -9743,7 +9743,7 @@
         ldfld int32 T_block_conrec::i
         stfld int32 T_record_86::Adr
     L_if_end_7:
-        // line 841
+        .line 841
         ldloc _F
         ldfld class @block @block_constantdeclaration::_slink
         call instance void @block::Testsemicolon()
@@ -9757,7 +9757,7 @@
         ret
     }
 
-// line 845
+.line 845
 
     .method public
     void Typedeclaration()
@@ -9791,52 +9791,52 @@
         call instance void T_symset::addValue(int32)
     
     L_Entry:
-        // line 847
+        .line 847
         call void Insymbol()
-        // line 848
+        .line 848
         ldloc _F
         ldfld class @block @block_typedeclaration::_slink
         ldloc $tmpSetLiteral1
         ldsfld valuetype T_symset _G::Blockbegsys
         ldc.i4 2
         call instance void @block::Test(valuetype T_symset S1, valuetype T_symset S2, int32 n)
-        // line 849
+        .line 849
         br L_while_test_2
     L_while_1:
-        // line 850
+        .line 850
         ldloc _F
         ldfld class @block @block_typedeclaration::_slink
         ldsfld valuetype T_alfa _G::Id
         ldc.i4 2
         call instance void @block::Enter(valuetype T_alfa Id, int32 k)
-        // line 850
+        .line 850
         ldloc _F
         ldsfld int32 _G::t
         stfld int32 @block_typedeclaration::T1
-        // line 850
+        .line 850
         call void Insymbol()
-        // line 851
+        .line 851
         ldsfld int32 _G::Sy
         ldc.i4 13
         ceq
         brfalse L_else_3
-        // line 851
+        .line 851
         call void Insymbol()
         br L_if_end_4
     L_else_3:
-        // line 852
+        .line 852
         ldc.i4 16
         call void Error(int32 n)
-        // line 853
+        .line 853
         ldsfld int32 _G::Sy
         ldc.i4 27
         ceq
         brfalse L_if_end_5
-        // line 853
+        .line 853
         call void Insymbol()
     L_if_end_5:
     L_if_end_4:
-        // line 855
+        .line 855
         ldloc _F
         ldfld class @block @block_typedeclaration::_slink
         ldloc $tmpSetLiteral2
@@ -9858,7 +9858,7 @@
         ldloc _F
         ldflda int32 @block_typedeclaration::Sz
         call instance void @block::Typ(valuetype T_symset Fsys, int32& Tp, int32& Rf, int32& Sz)
-        // line 857
+        .line 857
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_typedeclaration::T1
@@ -9866,7 +9866,7 @@
         ldloc _F
         ldfld int32 @block_typedeclaration::Tp
         stfld int32 T_record_86::Typ
-        // line 857
+        .line 857
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_typedeclaration::T1
@@ -9878,7 +9878,7 @@
         ldc.i4 131071
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_record_86::Ref
-        // line 857
+        .line 857
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_typedeclaration::T1
@@ -9886,7 +9886,7 @@
         ldloc _F
         ldfld int32 @block_typedeclaration::Sz
         stfld int32 T_record_86::Adr
-        // line 859
+        .line 859
         ldloc _F
         ldfld class @block @block_typedeclaration::_slink
         call instance void @block::Testsemicolon()
@@ -9900,7 +9900,7 @@
         ret
     }
 
-// line 863
+.line 863
 
     .method public
     void Variabledeclaration()
@@ -9929,25 +9929,25 @@
         call instance void T_symset::addValue(int32)
     
     L_Entry:
-        // line 866
+        .line 866
         call void Insymbol()
-        // line 867
+        .line 867
         br L_while_test_2
     L_while_1:
-        // line 868
+        .line 868
         ldloc _F
         ldsfld int32 _G::t
         stfld int32 @block_variabledeclaration::T0
-        // line 868
+        .line 868
         ldloc _F
         ldfld class @block @block_variabledeclaration::_slink
         call instance void @block::Entervariable()
-        // line 869
+        .line 869
         br L_while_test_4
     L_while_3:
-        // line 870
+        .line 870
         call void Insymbol()
-        // line 870
+        .line 870
         ldloc _F
         ldfld class @block @block_variabledeclaration::_slink
         call instance void @block::Entervariable()
@@ -9957,24 +9957,24 @@
         ldc.i4 23
         ceq
         brtrue L_while_3
-        // line 872
+        .line 872
         ldsfld int32 _G::Sy
         ldc.i4 26
         ceq
         brfalse L_else_5
-        // line 872
+        .line 872
         call void Insymbol()
         br L_if_end_6
     L_else_5:
-        // line 872
+        .line 872
         ldc.i4 5
         call void Error(int32 n)
     L_if_end_6:
-        // line 873
+        .line 873
         ldloc _F
         ldsfld int32 _G::t
         stfld int32 @block_variabledeclaration::T1
-        // line 874
+        .line 874
         ldloc _F
         ldfld class @block @block_variabledeclaration::_slink
         ldloc $tmpSetLiteral1
@@ -9996,17 +9996,17 @@
         ldloc _F
         ldflda int32 @block_variabledeclaration::Sz
         call instance void @block::Typ(valuetype T_symset Fsys, int32& Tp, int32& Rf, int32& Sz)
-        // line 875
+        .line 875
         br L_while_test_8
     L_while_7:
-        // line 876
+        .line 876
         ldloc _F
         ldloc _F
         ldfld int32 @block_variabledeclaration::T0
         ldc.i4 1
         add
         stfld int32 @block_variabledeclaration::T0
-        // line 878
+        .line 878
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_variabledeclaration::T0
@@ -10014,7 +10014,7 @@
         ldloc _F
         ldfld int32 @block_variabledeclaration::Tp
         stfld int32 T_record_86::Typ
-        // line 878
+        .line 878
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_variabledeclaration::T0
@@ -10026,7 +10026,7 @@
         ldc.i4 131071
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_record_86::Ref
-        // line 879
+        .line 879
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_variabledeclaration::T0
@@ -10039,7 +10039,7 @@
         ldc.i4 100
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int8 T_record_86::Lev
-        // line 879
+        .line 879
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_variabledeclaration::T0
@@ -10048,14 +10048,14 @@
         ldfld class @block @block_variabledeclaration::_slink
         ldfld int32 @block::Dx
         stfld int32 T_record_86::Adr
-        // line 879
+        .line 879
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_variabledeclaration::T0
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldc.i4 1 // (true)
         stfld bool T_record_86::Normal
-        // line 880
+        .line 880
         ldloc _F
         ldfld class @block @block_variabledeclaration::_slink
         ldloc _F
@@ -10072,7 +10072,7 @@
         ldfld int32 @block_variabledeclaration::T1
         clt
         brtrue L_while_7
-        // line 883
+        .line 883
         ldloc _F
         ldfld class @block @block_variabledeclaration::_slink
         call instance void @block::Testsemicolon()
@@ -10086,7 +10086,7 @@
         ret
     }
 
-// line 887
+.line 887
 
     .method public
     void Procdeclaration()
@@ -10109,34 +10109,34 @@
         call instance void T_symset::addValue(int32)
     
     L_Entry:
-        // line 889
+        .line 889
         ldloc _F
         ldsfld int32 _G::Sy
         ldc.i4 31
         ceq
         stfld bool @block_procdeclaration::Isfun
-        // line 889
+        .line 889
         call void Insymbol()
-        // line 890
+        .line 890
         ldsfld int32 _G::Sy
         ldc.i4 36
         ceq
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 891
+        .line 891
         ldc.i4 2
         call void Error(int32 n)
-        // line 891
+        .line 891
         ldsfld valuetype T_alfa STRING_61    // "          "
         stsfld valuetype T_alfa _G::Id
         /* nop */
     L_if_end_1:
-        // line 893
+        .line 893
         ldloc _F
         ldfld bool @block_procdeclaration::Isfun
         brfalse L_else_2
-        // line 893
+        .line 893
         ldloc _F
         ldfld class @block @block_procdeclaration::_slink
         ldsfld valuetype T_alfa _G::Id
@@ -10144,22 +10144,22 @@
         call instance void @block::Enter(valuetype T_alfa Id, int32 k)
         br L_if_end_3
     L_else_2:
-        // line 893
+        .line 893
         ldloc _F
         ldfld class @block @block_procdeclaration::_slink
         ldsfld valuetype T_alfa _G::Id
         ldc.i4 3
         call instance void @block::Enter(valuetype T_alfa Id, int32 k)
     L_if_end_3:
-        // line 894
+        .line 894
         ldsflda valuetype T_array_88 _G::Tab
         ldsfld int32 _G::t
         call instance valuetype T_record_86& T_array_88::ldadr(int32)
         ldc.i4 1 // (true)
         stfld bool T_record_86::Normal
-        // line 895
+        .line 895
         call void Insymbol()
-        // line 895
+        .line 895
         ldloc $tmpSetLiteral1
         call valuetype T_set_62 _SetCastTo_T_set_62(valuetype T_symset s)
         ldloc _F
@@ -10180,20 +10180,20 @@
         ldc.i4 1
         add
         call void Block(valuetype T_symset Fsys, bool Isfun, int32 Level)
-        // line 896
+        .line 896
         ldsfld int32 _G::Sy
         ldc.i4 24
         ceq
         brfalse L_else_4
-        // line 896
+        .line 896
         call void Insymbol()
         br L_if_end_5
     L_else_4:
-        // line 896
+        .line 896
         ldc.i4 14
         call void Error(int32 n)
     L_if_end_5:
-        // line 897
+        .line 897
         ldc.i4 32
         ldloc _F
         ldfld bool @block_procdeclaration::Isfun
@@ -10204,7 +10204,7 @@
         ret
     }
 
-// line 900
+.line 900
 
     .method public
     void Statement(valuetype T_symset Fsys)
@@ -10235,7 +10235,7 @@
     
     
     L_Entry:
-        // line 1450
+        .line 1450
         ldsfld valuetype T_symset _G::Statbegsys
         call valuetype T_set_62 _SetCastTo_T_set_62(valuetype T_symset s)
         ldloc $tmpSetLiteral1
@@ -10244,22 +10244,22 @@
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_set_62 s, int32 val)
         brfalse L_if_end_1
-        // line 1451
+        .line 1451
         ldsfld int32 _G::Sy
         stloc $tmpSwitchValue2
         ldloc $tmpSwitchValue2
         ldc.i4 36
         bne.un L_check_case_3
-        // line 1452
+        .line 1452
         ldloc _F
         ldloc _F
         ldfld class @block @block_statement::_slink
         ldsfld valuetype T_alfa _G::Id
         call instance int32 @block::Loc(valuetype T_alfa Id)
         stfld int32 @block_statement::i
-        // line 1452
+        .line 1452
         call void Insymbol()
-        // line 1453
+        .line 1453
         ldloc _F
         ldfld int32 @block_statement::i
         ldc.i4 0
@@ -10267,7 +10267,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_4
-        // line 1454
+        .line 1454
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_statement::i
@@ -10282,7 +10282,7 @@
         beq L_case_7
         br L_check_case_6
     L_case_7:
-        // line 1455
+        .line 1455
         ldc.i4 45
         call void Error(int32 n)
         br L_case_end_5
@@ -10290,7 +10290,7 @@
         ldloc $tmpSwitchValue3
         ldc.i4 1
         bne.un L_check_case_8
-        // line 1457
+        .line 1457
         ldloc _F
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
@@ -10308,7 +10308,7 @@
         ldloc $tmpSwitchValue3
         ldc.i4 3
         bne.un L_check_case_9
-        // line 1459
+        .line 1459
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_statement::i
@@ -10319,7 +10319,7 @@
         ldc.i4.0
         ceq
         brfalse L_else_10
-        // line 1459
+        .line 1459
         ldloc _F
         ldloc _F
         ldfld valuetype T_symset @block_statement::Fsys
@@ -10328,7 +10328,7 @@
         call instance void @block_statement::Call(valuetype T_symset Fsys, int32 i)
         br L_if_end_11
     L_else_10:
-        // line 1460
+        .line 1460
         ldloc _F
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
@@ -10342,7 +10342,7 @@
         ldloc $tmpSwitchValue3
         ldc.i4 4
         bne.un L_case_end_5
-        // line 1462
+        .line 1462
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
         ldfld int32 @block_statement::i
@@ -10356,7 +10356,7 @@
         ldobj int32
         ceq
         brfalse L_else_12
-        // line 1463
+        .line 1463
         ldloc _F
         ldsflda valuetype T_array_88 _G::Tab
         ldloc _F
@@ -10369,7 +10369,7 @@
         call instance void @block_statement::Assignment(int32 Lv, int32 Ad)
         br L_if_end_13
     L_else_12:
-        // line 1464
+        .line 1464
         ldc.i4 45
         call void Error(int32 n)
     L_if_end_13:
@@ -10380,7 +10380,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 37
         bne.un L_check_case_14
-        // line 1467
+        .line 1467
         ldloc _F
         call instance void @block_statement::Compoundstatement()
         br L_case_end_2
@@ -10388,7 +10388,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 38
         bne.un L_check_case_15
-        // line 1468
+        .line 1468
         ldloc _F
         call instance void @block_statement::Ifstatement()
         br L_case_end_2
@@ -10396,7 +10396,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 39
         bne.un L_check_case_16
-        // line 1469
+        .line 1469
         ldloc _F
         call instance void @block_statement::Casestatement()
         br L_case_end_2
@@ -10404,7 +10404,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 41
         bne.un L_check_case_17
-        // line 1470
+        .line 1470
         ldloc _F
         call instance void @block_statement::Whilestatement()
         br L_case_end_2
@@ -10412,7 +10412,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 40
         bne.un L_check_case_18
-        // line 1471
+        .line 1471
         ldloc _F
         call instance void @block_statement::Repeatstatement()
         br L_case_end_2
@@ -10420,12 +10420,12 @@
         ldloc $tmpSwitchValue2
         ldc.i4 42
         bne.un L_case_end_2
-        // line 1472
+        .line 1472
         ldloc _F
         call instance void @block_statement::Forstatement()
     L_case_end_2:
     L_if_end_1:
-        // line 1474
+        .line 1474
         ldloc _F
         ldfld class @block @block_statement::_slink
         ldloc _F
@@ -10445,11 +10445,11 @@
 }
 
 
-// line 1515
+.line 1515
 //================================================================================
 // scope: interpret (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_198 = array [1 .. 4] of int32;
 .class value explicit T_interpret_array_198
@@ -10488,7 +10488,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_200 = record;
 .class value explicit T_interpret_record_200
@@ -10517,7 +10517,7 @@
     // case records = 6
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_199 = array [1 .. 10000] of valuetype T_interpret_record_200;
 .class value explicit T_interpret_array_199
@@ -10585,7 +10585,7 @@
 }
 
 
-// line 167
+.line 167
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -10634,7 +10634,7 @@
     .field public static valuetype T_symset Typebegsys
 }
 
-// line 268
+.line 268
 
 .method static
 void Errormsg()
@@ -10651,439 +10651,439 @@ void Errormsg()
 
 
 L_Entry:
-    // line 273
+    .line 273
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 0
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_1    // "undef id  "
     stobj valuetype T_alfa
-    // line 273
+    .line 273
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 1
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_2    // "multi def "
     stobj valuetype T_alfa
-    // line 274
+    .line 274
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 2
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_3    // "identifier"
     stobj valuetype T_alfa
-    // line 274
+    .line 274
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 3
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_4    // "program   "
     stobj valuetype T_alfa
-    // line 275
+    .line 275
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 4
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_5    // ")         "
     stobj valuetype T_alfa
-    // line 275
+    .line 275
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 5
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_6    // ":         "
     stobj valuetype T_alfa
-    // line 276
+    .line 276
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 6
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_7    // "syntax    "
     stobj valuetype T_alfa
-    // line 276
+    .line 276
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 7
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_8    // "ident, var"
     stobj valuetype T_alfa
-    // line 277
+    .line 277
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 8
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_9    // "of        "
     stobj valuetype T_alfa
-    // line 277
+    .line 277
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 9
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_10    // "(         "
     stobj valuetype T_alfa
-    // line 278
+    .line 278
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 10
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_11    // "id, array "
     stobj valuetype T_alfa
-    // line 278
+    .line 278
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 11
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_12    // "[         "
     stobj valuetype T_alfa
-    // line 279
+    .line 279
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 12
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_13    // "]         "
     stobj valuetype T_alfa
-    // line 279
+    .line 279
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 13
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_14    // "..        "
     stobj valuetype T_alfa
-    // line 280
+    .line 280
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 14
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_15    // ";         "
     stobj valuetype T_alfa
-    // line 280
+    .line 280
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 15
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_16    // "func. type"
     stobj valuetype T_alfa
-    // line 281
+    .line 281
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 16
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_17    // "=         "
     stobj valuetype T_alfa
-    // line 281
+    .line 281
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 17
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_18    // "boolean   "
     stobj valuetype T_alfa
-    // line 282
+    .line 282
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 18
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_19    // "convar typ"
     stobj valuetype T_alfa
-    // line 282
+    .line 282
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 19
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_20    // "type      "
     stobj valuetype T_alfa
-    // line 283
+    .line 283
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 20
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_21    // "prog.param"
     stobj valuetype T_alfa
-    // line 283
+    .line 283
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 21
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_22    // "too big   "
     stobj valuetype T_alfa
-    // line 284
+    .line 284
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 22
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_23    // ".         "
     stobj valuetype T_alfa
-    // line 284
+    .line 284
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 23
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_24    // "typ (case)"
     stobj valuetype T_alfa
-    // line 285
+    .line 285
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 24
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_25    // "character "
     stobj valuetype T_alfa
-    // line 285
+    .line 285
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 25
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_26    // "const id  "
     stobj valuetype T_alfa
-    // line 286
+    .line 286
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 26
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_27    // "index type"
     stobj valuetype T_alfa
-    // line 286
+    .line 286
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 27
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_28    // "indexbound"
     stobj valuetype T_alfa
-    // line 287
+    .line 287
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 28
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_29    // "no array  "
     stobj valuetype T_alfa
-    // line 287
+    .line 287
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 29
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_30    // "type id   "
     stobj valuetype T_alfa
-    // line 288
+    .line 288
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 30
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_31    // "undef type"
     stobj valuetype T_alfa
-    // line 288
+    .line 288
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 31
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_32    // "no record "
     stobj valuetype T_alfa
-    // line 289
+    .line 289
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 32
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_33    // "boole type"
     stobj valuetype T_alfa
-    // line 289
+    .line 289
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 33
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_34    // "arith type"
     stobj valuetype T_alfa
-    // line 290
+    .line 290
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 34
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_35    // "integer   "
     stobj valuetype T_alfa
-    // line 290
+    .line 290
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 35
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_36    // "types     "
     stobj valuetype T_alfa
-    // line 291
+    .line 291
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 36
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_37    // "param type"
     stobj valuetype T_alfa
-    // line 291
+    .line 291
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 37
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_38    // "variab id "
     stobj valuetype T_alfa
-    // line 292
+    .line 292
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 38
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_39    // "string    "
     stobj valuetype T_alfa
-    // line 292
+    .line 292
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 39
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_40    // "no.of pars"
     stobj valuetype T_alfa
-    // line 293
+    .line 293
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 40
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_20    // "type      "
     stobj valuetype T_alfa
-    // line 293
+    .line 293
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 41
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_20    // "type      "
     stobj valuetype T_alfa
-    // line 294
+    .line 294
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 42
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_41    // "real type "
     stobj valuetype T_alfa
-    // line 294
+    .line 294
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 43
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_35    // "integer   "
     stobj valuetype T_alfa
-    // line 295
+    .line 295
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 44
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_42    // "var, const"
     stobj valuetype T_alfa
-    // line 295
+    .line 295
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 45
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_43    // "var, proc "
     stobj valuetype T_alfa
-    // line 296
+    .line 296
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 46
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_44    // "types (:=)"
     stobj valuetype T_alfa
-    // line 296
+    .line 296
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 47
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_24    // "typ (case)"
     stobj valuetype T_alfa
-    // line 297
+    .line 297
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 48
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_20    // "type      "
     stobj valuetype T_alfa
-    // line 297
+    .line 297
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 49
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_45    // "store ovfl"
     stobj valuetype T_alfa
-    // line 298
+    .line 298
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 50
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_46    // "constant  "
     stobj valuetype T_alfa
-    // line 298
+    .line 298
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 51
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_47    // ":=        "
     stobj valuetype T_alfa
-    // line 299
+    .line 299
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 52
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_48    // "then      "
     stobj valuetype T_alfa
-    // line 299
+    .line 299
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 53
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_49    // "until     "
     stobj valuetype T_alfa
-    // line 300
+    .line 300
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 54
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_50    // "do        "
     stobj valuetype T_alfa
-    // line 300
+    .line 300
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 55
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_51    // "to downto "
     stobj valuetype T_alfa
-    // line 301
+    .line 301
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 56
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_52    // "begin     "
     stobj valuetype T_alfa
-    // line 301
+    .line 301
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 57
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_53    // "end       "
     stobj valuetype T_alfa
-    // line 302
+    .line 302
     ldloc _F
     ldflda valuetype T_errormsg_array_1 @errormsg::Msg
     ldc.i4 58
     call instance valuetype T_alfa& T_errormsg_array_1::ldadr(int32)
     ldsfld valuetype T_alfa STRING_54    // "factor    "
     stobj valuetype T_alfa
-    // line 303
+    .line 303
     ldloc _F
     ldc.i4 0
     stfld int32 @errormsg::k
-    // line 303
+    .line 303
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 303
+    .line 303
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " key words"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 304
+    .line 304
     br L_while_test_2
 L_while_1:
-    // line 305
+    .line 305
     br L_while_test_4
 L_while_3:
-    // line 305
+    .line 305
     ldloc _F
     ldloc _F
     ldfld int32 @errormsg::k
@@ -11098,7 +11098,7 @@ L_while_test_4:
     ldc.i4.0
     ceq
     brtrue L_while_3
-    // line 306
+    .line 306
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -11117,7 +11117,7 @@ L_while_test_4:
     call string T_alfa::arrayToString(valuetype T_alfa)
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 306
+    .line 306
     ldloca $tmpSetLiteral1
     call instance void T_set_62::clear()
     ldloca $tmpSetLiteral1
@@ -11147,7 +11147,7 @@ L_Epilogue:
     ret
 }
 
-// line 310
+.line 310
 
 .method static
 void Nextch()
@@ -11160,46 +11160,46 @@ void Nextch()
     stloc _F
 
 L_Entry:
-    // line 311
+    .line 311
     ldsfld int32 _G::Cc
     ldsfld int32 _G::Ll
     ceq
     brfalse L_if_end_1
-    // line 312
+    .line 312
     ldsflda valuetype [lpcRuntime]LPC.File _G::Srcfil
     call instance bool [lpcRuntime]LPC.File::Eof()
     brfalse L_if_end_2
-    // line 313
+    .line 313
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 314
+    .line 314
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " program incomplete"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 315
+    .line 315
     call void Errormsg()
-    // line 315
+    .line 315
     ldc.i4 1
     newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
     throw
 L_if_end_2:
-    // line 317
+    .line 317
     ldsfld int32 _G::Errpos
     ldc.i4 0
     ceq
     ldc.i4.0
     ceq
     brfalse L_if_end_3
-    // line 318
+    .line 318
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 318
+    .line 318
     ldc.i4 0
     stsfld int32 _G::Errpos
 L_if_end_3:
-    // line 320
+    .line 320
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 5
@@ -11210,21 +11210,21 @@ L_if_end_3:
     ldstr "  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 321
+    .line 321
     ldc.i4 0
     stsfld int32 _G::Ll
-    // line 321
+    .line 321
     ldc.i4 0
     stsfld int32 _G::Cc
-    // line 322
+    .line 322
     br L_while_test_5
 L_while_4:
-    // line 323
+    .line 323
     ldsfld int32 _G::Ll
     ldc.i4 1
     add
     stsfld int32 _G::Ll
-    // line 323
+    .line 323
     ldsflda valuetype [lpcRuntime]LPC.File _G::Srcfil
     dup
     ldsflda uint8 _G::Ch
@@ -11232,13 +11232,13 @@ L_while_4:
     ldc.i4 255
     call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
     pop
-    // line 323
+    .line 323
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld uint8 _G::Ch
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 323
+    .line 323
     ldsflda valuetype T_array_65 _G::Line
     ldsfld int32 _G::Ll
     call instance uint8& T_array_65::ldadr(int32)
@@ -11250,31 +11250,31 @@ L_while_test_5:
     ldc.i4.0
     ceq
     brtrue L_while_4
-    // line 325
+    .line 325
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 325
+    .line 325
     ldsfld int32 _G::Ll
     ldc.i4 1
     add
     stsfld int32 _G::Ll
-    // line 325
+    .line 325
     ldsflda valuetype T_array_65 _G::Line
     ldsfld int32 _G::Ll
     call instance uint8& T_array_65::ldadr(int32)
     ldc.i4 32 // ' '
     stobj uint8
-    // line 325
+    .line 325
     ldsflda valuetype [lpcRuntime]LPC.File _G::Srcfil
     call instance void [lpcRuntime]LPC.File::Get()
     /* nop */
 L_if_end_1:
-    // line 327
+    .line 327
     ldsfld int32 _G::Cc
     ldc.i4 1
     add
     stsfld int32 _G::Cc
-    // line 327
+    .line 327
     ldsflda valuetype T_array_65 _G::Line
     ldsfld int32 _G::Cc
     call instance uint8& T_array_65::ldadr(int32)
@@ -11286,7 +11286,7 @@ L_Epilogue:
     ret
 }
 
-// line 330
+.line 330
 
 .method static
 void Error(int32 n)
@@ -11305,24 +11305,24 @@ void Error(int32 n)
     stfld int32 @error::n
 
 L_Entry:
-    // line 331
+    .line 331
     ldsfld int32 _G::Errpos
     ldc.i4 0
     ceq
     brfalse L_if_end_1
-    // line 331
+    .line 331
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " ****"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
 L_if_end_1:
-    // line 332
+    .line 332
     ldsfld int32 _G::Cc
     ldsfld int32 _G::Errpos
     cgt
     brfalse L_if_end_2
-    // line 333
+    .line 333
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld int32 _G::Cc
@@ -11341,12 +11341,12 @@ L_if_end_1:
     ldfld int32 @error::n
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
-    // line 334
+    .line 334
     ldsfld int32 _G::Cc
     ldc.i4 3
     add
     stsfld int32 _G::Errpos
-    // line 334
+    .line 334
     ldloca $tmpSetLiteral1
     call instance void T_set_62::clear()
     ldloca $tmpSetLiteral1
@@ -11369,7 +11369,7 @@ L_Epilogue:
     ret
 }
 
-// line 338
+.line 338
 
 .method static
 void Fatal(int32 n)
@@ -11386,61 +11386,61 @@ void Fatal(int32 n)
     stfld int32 @fatal::n
 
 L_Entry:
-    // line 340
+    .line 340
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 340
+    .line 340
     call void Errormsg()
-    // line 341
+    .line 341
     ldloc _F
     ldflda valuetype T_fatal_array_67 @fatal::Msg
     ldc.i4 1
     call instance valuetype T_alfa& T_fatal_array_67::ldadr(int32)
     ldsfld valuetype T_alfa STRING_3    // "identifier"
     stobj valuetype T_alfa
-    // line 341
+    .line 341
     ldloc _F
     ldflda valuetype T_fatal_array_67 @fatal::Msg
     ldc.i4 2
     call instance valuetype T_alfa& T_fatal_array_67::ldadr(int32)
     ldsfld valuetype T_alfa STRING_55    // "procedures"
     stobj valuetype T_alfa
-    // line 342
+    .line 342
     ldloc _F
     ldflda valuetype T_fatal_array_67 @fatal::Msg
     ldc.i4 3
     call instance valuetype T_alfa& T_fatal_array_67::ldadr(int32)
     ldsfld valuetype T_alfa STRING_56    // "reals     "
     stobj valuetype T_alfa
-    // line 342
+    .line 342
     ldloc _F
     ldflda valuetype T_fatal_array_67 @fatal::Msg
     ldc.i4 4
     call instance valuetype T_alfa& T_fatal_array_67::ldadr(int32)
     ldsfld valuetype T_alfa STRING_57    // "arrays    "
     stobj valuetype T_alfa
-    // line 343
+    .line 343
     ldloc _F
     ldflda valuetype T_fatal_array_67 @fatal::Msg
     ldc.i4 5
     call instance valuetype T_alfa& T_fatal_array_67::ldadr(int32)
     ldsfld valuetype T_alfa STRING_58    // "levels    "
     stobj valuetype T_alfa
-    // line 343
+    .line 343
     ldloc _F
     ldflda valuetype T_fatal_array_67 @fatal::Msg
     ldc.i4 6
     call instance valuetype T_alfa& T_fatal_array_67::ldadr(int32)
     ldsfld valuetype T_alfa STRING_59    // "code      "
     stobj valuetype T_alfa
-    // line 344
+    .line 344
     ldloc _F
     ldflda valuetype T_fatal_array_67 @fatal::Msg
     ldc.i4 7
     call instance valuetype T_alfa& T_fatal_array_67::ldadr(int32)
     ldsfld valuetype T_alfa STRING_60    // "strings   "
     stobj valuetype T_alfa
-    // line 345
+    .line 345
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " compiler table for "
@@ -11458,7 +11458,7 @@ L_Entry:
     ldstr " is too small"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 346
+    .line 346
     ldc.i4 1
     newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
     throw
@@ -11467,7 +11467,7 @@ L_Epilogue:
     ret
 }
 
-// line 349
+.line 349
 
 .method static
 void Insymbol()
@@ -11516,45 +11516,45 @@ void Insymbol()
     call instance void T_set_62::addRange(int32, int32)
 
 L_Entry:
-    // line 380
+    .line 380
 L_1:
     br L_while_test_2
 L_while_1:
-    // line 380
+    .line 380
     call void Nextch()
 L_while_test_2:
     ldsfld uint8 _G::Ch
     ldc.i4 32 // ' '
     ceq
     brtrue L_while_1
-    // line 381
+    .line 381
     ldloc $tmpSetLiteral1
     ldsfld uint8 _G::Ch
     call bool _SetContains(valuetype T_set_62 s, int32 val)
     brfalse L_else_3
-    // line 382
+    .line 382
     ldloc _F
     ldc.i4 0
     stfld int32 @insymbol::k
-    // line 382
+    .line 382
     ldsfld valuetype T_alfa STRING_61    // "          "
     stsfld valuetype T_alfa _G::Id
-    // line 383
+    .line 383
 L_repeat_5:
-    // line 383
+    .line 383
     ldloc _F
     ldfld int32 @insymbol::k
     ldc.i4 10
     clt
     brfalse L_if_end_6
-    // line 384
+    .line 384
     ldloc _F
     ldloc _F
     ldfld int32 @insymbol::k
     ldc.i4 1
     add
     stfld int32 @insymbol::k
-    // line 384
+    .line 384
     ldsflda valuetype T_alfa _G::Id
     ldloc _F
     ldfld int32 @insymbol::k
@@ -11562,7 +11562,7 @@ L_repeat_5:
     ldsfld uint8 _G::Ch
     stobj uint8
 L_if_end_6:
-    // line 386
+    .line 386
     call void Nextch()
     ldloc $tmpSetLiteral2
     ldsfld uint8 _G::Ch
@@ -11570,17 +11570,17 @@ L_if_end_6:
     ldc.i4.0
     ceq
     brfalse L_repeat_5
-    // line 388
+    .line 388
     ldloc _F
     ldc.i4 1
     stfld int32 @insymbol::i
-    // line 388
+    .line 388
     ldloc _F
     ldc.i4 27
     stfld int32 @insymbol::j
-    // line 389
+    .line 389
 L_repeat_7:
-    // line 389
+    .line 389
     ldloc _F
     ldloc _F
     ldfld int32 @insymbol::i
@@ -11590,7 +11590,7 @@ L_repeat_7:
     ldc.i4 2
     div
     stfld int32 @insymbol::k
-    // line 390
+    .line 390
     ldsfld valuetype T_alfa _G::Id
     call string T_alfa::arrayToString(valuetype T_alfa)
     ldsflda valuetype T_array_79 _G::Key
@@ -11601,7 +11601,7 @@ L_repeat_7:
     call string T_alfa::arrayToString(valuetype T_alfa)
     call bool [lpcRuntime]LPC.Helpers::StrcmpLE(string, string)
     brfalse L_if_end_8
-    // line 390
+    .line 390
     ldloc _F
     ldloc _F
     ldfld int32 @insymbol::k
@@ -11609,7 +11609,7 @@ L_repeat_7:
     sub
     stfld int32 @insymbol::j
 L_if_end_8:
-    // line 391
+    .line 391
     ldsfld valuetype T_alfa _G::Id
     call string T_alfa::arrayToString(valuetype T_alfa)
     ldsflda valuetype T_array_79 _G::Key
@@ -11620,7 +11620,7 @@ L_if_end_8:
     call string T_alfa::arrayToString(valuetype T_alfa)
     call bool [lpcRuntime]LPC.Helpers::StrcmpGE(string, string)
     brfalse L_if_end_9
-    // line 391
+    .line 391
     ldloc _F
     ldloc _F
     ldfld int32 @insymbol::k
@@ -11634,7 +11634,7 @@ L_if_end_9:
     ldfld int32 @insymbol::j
     cgt
     brfalse L_repeat_7
-    // line 393
+    .line 393
     ldloc _F
     ldfld int32 @insymbol::i
     ldc.i4 1
@@ -11643,7 +11643,7 @@ L_if_end_9:
     ldfld int32 @insymbol::j
     cgt
     brfalse L_else_10
-    // line 393
+    .line 393
     ldsflda valuetype T_array_80 _G::Ksy
     ldloc _F
     ldfld int32 @insymbol::k
@@ -11652,30 +11652,30 @@ L_if_end_9:
     stsfld int32 _G::Sy
     br L_if_end_11
 L_else_10:
-    // line 393
+    .line 393
     ldc.i4 36
     stsfld int32 _G::Sy
 L_if_end_11:
     br L_if_end_4
 L_else_3:
-    // line 395
+    .line 395
     ldloc $tmpSetLiteral3
     ldsfld uint8 _G::Ch
     call bool _SetContains(valuetype T_set_62 s, int32 val)
     brfalse L_else_12
-    // line 396
+    .line 396
     ldloc _F
     ldc.i4 0
     stfld int32 @insymbol::k
-    // line 396
+    .line 396
     ldc.i4 0
     stsfld int32 _G::Inum
-    // line 396
+    .line 396
     ldc.i4 0
     stsfld int32 _G::Sy
-    // line 397
+    .line 397
 L_repeat_14:
-    // line 397
+    .line 397
     ldsfld int32 _G::Inum
     ldc.i4 10
     mul
@@ -11684,14 +11684,14 @@ L_repeat_14:
     ldc.i4 48 // '0'
     sub
     stsfld int32 _G::Inum
-    // line 398
+    .line 398
     ldloc _F
     ldloc _F
     ldfld int32 @insymbol::k
     ldc.i4 1
     add
     stfld int32 @insymbol::k
-    // line 398
+    .line 398
     call void Nextch()
     ldloc $tmpSetLiteral4
     ldsfld uint8 _G::Ch
@@ -11699,7 +11699,7 @@ L_repeat_14:
     ldc.i4.0
     ceq
     brfalse L_repeat_14
-    // line 400
+    .line 400
     ldloc _F
     ldfld int32 @insymbol::k
     ldc.i4 15
@@ -11712,56 +11712,56 @@ L_repeat_14:
     cgt
 L_OR_shortcut_15:
     brfalse L_if_end_16
-    // line 401
+    .line 401
     ldc.i4 21
     call void Error(int32 n)
-    // line 401
+    .line 401
     ldc.i4 0
     stsfld int32 _G::Inum
-    // line 401
+    .line 401
     ldloc _F
     ldc.i4 0
     stfld int32 @insymbol::k
 L_if_end_16:
-    // line 403
+    .line 403
     ldsfld uint8 _G::Ch
     ldc.i4 46 // '.'
     ceq
     brfalse L_else_17
-    // line 404
+    .line 404
     call void Nextch()
-    // line 405
+    .line 405
     ldsfld uint8 _G::Ch
     ldc.i4 46 // '.'
     ceq
     brfalse L_else_19
-    // line 405
+    .line 405
     ldc.i4 58 // ':'
     stsfld uint8 _G::Ch
     br L_if_end_20
 L_else_19:
-    // line 406
+    .line 406
     ldc.i4 1
     stsfld int32 _G::Sy
-    // line 406
+    .line 406
     ldsfld int32 _G::Inum
     conv.r8
     stsfld float64 _G::Rnum
-    // line 406
+    .line 406
     ldloc _F
     ldc.i4 0
     stfld int32 @insymbol::e
-    // line 407
+    .line 407
     br L_while_test_22
 L_while_21:
-    // line 408
+    .line 408
     ldloc _F
     ldloc _F
     ldfld int32 @insymbol::e
     ldc.i4 1
     sub
     stfld int32 @insymbol::e
-    // line 409
+    .line 409
     ldc.r8 10.0000
     ldsfld float64 _G::Rnum
     mul
@@ -11771,23 +11771,23 @@ L_while_21:
     conv.r8
     add
     stsfld float64 _G::Rnum
-    // line 409
+    .line 409
     call void Nextch()
 L_while_test_22:
     ldloc $tmpSetLiteral5
     ldsfld uint8 _G::Ch
     call bool _SetContains(valuetype T_set_62 s, int32 val)
     brtrue L_while_21
-    // line 411
+    .line 411
     ldsfld uint8 _G::Ch
     ldc.i4 101 // 'e'
     ceq
     brfalse L_if_end_23
-    // line 411
+    .line 411
     ldloc _F
     call instance void @insymbol::Readscale()
 L_if_end_23:
-    // line 412
+    .line 412
     ldloc _F
     ldfld int32 @insymbol::e
     ldc.i4 0
@@ -11795,33 +11795,33 @@ L_if_end_23:
     ldc.i4.0
     ceq
     brfalse L_if_end_24
-    // line 412
+    .line 412
     ldloc _F
     call instance void @insymbol::Adjustscale()
 L_if_end_24:
 L_if_end_20:
     br L_if_end_18
 L_else_17:
-    // line 415
+    .line 415
     ldsfld uint8 _G::Ch
     ldc.i4 101 // 'e'
     ceq
     brfalse L_if_end_25
-    // line 416
+    .line 416
     ldc.i4 1
     stsfld int32 _G::Sy
-    // line 416
+    .line 416
     ldsfld int32 _G::Inum
     conv.r8
     stsfld float64 _G::Rnum
-    // line 416
+    .line 416
     ldloc _F
     ldc.i4 0
     stfld int32 @insymbol::e
-    // line 417
+    .line 417
     ldloc _F
     call instance void @insymbol::Readscale()
-    // line 417
+    .line 417
     ldloc _F
     ldfld int32 @insymbol::e
     ldc.i4 0
@@ -11829,7 +11829,7 @@ L_else_17:
     ldc.i4.0
     ceq
     brfalse L_if_end_26
-    // line 417
+    .line 417
     ldloc _F
     call instance void @insymbol::Adjustscale()
 L_if_end_26:
@@ -11838,27 +11838,27 @@ L_if_end_18:
     /* nop */
     br L_if_end_13
 L_else_12:
-    // line 420
+    .line 420
     ldsfld uint8 _G::Ch
     stloc $tmpSwitchValue6
     ldloc $tmpSwitchValue6
     ldc.i4 58 // ':'
     bne.un L_check_case_28
-    // line 421
+    .line 421
     call void Nextch()
-    // line 422
+    .line 422
     ldsfld uint8 _G::Ch
     ldc.i4 61 // '='
     ceq
     brfalse L_else_29
-    // line 423
+    .line 423
     ldc.i4 27
     stsfld int32 _G::Sy
-    // line 423
+    .line 423
     call void Nextch()
     br L_if_end_30
 L_else_29:
-    // line 424
+    .line 424
     ldc.i4 26
     stsfld int32 _G::Sy
 L_if_end_30:
@@ -11867,33 +11867,33 @@ L_check_case_28:
     ldloc $tmpSwitchValue6
     ldc.i4 60 // '<'
     bne.un L_check_case_31
-    // line 426
+    .line 426
     call void Nextch()
-    // line 427
+    .line 427
     ldsfld uint8 _G::Ch
     ldc.i4 61 // '='
     ceq
     brfalse L_else_32
-    // line 427
+    .line 427
     ldc.i4 18
     stsfld int32 _G::Sy
-    // line 427
+    .line 427
     call void Nextch()
     br L_if_end_33
 L_else_32:
-    // line 428
+    .line 428
     ldsfld uint8 _G::Ch
     ldc.i4 62 // '>'
     ceq
     brfalse L_else_34
-    // line 428
+    .line 428
     ldc.i4 14
     stsfld int32 _G::Sy
-    // line 428
+    .line 428
     call void Nextch()
     br L_if_end_35
 L_else_34:
-    // line 428
+    .line 428
     ldc.i4 17
     stsfld int32 _G::Sy
 L_if_end_35:
@@ -11903,21 +11903,21 @@ L_check_case_31:
     ldloc $tmpSwitchValue6
     ldc.i4 62 // '>'
     bne.un L_check_case_36
-    // line 430
+    .line 430
     call void Nextch()
-    // line 431
+    .line 431
     ldsfld uint8 _G::Ch
     ldc.i4 61 // '='
     ceq
     brfalse L_else_37
-    // line 431
+    .line 431
     ldc.i4 16
     stsfld int32 _G::Sy
-    // line 431
+    .line 431
     call void Nextch()
     br L_if_end_38
 L_else_37:
-    // line 431
+    .line 431
     ldc.i4 15
     stsfld int32 _G::Sy
 L_if_end_38:
@@ -11926,21 +11926,21 @@ L_check_case_36:
     ldloc $tmpSwitchValue6
     ldc.i4 46 // '.'
     bne.un L_check_case_39
-    // line 433
+    .line 433
     call void Nextch()
-    // line 434
+    .line 434
     ldsfld uint8 _G::Ch
     ldc.i4 46 // '.'
     ceq
     brfalse L_else_40
-    // line 435
+    .line 435
     ldc.i4 26
     stsfld int32 _G::Sy
-    // line 435
+    .line 435
     call void Nextch()
     br L_if_end_41
 L_else_40:
-    // line 436
+    .line 436
     ldc.i4 25
     stsfld int32 _G::Sy
 L_if_end_41:
@@ -11949,32 +11949,32 @@ L_check_case_39:
     ldloc $tmpSwitchValue6
     ldc.i4 39 // '''
     bne.un L_check_case_42
-    // line 438
+    .line 438
     ldloc _F
     ldc.i4 0
     stfld int32 @insymbol::k
-    // line 439
+    .line 439
 L_2:
     call void Nextch()
-    // line 440
+    .line 440
     ldsfld uint8 _G::Ch
     ldc.i4 39 // '''
     ceq
     brfalse L_if_end_43
-    // line 441
+    .line 441
     call void Nextch()
-    // line 441
+    .line 441
     ldsfld uint8 _G::Ch
     ldc.i4 39 // '''
     ceq
     ldc.i4.0
     ceq
     brfalse L_if_end_44
-    // line 441
+    .line 441
     br L_3
 L_if_end_44:
 L_if_end_43:
-    // line 443
+    .line 443
     ldsfld int32 _G::Sx
     ldloc _F
     ldfld int32 @insymbol::k
@@ -11982,11 +11982,11 @@ L_if_end_43:
     ldc.i4 10000
     ceq
     brfalse L_if_end_45
-    // line 443
+    .line 443
     ldc.i4 7
     call void Fatal(int32 n)
 L_if_end_45:
-    // line 444
+    .line 444
     ldsflda valuetype T_array_84 _G::Stab
     ldsfld int32 _G::Sx
     ldloc _F
@@ -11995,39 +11995,39 @@ L_if_end_45:
     call instance uint8& T_array_84::ldadr(int32)
     ldsfld uint8 _G::Ch
     stobj uint8
-    // line 444
+    .line 444
     ldloc _F
     ldloc _F
     ldfld int32 @insymbol::k
     ldc.i4 1
     add
     stfld int32 @insymbol::k
-    // line 445
+    .line 445
     ldsfld int32 _G::Cc
     ldc.i4 1
     ceq
     brfalse L_else_46
-    // line 446
+    .line 446
     ldloc _F
     ldc.i4 0
     stfld int32 @insymbol::k
     /* nop */
     br L_if_end_47
 L_else_46:
-    // line 448
+    .line 448
     br L_2
 L_if_end_47:
-    // line 449
+    .line 449
 L_3:
     ldloc _F
     ldfld int32 @insymbol::k
     ldc.i4 1
     ceq
     brfalse L_else_48
-    // line 450
+    .line 450
     ldc.i4 2
     stsfld int32 _G::Sy
-    // line 450
+    .line 450
     ldsflda valuetype T_array_84 _G::Stab
     ldsfld int32 _G::Sx
     call instance uint8& T_array_84::ldadr(int32)
@@ -12035,34 +12035,34 @@ L_3:
     stsfld int32 _G::Inum
     br L_if_end_49
 L_else_48:
-    // line 452
+    .line 452
     ldloc _F
     ldfld int32 @insymbol::k
     ldc.i4 0
     ceq
     brfalse L_else_50
-    // line 453
+    .line 453
     ldc.i4 38
     call void Error(int32 n)
-    // line 453
+    .line 453
     ldc.i4 2
     stsfld int32 _G::Sy
-    // line 453
+    .line 453
     ldc.i4 0
     stsfld int32 _G::Inum
     br L_if_end_51
 L_else_50:
-    // line 455
+    .line 455
     ldc.i4 3
     stsfld int32 _G::Sy
-    // line 455
+    .line 455
     ldsfld int32 _G::Sx
     stsfld int32 _G::Inum
-    // line 455
+    .line 455
     ldloc _F
     ldfld int32 @insymbol::k
     stsfld int32 _G::Sleng
-    // line 455
+    .line 455
     ldsfld int32 _G::Sx
     ldloc _F
     ldfld int32 @insymbol::k
@@ -12075,28 +12075,28 @@ L_check_case_42:
     ldloc $tmpSwitchValue6
     ldc.i4 40 // '('
     bne.un L_check_case_52
-    // line 458
+    .line 458
     call void Nextch()
-    // line 459
+    .line 459
     ldsfld uint8 _G::Ch
     ldc.i4 42 // '*'
     ceq
     ldc.i4.0
     ceq
     brfalse L_else_53
-    // line 459
+    .line 459
     ldc.i4 19
     stsfld int32 _G::Sy
     br L_if_end_54
 L_else_53:
-    // line 460
+    .line 460
     call void Nextch()
-    // line 461
+    .line 461
 L_repeat_55:
-    // line 462
+    .line 462
     br L_while_test_57
 L_while_56:
-    // line 462
+    .line 462
     call void Nextch()
 L_while_test_57:
     ldsfld uint8 _G::Ch
@@ -12105,15 +12105,15 @@ L_while_test_57:
     ldc.i4.0
     ceq
     brtrue L_while_56
-    // line 463
+    .line 463
     call void Nextch()
     ldsfld uint8 _G::Ch
     ldc.i4 41 // ')'
     ceq
     brfalse L_repeat_55
-    // line 465
+    .line 465
     call void Nextch()
-    // line 465
+    .line 465
     br L_1
 L_if_end_54:
     br L_case_end_27
@@ -12156,13 +12156,13 @@ L_check_case_52:
     beq L_case_59
     br L_check_case_58
 L_case_59:
-    // line 469
+    .line 469
     ldsflda valuetype T_array_85 _G::Sps
     ldsfld uint8 _G::Ch
     call instance int32& T_array_85::ldadr(int32)
     ldobj int32
     stsfld int32 _G::Sy
-    // line 469
+    .line 469
     call void Nextch()
     br L_case_end_27
 L_check_case_58:
@@ -12192,12 +12192,12 @@ L_check_case_58:
     beq L_case_60
     br L_case_end_27
 L_case_60:
-    // line 472
+    .line 472
     ldc.i4 24
     call void Error(int32 n)
-    // line 472
+    .line 472
     call void Nextch()
-    // line 472
+    .line 472
     br L_1
 L_case_end_27:
 L_if_end_13:
@@ -12207,7 +12207,7 @@ L_Epilogue:
     ret
 }
 
-// line 477
+.line 477
 
 .method static
 void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
@@ -12236,19 +12236,19 @@ void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
     stfld int32 @enter::X3
 
 L_Entry:
-    // line 479
+    .line 479
     ldsfld int32 _G::t
     ldc.i4 1
     add
     stsfld int32 _G::t
-    // line 481
+    .line 481
     ldsflda valuetype T_array_88 _G::Tab
     ldsfld int32 _G::t
     call instance valuetype T_record_86& T_array_88::ldadr(int32)
     ldloc _F
     ldfld valuetype T_alfa @enter::X0
     stfld valuetype T_alfa T_record_86::Name
-    // line 481
+    .line 481
     ldsflda valuetype T_array_88 _G::Tab
     ldsfld int32 _G::t
     call instance valuetype T_record_86& T_array_88::ldadr(int32)
@@ -12260,21 +12260,21 @@ L_Entry:
     ldc.i4 131071
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_record_86::Link
-    // line 481
+    .line 481
     ldsflda valuetype T_array_88 _G::Tab
     ldsfld int32 _G::t
     call instance valuetype T_record_86& T_array_88::ldadr(int32)
     ldloc _F
     ldfld int32 @enter::X1
     stfld int32 T_record_86::Obj
-    // line 482
+    .line 482
     ldsflda valuetype T_array_88 _G::Tab
     ldsfld int32 _G::t
     call instance valuetype T_record_86& T_array_88::ldadr(int32)
     ldloc _F
     ldfld int32 @enter::X2
     stfld int32 T_record_86::Typ
-    // line 482
+    .line 482
     ldsflda valuetype T_array_88 _G::Tab
     ldsfld int32 _G::t
     call instance valuetype T_record_86& T_array_88::ldadr(int32)
@@ -12284,13 +12284,13 @@ L_Entry:
     ldc.i4 131071
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_record_86::Ref
-    // line 482
+    .line 482
     ldsflda valuetype T_array_88 _G::Tab
     ldsfld int32 _G::t
     call instance valuetype T_record_86& T_array_88::ldadr(int32)
     ldc.i4 1 // (true)
     stfld bool T_record_86::Normal
-    // line 483
+    .line 483
     ldsflda valuetype T_array_88 _G::Tab
     ldsfld int32 _G::t
     call instance valuetype T_record_86& T_array_88::ldadr(int32)
@@ -12300,7 +12300,7 @@ L_Entry:
     ldc.i4 100
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_record_86::Lev
-    // line 483
+    .line 483
     ldsflda valuetype T_array_88 _G::Tab
     ldsfld int32 _G::t
     call instance valuetype T_record_86& T_array_88::ldadr(int32)
@@ -12312,7 +12312,7 @@ L_Epilogue:
     ret
 }
 
-// line 487
+.line 487
 
 .method static
 void Enterarray(int32 Tp, int32 l, int32 h)
@@ -12337,18 +12337,18 @@ void Enterarray(int32 Tp, int32 l, int32 h)
     stfld int32 @enterarray::Tp
 
 L_Entry:
-    // line 488
+    .line 488
     ldloc _F
     ldfld int32 @enterarray::l
     ldloc _F
     ldfld int32 @enterarray::h
     cgt
     brfalse L_if_end_1
-    // line 488
+    .line 488
     ldc.i4 27
     call void Error(int32 n)
 L_if_end_1:
-    // line 489
+    .line 489
     ldloc _F
     ldfld int32 @enterarray::l
     dup
@@ -12372,42 +12372,42 @@ L_abs_question_4:
     cgt
 L_OR_shortcut_2:
     brfalse L_if_end_5
-    // line 490
+    .line 490
     ldc.i4 27
     call void Error(int32 n)
-    // line 490
+    .line 490
     ldloc _F
     ldc.i4 0
     stfld int32 @enterarray::l
-    // line 490
+    .line 490
     ldloc _F
     ldc.i4 0
     stfld int32 @enterarray::h
     /* nop */
 L_if_end_5:
-    // line 492
+    .line 492
     ldsfld int32 _G::a
     ldc.i4 100
     ceq
     brfalse L_else_6
-    // line 492
+    .line 492
     ldc.i4 4
     call void Fatal(int32 n)
     br L_if_end_7
 L_else_6:
-    // line 493
+    .line 493
     ldsfld int32 _G::a
     ldc.i4 1
     add
     stsfld int32 _G::a
-    // line 495
+    .line 495
     ldsflda valuetype T_array_90 _G::Atab
     ldsfld int32 _G::a
     call instance valuetype T_record_89& T_array_90::ldadr(int32)
     ldloc _F
     ldfld int32 @enterarray::Tp
     stfld int32 T_record_89::Inxtyp
-    // line 495
+    .line 495
     ldsflda valuetype T_array_90 _G::Atab
     ldsfld int32 _G::a
     call instance valuetype T_record_89& T_array_90::ldadr(int32)
@@ -12418,7 +12418,7 @@ L_else_6:
     ldc.i4 131071
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_record_89::Low
-    // line 495
+    .line 495
     ldsflda valuetype T_array_90 _G::Atab
     ldsfld int32 _G::a
     call instance valuetype T_record_89& T_array_90::ldadr(int32)
@@ -12435,7 +12435,7 @@ L_Epilogue:
     ret
 }
 
-// line 500
+.line 500
 
 .method static
 void Enterblock()
@@ -12448,22 +12448,22 @@ void Enterblock()
     stloc _F
 
 L_Entry:
-    // line 501
+    .line 501
     ldsfld int32 _G::b
     ldc.i4 100
     ceq
     brfalse L_else_1
-    // line 501
+    .line 501
     ldc.i4 2
     call void Fatal(int32 n)
     br L_if_end_2
 L_else_1:
-    // line 502
+    .line 502
     ldsfld int32 _G::b
     ldc.i4 1
     add
     stsfld int32 _G::b
-    // line 502
+    .line 502
     ldsflda valuetype T_array_92 _G::Btab
     ldsfld int32 _G::b
     call instance valuetype T_record_91& T_array_92::ldadr(int32)
@@ -12473,7 +12473,7 @@ L_else_1:
     ldc.i4 131071
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_record_91::Last
-    // line 502
+    .line 502
     ldsflda valuetype T_array_92 _G::Btab
     ldsfld int32 _G::b
     call instance valuetype T_record_91& T_array_92::ldadr(int32)
@@ -12489,7 +12489,7 @@ L_Epilogue:
     ret
 }
 
-// line 506
+.line 506
 
 .method static
 void Enterreal(float64 x)
@@ -12506,19 +12506,19 @@ void Enterreal(float64 x)
     stfld float64 @enterreal::x
 
 L_Entry:
-    // line 507
+    .line 507
     ldsfld int32 _G::C2
     ldc.i4 100
     ldc.i4 1
     sub
     ceq
     brfalse L_else_1
-    // line 507
+    .line 507
     ldc.i4 3
     call void Fatal(int32 n)
     br L_if_end_2
 L_else_1:
-    // line 508
+    .line 508
     ldsflda valuetype T_array_93 _G::Rconst
     ldsfld int32 _G::C2
     ldc.i4 1
@@ -12527,13 +12527,13 @@ L_else_1:
     ldloc _F
     ldfld float64 @enterreal::x
     stobj float64
-    // line 508
+    .line 508
     ldc.i4 1
     stsfld int32 _G::C1
-    // line 509
+    .line 509
     br L_while_test_4
 L_while_3:
-    // line 509
+    .line 509
     ldsfld int32 _G::C1
     ldc.i4 1
     add
@@ -12549,12 +12549,12 @@ L_while_test_4:
     ldc.i4.0
     ceq
     brtrue L_while_3
-    // line 510
+    .line 510
     ldsfld int32 _G::C1
     ldsfld int32 _G::C2
     cgt
     brfalse L_if_end_5
-    // line 510
+    .line 510
     ldsfld int32 _G::C1
     stsfld int32 _G::C2
 L_if_end_5:
@@ -12564,7 +12564,7 @@ L_Epilogue:
     ret
 }
 
-// line 514
+.line 514
 
 .method static
 void Emit(int32 Fct)
@@ -12581,16 +12581,16 @@ void Emit(int32 Fct)
     stfld int32 @emit::Fct
 
 L_Entry:
-    // line 515
+    .line 515
     ldsfld int32 _G::Lc
     ldc.i4 10000
     ceq
     brfalse L_if_end_1
-    // line 515
+    .line 515
     ldc.i4 6
     call void Fatal(int32 n)
 L_if_end_1:
-    // line 516
+    .line 516
     ldsflda valuetype T_array_97 _G::Code
     ldsfld int32 _G::Lc
     call instance valuetype T_order& T_array_97::ldadr(int32)
@@ -12601,7 +12601,7 @@ L_if_end_1:
     ldc.i4 63
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_order::f
-    // line 516
+    .line 516
     ldsfld int32 _G::Lc
     ldc.i4 1
     add
@@ -12611,7 +12611,7 @@ L_Epilogue:
     ret
 }
 
-// line 519
+.line 519
 
 .method static
 void Emit1(int32 Fct, int32 b)
@@ -12632,16 +12632,16 @@ void Emit1(int32 Fct, int32 b)
     stfld int32 @emit1::Fct
 
 L_Entry:
-    // line 520
+    .line 520
     ldsfld int32 _G::Lc
     ldc.i4 10000
     ceq
     brfalse L_if_end_1
-    // line 520
+    .line 520
     ldc.i4 6
     call void Fatal(int32 n)
 L_if_end_1:
-    // line 522
+    .line 522
     ldsflda valuetype T_array_97 _G::Code
     ldsfld int32 _G::Lc
     call instance valuetype T_order& T_array_97::ldadr(int32)
@@ -12652,7 +12652,7 @@ L_if_end_1:
     ldc.i4 63
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_order::f
-    // line 522
+    .line 522
     ldsflda valuetype T_array_97 _G::Code
     ldsfld int32 _G::Lc
     call instance valuetype T_order& T_array_97::ldadr(int32)
@@ -12663,7 +12663,7 @@ L_if_end_1:
     ldc.i4 2147483647
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_order::y
-    // line 523
+    .line 523
     ldsfld int32 _G::Lc
     ldc.i4 1
     add
@@ -12673,7 +12673,7 @@ L_Epilogue:
     ret
 }
 
-// line 526
+.line 526
 
 .method static
 void Emit2(int32 Fct, int32 a, int32 b)
@@ -12698,16 +12698,16 @@ void Emit2(int32 Fct, int32 a, int32 b)
     stfld int32 @emit2::Fct
 
 L_Entry:
-    // line 527
+    .line 527
     ldsfld int32 _G::Lc
     ldc.i4 10000
     ceq
     brfalse L_if_end_1
-    // line 527
+    .line 527
     ldc.i4 6
     call void Fatal(int32 n)
 L_if_end_1:
-    // line 529
+    .line 529
     ldsflda valuetype T_array_97 _G::Code
     ldsfld int32 _G::Lc
     call instance valuetype T_order& T_array_97::ldadr(int32)
@@ -12718,7 +12718,7 @@ L_if_end_1:
     ldc.i4 63
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_order::f
-    // line 529
+    .line 529
     ldsflda valuetype T_array_97 _G::Code
     ldsfld int32 _G::Lc
     call instance valuetype T_order& T_array_97::ldadr(int32)
@@ -12729,7 +12729,7 @@ L_if_end_1:
     ldc.i4 100
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_order::x
-    // line 529
+    .line 529
     ldsflda valuetype T_array_97 _G::Code
     ldsfld int32 _G::Lc
     call instance valuetype T_order& T_array_97::ldadr(int32)
@@ -12740,7 +12740,7 @@ L_if_end_1:
     ldc.i4 2147483647
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_order::y
-    // line 530
+    .line 530
     ldsfld int32 _G::Lc
     ldc.i4 1
     add
@@ -12750,7 +12750,7 @@ L_Epilogue:
     ret
 }
 
-// line 533
+.line 533
 
 .method static
 void Printtables()
@@ -12776,16 +12776,16 @@ void Printtables()
     stloc _F
 
 L_Entry:
-    // line 537
+    .line 537
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "identifiers     link  obj  typ  ref  nrm  lev  adr"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 538
+    .line 538
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 539
+    .line 539
     ldsfld int32 _G::t
     stloc $tmpEndValue1
     ldsflda valuetype T_array_92 _G::Btab
@@ -12802,7 +12802,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int32 @printtables::i
 L_for_loop_1:
-    // line 541
+    .line 541
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -12897,16 +12897,16 @@ L_for_loop_1:
     br L_for_loop_1
 L_for_end_2:
     pop
-    // line 544
+    .line 544
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "blocks    last lpar psze vsze"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 545
+    .line 545
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 546
+    .line 546
     ldsfld int32 _G::b
     stloc $tmpEndValue4
     ldc.i4 1
@@ -12918,7 +12918,7 @@ L_for_end_2:
     ldloc $tmpIndex5
     stfld int32 @printtables::i
 L_for_loop_3:
-    // line 548
+    .line 548
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -12975,16 +12975,16 @@ L_for_loop_3:
     br L_for_loop_3
 L_for_end_4:
     pop
-    // line 550
+    .line 550
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "arrays    xtyp etyp eref  low high elsz size"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 551
+    .line 551
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 552
+    .line 552
     ldsfld int32 _G::a
     stloc $tmpEndValue7
     ldc.i4 1
@@ -12996,7 +12996,7 @@ L_for_end_4:
     ldloc $tmpIndex8
     stfld int32 @printtables::i
 L_for_loop_5:
-    // line 554
+    .line 554
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -13080,16 +13080,16 @@ L_for_loop_5:
     br L_for_loop_5
 L_for_end_6:
     pop
-    // line 557
+    .line 557
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "code:"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 558
+    .line 558
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 559
+    .line 559
     ldsfld int32 _G::Lc
     ldc.i4 1
     sub
@@ -13103,7 +13103,7 @@ L_for_end_6:
     ldloc $tmpIndex11
     stfld int32 @printtables::i
 L_for_loop_7:
-    // line 560
+    .line 560
     ldloc _F
     ldfld int32 @printtables::i
     ldc.i4 5
@@ -13111,10 +13111,10 @@ L_for_loop_7:
     ldc.i4 0
     ceq
     brfalse L_if_end_9
-    // line 561
+    .line 561
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 561
+    .line 561
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 5
@@ -13124,7 +13124,7 @@ L_for_loop_7:
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
 L_if_end_9:
-    // line 563
+    .line 563
     ldloc _F
     ldsflda valuetype T_array_97 _G::Code
     ldloc _F
@@ -13132,7 +13132,7 @@ L_if_end_9:
     call instance valuetype T_order& T_array_97::ldadr(int32)
     ldobj valuetype T_order
     stfld valuetype T_order @printtables::o
-    // line 563
+    .line 563
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 5
@@ -13142,7 +13142,7 @@ L_if_end_9:
     ldfld int8 T_order::f
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
-    // line 565
+    .line 565
     ldloc _F
     ldflda valuetype T_order @printtables::o
     ldfld int8 T_order::f
@@ -13158,14 +13158,14 @@ L_if_end_9:
     ceq
 L_OR_shortcut_10:
     brfalse L_else_11
-    // line 566
+    .line 566
     ldloc _F
     ldflda valuetype T_order @printtables::o
     ldfld int8 T_order::f
     ldc.i4 4
     clt
     brfalse L_else_13
-    // line 566
+    .line 566
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 2
@@ -13184,7 +13184,7 @@ L_OR_shortcut_10:
     pop
     br L_if_end_14
 L_else_13:
-    // line 567
+    .line 567
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 7
@@ -13197,14 +13197,14 @@ L_else_13:
 L_if_end_14:
     br L_if_end_12
 L_else_11:
-    // line 568
+    .line 568
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "       "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
 L_if_end_12:
-    // line 569
+    .line 569
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 44 // ','
@@ -13224,7 +13224,7 @@ L_if_end_12:
     br L_for_loop_7
 L_for_end_8:
     pop
-    // line 571
+    .line 571
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
 
@@ -13232,7 +13232,7 @@ L_Epilogue:
     ret
 }
 
-// line 574
+.line 574
 
 .method static
 void Block(valuetype T_symset Fsys, bool Isfun, int32 Level)
@@ -13315,52 +13315,52 @@ void Block(valuetype T_symset Fsys, bool Isfun, int32 Level)
 
 
 L_Entry:
-    // line 1477
+    .line 1477
     ldloc _F
     ldc.i4 5
     stfld int32 @block::Dx
-    // line 1477
+    .line 1477
     ldloc _F
     ldsfld int32 _G::t
     stfld int32 @block::Prt
-    // line 1478
+    .line 1478
     ldloc _F
     ldfld int32 @block::Level
     ldc.i4 100
     cgt
     brfalse L_if_end_1
-    // line 1478
+    .line 1478
     ldc.i4 5
     call void Fatal(int32 n)
 L_if_end_1:
-    // line 1479
+    .line 1479
     ldloc _F
     ldloc $tmpSetLiteral1
     ldloc _F
     ldfld valuetype T_symset @block::Fsys
     ldc.i4 7
     call instance void @block::Test(valuetype T_symset S1, valuetype T_symset S2, int32 n)
-    // line 1480
+    .line 1480
     call void Enterblock()
-    // line 1480
+    .line 1480
     ldsflda valuetype T_array_100 _G::Display
     ldloc _F
     ldfld int32 @block::Level
     call instance int32& T_array_100::ldadr(int32)
     ldsfld int32 _G::b
     stobj int32
-    // line 1480
+    .line 1480
     ldloc _F
     ldsfld int32 _G::b
     stfld int32 @block::Prb
-    // line 1481
+    .line 1481
     ldsflda valuetype T_array_88 _G::Tab
     ldloc _F
     ldfld int32 @block::Prt
     call instance valuetype T_record_86& T_array_88::ldadr(int32)
     ldc.i4 0
     stfld int32 T_record_86::Typ
-    // line 1481
+    .line 1481
     ldsflda valuetype T_array_88 _G::Tab
     ldloc _F
     ldfld int32 @block::Prt
@@ -13372,16 +13372,16 @@ L_if_end_1:
     ldc.i4 131071
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_record_86::Ref
-    // line 1482
+    .line 1482
     ldsfld int32 _G::Sy
     ldc.i4 19
     ceq
     brfalse L_if_end_2
-    // line 1482
+    .line 1482
     ldloc _F
     call instance void @block::Parameterlist()
 L_if_end_2:
-    // line 1483
+    .line 1483
     ldsflda valuetype T_array_92 _G::Btab
     ldloc _F
     ldfld int32 @block::Prb
@@ -13392,7 +13392,7 @@ L_if_end_2:
     ldc.i4 131071
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_record_91::Lastpar
-    // line 1483
+    .line 1483
     ldsflda valuetype T_array_92 _G::Btab
     ldloc _F
     ldfld int32 @block::Prb
@@ -13404,31 +13404,31 @@ L_if_end_2:
     ldc.i4 131071
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_record_91::Psize
-    // line 1484
+    .line 1484
     ldloc _F
     ldfld bool @block::Isfun
     brfalse L_if_end_3
-    // line 1485
+    .line 1485
     ldsfld int32 _G::Sy
     ldc.i4 26
     ceq
     brfalse L_else_4
-    // line 1486
+    .line 1486
     call void Insymbol()
-    // line 1487
+    .line 1487
     ldsfld int32 _G::Sy
     ldc.i4 36
     ceq
     brfalse L_else_6
-    // line 1488
+    .line 1488
     ldloc _F
     ldloc _F
     ldsfld valuetype T_alfa _G::Id
     call instance int32 @block::Loc(valuetype T_alfa Id)
     stfld int32 @block::x
-    // line 1488
+    .line 1488
     call void Insymbol()
-    // line 1489
+    .line 1489
     ldloc _F
     ldfld int32 @block::x
     ldc.i4 0
@@ -13436,7 +13436,7 @@ L_if_end_2:
     ldc.i4.0
     ceq
     brfalse L_if_end_8
-    // line 1490
+    .line 1490
     ldsflda valuetype T_array_88 _G::Tab
     ldloc _F
     ldfld int32 @block::x
@@ -13447,12 +13447,12 @@ L_if_end_2:
     ldc.i4.0
     ceq
     brfalse L_else_9
-    // line 1490
+    .line 1490
     ldc.i4 29
     call void Error(int32 n)
     br L_if_end_10
 L_else_9:
-    // line 1491
+    .line 1491
     ldsfld valuetype T_typset _G::Stantyps
     ldsflda valuetype T_array_88 _G::Tab
     ldloc _F
@@ -13461,7 +13461,7 @@ L_else_9:
     ldfld int32 T_record_86::Typ
     call bool _SetContains(valuetype T_typset s, int32 val)
     brfalse L_else_11
-    // line 1492
+    .line 1492
     ldsflda valuetype T_array_88 _G::Tab
     ldloc _F
     ldfld int32 @block::Prt
@@ -13474,7 +13474,7 @@ L_else_9:
     stfld int32 T_record_86::Typ
     br L_if_end_12
 L_else_11:
-    // line 1493
+    .line 1493
     ldc.i4 15
     call void Error(int32 n)
 L_if_end_12:
@@ -13482,7 +13482,7 @@ L_if_end_10:
 L_if_end_8:
     br L_if_end_7
 L_else_6:
-    // line 1494
+    .line 1494
     ldloc _F
     ldloc $tmpSetLiteral2
     call valuetype T_set_62 _SetCastTo_T_set_62(valuetype T_symset s)
@@ -13500,54 +13500,54 @@ L_else_6:
 L_if_end_7:
     br L_if_end_5
 L_else_4:
-    // line 1495
+    .line 1495
     ldc.i4 5
     call void Error(int32 n)
 L_if_end_5:
 L_if_end_3:
-    // line 1496
+    .line 1496
     ldsfld int32 _G::Sy
     ldc.i4 24
     ceq
     brfalse L_else_13
-    // line 1496
+    .line 1496
     call void Insymbol()
     br L_if_end_14
 L_else_13:
-    // line 1496
+    .line 1496
     ldc.i4 14
     call void Error(int32 n)
 L_if_end_14:
-    // line 1497
+    .line 1497
 L_repeat_15:
-    // line 1498
+    .line 1498
     ldsfld int32 _G::Sy
     ldc.i4 28
     ceq
     brfalse L_if_end_16
-    // line 1498
+    .line 1498
     ldloc _F
     call instance void @block::Constantdeclaration()
 L_if_end_16:
-    // line 1499
+    .line 1499
     ldsfld int32 _G::Sy
     ldc.i4 29
     ceq
     brfalse L_if_end_17
-    // line 1499
+    .line 1499
     ldloc _F
     call instance void @block::Typedeclaration()
 L_if_end_17:
-    // line 1500
+    .line 1500
     ldsfld int32 _G::Sy
     ldc.i4 30
     ceq
     brfalse L_if_end_18
-    // line 1500
+    .line 1500
     ldloc _F
     call instance void @block::Variabledeclaration()
 L_if_end_18:
-    // line 1501
+    .line 1501
     ldsflda valuetype T_array_92 _G::Btab
     ldloc _F
     ldfld int32 @block::Prb
@@ -13559,10 +13559,10 @@ L_if_end_18:
     ldc.i4 131071
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_record_91::Vsize
-    // line 1502
+    .line 1502
     br L_while_test_20
 L_while_19:
-    // line 1502
+    .line 1502
     ldloc _F
     call instance void @block::Procdeclaration()
 L_while_test_20:
@@ -13570,7 +13570,7 @@ L_while_test_20:
     ldsfld int32 _G::Sy
     call bool _SetContains(valuetype T_symset s, int32 val)
     brtrue L_while_19
-    // line 1503
+    .line 1503
     ldloc _F
     ldloc $tmpSetLiteral4
     ldsfld valuetype T_symset _G::Blockbegsys
@@ -13582,16 +13582,16 @@ L_while_test_20:
     ldsfld int32 _G::Sy
     call bool _SetContains(valuetype T_symset s, int32 val)
     brfalse L_repeat_15
-    // line 1505
+    .line 1505
     ldsflda valuetype T_array_88 _G::Tab
     ldloc _F
     ldfld int32 @block::Prt
     call instance valuetype T_record_86& T_array_88::ldadr(int32)
     ldsfld int32 _G::Lc
     stfld int32 T_record_86::Adr
-    // line 1506
+    .line 1506
     call void Insymbol()
-    // line 1506
+    .line 1506
     ldloc _F
     ldloc $tmpSetLiteral5
     call valuetype T_set_62 _SetCastTo_T_set_62(valuetype T_symset s)
@@ -13605,23 +13605,23 @@ L_while_test_20:
     call void _SetCheck(valuetype T_set_62 s, int32 min, int32 max)
     call valuetype T_symset _SetCastTo_T_symset(valuetype T_set_62 s)
     call instance void @block::Statement(valuetype T_symset Fsys)
-    // line 1507
+    .line 1507
     br L_while_test_22
 L_while_21:
-    // line 1508
+    .line 1508
     ldsfld int32 _G::Sy
     ldc.i4 24
     ceq
     brfalse L_else_23
-    // line 1508
+    .line 1508
     call void Insymbol()
     br L_if_end_24
 L_else_23:
-    // line 1508
+    .line 1508
     ldc.i4 14
     call void Error(int32 n)
 L_if_end_24:
-    // line 1509
+    .line 1509
     ldloc _F
     ldloc $tmpSetLiteral6
     call valuetype T_set_62 _SetCastTo_T_set_62(valuetype T_symset s)
@@ -13644,20 +13644,20 @@ L_while_test_22:
     ldsfld int32 _G::Sy
     call bool _SetContains(valuetype T_set_62 s, int32 val)
     brtrue L_while_21
-    // line 1511
+    .line 1511
     ldsfld int32 _G::Sy
     ldc.i4 43
     ceq
     brfalse L_else_25
-    // line 1511
+    .line 1511
     call void Insymbol()
     br L_if_end_26
 L_else_25:
-    // line 1511
+    .line 1511
     ldc.i4 57
     call void Error(int32 n)
 L_if_end_26:
-    // line 1512
+    .line 1512
     ldloc _F
     ldloc _F
     ldfld valuetype T_symset @block::Fsys
@@ -13683,7 +13683,7 @@ L_Epilogue:
     ret
 }
 
-// line 1515
+.line 1515
 
 .method static
 void Interpret()
@@ -13708,21 +13708,21 @@ void Interpret()
     stloc _F
 
 L_Entry:
-    // line 1538
+    .line 1538
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldc.i4 1
     call instance valuetype T_interpret_record_200& T_interpret_array_199::ldadr(int32)
     ldc.i4 0
     stfld int32 T_interpret_record_200::i
-    // line 1538
+    .line 1538
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldc.i4 2
     call instance valuetype T_interpret_record_200& T_interpret_array_199::ldadr(int32)
     ldc.i4 0
     stfld int32 T_interpret_record_200::i
-    // line 1538
+    .line 1538
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldc.i4 3
@@ -13730,7 +13730,7 @@ L_Entry:
     ldc.i4 1
     neg
     stfld int32 T_interpret_record_200::i
-    // line 1538
+    .line 1538
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldc.i4 4
@@ -13740,18 +13740,18 @@ L_Entry:
     call instance valuetype T_record_91& T_array_92::ldadr(int32)
     ldfld int32 T_record_91::Last
     stfld int32 T_interpret_record_200::i
-    // line 1539
+    .line 1539
     ldloc _F
     ldc.i4 0
     stfld int32 @interpret::b
-    // line 1539
+    .line 1539
     ldloc _F
     ldflda valuetype T_block_statement_casestatement_array_162 @interpret::Display
     ldc.i4 1
     call instance int32& T_block_statement_casestatement_array_162::ldadr(int32)
     ldc.i4 0
     stobj int32
-    // line 1540
+    .line 1540
     ldloc _F
     ldsflda valuetype T_array_92 _G::Btab
     ldc.i4 2
@@ -13760,7 +13760,7 @@ L_Entry:
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1540
+    .line 1540
     ldloc _F
     ldsflda valuetype T_array_88 _G::Tab
     ldloc _F
@@ -13771,53 +13771,53 @@ L_Entry:
     call instance valuetype T_record_86& T_array_88::ldadr(int32)
     ldfld int32 T_record_86::Adr
     stfld int32 @interpret::Pc
-    // line 1541
+    .line 1541
     ldloc _F
     ldc.i4 0 // run 
     stfld int32 @interpret::Ps
-    // line 1542
+    .line 1542
     ldloc _F
     ldc.i4 0
     stfld int32 @interpret::Lncnt
-    // line 1542
+    .line 1542
     ldloc _F
     ldc.i4 0
     stfld int32 @interpret::Ocnt
-    // line 1542
+    .line 1542
     ldloc _F
     ldc.i4 0
     stfld int32 @interpret::Chrcnt
-    // line 1543
+    .line 1543
     ldloc _F
     ldflda valuetype T_interpret_array_198 @interpret::Fld
     ldc.i4 1
     call instance int32& T_interpret_array_198::ldadr(int32)
     ldc.i4 10
     stobj int32
-    // line 1543
+    .line 1543
     ldloc _F
     ldflda valuetype T_interpret_array_198 @interpret::Fld
     ldc.i4 2
     call instance int32& T_interpret_array_198::ldadr(int32)
     ldc.i4 22
     stobj int32
-    // line 1543
+    .line 1543
     ldloc _F
     ldflda valuetype T_interpret_array_198 @interpret::Fld
     ldc.i4 3
     call instance int32& T_interpret_array_198::ldadr(int32)
     ldc.i4 10
     stobj int32
-    // line 1543
+    .line 1543
     ldloc _F
     ldflda valuetype T_interpret_array_198 @interpret::Fld
     ldc.i4 4
     call instance int32& T_interpret_array_198::ldadr(int32)
     ldc.i4 1
     stobj int32
-    // line 1544
+    .line 1544
 L_repeat_1:
-    // line 1544
+    .line 1544
     ldloc _F
     ldsflda valuetype T_array_97 _G::Code
     ldloc _F
@@ -13825,21 +13825,21 @@ L_repeat_1:
     call instance valuetype T_order& T_array_97::ldadr(int32)
     ldobj valuetype T_order
     stfld valuetype T_order @interpret::Ir
-    // line 1544
+    .line 1544
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::Pc
     ldc.i4 1
     add
     stfld int32 @interpret::Pc
-    // line 1544
+    .line 1544
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::Ocnt
     ldc.i4 1
     add
     stfld int32 @interpret::Ocnt
-    // line 1545
+    .line 1545
     ldloc _F
     ldflda valuetype T_order @interpret::Ir
     ldfld int8 T_order::f
@@ -13847,26 +13847,26 @@ L_repeat_1:
     ldloc $tmpSwitchValue1
     ldc.i4 0
     bne.un L_check_case_3
-    // line 1546
+    .line 1546
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     add
     stfld int32 @interpret::t
-    // line 1547
+    .line 1547
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 10000
     cgt
     brfalse L_else_4
-    // line 1547
+    .line 1547
     ldloc _F
     ldc.i4 5 // stkchk 
     stfld int32 @interpret::Ps
     br L_if_end_5
 L_else_4:
-    // line 1548
+    .line 1548
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -13890,26 +13890,26 @@ L_check_case_3:
     ldloc $tmpSwitchValue1
     ldc.i4 1
     bne.un L_check_case_6
-    // line 1550
+    .line 1550
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     add
     stfld int32 @interpret::t
-    // line 1551
+    .line 1551
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 10000
     cgt
     brfalse L_else_7
-    // line 1551
+    .line 1551
     ldloc _F
     ldc.i4 5 // stkchk 
     stfld int32 @interpret::Ps
     br L_if_end_8
 L_else_7:
-    // line 1552
+    .line 1552
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -13937,26 +13937,26 @@ L_check_case_6:
     ldloc $tmpSwitchValue1
     ldc.i4 2
     bne.un L_check_case_9
-    // line 1554
+    .line 1554
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     add
     stfld int32 @interpret::t
-    // line 1555
+    .line 1555
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 10000
     cgt
     brfalse L_else_10
-    // line 1555
+    .line 1555
     ldloc _F
     ldc.i4 5 // stkchk 
     stfld int32 @interpret::Ps
     br L_if_end_11
 L_else_10:
-    // line 1556
+    .line 1556
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -13988,26 +13988,26 @@ L_check_case_9:
     ldloc $tmpSwitchValue1
     ldc.i4 3
     bne.un L_check_case_12
-    // line 1559
+    .line 1559
     ldloc _F
     ldloc _F
     ldflda valuetype T_order @interpret::Ir
     ldfld int32 T_order::y
     stfld int32 @interpret::H1
-    // line 1559
+    .line 1559
     ldloc _F
     ldloc _F
     ldflda valuetype T_order @interpret::Ir
     ldfld int8 T_order::x
     stfld int32 @interpret::H2
-    // line 1559
+    .line 1559
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::b
     stfld int32 @interpret::H3
-    // line 1560
+    .line 1560
 L_repeat_13:
-    // line 1560
+    .line 1560
     ldloc _F
     ldflda valuetype T_block_statement_casestatement_array_162 @interpret::Display
     ldloc _F
@@ -14016,14 +14016,14 @@ L_repeat_13:
     ldloc _F
     ldfld int32 @interpret::H3
     stobj int32
-    // line 1560
+    .line 1560
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::H1
     ldc.i4 1
     sub
     stfld int32 @interpret::H1
-    // line 1560
+    .line 1560
     ldloc _F
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
@@ -14045,7 +14045,7 @@ L_check_case_12:
     ldloc $tmpSwitchValue1
     ldc.i4 8
     bne.un L_check_case_14
-    // line 1563
+    .line 1563
     ldloc _F
     ldflda valuetype T_order @interpret::Ir
     ldfld int32 T_order::y
@@ -14053,7 +14053,7 @@ L_check_case_12:
     ldloc $tmpSwitchValue2
     ldc.i4 0
     bne.un L_check_case_16
-    // line 1564
+    .line 1564
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14076,7 +14076,7 @@ L_check_case_16:
     ldloc $tmpSwitchValue2
     ldc.i4 1
     bne.un L_check_case_18
-    // line 1565
+    .line 1565
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14099,7 +14099,7 @@ L_check_case_18:
     ldloc $tmpSwitchValue2
     ldc.i4 2
     bne.un L_check_case_20
-    // line 1566
+    .line 1566
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14119,7 +14119,7 @@ L_check_case_20:
     ldloc $tmpSwitchValue2
     ldc.i4 3
     bne.un L_check_case_21
-    // line 1567
+    .line 1567
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14139,7 +14139,7 @@ L_check_case_21:
     ldloc $tmpSwitchValue2
     ldc.i4 4
     bne.un L_check_case_22
-    // line 1568
+    .line 1568
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14159,7 +14159,7 @@ L_check_case_22:
     ldloc $tmpSwitchValue2
     ldc.i4 5
     bne.un L_check_case_23
-    // line 1569
+    .line 1569
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14172,7 +14172,7 @@ L_check_case_22:
     call instance valuetype T_interpret_record_200& T_interpret_array_199::ldadr(int32)
     ldfld int32 T_interpret_record_200::i
     stfld uint8 T_interpret_record_200::c
-    // line 1570
+    .line 1570
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14194,7 +14194,7 @@ L_check_case_22:
     cgt
 L_OR_shortcut_24:
     brfalse L_if_end_25
-    // line 1570
+    .line 1570
     ldloc _F
     ldc.i4 4 // inxchk 
     stfld int32 @interpret::Ps
@@ -14204,7 +14204,7 @@ L_check_case_23:
     ldloc $tmpSwitchValue2
     ldc.i4 6
     bne.un L_check_case_26
-    // line 1572
+    .line 1572
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14222,7 +14222,7 @@ L_check_case_26:
     ldloc $tmpSwitchValue2
     ldc.i4 7
     bne.un L_check_case_27
-    // line 1573
+    .line 1573
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14242,7 +14242,7 @@ L_check_case_27:
     ldloc $tmpSwitchValue2
     ldc.i4 8
     bne.un L_check_case_28
-    // line 1574
+    .line 1574
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14262,7 +14262,7 @@ L_check_case_28:
     ldloc $tmpSwitchValue2
     ldc.i4 9
     bne.un L_check_case_29
-    // line 1575
+    .line 1575
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14281,7 +14281,7 @@ L_check_case_29:
     ldloc $tmpSwitchValue2
     ldc.i4 10
     bne.un L_check_case_30
-    // line 1576
+    .line 1576
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14300,7 +14300,7 @@ L_check_case_30:
     ldloc $tmpSwitchValue2
     ldc.i4 11
     bne.un L_check_case_31
-    // line 1577
+    .line 1577
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14319,7 +14319,7 @@ L_check_case_31:
     ldloc $tmpSwitchValue2
     ldc.i4 12
     bne.un L_check_case_32
-    // line 1578
+    .line 1578
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14338,7 +14338,7 @@ L_check_case_32:
     ldloc $tmpSwitchValue2
     ldc.i4 13
     bne.un L_check_case_33
-    // line 1579
+    .line 1579
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14357,7 +14357,7 @@ L_check_case_33:
     ldloc $tmpSwitchValue2
     ldc.i4 14
     bne.un L_check_case_34
-    // line 1580
+    .line 1580
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14376,7 +14376,7 @@ L_check_case_34:
     ldloc $tmpSwitchValue2
     ldc.i4 15
     bne.un L_check_case_35
-    // line 1581
+    .line 1581
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14395,7 +14395,7 @@ L_check_case_35:
     ldloc $tmpSwitchValue2
     ldc.i4 16
     bne.un L_check_case_36
-    // line 1582
+    .line 1582
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14414,26 +14414,26 @@ L_check_case_36:
     ldloc $tmpSwitchValue2
     ldc.i4 17
     bne.un L_check_case_37
-    // line 1583
+    .line 1583
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     add
     stfld int32 @interpret::t
-    // line 1584
+    .line 1584
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 10000
     cgt
     brfalse L_else_38
-    // line 1584
+    .line 1584
     ldloc _F
     ldc.i4 5 // stkchk 
     stfld int32 @interpret::Ps
     br L_if_end_39
 L_else_38:
-    // line 1585
+    .line 1585
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14448,26 +14448,26 @@ L_check_case_37:
     ldloc $tmpSwitchValue2
     ldc.i4 18
     bne.un L_case_end_15
-    // line 1587
+    .line 1587
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     add
     stfld int32 @interpret::t
-    // line 1588
+    .line 1588
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 10000
     cgt
     brfalse L_else_40
-    // line 1588
+    .line 1588
     ldloc _F
     ldc.i4 5 // stkchk 
     stfld int32 @interpret::Ps
     br L_if_end_41
 L_else_40:
-    // line 1589
+    .line 1589
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14483,7 +14483,7 @@ L_check_case_14:
     ldloc $tmpSwitchValue1
     ldc.i4 9
     bne.un L_check_case_42
-    // line 1592
+    .line 1592
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14505,7 +14505,7 @@ L_check_case_42:
     ldloc $tmpSwitchValue1
     ldc.i4 10
     bne.un L_check_case_43
-    // line 1593
+    .line 1593
     ldloc _F
     ldloc _F
     ldflda valuetype T_order @interpret::Ir
@@ -14516,7 +14516,7 @@ L_check_case_43:
     ldloc $tmpSwitchValue1
     ldc.i4 11
     bne.un L_check_case_44
-    // line 1595
+    .line 1595
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14526,14 +14526,14 @@ L_check_case_43:
     ldc.i4.0
     ceq
     brfalse L_if_end_45
-    // line 1595
+    .line 1595
     ldloc _F
     ldloc _F
     ldflda valuetype T_order @interpret::Ir
     ldfld int32 T_order::y
     stfld int32 @interpret::Pc
 L_if_end_45:
-    // line 1595
+    .line 1595
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
@@ -14545,7 +14545,7 @@ L_check_case_44:
     ldloc $tmpSwitchValue1
     ldc.i4 12
     bne.un L_check_case_46
-    // line 1597
+    .line 1597
     ldloc _F
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
@@ -14554,26 +14554,26 @@ L_check_case_44:
     call instance valuetype T_interpret_record_200& T_interpret_array_199::ldadr(int32)
     ldfld int32 T_interpret_record_200::i
     stfld int32 @interpret::H1
-    // line 1597
+    .line 1597
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1598
+    .line 1598
     ldloc _F
     ldloc _F
     ldflda valuetype T_order @interpret::Ir
     ldfld int32 T_order::y
     stfld int32 @interpret::H2
-    // line 1598
+    .line 1598
     ldloc _F
     ldc.i4 0
     stfld int32 @interpret::H3
-    // line 1599
+    .line 1599
 L_repeat_47:
-    // line 1599
+    .line 1599
     ldsflda valuetype T_array_97 _G::Code
     ldloc _F
     ldfld int32 @interpret::H2
@@ -14584,17 +14584,17 @@ L_repeat_47:
     ldc.i4.0
     ceq
     brfalse L_else_48
-    // line 1600
+    .line 1600
     ldloc _F
     ldc.i4 1
     stfld int32 @interpret::H3
-    // line 1600
+    .line 1600
     ldloc _F
     ldc.i4 2 // caschk 
     stfld int32 @interpret::Ps
     br L_if_end_49
 L_else_48:
-    // line 1602
+    .line 1602
     ldsflda valuetype T_array_97 _G::Code
     ldloc _F
     ldfld int32 @interpret::H2
@@ -14604,11 +14604,11 @@ L_else_48:
     ldfld int32 @interpret::H1
     ceq
     brfalse L_else_50
-    // line 1603
+    .line 1603
     ldloc _F
     ldc.i4 1
     stfld int32 @interpret::H3
-    // line 1603
+    .line 1603
     ldloc _F
     ldsflda valuetype T_array_97 _G::Code
     ldloc _F
@@ -14620,7 +14620,7 @@ L_else_48:
     stfld int32 @interpret::Pc
     br L_if_end_51
 L_else_50:
-    // line 1605
+    .line 1605
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::H2
@@ -14641,7 +14641,7 @@ L_check_case_46:
     ldloc $tmpSwitchValue1
     ldc.i4 14
     bne.un L_check_case_52
-    // line 1608
+    .line 1608
     ldloc _F
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
@@ -14652,7 +14652,7 @@ L_check_case_46:
     call instance valuetype T_interpret_record_200& T_interpret_array_199::ldadr(int32)
     ldfld int32 T_interpret_record_200::i
     stfld int32 @interpret::H1
-    // line 1609
+    .line 1609
     ldloc _F
     ldfld int32 @interpret::H1
     ldloc _F
@@ -14665,7 +14665,7 @@ L_check_case_46:
     ldc.i4.0
     ceq
     brfalse L_else_53
-    // line 1609
+    .line 1609
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14682,14 +14682,14 @@ L_check_case_46:
     stfld int32 T_interpret_record_200::i
     br L_if_end_54
 L_else_53:
-    // line 1610
+    .line 1610
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 3
     sub
     stfld int32 @interpret::t
-    // line 1610
+    .line 1610
     ldloc _F
     ldloc _F
     ldflda valuetype T_order @interpret::Ir
@@ -14701,7 +14701,7 @@ L_check_case_52:
     ldloc $tmpSwitchValue1
     ldc.i4 15
     bne.un L_check_case_55
-    // line 1613
+    .line 1613
     ldloc _F
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
@@ -14712,7 +14712,7 @@ L_check_case_52:
     call instance valuetype T_interpret_record_200& T_interpret_array_199::ldadr(int32)
     ldfld int32 T_interpret_record_200::i
     stfld int32 @interpret::H2
-    // line 1613
+    .line 1613
     ldloc _F
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
@@ -14723,7 +14723,7 @@ L_check_case_52:
     ldc.i4 1
     add
     stfld int32 @interpret::H1
-    // line 1614
+    .line 1614
     ldloc _F
     ldfld int32 @interpret::H1
     ldloc _F
@@ -14736,7 +14736,7 @@ L_check_case_52:
     ldc.i4.0
     ceq
     brfalse L_else_56
-    // line 1615
+    .line 1615
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14745,7 +14745,7 @@ L_check_case_52:
     ldloc _F
     ldfld int32 @interpret::H1
     stfld int32 T_interpret_record_200::i
-    // line 1615
+    .line 1615
     ldloc _F
     ldloc _F
     ldflda valuetype T_order @interpret::Ir
@@ -14753,7 +14753,7 @@ L_check_case_52:
     stfld int32 @interpret::Pc
     br L_if_end_57
 L_else_56:
-    // line 1616
+    .line 1616
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
@@ -14767,7 +14767,7 @@ L_check_case_55:
     ldloc $tmpSwitchValue1
     ldc.i4 16
     bne.un L_check_case_58
-    // line 1618
+    .line 1618
     ldloc _F
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
@@ -14778,7 +14778,7 @@ L_check_case_55:
     call instance valuetype T_interpret_record_200& T_interpret_array_199::ldadr(int32)
     ldfld int32 T_interpret_record_200::i
     stfld int32 @interpret::H1
-    // line 1619
+    .line 1619
     ldloc _F
     ldfld int32 @interpret::H1
     ldloc _F
@@ -14791,7 +14791,7 @@ L_check_case_55:
     ldc.i4.0
     ceq
     brfalse L_else_59
-    // line 1619
+    .line 1619
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14808,13 +14808,13 @@ L_check_case_55:
     stfld int32 T_interpret_record_200::i
     br L_if_end_60
 L_else_59:
-    // line 1620
+    .line 1620
     ldloc _F
     ldloc _F
     ldflda valuetype T_order @interpret::Ir
     ldfld int32 T_order::y
     stfld int32 @interpret::Pc
-    // line 1620
+    .line 1620
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
@@ -14827,7 +14827,7 @@ L_check_case_58:
     ldloc $tmpSwitchValue1
     ldc.i4 17
     bne.un L_check_case_61
-    // line 1623
+    .line 1623
     ldloc _F
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
@@ -14838,7 +14838,7 @@ L_check_case_58:
     call instance valuetype T_interpret_record_200& T_interpret_array_199::ldadr(int32)
     ldfld int32 T_interpret_record_200::i
     stfld int32 @interpret::H2
-    // line 1623
+    .line 1623
     ldloc _F
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
@@ -14849,7 +14849,7 @@ L_check_case_58:
     ldc.i4 1
     sub
     stfld int32 @interpret::H1
-    // line 1624
+    .line 1624
     ldloc _F
     ldfld int32 @interpret::H1
     ldloc _F
@@ -14862,7 +14862,7 @@ L_check_case_58:
     ldc.i4.0
     ceq
     brfalse L_else_62
-    // line 1625
+    .line 1625
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14871,7 +14871,7 @@ L_check_case_58:
     ldloc _F
     ldfld int32 @interpret::H1
     stfld int32 T_interpret_record_200::i
-    // line 1625
+    .line 1625
     ldloc _F
     ldloc _F
     ldflda valuetype T_order @interpret::Ir
@@ -14879,7 +14879,7 @@ L_check_case_58:
     stfld int32 @interpret::Pc
     br L_if_end_63
 L_else_62:
-    // line 1626
+    .line 1626
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
@@ -14893,7 +14893,7 @@ L_check_case_61:
     ldloc $tmpSwitchValue1
     ldc.i4 18
     bne.un L_check_case_64
-    // line 1628
+    .line 1628
     ldloc _F
     ldsflda valuetype T_array_92 _G::Btab
     ldsflda valuetype T_array_88 _G::Tab
@@ -14905,7 +14905,7 @@ L_check_case_61:
     call instance valuetype T_record_91& T_array_92::ldadr(int32)
     ldfld int32 T_record_91::Vsize
     stfld int32 @interpret::H1
-    // line 1629
+    .line 1629
     ldloc _F
     ldfld int32 @interpret::t
     ldloc _F
@@ -14914,20 +14914,20 @@ L_check_case_61:
     ldc.i4 10000
     cgt
     brfalse L_else_65
-    // line 1629
+    .line 1629
     ldloc _F
     ldc.i4 5 // stkchk 
     stfld int32 @interpret::Ps
     br L_if_end_66
 L_else_65:
-    // line 1630
+    .line 1630
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 5
     add
     stfld int32 @interpret::t
-    // line 1630
+    .line 1630
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14940,7 +14940,7 @@ L_else_65:
     ldc.i4 1
     sub
     stfld int32 T_interpret_record_200::i
-    // line 1630
+    .line 1630
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -14956,7 +14956,7 @@ L_check_case_64:
     ldloc $tmpSwitchValue1
     ldc.i4 19
     bne.un L_check_case_67
-    // line 1633
+    .line 1633
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
@@ -14965,7 +14965,7 @@ L_check_case_64:
     ldfld int32 T_order::y
     sub
     stfld int32 @interpret::H1
-    // line 1634
+    .line 1634
     ldloc _F
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
@@ -14976,7 +14976,7 @@ L_check_case_64:
     call instance valuetype T_interpret_record_200& T_interpret_array_199::ldadr(int32)
     ldfld int32 T_interpret_record_200::i
     stfld int32 @interpret::H2
-    // line 1635
+    .line 1635
     ldloc _F
     ldsflda valuetype T_array_88 _G::Tab
     ldloc _F
@@ -14984,7 +14984,7 @@ L_check_case_64:
     call instance valuetype T_record_86& T_array_88::ldadr(int32)
     ldfld int8 T_record_86::Lev
     stfld int32 @interpret::H3
-    // line 1635
+    .line 1635
     ldloc _F
     ldflda valuetype T_block_statement_casestatement_array_162 @interpret::Display
     ldloc _F
@@ -14995,7 +14995,7 @@ L_check_case_64:
     ldloc _F
     ldfld int32 @interpret::H1
     stobj int32
-    // line 1636
+    .line 1636
     ldloc _F
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
@@ -15009,7 +15009,7 @@ L_check_case_64:
     ldfld int32 @interpret::H1
     add
     stfld int32 @interpret::H4
-    // line 1637
+    .line 1637
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -15020,7 +15020,7 @@ L_check_case_64:
     ldloc _F
     ldfld int32 @interpret::Pc
     stfld int32 T_interpret_record_200::i
-    // line 1637
+    .line 1637
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -15035,7 +15035,7 @@ L_check_case_64:
     call instance int32& T_block_statement_casestatement_array_162::ldadr(int32)
     ldobj int32
     stfld int32 T_interpret_record_200::i
-    // line 1637
+    .line 1637
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -15046,7 +15046,7 @@ L_check_case_64:
     ldloc _F
     ldfld int32 @interpret::b
     stfld int32 T_interpret_record_200::i
-    // line 1638
+    .line 1638
     ldloc _F
     ldfld int32 @interpret::H4
     stloc $tmpEndValue3
@@ -15062,7 +15062,7 @@ L_check_case_64:
     ldloc $tmpIndex4
     stfld int32 @interpret::H3
 L_for_loop_68:
-    // line 1638
+    .line 1638
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -15084,17 +15084,17 @@ L_for_loop_68:
     br L_for_loop_68
 L_for_end_69:
     pop
-    // line 1639
+    .line 1639
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::H1
     stfld int32 @interpret::b
-    // line 1639
+    .line 1639
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::H4
     stfld int32 @interpret::t
-    // line 1639
+    .line 1639
     ldloc _F
     ldsflda valuetype T_array_88 _G::Tab
     ldloc _F
@@ -15107,13 +15107,13 @@ L_check_case_67:
     ldloc $tmpSwitchValue1
     ldc.i4 20
     bne.un L_check_case_70
-    // line 1641
+    .line 1641
     ldloc _F
     ldloc _F
     ldflda valuetype T_order @interpret::Ir
     ldfld int32 T_order::y
     stfld int32 @interpret::H1
-    // line 1642
+    .line 1642
     ldloc _F
     ldsflda valuetype T_array_90 _G::Atab
     ldloc _F
@@ -15121,7 +15121,7 @@ L_check_case_67:
     call instance valuetype T_record_89& T_array_90::ldadr(int32)
     ldfld int32 T_record_89::Low
     stfld int32 @interpret::H2
-    // line 1642
+    .line 1642
     ldloc _F
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
@@ -15130,20 +15130,20 @@ L_check_case_67:
     call instance valuetype T_interpret_record_200& T_interpret_array_199::ldadr(int32)
     ldfld int32 T_interpret_record_200::i
     stfld int32 @interpret::H3
-    // line 1643
+    .line 1643
     ldloc _F
     ldfld int32 @interpret::H3
     ldloc _F
     ldfld int32 @interpret::H2
     clt
     brfalse L_else_71
-    // line 1643
+    .line 1643
     ldloc _F
     ldc.i4 4 // inxchk 
     stfld int32 @interpret::Ps
     br L_if_end_72
 L_else_71:
-    // line 1644
+    .line 1644
     ldloc _F
     ldfld int32 @interpret::H3
     ldsflda valuetype T_array_90 _G::Atab
@@ -15153,20 +15153,20 @@ L_else_71:
     ldfld int32 T_record_89::High
     cgt
     brfalse L_else_73
-    // line 1644
+    .line 1644
     ldloc _F
     ldc.i4 4 // inxchk 
     stfld int32 @interpret::Ps
     br L_if_end_74
 L_else_73:
-    // line 1645
+    .line 1645
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1645
+    .line 1645
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -15192,13 +15192,13 @@ L_check_case_70:
     ldloc $tmpSwitchValue1
     ldc.i4 21
     bne.un L_check_case_75
-    // line 1648
+    .line 1648
     ldloc _F
     ldloc _F
     ldflda valuetype T_order @interpret::Ir
     ldfld int32 T_order::y
     stfld int32 @interpret::H1
-    // line 1649
+    .line 1649
     ldloc _F
     ldsflda valuetype T_array_90 _G::Atab
     ldloc _F
@@ -15206,7 +15206,7 @@ L_check_case_70:
     call instance valuetype T_record_89& T_array_90::ldadr(int32)
     ldfld int32 T_record_89::Low
     stfld int32 @interpret::H2
-    // line 1649
+    .line 1649
     ldloc _F
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
@@ -15215,20 +15215,20 @@ L_check_case_70:
     call instance valuetype T_interpret_record_200& T_interpret_array_199::ldadr(int32)
     ldfld int32 T_interpret_record_200::i
     stfld int32 @interpret::H3
-    // line 1650
+    .line 1650
     ldloc _F
     ldfld int32 @interpret::H3
     ldloc _F
     ldfld int32 @interpret::H2
     clt
     brfalse L_else_76
-    // line 1650
+    .line 1650
     ldloc _F
     ldc.i4 4 // inxchk 
     stfld int32 @interpret::Ps
     br L_if_end_77
 L_else_76:
-    // line 1651
+    .line 1651
     ldloc _F
     ldfld int32 @interpret::H3
     ldsflda valuetype T_array_90 _G::Atab
@@ -15238,20 +15238,20 @@ L_else_76:
     ldfld int32 T_record_89::High
     cgt
     brfalse L_else_78
-    // line 1651
+    .line 1651
     ldloc _F
     ldc.i4 4 // inxchk 
     stfld int32 @interpret::Ps
     br L_if_end_79
 L_else_78:
-    // line 1652
+    .line 1652
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1652
+    .line 1652
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -15283,7 +15283,7 @@ L_check_case_75:
     ldloc $tmpSwitchValue1
     ldc.i4 22
     bne.un L_check_case_80
-    // line 1655
+    .line 1655
     ldloc _F
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
@@ -15292,14 +15292,14 @@ L_check_case_75:
     call instance valuetype T_interpret_record_200& T_interpret_array_199::ldadr(int32)
     ldfld int32 T_interpret_record_200::i
     stfld int32 @interpret::H1
-    // line 1655
+    .line 1655
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1656
+    .line 1656
     ldloc _F
     ldloc _F
     ldflda valuetype T_order @interpret::Ir
@@ -15308,29 +15308,29 @@ L_check_case_75:
     ldfld int32 @interpret::t
     add
     stfld int32 @interpret::H2
-    // line 1656
+    .line 1656
     ldloc _F
     ldfld int32 @interpret::H2
     ldc.i4 10000
     cgt
     brfalse L_else_81
-    // line 1656
+    .line 1656
     ldloc _F
     ldc.i4 5 // stkchk 
     stfld int32 @interpret::Ps
     br L_if_end_82
 L_else_81:
-    // line 1657
+    .line 1657
     br L_while_test_84
 L_while_83:
-    // line 1658
+    .line 1658
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     add
     stfld int32 @interpret::t
-    // line 1658
+    .line 1658
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -15343,7 +15343,7 @@ L_while_83:
     call instance valuetype T_interpret_record_200& T_interpret_array_199::ldadr(int32)
     ldobj valuetype T_interpret_record_200
     stobj valuetype T_interpret_record_200
-    // line 1658
+    .line 1658
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::H1
@@ -15363,7 +15363,7 @@ L_check_case_80:
     ldloc $tmpSwitchValue1
     ldc.i4 23
     bne.un L_check_case_85
-    // line 1661
+    .line 1661
     ldloc _F
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
@@ -15374,7 +15374,7 @@ L_check_case_80:
     call instance valuetype T_interpret_record_200& T_interpret_array_199::ldadr(int32)
     ldfld int32 T_interpret_record_200::i
     stfld int32 @interpret::H1
-    // line 1662
+    .line 1662
     ldloc _F
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
@@ -15383,7 +15383,7 @@ L_check_case_80:
     call instance valuetype T_interpret_record_200& T_interpret_array_199::ldadr(int32)
     ldfld int32 T_interpret_record_200::i
     stfld int32 @interpret::H2
-    // line 1662
+    .line 1662
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::H1
@@ -15392,10 +15392,10 @@ L_check_case_80:
     ldfld int32 T_order::y
     add
     stfld int32 @interpret::H3
-    // line 1663
+    .line 1663
     br L_while_test_87
 L_while_86:
-    // line 1664
+    .line 1664
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -15408,14 +15408,14 @@ L_while_86:
     call instance valuetype T_interpret_record_200& T_interpret_array_199::ldadr(int32)
     ldobj valuetype T_interpret_record_200
     stobj valuetype T_interpret_record_200
-    // line 1664
+    .line 1664
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::H1
     ldc.i4 1
     add
     stfld int32 @interpret::H1
-    // line 1664
+    .line 1664
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::H2
@@ -15429,7 +15429,7 @@ L_while_test_87:
     ldfld int32 @interpret::H3
     clt
     brtrue L_while_86
-    // line 1666
+    .line 1666
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
@@ -15441,26 +15441,26 @@ L_check_case_85:
     ldloc $tmpSwitchValue1
     ldc.i4 24
     bne.un L_check_case_88
-    // line 1668
+    .line 1668
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     add
     stfld int32 @interpret::t
-    // line 1669
+    .line 1669
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 10000
     cgt
     brfalse L_else_89
-    // line 1669
+    .line 1669
     ldloc _F
     ldc.i4 5 // stkchk 
     stfld int32 @interpret::Ps
     br L_if_end_90
 L_else_89:
-    // line 1669
+    .line 1669
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -15476,26 +15476,26 @@ L_check_case_88:
     ldloc $tmpSwitchValue1
     ldc.i4 25
     bne.un L_check_case_91
-    // line 1671
+    .line 1671
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     add
     stfld int32 @interpret::t
-    // line 1672
+    .line 1672
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 10000
     cgt
     brfalse L_else_92
-    // line 1672
+    .line 1672
     ldloc _F
     ldc.i4 5 // stkchk 
     stfld int32 @interpret::Ps
     br L_if_end_93
 L_else_92:
-    // line 1672
+    .line 1672
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -15514,7 +15514,7 @@ L_check_case_91:
     ldloc $tmpSwitchValue1
     ldc.i4 26
     bne.un L_check_case_94
-    // line 1674
+    .line 1674
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
@@ -15523,7 +15523,7 @@ L_check_case_91:
     ldfld int32 T_order::y
     sub
     stfld int32 @interpret::H1
-    // line 1674
+    .line 1674
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -15542,17 +15542,17 @@ L_check_case_94:
     ldloc $tmpSwitchValue1
     ldc.i4 27
     bne.un L_check_case_95
-    // line 1677
+    .line 1677
     ldsflda valuetype [lpcRuntime]LPC.File _G::Input
     call instance bool [lpcRuntime]LPC.File::Eof()
     brfalse L_else_96
-    // line 1677
+    .line 1677
     ldloc _F
     ldc.i4 8 // redchk 
     stfld int32 @interpret::Ps
     br L_if_end_97
 L_else_96:
-    // line 1678
+    .line 1678
     ldloc _F
     ldflda valuetype T_order @interpret::Ir
     ldfld int32 T_order::y
@@ -15560,7 +15560,7 @@ L_else_96:
     ldloc $tmpSwitchValue6
     ldc.i4 1
     bne.un L_check_case_99
-    // line 1679
+    .line 1679
     ldsflda valuetype [lpcRuntime]LPC.File _G::Input
     dup
     ldloc _F
@@ -15582,7 +15582,7 @@ L_check_case_99:
     ldloc $tmpSwitchValue6
     ldc.i4 2
     bne.un L_check_case_100
-    // line 1680
+    .line 1680
     ldsflda valuetype [lpcRuntime]LPC.File _G::Input
     dup
     ldloc _F
@@ -15602,7 +15602,7 @@ L_check_case_100:
     ldloc $tmpSwitchValue6
     ldc.i4 4
     bne.un L_case_end_98
-    // line 1681
+    .line 1681
     ldsflda valuetype [lpcRuntime]LPC.File _G::Input
     dup
     ldloc _F
@@ -15621,7 +15621,7 @@ L_check_case_100:
     pop
 L_case_end_98:
 L_if_end_97:
-    // line 1683
+    .line 1683
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
@@ -15633,7 +15633,7 @@ L_check_case_95:
     ldloc $tmpSwitchValue1
     ldc.i4 28
     bne.un L_check_case_101
-    // line 1686
+    .line 1686
     ldloc _F
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
@@ -15642,20 +15642,20 @@ L_check_case_95:
     call instance valuetype T_interpret_record_200& T_interpret_array_199::ldadr(int32)
     ldfld int32 T_interpret_record_200::i
     stfld int32 @interpret::H1
-    // line 1686
+    .line 1686
     ldloc _F
     ldloc _F
     ldflda valuetype T_order @interpret::Ir
     ldfld int32 T_order::y
     stfld int32 @interpret::H2
-    // line 1686
+    .line 1686
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1687
+    .line 1687
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::Chrcnt
@@ -15663,20 +15663,20 @@ L_check_case_95:
     ldfld int32 @interpret::H1
     add
     stfld int32 @interpret::Chrcnt
-    // line 1687
+    .line 1687
     ldloc _F
     ldfld int32 @interpret::Chrcnt
     ldc.i4 250
     cgt
     brfalse L_if_end_102
-    // line 1687
+    .line 1687
     ldloc _F
     ldc.i4 7 // lngchk 
     stfld int32 @interpret::Ps
 L_if_end_102:
-    // line 1688
+    .line 1688
 L_repeat_103:
-    // line 1688
+    .line 1688
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsflda valuetype T_array_84 _G::Stab
@@ -15686,14 +15686,14 @@ L_repeat_103:
     ldobj uint8
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 1688
+    .line 1688
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::H1
     ldc.i4 1
     sub
     stfld int32 @interpret::H1
-    // line 1688
+    .line 1688
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::H2
@@ -15710,7 +15710,7 @@ L_check_case_101:
     ldloc $tmpSwitchValue1
     ldc.i4 29
     bne.un L_check_case_104
-    // line 1692
+    .line 1692
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::Chrcnt
@@ -15723,19 +15723,19 @@ L_check_case_101:
     ldobj int32
     add
     stfld int32 @interpret::Chrcnt
-    // line 1693
+    .line 1693
     ldloc _F
     ldfld int32 @interpret::Chrcnt
     ldc.i4 250
     cgt
     brfalse L_else_105
-    // line 1693
+    .line 1693
     ldloc _F
     ldc.i4 7 // lngchk 
     stfld int32 @interpret::Ps
     br L_if_end_106
 L_else_105:
-    // line 1694
+    .line 1694
     ldloc _F
     ldflda valuetype T_order @interpret::Ir
     ldfld int32 T_order::y
@@ -15743,7 +15743,7 @@ L_else_105:
     ldloc $tmpSwitchValue7
     ldc.i4 1
     bne.un L_check_case_108
-    // line 1695
+    .line 1695
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -15765,7 +15765,7 @@ L_check_case_108:
     ldloc $tmpSwitchValue7
     ldc.i4 2
     bne.un L_check_case_109
-    // line 1696
+    .line 1696
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -15787,7 +15787,7 @@ L_check_case_109:
     ldloc $tmpSwitchValue7
     ldc.i4 3
     bne.un L_check_case_110
-    // line 1697
+    .line 1697
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -15815,7 +15815,7 @@ L_check_case_110:
     ldloc $tmpSwitchValue7
     ldc.i4 4
     bne.un L_case_end_107
-    // line 1698
+    .line 1698
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -15828,7 +15828,7 @@ L_check_case_110:
     pop
 L_case_end_107:
 L_if_end_106:
-    // line 1700
+    .line 1700
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
@@ -15840,7 +15840,7 @@ L_check_case_104:
     ldloc $tmpSwitchValue1
     ldc.i4 30
     bne.un L_check_case_113
-    // line 1703
+    .line 1703
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::Chrcnt
@@ -15852,19 +15852,19 @@ L_check_case_104:
     ldfld int32 T_interpret_record_200::i
     add
     stfld int32 @interpret::Chrcnt
-    // line 1704
+    .line 1704
     ldloc _F
     ldfld int32 @interpret::Chrcnt
     ldc.i4 250
     cgt
     brfalse L_else_114
-    // line 1704
+    .line 1704
     ldloc _F
     ldc.i4 7 // lngchk 
     stfld int32 @interpret::Ps
     br L_if_end_115
 L_else_114:
-    // line 1705
+    .line 1705
     ldloc _F
     ldflda valuetype T_order @interpret::Ir
     ldfld int32 T_order::y
@@ -15872,7 +15872,7 @@ L_else_114:
     ldloc $tmpSwitchValue8
     ldc.i4 1
     bne.un L_check_case_117
-    // line 1706
+    .line 1706
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -15897,7 +15897,7 @@ L_check_case_117:
     ldloc $tmpSwitchValue8
     ldc.i4 2
     bne.un L_check_case_118
-    // line 1707
+    .line 1707
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -15922,7 +15922,7 @@ L_check_case_118:
     ldloc $tmpSwitchValue8
     ldc.i4 3
     bne.un L_check_case_119
-    // line 1708
+    .line 1708
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -15953,7 +15953,7 @@ L_check_case_119:
     ldloc $tmpSwitchValue8
     ldc.i4 4
     bne.un L_case_end_116
-    // line 1709
+    .line 1709
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -15975,7 +15975,7 @@ L_check_case_119:
     pop
 L_case_end_116:
 L_if_end_115:
-    // line 1711
+    .line 1711
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
@@ -15987,7 +15987,7 @@ L_check_case_113:
     ldloc $tmpSwitchValue1
     ldc.i4 31
     bne.un L_check_case_122
-    // line 1713
+    .line 1713
     ldloc _F
     ldc.i4 1 // fin 
     stfld int32 @interpret::Ps
@@ -15996,14 +15996,14 @@ L_check_case_122:
     ldloc $tmpSwitchValue1
     ldc.i4 32
     bne.un L_check_case_123
-    // line 1715
+    .line 1715
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::b
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1715
+    .line 1715
     ldloc _F
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
@@ -16014,7 +16014,7 @@ L_check_case_122:
     call instance valuetype T_interpret_record_200& T_interpret_array_199::ldadr(int32)
     ldfld int32 T_interpret_record_200::i
     stfld int32 @interpret::Pc
-    // line 1715
+    .line 1715
     ldloc _F
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
@@ -16030,12 +16030,12 @@ L_check_case_123:
     ldloc $tmpSwitchValue1
     ldc.i4 33
     bne.un L_check_case_124
-    // line 1718
+    .line 1718
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::b
     stfld int32 @interpret::t
-    // line 1718
+    .line 1718
     ldloc _F
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
@@ -16046,7 +16046,7 @@ L_check_case_123:
     call instance valuetype T_interpret_record_200& T_interpret_array_199::ldadr(int32)
     ldfld int32 T_interpret_record_200::i
     stfld int32 @interpret::Pc
-    // line 1718
+    .line 1718
     ldloc _F
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
@@ -16062,7 +16062,7 @@ L_check_case_124:
     ldloc $tmpSwitchValue1
     ldc.i4 34
     bne.un L_check_case_125
-    // line 1720
+    .line 1720
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16084,7 +16084,7 @@ L_check_case_125:
     ldloc $tmpSwitchValue1
     ldc.i4 35
     bne.un L_check_case_126
-    // line 1721
+    .line 1721
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16104,7 +16104,7 @@ L_check_case_126:
     ldloc $tmpSwitchValue1
     ldc.i4 36
     bne.un L_check_case_127
-    // line 1725
+    .line 1725
     ldloc _F
     ldflda valuetype T_order @interpret::Ir
     ldfld int32 T_order::y
@@ -16112,7 +16112,7 @@ L_check_case_126:
     ldloc $tmpSwitchValue9
     ldc.i4 1
     bne.un L_check_case_129
-    // line 1726
+    .line 1726
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16131,7 +16131,7 @@ L_check_case_129:
     ldloc $tmpSwitchValue9
     ldc.i4 2
     bne.un L_case_end_128
-    // line 1727
+    .line 1727
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16151,7 +16151,7 @@ L_check_case_127:
     ldloc $tmpSwitchValue1
     ldc.i4 37
     bne.un L_check_case_130
-    // line 1730
+    .line 1730
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::Chrcnt
@@ -16165,19 +16165,19 @@ L_check_case_127:
     ldfld int32 T_interpret_record_200::i
     add
     stfld int32 @interpret::Chrcnt
-    // line 1731
+    .line 1731
     ldloc _F
     ldfld int32 @interpret::Chrcnt
     ldc.i4 250
     cgt
     brfalse L_else_131
-    // line 1731
+    .line 1731
     ldloc _F
     ldc.i4 7 // lngchk 
     stfld int32 @interpret::Ps
     br L_if_end_132
 L_else_131:
-    // line 1732
+    .line 1732
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -16205,7 +16205,7 @@ L_else_131:
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, float64)
     pop
 L_if_end_132:
-    // line 1733
+    .line 1733
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
@@ -16217,7 +16217,7 @@ L_check_case_130:
     ldloc $tmpSwitchValue1
     ldc.i4 38
     bne.un L_check_case_133
-    // line 1735
+    .line 1735
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16236,7 +16236,7 @@ L_check_case_130:
     call instance valuetype T_interpret_record_200& T_interpret_array_199::ldadr(int32)
     ldobj valuetype T_interpret_record_200
     stobj valuetype T_interpret_record_200
-    // line 1735
+    .line 1735
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
@@ -16249,14 +16249,14 @@ L_check_case_133:
     ldloc $tmpSwitchValue1
     ldc.i4 39
     bne.un L_check_case_134
-    // line 1737
+    .line 1737
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1737
+    .line 1737
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16283,14 +16283,14 @@ L_check_case_134:
     ldloc $tmpSwitchValue1
     ldc.i4 40
     bne.un L_check_case_135
-    // line 1739
+    .line 1739
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1739
+    .line 1739
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16319,14 +16319,14 @@ L_check_case_135:
     ldloc $tmpSwitchValue1
     ldc.i4 41
     bne.un L_check_case_136
-    // line 1741
+    .line 1741
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1741
+    .line 1741
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16353,14 +16353,14 @@ L_check_case_136:
     ldloc $tmpSwitchValue1
     ldc.i4 42
     bne.un L_check_case_137
-    // line 1743
+    .line 1743
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1743
+    .line 1743
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16389,14 +16389,14 @@ L_check_case_137:
     ldloc $tmpSwitchValue1
     ldc.i4 43
     bne.un L_check_case_138
-    // line 1745
+    .line 1745
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1745
+    .line 1745
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16423,14 +16423,14 @@ L_check_case_138:
     ldloc $tmpSwitchValue1
     ldc.i4 44
     bne.un L_check_case_139
-    // line 1747
+    .line 1747
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1747
+    .line 1747
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16459,14 +16459,14 @@ L_check_case_139:
     ldloc $tmpSwitchValue1
     ldc.i4 45
     bne.un L_check_case_140
-    // line 1749
+    .line 1749
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1749
+    .line 1749
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16493,14 +16493,14 @@ L_check_case_140:
     ldloc $tmpSwitchValue1
     ldc.i4 46
     bne.un L_check_case_141
-    // line 1751
+    .line 1751
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1751
+    .line 1751
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16529,14 +16529,14 @@ L_check_case_141:
     ldloc $tmpSwitchValue1
     ldc.i4 47
     bne.un L_check_case_142
-    // line 1753
+    .line 1753
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1753
+    .line 1753
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16563,14 +16563,14 @@ L_check_case_142:
     ldloc $tmpSwitchValue1
     ldc.i4 48
     bne.un L_check_case_143
-    // line 1755
+    .line 1755
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1755
+    .line 1755
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16599,14 +16599,14 @@ L_check_case_143:
     ldloc $tmpSwitchValue1
     ldc.i4 49
     bne.un L_check_case_144
-    // line 1757
+    .line 1757
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1757
+    .line 1757
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16633,14 +16633,14 @@ L_check_case_144:
     ldloc $tmpSwitchValue1
     ldc.i4 50
     bne.un L_check_case_145
-    // line 1759
+    .line 1759
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1759
+    .line 1759
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16669,14 +16669,14 @@ L_check_case_145:
     ldloc $tmpSwitchValue1
     ldc.i4 51
     bne.un L_check_case_146
-    // line 1761
+    .line 1761
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1761
+    .line 1761
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16706,14 +16706,14 @@ L_check_case_146:
     ldloc $tmpSwitchValue1
     ldc.i4 52
     bne.un L_check_case_148
-    // line 1763
+    .line 1763
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1763
+    .line 1763
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16740,14 +16740,14 @@ L_check_case_148:
     ldloc $tmpSwitchValue1
     ldc.i4 53
     bne.un L_check_case_149
-    // line 1765
+    .line 1765
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1765
+    .line 1765
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16774,14 +16774,14 @@ L_check_case_149:
     ldloc $tmpSwitchValue1
     ldc.i4 54
     bne.un L_check_case_150
-    // line 1767
+    .line 1767
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1767
+    .line 1767
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16809,14 +16809,14 @@ L_check_case_150:
     ldloc $tmpSwitchValue1
     ldc.i4 55
     bne.un L_check_case_151
-    // line 1769
+    .line 1769
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1769
+    .line 1769
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16844,14 +16844,14 @@ L_check_case_151:
     ldloc $tmpSwitchValue1
     ldc.i4 56
     bne.un L_check_case_152
-    // line 1771
+    .line 1771
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1771
+    .line 1771
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16882,14 +16882,14 @@ L_check_case_152:
     ldloc $tmpSwitchValue1
     ldc.i4 57
     bne.un L_check_case_154
-    // line 1773
+    .line 1773
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1773
+    .line 1773
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16916,14 +16916,14 @@ L_check_case_154:
     ldloc $tmpSwitchValue1
     ldc.i4 58
     bne.un L_check_case_155
-    // line 1775
+    .line 1775
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1776
+    .line 1776
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16935,13 +16935,13 @@ L_check_case_154:
     ldc.i4 0
     ceq
     brfalse L_else_156
-    // line 1776
+    .line 1776
     ldloc _F
     ldc.i4 3 // divchk 
     stfld int32 @interpret::Ps
     br L_if_end_157
 L_else_156:
-    // line 1777
+    .line 1777
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16969,14 +16969,14 @@ L_check_case_155:
     ldloc $tmpSwitchValue1
     ldc.i4 59
     bne.un L_check_case_158
-    // line 1779
+    .line 1779
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1780
+    .line 1780
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -16988,13 +16988,13 @@ L_check_case_155:
     ldc.i4 0
     ceq
     brfalse L_else_159
-    // line 1780
+    .line 1780
     ldloc _F
     ldc.i4 3 // divchk 
     stfld int32 @interpret::Ps
     br L_if_end_160
 L_else_159:
-    // line 1781
+    .line 1781
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -17022,14 +17022,14 @@ L_check_case_158:
     ldloc $tmpSwitchValue1
     ldc.i4 60
     bne.un L_check_case_161
-    // line 1783
+    .line 1783
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1783
+    .line 1783
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -17057,14 +17057,14 @@ L_check_case_161:
     ldloc $tmpSwitchValue1
     ldc.i4 61
     bne.un L_check_case_162
-    // line 1785
+    .line 1785
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::t
     ldc.i4 1
     sub
     stfld int32 @interpret::t
-    // line 1785
+    .line 1785
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
     ldloc _F
@@ -17092,17 +17092,17 @@ L_check_case_162:
     ldloc $tmpSwitchValue1
     ldc.i4 62
     bne.un L_check_case_163
-    // line 1787
+    .line 1787
     ldsflda valuetype [lpcRuntime]LPC.File _G::Input
     call instance bool [lpcRuntime]LPC.File::Eof()
     brfalse L_else_164
-    // line 1787
+    .line 1787
     ldloc _F
     ldc.i4 8 // redchk 
     stfld int32 @interpret::Ps
     br L_if_end_165
 L_else_164:
-    // line 1787
+    .line 1787
     ldsflda valuetype [lpcRuntime]LPC.File _G::Input
     call instance void [lpcRuntime]LPC.File::ReadLn()
 L_if_end_165:
@@ -17111,27 +17111,27 @@ L_check_case_163:
     ldloc $tmpSwitchValue1
     ldc.i4 63
     bne.un L_case_end_2
-    // line 1788
+    .line 1788
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1788
+    .line 1788
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::Lncnt
     ldc.i4 1
     add
     stfld int32 @interpret::Lncnt
-    // line 1788
+    .line 1788
     ldloc _F
     ldc.i4 0
     stfld int32 @interpret::Chrcnt
-    // line 1789
+    .line 1789
     ldloc _F
     ldfld int32 @interpret::Lncnt
     ldc.i4 10000
     cgt
     brfalse L_if_end_166
-    // line 1789
+    .line 1789
     ldloc _F
     ldc.i4 6 // linchk 
     stfld int32 @interpret::Ps
@@ -17145,7 +17145,7 @@ L_case_end_2:
     ldc.i4.0
     ceq
     brfalse L_repeat_1
-    // line 1794
+    .line 1794
     ldloc _F
     ldfld int32 @interpret::Ps
     ldc.i4 1 // fin 
@@ -17153,10 +17153,10 @@ L_case_end_2:
     ldc.i4.0
     ceq
     brfalse L_if_end_167
-    // line 1795
+    .line 1795
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1797
+    .line 1797
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "halt at"
@@ -17171,17 +17171,17 @@ L_case_end_2:
     ldstr " because of "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1798
+    .line 1798
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1799
+    .line 1799
     ldloc _F
     ldfld int32 @interpret::Ps
     stloc $tmpSwitchValue10
     ldloc $tmpSwitchValue10
     ldc.i4 2 // caschk 
     bne.un L_check_case_169
-    // line 1800
+    .line 1800
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "undefined case"
@@ -17192,7 +17192,7 @@ L_check_case_169:
     ldloc $tmpSwitchValue10
     ldc.i4 3 // divchk 
     bne.un L_check_case_170
-    // line 1801
+    .line 1801
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "division by 0"
@@ -17203,7 +17203,7 @@ L_check_case_170:
     ldloc $tmpSwitchValue10
     ldc.i4 4 // inxchk 
     bne.un L_check_case_171
-    // line 1802
+    .line 1802
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "invalid index"
@@ -17214,7 +17214,7 @@ L_check_case_171:
     ldloc $tmpSwitchValue10
     ldc.i4 5 // stkchk 
     bne.un L_check_case_172
-    // line 1803
+    .line 1803
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "storage overflow"
@@ -17225,7 +17225,7 @@ L_check_case_172:
     ldloc $tmpSwitchValue10
     ldc.i4 6 // linchk 
     bne.un L_check_case_173
-    // line 1804
+    .line 1804
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "too much output"
@@ -17236,7 +17236,7 @@ L_check_case_173:
     ldloc $tmpSwitchValue10
     ldc.i4 7 // lngchk 
     bne.un L_check_case_174
-    // line 1805
+    .line 1805
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "line too long"
@@ -17247,46 +17247,46 @@ L_check_case_174:
     ldloc $tmpSwitchValue10
     ldc.i4 8 // redchk 
     bne.un L_case_end_168
-    // line 1806
+    .line 1806
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "reading past end of file"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
 L_case_end_168:
-    // line 1808
+    .line 1808
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::b
     stfld int32 @interpret::H1
-    // line 1808
+    .line 1808
     ldloc _F
     ldc.i4 10
     stfld int32 @interpret::Blkcnt
-    // line 1809
+    .line 1809
 L_repeat_175:
-    // line 1809
+    .line 1809
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1809
+    .line 1809
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::Blkcnt
     ldc.i4 1
     sub
     stfld int32 @interpret::Blkcnt
-    // line 1810
+    .line 1810
     ldloc _F
     ldfld int32 @interpret::Blkcnt
     ldc.i4 0
     ceq
     brfalse L_if_end_176
-    // line 1810
+    .line 1810
     ldloc _F
     ldc.i4 0
     stfld int32 @interpret::H1
 L_if_end_176:
-    // line 1810
+    .line 1810
     ldloc _F
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
@@ -17297,7 +17297,7 @@ L_if_end_176:
     call instance valuetype T_interpret_record_200& T_interpret_array_199::ldadr(int32)
     ldfld int32 T_interpret_record_200::i
     stfld int32 @interpret::H2
-    // line 1811
+    .line 1811
     ldloc _F
     ldfld int32 @interpret::H1
     ldc.i4 0
@@ -17305,7 +17305,7 @@ L_if_end_176:
     ldc.i4.0
     ceq
     brfalse L_if_end_177
-    // line 1812
+    .line 1812
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 32 // ' '
@@ -17335,7 +17335,7 @@ L_if_end_176:
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
 L_if_end_177:
-    // line 1813
+    .line 1813
     ldloc _F
     ldsflda valuetype T_array_92 _G::Btab
     ldsflda valuetype T_array_88 _G::Tab
@@ -17346,10 +17346,10 @@ L_if_end_177:
     call instance valuetype T_record_91& T_array_92::ldadr(int32)
     ldfld int32 T_record_91::Last
     stfld int32 @interpret::H2
-    // line 1814
+    .line 1814
     br L_while_test_179
 L_while_178:
-    // line 1816
+    .line 1816
     ldsflda valuetype T_array_88 _G::Tab
     ldloc _F
     ldfld int32 @interpret::H2
@@ -17358,7 +17358,7 @@ L_while_178:
     ldc.i4 1
     ceq
     brfalse L_if_end_180
-    // line 1817
+    .line 1817
     ldsfld valuetype T_typset _G::Stantyps
     ldsflda valuetype T_array_88 _G::Tab
     ldloc _F
@@ -17367,7 +17367,7 @@ L_while_178:
     ldfld int32 T_record_86::Typ
     call bool _SetContains(valuetype T_typset s, int32 val)
     brfalse L_if_end_181
-    // line 1818
+    .line 1818
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "    "
@@ -17384,14 +17384,14 @@ L_while_178:
     ldstr " = "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1819
+    .line 1819
     ldsflda valuetype T_array_88 _G::Tab
     ldloc _F
     ldfld int32 @interpret::H2
     call instance valuetype T_record_86& T_array_88::ldadr(int32)
     ldfld bool T_record_86::Normal
     brfalse L_else_182
-    // line 1819
+    .line 1819
     ldloc _F
     ldloc _F
     ldfld int32 @interpret::H1
@@ -17404,7 +17404,7 @@ L_while_178:
     stfld int32 @interpret::H3
     br L_if_end_183
 L_else_182:
-    // line 1819
+    .line 1819
     ldloc _F
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
@@ -17420,7 +17420,7 @@ L_else_182:
     ldfld int32 T_interpret_record_200::i
     stfld int32 @interpret::H3
 L_if_end_183:
-    // line 1820
+    .line 1820
     ldsflda valuetype T_array_88 _G::Tab
     ldloc _F
     ldfld int32 @interpret::H2
@@ -17430,7 +17430,7 @@ L_if_end_183:
     ldloc $tmpSwitchValue11
     ldc.i4 1
     bne.un L_check_case_185
-    // line 1821
+    .line 1821
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -17446,7 +17446,7 @@ L_check_case_185:
     ldloc $tmpSwitchValue11
     ldc.i4 2
     bne.un L_check_case_186
-    // line 1822
+    .line 1822
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -17462,7 +17462,7 @@ L_check_case_186:
     ldloc $tmpSwitchValue11
     ldc.i4 3
     bne.un L_check_case_187
-    // line 1823
+    .line 1823
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -17484,7 +17484,7 @@ L_check_case_187:
     ldloc $tmpSwitchValue11
     ldc.i4 4
     bne.un L_case_end_184
-    // line 1824
+    .line 1824
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -17498,7 +17498,7 @@ L_check_case_187:
 L_case_end_184:
 L_if_end_181:
 L_if_end_180:
-    // line 1827
+    .line 1827
     ldloc _F
     ldsflda valuetype T_array_88 _G::Tab
     ldloc _F
@@ -17514,7 +17514,7 @@ L_while_test_179:
     ldc.i4.0
     ceq
     brtrue L_while_178
-    // line 1829
+    .line 1829
     ldloc _F
     ldloc _F
     ldflda valuetype T_interpret_array_199 @interpret::s
@@ -17532,10 +17532,10 @@ L_while_test_179:
     brfalse L_repeat_175
     /* nop */
 L_if_end_167:
-    // line 1832
+    .line 1832
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1832
+    .line 1832
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -17550,11 +17550,11 @@ L_Epilogue:
     ret
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 167
+.line 167
 
 .method static
 void _Program()
@@ -17690,454 +17690,454 @@ void _Program()
 L_Entry:
 .try
 {
-    // line 1838
+    .line 1838
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1839
+    .line 1839
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pascal-S compiler/interpreter"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1843
+    .line 1843
     ldsflda valuetype [lpcRuntime]LPC.File _G::Srcfil
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 1845
+    .line 1845
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 1
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_62    // "and       "
     stobj valuetype T_alfa
-    // line 1845
+    .line 1845
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 2
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_63    // "array     "
     stobj valuetype T_alfa
-    // line 1846
+    .line 1846
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 3
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_52    // "begin     "
     stobj valuetype T_alfa
-    // line 1846
+    .line 1846
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 4
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_64    // "case      "
     stobj valuetype T_alfa
-    // line 1847
+    .line 1847
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 5
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_65    // "const     "
     stobj valuetype T_alfa
-    // line 1847
+    .line 1847
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 6
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_66    // "div       "
     stobj valuetype T_alfa
-    // line 1848
+    .line 1848
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 7
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_50    // "do        "
     stobj valuetype T_alfa
-    // line 1848
+    .line 1848
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 8
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_67    // "downto    "
     stobj valuetype T_alfa
-    // line 1849
+    .line 1849
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 9
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_68    // "else      "
     stobj valuetype T_alfa
-    // line 1849
+    .line 1849
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 10
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_53    // "end       "
     stobj valuetype T_alfa
-    // line 1850
+    .line 1850
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 11
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_69    // "for       "
     stobj valuetype T_alfa
-    // line 1850
+    .line 1850
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 12
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_70    // "function  "
     stobj valuetype T_alfa
-    // line 1851
+    .line 1851
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 13
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_71    // "if        "
     stobj valuetype T_alfa
-    // line 1851
+    .line 1851
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 14
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_72    // "mod       "
     stobj valuetype T_alfa
-    // line 1852
+    .line 1852
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 15
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_73    // "not       "
     stobj valuetype T_alfa
-    // line 1852
+    .line 1852
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 16
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_9    // "of        "
     stobj valuetype T_alfa
-    // line 1853
+    .line 1853
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 17
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_74    // "or        "
     stobj valuetype T_alfa
-    // line 1853
+    .line 1853
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 18
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_75    // "procedure "
     stobj valuetype T_alfa
-    // line 1854
+    .line 1854
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 19
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_4    // "program   "
     stobj valuetype T_alfa
-    // line 1854
+    .line 1854
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 20
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_76    // "record    "
     stobj valuetype T_alfa
-    // line 1855
+    .line 1855
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 21
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_77    // "repeat    "
     stobj valuetype T_alfa
-    // line 1855
+    .line 1855
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 22
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_48    // "then      "
     stobj valuetype T_alfa
-    // line 1856
+    .line 1856
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 23
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_78    // "to        "
     stobj valuetype T_alfa
-    // line 1856
+    .line 1856
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 24
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_20    // "type      "
     stobj valuetype T_alfa
-    // line 1857
+    .line 1857
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 25
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_49    // "until     "
     stobj valuetype T_alfa
-    // line 1857
+    .line 1857
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 26
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_79    // "var       "
     stobj valuetype T_alfa
-    // line 1858
+    .line 1858
     ldsflda valuetype T_array_79 _G::Key
     ldc.i4 27
     call instance valuetype T_alfa& T_array_79::ldadr(int32)
     ldsfld valuetype T_alfa STRING_80    // "while     "
     stobj valuetype T_alfa
-    // line 1859
+    .line 1859
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 1
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 11 // andsy 
     stobj int32
-    // line 1859
+    .line 1859
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 2
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 33 // arraysy 
     stobj int32
-    // line 1860
+    .line 1860
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 3
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 37 // beginsy 
     stobj int32
-    // line 1860
+    .line 1860
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 4
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 39 // casesy 
     stobj int32
-    // line 1861
+    .line 1861
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 5
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 28 // constsy 
     stobj int32
-    // line 1861
+    .line 1861
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 6
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 8 // idiv 
     stobj int32
-    // line 1862
+    .line 1862
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 7
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 47 // dosy 
     stobj int32
-    // line 1862
+    .line 1862
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 8
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 49 // downtosy 
     stobj int32
-    // line 1863
+    .line 1863
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 9
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 44 // elsesy 
     stobj int32
-    // line 1863
+    .line 1863
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 10
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 43 // endsy 
     stobj int32
-    // line 1864
+    .line 1864
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 11
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 42 // forsy 
     stobj int32
-    // line 1864
+    .line 1864
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 12
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 31 // functionsy 
     stobj int32
-    // line 1865
+    .line 1865
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 13
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 38 // ifsy 
     stobj int32
-    // line 1865
+    .line 1865
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 14
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 10 // imod 
     stobj int32
-    // line 1866
+    .line 1866
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 15
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 4 // notsy 
     stobj int32
-    // line 1866
+    .line 1866
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 16
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 46 // ofsy 
     stobj int32
-    // line 1867
+    .line 1867
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 17
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 12 // orsy 
     stobj int32
-    // line 1867
+    .line 1867
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 18
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 32 // proceduresy 
     stobj int32
-    // line 1868
+    .line 1868
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 19
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 35 // programsy 
     stobj int32
-    // line 1868
+    .line 1868
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 20
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 34 // recordsy 
     stobj int32
-    // line 1869
+    .line 1869
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 21
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 40 // repeatsy 
     stobj int32
-    // line 1869
+    .line 1869
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 22
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 50 // thensy 
     stobj int32
-    // line 1870
+    .line 1870
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 23
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 48 // tosy 
     stobj int32
-    // line 1870
+    .line 1870
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 24
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 29 // typesy 
     stobj int32
-    // line 1871
+    .line 1871
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 25
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 45 // untilsy 
     stobj int32
-    // line 1871
+    .line 1871
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 26
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 30 // varsy 
     stobj int32
-    // line 1872
+    .line 1872
     ldsflda valuetype T_array_80 _G::Ksy
     ldc.i4 27
     call instance int32& T_array_80::ldadr(int32)
     ldc.i4 41 // whilesy 
     stobj int32
-    // line 1873
+    .line 1873
     ldsflda valuetype T_array_85 _G::Sps
     ldc.i4 43 // '+'
     call instance int32& T_array_85::ldadr(int32)
     ldc.i4 5 // plus 
     stobj int32
-    // line 1873
+    .line 1873
     ldsflda valuetype T_array_85 _G::Sps
     ldc.i4 45 // '-'
     call instance int32& T_array_85::ldadr(int32)
     ldc.i4 6 // minus 
     stobj int32
-    // line 1874
+    .line 1874
     ldsflda valuetype T_array_85 _G::Sps
     ldc.i4 42 // '*'
     call instance int32& T_array_85::ldadr(int32)
     ldc.i4 7 // times 
     stobj int32
-    // line 1874
+    .line 1874
     ldsflda valuetype T_array_85 _G::Sps
     ldc.i4 47 // '/'
     call instance int32& T_array_85::ldadr(int32)
     ldc.i4 9 // rdiv 
     stobj int32
-    // line 1875
+    .line 1875
     ldsflda valuetype T_array_85 _G::Sps
     ldc.i4 40 // '('
     call instance int32& T_array_85::ldadr(int32)
     ldc.i4 19 // lparent 
     stobj int32
-    // line 1875
+    .line 1875
     ldsflda valuetype T_array_85 _G::Sps
     ldc.i4 41 // ')'
     call instance int32& T_array_85::ldadr(int32)
     ldc.i4 20 // rparent 
     stobj int32
-    // line 1876
+    .line 1876
     ldsflda valuetype T_array_85 _G::Sps
     ldc.i4 61 // '='
     call instance int32& T_array_85::ldadr(int32)
     ldc.i4 13 // egl 
     stobj int32
-    // line 1876
+    .line 1876
     ldsflda valuetype T_array_85 _G::Sps
     ldc.i4 44 // ','
     call instance int32& T_array_85::ldadr(int32)
     ldc.i4 23 // comma 
     stobj int32
-    // line 1877
+    .line 1877
     ldsflda valuetype T_array_85 _G::Sps
     ldc.i4 91 // '['
     call instance int32& T_array_85::ldadr(int32)
     ldc.i4 21 // lbrack 
     stobj int32
-    // line 1877
+    .line 1877
     ldsflda valuetype T_array_85 _G::Sps
     ldc.i4 93 // ']'
     call instance int32& T_array_85::ldadr(int32)
     ldc.i4 22 // rbrack 
     stobj int32
-    // line 1878
+    .line 1878
     ldsflda valuetype T_array_85 _G::Sps
     ldc.i4 35 // '#'
     call instance int32& T_array_85::ldadr(int32)
     ldc.i4 14 // neg 
     stobj int32
-    // line 1878
+    .line 1878
     ldsflda valuetype T_array_85 _G::Sps
     ldc.i4 38 // '&'
     call instance int32& T_array_85::ldadr(int32)
     ldc.i4 11 // andsy 
     stobj int32
-    // line 1879
+    .line 1879
     ldsflda valuetype T_array_85 _G::Sps
     ldc.i4 59 // ';'
     call instance int32& T_array_85::ldadr(int32)
     ldc.i4 24 // semicolon 
     stobj int32
-    // line 1880
+    .line 1880
     ldloc $tmpSetLiteral1
     stsfld valuetype T_symset _G::Constbegsys
-    // line 1881
+    .line 1881
     ldloc $tmpSetLiteral2
     stsfld valuetype T_symset _G::Typebegsys
-    // line 1882
+    .line 1882
     ldloc $tmpSetLiteral3
     stsfld valuetype T_symset _G::Blockbegsys
-    // line 1884
+    .line 1884
     ldloc $tmpSetLiteral4
     stsfld valuetype T_symset _G::Facbegsys
-    // line 1885
+    .line 1885
     ldloc $tmpSetLiteral5
     stsfld valuetype T_symset _G::Statbegsys
-    // line 1886
+    .line 1886
     ldloc $tmpSetLiteral6
     stsfld valuetype T_typset _G::Stantyps
-    // line 1887
+    .line 1887
     ldc.i4 0
     stsfld int32 _G::Lc
-    // line 1887
+    .line 1887
     ldc.i4 0
     stsfld int32 _G::Ll
-    // line 1887
+    .line 1887
     ldc.i4 0
     stsfld int32 _G::Cc
-    // line 1887
+    .line 1887
     ldc.i4 32 // ' '
     stsfld uint8 _G::Ch
-    // line 1888
+    .line 1888
     ldc.i4 0
     stsfld int32 _G::Errpos
-    // line 1888
+    .line 1888
     ldloc $tmpSetLiteral7
     dup
     ldc.i4 0
@@ -18145,123 +18145,123 @@ L_Entry:
     call void _SetCheck(valuetype T_set_62 s, int32 min, int32 max)
     call valuetype T_set_61 _SetCastTo_T_set_61(valuetype T_set_62 s)
     stsfld valuetype T_set_61 _G::Errs
-    // line 1888
+    .line 1888
     call void Insymbol()
-    // line 1889
+    .line 1889
     ldc.i4 1
     neg
     stsfld int32 _G::t
-    // line 1889
+    .line 1889
     ldc.i4 0
     stsfld int32 _G::a
-    // line 1889
+    .line 1889
     ldc.i4 1
     stsfld int32 _G::b
-    // line 1889
+    .line 1889
     ldc.i4 0
     stsfld int32 _G::Sx
-    // line 1889
+    .line 1889
     ldc.i4 0
     stsfld int32 _G::C2
-    // line 1890
+    .line 1890
     ldsflda valuetype T_array_100 _G::Display
     ldc.i4 0
     call instance int32& T_array_100::ldadr(int32)
     ldc.i4 1
     stobj int32
-    // line 1891
+    .line 1891
     ldc.i4 0 // (false)
     stsfld bool _G::Iflag
-    // line 1891
+    .line 1891
     ldc.i4 0 // (false)
     stsfld bool _G::Oflag
-    // line 1892
+    .line 1892
     ldsfld int32 _G::Sy
     ldc.i4 35 // programsy 
     ceq
     ldc.i4.0
     ceq
     brfalse L_else_1
-    // line 1892
+    .line 1892
     ldc.i4 3
     call void Error(int32 n)
     br L_if_end_2
 L_else_1:
-    // line 1893
+    .line 1893
     call void Insymbol()
-    // line 1894
+    .line 1894
     ldsfld int32 _G::Sy
     ldc.i4 36 // ident 
     ceq
     ldc.i4.0
     ceq
     brfalse L_else_3
-    // line 1894
+    .line 1894
     ldc.i4 2
     call void Error(int32 n)
     br L_if_end_4
 L_else_3:
-    // line 1895
+    .line 1895
     ldsfld valuetype T_alfa _G::Id
     stsfld valuetype T_alfa _G::Progname
-    // line 1895
+    .line 1895
     call void Insymbol()
-    // line 1896
+    .line 1896
     ldsfld int32 _G::Sy
     ldc.i4 19 // lparent 
     ceq
     ldc.i4.0
     ceq
     brfalse L_else_5
-    // line 1896
+    .line 1896
     ldc.i4 9
     call void Error(int32 n)
     br L_if_end_6
 L_else_5:
-    // line 1897
+    .line 1897
 L_repeat_7:
-    // line 1897
+    .line 1897
     call void Insymbol()
-    // line 1898
+    .line 1898
     ldsfld int32 _G::Sy
     ldc.i4 36 // ident 
     ceq
     ldc.i4.0
     ceq
     brfalse L_else_8
-    // line 1898
+    .line 1898
     ldc.i4 2
     call void Error(int32 n)
     br L_if_end_9
 L_else_8:
-    // line 1899
+    .line 1899
     ldsfld valuetype T_alfa _G::Id
     call string T_alfa::arrayToString(valuetype T_alfa)
     ldstr "input     "
     call bool [lpcRuntime]LPC.Helpers::StrcmpEQ(string, string)
     brfalse L_else_10
-    // line 1899
+    .line 1899
     ldc.i4 1 // (true)
     stsfld bool _G::Iflag
     br L_if_end_11
 L_else_10:
-    // line 1900
+    .line 1900
     ldsfld valuetype T_alfa _G::Id
     call string T_alfa::arrayToString(valuetype T_alfa)
     ldstr "output    "
     call bool [lpcRuntime]LPC.Helpers::StrcmpEQ(string, string)
     brfalse L_else_12
-    // line 1900
+    .line 1900
     ldc.i4 1 // (true)
     stsfld bool _G::Oflag
     br L_if_end_13
 L_else_12:
-    // line 1900
+    .line 1900
     ldc.i4 0
     call void Error(int32 n)
 L_if_end_13:
 L_if_end_11:
-    // line 1901
+    .line 1901
     call void Insymbol()
 L_if_end_9:
     ldsfld int32 _G::Sy
@@ -18271,205 +18271,205 @@ L_if_end_9:
     ceq
     brfalse L_repeat_7
 L_if_end_6:
-    // line 1904
+    .line 1904
     ldsfld int32 _G::Sy
     ldc.i4 20 // rparent 
     ceq
     brfalse L_else_14
-    // line 1904
+    .line 1904
     call void Insymbol()
     br L_if_end_15
 L_else_14:
-    // line 1904
+    .line 1904
     ldc.i4 4
     call void Error(int32 n)
 L_if_end_15:
-    // line 1905
+    .line 1905
     ldsfld bool _G::Oflag
     ldc.i4.0
     ceq
     brfalse L_if_end_16
-    // line 1905
+    .line 1905
     ldc.i4 20
     call void Error(int32 n)
 L_if_end_16:
 L_if_end_4:
 L_if_end_2:
-    // line 1908
+    .line 1908
     ldsfld valuetype T_alfa STRING_61    // "          "
     ldc.i4 1 // variable 
     ldc.i4 0 // notyp 
     ldc.i4 0
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1909
+    .line 1909
     ldsfld valuetype T_alfa STRING_81    // "false     "
     ldc.i4 0 // konstant 
     ldc.i4 3 // bools 
     ldc.i4 0
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1910
+    .line 1910
     ldsfld valuetype T_alfa STRING_82    // "true      "
     ldc.i4 0 // konstant 
     ldc.i4 3 // bools 
     ldc.i4 1
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1911
+    .line 1911
     ldsfld valuetype T_alfa STRING_83    // "real      "
     ldc.i4 2 // typel 
     ldc.i4 2 // reals 
     ldc.i4 1
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1912
+    .line 1912
     ldsfld valuetype T_alfa STRING_84    // "char      "
     ldc.i4 2 // typel 
     ldc.i4 4 // chars 
     ldc.i4 1
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1913
+    .line 1913
     ldsfld valuetype T_alfa STRING_18    // "boolean   "
     ldc.i4 2 // typel 
     ldc.i4 3 // bools 
     ldc.i4 1
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1914
+    .line 1914
     ldsfld valuetype T_alfa STRING_35    // "integer   "
     ldc.i4 2 // typel 
     ldc.i4 1 // ints 
     ldc.i4 1
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1915
+    .line 1915
     ldsfld valuetype T_alfa STRING_85    // "abs       "
     ldc.i4 4 // funktion 
     ldc.i4 2 // reals 
     ldc.i4 0
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1916
+    .line 1916
     ldsfld valuetype T_alfa STRING_86    // "sqr       "
     ldc.i4 4 // funktion 
     ldc.i4 2 // reals 
     ldc.i4 2
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1917
+    .line 1917
     ldsfld valuetype T_alfa STRING_87    // "odd       "
     ldc.i4 4 // funktion 
     ldc.i4 3 // bools 
     ldc.i4 4
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1918
+    .line 1918
     ldsfld valuetype T_alfa STRING_88    // "chr       "
     ldc.i4 4 // funktion 
     ldc.i4 4 // chars 
     ldc.i4 5
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1919
+    .line 1919
     ldsfld valuetype T_alfa STRING_89    // "ord       "
     ldc.i4 4 // funktion 
     ldc.i4 1 // ints 
     ldc.i4 6
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1920
+    .line 1920
     ldsfld valuetype T_alfa STRING_90    // "succ      "
     ldc.i4 4 // funktion 
     ldc.i4 4 // chars 
     ldc.i4 7
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1921
+    .line 1921
     ldsfld valuetype T_alfa STRING_91    // "pred      "
     ldc.i4 4 // funktion 
     ldc.i4 4 // chars 
     ldc.i4 8
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1922
+    .line 1922
     ldsfld valuetype T_alfa STRING_92    // "round     "
     ldc.i4 4 // funktion 
     ldc.i4 1 // ints 
     ldc.i4 9
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1923
+    .line 1923
     ldsfld valuetype T_alfa STRING_93    // "trunc     "
     ldc.i4 4 // funktion 
     ldc.i4 1 // ints 
     ldc.i4 10
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1924
+    .line 1924
     ldsfld valuetype T_alfa STRING_94    // "sin       "
     ldc.i4 4 // funktion 
     ldc.i4 2 // reals 
     ldc.i4 11
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1925
+    .line 1925
     ldsfld valuetype T_alfa STRING_95    // "cos       "
     ldc.i4 4 // funktion 
     ldc.i4 2 // reals 
     ldc.i4 12
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1926
+    .line 1926
     ldsfld valuetype T_alfa STRING_96    // "exp       "
     ldc.i4 4 // funktion 
     ldc.i4 2 // reals 
     ldc.i4 13
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1927
+    .line 1927
     ldsfld valuetype T_alfa STRING_97    // "ln        "
     ldc.i4 4 // funktion 
     ldc.i4 2 // reals 
     ldc.i4 14
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1928
+    .line 1928
     ldsfld valuetype T_alfa STRING_98    // "sqrt      "
     ldc.i4 4 // funktion 
     ldc.i4 2 // reals 
     ldc.i4 15
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1929
+    .line 1929
     ldsfld valuetype T_alfa STRING_99    // "arctan    "
     ldc.i4 4 // funktion 
     ldc.i4 2 // reals 
     ldc.i4 16
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1930
+    .line 1930
     ldsfld valuetype T_alfa STRING_100    // "eof       "
     ldc.i4 4 // funktion 
     ldc.i4 3 // bools 
     ldc.i4 17
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1931
+    .line 1931
     ldsfld valuetype T_alfa STRING_101    // "eoln      "
     ldc.i4 4 // funktion 
     ldc.i4 3 // bools 
     ldc.i4 18
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1932
+    .line 1932
     ldsfld valuetype T_alfa STRING_102    // "read      "
     ldc.i4 3 // prozedure 
     ldc.i4 0 // notyp 
     ldc.i4 1
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1933
+    .line 1933
     ldsfld valuetype T_alfa STRING_103    // "readln    "
     ldc.i4 3 // prozedure 
     ldc.i4 0 // notyp 
     ldc.i4 2
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1934
+    .line 1934
     ldsfld valuetype T_alfa STRING_104    // "write     "
     ldc.i4 3 // prozedure 
     ldc.i4 0 // notyp 
     ldc.i4 3
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1935
+    .line 1935
     ldsfld valuetype T_alfa STRING_105    // "writeln   "
     ldc.i4 3 // prozedure 
     ldc.i4 0 // notyp 
     ldc.i4 4
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1936
+    .line 1936
     ldsfld valuetype T_alfa STRING_61    // "          "
     ldc.i4 3 // prozedure 
     ldc.i4 0 // notyp 
     ldc.i4 0
     call void Enter(valuetype T_alfa X0, int32 X1, int32 X2, int32 X3)
-    // line 1938
+    .line 1938
     ldsflda valuetype T_array_92 _G::Btab
     ldc.i4 1
     call instance valuetype T_record_91& T_array_92::ldadr(int32)
@@ -18479,7 +18479,7 @@ L_if_end_2:
     ldc.i4 131071
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_record_91::Last
-    // line 1938
+    .line 1938
     ldsflda valuetype T_array_92 _G::Btab
     ldc.i4 1
     call instance valuetype T_record_91& T_array_92::ldadr(int32)
@@ -18489,7 +18489,7 @@ L_if_end_2:
     ldc.i4 131071
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_record_91::Lastpar
-    // line 1938
+    .line 1938
     ldsflda valuetype T_array_92 _G::Btab
     ldc.i4 1
     call instance valuetype T_record_91& T_array_92::ldadr(int32)
@@ -18499,7 +18499,7 @@ L_if_end_2:
     ldc.i4 131071
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_record_91::Psize
-    // line 1938
+    .line 1938
     ldsflda valuetype T_array_92 _G::Btab
     ldc.i4 1
     call instance valuetype T_record_91& T_array_92::ldadr(int32)
@@ -18509,28 +18509,28 @@ L_if_end_2:
     ldc.i4 131071
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_record_91::Vsize
-    // line 1941
+    .line 1941
     ldsfld valuetype T_symset _G::Blockbegsys
     ldsfld valuetype T_symset _G::Statbegsys
     call valuetype T_symset _SetUnion(valuetype T_symset a, valuetype T_symset b)
     ldc.i4 0 // (false)
     ldc.i4 1
     call void Block(valuetype T_symset Fsys, bool Isfun, int32 Level)
-    // line 1942
+    .line 1942
     ldsfld int32 _G::Sy
     ldc.i4 25 // period 
     ceq
     ldc.i4.0
     ceq
     brfalse L_if_end_17
-    // line 1942
+    .line 1942
     ldc.i4 22
     call void Error(int32 n)
 L_if_end_17:
-    // line 1943
+    .line 1943
     ldc.i4 31
     call void Emit(int32 Fct)
-    // line 1944
+    .line 1944
     ldsflda valuetype T_array_92 _G::Btab
     ldc.i4 2
     call instance valuetype T_record_91& T_array_92::ldadr(int32)
@@ -18538,33 +18538,33 @@ L_if_end_17:
     ldc.i4 10000 // stacksize 
     cgt
     brfalse L_if_end_18
-    // line 1944
+    .line 1944
     ldc.i4 49
     call void Error(int32 n)
 L_if_end_18:
-    // line 1945
+    .line 1945
     ldsfld valuetype T_alfa _G::Progname
     call string T_alfa::arrayToString(valuetype T_alfa)
     ldstr "test0     "
     call bool [lpcRuntime]LPC.Helpers::StrcmpEQ(string, string)
     brfalse L_if_end_19
-    // line 1945
+    .line 1945
     call void Printtables()
 L_if_end_19:
-    // line 1947
+    .line 1947
     ldsfld valuetype T_set_61 _G::Errs
     call valuetype T_set_62 _SetCastTo_T_set_62(valuetype T_set_61 s)
     ldloc $tmpSetLiteral8
     call bool _SetEqual(valuetype T_set_62 a, valuetype T_set_62 b)
     brfalse L_else_20
-    // line 1949
+    .line 1949
     ldsfld bool _G::Iflag
     brfalse L_if_end_22
-    // line 1951
+    .line 1951
     ldsflda valuetype [lpcRuntime]LPC.File _G::Input
     call instance bool [lpcRuntime]LPC.File::Eof()
     brfalse L_else_23
-    // line 1951
+    .line 1951
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " input data missing"
@@ -18572,25 +18572,25 @@ L_if_end_19:
     call instance void [lpcRuntime]LPC.File::WriteLn()
     br L_if_end_24
 L_else_23:
-    // line 1952
+    .line 1952
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " (eor) "
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1953
+    .line 1953
     br L_while_test_26
 L_while_25:
-    // line 1954
+    .line 1954
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 32 // ' '
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 1955
+    .line 1955
     br L_while_test_28
 L_while_27:
-    // line 1956
+    .line 1956
     ldsflda valuetype [lpcRuntime]LPC.File _G::Input
     dup
     ldsflda uint8 _G::Ch
@@ -18598,7 +18598,7 @@ L_while_27:
     ldc.i4 255
     call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
     pop
-    // line 1956
+    .line 1956
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld uint8 _G::Ch
@@ -18610,10 +18610,10 @@ L_while_test_28:
     ldc.i4.0
     ceq
     brtrue L_while_27
-    // line 1958
+    .line 1958
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1958
+    .line 1958
     ldsflda valuetype [lpcRuntime]LPC.File _G::Input
     dup
     ldsflda uint8 _G::Ch
@@ -18630,17 +18630,17 @@ L_while_test_26:
     /* nop */
 L_if_end_24:
 L_if_end_22:
-    // line 1962
+    .line 1962
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " (eof) "
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1963
+    .line 1963
     call void Interpret()
     br L_if_end_21
 L_else_20:
-    // line 1965
+    .line 1965
     call void Errormsg()
 L_if_end_21:
 L_99:
@@ -18677,7 +18677,7 @@ L_Epilogue:
 
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 //================================================================================
 // internal helpers
@@ -18826,7 +18826,7 @@ L_Epilogue:
 
 
 
-// line 0xfeefee
+.line 0xfeefee
 
 //================================================================================
 // global string literals

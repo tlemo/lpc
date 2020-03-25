@@ -19,9 +19,9 @@
     ret
 }
 
-// "freeVars.pas"
+.line 0 "freeVars.pas"
 
-// line 11
+.line 11
 //================================================================================
 // scope: foo_bar1 (level : 3)
 
@@ -45,7 +45,7 @@
 }
 
 
-// line 22
+.line 22
 //================================================================================
 // scope: foo_bar2_moo (level : 4)
 
@@ -66,7 +66,7 @@
 }
 
 
-// line 19
+.line 19
 //================================================================================
 // scope: foo_bar2 (level : 3)
 
@@ -88,7 +88,7 @@
         ret
     }
 
-// line 22
+.line 22
 
     .method public
     void Moo()
@@ -105,17 +105,17 @@
         stfld class @foo_bar2 @foo_bar2_moo::_slink
     
     L_Entry:
-        // line 25
+        .line 25
         ldloc _F
         ldc.i4 100
         stfld int32 @foo_bar2_moo::MooV
-        // line 26
+        .line 26
         ldloc _F
         ldfld class @foo_bar2 @foo_bar2_moo::_slink
         ldfld class @foo @foo_bar2::_slink
         ldc.i4 2
         call instance void @foo::Bar1(int32 i)
-        // line 27
+        .line 27
         ldsflda valuetype [lpcRuntime]LPC.File _G::_output
         dup
         ldloc _F
@@ -161,7 +161,7 @@
 }
 
 
-// line 8
+.line 8
 //================================================================================
 // scope: foo (level : 2)
 
@@ -177,7 +177,7 @@
         ret
     }
 
-// line 11
+.line 11
 
     .method public
     void Bar1(int32 i)
@@ -198,18 +198,18 @@
         stfld int32 @foo_bar1::i
     
     L_Entry:
-        // line 14
+        .line 14
         ldloc _F
         ldloc _F
         ldfld int32 @foo_bar1::i
         stfld int32 @foo_bar1::Bar1V
-        // line 15
+        .line 15
         ldloc _F
         ldfld int32 @foo_bar1::i
         ldc.i4 3
         clt
         brfalse L_if_end_1
-        // line 15
+        .line 15
         ldloc _F
         ldfld class @foo @foo_bar1::_slink
         ldloc _F
@@ -218,7 +218,7 @@
         add
         call instance void @foo::Bar1(int32 i)
     L_if_end_1:
-        // line 16
+        .line 16
         ldsflda valuetype [lpcRuntime]LPC.File _G::_output
         dup
         ldloc _F
@@ -245,7 +245,7 @@
         ret
     }
 
-// line 19
+.line 19
 
     .method public
     void Bar2(int32 i)
@@ -266,20 +266,20 @@
         stfld int32 @foo_bar2::i
     
     L_Entry:
-        // line 31
+        .line 31
         ldloc _F
         ldloc _F
         ldfld int32 @foo_bar2::i
         stfld int32 @foo_bar2::Bar2V
-        // line 32
+        .line 32
         ldloc _F
         ldfld class @foo @foo_bar2::_slink
         ldc.i4 1
         call instance void @foo::Bar1(int32 i)
-        // line 33
+        .line 33
         ldloc _F
         call instance void @foo_bar2::Moo()
-        // line 34
+        .line 34
         ldsflda valuetype [lpcRuntime]LPC.File _G::_output
         dup
         ldloc _F
@@ -308,7 +308,7 @@
 }
 
 
-// line 4
+.line 4
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -320,7 +320,7 @@
     .field public static int32 v
 }
 
-// line 8
+.line 8
 
 .method static
 void Foo()
@@ -333,15 +333,15 @@ void Foo()
     stloc _F
 
 L_Entry:
-    // line 38
+    .line 38
     ldloc _F
     ldc.i4 0
     call instance void @foo::Bar1(int32 i)
-    // line 39
+    .line 39
     ldloc _F
     ldc.i4 1000
     call instance void @foo::Bar2(int32 i)
-    // line 40
+    .line 40
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldloc _F
@@ -360,11 +360,11 @@ L_Epilogue:
     ret
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 4
+.line 4
 
 .method static
 void _Program()
@@ -382,9 +382,9 @@ void _Program()
     call instance void [lpcRuntime]LPC.File::Init(int32)
 
 L_Entry:
-    // line 44
+    .line 44
     call void Foo()
-    // line 45
+    .line 45
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldsfld int32 _G::v

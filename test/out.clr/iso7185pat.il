@@ -19,9 +19,9 @@
     ret
 }
 
-// "iso7185pat.pas"
+.line 0 "iso7185pat.pas"
 
-// line 398
+.line 398
 //================================================================================
 // scope: junk1 (level : 2)
 
@@ -40,7 +40,7 @@
 }
 
 
-// line 406
+.line 406
 //================================================================================
 // scope: junk2 (level : 2)
 
@@ -58,11 +58,11 @@
 }
 
 
-// line 414
+.line 414
 //================================================================================
 // scope: junk3 (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE string10 = array [1 .. 10] of uint8;
 .class value explicit T_string10
@@ -123,7 +123,7 @@
 }
 
 
-// line 422
+.line 422
 //================================================================================
 // scope: junk4 (level : 2)
 
@@ -141,7 +141,7 @@
 }
 
 
-// line 431
+.line 431
 //================================================================================
 // scope: junk5 (level : 2)
 
@@ -162,7 +162,7 @@
 }
 
 
-// line 439
+.line 439
 //================================================================================
 // scope: junk6 (level : 2)
 
@@ -177,7 +177,7 @@
 }
 
 
-// line 449
+.line 449
 //================================================================================
 // scope: junk7 (level : 2)
 
@@ -203,11 +203,11 @@
 }
 
 
-// line 467
+.line 467
 //================================================================================
 // scope: junk8 (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE arri = array [1 .. 10] of int32;
 .class value explicit T_arri
@@ -246,7 +246,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE recs = record;
 .class value explicit T_recs
@@ -258,7 +258,7 @@
     .field [4] public uint8 b
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE cset = set of 0 .. 255
 .class value explicit T_cset
@@ -348,7 +348,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE rec = record;
 .class value explicit T_rec
@@ -370,7 +370,7 @@
     .field [120] public void* p
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE recv = record;
 .class value explicit T_recv
@@ -423,11 +423,11 @@
 }
 
 
-// line 494
+.line 494
 //================================================================================
 // scope: junk9 (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_1 = procedure^;
 .class sealed T_subroutine_1 extends [mscorlib]System.MulticastDelegate
@@ -436,7 +436,7 @@
     .method public void Invoke(int32 Junk9, int32 b, uint8 c) runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_2 = function^;
 .class sealed T_subroutine_2 extends [mscorlib]System.MulticastDelegate
@@ -460,7 +460,7 @@
 }
 
 
-// line 504
+.line 504
 //================================================================================
 // scope: junk10 (level : 2)
 
@@ -480,7 +480,7 @@
 }
 
 
-// line 512
+.line 512
 //================================================================================
 // scope: junk11 (level : 2)
 
@@ -501,11 +501,11 @@
 }
 
 
-// line 520
+.line 520
 //================================================================================
 // scope: junk12 (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_3 = function^;
 .class sealed T_subroutine_3 extends [mscorlib]System.MulticastDelegate
@@ -514,7 +514,7 @@
     .method public int32 Invoke(int32 n) runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_5 = function^;
 .class sealed T_subroutine_5 extends [mscorlib]System.MulticastDelegate
@@ -523,7 +523,7 @@
     .method public int32 Invoke(int32 z) runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_4 = procedure^;
 .class sealed T_subroutine_4 extends [mscorlib]System.MulticastDelegate
@@ -547,11 +547,11 @@
 }
 
 
-// line 529
+.line 529
 //================================================================================
 // scope: junk13 (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_6 = function^;
 .class sealed T_subroutine_6 extends [mscorlib]System.MulticastDelegate
@@ -574,7 +574,7 @@
 }
 
 
-// line 541
+.line 541
 //================================================================================
 // scope: junk14_junk15 (level : 3)
 
@@ -592,7 +592,7 @@
 }
 
 
-// line 537
+.line 537
 //================================================================================
 // scope: junk14 (level : 2)
 
@@ -609,7 +609,7 @@
         ret
     }
 
-// line 541
+.line 541
 
     .method public
     void Junk15()
@@ -626,7 +626,7 @@
         stfld class @junk14 @junk14_junk15::_slink
     
     L_Entry:
-        // line 545
+        .line 545
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 1
@@ -653,7 +653,7 @@
 }
 
 
-// line 557
+.line 557
 //================================================================================
 // scope: junk16 (level : 2)
 
@@ -668,7 +668,7 @@
 }
 
 
-// line 561
+.line 561
 //================================================================================
 // scope: junk17_junk18 (level : 3)
 
@@ -686,11 +686,11 @@
 }
 
 
-// line 559
+.line 559
 //================================================================================
 // scope: junk17 (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_7 = procedure^;
 .class sealed T_subroutine_7 extends [mscorlib]System.MulticastDelegate
@@ -699,7 +699,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_8 = procedure^;
 .class sealed T_junk17_subroutine_8 extends [mscorlib]System.MulticastDelegate
@@ -721,7 +721,7 @@
         ret
     }
 
-// line 561
+.line 561
 
     .method public
     void Junk18()
@@ -738,7 +738,7 @@
         stfld class @junk17 @junk17_junk18::_slink
     
     L_Entry:
-        // line 565
+        .line 565
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 1
@@ -755,7 +755,7 @@
 }
 
 
-// line 578
+.line 578
 //================================================================================
 // scope: junk19 (level : 2)
 
@@ -773,7 +773,7 @@
 }
 
 
-// line 598
+.line 598
 //================================================================================
 // scope: junk20_inner (level : 3)
 
@@ -794,7 +794,7 @@
 }
 
 
-// line 596
+.line 596
 //================================================================================
 // scope: junk20 (level : 2)
 
@@ -810,7 +810,7 @@
         ret
     }
 
-// line 598
+.line 598
 
     .method public
     int32 Inner()
@@ -827,11 +827,11 @@
         stfld class @junk20 @junk20_inner::_slink
     
     L_Entry:
-        // line 602
+        .line 602
         ldloc _F
         ldc.i4 12
         stfld int32 @junk20_inner::_fnvalue
-        // line 603
+        .line 603
         ldloc _F
         ldfld class @junk20 @junk20_inner::_slink
         ldc.i4 37
@@ -845,7 +845,7 @@
 }
 
 
-// line 613
+.line 613
 //================================================================================
 // scope: random (level : 2)
 
@@ -868,11 +868,11 @@
 }
 
 
-// line 71
+.line 71
 //================================================================================
 // scope: program scope (level : 1)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE arrr = array [1 .. 10] of valuetype T_recs;
 .class value explicit T_arrr
@@ -911,7 +911,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_15 = array [1 .. 2] of int32;
 .class value explicit T_array_15
@@ -950,7 +950,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_14 = array [1 .. 2] of valuetype T_array_15;
 .class value explicit T_array_14
@@ -989,7 +989,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_13 = array [1 .. 2] of valuetype T_array_14;
 .class value explicit T_array_13
@@ -1028,7 +1028,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_12 = array [1 .. 2] of valuetype T_array_13;
 .class value explicit T_array_12
@@ -1067,7 +1067,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_11 = array [1 .. 2] of valuetype T_array_12;
 .class value explicit T_array_11
@@ -1106,7 +1106,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE arrim = array [1 .. 2] of valuetype T_array_11;
 .class value explicit T_arrim
@@ -1145,7 +1145,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_16 = array [1 .. 10] of bool;
 .class value explicit T_array_16
@@ -1182,7 +1182,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_21 = array [1 .. 10] of int8;
 .class value explicit T_array_21
@@ -1219,7 +1219,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_22 = array [1 .. 10] of valuetype [lpcRuntime]LPC.File;
 .class value explicit T_array_22
@@ -1258,7 +1258,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_25 = array [1 .. 10] of void*;
 .class value explicit T_array_25
@@ -1297,7 +1297,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_26 = array [1 .. 10] of float64;
 .class value explicit T_array_26
@@ -1336,7 +1336,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_28 = array [1 .. 10] of valuetype T_cset;
 .class value explicit T_array_28
@@ -1375,7 +1375,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_29 = array [0 .. 1] of int32;
 .class value explicit T_array_29
@@ -1412,7 +1412,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_30 = array [97 .. 122] of int32;
 .class value explicit T_array_30
@@ -1451,7 +1451,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_31 = array [0 .. 255] of int32;
 .class value explicit T_array_31
@@ -1488,7 +1488,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_34 = set of 97 .. 122
 .class value explicit T_set_34
@@ -1574,7 +1574,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_35 = set of 97 .. 102
 .class value explicit T_set_35
@@ -1660,7 +1660,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_37 = array [1 .. 10] of valuetype T_arri;
 .class value explicit T_array_37
@@ -1699,7 +1699,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_39 = array [0 .. 9] of int32;
 .class value explicit T_array_39
@@ -1736,7 +1736,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_40 = array [1 .. 5] of int32;
 .class value explicit T_array_40
@@ -1775,7 +1775,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_54 = array [1 .. 100] of void*;
 .class value explicit T_array_54
@@ -1814,7 +1814,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_66 = record;
 .class value explicit T_record_66
@@ -1825,7 +1825,7 @@
     .field [0] public int32 i
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_65 = record;
 .class value explicit T_record_65
@@ -1837,7 +1837,7 @@
     .field [4] public valuetype T_record_66 r
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_64 = record;
 .class value explicit T_record_64
@@ -1849,7 +1849,7 @@
     .field [4] public valuetype T_record_65 r
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_63 = record;
 .class value explicit T_record_63
@@ -1861,7 +1861,7 @@
     .field [4] public valuetype T_record_64 r
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_62 = record;
 .class value explicit T_record_62
@@ -1873,7 +1873,7 @@
     .field [4] public valuetype T_record_63 r
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_61 = record;
 .class value explicit T_record_61
@@ -1885,7 +1885,7 @@
     .field [4] public valuetype T_record_62 r
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_60 = record;
 .class value explicit T_record_60
@@ -1897,7 +1897,7 @@
     .field [4] public valuetype T_record_61 r
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_59 = record;
 .class value explicit T_record_59
@@ -1909,7 +1909,7 @@
     .field [4] public valuetype T_record_60 r
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_58 = record;
 .class value explicit T_record_58
@@ -1921,7 +1921,7 @@
     .field [4] public valuetype T_record_59 r
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_57 = record;
 .class value explicit T_record_57
@@ -1933,7 +1933,7 @@
     .field [4] public valuetype T_record_58 r
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE prec = record;
 .class value explicit T_prec
@@ -1955,7 +1955,7 @@
     .field [120] public void* p
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_111 = record;
 .class value explicit T_record_111
@@ -1970,7 +1970,7 @@
     .field [13] public valuetype T_string10 Rs
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_113 = record;
 .class value explicit T_record_113
@@ -1986,7 +1986,7 @@
     // case false = 0
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_116 = array [1 .. 10] of valuetype T_string10;
 .class value explicit T_array_116
@@ -2025,7 +2025,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_118 = set of 0 .. 1
 .class value explicit T_set_118
@@ -2108,7 +2108,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_122 = array [1 .. 16] of uint8;
 .class value explicit T_array_122
@@ -2155,7 +2155,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_123 = set of 0 .. 9
 .class value explicit T_set_123
@@ -2238,7 +2238,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_124 = set of 0 .. 4
 .class value explicit T_set_124
@@ -2321,7 +2321,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_126 = set of 0 .. 6
 .class value explicit T_set_126
@@ -2404,7 +2404,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_129 = set of 1 .. 100
 .class value explicit T_set_129
@@ -2490,7 +2490,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_130 = set of 1 .. 10
 .class value explicit T_set_130
@@ -2573,7 +2573,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_132 = set of 1 .. 20
 .class value explicit T_set_132
@@ -2656,7 +2656,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_134 = record;
 .class value explicit T_record_134
@@ -2730,7 +2730,7 @@
         .field [16] public int32 m
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_135 = record;
 .class value explicit T_record_135
@@ -2750,7 +2750,7 @@
         .field [1] public bool Vb
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_136 = record;
 .class value explicit T_record_136
@@ -2778,7 +2778,7 @@
         .field [4] public bool Vb
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_137 = record;
 .class value explicit T_record_137
@@ -2800,7 +2800,7 @@
         .field [1] public bool Vb
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_138 = record;
 .class value explicit T_record_138
@@ -2829,7 +2829,7 @@
         .field [1] public bool Vb
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_259 = procedure^;
 .class sealed T_subroutine_259 extends [mscorlib]System.MulticastDelegate
@@ -2838,7 +2838,7 @@
     .method public void Invoke(int32 x, int32 y, uint8 Junk10) runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_260 = function^;
 .class sealed T_subroutine_260 extends [mscorlib]System.MulticastDelegate
@@ -2847,7 +2847,7 @@
     .method public int32 Invoke(int32 x) runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_261 = procedure^;
 .class sealed T_subroutine_261 extends [mscorlib]System.MulticastDelegate
@@ -2856,7 +2856,7 @@
     .method public void Invoke(class T_subroutine_6 Xz) runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_262 = procedure^;
 .class sealed T_subroutine_262 extends [mscorlib]System.MulticastDelegate
@@ -2865,7 +2865,7 @@
     .method public void Invoke() runtime managed {}
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_263 = array [1 .. 2] of uint8;
 .class value explicit T_array_263
@@ -2912,7 +2912,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_267 = array [1 .. 3] of uint8;
 .class value explicit T_array_267
@@ -2959,7 +2959,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_274 = array [1 .. 4] of uint8;
 .class value explicit T_array_274
@@ -3006,7 +3006,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_287 = array [1 .. 5] of uint8;
 .class value explicit T_array_287
@@ -3239,7 +3239,7 @@
     .field public static int32 z
 }
 
-// line 398
+.line 398
 
 .method static
 void Junk1(int32 z, int32 q)
@@ -3260,7 +3260,7 @@ void Junk1(int32 z, int32 q)
     stfld int32 @junk1::z
 
 L_Entry:
-    // line 402
+    .line 402
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -3284,7 +3284,7 @@ L_Epilogue:
     ret
 }
 
-// line 406
+.line 406
 
 .method static
 void Junk2(int32& z)
@@ -3305,7 +3305,7 @@ void Junk2(int32& z)
     stfld int32* @junk2::z
 
 L_Entry:
-    // line 410
+    .line 410
     ldloc _F
     ldfld int32* @junk2::z
     ldloc _F
@@ -3319,7 +3319,7 @@ L_Epilogue:
     ret
 }
 
-// line 414
+.line 414
 
 .method static
 void Junk3(valuetype T_string10& p)
@@ -3340,7 +3340,7 @@ void Junk3(valuetype T_string10& p)
     stfld valuetype T_string10* @junk3::p
 
 L_Entry:
-    // line 418
+    .line 418
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -3354,7 +3354,7 @@ L_Epilogue:
     ret
 }
 
-// line 422
+.line 422
 
 .method static
 void Junk4(valuetype T_string10 p)
@@ -3371,14 +3371,14 @@ void Junk4(valuetype T_string10 p)
     stfld valuetype T_string10 @junk4::p
 
 L_Entry:
-    // line 426
+    .line 426
     ldloc _F
     ldflda valuetype T_string10 @junk4::p
     ldc.i4 5
     call instance uint8& T_string10::ldadr(int32)
     ldc.i4 63 // '?'
     stobj uint8
-    // line 427
+    .line 427
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -3391,7 +3391,7 @@ L_Epilogue:
     ret
 }
 
-// line 431
+.line 431
 
 .method static
 int32 Junk5(int32 x)
@@ -3408,7 +3408,7 @@ int32 Junk5(int32 x)
     stfld int32 @junk5::x
 
 L_Entry:
-    // line 435
+    .line 435
     ldloc _F
     ldloc _F
     ldfld int32 @junk5::x
@@ -3422,7 +3422,7 @@ L_Epilogue:
     ret
 }
 
-// line 439
+.line 439
 
 .method static
 void Junk6()
@@ -3435,7 +3435,7 @@ void Junk6()
     stloc _F
 
 L_Entry:
-    // line 443
+    .line 443
     ldc.i4 1
     newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
     throw
@@ -3444,7 +3444,7 @@ L_Epilogue:
     ret
 }
 
-// line 449
+.line 449
 
 .method static
 int32 Junk7(int32 a, int32 b, int32 c)
@@ -3469,19 +3469,19 @@ int32 Junk7(int32 a, int32 b, int32 c)
     stfld int32 @junk7::c
 
 L_Entry:
-    // line 455
+    .line 455
     ldloc _F
     ldc.i4 1
     stfld int32 @junk7::x
-    // line 456
+    .line 456
     ldloc _F
     ldc.i4 2
     stfld int32 @junk7::y
-    // line 457
+    .line 457
     ldloc _F
     ldc.i4 3
     stfld int32 @junk7::z
-    // line 458
+    .line 458
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -3511,19 +3511,19 @@ L_Entry:
     ldc.i4 32 // ' '
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 459
+    .line 459
     ldloc _F
     ldc.i4 4
     stfld int32 @junk7::a
-    // line 460
+    .line 460
     ldloc _F
     ldc.i4 5
     stfld int32 @junk7::b
-    // line 461
+    .line 461
     ldloc _F
     ldc.i4 6
     stfld int32 @junk7::c
-    // line 462
+    .line 462
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -3577,7 +3577,7 @@ L_Entry:
     ldfld int32 @junk7::x
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
-    // line 463
+    .line 463
     ldloc _F
     ldc.i4 78
     stfld int32 @junk7::_fnvalue
@@ -3588,7 +3588,7 @@ L_Epilogue:
     ret
 }
 
-// line 467
+.line 467
 
 .method static
 void Junk8(int32 a, bool b, uint8 c, int32 e, int8 Es, int8 s, float64 r, valuetype T_string10 St, valuetype T_arri Ar, valuetype T_rec Rc, valuetype T_recv Rv, valuetype T_cset Stc, void* p)
@@ -3666,7 +3666,7 @@ void Junk8(int32 a, bool b, uint8 c, int32 e, int8 Es, int8 s, float64 r, valuet
     stfld valuetype T_cset @junk8::Stc
 
 L_Entry:
-    // line 476
+    .line 476
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -3743,7 +3743,7 @@ L_bool_to_string_false_2:
     call string T_string10::arrayToString(valuetype T_string10)
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 478
+    .line 478
     ldc.i4 10
     stloc $tmpEndValue1
     ldc.i4 1
@@ -3755,7 +3755,7 @@ L_bool_to_string_false_2:
     ldloc $tmpIndex2
     stfld int32 @junk8::i
 L_for_loop_3:
-    // line 478
+    .line 478
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -3785,10 +3785,10 @@ L_for_loop_3:
     br L_for_loop_3
 L_for_end_4:
     pop
-    // line 478
+    .line 478
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 479
+    .line 479
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -3873,7 +3873,7 @@ L_bool_to_string_false_6:
     call string T_string10::arrayToString(valuetype T_string10)
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 481
+    .line 481
     ldc.i4 10
     stloc $tmpEndValue4
     ldc.i4 1
@@ -3885,7 +3885,7 @@ L_bool_to_string_false_6:
     ldloc $tmpIndex5
     stfld int32 @junk8::i
 L_for_loop_7:
-    // line 481
+    .line 481
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -3916,10 +3916,10 @@ L_for_loop_7:
     br L_for_loop_7
 L_for_end_8:
     pop
-    // line 481
+    .line 481
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 482
+    .line 482
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -3941,7 +3941,7 @@ L_for_end_8:
     ldfld uint8 T_recs::b
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, uint8)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 483
+    .line 483
     ldc.i4 106 // 'j'
     stloc $tmpEndValue7
     ldc.i4 97 // 'a'
@@ -3953,7 +3953,7 @@ L_for_end_8:
     ldloc $tmpIndex8
     stfld uint8 @junk8::Ci
 L_for_loop_9:
-    // line 483
+    .line 483
     ldloc _F
     ldflda valuetype T_rec @junk8::Rc
     ldfld valuetype T_cset T_rec::Stc
@@ -3961,7 +3961,7 @@ L_for_loop_9:
     ldfld uint8 @junk8::Ci
     call bool _SetContains(valuetype T_cset s, int32 val)
     brfalse L_else_11
-    // line 483
+    .line 483
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -3970,7 +3970,7 @@ L_for_loop_9:
     pop
     br L_if_end_12
 L_else_11:
-    // line 483
+    .line 483
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 95 // '_'
@@ -3991,10 +3991,10 @@ L_if_end_12:
     br L_for_loop_9
 L_for_end_10:
     pop
-    // line 484
+    .line 484
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 485
+    .line 485
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -4005,7 +4005,7 @@ L_for_end_10:
     ldobj int32
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 486
+    .line 486
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -4041,12 +4041,12 @@ L_bool_to_string_true_13:
 L_bool_to_string_false_14:
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 487
+    .line 487
     ldloc _F
     ldflda valuetype T_recv @junk8::Rv
     ldfld bool T_recv::c
     brfalse L_else_15
-    // line 487
+    .line 487
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -4058,7 +4058,7 @@ L_bool_to_string_false_14:
     call instance void [lpcRuntime]LPC.File::WriteLn()
     br L_if_end_16
 L_else_15:
-    // line 487
+    .line 487
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -4068,7 +4068,7 @@ L_else_15:
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
 L_if_end_16:
-    // line 488
+    .line 488
     ldc.i4 106 // 'j'
     stloc $tmpEndValue10
     ldc.i4 97 // 'a'
@@ -4080,14 +4080,14 @@ L_if_end_16:
     ldloc $tmpIndex11
     stfld uint8 @junk8::Ci
 L_for_loop_17:
-    // line 488
+    .line 488
     ldloc _F
     ldfld valuetype T_cset @junk8::Stc
     ldloc _F
     ldfld uint8 @junk8::Ci
     call bool _SetContains(valuetype T_cset s, int32 val)
     brfalse L_else_19
-    // line 488
+    .line 488
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -4096,7 +4096,7 @@ L_for_loop_17:
     pop
     br L_if_end_20
 L_else_19:
-    // line 488
+    .line 488
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 95 // '_'
@@ -4117,10 +4117,10 @@ L_if_end_20:
     br L_for_loop_17
 L_for_end_18:
     pop
-    // line 489
+    .line 489
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 490
+    .line 490
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -4135,7 +4135,7 @@ L_Epilogue:
     ret
 }
 
-// line 494
+.line 494
 
 .method static
 void Junk9(class T_subroutine_1 Junk9, class T_subroutine_2 y)
@@ -4156,14 +4156,14 @@ void Junk9(class T_subroutine_1 Junk9, class T_subroutine_2 y)
     stfld class T_subroutine_2 @junk9::y
 
 L_Entry:
-    // line 499
+    .line 499
     ldloc _F
     ldfld class T_subroutine_1 @junk9::Junk9
     ldc.i4 9834
     ldc.i4 8383
     ldc.i4 106 // 'j'
     call instance void T_subroutine_1::Invoke(int32 Junk9, int32 b, uint8 c)
-    // line 500
+    .line 500
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 32 // ' '
@@ -4183,7 +4183,7 @@ L_Epilogue:
     ret
 }
 
-// line 504
+.line 504
 
 .method static
 void Junk10(int32 x, int32 y, uint8 Junk10)
@@ -4208,7 +4208,7 @@ void Junk10(int32 x, int32 y, uint8 Junk10)
     stfld int32 @junk10::y
 
 L_Entry:
-    // line 508
+    .line 508
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -4240,7 +4240,7 @@ L_Epilogue:
     ret
 }
 
-// line 512
+.line 512
 
 .method static
 int32 Junk11(int32 x)
@@ -4257,7 +4257,7 @@ int32 Junk11(int32 x)
     stfld int32 @junk11::x
 
 L_Entry:
-    // line 516
+    .line 516
     ldloc _F
     ldloc _F
     ldfld int32 @junk11::x
@@ -4271,7 +4271,7 @@ L_Epilogue:
     ret
 }
 
-// line 520
+.line 520
 
 .method static
 void Junk12(class T_subroutine_4 Xq, class T_subroutine_3 q)
@@ -4292,7 +4292,7 @@ void Junk12(class T_subroutine_4 Xq, class T_subroutine_3 q)
     stfld class T_subroutine_4 @junk12::Xq
 
 L_Entry:
-    // line 525
+    .line 525
     ldloc _F
     ldfld class T_subroutine_4 @junk12::Xq
     ldloc _F
@@ -4303,7 +4303,7 @@ L_Epilogue:
     ret
 }
 
-// line 529
+.line 529
 
 .method static
 void Junk13(class T_subroutine_6 Xz)
@@ -4320,7 +4320,7 @@ void Junk13(class T_subroutine_6 Xz)
     stfld class T_subroutine_6 @junk13::Xz
 
 L_Entry:
-    // line 533
+    .line 533
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -4336,7 +4336,7 @@ L_Epilogue:
     ret
 }
 
-// line 537
+.line 537
 
 .method static
 void Junk14()
@@ -4349,15 +4349,15 @@ void Junk14()
     stloc _F
 
 L_Entry:
-    // line 551
+    .line 551
     ldloc _F
     ldc.i4 62
     stfld int32 @junk14::i
-    // line 552
+    .line 552
     ldloc _F
     ldc.i4 76
     stfld int32 @junk14::x
-    // line 553
+    .line 553
     ldloc _F
     call instance void @junk14::Junk15()
 
@@ -4365,7 +4365,7 @@ L_Epilogue:
     ret
 }
 
-// line 557
+.line 557
 
 .method static
 void Junk16()
@@ -4384,7 +4384,7 @@ L_Epilogue:
     ret
 }
 
-// line 559
+.line 559
 
 .method static
 void Junk17(class T_subroutine_7 x, int32 i)
@@ -4405,17 +4405,17 @@ void Junk17(class T_subroutine_7 x, int32 i)
     stfld class T_subroutine_7 @junk17::x
 
 L_Entry:
-    // line 571
+    .line 571
     ldloc _F
     ldfld class T_subroutine_7 @junk17::x
     call instance void T_subroutine_7::Invoke()
-    // line 572
+    .line 572
     ldloc _F
     ldfld int32 @junk17::i
     ldc.i4 52
     ceq
     brfalse L_if_end_1
-    // line 572
+    .line 572
     ldloc _F
     ldftn instance void @junk17::Junk18()
     newobj instance void T_junk17_subroutine_8::.ctor(object, native uint)
@@ -4427,7 +4427,7 @@ L_Epilogue:
     ret
 }
 
-// line 578
+.line 578
 
 .method static
 void Junk19()
@@ -4440,18 +4440,18 @@ void Junk19()
     stloc _F
 
 L_Entry:
-    // line 587
-    // line 587
+    .line 587
+    .line 587
     ldloc _F
     ldc.i4 1
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @junk19::p
-    // line 588
+    .line 588
     ldloc _F
     ldfld void* @junk19::p
     ldc.i4 97 // 'a'
     stobj uint8
-    // line 589
+    .line 589
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -4459,11 +4459,11 @@ L_Entry:
     ldobj uint8
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 590
+    .line 590
     ldloc _F
     ldfld void* @junk19::p
     call void [lpcRuntime]LPC.Heap::Free(void*)
-    // line 590
+    .line 590
     ldloc _F
     ldnull
     stfld void* @junk19::p
@@ -4472,7 +4472,7 @@ L_Epilogue:
     ret
 }
 
-// line 596
+.line 596
 
 .method static
 int32 Junk20()
@@ -4485,7 +4485,7 @@ int32 Junk20()
     stloc _F
 
 L_Entry:
-    // line 609
+    .line 609
     ldloc _F
     call instance int32 @junk20::Inner()
     stsfld int32 _G::i
@@ -4496,7 +4496,7 @@ L_Epilogue:
     ret
 }
 
-// line 613
+.line 613
 
 .method static
 int32 Random(int32 Low, int32 Hi)
@@ -4517,7 +4517,7 @@ int32 Random(int32 Low, int32 Hi)
     stfld int32 @random::Low
 
 L_Entry:
-    // line 621
+    .line 621
     ldloc _F
     ldc.i4 16807 // a 
     ldsfld int32 _G::Rndseq
@@ -4537,26 +4537,26 @@ L_Entry:
     mul
     sub
     stfld int32 @random::Gamma
-    // line 622
+    .line 622
     ldloc _F
     ldfld int32 @random::Gamma
     ldc.i4 0
     cgt
     brfalse L_else_1
-    // line 622
+    .line 622
     ldloc _F
     ldfld int32 @random::Gamma
     stsfld int32 _G::Rndseq
     br L_if_end_2
 L_else_1:
-    // line 622
+    .line 622
     ldloc _F
     ldfld int32 @random::Gamma
     ldc.i4 2147483647 // m 
     add
     stsfld int32 _G::Rndseq
 L_if_end_2:
-    // line 623
+    .line 623
     ldloc _F
     ldsfld int32 _G::Rndseq
     ldc.i4 2147483647
@@ -4580,11 +4580,11 @@ L_Epilogue:
     ret
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 71
+.line 71
 
 .method static
 void _Program()
@@ -6135,70 +6135,70 @@ void _Program()
 L_Entry:
 .try
 {
-    // line 628
+    .line 628
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "****************************************************************"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 629
+    .line 629
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "***************"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 630
+    .line 630
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 631
+    .line 631
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "                 TEST SUITE FOR ISO 7185 PASCAL"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 632
+    .line 632
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 633
+    .line 633
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "                 Copyright (C) 1995 S. A. Moore - All rights "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 634
+    .line 634
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "reserved"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 635
+    .line 635
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 636
+    .line 636
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "****************************************************************"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 637
+    .line 637
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "***************"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 638
+    .line 638
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 646
+    .line 646
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "The following are implementation defined characteristics"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 647
+    .line 647
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 648
+    .line 648
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Maxint: "
@@ -6209,21 +6209,21 @@ L_Entry:
     ldc.i4 2147483647
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 649
+    .line 649
     ldc.i4 2147483647
     stsfld int32 _G::i
-    // line 650
+    .line 650
     ldc.i4 0
     stsfld int32 _G::x
-    // line 651
+    .line 651
     br L_while_test_2
 L_while_1:
-    // line 651
+    .line 651
     ldsfld int32 _G::i
     ldc.i4 2
     div
     stsfld int32 _G::i
-    // line 651
+    .line 651
     ldsfld int32 _G::x
     ldc.i4 1
     add
@@ -6233,7 +6233,7 @@ L_while_test_2:
     ldc.i4 0
     cgt
     brtrue L_while_1
-    // line 652
+    .line 652
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Bit length of integer without sign bit appears to be: "
@@ -6244,73 +6244,73 @@ L_while_test_2:
     ldsfld int32 _G::x
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 653
+    .line 653
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer default output field"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 654
+    .line 654
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "         1111111111222222222233333333334"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 655
+    .line 655
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "1234567890123456789012345678901234567890"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 656
+    .line 656
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
     call instance void [lpcRuntime]LPC.File::Write(int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 657
+    .line 657
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real default output field"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 658
+    .line 658
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "         1111111111222222222233333333334"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 659
+    .line 659
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "1234567890123456789012345678901234567890"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 660
+    .line 660
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.r8 1.20000
     call instance void [lpcRuntime]LPC.File::Write(float64)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 661
+    .line 661
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean default output field"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 662
+    .line 662
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "         1111111111222222222233333333334"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 663
+    .line 663
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "1234567890123456789012345678901234567890"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 664
+    .line 664
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 0 // (false)
@@ -6322,7 +6322,7 @@ L_bool_to_string_true_3:
 L_bool_to_string_false_4:
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 665
+    .line 665
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1 // (true)
@@ -6334,31 +6334,31 @@ L_bool_to_string_true_5:
 L_bool_to_string_false_6:
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 666
+    .line 666
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Char default output field"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 667
+    .line 667
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "         1111111111222222222233333333334"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 668
+    .line 668
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "1234567890123456789012345678901234567890"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 669
+    .line 669
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 97 // 'a'
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 670
+    .line 670
     ldc.i4 97 // 'a'
     ldc.i4 97
     ceq
@@ -6377,7 +6377,7 @@ L_AND_shortcut_8:
     ceq
 L_AND_shortcut_7:
     brfalse L_else_9
-    // line 671
+    .line 671
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Appears to be ASCII"
@@ -6385,32 +6385,32 @@ L_AND_shortcut_7:
     call instance void [lpcRuntime]LPC.File::WriteLn()
     br L_if_end_10
 L_else_9:
-    // line 673
+    .line 673
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Appears to not be ASCII"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
 L_if_end_10:
-    // line 681
+    .line 681
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 682
+    .line 682
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "******************* Control structures tests *******************"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 683
+    .line 683
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 684
+    .line 684
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Control1: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 685
+    .line 685
     ldc.i4 10
     stloc $tmpEndValue1
     ldc.i4 1
@@ -6421,7 +6421,7 @@ L_if_end_10:
     ldloc $tmpIndex2
     stsfld int32 _G::i
 L_for_loop_11:
-    // line 685
+    .line 685
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -6444,19 +6444,19 @@ L_for_loop_11:
     br L_for_loop_11
 L_for_end_12:
     pop
-    // line 686
+    .line 686
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 1 2 3 4 5 6 7 8 9 10"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 687
+    .line 687
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Control2: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 688
+    .line 688
     ldc.i4 1
     stloc $tmpEndValue4
     ldc.i4 10
@@ -6467,7 +6467,7 @@ L_for_end_12:
     ldloc $tmpIndex5
     stsfld int32 _G::i
 L_for_loop_13:
-    // line 688
+    .line 688
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -6490,25 +6490,25 @@ L_for_loop_13:
     br L_for_loop_13
 L_for_end_14:
     pop
-    // line 689
+    .line 689
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 10 9 8 7 6 5 4 3 2 1"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 690
+    .line 690
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Control3: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 691
+    .line 691
     ldc.i4 1
     stsfld int32 _G::i
-    // line 692
+    .line 692
     br L_while_test_16
 L_while_15:
-    // line 692
+    .line 692
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -6519,7 +6519,7 @@ L_while_15:
     ldc.i4 32 // ' '
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 692
+    .line 692
     ldsfld int32 _G::i
     ldc.i4 1
     add
@@ -6531,24 +6531,24 @@ L_while_test_16:
     ldc.i4.0
     ceq
     brtrue L_while_15
-    // line 693
+    .line 693
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 1 2 3 4 5 6 7 8 9 10"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 694
+    .line 694
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Control4: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 695
+    .line 695
     ldc.i4 1
     stsfld int32 _G::i
-    // line 695
+    .line 695
 L_repeat_17:
-    // line 695
+    .line 695
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -6559,7 +6559,7 @@ L_repeat_17:
     ldc.i4 32 // ' '
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 695
+    .line 695
     ldsfld int32 _G::i
     ldc.i4 1
     add
@@ -6568,22 +6568,22 @@ L_repeat_17:
     ldc.i4 10
     cgt
     brfalse L_repeat_17
-    // line 696
+    .line 696
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 1 2 3 4 5 6 7 8 9 10"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 697
+    .line 697
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Control5: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 698
+    .line 698
     ldc.i4 1
     stsfld int32 _G::i
-    // line 699
+    .line 699
 L_1:
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
@@ -6595,37 +6595,37 @@ L_1:
     ldc.i4 32 // ' '
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 699
+    .line 699
     ldsfld int32 _G::i
     ldc.i4 1
     add
     stsfld int32 _G::i
-    // line 699
+    .line 699
     ldsfld int32 _G::i
     ldc.i4 10
     cgt
     ldc.i4.0
     ceq
     brfalse L_if_end_18
-    // line 699
+    .line 699
     br L_1
 L_if_end_18:
-    // line 700
+    .line 700
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 1 2 3 4 5 6 7 8 9 10"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 701
+    .line 701
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Control6: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 702
+    .line 702
     ldc.i4 1 // (true)
     brfalse L_else_19
-    // line 702
+    .line 702
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "yes"
@@ -6633,29 +6633,29 @@ L_if_end_18:
     pop
     br L_if_end_20
 L_else_19:
-    // line 702
+    .line 702
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "no"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
 L_if_end_20:
-    // line 703
+    .line 703
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b yes"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 704
+    .line 704
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Control7: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 705
+    .line 705
     ldc.i4 0 // (false)
     brfalse L_else_21
-    // line 705
+    .line 705
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "no"
@@ -6663,82 +6663,82 @@ L_if_end_20:
     pop
     br L_if_end_22
 L_else_21:
-    // line 705
+    .line 705
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "yes"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
 L_if_end_22:
-    // line 706
+    .line 706
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b yes"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 707
+    .line 707
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Control8: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 708
+    .line 708
     ldc.i4 1 // (true)
     brfalse L_if_end_23
-    // line 708
+    .line 708
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "yes "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
 L_if_end_23:
-    // line 708
+    .line 708
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "stop"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 709
+    .line 709
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b yes stop"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 710
+    .line 710
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Control9: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 711
+    .line 711
     ldc.i4 0 // (false)
     brfalse L_if_end_24
-    // line 711
+    .line 711
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "no "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
 L_if_end_24:
-    // line 711
+    .line 711
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "stop"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 712
+    .line 712
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b stop"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 713
+    .line 713
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Control10: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 714
+    .line 714
     ldc.i4 10
     stloc $tmpEndValue7
     ldc.i4 1
@@ -6749,13 +6749,13 @@ L_if_end_24:
     ldloc $tmpIndex8
     stsfld int32 _G::i
 L_for_loop_25:
-    // line 715
+    .line 715
     ldsfld int32 _G::i
     stloc $tmpSwitchValue9
     ldloc $tmpSwitchValue9
     ldc.i4 1
     bne.un L_check_case_28
-    // line 716
+    .line 716
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "one "
@@ -6766,7 +6766,7 @@ L_check_case_28:
     ldloc $tmpSwitchValue9
     ldc.i4 2
     bne.un L_check_case_29
-    // line 717
+    .line 717
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "two "
@@ -6777,7 +6777,7 @@ L_check_case_29:
     ldloc $tmpSwitchValue9
     ldc.i4 3
     bne.un L_check_case_30
-    // line 718
+    .line 718
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "three "
@@ -6788,7 +6788,7 @@ L_check_case_30:
     ldloc $tmpSwitchValue9
     ldc.i4 4
     bne.un L_check_case_31
-    // line 719
+    .line 719
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "four "
@@ -6799,7 +6799,7 @@ L_check_case_31:
     ldloc $tmpSwitchValue9
     ldc.i4 5
     bne.un L_check_case_32
-    // line 720
+    .line 720
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "five "
@@ -6810,7 +6810,7 @@ L_check_case_32:
     ldloc $tmpSwitchValue9
     ldc.i4 6
     bne.un L_check_case_33
-    // line 721
+    .line 721
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "six "
@@ -6821,7 +6821,7 @@ L_check_case_33:
     ldloc $tmpSwitchValue9
     ldc.i4 7
     bne.un L_check_case_34
-    // line 722
+    .line 722
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "seven "
@@ -6832,7 +6832,7 @@ L_check_case_34:
     ldloc $tmpSwitchValue9
     ldc.i4 8
     bne.un L_check_case_35
-    // line 723
+    .line 723
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "eight "
@@ -6848,7 +6848,7 @@ L_check_case_35:
     beq L_case_36
     br L_case_end_27
 L_case_36:
-    // line 724
+    .line 724
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "nine-ten "
@@ -6867,79 +6867,79 @@ L_case_end_27:
     br L_for_loop_25
 L_for_end_26:
     pop
-    // line 727
+    .line 727
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 728
+    .line 728
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Control10: s/b "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 729
+    .line 729
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "one two three four five "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 730
+    .line 730
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "six seven eight nine-ten nine-ten"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 731
+    .line 731
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Control11: start "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 732
+    .line 732
     call void Junk6()
-    // line 733
+    .line 733
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "!! BAD !!"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 734
+    .line 734
 L_2:
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "stop s/b start stop"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 735
+    .line 735
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Control12: start "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 736
+    .line 736
     br L_3
-    // line 737
+    .line 737
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "!! BAD !!"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 738
+    .line 738
 L_3:
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "stop s/b start stop"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 739
+    .line 739
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Control13: start "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 741
+    .line 741
     ldc.i4 10
     stsfld int32 _G::i
-    // line 742
+    .line 742
     ldsfld int32 _G::i
     stloc $tmpEndValue11
     ldc.i4 1
@@ -6950,7 +6950,7 @@ L_3:
     ldloc $tmpIndex12
     stsfld int32 _G::i
 L_for_loop_37:
-    // line 742
+    .line 742
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 3
@@ -6970,22 +6970,22 @@ L_for_loop_37:
     br L_for_loop_37
 L_for_end_38:
     pop
-    // line 743
+    .line 743
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b   1  2  3  4  5  6  7  8  9 10"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 744
+    .line 744
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Control14: start "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 746
+    .line 746
     ldc.i4 10
     stsfld int32 _G::i
-    // line 747
+    .line 747
     ldc.i4 1
     stloc $tmpEndValue14
     ldsfld int32 _G::i
@@ -6996,7 +6996,7 @@ L_for_end_38:
     ldloc $tmpIndex15
     stsfld int32 _G::i
 L_for_loop_39:
-    // line 747
+    .line 747
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 3
@@ -7016,19 +7016,19 @@ L_for_loop_39:
     br L_for_loop_39
 L_for_end_40:
     pop
-    // line 748
+    .line 748
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b  10  9  8  7  6  5  4  3  2  1"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 749
+    .line 749
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Control15: start "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 751
+    .line 751
     ldc.i4 9
     stloc $tmpEndValue17
     ldc.i4 0
@@ -7039,7 +7039,7 @@ L_for_end_40:
     ldloc $tmpIndex18
     stsfld int32 _G::i
 L_for_loop_41:
-    // line 751
+    .line 751
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 2
@@ -7059,19 +7059,19 @@ L_for_loop_41:
     br L_for_loop_41
 L_for_end_42:
     pop
-    // line 752
+    .line 752
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 0 1 2 3 4 5 6 7 8 9"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 753
+    .line 753
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Control16: start "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 755
+    .line 755
     ldc.i4 0
     stloc $tmpEndValue20
     ldc.i4 9
@@ -7082,7 +7082,7 @@ L_for_end_42:
     ldloc $tmpIndex21
     stsfld int32 _G::i
 L_for_loop_43:
-    // line 755
+    .line 755
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 2
@@ -7102,28 +7102,28 @@ L_for_loop_43:
     br L_for_loop_43
 L_for_end_44:
     pop
-    // line 756
+    .line 756
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 9 8 7 6 5 4 3 2 1 0"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 758
+    .line 758
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Control17: start "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 759
+    .line 759
     ldc.i4 10000
     stsfld int32 _G::i
-    // line 760
+    .line 760
     ldsfld int32 _G::i
     stloc $tmpSwitchValue23
     ldloc $tmpSwitchValue23
     ldc.i4 1
     bne.un L_check_case_46
-    // line 761
+    .line 761
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "*** bad ***"
@@ -7134,41 +7134,41 @@ L_check_case_46:
     ldloc $tmpSwitchValue23
     ldc.i4 10000
     bne.un L_case_end_45
-    // line 762
+    .line 762
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "good"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
 L_case_end_45:
-    // line 764
+    .line 764
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " start s/b good"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 772
+    .line 772
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 773
+    .line 773
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "******************* Integers *******************"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 774
+    .line 774
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 777
+    .line 777
     ldc.i4 43
     stsfld int32 _G::x
-    // line 777
+    .line 777
     ldc.i4 78
     stsfld int32 _G::y
-    // line 777
+    .line 777
     ldsfld int32 _G::y
     stsfld int32 _G::z
-    // line 778
+    .line 778
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer1:   "
@@ -7184,7 +7184,7 @@ L_case_end_45:
     ldstr " s/b 121"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 779
+    .line 779
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer2:   "
@@ -7200,7 +7200,7 @@ L_case_end_45:
     ldstr " s/b 35"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 780
+    .line 780
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer3:   "
@@ -7216,7 +7216,7 @@ L_case_end_45:
     ldstr " s/b 3354"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 781
+    .line 781
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer4:   "
@@ -7232,7 +7232,7 @@ L_case_end_45:
     ldstr " s/b 1"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 782
+    .line 782
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer5:   "
@@ -7248,7 +7248,7 @@ L_case_end_45:
     ldstr " s/b 35"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 783
+    .line 783
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer6:   "
@@ -7264,7 +7264,7 @@ L_case_end_45:
     ldstr " s/b 44"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 784
+    .line 784
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer7:   "
@@ -7280,7 +7280,7 @@ L_case_end_45:
     ldstr " s/b 42"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 785
+    .line 785
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer8:   "
@@ -7296,7 +7296,7 @@ L_case_end_45:
     ldstr " s/b 1849"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 786
+    .line 786
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer9:   "
@@ -7308,7 +7308,7 @@ L_case_end_45:
     ldstr " s/b N"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 787
+    .line 787
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer10:  "
@@ -7322,7 +7322,7 @@ L_case_end_45:
     ldstr " s/b 43"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 788
+    .line 788
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer11:  "
@@ -7344,7 +7344,7 @@ L_bool_to_string_false_48:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 789
+    .line 789
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer12:  "
@@ -7366,7 +7366,7 @@ L_bool_to_string_false_50:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 790
+    .line 790
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer13:  "
@@ -7388,7 +7388,7 @@ L_bool_to_string_false_52:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 791
+    .line 791
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer14:  "
@@ -7410,7 +7410,7 @@ L_bool_to_string_false_54:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 792
+    .line 792
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer15:  "
@@ -7432,7 +7432,7 @@ L_bool_to_string_false_56:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 793
+    .line 793
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer16:  "
@@ -7454,7 +7454,7 @@ L_bool_to_string_false_58:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 794
+    .line 794
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer17:  "
@@ -7476,7 +7476,7 @@ L_bool_to_string_false_60:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 795
+    .line 795
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer18:  "
@@ -7498,7 +7498,7 @@ L_bool_to_string_false_62:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 796
+    .line 796
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer19:  "
@@ -7522,7 +7522,7 @@ L_bool_to_string_false_64:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 797
+    .line 797
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer20:  "
@@ -7546,7 +7546,7 @@ L_bool_to_string_false_66:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 798
+    .line 798
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer21:  "
@@ -7570,7 +7570,7 @@ L_bool_to_string_false_68:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 799
+    .line 799
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer22:  "
@@ -7594,7 +7594,7 @@ L_bool_to_string_false_70:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 800
+    .line 800
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer23:  "
@@ -7618,7 +7618,7 @@ L_bool_to_string_false_72:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 801
+    .line 801
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer24:  "
@@ -7642,7 +7642,7 @@ L_bool_to_string_false_74:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 802
+    .line 802
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer25:  "
@@ -7666,7 +7666,7 @@ L_bool_to_string_false_76:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 803
+    .line 803
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer26:  "
@@ -7690,16 +7690,16 @@ L_bool_to_string_false_78:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 806
+    .line 806
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer27:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 806
+    .line 806
     ldc.i4 546
     stsfld int32 _G::i
-    // line 806
+    .line 806
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -7710,7 +7710,7 @@ L_bool_to_string_false_78:
     ldstr " s/b 546"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 807
+    .line 807
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer28:  "
@@ -7726,7 +7726,7 @@ L_bool_to_string_false_78:
     ldstr " s/b 90"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 808
+    .line 808
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer29:  "
@@ -7742,7 +7742,7 @@ L_bool_to_string_false_78:
     ldstr " s/b 22"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 809
+    .line 809
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer30:  "
@@ -7758,7 +7758,7 @@ L_bool_to_string_false_78:
     ldstr " s/b 1904"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 810
+    .line 810
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer31:  "
@@ -7774,7 +7774,7 @@ L_bool_to_string_false_78:
     ldstr " s/b 1"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 811
+    .line 811
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer32:  "
@@ -7790,7 +7790,7 @@ L_bool_to_string_false_78:
     ldstr " s/b 22"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 812
+    .line 812
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer33:  "
@@ -7806,7 +7806,7 @@ L_bool_to_string_false_78:
     ldstr " s/b 6"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 813
+    .line 813
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer34:  "
@@ -7822,7 +7822,7 @@ L_bool_to_string_false_78:
     ldstr " s/b 4"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 814
+    .line 814
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer35:  "
@@ -7838,7 +7838,7 @@ L_bool_to_string_false_78:
     ldstr " s/b 49"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 815
+    .line 815
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer36:  "
@@ -7850,7 +7850,7 @@ L_bool_to_string_false_78:
     ldstr " s/b A"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 816
+    .line 816
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer37:  "
@@ -7864,7 +7864,7 @@ L_bool_to_string_false_78:
     ldstr " s/b 65"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 817
+    .line 817
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer38:  "
@@ -7878,7 +7878,7 @@ L_bool_to_string_false_78:
     ldstr " s/b 768"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 818
+    .line 818
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer39:  "
@@ -7900,7 +7900,7 @@ L_bool_to_string_false_80:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 819
+    .line 819
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer40:  "
@@ -7922,7 +7922,7 @@ L_bool_to_string_false_82:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 820
+    .line 820
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer41:  "
@@ -7944,7 +7944,7 @@ L_bool_to_string_false_84:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 821
+    .line 821
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer42:  "
@@ -7966,7 +7966,7 @@ L_bool_to_string_false_86:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 822
+    .line 822
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer43:  "
@@ -7988,7 +7988,7 @@ L_bool_to_string_false_88:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 823
+    .line 823
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer44:  "
@@ -8010,7 +8010,7 @@ L_bool_to_string_false_90:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 824
+    .line 824
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer45:  "
@@ -8032,7 +8032,7 @@ L_bool_to_string_false_92:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 825
+    .line 825
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer46:  "
@@ -8054,7 +8054,7 @@ L_bool_to_string_false_94:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 826
+    .line 826
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer47:  "
@@ -8078,7 +8078,7 @@ L_bool_to_string_false_96:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 827
+    .line 827
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer48:  "
@@ -8102,7 +8102,7 @@ L_bool_to_string_false_98:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 828
+    .line 828
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer49:  "
@@ -8126,7 +8126,7 @@ L_bool_to_string_false_100:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 829
+    .line 829
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer50:  "
@@ -8150,7 +8150,7 @@ L_bool_to_string_false_102:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 830
+    .line 830
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer51:  "
@@ -8174,7 +8174,7 @@ L_bool_to_string_false_104:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 831
+    .line 831
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer52:  "
@@ -8198,7 +8198,7 @@ L_bool_to_string_false_106:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 832
+    .line 832
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer53:  "
@@ -8222,7 +8222,7 @@ L_bool_to_string_false_108:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 833
+    .line 833
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer54:  "
@@ -8246,32 +8246,32 @@ L_bool_to_string_false_110:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 836
+    .line 836
     ldc.i4 14
     neg
     stsfld int32 _G::As
-    // line 837
+    .line 837
     ldc.i4 32
     neg
     stsfld int32 _G::Bs
-    // line 838
+    .line 838
     ldc.i4 14
     neg
     stsfld int32 _G::Cs
-    // line 839
+    .line 839
     ldc.i4 20
     stsfld int32 _G::Ds
-    // line 840
+    .line 840
     ldc.i4 15
     neg
     stsfld int32 _G::Es
-    // line 841
+    .line 841
     ldc.i4 2147483647
     stsfld int32 _G::Gs
-    // line 842
+    .line 842
     ldc.i4 -2147483647 // mmaxint 
     stsfld int32 _G::Hs
-    // line 843
+    .line 843
     ldc.i4 2147483647
     neg
     dup
@@ -8279,7 +8279,7 @@ L_bool_to_string_false_110:
     ldc.i4 2147483647
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int32 _G::Vnum
-    // line 844
+    .line 844
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer55:  "
@@ -8295,7 +8295,7 @@ L_bool_to_string_false_110:
     ldstr " s/b 6"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 845
+    .line 845
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer56:  "
@@ -8311,7 +8311,7 @@ L_bool_to_string_false_110:
     ldstr " s/b 6"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 846
+    .line 846
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer57:  "
@@ -8327,7 +8327,7 @@ L_bool_to_string_false_110:
     ldstr " s/b -12"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 847
+    .line 847
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer58:  "
@@ -8343,7 +8343,7 @@ L_bool_to_string_false_110:
     ldstr " s/b -46"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 848
+    .line 848
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer59:  "
@@ -8359,7 +8359,7 @@ L_bool_to_string_false_110:
     ldstr " s/b 34"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 849
+    .line 849
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer60:  "
@@ -8375,7 +8375,7 @@ L_bool_to_string_false_110:
     ldstr " s/b -52"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 850
+    .line 850
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer61:  "
@@ -8391,7 +8391,7 @@ L_bool_to_string_false_110:
     ldstr " s/b -18"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 851
+    .line 851
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer62:  "
@@ -8407,7 +8407,7 @@ L_bool_to_string_false_110:
     ldstr " s/b -280"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 852
+    .line 852
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer63:  "
@@ -8423,7 +8423,7 @@ L_bool_to_string_false_110:
     ldstr " s/b -280"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 853
+    .line 853
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer64:  "
@@ -8439,7 +8439,7 @@ L_bool_to_string_false_110:
     ldstr " s/b 448"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 854
+    .line 854
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer65:  "
@@ -8455,7 +8455,7 @@ L_bool_to_string_false_110:
     ldstr " s/b -1"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 855
+    .line 855
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer66:  "
@@ -8471,7 +8471,7 @@ L_bool_to_string_false_110:
     ldstr " s/b -1"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 856
+    .line 856
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer67:  "
@@ -8487,7 +8487,7 @@ L_bool_to_string_false_110:
     ldstr " s/b 2"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 857
+    .line 857
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer68:  "
@@ -8503,7 +8503,7 @@ L_bool_to_string_false_110:
     ldstr " s/b -13"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 858
+    .line 858
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer69:  "
@@ -8519,7 +8519,7 @@ L_bool_to_string_false_110:
     ldstr " s/b -33"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 859
+    .line 859
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer70: "
@@ -8535,7 +8535,7 @@ L_bool_to_string_false_110:
     ldstr " s/b 196"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 860
+    .line 860
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer71:  "
@@ -8557,7 +8557,7 @@ L_bool_to_string_false_112:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 861
+    .line 861
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer72:  "
@@ -8579,7 +8579,7 @@ L_bool_to_string_false_114:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 862
+    .line 862
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer73:  "
@@ -8601,7 +8601,7 @@ L_bool_to_string_false_116:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 863
+    .line 863
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer74:  "
@@ -8623,7 +8623,7 @@ L_bool_to_string_false_118:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 864
+    .line 864
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer75:  "
@@ -8647,7 +8647,7 @@ L_bool_to_string_false_120:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 865
+    .line 865
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer76:  "
@@ -8671,7 +8671,7 @@ L_bool_to_string_false_122:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 866
+    .line 866
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer77:  "
@@ -8693,7 +8693,7 @@ L_bool_to_string_false_124:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 867
+    .line 867
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer78:  "
@@ -8715,7 +8715,7 @@ L_bool_to_string_false_126:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 868
+    .line 868
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer79:  "
@@ -8737,7 +8737,7 @@ L_bool_to_string_false_128:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 869
+    .line 869
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer80:  "
@@ -8759,7 +8759,7 @@ L_bool_to_string_false_130:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 870
+    .line 870
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer81:  "
@@ -8781,7 +8781,7 @@ L_bool_to_string_false_132:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 871
+    .line 871
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer82:  "
@@ -8803,7 +8803,7 @@ L_bool_to_string_false_134:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 872
+    .line 872
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer83:  "
@@ -8825,7 +8825,7 @@ L_bool_to_string_false_136:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 873
+    .line 873
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer84:  "
@@ -8847,7 +8847,7 @@ L_bool_to_string_false_138:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 874
+    .line 874
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer85:  "
@@ -8871,7 +8871,7 @@ L_bool_to_string_false_140:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 875
+    .line 875
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer86:  "
@@ -8895,7 +8895,7 @@ L_bool_to_string_false_142:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 876
+    .line 876
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer87:  "
@@ -8919,7 +8919,7 @@ L_bool_to_string_false_144:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 877
+    .line 877
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer88:  "
@@ -8943,7 +8943,7 @@ L_bool_to_string_false_146:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 878
+    .line 878
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer89:  "
@@ -8967,7 +8967,7 @@ L_bool_to_string_false_148:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 879
+    .line 879
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer90:  "
@@ -8991,7 +8991,7 @@ L_bool_to_string_false_150:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 880
+    .line 880
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer91:  "
@@ -9015,7 +9015,7 @@ L_bool_to_string_false_152:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 881
+    .line 881
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer92:  "
@@ -9039,7 +9039,7 @@ L_bool_to_string_false_154:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 882
+    .line 882
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer93:  "
@@ -9063,7 +9063,7 @@ L_bool_to_string_false_156:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 883
+    .line 883
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer94:  "
@@ -9087,7 +9087,7 @@ L_bool_to_string_false_158:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 884
+    .line 884
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer95:  "
@@ -9106,7 +9106,7 @@ L_abs_question_159:
     ldstr " s/b 14"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 885
+    .line 885
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer96:  "
@@ -9122,7 +9122,7 @@ L_abs_question_159:
     ldstr " s/b 0"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 886
+    .line 886
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer97:  "
@@ -9138,7 +9138,7 @@ L_abs_question_159:
     ldstr " s/b 0"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 887
+    .line 887
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer98:  "
@@ -9154,7 +9154,7 @@ L_abs_question_159:
     ldstr " s/b 0"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 890
+    .line 890
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer99:  "
@@ -9171,7 +9171,7 @@ L_abs_question_159:
     ldstr " s/b 15"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 891
+    .line 891
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer100:  "
@@ -9188,7 +9188,7 @@ L_abs_question_159:
     ldstr " s/b 45"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 892
+    .line 892
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer101: "
@@ -9205,7 +9205,7 @@ L_abs_question_159:
     ldstr " s/b -39"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 893
+    .line 893
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer102: "
@@ -9223,7 +9223,7 @@ L_abs_question_159:
     ldstr " s/b -35"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 894
+    .line 894
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer103: "
@@ -9240,7 +9240,7 @@ L_abs_question_159:
     ldstr " s/b 34"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 895
+    .line 895
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer104: "
@@ -9257,7 +9257,7 @@ L_abs_question_159:
     ldstr " s/b -48"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 896
+    .line 896
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer105: "
@@ -9275,7 +9275,7 @@ L_abs_question_159:
     ldstr " s/b -44"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 897
+    .line 897
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer106: "
@@ -9292,7 +9292,7 @@ L_abs_question_159:
     ldstr " s/b -20"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 898
+    .line 898
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer107: "
@@ -9309,7 +9309,7 @@ L_abs_question_159:
     ldstr " s/b -126"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 899
+    .line 899
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer108: "
@@ -9327,7 +9327,7 @@ L_abs_question_159:
     ldstr " s/b 520"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 900
+    .line 900
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer109: "
@@ -9344,7 +9344,7 @@ L_abs_question_159:
     ldstr " s/b -6"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 901
+    .line 901
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer110: "
@@ -9361,7 +9361,7 @@ L_abs_question_159:
     ldstr " s/b -25"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 902
+    .line 902
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer111: "
@@ -9379,7 +9379,7 @@ L_abs_question_159:
     ldstr " s/b 5"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 903
+    .line 903
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer112: "
@@ -9396,7 +9396,7 @@ L_abs_question_159:
     ldstr " s/b -9"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 904
+    .line 904
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer113: "
@@ -9413,7 +9413,7 @@ L_abs_question_159:
     ldstr " s/b 0"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 905
+    .line 905
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer114: "
@@ -9430,7 +9430,7 @@ L_abs_question_159:
     ldstr " s/b -2"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 906
+    .line 906
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer115: "
@@ -9447,7 +9447,7 @@ L_abs_question_159:
     ldstr " s/b 64"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 907
+    .line 907
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer116: "
@@ -9464,7 +9464,7 @@ L_abs_question_159:
     ldstr " s/b -55"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 908
+    .line 908
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer117: "
@@ -9487,7 +9487,7 @@ L_bool_to_string_false_161:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 909
+    .line 909
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer118: "
@@ -9510,7 +9510,7 @@ L_bool_to_string_false_163:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 910
+    .line 910
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer119: "
@@ -9534,7 +9534,7 @@ L_bool_to_string_false_165:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 911
+    .line 911
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer120: "
@@ -9557,7 +9557,7 @@ L_bool_to_string_false_167:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 912
+    .line 912
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer121: "
@@ -9583,7 +9583,7 @@ L_bool_to_string_false_169:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 913
+    .line 913
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer122: "
@@ -9609,7 +9609,7 @@ L_bool_to_string_false_171:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 914
+    .line 914
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer123: "
@@ -9632,7 +9632,7 @@ L_bool_to_string_false_173:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 915
+    .line 915
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer124: "
@@ -9656,7 +9656,7 @@ L_bool_to_string_false_175:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 916
+    .line 916
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer125: "
@@ -9679,7 +9679,7 @@ L_bool_to_string_false_177:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 917
+    .line 917
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer126: "
@@ -9703,7 +9703,7 @@ L_bool_to_string_false_179:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 918
+    .line 918
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer127: "
@@ -9726,7 +9726,7 @@ L_bool_to_string_false_181:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 919
+    .line 919
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer128: "
@@ -9750,7 +9750,7 @@ L_bool_to_string_false_183:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 920
+    .line 920
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer129: "
@@ -9773,7 +9773,7 @@ L_bool_to_string_false_185:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 921
+    .line 921
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer130: "
@@ -9797,7 +9797,7 @@ L_bool_to_string_false_187:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 922
+    .line 922
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer131: "
@@ -9822,7 +9822,7 @@ L_bool_to_string_false_189:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 923
+    .line 923
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer132: "
@@ -9848,7 +9848,7 @@ L_bool_to_string_false_191:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 924
+    .line 924
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer133: "
@@ -9874,7 +9874,7 @@ L_bool_to_string_false_193:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 925
+    .line 925
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer134: "
@@ -9899,7 +9899,7 @@ L_bool_to_string_false_195:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 926
+    .line 926
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer135: "
@@ -9925,7 +9925,7 @@ L_bool_to_string_false_197:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 927
+    .line 927
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer136: "
@@ -9950,7 +9950,7 @@ L_bool_to_string_false_199:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 928
+    .line 928
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer137: "
@@ -9976,7 +9976,7 @@ L_bool_to_string_false_201:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 929
+    .line 929
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer138: "
@@ -10002,7 +10002,7 @@ L_bool_to_string_false_203:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 930
+    .line 930
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer139: "
@@ -10027,7 +10027,7 @@ L_bool_to_string_false_205:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 931
+    .line 931
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer140: "
@@ -10053,7 +10053,7 @@ L_bool_to_string_false_207:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 932
+    .line 932
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer141: "
@@ -10073,7 +10073,7 @@ L_abs_question_208:
     ldstr " s/b 6"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 933
+    .line 933
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer142: "
@@ -10087,7 +10087,7 @@ L_abs_question_208:
     ldstr " s/b -52"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 934
+    .line 934
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer143: "
@@ -10102,7 +10102,7 @@ L_abs_question_208:
     ldstr " s/b 52"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 935
+    .line 935
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer144: "
@@ -10116,7 +10116,7 @@ L_abs_question_208:
     ldstr " s/b -768"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 936
+    .line 936
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer145: "
@@ -10130,7 +10130,7 @@ L_abs_question_208:
     ldstr " s/b 52"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 937
+    .line 937
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Integer146: "
@@ -10146,36 +10146,36 @@ L_abs_question_208:
     ldstr " s/b 0"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 945
+    .line 945
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 946
+    .line 946
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "******************* Subranges *******************"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 947
+    .line 947
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 950
+    .line 950
     ldc.i4 43
     dup
     ldc.i4 0
     ldc.i4 100
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int8 _G::Srx
-    // line 950
+    .line 950
     ldc.i4 78
     dup
     ldc.i4 0
     ldc.i4 100
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int8 _G::Sry
-    // line 950
+    .line 950
     ldsfld int8 _G::Sry
     stsfld int8 _G::Srz
-    // line 951
+    .line 951
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange1:   "
@@ -10191,7 +10191,7 @@ L_abs_question_208:
     ldstr " s/b 121"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 952
+    .line 952
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange2:   "
@@ -10207,7 +10207,7 @@ L_abs_question_208:
     ldstr " s/b 35"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 953
+    .line 953
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange3:   "
@@ -10223,7 +10223,7 @@ L_abs_question_208:
     ldstr " s/b 3354"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 954
+    .line 954
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange4:   "
@@ -10239,7 +10239,7 @@ L_abs_question_208:
     ldstr " s/b 1"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 955
+    .line 955
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange5:   "
@@ -10255,7 +10255,7 @@ L_abs_question_208:
     ldstr " s/b 35"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 956
+    .line 956
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange6:   "
@@ -10271,7 +10271,7 @@ L_abs_question_208:
     ldstr " s/b 44"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 957
+    .line 957
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange7:   "
@@ -10287,7 +10287,7 @@ L_abs_question_208:
     ldstr " s/b 42"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 958
+    .line 958
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange8:   "
@@ -10299,7 +10299,7 @@ L_abs_question_208:
     ldstr " s/b N"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 959
+    .line 959
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange9:   "
@@ -10313,7 +10313,7 @@ L_abs_question_208:
     ldstr " s/b 43"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 960
+    .line 960
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange10:  "
@@ -10335,7 +10335,7 @@ L_bool_to_string_false_210:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 961
+    .line 961
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange11:  "
@@ -10357,7 +10357,7 @@ L_bool_to_string_false_212:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 962
+    .line 962
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange12:  "
@@ -10379,7 +10379,7 @@ L_bool_to_string_false_214:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 963
+    .line 963
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange13:  "
@@ -10401,7 +10401,7 @@ L_bool_to_string_false_216:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 964
+    .line 964
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange14:  "
@@ -10423,7 +10423,7 @@ L_bool_to_string_false_218:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 965
+    .line 965
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange15:  "
@@ -10445,7 +10445,7 @@ L_bool_to_string_false_220:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 966
+    .line 966
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange16:  "
@@ -10467,7 +10467,7 @@ L_bool_to_string_false_222:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 967
+    .line 967
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange17:  "
@@ -10489,7 +10489,7 @@ L_bool_to_string_false_224:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 968
+    .line 968
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange18:  "
@@ -10513,7 +10513,7 @@ L_bool_to_string_false_226:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 969
+    .line 969
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange19:  "
@@ -10537,7 +10537,7 @@ L_bool_to_string_false_228:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 970
+    .line 970
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange20:  "
@@ -10561,7 +10561,7 @@ L_bool_to_string_false_230:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 971
+    .line 971
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange21:  "
@@ -10585,7 +10585,7 @@ L_bool_to_string_false_232:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 972
+    .line 972
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange22:  "
@@ -10609,7 +10609,7 @@ L_bool_to_string_false_234:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 973
+    .line 973
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange23:  "
@@ -10633,7 +10633,7 @@ L_bool_to_string_false_236:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 974
+    .line 974
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange24:  "
@@ -10657,7 +10657,7 @@ L_bool_to_string_false_238:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 975
+    .line 975
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange25:  "
@@ -10681,7 +10681,7 @@ L_bool_to_string_false_240:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 978
+    .line 978
     ldc.i4 14
     neg
     dup
@@ -10689,7 +10689,7 @@ L_bool_to_string_false_240:
     ldc.i4 100
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int8 _G::Sras
-    // line 979
+    .line 979
     ldc.i4 32
     neg
     dup
@@ -10697,7 +10697,7 @@ L_bool_to_string_false_240:
     ldc.i4 100
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int8 _G::Srbs
-    // line 980
+    .line 980
     ldc.i4 14
     neg
     dup
@@ -10705,14 +10705,14 @@ L_bool_to_string_false_240:
     ldc.i4 100
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int8 _G::Srcs
-    // line 981
+    .line 981
     ldc.i4 20
     dup
     ldc.i4 -100
     ldc.i4 100
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int8 _G::Srds
-    // line 982
+    .line 982
     ldc.i4 15
     neg
     dup
@@ -10720,7 +10720,7 @@ L_bool_to_string_false_240:
     ldc.i4 100
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int8 _G::Sres
-    // line 983
+    .line 983
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange26:  "
@@ -10736,7 +10736,7 @@ L_bool_to_string_false_240:
     ldstr " s/b 6"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 984
+    .line 984
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange27:  "
@@ -10752,7 +10752,7 @@ L_bool_to_string_false_240:
     ldstr " s/b 6"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 985
+    .line 985
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange28:  "
@@ -10768,7 +10768,7 @@ L_bool_to_string_false_240:
     ldstr " s/b -12"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 986
+    .line 986
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange29:  "
@@ -10784,7 +10784,7 @@ L_bool_to_string_false_240:
     ldstr " s/b -46"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 987
+    .line 987
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange30:  "
@@ -10800,7 +10800,7 @@ L_bool_to_string_false_240:
     ldstr " s/b 34"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 988
+    .line 988
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange31:  "
@@ -10816,7 +10816,7 @@ L_bool_to_string_false_240:
     ldstr " s/b -52"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 989
+    .line 989
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange32:  "
@@ -10832,7 +10832,7 @@ L_bool_to_string_false_240:
     ldstr " s/b -18"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 990
+    .line 990
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange33:  "
@@ -10848,7 +10848,7 @@ L_bool_to_string_false_240:
     ldstr " s/b -280"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 991
+    .line 991
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange34:  "
@@ -10864,7 +10864,7 @@ L_bool_to_string_false_240:
     ldstr " s/b -280"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 992
+    .line 992
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange35:  "
@@ -10880,7 +10880,7 @@ L_bool_to_string_false_240:
     ldstr " s/b 448"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 993
+    .line 993
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange36:  "
@@ -10896,7 +10896,7 @@ L_bool_to_string_false_240:
     ldstr " s/b -1"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 994
+    .line 994
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange37:  "
@@ -10912,7 +10912,7 @@ L_bool_to_string_false_240:
     ldstr " s/b -1"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 995
+    .line 995
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange38:  "
@@ -10928,7 +10928,7 @@ L_bool_to_string_false_240:
     ldstr " s/b 2"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 996
+    .line 996
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange39:  "
@@ -10944,7 +10944,7 @@ L_bool_to_string_false_240:
     ldstr " s/b -13"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 997
+    .line 997
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange40:  "
@@ -10960,7 +10960,7 @@ L_bool_to_string_false_240:
     ldstr " s/b -33"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 998
+    .line 998
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange41:  "
@@ -10982,7 +10982,7 @@ L_bool_to_string_false_242:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 999
+    .line 999
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange42:  "
@@ -11004,7 +11004,7 @@ L_bool_to_string_false_244:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1000
+    .line 1000
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange43:  "
@@ -11026,7 +11026,7 @@ L_bool_to_string_false_246:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1001
+    .line 1001
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange44:  "
@@ -11048,7 +11048,7 @@ L_bool_to_string_false_248:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1002
+    .line 1002
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange45:  "
@@ -11072,7 +11072,7 @@ L_bool_to_string_false_250:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1003
+    .line 1003
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange46:  "
@@ -11096,7 +11096,7 @@ L_bool_to_string_false_252:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1004
+    .line 1004
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange47:  "
@@ -11118,7 +11118,7 @@ L_bool_to_string_false_254:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1005
+    .line 1005
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange48:  "
@@ -11140,7 +11140,7 @@ L_bool_to_string_false_256:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1006
+    .line 1006
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange49:  "
@@ -11162,7 +11162,7 @@ L_bool_to_string_false_258:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1007
+    .line 1007
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange50:  "
@@ -11184,7 +11184,7 @@ L_bool_to_string_false_260:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1008
+    .line 1008
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange51:  "
@@ -11206,7 +11206,7 @@ L_bool_to_string_false_262:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1009
+    .line 1009
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange52:  "
@@ -11228,7 +11228,7 @@ L_bool_to_string_false_264:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1010
+    .line 1010
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange53:  "
@@ -11250,7 +11250,7 @@ L_bool_to_string_false_266:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1011
+    .line 1011
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange54:  "
@@ -11272,7 +11272,7 @@ L_bool_to_string_false_268:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1012
+    .line 1012
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange55:  "
@@ -11296,7 +11296,7 @@ L_bool_to_string_false_270:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1013
+    .line 1013
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange56:  "
@@ -11320,7 +11320,7 @@ L_bool_to_string_false_272:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1014
+    .line 1014
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange57:  "
@@ -11344,7 +11344,7 @@ L_bool_to_string_false_274:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1015
+    .line 1015
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange58:  "
@@ -11368,7 +11368,7 @@ L_bool_to_string_false_276:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1016
+    .line 1016
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange59:  "
@@ -11392,7 +11392,7 @@ L_bool_to_string_false_278:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1017
+    .line 1017
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange60:  "
@@ -11416,7 +11416,7 @@ L_bool_to_string_false_280:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1018
+    .line 1018
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange61:  "
@@ -11440,7 +11440,7 @@ L_bool_to_string_false_282:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1019
+    .line 1019
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange62:  "
@@ -11464,7 +11464,7 @@ L_bool_to_string_false_284:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1020
+    .line 1020
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange63:  "
@@ -11488,7 +11488,7 @@ L_bool_to_string_false_286:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1021
+    .line 1021
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange64:  "
@@ -11512,7 +11512,7 @@ L_bool_to_string_false_288:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1022
+    .line 1022
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Subrange65:  "
@@ -11531,28 +11531,28 @@ L_abs_question_289:
     ldstr " s/b 14"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1030
+    .line 1030
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1031
+    .line 1031
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "******************* Characters*******************"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1032
+    .line 1032
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1035
+    .line 1035
     ldc.i4 103 // 'g'
     stsfld uint8 _G::Ca
-    // line 1035
+    .line 1035
     ldc.i4 103 // 'g'
     stsfld uint8 _G::Cb
-    // line 1035
+    .line 1035
     ldc.i4 117 // 'u'
     stsfld uint8 _G::Cc
-    // line 1036
+    .line 1036
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character1:   "
@@ -11576,7 +11576,7 @@ L_abs_question_289:
     ldstr " s/b g g u"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1037
+    .line 1037
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character2:   "
@@ -11590,7 +11590,7 @@ L_abs_question_289:
     ldstr " s/b h"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1038
+    .line 1038
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character3:   "
@@ -11604,7 +11604,7 @@ L_abs_question_289:
     ldstr " s/b f"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1039
+    .line 1039
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character4:   "
@@ -11618,7 +11618,7 @@ L_abs_question_289:
     ldstr " s/b 103"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1040
+    .line 1040
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character5:   "
@@ -11630,7 +11630,7 @@ L_abs_question_289:
     ldstr " s/b u"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1041
+    .line 1041
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character6:   "
@@ -11652,7 +11652,7 @@ L_bool_to_string_false_291:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1042
+    .line 1042
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character7:   "
@@ -11674,7 +11674,7 @@ L_bool_to_string_false_293:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1043
+    .line 1043
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character8:   "
@@ -11696,7 +11696,7 @@ L_bool_to_string_false_295:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1044
+    .line 1044
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character9:   "
@@ -11718,7 +11718,7 @@ L_bool_to_string_false_297:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1045
+    .line 1045
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character10:  "
@@ -11740,7 +11740,7 @@ L_bool_to_string_false_299:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1046
+    .line 1046
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character11:  "
@@ -11762,7 +11762,7 @@ L_bool_to_string_false_301:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1047
+    .line 1047
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character12:  "
@@ -11786,7 +11786,7 @@ L_bool_to_string_false_303:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1048
+    .line 1048
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character13:  "
@@ -11810,7 +11810,7 @@ L_bool_to_string_false_305:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1049
+    .line 1049
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character14:  "
@@ -11834,7 +11834,7 @@ L_bool_to_string_false_307:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1050
+    .line 1050
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character15:  "
@@ -11858,7 +11858,7 @@ L_bool_to_string_false_309:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1051
+    .line 1051
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character16:  "
@@ -11882,7 +11882,7 @@ L_bool_to_string_false_311:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1052
+    .line 1052
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character17:  "
@@ -11906,7 +11906,7 @@ L_bool_to_string_false_313:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1053
+    .line 1053
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character18:  "
@@ -11930,7 +11930,7 @@ L_bool_to_string_false_315:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1054
+    .line 1054
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character19:  "
@@ -11954,16 +11954,16 @@ L_bool_to_string_false_317:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1055
+    .line 1055
     ldsfld valuetype T_string10 STRING_1    // "porker    "
     stsfld valuetype T_string10 _G::Sa
-    // line 1055
+    .line 1055
     ldsfld valuetype T_string10 STRING_1    // "porker    "
     stsfld valuetype T_string10 _G::Sb
-    // line 1055
+    .line 1055
     ldsfld valuetype T_string10 STRING_2    // "parker    "
     stsfld valuetype T_string10 _G::Sc
-    // line 1056
+    .line 1056
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character20:  "
@@ -11984,7 +11984,7 @@ L_bool_to_string_false_317:
     ldstr " s/b porker    porker    parker"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1058
+    .line 1058
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character21:  "
@@ -12008,7 +12008,7 @@ L_bool_to_string_false_319:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1059
+    .line 1059
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character22:  "
@@ -12032,7 +12032,7 @@ L_bool_to_string_false_321:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1060
+    .line 1060
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character23:  "
@@ -12056,7 +12056,7 @@ L_bool_to_string_false_323:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1061
+    .line 1061
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character24:  "
@@ -12080,7 +12080,7 @@ L_bool_to_string_false_325:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1062
+    .line 1062
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character25:  "
@@ -12104,7 +12104,7 @@ L_bool_to_string_false_327:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1063
+    .line 1063
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character26:  "
@@ -12128,7 +12128,7 @@ L_bool_to_string_false_329:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1064
+    .line 1064
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character27:  "
@@ -12152,7 +12152,7 @@ L_bool_to_string_false_331:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1065
+    .line 1065
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character28:  "
@@ -12176,7 +12176,7 @@ L_bool_to_string_false_333:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1066
+    .line 1066
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character29:  "
@@ -12200,7 +12200,7 @@ L_bool_to_string_false_335:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1067
+    .line 1067
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character30:  "
@@ -12224,7 +12224,7 @@ L_bool_to_string_false_337:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1068
+    .line 1068
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character40:  "
@@ -12248,7 +12248,7 @@ L_bool_to_string_false_339:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1069
+    .line 1069
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character41:  "
@@ -12272,7 +12272,7 @@ L_bool_to_string_false_341:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1070
+    .line 1070
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character42:  "
@@ -12296,7 +12296,7 @@ L_bool_to_string_false_343:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1071
+    .line 1071
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character43:  "
@@ -12320,13 +12320,13 @@ L_bool_to_string_false_345:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1072
+    .line 1072
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character44:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1073
+    .line 1073
     ldc.i4 122 // 'z'
     stloc $tmpEndValue24
     ldc.i4 97 // 'a'
@@ -12337,7 +12337,7 @@ L_bool_to_string_false_345:
     ldloc $tmpIndex25
     stsfld uint8 _G::Ca
 L_for_loop_346:
-    // line 1073
+    .line 1073
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld uint8 _G::Ca
@@ -12355,19 +12355,19 @@ L_for_loop_346:
     br L_for_loop_346
 L_for_end_347:
     pop
-    // line 1074
+    .line 1074
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b abcdefghijklmnopqrstuvwxyz"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1075
+    .line 1075
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character45:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1076
+    .line 1076
     ldc.i4 97 // 'a'
     stloc $tmpEndValue27
     ldc.i4 122 // 'z'
@@ -12378,7 +12378,7 @@ L_for_end_347:
     ldloc $tmpIndex28
     stsfld uint8 _G::Ca
 L_for_loop_348:
-    // line 1076
+    .line 1076
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld uint8 _G::Ca
@@ -12396,22 +12396,22 @@ L_for_loop_348:
     br L_for_loop_348
 L_for_end_349:
     pop
-    // line 1077
+    .line 1077
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b zyxwvutsrqponmlkjihgfedcba"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1078
+    .line 1078
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character46:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1079
+    .line 1079
     ldc.i4 0
     stsfld int32 _G::x
-    // line 1080
+    .line 1080
     ldc.i4 122 // 'z'
     stloc $tmpEndValue30
     ldc.i4 97 // 'a'
@@ -12422,13 +12422,13 @@ L_for_end_349:
     ldloc $tmpIndex31
     stsfld uint8 _G::Ca
 L_for_loop_350:
-    // line 1080
+    .line 1080
     ldsflda valuetype T_array_30 _G::Car
     ldsfld uint8 _G::Ca
     call instance int32& T_array_30::ldadr(int32)
     ldsfld int32 _G::x
     stobj int32
-    // line 1080
+    .line 1080
     ldsfld int32 _G::x
     ldc.i4 1
     add
@@ -12445,7 +12445,7 @@ L_for_loop_350:
     br L_for_loop_350
 L_for_end_351:
     pop
-    // line 1081
+    .line 1081
     ldc.i4 97 // 'a'
     stloc $tmpEndValue33
     ldc.i4 122 // 'z'
@@ -12456,7 +12456,7 @@ L_for_end_351:
     ldloc $tmpIndex34
     stsfld uint8 _G::Ca
 L_for_loop_352:
-    // line 1081
+    .line 1081
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -12482,10 +12482,10 @@ L_for_loop_352:
     br L_for_loop_352
 L_for_end_353:
     pop
-    // line 1082
+    .line 1082
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1083
+    .line 1083
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character46: s/b 25 24 23 22 21 20 19 18 17 16 15"
@@ -12494,11 +12494,11 @@ L_for_end_353:
     ldstr " 14 13 12 11 10 9 8 7 6 5 4 3 2 1 0"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1085
+    .line 1085
     ldsflda valuetype T_record_111 _G::r
     ldc.i4 110 // 'n'
     stfld uint8 T_record_111::Rc
-    // line 1085
+    .line 1085
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character47: "
@@ -12511,11 +12511,11 @@ L_for_end_353:
     ldstr " s/b n"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1086
+    .line 1086
     ldsflda valuetype T_record_111 _G::r
     ldsfld valuetype T_string10 STRING_3    // "junky01234"
     stfld valuetype T_string10 T_record_111::Rs
-    // line 1086
+    .line 1086
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character48: "
@@ -12529,7 +12529,7 @@ L_for_end_353:
     ldstr " s/b junky01234"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1088
+    .line 1088
     ldc.i4 10
     stloc $tmpEndValue36
     ldc.i4 1
@@ -12540,7 +12540,7 @@ L_for_end_353:
     ldloc $tmpIndex37
     stsfld int32 _G::i
 L_for_loop_354:
-    // line 1088
+    .line 1088
     ldsflda valuetype T_array_116 _G::Sar
     ldsfld int32 _G::i
     call instance valuetype T_string10& T_array_116::ldadr(int32)
@@ -12558,31 +12558,31 @@ L_for_loop_354:
     br L_for_loop_354
 L_for_end_355:
     pop
-    // line 1089
+    .line 1089
     ldsflda valuetype T_array_116 _G::Sar
     ldc.i4 1
     call instance valuetype T_string10& T_array_116::ldadr(int32)
     ldsfld valuetype T_string10 STRING_5    // "trash     "
     stobj valuetype T_string10
-    // line 1090
+    .line 1090
     ldsflda valuetype T_array_116 _G::Sar
     ldc.i4 2
     call instance valuetype T_string10& T_array_116::ldadr(int32)
     ldsfld valuetype T_string10 STRING_6    // "finnork   "
     stobj valuetype T_string10
-    // line 1091
+    .line 1091
     ldsflda valuetype T_array_116 _G::Sar
     ldc.i4 10
     call instance valuetype T_string10& T_array_116::ldadr(int32)
     ldsfld valuetype T_string10 STRING_7    // "crapola   "
     stobj valuetype T_string10
-    // line 1092
+    .line 1092
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character49:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1093
+    .line 1093
     ldc.i4 1
     stloc $tmpEndValue39
     ldc.i4 10
@@ -12593,7 +12593,7 @@ L_for_end_355:
     ldloc $tmpIndex40
     stsfld int32 _G::i
 L_for_loop_356:
-    // line 1093
+    .line 1093
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsflda valuetype T_array_116 _G::Sar
@@ -12615,79 +12615,79 @@ L_for_loop_356:
     br L_for_loop_356
 L_for_end_357:
     pop
-    // line 1094
+    .line 1094
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character49: s/b"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1095
+    .line 1095
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "crapola"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1096
+    .line 1096
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "0123456789"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1097
+    .line 1097
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "0123456789"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1098
+    .line 1098
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "0123456789"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1099
+    .line 1099
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "0123456789"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1100
+    .line 1100
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "0123456789"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1101
+    .line 1101
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "0123456789"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1102
+    .line 1102
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "0123456789"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1103
+    .line 1103
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "finnork"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1104
+    .line 1104
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "trash"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1105
+    .line 1105
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character50:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1106
+    .line 1106
     ldc.i4 57 // '9'
     stloc $tmpEndValue42
     ldc.i4 48 // '0'
@@ -12698,13 +12698,13 @@ L_for_end_357:
     ldloc $tmpIndex43
     stsfld uint8 _G::Ca
 L_for_loop_358:
-    // line 1108
+    .line 1108
     ldsfld uint8 _G::Ca
     stloc $tmpSwitchValue44
     ldloc $tmpSwitchValue44
     ldc.i4 53 // '5'
     bne.un L_check_case_361
-    // line 1109
+    .line 1109
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "five "
@@ -12715,7 +12715,7 @@ L_check_case_361:
     ldloc $tmpSwitchValue44
     ldc.i4 51 // '3'
     bne.un L_check_case_362
-    // line 1110
+    .line 1110
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "three "
@@ -12726,7 +12726,7 @@ L_check_case_362:
     ldloc $tmpSwitchValue44
     ldc.i4 54 // '6'
     bne.un L_check_case_363
-    // line 1111
+    .line 1111
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "six "
@@ -12737,7 +12737,7 @@ L_check_case_363:
     ldloc $tmpSwitchValue44
     ldc.i4 56 // '8'
     bne.un L_check_case_364
-    // line 1112
+    .line 1112
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "eight "
@@ -12748,7 +12748,7 @@ L_check_case_364:
     ldloc $tmpSwitchValue44
     ldc.i4 48 // '0'
     bne.un L_check_case_365
-    // line 1113
+    .line 1113
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "zero "
@@ -12759,7 +12759,7 @@ L_check_case_365:
     ldloc $tmpSwitchValue44
     ldc.i4 57 // '9'
     bne.un L_check_case_366
-    // line 1114
+    .line 1114
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "nine "
@@ -12770,7 +12770,7 @@ L_check_case_366:
     ldloc $tmpSwitchValue44
     ldc.i4 55 // '7'
     bne.un L_check_case_367
-    // line 1115
+    .line 1115
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "seven "
@@ -12781,7 +12781,7 @@ L_check_case_367:
     ldloc $tmpSwitchValue44
     ldc.i4 52 // '4'
     bne.un L_check_case_368
-    // line 1116
+    .line 1116
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "four "
@@ -12792,7 +12792,7 @@ L_check_case_368:
     ldloc $tmpSwitchValue44
     ldc.i4 49 // '1'
     bne.un L_check_case_369
-    // line 1117
+    .line 1117
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "one "
@@ -12803,7 +12803,7 @@ L_check_case_369:
     ldloc $tmpSwitchValue44
     ldc.i4 50 // '2'
     bne.un L_case_end_360
-    // line 1118
+    .line 1118
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "two "
@@ -12822,10 +12822,10 @@ L_case_end_360:
     br L_for_loop_358
 L_for_end_359:
     pop
-    // line 1121
+    .line 1121
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1122
+    .line 1122
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b zero one two three four five six "
@@ -12834,7 +12834,7 @@ L_for_end_359:
     ldstr "seven eight nine"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1126
+    .line 1126
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character51:  "
@@ -12846,7 +12846,7 @@ L_for_end_359:
     ldstr " s/b a"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1127
+    .line 1127
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character52:  "
@@ -12860,7 +12860,7 @@ L_for_end_359:
     ldstr " s/b b"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1128
+    .line 1128
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character53:  "
@@ -12874,7 +12874,7 @@ L_for_end_359:
     ldstr " s/b y"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1129
+    .line 1129
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character54:  "
@@ -12888,7 +12888,7 @@ L_for_end_359:
     ldstr " s/b 99"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1130
+    .line 1130
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character55:  "
@@ -12900,7 +12900,7 @@ L_for_end_359:
     ldstr " s/b g"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1131
+    .line 1131
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character56:  "
@@ -12922,7 +12922,7 @@ L_bool_to_string_false_371:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1132
+    .line 1132
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character57:  "
@@ -12944,7 +12944,7 @@ L_bool_to_string_false_373:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1133
+    .line 1133
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character58:  "
@@ -12966,7 +12966,7 @@ L_bool_to_string_false_375:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1134
+    .line 1134
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character59:  "
@@ -12988,7 +12988,7 @@ L_bool_to_string_false_377:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1135
+    .line 1135
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character50:  "
@@ -13010,7 +13010,7 @@ L_bool_to_string_false_379:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1136
+    .line 1136
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character61:  "
@@ -13032,7 +13032,7 @@ L_bool_to_string_false_381:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1137
+    .line 1137
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character62:  "
@@ -13056,7 +13056,7 @@ L_bool_to_string_false_383:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1138
+    .line 1138
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character63:  "
@@ -13080,7 +13080,7 @@ L_bool_to_string_false_385:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1139
+    .line 1139
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character64:  "
@@ -13104,7 +13104,7 @@ L_bool_to_string_false_387:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1140
+    .line 1140
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character65:  "
@@ -13128,7 +13128,7 @@ L_bool_to_string_false_389:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1141
+    .line 1141
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character66:  "
@@ -13152,7 +13152,7 @@ L_bool_to_string_false_391:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1142
+    .line 1142
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character67:  "
@@ -13176,7 +13176,7 @@ L_bool_to_string_false_393:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1143
+    .line 1143
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character68:  "
@@ -13200,7 +13200,7 @@ L_bool_to_string_false_395:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1144
+    .line 1144
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character69:  "
@@ -13224,7 +13224,7 @@ L_bool_to_string_false_397:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1145
+    .line 1145
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character70:  "
@@ -13246,7 +13246,7 @@ L_bool_to_string_false_399:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1146
+    .line 1146
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character71:  "
@@ -13268,7 +13268,7 @@ L_bool_to_string_false_401:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1148
+    .line 1148
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character72:  "
@@ -13290,7 +13290,7 @@ L_bool_to_string_false_403:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1149
+    .line 1149
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character73:  "
@@ -13312,7 +13312,7 @@ L_bool_to_string_false_405:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1150
+    .line 1150
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character74:  "
@@ -13334,7 +13334,7 @@ L_bool_to_string_false_407:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1151
+    .line 1151
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character75:  "
@@ -13356,7 +13356,7 @@ L_bool_to_string_false_409:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1152
+    .line 1152
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character76:  "
@@ -13378,7 +13378,7 @@ L_bool_to_string_false_411:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1153
+    .line 1153
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character77:  "
@@ -13400,7 +13400,7 @@ L_bool_to_string_false_413:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1154
+    .line 1154
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character78:  "
@@ -13422,7 +13422,7 @@ L_bool_to_string_false_415:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1155
+    .line 1155
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character79:  "
@@ -13444,7 +13444,7 @@ L_bool_to_string_false_417:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1156
+    .line 1156
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character80:  "
@@ -13466,7 +13466,7 @@ L_bool_to_string_false_419:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1157
+    .line 1157
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character81:  "
@@ -13488,7 +13488,7 @@ L_bool_to_string_false_421:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1158
+    .line 1158
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character82:  "
@@ -13510,7 +13510,7 @@ L_bool_to_string_false_423:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1159
+    .line 1159
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character83:  "
@@ -13532,7 +13532,7 @@ L_bool_to_string_false_425:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1160
+    .line 1160
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character84:  "
@@ -13544,7 +13544,7 @@ L_bool_to_string_false_425:
     ldstr " s/b this is a string"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1161
+    .line 1161
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character85:  "
@@ -13556,13 +13556,13 @@ L_bool_to_string_false_425:
     ldstr " s/b v"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1162
+    .line 1162
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character86:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1163
+    .line 1163
     ldc.i4 1
     stloc $tmpEndValue46
     ldc.i4 15
@@ -13573,7 +13573,7 @@ L_bool_to_string_false_425:
     ldloc $tmpIndex47
     stsfld int32 _G::i
 L_for_loop_426:
-    // line 1163
+    .line 1163
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld int32 _G::i
@@ -13593,124 +13593,124 @@ L_for_loop_426:
     br L_for_loop_426
 L_for_end_427:
     pop
-    // line 1164
+    .line 1164
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Character86:  s/b:"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1165
+    .line 1165
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "   hello, world"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1166
+    .line 1166
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "  hello, world"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1167
+    .line 1167
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " hello, world "
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1168
+    .line 1168
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "hello, world"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1169
+    .line 1169
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "hello, worl"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1170
+    .line 1170
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "hello, wor"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1171
+    .line 1171
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "hello, wo"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1172
+    .line 1172
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "hello, w"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1173
+    .line 1173
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "hello, "
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1174
+    .line 1174
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "hello,"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1175
+    .line 1175
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "hello"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1176
+    .line 1176
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "hell"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1177
+    .line 1177
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "hel"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1178
+    .line 1178
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "he"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1179
+    .line 1179
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 104 // 'h'
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1187
+    .line 1187
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1188
+    .line 1188
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "******************* Booleans *******************"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1189
+    .line 1189
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1192
+    .line 1192
     ldc.i4 1 // (true)
     stsfld bool _G::Ba
-    // line 1192
+    .line 1192
     ldc.i4 0 // (false)
     stsfld bool _G::Bb
-    // line 1192
+    .line 1192
     ldc.i4 1 // (true)
     stsfld bool _G::Bc
-    // line 1193
+    .line 1193
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean1:   "
@@ -13744,7 +13744,7 @@ L_bool_to_string_false_431:
     ldstr " s/b true false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1194
+    .line 1194
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean2:   "
@@ -13766,7 +13766,7 @@ L_bool_to_string_false_433:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1195
+    .line 1195
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean3:   "
@@ -13788,7 +13788,7 @@ L_bool_to_string_false_435:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1196
+    .line 1196
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean4:   "
@@ -13802,7 +13802,7 @@ L_bool_to_string_false_435:
     ldstr " s/b 0"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1197
+    .line 1197
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean5:   "
@@ -13816,7 +13816,7 @@ L_bool_to_string_false_435:
     ldstr " s/b 1"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1198
+    .line 1198
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean6:   "
@@ -13838,7 +13838,7 @@ L_bool_to_string_false_437:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1199
+    .line 1199
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean7:   "
@@ -13860,7 +13860,7 @@ L_bool_to_string_false_439:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1200
+    .line 1200
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean8:   "
@@ -13882,7 +13882,7 @@ L_bool_to_string_false_441:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1201
+    .line 1201
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean9:   "
@@ -13904,7 +13904,7 @@ L_bool_to_string_false_443:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1202
+    .line 1202
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean10:  "
@@ -13926,7 +13926,7 @@ L_bool_to_string_false_445:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1203
+    .line 1203
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean11:  "
@@ -13948,7 +13948,7 @@ L_bool_to_string_false_447:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1204
+    .line 1204
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean12:  "
@@ -13970,7 +13970,7 @@ L_bool_to_string_false_449:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1205
+    .line 1205
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean13:  "
@@ -13994,7 +13994,7 @@ L_bool_to_string_false_451:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1206
+    .line 1206
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean14:  "
@@ -14018,7 +14018,7 @@ L_bool_to_string_false_453:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1207
+    .line 1207
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean15:  "
@@ -14042,7 +14042,7 @@ L_bool_to_string_false_455:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1208
+    .line 1208
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean16:  "
@@ -14066,7 +14066,7 @@ L_bool_to_string_false_457:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1209
+    .line 1209
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean17:  "
@@ -14090,7 +14090,7 @@ L_bool_to_string_false_459:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1210
+    .line 1210
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean18:  "
@@ -14114,7 +14114,7 @@ L_bool_to_string_false_461:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1211
+    .line 1211
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean19:  "
@@ -14138,7 +14138,7 @@ L_bool_to_string_false_463:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1212
+    .line 1212
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean20:  "
@@ -14162,13 +14162,13 @@ L_bool_to_string_false_465:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1213
+    .line 1213
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean21:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1214
+    .line 1214
     ldc.i4 1 // (true)
     stloc $tmpEndValue49
     ldc.i4 0 // (false)
@@ -14179,7 +14179,7 @@ L_bool_to_string_false_465:
     ldloc $tmpIndex50
     stsfld bool _G::Ba
 L_for_loop_466:
-    // line 1214
+    .line 1214
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 5
@@ -14208,19 +14208,19 @@ L_bool_to_string_false_469:
     br L_for_loop_466
 L_for_end_467:
     pop
-    // line 1215
+    .line 1215
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b false true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1216
+    .line 1216
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean22:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1217
+    .line 1217
     ldc.i4 0 // (false)
     stloc $tmpEndValue52
     ldc.i4 1 // (true)
@@ -14231,7 +14231,7 @@ L_for_end_467:
     ldloc $tmpIndex53
     stsfld bool _G::Bb
 L_for_loop_470:
-    // line 1217
+    .line 1217
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 5
@@ -14260,24 +14260,24 @@ L_bool_to_string_false_473:
     br L_for_loop_470
 L_for_end_471:
     pop
-    // line 1218
+    .line 1218
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b true false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1219
+    .line 1219
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean23:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1220
+    .line 1220
     ldc.i4 1
     ldc.i4 0
     cgt
     stsfld bool _G::Ba
-    // line 1220
+    .line 1220
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 5
@@ -14294,18 +14294,18 @@ L_bool_to_string_false_475:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1221
+    .line 1221
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean24:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1222
+    .line 1222
     ldc.i4 1
     ldc.i4 0
     clt
     stsfld bool _G::Ba
-    // line 1222
+    .line 1222
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 5
@@ -14322,7 +14322,7 @@ L_bool_to_string_false_477:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1225
+    .line 1225
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean25:  "
@@ -14356,7 +14356,7 @@ L_bool_to_string_false_481:
     ldstr " s/b true false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1226
+    .line 1226
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean26:  "
@@ -14378,7 +14378,7 @@ L_bool_to_string_false_483:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1227
+    .line 1227
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean27:  "
@@ -14400,7 +14400,7 @@ L_bool_to_string_false_485:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1228
+    .line 1228
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean28:  "
@@ -14414,7 +14414,7 @@ L_bool_to_string_false_485:
     ldstr " s/b 0"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1229
+    .line 1229
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean29:  "
@@ -14428,7 +14428,7 @@ L_bool_to_string_false_485:
     ldstr " s/b 1"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1230
+    .line 1230
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean30:  "
@@ -14450,7 +14450,7 @@ L_bool_to_string_false_487:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1231
+    .line 1231
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean31:  "
@@ -14472,7 +14472,7 @@ L_bool_to_string_false_489:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1232
+    .line 1232
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean32:  "
@@ -14494,7 +14494,7 @@ L_bool_to_string_false_491:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1233
+    .line 1233
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean33:  "
@@ -14516,7 +14516,7 @@ L_bool_to_string_false_493:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1234
+    .line 1234
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean34:  "
@@ -14538,7 +14538,7 @@ L_bool_to_string_false_495:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1235
+    .line 1235
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean35:  "
@@ -14560,7 +14560,7 @@ L_bool_to_string_false_497:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1236
+    .line 1236
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean36:  "
@@ -14582,7 +14582,7 @@ L_bool_to_string_false_499:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1237
+    .line 1237
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean37:  "
@@ -14606,7 +14606,7 @@ L_bool_to_string_false_501:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1238
+    .line 1238
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean38:  "
@@ -14630,7 +14630,7 @@ L_bool_to_string_false_503:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1239
+    .line 1239
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean39:  "
@@ -14654,7 +14654,7 @@ L_bool_to_string_false_505:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1240
+    .line 1240
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean40:  "
@@ -14678,7 +14678,7 @@ L_bool_to_string_false_507:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1241
+    .line 1241
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean41:  "
@@ -14702,7 +14702,7 @@ L_bool_to_string_false_509:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1242
+    .line 1242
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean42:  "
@@ -14726,7 +14726,7 @@ L_bool_to_string_false_511:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1243
+    .line 1243
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean43:  "
@@ -14750,7 +14750,7 @@ L_bool_to_string_false_513:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1244
+    .line 1244
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean44:  "
@@ -14774,13 +14774,13 @@ L_bool_to_string_false_515:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1245
+    .line 1245
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean45:"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1246
+    .line 1246
     ldc.i4 1
     stloc $tmpEndValue55
     ldc.i4 10
@@ -14791,7 +14791,7 @@ L_bool_to_string_false_515:
     ldloc $tmpIndex56
     stsfld int32 _G::i
 L_for_loop_516:
-    // line 1246
+    .line 1246
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld int32 _G::i
@@ -14817,79 +14817,79 @@ L_bool_to_string_false_519:
     br L_for_loop_516
 L_for_end_517:
     pop
-    // line 1247
+    .line 1247
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean45: s/b:"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1248
+    .line 1248
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "     false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1249
+    .line 1249
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "    false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1250
+    .line 1250
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "   false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1251
+    .line 1251
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "  false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1252
+    .line 1252
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1253
+    .line 1253
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1254
+    .line 1254
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "fals"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1255
+    .line 1255
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "fal"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1256
+    .line 1256
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "fa"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1257
+    .line 1257
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 102 // 'f'
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1258
+    .line 1258
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean46:"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1259
+    .line 1259
     ldc.i4 1
     stloc $tmpEndValue58
     ldc.i4 10
@@ -14900,7 +14900,7 @@ L_for_end_517:
     ldloc $tmpIndex59
     stsfld int32 _G::i
 L_for_loop_520:
-    // line 1259
+    .line 1259
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld int32 _G::i
@@ -14926,94 +14926,94 @@ L_bool_to_string_false_523:
     br L_for_loop_520
 L_for_end_521:
     pop
-    // line 1260
+    .line 1260
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Boolean46: s/b:"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1261
+    .line 1261
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "      true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1262
+    .line 1262
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "     true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1263
+    .line 1263
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "    true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1264
+    .line 1264
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "   true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1265
+    .line 1265
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "  true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1266
+    .line 1266
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1267
+    .line 1267
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1268
+    .line 1268
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "tru"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1269
+    .line 1269
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "tr"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1270
+    .line 1270
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 116 // 't'
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1279
+    .line 1279
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1280
+    .line 1280
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "******************* Scalar *******************"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1281
+    .line 1281
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1284
+    .line 1284
     ldc.i4 2 // wed 
     stsfld int32 _G::Sva
-    // line 1284
+    .line 1284
     ldc.i4 0 // mon 
     stsfld int32 _G::Svb
-    // line 1284
+    .line 1284
     ldc.i4 2 // wed 
     stsfld int32 _G::Svc
-    // line 1285
+    .line 1285
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar1:   "
@@ -15037,7 +15037,7 @@ L_bool_to_string_false_525:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1286
+    .line 1286
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar2:   "
@@ -15061,7 +15061,7 @@ L_bool_to_string_false_527:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1287
+    .line 1287
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar3:   "
@@ -15075,7 +15075,7 @@ L_bool_to_string_false_527:
     ldstr " s/b 0"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1288
+    .line 1288
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar4:   "
@@ -15089,7 +15089,7 @@ L_bool_to_string_false_527:
     ldstr " s/b 2"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1289
+    .line 1289
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar5:   "
@@ -15111,7 +15111,7 @@ L_bool_to_string_false_529:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1290
+    .line 1290
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar6:   "
@@ -15133,7 +15133,7 @@ L_bool_to_string_false_531:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1291
+    .line 1291
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar7:   "
@@ -15155,7 +15155,7 @@ L_bool_to_string_false_533:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1292
+    .line 1292
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar8:   "
@@ -15177,7 +15177,7 @@ L_bool_to_string_false_535:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1293
+    .line 1293
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar9:   "
@@ -15199,7 +15199,7 @@ L_bool_to_string_false_537:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1294
+    .line 1294
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar10:  "
@@ -15221,7 +15221,7 @@ L_bool_to_string_false_539:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1295
+    .line 1295
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar11:  "
@@ -15243,7 +15243,7 @@ L_bool_to_string_false_541:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1296
+    .line 1296
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar12:  "
@@ -15267,7 +15267,7 @@ L_bool_to_string_false_543:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1297
+    .line 1297
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar13:  "
@@ -15291,7 +15291,7 @@ L_bool_to_string_false_545:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1298
+    .line 1298
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar14:  "
@@ -15315,7 +15315,7 @@ L_bool_to_string_false_547:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1299
+    .line 1299
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar15:  "
@@ -15339,7 +15339,7 @@ L_bool_to_string_false_549:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1300
+    .line 1300
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar16:  "
@@ -15363,7 +15363,7 @@ L_bool_to_string_false_551:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1301
+    .line 1301
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar17:  "
@@ -15387,7 +15387,7 @@ L_bool_to_string_false_553:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1302
+    .line 1302
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar18:  "
@@ -15411,7 +15411,7 @@ L_bool_to_string_false_555:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1303
+    .line 1303
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar19:  "
@@ -15435,13 +15435,13 @@ L_bool_to_string_false_557:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1304
+    .line 1304
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar20:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1305
+    .line 1305
     ldc.i4 6 // sun 
     stloc $tmpEndValue61
     ldc.i4 0 // mon 
@@ -15456,7 +15456,7 @@ L_bool_to_string_false_557:
     ldloc $tmpIndex62
     stsfld int32 _G::Sva
 L_for_loop_558:
-    // line 1305
+    .line 1305
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -15483,19 +15483,19 @@ L_for_loop_558:
     br L_for_loop_558
 L_for_end_559:
     pop
-    // line 1306
+    .line 1306
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 0 1 2 3 4 5 6"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1307
+    .line 1307
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar21:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1308
+    .line 1308
     ldc.i4 0 // mon 
     stloc $tmpEndValue64
     ldc.i4 6 // sun 
@@ -15510,7 +15510,7 @@ L_for_end_559:
     ldloc $tmpIndex65
     stsfld int32 _G::Svb
 L_for_loop_560:
-    // line 1308
+    .line 1308
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -15537,13 +15537,13 @@ L_for_loop_560:
     br L_for_loop_560
 L_for_end_561:
     pop
-    // line 1309
+    .line 1309
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 6 5 4 3 2 1 0"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1312
+    .line 1312
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar1:   "
@@ -15567,7 +15567,7 @@ L_bool_to_string_false_563:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1313
+    .line 1313
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar2:   "
@@ -15591,7 +15591,7 @@ L_bool_to_string_false_565:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1314
+    .line 1314
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar3:   "
@@ -15605,7 +15605,7 @@ L_bool_to_string_false_565:
     ldstr " s/b 2"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1315
+    .line 1315
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar4:   "
@@ -15619,7 +15619,7 @@ L_bool_to_string_false_565:
     ldstr " s/b 6"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1316
+    .line 1316
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar5:   "
@@ -15641,7 +15641,7 @@ L_bool_to_string_false_567:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1317
+    .line 1317
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar6:   "
@@ -15663,7 +15663,7 @@ L_bool_to_string_false_569:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1318
+    .line 1318
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar7:   "
@@ -15685,7 +15685,7 @@ L_bool_to_string_false_571:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1319
+    .line 1319
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar8:   "
@@ -15707,7 +15707,7 @@ L_bool_to_string_false_573:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1320
+    .line 1320
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar9:   "
@@ -15729,7 +15729,7 @@ L_bool_to_string_false_575:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1321
+    .line 1321
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar10:  "
@@ -15751,7 +15751,7 @@ L_bool_to_string_false_577:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1322
+    .line 1322
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar11:  "
@@ -15773,7 +15773,7 @@ L_bool_to_string_false_579:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1323
+    .line 1323
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar12:  "
@@ -15797,7 +15797,7 @@ L_bool_to_string_false_581:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1324
+    .line 1324
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar13:  "
@@ -15821,7 +15821,7 @@ L_bool_to_string_false_583:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1325
+    .line 1325
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar14:  "
@@ -15845,7 +15845,7 @@ L_bool_to_string_false_585:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1326
+    .line 1326
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar15:  "
@@ -15869,7 +15869,7 @@ L_bool_to_string_false_587:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1327
+    .line 1327
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar16:  "
@@ -15893,7 +15893,7 @@ L_bool_to_string_false_589:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1328
+    .line 1328
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar17:  "
@@ -15917,7 +15917,7 @@ L_bool_to_string_false_591:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1329
+    .line 1329
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar18:  "
@@ -15941,7 +15941,7 @@ L_bool_to_string_false_593:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1330
+    .line 1330
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Scalar19:  "
@@ -15965,19 +15965,19 @@ L_bool_to_string_false_595:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1338
+    .line 1338
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1339
+    .line 1339
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "******************* Reals ******************************"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1340
+    .line 1340
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1343
+    .line 1343
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real1:   "
@@ -15991,7 +15991,7 @@ L_bool_to_string_false_595:
     ldstr " s/b  1.554000e+00"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1344
+    .line 1344
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real2:   "
@@ -16005,7 +16005,7 @@ L_bool_to_string_false_595:
     ldstr " s/b  3.340000e-03"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1345
+    .line 1345
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real3:   "
@@ -16019,7 +16019,7 @@ L_bool_to_string_false_595:
     ldstr " s/b  3.34000e-24"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1346
+    .line 1346
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real4:   "
@@ -16033,7 +16033,7 @@ L_bool_to_string_false_595:
     ldstr " s/b  4.000000e-45"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1347
+    .line 1347
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real5:   "
@@ -16048,7 +16048,7 @@ L_bool_to_string_false_595:
     ldstr " s/b -5.565000e+03"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1348
+    .line 1348
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real6:   "
@@ -16063,7 +16063,7 @@ L_bool_to_string_false_595:
     ldstr " s/b -9.440000e-03"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1349
+    .line 1349
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real7:   "
@@ -16078,7 +16078,7 @@ L_bool_to_string_false_595:
     ldstr " s/b -6.364000e+29"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1350
+    .line 1350
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real8:   "
@@ -16093,25 +16093,25 @@ L_bool_to_string_false_595:
     ldstr " s/b -2.000000e-14"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1351
+    .line 1351
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real9:"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1352
+    .line 1352
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "         11111111112222222222333333333344444444445"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1353
+    .line 1353
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "12345678901234567890123456789012345678901234567890"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1354
+    .line 1354
     ldc.i4 20
     stloc $tmpEndValue67
     ldc.i4 1
@@ -16122,7 +16122,7 @@ L_bool_to_string_false_595:
     ldloc $tmpIndex68
     stsfld int32 _G::i
 L_for_loop_596:
-    // line 1354
+    .line 1354
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld int32 _G::i
@@ -16142,151 +16142,151 @@ L_for_loop_596:
     br L_for_loop_596
 L_for_end_597:
     pop
-    // line 1355
+    .line 1355
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b (note precision dropoff at right):"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1356
+    .line 1356
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 1.2e+000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1357
+    .line 1357
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 1.2e+000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1358
+    .line 1358
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 1.2e+000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1359
+    .line 1359
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 1.2e+000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1360
+    .line 1360
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 1.2e+000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1361
+    .line 1361
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 1.2e+000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1362
+    .line 1362
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 1.2e+000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1363
+    .line 1363
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 1.2e+000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1364
+    .line 1364
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 1.2e+000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1365
+    .line 1365
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 1.23e+000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1366
+    .line 1366
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 1.234e+000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1367
+    .line 1367
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 1.2345e+000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1368
+    .line 1368
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 1.23456e+000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1369
+    .line 1369
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 1.234567e+000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1370
+    .line 1370
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 1.2345678e+000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1371
+    .line 1371
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 1.23456789e+000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1372
+    .line 1372
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 1.234567890e+000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1373
+    .line 1373
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 1.2345678901e+000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1374
+    .line 1374
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 1.23456789012e+000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1375
+    .line 1375
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 1.234567890123e+000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1376
+    .line 1376
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real10:"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1377
+    .line 1377
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "         11111111112222222222333333333344444444445"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1378
+    .line 1378
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "12345678901234567890123456789012345678901234567890"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1379
+    .line 1379
     ldc.i4 20
     stloc $tmpEndValue70
     ldc.i4 1
@@ -16297,7 +16297,7 @@ L_for_end_597:
     ldloc $tmpIndex71
     stsfld int32 _G::i
 L_for_loop_598:
-    // line 1379
+    .line 1379
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -16320,145 +16320,145 @@ L_for_loop_598:
     br L_for_loop_598
 L_for_end_599:
     pop
-    // line 1380
+    .line 1380
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b (note precision dropoff at right):"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1381
+    .line 1381
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "1.2"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1382
+    .line 1382
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "2.23"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1383
+    .line 1383
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "3.234"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1384
+    .line 1384
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "4.2345"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1385
+    .line 1385
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "5.23456"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1386
+    .line 1386
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "6.234567"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1387
+    .line 1387
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "7.2345678"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1388
+    .line 1388
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "8.23456789"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1389
+    .line 1389
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "9.234567890"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1390
+    .line 1390
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "10.2345678901"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1391
+    .line 1391
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "11.23456789012"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1392
+    .line 1392
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "12.234567890123"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1393
+    .line 1393
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "13.2345678901234"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1394
+    .line 1394
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "14.23456789012345"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1395
+    .line 1395
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "15.234567890123456"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1396
+    .line 1396
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "16.2345678901234567"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1397
+    .line 1397
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "17.23456789012345678"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1398
+    .line 1398
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "18.234567890123456789"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1399
+    .line 1399
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "19.2345678901234567890"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1400
+    .line 1400
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "20.23456789012345678901"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1403
+    .line 1403
     ldc.r8 435.230
     stsfld float64 _G::Ra
-    // line 1404
+    .line 1404
     ldc.r8 983.670
     stsfld float64 _G::Rb
-    // line 1405
+    .line 1405
     ldsfld float64 _G::Rb
     stsfld float64 _G::Rc
-    // line 1406
+    .line 1406
     ldc.r8 0.344300
     stsfld float64 _G::Rd
-    // line 1407
+    .line 1407
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real11:  "
@@ -16474,7 +16474,7 @@ L_for_end_599:
     ldstr " s/b  1.418900e+03"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1408
+    .line 1408
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Rea112:  "
@@ -16490,7 +16490,7 @@ L_for_end_599:
     ldstr " s/b  5.484399e+02"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1409
+    .line 1409
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real13:  "
@@ -16506,7 +16506,7 @@ L_for_end_599:
     ldstr " s/b  4.281227e+05"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1410
+    .line 1410
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real14:  "
@@ -16522,7 +16522,7 @@ L_for_end_599:
     ldstr " s/b  2.260115e+00"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1411
+    .line 1411
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real15:  "
@@ -16544,7 +16544,7 @@ L_bool_to_string_false_601:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1412
+    .line 1412
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real16:  "
@@ -16566,7 +16566,7 @@ L_bool_to_string_false_603:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1413
+    .line 1413
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real17:  "
@@ -16588,7 +16588,7 @@ L_bool_to_string_false_605:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1414
+    .line 1414
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real18:  "
@@ -16610,7 +16610,7 @@ L_bool_to_string_false_607:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1415
+    .line 1415
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real19:  "
@@ -16632,7 +16632,7 @@ L_bool_to_string_false_609:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1416
+    .line 1416
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real20:  "
@@ -16654,7 +16654,7 @@ L_bool_to_string_false_611:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1417
+    .line 1417
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real21:  "
@@ -16678,7 +16678,7 @@ L_bool_to_string_false_613:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1418
+    .line 1418
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real22:  "
@@ -16702,7 +16702,7 @@ L_bool_to_string_false_615:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1419
+    .line 1419
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real23:  "
@@ -16726,7 +16726,7 @@ L_bool_to_string_false_617:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1420
+    .line 1420
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real24:  "
@@ -16750,7 +16750,7 @@ L_bool_to_string_false_619:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1421
+    .line 1421
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real25:  "
@@ -16774,7 +16774,7 @@ L_bool_to_string_false_621:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1422
+    .line 1422
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real26:  "
@@ -16798,7 +16798,7 @@ L_bool_to_string_false_623:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1423
+    .line 1423
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real27:  "
@@ -16822,7 +16822,7 @@ L_bool_to_string_false_625:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1424
+    .line 1424
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real28:  "
@@ -16846,7 +16846,7 @@ L_bool_to_string_false_627:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1425
+    .line 1425
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real29:  "
@@ -16865,7 +16865,7 @@ L_abs_question_628:
     ldstr " s/b  4.35230e+02"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1426
+    .line 1426
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real30:  "
@@ -16881,7 +16881,7 @@ L_abs_question_628:
     ldstr " s/b  1.89425e+05"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1427
+    .line 1427
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real31:  "
@@ -16896,7 +16896,7 @@ L_abs_question_628:
     ldstr " s/b  3.13635e+01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1428
+    .line 1428
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real32:  "
@@ -16911,7 +16911,7 @@ L_abs_question_628:
     ldstr " s/b -3.44290e-01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1429
+    .line 1429
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real33:  "
@@ -16926,7 +16926,7 @@ L_abs_question_628:
     ldstr " s/b  1.56850e+00"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1430
+    .line 1430
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real34:  "
@@ -16941,7 +16941,7 @@ L_abs_question_628:
     ldstr " s/b  1.41100e+00"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1431
+    .line 1431
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real35:  "
@@ -16956,7 +16956,7 @@ L_abs_question_628:
     ldstr " s/b  6.07587e+00"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1432
+    .line 1432
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real36:  "
@@ -16971,7 +16971,7 @@ L_abs_question_628:
     ldstr " s/b 435"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1433
+    .line 1433
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real37:  "
@@ -16986,7 +16986,7 @@ L_abs_question_628:
     ldstr " s/b 984"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1434
+    .line 1434
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real38:  "
@@ -17001,7 +17001,7 @@ L_abs_question_628:
     ldstr " s/b 435"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1437
+    .line 1437
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real39:  "
@@ -17017,7 +17017,7 @@ L_abs_question_628:
     ldstr " s/b  1.278052e+03"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1438
+    .line 1438
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real40:  "
@@ -17033,7 +17033,7 @@ L_abs_question_628:
     ldstr " s/b  2.389460e+02"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1439
+    .line 1439
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real41:  "
@@ -17049,7 +17049,7 @@ L_abs_question_628:
     ldstr " s/b  1.047202e+05"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1440
+    .line 1440
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real42:  "
@@ -17065,7 +17065,7 @@ L_abs_question_628:
     ldstr " s/b  7.259598e-03"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1441
+    .line 1441
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real43:  "
@@ -17087,7 +17087,7 @@ L_bool_to_string_false_630:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1442
+    .line 1442
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real44:  "
@@ -17109,7 +17109,7 @@ L_bool_to_string_false_632:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1443
+    .line 1443
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real45:  "
@@ -17131,7 +17131,7 @@ L_bool_to_string_false_634:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1444
+    .line 1444
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real46:  "
@@ -17153,7 +17153,7 @@ L_bool_to_string_false_636:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1445
+    .line 1445
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real47:  "
@@ -17175,7 +17175,7 @@ L_bool_to_string_false_638:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1446
+    .line 1446
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real48:  "
@@ -17197,7 +17197,7 @@ L_bool_to_string_false_640:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1447
+    .line 1447
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real49:  "
@@ -17221,7 +17221,7 @@ L_bool_to_string_false_642:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1448
+    .line 1448
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real50:  "
@@ -17245,7 +17245,7 @@ L_bool_to_string_false_644:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1449
+    .line 1449
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real51:  "
@@ -17269,7 +17269,7 @@ L_bool_to_string_false_646:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1450
+    .line 1450
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real52:  "
@@ -17293,7 +17293,7 @@ L_bool_to_string_false_648:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1451
+    .line 1451
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real53:  "
@@ -17317,7 +17317,7 @@ L_bool_to_string_false_650:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1452
+    .line 1452
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real54:  "
@@ -17341,7 +17341,7 @@ L_bool_to_string_false_652:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1453
+    .line 1453
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real55:  "
@@ -17365,7 +17365,7 @@ L_bool_to_string_false_654:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1454
+    .line 1454
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real56:  "
@@ -17389,7 +17389,7 @@ L_bool_to_string_false_656:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1455
+    .line 1455
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real57:  "
@@ -17408,7 +17408,7 @@ L_abs_question_657:
     ldstr " s/b  3.493000e+01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1456
+    .line 1456
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real58:  "
@@ -17424,7 +17424,7 @@ L_abs_question_657:
     ldstr " s/b  5.475600e+00"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1457
+    .line 1457
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real59:  "
@@ -17439,7 +17439,7 @@ L_abs_question_657:
     ldstr " s/b  9.723333e+01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1458
+    .line 1458
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real60:  "
@@ -17454,7 +17454,7 @@ L_abs_question_657:
     ldstr " s/b  3.311461e-01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1459
+    .line 1459
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real61:  "
@@ -17469,7 +17469,7 @@ L_abs_question_657:
     ldstr " s/b  1.567883e+00"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1460
+    .line 1460
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real62:  "
@@ -17484,7 +17484,7 @@ L_abs_question_657:
     ldstr " s/b  1.393753e+00"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1461
+    .line 1461
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real63:  "
@@ -17499,7 +17499,7 @@ L_abs_question_657:
     ldstr " s/b  4.421488e+00"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1462
+    .line 1462
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real64:  "
@@ -17514,7 +17514,7 @@ L_abs_question_657:
     ldstr " s/b 24"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1463
+    .line 1463
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real65:  "
@@ -17529,7 +17529,7 @@ L_abs_question_657:
     ldstr " s/b 75"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1464
+    .line 1464
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real66:  "
@@ -17544,7 +17544,7 @@ L_abs_question_657:
     ldstr " s/b 83"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1465
+    .line 1465
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real67:  "
@@ -17558,25 +17558,25 @@ L_abs_question_657:
     ldstr " s/b  4.333000e+01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1468
+    .line 1468
     ldc.r8 734.200
     neg
     stsfld float64 _G::Ra
-    // line 1469
+    .line 1469
     ldc.r8 7634.52
     neg
     stsfld float64 _G::Rb
-    // line 1470
+    .line 1470
     ldsfld float64 _G::Ra
     stsfld float64 _G::Rc
-    // line 1471
+    .line 1471
     ldc.r8 1034.54
     stsfld float64 _G::Rd
-    // line 1472
+    .line 1472
     ldc.r8 0.384830
     neg
     stsfld float64 _G::Re
-    // line 1473
+    .line 1473
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real68:  "
@@ -17592,7 +17592,7 @@ L_abs_question_657:
     ldstr " s/b  3.003400e+02"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1474
+    .line 1474
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real69:  "
@@ -17608,7 +17608,7 @@ L_abs_question_657:
     ldstr " s/b  3.003400e+02"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1475
+    .line 1475
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real70:  "
@@ -17624,7 +17624,7 @@ L_abs_question_657:
     ldstr " s/b -6.599980e+03"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1476
+    .line 1476
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real71:  "
@@ -17640,7 +17640,7 @@ L_abs_question_657:
     ldstr " s/b -8.368720e+03"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1477
+    .line 1477
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real72:  "
@@ -17656,7 +17656,7 @@ L_abs_question_657:
     ldstr " s/b  1.768740e+03"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1478
+    .line 1478
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real73:  "
@@ -17672,7 +17672,7 @@ L_abs_question_657:
     ldstr " s/b -8.669061e+03"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1479
+    .line 1479
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real74:  "
@@ -17688,7 +17688,7 @@ L_abs_question_657:
     ldstr " s/b -6.900320e+03"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1480
+    .line 1480
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real75:  "
@@ -17704,7 +17704,7 @@ L_abs_question_657:
     ldstr " s/b -7.595593e+05"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1481
+    .line 1481
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real76:  "
@@ -17720,7 +17720,7 @@ L_abs_question_657:
     ldstr " s/b -7.595593e+05"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1482
+    .line 1482
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real77:  "
@@ -17736,7 +17736,7 @@ L_abs_question_657:
     ldstr " s/b  5.605265e+06"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1483
+    .line 1483
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real78:  "
@@ -17752,7 +17752,7 @@ L_abs_question_657:
     ldstr " s/b -1.409071e+00"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1484
+    .line 1484
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real79:  "
@@ -17768,7 +17768,7 @@ L_abs_question_657:
     ldstr " s/b -7.379627e+00"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1485
+    .line 1485
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real80:  "
@@ -17784,7 +17784,7 @@ L_abs_question_657:
     ldstr " s/b  1.039842e+01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1486
+    .line 1486
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real81:  "
@@ -17806,7 +17806,7 @@ L_bool_to_string_false_659:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1487
+    .line 1487
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real82:  "
@@ -17828,7 +17828,7 @@ L_bool_to_string_false_661:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1488
+    .line 1488
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real83:  "
@@ -17852,7 +17852,7 @@ L_bool_to_string_false_663:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1489
+    .line 1489
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real84:  "
@@ -17876,7 +17876,7 @@ L_bool_to_string_false_665:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1490
+    .line 1490
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real85:  "
@@ -17898,7 +17898,7 @@ L_bool_to_string_false_667:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1491
+    .line 1491
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real86:  "
@@ -17920,7 +17920,7 @@ L_bool_to_string_false_669:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1492
+    .line 1492
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real87:  "
@@ -17942,7 +17942,7 @@ L_bool_to_string_false_671:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1493
+    .line 1493
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real88:  "
@@ -17964,7 +17964,7 @@ L_bool_to_string_false_673:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1494
+    .line 1494
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real89:  "
@@ -17986,7 +17986,7 @@ L_bool_to_string_false_675:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1495
+    .line 1495
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real90:  "
@@ -18008,7 +18008,7 @@ L_bool_to_string_false_677:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1496
+    .line 1496
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real91:  "
@@ -18030,7 +18030,7 @@ L_bool_to_string_false_679:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1497
+    .line 1497
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real92:  "
@@ -18052,7 +18052,7 @@ L_bool_to_string_false_681:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1498
+    .line 1498
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real93:  "
@@ -18076,7 +18076,7 @@ L_bool_to_string_false_683:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1499
+    .line 1499
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real94:  "
@@ -18100,7 +18100,7 @@ L_bool_to_string_false_685:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1500
+    .line 1500
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real95:  "
@@ -18124,7 +18124,7 @@ L_bool_to_string_false_687:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1501
+    .line 1501
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real96:  "
@@ -18148,7 +18148,7 @@ L_bool_to_string_false_689:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1502
+    .line 1502
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real97:  "
@@ -18172,7 +18172,7 @@ L_bool_to_string_false_691:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1503
+    .line 1503
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real98:  "
@@ -18196,7 +18196,7 @@ L_bool_to_string_false_693:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1504
+    .line 1504
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real99:  "
@@ -18220,7 +18220,7 @@ L_bool_to_string_false_695:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1505
+    .line 1505
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real100: "
@@ -18244,7 +18244,7 @@ L_bool_to_string_false_697:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1506
+    .line 1506
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real101: "
@@ -18268,7 +18268,7 @@ L_bool_to_string_false_699:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1507
+    .line 1507
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real102: "
@@ -18292,7 +18292,7 @@ L_bool_to_string_false_701:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1508
+    .line 1508
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real103: "
@@ -18311,7 +18311,7 @@ L_abs_question_702:
     ldstr " s/b  7.34200e+02"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1509
+    .line 1509
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real104: "
@@ -18327,7 +18327,7 @@ L_abs_question_702:
     ldstr " s/b  5.39050e+05"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1510
+    .line 1510
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real105: "
@@ -18342,7 +18342,7 @@ L_abs_question_702:
     ldstr " s/b -4.34850e-01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1511
+    .line 1511
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real106: "
@@ -18357,7 +18357,7 @@ L_abs_question_702:
     ldstr " s/b -1.56943e+00"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1512
+    .line 1512
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real107: "
@@ -18372,7 +18372,7 @@ L_abs_question_702:
     ldstr " s/b  6.80566e-01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1513
+    .line 1513
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real108: "
@@ -18387,7 +18387,7 @@ L_abs_question_702:
     ldstr " s/b -734"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1514
+    .line 1514
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real109: "
@@ -18402,7 +18402,7 @@ L_abs_question_702:
     ldstr " s/b -7635"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1515
+    .line 1515
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real110: "
@@ -18417,7 +18417,7 @@ L_abs_question_702:
     ldstr " s/b -734"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1518
+    .line 1518
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real111: "
@@ -18434,7 +18434,7 @@ L_abs_question_702:
     ldstr " s/b  1.510000e+01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1519
+    .line 1519
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real112: "
@@ -18451,7 +18451,7 @@ L_abs_question_702:
     ldstr " s/b  4.513300e+01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1520
+    .line 1520
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real113: "
@@ -18468,7 +18468,7 @@ L_abs_question_702:
     ldstr " s/b -3.864000e+01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1521
+    .line 1521
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real114: "
@@ -18486,7 +18486,7 @@ L_abs_question_702:
     ldstr " s/b -3.658100e+01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1522
+    .line 1522
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real115: "
@@ -18503,7 +18503,7 @@ L_abs_question_702:
     ldstr " s/b  3.554800e+01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1523
+    .line 1523
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real116: "
@@ -18520,7 +18520,7 @@ L_abs_question_702:
     ldstr " s/b -4.939840e+01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1524
+    .line 1524
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real117: "
@@ -18538,7 +18538,7 @@ L_abs_question_702:
     ldstr " s/b -4.400100e+01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1525
+    .line 1525
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real118: "
@@ -18555,7 +18555,7 @@ L_abs_question_702:
     ldstr " s/b -2.641223e+01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1526
+    .line 1526
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real119: "
@@ -18572,7 +18572,7 @@ L_abs_question_702:
     ldstr " s/b -1.489041e+02"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1527
+    .line 1527
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real120: "
@@ -18590,7 +18590,7 @@ L_abs_question_702:
     ldstr " s/b  5.585632e+02"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1528
+    .line 1528
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real121: "
@@ -18607,7 +18607,7 @@ L_abs_question_702:
     ldstr " s/b -5.220157e+00"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1529
+    .line 1529
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real122: "
@@ -18624,7 +18624,7 @@ L_abs_question_702:
     ldstr " s/b -1.772163e+01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1530
+    .line 1530
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real123: "
@@ -18642,7 +18642,7 @@ L_abs_question_702:
     ldstr " s/b  4.274582e+00"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1531
+    .line 1531
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real124: "
@@ -18666,7 +18666,7 @@ L_bool_to_string_false_704:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1532
+    .line 1532
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real125: "
@@ -18689,7 +18689,7 @@ L_bool_to_string_false_706:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1533
+    .line 1533
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real126: "
@@ -18715,7 +18715,7 @@ L_bool_to_string_false_708:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1534
+    .line 1534
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real127: "
@@ -18741,7 +18741,7 @@ L_bool_to_string_false_710:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1535
+    .line 1535
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real128: "
@@ -18764,7 +18764,7 @@ L_bool_to_string_false_712:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1536
+    .line 1536
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real129: "
@@ -18788,7 +18788,7 @@ L_bool_to_string_false_714:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1537
+    .line 1537
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real130: "
@@ -18811,7 +18811,7 @@ L_bool_to_string_false_716:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1538
+    .line 1538
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real131: "
@@ -18835,7 +18835,7 @@ L_bool_to_string_false_718:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1539
+    .line 1539
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real132: "
@@ -18858,7 +18858,7 @@ L_bool_to_string_false_720:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1540
+    .line 1540
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real133: "
@@ -18882,7 +18882,7 @@ L_bool_to_string_false_722:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1541
+    .line 1541
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real134: "
@@ -18905,7 +18905,7 @@ L_bool_to_string_false_724:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1542
+    .line 1542
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real135: "
@@ -18929,7 +18929,7 @@ L_bool_to_string_false_726:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1543
+    .line 1543
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real136: "
@@ -18954,7 +18954,7 @@ L_bool_to_string_false_728:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1544
+    .line 1544
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real137: "
@@ -18980,7 +18980,7 @@ L_bool_to_string_false_730:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1545
+    .line 1545
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real138: "
@@ -19006,7 +19006,7 @@ L_bool_to_string_false_732:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1546
+    .line 1546
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real139: "
@@ -19031,7 +19031,7 @@ L_bool_to_string_false_734:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1547
+    .line 1547
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real140: "
@@ -19057,7 +19057,7 @@ L_bool_to_string_false_736:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1548
+    .line 1548
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real141: "
@@ -19082,7 +19082,7 @@ L_bool_to_string_false_738:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1549
+    .line 1549
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real142: "
@@ -19108,7 +19108,7 @@ L_bool_to_string_false_740:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1550
+    .line 1550
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real143: "
@@ -19134,7 +19134,7 @@ L_bool_to_string_false_742:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1551
+    .line 1551
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real144: "
@@ -19159,7 +19159,7 @@ L_bool_to_string_false_744:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1552
+    .line 1552
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real145: "
@@ -19185,7 +19185,7 @@ L_bool_to_string_false_746:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1553
+    .line 1553
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real146: "
@@ -19205,7 +19205,7 @@ L_abs_question_747:
     ldstr " s/b  6.823000e+00"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1554
+    .line 1554
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real147  "
@@ -19222,7 +19222,7 @@ L_abs_question_747:
     ldstr " s/b  1.212572e+05"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1555
+    .line 1555
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real148: "
@@ -19238,7 +19238,7 @@ L_abs_question_747:
     ldstr " s/b  9.421146e-01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1556
+    .line 1556
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real149: "
@@ -19254,7 +19254,7 @@ L_abs_question_747:
     ldstr " s/b -1.570677e+00"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1557
+    .line 1557
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real150: "
@@ -19270,7 +19270,7 @@ L_abs_question_747:
     ldstr " s/b  4.171539e-01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1558
+    .line 1558
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real151: "
@@ -19286,7 +19286,7 @@ L_abs_question_747:
     ldstr " s/b -33"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1559
+    .line 1559
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real152: "
@@ -19302,7 +19302,7 @@ L_abs_question_747:
     ldstr " s/b -843"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1560
+    .line 1560
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real153: "
@@ -19318,7 +19318,7 @@ L_abs_question_747:
     ldstr " s/b -6244"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1561
+    .line 1561
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real154: "
@@ -19332,7 +19332,7 @@ L_abs_question_747:
     ldstr " s/b -8.422000e+01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1562
+    .line 1562
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real155: "
@@ -19347,7 +19347,7 @@ L_abs_question_747:
     ldstr " s/b  8.422000e+01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1563
+    .line 1563
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real156:  "
@@ -19361,7 +19361,7 @@ L_abs_question_747:
     ldstr " s/b -4.333000e+01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1564
+    .line 1564
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Real157: "
@@ -19375,25 +19375,25 @@ L_abs_question_747:
     ldstr " s/b  8.422000e+01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1572
+    .line 1572
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1573
+    .line 1573
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "******************* sets ******************************"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1574
+    .line 1574
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1577
+    .line 1577
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set1:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1578
+    .line 1578
     ldloc $tmpSetLiteral73
     dup
     ldc.i4 1
@@ -19401,7 +19401,7 @@ L_abs_question_747:
     call void _SetCheck(valuetype T_cset s, int32 min, int32 max)
     call valuetype T_set_129 _SetCastTo_T_set_129(valuetype T_cset s)
     stsfld valuetype T_set_129 _G::Sta
-    // line 1579
+    .line 1579
     ldc.i4 10
     stloc $tmpEndValue74
     ldc.i4 1
@@ -19412,12 +19412,12 @@ L_abs_question_747:
     ldloc $tmpIndex75
     stsfld int32 _G::i
 L_for_loop_748:
-    // line 1579
+    .line 1579
     ldsfld int32 _G::i
     ldc.i4.1
     and
     brfalse L_if_end_750
-    // line 1579
+    .line 1579
     ldloca $tmpSetLiteral76
     call instance void T_cset::clear()
     ldloca $tmpSetLiteral76
@@ -19451,7 +19451,7 @@ L_if_end_750:
     br L_for_loop_748
 L_for_end_749:
     pop
-    // line 1580
+    .line 1580
     ldc.i4 20
     stloc $tmpEndValue78
     ldc.i4 1
@@ -19462,12 +19462,12 @@ L_for_end_749:
     ldloc $tmpIndex79
     stsfld int32 _G::i
 L_for_loop_751:
-    // line 1580
+    .line 1580
     ldsfld valuetype T_set_129 _G::Sta
     ldsfld int32 _G::i
     call bool _SetContains(valuetype T_set_129 s, int32 val)
     brfalse L_else_753
-    // line 1580
+    .line 1580
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 49 // '1'
@@ -19475,7 +19475,7 @@ L_for_loop_751:
     pop
     br L_if_end_754
 L_else_753:
-    // line 1580
+    .line 1580
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 48 // '0'
@@ -19494,25 +19494,25 @@ L_if_end_754:
     br L_for_loop_751
 L_for_end_752:
     pop
-    // line 1581
+    .line 1581
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1582
+    .line 1582
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "10101010101010101010"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1583
+    .line 1583
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set2:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1584
+    .line 1584
     ldloc $tmpSetLiteral81
     dup
     ldc.i4 1
@@ -19520,7 +19520,7 @@ L_for_end_752:
     call void _SetCheck(valuetype T_cset s, int32 min, int32 max)
     call valuetype T_set_129 _SetCastTo_T_set_129(valuetype T_cset s)
     stsfld valuetype T_set_129 _G::Sta
-    // line 1585
+    .line 1585
     ldloc $tmpSetLiteral82
     dup
     ldc.i4 1
@@ -19528,7 +19528,7 @@ L_for_end_752:
     call void _SetCheck(valuetype T_cset s, int32 min, int32 max)
     call valuetype T_set_129 _SetCastTo_T_set_129(valuetype T_cset s)
     stsfld valuetype T_set_129 _G::Stb
-    // line 1586
+    .line 1586
     ldc.i4 10
     stloc $tmpEndValue83
     ldc.i4 1
@@ -19539,14 +19539,14 @@ L_for_end_752:
     ldloc $tmpIndex84
     stsfld int32 _G::i
 L_for_loop_755:
-    // line 1586
+    .line 1586
     ldsfld valuetype T_set_129 _G::Sta
     ldsfld valuetype T_set_129 _G::Stb
     call valuetype T_set_129 _SetUnion(valuetype T_set_129 a, valuetype T_set_129 b)
     ldsfld int32 _G::i
     call bool _SetContains(valuetype T_set_129 s, int32 val)
     brfalse L_else_757
-    // line 1586
+    .line 1586
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 49 // '1'
@@ -19554,7 +19554,7 @@ L_for_loop_755:
     pop
     br L_if_end_758
 L_else_757:
-    // line 1586
+    .line 1586
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 48 // '0'
@@ -19573,25 +19573,25 @@ L_if_end_758:
     br L_for_loop_755
 L_for_end_756:
     pop
-    // line 1587
+    .line 1587
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1588
+    .line 1588
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "1101110001"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1589
+    .line 1589
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set3:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1590
+    .line 1590
     ldloc $tmpSetLiteral86
     dup
     ldc.i4 1
@@ -19599,7 +19599,7 @@ L_for_end_756:
     call void _SetCheck(valuetype T_cset s, int32 min, int32 max)
     call valuetype T_set_129 _SetCastTo_T_set_129(valuetype T_cset s)
     stsfld valuetype T_set_129 _G::Sta
-    // line 1591
+    .line 1591
     ldloc $tmpSetLiteral87
     dup
     ldc.i4 1
@@ -19607,7 +19607,7 @@ L_for_end_756:
     call void _SetCheck(valuetype T_cset s, int32 min, int32 max)
     call valuetype T_set_129 _SetCastTo_T_set_129(valuetype T_cset s)
     stsfld valuetype T_set_129 _G::Stb
-    // line 1592
+    .line 1592
     ldc.i4 10
     stloc $tmpEndValue88
     ldc.i4 1
@@ -19618,14 +19618,14 @@ L_for_end_756:
     ldloc $tmpIndex89
     stsfld int32 _G::i
 L_for_loop_759:
-    // line 1592
+    .line 1592
     ldsfld valuetype T_set_129 _G::Sta
     ldsfld valuetype T_set_129 _G::Stb
     call valuetype T_set_129 _SetIntersection(valuetype T_set_129 a, valuetype T_set_129 b)
     ldsfld int32 _G::i
     call bool _SetContains(valuetype T_set_129 s, int32 val)
     brfalse L_else_761
-    // line 1592
+    .line 1592
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 49 // '1'
@@ -19633,7 +19633,7 @@ L_for_loop_759:
     pop
     br L_if_end_762
 L_else_761:
-    // line 1592
+    .line 1592
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 48 // '0'
@@ -19652,25 +19652,25 @@ L_if_end_762:
     br L_for_loop_759
 L_for_end_760:
     pop
-    // line 1593
+    .line 1593
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1594
+    .line 1594
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "0100010000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1595
+    .line 1595
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set4:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1596
+    .line 1596
     ldloc $tmpSetLiteral91
     dup
     ldc.i4 1
@@ -19678,7 +19678,7 @@ L_for_end_760:
     call void _SetCheck(valuetype T_cset s, int32 min, int32 max)
     call valuetype T_set_129 _SetCastTo_T_set_129(valuetype T_cset s)
     stsfld valuetype T_set_129 _G::Sta
-    // line 1597
+    .line 1597
     ldloc $tmpSetLiteral92
     dup
     ldc.i4 1
@@ -19686,7 +19686,7 @@ L_for_end_760:
     call void _SetCheck(valuetype T_cset s, int32 min, int32 max)
     call valuetype T_set_129 _SetCastTo_T_set_129(valuetype T_cset s)
     stsfld valuetype T_set_129 _G::Stb
-    // line 1598
+    .line 1598
     ldc.i4 10
     stloc $tmpEndValue93
     ldc.i4 1
@@ -19697,14 +19697,14 @@ L_for_end_760:
     ldloc $tmpIndex94
     stsfld int32 _G::i
 L_for_loop_763:
-    // line 1598
+    .line 1598
     ldsfld valuetype T_set_129 _G::Sta
     ldsfld valuetype T_set_129 _G::Stb
     call valuetype T_set_129 _SetDifference(valuetype T_set_129 a, valuetype T_set_129 b)
     ldsfld int32 _G::i
     call bool _SetContains(valuetype T_set_129 s, int32 val)
     brfalse L_else_765
-    // line 1598
+    .line 1598
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 49 // '1'
@@ -19712,7 +19712,7 @@ L_for_loop_763:
     pop
     br L_if_end_766
 L_else_765:
-    // line 1598
+    .line 1598
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 48 // '0'
@@ -19731,19 +19731,19 @@ L_if_end_766:
     br L_for_loop_763
 L_for_end_764:
     pop
-    // line 1599
+    .line 1599
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1600
+    .line 1600
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "0100001000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1601
+    .line 1601
     ldloc $tmpSetLiteral96
     dup
     ldc.i4 1
@@ -19751,7 +19751,7 @@ L_for_end_764:
     call void _SetCheck(valuetype T_cset s, int32 min, int32 max)
     call valuetype T_set_129 _SetCastTo_T_set_129(valuetype T_cset s)
     stsfld valuetype T_set_129 _G::Sta
-    // line 1602
+    .line 1602
     ldloc $tmpSetLiteral97
     dup
     ldc.i4 1
@@ -19759,7 +19759,7 @@ L_for_end_764:
     call void _SetCheck(valuetype T_cset s, int32 min, int32 max)
     call valuetype T_set_129 _SetCastTo_T_set_129(valuetype T_cset s)
     stsfld valuetype T_set_129 _G::Stb
-    // line 1603
+    .line 1603
     ldloc $tmpSetLiteral98
     dup
     ldc.i4 1
@@ -19767,7 +19767,7 @@ L_for_end_764:
     call void _SetCheck(valuetype T_cset s, int32 min, int32 max)
     call valuetype T_set_129 _SetCastTo_T_set_129(valuetype T_cset s)
     stsfld valuetype T_set_129 _G::Stc
-    // line 1604
+    .line 1604
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set5:  "
@@ -19789,7 +19789,7 @@ L_bool_to_string_false_768:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1605
+    .line 1605
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set6:  "
@@ -19811,7 +19811,7 @@ L_bool_to_string_false_770:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1606
+    .line 1606
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set7:  "
@@ -19835,7 +19835,7 @@ L_bool_to_string_false_772:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1607
+    .line 1607
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set8:  "
@@ -19859,7 +19859,7 @@ L_bool_to_string_false_774:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1608
+    .line 1608
     ldloc $tmpSetLiteral99
     dup
     ldc.i4 1
@@ -19867,7 +19867,7 @@ L_bool_to_string_false_774:
     call void _SetCheck(valuetype T_cset s, int32 min, int32 max)
     call valuetype T_set_129 _SetCastTo_T_set_129(valuetype T_cset s)
     stsfld valuetype T_set_129 _G::Sta
-    // line 1609
+    .line 1609
     ldloc $tmpSetLiteral100
     dup
     ldc.i4 1
@@ -19875,7 +19875,7 @@ L_bool_to_string_false_774:
     call void _SetCheck(valuetype T_cset s, int32 min, int32 max)
     call valuetype T_set_129 _SetCastTo_T_set_129(valuetype T_cset s)
     stsfld valuetype T_set_129 _G::Stb
-    // line 1610
+    .line 1610
     ldloc $tmpSetLiteral101
     dup
     ldc.i4 1
@@ -19883,7 +19883,7 @@ L_bool_to_string_false_774:
     call void _SetCheck(valuetype T_cset s, int32 min, int32 max)
     call valuetype T_set_129 _SetCastTo_T_set_129(valuetype T_cset s)
     stsfld valuetype T_set_129 _G::Stc
-    // line 1611
+    .line 1611
     ldloc $tmpSetLiteral102
     dup
     ldc.i4 1
@@ -19891,7 +19891,7 @@ L_bool_to_string_false_774:
     call void _SetCheck(valuetype T_cset s, int32 min, int32 max)
     call valuetype T_set_129 _SetCastTo_T_set_129(valuetype T_cset s)
     stsfld valuetype T_set_129 _G::Std
-    // line 1612
+    .line 1612
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set9:  "
@@ -19913,7 +19913,7 @@ L_bool_to_string_false_776:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1613
+    .line 1613
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set10: "
@@ -19935,7 +19935,7 @@ L_bool_to_string_false_778:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1614
+    .line 1614
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set11: "
@@ -19957,7 +19957,7 @@ L_bool_to_string_false_780:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1615
+    .line 1615
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set12: "
@@ -19979,7 +19979,7 @@ L_bool_to_string_false_782:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1616
+    .line 1616
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set13: "
@@ -20001,7 +20001,7 @@ L_bool_to_string_false_784:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1617
+    .line 1617
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set14: "
@@ -20023,19 +20023,19 @@ L_bool_to_string_false_786:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1618
+    .line 1618
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set15: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1619
+    .line 1619
     ldc.i4 2
     stsfld int32 _G::i
-    // line 1620
+    .line 1620
     ldc.i4 4
     stsfld int32 _G::x
-    // line 1621
+    .line 1621
     ldloca $tmpSetLiteral103
     call instance void T_cset::clear()
     ldloca $tmpSetLiteral103
@@ -20056,7 +20056,7 @@ L_bool_to_string_false_786:
     call void _SetCheck(valuetype T_cset s, int32 min, int32 max)
     call valuetype T_set_129 _SetCastTo_T_set_129(valuetype T_cset s)
     stsfld valuetype T_set_129 _G::Sta
-    // line 1622
+    .line 1622
     ldc.i4 10
     stloc $tmpEndValue104
     ldc.i4 1
@@ -20067,12 +20067,12 @@ L_bool_to_string_false_786:
     ldloc $tmpIndex105
     stsfld int32 _G::i
 L_for_loop_787:
-    // line 1622
+    .line 1622
     ldsfld valuetype T_set_129 _G::Sta
     ldsfld int32 _G::i
     call bool _SetContains(valuetype T_set_129 s, int32 val)
     brfalse L_else_789
-    // line 1622
+    .line 1622
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 49 // '1'
@@ -20080,7 +20080,7 @@ L_for_loop_787:
     pop
     br L_if_end_790
 L_else_789:
-    // line 1622
+    .line 1622
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 48 // '0'
@@ -20099,19 +20099,19 @@ L_if_end_790:
     br L_for_loop_787
 L_for_end_788:
     pop
-    // line 1623
+    .line 1623
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1624
+    .line 1624
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "0101010000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1626
+    .line 1626
     ldsfld valuetype T_set_129 _G::Std
     dup
     ldc.i4 1
@@ -20119,7 +20119,7 @@ L_for_end_788:
     call void _SetCheck(valuetype T_set_129 s, int32 min, int32 max)
     call valuetype T_set_130 _SetCastTo_T_set_130(valuetype T_set_129 s)
     stsfld valuetype T_set_130 _G::Ste
-    // line 1627
+    .line 1627
     ldloc $tmpSetLiteral107
     dup
     ldc.i4 1
@@ -20127,20 +20127,20 @@ L_for_end_788:
     call void _SetCheck(valuetype T_cset s, int32 min, int32 max)
     call valuetype T_set_130 _SetCastTo_T_set_130(valuetype T_cset s)
     stsfld valuetype T_set_130 _G::Stf
-    // line 1628
+    .line 1628
     ldsfld valuetype T_set_130 _G::Stf
     call valuetype T_set_132 _SetCastTo_T_set_132(valuetype T_set_130 s)
     stsfld valuetype T_set_132 _G::Stg
-    // line 1631
+    .line 1631
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set16: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1632
+    .line 1632
     ldloc $tmpSetLiteral108
     stsfld valuetype T_cset _G::Csta
-    // line 1633
+    .line 1633
     ldc.i4 106 // 'j'
     stloc $tmpEndValue109
     ldc.i4 97 // 'a'
@@ -20151,12 +20151,12 @@ L_for_end_788:
     ldloc $tmpIndex110
     stsfld uint8 _G::Ci
 L_for_loop_791:
-    // line 1634
+    .line 1634
     ldsfld uint8 _G::Ci
     ldc.i4.1
     and
     brfalse L_if_end_793
-    // line 1634
+    .line 1634
     ldloca $tmpSetLiteral111
     call instance void T_cset::clear()
     ldloca $tmpSetLiteral111
@@ -20184,7 +20184,7 @@ L_if_end_793:
     br L_for_loop_791
 L_for_end_792:
     pop
-    // line 1635
+    .line 1635
     ldc.i4 116 // 't'
     stloc $tmpEndValue113
     ldc.i4 97 // 'a'
@@ -20195,12 +20195,12 @@ L_for_end_792:
     ldloc $tmpIndex114
     stsfld uint8 _G::Ci
 L_for_loop_794:
-    // line 1635
+    .line 1635
     ldsfld valuetype T_cset _G::Csta
     ldsfld uint8 _G::Ci
     call bool _SetContains(valuetype T_cset s, int32 val)
     brfalse L_else_796
-    // line 1635
+    .line 1635
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld uint8 _G::Ci
@@ -20208,7 +20208,7 @@ L_for_loop_794:
     pop
     br L_if_end_797
 L_else_796:
-    // line 1635
+    .line 1635
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 95 // '_'
@@ -20227,31 +20227,31 @@ L_if_end_797:
     br L_for_loop_794
 L_for_end_795:
     pop
-    // line 1636
+    .line 1636
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1637
+    .line 1637
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "a_c_e_g_i_k_m_o_q_s_"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1638
+    .line 1638
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set17: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1639
+    .line 1639
     ldloc $tmpSetLiteral116
     stsfld valuetype T_cset _G::Csta
-    // line 1640
+    .line 1640
     ldloc $tmpSetLiteral117
     stsfld valuetype T_cset _G::Cstb
-    // line 1641
+    .line 1641
     ldc.i4 106 // 'j'
     stloc $tmpEndValue118
     ldc.i4 97 // 'a'
@@ -20262,14 +20262,14 @@ L_for_end_795:
     ldloc $tmpIndex119
     stsfld uint8 _G::Ci
 L_for_loop_798:
-    // line 1641
+    .line 1641
     ldsfld valuetype T_cset _G::Csta
     ldsfld valuetype T_cset _G::Cstb
     call valuetype T_cset _SetUnion(valuetype T_cset a, valuetype T_cset b)
     ldsfld uint8 _G::Ci
     call bool _SetContains(valuetype T_cset s, int32 val)
     brfalse L_else_800
-    // line 1641
+    .line 1641
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld uint8 _G::Ci
@@ -20277,7 +20277,7 @@ L_for_loop_798:
     pop
     br L_if_end_801
 L_else_800:
-    // line 1641
+    .line 1641
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 95 // '_'
@@ -20296,31 +20296,31 @@ L_if_end_801:
     br L_for_loop_798
 L_for_end_799:
     pop
-    // line 1642
+    .line 1642
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1643
+    .line 1643
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "a_cd_fg___"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1644
+    .line 1644
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set18: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1645
+    .line 1645
     ldloc $tmpSetLiteral121
     stsfld valuetype T_cset _G::Csta
-    // line 1646
+    .line 1646
     ldloc $tmpSetLiteral122
     stsfld valuetype T_cset _G::Cstb
-    // line 1647
+    .line 1647
     ldc.i4 106 // 'j'
     stloc $tmpEndValue123
     ldc.i4 97 // 'a'
@@ -20331,14 +20331,14 @@ L_for_end_799:
     ldloc $tmpIndex124
     stsfld uint8 _G::Ci
 L_for_loop_802:
-    // line 1647
+    .line 1647
     ldsfld valuetype T_cset _G::Csta
     ldsfld valuetype T_cset _G::Cstb
     call valuetype T_cset _SetIntersection(valuetype T_cset a, valuetype T_cset b)
     ldsfld uint8 _G::Ci
     call bool _SetContains(valuetype T_cset s, int32 val)
     brfalse L_else_804
-    // line 1647
+    .line 1647
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld uint8 _G::Ci
@@ -20346,7 +20346,7 @@ L_for_loop_802:
     pop
     br L_if_end_805
 L_else_804:
-    // line 1647
+    .line 1647
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 95 // '_'
@@ -20365,31 +20365,31 @@ L_if_end_805:
     br L_for_loop_802
 L_for_end_803:
     pop
-    // line 1648
+    .line 1648
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1649
+    .line 1649
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "a______h__"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1650
+    .line 1650
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set19: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1651
+    .line 1651
     ldloc $tmpSetLiteral126
     stsfld valuetype T_cset _G::Csta
-    // line 1652
+    .line 1652
     ldloc $tmpSetLiteral127
     stsfld valuetype T_cset _G::Cstb
-    // line 1653
+    .line 1653
     ldc.i4 106 // 'j'
     stloc $tmpEndValue128
     ldc.i4 97 // 'a'
@@ -20400,14 +20400,14 @@ L_for_end_803:
     ldloc $tmpIndex129
     stsfld uint8 _G::Ci
 L_for_loop_806:
-    // line 1653
+    .line 1653
     ldsfld valuetype T_cset _G::Csta
     ldsfld valuetype T_cset _G::Cstb
     call valuetype T_cset _SetDifference(valuetype T_cset a, valuetype T_cset b)
     ldsfld uint8 _G::Ci
     call bool _SetContains(valuetype T_cset s, int32 val)
     brfalse L_else_808
-    // line 1653
+    .line 1653
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld uint8 _G::Ci
@@ -20415,7 +20415,7 @@ L_for_loop_806:
     pop
     br L_if_end_809
 L_else_808:
-    // line 1653
+    .line 1653
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 95 // '_'
@@ -20434,28 +20434,28 @@ L_if_end_809:
     br L_for_loop_806
 L_for_end_807:
     pop
-    // line 1654
+    .line 1654
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1655
+    .line 1655
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "_b_______j"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1656
+    .line 1656
     ldloc $tmpSetLiteral131
     stsfld valuetype T_cset _G::Csta
-    // line 1657
+    .line 1657
     ldloc $tmpSetLiteral132
     stsfld valuetype T_cset _G::Cstb
-    // line 1658
+    .line 1658
     ldloc $tmpSetLiteral133
     stsfld valuetype T_cset _G::Cstc
-    // line 1659
+    .line 1659
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set20: "
@@ -20477,7 +20477,7 @@ L_bool_to_string_false_811:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1660
+    .line 1660
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set21: "
@@ -20499,7 +20499,7 @@ L_bool_to_string_false_813:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1661
+    .line 1661
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set22: "
@@ -20523,7 +20523,7 @@ L_bool_to_string_false_815:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1662
+    .line 1662
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set23: "
@@ -20547,19 +20547,19 @@ L_bool_to_string_false_817:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1663
+    .line 1663
     ldloc $tmpSetLiteral134
     stsfld valuetype T_cset _G::Csta
-    // line 1664
+    .line 1664
     ldloc $tmpSetLiteral135
     stsfld valuetype T_cset _G::Cstb
-    // line 1665
+    .line 1665
     ldloc $tmpSetLiteral136
     stsfld valuetype T_cset _G::Cstc
-    // line 1666
+    .line 1666
     ldloc $tmpSetLiteral137
     stsfld valuetype T_cset _G::Cstd
-    // line 1667
+    .line 1667
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set24: "
@@ -20581,7 +20581,7 @@ L_bool_to_string_false_819:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1668
+    .line 1668
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set25: "
@@ -20603,7 +20603,7 @@ L_bool_to_string_false_821:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1669
+    .line 1669
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set26: "
@@ -20625,7 +20625,7 @@ L_bool_to_string_false_823:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1670
+    .line 1670
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set27: "
@@ -20647,7 +20647,7 @@ L_bool_to_string_false_825:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1671
+    .line 1671
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set28: "
@@ -20669,7 +20669,7 @@ L_bool_to_string_false_827:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1672
+    .line 1672
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set29: "
@@ -20691,19 +20691,19 @@ L_bool_to_string_false_829:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1673
+    .line 1673
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set30: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1674
+    .line 1674
     ldc.i4 97 // 'a'
     stsfld uint8 _G::Ci
-    // line 1675
+    .line 1675
     ldc.i4 4
     stsfld int32 _G::i
-    // line 1676
+    .line 1676
     ldloca $tmpSetLiteral138
     call instance void T_cset::clear()
     ldloca $tmpSetLiteral138
@@ -20716,7 +20716,7 @@ L_bool_to_string_false_829:
     call instance void T_cset::addValue(int32)
     ldloc $tmpSetLiteral138
     stsfld valuetype T_cset _G::Csta
-    // line 1677
+    .line 1677
     ldc.i4 106 // 'j'
     stloc $tmpEndValue139
     ldc.i4 97 // 'a'
@@ -20727,12 +20727,12 @@ L_bool_to_string_false_829:
     ldloc $tmpIndex140
     stsfld uint8 _G::Ci
 L_for_loop_830:
-    // line 1677
+    .line 1677
     ldsfld valuetype T_cset _G::Csta
     ldsfld uint8 _G::Ci
     call bool _SetContains(valuetype T_cset s, int32 val)
     brfalse L_else_832
-    // line 1677
+    .line 1677
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld uint8 _G::Ci
@@ -20740,7 +20740,7 @@ L_for_loop_830:
     pop
     br L_if_end_833
 L_else_832:
-    // line 1677
+    .line 1677
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 95 // '_'
@@ -20759,19 +20759,19 @@ L_if_end_833:
     br L_for_loop_830
 L_for_end_831:
     pop
-    // line 1678
+    .line 1678
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1679
+    .line 1679
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "a___e_____"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1681
+    .line 1681
     ldsfld valuetype T_cset _G::Cstd
     dup
     ldc.i4 97
@@ -20779,7 +20779,7 @@ L_for_end_831:
     call void _SetCheck(valuetype T_cset s, int32 min, int32 max)
     call valuetype T_set_34 _SetCastTo_T_set_34(valuetype T_cset s)
     stsfld valuetype T_set_34 _G::Cste
-    // line 1682
+    .line 1682
     ldloc $tmpSetLiteral142
     dup
     ldc.i4 97
@@ -20787,17 +20787,17 @@ L_for_end_831:
     call void _SetCheck(valuetype T_cset s, int32 min, int32 max)
     call valuetype T_set_35 _SetCastTo_T_set_35(valuetype T_cset s)
     stsfld valuetype T_set_35 _G::Cstf
-    // line 1683
+    .line 1683
     ldsfld valuetype T_set_35 _G::Cstf
     call valuetype T_cset _SetCastTo_T_cset(valuetype T_set_35 s)
     stsfld valuetype T_cset _G::Cstg
-    // line 1686
+    .line 1686
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set31: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1687
+    .line 1687
     ldloc $tmpSetLiteral143
     dup
     ldc.i4 0
@@ -20805,7 +20805,7 @@ L_for_end_831:
     call void _SetCheck(valuetype T_cset s, int32 min, int32 max)
     call valuetype T_set_123 _SetCastTo_T_set_123(valuetype T_cset s)
     stsfld valuetype T_set_123 _G::Sena
-    // line 1688
+    .line 1688
     ldc.i4 9 // ten 
     stloc $tmpEndValue144
     ldc.i4 0 // one 
@@ -20820,12 +20820,12 @@ L_for_end_831:
     ldloc $tmpIndex145
     stsfld int32 _G::Ei
 L_for_loop_834:
-    // line 1688
+    .line 1688
     ldsfld int32 _G::Ei
     ldc.i4.1
     and
     brfalse L_if_end_836
-    // line 1688
+    .line 1688
     ldloca $tmpSetLiteral146
     call instance void T_set_123::clear()
     ldloca $tmpSetLiteral146
@@ -20859,7 +20859,7 @@ L_if_end_836:
     br L_for_loop_834
 L_for_end_835:
     pop
-    // line 1689
+    .line 1689
     ldc.i4 9 // ten 
     stloc $tmpEndValue148
     ldc.i4 0 // one 
@@ -20874,12 +20874,12 @@ L_for_end_835:
     ldloc $tmpIndex149
     stsfld int32 _G::Ei
 L_for_loop_837:
-    // line 1689
+    .line 1689
     ldsfld valuetype T_set_123 _G::Sena
     ldsfld int32 _G::Ei
     call bool _SetContains(valuetype T_set_123 s, int32 val)
     brfalse L_else_839
-    // line 1689
+    .line 1689
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 49 // '1'
@@ -20887,7 +20887,7 @@ L_for_loop_837:
     pop
     br L_if_end_840
 L_else_839:
-    // line 1689
+    .line 1689
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 48 // '0'
@@ -20910,31 +20910,31 @@ L_if_end_840:
     br L_for_loop_837
 L_for_end_838:
     pop
-    // line 1690
+    .line 1690
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1691
+    .line 1691
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "0101010101"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1692
+    .line 1692
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set32: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1693
+    .line 1693
     ldloc $tmpSetLiteral151
     stsfld valuetype T_set_123 _G::Sena
-    // line 1694
+    .line 1694
     ldloc $tmpSetLiteral152
     stsfld valuetype T_set_123 _G::Senb
-    // line 1695
+    .line 1695
     ldc.i4 9 // ten 
     stloc $tmpEndValue153
     ldc.i4 0 // one 
@@ -20949,14 +20949,14 @@ L_for_end_838:
     ldloc $tmpIndex154
     stsfld int32 _G::Ei
 L_for_loop_841:
-    // line 1695
+    .line 1695
     ldsfld valuetype T_set_123 _G::Sena
     ldsfld valuetype T_set_123 _G::Senb
     call valuetype T_set_123 _SetUnion(valuetype T_set_123 a, valuetype T_set_123 b)
     ldsfld int32 _G::Ei
     call bool _SetContains(valuetype T_set_123 s, int32 val)
     brfalse L_else_843
-    // line 1695
+    .line 1695
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 49 // '1'
@@ -20964,7 +20964,7 @@ L_for_loop_841:
     pop
     br L_if_end_844
 L_else_843:
-    // line 1695
+    .line 1695
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 48 // '0'
@@ -20987,31 +20987,31 @@ L_if_end_844:
     br L_for_loop_841
 L_for_end_842:
     pop
-    // line 1696
+    .line 1696
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1697
+    .line 1697
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "1101110001"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1698
+    .line 1698
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set33: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1699
+    .line 1699
     ldloc $tmpSetLiteral156
     stsfld valuetype T_set_123 _G::Sena
-    // line 1700
+    .line 1700
     ldloc $tmpSetLiteral157
     stsfld valuetype T_set_123 _G::Senb
-    // line 1701
+    .line 1701
     ldc.i4 9 // ten 
     stloc $tmpEndValue158
     ldc.i4 0 // one 
@@ -21026,14 +21026,14 @@ L_for_end_842:
     ldloc $tmpIndex159
     stsfld int32 _G::Ei
 L_for_loop_845:
-    // line 1701
+    .line 1701
     ldsfld valuetype T_set_123 _G::Sena
     ldsfld valuetype T_set_123 _G::Senb
     call valuetype T_set_123 _SetIntersection(valuetype T_set_123 a, valuetype T_set_123 b)
     ldsfld int32 _G::Ei
     call bool _SetContains(valuetype T_set_123 s, int32 val)
     brfalse L_else_847
-    // line 1701
+    .line 1701
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 49 // '1'
@@ -21041,7 +21041,7 @@ L_for_loop_845:
     pop
     br L_if_end_848
 L_else_847:
-    // line 1701
+    .line 1701
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 48 // '0'
@@ -21064,31 +21064,31 @@ L_if_end_848:
     br L_for_loop_845
 L_for_end_846:
     pop
-    // line 1702
+    .line 1702
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1703
+    .line 1703
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "0100010000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1704
+    .line 1704
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set34: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1705
+    .line 1705
     ldloc $tmpSetLiteral161
     stsfld valuetype T_set_123 _G::Sena
-    // line 1706
+    .line 1706
     ldloc $tmpSetLiteral162
     stsfld valuetype T_set_123 _G::Senb
-    // line 1707
+    .line 1707
     ldc.i4 9 // ten 
     stloc $tmpEndValue163
     ldc.i4 0 // one 
@@ -21103,14 +21103,14 @@ L_for_end_846:
     ldloc $tmpIndex164
     stsfld int32 _G::Ei
 L_for_loop_849:
-    // line 1707
+    .line 1707
     ldsfld valuetype T_set_123 _G::Sena
     ldsfld valuetype T_set_123 _G::Senb
     call valuetype T_set_123 _SetDifference(valuetype T_set_123 a, valuetype T_set_123 b)
     ldsfld int32 _G::Ei
     call bool _SetContains(valuetype T_set_123 s, int32 val)
     brfalse L_else_851
-    // line 1707
+    .line 1707
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 49 // '1'
@@ -21118,7 +21118,7 @@ L_for_loop_849:
     pop
     br L_if_end_852
 L_else_851:
-    // line 1707
+    .line 1707
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 48 // '0'
@@ -21141,28 +21141,28 @@ L_if_end_852:
     br L_for_loop_849
 L_for_end_850:
     pop
-    // line 1708
+    .line 1708
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1709
+    .line 1709
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "0100001000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1710
+    .line 1710
     ldloc $tmpSetLiteral166
     stsfld valuetype T_set_123 _G::Sena
-    // line 1711
+    .line 1711
     ldloc $tmpSetLiteral167
     stsfld valuetype T_set_123 _G::Senb
-    // line 1712
+    .line 1712
     ldloc $tmpSetLiteral168
     stsfld valuetype T_set_123 _G::Senc
-    // line 1713
+    .line 1713
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set35: "
@@ -21184,7 +21184,7 @@ L_bool_to_string_false_854:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1714
+    .line 1714
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set36: "
@@ -21206,7 +21206,7 @@ L_bool_to_string_false_856:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1715
+    .line 1715
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set37: "
@@ -21230,7 +21230,7 @@ L_bool_to_string_false_858:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1716
+    .line 1716
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set38: "
@@ -21254,19 +21254,19 @@ L_bool_to_string_false_860:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1717
+    .line 1717
     ldloc $tmpSetLiteral169
     stsfld valuetype T_set_123 _G::Sena
-    // line 1718
+    .line 1718
     ldloc $tmpSetLiteral170
     stsfld valuetype T_set_123 _G::Senb
-    // line 1719
+    .line 1719
     ldloc $tmpSetLiteral171
     stsfld valuetype T_set_123 _G::Senc
-    // line 1720
+    .line 1720
     ldloc $tmpSetLiteral172
     stsfld valuetype T_set_123 _G::Send
-    // line 1721
+    .line 1721
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set39: "
@@ -21288,7 +21288,7 @@ L_bool_to_string_false_862:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1722
+    .line 1722
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set40: "
@@ -21310,7 +21310,7 @@ L_bool_to_string_false_864:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1723
+    .line 1723
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set41: "
@@ -21332,7 +21332,7 @@ L_bool_to_string_false_866:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1724
+    .line 1724
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set42: "
@@ -21354,7 +21354,7 @@ L_bool_to_string_false_868:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1725
+    .line 1725
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set43: "
@@ -21376,7 +21376,7 @@ L_bool_to_string_false_870:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1726
+    .line 1726
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set44: "
@@ -21398,16 +21398,16 @@ L_bool_to_string_false_872:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1727
+    .line 1727
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set45: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1728
+    .line 1728
     ldc.i4 1 // two 
     stsfld int32 _G::Ei
-    // line 1729
+    .line 1729
     ldloca $tmpSetLiteral173
     call instance void T_set_123::clear()
     ldloca $tmpSetLiteral173
@@ -21420,7 +21420,7 @@ L_bool_to_string_false_872:
     call instance void T_set_123::addValue(int32)
     ldloc $tmpSetLiteral173
     stsfld valuetype T_set_123 _G::Sena
-    // line 1730
+    .line 1730
     ldc.i4 9 // ten 
     stloc $tmpEndValue174
     ldc.i4 0 // one 
@@ -21435,12 +21435,12 @@ L_bool_to_string_false_872:
     ldloc $tmpIndex175
     stsfld int32 _G::Ei
 L_for_loop_873:
-    // line 1730
+    .line 1730
     ldsfld valuetype T_set_123 _G::Sena
     ldsfld int32 _G::Ei
     call bool _SetContains(valuetype T_set_123 s, int32 val)
     brfalse L_else_875
-    // line 1730
+    .line 1730
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 49 // '1'
@@ -21448,7 +21448,7 @@ L_for_loop_873:
     pop
     br L_if_end_876
 L_else_875:
-    // line 1730
+    .line 1730
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 48 // '0'
@@ -21471,22 +21471,22 @@ L_if_end_876:
     br L_for_loop_873
 L_for_end_874:
     pop
-    // line 1731
+    .line 1731
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1732
+    .line 1732
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "0110000000"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1734
+    .line 1734
     ldloc $tmpSetLiteral177
     stsfld valuetype T_set_123 _G::Send
-    // line 1735
+    .line 1735
     ldsfld valuetype T_set_123 _G::Send
     dup
     ldc.i4 0
@@ -21494,10 +21494,10 @@ L_for_end_874:
     call void _SetCheck(valuetype T_set_123 s, int32 min, int32 max)
     call valuetype T_set_124 _SetCastTo_T_set_124(valuetype T_set_123 s)
     stsfld valuetype T_set_124 _G::Sene
-    // line 1736
+    .line 1736
     ldloc $tmpSetLiteral178
     stsfld valuetype T_set_123 _G::Senf
-    // line 1737
+    .line 1737
     ldsfld valuetype T_set_123 _G::Senf
     dup
     ldc.i4 0
@@ -21505,13 +21505,13 @@ L_for_end_874:
     call void _SetCheck(valuetype T_set_123 s, int32 min, int32 max)
     call valuetype T_set_126 _SetCastTo_T_set_126(valuetype T_set_123 s)
     stsfld valuetype T_set_126 _G::Seng
-    // line 1740
+    .line 1740
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set46: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1741
+    .line 1741
     ldloc $tmpSetLiteral179
     dup
     ldc.i4 0
@@ -21519,7 +21519,7 @@ L_for_end_874:
     call void _SetCheck(valuetype T_cset s, int32 min, int32 max)
     call valuetype T_set_118 _SetCastTo_T_set_118(valuetype T_cset s)
     stsfld valuetype T_set_118 _G::Sba
-    // line 1742
+    .line 1742
     ldc.i4 1 // (true)
     stloc $tmpEndValue180
     ldc.i4 0 // (false)
@@ -21530,12 +21530,12 @@ L_for_end_874:
     ldloc $tmpIndex181
     stsfld bool _G::Ba
 L_for_loop_877:
-    // line 1742
+    .line 1742
     ldsfld bool _G::Ba
     ldc.i4.1
     and
     brfalse L_if_end_879
-    // line 1742
+    .line 1742
     ldloca $tmpSetLiteral182
     call instance void T_set_118::clear()
     ldloca $tmpSetLiteral182
@@ -21565,7 +21565,7 @@ L_if_end_879:
     br L_for_loop_877
 L_for_end_878:
     pop
-    // line 1743
+    .line 1743
     ldc.i4 1 // (true)
     stloc $tmpEndValue184
     ldc.i4 0 // (false)
@@ -21576,12 +21576,12 @@ L_for_end_878:
     ldloc $tmpIndex185
     stsfld bool _G::Ba
 L_for_loop_880:
-    // line 1743
+    .line 1743
     ldsfld valuetype T_set_118 _G::Sba
     ldsfld bool _G::Ba
     call bool _SetContains(valuetype T_set_118 s, int32 val)
     brfalse L_else_882
-    // line 1743
+    .line 1743
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 49 // '1'
@@ -21589,7 +21589,7 @@ L_for_loop_880:
     pop
     br L_if_end_883
 L_else_882:
-    // line 1743
+    .line 1743
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 48 // '0'
@@ -21608,31 +21608,31 @@ L_if_end_883:
     br L_for_loop_880
 L_for_end_881:
     pop
-    // line 1744
+    .line 1744
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1745
+    .line 1745
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1746
+    .line 1746
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set47: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1747
+    .line 1747
     ldloc $tmpSetLiteral187
     stsfld valuetype T_set_118 _G::Sba
-    // line 1748
+    .line 1748
     ldloc $tmpSetLiteral188
     stsfld valuetype T_set_118 _G::Sbb
-    // line 1749
+    .line 1749
     ldc.i4 1 // (true)
     stloc $tmpEndValue189
     ldc.i4 0 // (false)
@@ -21643,14 +21643,14 @@ L_for_end_881:
     ldloc $tmpIndex190
     stsfld bool _G::Ba
 L_for_loop_884:
-    // line 1749
+    .line 1749
     ldsfld valuetype T_set_118 _G::Sba
     ldsfld valuetype T_set_118 _G::Sbb
     call valuetype T_set_118 _SetUnion(valuetype T_set_118 a, valuetype T_set_118 b)
     ldsfld bool _G::Ba
     call bool _SetContains(valuetype T_set_118 s, int32 val)
     brfalse L_else_886
-    // line 1749
+    .line 1749
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 49 // '1'
@@ -21658,7 +21658,7 @@ L_for_loop_884:
     pop
     br L_if_end_887
 L_else_886:
-    // line 1749
+    .line 1749
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 48 // '0'
@@ -21677,31 +21677,31 @@ L_if_end_887:
     br L_for_loop_884
 L_for_end_885:
     pop
-    // line 1750
+    .line 1750
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1751
+    .line 1751
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "11"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1752
+    .line 1752
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set48: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1753
+    .line 1753
     ldloc $tmpSetLiteral192
     stsfld valuetype T_set_118 _G::Sba
-    // line 1754
+    .line 1754
     ldloc $tmpSetLiteral193
     stsfld valuetype T_set_118 _G::Sbb
-    // line 1755
+    .line 1755
     ldc.i4 1 // (true)
     stloc $tmpEndValue194
     ldc.i4 0 // (false)
@@ -21712,14 +21712,14 @@ L_for_end_885:
     ldloc $tmpIndex195
     stsfld bool _G::Ba
 L_for_loop_888:
-    // line 1755
+    .line 1755
     ldsfld valuetype T_set_118 _G::Sba
     ldsfld valuetype T_set_118 _G::Sbb
     call valuetype T_set_118 _SetIntersection(valuetype T_set_118 a, valuetype T_set_118 b)
     ldsfld bool _G::Ba
     call bool _SetContains(valuetype T_set_118 s, int32 val)
     brfalse L_else_890
-    // line 1755
+    .line 1755
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 49 // '1'
@@ -21727,7 +21727,7 @@ L_for_loop_888:
     pop
     br L_if_end_891
 L_else_890:
-    // line 1755
+    .line 1755
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 48 // '0'
@@ -21746,31 +21746,31 @@ L_if_end_891:
     br L_for_loop_888
 L_for_end_889:
     pop
-    // line 1756
+    .line 1756
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1757
+    .line 1757
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "10"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1758
+    .line 1758
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set49: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1759
+    .line 1759
     ldloc $tmpSetLiteral197
     stsfld valuetype T_set_118 _G::Sba
-    // line 1760
+    .line 1760
     ldloc $tmpSetLiteral198
     stsfld valuetype T_set_118 _G::Sbb
-    // line 1761
+    .line 1761
     ldc.i4 1 // (true)
     stloc $tmpEndValue199
     ldc.i4 0 // (false)
@@ -21781,14 +21781,14 @@ L_for_end_889:
     ldloc $tmpIndex200
     stsfld bool _G::Ba
 L_for_loop_892:
-    // line 1761
+    .line 1761
     ldsfld valuetype T_set_118 _G::Sba
     ldsfld valuetype T_set_118 _G::Sbb
     call valuetype T_set_118 _SetDifference(valuetype T_set_118 a, valuetype T_set_118 b)
     ldsfld bool _G::Ba
     call bool _SetContains(valuetype T_set_118 s, int32 val)
     brfalse L_else_894
-    // line 1761
+    .line 1761
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 49 // '1'
@@ -21796,7 +21796,7 @@ L_for_loop_892:
     pop
     br L_if_end_895
 L_else_894:
-    // line 1761
+    .line 1761
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 48 // '0'
@@ -21815,28 +21815,28 @@ L_if_end_895:
     br L_for_loop_892
 L_for_end_893:
     pop
-    // line 1762
+    .line 1762
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1763
+    .line 1763
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "10"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1764
+    .line 1764
     ldloc $tmpSetLiteral202
     stsfld valuetype T_set_118 _G::Sba
-    // line 1765
+    .line 1765
     ldloc $tmpSetLiteral203
     stsfld valuetype T_set_118 _G::Sbb
-    // line 1766
+    .line 1766
     ldloc $tmpSetLiteral204
     stsfld valuetype T_set_118 _G::Sbc
-    // line 1767
+    .line 1767
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set50: "
@@ -21858,7 +21858,7 @@ L_bool_to_string_false_897:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1768
+    .line 1768
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set51: "
@@ -21880,7 +21880,7 @@ L_bool_to_string_false_899:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1769
+    .line 1769
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set52: "
@@ -21904,7 +21904,7 @@ L_bool_to_string_false_901:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1770
+    .line 1770
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set53: "
@@ -21928,19 +21928,19 @@ L_bool_to_string_false_903:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1771
+    .line 1771
     ldloc $tmpSetLiteral205
     stsfld valuetype T_set_118 _G::Sba
-    // line 1772
+    .line 1772
     ldloc $tmpSetLiteral206
     stsfld valuetype T_set_118 _G::Sbb
-    // line 1773
+    .line 1773
     ldloc $tmpSetLiteral207
     stsfld valuetype T_set_118 _G::Sbc
-    // line 1774
+    .line 1774
     ldloc $tmpSetLiteral208
     stsfld valuetype T_set_118 _G::Sbd
-    // line 1775
+    .line 1775
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set54: "
@@ -21962,7 +21962,7 @@ L_bool_to_string_false_905:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1776
+    .line 1776
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set55: "
@@ -21984,7 +21984,7 @@ L_bool_to_string_false_907:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1777
+    .line 1777
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set56: "
@@ -22006,7 +22006,7 @@ L_bool_to_string_false_909:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1778
+    .line 1778
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set57: "
@@ -22028,7 +22028,7 @@ L_bool_to_string_false_911:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1779
+    .line 1779
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set58: "
@@ -22050,7 +22050,7 @@ L_bool_to_string_false_913:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1780
+    .line 1780
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set59: "
@@ -22072,16 +22072,16 @@ L_bool_to_string_false_915:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1781
+    .line 1781
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Set60: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1782
+    .line 1782
     ldc.i4 0 // (false)
     stsfld bool _G::Ba
-    // line 1783
+    .line 1783
     ldloca $tmpSetLiteral209
     call instance void T_set_118::clear()
     ldloca $tmpSetLiteral209
@@ -22094,7 +22094,7 @@ L_bool_to_string_false_915:
     call instance void T_set_118::addValue(int32)
     ldloc $tmpSetLiteral209
     stsfld valuetype T_set_118 _G::Sba
-    // line 1784
+    .line 1784
     ldc.i4 1 // (true)
     stloc $tmpEndValue210
     ldc.i4 0 // (false)
@@ -22105,12 +22105,12 @@ L_bool_to_string_false_915:
     ldloc $tmpIndex211
     stsfld bool _G::Ba
 L_for_loop_916:
-    // line 1784
+    .line 1784
     ldsfld valuetype T_set_118 _G::Sba
     ldsfld bool _G::Ba
     call bool _SetContains(valuetype T_set_118 s, int32 val)
     brfalse L_else_918
-    // line 1784
+    .line 1784
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 49 // '1'
@@ -22118,7 +22118,7 @@ L_for_loop_916:
     pop
     br L_if_end_919
 L_else_918:
-    // line 1784
+    .line 1784
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 48 // '0'
@@ -22137,52 +22137,52 @@ L_if_end_919:
     br L_for_loop_916
 L_for_end_917:
     pop
-    // line 1785
+    .line 1785
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1786
+    .line 1786
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "11"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1788
+    .line 1788
     ldsfld valuetype T_set_118 _G::Sbd
     stsfld valuetype T_set_118 _G::Sbe
-    // line 1789
+    .line 1789
     ldloc $tmpSetLiteral213
     stsfld valuetype T_set_118 _G::Sbf
-    // line 1790
+    .line 1790
     ldsfld valuetype T_set_118 _G::Sbf
     stsfld valuetype T_set_118 _G::Sbg
-    // line 1791
+    .line 1791
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "set61: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1792
-    // line 1792
+    .line 1792
+    .line 1792
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Pi1
-    // line 1793
-    // line 1793
+    .line 1793
+    .line 1793
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Pi2
-    // line 1794
+    .line 1794
     ldsfld void* _G::Pi1
     ldc.i4 3
     stobj int32
-    // line 1795
+    .line 1795
     ldsfld void* _G::Pi2
     ldc.i4 5
     stobj int32
-    // line 1796
+    .line 1796
     ldloca $tmpSetLiteral214
     call instance void T_cset::clear()
     ldloca $tmpSetLiteral214
@@ -22206,40 +22206,40 @@ L_bool_to_string_true_920:
 L_bool_to_string_false_921:
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
     pop
-    // line 1797
+    .line 1797
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1805
+    .line 1805
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1806
+    .line 1806
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "******************* Pointers ******************************"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1807
+    .line 1807
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1810
+    .line 1810
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer1:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1811
-    // line 1811
+    .line 1811
+    .line 1811
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Pti
-    // line 1812
+    .line 1812
     ldsfld void* _G::Pti
     ldc.i4 4594
     stobj int32
-    // line 1813
+    .line 1813
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -22251,22 +22251,22 @@ L_bool_to_string_false_921:
     ldstr " s/b 4594"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1814
+    .line 1814
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer2:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1815
-    // line 1815
+    .line 1815
+    .line 1815
     ldc.i4 1
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ptb
-    // line 1816
+    .line 1816
     ldsfld void* _G::Ptb
     ldc.i4 1 // (true)
     stobj bool
-    // line 1817
+    .line 1817
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 5
@@ -22284,22 +22284,22 @@ L_bool_to_string_false_923:
     ldstr " s/b  true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1818
+    .line 1818
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer3:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1819
-    // line 1819
+    .line 1819
+    .line 1819
     ldc.i4 1
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ptb
-    // line 1820
+    .line 1820
     ldsfld void* _G::Ptb
     ldc.i4 0 // (false)
     stobj bool
-    // line 1821
+    .line 1821
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 5
@@ -22317,22 +22317,22 @@ L_bool_to_string_false_925:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1822
+    .line 1822
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer4:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1823
-    // line 1823
+    .line 1823
+    .line 1823
     ldc.i4 1
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ptc
-    // line 1824
+    .line 1824
     ldsfld void* _G::Ptc
     ldc.i4 112 // 'p'
     stobj uint8
-    // line 1825
+    .line 1825
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld void* _G::Ptc
@@ -22342,22 +22342,22 @@ L_bool_to_string_false_925:
     ldstr " s/b p"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1826
+    .line 1826
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer5:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1827
-    // line 1827
+    .line 1827
+    .line 1827
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Pte
-    // line 1828
+    .line 1828
     ldsfld void* _G::Pte
     ldc.i4 5 // six 
     stobj int32
-    // line 1829
+    .line 1829
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -22369,18 +22369,18 @@ L_bool_to_string_false_925:
     ldstr " s/b 5"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1830
+    .line 1830
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer6:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1831
-    // line 1831
+    .line 1831
+    .line 1831
     ldc.i4 1
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ptes
-    // line 1832
+    .line 1832
     ldsfld void* _G::Ptes
     ldc.i4 3 // four 
     dup
@@ -22388,7 +22388,7 @@ L_bool_to_string_false_925:
     ldc.i4 5
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int8
-    // line 1833
+    .line 1833
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -22400,18 +22400,18 @@ L_bool_to_string_false_925:
     ldstr " s/b 3"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1834
+    .line 1834
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer7:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1835
-    // line 1835
+    .line 1835
+    .line 1835
     ldc.i4 1
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Pts
-    // line 1836
+    .line 1836
     ldsfld void* _G::Pts
     ldc.i4 17
     dup
@@ -22419,7 +22419,7 @@ L_bool_to_string_false_925:
     ldc.i4 20
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj int8
-    // line 1837
+    .line 1837
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -22431,22 +22431,22 @@ L_bool_to_string_false_925:
     ldstr " s/b 17"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1838
+    .line 1838
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer8:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1839
-    // line 1839
+    .line 1839
+    .line 1839
     ldc.i4 8
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ptr
-    // line 1840
+    .line 1840
     ldsfld void* _G::Ptr
     ldc.r8 1234.57
     stobj float64
-    // line 1841
+    .line 1841
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -22458,22 +22458,22 @@ L_bool_to_string_false_925:
     ldstr " s/b 1234.5678"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1842
+    .line 1842
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer9:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1843
-    // line 1843
+    .line 1843
+    .line 1843
     ldc.i4 10
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ptst
-    // line 1844
+    .line 1844
     ldsfld void* _G::Ptst
     ldsfld valuetype T_string10 STRING_8    // "my word is"
     stobj valuetype T_string10
-    // line 1845
+    .line 1845
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld void* _G::Ptst
@@ -22484,18 +22484,18 @@ L_bool_to_string_false_925:
     ldstr " s/b my word is"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1846
+    .line 1846
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer10:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1847
-    // line 1847
+    .line 1847
+    .line 1847
     ldc.i4 40
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Pta
-    // line 1848
+    .line 1848
     ldc.i4 10
     stloc $tmpEndValue216
     ldc.i4 1
@@ -22506,7 +22506,7 @@ L_bool_to_string_false_925:
     ldloc $tmpIndex217
     stsfld int32 _G::i
 L_for_loop_926:
-    // line 1848
+    .line 1848
     ldsfld void* _G::Pta
     ldsfld int32 _G::i
     call instance int32& T_arri::ldadr(int32)
@@ -22526,7 +22526,7 @@ L_for_loop_926:
     br L_for_loop_926
 L_for_end_927:
     pop
-    // line 1849
+    .line 1849
     ldc.i4 1
     stloc $tmpEndValue219
     ldc.i4 10
@@ -22537,7 +22537,7 @@ L_for_end_927:
     ldloc $tmpIndex220
     stsfld int32 _G::i
 L_for_loop_928:
-    // line 1849
+    .line 1849
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -22563,32 +22563,32 @@ L_for_loop_928:
     br L_for_loop_928
 L_for_end_929:
     pop
-    // line 1850
+    .line 1850
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 20 19 18 17 16 15 14 13 12 11"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1851
+    .line 1851
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer11:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1852
-    // line 1852
+    .line 1852
+    .line 1852
     ldc.i4 5
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ptrc
-    // line 1853
+    .line 1853
     ldsfld void* _G::Ptrc
     ldc.i4 7234
     stfld int32 T_recs::a
-    // line 1854
+    .line 1854
     ldsfld void* _G::Ptrc
     ldc.i4 121 // 'y'
     stfld uint8 T_recs::b
-    // line 1855
+    .line 1855
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -22607,22 +22607,22 @@ L_for_end_929:
     ldstr " s/b 7234 y"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1856
+    .line 1856
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer12:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1857
-    // line 1857
+    .line 1857
+    .line 1857
     ldc.i4 32
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ptstc
-    // line 1858
+    .line 1858
     ldsfld void* _G::Ptstc
     ldloc $tmpSetLiteral222
     stobj valuetype T_cset
-    // line 1859
+    .line 1859
     ldc.i4 106 // 'j'
     stloc $tmpEndValue223
     ldc.i4 97 // 'a'
@@ -22633,13 +22633,13 @@ L_for_end_929:
     ldloc $tmpIndex224
     stsfld uint8 _G::Ci
 L_for_loop_930:
-    // line 1859
+    .line 1859
     ldsfld void* _G::Ptstc
     ldobj valuetype T_cset
     ldsfld uint8 _G::Ci
     call bool _SetContains(valuetype T_cset s, int32 val)
     brfalse L_else_932
-    // line 1859
+    .line 1859
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld uint8 _G::Ci
@@ -22647,7 +22647,7 @@ L_for_loop_930:
     pop
     br L_if_end_933
 L_else_932:
-    // line 1859
+    .line 1859
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 95 // '_'
@@ -22666,35 +22666,35 @@ L_if_end_933:
     br L_for_loop_930
 L_for_end_931:
     pop
-    // line 1860
+    .line 1860
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b _b_d____ij"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1861
+    .line 1861
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer13:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1862
-    // line 1862
+    .line 1862
+    .line 1862
     ldc.i4 8
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ptp
-    // line 1863
-    // line 1863
+    .line 1863
+    .line 1863
     ldsfld void* _G::Ptp
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stobj void*
-    // line 1864
+    .line 1864
     ldsfld void* _G::Ptp
     ldobj void*
     ldc.i4 3732
     stobj int32
-    // line 1865
+    .line 1865
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -22707,16 +22707,16 @@ L_for_end_931:
     ldstr " s/b 3732"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1868
+    .line 1868
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer14:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1869
+    .line 1869
     ldnull
     stsfld void* _G::Pti
-    // line 1870
+    .line 1870
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 5
@@ -22735,18 +22735,18 @@ L_bool_to_string_false_935:
     ldstr " s/b  true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1871
+    .line 1871
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer15:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1872
-    // line 1872
+    .line 1872
+    .line 1872
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Pti
-    // line 1873
+    .line 1873
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 5
@@ -22765,16 +22765,16 @@ L_bool_to_string_false_937:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1874
+    .line 1874
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer16:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1875
+    .line 1875
     ldsfld void* _G::Pti
     stsfld void* _G::Pti1
-    // line 1876
+    .line 1876
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 5
@@ -22793,16 +22793,16 @@ L_bool_to_string_false_939:
     ldstr " s/b true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1877
+    .line 1877
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer17:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1878
+    .line 1878
     ldsfld void* _G::Pti
     stsfld void* _G::Pti1
-    // line 1879
+    .line 1879
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 5
@@ -22823,18 +22823,18 @@ L_bool_to_string_false_941:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1880
+    .line 1880
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer18:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1881
-    // line 1881
+    .line 1881
+    .line 1881
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Pti1
-    // line 1882
+    .line 1882
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 5
@@ -22853,13 +22853,13 @@ L_bool_to_string_false_943:
     ldstr " s/b false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1883
+    .line 1883
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer19:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1884
+    .line 1884
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 5
@@ -22880,220 +22880,220 @@ L_bool_to_string_false_945:
     ldstr " s/b  true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1889
+    .line 1889
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer20:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1890
-    // line 1890
+    .line 1890
+    .line 1890
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ipa
-    // line 1891
-    // line 1891
+    .line 1891
+    .line 1891
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ipb
-    // line 1892
-    // line 1892
+    .line 1892
+    .line 1892
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ipc
-    // line 1893
+    .line 1893
     ldsfld void* _G::Ipa
     call void [lpcRuntime]LPC.Heap::Free(void*)
-    // line 1893
+    .line 1893
     ldnull
     stsfld void* _G::Ipa
-    // line 1894
+    .line 1894
     ldsfld void* _G::Ipb
     call void [lpcRuntime]LPC.Heap::Free(void*)
-    // line 1894
+    .line 1894
     ldnull
     stsfld void* _G::Ipb
-    // line 1895
+    .line 1895
     ldsfld void* _G::Ipc
     call void [lpcRuntime]LPC.Heap::Free(void*)
-    // line 1895
+    .line 1895
     ldnull
     stsfld void* _G::Ipc
-    // line 1896
+    .line 1896
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "done s/b done"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1900
+    .line 1900
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer21:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1901
-    // line 1901
+    .line 1901
+    .line 1901
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ipa
-    // line 1902
-    // line 1902
+    .line 1902
+    .line 1902
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ipb
-    // line 1903
-    // line 1903
+    .line 1903
+    .line 1903
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ipc
-    // line 1904
+    .line 1904
     ldsfld void* _G::Ipc
     call void [lpcRuntime]LPC.Heap::Free(void*)
-    // line 1904
+    .line 1904
     ldnull
     stsfld void* _G::Ipc
-    // line 1905
+    .line 1905
     ldsfld void* _G::Ipb
     call void [lpcRuntime]LPC.Heap::Free(void*)
-    // line 1905
+    .line 1905
     ldnull
     stsfld void* _G::Ipb
-    // line 1906
+    .line 1906
     ldsfld void* _G::Ipa
     call void [lpcRuntime]LPC.Heap::Free(void*)
-    // line 1906
+    .line 1906
     ldnull
     stsfld void* _G::Ipa
-    // line 1910
+    .line 1910
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer22:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1911
-    // line 1911
+    .line 1911
+    .line 1911
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ipa
-    // line 1912
-    // line 1912
+    .line 1912
+    .line 1912
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ipb
-    // line 1913
-    // line 1913
+    .line 1913
+    .line 1913
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ipc
-    // line 1914
-    // line 1914
+    .line 1914
+    .line 1914
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ipd
-    // line 1915
+    .line 1915
     ldsfld void* _G::Ipb
     call void [lpcRuntime]LPC.Heap::Free(void*)
-    // line 1915
+    .line 1915
     ldnull
     stsfld void* _G::Ipb
-    // line 1916
+    .line 1916
     ldsfld void* _G::Ipc
     call void [lpcRuntime]LPC.Heap::Free(void*)
-    // line 1916
+    .line 1916
     ldnull
     stsfld void* _G::Ipc
-    // line 1917
+    .line 1917
     ldsfld void* _G::Ipa
     call void [lpcRuntime]LPC.Heap::Free(void*)
-    // line 1917
+    .line 1917
     ldnull
     stsfld void* _G::Ipa
-    // line 1918
+    .line 1918
     ldsfld void* _G::Ipd
     call void [lpcRuntime]LPC.Heap::Free(void*)
-    // line 1918
+    .line 1918
     ldnull
     stsfld void* _G::Ipd
-    // line 1919
+    .line 1919
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "done s/b done"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1922
+    .line 1922
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer23:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 1923
-    // line 1923
+    .line 1923
+    .line 1923
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ipa
-    // line 1924
-    // line 1924
+    .line 1924
+    .line 1924
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ipb
-    // line 1925
-    // line 1925
+    .line 1925
+    .line 1925
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ipc
-    // line 1926
-    // line 1926
+    .line 1926
+    .line 1926
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ipd
-    // line 1927
-    // line 1927
+    .line 1927
+    .line 1927
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ipe
-    // line 1928
+    .line 1928
     ldsfld void* _G::Ipb
     call void [lpcRuntime]LPC.Heap::Free(void*)
-    // line 1928
+    .line 1928
     ldnull
     stsfld void* _G::Ipb
-    // line 1929
+    .line 1929
     ldsfld void* _G::Ipd
     call void [lpcRuntime]LPC.Heap::Free(void*)
-    // line 1929
+    .line 1929
     ldnull
     stsfld void* _G::Ipd
-    // line 1930
+    .line 1930
     ldsfld void* _G::Ipc
     call void [lpcRuntime]LPC.Heap::Free(void*)
-    // line 1930
+    .line 1930
     ldnull
     stsfld void* _G::Ipc
-    // line 1931
+    .line 1931
     ldsfld void* _G::Ipa
     call void [lpcRuntime]LPC.Heap::Free(void*)
-    // line 1931
+    .line 1931
     ldnull
     stsfld void* _G::Ipa
-    // line 1932
+    .line 1932
     ldsfld void* _G::Ipe
     call void [lpcRuntime]LPC.Heap::Free(void*)
-    // line 1932
+    .line 1932
     ldnull
     stsfld void* _G::Ipe
-    // line 1933
+    .line 1933
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "done s/b done"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1936
+    .line 1936
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer24:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1937
+    .line 1937
     ldc.i4 100
     stloc $tmpEndValue226
     ldc.i4 1
@@ -23104,7 +23104,7 @@ L_bool_to_string_false_945:
     ldloc $tmpIndex227
     stsfld int32 _G::Cnt
 L_for_loop_946:
-    // line 1939
+    .line 1939
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 3
@@ -23115,18 +23115,18 @@ L_for_loop_946:
     ldc.i4 32 // ' '
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 1939
+    .line 1939
     ldsfld int32 _G::Cnt
     ldc.i4 10
     call int32 [lpcRuntime]LPC.Helpers::Mod(int32, int32)
     ldc.i4 0
     ceq
     brfalse L_if_end_948
-    // line 1939
+    .line 1939
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
 L_if_end_948:
-    // line 1940
+    .line 1940
     ldc.i4 100
     stloc $tmpEndValue228
     ldc.i4 1
@@ -23137,7 +23137,7 @@ L_if_end_948:
     ldloc $tmpIndex229
     stsfld int32 _G::i
 L_for_loop_949:
-    // line 1940
+    .line 1940
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::i
     call instance void*& T_array_54::ldadr(int32)
@@ -23155,7 +23155,7 @@ L_for_loop_949:
     br L_for_loop_949
 L_for_end_950:
     pop
-    // line 1941
+    .line 1941
     ldc.i4 100
     stloc $tmpEndValue231
     ldc.i4 1
@@ -23166,15 +23166,15 @@ L_for_end_950:
     ldloc $tmpIndex232
     stsfld int32 _G::i
 L_for_loop_951:
-    // line 1941
-    // line 1941
+    .line 1941
+    .line 1941
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::i
     call instance void*& T_array_54::ldadr(int32)
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stobj void*
-    // line 1941
+    .line 1941
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::i
     call instance void*& T_array_54::ldadr(int32)
@@ -23193,7 +23193,7 @@ L_for_loop_951:
     br L_for_loop_951
 L_for_end_952:
     pop
-    // line 1942
+    .line 1942
     ldc.i4 100
     stloc $tmpEndValue234
     ldc.i4 1
@@ -23204,7 +23204,7 @@ L_for_end_952:
     ldloc $tmpIndex235
     stsfld int32 _G::i
 L_for_loop_953:
-    // line 1942
+    .line 1942
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::i
     call instance void*& T_array_54::ldadr(int32)
@@ -23212,7 +23212,7 @@ L_for_loop_953:
     ldnull
     ceq
     brfalse L_if_end_955
-    // line 1943
+    .line 1943
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "*** bad allocation of block"
@@ -23231,7 +23231,7 @@ L_if_end_955:
     br L_for_loop_953
 L_for_end_954:
     pop
-    // line 1944
+    .line 1944
     ldc.i4 1
     stloc $tmpEndValue237
     ldc.i4 100
@@ -23242,7 +23242,7 @@ L_for_end_954:
     ldloc $tmpIndex238
     stsfld int32 _G::i
 L_for_loop_956:
-    // line 1944
+    .line 1944
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::i
     call instance void*& T_array_54::ldadr(int32)
@@ -23253,7 +23253,7 @@ L_for_loop_956:
     ldc.i4.0
     ceq
     brfalse L_if_end_958
-    // line 1945
+    .line 1945
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "*** bad block content"
@@ -23272,7 +23272,7 @@ L_if_end_958:
     br L_for_loop_956
 L_for_end_957:
     pop
-    // line 1946
+    .line 1946
     ldc.i4 100
     stloc $tmpEndValue240
     ldc.i4 1
@@ -23283,25 +23283,25 @@ L_for_end_957:
     ldloc $tmpIndex241
     stsfld int32 _G::i
 L_for_loop_959:
-    // line 1948
+    .line 1948
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::i
     call instance void*& T_array_54::ldadr(int32)
     ldobj void*
     call void [lpcRuntime]LPC.Heap::Free(void*)
-    // line 1948
+    .line 1948
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::i
     call instance void*& T_array_54::ldadr(int32)
     ldnull
     stobj void*
-    // line 1949
+    .line 1949
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::i
     call instance void*& T_array_54::ldadr(int32)
     ldnull
     stobj void*
-    // line 1950
+    .line 1950
     ldc.i4 100
     stloc $tmpEndValue242
     ldc.i4 1
@@ -23312,7 +23312,7 @@ L_for_loop_959:
     ldloc $tmpIndex243
     stsfld int32 _G::x
 L_for_loop_961:
-    // line 1950
+    .line 1950
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::x
     call instance void*& T_array_54::ldadr(int32)
@@ -23322,7 +23322,7 @@ L_for_loop_961:
     ldc.i4.0
     ceq
     brfalse L_if_end_963
-    // line 1951
+    .line 1951
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::x
     call instance void*& T_array_54::ldadr(int32)
@@ -23333,7 +23333,7 @@ L_for_loop_961:
     ldc.i4.0
     ceq
     brfalse L_if_end_964
-    // line 1952
+    .line 1952
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "*** bad block content"
@@ -23365,7 +23365,7 @@ L_for_end_962:
     br L_for_loop_959
 L_for_end_960:
     pop
-    // line 1956
+    .line 1956
     ldc.i4 100
     stloc $tmpEndValue246
     ldc.i4 1
@@ -23376,7 +23376,7 @@ L_for_end_960:
     ldloc $tmpIndex247
     stsfld int32 _G::i
 L_for_loop_965:
-    // line 1956
+    .line 1956
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::i
     call instance void*& T_array_54::ldadr(int32)
@@ -23394,7 +23394,7 @@ L_for_loop_965:
     br L_for_loop_965
 L_for_end_966:
     pop
-    // line 1957
+    .line 1957
     ldc.i4 100
     stloc $tmpEndValue249
     ldc.i4 1
@@ -23405,15 +23405,15 @@ L_for_end_966:
     ldloc $tmpIndex250
     stsfld int32 _G::i
 L_for_loop_967:
-    // line 1957
-    // line 1957
+    .line 1957
+    .line 1957
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::i
     call instance void*& T_array_54::ldadr(int32)
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stobj void*
-    // line 1957
+    .line 1957
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::i
     call instance void*& T_array_54::ldadr(int32)
@@ -23432,7 +23432,7 @@ L_for_loop_967:
     br L_for_loop_967
 L_for_end_968:
     pop
-    // line 1958
+    .line 1958
     ldc.i4 100
     stloc $tmpEndValue252
     ldc.i4 1
@@ -23443,7 +23443,7 @@ L_for_end_968:
     ldloc $tmpIndex253
     stsfld int32 _G::i
 L_for_loop_969:
-    // line 1958
+    .line 1958
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::i
     call instance void*& T_array_54::ldadr(int32)
@@ -23451,7 +23451,7 @@ L_for_loop_969:
     ldnull
     ceq
     brfalse L_if_end_971
-    // line 1959
+    .line 1959
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "*** bad allocation of block"
@@ -23470,7 +23470,7 @@ L_if_end_971:
     br L_for_loop_969
 L_for_end_970:
     pop
-    // line 1960
+    .line 1960
     ldc.i4 1
     stloc $tmpEndValue255
     ldc.i4 100
@@ -23481,7 +23481,7 @@ L_for_end_970:
     ldloc $tmpIndex256
     stsfld int32 _G::i
 L_for_loop_972:
-    // line 1960
+    .line 1960
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::i
     call instance void*& T_array_54::ldadr(int32)
@@ -23492,7 +23492,7 @@ L_for_loop_972:
     ldc.i4.0
     ceq
     brfalse L_if_end_974
-    // line 1961
+    .line 1961
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "*** bad block content"
@@ -23511,7 +23511,7 @@ L_if_end_974:
     br L_for_loop_972
 L_for_end_973:
     pop
-    // line 1962
+    .line 1962
     ldc.i4 1
     stloc $tmpEndValue258
     ldc.i4 100
@@ -23522,25 +23522,25 @@ L_for_end_973:
     ldloc $tmpIndex259
     stsfld int32 _G::i
 L_for_loop_975:
-    // line 1964
+    .line 1964
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::i
     call instance void*& T_array_54::ldadr(int32)
     ldobj void*
     call void [lpcRuntime]LPC.Heap::Free(void*)
-    // line 1964
+    .line 1964
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::i
     call instance void*& T_array_54::ldadr(int32)
     ldnull
     stobj void*
-    // line 1965
+    .line 1965
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::i
     call instance void*& T_array_54::ldadr(int32)
     ldnull
     stobj void*
-    // line 1966
+    .line 1966
     ldc.i4 100
     stloc $tmpEndValue260
     ldc.i4 1
@@ -23551,7 +23551,7 @@ L_for_loop_975:
     ldloc $tmpIndex261
     stsfld int32 _G::x
 L_for_loop_977:
-    // line 1966
+    .line 1966
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::x
     call instance void*& T_array_54::ldadr(int32)
@@ -23561,7 +23561,7 @@ L_for_loop_977:
     ldc.i4.0
     ceq
     brfalse L_if_end_979
-    // line 1967
+    .line 1967
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::x
     call instance void*& T_array_54::ldadr(int32)
@@ -23572,7 +23572,7 @@ L_for_loop_977:
     ldc.i4.0
     ceq
     brfalse L_if_end_980
-    // line 1968
+    .line 1968
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "*** bad block content"
@@ -23616,88 +23616,88 @@ L_for_end_976:
     br L_for_loop_946
 L_for_end_947:
     pop
-    // line 1973
+    .line 1973
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1974
+    .line 1974
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1975
+    .line 1975
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1976
+    .line 1976
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "  1   2   3   4   5   6   7   8   9  10"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1977
+    .line 1977
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 11  12  13  14  15  16  17  18  19  20"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1978
+    .line 1978
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 21  22  23  24  25  26  27  28  29  30"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1979
+    .line 1979
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 31  32  33  34  35  36  37  38  39  40"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1980
+    .line 1980
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 41  42  43  44  45  46  47  48  49  50"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1981
+    .line 1981
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 51  52  53  54  55  56  57  58  59  60"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1982
+    .line 1982
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 61  62  63  64  65  66  67  68  69  70"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1983
+    .line 1983
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 71  72  73  74  75  76  77  78  79  80"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1984
+    .line 1984
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 81  82  83  84  85  86  87  88  89  90"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1985
+    .line 1985
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 91  92  93  94  95  96  97  98  99  100"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1987
+    .line 1987
     ldc.i4 1
     stsfld int32 _G::Rndseq
-    // line 1990
+    .line 1990
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Pointer25:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 1991
+    .line 1991
     ldc.i4 100
     stloc $tmpEndValue265
     ldc.i4 1
@@ -23708,7 +23708,7 @@ L_for_end_947:
     ldloc $tmpIndex266
     stsfld int32 _G::i
 L_for_loop_981:
-    // line 1991
+    .line 1991
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::i
     call instance void*& T_array_54::ldadr(int32)
@@ -23726,7 +23726,7 @@ L_for_loop_981:
     br L_for_loop_981
 L_for_end_982:
     pop
-    // line 1992
+    .line 1992
     ldc.i4 100
     stloc $tmpEndValue268
     ldc.i4 1
@@ -23737,7 +23737,7 @@ L_for_end_982:
     ldloc $tmpIndex269
     stsfld int32 _G::Cnt2
 L_for_loop_983:
-    // line 1994
+    .line 1994
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 3
@@ -23748,18 +23748,18 @@ L_for_loop_983:
     ldc.i4 32 // ' '
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 1994
+    .line 1994
     ldsfld int32 _G::Cnt2
     ldc.i4 10
     call int32 [lpcRuntime]LPC.Helpers::Mod(int32, int32)
     ldc.i4 0
     ceq
     brfalse L_if_end_985
-    // line 1994
+    .line 1994
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
 L_if_end_985:
-    // line 1995
+    .line 1995
     ldc.i4 100
     stloc $tmpEndValue270
     ldc.i4 1
@@ -23770,27 +23770,27 @@ L_if_end_985:
     ldloc $tmpIndex271
     stsfld int32 _G::Cnt
 L_for_loop_986:
-    // line 1998
+    .line 1998
     ldc.i4 1
     ldc.i4 100
     call int32 Random(int32 Low, int32 Hi)
     stsfld int32 _G::Rn
-    // line 1999
-    // line 1999
+    .line 1999
+    .line 1999
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::Rn
     call instance void*& T_array_54::ldadr(int32)
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stobj void*
-    // line 2000
+    .line 2000
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::Rn
     call instance void*& T_array_54::ldadr(int32)
     ldobj void*
     ldsfld int32 _G::Rn
     stobj int32
-    // line 2001
+    .line 2001
     ldc.i4 100
     stloc $tmpEndValue272
     ldc.i4 1
@@ -23801,7 +23801,7 @@ L_for_loop_986:
     ldloc $tmpIndex273
     stsfld int32 _G::i
 L_for_loop_988:
-    // line 2001
+    .line 2001
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::i
     call instance void*& T_array_54::ldadr(int32)
@@ -23811,7 +23811,7 @@ L_for_loop_988:
     ldc.i4.0
     ceq
     brfalse L_if_end_990
-    // line 2002
+    .line 2002
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::i
     call instance void*& T_array_54::ldadr(int32)
@@ -23822,7 +23822,7 @@ L_for_loop_988:
     ldc.i4.0
     ceq
     brfalse L_if_end_991
-    // line 2003
+    .line 2003
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "*** bad block content"
@@ -23842,12 +23842,12 @@ L_if_end_990:
     br L_for_loop_988
 L_for_end_989:
     pop
-    // line 2006
+    .line 2006
     ldc.i4 1
     ldc.i4 100
     call int32 Random(int32 Low, int32 Hi)
     stsfld int32 _G::Rn
-    // line 2007
+    .line 2007
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::Rn
     call instance void*& T_array_54::ldadr(int32)
@@ -23857,26 +23857,26 @@ L_for_end_989:
     ldc.i4.0
     ceq
     brfalse L_if_end_992
-    // line 2007
+    .line 2007
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::Rn
     call instance void*& T_array_54::ldadr(int32)
     ldobj void*
     call void [lpcRuntime]LPC.Heap::Free(void*)
-    // line 2007
+    .line 2007
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::Rn
     call instance void*& T_array_54::ldadr(int32)
     ldnull
     stobj void*
 L_if_end_992:
-    // line 2008
+    .line 2008
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::Rn
     call instance void*& T_array_54::ldadr(int32)
     ldnull
     stobj void*
-    // line 2009
+    .line 2009
     ldc.i4 100
     stloc $tmpEndValue275
     ldc.i4 1
@@ -23887,7 +23887,7 @@ L_if_end_992:
     ldloc $tmpIndex276
     stsfld int32 _G::i
 L_for_loop_993:
-    // line 2009
+    .line 2009
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::i
     call instance void*& T_array_54::ldadr(int32)
@@ -23897,7 +23897,7 @@ L_for_loop_993:
     ldc.i4.0
     ceq
     brfalse L_if_end_995
-    // line 2010
+    .line 2010
     ldsflda valuetype T_array_54 _G::Iap
     ldsfld int32 _G::i
     call instance void*& T_array_54::ldadr(int32)
@@ -23908,7 +23908,7 @@ L_for_loop_993:
     ldc.i4.0
     ceq
     brfalse L_if_end_996
-    // line 2011
+    .line 2011
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "*** bad block content"
@@ -23953,97 +23953,97 @@ L_for_end_987:
     br L_for_loop_983
 L_for_end_984:
     pop
-    // line 2016
+    .line 2016
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2017
+    .line 2017
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2018
+    .line 2018
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2019
+    .line 2019
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "  1   2   3   4   5   6   7   8   9  10"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2020
+    .line 2020
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 11  12  13  14  15  16  17  18  19  20"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2021
+    .line 2021
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 21  22  23  24  25  26  27  28  29  30"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2022
+    .line 2022
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 31  32  33  34  35  36  37  38  39  40"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2023
+    .line 2023
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 41  42  43  44  45  46  47  48  49  50"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2024
+    .line 2024
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 51  52  53  54  55  56  57  58  59  60"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2025
+    .line 2025
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 61  62  63  64  65  66  67  68  69  70"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2026
+    .line 2026
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 71  72  73  74  75  76  77  78  79  80"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2027
+    .line 2027
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 81  82  83  84  85  86  87  88  89  90"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2028
+    .line 2028
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 91  92  93  94  95  96  97  98  99  100"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2036
+    .line 2036
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2037
+    .line 2037
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "******************* arrays ******************************"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2038
+    .line 2038
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2041
+    .line 2041
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array1:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2042
+    .line 2042
     ldc.i4 10
     stloc $tmpEndValue280
     ldc.i4 1
@@ -24054,7 +24054,7 @@ L_for_end_984:
     ldloc $tmpIndex281
     stsfld int32 _G::i
 L_for_loop_997:
-    // line 2042
+    .line 2042
     ldsflda valuetype T_arri _G::Avi
     ldsfld int32 _G::i
     call instance int32& T_arri::ldadr(int32)
@@ -24074,7 +24074,7 @@ L_for_loop_997:
     br L_for_loop_997
 L_for_end_998:
     pop
-    // line 2043
+    .line 2043
     ldc.i4 1
     stloc $tmpEndValue283
     ldc.i4 10
@@ -24085,7 +24085,7 @@ L_for_end_998:
     ldloc $tmpIndex284
     stsfld int32 _G::i
 L_for_loop_999:
-    // line 2043
+    .line 2043
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -24111,19 +24111,19 @@ L_for_loop_999:
     br L_for_loop_999
 L_for_end_1000:
     pop
-    // line 2044
+    .line 2044
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 20 19 18 17 16 15 14 13 12 11"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2045
+    .line 2045
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array2:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2046
+    .line 2046
     ldc.i4 10
     stloc $tmpEndValue286
     ldc.i4 1
@@ -24134,7 +24134,7 @@ L_for_end_1000:
     ldloc $tmpIndex287
     stsfld int32 _G::i
 L_for_loop_1001:
-    // line 2046
+    .line 2046
     ldsflda valuetype T_arri _G::Pavi
     ldsfld int32 _G::i
     call instance int32& T_arri::ldadr(int32)
@@ -24154,7 +24154,7 @@ L_for_loop_1001:
     br L_for_loop_1001
 L_for_end_1002:
     pop
-    // line 2047
+    .line 2047
     ldc.i4 1
     stloc $tmpEndValue289
     ldc.i4 10
@@ -24165,7 +24165,7 @@ L_for_end_1002:
     ldloc $tmpIndex290
     stsfld int32 _G::i
 L_for_loop_1003:
-    // line 2047
+    .line 2047
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -24191,19 +24191,19 @@ L_for_loop_1003:
     br L_for_loop_1003
 L_for_end_1004:
     pop
-    // line 2048
+    .line 2048
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 20 19 18 17 16 15 14 13 12 11"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2049
+    .line 2049
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array3:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2050
+    .line 2050
     ldc.i4 10
     stloc $tmpEndValue292
     ldc.i4 1
@@ -24214,7 +24214,7 @@ L_for_end_1004:
     ldloc $tmpIndex293
     stsfld int32 _G::i
 L_for_loop_1005:
-    // line 2050
+    .line 2050
     ldsflda valuetype T_array_21 _G::Avis
     ldsfld int32 _G::i
     call instance int8& T_array_21::ldadr(int32)
@@ -24238,7 +24238,7 @@ L_for_loop_1005:
     br L_for_loop_1005
 L_for_end_1006:
     pop
-    // line 2051
+    .line 2051
     ldc.i4 1
     stloc $tmpEndValue295
     ldc.i4 10
@@ -24249,7 +24249,7 @@ L_for_end_1006:
     ldloc $tmpIndex296
     stsfld int32 _G::i
 L_for_loop_1007:
-    // line 2051
+    .line 2051
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -24275,19 +24275,19 @@ L_for_loop_1007:
     br L_for_loop_1007
 L_for_end_1008:
     pop
-    // line 2052
+    .line 2052
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 20 19 18 17 16 15 14 13 12 11"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2053
+    .line 2053
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array4:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2054
+    .line 2054
     ldc.i4 10
     stloc $tmpEndValue298
     ldc.i4 1
@@ -24298,7 +24298,7 @@ L_for_end_1008:
     ldloc $tmpIndex299
     stsfld int32 _G::i
 L_for_loop_1009:
-    // line 2054
+    .line 2054
     ldsflda valuetype T_array_21 _G::Pavis
     ldsfld int32 _G::i
     call instance int8& T_array_21::ldadr(int32)
@@ -24322,7 +24322,7 @@ L_for_loop_1009:
     br L_for_loop_1009
 L_for_end_1010:
     pop
-    // line 2055
+    .line 2055
     ldc.i4 1
     stloc $tmpEndValue301
     ldc.i4 10
@@ -24333,7 +24333,7 @@ L_for_end_1010:
     ldloc $tmpIndex302
     stsfld int32 _G::i
 L_for_loop_1011:
-    // line 2055
+    .line 2055
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -24359,19 +24359,19 @@ L_for_loop_1011:
     br L_for_loop_1011
 L_for_end_1012:
     pop
-    // line 2056
+    .line 2056
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 20 19 18 17 16 15 14 13 12 11"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2057
+    .line 2057
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array5:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2058
+    .line 2058
     ldc.i4 10
     stloc $tmpEndValue304
     ldc.i4 1
@@ -24382,7 +24382,7 @@ L_for_end_1012:
     ldloc $tmpIndex305
     stsfld int32 _G::i
 L_for_loop_1013:
-    // line 2058
+    .line 2058
     ldsflda valuetype T_array_16 _G::Avb
     ldsfld int32 _G::i
     call instance bool& T_array_16::ldadr(int32)
@@ -24402,7 +24402,7 @@ L_for_loop_1013:
     br L_for_loop_1013
 L_for_end_1014:
     pop
-    // line 2059
+    .line 2059
     ldc.i4 1
     stloc $tmpEndValue307
     ldc.i4 10
@@ -24413,7 +24413,7 @@ L_for_end_1014:
     ldloc $tmpIndex308
     stsfld int32 _G::i
 L_for_loop_1015:
-    // line 2059
+    .line 2059
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 5
@@ -24445,10 +24445,10 @@ L_bool_to_string_false_1018:
     br L_for_loop_1015
 L_for_end_1016:
     pop
-    // line 2060
+    .line 2060
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2061
+    .line 2061
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "    s/b:   false  true false  true false  true false  true false"
@@ -24457,13 +24457,13 @@ L_for_end_1016:
     ldstr "  true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2063
+    .line 2063
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array6:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2064
+    .line 2064
     ldc.i4 10
     stloc $tmpEndValue310
     ldc.i4 1
@@ -24474,7 +24474,7 @@ L_for_end_1016:
     ldloc $tmpIndex311
     stsfld int32 _G::i
 L_for_loop_1019:
-    // line 2064
+    .line 2064
     ldsflda valuetype T_array_16 _G::Pavb
     ldsfld int32 _G::i
     call instance bool& T_array_16::ldadr(int32)
@@ -24494,7 +24494,7 @@ L_for_loop_1019:
     br L_for_loop_1019
 L_for_end_1020:
     pop
-    // line 2065
+    .line 2065
     ldc.i4 1
     stloc $tmpEndValue313
     ldc.i4 10
@@ -24505,7 +24505,7 @@ L_for_end_1020:
     ldloc $tmpIndex314
     stsfld int32 _G::i
 L_for_loop_1021:
-    // line 2065
+    .line 2065
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 5
@@ -24537,10 +24537,10 @@ L_bool_to_string_false_1024:
     br L_for_loop_1021
 L_for_end_1022:
     pop
-    // line 2066
+    .line 2066
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2067
+    .line 2067
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "    s/b:   false  true false  true false  true false  true false"
@@ -24549,13 +24549,13 @@ L_for_end_1022:
     ldstr "  true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2069
+    .line 2069
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array7:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2070
+    .line 2070
     ldc.i4 10
     stloc $tmpEndValue316
     ldc.i4 1
@@ -24566,7 +24566,7 @@ L_for_end_1022:
     ldloc $tmpIndex317
     stsfld int32 _G::i
 L_for_loop_1025:
-    // line 2070
+    .line 2070
     ldsflda valuetype T_array_26 _G::Avr
     ldsfld int32 _G::i
     call instance float64& T_array_26::ldadr(int32)
@@ -24589,7 +24589,7 @@ L_for_loop_1025:
     br L_for_loop_1025
 L_for_end_1026:
     pop
-    // line 2071
+    .line 2071
     ldc.i4 1
     stloc $tmpEndValue319
     ldc.i4 10
@@ -24600,7 +24600,7 @@ L_for_end_1026:
     ldloc $tmpIndex320
     stsfld int32 _G::i
 L_for_loop_1027:
-    // line 2071
+    .line 2071
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -24626,10 +24626,10 @@ L_for_loop_1027:
     br L_for_loop_1027
 L_for_end_1028:
     pop
-    // line 2072
+    .line 2072
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2073
+    .line 2073
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "    s/b:   20.12 19.12 18.12 17.12 16.12 15.12 14.12 "
@@ -24638,13 +24638,13 @@ L_for_end_1028:
     ldstr "13.12 12.12 11.12"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2075
+    .line 2075
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array8:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2076
+    .line 2076
     ldc.i4 10
     stloc $tmpEndValue322
     ldc.i4 1
@@ -24655,7 +24655,7 @@ L_for_end_1028:
     ldloc $tmpIndex323
     stsfld int32 _G::i
 L_for_loop_1029:
-    // line 2076
+    .line 2076
     ldsflda valuetype T_array_26 _G::Pavr
     ldsfld int32 _G::i
     call instance float64& T_array_26::ldadr(int32)
@@ -24678,7 +24678,7 @@ L_for_loop_1029:
     br L_for_loop_1029
 L_for_end_1030:
     pop
-    // line 2077
+    .line 2077
     ldc.i4 1
     stloc $tmpEndValue325
     ldc.i4 10
@@ -24689,7 +24689,7 @@ L_for_end_1030:
     ldloc $tmpIndex326
     stsfld int32 _G::i
 L_for_loop_1031:
-    // line 2077
+    .line 2077
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -24715,10 +24715,10 @@ L_for_loop_1031:
     br L_for_loop_1031
 L_for_end_1032:
     pop
-    // line 2078
+    .line 2078
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2079
+    .line 2079
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "    s/b:   20.12 19.12 18.12 17.12 16.12 15.12 14.12 "
@@ -24727,13 +24727,13 @@ L_for_end_1032:
     ldstr "13.12 12.12 11.12"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2081
+    .line 2081
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array9:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2082
+    .line 2082
     ldc.i4 10
     stloc $tmpEndValue328
     ldc.i4 1
@@ -24744,7 +24744,7 @@ L_for_end_1032:
     ldloc $tmpIndex329
     stsfld int32 _G::i
 L_for_loop_1033:
-    // line 2082
+    .line 2082
     ldsflda valuetype T_string10 _G::Avc
     ldsfld int32 _G::i
     call instance uint8& T_string10::ldadr(int32)
@@ -24764,7 +24764,7 @@ L_for_loop_1033:
     br L_for_loop_1033
 L_for_end_1034:
     pop
-    // line 2083
+    .line 2083
     ldc.i4 1
     stloc $tmpEndValue331
     ldc.i4 10
@@ -24775,7 +24775,7 @@ L_for_end_1034:
     ldloc $tmpIndex332
     stsfld int32 _G::i
 L_for_loop_1035:
-    // line 2083
+    .line 2083
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -24801,19 +24801,19 @@ L_for_loop_1035:
     br L_for_loop_1035
 L_for_end_1036:
     pop
-    // line 2084
+    .line 2084
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b k j i h g f e d c b"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2085
+    .line 2085
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array10:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2086
+    .line 2086
     ldc.i4 10
     stloc $tmpEndValue334
     ldc.i4 1
@@ -24824,7 +24824,7 @@ L_for_end_1036:
     ldloc $tmpIndex335
     stsfld int32 _G::i
 L_for_loop_1037:
-    // line 2086
+    .line 2086
     ldsflda valuetype T_string10 _G::Pavc
     ldsfld int32 _G::i
     call instance uint8& T_string10::ldadr(int32)
@@ -24844,7 +24844,7 @@ L_for_loop_1037:
     br L_for_loop_1037
 L_for_end_1038:
     pop
-    // line 2087
+    .line 2087
     ldc.i4 1
     stloc $tmpEndValue337
     ldc.i4 10
@@ -24855,7 +24855,7 @@ L_for_end_1038:
     ldloc $tmpIndex338
     stsfld int32 _G::i
 L_for_loop_1039:
-    // line 2087
+    .line 2087
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -24881,19 +24881,19 @@ L_for_loop_1039:
     br L_for_loop_1039
 L_for_end_1040:
     pop
-    // line 2088
+    .line 2088
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b k j i h g f e d c b"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2089
+    .line 2089
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array11:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2090
+    .line 2090
     ldc.i4 10
     stloc $tmpEndValue340
     ldc.i4 1
@@ -24904,7 +24904,7 @@ L_for_end_1040:
     ldloc $tmpIndex341
     stsfld int32 _G::i
 L_for_loop_1041:
-    // line 2090
+    .line 2090
     ldsflda valuetype T_string10 _G::Avcs
     ldsfld int32 _G::i
     call instance uint8& T_string10::ldadr(int32)
@@ -24928,7 +24928,7 @@ L_for_loop_1041:
     br L_for_loop_1041
 L_for_end_1042:
     pop
-    // line 2091
+    .line 2091
     ldc.i4 1
     stloc $tmpEndValue343
     ldc.i4 10
@@ -24939,7 +24939,7 @@ L_for_end_1042:
     ldloc $tmpIndex344
     stsfld int32 _G::i
 L_for_loop_1043:
-    // line 2091
+    .line 2091
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -24965,19 +24965,19 @@ L_for_loop_1043:
     br L_for_loop_1043
 L_for_end_1044:
     pop
-    // line 2092
+    .line 2092
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b p o n m l k j i h g"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2093
+    .line 2093
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array12:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2094
+    .line 2094
     ldc.i4 10
     stloc $tmpEndValue346
     ldc.i4 1
@@ -24988,7 +24988,7 @@ L_for_end_1044:
     ldloc $tmpIndex347
     stsfld int32 _G::i
 L_for_loop_1045:
-    // line 2094
+    .line 2094
     ldsflda valuetype T_string10 _G::Pavcs
     ldsfld int32 _G::i
     call instance uint8& T_string10::ldadr(int32)
@@ -25012,7 +25012,7 @@ L_for_loop_1045:
     br L_for_loop_1045
 L_for_end_1046:
     pop
-    // line 2095
+    .line 2095
     ldc.i4 1
     stloc $tmpEndValue349
     ldc.i4 10
@@ -25023,7 +25023,7 @@ L_for_end_1046:
     ldloc $tmpIndex350
     stsfld int32 _G::i
 L_for_loop_1047:
-    // line 2095
+    .line 2095
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -25049,19 +25049,19 @@ L_for_loop_1047:
     br L_for_loop_1047
 L_for_end_1048:
     pop
-    // line 2096
+    .line 2096
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b p o n m l k j i h g"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2097
+    .line 2097
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array13:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2098
+    .line 2098
     ldc.i4 9 // ten 
     stloc $tmpEndValue352
     ldc.i4 0 // one 
@@ -25076,7 +25076,7 @@ L_for_end_1048:
     ldloc $tmpIndex353
     stsfld int32 _G::Ei
 L_for_loop_1049:
-    // line 2098
+    .line 2098
     ldsflda valuetype T_arri _G::Ave
     ldsfld int32 _G::Ei
     ldc.i4 1
@@ -25100,7 +25100,7 @@ L_for_loop_1049:
     br L_for_loop_1049
 L_for_end_1050:
     pop
-    // line 2099
+    .line 2099
     ldc.i4 0 // one 
     stloc $tmpEndValue355
     ldc.i4 9 // ten 
@@ -25115,7 +25115,7 @@ L_for_end_1050:
     ldloc $tmpIndex356
     stsfld int32 _G::Ei
 L_for_loop_1051:
-    // line 2099
+    .line 2099
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -25147,19 +25147,19 @@ L_for_loop_1051:
     br L_for_loop_1051
 L_for_end_1052:
     pop
-    // line 2100
+    .line 2100
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 9 8 7 6 5 4 3 2 1 0"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2101
+    .line 2101
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array14:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2102
+    .line 2102
     ldc.i4 9 // ten 
     stloc $tmpEndValue358
     ldc.i4 0 // one 
@@ -25174,7 +25174,7 @@ L_for_end_1052:
     ldloc $tmpIndex359
     stsfld int32 _G::Ei
 L_for_loop_1053:
-    // line 2102
+    .line 2102
     ldsflda valuetype T_arri _G::Pave
     ldsfld int32 _G::Ei
     ldc.i4 1
@@ -25198,7 +25198,7 @@ L_for_loop_1053:
     br L_for_loop_1053
 L_for_end_1054:
     pop
-    // line 2103
+    .line 2103
     ldc.i4 0 // one 
     stloc $tmpEndValue361
     ldc.i4 9 // ten 
@@ -25213,7 +25213,7 @@ L_for_end_1054:
     ldloc $tmpIndex362
     stsfld int32 _G::Ei
 L_for_loop_1055:
-    // line 2103
+    .line 2103
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -25245,19 +25245,19 @@ L_for_loop_1055:
     br L_for_loop_1055
 L_for_end_1056:
     pop
-    // line 2104
+    .line 2104
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 9 8 7 6 5 4 3 2 1 0"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2105
+    .line 2105
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array15:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2106
+    .line 2106
     ldc.i4 5 // six 
     stloc $tmpEndValue364
     ldc.i4 2 // three 
@@ -25272,7 +25272,7 @@ L_for_end_1056:
     ldloc $tmpIndex365
     stsfld int32 _G::Ei
 L_for_loop_1057:
-    // line 2106
+    .line 2106
     ldsflda valuetype T_array_21 _G::Aves
     ldsfld int32 _G::Ei
     ldc.i4 1
@@ -25300,7 +25300,7 @@ L_for_loop_1057:
     br L_for_loop_1057
 L_for_end_1058:
     pop
-    // line 2107
+    .line 2107
     ldc.i4 2 // three 
     stloc $tmpEndValue367
     ldc.i4 5 // six 
@@ -25315,7 +25315,7 @@ L_for_end_1058:
     ldloc $tmpIndex368
     stsfld int32 _G::Ei
 L_for_loop_1059:
-    // line 2107
+    .line 2107
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -25347,19 +25347,19 @@ L_for_loop_1059:
     br L_for_loop_1059
 L_for_end_1060:
     pop
-    // line 2108
+    .line 2108
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 5 4 3 2"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2109
+    .line 2109
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array16:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2110
+    .line 2110
     ldc.i4 5 // six 
     stloc $tmpEndValue370
     ldc.i4 2 // three 
@@ -25374,7 +25374,7 @@ L_for_end_1060:
     ldloc $tmpIndex371
     stsfld int32 _G::Ei
 L_for_loop_1061:
-    // line 2110
+    .line 2110
     ldsflda valuetype T_array_21 _G::Paves
     ldsfld int32 _G::Ei
     ldc.i4 1
@@ -25402,7 +25402,7 @@ L_for_loop_1061:
     br L_for_loop_1061
 L_for_end_1062:
     pop
-    // line 2111
+    .line 2111
     ldc.i4 2 // three 
     stloc $tmpEndValue373
     ldc.i4 5 // six 
@@ -25417,7 +25417,7 @@ L_for_end_1062:
     ldloc $tmpIndex374
     stsfld int32 _G::Ei
 L_for_loop_1063:
-    // line 2111
+    .line 2111
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -25449,19 +25449,19 @@ L_for_loop_1063:
     br L_for_loop_1063
 L_for_end_1064:
     pop
-    // line 2112
+    .line 2112
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 5 4 3 2"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2113
+    .line 2113
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array17:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2114
+    .line 2114
     ldc.i4 10
     stloc $tmpEndValue376
     ldc.i4 1
@@ -25472,7 +25472,7 @@ L_for_end_1064:
     ldloc $tmpIndex377
     stsfld int32 _G::i
 L_for_loop_1065:
-    // line 2114
+    .line 2114
     ldloca $tmpSetLiteral378
     call instance void T_cset::clear()
     ldloca $tmpSetLiteral378
@@ -25497,7 +25497,7 @@ L_for_loop_1065:
     br L_for_loop_1065
 L_for_end_1066:
     pop
-    // line 2115
+    .line 2115
     ldc.i4 1
     stloc $tmpEndValue380
     ldc.i4 10
@@ -25508,7 +25508,7 @@ L_for_end_1066:
     ldloc $tmpIndex381
     stsfld int32 _G::i
 L_for_loop_1067:
-    // line 2116
+    .line 2116
     ldc.i4 122 // 'z'
     stloc $tmpEndValue382
     ldc.i4 97 // 'a'
@@ -25519,7 +25519,7 @@ L_for_loop_1067:
     ldloc $tmpIndex383
     stsfld uint8 _G::Ci
 L_for_loop_1069:
-    // line 2116
+    .line 2116
     ldsflda valuetype T_array_28 _G::Avs
     ldsfld int32 _G::i
     call instance valuetype T_cset& T_array_28::ldadr(int32)
@@ -25527,7 +25527,7 @@ L_for_loop_1069:
     ldsfld uint8 _G::Ci
     call bool _SetContains(valuetype T_cset s, int32 val)
     brfalse L_if_end_1071
-    // line 2116
+    .line 2116
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld uint8 _G::Ci
@@ -25561,19 +25561,19 @@ L_for_end_1070:
     br L_for_loop_1067
 L_for_end_1068:
     pop
-    // line 2117
+    .line 2117
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b k j i h g f e d c b"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2118
+    .line 2118
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array18:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2119
+    .line 2119
     ldc.i4 10
     stloc $tmpEndValue386
     ldc.i4 1
@@ -25584,7 +25584,7 @@ L_for_end_1068:
     ldloc $tmpIndex387
     stsfld int32 _G::i
 L_for_loop_1072:
-    // line 2119
+    .line 2119
     ldloca $tmpSetLiteral388
     call instance void T_cset::clear()
     ldloca $tmpSetLiteral388
@@ -25609,7 +25609,7 @@ L_for_loop_1072:
     br L_for_loop_1072
 L_for_end_1073:
     pop
-    // line 2120
+    .line 2120
     ldc.i4 1
     stloc $tmpEndValue390
     ldc.i4 10
@@ -25620,7 +25620,7 @@ L_for_end_1073:
     ldloc $tmpIndex391
     stsfld int32 _G::i
 L_for_loop_1074:
-    // line 2121
+    .line 2121
     ldc.i4 122 // 'z'
     stloc $tmpEndValue392
     ldc.i4 97 // 'a'
@@ -25631,7 +25631,7 @@ L_for_loop_1074:
     ldloc $tmpIndex393
     stsfld uint8 _G::Ci
 L_for_loop_1076:
-    // line 2121
+    .line 2121
     ldsflda valuetype T_array_28 _G::Pavs
     ldsfld int32 _G::i
     call instance valuetype T_cset& T_array_28::ldadr(int32)
@@ -25639,7 +25639,7 @@ L_for_loop_1076:
     ldsfld uint8 _G::Ci
     call bool _SetContains(valuetype T_cset s, int32 val)
     brfalse L_if_end_1078
-    // line 2121
+    .line 2121
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld uint8 _G::Ci
@@ -25673,19 +25673,19 @@ L_for_end_1077:
     br L_for_loop_1074
 L_for_end_1075:
     pop
-    // line 2122
+    .line 2122
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b k j i h g f e d c b"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2123
+    .line 2123
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array19:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2124
+    .line 2124
     ldc.i4 10
     stloc $tmpEndValue396
     ldc.i4 1
@@ -25696,7 +25696,7 @@ L_for_end_1075:
     ldloc $tmpIndex397
     stsfld int32 _G::i
 L_for_loop_1079:
-    // line 2125
+    .line 2125
     ldsflda valuetype T_arrr _G::Avrc
     ldsfld int32 _G::i
     call instance valuetype T_recs& T_arrr::ldadr(int32)
@@ -25704,7 +25704,7 @@ L_for_loop_1079:
     ldc.i4 10
     add
     stfld int32 T_recs::a
-    // line 2125
+    .line 2125
     ldsflda valuetype T_arrr _G::Avrc
     ldsfld int32 _G::i
     call instance valuetype T_recs& T_arrr::ldadr(int32)
@@ -25724,7 +25724,7 @@ L_for_loop_1079:
     br L_for_loop_1079
 L_for_end_1080:
     pop
-    // line 2126
+    .line 2126
     ldc.i4 1
     stloc $tmpEndValue399
     ldc.i4 10
@@ -25735,7 +25735,7 @@ L_for_end_1080:
     ldloc $tmpIndex400
     stsfld int32 _G::i
 L_for_loop_1081:
-    // line 2126
+    .line 2126
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -25770,22 +25770,22 @@ L_for_loop_1081:
     br L_for_loop_1081
 L_for_end_1082:
     pop
-    // line 2127
+    .line 2127
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2128
+    .line 2128
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "     s/b:  20 k 19 j 18 i 17 h 16 g 15 f 14 e 13 d 12 c 11 b"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2129
+    .line 2129
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array20:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2130
+    .line 2130
     ldc.i4 10
     stloc $tmpEndValue402
     ldc.i4 1
@@ -25796,7 +25796,7 @@ L_for_end_1082:
     ldloc $tmpIndex403
     stsfld int32 _G::i
 L_for_loop_1083:
-    // line 2131
+    .line 2131
     ldsflda valuetype T_arrr _G::Pavrc
     ldsfld int32 _G::i
     call instance valuetype T_recs& T_arrr::ldadr(int32)
@@ -25804,7 +25804,7 @@ L_for_loop_1083:
     ldc.i4 10
     add
     stfld int32 T_recs::a
-    // line 2131
+    .line 2131
     ldsflda valuetype T_arrr _G::Pavrc
     ldsfld int32 _G::i
     call instance valuetype T_recs& T_arrr::ldadr(int32)
@@ -25824,7 +25824,7 @@ L_for_loop_1083:
     br L_for_loop_1083
 L_for_end_1084:
     pop
-    // line 2132
+    .line 2132
     ldc.i4 1
     stloc $tmpEndValue405
     ldc.i4 10
@@ -25835,7 +25835,7 @@ L_for_end_1084:
     ldloc $tmpIndex406
     stsfld int32 _G::i
 L_for_loop_1085:
-    // line 2132
+    .line 2132
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -25870,22 +25870,22 @@ L_for_loop_1085:
     br L_for_loop_1085
 L_for_end_1086:
     pop
-    // line 2133
+    .line 2133
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2134
+    .line 2134
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "     s/b:  20 k 19 j 18 i 17 h 16 g 15 f 14 e 13 d 12 c 11 b"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2135
+    .line 2135
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array21:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2136
+    .line 2136
     ldc.i4 10
     stloc $tmpEndValue408
     ldc.i4 1
@@ -25896,12 +25896,12 @@ L_for_end_1086:
     ldloc $tmpIndex409
     stsfld int32 _G::i
 L_for_loop_1087:
-    // line 2136
+    .line 2136
     ldsflda valuetype T_array_22 _G::Avf
     ldsfld int32 _G::i
     call instance valuetype [lpcRuntime]LPC.File& T_array_22::ldadr(int32)
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 2136
+    .line 2136
     ldsflda valuetype T_array_22 _G::Avf
     ldsfld int32 _G::i
     call instance valuetype [lpcRuntime]LPC.File& T_array_22::ldadr(int32)
@@ -25923,7 +25923,7 @@ L_for_loop_1087:
     br L_for_loop_1087
 L_for_end_1088:
     pop
-    // line 2137
+    .line 2137
     ldc.i4 1
     stloc $tmpEndValue411
     ldc.i4 10
@@ -25934,12 +25934,12 @@ L_for_end_1088:
     ldloc $tmpIndex412
     stsfld int32 _G::i
 L_for_loop_1089:
-    // line 2138
+    .line 2138
     ldsflda valuetype T_array_22 _G::Avf
     ldsfld int32 _G::i
     call instance valuetype [lpcRuntime]LPC.File& T_array_22::ldadr(int32)
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 2138
+    .line 2138
     ldsflda valuetype T_array_22 _G::Avf
     ldsfld int32 _G::i
     call instance valuetype [lpcRuntime]LPC.File& T_array_22::ldadr(int32)
@@ -25949,7 +25949,7 @@ L_for_loop_1089:
     ldc.i4 2147483647
     call instance void [lpcRuntime]LPC.File::Read(int32*, int32, int32)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 2138
+    .line 2138
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -25972,19 +25972,19 @@ L_for_loop_1089:
     br L_for_loop_1089
 L_for_end_1090:
     pop
-    // line 2139
+    .line 2139
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 20 19 18 17 16 15 14 13 12 11"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2140
+    .line 2140
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array22:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2141
+    .line 2141
     ldc.i4 10
     stloc $tmpEndValue414
     ldc.i4 1
@@ -25995,12 +25995,12 @@ L_for_end_1090:
     ldloc $tmpIndex415
     stsfld int32 _G::i
 L_for_loop_1091:
-    // line 2141
+    .line 2141
     ldsflda valuetype T_array_22 _G::Pavf
     ldsfld int32 _G::i
     call instance valuetype [lpcRuntime]LPC.File& T_array_22::ldadr(int32)
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 2141
+    .line 2141
     ldsflda valuetype T_array_22 _G::Pavf
     ldsfld int32 _G::i
     call instance valuetype [lpcRuntime]LPC.File& T_array_22::ldadr(int32)
@@ -26022,7 +26022,7 @@ L_for_loop_1091:
     br L_for_loop_1091
 L_for_end_1092:
     pop
-    // line 2142
+    .line 2142
     ldc.i4 1
     stloc $tmpEndValue417
     ldc.i4 10
@@ -26033,12 +26033,12 @@ L_for_end_1092:
     ldloc $tmpIndex418
     stsfld int32 _G::i
 L_for_loop_1093:
-    // line 2143
+    .line 2143
     ldsflda valuetype T_array_22 _G::Pavf
     ldsfld int32 _G::i
     call instance valuetype [lpcRuntime]LPC.File& T_array_22::ldadr(int32)
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 2143
+    .line 2143
     ldsflda valuetype T_array_22 _G::Pavf
     ldsfld int32 _G::i
     call instance valuetype [lpcRuntime]LPC.File& T_array_22::ldadr(int32)
@@ -26048,7 +26048,7 @@ L_for_loop_1093:
     ldc.i4 2147483647
     call instance void [lpcRuntime]LPC.File::Read(int32*, int32, int32)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 2143
+    .line 2143
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -26071,19 +26071,19 @@ L_for_loop_1093:
     br L_for_loop_1093
 L_for_end_1094:
     pop
-    // line 2144
+    .line 2144
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 20 19 18 17 16 15 14 13 12 11"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2145
+    .line 2145
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array23:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2146
+    .line 2146
     ldc.i4 10
     stloc $tmpEndValue420
     ldc.i4 1
@@ -26094,15 +26094,15 @@ L_for_end_1094:
     ldloc $tmpIndex421
     stsfld int32 _G::i
 L_for_loop_1095:
-    // line 2146
-    // line 2146
+    .line 2146
+    .line 2146
     ldsflda valuetype T_array_25 _G::Avp
     ldsfld int32 _G::i
     call instance void*& T_array_25::ldadr(int32)
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stobj void*
-    // line 2146
+    .line 2146
     ldsflda valuetype T_array_25 _G::Avp
     ldsfld int32 _G::i
     call instance void*& T_array_25::ldadr(int32)
@@ -26123,7 +26123,7 @@ L_for_loop_1095:
     br L_for_loop_1095
 L_for_end_1096:
     pop
-    // line 2147
+    .line 2147
     ldc.i4 1
     stloc $tmpEndValue423
     ldc.i4 10
@@ -26134,7 +26134,7 @@ L_for_end_1096:
     ldloc $tmpIndex424
     stsfld int32 _G::i
 L_for_loop_1097:
-    // line 2147
+    .line 2147
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -26161,19 +26161,19 @@ L_for_loop_1097:
     br L_for_loop_1097
 L_for_end_1098:
     pop
-    // line 2148
+    .line 2148
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 20 19 18 17 16 15 14 13 12 11"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2149
+    .line 2149
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array24:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2150
+    .line 2150
     ldc.i4 10
     stloc $tmpEndValue426
     ldc.i4 1
@@ -26184,15 +26184,15 @@ L_for_end_1098:
     ldloc $tmpIndex427
     stsfld int32 _G::i
 L_for_loop_1099:
-    // line 2150
-    // line 2150
+    .line 2150
+    .line 2150
     ldsflda valuetype T_array_25 _G::Pavp
     ldsfld int32 _G::i
     call instance void*& T_array_25::ldadr(int32)
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stobj void*
-    // line 2150
+    .line 2150
     ldsflda valuetype T_array_25 _G::Pavp
     ldsfld int32 _G::i
     call instance void*& T_array_25::ldadr(int32)
@@ -26213,7 +26213,7 @@ L_for_loop_1099:
     br L_for_loop_1099
 L_for_end_1100:
     pop
-    // line 2151
+    .line 2151
     ldc.i4 1
     stloc $tmpEndValue429
     ldc.i4 10
@@ -26224,7 +26224,7 @@ L_for_end_1100:
     ldloc $tmpIndex430
     stsfld int32 _G::i
 L_for_loop_1101:
-    // line 2151
+    .line 2151
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -26251,19 +26251,19 @@ L_for_loop_1101:
     br L_for_loop_1101
 L_for_end_1102:
     pop
-    // line 2152
+    .line 2152
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 20 19 18 17 16 15 14 13 12 11"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2155
+    .line 2155
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array25:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2156
+    .line 2156
     ldc.i4 1 // (true)
     stloc $tmpEndValue432
     ldc.i4 0 // (false)
@@ -26274,7 +26274,7 @@ L_for_end_1102:
     ldloc $tmpIndex433
     stsfld bool _G::Ba
 L_for_loop_1103:
-    // line 2156
+    .line 2156
     ldsflda valuetype T_array_29 _G::Bia
     ldsfld bool _G::Ba
     call instance int32& T_array_29::ldadr(int32)
@@ -26294,7 +26294,7 @@ L_for_loop_1103:
     br L_for_loop_1103
 L_for_end_1104:
     pop
-    // line 2157
+    .line 2157
     ldc.i4 0 // (false)
     stloc $tmpEndValue435
     ldc.i4 1 // (true)
@@ -26305,7 +26305,7 @@ L_for_end_1104:
     ldloc $tmpIndex436
     stsfld bool _G::Ba
 L_for_loop_1105:
-    // line 2157
+    .line 2157
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -26331,19 +26331,19 @@ L_for_loop_1105:
     br L_for_loop_1105
 L_for_end_1106:
     pop
-    // line 2158
+    .line 2158
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 11 10"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2159
+    .line 2159
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array26:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2160
+    .line 2160
     ldc.i4 1 // (true)
     stloc $tmpEndValue438
     ldc.i4 0 // (false)
@@ -26354,7 +26354,7 @@ L_for_end_1106:
     ldloc $tmpIndex439
     stsfld bool _G::Ba
 L_for_loop_1107:
-    // line 2160
+    .line 2160
     ldsflda valuetype T_array_29 _G::Pbia
     ldsfld bool _G::Ba
     call instance int32& T_array_29::ldadr(int32)
@@ -26374,7 +26374,7 @@ L_for_loop_1107:
     br L_for_loop_1107
 L_for_end_1108:
     pop
-    // line 2161
+    .line 2161
     ldc.i4 0 // (false)
     stloc $tmpEndValue441
     ldc.i4 1 // (true)
@@ -26385,7 +26385,7 @@ L_for_end_1108:
     ldloc $tmpIndex442
     stsfld bool _G::Ba
 L_for_loop_1109:
-    // line 2161
+    .line 2161
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -26411,19 +26411,19 @@ L_for_loop_1109:
     br L_for_loop_1109
 L_for_end_1110:
     pop
-    // line 2162
+    .line 2162
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 11 10"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2163
+    .line 2163
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array27:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2164
+    .line 2164
     ldc.i4 106 // 'j'
     stloc $tmpEndValue444
     ldc.i4 97 // 'a'
@@ -26434,7 +26434,7 @@ L_for_end_1110:
     ldloc $tmpIndex445
     stsfld uint8 _G::Ci
 L_for_loop_1111:
-    // line 2164
+    .line 2164
     ldsflda valuetype T_array_31 _G::Cia
     ldsfld uint8 _G::Ci
     call instance int32& T_array_31::ldadr(int32)
@@ -26452,7 +26452,7 @@ L_for_loop_1111:
     br L_for_loop_1111
 L_for_end_1112:
     pop
-    // line 2165
+    .line 2165
     ldc.i4 97 // 'a'
     stloc $tmpEndValue447
     ldc.i4 106 // 'j'
@@ -26463,7 +26463,7 @@ L_for_end_1112:
     ldloc $tmpIndex448
     stsfld uint8 _G::Ci
 L_for_loop_1113:
-    // line 2165
+    .line 2165
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsflda valuetype T_array_31 _G::Cia
@@ -26487,19 +26487,19 @@ L_for_loop_1113:
     br L_for_loop_1113
 L_for_end_1114:
     pop
-    // line 2166
+    .line 2166
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b  j i h g f e d c b a"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2167
+    .line 2167
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array28:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2168
+    .line 2168
     ldc.i4 106 // 'j'
     stloc $tmpEndValue450
     ldc.i4 97 // 'a'
@@ -26510,7 +26510,7 @@ L_for_end_1114:
     ldloc $tmpIndex451
     stsfld uint8 _G::Ci
 L_for_loop_1115:
-    // line 2168
+    .line 2168
     ldsflda valuetype T_array_31 _G::Pcia
     ldsfld uint8 _G::Ci
     call instance int32& T_array_31::ldadr(int32)
@@ -26528,7 +26528,7 @@ L_for_loop_1115:
     br L_for_loop_1115
 L_for_end_1116:
     pop
-    // line 2169
+    .line 2169
     ldc.i4 97 // 'a'
     stloc $tmpEndValue453
     ldc.i4 106 // 'j'
@@ -26539,7 +26539,7 @@ L_for_end_1116:
     ldloc $tmpIndex454
     stsfld uint8 _G::Ci
 L_for_loop_1117:
-    // line 2169
+    .line 2169
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsflda valuetype T_array_31 _G::Pcia
@@ -26563,19 +26563,19 @@ L_for_loop_1117:
     br L_for_loop_1117
 L_for_end_1118:
     pop
-    // line 2170
+    .line 2170
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b  j i h g f e d c b a"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2171
+    .line 2171
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array29:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2172
+    .line 2172
     ldc.i4 106 // 'j'
     stloc $tmpEndValue456
     ldc.i4 97 // 'a'
@@ -26586,7 +26586,7 @@ L_for_end_1118:
     ldloc $tmpIndex457
     stsfld uint8 _G::Ci
 L_for_loop_1119:
-    // line 2172
+    .line 2172
     ldsflda valuetype T_array_30 _G::Csia
     ldsfld uint8 _G::Ci
     call instance int32& T_array_30::ldadr(int32)
@@ -26604,7 +26604,7 @@ L_for_loop_1119:
     br L_for_loop_1119
 L_for_end_1120:
     pop
-    // line 2173
+    .line 2173
     ldc.i4 97 // 'a'
     stloc $tmpEndValue459
     ldc.i4 106 // 'j'
@@ -26615,7 +26615,7 @@ L_for_end_1120:
     ldloc $tmpIndex460
     stsfld uint8 _G::Ci
 L_for_loop_1121:
-    // line 2173
+    .line 2173
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsflda valuetype T_array_30 _G::Csia
@@ -26639,19 +26639,19 @@ L_for_loop_1121:
     br L_for_loop_1121
 L_for_end_1122:
     pop
-    // line 2174
+    .line 2174
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b  j i h g f e d c b a"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2175
+    .line 2175
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array30:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2176
+    .line 2176
     ldc.i4 106 // 'j'
     stloc $tmpEndValue462
     ldc.i4 97 // 'a'
@@ -26662,7 +26662,7 @@ L_for_end_1122:
     ldloc $tmpIndex463
     stsfld uint8 _G::Ci
 L_for_loop_1123:
-    // line 2176
+    .line 2176
     ldsflda valuetype T_array_30 _G::Pcsia
     ldsfld uint8 _G::Ci
     call instance int32& T_array_30::ldadr(int32)
@@ -26680,7 +26680,7 @@ L_for_loop_1123:
     br L_for_loop_1123
 L_for_end_1124:
     pop
-    // line 2177
+    .line 2177
     ldc.i4 97 // 'a'
     stloc $tmpEndValue465
     ldc.i4 106 // 'j'
@@ -26691,7 +26691,7 @@ L_for_end_1124:
     ldloc $tmpIndex466
     stsfld uint8 _G::Ci
 L_for_loop_1125:
-    // line 2177
+    .line 2177
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsflda valuetype T_array_30 _G::Pcsia
@@ -26715,19 +26715,19 @@ L_for_loop_1125:
     br L_for_loop_1125
 L_for_end_1126:
     pop
-    // line 2178
+    .line 2178
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b  j i h g f e d c b a"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2179
+    .line 2179
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array31:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2180
+    .line 2180
     ldc.i4 9 // ten 
     stloc $tmpEndValue468
     ldc.i4 0 // one 
@@ -26742,7 +26742,7 @@ L_for_end_1126:
     ldloc $tmpIndex469
     stsfld int32 _G::Ei
 L_for_loop_1127:
-    // line 2180
+    .line 2180
     ldsflda valuetype T_array_39 _G::Eia
     ldsfld int32 _G::Ei
     call instance int32& T_array_39::ldadr(int32)
@@ -26764,7 +26764,7 @@ L_for_loop_1127:
     br L_for_loop_1127
 L_for_end_1128:
     pop
-    // line 2181
+    .line 2181
     ldc.i4 0 // one 
     stloc $tmpEndValue471
     ldc.i4 9 // ten 
@@ -26779,7 +26779,7 @@ L_for_end_1128:
     ldloc $tmpIndex472
     stsfld int32 _G::Ei
 L_for_loop_1129:
-    // line 2181
+    .line 2181
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -26809,19 +26809,19 @@ L_for_loop_1129:
     br L_for_loop_1129
 L_for_end_1130:
     pop
-    // line 2182
+    .line 2182
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b  9 8 7 6 5 4 3 2 1 0"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2183
+    .line 2183
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array32:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2184
+    .line 2184
     ldc.i4 9 // ten 
     stloc $tmpEndValue474
     ldc.i4 0 // one 
@@ -26836,7 +26836,7 @@ L_for_end_1130:
     ldloc $tmpIndex475
     stsfld int32 _G::Ei
 L_for_loop_1131:
-    // line 2184
+    .line 2184
     ldsflda valuetype T_array_39 _G::Peia
     ldsfld int32 _G::Ei
     call instance int32& T_array_39::ldadr(int32)
@@ -26858,7 +26858,7 @@ L_for_loop_1131:
     br L_for_loop_1131
 L_for_end_1132:
     pop
-    // line 2185
+    .line 2185
     ldc.i4 0 // one 
     stloc $tmpEndValue477
     ldc.i4 9 // ten 
@@ -26873,7 +26873,7 @@ L_for_end_1132:
     ldloc $tmpIndex478
     stsfld int32 _G::Ei
 L_for_loop_1133:
-    // line 2185
+    .line 2185
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -26903,19 +26903,19 @@ L_for_loop_1133:
     br L_for_loop_1133
 L_for_end_1134:
     pop
-    // line 2186
+    .line 2186
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b  9 8 7 6 5 4 3 2 1 0"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2187
+    .line 2187
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array33:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2188
+    .line 2188
     ldc.i4 5 // six 
     stloc $tmpEndValue480
     ldc.i4 1 // two 
@@ -26930,7 +26930,7 @@ L_for_end_1134:
     ldloc $tmpIndex481
     stsfld int32 _G::Ei
 L_for_loop_1135:
-    // line 2188
+    .line 2188
     ldsflda valuetype T_array_39 _G::Eia
     ldsfld int32 _G::Ei
     call instance int32& T_array_39::ldadr(int32)
@@ -26952,7 +26952,7 @@ L_for_loop_1135:
     br L_for_loop_1135
 L_for_end_1136:
     pop
-    // line 2189
+    .line 2189
     ldc.i4 1 // two 
     stloc $tmpEndValue483
     ldc.i4 5 // six 
@@ -26967,7 +26967,7 @@ L_for_end_1136:
     ldloc $tmpIndex484
     stsfld int32 _G::Ei
 L_for_loop_1137:
-    // line 2189
+    .line 2189
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -26997,19 +26997,19 @@ L_for_loop_1137:
     br L_for_loop_1137
 L_for_end_1138:
     pop
-    // line 2190
+    .line 2190
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b  5 4 3 2 1"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2191
+    .line 2191
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array34:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2192
+    .line 2192
     ldc.i4 5 // six 
     stloc $tmpEndValue486
     ldc.i4 1 // two 
@@ -27024,7 +27024,7 @@ L_for_end_1138:
     ldloc $tmpIndex487
     stsfld int32 _G::Ei
 L_for_loop_1139:
-    // line 2192
+    .line 2192
     ldsflda valuetype T_array_39 _G::Peia
     ldsfld int32 _G::Ei
     call instance int32& T_array_39::ldadr(int32)
@@ -27046,7 +27046,7 @@ L_for_loop_1139:
     br L_for_loop_1139
 L_for_end_1140:
     pop
-    // line 2193
+    .line 2193
     ldc.i4 1 // two 
     stloc $tmpEndValue489
     ldc.i4 5 // six 
@@ -27061,7 +27061,7 @@ L_for_end_1140:
     ldloc $tmpIndex490
     stsfld int32 _G::Ei
 L_for_loop_1141:
-    // line 2193
+    .line 2193
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -27091,22 +27091,22 @@ L_for_loop_1141:
     br L_for_loop_1141
 L_for_end_1142:
     pop
-    // line 2194
+    .line 2194
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b  5 4 3 2 1"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2197
+    .line 2197
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array35:"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2198
+    .line 2198
     ldc.i4 0
     stsfld int32 _G::z
-    // line 2199
+    .line 2199
     ldc.i4 10
     stloc $tmpEndValue492
     ldc.i4 1
@@ -27117,7 +27117,7 @@ L_for_end_1142:
     ldloc $tmpIndex493
     stsfld int32 _G::x
 L_for_loop_1143:
-    // line 2200
+    .line 2200
     ldc.i4 10
     stloc $tmpEndValue494
     ldc.i4 1
@@ -27128,7 +27128,7 @@ L_for_loop_1143:
     ldloc $tmpIndex495
     stsfld int32 _G::y
 L_for_loop_1145:
-    // line 2200
+    .line 2200
     ldsflda valuetype T_array_37 _G::Da
     ldsfld int32 _G::y
     call instance valuetype T_arri& T_array_37::ldadr(int32)
@@ -27136,7 +27136,7 @@ L_for_loop_1145:
     call instance int32& T_arri::ldadr(int32)
     ldsfld int32 _G::z
     stobj int32
-    // line 2200
+    .line 2200
     ldsfld int32 _G::z
     ldc.i4 1
     add
@@ -27165,7 +27165,7 @@ L_for_end_1146:
     br L_for_loop_1143
 L_for_end_1144:
     pop
-    // line 2201
+    .line 2201
     ldc.i4 10
     stloc $tmpEndValue498
     ldc.i4 1
@@ -27176,7 +27176,7 @@ L_for_end_1144:
     ldloc $tmpIndex499
     stsfld int32 _G::x
 L_for_loop_1147:
-    // line 2203
+    .line 2203
     ldc.i4 10
     stloc $tmpEndValue500
     ldc.i4 1
@@ -27187,7 +27187,7 @@ L_for_loop_1147:
     ldloc $tmpIndex501
     stsfld int32 _G::y
 L_for_loop_1149:
-    // line 2203
+    .line 2203
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 2
@@ -27215,7 +27215,7 @@ L_for_loop_1149:
     br L_for_loop_1149
 L_for_end_1150:
     pop
-    // line 2204
+    .line 2204
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
     /* nop */
@@ -27231,82 +27231,82 @@ L_for_end_1150:
     br L_for_loop_1147
 L_for_end_1148:
     pop
-    // line 2206
+    .line 2206
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2207
+    .line 2207
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "0 10 20 30 40 50 60 70 80 90"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2208
+    .line 2208
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "1 11 21 31 41 51 61 71 81 91"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2209
+    .line 2209
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "2 12 22 32 42 52 62 72 82 92"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2210
+    .line 2210
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "3 13 23 33 43 53 63 73 83 93"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2211
+    .line 2211
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "4 14 24 34 44 54 64 74 84 94"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2212
+    .line 2212
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "5 15 25 35 45 55 65 75 85 95"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2213
+    .line 2213
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "6 16 26 36 46 56 66 76 86 96"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2214
+    .line 2214
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "7 17 27 37 47 57 67 77 87 97"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2215
+    .line 2215
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "8 18 28 38 48 58 68 78 88 98"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2216
+    .line 2216
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "9 19 29 39 49 59 69 79 89 99"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2217
+    .line 2217
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array36: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2218
+    .line 2218
     ldc.i4 0
     stsfld int32 _G::t
-    // line 2219
+    .line 2219
     ldc.i4 2
     stloc $tmpEndValue504
     ldc.i4 1
@@ -27317,7 +27317,7 @@ L_for_end_1148:
     ldloc $tmpIndex505
     stsfld int32 _G::i
 L_for_loop_1151:
-    // line 2220
+    .line 2220
     ldc.i4 2
     stloc $tmpEndValue506
     ldc.i4 1
@@ -27328,7 +27328,7 @@ L_for_loop_1151:
     ldloc $tmpIndex507
     stsfld int32 _G::x
 L_for_loop_1153:
-    // line 2221
+    .line 2221
     ldc.i4 2
     stloc $tmpEndValue508
     ldc.i4 1
@@ -27339,7 +27339,7 @@ L_for_loop_1153:
     ldloc $tmpIndex509
     stsfld int32 _G::y
 L_for_loop_1155:
-    // line 2222
+    .line 2222
     ldc.i4 2
     stloc $tmpEndValue510
     ldc.i4 1
@@ -27350,7 +27350,7 @@ L_for_loop_1155:
     ldloc $tmpIndex511
     stsfld int32 _G::z
 L_for_loop_1157:
-    // line 2223
+    .line 2223
     ldc.i4 2
     stloc $tmpEndValue512
     ldc.i4 1
@@ -27361,7 +27361,7 @@ L_for_loop_1157:
     ldloc $tmpIndex513
     stsfld int32 _G::q
 L_for_loop_1159:
-    // line 2224
+    .line 2224
     ldc.i4 2
     stloc $tmpEndValue514
     ldc.i4 1
@@ -27372,7 +27372,7 @@ L_for_loop_1159:
     ldloc $tmpIndex515
     stsfld int32 _G::n
 L_for_loop_1161:
-    // line 2225
+    .line 2225
     ldsflda valuetype T_arrim _G::Mdar
     ldsfld int32 _G::i
     call instance valuetype T_array_11& T_arrim::ldadr(int32)
@@ -27388,7 +27388,7 @@ L_for_loop_1161:
     call instance int32& T_array_15::ldadr(int32)
     ldsfld int32 _G::t
     stobj int32
-    // line 2225
+    .line 2225
     ldsfld int32 _G::t
     ldc.i4 1
     add
@@ -27465,7 +27465,7 @@ L_for_end_1154:
     br L_for_loop_1151
 L_for_end_1152:
     pop
-    // line 2226
+    .line 2226
     ldc.i4 1
     stloc $tmpEndValue522
     ldc.i4 2
@@ -27476,7 +27476,7 @@ L_for_end_1152:
     ldloc $tmpIndex523
     stsfld int32 _G::i
 L_for_loop_1163:
-    // line 2227
+    .line 2227
     ldc.i4 1
     stloc $tmpEndValue524
     ldc.i4 2
@@ -27487,7 +27487,7 @@ L_for_loop_1163:
     ldloc $tmpIndex525
     stsfld int32 _G::x
 L_for_loop_1165:
-    // line 2228
+    .line 2228
     ldc.i4 1
     stloc $tmpEndValue526
     ldc.i4 2
@@ -27498,7 +27498,7 @@ L_for_loop_1165:
     ldloc $tmpIndex527
     stsfld int32 _G::y
 L_for_loop_1167:
-    // line 2230
+    .line 2230
     ldc.i4 1
     stloc $tmpEndValue528
     ldc.i4 2
@@ -27509,7 +27509,7 @@ L_for_loop_1167:
     ldloc $tmpIndex529
     stsfld int32 _G::z
 L_for_loop_1169:
-    // line 2231
+    .line 2231
     ldc.i4 1
     stloc $tmpEndValue530
     ldc.i4 2
@@ -27520,7 +27520,7 @@ L_for_loop_1169:
     ldloc $tmpIndex531
     stsfld int32 _G::q
 L_for_loop_1171:
-    // line 2232
+    .line 2232
     ldc.i4 1
     stloc $tmpEndValue532
     ldc.i4 2
@@ -27531,7 +27531,7 @@ L_for_loop_1171:
     ldloc $tmpIndex533
     stsfld int32 _G::n
 L_for_loop_1173:
-    // line 2232
+    .line 2232
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 2
@@ -27591,7 +27591,7 @@ L_for_end_1172:
     br L_for_loop_1169
 L_for_end_1170:
     pop
-    // line 2233
+    .line 2233
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
     /* nop */
@@ -27631,70 +27631,70 @@ L_for_end_1166:
     br L_for_loop_1163
 L_for_end_1164:
     pop
-    // line 2236
+    .line 2236
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b:"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2237
+    .line 2237
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "63 62 61 60 59 58 57 56"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2238
+    .line 2238
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "55 54 53 52 51 50 49 48"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2239
+    .line 2239
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "47 46 45 44 43 42 41 40"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2240
+    .line 2240
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "39 38 37 36 35 34 33 32"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2241
+    .line 2241
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "31 30 29 28 27 26 25 24"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2242
+    .line 2242
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "23 22 21 20 19 18 17 16"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2243
+    .line 2243
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "15 14 13 12 11 10  9  8"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2244
+    .line 2244
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 7  6  5  4  3  2  1  0"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2247
+    .line 2247
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array37: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2248
+    .line 2248
     ldsfld valuetype T_string10 STRING_9    // "hello, guy"
     stsfld valuetype T_string10 _G::Pavc
-    // line 2249
+    .line 2249
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld valuetype T_string10 _G::Pavc
@@ -27704,13 +27704,13 @@ L_for_end_1164:
     ldstr " s/b hello, guy"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2250
+    .line 2250
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array38: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2251
+    .line 2251
     ldc.i4 10
     stloc $tmpEndValue540
     ldc.i4 1
@@ -27721,7 +27721,7 @@ L_for_end_1164:
     ldloc $tmpIndex541
     stsfld int32 _G::i
 L_for_loop_1175:
-    // line 2251
+    .line 2251
     ldsflda valuetype T_arri _G::Avi
     ldsfld int32 _G::i
     call instance int32& T_arri::ldadr(int32)
@@ -27741,10 +27741,10 @@ L_for_loop_1175:
     br L_for_loop_1175
 L_for_end_1176:
     pop
-    // line 2252
+    .line 2252
     ldsfld valuetype T_arri _G::Avi
     stsfld valuetype T_arri _G::Avi2
-    // line 2253
+    .line 2253
     ldc.i4 1
     stloc $tmpEndValue543
     ldc.i4 10
@@ -27755,7 +27755,7 @@ L_for_end_1176:
     ldloc $tmpIndex544
     stsfld int32 _G::i
 L_for_loop_1177:
-    // line 2253
+    .line 2253
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -27781,22 +27781,22 @@ L_for_loop_1177:
     br L_for_loop_1177
 L_for_end_1178:
     pop
-    // line 2254
+    .line 2254
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 20 19 18 17 16 15 14 13 12 11"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2255
+    .line 2255
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array39: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2256
+    .line 2256
     ldc.i4 0
     stsfld int32 _G::t
-    // line 2257
+    .line 2257
     ldc.i4 2
     stloc $tmpEndValue546
     ldc.i4 1
@@ -27807,7 +27807,7 @@ L_for_end_1178:
     ldloc $tmpIndex547
     stsfld int32 _G::i
 L_for_loop_1179:
-    // line 2258
+    .line 2258
     ldc.i4 2
     stloc $tmpEndValue548
     ldc.i4 1
@@ -27818,7 +27818,7 @@ L_for_loop_1179:
     ldloc $tmpIndex549
     stsfld int32 _G::x
 L_for_loop_1181:
-    // line 2259
+    .line 2259
     ldc.i4 2
     stloc $tmpEndValue550
     ldc.i4 1
@@ -27829,7 +27829,7 @@ L_for_loop_1181:
     ldloc $tmpIndex551
     stsfld int32 _G::y
 L_for_loop_1183:
-    // line 2260
+    .line 2260
     ldc.i4 2
     stloc $tmpEndValue552
     ldc.i4 1
@@ -27840,7 +27840,7 @@ L_for_loop_1183:
     ldloc $tmpIndex553
     stsfld int32 _G::z
 L_for_loop_1185:
-    // line 2261
+    .line 2261
     ldc.i4 2
     stloc $tmpEndValue554
     ldc.i4 1
@@ -27851,7 +27851,7 @@ L_for_loop_1185:
     ldloc $tmpIndex555
     stsfld int32 _G::q
 L_for_loop_1187:
-    // line 2262
+    .line 2262
     ldc.i4 2
     stloc $tmpEndValue556
     ldc.i4 1
@@ -27862,7 +27862,7 @@ L_for_loop_1187:
     ldloc $tmpIndex557
     stsfld int32 _G::n
 L_for_loop_1189:
-    // line 2263
+    .line 2263
     ldsflda valuetype T_arrim _G::Mdar
     ldsfld int32 _G::i
     call instance valuetype T_array_11& T_arrim::ldadr(int32)
@@ -27878,7 +27878,7 @@ L_for_loop_1189:
     call instance int32& T_array_15::ldadr(int32)
     ldsfld int32 _G::t
     stobj int32
-    // line 2263
+    .line 2263
     ldsfld int32 _G::t
     ldc.i4 1
     add
@@ -27955,10 +27955,10 @@ L_for_end_1182:
     br L_for_loop_1179
 L_for_end_1180:
     pop
-    // line 2264
+    .line 2264
     ldsfld valuetype T_arrim _G::Mdar
     stsfld valuetype T_arrim _G::Mdar2
-    // line 2265
+    .line 2265
     ldc.i4 1
     stloc $tmpEndValue564
     ldc.i4 2
@@ -27969,7 +27969,7 @@ L_for_end_1180:
     ldloc $tmpIndex565
     stsfld int32 _G::i
 L_for_loop_1191:
-    // line 2266
+    .line 2266
     ldc.i4 1
     stloc $tmpEndValue566
     ldc.i4 2
@@ -27980,7 +27980,7 @@ L_for_loop_1191:
     ldloc $tmpIndex567
     stsfld int32 _G::x
 L_for_loop_1193:
-    // line 2267
+    .line 2267
     ldc.i4 1
     stloc $tmpEndValue568
     ldc.i4 2
@@ -27991,7 +27991,7 @@ L_for_loop_1193:
     ldloc $tmpIndex569
     stsfld int32 _G::y
 L_for_loop_1195:
-    // line 2269
+    .line 2269
     ldc.i4 1
     stloc $tmpEndValue570
     ldc.i4 2
@@ -28002,7 +28002,7 @@ L_for_loop_1195:
     ldloc $tmpIndex571
     stsfld int32 _G::z
 L_for_loop_1197:
-    // line 2270
+    .line 2270
     ldc.i4 1
     stloc $tmpEndValue572
     ldc.i4 2
@@ -28013,7 +28013,7 @@ L_for_loop_1197:
     ldloc $tmpIndex573
     stsfld int32 _G::q
 L_for_loop_1199:
-    // line 2271
+    .line 2271
     ldc.i4 1
     stloc $tmpEndValue574
     ldc.i4 2
@@ -28024,7 +28024,7 @@ L_for_loop_1199:
     ldloc $tmpIndex575
     stsfld int32 _G::n
 L_for_loop_1201:
-    // line 2271
+    .line 2271
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 2
@@ -28084,7 +28084,7 @@ L_for_end_1200:
     br L_for_loop_1197
 L_for_end_1198:
     pop
-    // line 2272
+    .line 2272
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
     /* nop */
@@ -28124,67 +28124,67 @@ L_for_end_1194:
     br L_for_loop_1191
 L_for_end_1192:
     pop
-    // line 2275
+    .line 2275
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b:"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2276
+    .line 2276
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "63 62 61 60 59 58 57 56"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2277
+    .line 2277
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "55 54 53 52 51 50 49 48"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2278
+    .line 2278
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "47 46 45 44 43 42 41 40"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2279
+    .line 2279
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "39 38 37 36 35 34 33 32"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2280
+    .line 2280
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "31 30 29 28 27 26 25 24"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2281
+    .line 2281
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "23 22 21 20 19 18 17 16"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2282
+    .line 2282
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "15 14 13 12 11 10  9  8"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2283
+    .line 2283
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 7  6  5  4  3  2  1  0"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2286
+    .line 2286
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array40: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2287
+    .line 2287
     ldc.i4 10
     stloc $tmpEndValue582
     ldc.i4 1
@@ -28195,7 +28195,7 @@ L_for_end_1192:
     ldloc $tmpIndex583
     stsfld int32 _G::i
 L_for_loop_1203:
-    // line 2287
+    .line 2287
     ldsflda valuetype T_arri _G::Pavi
     ldsfld int32 _G::i
     call instance int32& T_arri::ldadr(int32)
@@ -28215,13 +28215,13 @@ L_for_loop_1203:
     br L_for_loop_1203
 L_for_end_1204:
     pop
-    // line 2288
+    .line 2288
     ldc.i4 1
     stloc $tmpDstIndex586
     ldc.i4 1
     stloc $tmpSrcIndex585
 L_unpack_loop_1205:
-    // line 2288
+    .line 2288
     ldsflda valuetype T_arri _G::Avi
     ldloc $tmpDstIndex586
     call instance int32& T_arri::ldadr(int32)
@@ -28241,7 +28241,7 @@ L_unpack_loop_1205:
     stloc $tmpSrcIndex585
     ldc.i4 10
     ble L_unpack_loop_1205
-    // line 2289
+    .line 2289
     ldc.i4 1
     stloc $tmpEndValue587
     ldc.i4 10
@@ -28252,7 +28252,7 @@ L_unpack_loop_1205:
     ldloc $tmpIndex588
     stsfld int32 _G::i
 L_for_loop_1206:
-    // line 2289
+    .line 2289
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -28278,19 +28278,19 @@ L_for_loop_1206:
     br L_for_loop_1206
 L_for_end_1207:
     pop
-    // line 2290
+    .line 2290
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 20 19 18 17 16 15 14 13 12 11"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2291
+    .line 2291
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array41: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2292
+    .line 2292
     ldc.i4 10
     stloc $tmpEndValue590
     ldc.i4 1
@@ -28301,7 +28301,7 @@ L_for_end_1207:
     ldloc $tmpIndex591
     stsfld int32 _G::i
 L_for_loop_1208:
-    // line 2292
+    .line 2292
     ldsflda valuetype T_arri _G::Avi
     ldsfld int32 _G::i
     call instance int32& T_arri::ldadr(int32)
@@ -28321,13 +28321,13 @@ L_for_loop_1208:
     br L_for_loop_1208
 L_for_end_1209:
     pop
-    // line 2293
+    .line 2293
     ldc.i4 1
     stloc $tmpSrcIndex593
     ldc.i4 1
     stloc $tmpDstIndex594
 L_pack_loop_1210:
-    // line 2293
+    .line 2293
     ldsflda valuetype T_arri _G::Pavi
     ldloc $tmpDstIndex594
     call instance int32& T_arri::ldadr(int32)
@@ -28347,7 +28347,7 @@ L_pack_loop_1210:
     stloc $tmpDstIndex594
     ldc.i4 10
     ble L_pack_loop_1210
-    // line 2294
+    .line 2294
     ldc.i4 1
     stloc $tmpEndValue595
     ldc.i4 10
@@ -28358,7 +28358,7 @@ L_pack_loop_1210:
     ldloc $tmpIndex596
     stsfld int32 _G::i
 L_for_loop_1211:
-    // line 2294
+    .line 2294
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -28384,19 +28384,19 @@ L_for_loop_1211:
     br L_for_loop_1211
 L_for_end_1212:
     pop
-    // line 2295
+    .line 2295
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 30 29 28 27 26 25 24 23 22 21"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2296
+    .line 2296
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array42: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2297
+    .line 2297
     ldc.i4 10
     stloc $tmpEndValue598
     ldc.i4 1
@@ -28407,7 +28407,7 @@ L_for_end_1212:
     ldloc $tmpIndex599
     stsfld int32 _G::i
 L_for_loop_1213:
-    // line 2297
+    .line 2297
     ldsflda valuetype T_arri _G::Pavi
     ldsfld int32 _G::i
     call instance int32& T_arri::ldadr(int32)
@@ -28427,13 +28427,13 @@ L_for_loop_1213:
     br L_for_loop_1213
 L_for_end_1214:
     pop
-    // line 2298
+    .line 2298
     ldc.i4 103 // 'g'
     stloc $tmpDstIndex602
     ldc.i4 1
     stloc $tmpSrcIndex601
 L_unpack_loop_1215:
-    // line 2298
+    .line 2298
     ldsflda valuetype T_array_31 _G::Cia
     ldloc $tmpDstIndex602
     call instance int32& T_array_31::ldadr(int32)
@@ -28453,7 +28453,7 @@ L_unpack_loop_1215:
     stloc $tmpSrcIndex601
     ldc.i4 10
     ble L_unpack_loop_1215
-    // line 2299
+    .line 2299
     ldc.i4 103 // 'g'
     stloc $tmpEndValue603
     ldc.i4 112 // 'p'
@@ -28464,7 +28464,7 @@ L_unpack_loop_1215:
     ldloc $tmpIndex604
     stsfld uint8 _G::Ci
 L_for_loop_1216:
-    // line 2299
+    .line 2299
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -28490,22 +28490,22 @@ L_for_loop_1216:
     br L_for_loop_1216
 L_for_end_1217:
     pop
-    // line 2300
+    .line 2300
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 40 39 38 37 36 35 34 33 32 31"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2301
+    .line 2301
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Array43: "
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2302
+    .line 2302
     ldc.i4 1
     stsfld int32 _G::x
-    // line 2303
+    .line 2303
     ldc.i4 122 // 'z'
     stloc $tmpEndValue606
     ldc.i4 97 // 'a'
@@ -28516,13 +28516,13 @@ L_for_end_1217:
     ldloc $tmpIndex607
     stsfld uint8 _G::Ci
 L_for_loop_1218:
-    // line 2303
+    .line 2303
     ldsflda valuetype T_array_31 _G::Cia
     ldsfld uint8 _G::Ci
     call instance int32& T_array_31::ldadr(int32)
     ldsfld int32 _G::x
     stobj int32
-    // line 2303
+    .line 2303
     ldsfld int32 _G::x
     ldc.i4 1
     add
@@ -28539,13 +28539,13 @@ L_for_loop_1218:
     br L_for_loop_1218
 L_for_end_1219:
     pop
-    // line 2304
+    .line 2304
     ldc.i4 109 // 'm'
     stloc $tmpSrcIndex609
     ldc.i4 1
     stloc $tmpDstIndex610
 L_pack_loop_1220:
-    // line 2304
+    .line 2304
     ldsflda valuetype T_arri _G::Pavi
     ldloc $tmpDstIndex610
     call instance int32& T_arri::ldadr(int32)
@@ -28565,7 +28565,7 @@ L_pack_loop_1220:
     stloc $tmpDstIndex610
     ldc.i4 10
     ble L_pack_loop_1220
-    // line 2305
+    .line 2305
     ldc.i4 1
     stloc $tmpEndValue611
     ldc.i4 10
@@ -28576,7 +28576,7 @@ L_pack_loop_1220:
     ldloc $tmpIndex612
     stsfld int32 _G::i
 L_for_loop_1221:
-    // line 2305
+    .line 2305
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -28602,47 +28602,47 @@ L_for_loop_1221:
     br L_for_loop_1221
 L_for_end_1222:
     pop
-    // line 2306
+    .line 2306
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 22 21 20 19 18 17 16 15 14 13"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2314
+    .line 2314
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2315
+    .line 2315
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "******************* records ******************************"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2316
+    .line 2316
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2319
+    .line 2319
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record1:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2320
+    .line 2320
     ldsflda valuetype T_rec _G::Arec
     ldc.i4 64
     stfld int32 T_rec::i
-    // line 2321
+    .line 2321
     ldsflda valuetype T_rec _G::Arec
     ldc.i4 0 // (false)
     stfld bool T_rec::b
-    // line 2322
+    .line 2322
     ldsflda valuetype T_rec _G::Arec
     ldc.i4 106 // 'j'
     stfld uint8 T_rec::c
-    // line 2323
+    .line 2323
     ldsflda valuetype T_rec _G::Arec
     ldc.i4 1 // two 
     stfld int32 T_rec::e
-    // line 2324
+    .line 2324
     ldsflda valuetype T_rec _G::Arec
     ldc.i4 3 // four 
     dup
@@ -28650,7 +28650,7 @@ L_for_end_1222:
     ldc.i4 5
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_rec::Es
-    // line 2325
+    .line 2325
     ldsflda valuetype T_rec _G::Arec
     ldc.i4 12
     dup
@@ -28658,15 +28658,15 @@ L_for_end_1222:
     ldc.i4 20
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_rec::s
-    // line 2326
+    .line 2326
     ldsflda valuetype T_rec _G::Arec
     ldc.r8 4.54512e-29
     stfld float64 T_rec::r
-    // line 2327
+    .line 2327
     ldsflda valuetype T_rec _G::Arec
     ldsfld valuetype T_string10 STRING_10    // "what ? who"
     stfld valuetype T_string10 T_rec::St
-    // line 2328
+    .line 2328
     ldc.i4 10
     stloc $tmpEndValue614
     ldc.i4 1
@@ -28677,7 +28677,7 @@ L_for_end_1222:
     ldloc $tmpIndex615
     stsfld int32 _G::i
 L_for_loop_1223:
-    // line 2328
+    .line 2328
     ldsflda valuetype T_rec _G::Arec
     ldflda valuetype T_arri T_rec::a
     ldsfld int32 _G::i
@@ -28698,32 +28698,32 @@ L_for_loop_1223:
     br L_for_loop_1223
 L_for_end_1224:
     pop
-    // line 2329
+    .line 2329
     ldsflda valuetype T_rec _G::Arec
     ldflda valuetype T_recs T_rec::Rc
     ldc.i4 2324
     stfld int32 T_recs::a
-    // line 2330
+    .line 2330
     ldsflda valuetype T_rec _G::Arec
     ldflda valuetype T_recs T_rec::Rc
     ldc.i4 121 // 'y'
     stfld uint8 T_recs::b
-    // line 2331
+    .line 2331
     ldsflda valuetype T_rec _G::Arec
     ldloc $tmpSetLiteral617
     stfld valuetype T_cset T_rec::Stc
-    // line 2332
-    // line 2332
+    .line 2332
+    .line 2332
     ldsflda valuetype T_rec _G::Arec
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* T_rec::p
-    // line 2333
+    .line 2333
     ldsflda valuetype T_rec _G::Arec
     ldfld void* T_rec::p
     ldc.i4 8454
     stobj int32
-    // line 2334
+    .line 2334
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -28800,7 +28800,7 @@ L_bool_to_string_false_1226:
     call string T_string10::arrayToString(valuetype T_string10)
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2337
+    .line 2337
     ldc.i4 10
     stloc $tmpEndValue618
     ldc.i4 1
@@ -28811,7 +28811,7 @@ L_bool_to_string_false_1226:
     ldloc $tmpIndex619
     stsfld int32 _G::i
 L_for_loop_1227:
-    // line 2337
+    .line 2337
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -28838,10 +28838,10 @@ L_for_loop_1227:
     br L_for_loop_1227
 L_for_end_1228:
     pop
-    // line 2337
+    .line 2337
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2338
+    .line 2338
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -28861,7 +28861,7 @@ L_for_end_1228:
     ldfld uint8 T_recs::b
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, uint8)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2339
+    .line 2339
     ldc.i4 106 // 'j'
     stloc $tmpEndValue621
     ldc.i4 97 // 'a'
@@ -28872,13 +28872,13 @@ L_for_end_1228:
     ldloc $tmpIndex622
     stsfld uint8 _G::Ci
 L_for_loop_1229:
-    // line 2339
+    .line 2339
     ldsflda valuetype T_rec _G::Arec
     ldfld valuetype T_cset T_rec::Stc
     ldsfld uint8 _G::Ci
     call bool _SetContains(valuetype T_cset s, int32 val)
     brfalse L_else_1231
-    // line 2339
+    .line 2339
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld uint8 _G::Ci
@@ -28886,7 +28886,7 @@ L_for_loop_1229:
     pop
     br L_if_end_1232
 L_else_1231:
-    // line 2339
+    .line 2339
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 95 // '_'
@@ -28905,10 +28905,10 @@ L_if_end_1232:
     br L_for_loop_1229
 L_for_end_1230:
     pop
-    // line 2340
+    .line 2340
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2341
+    .line 2341
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -28918,65 +28918,65 @@ L_for_end_1230:
     ldobj int32
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2342
+    .line 2342
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b:"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2343
+    .line 2343
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "64 false j 1 3 12  4.54512000e-29 what ? who"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2344
+    .line 2344
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "21 22 23 24 25 26 27 28 29 30"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2345
+    .line 2345
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "2324 y"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2346
+    .line 2346
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "_bcde___i_"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2347
+    .line 2347
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "8454"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2348
+    .line 2348
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record2:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2349
+    .line 2349
     ldsflda valuetype T_prec _G::Parec
     ldc.i4 64
     stfld int32 T_prec::i
-    // line 2350
+    .line 2350
     ldsflda valuetype T_prec _G::Parec
     ldc.i4 0 // (false)
     stfld bool T_prec::b
-    // line 2351
+    .line 2351
     ldsflda valuetype T_prec _G::Parec
     ldc.i4 106 // 'j'
     stfld uint8 T_prec::c
-    // line 2352
+    .line 2352
     ldsflda valuetype T_prec _G::Parec
     ldc.i4 1 // two 
     stfld int32 T_prec::e
-    // line 2353
+    .line 2353
     ldsflda valuetype T_prec _G::Parec
     ldc.i4 3 // four 
     dup
@@ -28984,7 +28984,7 @@ L_for_end_1230:
     ldc.i4 5
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_prec::Es
-    // line 2354
+    .line 2354
     ldsflda valuetype T_prec _G::Parec
     ldc.i4 12
     dup
@@ -28992,15 +28992,15 @@ L_for_end_1230:
     ldc.i4 20
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_prec::s
-    // line 2355
+    .line 2355
     ldsflda valuetype T_prec _G::Parec
     ldc.r8 4.54512e-29
     stfld float64 T_prec::r
-    // line 2356
+    .line 2356
     ldsflda valuetype T_prec _G::Parec
     ldsfld valuetype T_string10 STRING_10    // "what ? who"
     stfld valuetype T_string10 T_prec::St
-    // line 2357
+    .line 2357
     ldc.i4 10
     stloc $tmpEndValue624
     ldc.i4 1
@@ -29011,7 +29011,7 @@ L_for_end_1230:
     ldloc $tmpIndex625
     stsfld int32 _G::i
 L_for_loop_1233:
-    // line 2357
+    .line 2357
     ldsflda valuetype T_prec _G::Parec
     ldflda valuetype T_arri T_prec::a
     ldsfld int32 _G::i
@@ -29032,32 +29032,32 @@ L_for_loop_1233:
     br L_for_loop_1233
 L_for_end_1234:
     pop
-    // line 2358
+    .line 2358
     ldsflda valuetype T_prec _G::Parec
     ldflda valuetype T_recs T_prec::Rc
     ldc.i4 2324
     stfld int32 T_recs::a
-    // line 2359
+    .line 2359
     ldsflda valuetype T_prec _G::Parec
     ldflda valuetype T_recs T_prec::Rc
     ldc.i4 121 // 'y'
     stfld uint8 T_recs::b
-    // line 2360
+    .line 2360
     ldsflda valuetype T_prec _G::Parec
     ldloc $tmpSetLiteral627
     stfld valuetype T_cset T_prec::Stc
-    // line 2361
-    // line 2361
+    .line 2361
+    .line 2361
     ldsflda valuetype T_prec _G::Parec
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* T_prec::p
-    // line 2362
+    .line 2362
     ldsflda valuetype T_prec _G::Parec
     ldfld void* T_prec::p
     ldc.i4 8454
     stobj int32
-    // line 2363
+    .line 2363
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -29134,7 +29134,7 @@ L_bool_to_string_false_1236:
     call string T_string10::arrayToString(valuetype T_string10)
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2366
+    .line 2366
     ldc.i4 10
     stloc $tmpEndValue628
     ldc.i4 1
@@ -29145,7 +29145,7 @@ L_bool_to_string_false_1236:
     ldloc $tmpIndex629
     stsfld int32 _G::i
 L_for_loop_1237:
-    // line 2366
+    .line 2366
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -29172,10 +29172,10 @@ L_for_loop_1237:
     br L_for_loop_1237
 L_for_end_1238:
     pop
-    // line 2366
+    .line 2366
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2367
+    .line 2367
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -29195,7 +29195,7 @@ L_for_end_1238:
     ldfld uint8 T_recs::b
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, uint8)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2368
+    .line 2368
     ldc.i4 106 // 'j'
     stloc $tmpEndValue631
     ldc.i4 97 // 'a'
@@ -29206,13 +29206,13 @@ L_for_end_1238:
     ldloc $tmpIndex632
     stsfld uint8 _G::Ci
 L_for_loop_1239:
-    // line 2368
+    .line 2368
     ldsflda valuetype T_prec _G::Parec
     ldfld valuetype T_cset T_prec::Stc
     ldsfld uint8 _G::Ci
     call bool _SetContains(valuetype T_cset s, int32 val)
     brfalse L_else_1241
-    // line 2368
+    .line 2368
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld uint8 _G::Ci
@@ -29220,7 +29220,7 @@ L_for_loop_1239:
     pop
     br L_if_end_1242
 L_else_1241:
-    // line 2368
+    .line 2368
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 95 // '_'
@@ -29239,10 +29239,10 @@ L_if_end_1242:
     br L_for_loop_1239
 L_for_end_1240:
     pop
-    // line 2369
+    .line 2369
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2370
+    .line 2370
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -29252,65 +29252,65 @@ L_for_end_1240:
     ldobj int32
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2371
+    .line 2371
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b:"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2372
+    .line 2372
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "64 false j 1 3 12  4.54512000e-29 what ? who"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2373
+    .line 2373
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "21 22 23 24 25 26 27 28 29 30"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2374
+    .line 2374
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "2324 y"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2375
+    .line 2375
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "_bcde___i_"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2376
+    .line 2376
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "8454"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2379
+    .line 2379
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record3:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2380
+    .line 2380
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 873
     stfld int32 T_record_134::i
-    // line 2381
+    .line 2381
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 0 // vti 
     stfld int32 T_record_134::Vt
-    // line 2382
+    .line 2382
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 427
     stfld int32 T_record_134::a
-    // line 2383
+    .line 2383
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 235
     stfld int32 T_record_134::Vdi
-    // line 2384
+    .line 2384
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -29346,35 +29346,35 @@ L_for_end_1240:
     ldfld int32 T_record_134::a
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
-    // line 2385
+    .line 2385
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 873 0 235 427"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2386
+    .line 2386
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record4:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2387
+    .line 2387
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 873
     stfld int32 T_record_134::i
-    // line 2388
+    .line 2388
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 1 // vtb 
     stfld int32 T_record_134::Vt
-    // line 2389
+    .line 2389
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 427
     stfld int32 T_record_134::b
-    // line 2390
+    .line 2390
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 1 // (true)
     stfld bool T_record_134::Vdb
-    // line 2391
+    .line 2391
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -29416,35 +29416,35 @@ L_bool_to_string_false_1244:
     ldfld int32 T_record_134::b
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
-    // line 2392
+    .line 2392
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 873 1  true 427"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2393
+    .line 2393
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record5:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2394
+    .line 2394
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 873
     stfld int32 T_record_134::i
-    // line 2395
+    .line 2395
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 2 // vtc 
     stfld int32 T_record_134::Vt
-    // line 2396
+    .line 2396
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 427
     stfld int32 T_record_134::c
-    // line 2397
+    .line 2397
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 102 // 'f'
     stfld uint8 T_record_134::Vdc
-    // line 2398
+    .line 2398
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -29478,35 +29478,35 @@ L_bool_to_string_false_1244:
     ldfld int32 T_record_134::c
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
-    // line 2399
+    .line 2399
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 873 2 f 427"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2400
+    .line 2400
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record6:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2401
+    .line 2401
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 873
     stfld int32 T_record_134::i
-    // line 2402
+    .line 2402
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 3 // vte 
     stfld int32 T_record_134::Vt
-    // line 2403
+    .line 2403
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 427
     stfld int32 T_record_134::d
-    // line 2404
+    .line 2404
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 8 // nine 
     stfld int32 T_record_134::Vde
-    // line 2405
+    .line 2405
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -29542,31 +29542,31 @@ L_bool_to_string_false_1244:
     ldfld int32 T_record_134::d
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
-    // line 2406
+    .line 2406
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 873 3 8 427"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2407
+    .line 2407
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record7:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2408
+    .line 2408
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 873
     stfld int32 T_record_134::i
-    // line 2409
+    .line 2409
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 4 // vtes 
     stfld int32 T_record_134::Vt
-    // line 2410
+    .line 2410
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 427
     stfld int32 T_record_134::e
-    // line 2411
+    .line 2411
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 3 // four 
     dup
@@ -29574,7 +29574,7 @@ L_bool_to_string_false_1244:
     ldc.i4 5
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_record_134::Vdes
-    // line 2412
+    .line 2412
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -29610,31 +29610,31 @@ L_bool_to_string_false_1244:
     ldfld int32 T_record_134::e
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
-    // line 2413
+    .line 2413
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 873 4 3 427"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2414
+    .line 2414
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record8:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2415
+    .line 2415
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 873
     stfld int32 T_record_134::i
-    // line 2416
+    .line 2416
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 5 // vts 
     stfld int32 T_record_134::Vt
-    // line 2417
+    .line 2417
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 427
     stfld int32 T_record_134::f
-    // line 2418
+    .line 2418
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 12
     dup
@@ -29642,7 +29642,7 @@ L_bool_to_string_false_1244:
     ldc.i4 20
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_record_134::Vds
-    // line 2419
+    .line 2419
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -29678,35 +29678,35 @@ L_bool_to_string_false_1244:
     ldfld int32 T_record_134::f
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
-    // line 2420
+    .line 2420
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 873 5 12 427"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2421
+    .line 2421
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record9:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2422
+    .line 2422
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 873
     stfld int32 T_record_134::i
-    // line 2423
+    .line 2423
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 6 // vtr 
     stfld int32 T_record_134::Vt
-    // line 2424
+    .line 2424
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 427
     stfld int32 T_record_134::g
-    // line 2425
+    .line 2425
     ldsflda valuetype T_record_134 _G::Vra
     ldc.r8 8734.84
     stfld float64 T_record_134::Vdr
-    // line 2426
+    .line 2426
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -29742,35 +29742,35 @@ L_bool_to_string_false_1244:
     ldfld int32 T_record_134::g
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
-    // line 2427
+    .line 2427
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 873 6 8734.8389 427"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2428
+    .line 2428
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record10:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2429
+    .line 2429
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 873
     stfld int32 T_record_134::i
-    // line 2430
+    .line 2430
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 7 // vtst 
     stfld int32 T_record_134::Vt
-    // line 2431
+    .line 2431
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 427
     stfld int32 T_record_134::h
-    // line 2432
+    .line 2432
     ldsflda valuetype T_record_134 _G::Vra
     ldsfld valuetype T_string10 STRING_11    // "this one ?"
     stfld valuetype T_string10 T_record_134::Vdst
-    // line 2433
+    .line 2433
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -29805,31 +29805,31 @@ L_bool_to_string_false_1244:
     ldfld int32 T_record_134::h
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
-    // line 2434
+    .line 2434
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 873 7 this one ? 427"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2435
+    .line 2435
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record11:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2436
+    .line 2436
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 873
     stfld int32 T_record_134::i
-    // line 2437
+    .line 2437
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 8 // vta 
     stfld int32 T_record_134::Vt
-    // line 2438
+    .line 2438
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 427
     stfld int32 T_record_134::j
-    // line 2439
+    .line 2439
     ldc.i4 10
     stloc $tmpEndValue634
     ldc.i4 1
@@ -29840,7 +29840,7 @@ L_bool_to_string_false_1244:
     ldloc $tmpIndex635
     stsfld int32 _G::i
 L_for_loop_1245:
-    // line 2439
+    .line 2439
     ldsflda valuetype T_record_134 _G::Vra
     ldflda valuetype T_arri T_record_134::Vda
     ldsfld int32 _G::i
@@ -29861,7 +29861,7 @@ L_for_loop_1245:
     br L_for_loop_1245
 L_for_end_1246:
     pop
-    // line 2440
+    .line 2440
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -29882,7 +29882,7 @@ L_for_end_1246:
     ldc.i4 32 // ' '
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 2441
+    .line 2441
     ldc.i4 1
     stloc $tmpEndValue637
     ldc.i4 10
@@ -29893,7 +29893,7 @@ L_for_end_1246:
     ldloc $tmpIndex638
     stsfld int32 _G::i
 L_for_loop_1247:
-    // line 2441
+    .line 2441
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -29920,7 +29920,7 @@ L_for_loop_1247:
     br L_for_loop_1247
 L_for_end_1248:
     pop
-    // line 2442
+    .line 2442
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -29929,41 +29929,41 @@ L_for_end_1248:
     ldfld int32 T_record_134::j
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2443
+    .line 2443
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "      s/b:  873 8 20 19 18 17 16 15 14 13 12 11 427"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2444
+    .line 2444
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record12:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2445
+    .line 2445
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 873
     stfld int32 T_record_134::i
-    // line 2446
+    .line 2446
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 9 // vtrc 
     stfld int32 T_record_134::Vt
-    // line 2447
+    .line 2447
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 427
     stfld int32 T_record_134::k
-    // line 2448
+    .line 2448
     ldsflda valuetype T_record_134 _G::Vra
     ldflda valuetype T_recs T_record_134::Vdrc
     ldc.i4 2387
     stfld int32 T_recs::a
-    // line 2449
+    .line 2449
     ldsflda valuetype T_record_134 _G::Vra
     ldflda valuetype T_recs T_record_134::Vdrc
     ldc.i4 116 // 't'
     stfld uint8 T_recs::b
-    // line 2450
+    .line 2450
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -30008,35 +30008,35 @@ L_for_end_1248:
     ldfld int32 T_record_134::k
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
-    // line 2452
+    .line 2452
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b:  873 9 2387 t 427"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2453
+    .line 2453
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record13:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2454
+    .line 2454
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 873
     stfld int32 T_record_134::i
-    // line 2455
+    .line 2455
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 10 // vtstc 
     stfld int32 T_record_134::Vt
-    // line 2456
+    .line 2456
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 427
     stfld int32 T_record_134::l
-    // line 2457
+    .line 2457
     ldsflda valuetype T_record_134 _G::Vra
     ldloc $tmpSetLiteral640
     stfld valuetype T_cset T_record_134::Vdstc
-    // line 2458
+    .line 2458
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -30057,7 +30057,7 @@ L_for_end_1248:
     ldc.i4 32 // ' '
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 2459
+    .line 2459
     ldc.i4 97 // 'a'
     stloc $tmpEndValue641
     ldc.i4 106 // 'j'
@@ -30068,13 +30068,13 @@ L_for_end_1248:
     ldloc $tmpIndex642
     stsfld uint8 _G::Ci
 L_for_loop_1249:
-    // line 2459
+    .line 2459
     ldsflda valuetype T_record_134 _G::Vra
     ldfld valuetype T_cset T_record_134::Vdstc
     ldsfld uint8 _G::Ci
     call bool _SetContains(valuetype T_cset s, int32 val)
     brfalse L_else_1251
-    // line 2459
+    .line 2459
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld uint8 _G::Ci
@@ -30082,7 +30082,7 @@ L_for_loop_1249:
     pop
     br L_if_end_1252
 L_else_1251:
-    // line 2459
+    .line 2459
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 95 // '_'
@@ -30101,7 +30101,7 @@ L_if_end_1252:
     br L_for_loop_1249
 L_for_end_1250:
     pop
-    // line 2460
+    .line 2460
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 32 // ' '
@@ -30113,42 +30113,42 @@ L_for_end_1250:
     ldfld int32 T_record_134::l
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2461
+    .line 2461
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "      s/b:  873 10 _i_gfedcb_ 427"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2462
+    .line 2462
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record14:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2463
+    .line 2463
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 873
     stfld int32 T_record_134::i
-    // line 2464
+    .line 2464
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 11 // vtp 
     stfld int32 T_record_134::Vt
-    // line 2465
+    .line 2465
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 427
     stfld int32 T_record_134::m
-    // line 2466
-    // line 2466
+    .line 2466
+    .line 2466
     ldsflda valuetype T_record_134 _G::Vra
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* T_record_134::Vdp
-    // line 2467
+    .line 2467
     ldsflda valuetype T_record_134 _G::Vra
     ldfld void* T_record_134::Vdp
     ldc.i4 2394
     stobj int32
-    // line 2468
+    .line 2468
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -30185,19 +30185,19 @@ L_for_end_1250:
     ldfld int32 T_record_134::m
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
-    // line 2469
+    .line 2469
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 873 11 2394 427"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2472
+    .line 2472
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record15:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2473
+    .line 2473
     ldsflda valuetype T_record_138 _G::Vvrs
     ldc.i4 10
     dup
@@ -30205,11 +30205,11 @@ L_for_end_1250:
     ldc.i4 20
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_record_138::Vt
-    // line 2474
+    .line 2474
     ldsflda valuetype T_record_138 _G::Vvrs
     ldc.i4 2343
     stfld int32 T_record_138::Vi
-    // line 2475
+    .line 2475
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -30227,19 +30227,19 @@ L_for_end_1250:
     ldfld int32 T_record_138::Vi
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
-    // line 2476
+    .line 2476
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 10 2343"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2477
+    .line 2477
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record16:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2478
+    .line 2478
     ldsflda valuetype T_record_138 _G::Vvrs
     ldc.i4 19
     dup
@@ -30247,11 +30247,11 @@ L_for_end_1250:
     ldc.i4 20
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_record_138::Vt
-    // line 2479
+    .line 2479
     ldsflda valuetype T_record_138 _G::Vvrs
     ldc.i4 1 // (true)
     stfld bool T_record_138::Vb
-    // line 2480
+    .line 2480
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -30275,27 +30275,27 @@ L_bool_to_string_true_1253:
 L_bool_to_string_false_1254:
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
     pop
-    // line 2481
+    .line 2481
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 19  true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2482
+    .line 2482
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record17:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2483
+    .line 2483
     ldsflda valuetype T_record_135 _G::Vvrb
     ldc.i4 1 // (true)
     stfld bool T_record_135::Vt
-    // line 2484
+    .line 2484
     ldsflda valuetype T_record_135 _G::Vvrb
     ldc.i4 2343
     stfld int32 T_record_135::Vi
-    // line 2485
+    .line 2485
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 5
@@ -30319,27 +30319,27 @@ L_bool_to_string_false_1256:
     ldfld int32 T_record_135::Vi
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
-    // line 2486
+    .line 2486
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b  true 2343"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2487
+    .line 2487
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record18:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2488
+    .line 2488
     ldsflda valuetype T_record_135 _G::Vvrb
     ldc.i4 0 // (false)
     stfld bool T_record_135::Vt
-    // line 2489
+    .line 2489
     ldsflda valuetype T_record_135 _G::Vvrb
     ldc.i4 1 // (true)
     stfld bool T_record_135::Vb
-    // line 2490
+    .line 2490
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 5
@@ -30369,27 +30369,27 @@ L_bool_to_string_true_1259:
 L_bool_to_string_false_1260:
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
     pop
-    // line 2491
+    .line 2491
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b false  true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2492
+    .line 2492
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record19:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2493
+    .line 2493
     ldsflda valuetype T_record_136 _G::Vvre
     ldc.i4 2 // three 
     stfld int32 T_record_136::Vt
-    // line 2494
+    .line 2494
     ldsflda valuetype T_record_136 _G::Vvre
     ldc.i4 2343
     stfld int32 T_record_136::Vi
-    // line 2495
+    .line 2495
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -30407,27 +30407,27 @@ L_bool_to_string_false_1260:
     ldfld int32 T_record_136::Vi
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
-    // line 2496
+    .line 2496
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 2 2343"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2497
+    .line 2497
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record20:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2498
+    .line 2498
     ldsflda valuetype T_record_136 _G::Vvre
     ldc.i4 7 // eight 
     stfld int32 T_record_136::Vt
-    // line 2499
+    .line 2499
     ldsflda valuetype T_record_136 _G::Vvre
     ldc.i4 1 // (true)
     stfld bool T_record_136::Vb
-    // line 2500
+    .line 2500
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -30451,19 +30451,19 @@ L_bool_to_string_true_1261:
 L_bool_to_string_false_1262:
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
     pop
-    // line 2501
+    .line 2501
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 7  true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2502
+    .line 2502
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record21:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2503
+    .line 2503
     ldsflda valuetype T_record_137 _G::Vvres
     ldc.i4 3 // four 
     dup
@@ -30471,11 +30471,11 @@ L_bool_to_string_false_1262:
     ldc.i4 5
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_record_137::Vt
-    // line 2504
+    .line 2504
     ldsflda valuetype T_record_137 _G::Vvres
     ldc.i4 2343
     stfld int32 T_record_137::Vi
-    // line 2505
+    .line 2505
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -30493,19 +30493,19 @@ L_bool_to_string_false_1262:
     ldfld int32 T_record_137::Vi
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
-    // line 2506
+    .line 2506
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 3 2343"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2507
+    .line 2507
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record22:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2508
+    .line 2508
     ldsflda valuetype T_record_137 _G::Vvres
     ldc.i4 4 // five 
     dup
@@ -30513,11 +30513,11 @@ L_bool_to_string_false_1262:
     ldc.i4 5
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_record_137::Vt
-    // line 2509
+    .line 2509
     ldsflda valuetype T_record_137 _G::Vvres
     ldc.i4 1 // (true)
     stfld bool T_record_137::Vb
-    // line 2510
+    .line 2510
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -30541,41 +30541,41 @@ L_bool_to_string_true_1263:
 L_bool_to_string_false_1264:
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
     pop
-    // line 2511
+    .line 2511
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 4  true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2514
+    .line 2514
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record23:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2515
+    .line 2515
     ldsflda valuetype T_record_57 _G::Nvr
     ldc.i4 1
     stfld int32 T_record_57::i
-    // line 2516
+    .line 2516
     ldsflda valuetype T_record_57 _G::Nvr
     ldflda valuetype T_record_58 T_record_57::r
     ldc.i4 2
     stfld int32 T_record_58::i
-    // line 2517
+    .line 2517
     ldsflda valuetype T_record_57 _G::Nvr
     ldflda valuetype T_record_58 T_record_57::r
     ldflda valuetype T_record_59 T_record_58::r
     ldc.i4 3
     stfld int32 T_record_59::i
-    // line 2518
+    .line 2518
     ldsflda valuetype T_record_57 _G::Nvr
     ldflda valuetype T_record_58 T_record_57::r
     ldflda valuetype T_record_59 T_record_58::r
     ldflda valuetype T_record_60 T_record_59::r
     ldc.i4 4
     stfld int32 T_record_60::i
-    // line 2519
+    .line 2519
     ldsflda valuetype T_record_57 _G::Nvr
     ldflda valuetype T_record_58 T_record_57::r
     ldflda valuetype T_record_59 T_record_58::r
@@ -30583,7 +30583,7 @@ L_bool_to_string_false_1264:
     ldflda valuetype T_record_61 T_record_60::r
     ldc.i4 5
     stfld int32 T_record_61::i
-    // line 2520
+    .line 2520
     ldsflda valuetype T_record_57 _G::Nvr
     ldflda valuetype T_record_58 T_record_57::r
     ldflda valuetype T_record_59 T_record_58::r
@@ -30592,7 +30592,7 @@ L_bool_to_string_false_1264:
     ldflda valuetype T_record_62 T_record_61::r
     ldc.i4 6
     stfld int32 T_record_62::i
-    // line 2521
+    .line 2521
     ldsflda valuetype T_record_57 _G::Nvr
     ldflda valuetype T_record_58 T_record_57::r
     ldflda valuetype T_record_59 T_record_58::r
@@ -30602,7 +30602,7 @@ L_bool_to_string_false_1264:
     ldflda valuetype T_record_63 T_record_62::r
     ldc.i4 7
     stfld int32 T_record_63::i
-    // line 2522
+    .line 2522
     ldsflda valuetype T_record_57 _G::Nvr
     ldflda valuetype T_record_58 T_record_57::r
     ldflda valuetype T_record_59 T_record_58::r
@@ -30613,7 +30613,7 @@ L_bool_to_string_false_1264:
     ldflda valuetype T_record_64 T_record_63::r
     ldc.i4 8
     stfld int32 T_record_64::i
-    // line 2523
+    .line 2523
     ldsflda valuetype T_record_57 _G::Nvr
     ldflda valuetype T_record_58 T_record_57::r
     ldflda valuetype T_record_59 T_record_58::r
@@ -30625,7 +30625,7 @@ L_bool_to_string_false_1264:
     ldflda valuetype T_record_65 T_record_64::r
     ldc.i4 9
     stfld int32 T_record_65::i
-    // line 2524
+    .line 2524
     ldsflda valuetype T_record_57 _G::Nvr
     ldflda valuetype T_record_58 T_record_57::r
     ldflda valuetype T_record_59 T_record_58::r
@@ -30638,7 +30638,7 @@ L_bool_to_string_false_1264:
     ldflda valuetype T_record_66 T_record_65::r
     ldc.i4 10
     stfld int32 T_record_66::i
-    // line 2525
+    .line 2525
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -30779,35 +30779,35 @@ L_bool_to_string_false_1264:
     ldstr "s/b 1 2 3 4 5 6 7 8 9 10"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2538
+    .line 2538
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record24:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2541
+    .line 2541
     ldsflda valuetype T_record_57 _G::Nvr
     ldc.i4 10
     stfld int32 T_record_57::i
-    // line 2544
+    .line 2544
     ldsflda valuetype T_record_57 _G::Nvr
     ldflda valuetype T_record_58 T_record_57::r
     ldc.i4 9
     stfld int32 T_record_58::i
-    // line 2547
+    .line 2547
     ldsflda valuetype T_record_57 _G::Nvr
     ldflda valuetype T_record_58 T_record_57::r
     ldflda valuetype T_record_59 T_record_58::r
     ldc.i4 8
     stfld int32 T_record_59::i
-    // line 2550
+    .line 2550
     ldsflda valuetype T_record_57 _G::Nvr
     ldflda valuetype T_record_58 T_record_57::r
     ldflda valuetype T_record_59 T_record_58::r
     ldflda valuetype T_record_60 T_record_59::r
     ldc.i4 7
     stfld int32 T_record_60::i
-    // line 2553
+    .line 2553
     ldsflda valuetype T_record_57 _G::Nvr
     ldflda valuetype T_record_58 T_record_57::r
     ldflda valuetype T_record_59 T_record_58::r
@@ -30815,7 +30815,7 @@ L_bool_to_string_false_1264:
     ldflda valuetype T_record_61 T_record_60::r
     ldc.i4 6
     stfld int32 T_record_61::i
-    // line 2556
+    .line 2556
     ldsflda valuetype T_record_57 _G::Nvr
     ldflda valuetype T_record_58 T_record_57::r
     ldflda valuetype T_record_59 T_record_58::r
@@ -30824,7 +30824,7 @@ L_bool_to_string_false_1264:
     ldflda valuetype T_record_62 T_record_61::r
     ldc.i4 5
     stfld int32 T_record_62::i
-    // line 2559
+    .line 2559
     ldsflda valuetype T_record_57 _G::Nvr
     ldflda valuetype T_record_58 T_record_57::r
     ldflda valuetype T_record_59 T_record_58::r
@@ -30834,7 +30834,7 @@ L_bool_to_string_false_1264:
     ldflda valuetype T_record_63 T_record_62::r
     ldc.i4 4
     stfld int32 T_record_63::i
-    // line 2562
+    .line 2562
     ldsflda valuetype T_record_57 _G::Nvr
     ldflda valuetype T_record_58 T_record_57::r
     ldflda valuetype T_record_59 T_record_58::r
@@ -30845,7 +30845,7 @@ L_bool_to_string_false_1264:
     ldflda valuetype T_record_64 T_record_63::r
     ldc.i4 3
     stfld int32 T_record_64::i
-    // line 2565
+    .line 2565
     ldsflda valuetype T_record_57 _G::Nvr
     ldflda valuetype T_record_58 T_record_57::r
     ldflda valuetype T_record_59 T_record_58::r
@@ -30857,7 +30857,7 @@ L_bool_to_string_false_1264:
     ldflda valuetype T_record_65 T_record_64::r
     ldc.i4 2
     stfld int32 T_record_65::i
-    // line 2568
+    .line 2568
     ldsflda valuetype T_record_57 _G::Nvr
     ldflda valuetype T_record_58 T_record_57::r
     ldflda valuetype T_record_59 T_record_58::r
@@ -30870,7 +30870,7 @@ L_bool_to_string_false_1264:
     ldflda valuetype T_record_66 T_record_65::r
     ldc.i4 2
     stfld int32 T_record_66::i
-    // line 2571
+    .line 2571
     ldsflda valuetype T_record_57 _G::Nvr
     ldflda valuetype T_record_58 T_record_57::r
     ldflda valuetype T_record_59 T_record_58::r
@@ -30883,7 +30883,7 @@ L_bool_to_string_false_1264:
     ldflda valuetype T_record_66 T_record_65::r
     ldc.i4 1
     stfld int32 T_record_66::i
-    // line 2594
+    .line 2594
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -31024,13 +31024,13 @@ L_bool_to_string_false_1264:
     ldstr "s/b 10 9 8 7 6 5 4 3 2 1"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2605
+    .line 2605
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record25:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2606
+    .line 2606
     ldsflda valuetype T_record_57 _G::Nvr
     ldflda valuetype T_record_58 T_record_57::r
     ldflda valuetype T_record_59 T_record_58::r
@@ -31043,7 +31043,7 @@ L_bool_to_string_false_1264:
     ldflda valuetype T_record_66 T_record_65::r
     ldc.i4 76
     stfld int32 T_record_66::i
-    // line 2607
+    .line 2607
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -31184,27 +31184,27 @@ L_bool_to_string_false_1264:
     ldstr "s/b 10 9 8 7 6 5 4 3 2 76"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2618
+    .line 2618
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record26:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2619
-    // line 2619
+    .line 2619
+    .line 2619
     ldc.i4 128
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Rpa
-    // line 2622
+    .line 2622
     ldsfld void* _G::Rpa
     ldc.i4 1
     stfld int32 T_rec::i
-    // line 2623
+    .line 2623
     ldsfld void* _G::Rpa
     ldflda valuetype T_recs T_rec::Rc
     ldc.i4 103 // 'g'
     stfld uint8 T_recs::b
-    // line 2626
+    .line 2626
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -31224,13 +31224,13 @@ L_bool_to_string_false_1264:
     ldstr " s/b 1 g"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2627
+    .line 2627
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "Record27:  "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2628
+    .line 2628
     ldc.i4 10
     stloc $tmpEndValue644
     ldc.i4 1
@@ -31241,7 +31241,7 @@ L_bool_to_string_false_1264:
     ldloc $tmpIndex645
     stsfld int32 _G::i
 L_for_loop_1265:
-    // line 2628
+    .line 2628
     ldsflda valuetype T_arrr _G::Ara
     ldsfld int32 _G::i
     call instance valuetype T_recs& T_arrr::ldadr(int32)
@@ -31261,7 +31261,7 @@ L_for_loop_1265:
     br L_for_loop_1265
 L_for_end_1266:
     pop
-    // line 2629
+    .line 2629
     ldc.i4 1
     stloc $tmpEndValue647
     ldc.i4 10
@@ -31272,7 +31272,7 @@ L_for_end_1266:
     ldloc $tmpIndex648
     stsfld int32 _G::i
 L_for_loop_1267:
-    // line 2629
+    .line 2629
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -31298,37 +31298,37 @@ L_for_loop_1267:
     br L_for_loop_1267
 L_for_end_1268:
     pop
-    // line 2630
+    .line 2630
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 20 19 18 17 16 15 14 13 12 11"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2638
+    .line 2638
     ldc.i4 0 // testfile 
     brfalse L_if_end_1269
-    // line 2640
+    .line 2640
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2641
+    .line 2641
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "******************* files ******************************"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2642
+    .line 2642
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2645
+    .line 2645
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "File1:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2646
+    .line 2646
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fi
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 2647
+    .line 2647
     ldc.i4 10
     stloc $tmpEndValue650
     ldc.i4 1
@@ -31339,7 +31339,7 @@ L_for_end_1268:
     ldloc $tmpIndex651
     stsfld int32 _G::i
 L_for_loop_1270:
-    // line 2647
+    .line 2647
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fi
     dup
     ldsfld int32 _G::i
@@ -31359,10 +31359,10 @@ L_for_loop_1270:
     br L_for_loop_1270
 L_for_end_1271:
     pop
-    // line 2648
+    .line 2648
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fi
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 2649
+    .line 2649
     ldc.i4 10
     stloc $tmpEndValue653
     ldc.i4 1
@@ -31373,7 +31373,7 @@ L_for_end_1271:
     ldloc $tmpIndex654
     stsfld int32 _G::i
 L_for_loop_1272:
-    // line 2649
+    .line 2649
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fi
     dup
     ldsflda int32 _G::x
@@ -31381,7 +31381,7 @@ L_for_loop_1272:
     ldc.i4 2147483647
     call instance void [lpcRuntime]LPC.File::Read(int32*, int32, int32)
     pop
-    // line 2649
+    .line 2649
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -31404,22 +31404,22 @@ L_for_loop_1272:
     br L_for_loop_1272
 L_for_end_1273:
     pop
-    // line 2650
+    .line 2650
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 11 12 13 14 15 16 17 18 19 20"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2651
+    .line 2651
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "File2:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2652
+    .line 2652
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfi
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 2653
+    .line 2653
     ldc.i4 10
     stloc $tmpEndValue656
     ldc.i4 1
@@ -31430,7 +31430,7 @@ L_for_end_1273:
     ldloc $tmpIndex657
     stsfld int32 _G::i
 L_for_loop_1274:
-    // line 2653
+    .line 2653
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfi
     dup
     ldsfld int32 _G::i
@@ -31450,10 +31450,10 @@ L_for_loop_1274:
     br L_for_loop_1274
 L_for_end_1275:
     pop
-    // line 2654
+    .line 2654
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfi
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 2655
+    .line 2655
     ldc.i4 10
     stloc $tmpEndValue659
     ldc.i4 1
@@ -31464,7 +31464,7 @@ L_for_end_1275:
     ldloc $tmpIndex660
     stsfld int32 _G::i
 L_for_loop_1276:
-    // line 2655
+    .line 2655
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfi
     dup
     ldsflda int32 _G::x
@@ -31472,7 +31472,7 @@ L_for_loop_1276:
     ldc.i4 2147483647
     call instance void [lpcRuntime]LPC.File::Read(int32*, int32, int32)
     pop
-    // line 2655
+    .line 2655
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -31495,22 +31495,22 @@ L_for_loop_1276:
     br L_for_loop_1276
 L_for_end_1277:
     pop
-    // line 2656
+    .line 2656
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 11 12 13 14 15 16 17 18 19 20"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2657
+    .line 2657
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "File3:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2658
+    .line 2658
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fb
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 2659
+    .line 2659
     ldc.i4 10
     stloc $tmpEndValue662
     ldc.i4 1
@@ -31521,7 +31521,7 @@ L_for_end_1277:
     ldloc $tmpIndex663
     stsfld int32 _G::i
 L_for_loop_1278:
-    // line 2659
+    .line 2659
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fb
     dup
     ldsfld int32 _G::i
@@ -31547,10 +31547,10 @@ L_bool_to_string_false_1281:
     br L_for_loop_1278
 L_for_end_1279:
     pop
-    // line 2660
+    .line 2660
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fb
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 2661
+    .line 2661
     ldc.i4 10
     stloc $tmpEndValue665
     ldc.i4 1
@@ -31561,7 +31561,7 @@ L_for_end_1279:
     ldloc $tmpIndex666
     stsfld int32 _G::i
 L_for_loop_1282:
-    // line 2661
+    .line 2661
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fb
     dup
     ldsflda bool _G::Ba
@@ -31569,7 +31569,7 @@ L_for_loop_1282:
     ldc.i4 1
     call instance void [lpcRuntime]LPC.File::Read(bool*, int32, int32)
     pop
-    // line 2661
+    .line 2661
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 5
@@ -31598,10 +31598,10 @@ L_bool_to_string_false_1285:
     br L_for_loop_1282
 L_for_end_1283:
     pop
-    // line 2662
+    .line 2662
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2663
+    .line 2663
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "   s/b:    true false  true false  true false  true false  true "
@@ -31610,16 +31610,16 @@ L_for_end_1283:
     ldstr "false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2665
+    .line 2665
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "File4:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2666
+    .line 2666
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfb
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 2667
+    .line 2667
     ldc.i4 10
     stloc $tmpEndValue668
     ldc.i4 1
@@ -31630,7 +31630,7 @@ L_for_end_1283:
     ldloc $tmpIndex669
     stsfld int32 _G::i
 L_for_loop_1286:
-    // line 2667
+    .line 2667
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfb
     dup
     ldsfld int32 _G::i
@@ -31656,10 +31656,10 @@ L_bool_to_string_false_1289:
     br L_for_loop_1286
 L_for_end_1287:
     pop
-    // line 2668
+    .line 2668
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfb
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 2669
+    .line 2669
     ldc.i4 10
     stloc $tmpEndValue671
     ldc.i4 1
@@ -31670,7 +31670,7 @@ L_for_end_1287:
     ldloc $tmpIndex672
     stsfld int32 _G::i
 L_for_loop_1290:
-    // line 2669
+    .line 2669
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfb
     dup
     ldsflda bool _G::Ba
@@ -31678,7 +31678,7 @@ L_for_loop_1290:
     ldc.i4 1
     call instance void [lpcRuntime]LPC.File::Read(bool*, int32, int32)
     pop
-    // line 2669
+    .line 2669
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 5
@@ -31707,10 +31707,10 @@ L_bool_to_string_false_1293:
     br L_for_loop_1290
 L_for_end_1291:
     pop
-    // line 2670
+    .line 2670
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2671
+    .line 2671
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "   s/b:    true false  true false  true false  true false  true "
@@ -31719,16 +31719,16 @@ L_for_end_1291:
     ldstr "false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2673
+    .line 2673
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "File5:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2674
+    .line 2674
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fc
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 2675
+    .line 2675
     ldc.i4 106 // 'j'
     stloc $tmpEndValue674
     ldc.i4 97 // 'a'
@@ -31739,7 +31739,7 @@ L_for_end_1291:
     ldloc $tmpIndex675
     stsfld uint8 _G::Ci
 L_for_loop_1294:
-    // line 2675
+    .line 2675
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fc
     dup
     ldsfld uint8 _G::Ci
@@ -31757,10 +31757,10 @@ L_for_loop_1294:
     br L_for_loop_1294
 L_for_end_1295:
     pop
-    // line 2676
+    .line 2676
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fc
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 2677
+    .line 2677
     ldc.i4 106 // 'j'
     stloc $tmpEndValue677
     ldc.i4 97 // 'a'
@@ -31771,7 +31771,7 @@ L_for_end_1295:
     ldloc $tmpIndex678
     stsfld uint8 _G::Ci
 L_for_loop_1296:
-    // line 2677
+    .line 2677
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fc
     dup
     ldsflda uint8 _G::Ca
@@ -31779,7 +31779,7 @@ L_for_loop_1296:
     ldc.i4 255
     call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
     pop
-    // line 2677
+    .line 2677
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld uint8 _G::Ca
@@ -31800,22 +31800,22 @@ L_for_loop_1296:
     br L_for_loop_1296
 L_for_end_1297:
     pop
-    // line 2678
+    .line 2678
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b a b c d e f g h i j"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2679
+    .line 2679
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "File6:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2680
+    .line 2680
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfc
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 2681
+    .line 2681
     ldc.i4 106 // 'j'
     stloc $tmpEndValue680
     ldc.i4 97 // 'a'
@@ -31826,7 +31826,7 @@ L_for_end_1297:
     ldloc $tmpIndex681
     stsfld uint8 _G::Ci
 L_for_loop_1298:
-    // line 2681
+    .line 2681
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfc
     dup
     ldsfld uint8 _G::Ci
@@ -31844,10 +31844,10 @@ L_for_loop_1298:
     br L_for_loop_1298
 L_for_end_1299:
     pop
-    // line 2682
+    .line 2682
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfc
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 2683
+    .line 2683
     ldc.i4 106 // 'j'
     stloc $tmpEndValue683
     ldc.i4 97 // 'a'
@@ -31858,7 +31858,7 @@ L_for_end_1299:
     ldloc $tmpIndex684
     stsfld uint8 _G::Ci
 L_for_loop_1300:
-    // line 2683
+    .line 2683
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfc
     dup
     ldsflda uint8 _G::Ca
@@ -31866,7 +31866,7 @@ L_for_loop_1300:
     ldc.i4 255
     call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
     pop
-    // line 2683
+    .line 2683
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld uint8 _G::Ca
@@ -31887,22 +31887,22 @@ L_for_loop_1300:
     br L_for_loop_1300
 L_for_end_1301:
     pop
-    // line 2684
+    .line 2684
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b a b c d e f g h i j"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2685
+    .line 2685
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "File7:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2686
+    .line 2686
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fe
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 2687
+    .line 2687
     ldc.i4 9 // ten 
     stloc $tmpEndValue686
     ldc.i4 0 // one 
@@ -31917,7 +31917,7 @@ L_for_end_1301:
     ldloc $tmpIndex687
     stsfld int32 _G::Ei
 L_for_loop_1302:
-    // line 2687
+    .line 2687
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fe
     dup
     ldsfld int32 _G::Ei
@@ -31939,10 +31939,10 @@ L_for_loop_1302:
     br L_for_loop_1302
 L_for_end_1303:
     pop
-    // line 2688
+    .line 2688
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fe
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 2689
+    .line 2689
     ldc.i4 9 // ten 
     stloc $tmpEndValue689
     ldc.i4 0 // one 
@@ -31957,7 +31957,7 @@ L_for_end_1303:
     ldloc $tmpIndex690
     stsfld int32 _G::Ei
 L_for_loop_1304:
-    // line 2689
+    .line 2689
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fe
     dup
     ldsflda int32 _G::Ea
@@ -31965,7 +31965,7 @@ L_for_loop_1304:
     ldc.i4 9
     call instance void [lpcRuntime]LPC.File::Read(int32*, int32, int32)
     pop
-    // line 2689
+    .line 2689
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -31992,22 +31992,22 @@ L_for_loop_1304:
     br L_for_loop_1304
 L_for_end_1305:
     pop
-    // line 2690
+    .line 2690
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 0 1 2 3 4 5 6 7 8 9"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2691
+    .line 2691
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "File8:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2692
+    .line 2692
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfe
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 2693
+    .line 2693
     ldc.i4 9 // ten 
     stloc $tmpEndValue692
     ldc.i4 0 // one 
@@ -32022,7 +32022,7 @@ L_for_end_1305:
     ldloc $tmpIndex693
     stsfld int32 _G::Ei
 L_for_loop_1306:
-    // line 2693
+    .line 2693
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfe
     dup
     ldsfld int32 _G::Ei
@@ -32044,10 +32044,10 @@ L_for_loop_1306:
     br L_for_loop_1306
 L_for_end_1307:
     pop
-    // line 2694
+    .line 2694
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfe
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 2695
+    .line 2695
     ldc.i4 9 // ten 
     stloc $tmpEndValue695
     ldc.i4 0 // one 
@@ -32062,7 +32062,7 @@ L_for_end_1307:
     ldloc $tmpIndex696
     stsfld int32 _G::Ei
 L_for_loop_1308:
-    // line 2695
+    .line 2695
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfe
     dup
     ldsflda int32 _G::Ea
@@ -32070,7 +32070,7 @@ L_for_loop_1308:
     ldc.i4 9
     call instance void [lpcRuntime]LPC.File::Read(int32*, int32, int32)
     pop
-    // line 2695
+    .line 2695
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -32097,25 +32097,25 @@ L_for_loop_1308:
     br L_for_loop_1308
 L_for_end_1309:
     pop
-    // line 2696
+    .line 2696
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 0 1 2 3 4 5 6 7 8 9"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2699
+    .line 2699
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "File9:"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2700
+    .line 2700
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 2701
+    .line 2701
     ldc.i4 7384
     stsfld int32 _G::x
-    // line 2702
+    .line 2702
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldc.i4 1
@@ -32123,7 +32123,7 @@ L_for_end_1309:
     ldsfld int32 _G::x
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2703
+    .line 2703
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldc.i4 1
@@ -32131,10 +32131,10 @@ L_for_end_1309:
     ldc.i4 8342
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2704
+    .line 2704
     ldc.i4 1 // (true)
     stsfld bool _G::Ba
-    // line 2705
+    .line 2705
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldc.i4 5
@@ -32148,7 +32148,7 @@ L_bool_to_string_true_1310:
 L_bool_to_string_false_1311:
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2706
+    .line 2706
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldc.i4 5
@@ -32162,25 +32162,25 @@ L_bool_to_string_true_1312:
 L_bool_to_string_false_1313:
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2707
+    .line 2707
     ldc.i4 109 // 'm'
     stsfld uint8 _G::Ca
-    // line 2708
+    .line 2708
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldsfld uint8 _G::Ca
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2709
+    .line 2709
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldc.i4 113 // 'q'
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2710
+    .line 2710
     ldc.r8 1.23457
     stsfld float64 _G::Ra
-    // line 2711
+    .line 2711
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldc.i4 15
@@ -32188,7 +32188,7 @@ L_bool_to_string_false_1313:
     ldsfld float64 _G::Ra
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, float64)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2712
+    .line 2712
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldc.i4 1
@@ -32196,7 +32196,7 @@ L_bool_to_string_false_1313:
     ldsfld float64 _G::Ra
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, float64)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2713
+    .line 2713
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldc.i4 15
@@ -32204,7 +32204,7 @@ L_bool_to_string_false_1313:
     ldc.r8 56.8943
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, float64)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2714
+    .line 2714
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldc.i4 1
@@ -32212,17 +32212,17 @@ L_bool_to_string_false_1313:
     ldc.r8 0.938376
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, float64)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2715
+    .line 2715
     ldsfld valuetype T_string10 STRING_12    // "hi there !"
     stsfld valuetype T_string10 _G::s
-    // line 2716
+    .line 2716
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldsfld valuetype T_string10 _G::s
     call string T_string10::arrayToString(valuetype T_string10)
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2717
+    .line 2717
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldc.i4 5
@@ -32231,7 +32231,7 @@ L_bool_to_string_false_1313:
     call string T_string10::arrayToString(valuetype T_string10)
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2718
+    .line 2718
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldc.i4 15
@@ -32240,25 +32240,25 @@ L_bool_to_string_false_1313:
     call string T_string10::arrayToString(valuetype T_string10)
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2719
+    .line 2719
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 2720
+    .line 2720
     br L_while_test_1315
 L_while_1314:
-    // line 2722
+    .line 2722
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     call instance bool [lpcRuntime]LPC.File::Eoln()
     brfalse L_else_1316
-    // line 2724
+    .line 2724
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 2725
+    .line 2725
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
     br L_if_end_1317
 L_else_1316:
-    // line 2729
+    .line 2729
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldsflda uint8 _G::Ci
@@ -32266,7 +32266,7 @@ L_else_1316:
     ldc.i4 255
     call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
     pop
-    // line 2730
+    .line 2730
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld uint8 _G::Ci
@@ -32279,100 +32279,100 @@ L_while_test_1315:
     ldc.i4.0
     ceq
     brtrue L_while_1314
-    // line 2735
+    .line 2735
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b:"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2736
+    .line 2736
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "7384"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2737
+    .line 2737
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "8342"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2738
+    .line 2738
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " true"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2739
+    .line 2739
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2740
+    .line 2740
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 109 // 'm'
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2741
+    .line 2741
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 113 // 'q'
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2742
+    .line 2742
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 1.2345678000e+00"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2743
+    .line 2743
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "1.2345678"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2744
+    .line 2744
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 5.6894321000e+01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2745
+    .line 2745
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "0.93837632"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2746
+    .line 2746
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "hi there !"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2747
+    .line 2747
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "hi th"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2748
+    .line 2748
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "     hi there !"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2751
+    .line 2751
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "file10:"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2752
+    .line 2752
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 2753
+    .line 2753
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldsflda int32 _G::y
@@ -32380,7 +32380,7 @@ L_while_test_1315:
     ldc.i4 2147483647
     call instance void [lpcRuntime]LPC.File::Read(int32*, int32, int32)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 2754
+    .line 2754
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -32388,7 +32388,7 @@ L_while_test_1315:
     ldsfld int32 _G::y
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2755
+    .line 2755
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldsflda int32 _G::y
@@ -32396,7 +32396,7 @@ L_while_test_1315:
     ldc.i4 2147483647
     call instance void [lpcRuntime]LPC.File::Read(int32*, int32, int32)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 2756
+    .line 2756
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -32404,27 +32404,13 @@ L_while_test_1315:
     ldsfld int32 _G::y
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2757
+    .line 2757
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 2758
+    .line 2758
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 2759
-    ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
-    dup
-    ldsflda uint8 _G::Ci
-    ldc.i4 0
-    ldc.i4 255
-    call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
-    call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 2760
-    ldsflda valuetype [lpcRuntime]LPC.File _G::Output
-    dup
-    ldsfld uint8 _G::Ci
-    call instance void [lpcRuntime]LPC.File::Write(uint8)
-    call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2761
+    .line 2759
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldsflda uint8 _G::Ci
@@ -32432,19 +32418,33 @@ L_while_test_1315:
     ldc.i4 255
     call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 2762
+    .line 2760
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld uint8 _G::Ci
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2763
+    .line 2761
+    ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
+    dup
+    ldsflda uint8 _G::Ci
+    ldc.i4 0
+    ldc.i4 255
+    call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
+    call instance void [lpcRuntime]LPC.File::ReadLn()
+    .line 2762
+    ldsflda valuetype [lpcRuntime]LPC.File _G::Output
+    dup
+    ldsfld uint8 _G::Ci
+    call instance void [lpcRuntime]LPC.File::Write(uint8)
+    call instance void [lpcRuntime]LPC.File::WriteLn()
+    .line 2763
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldsflda float64 _G::Rb
     call instance void [lpcRuntime]LPC.File::Read(float64*)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 2764
+    .line 2764
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 15
@@ -32452,13 +32452,13 @@ L_while_test_1315:
     ldsfld float64 _G::Rb
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, float64)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2765
+    .line 2765
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldsflda float64 _G::Rb
     call instance void [lpcRuntime]LPC.File::Read(float64*)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 2766
+    .line 2766
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 15
@@ -32466,13 +32466,13 @@ L_while_test_1315:
     ldsfld float64 _G::Rb
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, float64)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2767
+    .line 2767
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldsflda float64 _G::Rb
     call instance void [lpcRuntime]LPC.File::Read(float64*)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 2768
+    .line 2768
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 15
@@ -32480,13 +32480,13 @@ L_while_test_1315:
     ldsfld float64 _G::Rb
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, float64)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2769
+    .line 2769
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldsflda float64 _G::Rb
     call instance void [lpcRuntime]LPC.File::Read(float64*)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 2770
+    .line 2770
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 15
@@ -32494,105 +32494,105 @@ L_while_test_1315:
     ldsfld float64 _G::Rb
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, float64)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2771
+    .line 2771
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b:"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2772
+    .line 2772
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "7384"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2773
+    .line 2773
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "8342"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2774
+    .line 2774
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 109 // 'm'
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2775
+    .line 2775
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 113 // 'q'
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2776
+    .line 2776
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 1.2345678000e+00"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2777
+    .line 2777
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 1.2345678000e+00"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2778
+    .line 2778
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 5.6894321000e+01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2779
+    .line 2779
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " 9.3837632000e+01"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2782
+    .line 2782
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "file11:"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2783
+    .line 2783
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 2784
+    .line 2784
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldstr "how now"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2785
+    .line 2785
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldstr "brown cow"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2786
+    .line 2786
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 2787
+    .line 2787
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 39 // '''
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 2788
+    .line 2788
     br L_while_test_1319
 L_while_1318:
-    // line 2790
+    .line 2790
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     call instance bool [lpcRuntime]LPC.File::Eoln()
     brfalse L_if_end_1320
-    // line 2790
+    .line 2790
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "<eoln>"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
 L_if_end_1320:
-    // line 2791
+    .line 2791
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldsflda uint8 _G::Ca
@@ -32600,7 +32600,7 @@ L_if_end_1320:
     ldc.i4 255
     call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
     pop
-    // line 2792
+    .line 2792
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld uint8 _G::Ca
@@ -32612,63 +32612,63 @@ L_while_test_1319:
     ldc.i4.0
     ceq
     brtrue L_while_1318
-    // line 2795
+    .line 2795
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 39 // '''
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 2796
+    .line 2796
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 'how now<eoln> brown cow<eoln> '"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2797
+    .line 2797
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "file12:"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2798
+    .line 2798
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 2799
+    .line 2799
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldstr "too much"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2800
+    .line 2800
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldstr "too soon"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2801
+    .line 2801
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 2802
+    .line 2802
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 39 // '''
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 2803
+    .line 2803
     br L_while_test_1322
 L_while_1321:
-    // line 2805
+    .line 2805
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     call instance bool [lpcRuntime]LPC.File::Eoln()
     brfalse L_if_end_1323
-    // line 2805
+    .line 2805
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "<eoln>"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
 L_if_end_1323:
-    // line 2806
+    .line 2806
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldsflda uint8 _G::Ca
@@ -32676,7 +32676,7 @@ L_if_end_1323:
     ldc.i4 255
     call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
     pop
-    // line 2807
+    .line 2807
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld uint8 _G::Ca
@@ -32688,28 +32688,28 @@ L_while_test_1322:
     ldc.i4.0
     ceq
     brtrue L_while_1321
-    // line 2810
+    .line 2810
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 39 // '''
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 2811
+    .line 2811
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 'too much<eoln> too soon<eoln> '"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2814
+    .line 2814
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "File13:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2815
+    .line 2815
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fi
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 2816
+    .line 2816
     ldc.i4 10
     stloc $tmpEndValue698
     ldc.i4 1
@@ -32720,14 +32720,14 @@ L_while_test_1322:
     ldloc $tmpIndex699
     stsfld int32 _G::i
 L_for_loop_1324:
-    // line 2816
+    .line 2816
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fi
     ldflda uint8 [lpcRuntime]LPC.File::FileVar
     ldsfld int32 _G::i
     ldc.i4 10
     add
     stobj int32
-    // line 2816
+    .line 2816
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fi
     call instance void [lpcRuntime]LPC.File::Put()
     ldsfld int32 _G::i
@@ -32742,10 +32742,10 @@ L_for_loop_1324:
     br L_for_loop_1324
 L_for_end_1325:
     pop
-    // line 2817
+    .line 2817
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fi
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 2818
+    .line 2818
     ldc.i4 10
     stloc $tmpEndValue701
     ldc.i4 1
@@ -32756,17 +32756,17 @@ L_for_end_1325:
     ldloc $tmpIndex702
     stsfld int32 _G::i
 L_for_loop_1326:
-    // line 2818
+    .line 2818
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fi
     dup
     call instance void [lpcRuntime]LPC.File::VarRead()
     ldflda uint8 [lpcRuntime]LPC.File::FileVar
     ldobj int32
     stsfld int32 _G::x
-    // line 2818
+    .line 2818
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fi
     call instance void [lpcRuntime]LPC.File::Get()
-    // line 2818
+    .line 2818
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -32789,22 +32789,22 @@ L_for_loop_1326:
     br L_for_loop_1326
 L_for_end_1327:
     pop
-    // line 2819
+    .line 2819
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 11 12 13 14 15 16 17 18 19 20"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2820
+    .line 2820
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "File14:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2821
+    .line 2821
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfi
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 2822
+    .line 2822
     ldc.i4 10
     stloc $tmpEndValue704
     ldc.i4 1
@@ -32815,14 +32815,14 @@ L_for_end_1327:
     ldloc $tmpIndex705
     stsfld int32 _G::i
 L_for_loop_1328:
-    // line 2822
+    .line 2822
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfi
     ldflda uint8 [lpcRuntime]LPC.File::FileVar
     ldsfld int32 _G::i
     ldc.i4 10
     add
     stobj int32
-    // line 2822
+    .line 2822
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfi
     call instance void [lpcRuntime]LPC.File::Put()
     ldsfld int32 _G::i
@@ -32837,10 +32837,10 @@ L_for_loop_1328:
     br L_for_loop_1328
 L_for_end_1329:
     pop
-    // line 2823
+    .line 2823
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfi
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 2824
+    .line 2824
     ldc.i4 10
     stloc $tmpEndValue707
     ldc.i4 1
@@ -32851,17 +32851,17 @@ L_for_end_1329:
     ldloc $tmpIndex708
     stsfld int32 _G::i
 L_for_loop_1330:
-    // line 2824
+    .line 2824
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfi
     dup
     call instance void [lpcRuntime]LPC.File::VarRead()
     ldflda uint8 [lpcRuntime]LPC.File::FileVar
     ldobj int32
     stsfld int32 _G::x
-    // line 2824
+    .line 2824
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfi
     call instance void [lpcRuntime]LPC.File::Get()
-    // line 2824
+    .line 2824
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -32884,22 +32884,22 @@ L_for_loop_1330:
     br L_for_loop_1330
 L_for_end_1331:
     pop
-    // line 2825
+    .line 2825
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 11 12 13 14 15 16 17 18 19 20"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2826
+    .line 2826
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "File15:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2827
+    .line 2827
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fb
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 2828
+    .line 2828
     ldc.i4 10
     stloc $tmpEndValue710
     ldc.i4 1
@@ -32910,14 +32910,14 @@ L_for_end_1331:
     ldloc $tmpIndex711
     stsfld int32 _G::i
 L_for_loop_1332:
-    // line 2828
+    .line 2828
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fb
     ldflda uint8 [lpcRuntime]LPC.File::FileVar
     ldsfld int32 _G::i
     ldc.i4.1
     and
     stobj bool
-    // line 2828
+    .line 2828
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fb
     call instance void [lpcRuntime]LPC.File::Put()
     ldsfld int32 _G::i
@@ -32932,10 +32932,10 @@ L_for_loop_1332:
     br L_for_loop_1332
 L_for_end_1333:
     pop
-    // line 2829
+    .line 2829
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fb
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 2830
+    .line 2830
     ldc.i4 10
     stloc $tmpEndValue713
     ldc.i4 1
@@ -32946,17 +32946,17 @@ L_for_end_1333:
     ldloc $tmpIndex714
     stsfld int32 _G::i
 L_for_loop_1334:
-    // line 2830
+    .line 2830
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fb
     dup
     call instance void [lpcRuntime]LPC.File::VarRead()
     ldflda uint8 [lpcRuntime]LPC.File::FileVar
     ldobj bool
     stsfld bool _G::Ba
-    // line 2830
+    .line 2830
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fb
     call instance void [lpcRuntime]LPC.File::Get()
-    // line 2830
+    .line 2830
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 5
@@ -32985,10 +32985,10 @@ L_bool_to_string_false_1337:
     br L_for_loop_1334
 L_for_end_1335:
     pop
-    // line 2831
+    .line 2831
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2832
+    .line 2832
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "   s/b:    true false  true false  true false  true false  true "
@@ -32997,16 +32997,16 @@ L_for_end_1335:
     ldstr "false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2834
+    .line 2834
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "File16:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2835
+    .line 2835
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfb
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 2836
+    .line 2836
     ldc.i4 10
     stloc $tmpEndValue716
     ldc.i4 1
@@ -33017,14 +33017,14 @@ L_for_end_1335:
     ldloc $tmpIndex717
     stsfld int32 _G::i
 L_for_loop_1338:
-    // line 2836
+    .line 2836
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfb
     ldflda uint8 [lpcRuntime]LPC.File::FileVar
     ldsfld int32 _G::i
     ldc.i4.1
     and
     stobj bool
-    // line 2836
+    .line 2836
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfb
     call instance void [lpcRuntime]LPC.File::Put()
     ldsfld int32 _G::i
@@ -33039,10 +33039,10 @@ L_for_loop_1338:
     br L_for_loop_1338
 L_for_end_1339:
     pop
-    // line 2837
+    .line 2837
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfb
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 2838
+    .line 2838
     ldc.i4 10
     stloc $tmpEndValue719
     ldc.i4 1
@@ -33053,17 +33053,17 @@ L_for_end_1339:
     ldloc $tmpIndex720
     stsfld int32 _G::i
 L_for_loop_1340:
-    // line 2838
+    .line 2838
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfb
     dup
     call instance void [lpcRuntime]LPC.File::VarRead()
     ldflda uint8 [lpcRuntime]LPC.File::FileVar
     ldobj bool
     stsfld bool _G::Ba
-    // line 2838
+    .line 2838
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfb
     call instance void [lpcRuntime]LPC.File::Get()
-    // line 2838
+    .line 2838
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 5
@@ -33092,10 +33092,10 @@ L_bool_to_string_false_1343:
     br L_for_loop_1340
 L_for_end_1341:
     pop
-    // line 2839
+    .line 2839
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2840
+    .line 2840
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "   s/b:    true false  true false  true false  true false  true "
@@ -33104,16 +33104,16 @@ L_for_end_1341:
     ldstr "false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2842
+    .line 2842
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "File17:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2843
+    .line 2843
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fc
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 2844
+    .line 2844
     ldc.i4 106 // 'j'
     stloc $tmpEndValue722
     ldc.i4 97 // 'a'
@@ -33124,12 +33124,12 @@ L_for_end_1341:
     ldloc $tmpIndex723
     stsfld uint8 _G::Ci
 L_for_loop_1344:
-    // line 2844
+    .line 2844
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fc
     ldflda uint8 [lpcRuntime]LPC.File::FileVar
     ldsfld uint8 _G::Ci
     stobj uint8
-    // line 2844
+    .line 2844
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fc
     call instance void [lpcRuntime]LPC.File::Put()
     ldsfld uint8 _G::Ci
@@ -33144,10 +33144,10 @@ L_for_loop_1344:
     br L_for_loop_1344
 L_for_end_1345:
     pop
-    // line 2845
+    .line 2845
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fc
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 2846
+    .line 2846
     ldc.i4 106 // 'j'
     stloc $tmpEndValue725
     ldc.i4 97 // 'a'
@@ -33158,17 +33158,17 @@ L_for_end_1345:
     ldloc $tmpIndex726
     stsfld uint8 _G::Ci
 L_for_loop_1346:
-    // line 2846
+    .line 2846
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fc
     dup
     call instance void [lpcRuntime]LPC.File::VarRead()
     ldflda uint8 [lpcRuntime]LPC.File::FileVar
     ldobj uint8
     stsfld uint8 _G::Ca
-    // line 2846
+    .line 2846
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fc
     call instance void [lpcRuntime]LPC.File::Get()
-    // line 2846
+    .line 2846
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld uint8 _G::Ca
@@ -33189,22 +33189,22 @@ L_for_loop_1346:
     br L_for_loop_1346
 L_for_end_1347:
     pop
-    // line 2847
+    .line 2847
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b a b c d e f g h i j"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2848
+    .line 2848
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "File18:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2849
+    .line 2849
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfc
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 2850
+    .line 2850
     ldc.i4 106 // 'j'
     stloc $tmpEndValue728
     ldc.i4 97 // 'a'
@@ -33215,12 +33215,12 @@ L_for_end_1347:
     ldloc $tmpIndex729
     stsfld uint8 _G::Ci
 L_for_loop_1348:
-    // line 2850
+    .line 2850
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfc
     ldflda uint8 [lpcRuntime]LPC.File::FileVar
     ldsfld uint8 _G::Ci
     stobj uint8
-    // line 2850
+    .line 2850
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfc
     call instance void [lpcRuntime]LPC.File::Put()
     ldsfld uint8 _G::Ci
@@ -33235,10 +33235,10 @@ L_for_loop_1348:
     br L_for_loop_1348
 L_for_end_1349:
     pop
-    // line 2851
+    .line 2851
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfc
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 2852
+    .line 2852
     ldc.i4 106 // 'j'
     stloc $tmpEndValue731
     ldc.i4 97 // 'a'
@@ -33249,17 +33249,17 @@ L_for_end_1349:
     ldloc $tmpIndex732
     stsfld uint8 _G::Ci
 L_for_loop_1350:
-    // line 2852
+    .line 2852
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfc
     dup
     call instance void [lpcRuntime]LPC.File::VarRead()
     ldflda uint8 [lpcRuntime]LPC.File::FileVar
     ldobj uint8
     stsfld uint8 _G::Ca
-    // line 2852
+    .line 2852
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfc
     call instance void [lpcRuntime]LPC.File::Get()
-    // line 2852
+    .line 2852
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld uint8 _G::Ca
@@ -33280,22 +33280,22 @@ L_for_loop_1350:
     br L_for_loop_1350
 L_for_end_1351:
     pop
-    // line 2853
+    .line 2853
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b a b c d e f g h i j"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2854
+    .line 2854
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "File19:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2855
+    .line 2855
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fe
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 2856
+    .line 2856
     ldc.i4 9 // ten 
     stloc $tmpEndValue734
     ldc.i4 0 // one 
@@ -33310,12 +33310,12 @@ L_for_end_1351:
     ldloc $tmpIndex735
     stsfld int32 _G::Ei
 L_for_loop_1352:
-    // line 2856
+    .line 2856
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fe
     ldflda uint8 [lpcRuntime]LPC.File::FileVar
     ldsfld int32 _G::Ei
     stobj int32
-    // line 2856
+    .line 2856
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fe
     call instance void [lpcRuntime]LPC.File::Put()
     ldsfld int32 _G::Ei
@@ -33334,10 +33334,10 @@ L_for_loop_1352:
     br L_for_loop_1352
 L_for_end_1353:
     pop
-    // line 2857
+    .line 2857
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fe
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 2858
+    .line 2858
     ldc.i4 9 // ten 
     stloc $tmpEndValue737
     ldc.i4 0 // one 
@@ -33352,17 +33352,17 @@ L_for_end_1353:
     ldloc $tmpIndex738
     stsfld int32 _G::Ei
 L_for_loop_1354:
-    // line 2858
+    .line 2858
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fe
     dup
     call instance void [lpcRuntime]LPC.File::VarRead()
     ldflda uint8 [lpcRuntime]LPC.File::FileVar
     ldobj int32
     stsfld int32 _G::Ea
-    // line 2858
+    .line 2858
     ldsflda valuetype [lpcRuntime]LPC.File _G::Fe
     call instance void [lpcRuntime]LPC.File::Get()
-    // line 2858
+    .line 2858
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -33389,22 +33389,22 @@ L_for_loop_1354:
     br L_for_loop_1354
 L_for_end_1355:
     pop
-    // line 2859
+    .line 2859
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 0 1 2 3 4 5 6 7 8 9"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2860
+    .line 2860
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "File20:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2861
+    .line 2861
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfe
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 2862
+    .line 2862
     ldc.i4 9 // ten 
     stloc $tmpEndValue740
     ldc.i4 0 // one 
@@ -33419,12 +33419,12 @@ L_for_end_1355:
     ldloc $tmpIndex741
     stsfld int32 _G::Ei
 L_for_loop_1356:
-    // line 2862
+    .line 2862
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfe
     ldflda uint8 [lpcRuntime]LPC.File::FileVar
     ldsfld int32 _G::Ei
     stobj int32
-    // line 2862
+    .line 2862
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfe
     call instance void [lpcRuntime]LPC.File::Put()
     ldsfld int32 _G::Ei
@@ -33443,10 +33443,10 @@ L_for_loop_1356:
     br L_for_loop_1356
 L_for_end_1357:
     pop
-    // line 2863
+    .line 2863
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfe
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 2864
+    .line 2864
     ldc.i4 9 // ten 
     stloc $tmpEndValue743
     ldc.i4 0 // one 
@@ -33461,17 +33461,17 @@ L_for_end_1357:
     ldloc $tmpIndex744
     stsfld int32 _G::Ei
 L_for_loop_1358:
-    // line 2864
+    .line 2864
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfe
     dup
     call instance void [lpcRuntime]LPC.File::VarRead()
     ldflda uint8 [lpcRuntime]LPC.File::FileVar
     ldobj int32
     stsfld int32 _G::Ea
-    // line 2864
+    .line 2864
     ldsflda valuetype [lpcRuntime]LPC.File _G::Pfe
     call instance void [lpcRuntime]LPC.File::Get()
-    // line 2864
+    .line 2864
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -33498,31 +33498,31 @@ L_for_loop_1358:
     br L_for_loop_1358
 L_for_end_1359:
     pop
-    // line 2865
+    .line 2865
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b 0 1 2 3 4 5 6 7 8 9"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2866
+    .line 2866
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "File21:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2867
+    .line 2867
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 2868
+    .line 2868
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldstr "50"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2869
+    .line 2869
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 2870
+    .line 2870
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     dup
     ldsflda int8 _G::Srx
@@ -33530,7 +33530,7 @@ L_for_end_1359:
     ldc.i4 100
     call instance void [lpcRuntime]LPC.File::Read(int8*, int32, int32)
     pop
-    // line 2871
+    .line 2871
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b "
@@ -33541,16 +33541,16 @@ L_for_end_1359:
     ldc.i4 50
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2872
+    .line 2872
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "File22:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2873
+    .line 2873
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 2874
+    .line 2874
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsflda valuetype [lpcRuntime]LPC.File _G::Ft
@@ -33568,53 +33568,53 @@ L_bool_to_string_false_1361:
     call instance void [lpcRuntime]LPC.File::WriteLn()
     /* nop */
 L_if_end_1269:
-    // line 2884
+    .line 2884
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2885
+    .line 2885
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "************ Procedures and functions ******************"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2886
+    .line 2886
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2887
+    .line 2887
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "ProcedureFunction1:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2888
+    .line 2888
     ldc.i4 45
     stsfld int32 _G::x
-    // line 2888
+    .line 2888
     ldc.i4 89
     stsfld int32 _G::y
-    // line 2889
+    .line 2889
     ldsfld int32 _G::x
     ldsfld int32 _G::y
     call void Junk1(int32 z, int32 q)
-    // line 2890
+    .line 2890
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 45 89"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2891
+    .line 2891
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "ProcedureFunction2:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2892
+    .line 2892
     ldc.i4 45
     stsfld int32 _G::x
-    // line 2892
+    .line 2892
     ldsflda int32 _G::x
     call void Junk2(int32& z)
-    // line 2893
+    .line 2893
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -33625,43 +33625,43 @@ L_if_end_1269:
     ldstr " s/b 46"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2894
+    .line 2894
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "ProcedureFunction3:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2895
+    .line 2895
     ldsfld valuetype T_string10 STRING_13    // "total junk"
     stsfld valuetype T_string10 _G::s
-    // line 2896
+    .line 2896
     ldsflda valuetype T_string10 _G::s
     call void Junk3(valuetype T_string10& p)
-    // line 2897
+    .line 2897
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b total junk"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2898
+    .line 2898
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "ProcedureFunction4:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2899
+    .line 2899
     ldsfld valuetype T_string10 STRING_13    // "total junk"
     stsfld valuetype T_string10 _G::s
-    // line 2900
+    .line 2900
     ldsfld valuetype T_string10 _G::s
     call void Junk4(valuetype T_string10 p)
-    // line 2901
+    .line 2901
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b tota? junk"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2902
+    .line 2902
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld valuetype T_string10 _G::s
@@ -33671,13 +33671,13 @@ L_if_end_1269:
     ldstr " s/b total junk"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2903
+    .line 2903
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "ProcedureFunction5:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2904
+    .line 2904
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -33689,19 +33689,19 @@ L_if_end_1269:
     ldstr " s/b 35"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2905
+    .line 2905
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "ProcedureFunction6:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2906
+    .line 2906
     ldc.i4 10
     ldc.i4 9
     ldc.i4 8
     call int32 Junk7(int32 a, int32 b, int32 c)
     stsfld int32 _G::i
-    // line 2907
+    .line 2907
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 32 // ' '
@@ -33712,19 +33712,19 @@ L_if_end_1269:
     ldsfld int32 _G::i
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2908
+    .line 2908
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b:   10 9 8 6 5 4 3 2 1 78"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2909
+    .line 2909
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "ProcedureFunction7:"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2910
+    .line 2910
     ldc.i4 10
     stloc $tmpEndValue746
     ldc.i4 1
@@ -33735,7 +33735,7 @@ L_if_end_1269:
     ldloc $tmpIndex747
     stsfld int32 _G::i
 L_for_loop_1362:
-    // line 2910
+    .line 2910
     ldsflda valuetype T_arri _G::Ai
     ldsfld int32 _G::i
     call instance int32& T_arri::ldadr(int32)
@@ -33755,23 +33755,23 @@ L_for_loop_1362:
     br L_for_loop_1362
 L_for_end_1363:
     pop
-    // line 2911
+    .line 2911
     ldsflda valuetype T_rec _G::Arec
     ldc.i4 64
     stfld int32 T_rec::i
-    // line 2912
+    .line 2912
     ldsflda valuetype T_rec _G::Arec
     ldc.i4 0 // (false)
     stfld bool T_rec::b
-    // line 2913
+    .line 2913
     ldsflda valuetype T_rec _G::Arec
     ldc.i4 106 // 'j'
     stfld uint8 T_rec::c
-    // line 2914
+    .line 2914
     ldsflda valuetype T_rec _G::Arec
     ldc.i4 1 // two 
     stfld int32 T_rec::e
-    // line 2915
+    .line 2915
     ldsflda valuetype T_rec _G::Arec
     ldc.i4 3 // four 
     dup
@@ -33779,7 +33779,7 @@ L_for_end_1363:
     ldc.i4 5
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_rec::Es
-    // line 2916
+    .line 2916
     ldsflda valuetype T_rec _G::Arec
     ldc.i4 12
     dup
@@ -33787,15 +33787,15 @@ L_for_end_1363:
     ldc.i4 20
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_rec::s
-    // line 2917
+    .line 2917
     ldsflda valuetype T_rec _G::Arec
     ldc.r8 4.54512e-29
     stfld float64 T_rec::r
-    // line 2918
+    .line 2918
     ldsflda valuetype T_rec _G::Arec
     ldsfld valuetype T_string10 STRING_10    // "what ? who"
     stfld valuetype T_string10 T_rec::St
-    // line 2919
+    .line 2919
     ldc.i4 10
     stloc $tmpEndValue749
     ldc.i4 1
@@ -33806,7 +33806,7 @@ L_for_end_1363:
     ldloc $tmpIndex750
     stsfld int32 _G::i
 L_for_loop_1364:
-    // line 2919
+    .line 2919
     ldsflda valuetype T_rec _G::Arec
     ldflda valuetype T_arri T_rec::a
     ldsfld int32 _G::i
@@ -33827,57 +33827,57 @@ L_for_loop_1364:
     br L_for_loop_1364
 L_for_end_1365:
     pop
-    // line 2920
+    .line 2920
     ldsflda valuetype T_rec _G::Arec
     ldflda valuetype T_recs T_rec::Rc
     ldc.i4 2324
     stfld int32 T_recs::a
-    // line 2921
+    .line 2921
     ldsflda valuetype T_rec _G::Arec
     ldflda valuetype T_recs T_rec::Rc
     ldc.i4 121 // 'y'
     stfld uint8 T_recs::b
-    // line 2922
+    .line 2922
     ldsflda valuetype T_rec _G::Arec
     ldloc $tmpSetLiteral752
     stfld valuetype T_cset T_rec::Stc
-    // line 2923
-    // line 2923
+    .line 2923
+    .line 2923
     ldsflda valuetype T_rec _G::Arec
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* T_rec::p
-    // line 2924
+    .line 2924
     ldsflda valuetype T_rec _G::Arec
     ldfld void* T_rec::p
     ldc.i4 8454
     stobj int32
-    // line 2925
+    .line 2925
     ldsflda valuetype T_recv _G::Vrec
     ldc.i4 23487
     stfld int32 T_recv::a
-    // line 2926
+    .line 2926
     ldsflda valuetype T_recv _G::Vrec
     ldc.i4 110 // 'n'
     stfld uint8 T_recv::b
-    // line 2927
+    .line 2927
     ldsflda valuetype T_recv _G::Vrec
     ldc.i4 0 // (false)
     stfld bool T_recv::c
-    // line 2928
+    .line 2928
     ldsflda valuetype T_recv _G::Vrec
     ldsfld valuetype T_string10 STRING_14    // "help me123"
     stfld valuetype T_string10 T_recv::d
-    // line 2929
-    // line 2929
+    .line 2929
+    .line 2929
     ldc.i4 4
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ip
-    // line 2930
+    .line 2930
     ldsfld void* _G::Ip
     ldc.i4 734
     stobj int32
-    // line 2931
+    .line 2931
     ldc.i4 93
     ldc.i4 1 // (true)
     ldc.i4 107 // 'k'
@@ -33900,85 +33900,85 @@ L_for_end_1365:
     ldloc $tmpSetLiteral753
     ldsfld void* _G::Ip
     call void Junk8(int32 a, bool b, uint8 c, int32 e, int8 Es, int8 s, float64 r, valuetype T_string10 St, valuetype T_arri Ar, valuetype T_rec Rc, valuetype T_recv Rv, valuetype T_cset Stc, void* p)
-    // line 2933
+    .line 2933
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "s/b:"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2934
+    .line 2934
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "93  true k 7 4 10  3.14140000e+00 hello, guy"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2935
+    .line 2935
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "11 12 13 14 15 16 17 18 19 20"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2936
+    .line 2936
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "64 false j 1 3 12  4.54500000e-29 what ? who"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2937
+    .line 2937
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "21 22 23 24 25 26 27 28 29 30"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2938
+    .line 2938
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "2324 y"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2939
+    .line 2939
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "_bcde___i_"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2940
+    .line 2940
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "8454"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2941
+    .line 2941
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "23487 n false"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2942
+    .line 2942
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "help me123"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2943
+    .line 2943
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "abcd___h__"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2944
+    .line 2944
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "734"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2945
+    .line 2945
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "ProcedureFunction8:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2946
+    .line 2946
     ldnull
     ldftn void Junk10(int32 x, int32 y, uint8 Junk10)
     newobj instance void T_subroutine_259::.ctor(object, native uint)
@@ -33986,19 +33986,19 @@ L_for_end_1365:
     ldftn int32 Junk11(int32 x)
     newobj instance void T_subroutine_260::.ctor(object, native uint)
     call void Junk9(class T_subroutine_1 Junk9, class T_subroutine_2 y)
-    // line 2947
+    .line 2947
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 9834 8383 j 744"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2948
+    .line 2948
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "ProcedureFunction9:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2949
+    .line 2949
     ldnull
     ldftn void Junk13(class T_subroutine_6 Xz)
     newobj instance void T_subroutine_261::.ctor(object, native uint)
@@ -34006,65 +34006,65 @@ L_for_end_1365:
     ldftn int32 Junk11(int32 x)
     newobj instance void T_subroutine_260::.ctor(object, native uint)
     call void Junk12(class T_subroutine_4 Xq, class T_subroutine_3 q)
-    // line 2950
+    .line 2950
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 942"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2951
+    .line 2951
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "ProcedureFunction10:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2952
+    .line 2952
     call void Junk14()
-    // line 2953
+    .line 2953
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 62 76"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2954
+    .line 2954
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "ProcedureFunction11:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2955
+    .line 2955
     ldnull
     ldftn void Junk16()
     newobj instance void T_subroutine_262::.ctor(object, native uint)
     ldc.i4 52
     call void Junk17(class T_subroutine_7 x, int32 i)
-    // line 2956
+    .line 2956
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b 52"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2957
+    .line 2957
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "ProcedureFunction12:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2958
+    .line 2958
     call void Junk19()
-    // line 2959
+    .line 2959
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " s/b a"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 2960
+    .line 2960
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "ProcedureFunction13:   "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 2961
+    .line 2961
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 1
@@ -34180,7 +34180,7 @@ L_Epilogue:
 
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 //================================================================================
 // internal helpers
@@ -34649,7 +34649,7 @@ L_Epilogue:
 
 
 
-// line 0xfeefee
+.line 0xfeefee
 
 //================================================================================
 // global string literals

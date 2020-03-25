@@ -27,9 +27,9 @@
     ret
 }
 
-// "pcom.pas"
+.line 0 "pcom.pas"
 
-// line 366
+.line 366
 //================================================================================
 // scope: mark (level : 2)
 
@@ -47,7 +47,7 @@
 }
 
 
-// line 367
+.line 367
 //================================================================================
 // scope: release (level : 2)
 
@@ -65,11 +65,11 @@
 }
 
 
-// line 369
+.line 369
 //================================================================================
 // scope: endofline (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_2 = record;
 .class value explicit T_record_2
@@ -81,7 +81,7 @@
     .field [4] public int16 Nmr
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_4 = array [1 .. 10] of valuetype T_record_2;
 .class value explicit T_array_4
@@ -139,7 +139,7 @@
 }
 
 
-// line 404
+.line 404
 //================================================================================
 // scope: error (level : 2)
 
@@ -157,7 +157,7 @@
 }
 
 
-// line 424
+.line 424
 //================================================================================
 // scope: insymbol_nextch (level : 3)
 
@@ -175,7 +175,7 @@
 }
 
 
-// line 439
+.line 439
 //================================================================================
 // scope: insymbol_options (level : 3)
 
@@ -193,11 +193,11 @@
 }
 
 
-// line 415
+.line 415
 //================================================================================
 // scope: insymbol (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_5 = array [1 .. 100] of uint8;
 .class value explicit T_insymbol_array_5
@@ -244,7 +244,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_7 = array [0 .. 255] of int32;
 .class value explicit T_array_7
@@ -281,7 +281,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE alpha = array [1 .. 8] of uint8;
 .class value explicit T_alpha
@@ -328,7 +328,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_8 = set of 0 .. 10
 .class value explicit T_set_8
@@ -411,7 +411,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_11 = array [1 .. 9] of int8;
 .class value explicit T_array_11
@@ -448,7 +448,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_12 = array [1 .. 35] of valuetype T_alpha;
 .class value explicit T_array_12
@@ -487,7 +487,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_13 = array [1 .. 35] of int32;
 .class value explicit T_array_13
@@ -526,7 +526,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE setty = set of 0 .. 47
 .class value explicit T_setty
@@ -610,7 +610,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE constant = record;
 .class value explicit T_constant
@@ -635,7 +635,7 @@
         .field [5] public valuetype T_insymbol_array_5 Sval
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE valu = record;
 .class value explicit T_valu
@@ -672,7 +672,7 @@
         ret
     }
 
-// line 424
+.line 424
 
     .method public
     void Nextch()
@@ -689,30 +689,30 @@
         stfld class @insymbol @insymbol_nextch::_slink
     
     L_Entry:
-        // line 425
+        .line 425
         ldsfld bool _G::Eol
         brfalse L_if_end_1
-        // line 426
+        .line 426
         ldsfld bool _G::List
         brfalse L_if_end_2
-        // line 426
+        .line 426
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
     L_if_end_2:
-        // line 426
+        .line 426
         call void Endofline()
     L_if_end_1:
-        // line 428
+        .line 428
         ldsflda valuetype [lpcRuntime]LPC.File _G::Source
         call instance bool [lpcRuntime]LPC.File::Eof()
         ldc.i4.0
         ceq
         brfalse L_else_3
-        // line 429
+        .line 429
         ldsflda valuetype [lpcRuntime]LPC.File _G::Source
         call instance bool [lpcRuntime]LPC.File::Eoln()
         stsfld bool _G::Eol
-        // line 429
+        .line 429
         ldsflda valuetype [lpcRuntime]LPC.File _G::Source
         dup
         ldsflda uint8 _G::Ch
@@ -720,24 +720,24 @@
         ldc.i4 255
         call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
         pop
-        // line 430
+        .line 430
         ldsfld bool _G::List
         brfalse L_if_end_5
-        // line 430
+        .line 430
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldsfld uint8 _G::Ch
         call instance void [lpcRuntime]LPC.File::Write(uint8)
         pop
     L_if_end_5:
-        // line 431
+        .line 431
         ldsfld int32 _G::Chcnt
         ldc.i4 1
         add
         stsfld int32 _G::Chcnt
         br L_if_end_4
     L_else_3:
-        // line 434
+        .line 434
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "   *** eof "
@@ -746,7 +746,7 @@
         ldstr "encountered"
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 435
+        .line 435
         ldloc _F
         ldfld class @insymbol @insymbol_nextch::_slink
         ldc.i4 0 // (false)
@@ -757,7 +757,7 @@
         ret
     }
 
-// line 439
+.line 439
 
     .method public
     void Options()
@@ -774,86 +774,86 @@
         stfld class @insymbol @insymbol_options::_slink
     
     L_Entry:
-        // line 441
+        .line 441
     L_repeat_1:
-        // line 441
+        .line 441
         ldloc _F
         ldfld class @insymbol @insymbol_options::_slink
         call instance void @insymbol::Nextch()
-        // line 442
+        .line 442
         ldsfld uint8 _G::Ch
         ldc.i4 42 // '*'
         ceq
         ldc.i4.0
         ceq
         brfalse L_if_end_2
-        // line 444
+        .line 444
         ldsfld uint8 _G::Ch
         ldc.i4 116 // 't'
         ceq
         brfalse L_else_3
-        // line 445
+        .line 445
         ldloc _F
         ldfld class @insymbol @insymbol_options::_slink
         call instance void @insymbol::Nextch()
-        // line 445
+        .line 445
         ldsfld uint8 _G::Ch
         ldc.i4 43 // '+'
         ceq
         stsfld bool _G::Prtables
         br L_if_end_4
     L_else_3:
-        // line 447
+        .line 447
         ldsfld uint8 _G::Ch
         ldc.i4 108 // 'l'
         ceq
         brfalse L_else_5
-        // line 448
+        .line 448
         ldloc _F
         ldfld class @insymbol @insymbol_options::_slink
         call instance void @insymbol::Nextch()
-        // line 448
+        .line 448
         ldsfld uint8 _G::Ch
         ldc.i4 43 // '+'
         ceq
         stsfld bool _G::List
-        // line 449
+        .line 449
         ldsfld bool _G::List
         ldc.i4.0
         ceq
         brfalse L_if_end_7
-        // line 449
+        .line 449
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
     L_if_end_7:
         br L_if_end_6
     L_else_5:
-        // line 452
+        .line 452
         ldsfld uint8 _G::Ch
         ldc.i4 100 // 'd'
         ceq
         brfalse L_else_8
-        // line 453
+        .line 453
         ldloc _F
         ldfld class @insymbol @insymbol_options::_slink
         call instance void @insymbol::Nextch()
-        // line 453
+        .line 453
         ldsfld uint8 _G::Ch
         ldc.i4 43 // '+'
         ceq
         stsfld bool _G::Debug
         br L_if_end_9
     L_else_8:
-        // line 455
+        .line 455
         ldsfld uint8 _G::Ch
         ldc.i4 99 // 'c'
         ceq
         brfalse L_if_end_10
-        // line 456
+        .line 456
         ldloc _F
         ldfld class @insymbol @insymbol_options::_slink
         call instance void @insymbol::Nextch()
-        // line 456
+        .line 456
         ldsfld uint8 _G::Ch
         ldc.i4 43 // '+'
         ceq
@@ -862,7 +862,7 @@
     L_if_end_9:
     L_if_end_6:
     L_if_end_4:
-        // line 457
+        .line 457
         ldloc _F
         ldfld class @insymbol @insymbol_options::_slink
         call instance void @insymbol::Nextch()
@@ -880,11 +880,11 @@
 }
 
 
-// line 617
+.line 617
 //================================================================================
 // scope: enterid (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE identifier = record;
 .class value explicit T_identifier
@@ -943,7 +943,7 @@
             // case formal = 1
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_22 = record;
 .class value explicit T_record_22
@@ -971,7 +971,7 @@
     // case rec = 3
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_23 = array [0 .. 20] of valuetype T_record_22;
 .class value explicit T_array_23
@@ -1028,7 +1028,7 @@
 }
 
 
-// line 641
+.line 641
 //================================================================================
 // scope: searchsection (level : 2)
 
@@ -1047,11 +1047,11 @@
 }
 
 
-// line 659
+.line 659
 //================================================================================
 // scope: searchid (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE setofids = set of 0 .. 5
 .class value explicit T_setofids
@@ -1153,11 +1153,11 @@
 }
 
 
-// line 701
+.line 701
 //================================================================================
 // scope: getbounds (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE structure = record;
 .class value explicit T_structure
@@ -1238,7 +1238,7 @@
 }
 
 
-// line 719
+.line 719
 //================================================================================
 // scope: alignquot (level : 2)
 
@@ -1259,7 +1259,7 @@
 }
 
 
-// line 741
+.line 741
 //================================================================================
 // scope: align (level : 2)
 
@@ -1282,11 +1282,11 @@
 }
 
 
-// line 759
+.line 759
 //================================================================================
 // scope: printtables_stptoint (level : 3)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_25 = record;
 .class value explicit T_printtables_stptoint_record_25
@@ -1324,11 +1324,11 @@
 }
 
 
-// line 763
+.line 763
 //================================================================================
 // scope: printtables_ctptoint (level : 3)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_26 = record;
 .class value explicit T_printtables_ctptoint_record_26
@@ -1366,7 +1366,7 @@
 }
 
 
-// line 773
+.line 773
 //================================================================================
 // scope: printtables_marker_markstp (level : 4)
 
@@ -1387,7 +1387,7 @@
 }
 
 
-// line 794
+.line 794
 //================================================================================
 // scope: printtables_marker_markctp (level : 4)
 
@@ -1408,7 +1408,7 @@
 }
 
 
-// line 767
+.line 767
 //================================================================================
 // scope: printtables_marker (level : 3)
 
@@ -1427,7 +1427,7 @@
         ret
     }
 
-// line 773
+.line 773
 
     .method public
     void Markstp(void* Fp)
@@ -1450,7 +1450,7 @@
         stfld void* @printtables_marker_markstp::Fp
     
     L_Entry:
-        // line 776
+        .line 776
         ldloc _F
         ldfld void* @printtables_marker_markstp::Fp
         ldnull
@@ -1458,12 +1458,12 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 778
+        .line 778
         ldloc _F
         ldfld void* @printtables_marker_markstp::Fp
         ldc.i4 1 // (true)
         stfld bool T_structure::Marked
-        // line 779
+        .line 779
         ldloc _F
         ldfld void* @printtables_marker_markstp::Fp
         ldfld int32 T_structure::Form
@@ -1477,7 +1477,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 1
         bne.un L_check_case_4
-        // line 781
+        .line 781
         ldloc _F
         ldfld class @printtables_marker @printtables_marker_markstp::_slink
         ldloc _F
@@ -1495,7 +1495,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 3
         bne.un L_check_case_6
-        // line 784
+        .line 784
         ldloc _F
         ldfld class @printtables_marker @printtables_marker_markstp::_slink
         ldloc _F
@@ -1507,14 +1507,14 @@
         ldloc $tmpSwitchValue1
         ldc.i4 4
         bne.un L_check_case_7
-        // line 785
+        .line 785
         ldloc _F
         ldfld class @printtables_marker @printtables_marker_markstp::_slink
         ldloc _F
         ldfld void* @printtables_marker_markstp::Fp
         ldfld void* T_structure::Aeltype
         call instance void @printtables_marker::Markstp(void* Fp)
-        // line 785
+        .line 785
         ldloc _F
         ldfld class @printtables_marker @printtables_marker_markstp::_slink
         ldloc _F
@@ -1526,14 +1526,14 @@
         ldloc $tmpSwitchValue1
         ldc.i4 5
         bne.un L_check_case_8
-        // line 786
+        .line 786
         ldloc _F
         ldfld class @printtables_marker @printtables_marker_markstp::_slink
         ldloc _F
         ldfld void* @printtables_marker_markstp::Fp
         ldfld void* T_structure::Fstfld
         call instance void @printtables_marker::Markctp(void* Fp)
-        // line 786
+        .line 786
         ldloc _F
         ldfld class @printtables_marker @printtables_marker_markstp::_slink
         ldloc _F
@@ -1545,7 +1545,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 6
         bne.un L_check_case_9
-        // line 787
+        .line 787
         ldloc _F
         ldfld class @printtables_marker @printtables_marker_markstp::_slink
         ldloc _F
@@ -1557,7 +1557,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 7
         bne.un L_check_case_10
-        // line 788
+        .line 788
         ldloc _F
         ldfld class @printtables_marker @printtables_marker_markstp::_slink
         ldloc _F
@@ -1569,14 +1569,14 @@
         ldloc $tmpSwitchValue1
         ldc.i4 8
         bne.un L_case_end_2
-        // line 789
+        .line 789
         ldloc _F
         ldfld class @printtables_marker @printtables_marker_markstp::_slink
         ldloc _F
         ldfld void* @printtables_marker_markstp::Fp
         ldfld void* T_structure::Nxtvar
         call instance void @printtables_marker::Markstp(void* Fp)
-        // line 789
+        .line 789
         ldloc _F
         ldfld class @printtables_marker @printtables_marker_markstp::_slink
         ldloc _F
@@ -1590,7 +1590,7 @@
         ret
     }
 
-// line 794
+.line 794
 
     .method public
     void Markctp(void* Fp)
@@ -1611,7 +1611,7 @@
         stfld void* @printtables_marker_markctp::Fp
     
     L_Entry:
-        // line 796
+        .line 796
         ldloc _F
         ldfld void* @printtables_marker_markctp::Fp
         ldnull
@@ -1619,21 +1619,21 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 798
+        .line 798
         ldloc _F
         ldfld class @printtables_marker @printtables_marker_markctp::_slink
         ldloc _F
         ldfld void* @printtables_marker_markctp::Fp
         ldfld void* T_identifier::Llink
         call instance void @printtables_marker::Markctp(void* Fp)
-        // line 798
+        .line 798
         ldloc _F
         ldfld class @printtables_marker @printtables_marker_markctp::_slink
         ldloc _F
         ldfld void* @printtables_marker_markctp::Fp
         ldfld void* T_identifier::Rlink
         call instance void @printtables_marker::Markctp(void* Fp)
-        // line 799
+        .line 799
         ldloc _F
         ldfld class @printtables_marker @printtables_marker_markctp::_slink
         ldloc _F
@@ -1648,7 +1648,7 @@
 }
 
 
-// line 810
+.line 810
 //================================================================================
 // scope: printtables_followstp (level : 3)
 
@@ -1669,7 +1669,7 @@
 }
 
 
-// line 862
+.line 862
 //================================================================================
 // scope: printtables_followctp (level : 3)
 
@@ -1693,7 +1693,7 @@
 }
 
 
-// line 749
+.line 749
 //================================================================================
 // scope: printtables (level : 2)
 
@@ -1713,7 +1713,7 @@
         ret
     }
 
-// line 759
+.line 759
 
     .method public
     int32 Stptoint(void* p)
@@ -1734,13 +1734,13 @@
         stfld void* @printtables_stptoint::p
     
     L_Entry:
-        // line 761
+        .line 761
         ldloc _F
         ldflda valuetype T_printtables_stptoint_record_25 @printtables_stptoint::r
         ldloc _F
         ldfld void* @printtables_stptoint::p
         stfld void* T_printtables_stptoint_record_25::p
-        // line 761
+        .line 761
         ldloc _F
         ldloc _F
         ldflda valuetype T_printtables_stptoint_record_25 @printtables_stptoint::r
@@ -1753,7 +1753,7 @@
         ret
     }
 
-// line 763
+.line 763
 
     .method public
     int32 Ctptoint(void* p)
@@ -1774,13 +1774,13 @@
         stfld void* @printtables_ctptoint::p
     
     L_Entry:
-        // line 765
+        .line 765
         ldloc _F
         ldflda valuetype T_printtables_ctptoint_record_26 @printtables_ctptoint::r
         ldloc _F
         ldfld void* @printtables_ctptoint::p
         stfld void* T_printtables_ctptoint_record_26::p
-        // line 765
+        .line 765
         ldloc _F
         ldloc _F
         ldflda valuetype T_printtables_ctptoint_record_26 @printtables_ctptoint::r
@@ -1793,7 +1793,7 @@
         ret
     }
 
-// line 767
+.line 767
 
     .method public
     void Marker()
@@ -1814,7 +1814,7 @@
         stfld class @printtables @printtables_marker::_slink
     
     L_Entry:
-        // line 804
+        .line 804
         ldloc _F
         ldfld class @printtables @printtables_marker::_slink
         ldfld int8 @printtables::Lim
@@ -1828,7 +1828,7 @@
         ldloc $tmpIndex2
         stfld int32 @printtables_marker::i
     L_for_loop_1:
-        // line 805
+        .line 805
         ldloc _F
         ldsflda valuetype T_array_23 _G::Display
         ldloc _F
@@ -1855,7 +1855,7 @@
         ret
     }
 
-// line 810
+.line 810
 
     .method public
     void Followstp(void* Fp)
@@ -1878,7 +1878,7 @@
         stfld void* @printtables_followstp::Fp
     
     L_Entry:
-        // line 812
+        .line 812
         ldloc _F
         ldfld void* @printtables_followstp::Fp
         ldnull
@@ -1886,17 +1886,17 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 814
+        .line 814
         ldloc _F
         ldfld void* @printtables_followstp::Fp
         ldfld bool T_structure::Marked
         brfalse L_if_end_2
-        // line 815
+        .line 815
         ldloc _F
         ldfld void* @printtables_followstp::Fp
         ldc.i4 0 // (false)
         stfld bool T_structure::Marked
-        // line 815
+        .line 815
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 4
@@ -1920,7 +1920,7 @@
         ldfld int32 T_structure::Size
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
         pop
-        // line 816
+        .line 816
         ldloc _F
         ldfld void* @printtables_followstp::Fp
         ldfld int32 T_structure::Form
@@ -1928,7 +1928,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 0
         bne.un L_check_case_4
-        // line 817
+        .line 817
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -1936,14 +1936,14 @@
         ldstr "scalar"
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
         pop
-        // line 818
+        .line 818
         ldloc _F
         ldfld void* @printtables_followstp::Fp
         ldfld int32 T_structure::Scalkind
         ldc.i4 0
         ceq
         brfalse L_else_5
-        // line 819
+        .line 819
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -1953,7 +1953,7 @@
         pop
         br L_if_end_6
     L_else_5:
-        // line 820
+        .line 820
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -1977,7 +1977,7 @@
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
         pop
     L_if_end_6:
-        // line 821
+        .line 821
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
         br L_case_end_3
@@ -1985,7 +1985,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 1
         bne.un L_check_case_7
-        // line 824
+        .line 824
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -2008,7 +2008,7 @@
         call instance int32 @printtables::Stptoint(void* p)
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
         pop
-        // line 825
+        .line 825
         ldloc _F
         ldfld void* @printtables_followstp::Fp
         ldfld void* T_structure::Rangetype
@@ -2017,7 +2017,7 @@
         ldc.i4.0
         ceq
         brfalse L_else_8
-        // line 826
+        .line 826
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldloc _F
@@ -2034,7 +2034,7 @@
         pop
         br L_if_end_9
     L_else_8:
-        // line 828
+        .line 828
         ldloc _F
         ldfld void* @printtables_followstp::Fp
         ldflda valuetype T_valu T_structure::Min
@@ -2056,7 +2056,7 @@
         ceq
     L_AND_shortcut_10:
         brfalse L_if_end_11
-        // line 829
+        .line 829
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 32 // ' '
@@ -2087,10 +2087,10 @@
         pop
     L_if_end_11:
     L_if_end_9:
-        // line 831
+        .line 831
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 831
+        .line 831
         ldloc _F
         ldfld class @printtables @printtables_followstp::_slink
         ldloc _F
@@ -2103,7 +2103,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 2
         bne.un L_check_case_12
-        // line 833
+        .line 833
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -2131,7 +2131,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 3
         bne.un L_check_case_13
-        // line 834
+        .line 834
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -2154,7 +2154,7 @@
         call instance int32 @printtables::Stptoint(void* p)
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 835
+        .line 835
         ldloc _F
         ldfld class @printtables @printtables_followstp::_slink
         ldloc _F
@@ -2166,7 +2166,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 4
         bne.un L_check_case_14
-        // line 838
+        .line 838
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -2204,14 +2204,14 @@
         call instance int32 @printtables::Stptoint(void* p)
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 840
+        .line 840
         ldloc _F
         ldfld class @printtables @printtables_followstp::_slink
         ldloc _F
         ldfld void* @printtables_followstp::Fp
         ldfld void* T_structure::Aeltype
         call instance void @printtables::Followstp(void* Fp)
-        // line 840
+        .line 840
         ldloc _F
         ldfld class @printtables @printtables_followstp::_slink
         ldloc _F
@@ -2223,7 +2223,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 5
         bne.un L_check_case_15
-        // line 843
+        .line 843
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -2261,14 +2261,14 @@
         call instance int32 @printtables::Stptoint(void* p)
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 844
+        .line 844
         ldloc _F
         ldfld class @printtables @printtables_followstp::_slink
         ldloc _F
         ldfld void* @printtables_followstp::Fp
         ldfld void* T_structure::Fstfld
         call instance void @printtables::Followctp(void* Fp)
-        // line 845
+        .line 845
         ldloc _F
         ldfld class @printtables @printtables_followstp::_slink
         ldloc _F
@@ -2280,7 +2280,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 6
         bne.un L_check_case_16
-        // line 847
+        .line 847
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -2303,7 +2303,7 @@
         call instance int32 @printtables::Stptoint(void* p)
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
         pop
-        // line 848
+        .line 848
         ldloc _F
         ldfld class @printtables @printtables_followstp::_slink
         ldloc _F
@@ -2315,7 +2315,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 7
         bne.un L_check_case_17
-        // line 850
+        .line 850
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -2353,7 +2353,7 @@
         call instance int32 @printtables::Stptoint(void* p)
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 852
+        .line 852
         ldloc _F
         ldfld class @printtables @printtables_followstp::_slink
         ldloc _F
@@ -2365,7 +2365,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 8
         bne.un L_case_end_3
-        // line 854
+        .line 854
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -2409,14 +2409,14 @@
         ldfld int32 T_valu::Ival
         call instance void [lpcRuntime]LPC.File::Write(int32)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 856
+        .line 856
         ldloc _F
         ldfld class @printtables @printtables_followstp::_slink
         ldloc _F
         ldfld void* @printtables_followstp::Fp
         ldfld void* T_structure::Nxtvar
         call instance void @printtables::Followstp(void* Fp)
-        // line 856
+        .line 856
         ldloc _F
         ldfld class @printtables @printtables_followstp::_slink
         ldloc _F
@@ -2431,7 +2431,7 @@
         ret
     }
 
-// line 862
+.line 862
 
     .method public
     void Followctp(void* Fp)
@@ -2457,7 +2457,7 @@
         stfld void* @printtables_followctp::Fp
     
     L_Entry:
-        // line 865
+        .line 865
         ldloc _F
         ldfld void* @printtables_followctp::Fp
         ldnull
@@ -2465,7 +2465,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 867
+        .line 867
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 4
@@ -2538,7 +2538,7 @@
         call instance int32 @printtables::Stptoint(void* p)
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
         pop
-        // line 869
+        .line 869
         ldloc _F
         ldfld void* @printtables_followctp::Fp
         ldfld int32 T_identifier::Klass
@@ -2546,7 +2546,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 0
         bne.un L_check_case_3
-        // line 870
+        .line 870
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -2559,7 +2559,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 1
         bne.un L_check_case_4
-        // line 871
+        .line 871
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -2582,7 +2582,7 @@
         call instance int32 @printtables::Ctptoint(void* p)
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
         pop
-        // line 872
+        .line 872
         ldloc _F
         ldfld void* @printtables_followctp::Fp
         ldfld void* T_identifier::Idtype
@@ -2591,14 +2591,14 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_5
-        // line 873
+        .line 873
         ldloc _F
         ldfld void* @printtables_followctp::Fp
         ldfld void* T_identifier::Idtype
         ldsfld void* _G::Realptr
         ceq
         brfalse L_else_6
-        // line 875
+        .line 875
         ldloc _F
         ldfld void* @printtables_followctp::Fp
         ldflda valuetype T_valu T_identifier::Values
@@ -2608,7 +2608,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_8
-        // line 876
+        .line 876
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 32 // ' '
@@ -2627,7 +2627,7 @@
     L_if_end_8:
         br L_if_end_7
     L_else_6:
-        // line 879
+        .line 879
         ldloc _F
         ldfld void* @printtables_followctp::Fp
         ldfld void* T_identifier::Idtype
@@ -2635,7 +2635,7 @@
         ldc.i4 4
         ceq
         brfalse L_else_9
-        // line 881
+        .line 881
         ldloc _F
         ldfld void* @printtables_followctp::Fp
         ldflda valuetype T_valu T_identifier::Values
@@ -2645,13 +2645,13 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_11
-        // line 882
+        .line 882
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 32 // ' '
         call instance void [lpcRuntime]LPC.File::Write(uint8)
         pop
-        // line 884
+        .line 884
         ldloc _F
         ldfld void* @printtables_followctp::Fp
         ldflda valuetype T_valu T_identifier::Values
@@ -2667,7 +2667,7 @@
         ldloc $tmpIndex3
         stfld int32 @printtables_followctp::i
     L_for_loop_12:
-        // line 885
+        .line 885
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldloc _F
@@ -2698,7 +2698,7 @@
     L_if_end_11:
         br L_if_end_10
     L_else_9:
-        // line 888
+        .line 888
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldloc _F
@@ -2715,7 +2715,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 2
         bne.un L_check_case_14
-        // line 890
+        .line 890
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -2723,14 +2723,14 @@
         ldstr "variable"
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
         pop
-        // line 891
+        .line 891
         ldloc _F
         ldfld void* @printtables_followctp::Fp
         ldfld int32 T_identifier::Vkind
         ldc.i4 0
         ceq
         brfalse L_else_15
-        // line 891
+        .line 891
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -2740,7 +2740,7 @@
         pop
         br L_if_end_16
     L_else_15:
-        // line 892
+        .line 892
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -2749,7 +2749,7 @@
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
         pop
     L_if_end_16:
-        // line 893
+        .line 893
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 4
@@ -2790,7 +2790,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 3
         bne.un L_check_case_17
-        // line 895
+        .line 895
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -2835,14 +2835,14 @@
         beq L_case_18
         br L_case_end_2
     L_case_18:
-        // line 898
+        .line 898
         ldloc _F
         ldfld void* @printtables_followctp::Fp
         ldfld int32 T_identifier::Klass
         ldc.i4 4
         ceq
         brfalse L_else_19
-        // line 898
+        .line 898
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -2852,7 +2852,7 @@
         pop
         br L_if_end_20
     L_else_19:
-        // line 899
+        .line 899
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -2861,14 +2861,14 @@
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
         pop
     L_if_end_20:
-        // line 900
+        .line 900
         ldloc _F
         ldfld void* @printtables_followctp::Fp
         ldfld int32 T_identifier::Pfdeckind
         ldc.i4 0
         ceq
         brfalse L_else_21
-        // line 901
+        .line 901
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -2885,7 +2885,7 @@
         pop
         br L_if_end_22
     L_else_21:
-        // line 903
+        .line 903
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -2908,7 +2908,7 @@
         call instance int32 @printtables::Ctptoint(void* p)
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
         pop
-        // line 904
+        .line 904
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldloc _F
@@ -2928,14 +2928,14 @@
         ldfld int32 T_identifier::Pfname
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
         pop
-        // line 905
+        .line 905
         ldloc _F
         ldfld void* @printtables_followctp::Fp
         ldfld int32 T_identifier::Pfkind
         ldc.i4 0
         ceq
         brfalse L_else_23
-        // line 906
+        .line 906
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -2943,12 +2943,12 @@
         ldstr "actual"
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
         pop
-        // line 907
+        .line 907
         ldloc _F
         ldfld void* @printtables_followctp::Fp
         ldfld bool T_identifier::Forwdecl
         brfalse L_else_25
-        // line 907
+        .line 907
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -2958,7 +2958,7 @@
         pop
         br L_if_end_26
     L_else_25:
-        // line 908
+        .line 908
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -2967,12 +2967,12 @@
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
         pop
     L_if_end_26:
-        // line 909
+        .line 909
         ldloc _F
         ldfld void* @printtables_followctp::Fp
         ldfld bool T_identifier::Externl
         brfalse L_else_27
-        // line 909
+        .line 909
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -2982,7 +2982,7 @@
         pop
         br L_if_end_28
     L_else_27:
-        // line 910
+        .line 910
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -2994,7 +2994,7 @@
         /* nop */
         br L_if_end_24
     L_else_23:
-        // line 912
+        .line 912
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 10
@@ -3005,24 +3005,24 @@
     L_if_end_24:
     L_if_end_22:
     L_case_end_2:
-        // line 916
+        .line 916
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 917
+        .line 917
         ldloc _F
         ldfld class @printtables @printtables_followctp::_slink
         ldloc _F
         ldfld void* @printtables_followctp::Fp
         ldfld void* T_identifier::Llink
         call instance void @printtables::Followctp(void* Fp)
-        // line 917
+        .line 917
         ldloc _F
         ldfld class @printtables @printtables_followctp::_slink
         ldloc _F
         ldfld void* @printtables_followctp::Fp
         ldfld void* T_identifier::Rlink
         call instance void @printtables::Followctp(void* Fp)
-        // line 918
+        .line 918
         ldloc _F
         ldfld class @printtables @printtables_followctp::_slink
         ldloc _F
@@ -3037,7 +3037,7 @@
 }
 
 
-// line 934
+.line 934
 //================================================================================
 // scope: genlabel (level : 2)
 
@@ -3055,7 +3055,7 @@
 }
 
 
-// line 942
+.line 942
 //================================================================================
 // scope: block_skip (level : 3)
 
@@ -3076,11 +3076,11 @@
 }
 
 
-// line 951
+.line 951
 //================================================================================
 // scope: block_constant (level : 3)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_29 = set of 0 .. 15
 .class value explicit T_set_29
@@ -3189,7 +3189,7 @@
 }
 
 
-// line 1021
+.line 1021
 //================================================================================
 // scope: block_equalbounds (level : 3)
 
@@ -3218,11 +3218,11 @@
 }
 
 
-// line 1033
+.line 1033
 //================================================================================
 // scope: block_comptypes (level : 3)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE testpointer = record;
 .class value explicit T_testpointer
@@ -3261,7 +3261,7 @@
 }
 
 
-// line 1105
+.line 1105
 //================================================================================
 // scope: block_string (level : 3)
 
@@ -3285,11 +3285,11 @@
 }
 
 
-// line 1116
+.line 1116
 //================================================================================
 // scope: block_typ_simpletype (level : 4)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_31 = set of 0 .. 255
 .class value explicit T_set_31
@@ -3407,7 +3407,7 @@
 }
 
 
-// line 1201
+.line 1201
 //================================================================================
 // scope: block_typ_fieldlist (level : 4)
 
@@ -3444,7 +3444,7 @@
 }
 
 
-// line 1112
+.line 1112
 //================================================================================
 // scope: block_typ (level : 3)
 
@@ -3476,7 +3476,7 @@
         ret
     }
 
-// line 1116
+.line 1116
 
     .method public
     void Simpletype(valuetype T_setty Fsys, void*& Fsp, int32& Fsize)
@@ -3543,7 +3543,7 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 1119
+        .line 1119
         ldloc _F
         ldfld int32* @block_typ_simpletype::Fsize
         ldc.i4 1
@@ -3552,17 +3552,17 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int32
-        // line 1120
+        .line 1120
         ldsfld valuetype T_setty _G::Simptypebegsys
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_setty s, int32 val)
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 1121
+        .line 1121
         ldc.i4 1
         call void Error(int32 Ferrnr)
-        // line 1121
+        .line 1121
         ldloc _F
         ldfld class @block_typ @block_typ_simpletype::_slink
         ldfld class @block @block_typ::_slink
@@ -3572,24 +3572,24 @@
         call valuetype T_setty _SetUnion(valuetype T_setty a, valuetype T_setty b)
         call instance void @block::Skip(valuetype T_setty Fsys)
     L_if_end_1:
-        // line 1122
+        .line 1122
         ldsfld valuetype T_setty _G::Simptypebegsys
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_setty s, int32 val)
         brfalse L_else_2
-        // line 1124
+        .line 1124
         ldsfld int32 _G::Sy
         ldc.i4 8
         ceq
         brfalse L_else_4
-        // line 1125
+        .line 1125
         ldloc _F
         ldsfld int8 _G::Top
         stfld int8 @block_typ_simpletype::Ttop
-        // line 1126
+        .line 1126
         br L_while_test_7
     L_while_6:
-        // line 1126
+        .line 1126
         ldsfld int8 _G::Top
         ldc.i4 1
         sub
@@ -3608,23 +3608,23 @@
         ldc.i4.0
         ceq
         brtrue L_while_6
-        // line 1127
-        // line 1127
+        .line 1127
+        .line 1127
         ldloc _F
         ldc.i4 77
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ_simpletype::Lsp
-        // line 1127
+        .line 1127
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldc.i4 0
         stfld int32 T_structure::Form
-        // line 1127
+        .line 1127
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldc.i4 1
         stfld int32 T_structure::Scalkind
-        // line 1129
+        .line 1129
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldc.i4 1
@@ -3633,98 +3633,98 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_structure::Size
-        // line 1129
+        .line 1129
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldc.i4 0
         stfld int32 T_structure::Form
-        // line 1130
+        .line 1130
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldc.i4 1
         stfld int32 T_structure::Scalkind
-        // line 1132
+        .line 1132
         ldloc _F
         ldnull
         stfld void* @block_typ_simpletype::Lcp1
-        // line 1132
+        .line 1132
         ldloc _F
         ldc.i4 0
         stfld int32 @block_typ_simpletype::Lcnt
-        // line 1133
+        .line 1133
     L_repeat_8:
-        // line 1133
+        .line 1133
         call void Insymbol()
-        // line 1134
+        .line 1134
         ldsfld int32 _G::Sy
         ldc.i4 0
         ceq
         brfalse L_else_9
-        // line 1135
-        // line 1135
+        .line 1135
+        .line 1135
         ldloc _F
         ldc.i4 214
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ_simpletype::Lcp
-        // line 1135
+        .line 1135
         ldloc _F
         ldfld void* @block_typ_simpletype::Lcp
         ldc.i4 1
         stfld int32 T_identifier::Klass
-        // line 1137
+        .line 1137
         ldloc _F
         ldfld void* @block_typ_simpletype::Lcp
         ldsfld valuetype T_alpha _G::Id
         stfld valuetype T_alpha T_identifier::Name
-        // line 1137
+        .line 1137
         ldloc _F
         ldfld void* @block_typ_simpletype::Lcp
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         stfld void* T_identifier::Idtype
-        // line 1137
+        .line 1137
         ldloc _F
         ldfld void* @block_typ_simpletype::Lcp
         ldloc _F
         ldfld void* @block_typ_simpletype::Lcp1
         stfld void* T_identifier::Next
-        // line 1138
+        .line 1138
         ldloc _F
         ldfld void* @block_typ_simpletype::Lcp
         ldflda valuetype T_valu T_identifier::Values
         ldloc _F
         ldfld int32 @block_typ_simpletype::Lcnt
         stfld int32 T_valu::Ival
-        // line 1138
+        .line 1138
         ldloc _F
         ldfld void* @block_typ_simpletype::Lcp
         ldc.i4 1
         stfld int32 T_identifier::Klass
-        // line 1140
+        .line 1140
         ldloc _F
         ldfld void* @block_typ_simpletype::Lcp
         call void Enterid(void* Fcp)
-        // line 1141
+        .line 1141
         ldloc _F
         ldloc _F
         ldfld int32 @block_typ_simpletype::Lcnt
         ldc.i4 1
         add
         stfld int32 @block_typ_simpletype::Lcnt
-        // line 1142
+        .line 1142
         ldloc _F
         ldloc _F
         ldfld void* @block_typ_simpletype::Lcp
         stfld void* @block_typ_simpletype::Lcp1
-        // line 1142
+        .line 1142
         call void Insymbol()
         br L_if_end_10
     L_else_9:
-        // line 1144
+        .line 1144
         ldc.i4 2
         call void Error(int32 Ferrnr)
     L_if_end_10:
-        // line 1145
+        .line 1145
         ldloc _F
         ldfld valuetype T_setty @block_typ_simpletype::Fsys
         call valuetype T_set_31 _SetCastTo_T_set_31(valuetype T_setty s)
@@ -3736,10 +3736,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_11
-        // line 1146
+        .line 1146
         ldc.i4 6
         call void Error(int32 Ferrnr)
-        // line 1146
+        .line 1146
         ldloc _F
         ldfld class @block_typ @block_typ_simpletype::_slink
         ldfld class @block @block_typ::_slink
@@ -3762,74 +3762,74 @@
         ldc.i4.0
         ceq
         brfalse L_repeat_8
-        // line 1148
+        .line 1148
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldloc _F
         ldfld void* @block_typ_simpletype::Lcp1
         stfld void* T_structure::Fconst
-        // line 1148
+        .line 1148
         ldloc _F
         ldfld int8 @block_typ_simpletype::Ttop
         stsfld int8 _G::Top
-        // line 1149
+        .line 1149
         ldsfld int32 _G::Sy
         ldc.i4 9
         ceq
         brfalse L_else_12
-        // line 1149
+        .line 1149
         call void Insymbol()
         br L_if_end_13
     L_else_12:
-        // line 1149
+        .line 1149
         ldc.i4 4
         call void Error(int32 Ferrnr)
     L_if_end_13:
         br L_if_end_5
     L_else_4:
-        // line 1153
+        .line 1153
         ldsfld int32 _G::Sy
         ldc.i4 0
         ceq
         brfalse L_else_14
-        // line 1154
+        .line 1154
         ldloc $tmpSetLiteral3
         ldloc _F
         ldflda void* @block_typ_simpletype::Lcp
         call void Searchid(valuetype T_setofids Fidcls, void*& Fcp)
-        // line 1155
+        .line 1155
         call void Insymbol()
-        // line 1156
+        .line 1156
         ldloc _F
         ldfld void* @block_typ_simpletype::Lcp
         ldfld int32 T_identifier::Klass
         ldc.i4 1
         ceq
         brfalse L_else_16
-        // line 1157
-        // line 1157
+        .line 1157
+        .line 1157
         ldloc _F
         ldc.i4 77
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ_simpletype::Lsp
-        // line 1157
+        .line 1157
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldc.i4 1
         stfld int32 T_structure::Form
-        // line 1159
+        .line 1159
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldloc _F
         ldfld void* @block_typ_simpletype::Lcp
         ldfld void* T_identifier::Idtype
         stfld void* T_structure::Rangetype
-        // line 1159
+        .line 1159
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldc.i4 1
         stfld int32 T_structure::Form
-        // line 1160
+        .line 1160
         ldloc _F
         ldfld class @block_typ @block_typ_simpletype::_slink
         ldfld class @block @block_typ::_slink
@@ -3838,23 +3838,23 @@
         ldfld void* T_structure::Rangetype
         call instance bool @block::String(void* Fsp)
         brfalse L_if_end_18
-        // line 1161
+        .line 1161
         ldc.i4 148
         call void Error(int32 Ferrnr)
-        // line 1161
+        .line 1161
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldnull
         stfld void* T_structure::Rangetype
     L_if_end_18:
-        // line 1162
+        .line 1162
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldloc _F
         ldfld void* @block_typ_simpletype::Lcp
         ldfld valuetype T_valu T_identifier::Values
         stfld valuetype T_valu T_structure::Min
-        // line 1162
+        .line 1162
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldc.i4 1
@@ -3863,20 +3863,20 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_structure::Size
-        // line 1164
+        .line 1164
         ldsfld int32 _G::Sy
         ldc.i4 16
         ceq
         brfalse L_else_19
-        // line 1164
+        .line 1164
         call void Insymbol()
         br L_if_end_20
     L_else_19:
-        // line 1164
+        .line 1164
         ldc.i4 5
         call void Error(int32 Ferrnr)
     L_if_end_20:
-        // line 1165
+        .line 1165
         ldloc _F
         ldfld class @block_typ @block_typ_simpletype::_slink
         ldfld class @block @block_typ::_slink
@@ -3887,13 +3887,13 @@
         ldloc _F
         ldflda valuetype T_valu @block_typ_simpletype::Lvalu
         call instance void @block::Constant(valuetype T_setty Fsys, void*& Fsp, valuetype T_valu& Fvalu)
-        // line 1166
+        .line 1166
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldloc _F
         ldfld valuetype T_valu @block_typ_simpletype::Lvalu
         stfld valuetype T_valu T_structure::Max
-        // line 1167
+        .line 1167
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldfld void* T_structure::Rangetype
@@ -3903,19 +3903,19 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_21
-        // line 1167
+        .line 1167
         ldc.i4 107
         call void Error(int32 Ferrnr)
     L_if_end_21:
         br L_if_end_17
     L_else_16:
-        // line 1170
+        .line 1170
         ldloc _F
         ldloc _F
         ldfld void* @block_typ_simpletype::Lcp
         ldfld void* T_identifier::Idtype
         stfld void* @block_typ_simpletype::Lsp
-        // line 1171
+        .line 1171
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldnull
@@ -3923,7 +3923,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_22
-        // line 1171
+        .line 1171
         ldloc _F
         ldfld int32* @block_typ_simpletype::Fsize
         ldloc _F
@@ -3934,23 +3934,23 @@
     L_if_end_17:
         br L_if_end_15
     L_else_14:
-        // line 1175
-        // line 1175
+        .line 1175
+        .line 1175
         ldloc _F
         ldc.i4 77
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ_simpletype::Lsp
-        // line 1175
+        .line 1175
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldc.i4 1
         stfld int32 T_structure::Form
-        // line 1175
+        .line 1175
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldc.i4 1
         stfld int32 T_structure::Form
-        // line 1176
+        .line 1176
         ldloc _F
         ldfld class @block_typ @block_typ_simpletype::_slink
         ldfld class @block @block_typ::_slink
@@ -3970,7 +3970,7 @@
         ldloc _F
         ldflda valuetype T_valu @block_typ_simpletype::Lvalu
         call instance void @block::Constant(valuetype T_setty Fsys, void*& Fsp, valuetype T_valu& Fvalu)
-        // line 1177
+        .line 1177
         ldloc _F
         ldfld class @block_typ @block_typ_simpletype::_slink
         ldfld class @block @block_typ::_slink
@@ -3978,27 +3978,27 @@
         ldfld void* @block_typ_simpletype::Lsp1
         call instance bool @block::String(void* Fsp)
         brfalse L_if_end_23
-        // line 1178
+        .line 1178
         ldc.i4 148
         call void Error(int32 Ferrnr)
-        // line 1178
+        .line 1178
         ldloc _F
         ldnull
         stfld void* @block_typ_simpletype::Lsp1
     L_if_end_23:
-        // line 1180
+        .line 1180
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp1
         stfld void* T_structure::Rangetype
-        // line 1180
+        .line 1180
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldloc _F
         ldfld valuetype T_valu @block_typ_simpletype::Lvalu
         stfld valuetype T_valu T_structure::Min
-        // line 1180
+        .line 1180
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldc.i4 1
@@ -4007,20 +4007,20 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_structure::Size
-        // line 1181
+        .line 1181
         ldsfld int32 _G::Sy
         ldc.i4 16
         ceq
         brfalse L_else_24
-        // line 1181
+        .line 1181
         call void Insymbol()
         br L_if_end_25
     L_else_24:
-        // line 1181
+        .line 1181
         ldc.i4 5
         call void Error(int32 Ferrnr)
     L_if_end_25:
-        // line 1182
+        .line 1182
         ldloc _F
         ldfld class @block_typ @block_typ_simpletype::_slink
         ldfld class @block @block_typ::_slink
@@ -4031,13 +4031,13 @@
         ldloc _F
         ldflda valuetype T_valu @block_typ_simpletype::Lvalu
         call instance void @block::Constant(valuetype T_setty Fsys, void*& Fsp, valuetype T_valu& Fvalu)
-        // line 1183
+        .line 1183
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldloc _F
         ldfld valuetype T_valu @block_typ_simpletype::Lvalu
         stfld valuetype T_valu T_structure::Max
-        // line 1184
+        .line 1184
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldfld void* T_structure::Rangetype
@@ -4047,12 +4047,12 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_26
-        // line 1184
+        .line 1184
         ldc.i4 107
         call void Error(int32 Ferrnr)
     L_if_end_26:
     L_if_end_15:
-        // line 1186
+        .line 1186
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldnull
@@ -4060,14 +4060,14 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_27
-        // line 1188
+        .line 1188
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldfld int32 T_structure::Form
         ldc.i4 1
         ceq
         brfalse L_if_end_28
-        // line 1189
+        .line 1189
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldfld void* T_structure::Rangetype
@@ -4076,19 +4076,19 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_29
-        // line 1190
+        .line 1190
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldfld void* T_structure::Rangetype
         ldsfld void* _G::Realptr
         ceq
         brfalse L_else_30
-        // line 1190
+        .line 1190
         ldc.i4 399
         call void Error(int32 Ferrnr)
         br L_if_end_31
     L_else_30:
-        // line 1192
+        .line 1192
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         ldflda valuetype T_valu T_structure::Min
@@ -4099,7 +4099,7 @@
         ldfld int32 T_valu::Ival
         cgt
         brfalse L_if_end_32
-        // line 1192
+        .line 1192
         ldc.i4 102
         call void Error(int32 Ferrnr)
     L_if_end_32:
@@ -4108,13 +4108,13 @@
     L_if_end_28:
     L_if_end_27:
     L_if_end_5:
-        // line 1194
+        .line 1194
         ldloc _F
         ldfld void** @block_typ_simpletype::Fsp
         ldloc _F
         ldfld void* @block_typ_simpletype::Lsp
         stobj void*
-        // line 1195
+        .line 1195
         ldloc _F
         ldfld valuetype T_setty @block_typ_simpletype::Fsys
         ldsfld int32 _G::Sy
@@ -4122,10 +4122,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_33
-        // line 1196
+        .line 1196
         ldc.i4 6
         call void Error(int32 Ferrnr)
-        // line 1196
+        .line 1196
         ldloc _F
         ldfld class @block_typ @block_typ_simpletype::_slink
         ldfld class @block @block_typ::_slink
@@ -4135,7 +4135,7 @@
     L_if_end_33:
         br L_if_end_3
     L_else_2:
-        // line 1198
+        .line 1198
         ldloc _F
         ldfld void** @block_typ_simpletype::Fsp
         ldnull
@@ -4146,7 +4146,7 @@
         ret
     }
 
-// line 1201
+.line 1201
 
     .method public
     void Fieldlist(valuetype T_setty Fsys, void*& Frecvar)
@@ -4296,15 +4296,15 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 1204
+        .line 1204
         ldloc _F
         ldnull
         stfld void* @block_typ_fieldlist::Nxt1
-        // line 1204
+        .line 1204
         ldloc _F
         ldnull
         stfld void* @block_typ_fieldlist::Lsp
-        // line 1205
+        .line 1205
         ldloc _F
         ldfld valuetype T_setty @block_typ_fieldlist::Fsys
         call valuetype T_set_31 _SetCastTo_T_set_31(valuetype T_setty s)
@@ -4316,10 +4316,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 1206
+        .line 1206
         ldc.i4 19
         call void Error(int32 Ferrnr)
-        // line 1206
+        .line 1206
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld class @block @block_typ::_slink
@@ -4336,81 +4336,81 @@
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block::Skip(valuetype T_setty Fsys)
     L_if_end_1:
-        // line 1207
+        .line 1207
         br L_while_test_3
     L_while_2:
-        // line 1208
+        .line 1208
         ldloc _F
         ldloc _F
         ldfld void* @block_typ_fieldlist::Nxt1
         stfld void* @block_typ_fieldlist::Nxt
-        // line 1209
+        .line 1209
     L_repeat_4:
-        // line 1210
+        .line 1210
         ldsfld int32 _G::Sy
         ldc.i4 0
         ceq
         brfalse L_else_5
-        // line 1211
-        // line 1211
+        .line 1211
+        .line 1211
         ldloc _F
         ldc.i4 214
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ_fieldlist::Lcp
-        // line 1211
+        .line 1211
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lcp
         ldc.i4 3
         stfld int32 T_identifier::Klass
-        // line 1213
+        .line 1213
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lcp
         ldsfld valuetype T_alpha _G::Id
         stfld valuetype T_alpha T_identifier::Name
-        // line 1213
+        .line 1213
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lcp
         ldnull
         stfld void* T_identifier::Idtype
-        // line 1213
+        .line 1213
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lcp
         ldloc _F
         ldfld void* @block_typ_fieldlist::Nxt
         stfld void* T_identifier::Next
-        // line 1214
+        .line 1214
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lcp
         ldc.i4 3
         stfld int32 T_identifier::Klass
-        // line 1216
+        .line 1216
         ldloc _F
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lcp
         stfld void* @block_typ_fieldlist::Nxt
-        // line 1217
+        .line 1217
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lcp
         call void Enterid(void* Fcp)
-        // line 1218
+        .line 1218
         call void Insymbol()
         br L_if_end_6
     L_else_5:
-        // line 1220
+        .line 1220
         ldc.i4 2
         call void Error(int32 Ferrnr)
     L_if_end_6:
-        // line 1221
+        .line 1221
         ldloc $tmpSetLiteral3
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_setty s, int32 val)
         ldc.i4.0
         ceq
         brfalse L_if_end_7
-        // line 1222
+        .line 1222
         ldc.i4 6
         call void Error(int32 Ferrnr)
-        // line 1222
+        .line 1222
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld class @block @block_typ::_slink
@@ -4427,7 +4427,7 @@
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block::Skip(valuetype T_setty Fsys)
     L_if_end_7:
-        // line 1224
+        .line 1224
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld class @block @block_typ::_slink
@@ -4437,7 +4437,7 @@
         ldc.i4.0
         ceq
         stfld bool @block::Test
-        // line 1225
+        .line 1225
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld class @block @block_typ::_slink
@@ -4445,7 +4445,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_8
-        // line 1225
+        .line 1225
         call void Insymbol()
     L_if_end_8:
         ldloc _F
@@ -4453,20 +4453,20 @@
         ldfld class @block @block_typ::_slink
         ldfld bool @block::Test
         brfalse L_repeat_4
-        // line 1227
+        .line 1227
         ldsfld int32 _G::Sy
         ldc.i4 16
         ceq
         brfalse L_else_9
-        // line 1227
+        .line 1227
         call void Insymbol()
         br L_if_end_10
     L_else_9:
-        // line 1227
+        .line 1227
         ldc.i4 5
         call void Error(int32 Ferrnr)
     L_if_end_10:
-        // line 1228
+        .line 1228
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld class @block @block_typ::_slink
@@ -4486,36 +4486,36 @@
         ldloc _F
         ldflda int32 @block_typ_fieldlist::Lsize
         call instance void @block::Typ(valuetype T_setty Fsys, void*& Fsp, int32& Fsize)
-        // line 1229
+        .line 1229
         br L_while_test_12
     L_while_11:
-        // line 1231
+        .line 1231
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldflda int32 @block_typ::Displ
         call void Align(void* Fsp, int32& Flc)
-        // line 1232
+        .line 1232
         ldloc _F
         ldfld void* @block_typ_fieldlist::Nxt
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp
         stfld void* T_identifier::Idtype
-        // line 1232
+        .line 1232
         ldloc _F
         ldfld void* @block_typ_fieldlist::Nxt
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld int32 @block_typ::Displ
         stfld int32 T_identifier::Fldaddr
-        // line 1233
+        .line 1233
         ldloc _F
         ldloc _F
         ldfld void* @block_typ_fieldlist::Nxt
         ldfld void* T_identifier::Next
         stfld void* @block_typ_fieldlist::Nxt
-        // line 1233
+        .line 1233
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldloc _F
@@ -4538,17 +4538,17 @@
         ldc.i4.0
         ceq
         brtrue L_while_11
-        // line 1235
+        .line 1235
         ldloc _F
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lcp
         stfld void* @block_typ_fieldlist::Nxt1
-        // line 1236
+        .line 1236
         br L_while_test_14
     L_while_13:
-        // line 1237
+        .line 1237
         call void Insymbol()
-        // line 1238
+        .line 1238
         ldloc _F
         ldfld valuetype T_setty @block_typ_fieldlist::Fsys
         call valuetype T_set_31 _SetCastTo_T_set_31(valuetype T_setty s)
@@ -4560,10 +4560,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_15
-        // line 1239
+        .line 1239
         ldc.i4 19
         call void Error(int32 Ferrnr)
-        // line 1239
+        .line 1239
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld class @block @block_typ::_slink
@@ -4590,31 +4590,31 @@
         ldc.i4 0
         ceq
         brtrue L_while_2
-        // line 1242
+        .line 1242
         ldloc _F
         ldnull
         stfld void* @block_typ_fieldlist::Nxt
-        // line 1243
+        .line 1243
         br L_while_test_17
     L_while_16:
-        // line 1245
+        .line 1245
         ldloc _F
         ldloc _F
         ldfld void* @block_typ_fieldlist::Nxt1
         ldfld void* T_identifier::Next
         stfld void* @block_typ_fieldlist::Lcp
-        // line 1245
+        .line 1245
         ldloc _F
         ldfld void* @block_typ_fieldlist::Nxt1
         ldloc _F
         ldfld void* @block_typ_fieldlist::Nxt
         stfld void* T_identifier::Next
-        // line 1245
+        .line 1245
         ldloc _F
         ldloc _F
         ldfld void* @block_typ_fieldlist::Nxt1
         stfld void* @block_typ_fieldlist::Nxt
-        // line 1245
+        .line 1245
         ldloc _F
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lcp
@@ -4627,124 +4627,124 @@
         ldc.i4.0
         ceq
         brtrue L_while_16
-        // line 1246
+        .line 1246
         ldsfld int32 _G::Sy
         ldc.i4 33
         ceq
         brfalse L_else_18
-        // line 1247
-        // line 1247
+        .line 1247
+        .line 1247
         ldloc _F
         ldc.i4 77
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ_fieldlist::Lsp
-        // line 1247
+        .line 1247
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp
         ldc.i4 7
         stfld int32 T_structure::Form
-        // line 1249
+        .line 1249
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp
         ldnull
         stfld void* T_structure::Tagfieldp
-        // line 1249
+        .line 1249
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp
         ldnull
         stfld void* T_structure::Fstvar
-        // line 1249
+        .line 1249
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp
         ldc.i4 7
         stfld int32 T_structure::Form
-        // line 1250
+        .line 1250
         ldloc _F
         ldfld void** @block_typ_fieldlist::Frecvar
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp
         stobj void*
-        // line 1251
+        .line 1251
         call void Insymbol()
-        // line 1252
+        .line 1252
         ldsfld int32 _G::Sy
         ldc.i4 0
         ceq
         brfalse L_else_20
-        // line 1253
-        // line 1253
+        .line 1253
+        .line 1253
         ldloc _F
         ldc.i4 214
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ_fieldlist::Lcp
-        // line 1253
+        .line 1253
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lcp
         ldc.i4 3
         stfld int32 T_identifier::Klass
-        // line 1255
+        .line 1255
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lcp
         ldsfld valuetype T_alpha _G::Id
         stfld valuetype T_alpha T_identifier::Name
-        // line 1255
+        .line 1255
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lcp
         ldnull
         stfld void* T_identifier::Idtype
-        // line 1255
+        .line 1255
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lcp
         ldc.i4 3
         stfld int32 T_identifier::Klass
-        // line 1256
+        .line 1256
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lcp
         ldnull
         stfld void* T_identifier::Next
-        // line 1256
+        .line 1256
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lcp
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld int32 @block_typ::Displ
         stfld int32 T_identifier::Fldaddr
-        // line 1258
+        .line 1258
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lcp
         call void Enterid(void* Fcp)
-        // line 1259
+        .line 1259
         call void Insymbol()
-        // line 1260
+        .line 1260
         ldsfld int32 _G::Sy
         ldc.i4 16
         ceq
         brfalse L_else_22
-        // line 1260
+        .line 1260
         call void Insymbol()
         br L_if_end_23
     L_else_22:
-        // line 1260
+        .line 1260
         ldc.i4 5
         call void Error(int32 Ferrnr)
     L_if_end_23:
-        // line 1261
+        .line 1261
         ldsfld int32 _G::Sy
         ldc.i4 0
         ceq
         brfalse L_else_24
-        // line 1262
+        .line 1262
         ldloc $tmpSetLiteral8
         ldloc _F
         ldflda void* @block_typ_fieldlist::Lcp1
         call void Searchid(valuetype T_setofids Fidcls, void*& Fcp)
-        // line 1263
+        .line 1263
         ldloc _F
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lcp1
         ldfld void* T_identifier::Idtype
         stfld void* @block_typ_fieldlist::Lsp1
-        // line 1264
+        .line 1264
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp1
         ldnull
@@ -4752,21 +4752,21 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_26
-        // line 1265
+        .line 1265
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp1
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldflda int32 @block_typ::Displ
         call void Align(void* Fsp, int32& Flc)
-        // line 1266
+        .line 1266
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lcp
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld int32 @block_typ::Displ
         stfld int32 T_identifier::Fldaddr
-        // line 1267
+        .line 1267
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldloc _F
@@ -4781,7 +4781,7 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 @block_typ::Displ
-        // line 1268
+        .line 1268
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp1
         ldfld int32 T_structure::Form
@@ -4800,7 +4800,7 @@
         call instance bool @block::String(void* Fsp)
     L_OR_shortcut_27:
         brfalse L_else_28
-        // line 1269
+        .line 1269
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld class @block @block_typ::_slink
@@ -4809,12 +4809,12 @@
         ldfld void* @block_typ_fieldlist::Lsp1
         call instance bool @block::Comptypes(void* Fsp1, void* Fsp2)
         brfalse L_else_30
-        // line 1269
+        .line 1269
         ldc.i4 109
         call void Error(int32 Ferrnr)
         br L_if_end_31
     L_else_30:
-        // line 1270
+        .line 1270
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld class @block @block_typ::_slink
@@ -4822,18 +4822,18 @@
         ldfld void* @block_typ_fieldlist::Lsp1
         call instance bool @block::String(void* Fsp)
         brfalse L_if_end_32
-        // line 1270
+        .line 1270
         ldc.i4 399
         call void Error(int32 Ferrnr)
     L_if_end_32:
     L_if_end_31:
-        // line 1271
+        .line 1271
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lcp
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp1
         stfld void* T_identifier::Idtype
-        // line 1271
+        .line 1271
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp
         ldloc _F
@@ -4842,21 +4842,21 @@
         /* nop */
         br L_if_end_29
     L_else_28:
-        // line 1273
+        .line 1273
         ldc.i4 110
         call void Error(int32 Ferrnr)
     L_if_end_29:
         /* nop */
     L_if_end_26:
-        // line 1275
+        .line 1275
         call void Insymbol()
         /* nop */
         br L_if_end_25
     L_else_24:
-        // line 1277
+        .line 1277
         ldc.i4 2
         call void Error(int32 Ferrnr)
-        // line 1277
+        .line 1277
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld class @block @block_typ::_slink
@@ -4875,10 +4875,10 @@
     L_if_end_25:
         br L_if_end_21
     L_else_20:
-        // line 1279
+        .line 1279
         ldc.i4 2
         call void Error(int32 Ferrnr)
-        // line 1279
+        .line 1279
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld class @block @block_typ::_slink
@@ -4895,49 +4895,49 @@
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block::Skip(valuetype T_setty Fsys)
     L_if_end_21:
-        // line 1280
+        .line 1280
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld int32 @block_typ::Displ
         stfld int32 T_structure::Size
-        // line 1281
+        .line 1281
         ldsfld int32 _G::Sy
         ldc.i4 42
         ceq
         brfalse L_else_33
-        // line 1281
+        .line 1281
         call void Insymbol()
         br L_if_end_34
     L_else_33:
-        // line 1281
+        .line 1281
         ldc.i4 8
         call void Error(int32 Ferrnr)
     L_if_end_34:
-        // line 1282
+        .line 1282
         ldloc _F
         ldnull
         stfld void* @block_typ_fieldlist::Lsp1
-        // line 1282
+        .line 1282
         ldloc _F
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld int32 @block_typ::Displ
         stfld int32 @block_typ_fieldlist::Minsize
-        // line 1282
+        .line 1282
         ldloc _F
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld int32 @block_typ::Displ
         stfld int32 @block_typ_fieldlist::Maxsize
-        // line 1283
+        .line 1283
     L_repeat_35:
-        // line 1283
+        .line 1283
         ldloc _F
         ldnull
         stfld void* @block_typ_fieldlist::Lsp2
-        // line 1284
+        .line 1284
         ldloc _F
         ldfld valuetype T_setty @block_typ_fieldlist::Fsys
         call valuetype T_set_31 _SetCastTo_T_set_31(valuetype T_setty s)
@@ -4949,9 +4949,9 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_36
-        // line 1286
+        .line 1286
     L_repeat_37:
-        // line 1286
+        .line 1286
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld class @block @block_typ::_slink
@@ -4971,7 +4971,7 @@
         ldloc _F
         ldflda valuetype T_valu @block_typ_fieldlist::Lvalu
         call instance void @block::Constant(valuetype T_setty Fsys, void*& Fsp, valuetype T_valu& Fvalu)
-        // line 1287
+        .line 1287
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp
         ldfld void* T_structure::Tagfieldp
@@ -4980,7 +4980,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_38
-        // line 1288
+        .line 1288
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld class @block @block_typ::_slink
@@ -4994,54 +4994,54 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_39
-        // line 1288
+        .line 1288
         ldc.i4 111
         call void Error(int32 Ferrnr)
     L_if_end_39:
     L_if_end_38:
-        // line 1289
-        // line 1289
+        .line 1289
+        .line 1289
         ldloc _F
         ldc.i4 77
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ_fieldlist::Lsp3
-        // line 1289
+        .line 1289
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp3
         ldc.i4 8
         stfld int32 T_structure::Form
-        // line 1291
+        .line 1291
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp3
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp1
         stfld void* T_structure::Nxtvar
-        // line 1291
+        .line 1291
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp3
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp2
         stfld void* T_structure::Subvar
-        // line 1291
+        .line 1291
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp3
         ldloc _F
         ldfld valuetype T_valu @block_typ_fieldlist::Lvalu
         stfld valuetype T_valu T_structure::Varval
-        // line 1292
+        .line 1292
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp3
         ldc.i4 8
         stfld int32 T_structure::Form
-        // line 1294
+        .line 1294
         ldloc _F
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp1
         stfld void* @block_typ_fieldlist::Lsp4
-        // line 1295
+        .line 1295
         br L_while_test_41
     L_while_40:
-        // line 1298
+        .line 1298
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp4
         ldflda valuetype T_valu T_structure::Varval
@@ -5051,11 +5051,11 @@
         ldfld int32 T_valu::Ival
         ceq
         brfalse L_if_end_42
-        // line 1298
+        .line 1298
         ldc.i4 178
         call void Error(int32 Ferrnr)
     L_if_end_42:
-        // line 1299
+        .line 1299
         ldloc _F
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp4
@@ -5069,17 +5069,17 @@
         ldc.i4.0
         ceq
         brtrue L_while_40
-        // line 1301
+        .line 1301
         ldloc _F
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp3
         stfld void* @block_typ_fieldlist::Lsp1
-        // line 1301
+        .line 1301
         ldloc _F
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp3
         stfld void* @block_typ_fieldlist::Lsp2
-        // line 1302
+        .line 1302
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld class @block @block_typ::_slink
@@ -5089,7 +5089,7 @@
         ldc.i4.0
         ceq
         stfld bool @block::Test
-        // line 1303
+        .line 1303
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld class @block @block_typ::_slink
@@ -5097,7 +5097,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_43
-        // line 1303
+        .line 1303
         call void Insymbol()
     L_if_end_43:
         ldloc _F
@@ -5105,33 +5105,33 @@
         ldfld class @block @block_typ::_slink
         ldfld bool @block::Test
         brfalse L_repeat_37
-        // line 1305
+        .line 1305
         ldsfld int32 _G::Sy
         ldc.i4 16
         ceq
         brfalse L_else_44
-        // line 1305
+        .line 1305
         call void Insymbol()
         br L_if_end_45
     L_else_44:
-        // line 1305
+        .line 1305
         ldc.i4 5
         call void Error(int32 Ferrnr)
     L_if_end_45:
-        // line 1306
+        .line 1306
         ldsfld int32 _G::Sy
         ldc.i4 8
         ceq
         brfalse L_else_46
-        // line 1306
+        .line 1306
         call void Insymbol()
         br L_if_end_47
     L_else_46:
-        // line 1306
+        .line 1306
         ldc.i4 9
         call void Error(int32 Ferrnr)
     L_if_end_47:
-        // line 1307
+        .line 1307
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldloc _F
@@ -5148,7 +5148,7 @@
         ldloc _F
         ldflda void* @block_typ_fieldlist::Lsp2
         call instance void @block_typ::Fieldlist(valuetype T_setty Fsys, void*& Frecvar)
-        // line 1308
+        .line 1308
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld int32 @block_typ::Displ
@@ -5156,36 +5156,36 @@
         ldfld int32 @block_typ_fieldlist::Maxsize
         cgt
         brfalse L_if_end_48
-        // line 1308
+        .line 1308
         ldloc _F
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld int32 @block_typ::Displ
         stfld int32 @block_typ_fieldlist::Maxsize
     L_if_end_48:
-        // line 1309
+        .line 1309
         br L_while_test_50
     L_while_49:
-        // line 1310
+        .line 1310
         ldloc _F
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp3
         ldfld void* T_structure::Subvar
         stfld void* @block_typ_fieldlist::Lsp4
-        // line 1310
+        .line 1310
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp3
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp2
         stfld void* T_structure::Subvar
-        // line 1311
+        .line 1311
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp3
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld int32 @block_typ::Displ
         stfld int32 T_structure::Size
-        // line 1312
+        .line 1312
         ldloc _F
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp4
@@ -5198,14 +5198,14 @@
         ldc.i4.0
         ceq
         brtrue L_while_49
-        // line 1314
+        .line 1314
         ldsfld int32 _G::Sy
         ldc.i4 9
         ceq
         brfalse L_else_51
-        // line 1315
+        .line 1315
         call void Insymbol()
-        // line 1316
+        .line 1316
         ldloc _F
         ldfld valuetype T_setty @block_typ_fieldlist::Fsys
         call valuetype T_set_31 _SetCastTo_T_set_31(valuetype T_setty s)
@@ -5217,10 +5217,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_53
-        // line 1317
+        .line 1317
         ldc.i4 6
         call void Error(int32 Ferrnr)
-        // line 1317
+        .line 1317
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld class @block @block_typ::_slink
@@ -5239,13 +5239,13 @@
     L_if_end_53:
         br L_if_end_52
     L_else_51:
-        // line 1319
+        .line 1319
         ldc.i4 4
         call void Error(int32 Ferrnr)
     L_if_end_52:
         /* nop */
     L_if_end_36:
-        // line 1321
+        .line 1321
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld class @block @block_typ::_slink
@@ -5255,7 +5255,7 @@
         ldc.i4.0
         ceq
         stfld bool @block::Test
-        // line 1322
+        .line 1322
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldfld class @block @block_typ::_slink
@@ -5263,13 +5263,13 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_54
-        // line 1323
+        .line 1323
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldloc _F
         ldfld int32 @block_typ_fieldlist::Minsize
         stfld int32 @block_typ::Displ
-        // line 1324
+        .line 1324
         call void Insymbol()
     L_if_end_54:
         ldloc _F
@@ -5277,13 +5277,13 @@
         ldfld class @block @block_typ::_slink
         ldfld bool @block::Test
         brfalse L_repeat_35
-        // line 1327
+        .line 1327
         ldloc _F
         ldfld class @block_typ @block_typ_fieldlist::_slink
         ldloc _F
         ldfld int32 @block_typ_fieldlist::Maxsize
         stfld int32 @block_typ::Displ
-        // line 1328
+        .line 1328
         ldloc _F
         ldfld void* @block_typ_fieldlist::Lsp
         ldloc _F
@@ -5292,7 +5292,7 @@
         /* nop */
         br L_if_end_19
     L_else_18:
-        // line 1330
+        .line 1330
         ldloc _F
         ldfld void** @block_typ_fieldlist::Frecvar
         ldnull
@@ -5305,11 +5305,11 @@
 }
 
 
-// line 1474
+.line 1474
 //================================================================================
 // scope: block_labeldeclaration (level : 3)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE labl = record;
 .class value explicit T_labl
@@ -5342,7 +5342,7 @@
 }
 
 
-// line 1504
+.line 1504
 //================================================================================
 // scope: block_constdeclaration (level : 3)
 
@@ -5365,7 +5365,7 @@
 }
 
 
-// line 1527
+.line 1527
 //================================================================================
 // scope: block_typedeclaration (level : 3)
 
@@ -5390,7 +5390,7 @@
 }
 
 
-// line 1570
+.line 1570
 //================================================================================
 // scope: block_vardeclaration (level : 3)
 
@@ -5414,11 +5414,11 @@
 }
 
 
-// line 1620
+.line 1620
 //================================================================================
 // scope: block_procdeclaration_parameterlist (level : 4)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_79 = set of 0 .. 8
 .class value explicit T_set_79
@@ -5530,7 +5530,7 @@
 }
 
 
-// line 1615
+.line 1615
 //================================================================================
 // scope: block_procdeclaration (level : 3)
 
@@ -5561,7 +5561,7 @@
         ret
     }
 
-// line 1620
+.line 1620
 
     .method public
     void Parameterlist(valuetype T_setty Fsy, void*& Fpar)
@@ -5772,11 +5772,11 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 1623
+        .line 1623
         ldloc _F
         ldnull
         stfld void* @block_procdeclaration_parameterlist::Lcp1
-        // line 1624
+        .line 1624
         ldloc _F
         ldfld valuetype T_setty @block_procdeclaration_parameterlist::Fsy
         call valuetype T_set_31 _SetCastTo_T_set_31(valuetype T_setty s)
@@ -5788,10 +5788,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 1625
+        .line 1625
         ldc.i4 7
         call void Error(int32 Ferrnr)
-        // line 1625
+        .line 1625
         ldloc _F
         ldfld class @block_procdeclaration @block_procdeclaration_parameterlist::_slink
         ldfld class @block @block_procdeclaration::_slink
@@ -5813,33 +5813,33 @@
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block::Skip(valuetype T_setty Fsys)
     L_if_end_1:
-        // line 1626
+        .line 1626
         ldsfld int32 _G::Sy
         ldc.i4 8
         ceq
         brfalse L_else_2
-        // line 1627
+        .line 1627
         ldloc _F
         ldfld class @block_procdeclaration @block_procdeclaration_parameterlist::_slink
         ldfld bool @block_procdeclaration::Forw
         brfalse L_if_end_4
-        // line 1627
+        .line 1627
         ldc.i4 119
         call void Error(int32 Ferrnr)
     L_if_end_4:
-        // line 1628
+        .line 1628
         call void Insymbol()
-        // line 1629
+        .line 1629
         ldloc $tmpSetLiteral3
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_setty s, int32 val)
         ldc.i4.0
         ceq
         brfalse L_if_end_5
-        // line 1630
+        .line 1630
         ldc.i4 7
         call void Error(int32 Ferrnr)
-        // line 1630
+        .line 1630
         ldloc _F
         ldfld class @block_procdeclaration @block_procdeclaration_parameterlist::_slink
         ldfld class @block @block_procdeclaration::_slink
@@ -5858,105 +5858,105 @@
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block::Skip(valuetype T_setty Fsys)
     L_if_end_5:
-        // line 1631
+        .line 1631
         br L_while_test_7
     L_while_6:
-        // line 1633
+        .line 1633
         ldsfld int32 _G::Sy
         ldc.i4 24
         ceq
         brfalse L_else_8
-        // line 1634
+        .line 1634
         ldc.i4 399
         call void Error(int32 Ferrnr)
-        // line 1635
+        .line 1635
     L_repeat_10:
-        // line 1635
+        .line 1635
         call void Insymbol()
-        // line 1636
+        .line 1636
         ldsfld int32 _G::Sy
         ldc.i4 0
         ceq
         brfalse L_else_11
-        // line 1637
-        // line 1637
+        .line 1637
+        .line 1637
         ldloc _F
         ldc.i4 214
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_procdeclaration_parameterlist::Lcp
-        // line 1637
+        .line 1637
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldc.i4 4
         stfld int32 T_identifier::Klass
-        // line 1637
+        .line 1637
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldc.i4 1
         stfld int32 T_identifier::Pfdeckind
-        // line 1637
+        .line 1637
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldc.i4 1
         stfld int32 T_identifier::Pfkind
-        // line 1639
+        .line 1639
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldsfld valuetype T_alpha _G::Id
         stfld valuetype T_alpha T_identifier::Name
-        // line 1639
+        .line 1639
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldnull
         stfld void* T_identifier::Idtype
-        // line 1639
+        .line 1639
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp1
         stfld void* T_identifier::Next
-        // line 1640
+        .line 1640
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldsfld int8 _G::Level
         stfld int8 T_identifier::Pflev
-        // line 1641
+        .line 1641
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldc.i4 4
         stfld int32 T_identifier::Klass
-        // line 1641
+        .line 1641
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldc.i4 1
         stfld int32 T_identifier::Pfdeckind
-        // line 1641
+        .line 1641
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldc.i4 1
         stfld int32 T_identifier::Pfkind
-        // line 1643
+        .line 1643
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         call void Enterid(void* Fcp)
-        // line 1644
+        .line 1644
         ldloc _F
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         stfld void* @block_procdeclaration_parameterlist::Lcp1
-        // line 1645
+        .line 1645
         ldsfld void* _G::Parmptr
         ldsflda int32 _G::Lc
         call void Align(void* Fsp, int32& Flc)
-        // line 1647
+        .line 1647
         call void Insymbol()
         br L_if_end_12
     L_else_11:
-        // line 1649
+        .line 1649
         ldc.i4 2
         call void Error(int32 Ferrnr)
     L_if_end_12:
-        // line 1650
+        .line 1650
         ldloc _F
         ldfld class @block_procdeclaration @block_procdeclaration_parameterlist::_slink
         ldfld class @block @block_procdeclaration::_slink
@@ -5970,10 +5970,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_13
-        // line 1651
+        .line 1651
         ldc.i4 7
         call void Error(int32 Ferrnr)
-        // line 1651
+        .line 1651
         ldloc _F
         ldfld class @block_procdeclaration @block_procdeclaration_parameterlist::_slink
         ldfld class @block @block_procdeclaration::_slink
@@ -6000,102 +6000,102 @@
         brfalse L_repeat_10
         br L_if_end_9
     L_else_8:
-        // line 1656
+        .line 1656
         ldsfld int32 _G::Sy
         ldc.i4 22
         ceq
         brfalse L_else_14
-        // line 1657
+        .line 1657
         ldc.i4 399
         call void Error(int32 Ferrnr)
-        // line 1657
+        .line 1657
         ldloc _F
         ldnull
         stfld void* @block_procdeclaration_parameterlist::Lcp2
-        // line 1658
+        .line 1658
     L_repeat_16:
-        // line 1658
+        .line 1658
         call void Insymbol()
-        // line 1659
+        .line 1659
         ldsfld int32 _G::Sy
         ldc.i4 0
         ceq
         brfalse L_if_end_17
-        // line 1660
-        // line 1660
+        .line 1660
+        .line 1660
         ldloc _F
         ldc.i4 214
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_procdeclaration_parameterlist::Lcp
-        // line 1660
+        .line 1660
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldc.i4 5
         stfld int32 T_identifier::Klass
-        // line 1660
+        .line 1660
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldc.i4 1
         stfld int32 T_identifier::Pfdeckind
-        // line 1660
+        .line 1660
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldc.i4 1
         stfld int32 T_identifier::Pfkind
-        // line 1662
+        .line 1662
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldsfld valuetype T_alpha _G::Id
         stfld valuetype T_alpha T_identifier::Name
-        // line 1662
+        .line 1662
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldnull
         stfld void* T_identifier::Idtype
-        // line 1662
+        .line 1662
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp2
         stfld void* T_identifier::Next
-        // line 1663
+        .line 1663
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldsfld int8 _G::Level
         stfld int8 T_identifier::Pflev
-        // line 1664
+        .line 1664
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldc.i4 5
         stfld int32 T_identifier::Klass
-        // line 1664
+        .line 1664
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldc.i4 1
         stfld int32 T_identifier::Pfdeckind
-        // line 1665
+        .line 1665
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldc.i4 1
         stfld int32 T_identifier::Pfkind
-        // line 1667
+        .line 1667
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         call void Enterid(void* Fcp)
-        // line 1668
+        .line 1668
         ldloc _F
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         stfld void* @block_procdeclaration_parameterlist::Lcp2
-        // line 1669
+        .line 1669
         ldsfld void* _G::Parmptr
         ldsflda int32 _G::Lc
         call void Align(void* Fsp, int32& Flc)
-        // line 1671
+        .line 1671
         call void Insymbol()
         /* nop */
     L_if_end_17:
-        // line 1673
+        .line 1673
         ldloc $tmpSetLiteral7
         call valuetype T_set_31 _SetCastTo_T_set_31(valuetype T_setty s)
         ldloc _F
@@ -6109,10 +6109,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_18
-        // line 1674
+        .line 1674
         ldc.i4 7
         call void Error(int32 Ferrnr)
-        // line 1674
+        .line 1674
         ldloc _F
         ldfld class @block_procdeclaration @block_procdeclaration_parameterlist::_slink
         ldfld class @block @block_procdeclaration::_slink
@@ -6137,30 +6137,30 @@
         ldc.i4.0
         ceq
         brfalse L_repeat_16
-        // line 1677
+        .line 1677
         ldsfld int32 _G::Sy
         ldc.i4 16
         ceq
         brfalse L_else_19
-        // line 1678
+        .line 1678
         call void Insymbol()
-        // line 1679
+        .line 1679
         ldsfld int32 _G::Sy
         ldc.i4 0
         ceq
         brfalse L_else_21
-        // line 1680
+        .line 1680
         ldloc $tmpSetLiteral9
         ldloc _F
         ldflda void* @block_procdeclaration_parameterlist::Lcp
         call void Searchid(valuetype T_setofids Fidcls, void*& Fcp)
-        // line 1681
+        .line 1681
         ldloc _F
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldfld void* T_identifier::Idtype
         stfld void* @block_procdeclaration_parameterlist::Lsp
-        // line 1682
+        .line 1682
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lsp
         ldnull
@@ -6168,7 +6168,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_23
-        // line 1683
+        .line 1683
         ldloc $tmpSetLiteral10
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lsp
@@ -6177,35 +6177,35 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_24
-        // line 1684
+        .line 1684
         ldc.i4 120
         call void Error(int32 Ferrnr)
-        // line 1684
+        .line 1684
         ldloc _F
         ldnull
         stfld void* @block_procdeclaration_parameterlist::Lsp
     L_if_end_24:
     L_if_end_23:
-        // line 1685
+        .line 1685
         ldloc _F
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp2
         stfld void* @block_procdeclaration_parameterlist::Lcp3
-        // line 1686
+        .line 1686
         br L_while_test_26
     L_while_25:
-        // line 1687
+        .line 1687
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp2
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lsp
         stfld void* T_identifier::Idtype
-        // line 1687
+        .line 1687
         ldloc _F
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp2
         stfld void* @block_procdeclaration_parameterlist::Lcp
-        // line 1688
+        .line 1688
         ldloc _F
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp2
@@ -6219,26 +6219,26 @@
         ldc.i4.0
         ceq
         brtrue L_while_25
-        // line 1690
+        .line 1690
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp1
         stfld void* T_identifier::Next
-        // line 1690
+        .line 1690
         ldloc _F
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp3
         stfld void* @block_procdeclaration_parameterlist::Lcp1
-        // line 1691
+        .line 1691
         call void Insymbol()
         br L_if_end_22
     L_else_21:
-        // line 1693
+        .line 1693
         ldc.i4 2
         call void Error(int32 Ferrnr)
     L_if_end_22:
-        // line 1694
+        .line 1694
         ldloc _F
         ldfld class @block_procdeclaration @block_procdeclaration_parameterlist::_slink
         ldfld class @block @block_procdeclaration::_slink
@@ -6252,10 +6252,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_27
-        // line 1695
+        .line 1695
         ldc.i4 7
         call void Error(int32 Ferrnr)
-        // line 1695
+        .line 1695
         ldloc _F
         ldfld class @block_procdeclaration @block_procdeclaration_parameterlist::_slink
         ldfld class @block @block_procdeclaration::_slink
@@ -6276,110 +6276,110 @@
     L_if_end_27:
         br L_if_end_20
     L_else_19:
-        // line 1697
+        .line 1697
         ldc.i4 5
         call void Error(int32 Ferrnr)
     L_if_end_20:
         br L_if_end_15
     L_else_14:
-        // line 1701
+        .line 1701
         ldsfld int32 _G::Sy
         ldc.i4 21
         ceq
         brfalse L_else_28
-        // line 1702
+        .line 1702
         ldloc _F
         ldc.i4 1
         stfld int32 @block_procdeclaration_parameterlist::Lkind
-        // line 1702
+        .line 1702
         call void Insymbol()
         br L_if_end_29
     L_else_28:
-        // line 1703
+        .line 1703
         ldloc _F
         ldc.i4 0
         stfld int32 @block_procdeclaration_parameterlist::Lkind
     L_if_end_29:
-        // line 1704
+        .line 1704
         ldloc _F
         ldnull
         stfld void* @block_procdeclaration_parameterlist::Lcp2
-        // line 1705
+        .line 1705
         ldloc _F
         ldc.i4 0
         stfld int32 @block_procdeclaration_parameterlist::Count
-        // line 1706
+        .line 1706
     L_repeat_30:
-        // line 1707
+        .line 1707
         ldsfld int32 _G::Sy
         ldc.i4 0
         ceq
         brfalse L_if_end_31
-        // line 1708
-        // line 1708
+        .line 1708
+        .line 1708
         ldloc _F
         ldc.i4 214
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_procdeclaration_parameterlist::Lcp
-        // line 1708
+        .line 1708
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldc.i4 2
         stfld int32 T_identifier::Klass
-        // line 1710
+        .line 1710
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldsfld valuetype T_alpha _G::Id
         stfld valuetype T_alpha T_identifier::Name
-        // line 1710
+        .line 1710
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldnull
         stfld void* T_identifier::Idtype
-        // line 1710
+        .line 1710
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldc.i4 2
         stfld int32 T_identifier::Klass
-        // line 1711
+        .line 1711
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldloc _F
         ldfld int32 @block_procdeclaration_parameterlist::Lkind
         stfld int32 T_identifier::Vkind
-        // line 1711
+        .line 1711
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp2
         stfld void* T_identifier::Next
-        // line 1711
+        .line 1711
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldsfld int8 _G::Level
         stfld int8 T_identifier::Vlev
         /* nop */
-        // line 1713
+        .line 1713
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         call void Enterid(void* Fcp)
-        // line 1714
+        .line 1714
         ldloc _F
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         stfld void* @block_procdeclaration_parameterlist::Lcp2
-        // line 1714
+        .line 1714
         ldloc _F
         ldloc _F
         ldfld int32 @block_procdeclaration_parameterlist::Count
         ldc.i4 1
         add
         stfld int32 @block_procdeclaration_parameterlist::Count
-        // line 1715
+        .line 1715
         call void Insymbol()
         /* nop */
     L_if_end_31:
-        // line 1717
+        .line 1717
         ldloc $tmpSetLiteral13
         call valuetype T_set_31 _SetCastTo_T_set_31(valuetype T_setty s)
         ldloc _F
@@ -6393,10 +6393,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_32
-        // line 1718
+        .line 1718
         ldc.i4 7
         call void Error(int32 Ferrnr)
-        // line 1718
+        .line 1718
         ldloc _F
         ldfld class @block_procdeclaration @block_procdeclaration_parameterlist::_slink
         ldfld class @block @block_procdeclaration::_slink
@@ -6415,7 +6415,7 @@
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block::Skip(valuetype T_setty Fsys)
     L_if_end_32:
-        // line 1720
+        .line 1720
         ldloc _F
         ldfld class @block_procdeclaration @block_procdeclaration_parameterlist::_slink
         ldfld class @block @block_procdeclaration::_slink
@@ -6425,7 +6425,7 @@
         ldc.i4.0
         ceq
         stfld bool @block::Test
-        // line 1721
+        .line 1721
         ldloc _F
         ldfld class @block_procdeclaration @block_procdeclaration_parameterlist::_slink
         ldfld class @block @block_procdeclaration::_slink
@@ -6433,7 +6433,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_33
-        // line 1721
+        .line 1721
         call void Insymbol()
     L_if_end_33:
         ldloc _F
@@ -6441,30 +6441,30 @@
         ldfld class @block @block_procdeclaration::_slink
         ldfld bool @block::Test
         brfalse L_repeat_30
-        // line 1723
+        .line 1723
         ldsfld int32 _G::Sy
         ldc.i4 16
         ceq
         brfalse L_else_34
-        // line 1724
+        .line 1724
         call void Insymbol()
-        // line 1725
+        .line 1725
         ldsfld int32 _G::Sy
         ldc.i4 0
         ceq
         brfalse L_else_36
-        // line 1726
+        .line 1726
         ldloc $tmpSetLiteral15
         ldloc _F
         ldflda void* @block_procdeclaration_parameterlist::Lcp
         call void Searchid(valuetype T_setofids Fidcls, void*& Fcp)
-        // line 1727
+        .line 1727
         ldloc _F
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldfld void* T_identifier::Idtype
         stfld void* @block_procdeclaration_parameterlist::Lsp
-        // line 1728
+        .line 1728
         ldloc _F
         ldc.i4 1
         dup
@@ -6472,7 +6472,7 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 @block_procdeclaration_parameterlist::Lsize
-        // line 1729
+        .line 1729
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lsp
         ldnull
@@ -6480,13 +6480,13 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_38
-        // line 1730
+        .line 1730
         ldloc _F
         ldfld int32 @block_procdeclaration_parameterlist::Lkind
         ldc.i4 0
         ceq
         brfalse L_if_end_39
-        // line 1731
+        .line 1731
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lsp
         ldfld int32 T_structure::Form
@@ -6495,7 +6495,7 @@
         ldc.i4.0
         ceq
         brfalse L_else_40
-        // line 1731
+        .line 1731
         ldloc _F
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lsp
@@ -6503,35 +6503,35 @@
         stfld int32 @block_procdeclaration_parameterlist::Lsize
         br L_if_end_41
     L_else_40:
-        // line 1732
+        .line 1732
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lsp
         ldfld int32 T_structure::Form
         ldc.i4 6
         ceq
         brfalse L_if_end_42
-        // line 1732
+        .line 1732
         ldc.i4 121
         call void Error(int32 Ferrnr)
     L_if_end_42:
     L_if_end_41:
     L_if_end_39:
     L_if_end_38:
-        // line 1733
+        .line 1733
         ldsfld void* _G::Parmptr
         ldloc _F
         ldflda int32 @block_procdeclaration_parameterlist::Lsize
         call void Align(void* Fsp, int32& Flc)
-        // line 1734
+        .line 1734
         ldloc _F
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp2
         stfld void* @block_procdeclaration_parameterlist::Lcp3
-        // line 1735
+        .line 1735
         ldsfld void* _G::Parmptr
         ldsflda int32 _G::Lc
         call void Align(void* Fsp, int32& Flc)
-        // line 1736
+        .line 1736
         ldsfld int32 _G::Lc
         ldloc _F
         ldfld int32 @block_procdeclaration_parameterlist::Count
@@ -6544,25 +6544,25 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int32 _G::Lc
-        // line 1737
+        .line 1737
         ldloc _F
         ldsfld int32 _G::Lc
         stfld int32 @block_procdeclaration_parameterlist::Llc
-        // line 1738
+        .line 1738
         br L_while_test_44
     L_while_43:
-        // line 1739
+        .line 1739
         ldloc _F
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp2
         stfld void* @block_procdeclaration_parameterlist::Lcp
-        // line 1741
+        .line 1741
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp2
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lsp
         stfld void* T_identifier::Idtype
-        // line 1742
+        .line 1742
         ldloc _F
         ldloc _F
         ldfld int32 @block_procdeclaration_parameterlist::Llc
@@ -6574,14 +6574,14 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 @block_procdeclaration_parameterlist::Llc
-        // line 1743
+        .line 1743
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp2
         ldloc _F
         ldfld int32 @block_procdeclaration_parameterlist::Llc
         stfld int32 T_identifier::Vaddr
         /* nop */
-        // line 1745
+        .line 1745
         ldloc _F
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp2
@@ -6595,26 +6595,26 @@
         ldc.i4.0
         ceq
         brtrue L_while_43
-        // line 1747
+        .line 1747
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp1
         stfld void* T_identifier::Next
-        // line 1747
+        .line 1747
         ldloc _F
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp3
         stfld void* @block_procdeclaration_parameterlist::Lcp1
-        // line 1748
+        .line 1748
         call void Insymbol()
         br L_if_end_37
     L_else_36:
-        // line 1750
+        .line 1750
         ldc.i4 2
         call void Error(int32 Ferrnr)
     L_if_end_37:
-        // line 1751
+        .line 1751
         ldloc _F
         ldfld class @block_procdeclaration @block_procdeclaration_parameterlist::_slink
         ldfld class @block @block_procdeclaration::_slink
@@ -6628,10 +6628,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_45
-        // line 1752
+        .line 1752
         ldc.i4 7
         call void Error(int32 Ferrnr)
-        // line 1752
+        .line 1752
         ldloc _F
         ldfld class @block_procdeclaration @block_procdeclaration_parameterlist::_slink
         ldfld class @block @block_procdeclaration::_slink
@@ -6652,7 +6652,7 @@
     L_if_end_45:
         br L_if_end_35
     L_else_34:
-        // line 1754
+        .line 1754
         ldc.i4 5
         call void Error(int32 Ferrnr)
     L_if_end_35:
@@ -6660,14 +6660,14 @@
     L_if_end_15:
         /* nop */
     L_if_end_9:
-        // line 1757
+        .line 1757
         ldsfld int32 _G::Sy
         ldc.i4 13
         ceq
         brfalse L_if_end_46
-        // line 1758
+        .line 1758
         call void Insymbol()
-        // line 1759
+        .line 1759
         ldloc _F
         ldfld class @block_procdeclaration @block_procdeclaration_parameterlist::_slink
         ldfld class @block @block_procdeclaration::_slink
@@ -6681,10 +6681,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_47
-        // line 1760
+        .line 1760
         ldc.i4 7
         call void Error(int32 Ferrnr)
-        // line 1760
+        .line 1760
         ldloc _F
         ldfld class @block_procdeclaration @block_procdeclaration_parameterlist::_slink
         ldfld class @block @block_procdeclaration::_slink
@@ -6709,14 +6709,14 @@
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_setty s, int32 val)
         brtrue L_while_6
-        // line 1763
+        .line 1763
         ldsfld int32 _G::Sy
         ldc.i4 9
         ceq
         brfalse L_else_48
-        // line 1764
+        .line 1764
         call void Insymbol()
-        // line 1765
+        .line 1765
         ldloc _F
         ldfld valuetype T_setty @block_procdeclaration_parameterlist::Fsy
         ldloc _F
@@ -6729,10 +6729,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_50
-        // line 1766
+        .line 1766
         ldc.i4 6
         call void Error(int32 Ferrnr)
-        // line 1766
+        .line 1766
         ldloc _F
         ldfld class @block_procdeclaration @block_procdeclaration_parameterlist::_slink
         ldfld class @block @block_procdeclaration::_slink
@@ -6747,37 +6747,37 @@
     L_if_end_50:
         br L_if_end_49
     L_else_48:
-        // line 1768
+        .line 1768
         ldc.i4 4
         call void Error(int32 Ferrnr)
     L_if_end_49:
-        // line 1769
+        .line 1769
         ldloc _F
         ldnull
         stfld void* @block_procdeclaration_parameterlist::Lcp3
-        // line 1772
+        .line 1772
         br L_while_test_52
     L_while_51:
-        // line 1774
+        .line 1774
         ldloc _F
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp1
         ldfld void* T_identifier::Next
         stfld void* @block_procdeclaration_parameterlist::Lcp2
-        // line 1774
+        .line 1774
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp1
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp3
         stfld void* T_identifier::Next
-        // line 1775
+        .line 1775
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp1
         ldfld int32 T_identifier::Klass
         ldc.i4 2
         ceq
         brfalse L_if_end_53
-        // line 1776
+        .line 1776
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp1
         ldfld void* T_identifier::Idtype
@@ -6786,7 +6786,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_54
-        // line 1777
+        .line 1777
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp1
         ldfld int32 T_identifier::Vkind
@@ -6803,18 +6803,18 @@
         cgt
     L_AND_shortcut_55:
         brfalse L_if_end_56
-        // line 1778
+        .line 1778
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp1
         ldfld void* T_identifier::Idtype
         ldsflda int32 _G::Lc
         call void Align(void* Fsp, int32& Flc)
-        // line 1779
+        .line 1779
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp1
         ldsfld int32 _G::Lc
         stfld int32 T_identifier::Vaddr
-        // line 1780
+        .line 1780
         ldsfld int32 _G::Lc
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp1
@@ -6830,12 +6830,12 @@
     L_if_end_56:
     L_if_end_54:
     L_if_end_53:
-        // line 1782
+        .line 1782
         ldloc _F
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp1
         stfld void* @block_procdeclaration_parameterlist::Lcp3
-        // line 1782
+        .line 1782
         ldloc _F
         ldloc _F
         ldfld void* @block_procdeclaration_parameterlist::Lcp2
@@ -6848,7 +6848,7 @@
         ldc.i4.0
         ceq
         brtrue L_while_51
-        // line 1784
+        .line 1784
         ldloc _F
         ldfld void** @block_procdeclaration_parameterlist::Fpar
         ldloc _F
@@ -6856,7 +6856,7 @@
         stobj void*
         br L_if_end_3
     L_else_2:
-        // line 1786
+        .line 1786
         ldloc _F
         ldfld void** @block_procdeclaration_parameterlist::Fpar
         ldnull
@@ -6869,11 +6869,11 @@
 }
 
 
-// line 1912
+.line 1912
 //================================================================================
 // scope: block_body_mes (level : 4)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_99 = array [0 .. 60] of int8;
 .class value explicit T_array_99
@@ -6925,7 +6925,7 @@
 }
 
 
-// line 1917
+.line 1917
 //================================================================================
 // scope: block_body_putic (level : 4)
 
@@ -6943,11 +6943,11 @@
 }
 
 
-// line 1920
+.line 1920
 //================================================================================
 // scope: block_body_gen0 (level : 4)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_100 = array [1 .. 4] of uint8;
 .class value explicit T_array_100
@@ -6994,7 +6994,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_101 = array [0 .. 60] of valuetype T_array_100;
 .class value explicit T_array_101
@@ -7048,11 +7048,11 @@
 }
 
 
-// line 1926
+.line 1926
 //================================================================================
 // scope: block_body_gen1 (level : 4)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_103 = array [1 .. 23] of valuetype T_array_100;
 .class value explicit T_array_103
@@ -7091,7 +7091,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_105 = array [1 .. 23] of int8;
 .class value explicit T_array_105
@@ -7128,7 +7128,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_106 = array [1 .. 65] of void*;
 .class value explicit T_block_body_array_106
@@ -7188,7 +7188,7 @@
 }
 
 
-// line 1955
+.line 1955
 //================================================================================
 // scope: block_body_gen2 (level : 4)
 
@@ -7214,7 +7214,7 @@
 }
 
 
-// line 1991
+.line 1991
 //================================================================================
 // scope: block_body_gentypindicator (level : 4)
 
@@ -7235,7 +7235,7 @@
 }
 
 
-// line 2012
+.line 2012
 //================================================================================
 // scope: block_body_gen0t (level : 4)
 
@@ -7257,7 +7257,7 @@
 }
 
 
-// line 2023
+.line 2023
 //================================================================================
 // scope: block_body_gen1t (level : 4)
 
@@ -7280,7 +7280,7 @@
 }
 
 
-// line 2034
+.line 2034
 //================================================================================
 // scope: block_body_gen2t (level : 4)
 
@@ -7304,11 +7304,11 @@
 }
 
 
-// line 2045
+.line 2045
 //================================================================================
 // scope: block_body_load (level : 4)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE attr = record;
 .class value explicit T_attr
@@ -7358,7 +7358,7 @@
 }
 
 
-// line 2082
+.line 2082
 //================================================================================
 // scope: block_body_store (level : 4)
 
@@ -7379,7 +7379,7 @@
 }
 
 
-// line 2095
+.line 2095
 //================================================================================
 // scope: block_body_loadaddress (level : 4)
 
@@ -7397,7 +7397,7 @@
 }
 
 
-// line 2123
+.line 2123
 //================================================================================
 // scope: block_body_genfjp (level : 4)
 
@@ -7418,7 +7418,7 @@
 }
 
 
-// line 2131
+.line 2131
 //================================================================================
 // scope: block_body_genujpxjp (level : 4)
 
@@ -7440,7 +7440,7 @@
 }
 
 
-// line 2139
+.line 2139
 //================================================================================
 // scope: block_body_gencupent (level : 4)
 
@@ -7463,7 +7463,7 @@
 }
 
 
-// line 2149
+.line 2149
 //================================================================================
 // scope: block_body_checkbnds (level : 4)
 
@@ -7488,7 +7488,7 @@
 }
 
 
-// line 2163
+.line 2163
 //================================================================================
 // scope: block_body_putlabel (level : 4)
 
@@ -7509,7 +7509,7 @@
 }
 
 
-// line 2173
+.line 2173
 //================================================================================
 // scope: block_body_statement_selector (level : 5)
 
@@ -7538,7 +7538,7 @@
 }
 
 
-// line 2317
+.line 2317
 //================================================================================
 // scope: block_body_statement_call_variable (level : 6)
 
@@ -7562,7 +7562,7 @@
 }
 
 
-// line 2326
+.line 2326
 //================================================================================
 // scope: block_body_statement_call_getputresetrewrite (level : 6)
 
@@ -7580,7 +7580,7 @@
 }
 
 
-// line 2334
+.line 2334
 //================================================================================
 // scope: block_body_statement_call_read (level : 6)
 
@@ -7603,7 +7603,7 @@
 }
 
 
-// line 2391
+.line 2391
 //================================================================================
 // scope: block_body_statement_call_write (level : 6)
 
@@ -7629,7 +7629,7 @@
 }
 
 
-// line 2485
+.line 2485
 //================================================================================
 // scope: block_body_statement_call_pack (level : 6)
 
@@ -7651,7 +7651,7 @@
 }
 
 
-// line 2513
+.line 2513
 //================================================================================
 // scope: block_body_statement_call_unpack (level : 6)
 
@@ -7673,7 +7673,7 @@
 }
 
 
-// line 2541
+.line 2541
 //================================================================================
 // scope: block_body_statement_call_new (level : 6)
 
@@ -7698,7 +7698,7 @@
 }
 
 
-// line 2586
+.line 2586
 //================================================================================
 // scope: block_body_statement_call_mark (level : 6)
 
@@ -7716,7 +7716,7 @@
 }
 
 
-// line 2594
+.line 2594
 //================================================================================
 // scope: block_body_statement_call_release (level : 6)
 
@@ -7734,7 +7734,7 @@
 }
 
 
-// line 2604
+.line 2604
 //================================================================================
 // scope: block_body_statement_call_abs (level : 6)
 
@@ -7752,7 +7752,7 @@
 }
 
 
-// line 2613
+.line 2613
 //================================================================================
 // scope: block_body_statement_call_sqr (level : 6)
 
@@ -7770,7 +7770,7 @@
 }
 
 
-// line 2622
+.line 2622
 //================================================================================
 // scope: block_body_statement_call_trunc (level : 6)
 
@@ -7788,7 +7788,7 @@
 }
 
 
-// line 2630
+.line 2630
 //================================================================================
 // scope: block_body_statement_call_odd (level : 6)
 
@@ -7806,7 +7806,7 @@
 }
 
 
-// line 2638
+.line 2638
 //================================================================================
 // scope: block_body_statement_call_ord (level : 6)
 
@@ -7824,7 +7824,7 @@
 }
 
 
-// line 2646
+.line 2646
 //================================================================================
 // scope: block_body_statement_call_chr (level : 6)
 
@@ -7842,7 +7842,7 @@
 }
 
 
-// line 2654
+.line 2654
 //================================================================================
 // scope: block_body_statement_call_predsucc (level : 6)
 
@@ -7860,7 +7860,7 @@
 }
 
 
-// line 2662
+.line 2662
 //================================================================================
 // scope: block_body_statement_call_eof (level : 6)
 
@@ -7878,7 +7878,7 @@
 }
 
 
-// line 2682
+.line 2682
 //================================================================================
 // scope: block_body_statement_call_callnonstandard (level : 6)
 
@@ -7905,7 +7905,7 @@
 }
 
 
-// line 2314
+.line 2314
 //================================================================================
 // scope: block_body_statement_call (level : 5)
 
@@ -7928,7 +7928,7 @@
         ret
     }
 
-// line 2317
+.line 2317
 
     .method public
     void Variable(valuetype T_setty Fsys)
@@ -7958,29 +7958,29 @@
         call instance void T_setofids::addValue(int32)
     
     L_Entry:
-        // line 2320
+        .line 2320
         ldsfld int32 _G::Sy
         ldc.i4 0
         ceq
         brfalse L_else_1
-        // line 2321
+        .line 2321
         ldloc $tmpSetLiteral1
         ldloc _F
         ldflda void* @block_body_statement_call_variable::Lcp
         call void Searchid(valuetype T_setofids Fidcls, void*& Fcp)
-        // line 2321
+        .line 2321
         call void Insymbol()
         br L_if_end_2
     L_else_1:
-        // line 2322
+        .line 2322
         ldc.i4 2
         call void Error(int32 Ferrnr)
-        // line 2322
+        .line 2322
         ldloc _F
         ldsfld void* _G::Uvarptr
         stfld void* @block_body_statement_call_variable::Lcp
     L_if_end_2:
-        // line 2323
+        .line 2323
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_variable::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -7994,7 +7994,7 @@
         ret
     }
 
-// line 2326
+.line 2326
 
     .method public
     void Getputresetrewrite()
@@ -8017,7 +8017,7 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 2327
+        .line 2327
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_getputresetrewrite::_slink
         ldloc _F
@@ -8033,13 +8033,13 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement_call::Variable(valuetype T_setty Fsys)
-        // line 2327
+        .line 2327
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_getputresetrewrite::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Loadaddress()
-        // line 2328
+        .line 2328
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -8047,7 +8047,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 2329
+        .line 2329
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
@@ -8056,12 +8056,12 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_2
-        // line 2329
+        .line 2329
         ldc.i4 116
         call void Error(int32 Ferrnr)
     L_if_end_2:
     L_if_end_1:
-        // line 2330
+        .line 2330
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_getputresetrewrite::_slink
         ldfld int8 @block_body_statement_call::Lkey
@@ -8070,7 +8070,7 @@
         ldc.i4.0
         ceq
         brfalse L_else_3
-        // line 2330
+        .line 2330
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_getputresetrewrite::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8086,7 +8086,7 @@
         call instance void @block_body::Gen1(int8 Fop, int32 Fp2)
         br L_if_end_4
     L_else_3:
-        // line 2331
+        .line 2331
         ldc.i4 399
         call void Error(int32 Ferrnr)
     L_if_end_4:
@@ -8095,7 +8095,7 @@
         ret
     }
 
-// line 2334
+.line 2334
 
     .method public
     void Read()
@@ -8145,7 +8145,7 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 2338
+        .line 2338
         ldloc _F
         ldc.i4 1
         dup
@@ -8153,7 +8153,7 @@
         ldc.i4 10
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int8 @block_body_statement_call_read::Llev
-        // line 2338
+        .line 2338
         ldloc _F
         ldc.i4 5
         dup
@@ -8161,14 +8161,14 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 @block_body_statement_call_read::Laddr
-        // line 2339
+        .line 2339
         ldsfld int32 _G::Sy
         ldc.i4 8
         ceq
         brfalse L_else_1
-        // line 2340
+        .line 2340
         call void Insymbol()
-        // line 2341
+        .line 2341
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_read::_slink
         ldloc _F
@@ -8184,12 +8184,12 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement_call::Variable(valuetype T_setty Fsys)
-        // line 2342
+        .line 2342
         ldloc _F
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         stfld void* @block_body_statement_call_read::Lsp
-        // line 2342
+        .line 2342
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_read::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8197,7 +8197,7 @@
         ldfld class @block @block_body::_slink
         ldc.i4 0 // (false)
         stfld bool @block::Test
-        // line 2343
+        .line 2343
         ldloc _F
         ldfld void* @block_body_statement_call_read::Lsp
         ldnull
@@ -8205,53 +8205,53 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_3
-        // line 2344
+        .line 2344
         ldloc _F
         ldfld void* @block_body_statement_call_read::Lsp
         ldfld int32 T_structure::Form
         ldc.i4 6
         ceq
         brfalse L_if_end_4
-        // line 2347
+        .line 2347
         ldloc _F
         ldfld void* @block_body_statement_call_read::Lsp
         ldfld void* T_structure::Filtype
         ldsfld void* _G::Charptr
         ceq
         brfalse L_else_5
-        // line 2348
+        .line 2348
         ldloc _F
         ldsflda valuetype T_attr _G::Gattr
         ldfld int8 T_attr::Vlevel
         stfld int8 @block_body_statement_call_read::Llev
-        // line 2348
+        .line 2348
         ldloc _F
         ldsflda valuetype T_attr _G::Gattr
         ldfld int32 T_attr::Dplmt
         stfld int32 @block_body_statement_call_read::Laddr
         br L_if_end_6
     L_else_5:
-        // line 2349
+        .line 2349
         ldc.i4 399
         call void Error(int32 Ferrnr)
     L_if_end_6:
-        // line 2350
+        .line 2350
         ldsfld int32 _G::Sy
         ldc.i4 9
         ceq
         brfalse L_else_7
-        // line 2351
+        .line 2351
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_read::_slink
         ldfld int8 @block_body_statement_call::Lkey
         ldc.i4 5
         ceq
         brfalse L_if_end_9
-        // line 2351
+        .line 2351
         ldc.i4 116
         call void Error(int32 Ferrnr)
     L_if_end_9:
-        // line 2352
+        .line 2352
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_read::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8261,17 +8261,17 @@
         stfld bool @block::Test
         br L_if_end_8
     L_else_7:
-        // line 2355
+        .line 2355
         ldsfld int32 _G::Sy
         ldc.i4 12
         ceq
         ldc.i4.0
         ceq
         brfalse L_if_end_10
-        // line 2356
+        .line 2356
         ldc.i4 116
         call void Error(int32 Ferrnr)
-        // line 2356
+        .line 2356
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_read::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8292,14 +8292,14 @@
         call instance void @block::Skip(valuetype T_setty Fsys)
     L_if_end_10:
     L_if_end_8:
-        // line 2357
+        .line 2357
         ldsfld int32 _G::Sy
         ldc.i4 12
         ceq
         brfalse L_else_11
-        // line 2358
+        .line 2358
         call void Insymbol()
-        // line 2358
+        .line 2358
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_read::_slink
         ldloc _F
@@ -8317,7 +8317,7 @@
         call instance void @block_body_statement_call::Variable(valuetype T_setty Fsys)
         br L_if_end_12
     L_else_11:
-        // line 2360
+        .line 2360
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_read::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8328,7 +8328,7 @@
     L_if_end_12:
     L_if_end_4:
     L_if_end_3:
-        // line 2362
+        .line 2362
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_read::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8338,15 +8338,15 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_13
-        // line 2363
+        .line 2363
     L_repeat_14:
-        // line 2363
+        .line 2363
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_read::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Loadaddress()
-        // line 2364
+        .line 2364
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_read::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8363,7 +8363,7 @@
         ldloc _F
         ldfld int32 @block_body_statement_call_read::Laddr
         call instance void @block_body::Gen2(int8 Fop, int32 Fp1, int32 Fp2)
-        // line 2365
+        .line 2365
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -8371,7 +8371,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_15
-        // line 2366
+        .line 2366
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
@@ -8380,7 +8380,7 @@
         ldc.i4.0
         ceq
         brfalse L_else_16
-        // line 2367
+        .line 2367
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_read::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8391,7 +8391,7 @@
         ldfld void* T_attr::Typtr
         call instance bool @block::Comptypes(void* Fsp1, void* Fsp2)
         brfalse L_else_18
-        // line 2368
+        .line 2368
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_read::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8405,7 +8405,7 @@
         call instance void @block_body::Gen1(int8 Fop, int32 Fp2)
         br L_if_end_19
     L_else_18:
-        // line 2370
+        .line 2370
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_read::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8416,7 +8416,7 @@
         ldfld void* T_attr::Typtr
         call instance bool @block::Comptypes(void* Fsp1, void* Fsp2)
         brfalse L_else_20
-        // line 2371
+        .line 2371
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_read::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8430,7 +8430,7 @@
         call instance void @block_body::Gen1(int8 Fop, int32 Fp2)
         br L_if_end_21
     L_else_20:
-        // line 2373
+        .line 2373
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_read::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8441,7 +8441,7 @@
         ldfld void* T_attr::Typtr
         call instance bool @block::Comptypes(void* Fsp1, void* Fsp2)
         brfalse L_else_22
-        // line 2374
+        .line 2374
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_read::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8455,7 +8455,7 @@
         call instance void @block_body::Gen1(int8 Fop, int32 Fp2)
         br L_if_end_23
     L_else_22:
-        // line 2375
+        .line 2375
         ldc.i4 399
         call void Error(int32 Ferrnr)
     L_if_end_23:
@@ -8463,12 +8463,12 @@
     L_if_end_19:
         br L_if_end_17
     L_else_16:
-        // line 2376
+        .line 2376
         ldc.i4 116
         call void Error(int32 Ferrnr)
     L_if_end_17:
     L_if_end_15:
-        // line 2377
+        .line 2377
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_read::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8480,7 +8480,7 @@
         ldc.i4.0
         ceq
         stfld bool @block::Test
-        // line 2378
+        .line 2378
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_read::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8490,9 +8490,9 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_24
-        // line 2379
+        .line 2379
         call void Insymbol()
-        // line 2379
+        .line 2379
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_read::_slink
         ldloc _F
@@ -8517,41 +8517,41 @@
         ldfld bool @block::Test
         brfalse L_repeat_14
     L_if_end_13:
-        // line 2382
+        .line 2382
         ldsfld int32 _G::Sy
         ldc.i4 9
         ceq
         brfalse L_else_25
-        // line 2382
+        .line 2382
         call void Insymbol()
         br L_if_end_26
     L_else_25:
-        // line 2382
+        .line 2382
         ldc.i4 4
         call void Error(int32 Ferrnr)
     L_if_end_26:
         br L_if_end_2
     L_else_1:
-        // line 2384
+        .line 2384
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_read::_slink
         ldfld int8 @block_body_statement_call::Lkey
         ldc.i4 5
         ceq
         brfalse L_if_end_27
-        // line 2384
+        .line 2384
         ldc.i4 116
         call void Error(int32 Ferrnr)
     L_if_end_27:
     L_if_end_2:
-        // line 2385
+        .line 2385
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_read::_slink
         ldfld int8 @block_body_statement_call::Lkey
         ldc.i4 11
         ceq
         brfalse L_if_end_28
-        // line 2386
+        .line 2386
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_read::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8568,7 +8568,7 @@
         ldloc _F
         ldfld int32 @block_body_statement_call_read::Laddr
         call instance void @block_body::Gen2(int8 Fop, int32 Fp1, int32 Fp2)
-        // line 2387
+        .line 2387
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_read::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8586,7 +8586,7 @@
         ret
     }
 
-// line 2391
+.line 2391
 
     .method public
     void Write()
@@ -8664,13 +8664,13 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 2394
+        .line 2394
         ldloc _F
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld int8 @block_body_statement_call::Lkey
         stfld int8 @block_body_statement_call_write::Llkey
-        // line 2395
+        .line 2395
         ldloc _F
         ldc.i4 1
         dup
@@ -8678,7 +8678,7 @@
         ldc.i4 10
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int8 @block_body_statement_call_write::Llev
-        // line 2395
+        .line 2395
         ldloc _F
         ldc.i4 5
         ldc.i4 1
@@ -8688,14 +8688,14 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 @block_body_statement_call_write::Laddr
-        // line 2396
+        .line 2396
         ldsfld int32 _G::Sy
         ldc.i4 8
         ceq
         brfalse L_else_1
-        // line 2397
+        .line 2397
         call void Insymbol()
-        // line 2398
+        .line 2398
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8712,12 +8712,12 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement::Expression(valuetype T_setty Fsys)
-        // line 2399
+        .line 2399
         ldloc _F
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         stfld void* @block_body_statement_call_write::Lsp
-        // line 2399
+        .line 2399
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8725,7 +8725,7 @@
         ldfld class @block @block_body::_slink
         ldc.i4 0 // (false)
         stfld bool @block::Test
-        // line 2400
+        .line 2400
         ldloc _F
         ldfld void* @block_body_statement_call_write::Lsp
         ldnull
@@ -8733,52 +8733,52 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_3
-        // line 2401
+        .line 2401
         ldloc _F
         ldfld void* @block_body_statement_call_write::Lsp
         ldfld int32 T_structure::Form
         ldc.i4 6
         ceq
         brfalse L_if_end_4
-        // line 2404
+        .line 2404
         ldloc _F
         ldfld void* @block_body_statement_call_write::Lsp
         ldfld void* T_structure::Filtype
         ldsfld void* _G::Charptr
         ceq
         brfalse L_else_5
-        // line 2405
+        .line 2405
         ldloc _F
         ldsflda valuetype T_attr _G::Gattr
         ldfld int8 T_attr::Vlevel
         stfld int8 @block_body_statement_call_write::Llev
-        // line 2405
+        .line 2405
         ldloc _F
         ldsflda valuetype T_attr _G::Gattr
         ldfld int32 T_attr::Dplmt
         stfld int32 @block_body_statement_call_write::Laddr
         br L_if_end_6
     L_else_5:
-        // line 2406
+        .line 2406
         ldc.i4 399
         call void Error(int32 Ferrnr)
     L_if_end_6:
-        // line 2407
+        .line 2407
         ldsfld int32 _G::Sy
         ldc.i4 9
         ceq
         brfalse L_else_7
-        // line 2408
+        .line 2408
         ldloc _F
         ldfld int8 @block_body_statement_call_write::Llkey
         ldc.i4 6
         ceq
         brfalse L_if_end_9
-        // line 2408
+        .line 2408
         ldc.i4 116
         call void Error(int32 Ferrnr)
     L_if_end_9:
-        // line 2409
+        .line 2409
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8788,17 +8788,17 @@
         stfld bool @block::Test
         br L_if_end_8
     L_else_7:
-        // line 2412
+        .line 2412
         ldsfld int32 _G::Sy
         ldc.i4 12
         ceq
         ldc.i4.0
         ceq
         brfalse L_if_end_10
-        // line 2413
+        .line 2413
         ldc.i4 116
         call void Error(int32 Ferrnr)
-        // line 2413
+        .line 2413
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8819,14 +8819,14 @@
         call instance void @block::Skip(valuetype T_setty Fsys)
     L_if_end_10:
     L_if_end_8:
-        // line 2414
+        .line 2414
         ldsfld int32 _G::Sy
         ldc.i4 12
         ceq
         brfalse L_else_11
-        // line 2415
+        .line 2415
         call void Insymbol()
-        // line 2415
+        .line 2415
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8845,7 +8845,7 @@
         call instance void @block_body_statement::Expression(valuetype T_setty Fsys)
         br L_if_end_12
     L_else_11:
-        // line 2417
+        .line 2417
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8856,7 +8856,7 @@
     L_if_end_12:
     L_if_end_4:
     L_if_end_3:
-        // line 2419
+        .line 2419
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8866,14 +8866,14 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_13
-        // line 2420
+        .line 2420
     L_repeat_14:
-        // line 2421
+        .line 2421
         ldloc _F
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         stfld void* @block_body_statement_call_write::Lsp
-        // line 2422
+        .line 2422
         ldloc _F
         ldfld void* @block_body_statement_call_write::Lsp
         ldnull
@@ -8881,7 +8881,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_15
-        // line 2423
+        .line 2423
         ldloc _F
         ldfld void* @block_body_statement_call_write::Lsp
         ldfld int32 T_structure::Form
@@ -8890,7 +8890,7 @@
         ldc.i4.0
         ceq
         brfalse L_else_16
-        // line 2423
+        .line 2423
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8898,7 +8898,7 @@
         call instance void @block_body::Load()
         br L_if_end_17
     L_else_16:
-        // line 2423
+        .line 2423
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8906,14 +8906,14 @@
         call instance void @block_body::Loadaddress()
     L_if_end_17:
     L_if_end_15:
-        // line 2424
+        .line 2424
         ldsfld int32 _G::Sy
         ldc.i4 16
         ceq
         brfalse L_else_18
-        // line 2425
+        .line 2425
         call void Insymbol()
-        // line 2425
+        .line 2425
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8930,7 +8930,7 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement::Expression(valuetype T_setty Fsys)
-        // line 2426
+        .line 2426
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -8938,7 +8938,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_20
-        // line 2427
+        .line 2427
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Intptr
@@ -8946,36 +8946,36 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_21
-        // line 2427
+        .line 2427
         ldc.i4 116
         call void Error(int32 Ferrnr)
     L_if_end_21:
     L_if_end_20:
-        // line 2428
+        .line 2428
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Load()
-        // line 2428
+        .line 2428
         ldloc _F
         ldc.i4 0 // (false)
         stfld bool @block_body_statement_call_write::Default
         br L_if_end_19
     L_else_18:
-        // line 2430
+        .line 2430
         ldloc _F
         ldc.i4 1 // (true)
         stfld bool @block_body_statement_call_write::Default
     L_if_end_19:
-        // line 2431
+        .line 2431
         ldsfld int32 _G::Sy
         ldc.i4 16
         ceq
         brfalse L_else_22
-        // line 2432
+        .line 2432
         call void Insymbol()
-        // line 2432
+        .line 2432
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -8992,7 +8992,7 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement::Expression(valuetype T_setty Fsys)
-        // line 2433
+        .line 2433
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -9000,7 +9000,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_24
-        // line 2434
+        .line 2434
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Intptr
@@ -9008,12 +9008,12 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_25
-        // line 2434
+        .line 2434
         ldc.i4 116
         call void Error(int32 Ferrnr)
     L_if_end_25:
     L_if_end_24:
-        // line 2435
+        .line 2435
         ldloc _F
         ldfld void* @block_body_statement_call_write::Lsp
         ldsfld void* _G::Realptr
@@ -9021,33 +9021,33 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_26
-        // line 2435
+        .line 2435
         ldc.i4 124
         call void Error(int32 Ferrnr)
     L_if_end_26:
-        // line 2436
+        .line 2436
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Load()
-        // line 2436
+        .line 2436
         ldc.i4 399
         call void Error(int32 Ferrnr)
         /* nop */
         br L_if_end_23
     L_else_22:
-        // line 2439
+        .line 2439
         ldloc _F
         ldfld void* @block_body_statement_call_write::Lsp
         ldsfld void* _G::Intptr
         ceq
         brfalse L_else_27
-        // line 2440
+        .line 2440
         ldloc _F
         ldfld bool @block_body_statement_call_write::Default
         brfalse L_if_end_29
-        // line 2440
+        .line 2440
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9061,7 +9061,7 @@
         ldc.i4 10
         call instance void @block_body::Gen2(int8 Fop, int32 Fp1, int32 Fp2)
     L_if_end_29:
-        // line 2441
+        .line 2441
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9078,7 +9078,7 @@
         ldloc _F
         ldfld int32 @block_body_statement_call_write::Laddr
         call instance void @block_body::Gen2(int8 Fop, int32 Fp1, int32 Fp2)
-        // line 2442
+        .line 2442
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9092,17 +9092,17 @@
         call instance void @block_body::Gen1(int8 Fop, int32 Fp2)
         br L_if_end_28
     L_else_27:
-        // line 2445
+        .line 2445
         ldloc _F
         ldfld void* @block_body_statement_call_write::Lsp
         ldsfld void* _G::Realptr
         ceq
         brfalse L_else_30
-        // line 2446
+        .line 2446
         ldloc _F
         ldfld bool @block_body_statement_call_write::Default
         brfalse L_if_end_32
-        // line 2446
+        .line 2446
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9116,7 +9116,7 @@
         ldc.i4 20
         call instance void @block_body::Gen2(int8 Fop, int32 Fp1, int32 Fp2)
     L_if_end_32:
-        // line 2447
+        .line 2447
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9133,7 +9133,7 @@
         ldloc _F
         ldfld int32 @block_body_statement_call_write::Laddr
         call instance void @block_body::Gen2(int8 Fop, int32 Fp1, int32 Fp2)
-        // line 2448
+        .line 2448
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9147,17 +9147,17 @@
         call instance void @block_body::Gen1(int8 Fop, int32 Fp2)
         br L_if_end_31
     L_else_30:
-        // line 2451
+        .line 2451
         ldloc _F
         ldfld void* @block_body_statement_call_write::Lsp
         ldsfld void* _G::Charptr
         ceq
         brfalse L_else_33
-        // line 2452
+        .line 2452
         ldloc _F
         ldfld bool @block_body_statement_call_write::Default
         brfalse L_if_end_35
-        // line 2452
+        .line 2452
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9171,7 +9171,7 @@
         ldc.i4 1
         call instance void @block_body::Gen2(int8 Fop, int32 Fp1, int32 Fp2)
     L_if_end_35:
-        // line 2453
+        .line 2453
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9188,7 +9188,7 @@
         ldloc _F
         ldfld int32 @block_body_statement_call_write::Laddr
         call instance void @block_body::Gen2(int8 Fop, int32 Fp1, int32 Fp2)
-        // line 2454
+        .line 2454
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9202,7 +9202,7 @@
         call instance void @block_body::Gen1(int8 Fop, int32 Fp2)
         br L_if_end_34
     L_else_33:
-        // line 2457
+        .line 2457
         ldloc _F
         ldfld void* @block_body_statement_call_write::Lsp
         ldnull
@@ -9210,19 +9210,19 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_36
-        // line 2459
+        .line 2459
         ldloc _F
         ldfld void* @block_body_statement_call_write::Lsp
         ldfld int32 T_structure::Form
         ldc.i4 0
         ceq
         brfalse L_else_37
-        // line 2459
+        .line 2459
         ldc.i4 399
         call void Error(int32 Ferrnr)
         br L_if_end_38
     L_else_37:
-        // line 2461
+        .line 2461
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9232,7 +9232,7 @@
         ldfld void* @block_body_statement_call_write::Lsp
         call instance bool @block::String(void* Fsp)
         brfalse L_else_39
-        // line 2462
+        .line 2462
         ldloc _F
         ldloc _F
         ldfld void* @block_body_statement_call_write::Lsp
@@ -9244,11 +9244,11 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 @block_body_statement_call_write::Len
-        // line 2463
+        .line 2463
         ldloc _F
         ldfld bool @block_body_statement_call_write::Default
         brfalse L_if_end_41
-        // line 2464
+        .line 2464
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9263,7 +9263,7 @@
         ldfld int32 @block_body_statement_call_write::Len
         call instance void @block_body::Gen2(int8 Fop, int32 Fp1, int32 Fp2)
     L_if_end_41:
-        // line 2465
+        .line 2465
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9277,7 +9277,7 @@
         ldloc _F
         ldfld int32 @block_body_statement_call_write::Len
         call instance void @block_body::Gen2(int8 Fop, int32 Fp1, int32 Fp2)
-        // line 2466
+        .line 2466
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9294,7 +9294,7 @@
         ldloc _F
         ldfld int32 @block_body_statement_call_write::Laddr
         call instance void @block_body::Gen2(int8 Fop, int32 Fp1, int32 Fp2)
-        // line 2467
+        .line 2467
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9308,7 +9308,7 @@
         call instance void @block_body::Gen1(int8 Fop, int32 Fp2)
         br L_if_end_40
     L_else_39:
-        // line 2469
+        .line 2469
         ldc.i4 116
         call void Error(int32 Ferrnr)
     L_if_end_40:
@@ -9318,7 +9318,7 @@
     L_if_end_31:
     L_if_end_28:
     L_if_end_23:
-        // line 2471
+        .line 2471
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9330,7 +9330,7 @@
         ldc.i4.0
         ceq
         stfld bool @block::Test
-        // line 2472
+        .line 2472
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9340,9 +9340,9 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_42
-        // line 2473
+        .line 2473
         call void Insymbol()
-        // line 2473
+        .line 2473
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9368,40 +9368,40 @@
         ldfld bool @block::Test
         brfalse L_repeat_14
     L_if_end_13:
-        // line 2476
+        .line 2476
         ldsfld int32 _G::Sy
         ldc.i4 9
         ceq
         brfalse L_else_43
-        // line 2476
+        .line 2476
         call void Insymbol()
         br L_if_end_44
     L_else_43:
-        // line 2476
+        .line 2476
         ldc.i4 4
         call void Error(int32 Ferrnr)
     L_if_end_44:
         br L_if_end_2
     L_else_1:
-        // line 2478
+        .line 2478
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld int8 @block_body_statement_call::Lkey
         ldc.i4 6
         ceq
         brfalse L_if_end_45
-        // line 2478
+        .line 2478
         ldc.i4 116
         call void Error(int32 Ferrnr)
     L_if_end_45:
     L_if_end_2:
-        // line 2479
+        .line 2479
         ldloc _F
         ldfld int8 @block_body_statement_call_write::Llkey
         ldc.i4 12
         ceq
         brfalse L_if_end_46
-        // line 2480
+        .line 2480
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9418,7 +9418,7 @@
         ldloc _F
         ldfld int32 @block_body_statement_call_write::Laddr
         call instance void @block_body::Gen2(int8 Fop, int32 Fp1, int32 Fp2)
-        // line 2481
+        .line 2481
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_write::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9436,7 +9436,7 @@
         ret
     }
 
-// line 2485
+.line 2485
 
     .method public
     void Pack()
@@ -9475,10 +9475,10 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 2487
+        .line 2487
         ldc.i4 399
         call void Error(int32 Ferrnr)
-        // line 2487
+        .line 2487
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_pack::_slink
         ldloc _F
@@ -9494,15 +9494,15 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement_call::Variable(valuetype T_setty Fsys)
-        // line 2488
+        .line 2488
         ldloc _F
         ldnull
         stfld void* @block_body_statement_call_pack::Lsp
-        // line 2488
+        .line 2488
         ldloc _F
         ldnull
         stfld void* @block_body_statement_call_pack::Lsp1
-        // line 2489
+        .line 2489
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -9510,20 +9510,20 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 2491
+        .line 2491
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
         ldc.i4 4
         ceq
         brfalse L_else_2
-        // line 2492
+        .line 2492
         ldloc _F
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld void* T_structure::Inxtype
         stfld void* @block_body_statement_call_pack::Lsp
-        // line 2492
+        .line 2492
         ldloc _F
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
@@ -9531,25 +9531,25 @@
         stfld void* @block_body_statement_call_pack::Lsp1
         br L_if_end_3
     L_else_2:
-        // line 2493
+        .line 2493
         ldc.i4 116
         call void Error(int32 Ferrnr)
     L_if_end_3:
     L_if_end_1:
-        // line 2494
+        .line 2494
         ldsfld int32 _G::Sy
         ldc.i4 12
         ceq
         brfalse L_else_4
-        // line 2494
+        .line 2494
         call void Insymbol()
         br L_if_end_5
     L_else_4:
-        // line 2494
+        .line 2494
         ldc.i4 20
         call void Error(int32 Ferrnr)
     L_if_end_5:
-        // line 2495
+        .line 2495
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_pack::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9566,7 +9566,7 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement::Expression(valuetype T_setty Fsys)
-        // line 2496
+        .line 2496
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -9574,7 +9574,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_6
-        // line 2497
+        .line 2497
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
@@ -9583,12 +9583,12 @@
         ldc.i4.0
         ceq
         brfalse L_else_7
-        // line 2497
+        .line 2497
         ldc.i4 116
         call void Error(int32 Ferrnr)
         br L_if_end_8
     L_else_7:
-        // line 2499
+        .line 2499
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_pack::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9602,26 +9602,26 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_9
-        // line 2499
+        .line 2499
         ldc.i4 116
         call void Error(int32 Ferrnr)
     L_if_end_9:
     L_if_end_8:
     L_if_end_6:
-        // line 2500
+        .line 2500
         ldsfld int32 _G::Sy
         ldc.i4 12
         ceq
         brfalse L_else_10
-        // line 2500
+        .line 2500
         call void Insymbol()
         br L_if_end_11
     L_else_10:
-        // line 2500
+        .line 2500
         ldc.i4 20
         call void Error(int32 Ferrnr)
     L_if_end_11:
-        // line 2501
+        .line 2501
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_pack::_slink
         ldloc _F
@@ -9637,7 +9637,7 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement_call::Variable(valuetype T_setty Fsys)
-        // line 2502
+        .line 2502
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -9645,14 +9645,14 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_12
-        // line 2504
+        .line 2504
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
         ldc.i4 4
         ceq
         brfalse L_else_13
-        // line 2506
+        .line 2506
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_pack::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9684,13 +9684,13 @@
         ceq
     L_OR_shortcut_15:
         brfalse L_if_end_16
-        // line 2508
+        .line 2508
         ldc.i4 116
         call void Error(int32 Ferrnr)
     L_if_end_16:
         br L_if_end_14
     L_else_13:
-        // line 2510
+        .line 2510
         ldc.i4 116
         call void Error(int32 Ferrnr)
     L_if_end_14:
@@ -9700,7 +9700,7 @@
         ret
     }
 
-// line 2513
+.line 2513
 
     .method public
     void Unpack()
@@ -9739,10 +9739,10 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 2515
+        .line 2515
         ldc.i4 399
         call void Error(int32 Ferrnr)
-        // line 2515
+        .line 2515
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_unpack::_slink
         ldloc _F
@@ -9758,15 +9758,15 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement_call::Variable(valuetype T_setty Fsys)
-        // line 2516
+        .line 2516
         ldloc _F
         ldnull
         stfld void* @block_body_statement_call_unpack::Lsp
-        // line 2516
+        .line 2516
         ldloc _F
         ldnull
         stfld void* @block_body_statement_call_unpack::Lsp1
-        // line 2517
+        .line 2517
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -9774,20 +9774,20 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 2519
+        .line 2519
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
         ldc.i4 4
         ceq
         brfalse L_else_2
-        // line 2520
+        .line 2520
         ldloc _F
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld void* T_structure::Inxtype
         stfld void* @block_body_statement_call_unpack::Lsp
-        // line 2520
+        .line 2520
         ldloc _F
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
@@ -9795,25 +9795,25 @@
         stfld void* @block_body_statement_call_unpack::Lsp1
         br L_if_end_3
     L_else_2:
-        // line 2521
+        .line 2521
         ldc.i4 116
         call void Error(int32 Ferrnr)
     L_if_end_3:
     L_if_end_1:
-        // line 2522
+        .line 2522
         ldsfld int32 _G::Sy
         ldc.i4 12
         ceq
         brfalse L_else_4
-        // line 2522
+        .line 2522
         call void Insymbol()
         br L_if_end_5
     L_else_4:
-        // line 2522
+        .line 2522
         ldc.i4 20
         call void Error(int32 Ferrnr)
     L_if_end_5:
-        // line 2523
+        .line 2523
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_unpack::_slink
         ldloc _F
@@ -9829,7 +9829,7 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement_call::Variable(valuetype T_setty Fsys)
-        // line 2524
+        .line 2524
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -9837,14 +9837,14 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_6
-        // line 2526
+        .line 2526
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
         ldc.i4 4
         ceq
         brfalse L_else_7
-        // line 2528
+        .line 2528
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_unpack::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9876,31 +9876,31 @@
         ceq
     L_OR_shortcut_9:
         brfalse L_if_end_10
-        // line 2530
+        .line 2530
         ldc.i4 116
         call void Error(int32 Ferrnr)
     L_if_end_10:
         br L_if_end_8
     L_else_7:
-        // line 2532
+        .line 2532
         ldc.i4 116
         call void Error(int32 Ferrnr)
     L_if_end_8:
     L_if_end_6:
-        // line 2533
+        .line 2533
         ldsfld int32 _G::Sy
         ldc.i4 12
         ceq
         brfalse L_else_11
-        // line 2533
+        .line 2533
         call void Insymbol()
         br L_if_end_12
     L_else_11:
-        // line 2533
+        .line 2533
         ldc.i4 20
         call void Error(int32 Ferrnr)
     L_if_end_12:
-        // line 2534
+        .line 2534
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_unpack::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9917,7 +9917,7 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement::Expression(valuetype T_setty Fsys)
-        // line 2535
+        .line 2535
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -9925,7 +9925,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_13
-        // line 2536
+        .line 2536
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
@@ -9934,12 +9934,12 @@
         ldc.i4.0
         ceq
         brfalse L_else_14
-        // line 2536
+        .line 2536
         ldc.i4 116
         call void Error(int32 Ferrnr)
         br L_if_end_15
     L_else_14:
-        // line 2538
+        .line 2538
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_unpack::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -9953,7 +9953,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_16
-        // line 2538
+        .line 2538
         ldc.i4 116
         call void Error(int32 Ferrnr)
     L_if_end_16:
@@ -9965,7 +9965,7 @@
         ret
     }
 
-// line 2541
+.line 2541
 
     .method public
     void New()
@@ -9999,7 +9999,7 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 2545
+        .line 2545
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_new::_slink
         ldloc _F
@@ -10015,21 +10015,21 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement_call::Variable(valuetype T_setty Fsys)
-        // line 2545
+        .line 2545
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_new::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Loadaddress()
-        // line 2546
+        .line 2546
         ldloc _F
         ldnull
         stfld void* @block_body_statement_call_new::Lsp
-        // line 2546
+        .line 2546
         ldloc _F
         ldc.i4 0
         stfld int32 @block_body_statement_call_new::Varts
-        // line 2546
+        .line 2546
         ldloc _F
         ldc.i4 0
         dup
@@ -10037,7 +10037,7 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 @block_body_statement_call_new::Lsize
-        // line 2547
+        .line 2547
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -10045,14 +10045,14 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 2549
+        .line 2549
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
         ldc.i4 2
         ceq
         brfalse L_else_2
-        // line 2551
+        .line 2551
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld void* T_structure::Eltype
@@ -10061,14 +10061,14 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_4
-        // line 2552
+        .line 2552
         ldloc _F
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld void* T_structure::Eltype
         ldfld int32 T_structure::Size
         stfld int32 @block_body_statement_call_new::Lsize
-        // line 2553
+        .line 2553
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld void* T_structure::Eltype
@@ -10076,7 +10076,7 @@
         ldc.i4 5
         ceq
         brfalse L_if_end_5
-        // line 2553
+        .line 2553
         ldloc _F
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
@@ -10087,17 +10087,17 @@
     L_if_end_4:
         br L_if_end_3
     L_else_2:
-        // line 2556
+        .line 2556
         ldc.i4 116
         call void Error(int32 Ferrnr)
     L_if_end_3:
     L_if_end_1:
-        // line 2557
+        .line 2557
         br L_while_test_7
     L_while_6:
-        // line 2558
+        .line 2558
         call void Insymbol()
-        // line 2558
+        .line 2558
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_new::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -10120,25 +10120,25 @@
         ldloc _F
         ldflda valuetype T_valu @block_body_statement_call_new::Lval
         call instance void @block::Constant(valuetype T_setty Fsys, void*& Fsp, valuetype T_valu& Fvalu)
-        // line 2559
+        .line 2559
         ldloc _F
         ldloc _F
         ldfld int32 @block_body_statement_call_new::Varts
         ldc.i4 1
         add
         stfld int32 @block_body_statement_call_new::Varts
-        // line 2561
+        .line 2561
         ldloc _F
         ldfld void* @block_body_statement_call_new::Lsp
         ldnull
         ceq
         brfalse L_else_8
-        // line 2561
+        .line 2561
         ldc.i4 158
         call void Error(int32 Ferrnr)
         br L_if_end_9
     L_else_8:
-        // line 2563
+        .line 2563
         ldloc _F
         ldfld void* @block_body_statement_call_new::Lsp
         ldfld int32 T_structure::Form
@@ -10147,12 +10147,12 @@
         ldc.i4.0
         ceq
         brfalse L_else_10
-        // line 2563
+        .line 2563
         ldc.i4 162
         call void Error(int32 Ferrnr)
         br L_if_end_11
     L_else_10:
-        // line 2565
+        .line 2565
         ldloc _F
         ldfld void* @block_body_statement_call_new::Lsp
         ldfld void* T_structure::Tagfieldp
@@ -10161,7 +10161,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_12
-        // line 2566
+        .line 2566
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_new::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -10179,12 +10179,12 @@
         ceq
     L_OR_shortcut_13:
         brfalse L_else_14
-        // line 2566
+        .line 2566
         ldc.i4 159
         call void Error(int32 Ferrnr)
         br L_if_end_15
     L_else_14:
-        // line 2568
+        .line 2568
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_new::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -10198,16 +10198,16 @@
         ldfld void* @block_body_statement_call_new::Lsp1
         call instance bool @block::Comptypes(void* Fsp1, void* Fsp2)
         brfalse L_else_16
-        // line 2570
+        .line 2570
         ldloc _F
         ldloc _F
         ldfld void* @block_body_statement_call_new::Lsp
         ldfld void* T_structure::Fstvar
         stfld void* @block_body_statement_call_new::Lsp1
-        // line 2571
+        .line 2571
         br L_while_test_19
     L_while_18:
-        // line 2573
+        .line 2573
         ldloc _F
         ldfld void* @block_body_statement_call_new::Lsp1
         ldflda valuetype T_valu T_structure::Varval
@@ -10217,23 +10217,23 @@
         ldfld int32 T_valu::Ival
         ceq
         brfalse L_else_20
-        // line 2574
+        .line 2574
         ldloc _F
         ldloc _F
         ldfld void* @block_body_statement_call_new::Lsp1
         ldfld int32 T_structure::Size
         stfld int32 @block_body_statement_call_new::Lsize
-        // line 2574
+        .line 2574
         ldloc _F
         ldloc _F
         ldfld void* @block_body_statement_call_new::Lsp1
         ldfld void* T_structure::Subvar
         stfld void* @block_body_statement_call_new::Lsp
-        // line 2575
+        .line 2575
         br L_1
         br L_if_end_21
     L_else_20:
-        // line 2577
+        .line 2577
         ldloc _F
         ldloc _F
         ldfld void* @block_body_statement_call_new::Lsp1
@@ -10248,20 +10248,20 @@
         ldc.i4.0
         ceq
         brtrue L_while_18
-        // line 2578
+        .line 2578
         ldloc _F
         ldloc _F
         ldfld void* @block_body_statement_call_new::Lsp
         ldfld int32 T_structure::Size
         stfld int32 @block_body_statement_call_new::Lsize
-        // line 2578
+        .line 2578
         ldloc _F
         ldnull
         stfld void* @block_body_statement_call_new::Lsp
         /* nop */
         br L_if_end_17
     L_else_16:
-        // line 2580
+        .line 2580
         ldc.i4 116
         call void Error(int32 Ferrnr)
     L_if_end_17:
@@ -10276,7 +10276,7 @@
         ldc.i4 12
         ceq
         brtrue L_while_6
-        // line 2582
+        .line 2582
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_new::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -10290,7 +10290,7 @@
         ldloc _F
         ldfld int32 @block_body_statement_call_new::Lsize
         call instance void @block_body::Gen2(int8 Fop, int32 Fp1, int32 Fp2)
-        // line 2583
+        .line 2583
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_new::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -10308,7 +10308,7 @@
         ret
     }
 
-// line 2586
+.line 2586
 
     .method public
     void Mark()
@@ -10331,7 +10331,7 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 2587
+        .line 2587
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_mark::_slink
         ldloc _F
@@ -10347,7 +10347,7 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement_call::Variable(valuetype T_setty Fsys)
-        // line 2588
+        .line 2588
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -10355,20 +10355,20 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 2589
+        .line 2589
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
         ldc.i4 2
         ceq
         brfalse L_else_2
-        // line 2590
+        .line 2590
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_mark::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Loadaddress()
-        // line 2590
+        .line 2590
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_mark::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -10382,7 +10382,7 @@
         call instance void @block_body::Gen1(int8 Fop, int32 Fp2)
         br L_if_end_3
     L_else_2:
-        // line 2591
+        .line 2591
         ldc.i4 116
         call void Error(int32 Ferrnr)
     L_if_end_3:
@@ -10392,7 +10392,7 @@
         ret
     }
 
-// line 2594
+.line 2594
 
     .method public
     void Release()
@@ -10415,7 +10415,7 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 2595
+        .line 2595
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_release::_slink
         ldloc _F
@@ -10431,7 +10431,7 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement_call::Variable(valuetype T_setty Fsys)
-        // line 2596
+        .line 2596
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -10439,20 +10439,20 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 2597
+        .line 2597
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
         ldc.i4 2
         ceq
         brfalse L_else_2
-        // line 2598
+        .line 2598
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_release::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Load()
-        // line 2598
+        .line 2598
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_release::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -10466,7 +10466,7 @@
         call instance void @block_body::Gen1(int8 Fop, int32 Fp2)
         br L_if_end_3
     L_else_2:
-        // line 2599
+        .line 2599
         ldc.i4 116
         call void Error(int32 Ferrnr)
     L_if_end_3:
@@ -10476,7 +10476,7 @@
         ret
     }
 
-// line 2604
+.line 2604
 
     .method public
     void Abs()
@@ -10493,7 +10493,7 @@
         stfld class @block_body_statement_call @block_body_statement_call_abs::_slink
     
     L_Entry:
-        // line 2606
+        .line 2606
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -10501,13 +10501,13 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 2607
+        .line 2607
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Intptr
         ceq
         brfalse L_else_2
-        // line 2607
+        .line 2607
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_abs::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -10520,13 +10520,13 @@
         call instance void @block_body::Gen0(int8 Fop)
         br L_if_end_3
     L_else_2:
-        // line 2609
+        .line 2609
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Realptr
         ceq
         brfalse L_else_4
-        // line 2609
+        .line 2609
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_abs::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -10539,10 +10539,10 @@
         call instance void @block_body::Gen0(int8 Fop)
         br L_if_end_5
     L_else_4:
-        // line 2610
+        .line 2610
         ldc.i4 125
         call void Error(int32 Ferrnr)
-        // line 2610
+        .line 2610
         ldsflda valuetype T_attr _G::Gattr
         ldsfld void* _G::Intptr
         stfld void* T_attr::Typtr
@@ -10554,7 +10554,7 @@
         ret
     }
 
-// line 2613
+.line 2613
 
     .method public
     void Sqr()
@@ -10571,7 +10571,7 @@
         stfld class @block_body_statement_call @block_body_statement_call_sqr::_slink
     
     L_Entry:
-        // line 2615
+        .line 2615
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -10579,13 +10579,13 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 2616
+        .line 2616
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Intptr
         ceq
         brfalse L_else_2
-        // line 2616
+        .line 2616
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_sqr::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -10598,13 +10598,13 @@
         call instance void @block_body::Gen0(int8 Fop)
         br L_if_end_3
     L_else_2:
-        // line 2618
+        .line 2618
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Realptr
         ceq
         brfalse L_else_4
-        // line 2618
+        .line 2618
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_sqr::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -10617,10 +10617,10 @@
         call instance void @block_body::Gen0(int8 Fop)
         br L_if_end_5
     L_else_4:
-        // line 2619
+        .line 2619
         ldc.i4 125
         call void Error(int32 Ferrnr)
-        // line 2619
+        .line 2619
         ldsflda valuetype T_attr _G::Gattr
         ldsfld void* _G::Intptr
         stfld void* T_attr::Typtr
@@ -10632,7 +10632,7 @@
         ret
     }
 
-// line 2622
+.line 2622
 
     .method public
     void Trunc()
@@ -10649,7 +10649,7 @@
         stfld class @block_body_statement_call @block_body_statement_call_trunc::_slink
     
     L_Entry:
-        // line 2624
+        .line 2624
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -10657,7 +10657,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 2625
+        .line 2625
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Realptr
@@ -10665,12 +10665,12 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_2
-        // line 2625
+        .line 2625
         ldc.i4 125
         call void Error(int32 Ferrnr)
     L_if_end_2:
     L_if_end_1:
-        // line 2626
+        .line 2626
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_trunc::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -10681,7 +10681,7 @@
         ldc.i4 63
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         call instance void @block_body::Gen0(int8 Fop)
-        // line 2627
+        .line 2627
         ldsflda valuetype T_attr _G::Gattr
         ldsfld void* _G::Intptr
         stfld void* T_attr::Typtr
@@ -10690,7 +10690,7 @@
         ret
     }
 
-// line 2630
+.line 2630
 
     .method public
     void Odd()
@@ -10707,7 +10707,7 @@
         stfld class @block_body_statement_call @block_body_statement_call_odd::_slink
     
     L_Entry:
-        // line 2632
+        .line 2632
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -10715,7 +10715,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 2633
+        .line 2633
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Intptr
@@ -10723,12 +10723,12 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_2
-        // line 2633
+        .line 2633
         ldc.i4 125
         call void Error(int32 Ferrnr)
     L_if_end_2:
     L_if_end_1:
-        // line 2634
+        .line 2634
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_odd::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -10739,7 +10739,7 @@
         ldc.i4 63
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         call instance void @block_body::Gen0(int8 Fop)
-        // line 2635
+        .line 2635
         ldsflda valuetype T_attr _G::Gattr
         ldsfld void* _G::Boolptr
         stfld void* T_attr::Typtr
@@ -10748,7 +10748,7 @@
         ret
     }
 
-// line 2638
+.line 2638
 
     .method public
     void Ord()
@@ -10765,7 +10765,7 @@
         stfld class @block_body_statement_call @block_body_statement_call_ord::_slink
     
     L_Entry:
-        // line 2640
+        .line 2640
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -10773,7 +10773,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 2641
+        .line 2641
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
@@ -10782,12 +10782,12 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_2
-        // line 2641
+        .line 2641
         ldc.i4 125
         call void Error(int32 Ferrnr)
     L_if_end_2:
     L_if_end_1:
-        // line 2642
+        .line 2642
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_ord::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -10800,7 +10800,7 @@
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         call instance void @block_body::Gen0t(int8 Fop, void* Fsp)
-        // line 2643
+        .line 2643
         ldsflda valuetype T_attr _G::Gattr
         ldsfld void* _G::Intptr
         stfld void* T_attr::Typtr
@@ -10809,7 +10809,7 @@
         ret
     }
 
-// line 2646
+.line 2646
 
     .method public
     void Chr()
@@ -10826,7 +10826,7 @@
         stfld class @block_body_statement_call @block_body_statement_call_chr::_slink
     
     L_Entry:
-        // line 2648
+        .line 2648
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -10834,7 +10834,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 2649
+        .line 2649
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Intptr
@@ -10842,12 +10842,12 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_2
-        // line 2649
+        .line 2649
         ldc.i4 125
         call void Error(int32 Ferrnr)
     L_if_end_2:
     L_if_end_1:
-        // line 2650
+        .line 2650
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_chr::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -10858,7 +10858,7 @@
         ldc.i4 63
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         call instance void @block_body::Gen0(int8 Fop)
-        // line 2651
+        .line 2651
         ldsflda valuetype T_attr _G::Gattr
         ldsfld void* _G::Charptr
         stfld void* T_attr::Typtr
@@ -10867,7 +10867,7 @@
         ret
     }
 
-// line 2654
+.line 2654
 
     .method public
     void Predsucc()
@@ -10884,7 +10884,7 @@
         stfld class @block_body_statement_call @block_body_statement_call_predsucc::_slink
     
     L_Entry:
-        // line 2656
+        .line 2656
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -10892,7 +10892,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 2657
+        .line 2657
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
@@ -10901,19 +10901,19 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_2
-        // line 2657
+        .line 2657
         ldc.i4 125
         call void Error(int32 Ferrnr)
     L_if_end_2:
     L_if_end_1:
-        // line 2658
+        .line 2658
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_predsucc::_slink
         ldfld int8 @block_body_statement_call::Lkey
         ldc.i4 7
         ceq
         brfalse L_else_3
-        // line 2658
+        .line 2658
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_predsucc::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -10929,7 +10929,7 @@
         call instance void @block_body::Gen1t(int8 Fop, int32 Fp2, void* Fsp)
         br L_if_end_4
     L_else_3:
-        // line 2659
+        .line 2659
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_predsucc::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -10949,7 +10949,7 @@
         ret
     }
 
-// line 2662
+.line 2662
 
     .method public
     void Eof()
@@ -10972,14 +10972,14 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 2664
+        .line 2664
         ldsfld int32 _G::Sy
         ldc.i4 8
         ceq
         brfalse L_else_1
-        // line 2665
+        .line 2665
         call void Insymbol()
-        // line 2665
+        .line 2665
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_eof::_slink
         ldloc _F
@@ -10995,34 +10995,34 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement_call::Variable(valuetype T_setty Fsys)
-        // line 2666
+        .line 2666
         ldsfld int32 _G::Sy
         ldc.i4 9
         ceq
         brfalse L_else_3
-        // line 2666
+        .line 2666
         call void Insymbol()
         br L_if_end_4
     L_else_3:
-        // line 2666
+        .line 2666
         ldc.i4 4
         call void Error(int32 Ferrnr)
     L_if_end_4:
         br L_if_end_2
     L_else_1:
-        // line 2670
+        .line 2670
         ldsflda valuetype T_attr _G::Gattr
         ldsfld void* _G::Textptr
         stfld void* T_attr::Typtr
-        // line 2670
+        .line 2670
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 1
         stfld int32 T_attr::Kind
-        // line 2670
+        .line 2670
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 0
         stfld int32 T_attr::Access
-        // line 2671
+        .line 2671
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 1
         dup
@@ -11030,7 +11030,7 @@
         ldc.i4 10
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int8 T_attr::Vlevel
-        // line 2671
+        .line 2671
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 5
         dup
@@ -11039,13 +11039,13 @@
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_attr::Dplmt
     L_if_end_2:
-        // line 2673
+        .line 2673
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_eof::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Loadaddress()
-        // line 2674
+        .line 2674
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -11053,7 +11053,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_5
-        // line 2675
+        .line 2675
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
@@ -11062,19 +11062,19 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_6
-        // line 2675
+        .line 2675
         ldc.i4 125
         call void Error(int32 Ferrnr)
     L_if_end_6:
     L_if_end_5:
-        // line 2676
+        .line 2676
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_eof::_slink
         ldfld int8 @block_body_statement_call::Lkey
         ldc.i4 9
         ceq
         brfalse L_else_7
-        // line 2676
+        .line 2676
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_eof::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -11087,7 +11087,7 @@
         call instance void @block_body::Gen0(int8 Fop)
         br L_if_end_8
     L_else_7:
-        // line 2676
+        .line 2676
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_eof::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -11100,7 +11100,7 @@
         ldc.i4 14
         call instance void @block_body::Gen1(int8 Fop, int32 Fp2)
     L_if_end_8:
-        // line 2677
+        .line 2677
         ldsflda valuetype T_attr _G::Gattr
         ldsfld void* _G::Boolptr
         stfld void* T_attr::Typtr
@@ -11109,7 +11109,7 @@
         ret
     }
 
-// line 2682
+.line 2682
 
     .method public
     void Callnonstandard()
@@ -11177,7 +11177,7 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 2685
+        .line 2685
         ldloc _F
         ldc.i4 0
         dup
@@ -11185,21 +11185,21 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 @block_body_statement_call_callnonstandard::Locpar
-        // line 2687
+        .line 2687
         ldloc _F
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_callnonstandard::_slink
         ldfld void* @block_body_statement_call::Fcp
         ldfld void* T_identifier::Next
         stfld void* @block_body_statement_call_callnonstandard::Nxt
-        // line 2687
+        .line 2687
         ldloc _F
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_callnonstandard::_slink
         ldfld void* @block_body_statement_call::Fcp
         ldfld int32 T_identifier::Pfkind
         stfld int32 @block_body_statement_call_callnonstandard::Lkind
-        // line 2688
+        .line 2688
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_callnonstandard::_slink
         ldfld void* @block_body_statement_call::Fcp
@@ -11207,7 +11207,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 2688
+        .line 2688
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_callnonstandard::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -11225,39 +11225,39 @@
         sub
         call instance void @block_body::Gen1(int8 Fop, int32 Fp2)
     L_if_end_1:
-        // line 2690
+        .line 2690
         ldsfld int32 _G::Sy
         ldc.i4 8
         ceq
         brfalse L_if_end_2
-        // line 2691
+        .line 2691
         ldloc _F
         ldsfld int32 _G::Lc
         stfld int32 @block_body_statement_call_callnonstandard::Llc
-        // line 2692
+        .line 2692
     L_repeat_3:
-        // line 2692
+        .line 2692
         ldloc _F
         ldc.i4 0 // (false)
         stfld bool @block_body_statement_call_callnonstandard::Lb
-        // line 2693
+        .line 2693
         ldloc _F
         ldfld int32 @block_body_statement_call_callnonstandard::Lkind
         ldc.i4 0
         ceq
         brfalse L_else_4
-        // line 2695
+        .line 2695
         ldloc _F
         ldfld void* @block_body_statement_call_callnonstandard::Nxt
         ldnull
         ceq
         brfalse L_else_6
-        // line 2695
+        .line 2695
         ldc.i4 126
         call void Error(int32 Ferrnr)
         br L_if_end_7
     L_else_6:
-        // line 2696
+        .line 2696
         ldloc _F
         ldloc $tmpSetLiteral1
         ldloc _F
@@ -11268,30 +11268,30 @@
     L_if_end_7:
         br L_if_end_5
     L_else_4:
-        // line 2697
+        .line 2697
         ldc.i4 399
         call void Error(int32 Ferrnr)
     L_if_end_5:
-        // line 2704
+        .line 2704
         call void Insymbol()
-        // line 2705
+        .line 2705
         ldloc _F
         ldfld bool @block_body_statement_call_callnonstandard::Lb
         brfalse L_else_8
-        // line 2706
+        .line 2706
         ldc.i4 399
         call void Error(int32 Ferrnr)
-        // line 2707
+        .line 2707
         ldsfld int32 _G::Sy
         ldc.i4 0
         ceq
         ldc.i4.0
         ceq
         brfalse L_else_10
-        // line 2708
+        .line 2708
         ldc.i4 2
         call void Error(int32 Ferrnr)
-        // line 2708
+        .line 2708
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_callnonstandard::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -11312,26 +11312,26 @@
         call instance void @block::Skip(valuetype T_setty Fsys)
         br L_if_end_11
     L_else_10:
-        // line 2711
+        .line 2711
         ldloc _F
         ldfld void* @block_body_statement_call_callnonstandard::Nxt
         ldfld int32 T_identifier::Klass
         ldc.i4 4
         ceq
         brfalse L_else_12
-        // line 2711
+        .line 2711
         ldloc $tmpSetLiteral3
         ldloc _F
         ldflda void* @block_body_statement_call_callnonstandard::Lcp
         call void Searchid(valuetype T_setofids Fidcls, void*& Fcp)
         br L_if_end_13
     L_else_12:
-        // line 2713
+        .line 2713
         ldloc $tmpSetLiteral4
         ldloc _F
         ldflda void* @block_body_statement_call_callnonstandard::Lcp
         call void Searchid(valuetype T_setofids Fidcls, void*& Fcp)
-        // line 2714
+        .line 2714
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_callnonstandard::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -11347,14 +11347,14 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_14
-        // line 2715
+        .line 2715
         ldc.i4 128
         call void Error(int32 Ferrnr)
     L_if_end_14:
     L_if_end_13:
-        // line 2717
+        .line 2717
         call void Insymbol()
-        // line 2718
+        .line 2718
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_callnonstandard::_slink
         ldfld valuetype T_setty @block_body_statement_call::Fsys
@@ -11367,10 +11367,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_15
-        // line 2719
+        .line 2719
         ldc.i4 6
         call void Error(int32 Ferrnr)
-        // line 2719
+        .line 2719
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_callnonstandard::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -11393,7 +11393,7 @@
     L_if_end_11:
         br L_if_end_9
     L_else_8:
-        // line 2723
+        .line 2723
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_callnonstandard::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -11410,7 +11410,7 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement::Expression(valuetype T_setty Fsys)
-        // line 2724
+        .line 2724
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -11418,13 +11418,13 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_16
-        // line 2725
+        .line 2725
         ldloc _F
         ldfld int32 @block_body_statement_call_callnonstandard::Lkind
         ldc.i4 0
         ceq
         brfalse L_else_17
-        // line 2727
+        .line 2727
         ldloc _F
         ldfld void* @block_body_statement_call_callnonstandard::Nxt
         ldnull
@@ -11432,13 +11432,13 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_19
-        // line 2728
+        .line 2728
         ldloc _F
         ldloc _F
         ldfld void* @block_body_statement_call_callnonstandard::Nxt
         ldfld void* T_identifier::Idtype
         stfld void* @block_body_statement_call_callnonstandard::Lsp
-        // line 2729
+        .line 2729
         ldloc _F
         ldfld void* @block_body_statement_call_callnonstandard::Lsp
         ldnull
@@ -11446,14 +11446,14 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_20
-        // line 2731
+        .line 2731
         ldloc _F
         ldfld void* @block_body_statement_call_callnonstandard::Nxt
         ldfld int32 T_identifier::Vkind
         ldc.i4 0
         ceq
         brfalse L_else_21
-        // line 2732
+        .line 2732
         ldloc _F
         ldfld void* @block_body_statement_call_callnonstandard::Lsp
         ldfld int32 T_structure::Form
@@ -11462,16 +11462,16 @@
         ldc.i4.0
         ceq
         brfalse L_else_23
-        // line 2733
+        .line 2733
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_callnonstandard::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Load()
-        // line 2734
+        .line 2734
         ldsfld bool _G::Debug
         brfalse L_if_end_25
-        // line 2734
+        .line 2734
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_callnonstandard::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -11480,7 +11480,7 @@
         ldfld void* @block_body_statement_call_callnonstandard::Lsp
         call instance void @block_body::Checkbnds(void* Fsp)
     L_if_end_25:
-        // line 2735
+        .line 2735
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_callnonstandard::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -11499,7 +11499,7 @@
         ceq
     L_AND_shortcut_26:
         brfalse L_if_end_27
-        // line 2737
+        .line 2737
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_callnonstandard::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -11510,12 +11510,12 @@
         ldc.i4 63
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         call instance void @block_body::Gen0(int8 Fop)
-        // line 2738
+        .line 2738
         ldsflda valuetype T_attr _G::Gattr
         ldsfld void* _G::Realptr
         stfld void* T_attr::Typtr
     L_if_end_27:
-        // line 2740
+        .line 2740
         ldloc _F
         ldloc _F
         ldfld int32 @block_body_statement_call_callnonstandard::Locpar
@@ -11528,7 +11528,7 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 @block_body_statement_call_callnonstandard::Locpar
-        // line 2741
+        .line 2741
         ldsfld void* _G::Parmptr
         ldloc _F
         ldflda int32 @block_body_statement_call_callnonstandard::Locpar
@@ -11536,13 +11536,13 @@
         /* nop */
         br L_if_end_24
     L_else_23:
-        // line 2745
+        .line 2745
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_callnonstandard::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Loadaddress()
-        // line 2746
+        .line 2746
         ldloc _F
         ldloc _F
         ldfld int32 @block_body_statement_call_callnonstandard::Locpar
@@ -11553,7 +11553,7 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 @block_body_statement_call_callnonstandard::Locpar
-        // line 2747
+        .line 2747
         ldsfld void* _G::Parmptr
         ldloc _F
         ldflda int32 @block_body_statement_call_callnonstandard::Locpar
@@ -11561,19 +11561,19 @@
     L_if_end_24:
         br L_if_end_22
     L_else_21:
-        // line 2750
+        .line 2750
         ldsflda valuetype T_attr _G::Gattr
         ldfld int32 T_attr::Kind
         ldc.i4 1
         ceq
         brfalse L_else_28
-        // line 2751
+        .line 2751
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_callnonstandard::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Loadaddress()
-        // line 2752
+        .line 2752
         ldloc _F
         ldloc _F
         ldfld int32 @block_body_statement_call_callnonstandard::Locpar
@@ -11584,7 +11584,7 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 @block_body_statement_call_callnonstandard::Locpar
-        // line 2753
+        .line 2753
         ldsfld void* _G::Parmptr
         ldloc _F
         ldflda int32 @block_body_statement_call_callnonstandard::Locpar
@@ -11592,12 +11592,12 @@
         /* nop */
         br L_if_end_29
     L_else_28:
-        // line 2755
+        .line 2755
         ldc.i4 154
         call void Error(int32 Ferrnr)
     L_if_end_29:
     L_if_end_22:
-        // line 2756
+        .line 2756
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_callnonstandard::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -11611,7 +11611,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_30
-        // line 2757
+        .line 2757
         ldc.i4 142
         call void Error(int32 Ferrnr)
     L_if_end_30:
@@ -11623,7 +11623,7 @@
     L_if_end_18:
     L_if_end_16:
     L_if_end_9:
-        // line 2765
+        .line 2765
         ldloc _F
         ldfld int32 @block_body_statement_call_callnonstandard::Lkind
         ldc.i4 0
@@ -11639,7 +11639,7 @@
         ceq
     L_AND_shortcut_31:
         brfalse L_if_end_32
-        // line 2765
+        .line 2765
         ldloc _F
         ldloc _F
         ldfld void* @block_body_statement_call_callnonstandard::Nxt
@@ -11652,31 +11652,31 @@
         ldc.i4.0
         ceq
         brfalse L_repeat_3
-        // line 2767
+        .line 2767
         ldloc _F
         ldfld int32 @block_body_statement_call_callnonstandard::Llc
         stsfld int32 _G::Lc
-        // line 2768
+        .line 2768
         ldsfld int32 _G::Sy
         ldc.i4 9
         ceq
         brfalse L_else_33
-        // line 2768
+        .line 2768
         call void Insymbol()
         br L_if_end_34
     L_else_33:
-        // line 2768
+        .line 2768
         ldc.i4 4
         call void Error(int32 Ferrnr)
     L_if_end_34:
     L_if_end_2:
-        // line 2770
+        .line 2770
         ldloc _F
         ldfld int32 @block_body_statement_call_callnonstandard::Lkind
         ldc.i4 0
         ceq
         brfalse L_if_end_35
-        // line 2771
+        .line 2771
         ldloc _F
         ldfld void* @block_body_statement_call_callnonstandard::Nxt
         ldnull
@@ -11684,17 +11684,17 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_36
-        // line 2771
+        .line 2771
         ldc.i4 126
         call void Error(int32 Ferrnr)
     L_if_end_36:
-        // line 2774
+        .line 2774
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_callnonstandard::_slink
         ldfld void* @block_body_statement_call::Fcp
         ldfld bool T_identifier::Externl
         brfalse L_else_37
-        // line 2774
+        .line 2774
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_callnonstandard::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -11711,7 +11711,7 @@
         call instance void @block_body::Gen1(int8 Fop, int32 Fp2)
         br L_if_end_38
     L_else_37:
-        // line 2775
+        .line 2775
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_callnonstandard::_slink
         ldfld class @block_body_statement @block_body_statement_call::_slink
@@ -11731,7 +11731,7 @@
     L_if_end_38:
         /* nop */
     L_if_end_35:
-        // line 2778
+        .line 2778
         ldsflda valuetype T_attr _G::Gattr
         ldloc _F
         ldfld class @block_body_statement_call @block_body_statement_call_callnonstandard::_slink
@@ -11745,7 +11745,7 @@
 }
 
 
-// line 2835
+.line 2835
 //================================================================================
 // scope: block_body_statement_expression_simpleexpression_term_factor (level : 8)
 
@@ -11773,7 +11773,7 @@
 }
 
 
-// line 2832
+.line 2832
 //================================================================================
 // scope: block_body_statement_expression_simpleexpression_term (level : 7)
 
@@ -11796,7 +11796,7 @@
         ret
     }
 
-// line 2835
+.line 2835
 
     .method public
     void Factor(valuetype T_setty Fsys)
@@ -11851,17 +11851,17 @@
     
     
     L_Entry:
-        // line 2839
+        .line 2839
         ldsfld valuetype T_setty _G::Facbegsys
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_setty s, int32 val)
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 2840
+        .line 2840
         ldc.i4 58
         call void Error(int32 Ferrnr)
-        // line 2840
+        .line 2840
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression_term @block_body_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
@@ -11874,35 +11874,35 @@
         ldsfld valuetype T_setty _G::Facbegsys
         call valuetype T_setty _SetUnion(valuetype T_setty a, valuetype T_setty b)
         call instance void @block::Skip(valuetype T_setty Fsys)
-        // line 2841
+        .line 2841
         ldsflda valuetype T_attr _G::Gattr
         ldnull
         stfld void* T_attr::Typtr
     L_if_end_1:
-        // line 2843
+        .line 2843
         br L_while_test_3
     L_while_2:
-        // line 2845
+        .line 2845
         ldsfld int32 _G::Sy
         stloc $tmpSwitchValue1
         ldloc $tmpSwitchValue1
         ldc.i4 0
         bne.un L_check_case_5
-        // line 2847
+        .line 2847
         ldloc $tmpSetLiteral2
         ldloc _F
         ldflda void* @block_body_statement_expression_simpleexpression_term_factor::Lcp
         call void Searchid(valuetype T_setofids Fidcls, void*& Fcp)
-        // line 2848
+        .line 2848
         call void Insymbol()
-        // line 2849
+        .line 2849
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lcp
         ldfld int32 T_identifier::Klass
         ldc.i4 5
         ceq
         brfalse L_else_6
-        // line 2850
+        .line 2850
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression_term @block_body_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
@@ -11913,11 +11913,11 @@
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lcp
         call instance void @block_body_statement::Call(valuetype T_setty Fsys, void* Fcp)
-        // line 2852
+        .line 2852
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 2
         stfld int32 T_attr::Kind
-        // line 2853
+        .line 2853
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -11925,14 +11925,14 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_8
-        // line 2854
+        .line 2854
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
         ldc.i4 1
         ceq
         brfalse L_if_end_9
-        // line 2855
+        .line 2855
         ldsflda valuetype T_attr _G::Gattr
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
@@ -11942,24 +11942,24 @@
     L_if_end_8:
         br L_if_end_7
     L_else_6:
-        // line 2859
+        .line 2859
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lcp
         ldfld int32 T_identifier::Klass
         ldc.i4 1
         ceq
         brfalse L_else_10
-        // line 2861
+        .line 2861
         ldsflda valuetype T_attr _G::Gattr
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lcp
         ldfld void* T_identifier::Idtype
         stfld void* T_attr::Typtr
-        // line 2861
+        .line 2861
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 0
         stfld int32 T_attr::Kind
-        // line 2862
+        .line 2862
         ldsflda valuetype T_attr _G::Gattr
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lcp
@@ -11967,7 +11967,7 @@
         stfld valuetype T_valu T_attr::Cval
         br L_if_end_11
     L_else_10:
-        // line 2865
+        .line 2865
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression_term @block_body_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
@@ -11978,7 +11978,7 @@
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lcp
         call instance void @block_body_statement::Selector(valuetype T_setty Fsys, void* Fcp)
-        // line 2866
+        .line 2866
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -11986,14 +11986,14 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_12
-        // line 2868
+        .line 2868
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
         ldc.i4 1
         ceq
         brfalse L_if_end_13
-        // line 2869
+        .line 2869
         ldsflda valuetype T_attr _G::Gattr
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
@@ -12008,82 +12008,82 @@
         ldloc $tmpSwitchValue1
         ldc.i4 1
         bne.un L_check_case_14
-        // line 2875
+        .line 2875
         ldsflda valuetype T_attr _G::Gattr
         ldsfld void* _G::Intptr
         stfld void* T_attr::Typtr
-        // line 2875
+        .line 2875
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 0
         stfld int32 T_attr::Kind
-        // line 2876
+        .line 2876
         ldsflda valuetype T_attr _G::Gattr
         ldsfld valuetype T_valu _G::Val
         stfld valuetype T_valu T_attr::Cval
-        // line 2878
+        .line 2878
         call void Insymbol()
         br L_case_end_4
     L_check_case_14:
         ldloc $tmpSwitchValue1
         ldc.i4 2
         bne.un L_check_case_15
-        // line 2883
+        .line 2883
         ldsflda valuetype T_attr _G::Gattr
         ldsfld void* _G::Realptr
         stfld void* T_attr::Typtr
-        // line 2883
+        .line 2883
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 0
         stfld int32 T_attr::Kind
-        // line 2884
+        .line 2884
         ldsflda valuetype T_attr _G::Gattr
         ldsfld valuetype T_valu _G::Val
         stfld valuetype T_valu T_attr::Cval
-        // line 2886
+        .line 2886
         call void Insymbol()
         br L_case_end_4
     L_check_case_15:
         ldloc $tmpSwitchValue1
         ldc.i4 3
         bne.un L_check_case_16
-        // line 2892
+        .line 2892
         ldsfld int32 _G::Lgth
         ldc.i4 1
         ceq
         brfalse L_else_17
-        // line 2892
+        .line 2892
         ldsflda valuetype T_attr _G::Gattr
         ldsfld void* _G::Charptr
         stfld void* T_attr::Typtr
         br L_if_end_18
     L_else_17:
-        // line 2894
-        // line 2894
+        .line 2894
+        .line 2894
         ldloc _F
         ldc.i4 77
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_body_statement_expression_simpleexpression_term_factor::Lsp
-        // line 2894
+        .line 2894
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lsp
         ldc.i4 4
         stfld int32 T_structure::Form
-        // line 2896
+        .line 2896
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lsp
         ldsfld void* _G::Charptr
         stfld void* T_structure::Aeltype
-        // line 2896
+        .line 2896
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lsp
         ldc.i4 4
         stfld int32 T_structure::Form
-        // line 2897
+        .line 2897
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lsp
         ldnull
         stfld void* T_structure::Inxtype
-        // line 2897
+        .line 2897
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lsp
         ldsfld int32 _G::Lgth
@@ -12094,30 +12094,30 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_structure::Size
-        // line 2899
+        .line 2899
         ldsflda valuetype T_attr _G::Gattr
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lsp
         stfld void* T_attr::Typtr
     L_if_end_18:
-        // line 2901
+        .line 2901
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 0
         stfld int32 T_attr::Kind
-        // line 2901
+        .line 2901
         ldsflda valuetype T_attr _G::Gattr
         ldsfld valuetype T_valu _G::Val
         stfld valuetype T_valu T_attr::Cval
-        // line 2903
+        .line 2903
         call void Insymbol()
         br L_case_end_4
     L_check_case_16:
         ldloc $tmpSwitchValue1
         ldc.i4 8
         bne.un L_check_case_19
-        // line 2906
+        .line 2906
         call void Insymbol()
-        // line 2906
+        .line 2906
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression_term @block_body_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
@@ -12135,16 +12135,16 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement::Expression(valuetype T_setty Fsys)
-        // line 2907
+        .line 2907
         ldsfld int32 _G::Sy
         ldc.i4 9
         ceq
         brfalse L_else_20
-        // line 2907
+        .line 2907
         call void Insymbol()
         br L_if_end_21
     L_else_20:
-        // line 2907
+        .line 2907
         ldc.i4 4
         call void Error(int32 Ferrnr)
     L_if_end_21:
@@ -12153,15 +12153,15 @@
         ldloc $tmpSwitchValue1
         ldc.i4 4
         bne.un L_check_case_22
-        // line 2910
+        .line 2910
         call void Insymbol()
-        // line 2910
+        .line 2910
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression_term @block_body_statement_expression_simpleexpression_term_factor::_slink
         ldloc _F
         ldfld valuetype T_setty @block_body_statement_expression_simpleexpression_term_factor::Fsys
         call instance void @block_body_statement_expression_simpleexpression_term::Factor(valuetype T_setty Fsys)
-        // line 2911
+        .line 2911
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression_term @block_body_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
@@ -12169,7 +12169,7 @@
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Load()
-        // line 2911
+        .line 2911
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression_term @block_body_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
@@ -12182,7 +12182,7 @@
         ldc.i4 63
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         call instance void @block_body::Gen0(int8 Fop)
-        // line 2912
+        .line 2912
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -12190,7 +12190,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_23
-        // line 2913
+        .line 2913
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Boolptr
@@ -12198,10 +12198,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_24
-        // line 2914
+        .line 2914
         ldc.i4 135
         call void Error(int32 Ferrnr)
-        // line 2914
+        .line 2914
         ldsflda valuetype T_attr _G::Gattr
         ldnull
         stfld void* T_attr::Typtr
@@ -12213,9 +12213,9 @@
         ldloc $tmpSwitchValue1
         ldc.i4 10
         bne.un L_case_end_4
-        // line 2917
+        .line 2917
         call void Insymbol()
-        // line 2917
+        .line 2917
         ldloc _F
         ldloc $tmpSetLiteral4
         dup
@@ -12224,27 +12224,27 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         stfld valuetype T_setty @block_body_statement_expression_simpleexpression_term_factor::Cstpart
-        // line 2917
+        .line 2917
         ldloc _F
         ldc.i4 0 // (false)
         stfld bool @block_body_statement_expression_simpleexpression_term_factor::Varpart
-        // line 2918
-        // line 2918
+        .line 2918
+        .line 2918
         ldloc _F
         ldc.i4 77
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_body_statement_expression_simpleexpression_term_factor::Lsp
-        // line 2918
+        .line 2918
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lsp
         ldc.i4 3
         stfld int32 T_structure::Form
-        // line 2920
+        .line 2920
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lsp
         ldnull
         stfld void* T_structure::Elset
-        // line 2920
+        .line 2920
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lsp
         ldc.i4 1
@@ -12253,32 +12253,32 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_structure::Size
-        // line 2920
+        .line 2920
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lsp
         ldc.i4 3
         stfld int32 T_structure::Form
-        // line 2921
+        .line 2921
         ldsfld int32 _G::Sy
         ldc.i4 11
         ceq
         brfalse L_else_25
-        // line 2924
+        .line 2924
         ldsflda valuetype T_attr _G::Gattr
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lsp
         stfld void* T_attr::Typtr
-        // line 2924
+        .line 2924
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 0
         stfld int32 T_attr::Kind
-        // line 2925
+        .line 2925
         call void Insymbol()
         br L_if_end_26
     L_else_25:
-        // line 2929
+        .line 2929
     L_repeat_27:
-        // line 2929
+        .line 2929
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression_term @block_body_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
@@ -12296,7 +12296,7 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement::Expression(valuetype T_setty Fsys)
-        // line 2930
+        .line 2930
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -12304,7 +12304,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_28
-        // line 2931
+        .line 2931
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
@@ -12313,16 +12313,16 @@
         ldc.i4.0
         ceq
         brfalse L_else_29
-        // line 2932
+        .line 2932
         ldc.i4 136
         call void Error(int32 Ferrnr)
-        // line 2932
+        .line 2932
         ldsflda valuetype T_attr _G::Gattr
         ldnull
         stfld void* T_attr::Typtr
         br L_if_end_30
     L_else_29:
-        // line 2934
+        .line 2934
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression_term @block_body_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
@@ -12337,13 +12337,13 @@
         ldfld void* T_attr::Typtr
         call instance bool @block::Comptypes(void* Fsp1, void* Fsp2)
         brfalse L_else_31
-        // line 2936
+        .line 2936
         ldsflda valuetype T_attr _G::Gattr
         ldfld int32 T_attr::Kind
         ldc.i4 0
         ceq
         brfalse L_else_33
-        // line 2937
+        .line 2937
         ldsflda valuetype T_attr _G::Gattr
         ldflda valuetype T_valu T_attr::Cval
         ldfld int32 T_valu::Ival
@@ -12359,12 +12359,12 @@
         cgt
     L_OR_shortcut_35:
         brfalse L_else_36
-        // line 2939
+        .line 2939
         ldc.i4 304
         call void Error(int32 Ferrnr)
         br L_if_end_37
     L_else_36:
-        // line 2941
+        .line 2941
         ldloca $tmpSetLiteral6
         call instance void T_set_31::clear()
         ldloca $tmpSetLiteral6
@@ -12387,7 +12387,7 @@
     L_if_end_37:
         br L_if_end_34
     L_else_33:
-        // line 2943
+        .line 2943
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression_term @block_body_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
@@ -12395,7 +12395,7 @@
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Load()
-        // line 2944
+        .line 2944
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression_term @block_body_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
@@ -12410,7 +12410,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_38
-        // line 2945
+        .line 2945
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression_term @block_body_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
@@ -12426,7 +12426,7 @@
         ldfld void* T_attr::Typtr
         call instance void @block_body::Gen0t(int8 Fop, void* Fsp)
     L_if_end_38:
-        // line 2946
+        .line 2946
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression_term @block_body_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
@@ -12439,11 +12439,11 @@
         ldc.i4 63
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         call instance void @block_body::Gen0(int8 Fop)
-        // line 2947
+        .line 2947
         ldloc _F
         ldfld bool @block_body_statement_expression_simpleexpression_term_factor::Varpart
         brfalse L_else_39
-        // line 2947
+        .line 2947
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression_term @block_body_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
@@ -12458,32 +12458,32 @@
         call instance void @block_body::Gen0(int8 Fop)
         br L_if_end_40
     L_else_39:
-        // line 2948
+        .line 2948
         ldloc _F
         ldc.i4 1 // (true)
         stfld bool @block_body_statement_expression_simpleexpression_term_factor::Varpart
     L_if_end_40:
     L_if_end_34:
-        // line 2950
+        .line 2950
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lsp
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         stfld void* T_structure::Elset
-        // line 2951
+        .line 2951
         ldsflda valuetype T_attr _G::Gattr
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lsp
         stfld void* T_attr::Typtr
         br L_if_end_32
     L_else_31:
-        // line 2953
+        .line 2953
         ldc.i4 137
         call void Error(int32 Ferrnr)
     L_if_end_32:
     L_if_end_30:
     L_if_end_28:
-        // line 2954
+        .line 2954
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression_term @block_body_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
@@ -12497,7 +12497,7 @@
         ldc.i4.0
         ceq
         stfld bool @block::Test
-        // line 2955
+        .line 2955
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression_term @block_body_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
@@ -12509,7 +12509,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_41
-        // line 2955
+        .line 2955
         call void Insymbol()
     L_if_end_41:
         ldloc _F
@@ -12521,25 +12521,25 @@
         ldfld class @block @block_body::_slink
         ldfld bool @block::Test
         brfalse L_repeat_27
-        // line 2957
+        .line 2957
         ldsfld int32 _G::Sy
         ldc.i4 11
         ceq
         brfalse L_else_42
-        // line 2957
+        .line 2957
         call void Insymbol()
         br L_if_end_43
     L_else_42:
-        // line 2957
+        .line 2957
         ldc.i4 12
         call void Error(int32 Ferrnr)
     L_if_end_43:
     L_if_end_26:
-        // line 2959
+        .line 2959
         ldloc _F
         ldfld bool @block_body_statement_expression_simpleexpression_term_factor::Varpart
         brfalse L_else_44
-        // line 2961
+        .line 2961
         ldloc _F
         ldfld valuetype T_setty @block_body_statement_expression_simpleexpression_term_factor::Cstpart
         call valuetype T_set_31 _SetCastTo_T_set_31(valuetype T_setty s)
@@ -12548,29 +12548,29 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_46
-        // line 2962
-        // line 2962
+        .line 2962
+        .line 2962
         ldloc _F
         ldc.i4 109
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_body_statement_expression_simpleexpression_term_factor::Lvp
-        // line 2962
+        .line 2962
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lvp
         ldc.i4 1
         stfld int32 T_constant::Cclass
-        // line 2962
+        .line 2962
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lvp
         ldloc _F
         ldfld valuetype T_setty @block_body_statement_expression_simpleexpression_term_factor::Cstpart
         stfld valuetype T_setty T_constant::Pval
-        // line 2963
+        .line 2963
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lvp
         ldc.i4 1
         stfld int32 T_constant::Cclass
-        // line 2964
+        .line 2964
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression_term @block_body_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
@@ -12581,12 +12581,12 @@
         ldc.i4 65
         ceq
         brfalse L_else_47
-        // line 2964
+        .line 2964
         ldc.i4 254
         call void Error(int32 Ferrnr)
         br L_if_end_48
     L_else_47:
-        // line 2966
+        .line 2966
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression_term @block_body_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
@@ -12607,7 +12607,7 @@
         ldc.i4 65
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int8 @block_body::Cstptrix
-        // line 2967
+        .line 2967
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression_term @block_body_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
@@ -12626,7 +12626,7 @@
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lvp
         stobj void*
-        // line 2968
+        .line 2968
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression_term @block_body_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
@@ -12647,7 +12647,7 @@
         ldfld class @block_body @block_body_statement::_slink
         ldfld int8 @block_body::Cstptrix
         call instance void @block_body::Gen2(int8 Fop, int32 Fp1, int32 Fp2)
-        // line 2969
+        .line 2969
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression_term @block_body_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
@@ -12660,7 +12660,7 @@
         ldc.i4 63
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         call instance void @block_body::Gen0(int8 Fop)
-        // line 2969
+        .line 2969
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 2
         stfld int32 T_attr::Kind
@@ -12668,29 +12668,29 @@
     L_if_end_46:
         br L_if_end_45
     L_else_44:
-        // line 2974
-        // line 2974
+        .line 2974
+        .line 2974
         ldloc _F
         ldc.i4 109
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_body_statement_expression_simpleexpression_term_factor::Lvp
-        // line 2974
+        .line 2974
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lvp
         ldc.i4 1
         stfld int32 T_constant::Cclass
-        // line 2974
+        .line 2974
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lvp
         ldloc _F
         ldfld valuetype T_setty @block_body_statement_expression_simpleexpression_term_factor::Cstpart
         stfld valuetype T_setty T_constant::Pval
-        // line 2975
+        .line 2975
         ldloc _F
         ldfld void* @block_body_statement_expression_simpleexpression_term_factor::Lvp
         ldc.i4 1
         stfld int32 T_constant::Cclass
-        // line 2976
+        .line 2976
         ldsflda valuetype T_attr _G::Gattr
         ldflda valuetype T_valu T_attr::Cval
         ldloc _F
@@ -12698,7 +12698,7 @@
         stfld void* T_valu::Valp
     L_if_end_45:
     L_case_end_4:
-        // line 2980
+        .line 2980
         ldloc _F
         ldfld valuetype T_setty @block_body_statement_expression_simpleexpression_term_factor::Fsys
         ldsfld int32 _G::Sy
@@ -12706,10 +12706,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_49
-        // line 2981
+        .line 2981
         ldc.i4 6
         call void Error(int32 Ferrnr)
-        // line 2981
+        .line 2981
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression_term @block_body_statement_expression_simpleexpression_term_factor::_slink
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
@@ -12735,7 +12735,7 @@
 }
 
 
-// line 2829
+.line 2829
 //================================================================================
 // scope: block_body_statement_expression_simpleexpression (level : 6)
 
@@ -12759,7 +12759,7 @@
         ret
     }
 
-// line 2832
+.line 2832
 
     .method public
     void Term(valuetype T_setty Fsys)
@@ -12792,7 +12792,7 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 2986
+        .line 2986
         ldloc _F
         ldloc _F
         ldfld valuetype T_setty @block_body_statement_expression_simpleexpression_term::Fsys
@@ -12806,27 +12806,27 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement_expression_simpleexpression_term::Factor(valuetype T_setty Fsys)
-        // line 2987
+        .line 2987
         br L_while_test_2
     L_while_1:
-        // line 2988
+        .line 2988
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Load()
-        // line 2988
+        .line 2988
         ldloc _F
         ldsfld valuetype T_attr _G::Gattr
         stfld valuetype T_attr @block_body_statement_expression_simpleexpression_term::Lattr
-        // line 2988
+        .line 2988
         ldloc _F
         ldsfld int32 _G::Op
         stfld int32 @block_body_statement_expression_simpleexpression_term::Lop
-        // line 2989
+        .line 2989
         call void Insymbol()
-        // line 2989
+        .line 2989
         ldloc _F
         ldloc _F
         ldfld valuetype T_setty @block_body_statement_expression_simpleexpression_term::Fsys
@@ -12840,14 +12840,14 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement_expression_simpleexpression_term::Factor(valuetype T_setty Fsys)
-        // line 2989
+        .line 2989
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Load()
-        // line 2990
+        .line 2990
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression_simpleexpression_term::Lattr
         ldfld void* T_attr::Typtr
@@ -12866,14 +12866,14 @@
         ceq
     L_AND_shortcut_3:
         brfalse L_else_4
-        // line 2991
+        .line 2991
         ldloc _F
         ldfld int32 @block_body_statement_expression_simpleexpression_term::Lop
         stloc $tmpSwitchValue3
         ldloc $tmpSwitchValue3
         ldc.i4 0
         bne.un L_check_case_7
-        // line 2992
+        .line 2992
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression_simpleexpression_term::Lattr
         ldfld void* T_attr::Typtr
@@ -12888,7 +12888,7 @@
         ceq
     L_AND_shortcut_8:
         brfalse L_else_9
-        // line 2993
+        .line 2993
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
@@ -12902,14 +12902,14 @@
         call instance void @block_body::Gen0(int8 Fop)
         br L_if_end_10
     L_else_9:
-        // line 2996
+        .line 2996
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression_simpleexpression_term::Lattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Intptr
         ceq
         brfalse L_else_11
-        // line 2997
+        .line 2997
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
@@ -12921,20 +12921,20 @@
         ldc.i4 63
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         call instance void @block_body::Gen0(int8 Fop)
-        // line 2998
+        .line 2998
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression_simpleexpression_term::Lattr
         ldsfld void* _G::Realptr
         stfld void* T_attr::Typtr
         br L_if_end_12
     L_else_11:
-        // line 3001
+        .line 3001
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Intptr
         ceq
         brfalse L_if_end_13
-        // line 3002
+        .line 3002
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
@@ -12946,13 +12946,13 @@
         ldc.i4 63
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         call instance void @block_body::Gen0(int8 Fop)
-        // line 3003
+        .line 3003
         ldsflda valuetype T_attr _G::Gattr
         ldsfld void* _G::Realptr
         stfld void* T_attr::Typtr
     L_if_end_13:
     L_if_end_12:
-        // line 3005
+        .line 3005
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression_simpleexpression_term::Lattr
         ldfld void* T_attr::Typtr
@@ -12967,7 +12967,7 @@
         ceq
     L_AND_shortcut_14:
         brfalse L_else_15
-        // line 3006
+        .line 3006
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
@@ -12981,7 +12981,7 @@
         call instance void @block_body::Gen0(int8 Fop)
         br L_if_end_16
     L_else_15:
-        // line 3008
+        .line 3008
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression_simpleexpression_term::Lattr
         ldfld void* T_attr::Typtr
@@ -13005,7 +13005,7 @@
         call instance bool @block::Comptypes(void* Fsp1, void* Fsp2)
     L_AND_shortcut_17:
         brfalse L_else_18
-        // line 3010
+        .line 3010
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
@@ -13019,10 +13019,10 @@
         call instance void @block_body::Gen0(int8 Fop)
         br L_if_end_19
     L_else_18:
-        // line 3011
+        .line 3011
         ldc.i4 134
         call void Error(int32 Ferrnr)
-        // line 3011
+        .line 3011
         ldsflda valuetype T_attr _G::Gattr
         ldnull
         stfld void* T_attr::Typtr
@@ -13034,13 +13034,13 @@
         ldloc $tmpSwitchValue3
         ldc.i4 1
         bne.un L_check_case_20
-        // line 3014
+        .line 3014
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Intptr
         ceq
         brfalse L_if_end_21
-        // line 3015
+        .line 3015
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
@@ -13052,19 +13052,19 @@
         ldc.i4 63
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         call instance void @block_body::Gen0(int8 Fop)
-        // line 3016
+        .line 3016
         ldsflda valuetype T_attr _G::Gattr
         ldsfld void* _G::Realptr
         stfld void* T_attr::Typtr
     L_if_end_21:
-        // line 3018
+        .line 3018
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression_simpleexpression_term::Lattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Intptr
         ceq
         brfalse L_if_end_22
-        // line 3019
+        .line 3019
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
@@ -13076,13 +13076,13 @@
         ldc.i4 63
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         call instance void @block_body::Gen0(int8 Fop)
-        // line 3020
+        .line 3020
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression_simpleexpression_term::Lattr
         ldsfld void* _G::Realptr
         stfld void* T_attr::Typtr
     L_if_end_22:
-        // line 3022
+        .line 3022
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression_simpleexpression_term::Lattr
         ldfld void* T_attr::Typtr
@@ -13097,7 +13097,7 @@
         ceq
     L_AND_shortcut_23:
         brfalse L_else_24
-        // line 3023
+        .line 3023
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
@@ -13111,10 +13111,10 @@
         call instance void @block_body::Gen0(int8 Fop)
         br L_if_end_25
     L_else_24:
-        // line 3024
+        .line 3024
         ldc.i4 134
         call void Error(int32 Ferrnr)
-        // line 3024
+        .line 3024
         ldsflda valuetype T_attr _G::Gattr
         ldnull
         stfld void* T_attr::Typtr
@@ -13124,7 +13124,7 @@
         ldloc $tmpSwitchValue3
         ldc.i4 3
         bne.un L_check_case_26
-        // line 3026
+        .line 3026
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression_simpleexpression_term::Lattr
         ldfld void* T_attr::Typtr
@@ -13139,7 +13139,7 @@
         ceq
     L_AND_shortcut_27:
         brfalse L_else_28
-        // line 3027
+        .line 3027
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
@@ -13153,10 +13153,10 @@
         call instance void @block_body::Gen0(int8 Fop)
         br L_if_end_29
     L_else_28:
-        // line 3028
+        .line 3028
         ldc.i4 134
         call void Error(int32 Ferrnr)
-        // line 3028
+        .line 3028
         ldsflda valuetype T_attr _G::Gattr
         ldnull
         stfld void* T_attr::Typtr
@@ -13166,7 +13166,7 @@
         ldloc $tmpSwitchValue3
         ldc.i4 4
         bne.un L_check_case_30
-        // line 3029
+        .line 3029
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression_simpleexpression_term::Lattr
         ldfld void* T_attr::Typtr
@@ -13181,7 +13181,7 @@
         ceq
     L_AND_shortcut_31:
         brfalse L_else_32
-        // line 3030
+        .line 3030
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
@@ -13195,10 +13195,10 @@
         call instance void @block_body::Gen0(int8 Fop)
         br L_if_end_33
     L_else_32:
-        // line 3031
+        .line 3031
         ldc.i4 134
         call void Error(int32 Ferrnr)
-        // line 3031
+        .line 3031
         ldsflda valuetype T_attr _G::Gattr
         ldnull
         stfld void* T_attr::Typtr
@@ -13208,7 +13208,7 @@
         ldloc $tmpSwitchValue3
         ldc.i4 2
         bne.un L_case_end_6
-        // line 3032
+        .line 3032
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression_simpleexpression_term::Lattr
         ldfld void* T_attr::Typtr
@@ -13223,7 +13223,7 @@
         ceq
     L_AND_shortcut_34:
         brfalse L_else_35
-        // line 3033
+        .line 3033
         ldloc _F
         ldfld class @block_body_statement_expression_simpleexpression @block_body_statement_expression_simpleexpression_term::_slink
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
@@ -13237,10 +13237,10 @@
         call instance void @block_body::Gen0(int8 Fop)
         br L_if_end_36
     L_else_35:
-        // line 3034
+        .line 3034
         ldc.i4 134
         call void Error(int32 Ferrnr)
-        // line 3034
+        .line 3034
         ldsflda valuetype T_attr _G::Gattr
         ldnull
         stfld void* T_attr::Typtr
@@ -13248,7 +13248,7 @@
     L_case_end_6:
         br L_if_end_5
     L_else_4:
-        // line 3036
+        .line 3036
         ldsflda valuetype T_attr _G::Gattr
         ldnull
         stfld void* T_attr::Typtr
@@ -13265,7 +13265,7 @@
 }
 
 
-// line 2826
+.line 2826
 //================================================================================
 // scope: block_body_statement_expression (level : 5)
 
@@ -13290,7 +13290,7 @@
         ret
     }
 
-// line 2829
+.line 2829
 
     .method public
     void Simpleexpression(valuetype T_setty Fsys)
@@ -13331,11 +13331,11 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 3041
+        .line 3041
         ldloc _F
         ldc.i4 0 // (false)
         stfld bool @block_body_statement_expression_simpleexpression::Signed
-        // line 3042
+        .line 3042
         ldsfld int32 _G::Sy
         ldc.i4 6
         ceq
@@ -13347,16 +13347,16 @@
         call bool _SetContains(valuetype T_set_29 s, int32 val)
     L_AND_shortcut_1:
         brfalse L_if_end_2
-        // line 3043
+        .line 3043
         ldloc _F
         ldsfld int32 _G::Op
         ldc.i4 6
         ceq
         stfld bool @block_body_statement_expression_simpleexpression::Signed
-        // line 3043
+        .line 3043
         call void Insymbol()
     L_if_end_2:
-        // line 3044
+        .line 3044
         ldloc _F
         ldloc _F
         ldfld valuetype T_setty @block_body_statement_expression_simpleexpression::Fsys
@@ -13370,23 +13370,23 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement_expression_simpleexpression::Term(valuetype T_setty Fsys)
-        // line 3045
+        .line 3045
         ldloc _F
         ldfld bool @block_body_statement_expression_simpleexpression::Signed
         brfalse L_if_end_3
-        // line 3046
+        .line 3046
         ldloc _F
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Load()
-        // line 3047
+        .line 3047
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Intptr
         ceq
         brfalse L_else_4
-        // line 3047
+        .line 3047
         ldloc _F
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
         ldfld class @block_body_statement @block_body_statement_expression::_slink
@@ -13399,13 +13399,13 @@
         call instance void @block_body::Gen0(int8 Fop)
         br L_if_end_5
     L_else_4:
-        // line 3049
+        .line 3049
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Realptr
         ceq
         brfalse L_else_6
-        // line 3049
+        .line 3049
         ldloc _F
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
         ldfld class @block_body_statement @block_body_statement_expression::_slink
@@ -13418,36 +13418,36 @@
         call instance void @block_body::Gen0(int8 Fop)
         br L_if_end_7
     L_else_6:
-        // line 3050
+        .line 3050
         ldc.i4 134
         call void Error(int32 Ferrnr)
-        // line 3050
+        .line 3050
         ldsflda valuetype T_attr _G::Gattr
         ldnull
         stfld void* T_attr::Typtr
     L_if_end_7:
     L_if_end_5:
     L_if_end_3:
-        // line 3052
+        .line 3052
         br L_while_test_9
     L_while_8:
-        // line 3053
+        .line 3053
         ldloc _F
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Load()
-        // line 3053
+        .line 3053
         ldloc _F
         ldsfld valuetype T_attr _G::Gattr
         stfld valuetype T_attr @block_body_statement_expression_simpleexpression::Lattr
-        // line 3053
+        .line 3053
         ldloc _F
         ldsfld int32 _G::Op
         stfld int32 @block_body_statement_expression_simpleexpression::Lop
-        // line 3054
+        .line 3054
         call void Insymbol()
-        // line 3054
+        .line 3054
         ldloc _F
         ldloc _F
         ldfld valuetype T_setty @block_body_statement_expression_simpleexpression::Fsys
@@ -13461,13 +13461,13 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement_expression_simpleexpression::Term(valuetype T_setty Fsys)
-        // line 3054
+        .line 3054
         ldloc _F
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Load()
-        // line 3055
+        .line 3055
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression_simpleexpression::Lattr
         ldfld void* T_attr::Typtr
@@ -13486,14 +13486,14 @@
         ceq
     L_AND_shortcut_10:
         brfalse L_else_11
-        // line 3056
+        .line 3056
         ldloc _F
         ldfld int32 @block_body_statement_expression_simpleexpression::Lop
         stloc $tmpSwitchValue4
         ldloc $tmpSwitchValue4
         ldc.i4 5
         bne.un L_check_case_14
-        // line 3058
+        .line 3058
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression_simpleexpression::Lattr
         ldfld void* T_attr::Typtr
@@ -13508,7 +13508,7 @@
         ceq
     L_AND_shortcut_15:
         brfalse L_else_16
-        // line 3059
+        .line 3059
         ldloc _F
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
         ldfld class @block_body_statement @block_body_statement_expression::_slink
@@ -13521,14 +13521,14 @@
         call instance void @block_body::Gen0(int8 Fop)
         br L_if_end_17
     L_else_16:
-        // line 3062
+        .line 3062
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression_simpleexpression::Lattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Intptr
         ceq
         brfalse L_else_18
-        // line 3063
+        .line 3063
         ldloc _F
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
         ldfld class @block_body_statement @block_body_statement_expression::_slink
@@ -13539,20 +13539,20 @@
         ldc.i4 63
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         call instance void @block_body::Gen0(int8 Fop)
-        // line 3064
+        .line 3064
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression_simpleexpression::Lattr
         ldsfld void* _G::Realptr
         stfld void* T_attr::Typtr
         br L_if_end_19
     L_else_18:
-        // line 3067
+        .line 3067
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Intptr
         ceq
         brfalse L_if_end_20
-        // line 3068
+        .line 3068
         ldloc _F
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
         ldfld class @block_body_statement @block_body_statement_expression::_slink
@@ -13563,13 +13563,13 @@
         ldc.i4 63
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         call instance void @block_body::Gen0(int8 Fop)
-        // line 3069
+        .line 3069
         ldsflda valuetype T_attr _G::Gattr
         ldsfld void* _G::Realptr
         stfld void* T_attr::Typtr
     L_if_end_20:
     L_if_end_19:
-        // line 3071
+        .line 3071
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression_simpleexpression::Lattr
         ldfld void* T_attr::Typtr
@@ -13584,7 +13584,7 @@
         ceq
     L_AND_shortcut_21:
         brfalse L_else_22
-        // line 3072
+        .line 3072
         ldloc _F
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
         ldfld class @block_body_statement @block_body_statement_expression::_slink
@@ -13597,7 +13597,7 @@
         call instance void @block_body::Gen0(int8 Fop)
         br L_if_end_23
     L_else_22:
-        // line 3073
+        .line 3073
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression_simpleexpression::Lattr
         ldfld void* T_attr::Typtr
@@ -13620,7 +13620,7 @@
         call instance bool @block::Comptypes(void* Fsp1, void* Fsp2)
     L_AND_shortcut_24:
         brfalse L_else_25
-        // line 3075
+        .line 3075
         ldloc _F
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
         ldfld class @block_body_statement @block_body_statement_expression::_slink
@@ -13633,10 +13633,10 @@
         call instance void @block_body::Gen0(int8 Fop)
         br L_if_end_26
     L_else_25:
-        // line 3076
+        .line 3076
         ldc.i4 134
         call void Error(int32 Ferrnr)
-        // line 3076
+        .line 3076
         ldsflda valuetype T_attr _G::Gattr
         ldnull
         stfld void* T_attr::Typtr
@@ -13648,7 +13648,7 @@
         ldloc $tmpSwitchValue4
         ldc.i4 6
         bne.un L_check_case_27
-        // line 3079
+        .line 3079
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression_simpleexpression::Lattr
         ldfld void* T_attr::Typtr
@@ -13663,7 +13663,7 @@
         ceq
     L_AND_shortcut_28:
         brfalse L_else_29
-        // line 3080
+        .line 3080
         ldloc _F
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
         ldfld class @block_body_statement @block_body_statement_expression::_slink
@@ -13676,14 +13676,14 @@
         call instance void @block_body::Gen0(int8 Fop)
         br L_if_end_30
     L_else_29:
-        // line 3083
+        .line 3083
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression_simpleexpression::Lattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Intptr
         ceq
         brfalse L_else_31
-        // line 3084
+        .line 3084
         ldloc _F
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
         ldfld class @block_body_statement @block_body_statement_expression::_slink
@@ -13694,20 +13694,20 @@
         ldc.i4 63
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         call instance void @block_body::Gen0(int8 Fop)
-        // line 3085
+        .line 3085
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression_simpleexpression::Lattr
         ldsfld void* _G::Realptr
         stfld void* T_attr::Typtr
         br L_if_end_32
     L_else_31:
-        // line 3088
+        .line 3088
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Intptr
         ceq
         brfalse L_if_end_33
-        // line 3089
+        .line 3089
         ldloc _F
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
         ldfld class @block_body_statement @block_body_statement_expression::_slink
@@ -13718,13 +13718,13 @@
         ldc.i4 63
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         call instance void @block_body::Gen0(int8 Fop)
-        // line 3090
+        .line 3090
         ldsflda valuetype T_attr _G::Gattr
         ldsfld void* _G::Realptr
         stfld void* T_attr::Typtr
     L_if_end_33:
     L_if_end_32:
-        // line 3092
+        .line 3092
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression_simpleexpression::Lattr
         ldfld void* T_attr::Typtr
@@ -13739,7 +13739,7 @@
         ceq
     L_AND_shortcut_34:
         brfalse L_else_35
-        // line 3093
+        .line 3093
         ldloc _F
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
         ldfld class @block_body_statement @block_body_statement_expression::_slink
@@ -13752,7 +13752,7 @@
         call instance void @block_body::Gen0(int8 Fop)
         br L_if_end_36
     L_else_35:
-        // line 3095
+        .line 3095
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression_simpleexpression::Lattr
         ldfld void* T_attr::Typtr
@@ -13775,7 +13775,7 @@
         call instance bool @block::Comptypes(void* Fsp1, void* Fsp2)
     L_AND_shortcut_37:
         brfalse L_else_38
-        // line 3097
+        .line 3097
         ldloc _F
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
         ldfld class @block_body_statement @block_body_statement_expression::_slink
@@ -13788,10 +13788,10 @@
         call instance void @block_body::Gen0(int8 Fop)
         br L_if_end_39
     L_else_38:
-        // line 3098
+        .line 3098
         ldc.i4 134
         call void Error(int32 Ferrnr)
-        // line 3098
+        .line 3098
         ldsflda valuetype T_attr _G::Gattr
         ldnull
         stfld void* T_attr::Typtr
@@ -13803,7 +13803,7 @@
         ldloc $tmpSwitchValue4
         ldc.i4 7
         bne.un L_case_end_13
-        // line 3101
+        .line 3101
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression_simpleexpression::Lattr
         ldfld void* T_attr::Typtr
@@ -13818,7 +13818,7 @@
         ceq
     L_AND_shortcut_40:
         brfalse L_else_41
-        // line 3102
+        .line 3102
         ldloc _F
         ldfld class @block_body_statement_expression @block_body_statement_expression_simpleexpression::_slink
         ldfld class @block_body_statement @block_body_statement_expression::_slink
@@ -13831,10 +13831,10 @@
         call instance void @block_body::Gen0(int8 Fop)
         br L_if_end_42
     L_else_41:
-        // line 3103
+        .line 3103
         ldc.i4 134
         call void Error(int32 Ferrnr)
-        // line 3103
+        .line 3103
         ldsflda valuetype T_attr _G::Gattr
         ldnull
         stfld void* T_attr::Typtr
@@ -13842,7 +13842,7 @@
     L_case_end_13:
         br L_if_end_12
     L_else_11:
-        // line 3105
+        .line 3105
         ldsflda valuetype T_attr _G::Gattr
         ldnull
         stfld void* T_attr::Typtr
@@ -13859,7 +13859,7 @@
 }
 
 
-// line 3191
+.line 3191
 //================================================================================
 // scope: block_body_statement_assignment (level : 5)
 
@@ -13883,7 +13883,7 @@
 }
 
 
-// line 3233
+.line 3233
 //================================================================================
 // scope: block_body_statement_gotostatement (level : 5)
 
@@ -13907,7 +13907,7 @@
 }
 
 
-// line 3261
+.line 3261
 //================================================================================
 // scope: block_body_statement_compoundstatement (level : 5)
 
@@ -13925,7 +13925,7 @@
 }
 
 
-// line 3272
+.line 3272
 //================================================================================
 // scope: block_body_statement_ifstatement (level : 5)
 
@@ -13947,11 +13947,11 @@
 }
 
 
-// line 3287
+.line 3287
 //================================================================================
 // scope: block_body_statement_casestatement (level : 5)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE caseinfo = record;
 .class value explicit T_block_body_statement_casestatement_caseinfo
@@ -13992,7 +13992,7 @@
 }
 
 
-// line 3378
+.line 3378
 //================================================================================
 // scope: block_body_statement_repeatstatement (level : 5)
 
@@ -14013,7 +14013,7 @@
 }
 
 
-// line 3396
+.line 3396
 //================================================================================
 // scope: block_body_statement_whilestatement (level : 5)
 
@@ -14035,7 +14035,7 @@
 }
 
 
-// line 3404
+.line 3404
 //================================================================================
 // scope: block_body_statement_forstatement (level : 5)
 
@@ -14060,7 +14060,7 @@
 }
 
 
-// line 3477
+.line 3477
 //================================================================================
 // scope: block_body_statement_withstatement (level : 5)
 
@@ -14083,7 +14083,7 @@
 }
 
 
-// line 2167
+.line 2167
 //================================================================================
 // scope: block_body_statement (level : 4)
 
@@ -14106,7 +14106,7 @@
         ret
     }
 
-// line 2173
+.line 2173
 
     .method public
     void Selector(valuetype T_setty Fsys, void* Fcp)
@@ -14142,17 +14142,17 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 2177
+        .line 2177
         ldsflda valuetype T_attr _G::Gattr
         ldloc _F
         ldfld void* @block_body_statement_selector::Fcp
         ldfld void* T_identifier::Idtype
         stfld void* T_attr::Typtr
-        // line 2177
+        .line 2177
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 1
         stfld int32 T_attr::Kind
-        // line 2178
+        .line 2178
         ldloc _F
         ldfld void* @block_body_statement_selector::Fcp
         ldfld int32 T_identifier::Klass
@@ -14160,24 +14160,24 @@
         ldloc $tmpSwitchValue1
         ldc.i4 2
         bne.un L_check_case_2
-        // line 2180
+        .line 2180
         ldloc _F
         ldfld void* @block_body_statement_selector::Fcp
         ldfld int32 T_identifier::Vkind
         ldc.i4 0
         ceq
         brfalse L_else_3
-        // line 2181
+        .line 2181
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 0
         stfld int32 T_attr::Access
-        // line 2181
+        .line 2181
         ldsflda valuetype T_attr _G::Gattr
         ldloc _F
         ldfld void* @block_body_statement_selector::Fcp
         ldfld int8 T_identifier::Vlev
         stfld int8 T_attr::Vlevel
-        // line 2182
+        .line 2182
         ldsflda valuetype T_attr _G::Gattr
         ldloc _F
         ldfld void* @block_body_statement_selector::Fcp
@@ -14185,7 +14185,7 @@
         stfld int32 T_attr::Dplmt
         br L_if_end_4
     L_else_3:
-        // line 2185
+        .line 2185
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_selector::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -14204,11 +14204,11 @@
         ldfld int32 T_identifier::Vaddr
         ldsfld void* _G::Nilptr
         call instance void @block_body::Gen2t(int8 Fop, int32 Fp1, int32 Fp2, void* Fsp)
-        // line 2186
+        .line 2186
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 1
         stfld int32 T_attr::Access
-        // line 2186
+        .line 2186
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 0
         dup
@@ -14222,7 +14222,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 3
         bne.un L_check_case_5
-        // line 2190
+        .line 2190
         ldsflda valuetype T_array_23 _G::Display
         ldsfld int8 _G::Disx
         call instance valuetype T_record_22& T_array_23::ldadr(int32)
@@ -14230,18 +14230,18 @@
         ldc.i4 1
         ceq
         brfalse L_else_6
-        // line 2191
+        .line 2191
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 0
         stfld int32 T_attr::Access
-        // line 2191
+        .line 2191
         ldsflda valuetype T_attr _G::Gattr
         ldsflda valuetype T_array_23 _G::Display
         ldsfld int8 _G::Disx
         call instance valuetype T_record_22& T_array_23::ldadr(int32)
         ldfld int8 T_record_22::Clev
         stfld int8 T_attr::Vlevel
-        // line 2192
+        .line 2192
         ldsflda valuetype T_attr _G::Gattr
         ldsflda valuetype T_array_23 _G::Display
         ldsfld int8 _G::Disx
@@ -14258,12 +14258,12 @@
         stfld int32 T_attr::Dplmt
         br L_if_end_7
     L_else_6:
-        // line 2196
+        .line 2196
         ldsfld int8 _G::Level
         ldc.i4 1
         ceq
         brfalse L_else_8
-        // line 2196
+        .line 2196
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_selector::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -14280,7 +14280,7 @@
         call instance void @block_body::Gen1t(int8 Fop, int32 Fp2, void* Fsp)
         br L_if_end_9
     L_else_8:
-        // line 2197
+        .line 2197
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_selector::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -14297,11 +14297,11 @@
         ldsfld void* _G::Nilptr
         call instance void @block_body::Gen2t(int8 Fop, int32 Fp1, int32 Fp2, void* Fsp)
     L_if_end_9:
-        // line 2198
+        .line 2198
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 1
         stfld int32 T_attr::Access
-        // line 2198
+        .line 2198
         ldsflda valuetype T_attr _G::Gattr
         ldloc _F
         ldfld void* @block_body_statement_selector::Fcp
@@ -14313,35 +14313,35 @@
         ldloc $tmpSwitchValue1
         ldc.i4 5
         bne.un L_case_end_1
-        // line 2201
+        .line 2201
         ldloc _F
         ldfld void* @block_body_statement_selector::Fcp
         ldfld int32 T_identifier::Pfdeckind
         ldc.i4 0
         ceq
         brfalse L_else_10
-        // line 2202
+        .line 2202
         ldc.i4 150
         call void Error(int32 Ferrnr)
-        // line 2202
+        .line 2202
         ldsflda valuetype T_attr _G::Gattr
         ldnull
         stfld void* T_attr::Typtr
         br L_if_end_11
     L_else_10:
-        // line 2205
+        .line 2205
         ldloc _F
         ldfld void* @block_body_statement_selector::Fcp
         ldfld int32 T_identifier::Pfkind
         ldc.i4 1
         ceq
         brfalse L_else_12
-        // line 2205
+        .line 2205
         ldc.i4 151
         call void Error(int32 Ferrnr)
         br L_if_end_13
     L_else_12:
-        // line 2207
+        .line 2207
         ldloc _F
         ldfld void* @block_body_statement_selector::Fcp
         ldfld int8 T_identifier::Pflev
@@ -14366,16 +14366,16 @@
         ceq
     L_OR_shortcut_14:
         brfalse L_if_end_15
-        // line 2207
+        .line 2207
         ldc.i4 177
         call void Error(int32 Ferrnr)
     L_if_end_15:
     L_if_end_13:
-        // line 2208
+        .line 2208
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 0
         stfld int32 T_attr::Access
-        // line 2208
+        .line 2208
         ldsflda valuetype T_attr _G::Gattr
         ldloc _F
         ldfld void* @block_body_statement_selector::Fcp
@@ -14387,7 +14387,7 @@
         ldc.i4 10
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int8 T_attr::Vlevel
-        // line 2209
+        .line 2209
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 0
         dup
@@ -14397,7 +14397,7 @@
         stfld int32 T_attr::Dplmt
     L_if_end_11:
     L_case_end_1:
-        // line 2214
+        .line 2214
         ldsfld valuetype T_setty _G::Selectsys
         ldloc _F
         ldfld valuetype T_setty @block_body_statement_selector::Fsys
@@ -14407,10 +14407,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_16
-        // line 2215
+        .line 2215
         ldc.i4 59
         call void Error(int32 Ferrnr)
-        // line 2215
+        .line 2215
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_selector::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -14421,21 +14421,21 @@
         call valuetype T_setty _SetUnion(valuetype T_setty a, valuetype T_setty b)
         call instance void @block::Skip(valuetype T_setty Fsys)
     L_if_end_16:
-        // line 2216
+        .line 2216
         br L_while_test_18
     L_while_17:
-        // line 2218
+        .line 2218
         ldsfld int32 _G::Sy
         ldc.i4 10
         ceq
         brfalse L_else_19
-        // line 2220
+        .line 2220
     L_repeat_21:
-        // line 2220
+        .line 2220
         ldloc _F
         ldsfld valuetype T_attr _G::Gattr
         stfld valuetype T_attr @block_body_statement_selector::Lattr
-        // line 2222
+        .line 2222
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_selector::Lattr
         ldfld void* T_attr::Typtr
@@ -14444,7 +14444,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_22
-        // line 2223
+        .line 2223
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_selector::Lattr
         ldfld void* T_attr::Typtr
@@ -14454,24 +14454,24 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_23
-        // line 2224
+        .line 2224
         ldc.i4 138
         call void Error(int32 Ferrnr)
-        // line 2224
+        .line 2224
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_selector::Lattr
         ldnull
         stfld void* T_attr::Typtr
     L_if_end_23:
     L_if_end_22:
-        // line 2225
+        .line 2225
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_selector::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Loadaddress()
-        // line 2226
+        .line 2226
         call void Insymbol()
-        // line 2226
+        .line 2226
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_selector::_slink
         ldloc _F
@@ -14486,12 +14486,12 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement::Expression(valuetype T_setty Fsys)
-        // line 2227
+        .line 2227
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_selector::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Load()
-        // line 2228
+        .line 2228
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -14499,7 +14499,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_24
-        // line 2229
+        .line 2229
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
@@ -14508,12 +14508,12 @@
         ldc.i4.0
         ceq
         brfalse L_else_25
-        // line 2229
+        .line 2229
         ldc.i4 113
         call void Error(int32 Ferrnr)
         br L_if_end_26
     L_else_25:
-        // line 2230
+        .line 2230
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_selector::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -14525,7 +14525,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_27
-        // line 2231
+        .line 2231
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_selector::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -14540,7 +14540,7 @@
     L_if_end_27:
     L_if_end_26:
     L_if_end_24:
-        // line 2232
+        .line 2232
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_selector::Lattr
         ldfld void* T_attr::Typtr
@@ -14549,7 +14549,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_28
-        // line 2235
+        .line 2235
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_selector::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -14562,7 +14562,7 @@
         ldfld void* T_attr::Typtr
         call instance bool @block::Comptypes(void* Fsp1, void* Fsp2)
         brfalse L_else_29
-        // line 2237
+        .line 2237
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_selector::Lattr
         ldfld void* T_attr::Typtr
@@ -14572,7 +14572,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_31
-        // line 2238
+        .line 2238
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_selector::Lattr
         ldfld void* T_attr::Typtr
@@ -14582,10 +14582,10 @@
         ldloc _F
         ldflda int32 @block_body_statement_selector::Lmax
         call void Getbounds(void* Fsp, int32& Fmin, int32& Fmax)
-        // line 2239
+        .line 2239
         ldsfld bool _G::Debug
         brfalse L_if_end_32
-        // line 2240
+        .line 2240
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_selector::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -14601,13 +14601,13 @@
         ldsfld void* _G::Intptr
         call instance void @block_body::Gen2t(int8 Fop, int32 Fp1, int32 Fp2, void* Fsp)
     L_if_end_32:
-        // line 2241
+        .line 2241
         ldloc _F
         ldfld int32 @block_body_statement_selector::Lmin
         ldc.i4 0
         cgt
         brfalse L_else_33
-        // line 2241
+        .line 2241
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_selector::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -14622,13 +14622,13 @@
         call instance void @block_body::Gen1t(int8 Fop, int32 Fp2, void* Fsp)
         br L_if_end_34
     L_else_33:
-        // line 2242
+        .line 2242
         ldloc _F
         ldfld int32 @block_body_statement_selector::Lmin
         ldc.i4 0
         clt
         brfalse L_if_end_35
-        // line 2243
+        .line 2243
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_selector::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -14648,26 +14648,26 @@
     L_if_end_31:
         br L_if_end_30
     L_else_29:
-        // line 2247
+        .line 2247
         ldc.i4 139
         call void Error(int32 Ferrnr)
     L_if_end_30:
-        // line 2249
+        .line 2249
         ldsflda valuetype T_attr _G::Gattr
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_selector::Lattr
         ldfld void* T_attr::Typtr
         ldfld void* T_structure::Aeltype
         stfld void* T_attr::Typtr
-        // line 2249
+        .line 2249
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 1
         stfld int32 T_attr::Kind
-        // line 2250
+        .line 2250
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 1
         stfld int32 T_attr::Access
-        // line 2250
+        .line 2250
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 0
         dup
@@ -14675,7 +14675,7 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_attr::Idplmt
-        // line 2252
+        .line 2252
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -14683,19 +14683,19 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_36
-        // line 2254
+        .line 2254
         ldloc _F
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Size
         stfld int32 @block_body_statement_selector::Lsize
-        // line 2255
+        .line 2255
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldloc _F
         ldflda int32 @block_body_statement_selector::Lsize
         call void Align(void* Fsp, int32& Flc)
-        // line 2256
+        .line 2256
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_selector::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -14715,27 +14715,27 @@
         ldc.i4.0
         ceq
         brfalse L_repeat_21
-        // line 2260
+        .line 2260
         ldsfld int32 _G::Sy
         ldc.i4 11
         ceq
         brfalse L_else_37
-        // line 2260
+        .line 2260
         call void Insymbol()
         br L_if_end_38
     L_else_37:
-        // line 2260
+        .line 2260
         ldc.i4 12
         call void Error(int32 Ferrnr)
     L_if_end_38:
         br L_if_end_20
     L_else_19:
-        // line 2263
+        .line 2263
         ldsfld int32 _G::Sy
         ldc.i4 14
         ceq
         brfalse L_else_39
-        // line 2267
+        .line 2267
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -14743,7 +14743,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_41
-        // line 2268
+        .line 2268
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
@@ -14752,23 +14752,23 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_42
-        // line 2269
+        .line 2269
         ldc.i4 140
         call void Error(int32 Ferrnr)
-        // line 2269
+        .line 2269
         ldsflda valuetype T_attr _G::Gattr
         ldnull
         stfld void* T_attr::Typtr
     L_if_end_42:
     L_if_end_41:
-        // line 2270
+        .line 2270
         call void Insymbol()
-        // line 2271
+        .line 2271
         ldsfld int32 _G::Sy
         ldc.i4 0
         ceq
         brfalse L_else_43
-        // line 2273
+        .line 2273
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -14776,42 +14776,42 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_45
-        // line 2274
+        .line 2274
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld void* T_structure::Fstfld
         ldloc _F
         ldflda void* @block_body_statement_selector::Lcp
         call void Searchsection(void* Fcp, void*& Fcp1)
-        // line 2275
+        .line 2275
         ldloc _F
         ldfld void* @block_body_statement_selector::Lcp
         ldnull
         ceq
         brfalse L_else_46
-        // line 2276
+        .line 2276
         ldc.i4 152
         call void Error(int32 Ferrnr)
-        // line 2276
+        .line 2276
         ldsflda valuetype T_attr _G::Gattr
         ldnull
         stfld void* T_attr::Typtr
         br L_if_end_47
     L_else_46:
-        // line 2279
+        .line 2279
         ldsflda valuetype T_attr _G::Gattr
         ldloc _F
         ldfld void* @block_body_statement_selector::Lcp
         ldfld void* T_identifier::Idtype
         stfld void* T_attr::Typtr
-        // line 2280
+        .line 2280
         ldsflda valuetype T_attr _G::Gattr
         ldfld int32 T_attr::Access
         stloc $tmpSwitchValue3
         ldloc $tmpSwitchValue3
         ldc.i4 0
         bne.un L_check_case_49
-        // line 2281
+        .line 2281
         ldsflda valuetype T_attr _G::Gattr
         ldsflda valuetype T_attr _G::Gattr
         ldfld int32 T_attr::Dplmt
@@ -14829,7 +14829,7 @@
         ldloc $tmpSwitchValue3
         ldc.i4 1
         bne.un L_check_case_50
-        // line 2282
+        .line 2282
         ldsflda valuetype T_attr _G::Gattr
         ldsflda valuetype T_attr _G::Gattr
         ldfld int32 T_attr::Idplmt
@@ -14847,23 +14847,23 @@
         ldloc $tmpSwitchValue3
         ldc.i4 2
         bne.un L_case_end_48
-        // line 2283
+        .line 2283
         ldc.i4 400
         call void Error(int32 Ferrnr)
     L_case_end_48:
     L_if_end_47:
     L_if_end_45:
-        // line 2287
+        .line 2287
         call void Insymbol()
         br L_if_end_44
     L_else_43:
-        // line 2289
+        .line 2289
         ldc.i4 2
         call void Error(int32 Ferrnr)
     L_if_end_44:
         br L_if_end_40
     L_else_39:
-        // line 2294
+        .line 2294
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -14871,28 +14871,28 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_51
-        // line 2296
+        .line 2296
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
         ldc.i4 2
         ceq
         brfalse L_else_52
-        // line 2297
+        .line 2297
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_selector::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Load()
-        // line 2297
+        .line 2297
         ldsflda valuetype T_attr _G::Gattr
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld void* T_structure::Eltype
         stfld void* T_attr::Typtr
-        // line 2298
+        .line 2298
         ldsfld bool _G::Debug
         brfalse L_if_end_54
-        // line 2298
+        .line 2298
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_selector::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -14906,15 +14906,15 @@
         ldsfld void* _G::Nilptr
         call instance void @block_body::Gen2t(int8 Fop, int32 Fp1, int32 Fp2, void* Fsp)
     L_if_end_54:
-        // line 2300
+        .line 2300
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 1
         stfld int32 T_attr::Kind
-        // line 2300
+        .line 2300
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 1
         stfld int32 T_attr::Access
-        // line 2301
+        .line 2301
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 0
         dup
@@ -14924,14 +14924,14 @@
         stfld int32 T_attr::Idplmt
         br L_if_end_53
     L_else_52:
-        // line 2305
+        .line 2305
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
         ldc.i4 6
         ceq
         brfalse L_else_55
-        // line 2305
+        .line 2305
         ldsflda valuetype T_attr _G::Gattr
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
@@ -14939,17 +14939,17 @@
         stfld void* T_attr::Typtr
         br L_if_end_56
     L_else_55:
-        // line 2306
+        .line 2306
         ldc.i4 141
         call void Error(int32 Ferrnr)
     L_if_end_56:
     L_if_end_53:
     L_if_end_51:
-        // line 2307
+        .line 2307
         call void Insymbol()
     L_if_end_40:
     L_if_end_20:
-        // line 2309
+        .line 2309
         ldloc _F
         ldfld valuetype T_setty @block_body_statement_selector::Fsys
         ldsfld valuetype T_setty _G::Selectsys
@@ -14959,10 +14959,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_57
-        // line 2310
+        .line 2310
         ldc.i4 6
         call void Error(int32 Ferrnr)
-        // line 2310
+        .line 2310
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_selector::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -14983,7 +14983,7 @@
         ret
     }
 
-// line 2314
+.line 2314
 
     .method public
     void Call(valuetype T_setty Fsys, void* Fcp)
@@ -15044,27 +15044,27 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 2782
+        .line 2782
         ldloc _F
         ldfld void* @block_body_statement_call::Fcp
         ldfld int32 T_identifier::Pfdeckind
         ldc.i4 0
         ceq
         brfalse L_else_1
-        // line 2783
+        .line 2783
         ldloc _F
         ldloc _F
         ldfld void* @block_body_statement_call::Fcp
         ldfld int8 T_identifier::Key
         stfld int8 @block_body_statement_call::Lkey
-        // line 2784
+        .line 2784
         ldloc _F
         ldfld void* @block_body_statement_call::Fcp
         ldfld int32 T_identifier::Klass
         ldc.i4 4
         ceq
         brfalse L_else_3
-        // line 2786
+        .line 2786
         ldloc $tmpSetLiteral1
         ldloc _F
         ldfld int8 @block_body_statement_call::Lkey
@@ -15072,21 +15072,21 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_5
-        // line 2787
+        .line 2787
         ldsfld int32 _G::Sy
         ldc.i4 8
         ceq
         brfalse L_else_6
-        // line 2787
+        .line 2787
         call void Insymbol()
         br L_if_end_7
     L_else_6:
-        // line 2787
+        .line 2787
         ldc.i4 9
         call void Error(int32 Ferrnr)
     L_if_end_7:
     L_if_end_5:
-        // line 2788
+        .line 2788
         ldloc _F
         ldfld int8 @block_body_statement_call::Lkey
         stloc $tmpSwitchValue2
@@ -15104,7 +15104,7 @@
         beq L_case_10
         br L_check_case_9
     L_case_10:
-        // line 2790
+        .line 2790
         ldloc _F
         call instance void @block_body_statement_call::Getputresetrewrite()
         br L_case_end_8
@@ -15117,7 +15117,7 @@
         beq L_case_12
         br L_check_case_11
     L_case_12:
-        // line 2791
+        .line 2791
         ldloc _F
         call instance void @block_body_statement_call::Read()
         br L_case_end_8
@@ -15130,7 +15130,7 @@
         beq L_case_14
         br L_check_case_13
     L_case_14:
-        // line 2792
+        .line 2792
         ldloc _F
         call instance void @block_body_statement_call::Write()
         br L_case_end_8
@@ -15138,7 +15138,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 7
         bne.un L_check_case_15
-        // line 2793
+        .line 2793
         ldloc _F
         call instance void @block_body_statement_call::Pack()
         br L_case_end_8
@@ -15146,7 +15146,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 8
         bne.un L_check_case_16
-        // line 2794
+        .line 2794
         ldloc _F
         call instance void @block_body_statement_call::Unpack()
         br L_case_end_8
@@ -15154,7 +15154,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 9
         bne.un L_check_case_17
-        // line 2795
+        .line 2795
         ldloc _F
         call instance void @block_body_statement_call::New()
         br L_case_end_8
@@ -15162,7 +15162,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 10
         bne.un L_check_case_18
-        // line 2796
+        .line 2796
         ldloc _F
         call instance void @block_body_statement_call::Release()
         br L_case_end_8
@@ -15170,11 +15170,11 @@
         ldloc $tmpSwitchValue2
         ldc.i4 13
         bne.un L_case_end_8
-        // line 2797
+        .line 2797
         ldloc _F
         call instance void @block_body_statement_call::Mark()
     L_case_end_8:
-        // line 2799
+        .line 2799
         ldloc $tmpSetLiteral3
         ldloc _F
         ldfld int8 @block_body_statement_call::Lkey
@@ -15182,23 +15182,23 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_19
-        // line 2800
+        .line 2800
         ldsfld int32 _G::Sy
         ldc.i4 9
         ceq
         brfalse L_else_20
-        // line 2800
+        .line 2800
         call void Insymbol()
         br L_if_end_21
     L_else_20:
-        // line 2800
+        .line 2800
         ldc.i4 4
         call void Error(int32 Ferrnr)
     L_if_end_21:
     L_if_end_19:
         br L_if_end_4
     L_else_3:
-        // line 2804
+        .line 2804
         ldloc _F
         ldfld int8 @block_body_statement_call::Lkey
         ldc.i4 8
@@ -15206,20 +15206,20 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_22
-        // line 2806
+        .line 2806
         ldsfld int32 _G::Sy
         ldc.i4 8
         ceq
         brfalse L_else_23
-        // line 2806
+        .line 2806
         call void Insymbol()
         br L_if_end_24
     L_else_23:
-        // line 2806
+        .line 2806
         ldc.i4 9
         call void Error(int32 Ferrnr)
     L_if_end_24:
-        // line 2807
+        .line 2807
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_call::_slink
         ldloc _F
@@ -15234,20 +15234,20 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement::Expression(valuetype T_setty Fsys)
-        // line 2807
+        .line 2807
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_call::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Load()
     L_if_end_22:
-        // line 2809
+        .line 2809
         ldloc _F
         ldfld int8 @block_body_statement_call::Lkey
         stloc $tmpSwitchValue5
         ldloc $tmpSwitchValue5
         ldc.i4 1
         bne.un L_check_case_26
-        // line 2810
+        .line 2810
         ldloc _F
         call instance void @block_body_statement_call::Abs()
         br L_case_end_25
@@ -15255,7 +15255,7 @@
         ldloc $tmpSwitchValue5
         ldc.i4 2
         bne.un L_check_case_27
-        // line 2811
+        .line 2811
         ldloc _F
         call instance void @block_body_statement_call::Sqr()
         br L_case_end_25
@@ -15263,7 +15263,7 @@
         ldloc $tmpSwitchValue5
         ldc.i4 3
         bne.un L_check_case_28
-        // line 2812
+        .line 2812
         ldloc _F
         call instance void @block_body_statement_call::Trunc()
         br L_case_end_25
@@ -15271,7 +15271,7 @@
         ldloc $tmpSwitchValue5
         ldc.i4 4
         bne.un L_check_case_29
-        // line 2813
+        .line 2813
         ldloc _F
         call instance void @block_body_statement_call::Odd()
         br L_case_end_25
@@ -15279,7 +15279,7 @@
         ldloc $tmpSwitchValue5
         ldc.i4 5
         bne.un L_check_case_30
-        // line 2814
+        .line 2814
         ldloc _F
         call instance void @block_body_statement_call::Ord()
         br L_case_end_25
@@ -15287,7 +15287,7 @@
         ldloc $tmpSwitchValue5
         ldc.i4 6
         bne.un L_check_case_31
-        // line 2815
+        .line 2815
         ldloc _F
         call instance void @block_body_statement_call::Chr()
         br L_case_end_25
@@ -15300,7 +15300,7 @@
         beq L_case_33
         br L_check_case_32
     L_case_33:
-        // line 2816
+        .line 2816
         ldloc _F
         call instance void @block_body_statement_call::Predsucc()
         br L_case_end_25
@@ -15313,11 +15313,11 @@
         beq L_case_34
         br L_case_end_25
     L_case_34:
-        // line 2817
+        .line 2817
         ldloc _F
         call instance void @block_body_statement_call::Eof()
     L_case_end_25:
-        // line 2819
+        .line 2819
         ldloc _F
         ldfld int8 @block_body_statement_call::Lkey
         ldc.i4 8
@@ -15325,16 +15325,16 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_35
-        // line 2820
+        .line 2820
         ldsfld int32 _G::Sy
         ldc.i4 9
         ceq
         brfalse L_else_36
-        // line 2820
+        .line 2820
         call void Insymbol()
         br L_if_end_37
     L_else_36:
-        // line 2820
+        .line 2820
         ldc.i4 4
         call void Error(int32 Ferrnr)
     L_if_end_37:
@@ -15343,7 +15343,7 @@
         /* nop */
         br L_if_end_2
     L_else_1:
-        // line 2823
+        .line 2823
         ldloc _F
         call instance void @block_body_statement_call::Callnonstandard()
     L_if_end_2:
@@ -15352,7 +15352,7 @@
         ret
     }
 
-// line 2826
+.line 2826
 
     .method public
     void Expression(valuetype T_setty Fsys)
@@ -15403,7 +15403,7 @@
         call instance void T_set_29::addValue(int32)
     
     L_Entry:
-        // line 3110
+        .line 3110
         ldloc _F
         ldloc _F
         ldfld valuetype T_setty @block_body_statement_expression::Fsys
@@ -15417,12 +15417,12 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement_expression::Simpleexpression(valuetype T_setty Fsys)
-        // line 3111
+        .line 3111
         ldsfld int32 _G::Sy
         ldc.i4 7
         ceq
         brfalse L_if_end_1
-        // line 3113
+        .line 3113
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -15430,7 +15430,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_2
-        // line 3114
+        .line 3114
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
@@ -15439,35 +15439,35 @@
         ldc.i4.0
         ceq
         brfalse L_else_3
-        // line 3114
+        .line 3114
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Load()
         br L_if_end_4
     L_else_3:
-        // line 3115
+        .line 3115
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Loadaddress()
     L_if_end_4:
     L_if_end_2:
-        // line 3116
+        .line 3116
         ldloc _F
         ldsfld valuetype T_attr _G::Gattr
         stfld valuetype T_attr @block_body_statement_expression::Lattr
-        // line 3116
+        .line 3116
         ldloc _F
         ldsfld int32 _G::Op
         stfld int32 @block_body_statement_expression::Lop
-        // line 3117
+        .line 3117
         ldloc _F
         ldfld int32 @block_body_statement_expression::Lop
         ldc.i4 14
         ceq
         brfalse L_if_end_5
-        // line 3118
+        .line 3118
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -15479,7 +15479,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_6
-        // line 3119
+        .line 3119
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -15493,14 +15493,14 @@
         call instance void @block_body::Gen0t(int8 Fop, void* Fsp)
     L_if_end_6:
     L_if_end_5:
-        // line 3120
+        .line 3120
         call void Insymbol()
-        // line 3120
+        .line 3120
         ldloc _F
         ldloc _F
         ldfld valuetype T_setty @block_body_statement_expression::Fsys
         call instance void @block_body_statement_expression::Simpleexpression(valuetype T_setty Fsys)
-        // line 3121
+        .line 3121
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -15508,7 +15508,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_7
-        // line 3122
+        .line 3122
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
@@ -15517,21 +15517,21 @@
         ldc.i4.0
         ceq
         brfalse L_else_8
-        // line 3122
+        .line 3122
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Load()
         br L_if_end_9
     L_else_8:
-        // line 3123
+        .line 3123
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Loadaddress()
     L_if_end_9:
     L_if_end_7:
-        // line 3124
+        .line 3124
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression::Lattr
         ldfld void* T_attr::Typtr
@@ -15550,20 +15550,20 @@
         ceq
     L_AND_shortcut_10:
         brfalse L_if_end_11
-        // line 3125
+        .line 3125
         ldloc _F
         ldfld int32 @block_body_statement_expression::Lop
         ldc.i4 14
         ceq
         brfalse L_else_12
-        // line 3126
+        .line 3126
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
         ldc.i4 3
         ceq
         brfalse L_else_14
-        // line 3127
+        .line 3127
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -15576,7 +15576,7 @@
         ldfld void* T_structure::Elset
         call instance bool @block::Comptypes(void* Fsp1, void* Fsp2)
         brfalse L_else_16
-        // line 3128
+        .line 3128
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -15588,27 +15588,27 @@
         call instance void @block_body::Gen0(int8 Fop)
         br L_if_end_17
     L_else_16:
-        // line 3129
+        .line 3129
         ldc.i4 129
         call void Error(int32 Ferrnr)
-        // line 3129
+        .line 3129
         ldsflda valuetype T_attr _G::Gattr
         ldnull
         stfld void* T_attr::Typtr
     L_if_end_17:
         br L_if_end_15
     L_else_14:
-        // line 3130
+        .line 3130
         ldc.i4 130
         call void Error(int32 Ferrnr)
-        // line 3130
+        .line 3130
         ldsflda valuetype T_attr _G::Gattr
         ldnull
         stfld void* T_attr::Typtr
     L_if_end_15:
         br L_if_end_13
     L_else_12:
-        // line 3133
+        .line 3133
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression::Lattr
         ldfld void* T_attr::Typtr
@@ -15618,14 +15618,14 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_18
-        // line 3134
+        .line 3134
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression::Lattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Intptr
         ceq
         brfalse L_else_19
-        // line 3135
+        .line 3135
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -15635,20 +15635,20 @@
         ldc.i4 63
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         call instance void @block_body::Gen0(int8 Fop)
-        // line 3136
+        .line 3136
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression::Lattr
         ldsfld void* _G::Realptr
         stfld void* T_attr::Typtr
         br L_if_end_20
     L_else_19:
-        // line 3139
+        .line 3139
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Intptr
         ceq
         brfalse L_if_end_21
-        // line 3140
+        .line 3140
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -15658,14 +15658,14 @@
         ldc.i4 63
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         call instance void @block_body::Gen0(int8 Fop)
-        // line 3141
+        .line 3141
         ldsflda valuetype T_attr _G::Gattr
         ldsfld void* _G::Realptr
         stfld void* T_attr::Typtr
     L_if_end_21:
     L_if_end_20:
     L_if_end_18:
-        // line 3143
+        .line 3143
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -15677,14 +15677,14 @@
         ldfld void* T_attr::Typtr
         call instance bool @block::Comptypes(void* Fsp1, void* Fsp2)
         brfalse L_else_22
-        // line 3144
+        .line 3144
         ldloc _F
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression::Lattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Size
         stfld int32 @block_body_statement_expression::Lsize
-        // line 3145
+        .line 3145
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression::Lattr
         ldfld void* T_attr::Typtr
@@ -15693,46 +15693,46 @@
         ldloc $tmpSwitchValue2
         ldc.i4 0
         bne.un L_check_case_25
-        // line 3147
+        .line 3147
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression::Lattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Realptr
         ceq
         brfalse L_else_26
-        // line 3147
+        .line 3147
         ldloc _F
         ldc.i4 114 // 'r'
         stfld uint8 @block_body_statement_expression::Typind
         br L_if_end_27
     L_else_26:
-        // line 3149
+        .line 3149
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression::Lattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Boolptr
         ceq
         brfalse L_else_28
-        // line 3149
+        .line 3149
         ldloc _F
         ldc.i4 98 // 'b'
         stfld uint8 @block_body_statement_expression::Typind
         br L_if_end_29
     L_else_28:
-        // line 3151
+        .line 3151
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_expression::Lattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Charptr
         ceq
         brfalse L_else_30
-        // line 3151
+        .line 3151
         ldloc _F
         ldc.i4 99 // 'c'
         stfld uint8 @block_body_statement_expression::Typind
         br L_if_end_31
     L_else_30:
-        // line 3152
+        .line 3152
         ldloc _F
         ldc.i4 105 // 'i'
         stfld uint8 @block_body_statement_expression::Typind
@@ -15744,17 +15744,17 @@
         ldloc $tmpSwitchValue2
         ldc.i4 2
         bne.un L_check_case_32
-        // line 3155
+        .line 3155
         ldloc $tmpSetLiteral3
         ldloc _F
         ldfld int32 @block_body_statement_expression::Lop
         call bool _SetContains(valuetype T_set_29 s, int32 val)
         brfalse L_if_end_33
-        // line 3155
+        .line 3155
         ldc.i4 131
         call void Error(int32 Ferrnr)
     L_if_end_33:
-        // line 3156
+        .line 3156
         ldloc _F
         ldc.i4 97 // 'a'
         stfld uint8 @block_body_statement_expression::Typind
@@ -15763,17 +15763,17 @@
         ldloc $tmpSwitchValue2
         ldc.i4 3
         bne.un L_check_case_34
-        // line 3159
+        .line 3159
         ldloc $tmpSetLiteral4
         ldloc _F
         ldfld int32 @block_body_statement_expression::Lop
         call bool _SetContains(valuetype T_set_29 s, int32 val)
         brfalse L_if_end_35
-        // line 3159
+        .line 3159
         ldc.i4 132
         call void Error(int32 Ferrnr)
     L_if_end_35:
-        // line 3160
+        .line 3160
         ldloc _F
         ldc.i4 115 // 's'
         stfld uint8 @block_body_statement_expression::Typind
@@ -15782,7 +15782,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 4
         bne.un L_check_case_36
-        // line 3164
+        .line 3164
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -15794,11 +15794,11 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_37
-        // line 3165
+        .line 3165
         ldc.i4 134
         call void Error(int32 Ferrnr)
     L_if_end_37:
-        // line 3166
+        .line 3166
         ldloc _F
         ldc.i4 109 // 'm'
         stfld uint8 @block_body_statement_expression::Typind
@@ -15807,10 +15807,10 @@
         ldloc $tmpSwitchValue2
         ldc.i4 5
         bne.un L_check_case_38
-        // line 3170
+        .line 3170
         ldc.i4 134
         call void Error(int32 Ferrnr)
-        // line 3171
+        .line 3171
         ldloc _F
         ldc.i4 109 // 'm'
         stfld uint8 @block_body_statement_expression::Typind
@@ -15819,22 +15819,22 @@
         ldloc $tmpSwitchValue2
         ldc.i4 6
         bne.un L_case_end_24
-        // line 3174
+        .line 3174
         ldc.i4 133
         call void Error(int32 Ferrnr)
-        // line 3174
+        .line 3174
         ldloc _F
         ldc.i4 102 // 'f'
         stfld uint8 @block_body_statement_expression::Typind
     L_case_end_24:
-        // line 3176
+        .line 3176
         ldloc _F
         ldfld int32 @block_body_statement_expression::Lop
         stloc $tmpSwitchValue5
         ldloc $tmpSwitchValue5
         ldc.i4 8
         bne.un L_check_case_40
-        // line 3177
+        .line 3177
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -15853,7 +15853,7 @@
         ldloc $tmpSwitchValue5
         ldc.i4 9
         bne.un L_check_case_41
-        // line 3178
+        .line 3178
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -15872,7 +15872,7 @@
         ldloc $tmpSwitchValue5
         ldc.i4 11
         bne.un L_check_case_42
-        // line 3179
+        .line 3179
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -15891,7 +15891,7 @@
         ldloc $tmpSwitchValue5
         ldc.i4 10
         bne.un L_check_case_43
-        // line 3180
+        .line 3180
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -15910,7 +15910,7 @@
         ldloc $tmpSwitchValue5
         ldc.i4 12
         bne.un L_check_case_44
-        // line 3181
+        .line 3181
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -15929,7 +15929,7 @@
         ldloc $tmpSwitchValue5
         ldc.i4 13
         bne.un L_case_end_39
-        // line 3182
+        .line 3182
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_expression::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -15946,17 +15946,17 @@
     L_case_end_39:
         br L_if_end_23
     L_else_22:
-        // line 3185
+        .line 3185
         ldc.i4 129
         call void Error(int32 Ferrnr)
     L_if_end_23:
     L_if_end_13:
     L_if_end_11:
-        // line 3187
+        .line 3187
         ldsflda valuetype T_attr _G::Gattr
         ldsfld void* _G::Boolptr
         stfld void* T_attr::Typtr
-        // line 3187
+        .line 3187
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 2
         stfld int32 T_attr::Kind
@@ -15966,7 +15966,7 @@
         ret
     }
 
-// line 3191
+.line 3191
 
     .method public
     void Assignment(void* Fcp)
@@ -15994,7 +15994,7 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 3193
+        .line 3193
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_assignment::_slink
         ldloc _F
@@ -16012,12 +16012,12 @@
         ldloc _F
         ldfld void* @block_body_statement_assignment::Fcp
         call instance void @block_body_statement::Selector(valuetype T_setty Fsys, void* Fcp)
-        // line 3194
+        .line 3194
         ldsfld int32 _G::Sy
         ldc.i4 17
         ceq
         brfalse L_else_1
-        // line 3196
+        .line 3196
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -16025,7 +16025,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_3
-        // line 3197
+        .line 3197
         ldsflda valuetype T_attr _G::Gattr
         ldfld int32 T_attr::Access
         ldc.i4 0
@@ -16042,27 +16042,27 @@
         cgt
     L_OR_shortcut_4:
         brfalse L_if_end_5
-        // line 3198
+        .line 3198
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_assignment::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Loadaddress()
     L_if_end_5:
     L_if_end_3:
-        // line 3199
+        .line 3199
         ldloc _F
         ldsfld valuetype T_attr _G::Gattr
         stfld valuetype T_attr @block_body_statement_assignment::Lattr
-        // line 3200
+        .line 3200
         call void Insymbol()
-        // line 3200
+        .line 3200
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_assignment::_slink
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_assignment::_slink
         ldfld valuetype T_setty @block_body_statement::Fsys
         call instance void @block_body_statement::Expression(valuetype T_setty Fsys)
-        // line 3201
+        .line 3201
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -16070,7 +16070,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_6
-        // line 3202
+        .line 3202
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
@@ -16079,21 +16079,21 @@
         ldc.i4.0
         ceq
         brfalse L_else_7
-        // line 3202
+        .line 3202
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_assignment::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Load()
         br L_if_end_8
     L_else_7:
-        // line 3203
+        .line 3203
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_assignment::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Loadaddress()
     L_if_end_8:
     L_if_end_6:
-        // line 3204
+        .line 3204
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_assignment::Lattr
         ldfld void* T_attr::Typtr
@@ -16112,7 +16112,7 @@
         ceq
     L_AND_shortcut_9:
         brfalse L_if_end_10
-        // line 3206
+        .line 3206
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_assignment::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -16131,7 +16131,7 @@
         ceq
     L_AND_shortcut_11:
         brfalse L_if_end_12
-        // line 3207
+        .line 3207
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_assignment::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -16141,12 +16141,12 @@
         ldc.i4 63
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         call instance void @block_body::Gen0(int8 Fop)
-        // line 3208
+        .line 3208
         ldsflda valuetype T_attr _G::Gattr
         ldsfld void* _G::Realptr
         stfld void* T_attr::Typtr
     L_if_end_12:
-        // line 3210
+        .line 3210
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_assignment::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -16158,7 +16158,7 @@
         ldfld void* T_attr::Typtr
         call instance bool @block::Comptypes(void* Fsp1, void* Fsp2)
         brfalse L_else_13
-        // line 3211
+        .line 3211
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_assignment::Lattr
         ldfld void* T_attr::Typtr
@@ -16172,10 +16172,10 @@
         beq L_case_17
         br L_check_case_16
     L_case_17:
-        // line 3214
+        .line 3214
         ldsfld bool _G::Debug
         brfalse L_if_end_18
-        // line 3214
+        .line 3214
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_assignment::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -16184,7 +16184,7 @@
         ldfld void* T_attr::Typtr
         call instance void @block_body::Checkbnds(void* Fsp)
     L_if_end_18:
-        // line 3215
+        .line 3215
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_assignment::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -16196,10 +16196,10 @@
         ldloc $tmpSwitchValue2
         ldc.i4 2
         bne.un L_check_case_19
-        // line 3218
+        .line 3218
         ldsfld bool _G::Debug
         brfalse L_if_end_20
-        // line 3219
+        .line 3219
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_assignment::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -16213,7 +16213,7 @@
         ldsfld void* _G::Nilptr
         call instance void @block_body::Gen2t(int8 Fop, int32 Fp1, int32 Fp2, void* Fsp)
     L_if_end_20:
-        // line 3220
+        .line 3220
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_assignment::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -16225,7 +16225,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 3
         bne.un L_check_case_21
-        // line 3222
+        .line 3222
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_assignment::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -16242,7 +16242,7 @@
         beq L_case_23
         br L_check_case_22
     L_case_23:
-        // line 3224
+        .line 3224
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_assignment::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -16261,20 +16261,20 @@
         ldloc $tmpSwitchValue2
         ldc.i4 6
         bne.un L_case_end_15
-        // line 3225
+        .line 3225
         ldc.i4 146
         call void Error(int32 Ferrnr)
     L_case_end_15:
         br L_if_end_14
     L_else_13:
-        // line 3227
+        .line 3227
         ldc.i4 129
         call void Error(int32 Ferrnr)
     L_if_end_14:
     L_if_end_10:
         br L_if_end_2
     L_else_1:
-        // line 3230
+        .line 3230
         ldc.i4 51
         call void Error(int32 Ferrnr)
     L_if_end_2:
@@ -16283,7 +16283,7 @@
         ret
     }
 
-// line 3233
+.line 3233
 
     .method public
     void Gotostatement()
@@ -16300,23 +16300,23 @@
         stfld class @block_body_statement @block_body_statement_gotostatement::_slink
     
     L_Entry:
-        // line 3236
+        .line 3236
         ldsfld int32 _G::Sy
         ldc.i4 1
         ceq
         brfalse L_else_1
-        // line 3238
+        .line 3238
         ldloc _F
         ldc.i4 0 // (false)
         stfld bool @block_body_statement_gotostatement::Found
-        // line 3239
+        .line 3239
         ldloc _F
         ldsfld int8 _G::Top
         stfld int8 @block_body_statement_gotostatement::Ttop
-        // line 3240
+        .line 3240
         br L_while_test_4
     L_while_3:
-        // line 3240
+        .line 3240
         ldloc _F
         ldloc _F
         ldfld int8 @block_body_statement_gotostatement::Ttop
@@ -16338,14 +16338,14 @@
         ldc.i4.0
         ceq
         brtrue L_while_3
-        // line 3241
+        .line 3241
         ldloc _F
         ldloc _F
         ldfld int8 @block_body_statement_gotostatement::Ttop
         stfld int8 @block_body_statement_gotostatement::Ttop1
-        // line 3242
+        .line 3242
     L_repeat_5:
-        // line 3243
+        .line 3243
         ldloc _F
         ldsflda valuetype T_array_23 _G::Display
         ldloc _F
@@ -16353,10 +16353,10 @@
         call instance valuetype T_record_22& T_array_23::ldadr(int32)
         ldfld void* T_record_22::Flabel
         stfld void* @block_body_statement_gotostatement::Llp
-        // line 3244
+        .line 3244
         br L_while_test_7
     L_while_6:
-        // line 3246
+        .line 3246
         ldloc _F
         ldfld void* @block_body_statement_gotostatement::Llp
         ldfld int32 T_labl::Labval
@@ -16364,18 +16364,18 @@
         ldfld int32 T_valu::Ival
         ceq
         brfalse L_else_8
-        // line 3247
+        .line 3247
         ldloc _F
         ldc.i4 1 // (true)
         stfld bool @block_body_statement_gotostatement::Found
-        // line 3248
+        .line 3248
         ldloc _F
         ldfld int8 @block_body_statement_gotostatement::Ttop
         ldloc _F
         ldfld int8 @block_body_statement_gotostatement::Ttop1
         ceq
         brfalse L_else_10
-        // line 3249
+        .line 3249
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_gotostatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -16390,13 +16390,13 @@
         call instance void @block_body::Genujpxjp(int8 Fop, int32 Fp2)
         br L_if_end_11
     L_else_10:
-        // line 3250
+        .line 3250
         ldc.i4 399
         call void Error(int32 Ferrnr)
     L_if_end_11:
         br L_if_end_9
     L_else_8:
-        // line 3252
+        .line 3252
         ldloc _F
         ldloc _F
         ldfld void* @block_body_statement_gotostatement::Llp
@@ -16419,7 +16419,7 @@
         ceq
     L_AND_shortcut_12:
         brtrue L_while_6
-        // line 3253
+        .line 3253
         ldloc _F
         ldloc _F
         ldfld int8 @block_body_statement_gotostatement::Ttop
@@ -16441,21 +16441,21 @@
         ceq
     L_OR_shortcut_13:
         brfalse L_repeat_5
-        // line 3255
+        .line 3255
         ldloc _F
         ldfld bool @block_body_statement_gotostatement::Found
         ldc.i4.0
         ceq
         brfalse L_if_end_14
-        // line 3255
+        .line 3255
         ldc.i4 167
         call void Error(int32 Ferrnr)
     L_if_end_14:
-        // line 3256
+        .line 3256
         call void Insymbol()
         br L_if_end_2
     L_else_1:
-        // line 3258
+        .line 3258
         ldc.i4 15
         call void Error(int32 Ferrnr)
     L_if_end_2:
@@ -16464,7 +16464,7 @@
         ret
     }
 
-// line 3261
+.line 3261
 
     .method public
     void Compoundstatement()
@@ -16490,11 +16490,11 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 3263
+        .line 3263
     L_repeat_1:
-        // line 3264
+        .line 3264
     L_repeat_2:
-        // line 3264
+        .line 3264
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_compoundstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -16517,7 +16517,7 @@
         ldc.i4.0
         ceq
         brfalse L_repeat_2
-        // line 3266
+        .line 3266
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_compoundstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -16528,7 +16528,7 @@
         ldc.i4.0
         ceq
         stfld bool @block::Test
-        // line 3267
+        .line 3267
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_compoundstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -16537,7 +16537,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_3
-        // line 3267
+        .line 3267
         call void Insymbol()
     L_if_end_3:
         ldloc _F
@@ -16546,16 +16546,16 @@
         ldfld class @block @block_body::_slink
         ldfld bool @block::Test
         brfalse L_repeat_1
-        // line 3269
+        .line 3269
         ldsfld int32 _G::Sy
         ldc.i4 39
         ceq
         brfalse L_else_4
-        // line 3269
+        .line 3269
         call void Insymbol()
         br L_if_end_5
     L_else_4:
-        // line 3269
+        .line 3269
         ldc.i4 13
         call void Error(int32 Ferrnr)
     L_if_end_5:
@@ -16564,7 +16564,7 @@
         ret
     }
 
-// line 3272
+.line 3272
 
     .method public
     void Ifstatement()
@@ -16592,7 +16592,7 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 3274
+        .line 3274
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_ifstatement::_slink
         ldloc _F
@@ -16608,31 +16608,31 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement::Expression(valuetype T_setty Fsys)
-        // line 3275
+        .line 3275
         ldloc _F
         ldflda int32 @block_body_statement_ifstatement::Lcix1
         call void Genlabel(int32& Nxtlab)
-        // line 3275
+        .line 3275
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_ifstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
         ldloc _F
         ldfld int32 @block_body_statement_ifstatement::Lcix1
         call instance void @block_body::Genfjp(int32 Faddr)
-        // line 3276
+        .line 3276
         ldsfld int32 _G::Sy
         ldc.i4 46
         ceq
         brfalse L_else_1
-        // line 3276
+        .line 3276
         call void Insymbol()
         br L_if_end_2
     L_else_1:
-        // line 3276
+        .line 3276
         ldc.i4 52
         call void Error(int32 Ferrnr)
     L_if_end_2:
-        // line 3277
+        .line 3277
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_ifstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -16649,16 +16649,16 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body::Statement(valuetype T_setty Fsys)
-        // line 3278
+        .line 3278
         ldsfld int32 _G::Sy
         ldc.i4 40
         ceq
         brfalse L_else_3
-        // line 3279
+        .line 3279
         ldloc _F
         ldflda int32 @block_body_statement_ifstatement::Lcix2
         call void Genlabel(int32& Nxtlab)
-        // line 3279
+        .line 3279
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_ifstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -16670,16 +16670,16 @@
         ldloc _F
         ldfld int32 @block_body_statement_ifstatement::Lcix2
         call instance void @block_body::Genujpxjp(int8 Fop, int32 Fp2)
-        // line 3280
+        .line 3280
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_ifstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
         ldloc _F
         ldfld int32 @block_body_statement_ifstatement::Lcix1
         call instance void @block_body::Putlabel(int32 Labname)
-        // line 3281
+        .line 3281
         call void Insymbol()
-        // line 3281
+        .line 3281
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_ifstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -16687,7 +16687,7 @@
         ldfld class @block_body_statement @block_body_statement_ifstatement::_slink
         ldfld valuetype T_setty @block_body_statement::Fsys
         call instance void @block_body::Statement(valuetype T_setty Fsys)
-        // line 3282
+        .line 3282
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_ifstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -16696,7 +16696,7 @@
         call instance void @block_body::Putlabel(int32 Labname)
         br L_if_end_4
     L_else_3:
-        // line 3284
+        .line 3284
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_ifstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -16709,7 +16709,7 @@
         ret
     }
 
-// line 3287
+.line 3287
 
     .method public
     void Casestatement()
@@ -16759,7 +16759,7 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 3297
+        .line 3297
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_casestatement::_slink
         ldloc _F
@@ -16775,21 +16775,21 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement::Expression(valuetype T_setty Fsys)
-        // line 3298
+        .line 3298
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_casestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Load()
-        // line 3298
+        .line 3298
         ldloc _F
         ldflda int32 @block_body_statement_casestatement::Lcix
         call void Genlabel(int32& Nxtlab)
-        // line 3299
+        .line 3299
         ldloc _F
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         stfld void* @block_body_statement_casestatement::Lsp
-        // line 3300
+        .line 3300
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Lsp
         ldnull
@@ -16797,7 +16797,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 3301
+        .line 3301
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Lsp
         ldfld int32 T_structure::Form
@@ -16814,16 +16814,16 @@
         ceq
     L_OR_shortcut_2:
         brfalse L_else_3
-        // line 3302
+        .line 3302
         ldc.i4 144
         call void Error(int32 Ferrnr)
-        // line 3302
+        .line 3302
         ldloc _F
         ldnull
         stfld void* @block_body_statement_casestatement::Lsp
         br L_if_end_4
     L_else_3:
-        // line 3303
+        .line 3303
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_casestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -16835,7 +16835,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_5
-        // line 3303
+        .line 3303
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_casestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -16850,7 +16850,7 @@
     L_if_end_5:
     L_if_end_4:
     L_if_end_1:
-        // line 3304
+        .line 3304
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_casestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -16862,47 +16862,47 @@
         ldloc _F
         ldfld int32 @block_body_statement_casestatement::Lcix
         call instance void @block_body::Genujpxjp(int8 Fop, int32 Fp2)
-        // line 3305
+        .line 3305
         ldsfld int32 _G::Sy
         ldc.i4 42
         ceq
         brfalse L_else_6
-        // line 3305
+        .line 3305
         call void Insymbol()
         br L_if_end_7
     L_else_6:
-        // line 3305
+        .line 3305
         ldc.i4 8
         call void Error(int32 Ferrnr)
     L_if_end_7:
-        // line 3306
+        .line 3306
         ldloc _F
         ldnull
         stfld void* @block_body_statement_casestatement::Fstptr
-        // line 3306
+        .line 3306
         ldloc _F
         ldflda int32 @block_body_statement_casestatement::Laddr
         call void Genlabel(int32& Nxtlab)
-        // line 3307
+        .line 3307
     L_repeat_8:
-        // line 3308
+        .line 3308
         ldloc _F
         ldnull
         stfld void* @block_body_statement_casestatement::Lpt3
-        // line 3308
+        .line 3308
         ldloc _F
         ldflda int32 @block_body_statement_casestatement::Lcix1
         call void Genlabel(int32& Nxtlab)
-        // line 3309
+        .line 3309
         ldloc $tmpSetLiteral2
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_setty s, int32 val)
         ldc.i4.0
         ceq
         brfalse L_if_end_9
-        // line 3311
+        .line 3311
     L_repeat_10:
-        // line 3311
+        .line 3311
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_casestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -16924,7 +16924,7 @@
         ldloc _F
         ldflda valuetype T_valu @block_body_statement_casestatement::Lval
         call instance void @block::Constant(valuetype T_setty Fsys, void*& Fsp, valuetype T_valu& Fvalu)
-        // line 3312
+        .line 3312
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Lsp
         ldnull
@@ -16932,7 +16932,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_11
-        // line 3313
+        .line 3313
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_casestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -16943,19 +16943,19 @@
         ldfld void* @block_body_statement_casestatement::Lsp1
         call instance bool @block::Comptypes(void* Fsp1, void* Fsp2)
         brfalse L_else_12
-        // line 3314
+        .line 3314
         ldloc _F
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Fstptr
         stfld void* @block_body_statement_casestatement::Lpt1
-        // line 3314
+        .line 3314
         ldloc _F
         ldnull
         stfld void* @block_body_statement_casestatement::Lpt2
-        // line 3315
+        .line 3315
         br L_while_test_15
     L_while_14:
-        // line 3318
+        .line 3318
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Lpt1
         ldfld int32 T_block_body_statement_casestatement_caseinfo::Cslab
@@ -16966,7 +16966,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_16
-        // line 3319
+        .line 3319
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Lpt1
         ldfld int32 T_block_body_statement_casestatement_caseinfo::Cslab
@@ -16975,19 +16975,19 @@
         ldfld int32 T_valu::Ival
         ceq
         brfalse L_if_end_17
-        // line 3319
+        .line 3319
         ldc.i4 156
         call void Error(int32 Ferrnr)
     L_if_end_17:
-        // line 3320
+        .line 3320
         br L_1
     L_if_end_16:
-        // line 3322
+        .line 3322
         ldloc _F
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Lpt1
         stfld void* @block_body_statement_casestatement::Lpt2
-        // line 3322
+        .line 3322
         ldloc _F
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Lpt1
@@ -17001,46 +17001,46 @@
         ldc.i4.0
         ceq
         brtrue L_while_14
-        // line 3324
+        .line 3324
     L_1:
-        // line 3324
+        .line 3324
         ldloc _F
         ldc.i4 16
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_body_statement_casestatement::Lpt3
-        // line 3326
+        .line 3326
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Lpt3
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Lpt1
         stfld void* T_block_body_statement_casestatement_caseinfo::Next
-        // line 3326
+        .line 3326
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Lpt3
         ldloc _F
         ldflda valuetype T_valu @block_body_statement_casestatement::Lval
         ldfld int32 T_valu::Ival
         stfld int32 T_block_body_statement_casestatement_caseinfo::Cslab
-        // line 3327
+        .line 3327
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Lpt3
         ldloc _F
         ldfld int32 @block_body_statement_casestatement::Lcix1
         stfld int32 T_block_body_statement_casestatement_caseinfo::Csstart
-        // line 3329
+        .line 3329
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Lpt2
         ldnull
         ceq
         brfalse L_else_18
-        // line 3329
+        .line 3329
         ldloc _F
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Lpt3
         stfld void* @block_body_statement_casestatement::Fstptr
         br L_if_end_19
     L_else_18:
-        // line 3330
+        .line 3330
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Lpt2
         ldloc _F
@@ -17049,12 +17049,12 @@
     L_if_end_19:
         br L_if_end_13
     L_else_12:
-        // line 3332
+        .line 3332
         ldc.i4 147
         call void Error(int32 Ferrnr)
     L_if_end_13:
     L_if_end_11:
-        // line 3333
+        .line 3333
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_casestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -17065,7 +17065,7 @@
         ldc.i4.0
         ceq
         stfld bool @block::Test
-        // line 3334
+        .line 3334
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_casestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -17074,7 +17074,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_20
-        // line 3334
+        .line 3334
         call void Insymbol()
     L_if_end_20:
         ldloc _F
@@ -17083,29 +17083,29 @@
         ldfld class @block @block_body::_slink
         ldfld bool @block::Test
         brfalse L_repeat_10
-        // line 3336
+        .line 3336
         ldsfld int32 _G::Sy
         ldc.i4 16
         ceq
         brfalse L_else_21
-        // line 3336
+        .line 3336
         call void Insymbol()
         br L_if_end_22
     L_else_21:
-        // line 3336
+        .line 3336
         ldc.i4 5
         call void Error(int32 Ferrnr)
     L_if_end_22:
-        // line 3337
+        .line 3337
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_casestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
         ldloc _F
         ldfld int32 @block_body_statement_casestatement::Lcix1
         call instance void @block_body::Putlabel(int32 Labname)
-        // line 3338
+        .line 3338
     L_repeat_23:
-        // line 3338
+        .line 3338
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_casestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -17128,7 +17128,7 @@
         ldc.i4.0
         ceq
         brfalse L_repeat_23
-        // line 3340
+        .line 3340
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Lpt3
         ldnull
@@ -17136,7 +17136,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_24
-        // line 3341
+        .line 3341
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_casestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -17151,7 +17151,7 @@
     L_if_end_24:
         /* nop */
     L_if_end_9:
-        // line 3343
+        .line 3343
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_casestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -17162,7 +17162,7 @@
         ldc.i4.0
         ceq
         stfld bool @block::Test
-        // line 3344
+        .line 3344
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_casestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -17171,7 +17171,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_25
-        // line 3344
+        .line 3344
         call void Insymbol()
     L_if_end_25:
         ldloc _F
@@ -17180,14 +17180,14 @@
         ldfld class @block @block_body::_slink
         ldfld bool @block::Test
         brfalse L_repeat_8
-        // line 3346
+        .line 3346
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_casestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
         ldloc _F
         ldfld int32 @block_body_statement_casestatement::Lcix
         call instance void @block_body::Putlabel(int32 Labname)
-        // line 3347
+        .line 3347
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Fstptr
         ldnull
@@ -17195,41 +17195,41 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_26
-        // line 3348
+        .line 3348
         ldloc _F
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Fstptr
         ldfld int32 T_block_body_statement_casestatement_caseinfo::Cslab
         stfld int32 @block_body_statement_casestatement::Lmax
-        // line 3350
+        .line 3350
         ldloc _F
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Fstptr
         stfld void* @block_body_statement_casestatement::Lpt1
-        // line 3350
+        .line 3350
         ldloc _F
         ldnull
         stfld void* @block_body_statement_casestatement::Fstptr
-        // line 3351
+        .line 3351
     L_repeat_27:
-        // line 3351
+        .line 3351
         ldloc _F
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Lpt1
         ldfld void* T_block_body_statement_casestatement_caseinfo::Next
         stfld void* @block_body_statement_casestatement::Lpt2
-        // line 3351
+        .line 3351
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Lpt1
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Fstptr
         stfld void* T_block_body_statement_casestatement_caseinfo::Next
-        // line 3352
+        .line 3352
         ldloc _F
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Lpt1
         stfld void* @block_body_statement_casestatement::Fstptr
-        // line 3352
+        .line 3352
         ldloc _F
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Lpt2
@@ -17239,13 +17239,13 @@
         ldnull
         ceq
         brfalse L_repeat_27
-        // line 3354
+        .line 3354
         ldloc _F
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Fstptr
         ldfld int32 T_block_body_statement_casestatement_caseinfo::Cslab
         stfld int32 @block_body_statement_casestatement::Lmin
-        // line 3355
+        .line 3355
         ldloc _F
         ldfld int32 @block_body_statement_casestatement::Lmax
         ldloc _F
@@ -17254,7 +17254,7 @@
         ldc.i4 1000
         clt
         brfalse L_else_28
-        // line 3357
+        .line 3357
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_casestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -17269,7 +17269,7 @@
         ldfld int32 @block_body_statement_casestatement::Lmax
         ldsfld void* _G::Intptr
         call instance void @block_body::Gen2t(int8 Fop, int32 Fp1, int32 Fp2, void* Fsp)
-        // line 3358
+        .line 3358
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_casestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -17282,7 +17282,7 @@
         ldloc _F
         ldfld int32 @block_body_statement_casestatement::Lmin
         call instance void @block_body::Gen2(int8 Fop, int32 Fp1, int32 Fp2)
-        // line 3358
+        .line 3358
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_casestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -17292,11 +17292,11 @@
         ldc.i4 63
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         call instance void @block_body::Gen0(int8 Fop)
-        // line 3358
+        .line 3358
         ldloc _F
         ldflda int32 @block_body_statement_casestatement::Lcix
         call void Genlabel(int32& Nxtlab)
-        // line 3359
+        .line 3359
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_casestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -17308,19 +17308,19 @@
         ldloc _F
         ldfld int32 @block_body_statement_casestatement::Lcix
         call instance void @block_body::Genujpxjp(int8 Fop, int32 Fp2)
-        // line 3359
+        .line 3359
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_casestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
         ldloc _F
         ldfld int32 @block_body_statement_casestatement::Lcix
         call instance void @block_body::Putlabel(int32 Labname)
-        // line 3360
+        .line 3360
     L_repeat_30:
-        // line 3363
+        .line 3363
         br L_while_test_32
     L_while_31:
-        // line 3364
+        .line 3364
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_casestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -17330,7 +17330,7 @@
         ldc.i4 63
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         call instance void @block_body::Gen0(int8 Fop)
-        // line 3365
+        .line 3365
         ldloc _F
         ldloc _F
         ldfld int32 @block_body_statement_casestatement::Lmin
@@ -17345,7 +17345,7 @@
         ldfld int32 @block_body_statement_casestatement::Lmin
         cgt
         brtrue L_while_31
-        // line 3367
+        .line 3367
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_casestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -17358,13 +17358,13 @@
         ldfld void* @block_body_statement_casestatement::Fstptr
         ldfld int32 T_block_body_statement_casestatement_caseinfo::Csstart
         call instance void @block_body::Genujpxjp(int8 Fop, int32 Fp2)
-        // line 3368
+        .line 3368
         ldloc _F
         ldloc _F
         ldfld void* @block_body_statement_casestatement::Fstptr
         ldfld void* T_block_body_statement_casestatement_caseinfo::Next
         stfld void* @block_body_statement_casestatement::Fstptr
-        // line 3368
+        .line 3368
         ldloc _F
         ldloc _F
         ldfld int32 @block_body_statement_casestatement::Lmin
@@ -17376,7 +17376,7 @@
         ldnull
         ceq
         brfalse L_repeat_30
-        // line 3371
+        .line 3371
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_casestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -17385,21 +17385,21 @@
         call instance void @block_body::Putlabel(int32 Labname)
         br L_if_end_29
     L_else_28:
-        // line 3373
+        .line 3373
         ldc.i4 157
         call void Error(int32 Ferrnr)
     L_if_end_29:
     L_if_end_26:
-        // line 3375
+        .line 3375
         ldsfld int32 _G::Sy
         ldc.i4 39
         ceq
         brfalse L_else_33
-        // line 3375
+        .line 3375
         call void Insymbol()
         br L_if_end_34
     L_else_33:
-        // line 3375
+        .line 3375
         ldc.i4 13
         call void Error(int32 Ferrnr)
     L_if_end_34:
@@ -17408,7 +17408,7 @@
         ret
     }
 
-// line 3378
+.line 3378
 
     .method public
     void Repeatstatement()
@@ -17442,20 +17442,20 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 3380
+        .line 3380
         ldloc _F
         ldflda int32 @block_body_statement_repeatstatement::Laddr
         call void Genlabel(int32& Nxtlab)
-        // line 3380
+        .line 3380
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_repeatstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
         ldloc _F
         ldfld int32 @block_body_statement_repeatstatement::Laddr
         call instance void @block_body::Putlabel(int32 Labname)
-        // line 3381
+        .line 3381
     L_repeat_1:
-        // line 3381
+        .line 3381
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_repeatstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -17472,12 +17472,12 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body::Statement(valuetype T_setty Fsys)
-        // line 3382
+        .line 3382
         ldsfld valuetype T_setty _G::Statbegsys
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_setty s, int32 val)
         brfalse L_if_end_2
-        // line 3382
+        .line 3382
         ldc.i4 14
         call void Error(int32 Ferrnr)
     L_if_end_2:
@@ -17487,14 +17487,14 @@
         ldc.i4.0
         ceq
         brfalse L_repeat_1
-        // line 3384
+        .line 3384
         br L_while_test_4
     L_while_3:
-        // line 3385
+        .line 3385
         call void Insymbol()
-        // line 3386
+        .line 3386
     L_repeat_5:
-        // line 3386
+        .line 3386
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_repeatstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -17511,12 +17511,12 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body::Statement(valuetype T_setty Fsys)
-        // line 3387
+        .line 3387
         ldsfld valuetype T_setty _G::Statbegsys
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_setty s, int32 val)
         brfalse L_if_end_6
-        // line 3387
+        .line 3387
         ldc.i4 14
         call void Error(int32 Ferrnr)
     L_if_end_6:
@@ -17532,21 +17532,21 @@
         ldc.i4 13
         ceq
         brtrue L_while_3
-        // line 3390
+        .line 3390
         ldsfld int32 _G::Sy
         ldc.i4 41
         ceq
         brfalse L_else_7
-        // line 3391
+        .line 3391
         call void Insymbol()
-        // line 3391
+        .line 3391
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_repeatstatement::_slink
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_repeatstatement::_slink
         ldfld valuetype T_setty @block_body_statement::Fsys
         call instance void @block_body_statement::Expression(valuetype T_setty Fsys)
-        // line 3391
+        .line 3391
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_repeatstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -17555,7 +17555,7 @@
         call instance void @block_body::Genfjp(int32 Faddr)
         br L_if_end_8
     L_else_7:
-        // line 3393
+        .line 3393
         ldc.i4 53
         call void Error(int32 Ferrnr)
     L_if_end_8:
@@ -17564,7 +17564,7 @@
         ret
     }
 
-// line 3396
+.line 3396
 
     .method public
     void Whilestatement()
@@ -17587,18 +17587,18 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 3398
+        .line 3398
         ldloc _F
         ldflda int32 @block_body_statement_whilestatement::Laddr
         call void Genlabel(int32& Nxtlab)
-        // line 3398
+        .line 3398
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_whilestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
         ldloc _F
         ldfld int32 @block_body_statement_whilestatement::Laddr
         call instance void @block_body::Putlabel(int32 Labname)
-        // line 3399
+        .line 3399
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_whilestatement::_slink
         ldloc _F
@@ -17614,31 +17614,31 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement::Expression(valuetype T_setty Fsys)
-        // line 3399
+        .line 3399
         ldloc _F
         ldflda int32 @block_body_statement_whilestatement::Lcix
         call void Genlabel(int32& Nxtlab)
-        // line 3399
+        .line 3399
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_whilestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
         ldloc _F
         ldfld int32 @block_body_statement_whilestatement::Lcix
         call instance void @block_body::Genfjp(int32 Faddr)
-        // line 3400
+        .line 3400
         ldsfld int32 _G::Sy
         ldc.i4 43
         ceq
         brfalse L_else_1
-        // line 3400
+        .line 3400
         call void Insymbol()
         br L_if_end_2
     L_else_1:
-        // line 3400
+        .line 3400
         ldc.i4 54
         call void Error(int32 Ferrnr)
     L_if_end_2:
-        // line 3401
+        .line 3401
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_whilestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -17646,7 +17646,7 @@
         ldfld class @block_body_statement @block_body_statement_whilestatement::_slink
         ldfld valuetype T_setty @block_body_statement::Fsys
         call instance void @block_body::Statement(valuetype T_setty Fsys)
-        // line 3401
+        .line 3401
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_whilestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -17658,7 +17658,7 @@
         ldloc _F
         ldfld int32 @block_body_statement_whilestatement::Laddr
         call instance void @block_body::Genujpxjp(int8 Fop, int32 Fp2)
-        // line 3401
+        .line 3401
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_whilestatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -17670,7 +17670,7 @@
         ret
     }
 
-// line 3404
+.line 3404
 
     .method public
     void Forstatement()
@@ -17747,31 +17747,31 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 3408
+        .line 3408
         ldloc _F
         ldsfld int32 _G::Lc
         stfld int32 @block_body_statement_forstatement::Llc
-        // line 3410
+        .line 3410
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_forstatement::Lattr
         ldnull
         stfld void* T_attr::Typtr
-        // line 3410
+        .line 3410
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_forstatement::Lattr
         ldc.i4 1
         stfld int32 T_attr::Kind
-        // line 3411
+        .line 3411
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_forstatement::Lattr
         ldc.i4 0
         stfld int32 T_attr::Access
-        // line 3411
+        .line 3411
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_forstatement::Lattr
         ldsfld int8 _G::Level
         stfld int8 T_attr::Vlevel
-        // line 3411
+        .line 3411
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_forstatement::Lattr
         ldc.i4 0
@@ -17780,18 +17780,18 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_attr::Dplmt
-        // line 3413
+        .line 3413
         ldsfld int32 _G::Sy
         ldc.i4 0
         ceq
         brfalse L_else_1
-        // line 3414
+        .line 3414
         ldloc $tmpSetLiteral1
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldflda void* @block_body_statement::Lcp
         call void Searchid(valuetype T_setofids Fidcls, void*& Fcp)
-        // line 3416
+        .line 3416
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_forstatement::Lattr
         ldloc _F
@@ -17799,12 +17799,12 @@
         ldfld void* @block_body_statement::Lcp
         ldfld void* T_identifier::Idtype
         stfld void* T_attr::Typtr
-        // line 3416
+        .line 3416
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_forstatement::Lattr
         ldc.i4 1
         stfld int32 T_attr::Kind
-        // line 3417
+        .line 3417
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld void* @block_body_statement::Lcp
@@ -17812,12 +17812,12 @@
         ldc.i4 0
         ceq
         brfalse L_else_3
-        // line 3418
+        .line 3418
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_forstatement::Lattr
         ldc.i4 0
         stfld int32 T_attr::Access
-        // line 3418
+        .line 3418
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_forstatement::Lattr
         ldloc _F
@@ -17825,7 +17825,7 @@
         ldfld void* @block_body_statement::Lcp
         ldfld int8 T_identifier::Vlev
         stfld int8 T_attr::Vlevel
-        // line 3419
+        .line 3419
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_forstatement::Lattr
         ldloc _F
@@ -17835,16 +17835,16 @@
         stfld int32 T_attr::Dplmt
         br L_if_end_4
     L_else_3:
-        // line 3421
+        .line 3421
         ldc.i4 155
         call void Error(int32 Ferrnr)
-        // line 3421
+        .line 3421
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_forstatement::Lattr
         ldnull
         stfld void* T_attr::Typtr
     L_if_end_4:
-        // line 3423
+        .line 3423
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_forstatement::Lattr
         ldfld void* T_attr::Typtr
@@ -17853,7 +17853,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_5
-        // line 3424
+        .line 3424
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_forstatement::Lattr
         ldfld void* T_attr::Typtr
@@ -17874,24 +17874,24 @@
         call instance bool @block::Comptypes(void* Fsp1, void* Fsp2)
     L_OR_shortcut_6:
         brfalse L_if_end_7
-        // line 3426
+        .line 3426
         ldc.i4 143
         call void Error(int32 Ferrnr)
-        // line 3426
+        .line 3426
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_forstatement::Lattr
         ldnull
         stfld void* T_attr::Typtr
     L_if_end_7:
     L_if_end_5:
-        // line 3427
+        .line 3427
         call void Insymbol()
         br L_if_end_2
     L_else_1:
-        // line 3430
+        .line 3430
         ldc.i4 2
         call void Error(int32 Ferrnr)
-        // line 3430
+        .line 3430
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -17910,14 +17910,14 @@
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block::Skip(valuetype T_setty Fsys)
     L_if_end_2:
-        // line 3431
+        .line 3431
         ldsfld int32 _G::Sy
         ldc.i4 17
         ceq
         brfalse L_else_8
-        // line 3432
+        .line 3432
         call void Insymbol()
-        // line 3432
+        .line 3432
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldloc _F
@@ -17933,7 +17933,7 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement::Expression(valuetype T_setty Fsys)
-        // line 3433
+        .line 3433
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -17941,7 +17941,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_10
-        // line 3434
+        .line 3434
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
@@ -17950,12 +17950,12 @@
         ldc.i4.0
         ceq
         brfalse L_else_11
-        // line 3434
+        .line 3434
         ldc.i4 144
         call void Error(int32 Ferrnr)
         br L_if_end_12
     L_else_11:
-        // line 3436
+        .line 3436
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -17967,12 +17967,12 @@
         ldfld void* T_attr::Typtr
         call instance bool @block::Comptypes(void* Fsp1, void* Fsp2)
         brfalse L_else_13
-        // line 3437
+        .line 3437
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Load()
-        // line 3437
+        .line 3437
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -17981,7 +17981,7 @@
         call instance void @block_body::Store(valuetype T_attr& Fattr)
         br L_if_end_14
     L_else_13:
-        // line 3438
+        .line 3438
         ldc.i4 145
         call void Error(int32 Ferrnr)
     L_if_end_14:
@@ -17989,10 +17989,10 @@
     L_if_end_10:
         br L_if_end_9
     L_else_8:
-        // line 3441
+        .line 3441
         ldc.i4 51
         call void Error(int32 Ferrnr)
-        // line 3441
+        .line 3441
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -18011,18 +18011,18 @@
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block::Skip(valuetype T_setty Fsys)
     L_if_end_9:
-        // line 3442
+        .line 3442
         ldloc $tmpSetLiteral5
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_setty s, int32 val)
         brfalse L_else_15
-        // line 3443
+        .line 3443
         ldloc _F
         ldsfld int32 _G::Sy
         stfld int32 @block_body_statement_forstatement::Lsy
-        // line 3443
+        .line 3443
         call void Insymbol()
-        // line 3443
+        .line 3443
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldloc _F
@@ -18038,7 +18038,7 @@
         call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block_body_statement::Expression(valuetype T_setty Fsys)
-        // line 3444
+        .line 3444
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -18046,7 +18046,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_17
-        // line 3445
+        .line 3445
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
@@ -18055,12 +18055,12 @@
         ldc.i4.0
         ceq
         brfalse L_else_18
-        // line 3445
+        .line 3445
         ldc.i4 144
         call void Error(int32 Ferrnr)
         br L_if_end_19
     L_else_18:
-        // line 3447
+        .line 3447
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -18072,12 +18072,12 @@
         ldfld void* T_attr::Typtr
         call instance bool @block::Comptypes(void* Fsp1, void* Fsp2)
         brfalse L_else_20
-        // line 3448
+        .line 3448
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Load()
-        // line 3449
+        .line 3449
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -18090,7 +18090,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_22
-        // line 3450
+        .line 3450
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -18103,11 +18103,11 @@
         ldfld void* T_attr::Typtr
         call instance void @block_body::Gen0t(int8 Fop, void* Fsp)
     L_if_end_22:
-        // line 3451
+        .line 3451
         ldsfld void* _G::Intptr
         ldsflda int32 _G::Lc
         call void Align(void* Fsp, int32& Flc)
-        // line 3452
+        .line 3452
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -18120,27 +18120,27 @@
         ldsfld int32 _G::Lc
         ldsfld void* _G::Intptr
         call instance void @block_body::Gen2t(int8 Fop, int32 Fp1, int32 Fp2, void* Fsp)
-        // line 3453
+        .line 3453
         ldloc _F
         ldflda int32 @block_body_statement_forstatement::Laddr
         call void Genlabel(int32& Nxtlab)
-        // line 3453
+        .line 3453
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
         ldloc _F
         ldfld int32 @block_body_statement_forstatement::Laddr
         call instance void @block_body::Putlabel(int32 Labname)
-        // line 3454
+        .line 3454
         ldloc _F
         ldfld valuetype T_attr @block_body_statement_forstatement::Lattr
         stsfld valuetype T_attr _G::Gattr
-        // line 3454
+        .line 3454
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Load()
-        // line 3455
+        .line 3455
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -18152,7 +18152,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_23
-        // line 3456
+        .line 3456
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -18165,7 +18165,7 @@
         ldfld void* T_attr::Typtr
         call instance void @block_body::Gen0t(int8 Fop, void* Fsp)
     L_if_end_23:
-        // line 3457
+        .line 3457
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -18178,7 +18178,7 @@
         ldsfld int32 _G::Lc
         ldsfld void* _G::Intptr
         call instance void @block_body::Gen2t(int8 Fop, int32 Fp1, int32 Fp2, void* Fsp)
-        // line 3458
+        .line 3458
         ldsfld int32 _G::Lc
         ldc.i4 1
         add
@@ -18187,7 +18187,7 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int32 _G::Lc
-        // line 3459
+        .line 3459
         ldsfld int32 _G::Lc
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
@@ -18195,20 +18195,20 @@
         ldfld int32 @block_body::Lcmax
         cgt
         brfalse L_if_end_24
-        // line 3459
+        .line 3459
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
         ldsfld int32 _G::Lc
         stfld int32 @block_body::Lcmax
     L_if_end_24:
-        // line 3460
+        .line 3460
         ldloc _F
         ldfld int32 @block_body_statement_forstatement::Lsy
         ldc.i4 44
         ceq
         brfalse L_else_25
-        // line 3460
+        .line 3460
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -18222,7 +18222,7 @@
         call instance void @block_body::Gen2(int8 Fop, int32 Fp1, int32 Fp2)
         br L_if_end_26
     L_else_25:
-        // line 3461
+        .line 3461
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -18238,7 +18238,7 @@
         /* nop */
         br L_if_end_21
     L_else_20:
-        // line 3463
+        .line 3463
         ldc.i4 145
         call void Error(int32 Ferrnr)
     L_if_end_21:
@@ -18246,10 +18246,10 @@
     L_if_end_17:
         br L_if_end_16
     L_else_15:
-        // line 3465
+        .line 3465
         ldc.i4 55
         call void Error(int32 Ferrnr)
-        // line 3465
+        .line 3465
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -18268,11 +18268,11 @@
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block::Skip(valuetype T_setty Fsys)
     L_if_end_16:
-        // line 3466
+        .line 3466
         ldloc _F
         ldflda int32 @block_body_statement_forstatement::Lcix
         call void Genlabel(int32& Nxtlab)
-        // line 3466
+        .line 3466
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -18284,20 +18284,20 @@
         ldloc _F
         ldfld int32 @block_body_statement_forstatement::Lcix
         call instance void @block_body::Genujpxjp(int8 Fop, int32 Fp2)
-        // line 3467
+        .line 3467
         ldsfld int32 _G::Sy
         ldc.i4 43
         ceq
         brfalse L_else_27
-        // line 3467
+        .line 3467
         call void Insymbol()
         br L_if_end_28
     L_else_27:
-        // line 3467
+        .line 3467
         ldc.i4 54
         call void Error(int32 Ferrnr)
     L_if_end_28:
-        // line 3468
+        .line 3468
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -18305,22 +18305,22 @@
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld valuetype T_setty @block_body_statement::Fsys
         call instance void @block_body::Statement(valuetype T_setty Fsys)
-        // line 3469
+        .line 3469
         ldloc _F
         ldfld valuetype T_attr @block_body_statement_forstatement::Lattr
         stsfld valuetype T_attr _G::Gattr
-        // line 3469
+        .line 3469
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Load()
-        // line 3470
+        .line 3470
         ldloc _F
         ldfld int32 @block_body_statement_forstatement::Lsy
         ldc.i4 44
         ceq
         brfalse L_else_29
-        // line 3470
+        .line 3470
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -18335,7 +18335,7 @@
         call instance void @block_body::Gen1t(int8 Fop, int32 Fp2, void* Fsp)
         br L_if_end_30
     L_else_29:
-        // line 3471
+        .line 3471
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -18349,14 +18349,14 @@
         ldfld void* T_attr::Typtr
         call instance void @block_body::Gen1t(int8 Fop, int32 Fp2, void* Fsp)
     L_if_end_30:
-        // line 3472
+        .line 3472
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
         ldloc _F
         ldflda valuetype T_attr @block_body_statement_forstatement::Lattr
         call instance void @block_body::Store(valuetype T_attr& Fattr)
-        // line 3472
+        .line 3472
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -18368,14 +18368,14 @@
         ldloc _F
         ldfld int32 @block_body_statement_forstatement::Laddr
         call instance void @block_body::Genujpxjp(int8 Fop, int32 Fp2)
-        // line 3472
+        .line 3472
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_forstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
         ldloc _F
         ldfld int32 @block_body_statement_forstatement::Lcix
         call instance void @block_body::Putlabel(int32 Labname)
-        // line 3473
+        .line 3473
         ldloc _F
         ldfld int32 @block_body_statement_forstatement::Llc
         stsfld int32 _G::Lc
@@ -18385,7 +18385,7 @@
         ret
     }
 
-// line 3477
+.line 3477
 
     .method public
     void Withstatement()
@@ -18419,7 +18419,7 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 3479
+        .line 3479
         ldloc _F
         ldc.i4 0
         dup
@@ -18427,35 +18427,35 @@
         ldc.i4 20
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int8 @block_body_statement_withstatement::Lcnt1
-        // line 3479
+        .line 3479
         ldloc _F
         ldsfld int32 _G::Lc
         stfld int32 @block_body_statement_withstatement::Llc
-        // line 3480
+        .line 3480
     L_repeat_1:
-        // line 3481
+        .line 3481
         ldsfld int32 _G::Sy
         ldc.i4 0
         ceq
         brfalse L_else_2
-        // line 3482
+        .line 3482
         ldloc $tmpSetLiteral1
         ldloc _F
         ldflda void* @block_body_statement_withstatement::Lcp
         call void Searchid(valuetype T_setofids Fidcls, void*& Fcp)
-        // line 3482
+        .line 3482
         call void Insymbol()
         br L_if_end_3
     L_else_2:
-        // line 3483
+        .line 3483
         ldc.i4 2
         call void Error(int32 Ferrnr)
-        // line 3483
+        .line 3483
         ldloc _F
         ldsfld void* _G::Uvarptr
         stfld void* @block_body_statement_withstatement::Lcp
     L_if_end_3:
-        // line 3484
+        .line 3484
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_withstatement::_slink
         ldloc _F
@@ -18473,7 +18473,7 @@
         ldloc _F
         ldfld void* @block_body_statement_withstatement::Lcp
         call instance void @block_body_statement::Selector(valuetype T_setty Fsys, void* Fcp)
-        // line 3485
+        .line 3485
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -18481,19 +18481,19 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_4
-        // line 3486
+        .line 3486
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
         ldc.i4 5
         ceq
         brfalse L_else_5
-        // line 3487
+        .line 3487
         ldsfld int8 _G::Top
         ldc.i4 20
         clt
         brfalse L_else_7
-        // line 3488
+        .line 3488
         ldsfld int8 _G::Top
         ldc.i4 1
         add
@@ -18502,7 +18502,7 @@
         ldc.i4 20
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int8 _G::Top
-        // line 3488
+        .line 3488
         ldloc _F
         ldloc _F
         ldfld int8 @block_body_statement_withstatement::Lcnt1
@@ -18513,7 +18513,7 @@
         ldc.i4 20
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int8 @block_body_statement_withstatement::Lcnt1
-        // line 3490
+        .line 3490
         ldsflda valuetype T_array_23 _G::Display
         ldsfld int8 _G::Top
         call instance valuetype T_record_22& T_array_23::ldadr(int32)
@@ -18521,32 +18521,32 @@
         ldfld void* T_attr::Typtr
         ldfld void* T_structure::Fstfld
         stfld void* T_record_22::Fname
-        // line 3491
+        .line 3491
         ldsflda valuetype T_array_23 _G::Display
         ldsfld int8 _G::Top
         call instance valuetype T_record_22& T_array_23::ldadr(int32)
         ldnull
         stfld void* T_record_22::Flabel
-        // line 3493
+        .line 3493
         ldsflda valuetype T_attr _G::Gattr
         ldfld int32 T_attr::Access
         ldc.i4 0
         ceq
         brfalse L_else_9
-        // line 3495
+        .line 3495
         ldsflda valuetype T_array_23 _G::Display
         ldsfld int8 _G::Top
         call instance valuetype T_record_22& T_array_23::ldadr(int32)
         ldc.i4 1
         stfld int32 T_record_22::Occur
-        // line 3495
+        .line 3495
         ldsflda valuetype T_array_23 _G::Display
         ldsfld int8 _G::Top
         call instance valuetype T_record_22& T_array_23::ldadr(int32)
         ldsflda valuetype T_attr _G::Gattr
         ldfld int8 T_attr::Vlevel
         stfld int8 T_record_22::Clev
-        // line 3496
+        .line 3496
         ldsflda valuetype T_array_23 _G::Display
         ldsfld int8 _G::Top
         call instance valuetype T_record_22& T_array_23::ldadr(int32)
@@ -18555,16 +18555,16 @@
         stfld int32 T_record_22::Cdspl
         br L_if_end_10
     L_else_9:
-        // line 3499
+        .line 3499
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_withstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
         call instance void @block_body::Loadaddress()
-        // line 3500
+        .line 3500
         ldsfld void* _G::Nilptr
         ldsflda int32 _G::Lc
         call void Align(void* Fsp, int32& Flc)
-        // line 3501
+        .line 3501
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_withstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -18577,19 +18577,19 @@
         ldsfld int32 _G::Lc
         ldsfld void* _G::Nilptr
         call instance void @block_body::Gen2t(int8 Fop, int32 Fp1, int32 Fp2, void* Fsp)
-        // line 3503
+        .line 3503
         ldsflda valuetype T_array_23 _G::Display
         ldsfld int8 _G::Top
         call instance valuetype T_record_22& T_array_23::ldadr(int32)
         ldc.i4 2
         stfld int32 T_record_22::Occur
-        // line 3503
+        .line 3503
         ldsflda valuetype T_array_23 _G::Display
         ldsfld int8 _G::Top
         call instance valuetype T_record_22& T_array_23::ldadr(int32)
         ldsfld int32 _G::Lc
         stfld int32 T_record_22::Vdspl
-        // line 3504
+        .line 3504
         ldsfld int32 _G::Lc
         ldc.i4 1
         add
@@ -18598,7 +18598,7 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int32 _G::Lc
-        // line 3505
+        .line 3505
         ldsfld int32 _G::Lc
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_withstatement::_slink
@@ -18606,7 +18606,7 @@
         ldfld int32 @block_body::Lcmax
         cgt
         brfalse L_if_end_11
-        // line 3505
+        .line 3505
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_withstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -18616,18 +18616,18 @@
     L_if_end_10:
         br L_if_end_8
     L_else_7:
-        // line 3508
+        .line 3508
         ldc.i4 250
         call void Error(int32 Ferrnr)
     L_if_end_8:
         br L_if_end_6
     L_else_5:
-        // line 3509
+        .line 3509
         ldc.i4 140
         call void Error(int32 Ferrnr)
     L_if_end_6:
     L_if_end_4:
-        // line 3510
+        .line 3510
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_withstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -18638,7 +18638,7 @@
         ldc.i4.0
         ceq
         stfld bool @block::Test
-        // line 3511
+        .line 3511
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_withstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -18647,7 +18647,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_12
-        // line 3511
+        .line 3511
         call void Insymbol()
     L_if_end_12:
         ldloc _F
@@ -18656,20 +18656,20 @@
         ldfld class @block @block_body::_slink
         ldfld bool @block::Test
         brfalse L_repeat_1
-        // line 3513
+        .line 3513
         ldsfld int32 _G::Sy
         ldc.i4 43
         ceq
         brfalse L_else_13
-        // line 3513
+        .line 3513
         call void Insymbol()
         br L_if_end_14
     L_else_13:
-        // line 3513
+        .line 3513
         ldc.i4 54
         call void Error(int32 Ferrnr)
     L_if_end_14:
-        // line 3514
+        .line 3514
         ldloc _F
         ldfld class @block_body_statement @block_body_statement_withstatement::_slink
         ldfld class @block_body @block_body_statement::_slink
@@ -18677,7 +18677,7 @@
         ldfld class @block_body_statement @block_body_statement_withstatement::_slink
         ldfld valuetype T_setty @block_body_statement::Fsys
         call instance void @block_body::Statement(valuetype T_setty Fsys)
-        // line 3515
+        .line 3515
         ldsfld int8 _G::Top
         ldloc _F
         ldfld int8 @block_body_statement_withstatement::Lcnt1
@@ -18687,7 +18687,7 @@
         ldc.i4 20
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int8 _G::Top
-        // line 3515
+        .line 3515
         ldloc _F
         ldfld int32 @block_body_statement_withstatement::Llc
         stsfld int32 _G::Lc
@@ -18699,11 +18699,11 @@
 }
 
 
-// line 1895
+.line 1895
 //================================================================================
 // scope: block_body (level : 3)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE filerec = record;
 .class value explicit T_filerec
@@ -18745,7 +18745,7 @@
         ret
     }
 
-// line 1912
+.line 1912
 
     .method public
     void Mes(int32 i)
@@ -18766,7 +18766,7 @@
         stfld int32 @block_body_mes::i
     
     L_Entry:
-        // line 1913
+        .line 1913
         ldloc _F
         ldfld class @block_body @block_body_mes::_slink
         ldloc _F
@@ -18781,7 +18781,7 @@
         mul
         add
         stfld int32 @block_body::Topnew
-        // line 1914
+        .line 1914
         ldloc _F
         ldfld class @block_body @block_body_mes::_slink
         ldfld int32 @block_body::Topnew
@@ -18790,7 +18790,7 @@
         ldfld int32 @block_body::Topmax
         cgt
         brfalse L_if_end_1
-        // line 1914
+        .line 1914
         ldloc _F
         ldfld class @block_body @block_body_mes::_slink
         ldloc _F
@@ -18803,7 +18803,7 @@
         ret
     }
 
-// line 1917
+.line 1917
 
     .method public
     void Putic()
@@ -18820,14 +18820,14 @@
         stfld class @block_body @block_body_putic::_slink
     
     L_Entry:
-        // line 1918
+        .line 1918
         ldsfld int32 _G::Ic
         ldc.i4 10
         call int32 [lpcRuntime]LPC.Helpers::Mod(int32, int32)
         ldc.i4 0
         ceq
         brfalse L_if_end_1
-        // line 1918
+        .line 1918
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 105 // 'i'
@@ -18844,7 +18844,7 @@
         ret
     }
 
-// line 1920
+.line 1920
 
     .method public
     void Gen0(int8 Fop)
@@ -18865,14 +18865,14 @@
         stfld int8 @block_body_gen0::Fop
     
     L_Entry:
-        // line 1922
+        .line 1922
         ldsfld bool _G::Prcode
         brfalse L_if_end_1
-        // line 1922
+        .line 1922
         ldloc _F
         ldfld class @block_body @block_body_gen0::_slink
         call instance void @block_body::Putic()
-        // line 1922
+        .line 1922
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 4
@@ -18886,7 +18886,7 @@
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
     L_if_end_1:
-        // line 1923
+        .line 1923
         ldsfld int32 _G::Ic
         ldc.i4 1
         add
@@ -18895,7 +18895,7 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int32 _G::Ic
-        // line 1923
+        .line 1923
         ldloc _F
         ldfld class @block_body @block_body_gen0::_slink
         ldloc _F
@@ -18906,7 +18906,7 @@
         ret
     }
 
-// line 1926
+.line 1926
 
     .method public
     void Gen1(int8 Fop, int32 Fp2)
@@ -18938,14 +18938,14 @@
         stfld int32 @block_body_gen1::Fp2
     
     L_Entry:
-        // line 1929
+        .line 1929
         ldsfld bool _G::Prcode
         brfalse L_if_end_1
-        // line 1930
+        .line 1930
         ldloc _F
         ldfld class @block_body @block_body_gen1::_slink
         call instance void @block_body::Putic()
-        // line 1930
+        .line 1930
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 4
@@ -18958,13 +18958,13 @@
         call string T_array_100::arrayToString(valuetype T_array_100)
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
         pop
-        // line 1931
+        .line 1931
         ldloc _F
         ldfld int8 @block_body_gen1::Fop
         ldc.i4 30
         ceq
         brfalse L_else_2
-        // line 1932
+        .line 1932
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 12
@@ -18977,7 +18977,7 @@
         call string T_array_100::arrayToString(valuetype T_array_100)
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 1933
+        .line 1933
         ldloc _F
         ldfld class @block_body @block_body_gen1::_slink
         ldloc _F
@@ -18992,7 +18992,7 @@
         mul
         add
         stfld int32 @block_body::Topnew
-        // line 1934
+        .line 1934
         ldloc _F
         ldfld class @block_body @block_body_gen1::_slink
         ldfld int32 @block_body::Topnew
@@ -19001,7 +19001,7 @@
         ldfld int32 @block_body::Topmax
         cgt
         brfalse L_if_end_4
-        // line 1934
+        .line 1934
         ldloc _F
         ldfld class @block_body @block_body_gen1::_slink
         ldloc _F
@@ -19011,19 +19011,19 @@
     L_if_end_4:
         br L_if_end_3
     L_else_2:
-        // line 1938
+        .line 1938
         ldloc _F
         ldfld int8 @block_body_gen1::Fop
         ldc.i4 38
         ceq
         brfalse L_else_5
-        // line 1939
+        .line 1939
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 39 // '''
         call instance void [lpcRuntime]LPC.File::Write(uint8)
         pop
-        // line 1942
+        .line 1942
         ldloc _F
         ldfld class @block_body @block_body_gen1::_slink
         ldflda valuetype T_block_body_array_106 @block_body::Cstptr
@@ -19042,7 +19042,7 @@
         ldloc $tmpIndex2
         stfld int32 @block_body_gen1::k
     L_for_loop_7:
-        // line 1942
+        .line 1942
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 1
@@ -19075,7 +19075,7 @@
         br L_for_loop_7
     L_for_end_8:
         pop
-        // line 1943
+        .line 1943
         ldc.i4 100
         stloc $tmpEndValue4
         ldloc _F
@@ -19096,7 +19096,7 @@
         ldloc $tmpIndex5
         stfld int32 @block_body_gen1::k
     L_for_loop_9:
-        // line 1943
+        .line 1943
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 32 // ' '
@@ -19117,7 +19117,7 @@
     L_for_end_10:
         pop
         /* nop */
-        // line 1945
+        .line 1945
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 39 // '''
@@ -19125,13 +19125,13 @@
         call instance void [lpcRuntime]LPC.File::WriteLn()
         br L_if_end_6
     L_else_5:
-        // line 1947
+        .line 1947
         ldloc _F
         ldfld int8 @block_body_gen1::Fop
         ldc.i4 42
         ceq
         brfalse L_else_11
-        // line 1947
+        .line 1947
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldloc _F
@@ -19140,7 +19140,7 @@
         call instance void [lpcRuntime]LPC.File::WriteLn()
         br L_if_end_12
     L_else_11:
-        // line 1948
+        .line 1948
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 12
@@ -19151,7 +19151,7 @@
         call instance void [lpcRuntime]LPC.File::WriteLn()
     L_if_end_12:
     L_if_end_6:
-        // line 1949
+        .line 1949
         ldloc _F
         ldfld class @block_body @block_body_gen1::_slink
         ldloc _F
@@ -19159,7 +19159,7 @@
         call instance void @block_body::Mes(int32 i)
     L_if_end_3:
     L_if_end_1:
-        // line 1952
+        .line 1952
         ldsfld int32 _G::Ic
         ldc.i4 1
         add
@@ -19173,7 +19173,7 @@
         ret
     }
 
-// line 1955
+.line 1955
 
     .method public
     void Gen2(int8 Fop, int32 Fp1, int32 Fp2)
@@ -19211,14 +19211,14 @@
         stfld int32 @block_body_gen2::Fp2
     
     L_Entry:
-        // line 1958
+        .line 1958
         ldsfld bool _G::Prcode
         brfalse L_if_end_1
-        // line 1959
+        .line 1959
         ldloc _F
         ldfld class @block_body @block_body_gen2::_slink
         call instance void @block_body::Putic()
-        // line 1959
+        .line 1959
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 4
@@ -19231,7 +19231,7 @@
         call string T_array_100::arrayToString(valuetype T_array_100)
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
         pop
-        // line 1960
+        .line 1960
         ldloc _F
         ldfld int8 @block_body_gen2::Fop
         stloc $tmpSwitchValue1
@@ -19249,7 +19249,7 @@
         beq L_case_4
         br L_check_case_3
     L_case_4:
-        // line 1962
+        .line 1962
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 32 // ' '
@@ -19289,20 +19289,20 @@
         beq L_case_6
         br L_check_case_5
     L_case_6:
-        // line 1964
+        .line 1964
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldloc _F
         ldfld int32 @block_body_gen2::Fp1
         call instance void [lpcRuntime]LPC.File::Write(uint8)
         pop
-        // line 1965
+        .line 1965
         ldloc _F
         ldfld int32 @block_body_gen2::Fp1
         ldc.i4 109 // 'm'
         ceq
         brfalse L_if_end_7
-        // line 1965
+        .line 1965
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 11
@@ -19312,7 +19312,7 @@
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
         pop
     L_if_end_7:
-        // line 1966
+        .line 1966
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         call instance void [lpcRuntime]LPC.File::WriteLn()
         br L_case_end_2
@@ -19320,14 +19320,14 @@
         ldloc $tmpSwitchValue1
         ldc.i4 51
         bne.un L_case_end_2
-        // line 1969
+        .line 1969
         ldloc _F
         ldfld int32 @block_body_gen2::Fp1
         stloc $tmpSwitchValue2
         ldloc $tmpSwitchValue2
         ldc.i4 1
         bne.un L_check_case_9
-        // line 1970
+        .line 1970
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldstr "i "
@@ -19342,13 +19342,13 @@
         ldloc $tmpSwitchValue2
         ldc.i4 2
         bne.un L_check_case_10
-        // line 1971
+        .line 1971
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldstr "r "
         call instance void [lpcRuntime]LPC.File::Write(string)
         pop
-        // line 1973
+        .line 1973
         ldc.i4 100
         stloc $tmpEndValue3
         ldc.i4 1
@@ -19360,7 +19360,7 @@
         ldloc $tmpIndex4
         stfld int32 @block_body_gen2::k
     L_for_loop_11:
-        // line 1973
+        .line 1973
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldloc _F
@@ -19391,7 +19391,7 @@
         br L_for_loop_11
     L_for_end_12:
         pop
-        // line 1974
+        .line 1974
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         call instance void [lpcRuntime]LPC.File::WriteLn()
         br L_case_end_8
@@ -19399,7 +19399,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 3
         bne.un L_check_case_13
-        // line 1976
+        .line 1976
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldstr "b "
@@ -19414,7 +19414,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 4
         bne.un L_check_case_14
-        // line 1977
+        .line 1977
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 110 // 'n'
@@ -19425,7 +19425,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 6
         bne.un L_check_case_15
-        // line 1978
+        .line 1978
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 3
@@ -19445,13 +19445,13 @@
         ldloc $tmpSwitchValue2
         ldc.i4 5
         bne.un L_case_end_8
-        // line 1979
+        .line 1979
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 40 // '('
         call instance void [lpcRuntime]LPC.File::Write(uint8)
         pop
-        // line 1981
+        .line 1981
         ldc.i4 47
         stloc $tmpEndValue6
         ldc.i4 0
@@ -19463,7 +19463,7 @@
         ldloc $tmpIndex7
         stfld int32 @block_body_gen2::k
     L_for_loop_16:
-        // line 1982
+        .line 1982
         ldloc _F
         ldfld class @block_body @block_body_gen2::_slink
         ldflda valuetype T_block_body_array_106 @block_body::Cstptr
@@ -19476,7 +19476,7 @@
         ldfld int32 @block_body_gen2::k
         call bool _SetContains(valuetype T_setty s, int32 val)
         brfalse L_if_end_18
-        // line 1982
+        .line 1982
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 3
@@ -19500,7 +19500,7 @@
         br L_for_loop_16
     L_for_end_17:
         pop
-        // line 1983
+        .line 1983
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 41 // ')'
@@ -19510,7 +19510,7 @@
     L_case_end_2:
         /* nop */
     L_if_end_1:
-        // line 1988
+        .line 1988
         ldsfld int32 _G::Ic
         ldc.i4 1
         add
@@ -19519,7 +19519,7 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int32 _G::Ic
-        // line 1988
+        .line 1988
         ldloc _F
         ldfld class @block_body @block_body_gen2::_slink
         ldloc _F
@@ -19530,7 +19530,7 @@
         ret
     }
 
-// line 1991
+.line 1991
 
     .method public
     void Gentypindicator(void* Fsp)
@@ -19553,7 +19553,7 @@
         stfld void* @block_body_gentypindicator::Fsp
     
     L_Entry:
-        // line 1993
+        .line 1993
         ldloc _F
         ldfld void* @block_body_gentypindicator::Fsp
         ldnull
@@ -19561,7 +19561,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 1995
+        .line 1995
         ldloc _F
         ldfld void* @block_body_gentypindicator::Fsp
         ldfld int32 T_structure::Form
@@ -19569,13 +19569,13 @@
         ldloc $tmpSwitchValue1
         ldc.i4 0
         bne.un L_check_case_3
-        // line 1996
+        .line 1996
         ldloc _F
         ldfld void* @block_body_gentypindicator::Fsp
         ldsfld void* _G::Intptr
         ceq
         brfalse L_else_4
-        // line 1996
+        .line 1996
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 105 // 'i'
@@ -19583,13 +19583,13 @@
         pop
         br L_if_end_5
     L_else_4:
-        // line 1998
+        .line 1998
         ldloc _F
         ldfld void* @block_body_gentypindicator::Fsp
         ldsfld void* _G::Boolptr
         ceq
         brfalse L_else_6
-        // line 1998
+        .line 1998
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 98 // 'b'
@@ -19597,13 +19597,13 @@
         pop
         br L_if_end_7
     L_else_6:
-        // line 2000
+        .line 2000
         ldloc _F
         ldfld void* @block_body_gentypindicator::Fsp
         ldsfld void* _G::Charptr
         ceq
         brfalse L_else_8
-        // line 2000
+        .line 2000
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 99 // 'c'
@@ -19611,14 +19611,14 @@
         pop
         br L_if_end_9
     L_else_8:
-        // line 2002
+        .line 2002
         ldloc _F
         ldfld void* @block_body_gentypindicator::Fsp
         ldfld int32 T_structure::Scalkind
         ldc.i4 1
         ceq
         brfalse L_else_10
-        // line 2002
+        .line 2002
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 105 // 'i'
@@ -19626,7 +19626,7 @@
         pop
         br L_if_end_11
     L_else_10:
-        // line 2003
+        .line 2003
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 114 // 'r'
@@ -19641,7 +19641,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 1
         bne.un L_check_case_12
-        // line 2004
+        .line 2004
         ldloc _F
         ldfld class @block_body @block_body_gentypindicator::_slink
         ldloc _F
@@ -19653,7 +19653,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 2
         bne.un L_check_case_13
-        // line 2005
+        .line 2005
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 97 // 'a'
@@ -19664,7 +19664,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 3
         bne.un L_check_case_14
-        // line 2006
+        .line 2006
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 115 // 's'
@@ -19680,7 +19680,7 @@
         beq L_case_16
         br L_check_case_15
     L_case_16:
-        // line 2007
+        .line 2007
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 109 // 'm'
@@ -19699,7 +19699,7 @@
         beq L_case_17
         br L_case_end_2
     L_case_17:
-        // line 2008
+        .line 2008
         ldc.i4 500
         call void Error(int32 Ferrnr)
     L_case_end_2:
@@ -19709,7 +19709,7 @@
         ret
     }
 
-// line 2012
+.line 2012
 
     .method public
     void Gen0t(int8 Fop, void* Fsp)
@@ -19734,14 +19734,14 @@
         stfld void* @block_body_gen0t::Fsp
     
     L_Entry:
-        // line 2014
+        .line 2014
         ldsfld bool _G::Prcode
         brfalse L_if_end_1
-        // line 2015
+        .line 2015
         ldloc _F
         ldfld class @block_body @block_body_gen0t::_slink
         call instance void @block_body::Putic()
-        // line 2016
+        .line 2016
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 4
@@ -19754,18 +19754,18 @@
         call string T_array_100::arrayToString(valuetype T_array_100)
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
         pop
-        // line 2017
+        .line 2017
         ldloc _F
         ldfld class @block_body @block_body_gen0t::_slink
         ldloc _F
         ldfld void* @block_body_gen0t::Fsp
         call instance void @block_body::Gentypindicator(void* Fsp)
-        // line 2018
+        .line 2018
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         call instance void [lpcRuntime]LPC.File::WriteLn()
         /* nop */
     L_if_end_1:
-        // line 2020
+        .line 2020
         ldsfld int32 _G::Ic
         ldc.i4 1
         add
@@ -19774,7 +19774,7 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int32 _G::Ic
-        // line 2020
+        .line 2020
         ldloc _F
         ldfld class @block_body @block_body_gen0t::_slink
         ldloc _F
@@ -19785,7 +19785,7 @@
         ret
     }
 
-// line 2023
+.line 2023
 
     .method public
     void Gen1t(int8 Fop, int32 Fp2, void* Fsp)
@@ -19814,14 +19814,14 @@
         stfld void* @block_body_gen1t::Fsp
     
     L_Entry:
-        // line 2025
+        .line 2025
         ldsfld bool _G::Prcode
         brfalse L_if_end_1
-        // line 2026
+        .line 2026
         ldloc _F
         ldfld class @block_body @block_body_gen1t::_slink
         call instance void @block_body::Putic()
-        // line 2027
+        .line 2027
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 4
@@ -19834,13 +19834,13 @@
         call string T_array_100::arrayToString(valuetype T_array_100)
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
         pop
-        // line 2028
+        .line 2028
         ldloc _F
         ldfld class @block_body @block_body_gen1t::_slink
         ldloc _F
         ldfld void* @block_body_gen1t::Fsp
         call instance void @block_body::Gentypindicator(void* Fsp)
-        // line 2029
+        .line 2029
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 11
@@ -19850,7 +19850,7 @@
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
         call instance void [lpcRuntime]LPC.File::WriteLn()
     L_if_end_1:
-        // line 2031
+        .line 2031
         ldsfld int32 _G::Ic
         ldc.i4 1
         add
@@ -19859,7 +19859,7 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int32 _G::Ic
-        // line 2031
+        .line 2031
         ldloc _F
         ldfld class @block_body @block_body_gen1t::_slink
         ldloc _F
@@ -19870,7 +19870,7 @@
         ret
     }
 
-// line 2034
+.line 2034
 
     .method public
     void Gen2t(int8 Fop, int32 Fp1, int32 Fp2, void* Fsp)
@@ -19903,14 +19903,14 @@
         stfld void* @block_body_gen2t::Fsp
     
     L_Entry:
-        // line 2036
+        .line 2036
         ldsfld bool _G::Prcode
         brfalse L_if_end_1
-        // line 2037
+        .line 2037
         ldloc _F
         ldfld class @block_body @block_body_gen2t::_slink
         call instance void @block_body::Putic()
-        // line 2038
+        .line 2038
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 4
@@ -19923,13 +19923,13 @@
         call string T_array_100::arrayToString(valuetype T_array_100)
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
         pop
-        // line 2039
+        .line 2039
         ldloc _F
         ldfld class @block_body @block_body_gen2t::_slink
         ldloc _F
         ldfld void* @block_body_gen2t::Fsp
         call instance void @block_body::Gentypindicator(void* Fsp)
-        // line 2040
+        .line 2040
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 3
@@ -19958,7 +19958,7 @@
         call instance void [lpcRuntime]LPC.File::WriteLn()
         /* nop */
     L_if_end_1:
-        // line 2042
+        .line 2042
         ldsfld int32 _G::Ic
         ldc.i4 1
         add
@@ -19967,7 +19967,7 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int32 _G::Ic
-        // line 2042
+        .line 2042
         ldloc _F
         ldfld class @block_body @block_body_gen2t::_slink
         ldloc _F
@@ -19978,7 +19978,7 @@
         ret
     }
 
-// line 2045
+.line 2045
 
     .method public
     void Load()
@@ -19998,7 +19998,7 @@
         stfld class @block_body @block_body_load::_slink
     
     L_Entry:
-        // line 2048
+        .line 2048
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -20006,14 +20006,14 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 2050
+        .line 2050
         ldsflda valuetype T_attr _G::Gattr
         ldfld int32 T_attr::Kind
         stloc $tmpSwitchValue1
         ldloc $tmpSwitchValue1
         ldc.i4 0
         bne.un L_check_case_3
-        // line 2051
+        .line 2051
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldfld int32 T_structure::Form
@@ -20030,13 +20030,13 @@
         ceq
     L_AND_shortcut_4:
         brfalse L_else_5
-        // line 2052
+        .line 2052
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Boolptr
         ceq
         brfalse L_else_7
-        // line 2052
+        .line 2052
         ldloc _F
         ldfld class @block_body @block_body_load::_slink
         ldc.i4 51
@@ -20051,13 +20051,13 @@
         call instance void @block_body::Gen2(int8 Fop, int32 Fp1, int32 Fp2)
         br L_if_end_8
     L_else_7:
-        // line 2054
+        .line 2054
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Charptr
         ceq
         brfalse L_else_9
-        // line 2055
+        .line 2055
         ldloc _F
         ldfld class @block_body @block_body_load::_slink
         ldc.i4 51
@@ -20072,7 +20072,7 @@
         call instance void @block_body::Gen2(int8 Fop, int32 Fp1, int32 Fp2)
         br L_if_end_10
     L_else_9:
-        // line 2056
+        .line 2056
         ldloc _F
         ldfld class @block_body @block_body_load::_slink
         ldc.i4 51
@@ -20089,13 +20089,13 @@
     L_if_end_8:
         br L_if_end_6
     L_else_5:
-        // line 2058
+        .line 2058
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Nilptr
         ceq
         brfalse L_else_11
-        // line 2058
+        .line 2058
         ldloc _F
         ldfld class @block_body @block_body_load::_slink
         ldc.i4 51
@@ -20108,7 +20108,7 @@
         call instance void @block_body::Gen2(int8 Fop, int32 Fp1, int32 Fp2)
         br L_if_end_12
     L_else_11:
-        // line 2060
+        .line 2060
         ldloc _F
         ldfld class @block_body @block_body_load::_slink
         ldfld int8 @block_body::Cstptrix
@@ -20117,12 +20117,12 @@
         ldc.i4.0
         ceq
         brfalse L_else_13
-        // line 2060
+        .line 2060
         ldc.i4 254
         call void Error(int32 Ferrnr)
         br L_if_end_14
     L_else_13:
-        // line 2062
+        .line 2062
         ldloc _F
         ldfld class @block_body @block_body_load::_slink
         ldloc _F
@@ -20135,7 +20135,7 @@
         ldc.i4 65
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int8 @block_body::Cstptrix
-        // line 2063
+        .line 2063
         ldloc _F
         ldfld class @block_body @block_body_load::_slink
         ldflda valuetype T_block_body_array_106 @block_body::Cstptr
@@ -20147,13 +20147,13 @@
         ldflda valuetype T_valu T_attr::Cval
         ldfld void* T_valu::Valp
         stobj void*
-        // line 2064
+        .line 2064
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Realptr
         ceq
         brfalse L_else_15
-        // line 2065
+        .line 2065
         ldloc _F
         ldfld class @block_body @block_body_load::_slink
         ldc.i4 51
@@ -20168,7 +20168,7 @@
         call instance void @block_body::Gen2(int8 Fop, int32 Fp1, int32 Fp2)
         br L_if_end_16
     L_else_15:
-        // line 2067
+        .line 2067
         ldloc _F
         ldfld class @block_body @block_body_load::_slink
         ldc.i4 51
@@ -20190,14 +20190,14 @@
         ldloc $tmpSwitchValue1
         ldc.i4 1
         bne.un L_check_case_17
-        // line 2069
+        .line 2069
         ldsflda valuetype T_attr _G::Gattr
         ldfld int32 T_attr::Access
         stloc $tmpSwitchValue2
         ldloc $tmpSwitchValue2
         ldc.i4 0
         bne.un L_check_case_19
-        // line 2070
+        .line 2070
         ldsflda valuetype T_attr _G::Gattr
         ldfld int8 T_attr::Vlevel
         ldc.i4 1
@@ -20205,7 +20205,7 @@
         ldc.i4.0
         ceq
         brfalse L_else_20
-        // line 2071
+        .line 2071
         ldloc _F
         ldfld class @block_body @block_body_load::_slink
         ldc.i4 39
@@ -20220,7 +20220,7 @@
         call instance void @block_body::Gen1t(int8 Fop, int32 Fp2, void* Fsp)
         br L_if_end_21
     L_else_20:
-        // line 2072
+        .line 2072
         ldloc _F
         ldfld class @block_body @block_body_load::_slink
         ldc.i4 54
@@ -20243,7 +20243,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 1
         bne.un L_check_case_22
-        // line 2073
+        .line 2073
         ldloc _F
         ldfld class @block_body @block_body_load::_slink
         ldc.i4 35
@@ -20261,7 +20261,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 2
         bne.un L_case_end_18
-        // line 2074
+        .line 2074
         ldc.i4 400
         call void Error(int32 Ferrnr)
     L_case_end_18:
@@ -20272,7 +20272,7 @@
         bne.un L_case_end_2
         /* nop */
     L_case_end_2:
-        // line 2078
+        .line 2078
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 2
         stfld int32 T_attr::Kind
@@ -20282,7 +20282,7 @@
         ret
     }
 
-// line 2082
+.line 2082
 
     .method public
     void Store(valuetype T_attr& Fattr)
@@ -20309,7 +20309,7 @@
         stfld valuetype T_attr* @block_body_store::Fattr
     
     L_Entry:
-        // line 2085
+        .line 2085
         ldloc _F
         ldfld valuetype T_attr* @block_body_store::Fattr
         ldfld void* T_attr::Typtr
@@ -20318,7 +20318,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 2086
+        .line 2086
         ldloc _F
         ldfld valuetype T_attr* @block_body_store::Fattr
         ldfld int32 T_attr::Access
@@ -20326,7 +20326,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 0
         bne.un L_check_case_3
-        // line 2087
+        .line 2087
         ldloc _F
         ldfld valuetype T_attr* @block_body_store::Fattr
         ldfld int8 T_attr::Vlevel
@@ -20335,7 +20335,7 @@
         ldc.i4.0
         ceq
         brfalse L_else_4
-        // line 2087
+        .line 2087
         ldloc _F
         ldfld class @block_body @block_body_store::_slink
         ldc.i4 43
@@ -20352,7 +20352,7 @@
         call instance void @block_body::Gen1t(int8 Fop, int32 Fp2, void* Fsp)
         br L_if_end_5
     L_else_4:
-        // line 2088
+        .line 2088
         ldloc _F
         ldfld class @block_body @block_body_store::_slink
         ldc.i4 56
@@ -20378,7 +20378,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 1
         bne.un L_check_case_6
-        // line 2089
+        .line 2089
         ldloc _F
         ldfld valuetype T_attr* @block_body_store::Fattr
         ldfld int32 T_attr::Idplmt
@@ -20387,12 +20387,12 @@
         ldc.i4.0
         ceq
         brfalse L_else_7
-        // line 2089
+        .line 2089
         ldc.i4 400
         call void Error(int32 Ferrnr)
         br L_if_end_8
     L_else_7:
-        // line 2090
+        .line 2090
         ldloc _F
         ldfld class @block_body @block_body_store::_slink
         ldc.i4 26
@@ -20410,7 +20410,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 2
         bne.un L_case_end_2
-        // line 2091
+        .line 2091
         ldc.i4 400
         call void Error(int32 Ferrnr)
     L_case_end_2:
@@ -20420,7 +20420,7 @@
         ret
     }
 
-// line 2095
+.line 2095
 
     .method public
     void Loadaddress()
@@ -20440,7 +20440,7 @@
         stfld class @block_body @block_body_loadaddress::_slink
     
     L_Entry:
-        // line 2098
+        .line 2098
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -20448,14 +20448,14 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 2100
+        .line 2100
         ldsflda valuetype T_attr _G::Gattr
         ldfld int32 T_attr::Kind
         stloc $tmpSwitchValue1
         ldloc $tmpSwitchValue1
         ldc.i4 0
         bne.un L_check_case_3
-        // line 2101
+        .line 2101
         ldloc _F
         ldfld class @block_body @block_body_loadaddress::_slink
         ldfld class @block @block_body::_slink
@@ -20463,7 +20463,7 @@
         ldfld void* T_attr::Typtr
         call instance bool @block::String(void* Fsp)
         brfalse L_else_4
-        // line 2102
+        .line 2102
         ldloc _F
         ldfld class @block_body @block_body_loadaddress::_slink
         ldfld int8 @block_body::Cstptrix
@@ -20472,12 +20472,12 @@
         ldc.i4.0
         ceq
         brfalse L_else_6
-        // line 2102
+        .line 2102
         ldc.i4 254
         call void Error(int32 Ferrnr)
         br L_if_end_7
     L_else_6:
-        // line 2104
+        .line 2104
         ldloc _F
         ldfld class @block_body @block_body_loadaddress::_slink
         ldloc _F
@@ -20490,7 +20490,7 @@
         ldc.i4 65
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int8 @block_body::Cstptrix
-        // line 2105
+        .line 2105
         ldloc _F
         ldfld class @block_body @block_body_loadaddress::_slink
         ldflda valuetype T_block_body_array_106 @block_body::Cstptr
@@ -20502,7 +20502,7 @@
         ldflda valuetype T_valu T_attr::Cval
         ldfld void* T_valu::Valp
         stobj void*
-        // line 2106
+        .line 2106
         ldloc _F
         ldfld class @block_body @block_body_loadaddress::_slink
         ldc.i4 38
@@ -20517,7 +20517,7 @@
     L_if_end_7:
         br L_if_end_5
     L_else_4:
-        // line 2108
+        .line 2108
         ldc.i4 400
         call void Error(int32 Ferrnr)
     L_if_end_5:
@@ -20526,14 +20526,14 @@
         ldloc $tmpSwitchValue1
         ldc.i4 1
         bne.un L_check_case_8
-        // line 2109
+        .line 2109
         ldsflda valuetype T_attr _G::Gattr
         ldfld int32 T_attr::Access
         stloc $tmpSwitchValue2
         ldloc $tmpSwitchValue2
         ldc.i4 0
         bne.un L_check_case_10
-        // line 2110
+        .line 2110
         ldsflda valuetype T_attr _G::Gattr
         ldfld int8 T_attr::Vlevel
         ldc.i4 1
@@ -20541,7 +20541,7 @@
         ldc.i4.0
         ceq
         brfalse L_else_11
-        // line 2110
+        .line 2110
         ldloc _F
         ldfld class @block_body @block_body_loadaddress::_slink
         ldc.i4 37
@@ -20554,7 +20554,7 @@
         call instance void @block_body::Gen1(int8 Fop, int32 Fp2)
         br L_if_end_12
     L_else_11:
-        // line 2111
+        .line 2111
         ldloc _F
         ldfld class @block_body @block_body_loadaddress::_slink
         ldc.i4 50
@@ -20575,7 +20575,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 1
         bne.un L_check_case_13
-        // line 2112
+        .line 2112
         ldsflda valuetype T_attr _G::Gattr
         ldfld int32 T_attr::Idplmt
         ldc.i4 0
@@ -20583,7 +20583,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_14
-        // line 2113
+        .line 2113
         ldloc _F
         ldfld class @block_body @block_body_loadaddress::_slink
         ldc.i4 34
@@ -20601,7 +20601,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 2
         bne.un L_case_end_9
-        // line 2114
+        .line 2114
         ldc.i4 400
         call void Error(int32 Ferrnr)
     L_case_end_9:
@@ -20610,19 +20610,19 @@
         ldloc $tmpSwitchValue1
         ldc.i4 2
         bne.un L_case_end_2
-        // line 2116
+        .line 2116
         ldc.i4 400
         call void Error(int32 Ferrnr)
     L_case_end_2:
-        // line 2118
+        .line 2118
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 1
         stfld int32 T_attr::Kind
-        // line 2118
+        .line 2118
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 1
         stfld int32 T_attr::Access
-        // line 2118
+        .line 2118
         ldsflda valuetype T_attr _G::Gattr
         ldc.i4 0
         dup
@@ -20636,7 +20636,7 @@
         ret
     }
 
-// line 2123
+.line 2123
 
     .method public
     void Genfjp(int32 Faddr)
@@ -20657,11 +20657,11 @@
         stfld int32 @block_body_genfjp::Faddr
     
     L_Entry:
-        // line 2124
+        .line 2124
         ldloc _F
         ldfld class @block_body @block_body_genfjp::_slink
         call instance void @block_body::Load()
-        // line 2125
+        .line 2125
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldnull
@@ -20669,7 +20669,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 2126
+        .line 2126
         ldsflda valuetype T_attr _G::Gattr
         ldfld void* T_attr::Typtr
         ldsfld void* _G::Boolptr
@@ -20677,19 +20677,19 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_2
-        // line 2126
+        .line 2126
         ldc.i4 144
         call void Error(int32 Ferrnr)
     L_if_end_2:
     L_if_end_1:
-        // line 2127
+        .line 2127
         ldsfld bool _G::Prcode
         brfalse L_if_end_3
-        // line 2127
+        .line 2127
         ldloc _F
         ldfld class @block_body @block_body_genfjp::_slink
         call instance void @block_body::Putic()
-        // line 2127
+        .line 2127
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 4
@@ -20713,7 +20713,7 @@
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
         call instance void [lpcRuntime]LPC.File::WriteLn()
     L_if_end_3:
-        // line 2128
+        .line 2128
         ldsfld int32 _G::Ic
         ldc.i4 1
         add
@@ -20722,7 +20722,7 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int32 _G::Ic
-        // line 2128
+        .line 2128
         ldloc _F
         ldfld class @block_body @block_body_genfjp::_slink
         ldc.i4 33
@@ -20732,7 +20732,7 @@
         ret
     }
 
-// line 2131
+.line 2131
 
     .method public
     void Genujpxjp(int8 Fop, int32 Fp2)
@@ -20757,14 +20757,14 @@
         stfld int32 @block_body_genujpxjp::Fp2
     
     L_Entry:
-        // line 2133
+        .line 2133
         ldsfld bool _G::Prcode
         brfalse L_if_end_1
-        // line 2134
+        .line 2134
         ldloc _F
         ldfld class @block_body @block_body_genujpxjp::_slink
         call instance void @block_body::Putic()
-        // line 2134
+        .line 2134
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 4
@@ -20789,7 +20789,7 @@
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
         call instance void [lpcRuntime]LPC.File::WriteLn()
     L_if_end_1:
-        // line 2135
+        .line 2135
         ldsfld int32 _G::Ic
         ldc.i4 1
         add
@@ -20798,7 +20798,7 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int32 _G::Ic
-        // line 2135
+        .line 2135
         ldloc _F
         ldfld class @block_body @block_body_genujpxjp::_slink
         ldloc _F
@@ -20809,7 +20809,7 @@
         ret
     }
 
-// line 2139
+.line 2139
 
     .method public
     void Gencupent(int8 Fop, int32 Fp1, int32 Fp2)
@@ -20838,14 +20838,14 @@
         stfld int32 @block_body_gencupent::Fp2
     
     L_Entry:
-        // line 2141
+        .line 2141
         ldsfld bool _G::Prcode
         brfalse L_if_end_1
-        // line 2142
+        .line 2142
         ldloc _F
         ldfld class @block_body @block_body_gencupent::_slink
         call instance void @block_body::Putic()
-        // line 2143
+        .line 2143
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 4
@@ -20876,7 +20876,7 @@
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
         call instance void [lpcRuntime]LPC.File::WriteLn()
     L_if_end_1:
-        // line 2145
+        .line 2145
         ldsfld int32 _G::Ic
         ldc.i4 1
         add
@@ -20885,7 +20885,7 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int32 _G::Ic
-        // line 2145
+        .line 2145
         ldloc _F
         ldfld class @block_body @block_body_gencupent::_slink
         ldloc _F
@@ -20896,7 +20896,7 @@
         ret
     }
 
-// line 2149
+.line 2149
 
     .method public
     void Checkbnds(void* Fsp)
@@ -20917,7 +20917,7 @@
         stfld void* @block_body_checkbnds::Fsp
     
     L_Entry:
-        // line 2152
+        .line 2152
         ldloc _F
         ldfld void* @block_body_checkbnds::Fsp
         ldnull
@@ -20925,7 +20925,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 2153
+        .line 2153
         ldloc _F
         ldfld void* @block_body_checkbnds::Fsp
         ldsfld void* _G::Intptr
@@ -20933,7 +20933,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_2
-        // line 2154
+        .line 2154
         ldloc _F
         ldfld void* @block_body_checkbnds::Fsp
         ldsfld void* _G::Realptr
@@ -20941,7 +20941,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_3
-        // line 2155
+        .line 2155
         ldloc _F
         ldfld void* @block_body_checkbnds::Fsp
         ldfld int32 T_structure::Form
@@ -20950,7 +20950,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_4
-        // line 2157
+        .line 2157
         ldloc _F
         ldfld void* @block_body_checkbnds::Fsp
         ldloc _F
@@ -20958,7 +20958,7 @@
         ldloc _F
         ldflda int32 @block_body_checkbnds::Lmax
         call void Getbounds(void* Fsp, int32& Fmin, int32& Fmax)
-        // line 2158
+        .line 2158
         ldloc _F
         ldfld class @block_body @block_body_checkbnds::_slink
         ldc.i4 45
@@ -20982,7 +20982,7 @@
         ret
     }
 
-// line 2163
+.line 2163
 
     .method public
     void Putlabel(int32 Labname)
@@ -21003,10 +21003,10 @@
         stfld int32 @block_body_putlabel::Labname
     
     L_Entry:
-        // line 2164
+        .line 2164
         ldsfld bool _G::Prcode
         brfalse L_if_end_1
-        // line 2164
+        .line 2164
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 108 // 'l'
@@ -21024,7 +21024,7 @@
         ret
     }
 
-// line 2167
+.line 2167
 
     .method public
     void Statement(valuetype T_setty Fsys)
@@ -21085,22 +21085,22 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 3519
+        .line 3519
         ldsfld int32 _G::Sy
         ldc.i4 1
         ceq
         brfalse L_if_end_1
-        // line 3520
+        .line 3520
         ldloc _F
         ldsflda valuetype T_array_23 _G::Display
         ldsfld int8 _G::Level
         call instance valuetype T_record_22& T_array_23::ldadr(int32)
         ldfld void* T_record_22::Flabel
         stfld void* @block_body_statement::Llp
-        // line 3521
+        .line 3521
         br L_while_test_3
     L_while_2:
-        // line 3523
+        .line 3523
         ldloc _F
         ldfld void* @block_body_statement::Llp
         ldfld int32 T_labl::Labval
@@ -21108,32 +21108,32 @@
         ldfld int32 T_valu::Ival
         ceq
         brfalse L_else_4
-        // line 3524
+        .line 3524
         ldloc _F
         ldfld void* @block_body_statement::Llp
         ldfld bool T_labl::Defined
         brfalse L_if_end_6
-        // line 3524
+        .line 3524
         ldc.i4 165
         call void Error(int32 Ferrnr)
     L_if_end_6:
-        // line 3525
+        .line 3525
         ldloc _F
         ldfld class @block_body @block_body_statement::_slink
         ldloc _F
         ldfld void* @block_body_statement::Llp
         ldfld int32 T_labl::Labname
         call instance void @block_body::Putlabel(int32 Labname)
-        // line 3525
+        .line 3525
         ldloc _F
         ldfld void* @block_body_statement::Llp
         ldc.i4 1 // (true)
         stfld bool T_labl::Defined
-        // line 3526
+        .line 3526
         br L_1
         br L_if_end_5
     L_else_4:
-        // line 3528
+        .line 3528
         ldloc _F
         ldloc _F
         ldfld void* @block_body_statement::Llp
@@ -21148,27 +21148,27 @@
         ldc.i4.0
         ceq
         brtrue L_while_2
-        // line 3529
+        .line 3529
         ldc.i4 167
         call void Error(int32 Ferrnr)
-        // line 3530
+        .line 3530
     L_1:
         call void Insymbol()
-        // line 3531
+        .line 3531
         ldsfld int32 _G::Sy
         ldc.i4 16
         ceq
         brfalse L_else_7
-        // line 3531
+        .line 3531
         call void Insymbol()
         br L_if_end_8
     L_else_7:
-        // line 3531
+        .line 3531
         ldc.i4 5
         call void Error(int32 Ferrnr)
     L_if_end_8:
     L_if_end_1:
-        // line 3533
+        .line 3533
         ldloc _F
         ldfld valuetype T_setty @block_body_statement::Fsys
         call valuetype T_set_31 _SetCastTo_T_set_31(valuetype T_setty s)
@@ -21180,10 +21180,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_9
-        // line 3534
+        .line 3534
         ldc.i4 6
         call void Error(int32 Ferrnr)
-        // line 3534
+        .line 3534
         ldloc _F
         ldfld class @block_body @block_body_statement::_slink
         ldfld class @block @block_body::_slink
@@ -21191,7 +21191,7 @@
         ldfld valuetype T_setty @block_body_statement::Fsys
         call instance void @block::Skip(valuetype T_setty Fsys)
     L_if_end_9:
-        // line 3535
+        .line 3535
         ldsfld valuetype T_setty _G::Statbegsys
         call valuetype T_set_31 _SetCastTo_T_set_31(valuetype T_setty s)
         ldloc $tmpSetLiteral2
@@ -21200,27 +21200,27 @@
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_set_31 s, int32 val)
         brfalse L_if_end_10
-        // line 3537
+        .line 3537
         ldsfld int32 _G::Sy
         stloc $tmpSwitchValue3
         ldloc $tmpSwitchValue3
         ldc.i4 0
         bne.un L_check_case_12
-        // line 3538
+        .line 3538
         ldloc $tmpSetLiteral4
         ldloc _F
         ldflda void* @block_body_statement::Lcp
         call void Searchid(valuetype T_setofids Fidcls, void*& Fcp)
-        // line 3538
+        .line 3538
         call void Insymbol()
-        // line 3539
+        .line 3539
         ldloc _F
         ldfld void* @block_body_statement::Lcp
         ldfld int32 T_identifier::Klass
         ldc.i4 4
         ceq
         brfalse L_else_13
-        // line 3539
+        .line 3539
         ldloc _F
         ldloc _F
         ldfld valuetype T_setty @block_body_statement::Fsys
@@ -21229,7 +21229,7 @@
         call instance void @block_body_statement::Call(valuetype T_setty Fsys, void* Fcp)
         br L_if_end_14
     L_else_13:
-        // line 3540
+        .line 3540
         ldloc _F
         ldloc _F
         ldfld void* @block_body_statement::Lcp
@@ -21240,9 +21240,9 @@
         ldloc $tmpSwitchValue3
         ldc.i4 31
         bne.un L_check_case_15
-        // line 3542
+        .line 3542
         call void Insymbol()
-        // line 3542
+        .line 3542
         ldloc _F
         call instance void @block_body_statement::Compoundstatement()
         br L_case_end_11
@@ -21250,9 +21250,9 @@
         ldloc $tmpSwitchValue3
         ldc.i4 38
         bne.un L_check_case_16
-        // line 3543
+        .line 3543
         call void Insymbol()
-        // line 3543
+        .line 3543
         ldloc _F
         call instance void @block_body_statement::Gotostatement()
         br L_case_end_11
@@ -21260,9 +21260,9 @@
         ldloc $tmpSwitchValue3
         ldc.i4 32
         bne.un L_check_case_17
-        // line 3544
+        .line 3544
         call void Insymbol()
-        // line 3544
+        .line 3544
         ldloc _F
         call instance void @block_body_statement::Ifstatement()
         br L_case_end_11
@@ -21270,9 +21270,9 @@
         ldloc $tmpSwitchValue3
         ldc.i4 33
         bne.un L_check_case_18
-        // line 3545
+        .line 3545
         call void Insymbol()
-        // line 3545
+        .line 3545
         ldloc _F
         call instance void @block_body_statement::Casestatement()
         br L_case_end_11
@@ -21280,9 +21280,9 @@
         ldloc $tmpSwitchValue3
         ldc.i4 35
         bne.un L_check_case_19
-        // line 3546
+        .line 3546
         call void Insymbol()
-        // line 3546
+        .line 3546
         ldloc _F
         call instance void @block_body_statement::Whilestatement()
         br L_case_end_11
@@ -21290,9 +21290,9 @@
         ldloc $tmpSwitchValue3
         ldc.i4 34
         bne.un L_check_case_20
-        // line 3547
+        .line 3547
         call void Insymbol()
-        // line 3547
+        .line 3547
         ldloc _F
         call instance void @block_body_statement::Repeatstatement()
         br L_case_end_11
@@ -21300,9 +21300,9 @@
         ldloc $tmpSwitchValue3
         ldc.i4 36
         bne.un L_check_case_21
-        // line 3548
+        .line 3548
         call void Insymbol()
-        // line 3548
+        .line 3548
         ldloc _F
         call instance void @block_body_statement::Forstatement()
         br L_case_end_11
@@ -21310,23 +21310,23 @@
         ldloc $tmpSwitchValue3
         ldc.i4 37
         bne.un L_case_end_11
-        // line 3549
+        .line 3549
         call void Insymbol()
-        // line 3549
+        .line 3549
         ldloc _F
         call instance void @block_body_statement::Withstatement()
     L_case_end_11:
-        // line 3551
+        .line 3551
         ldloc $tmpSetLiteral5
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_setty s, int32 val)
         ldc.i4.0
         ceq
         brfalse L_if_end_22
-        // line 3552
+        .line 3552
         ldc.i4 6
         call void Error(int32 Ferrnr)
-        // line 3552
+        .line 3552
         ldloc _F
         ldfld class @block_body @block_body_statement::_slink
         ldfld class @block @block_body::_slink
@@ -21342,7 +21342,7 @@
 }
 
 
-// line 939
+.line 939
 //================================================================================
 // scope: block (level : 2)
 
@@ -21364,7 +21364,7 @@
         ret
     }
 
-// line 942
+.line 942
 
     .method public
     void Skip(valuetype T_setty Fsys)
@@ -21385,16 +21385,16 @@
         stfld valuetype T_setty @block_skip::Fsys
     
     L_Entry:
-        // line 945
+        .line 945
         ldsflda valuetype [lpcRuntime]LPC.File _G::Source
         call instance bool [lpcRuntime]LPC.File::Eof()
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 946
+        .line 946
         br L_while_test_3
     L_while_2:
-        // line 946
+        .line 946
         call void Insymbol()
     L_while_test_3:
         ldloc _F
@@ -21412,7 +21412,7 @@
         ceq
     L_AND_shortcut_4:
         brtrue L_while_2
-        // line 947
+        .line 947
         ldloc _F
         ldfld valuetype T_setty @block_skip::Fsys
         ldsfld int32 _G::Sy
@@ -21420,7 +21420,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_5
-        // line 947
+        .line 947
         call void Insymbol()
     L_if_end_5:
     L_if_end_1:
@@ -21429,7 +21429,7 @@
         ret
     }
 
-// line 951
+.line 951
 
     .method public
     void Constant(valuetype T_setty Fsys, void*& Fsp, valuetype T_valu& Fvalu)
@@ -21483,26 +21483,26 @@
         call instance void T_setofids::addValue(int32)
     
     L_Entry:
-        // line 954
+        .line 954
         ldloc _F
         ldnull
         stfld void* @block_constant::Lsp
-        // line 954
+        .line 954
         ldloc _F
         ldfld valuetype T_valu* @block_constant::Fvalu
         ldc.i4 0
         stfld int32 T_valu::Ival
-        // line 955
+        .line 955
         ldsfld valuetype T_setty _G::Constbegsys
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_setty s, int32 val)
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 956
+        .line 956
         ldc.i4 50
         call void Error(int32 Ferrnr)
-        // line 956
+        .line 956
         ldloc _F
         ldfld class @block @block_constant::_slink
         ldloc _F
@@ -21511,49 +21511,49 @@
         call valuetype T_setty _SetUnion(valuetype T_setty a, valuetype T_setty b)
         call instance void @block::Skip(valuetype T_setty Fsys)
     L_if_end_1:
-        // line 957
+        .line 957
         ldsfld valuetype T_setty _G::Constbegsys
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_setty s, int32 val)
         brfalse L_if_end_2
-        // line 959
+        .line 959
         ldsfld int32 _G::Sy
         ldc.i4 3
         ceq
         brfalse L_else_3
-        // line 961
+        .line 961
         ldsfld int32 _G::Lgth
         ldc.i4 1
         ceq
         brfalse L_else_5
-        // line 961
+        .line 961
         ldloc _F
         ldsfld void* _G::Charptr
         stfld void* @block_constant::Lsp
         br L_if_end_6
     L_else_5:
-        // line 964
-        // line 964
+        .line 964
+        .line 964
         ldloc _F
         ldc.i4 77
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_constant::Lsp
-        // line 964
+        .line 964
         ldloc _F
         ldfld void* @block_constant::Lsp
         ldc.i4 4
         stfld int32 T_structure::Form
-        // line 966
+        .line 966
         ldloc _F
         ldfld void* @block_constant::Lsp
         ldsfld void* _G::Charptr
         stfld void* T_structure::Aeltype
-        // line 966
+        .line 966
         ldloc _F
         ldfld void* @block_constant::Lsp
         ldnull
         stfld void* T_structure::Inxtype
-        // line 967
+        .line 967
         ldloc _F
         ldfld void* @block_constant::Lsp
         ldsfld int32 _G::Lgth
@@ -21564,26 +21564,26 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_structure::Size
-        // line 967
+        .line 967
         ldloc _F
         ldfld void* @block_constant::Lsp
         ldc.i4 4
         stfld int32 T_structure::Form
     L_if_end_6:
-        // line 970
+        .line 970
         ldloc _F
         ldfld valuetype T_valu* @block_constant::Fvalu
         ldsfld valuetype T_valu _G::Val
         stobj valuetype T_valu
-        // line 970
+        .line 970
         call void Insymbol()
         br L_if_end_4
     L_else_3:
-        // line 974
+        .line 974
         ldloc _F
         ldc.i4 0 // none 
         stfld int32 @block_constant::Sign
-        // line 975
+        .line 975
         ldsfld int32 _G::Sy
         ldc.i4 6
         ceq
@@ -21595,49 +21595,49 @@
         call bool _SetContains(valuetype T_set_29 s, int32 val)
     L_AND_shortcut_7:
         brfalse L_if_end_8
-        // line 976
+        .line 976
         ldsfld int32 _G::Op
         ldc.i4 5
         ceq
         brfalse L_else_9
-        // line 976
+        .line 976
         ldloc _F
         ldc.i4 1 // pos 
         stfld int32 @block_constant::Sign
         br L_if_end_10
     L_else_9:
-        // line 976
+        .line 976
         ldloc _F
         ldc.i4 2 // neg 
         stfld int32 @block_constant::Sign
     L_if_end_10:
-        // line 977
+        .line 977
         call void Insymbol()
     L_if_end_8:
-        // line 979
+        .line 979
         ldsfld int32 _G::Sy
         ldc.i4 0
         ceq
         brfalse L_else_11
-        // line 980
+        .line 980
         ldloc $tmpSetLiteral2
         ldloc _F
         ldflda void* @block_constant::Lcp
         call void Searchid(valuetype T_setofids Fidcls, void*& Fcp)
-        // line 982
+        .line 982
         ldloc _F
         ldloc _F
         ldfld void* @block_constant::Lcp
         ldfld void* T_identifier::Idtype
         stfld void* @block_constant::Lsp
-        // line 982
+        .line 982
         ldloc _F
         ldfld valuetype T_valu* @block_constant::Fvalu
         ldloc _F
         ldfld void* @block_constant::Lcp
         ldfld valuetype T_valu T_identifier::Values
         stobj valuetype T_valu
-        // line 983
+        .line 983
         ldloc _F
         ldfld int32 @block_constant::Sign
         ldc.i4 0 // none 
@@ -21645,19 +21645,19 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_13
-        // line 984
+        .line 984
         ldloc _F
         ldfld void* @block_constant::Lsp
         ldsfld void* _G::Intptr
         ceq
         brfalse L_else_14
-        // line 985
+        .line 985
         ldloc _F
         ldfld int32 @block_constant::Sign
         ldc.i4 2 // neg 
         ceq
         brfalse L_if_end_16
-        // line 985
+        .line 985
         ldloc _F
         ldfld valuetype T_valu* @block_constant::Fvalu
         ldloc _F
@@ -21668,30 +21668,30 @@
     L_if_end_16:
         br L_if_end_15
     L_else_14:
-        // line 987
+        .line 987
         ldloc _F
         ldfld void* @block_constant::Lsp
         ldsfld void* _G::Realptr
         ceq
         brfalse L_else_17
-        // line 989
+        .line 989
         ldloc _F
         ldfld int32 @block_constant::Sign
         ldc.i4 2 // neg 
         ceq
         brfalse L_if_end_19
-        // line 990
-        // line 990
+        .line 990
+        .line 990
         ldloc _F
         ldc.i4 109
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_constant::Lvp
-        // line 990
+        .line 990
         ldloc _F
         ldfld void* @block_constant::Lvp
         ldc.i4 0
         stfld int32 T_constant::Cclass
-        // line 991
+        .line 991
         ldloc _F
         ldfld valuetype T_valu* @block_constant::Fvalu
         ldfld void* T_valu::Valp
@@ -21702,7 +21702,7 @@
         ldc.i4 45 // '-'
         ceq
         brfalse L_else_20
-        // line 992
+        .line 992
         ldloc _F
         ldfld void* @block_constant::Lvp
         ldflda valuetype T_insymbol_array_5 T_constant::Rval
@@ -21712,7 +21712,7 @@
         stobj uint8
         br L_if_end_21
     L_else_20:
-        // line 993
+        .line 993
         ldloc _F
         ldfld void* @block_constant::Lvp
         ldflda valuetype T_insymbol_array_5 T_constant::Rval
@@ -21721,7 +21721,7 @@
         ldc.i4 45 // '-'
         stobj uint8
     L_if_end_21:
-        // line 994
+        .line 994
         ldc.i4 100
         stloc $tmpEndValue3
         ldc.i4 2
@@ -21737,7 +21737,7 @@
         ldloc $tmpIndex4
         stfld int8 @block_constant::i
     L_for_loop_22:
-        // line 995
+        .line 995
         ldloc _F
         ldfld void* @block_constant::Lvp
         ldflda valuetype T_insymbol_array_5 T_constant::Rval
@@ -21771,7 +21771,7 @@
         br L_for_loop_22
     L_for_end_23:
         pop
-        // line 996
+        .line 996
         ldloc _F
         ldfld valuetype T_valu* @block_constant::Fvalu
         ldloc _F
@@ -21781,60 +21781,60 @@
     L_if_end_19:
         br L_if_end_18
     L_else_17:
-        // line 999
+        .line 999
         ldc.i4 105
         call void Error(int32 Ferrnr)
     L_if_end_18:
     L_if_end_15:
     L_if_end_13:
-        // line 1000
+        .line 1000
         call void Insymbol()
         /* nop */
         br L_if_end_12
     L_else_11:
-        // line 1003
+        .line 1003
         ldsfld int32 _G::Sy
         ldc.i4 1
         ceq
         brfalse L_else_24
-        // line 1004
+        .line 1004
         ldloc _F
         ldfld int32 @block_constant::Sign
         ldc.i4 2 // neg 
         ceq
         brfalse L_if_end_26
-        // line 1004
+        .line 1004
         ldsflda valuetype T_valu _G::Val
         ldsflda valuetype T_valu _G::Val
         ldfld int32 T_valu::Ival
         neg
         stfld int32 T_valu::Ival
     L_if_end_26:
-        // line 1005
+        .line 1005
         ldloc _F
         ldsfld void* _G::Intptr
         stfld void* @block_constant::Lsp
-        // line 1005
+        .line 1005
         ldloc _F
         ldfld valuetype T_valu* @block_constant::Fvalu
         ldsfld valuetype T_valu _G::Val
         stobj valuetype T_valu
-        // line 1005
+        .line 1005
         call void Insymbol()
         br L_if_end_25
     L_else_24:
-        // line 1008
+        .line 1008
         ldsfld int32 _G::Sy
         ldc.i4 2
         ceq
         brfalse L_else_27
-        // line 1009
+        .line 1009
         ldloc _F
         ldfld int32 @block_constant::Sign
         ldc.i4 2 // neg 
         ceq
         brfalse L_if_end_29
-        // line 1009
+        .line 1009
         ldsflda valuetype T_valu _G::Val
         ldfld void* T_valu::Valp
         ldflda valuetype T_insymbol_array_5 T_constant::Rval
@@ -21843,23 +21843,23 @@
         ldc.i4 45 // '-'
         stobj uint8
     L_if_end_29:
-        // line 1010
+        .line 1010
         ldloc _F
         ldsfld void* _G::Realptr
         stfld void* @block_constant::Lsp
-        // line 1010
+        .line 1010
         ldloc _F
         ldfld valuetype T_valu* @block_constant::Fvalu
         ldsfld valuetype T_valu _G::Val
         stobj valuetype T_valu
-        // line 1010
+        .line 1010
         call void Insymbol()
         br L_if_end_28
     L_else_27:
-        // line 1013
+        .line 1013
         ldc.i4 106
         call void Error(int32 Ferrnr)
-        // line 1013
+        .line 1013
         ldloc _F
         ldfld class @block @block_constant::_slink
         ldloc _F
@@ -21869,7 +21869,7 @@
     L_if_end_25:
     L_if_end_12:
     L_if_end_4:
-        // line 1015
+        .line 1015
         ldloc _F
         ldfld valuetype T_setty @block_constant::Fsys
         ldsfld int32 _G::Sy
@@ -21877,10 +21877,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_30
-        // line 1016
+        .line 1016
         ldc.i4 6
         call void Error(int32 Ferrnr)
-        // line 1016
+        .line 1016
         ldloc _F
         ldfld class @block @block_constant::_slink
         ldloc _F
@@ -21888,7 +21888,7 @@
         call instance void @block::Skip(valuetype T_setty Fsys)
     L_if_end_30:
     L_if_end_2:
-        // line 1018
+        .line 1018
         ldloc _F
         ldfld void** @block_constant::Fsp
         ldloc _F
@@ -21899,7 +21899,7 @@
         ret
     }
 
-// line 1021
+.line 1021
 
     .method public
     bool Equalbounds(void* Fsp1, void* Fsp2)
@@ -21924,7 +21924,7 @@
         stfld void* @block_equalbounds::Fsp2
     
     L_Entry:
-        // line 1024
+        .line 1024
         ldloc _F
         ldfld void* @block_equalbounds::Fsp1
         ldnull
@@ -21938,13 +21938,13 @@
         ceq
     L_OR_shortcut_1:
         brfalse L_else_2
-        // line 1024
+        .line 1024
         ldloc _F
         ldc.i4 1 // (true)
         stfld bool @block_equalbounds::_fnvalue
         br L_if_end_3
     L_else_2:
-        // line 1027
+        .line 1027
         ldloc _F
         ldfld void* @block_equalbounds::Fsp1
         ldloc _F
@@ -21952,7 +21952,7 @@
         ldloc _F
         ldflda int32 @block_equalbounds::Lmax1
         call void Getbounds(void* Fsp, int32& Fmin, int32& Fmax)
-        // line 1028
+        .line 1028
         ldloc _F
         ldfld void* @block_equalbounds::Fsp2
         ldloc _F
@@ -21960,7 +21960,7 @@
         ldloc _F
         ldflda int32 @block_equalbounds::Lmax2
         call void Getbounds(void* Fsp, int32& Fmin, int32& Fmax)
-        // line 1029
+        .line 1029
         ldloc _F
         ldloc _F
         ldfld int32 @block_equalbounds::Lmin1
@@ -21985,7 +21985,7 @@
         ret
     }
 
-// line 1033
+.line 1033
 
     .method public
     bool Comptypes(void* Fsp1, void* Fsp2)
@@ -22012,20 +22012,20 @@
         stfld void* @block_comptypes::Fsp2
     
     L_Entry:
-        // line 1038
+        .line 1038
         ldloc _F
         ldfld void* @block_comptypes::Fsp1
         ldloc _F
         ldfld void* @block_comptypes::Fsp2
         ceq
         brfalse L_else_1
-        // line 1038
+        .line 1038
         ldloc _F
         ldc.i4 1 // (true)
         stfld bool @block_comptypes::_fnvalue
         br L_if_end_2
     L_else_1:
-        // line 1040
+        .line 1040
         ldloc _F
         ldfld void* @block_comptypes::Fsp1
         ldnull
@@ -22043,7 +22043,7 @@
         ceq
     L_AND_shortcut_3:
         brfalse L_else_4
-        // line 1041
+        .line 1041
         ldloc _F
         ldfld void* @block_comptypes::Fsp1
         ldfld int32 T_structure::Form
@@ -22052,7 +22052,7 @@
         ldfld int32 T_structure::Form
         ceq
         brfalse L_else_6
-        // line 1042
+        .line 1042
         ldloc _F
         ldfld void* @block_comptypes::Fsp1
         ldfld int32 T_structure::Form
@@ -22060,7 +22060,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 0
         bne.un L_check_case_9
-        // line 1044
+        .line 1044
         ldloc _F
         ldc.i4 0 // (false)
         stfld bool @block_comptypes::_fnvalue
@@ -22069,7 +22069,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 1
         bne.un L_check_case_10
-        // line 1048
+        .line 1048
         ldloc _F
         ldloc _F
         ldfld class @block @block_comptypes::_slink
@@ -22086,22 +22086,22 @@
         ldloc $tmpSwitchValue1
         ldc.i4 2
         bne.un L_check_case_11
-        // line 1051
+        .line 1051
         ldloc _F
         ldc.i4 0 // (false)
         stfld bool @block_comptypes::Comp
-        // line 1051
+        .line 1051
         ldloc _F
         ldsfld void* _G::Globtestp
         stfld void* @block_comptypes::Ltestp1
-        // line 1052
+        .line 1052
         ldloc _F
         ldsfld void* _G::Globtestp
         stfld void* @block_comptypes::Ltestp2
-        // line 1053
+        .line 1053
         br L_while_test_13
     L_while_12:
-        // line 1056
+        .line 1056
         ldloc _F
         ldfld void* @block_comptypes::Ltestp1
         ldfld void* T_testpointer::Elt1
@@ -22121,12 +22121,12 @@
         ceq
     L_AND_shortcut_14:
         brfalse L_if_end_15
-        // line 1057
+        .line 1057
         ldloc _F
         ldc.i4 1 // (true)
         stfld bool @block_comptypes::Comp
     L_if_end_15:
-        // line 1058
+        .line 1058
         ldloc _F
         ldloc _F
         ldfld void* @block_comptypes::Ltestp1
@@ -22140,42 +22140,42 @@
         ldc.i4.0
         ceq
         brtrue L_while_12
-        // line 1060
+        .line 1060
         ldloc _F
         ldfld bool @block_comptypes::Comp
         ldc.i4.0
         ceq
         brfalse L_if_end_16
-        // line 1061
-        // line 1061
+        .line 1061
+        .line 1061
         ldloc _F
         ldc.i4 24
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_comptypes::Ltestp1
-        // line 1063
+        .line 1063
         ldloc _F
         ldfld void* @block_comptypes::Ltestp1
         ldloc _F
         ldfld void* @block_comptypes::Fsp1
         ldfld void* T_structure::Eltype
         stfld void* T_testpointer::Elt1
-        // line 1064
+        .line 1064
         ldloc _F
         ldfld void* @block_comptypes::Ltestp1
         ldloc _F
         ldfld void* @block_comptypes::Fsp2
         ldfld void* T_structure::Eltype
         stfld void* T_testpointer::Elt2
-        // line 1065
+        .line 1065
         ldloc _F
         ldfld void* @block_comptypes::Ltestp1
         ldsfld void* _G::Globtestp
         stfld void* T_testpointer::Lasttestp
-        // line 1067
+        .line 1067
         ldloc _F
         ldfld void* @block_comptypes::Ltestp1
         stsfld void* _G::Globtestp
-        // line 1068
+        .line 1068
         ldloc _F
         ldloc _F
         ldfld class @block @block_comptypes::_slink
@@ -22188,12 +22188,12 @@
         call instance bool @block::Comptypes(void* Fsp1, void* Fsp2)
         stfld bool @block_comptypes::Comp
     L_if_end_16:
-        // line 1070
+        .line 1070
         ldloc _F
         ldloc _F
         ldfld bool @block_comptypes::Comp
         stfld bool @block_comptypes::_fnvalue
-        // line 1070
+        .line 1070
         ldloc _F
         ldfld void* @block_comptypes::Ltestp2
         stsfld void* _G::Globtestp
@@ -22202,7 +22202,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 3
         bne.un L_check_case_17
-        // line 1073
+        .line 1073
         ldloc _F
         ldloc _F
         ldfld class @block @block_comptypes::_slink
@@ -22219,7 +22219,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 4
         bne.un L_check_case_18
-        // line 1076
+        .line 1076
         ldloc _F
         ldloc _F
         ldfld class @block @block_comptypes::_slink
@@ -22244,7 +22244,7 @@
         call instance bool @block::Comptypes(void* Fsp1, void* Fsp2)
     L_AND_shortcut_19:
         stfld bool @block_comptypes::Comp
-        // line 1078
+        .line 1078
         ldloc _F
         ldloc _F
         ldfld bool @block_comptypes::Comp
@@ -22278,26 +22278,26 @@
         ldloc $tmpSwitchValue1
         ldc.i4 5
         bne.un L_check_case_22
-        // line 1082
+        .line 1082
         ldloc _F
         ldloc _F
         ldfld void* @block_comptypes::Fsp1
         ldfld void* T_structure::Fstfld
         stfld void* @block_comptypes::Nxt1
-        // line 1082
+        .line 1082
         ldloc _F
         ldloc _F
         ldfld void* @block_comptypes::Fsp2
         ldfld void* T_structure::Fstfld
         stfld void* @block_comptypes::Nxt2
-        // line 1082
+        .line 1082
         ldloc _F
         ldc.i4 1 // (true)
         stfld bool @block_comptypes::Comp
-        // line 1083
+        .line 1083
         br L_while_test_24
     L_while_23:
-        // line 1084
+        .line 1084
         ldloc _F
         ldloc _F
         ldfld bool @block_comptypes::Comp
@@ -22315,13 +22315,13 @@
         call instance bool @block::Comptypes(void* Fsp1, void* Fsp2)
     L_AND_shortcut_25:
         stfld bool @block_comptypes::Comp
-        // line 1085
+        .line 1085
         ldloc _F
         ldloc _F
         ldfld void* @block_comptypes::Nxt1
         ldfld void* T_identifier::Next
         stfld void* @block_comptypes::Nxt1
-        // line 1085
+        .line 1085
         ldloc _F
         ldloc _F
         ldfld void* @block_comptypes::Nxt2
@@ -22345,7 +22345,7 @@
         ceq
     L_AND_shortcut_26:
         brtrue L_while_23
-        // line 1087
+        .line 1087
         ldloc _F
         ldloc _F
         ldfld bool @block_comptypes::Comp
@@ -22389,7 +22389,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 6
         bne.un L_case_end_8
-        // line 1093
+        .line 1093
         ldloc _F
         ldloc _F
         ldfld class @block @block_comptypes::_slink
@@ -22404,14 +22404,14 @@
     L_case_end_8:
         br L_if_end_7
     L_else_6:
-        // line 1096
+        .line 1096
         ldloc _F
         ldfld void* @block_comptypes::Fsp1
         ldfld int32 T_structure::Form
         ldc.i4 1
         ceq
         brfalse L_else_31
-        // line 1097
+        .line 1097
         ldloc _F
         ldloc _F
         ldfld class @block @block_comptypes::_slink
@@ -22424,14 +22424,14 @@
         stfld bool @block_comptypes::_fnvalue
         br L_if_end_32
     L_else_31:
-        // line 1099
+        .line 1099
         ldloc _F
         ldfld void* @block_comptypes::Fsp2
         ldfld int32 T_structure::Form
         ldc.i4 1
         ceq
         brfalse L_else_33
-        // line 1100
+        .line 1100
         ldloc _F
         ldloc _F
         ldfld class @block @block_comptypes::_slink
@@ -22444,7 +22444,7 @@
         stfld bool @block_comptypes::_fnvalue
         br L_if_end_34
     L_else_33:
-        // line 1101
+        .line 1101
         ldloc _F
         ldc.i4 0 // (false)
         stfld bool @block_comptypes::_fnvalue
@@ -22453,7 +22453,7 @@
     L_if_end_7:
         br L_if_end_5
     L_else_4:
-        // line 1102
+        .line 1102
         ldloc _F
         ldc.i4 1 // (true)
         stfld bool @block_comptypes::_fnvalue
@@ -22466,7 +22466,7 @@
         ret
     }
 
-// line 1105
+.line 1105
 
     .method public
     bool String(void* Fsp)
@@ -22487,11 +22487,11 @@
         stfld void* @block_string::Fsp
     
     L_Entry:
-        // line 1106
+        .line 1106
         ldloc _F
         ldc.i4 0 // (false)
         stfld bool @block_string::_fnvalue
-        // line 1107
+        .line 1107
         ldloc _F
         ldfld void* @block_string::Fsp
         ldnull
@@ -22499,14 +22499,14 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 1108
+        .line 1108
         ldloc _F
         ldfld void* @block_string::Fsp
         ldfld int32 T_structure::Form
         ldc.i4 4
         ceq
         brfalse L_if_end_2
-        // line 1109
+        .line 1109
         ldloc _F
         ldfld class @block @block_string::_slink
         ldloc _F
@@ -22515,7 +22515,7 @@
         ldsfld void* _G::Charptr
         call instance bool @block::Comptypes(void* Fsp1, void* Fsp2)
         brfalse L_if_end_3
-        // line 1109
+        .line 1109
         ldloc _F
         ldc.i4 1 // (true)
         stfld bool @block_string::_fnvalue
@@ -22529,7 +22529,7 @@
         ret
     }
 
-// line 1112
+.line 1112
 
     .method public
     void Typ(valuetype T_setty Fsys, void*& Fsp, int32& Fsize)
@@ -22593,17 +22593,17 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 1334
+        .line 1334
         ldsfld valuetype T_setty _G::Typebegsys
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_setty s, int32 val)
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 1335
+        .line 1335
         ldc.i4 10
         call void Error(int32 Ferrnr)
-        // line 1335
+        .line 1335
         ldloc _F
         ldfld class @block @block_typ::_slink
         ldloc _F
@@ -22612,17 +22612,17 @@
         call valuetype T_setty _SetUnion(valuetype T_setty a, valuetype T_setty b)
         call instance void @block::Skip(valuetype T_setty Fsys)
     L_if_end_1:
-        // line 1336
+        .line 1336
         ldsfld valuetype T_setty _G::Typebegsys
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_setty s, int32 val)
         brfalse L_else_2
-        // line 1338
+        .line 1338
         ldsfld valuetype T_setty _G::Simptypebegsys
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_setty s, int32 val)
         brfalse L_else_4
-        // line 1338
+        .line 1338
         ldloc _F
         ldloc _F
         ldfld valuetype T_setty @block_typ::Fsys
@@ -22633,34 +22633,34 @@
         call instance void @block_typ::Simpletype(valuetype T_setty Fsys, void*& Fsp, int32& Fsize)
         br L_if_end_5
     L_else_4:
-        // line 1340
+        .line 1340
         ldsfld int32 _G::Sy
         ldc.i4 15
         ceq
         brfalse L_else_6
-        // line 1341
-        // line 1341
+        .line 1341
+        .line 1341
         ldloc _F
         ldc.i4 77
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ::Lsp
-        // line 1341
+        .line 1341
         ldloc _F
         ldfld void* @block_typ::Lsp
         ldc.i4 2
         stfld int32 T_structure::Form
-        // line 1341
+        .line 1341
         ldloc _F
         ldfld void** @block_typ::Fsp
         ldloc _F
         ldfld void* @block_typ::Lsp
         stobj void*
-        // line 1343
+        .line 1343
         ldloc _F
         ldfld void* @block_typ::Lsp
         ldnull
         stfld void* T_structure::Eltype
-        // line 1343
+        .line 1343
         ldloc _F
         ldfld void* @block_typ::Lsp
         ldc.i4 1
@@ -22669,74 +22669,74 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_structure::Size
-        // line 1343
+        .line 1343
         ldloc _F
         ldfld void* @block_typ::Lsp
         ldc.i4 2
         stfld int32 T_structure::Form
-        // line 1344
+        .line 1344
         call void Insymbol()
-        // line 1345
+        .line 1345
         ldsfld int32 _G::Sy
         ldc.i4 0
         ceq
         brfalse L_else_8
-        // line 1346
+        .line 1346
         ldc.i4 0 // (false)
         stsfld bool _G::Prterr
-        // line 1347
+        .line 1347
         ldloc $tmpSetLiteral1
         ldloc _F
         ldflda void* @block_typ::Lcp
         call void Searchid(valuetype T_setofids Fidcls, void*& Fcp)
-        // line 1347
+        .line 1347
         ldc.i4 1 // (true)
         stsfld bool _G::Prterr
-        // line 1348
+        .line 1348
         ldloc _F
         ldfld void* @block_typ::Lcp
         ldnull
         ceq
         brfalse L_else_10
-        // line 1349
-        // line 1349
+        .line 1349
+        .line 1349
         ldloc _F
         ldc.i4 214
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ::Lcp
-        // line 1349
+        .line 1349
         ldloc _F
         ldfld void* @block_typ::Lcp
         ldc.i4 0
         stfld int32 T_identifier::Klass
-        // line 1351
+        .line 1351
         ldloc _F
         ldfld void* @block_typ::Lcp
         ldsfld valuetype T_alpha _G::Id
         stfld valuetype T_alpha T_identifier::Name
-        // line 1351
+        .line 1351
         ldloc _F
         ldfld void* @block_typ::Lcp
         ldloc _F
         ldfld void* @block_typ::Lsp
         stfld void* T_identifier::Idtype
-        // line 1352
+        .line 1352
         ldloc _F
         ldfld void* @block_typ::Lcp
         ldsfld void* _G::Fwptr
         stfld void* T_identifier::Next
-        // line 1352
+        .line 1352
         ldloc _F
         ldfld void* @block_typ::Lcp
         ldc.i4 0
         stfld int32 T_identifier::Klass
-        // line 1354
+        .line 1354
         ldloc _F
         ldfld void* @block_typ::Lcp
         stsfld void* _G::Fwptr
         br L_if_end_11
     L_else_10:
-        // line 1358
+        .line 1358
         ldloc _F
         ldfld void* @block_typ::Lcp
         ldfld void* T_identifier::Idtype
@@ -22745,7 +22745,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_12
-        // line 1359
+        .line 1359
         ldloc _F
         ldfld void* @block_typ::Lcp
         ldfld void* T_identifier::Idtype
@@ -22753,12 +22753,12 @@
         ldc.i4 6
         ceq
         brfalse L_else_13
-        // line 1359
+        .line 1359
         ldc.i4 108
         call void Error(int32 Ferrnr)
         br L_if_end_14
     L_else_13:
-        // line 1360
+        .line 1360
         ldloc _F
         ldfld void* @block_typ::Lsp
         ldloc _F
@@ -22768,36 +22768,36 @@
     L_if_end_14:
     L_if_end_12:
     L_if_end_11:
-        // line 1362
+        .line 1362
         call void Insymbol()
         /* nop */
         br L_if_end_9
     L_else_8:
-        // line 1364
+        .line 1364
         ldc.i4 2
         call void Error(int32 Ferrnr)
     L_if_end_9:
         /* nop */
         br L_if_end_7
     L_else_6:
-        // line 1368
+        .line 1368
         ldsfld int32 _G::Sy
         ldc.i4 26
         ceq
         brfalse L_if_end_15
-        // line 1369
+        .line 1369
         call void Insymbol()
-        // line 1370
+        .line 1370
         ldsfld valuetype T_setty _G::Typedels
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_setty s, int32 val)
         ldc.i4.0
         ceq
         brfalse L_if_end_16
-        // line 1372
+        .line 1372
         ldc.i4 10
         call void Error(int32 Ferrnr)
-        // line 1372
+        .line 1372
         ldloc _F
         ldfld class @block @block_typ::_slink
         ldloc _F
@@ -22807,65 +22807,65 @@
         call instance void @block::Skip(valuetype T_setty Fsys)
     L_if_end_16:
     L_if_end_15:
-        // line 1375
+        .line 1375
         ldsfld int32 _G::Sy
         ldc.i4 27
         ceq
         brfalse L_else_17
-        // line 1376
+        .line 1376
         call void Insymbol()
-        // line 1377
+        .line 1377
         ldsfld int32 _G::Sy
         ldc.i4 10
         ceq
         brfalse L_else_19
-        // line 1377
+        .line 1377
         call void Insymbol()
         br L_if_end_20
     L_else_19:
-        // line 1377
+        .line 1377
         ldc.i4 11
         call void Error(int32 Ferrnr)
     L_if_end_20:
-        // line 1378
+        .line 1378
         ldloc _F
         ldnull
         stfld void* @block_typ::Lsp1
-        // line 1379
+        .line 1379
     L_repeat_21:
-        // line 1379
-        // line 1379
+        .line 1379
+        .line 1379
         ldloc _F
         ldc.i4 77
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ::Lsp
-        // line 1379
+        .line 1379
         ldloc _F
         ldfld void* @block_typ::Lsp
         ldc.i4 4
         stfld int32 T_structure::Form
-        // line 1381
+        .line 1381
         ldloc _F
         ldfld void* @block_typ::Lsp
         ldloc _F
         ldfld void* @block_typ::Lsp1
         stfld void* T_structure::Aeltype
-        // line 1381
+        .line 1381
         ldloc _F
         ldfld void* @block_typ::Lsp
         ldnull
         stfld void* T_structure::Inxtype
-        // line 1381
+        .line 1381
         ldloc _F
         ldfld void* @block_typ::Lsp
         ldc.i4 4
         stfld int32 T_structure::Form
-        // line 1382
+        .line 1382
         ldloc _F
         ldloc _F
         ldfld void* @block_typ::Lsp
         stfld void* @block_typ::Lsp1
-        // line 1383
+        .line 1383
         ldloc _F
         ldloc _F
         ldfld valuetype T_setty @block_typ::Fsys
@@ -22883,13 +22883,13 @@
         ldloc _F
         ldflda int32 @block_typ::Lsize
         call instance void @block_typ::Simpletype(valuetype T_setty Fsys, void*& Fsp, int32& Fsize)
-        // line 1384
+        .line 1384
         ldloc _F
         ldfld void* @block_typ::Lsp1
         ldloc _F
         ldfld int32 @block_typ::Lsize
         stfld int32 T_structure::Size
-        // line 1385
+        .line 1385
         ldloc _F
         ldfld void* @block_typ::Lsp2
         ldnull
@@ -22897,7 +22897,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_22
-        // line 1386
+        .line 1386
         ldloc _F
         ldfld void* @block_typ::Lsp2
         ldfld int32 T_structure::Form
@@ -22906,37 +22906,37 @@
         ldc.i4.0
         ceq
         brfalse L_else_23
-        // line 1388
+        .line 1388
         ldloc _F
         ldfld void* @block_typ::Lsp2
         ldsfld void* _G::Realptr
         ceq
         brfalse L_else_25
-        // line 1389
+        .line 1389
         ldc.i4 109
         call void Error(int32 Ferrnr)
-        // line 1389
+        .line 1389
         ldloc _F
         ldnull
         stfld void* @block_typ::Lsp2
         br L_if_end_26
     L_else_25:
-        // line 1391
+        .line 1391
         ldloc _F
         ldfld void* @block_typ::Lsp2
         ldsfld void* _G::Intptr
         ceq
         brfalse L_if_end_27
-        // line 1392
+        .line 1392
         ldc.i4 149
         call void Error(int32 Ferrnr)
-        // line 1392
+        .line 1392
         ldloc _F
         ldnull
         stfld void* @block_typ::Lsp2
     L_if_end_27:
     L_if_end_26:
-        // line 1393
+        .line 1393
         ldloc _F
         ldfld void* @block_typ::Lsp
         ldloc _F
@@ -22944,16 +22944,16 @@
         stfld void* T_structure::Inxtype
         br L_if_end_24
     L_else_23:
-        // line 1395
+        .line 1395
         ldc.i4 113
         call void Error(int32 Ferrnr)
-        // line 1395
+        .line 1395
         ldloc _F
         ldnull
         stfld void* @block_typ::Lsp2
     L_if_end_24:
     L_if_end_22:
-        // line 1396
+        .line 1396
         ldloc _F
         ldfld class @block @block_typ::_slink
         ldsfld int32 _G::Sy
@@ -22962,47 +22962,47 @@
         ldc.i4.0
         ceq
         stfld bool @block::Test
-        // line 1397
+        .line 1397
         ldloc _F
         ldfld class @block @block_typ::_slink
         ldfld bool @block::Test
         ldc.i4.0
         ceq
         brfalse L_if_end_28
-        // line 1397
+        .line 1397
         call void Insymbol()
     L_if_end_28:
         ldloc _F
         ldfld class @block @block_typ::_slink
         ldfld bool @block::Test
         brfalse L_repeat_21
-        // line 1399
+        .line 1399
         ldsfld int32 _G::Sy
         ldc.i4 11
         ceq
         brfalse L_else_29
-        // line 1399
+        .line 1399
         call void Insymbol()
         br L_if_end_30
     L_else_29:
-        // line 1399
+        .line 1399
         ldc.i4 12
         call void Error(int32 Ferrnr)
     L_if_end_30:
-        // line 1400
+        .line 1400
         ldsfld int32 _G::Sy
         ldc.i4 42
         ceq
         brfalse L_else_31
-        // line 1400
+        .line 1400
         call void Insymbol()
         br L_if_end_32
     L_else_31:
-        // line 1400
+        .line 1400
         ldc.i4 8
         call void Error(int32 Ferrnr)
     L_if_end_32:
-        // line 1401
+        .line 1401
         ldloc _F
         ldfld class @block @block_typ::_slink
         ldloc _F
@@ -23012,21 +23012,21 @@
         ldloc _F
         ldflda int32 @block_typ::Lsize
         call instance void @block::Typ(valuetype T_setty Fsys, void*& Fsp, int32& Fsize)
-        // line 1402
+        .line 1402
     L_repeat_33:
-        // line 1404
+        .line 1404
         ldloc _F
         ldloc _F
         ldfld void* @block_typ::Lsp1
         ldfld void* T_structure::Aeltype
         stfld void* @block_typ::Lsp2
-        // line 1404
+        .line 1404
         ldloc _F
         ldfld void* @block_typ::Lsp1
         ldloc _F
         ldfld void* @block_typ::Lsp
         stfld void* T_structure::Aeltype
-        // line 1405
+        .line 1405
         ldloc _F
         ldfld void* @block_typ::Lsp1
         ldfld void* T_structure::Inxtype
@@ -23035,7 +23035,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_34
-        // line 1406
+        .line 1406
         ldloc _F
         ldfld void* @block_typ::Lsp1
         ldfld void* T_structure::Inxtype
@@ -23044,13 +23044,13 @@
         ldloc _F
         ldflda int32 @block_typ::Lmax
         call void Getbounds(void* Fsp, int32& Fmin, int32& Fmax)
-        // line 1407
+        .line 1407
         ldloc _F
         ldfld void* @block_typ::Lsp
         ldloc _F
         ldflda int32 @block_typ::Lsize
         call void Align(void* Fsp, int32& Flc)
-        // line 1408
+        .line 1408
         ldloc _F
         ldloc _F
         ldfld int32 @block_typ::Lsize
@@ -23067,19 +23067,19 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 @block_typ::Lsize
-        // line 1409
+        .line 1409
         ldloc _F
         ldfld void* @block_typ::Lsp1
         ldloc _F
         ldfld int32 @block_typ::Lsize
         stfld int32 T_structure::Size
     L_if_end_34:
-        // line 1412
+        .line 1412
         ldloc _F
         ldloc _F
         ldfld void* @block_typ::Lsp1
         stfld void* @block_typ::Lsp
-        // line 1412
+        .line 1412
         ldloc _F
         ldloc _F
         ldfld void* @block_typ::Lsp2
@@ -23091,23 +23091,23 @@
         brfalse L_repeat_33
         br L_if_end_18
     L_else_17:
-        // line 1416
+        .line 1416
         ldsfld int32 _G::Sy
         ldc.i4 28
         ceq
         brfalse L_else_35
-        // line 1417
+        .line 1417
         call void Insymbol()
-        // line 1418
+        .line 1418
         ldloc _F
         ldsfld int8 _G::Top
         stfld int8 @block_typ::Oldtop
-        // line 1419
+        .line 1419
         ldsfld int8 _G::Top
         ldc.i4 20
         clt
         brfalse L_else_37
-        // line 1420
+        .line 1420
         ldsfld int8 _G::Top
         ldc.i4 1
         add
@@ -23116,19 +23116,19 @@
         ldc.i4 20
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int8 _G::Top
-        // line 1422
+        .line 1422
         ldsflda valuetype T_array_23 _G::Display
         ldsfld int8 _G::Top
         call instance valuetype T_record_22& T_array_23::ldadr(int32)
         ldnull
         stfld void* T_record_22::Fname
-        // line 1423
+        .line 1423
         ldsflda valuetype T_array_23 _G::Display
         ldsfld int8 _G::Top
         call instance valuetype T_record_22& T_array_23::ldadr(int32)
         ldnull
         stfld void* T_record_22::Flabel
-        // line 1424
+        .line 1424
         ldsflda valuetype T_array_23 _G::Display
         ldsfld int8 _G::Top
         call instance valuetype T_record_22& T_array_23::ldadr(int32)
@@ -23136,11 +23136,11 @@
         stfld int32 T_record_22::Occur
         br L_if_end_38
     L_else_37:
-        // line 1427
+        .line 1427
         ldc.i4 250
         call void Error(int32 Ferrnr)
     L_if_end_38:
-        // line 1428
+        .line 1428
         ldloc _F
         ldc.i4 0
         dup
@@ -23148,7 +23148,7 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 @block_typ::Displ
-        // line 1429
+        .line 1429
         ldloc _F
         ldloc _F
         ldfld valuetype T_setty @block_typ::Fsys
@@ -23167,18 +23167,18 @@
         ldloc _F
         ldflda void* @block_typ::Lsp1
         call instance void @block_typ::Fieldlist(valuetype T_setty Fsys, void*& Frecvar)
-        // line 1430
-        // line 1430
+        .line 1430
+        .line 1430
         ldloc _F
         ldc.i4 77
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ::Lsp
-        // line 1430
+        .line 1430
         ldloc _F
         ldfld void* @block_typ::Lsp
         ldc.i4 5
         stfld int32 T_structure::Form
-        // line 1432
+        .line 1432
         ldloc _F
         ldfld void* @block_typ::Lsp
         ldsflda valuetype T_array_23 _G::Display
@@ -23186,63 +23186,63 @@
         call instance valuetype T_record_22& T_array_23::ldadr(int32)
         ldfld void* T_record_22::Fname
         stfld void* T_structure::Fstfld
-        // line 1433
+        .line 1433
         ldloc _F
         ldfld void* @block_typ::Lsp
         ldloc _F
         ldfld void* @block_typ::Lsp1
         stfld void* T_structure::Recvar
-        // line 1433
+        .line 1433
         ldloc _F
         ldfld void* @block_typ::Lsp
         ldloc _F
         ldfld int32 @block_typ::Displ
         stfld int32 T_structure::Size
-        // line 1433
+        .line 1433
         ldloc _F
         ldfld void* @block_typ::Lsp
         ldc.i4 5
         stfld int32 T_structure::Form
-        // line 1435
+        .line 1435
         ldloc _F
         ldfld int8 @block_typ::Oldtop
         stsfld int8 _G::Top
-        // line 1436
+        .line 1436
         ldsfld int32 _G::Sy
         ldc.i4 39
         ceq
         brfalse L_else_39
-        // line 1436
+        .line 1436
         call void Insymbol()
         br L_if_end_40
     L_else_39:
-        // line 1436
+        .line 1436
         ldc.i4 13
         call void Error(int32 Ferrnr)
     L_if_end_40:
         br L_if_end_36
     L_else_35:
-        // line 1439
+        .line 1439
         ldsfld int32 _G::Sy
         ldc.i4 25
         ceq
         brfalse L_else_41
-        // line 1440
+        .line 1440
         call void Insymbol()
-        // line 1441
+        .line 1441
         ldsfld int32 _G::Sy
         ldc.i4 42
         ceq
         brfalse L_else_43
-        // line 1441
+        .line 1441
         call void Insymbol()
         br L_if_end_44
     L_else_43:
-        // line 1441
+        .line 1441
         ldc.i4 8
         call void Error(int32 Ferrnr)
     L_if_end_44:
-        // line 1442
+        .line 1442
         ldloc _F
         ldloc _F
         ldfld valuetype T_setty @block_typ::Fsys
@@ -23251,7 +23251,7 @@
         ldloc _F
         ldflda int32 @block_typ::Lsize
         call instance void @block_typ::Simpletype(valuetype T_setty Fsys, void*& Fsp, int32& Fsize)
-        // line 1443
+        .line 1443
         ldloc _F
         ldfld void* @block_typ::Lsp1
         ldnull
@@ -23259,53 +23259,53 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_45
-        // line 1444
+        .line 1444
         ldloc _F
         ldfld void* @block_typ::Lsp1
         ldfld int32 T_structure::Form
         ldc.i4 1
         cgt
         brfalse L_else_46
-        // line 1445
+        .line 1445
         ldc.i4 115
         call void Error(int32 Ferrnr)
-        // line 1445
+        .line 1445
         ldloc _F
         ldnull
         stfld void* @block_typ::Lsp1
         br L_if_end_47
     L_else_46:
-        // line 1447
+        .line 1447
         ldloc _F
         ldfld void* @block_typ::Lsp1
         ldsfld void* _G::Realptr
         ceq
         brfalse L_else_48
-        // line 1448
+        .line 1448
         ldc.i4 114
         call void Error(int32 Ferrnr)
-        // line 1448
+        .line 1448
         ldloc _F
         ldnull
         stfld void* @block_typ::Lsp1
         br L_if_end_49
     L_else_48:
-        // line 1449
+        .line 1449
         ldloc _F
         ldfld void* @block_typ::Lsp1
         ldsfld void* _G::Intptr
         ceq
         brfalse L_else_50
-        // line 1450
+        .line 1450
         ldc.i4 169
         call void Error(int32 Ferrnr)
-        // line 1450
+        .line 1450
         ldloc _F
         ldnull
         stfld void* @block_typ::Lsp1
         br L_if_end_51
     L_else_50:
-        // line 1452
+        .line 1452
         ldloc _F
         ldfld void* @block_typ::Lsp1
         ldloc _F
@@ -23313,7 +23313,7 @@
         ldloc _F
         ldflda int32 @block_typ::Lmax
         call void Getbounds(void* Fsp, int32& Fmin, int32& Fmax)
-        // line 1453
+        .line 1453
         ldloc _F
         ldfld int32 @block_typ::Lmin
         ldc.i4 0
@@ -23327,7 +23327,7 @@
         cgt
     L_OR_shortcut_52:
         brfalse L_if_end_53
-        // line 1454
+        .line 1454
         ldc.i4 169
         call void Error(int32 Ferrnr)
     L_if_end_53:
@@ -23336,24 +23336,24 @@
     L_if_end_49:
     L_if_end_47:
     L_if_end_45:
-        // line 1456
-        // line 1456
+        .line 1456
+        .line 1456
         ldloc _F
         ldc.i4 77
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typ::Lsp
-        // line 1456
+        .line 1456
         ldloc _F
         ldfld void* @block_typ::Lsp
         ldc.i4 3
         stfld int32 T_structure::Form
-        // line 1458
+        .line 1458
         ldloc _F
         ldfld void* @block_typ::Lsp
         ldloc _F
         ldfld void* @block_typ::Lsp1
         stfld void* T_structure::Elset
-        // line 1458
+        .line 1458
         ldloc _F
         ldfld void* @block_typ::Lsp
         ldc.i4 1
@@ -23362,7 +23362,7 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 T_structure::Size
-        // line 1458
+        .line 1458
         ldloc _F
         ldfld void* @block_typ::Lsp
         ldc.i4 3
@@ -23370,23 +23370,23 @@
         /* nop */
         br L_if_end_42
     L_else_41:
-        // line 1461
+        .line 1461
         ldsfld int32 _G::Sy
         ldc.i4 29
         ceq
         brfalse L_if_end_54
-        // line 1462
+        .line 1462
         call void Insymbol()
-        // line 1463
+        .line 1463
         ldc.i4 399
         call void Error(int32 Ferrnr)
-        // line 1463
+        .line 1463
         ldloc _F
         ldfld class @block @block_typ::_slink
         ldloc _F
         ldfld valuetype T_setty @block_typ::Fsys
         call instance void @block::Skip(valuetype T_setty Fsys)
-        // line 1463
+        .line 1463
         ldloc _F
         ldnull
         stfld void* @block_typ::Lsp
@@ -23394,7 +23394,7 @@
     L_if_end_42:
     L_if_end_36:
     L_if_end_18:
-        // line 1465
+        .line 1465
         ldloc _F
         ldfld void** @block_typ::Fsp
         ldloc _F
@@ -23402,7 +23402,7 @@
         stobj void*
     L_if_end_7:
     L_if_end_5:
-        // line 1467
+        .line 1467
         ldloc _F
         ldfld valuetype T_setty @block_typ::Fsys
         ldsfld int32 _G::Sy
@@ -23410,10 +23410,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_55
-        // line 1468
+        .line 1468
         ldc.i4 6
         call void Error(int32 Ferrnr)
-        // line 1468
+        .line 1468
         ldloc _F
         ldfld class @block @block_typ::_slink
         ldloc _F
@@ -23422,20 +23422,20 @@
     L_if_end_55:
         br L_if_end_3
     L_else_2:
-        // line 1470
+        .line 1470
         ldloc _F
         ldfld void** @block_typ::Fsp
         ldnull
         stobj void*
     L_if_end_3:
-        // line 1471
+        .line 1471
         ldloc _F
         ldfld void** @block_typ::Fsp
         ldobj void*
         ldnull
         ceq
         brfalse L_else_56
-        // line 1471
+        .line 1471
         ldloc _F
         ldfld int32* @block_typ::Fsize
         ldc.i4 1
@@ -23446,7 +23446,7 @@
         stobj int32
         br L_if_end_57
     L_else_56:
-        // line 1471
+        .line 1471
         ldloc _F
         ldfld int32* @block_typ::Fsize
         ldloc _F
@@ -23460,7 +23460,7 @@
         ret
     }
 
-// line 1474
+.line 1474
 
     .method public
     void Labeldeclaration()
@@ -23494,28 +23494,28 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 1477
+        .line 1477
     L_repeat_1:
-        // line 1478
+        .line 1478
         ldsfld int32 _G::Sy
         ldc.i4 1
         ceq
         brfalse L_else_2
-        // line 1480
+        .line 1480
         ldloc _F
         ldsflda valuetype T_array_23 _G::Display
         ldsfld int8 _G::Top
         call instance valuetype T_record_22& T_array_23::ldadr(int32)
         ldfld void* T_record_22::Flabel
         stfld void* @block_labeldeclaration::Llp
-        // line 1480
+        .line 1480
         ldloc _F
         ldc.i4 0 // (false)
         stfld bool @block_labeldeclaration::Redef
-        // line 1481
+        .line 1481
         br L_while_test_5
     L_while_4:
-        // line 1482
+        .line 1482
         ldloc _F
         ldfld void* @block_labeldeclaration::Llp
         ldfld int32 T_labl::Labval
@@ -23525,7 +23525,7 @@
         ldc.i4.0
         ceq
         brfalse L_else_6
-        // line 1483
+        .line 1483
         ldloc _F
         ldloc _F
         ldfld void* @block_labeldeclaration::Llp
@@ -23533,11 +23533,11 @@
         stfld void* @block_labeldeclaration::Llp
         br L_if_end_7
     L_else_6:
-        // line 1484
+        .line 1484
         ldloc _F
         ldc.i4 1 // (true)
         stfld bool @block_labeldeclaration::Redef
-        // line 1484
+        .line 1484
         ldc.i4 166
         call void Error(int32 Ferrnr)
     L_if_end_7:
@@ -23557,34 +23557,34 @@
         ceq
     L_AND_shortcut_8:
         brtrue L_while_4
-        // line 1485
+        .line 1485
         ldloc _F
         ldfld bool @block_labeldeclaration::Redef
         ldc.i4.0
         ceq
         brfalse L_if_end_9
-        // line 1486
-        // line 1486
+        .line 1486
+        .line 1486
         ldloc _F
         ldc.i4 20
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_labeldeclaration::Llp
-        // line 1488
+        .line 1488
         ldloc _F
         ldfld void* @block_labeldeclaration::Llp
         ldsflda valuetype T_valu _G::Val
         ldfld int32 T_valu::Ival
         stfld int32 T_labl::Labval
-        // line 1488
+        .line 1488
         ldloc _F
         ldflda int32 @block_labeldeclaration::Lbname
         call void Genlabel(int32& Nxtlab)
-        // line 1489
+        .line 1489
         ldloc _F
         ldfld void* @block_labeldeclaration::Llp
         ldc.i4 0 // (false)
         stfld bool T_labl::Defined
-        // line 1489
+        .line 1489
         ldloc _F
         ldfld void* @block_labeldeclaration::Llp
         ldsflda valuetype T_array_23 _G::Display
@@ -23592,13 +23592,13 @@
         call instance valuetype T_record_22& T_array_23::ldadr(int32)
         ldfld void* T_record_22::Flabel
         stfld void* T_labl::Nextlab
-        // line 1489
+        .line 1489
         ldloc _F
         ldfld void* @block_labeldeclaration::Llp
         ldloc _F
         ldfld int32 @block_labeldeclaration::Lbname
         stfld int32 T_labl::Labname
-        // line 1491
+        .line 1491
         ldsflda valuetype T_array_23 _G::Display
         ldsfld int8 _G::Top
         call instance valuetype T_record_22& T_array_23::ldadr(int32)
@@ -23606,15 +23606,15 @@
         ldfld void* @block_labeldeclaration::Llp
         stfld void* T_record_22::Flabel
     L_if_end_9:
-        // line 1493
+        .line 1493
         call void Insymbol()
         br L_if_end_3
     L_else_2:
-        // line 1495
+        .line 1495
         ldc.i4 15
         call void Error(int32 Ferrnr)
     L_if_end_3:
-        // line 1496
+        .line 1496
         ldloc _F
         ldfld class @block @block_labeldeclaration::_slink
         ldfld valuetype T_setty @block::Fsys
@@ -23627,10 +23627,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_10
-        // line 1497
+        .line 1497
         ldc.i4 6
         call void Error(int32 Ferrnr)
-        // line 1497
+        .line 1497
         ldloc _F
         ldfld class @block @block_labeldeclaration::_slink
         ldloc _F
@@ -23647,7 +23647,7 @@
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block::Skip(valuetype T_setty Fsys)
     L_if_end_10:
-        // line 1498
+        .line 1498
         ldloc _F
         ldfld class @block @block_labeldeclaration::_slink
         ldsfld int32 _G::Sy
@@ -23656,30 +23656,30 @@
         ldc.i4.0
         ceq
         stfld bool @block::Test
-        // line 1499
+        .line 1499
         ldloc _F
         ldfld class @block @block_labeldeclaration::_slink
         ldfld bool @block::Test
         ldc.i4.0
         ceq
         brfalse L_if_end_11
-        // line 1499
+        .line 1499
         call void Insymbol()
     L_if_end_11:
         ldloc _F
         ldfld class @block @block_labeldeclaration::_slink
         ldfld bool @block::Test
         brfalse L_repeat_1
-        // line 1501
+        .line 1501
         ldsfld int32 _G::Sy
         ldc.i4 13
         ceq
         brfalse L_else_12
-        // line 1501
+        .line 1501
         call void Insymbol()
         br L_if_end_13
     L_else_12:
-        // line 1501
+        .line 1501
         ldc.i4 14
         call void Error(int32 Ferrnr)
     L_if_end_13:
@@ -23688,7 +23688,7 @@
         ret
     }
 
-// line 1504
+.line 1504
 
     .method public
     void Constdeclaration()
@@ -23726,17 +23726,17 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 1507
+        .line 1507
         ldsfld int32 _G::Sy
         ldc.i4 0
         ceq
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 1508
+        .line 1508
         ldc.i4 2
         call void Error(int32 Ferrnr)
-        // line 1508
+        .line 1508
         ldloc _F
         ldfld class @block @block_constdeclaration::_slink
         ldloc _F
@@ -23753,43 +23753,43 @@
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block::Skip(valuetype T_setty Fsys)
     L_if_end_1:
-        // line 1509
+        .line 1509
         br L_while_test_3
     L_while_2:
-        // line 1510
-        // line 1510
+        .line 1510
+        .line 1510
         ldloc _F
         ldc.i4 214
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_constdeclaration::Lcp
-        // line 1510
+        .line 1510
         ldloc _F
         ldfld void* @block_constdeclaration::Lcp
         ldc.i4 1
         stfld int32 T_identifier::Klass
-        // line 1512
+        .line 1512
         ldloc _F
         ldfld void* @block_constdeclaration::Lcp
         ldsfld valuetype T_alpha _G::Id
         stfld valuetype T_alpha T_identifier::Name
-        // line 1512
+        .line 1512
         ldloc _F
         ldfld void* @block_constdeclaration::Lcp
         ldnull
         stfld void* T_identifier::Idtype
-        // line 1512
+        .line 1512
         ldloc _F
         ldfld void* @block_constdeclaration::Lcp
         ldnull
         stfld void* T_identifier::Next
-        // line 1512
+        .line 1512
         ldloc _F
         ldfld void* @block_constdeclaration::Lcp
         ldc.i4 1
         stfld int32 T_identifier::Klass
-        // line 1513
+        .line 1513
         call void Insymbol()
-        // line 1514
+        .line 1514
         ldsfld int32 _G::Sy
         ldc.i4 7
         ceq
@@ -23801,15 +23801,15 @@
         ceq
     L_AND_shortcut_4:
         brfalse L_else_5
-        // line 1514
+        .line 1514
         call void Insymbol()
         br L_if_end_6
     L_else_5:
-        // line 1514
+        .line 1514
         ldc.i4 16
         call void Error(int32 Ferrnr)
     L_if_end_6:
-        // line 1515
+        .line 1515
         ldloc _F
         ldfld class @block @block_constdeclaration::_slink
         ldloc _F
@@ -23829,30 +23829,30 @@
         ldloc _F
         ldflda valuetype T_valu @block_constdeclaration::Lvalu
         call instance void @block::Constant(valuetype T_setty Fsys, void*& Fsp, valuetype T_valu& Fvalu)
-        // line 1516
+        .line 1516
         ldloc _F
         ldfld void* @block_constdeclaration::Lcp
         call void Enterid(void* Fcp)
-        // line 1517
+        .line 1517
         ldloc _F
         ldfld void* @block_constdeclaration::Lcp
         ldloc _F
         ldfld void* @block_constdeclaration::Lsp
         stfld void* T_identifier::Idtype
-        // line 1517
+        .line 1517
         ldloc _F
         ldfld void* @block_constdeclaration::Lcp
         ldloc _F
         ldfld valuetype T_valu @block_constdeclaration::Lvalu
         stfld valuetype T_valu T_identifier::Values
-        // line 1518
+        .line 1518
         ldsfld int32 _G::Sy
         ldc.i4 13
         ceq
         brfalse L_else_7
-        // line 1519
+        .line 1519
         call void Insymbol()
-        // line 1520
+        .line 1520
         ldloc _F
         ldfld class @block @block_constdeclaration::_slink
         ldfld valuetype T_setty @block::Fsys
@@ -23865,10 +23865,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_9
-        // line 1521
+        .line 1521
         ldc.i4 6
         call void Error(int32 Ferrnr)
-        // line 1521
+        .line 1521
         ldloc _F
         ldfld class @block @block_constdeclaration::_slink
         ldloc _F
@@ -23887,7 +23887,7 @@
     L_if_end_9:
         br L_if_end_8
     L_else_7:
-        // line 1523
+        .line 1523
         ldc.i4 14
         call void Error(int32 Ferrnr)
     L_if_end_8:
@@ -23901,7 +23901,7 @@
         ret
     }
 
-// line 1527
+.line 1527
 
     .method public
     void Typedeclaration()
@@ -23939,17 +23939,17 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 1530
+        .line 1530
         ldsfld int32 _G::Sy
         ldc.i4 0
         ceq
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 1531
+        .line 1531
         ldc.i4 2
         call void Error(int32 Ferrnr)
-        // line 1531
+        .line 1531
         ldloc _F
         ldfld class @block @block_typedeclaration::_slink
         ldloc _F
@@ -23966,38 +23966,38 @@
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block::Skip(valuetype T_setty Fsys)
     L_if_end_1:
-        // line 1532
+        .line 1532
         br L_while_test_3
     L_while_2:
-        // line 1533
-        // line 1533
+        .line 1533
+        .line 1533
         ldloc _F
         ldc.i4 214
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_typedeclaration::Lcp
-        // line 1533
+        .line 1533
         ldloc _F
         ldfld void* @block_typedeclaration::Lcp
         ldc.i4 0
         stfld int32 T_identifier::Klass
-        // line 1535
+        .line 1535
         ldloc _F
         ldfld void* @block_typedeclaration::Lcp
         ldsfld valuetype T_alpha _G::Id
         stfld valuetype T_alpha T_identifier::Name
-        // line 1535
+        .line 1535
         ldloc _F
         ldfld void* @block_typedeclaration::Lcp
         ldnull
         stfld void* T_identifier::Idtype
-        // line 1535
+        .line 1535
         ldloc _F
         ldfld void* @block_typedeclaration::Lcp
         ldc.i4 0
         stfld int32 T_identifier::Klass
-        // line 1536
+        .line 1536
         call void Insymbol()
-        // line 1537
+        .line 1537
         ldsfld int32 _G::Sy
         ldc.i4 7
         ceq
@@ -24009,15 +24009,15 @@
         ceq
     L_AND_shortcut_4:
         brfalse L_else_5
-        // line 1537
+        .line 1537
         call void Insymbol()
         br L_if_end_6
     L_else_5:
-        // line 1537
+        .line 1537
         ldc.i4 16
         call void Error(int32 Ferrnr)
     L_if_end_6:
-        // line 1538
+        .line 1538
         ldloc _F
         ldfld class @block @block_typedeclaration::_slink
         ldloc _F
@@ -24037,24 +24037,24 @@
         ldloc _F
         ldflda int32 @block_typedeclaration::Lsize
         call instance void @block::Typ(valuetype T_setty Fsys, void*& Fsp, int32& Fsize)
-        // line 1539
+        .line 1539
         ldloc _F
         ldfld void* @block_typedeclaration::Lcp
         call void Enterid(void* Fcp)
-        // line 1540
+        .line 1540
         ldloc _F
         ldfld void* @block_typedeclaration::Lcp
         ldloc _F
         ldfld void* @block_typedeclaration::Lsp
         stfld void* T_identifier::Idtype
-        // line 1542
+        .line 1542
         ldloc _F
         ldsfld void* _G::Fwptr
         stfld void* @block_typedeclaration::Lcp1
-        // line 1543
+        .line 1543
         br L_while_test_8
     L_while_7:
-        // line 1545
+        .line 1545
         ldloc _F
         ldfld void* @block_typedeclaration::Lcp1
         ldfld valuetype T_alpha T_identifier::Name
@@ -24065,7 +24065,7 @@
         call string T_alpha::arrayToString(valuetype T_alpha)
         call bool [lpcRuntime]LPC.Helpers::StrcmpEQ(string, string)
         brfalse L_else_9
-        // line 1546
+        .line 1546
         ldloc _F
         ldfld void* @block_typedeclaration::Lcp1
         ldfld void* T_identifier::Idtype
@@ -24073,7 +24073,7 @@
         ldfld void* @block_typedeclaration::Lcp
         ldfld void* T_identifier::Idtype
         stfld void* T_structure::Eltype
-        // line 1547
+        .line 1547
         ldloc _F
         ldfld void* @block_typedeclaration::Lcp1
         ldsfld void* _G::Fwptr
@@ -24081,7 +24081,7 @@
         ldc.i4.0
         ceq
         brfalse L_else_11
-        // line 1548
+        .line 1548
         ldloc _F
         ldfld void* @block_typedeclaration::Lcp2
         ldloc _F
@@ -24090,7 +24090,7 @@
         stfld void* T_identifier::Next
         br L_if_end_12
     L_else_11:
-        // line 1549
+        .line 1549
         ldloc _F
         ldfld void* @block_typedeclaration::Lcp1
         ldfld void* T_identifier::Next
@@ -24099,13 +24099,13 @@
         /* nop */
         br L_if_end_10
     L_else_9:
-        // line 1551
+        .line 1551
         ldloc _F
         ldloc _F
         ldfld void* @block_typedeclaration::Lcp1
         stfld void* @block_typedeclaration::Lcp2
     L_if_end_10:
-        // line 1552
+        .line 1552
         ldloc _F
         ldloc _F
         ldfld void* @block_typedeclaration::Lcp1
@@ -24119,14 +24119,14 @@
         ldc.i4.0
         ceq
         brtrue L_while_7
-        // line 1554
+        .line 1554
         ldsfld int32 _G::Sy
         ldc.i4 13
         ceq
         brfalse L_else_13
-        // line 1555
+        .line 1555
         call void Insymbol()
-        // line 1556
+        .line 1556
         ldloc _F
         ldfld class @block @block_typedeclaration::_slink
         ldfld valuetype T_setty @block::Fsys
@@ -24139,10 +24139,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_15
-        // line 1557
+        .line 1557
         ldc.i4 6
         call void Error(int32 Ferrnr)
-        // line 1557
+        .line 1557
         ldloc _F
         ldfld class @block @block_typedeclaration::_slink
         ldloc _F
@@ -24161,7 +24161,7 @@
     L_if_end_15:
         br L_if_end_14
     L_else_13:
-        // line 1559
+        .line 1559
         ldc.i4 14
         call void Error(int32 Ferrnr)
     L_if_end_14:
@@ -24170,22 +24170,22 @@
         ldc.i4 0
         ceq
         brtrue L_while_2
-        // line 1561
+        .line 1561
         ldsfld void* _G::Fwptr
         ldnull
         ceq
         ldc.i4.0
         ceq
         brfalse L_if_end_16
-        // line 1562
+        .line 1562
         ldc.i4 117
         call void Error(int32 Ferrnr)
-        // line 1562
+        .line 1562
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 1563
+        .line 1563
     L_repeat_17:
-        // line 1563
+        .line 1563
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr " type-id "
@@ -24196,7 +24196,7 @@
         call string T_alpha::arrayToString(valuetype T_alpha)
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 1564
+        .line 1564
         ldsfld void* _G::Fwptr
         ldfld void* T_identifier::Next
         stsfld void* _G::Fwptr
@@ -24204,12 +24204,12 @@
         ldnull
         ceq
         brfalse L_repeat_17
-        // line 1566
+        .line 1566
         ldsfld bool _G::Eol
         ldc.i4.0
         ceq
         brfalse L_if_end_18
-        // line 1566
+        .line 1566
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldsfld int32 _G::Chcnt
@@ -24226,7 +24226,7 @@
         ret
     }
 
-// line 1570
+.line 1570
 
     .method public
     void Vardeclaration()
@@ -24278,80 +24278,80 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 1572
+        .line 1572
         ldloc _F
         ldnull
         stfld void* @block_vardeclaration::Nxt
-        // line 1573
+        .line 1573
     L_repeat_1:
-        // line 1574
+        .line 1574
     L_repeat_2:
-        // line 1575
+        .line 1575
         ldsfld int32 _G::Sy
         ldc.i4 0
         ceq
         brfalse L_else_3
-        // line 1576
-        // line 1576
+        .line 1576
+        .line 1576
         ldloc _F
         ldc.i4 214
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_vardeclaration::Lcp
-        // line 1576
+        .line 1576
         ldloc _F
         ldfld void* @block_vardeclaration::Lcp
         ldc.i4 2
         stfld int32 T_identifier::Klass
-        // line 1578
+        .line 1578
         ldloc _F
         ldfld void* @block_vardeclaration::Lcp
         ldsfld valuetype T_alpha _G::Id
         stfld valuetype T_alpha T_identifier::Name
-        // line 1578
+        .line 1578
         ldloc _F
         ldfld void* @block_vardeclaration::Lcp
         ldloc _F
         ldfld void* @block_vardeclaration::Nxt
         stfld void* T_identifier::Next
-        // line 1578
+        .line 1578
         ldloc _F
         ldfld void* @block_vardeclaration::Lcp
         ldc.i4 2
         stfld int32 T_identifier::Klass
-        // line 1579
+        .line 1579
         ldloc _F
         ldfld void* @block_vardeclaration::Lcp
         ldnull
         stfld void* T_identifier::Idtype
-        // line 1579
+        .line 1579
         ldloc _F
         ldfld void* @block_vardeclaration::Lcp
         ldc.i4 0
         stfld int32 T_identifier::Vkind
-        // line 1579
+        .line 1579
         ldloc _F
         ldfld void* @block_vardeclaration::Lcp
         ldsfld int8 _G::Level
         stfld int8 T_identifier::Vlev
-        // line 1581
+        .line 1581
         ldloc _F
         ldfld void* @block_vardeclaration::Lcp
         call void Enterid(void* Fcp)
-        // line 1582
+        .line 1582
         ldloc _F
         ldloc _F
         ldfld void* @block_vardeclaration::Lcp
         stfld void* @block_vardeclaration::Nxt
-        // line 1583
+        .line 1583
         call void Insymbol()
         /* nop */
         br L_if_end_4
     L_else_3:
-        // line 1585
+        .line 1585
         ldc.i4 2
         call void Error(int32 Ferrnr)
     L_if_end_4:
-        // line 1586
+        .line 1586
         ldloc _F
         ldfld class @block @block_vardeclaration::_slink
         ldfld valuetype T_setty @block::Fsys
@@ -24367,10 +24367,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_5
-        // line 1587
+        .line 1587
         ldc.i4 6
         call void Error(int32 Ferrnr)
-        // line 1587
+        .line 1587
         ldloc _F
         ldfld class @block @block_vardeclaration::_slink
         ldloc _F
@@ -24390,7 +24390,7 @@
         call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
         call instance void @block::Skip(valuetype T_setty Fsys)
     L_if_end_5:
-        // line 1588
+        .line 1588
         ldloc _F
         ldfld class @block @block_vardeclaration::_slink
         ldsfld int32 _G::Sy
@@ -24399,34 +24399,34 @@
         ldc.i4.0
         ceq
         stfld bool @block::Test
-        // line 1589
+        .line 1589
         ldloc _F
         ldfld class @block @block_vardeclaration::_slink
         ldfld bool @block::Test
         ldc.i4.0
         ceq
         brfalse L_if_end_6
-        // line 1589
+        .line 1589
         call void Insymbol()
     L_if_end_6:
         ldloc _F
         ldfld class @block @block_vardeclaration::_slink
         ldfld bool @block::Test
         brfalse L_repeat_2
-        // line 1591
+        .line 1591
         ldsfld int32 _G::Sy
         ldc.i4 16
         ceq
         brfalse L_else_7
-        // line 1591
+        .line 1591
         call void Insymbol()
         br L_if_end_8
     L_else_7:
-        // line 1591
+        .line 1591
         ldc.i4 5
         call void Error(int32 Ferrnr)
     L_if_end_8:
-        // line 1592
+        .line 1592
         ldloc _F
         ldfld class @block @block_vardeclaration::_slink
         ldloc _F
@@ -24449,26 +24449,26 @@
         ldloc _F
         ldflda int32 @block_vardeclaration::Lsize
         call instance void @block::Typ(valuetype T_setty Fsys, void*& Fsp, int32& Fsize)
-        // line 1593
+        .line 1593
         br L_while_test_10
     L_while_9:
-        // line 1595
+        .line 1595
         ldloc _F
         ldfld void* @block_vardeclaration::Lsp
         ldsflda int32 _G::Lc
         call void Align(void* Fsp, int32& Flc)
-        // line 1596
+        .line 1596
         ldloc _F
         ldfld void* @block_vardeclaration::Nxt
         ldloc _F
         ldfld void* @block_vardeclaration::Lsp
         stfld void* T_identifier::Idtype
-        // line 1596
+        .line 1596
         ldloc _F
         ldfld void* @block_vardeclaration::Nxt
         ldsfld int32 _G::Lc
         stfld int32 T_identifier::Vaddr
-        // line 1597
+        .line 1597
         ldsfld int32 _G::Lc
         ldloc _F
         ldfld int32 @block_vardeclaration::Lsize
@@ -24478,7 +24478,7 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int32 _G::Lc
-        // line 1597
+        .line 1597
         ldloc _F
         ldloc _F
         ldfld void* @block_vardeclaration::Nxt
@@ -24492,14 +24492,14 @@
         ldc.i4.0
         ceq
         brtrue L_while_9
-        // line 1599
+        .line 1599
         ldsfld int32 _G::Sy
         ldc.i4 13
         ceq
         brfalse L_else_11
-        // line 1600
+        .line 1600
         call void Insymbol()
-        // line 1601
+        .line 1601
         ldloc _F
         ldfld class @block @block_vardeclaration::_slink
         ldfld valuetype T_setty @block::Fsys
@@ -24512,10 +24512,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_13
-        // line 1602
+        .line 1602
         ldc.i4 6
         call void Error(int32 Ferrnr)
-        // line 1602
+        .line 1602
         ldloc _F
         ldfld class @block @block_vardeclaration::_slink
         ldloc _F
@@ -24534,7 +24534,7 @@
     L_if_end_13:
         br L_if_end_12
     L_else_11:
-        // line 1604
+        .line 1604
         ldc.i4 14
         call void Error(int32 Ferrnr)
     L_if_end_12:
@@ -24553,22 +24553,22 @@
         ceq
     L_AND_shortcut_14:
         brfalse L_repeat_1
-        // line 1606
+        .line 1606
         ldsfld void* _G::Fwptr
         ldnull
         ceq
         ldc.i4.0
         ceq
         brfalse L_if_end_15
-        // line 1607
+        .line 1607
         ldc.i4 117
         call void Error(int32 Ferrnr)
-        // line 1607
+        .line 1607
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 1608
+        .line 1608
     L_repeat_16:
-        // line 1608
+        .line 1608
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr " type-id "
@@ -24579,7 +24579,7 @@
         call string T_alpha::arrayToString(valuetype T_alpha)
         call instance void [lpcRuntime]LPC.File::Write(string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 1609
+        .line 1609
         ldsfld void* _G::Fwptr
         ldfld void* T_identifier::Next
         stsfld void* _G::Fwptr
@@ -24587,12 +24587,12 @@
         ldnull
         ceq
         brfalse L_repeat_16
-        // line 1611
+        .line 1611
         ldsfld bool _G::Eol
         ldc.i4.0
         ceq
         brfalse L_if_end_17
-        // line 1611
+        .line 1611
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldsfld int32 _G::Chcnt
@@ -24609,7 +24609,7 @@
         ret
     }
 
-// line 1615
+.line 1615
 
     .method public
     void Procdeclaration(int32 Fsy)
@@ -24687,27 +24687,27 @@
         call instance void T_setty::addValue(int32)
     
     L_Entry:
-        // line 1790
+        .line 1790
         ldloc _F
         ldsfld int32 _G::Lc
         stfld int32 @block_procdeclaration::Llc
-        // line 1790
+        .line 1790
         ldc.i4 5
         dup
         ldc.i4 0
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int32 _G::Lc
-        // line 1790
+        .line 1790
         ldloc _F
         ldc.i4 0 // (false)
         stfld bool @block_procdeclaration::Forw
-        // line 1791
+        .line 1791
         ldsfld int32 _G::Sy
         ldc.i4 0
         ceq
         brfalse L_else_1
-        // line 1792
+        .line 1792
         ldsflda valuetype T_array_23 _G::Display
         ldsfld int8 _G::Top
         call instance valuetype T_record_22& T_array_23::ldadr(int32)
@@ -24715,7 +24715,7 @@
         ldloc _F
         ldflda void* @block_procdeclaration::Lcp
         call void Searchsection(void* Fcp, void*& Fcp1)
-        // line 1793
+        .line 1793
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldnull
@@ -24723,14 +24723,14 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_3
-        // line 1795
+        .line 1795
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldfld int32 T_identifier::Klass
         ldc.i4 4
         ceq
         brfalse L_else_4
-        // line 1796
+        .line 1796
         ldloc _F
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
@@ -24755,14 +24755,14 @@
         stfld bool @block_procdeclaration::Forw
         br L_if_end_5
     L_else_4:
-        // line 1798
+        .line 1798
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldfld int32 T_identifier::Klass
         ldc.i4 5
         ceq
         brfalse L_else_8
-        // line 1799
+        .line 1799
         ldloc _F
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
@@ -24787,162 +24787,162 @@
         stfld bool @block_procdeclaration::Forw
         br L_if_end_9
     L_else_8:
-        // line 1800
+        .line 1800
         ldloc _F
         ldc.i4 0 // (false)
         stfld bool @block_procdeclaration::Forw
     L_if_end_9:
     L_if_end_5:
-        // line 1801
+        .line 1801
         ldloc _F
         ldfld bool @block_procdeclaration::Forw
         ldc.i4.0
         ceq
         brfalse L_if_end_12
-        // line 1801
+        .line 1801
         ldc.i4 160
         call void Error(int32 Ferrnr)
     L_if_end_12:
     L_if_end_3:
-        // line 1803
+        .line 1803
         ldloc _F
         ldfld bool @block_procdeclaration::Forw
         ldc.i4.0
         ceq
         brfalse L_else_13
-        // line 1805
+        .line 1805
         ldloc _F
         ldfld int32 @block_procdeclaration::Fsy
         ldc.i4 24
         ceq
         brfalse L_else_15
-        // line 1805
-        // line 1805
+        .line 1805
+        .line 1805
         ldloc _F
         ldc.i4 214
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_procdeclaration::Lcp
-        // line 1805
+        .line 1805
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldc.i4 4
         stfld int32 T_identifier::Klass
-        // line 1805
+        .line 1805
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldc.i4 1
         stfld int32 T_identifier::Pfdeckind
-        // line 1805
+        .line 1805
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldc.i4 0
         stfld int32 T_identifier::Pfkind
         br L_if_end_16
     L_else_15:
-        // line 1806
-        // line 1806
+        .line 1806
+        .line 1806
         ldloc _F
         ldc.i4 214
         call void* [lpcRuntime]LPC.Heap::Malloc(int32)
         stfld void* @block_procdeclaration::Lcp
-        // line 1806
+        .line 1806
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldc.i4 5
         stfld int32 T_identifier::Klass
-        // line 1806
+        .line 1806
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldc.i4 1
         stfld int32 T_identifier::Pfdeckind
-        // line 1806
+        .line 1806
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldc.i4 0
         stfld int32 T_identifier::Pfkind
     L_if_end_16:
-        // line 1808
+        .line 1808
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldsfld valuetype T_alpha _G::Id
         stfld valuetype T_alpha T_identifier::Name
-        // line 1808
+        .line 1808
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldnull
         stfld void* T_identifier::Idtype
-        // line 1809
+        .line 1809
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldc.i4 0 // (false)
         stfld bool T_identifier::Externl
-        // line 1809
+        .line 1809
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldsfld int8 _G::Level
         stfld int8 T_identifier::Pflev
-        // line 1809
+        .line 1809
         ldloc _F
         ldflda int32 @block_procdeclaration::Lbname
         call void Genlabel(int32& Nxtlab)
-        // line 1810
+        .line 1810
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldc.i4 1
         stfld int32 T_identifier::Pfdeckind
-        // line 1810
+        .line 1810
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldc.i4 0
         stfld int32 T_identifier::Pfkind
-        // line 1810
+        .line 1810
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldloc _F
         ldfld int32 @block_procdeclaration::Lbname
         stfld int32 T_identifier::Pfname
-        // line 1811
+        .line 1811
         ldloc _F
         ldfld int32 @block_procdeclaration::Fsy
         ldc.i4 24
         ceq
         brfalse L_else_17
-        // line 1811
+        .line 1811
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldc.i4 4
         stfld int32 T_identifier::Klass
         br L_if_end_18
     L_else_17:
-        // line 1812
+        .line 1812
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldc.i4 5
         stfld int32 T_identifier::Klass
     L_if_end_18:
-        // line 1814
+        .line 1814
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         call void Enterid(void* Fcp)
         br L_if_end_14
     L_else_13:
-        // line 1817
+        .line 1817
         ldloc _F
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldfld void* T_identifier::Next
         stfld void* @block_procdeclaration::Lcp1
-        // line 1818
+        .line 1818
         br L_while_test_20
     L_while_19:
-        // line 1821
+        .line 1821
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp1
         ldfld int32 T_identifier::Klass
         ldc.i4 2
         ceq
         brfalse L_if_end_21
-        // line 1822
+        .line 1822
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp1
         ldfld void* T_identifier::Idtype
@@ -24951,7 +24951,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_22
-        // line 1823
+        .line 1823
         ldloc _F
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp1
@@ -24966,20 +24966,20 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 @block_procdeclaration::Lcm
-        // line 1824
+        .line 1824
         ldloc _F
         ldfld int32 @block_procdeclaration::Lcm
         ldsfld int32 _G::Lc
         cgt
         brfalse L_if_end_23
-        // line 1824
+        .line 1824
         ldloc _F
         ldfld int32 @block_procdeclaration::Lcm
         stsfld int32 _G::Lc
     L_if_end_23:
     L_if_end_22:
     L_if_end_21:
-        // line 1826
+        .line 1826
         ldloc _F
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp1
@@ -24994,32 +24994,32 @@
         ceq
         brtrue L_while_19
     L_if_end_14:
-        // line 1829
+        .line 1829
         call void Insymbol()
         br L_if_end_2
     L_else_1:
-        // line 1832
+        .line 1832
         ldc.i4 2
         call void Error(int32 Ferrnr)
-        // line 1832
+        .line 1832
         ldloc _F
         ldsfld void* _G::Ufctptr
         stfld void* @block_procdeclaration::Lcp
     L_if_end_2:
-        // line 1833
+        .line 1833
         ldloc _F
         ldsfld int8 _G::Level
         stfld int8 @block_procdeclaration::Oldlev
-        // line 1833
+        .line 1833
         ldloc _F
         ldsfld int8 _G::Top
         stfld int8 @block_procdeclaration::Oldtop
-        // line 1834
+        .line 1834
         ldsfld int8 _G::Level
         ldc.i4 10
         clt
         brfalse L_else_24
-        // line 1834
+        .line 1834
         ldsfld int8 _G::Level
         ldc.i4 1
         add
@@ -25030,16 +25030,16 @@
         stsfld int8 _G::Level
         br L_if_end_25
     L_else_24:
-        // line 1834
+        .line 1834
         ldc.i4 251
         call void Error(int32 Ferrnr)
     L_if_end_25:
-        // line 1835
+        .line 1835
         ldsfld int8 _G::Top
         ldc.i4 20
         clt
         brfalse L_else_26
-        // line 1836
+        .line 1836
         ldsfld int8 _G::Top
         ldc.i4 1
         add
@@ -25048,11 +25048,11 @@
         ldc.i4 20
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int8 _G::Top
-        // line 1839
+        .line 1839
         ldloc _F
         ldfld bool @block_procdeclaration::Forw
         brfalse L_else_28
-        // line 1839
+        .line 1839
         ldsflda valuetype T_array_23 _G::Display
         ldsfld int8 _G::Top
         call instance valuetype T_record_22& T_array_23::ldadr(int32)
@@ -25062,20 +25062,20 @@
         stfld void* T_record_22::Fname
         br L_if_end_29
     L_else_28:
-        // line 1840
+        .line 1840
         ldsflda valuetype T_array_23 _G::Display
         ldsfld int8 _G::Top
         call instance valuetype T_record_22& T_array_23::ldadr(int32)
         ldnull
         stfld void* T_record_22::Fname
     L_if_end_29:
-        // line 1841
+        .line 1841
         ldsflda valuetype T_array_23 _G::Display
         ldsfld int8 _G::Top
         call instance valuetype T_record_22& T_array_23::ldadr(int32)
         ldnull
         stfld void* T_record_22::Flabel
-        // line 1842
+        .line 1842
         ldsflda valuetype T_array_23 _G::Display
         ldsfld int8 _G::Top
         call instance valuetype T_record_22& T_array_23::ldadr(int32)
@@ -25083,29 +25083,29 @@
         stfld int32 T_record_22::Occur
         br L_if_end_27
     L_else_26:
-        // line 1845
+        .line 1845
         ldc.i4 250
         call void Error(int32 Ferrnr)
     L_if_end_27:
-        // line 1846
+        .line 1846
         ldloc _F
         ldfld int32 @block_procdeclaration::Fsy
         ldc.i4 24
         ceq
         brfalse L_else_30
-        // line 1847
+        .line 1847
         ldloc _F
         ldloc $tmpSetLiteral1
         ldloc _F
         ldflda void* @block_procdeclaration::Lcp1
         call instance void @block_procdeclaration::Parameterlist(valuetype T_setty Fsy, void*& Fpar)
-        // line 1848
+        .line 1848
         ldloc _F
         ldfld bool @block_procdeclaration::Forw
         ldc.i4.0
         ceq
         brfalse L_if_end_32
-        // line 1848
+        .line 1848
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldloc _F
@@ -25114,63 +25114,63 @@
     L_if_end_32:
         br L_if_end_31
     L_else_30:
-        // line 1851
+        .line 1851
         ldloc _F
         ldloc $tmpSetLiteral2
         ldloc _F
         ldflda void* @block_procdeclaration::Lcp1
         call instance void @block_procdeclaration::Parameterlist(valuetype T_setty Fsy, void*& Fpar)
-        // line 1852
+        .line 1852
         ldloc _F
         ldfld bool @block_procdeclaration::Forw
         ldc.i4.0
         ceq
         brfalse L_if_end_33
-        // line 1852
+        .line 1852
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp1
         stfld void* T_identifier::Next
     L_if_end_33:
-        // line 1853
+        .line 1853
         ldsfld int32 _G::Sy
         ldc.i4 16
         ceq
         brfalse L_else_34
-        // line 1854
+        .line 1854
         call void Insymbol()
-        // line 1855
+        .line 1855
         ldsfld int32 _G::Sy
         ldc.i4 0
         ceq
         brfalse L_else_36
-        // line 1856
+        .line 1856
         ldloc _F
         ldfld bool @block_procdeclaration::Forw
         brfalse L_if_end_38
-        // line 1856
+        .line 1856
         ldc.i4 122
         call void Error(int32 Ferrnr)
     L_if_end_38:
-        // line 1857
+        .line 1857
         ldloc $tmpSetLiteral3
         ldloc _F
         ldflda void* @block_procdeclaration::Lcp1
         call void Searchid(valuetype T_setofids Fidcls, void*& Fcp)
-        // line 1858
+        .line 1858
         ldloc _F
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp1
         ldfld void* T_identifier::Idtype
         stfld void* @block_procdeclaration::Lsp
-        // line 1859
+        .line 1859
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldloc _F
         ldfld void* @block_procdeclaration::Lsp
         stfld void* T_identifier::Idtype
-        // line 1860
+        .line 1860
         ldloc _F
         ldfld void* @block_procdeclaration::Lsp
         ldnull
@@ -25178,7 +25178,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_39
-        // line 1861
+        .line 1861
         ldloc $tmpSetLiteral4
         ldloc _F
         ldfld void* @block_procdeclaration::Lsp
@@ -25187,24 +25187,24 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_40
-        // line 1862
+        .line 1862
         ldc.i4 120
         call void Error(int32 Ferrnr)
-        // line 1862
+        .line 1862
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldnull
         stfld void* T_identifier::Idtype
     L_if_end_40:
     L_if_end_39:
-        // line 1863
+        .line 1863
         call void Insymbol()
         br L_if_end_37
     L_else_36:
-        // line 1865
+        .line 1865
         ldc.i4 2
         call void Error(int32 Ferrnr)
-        // line 1865
+        .line 1865
         ldloc _F
         ldfld class @block @block_procdeclaration::_slink
         ldloc _F
@@ -25223,67 +25223,67 @@
     L_if_end_37:
         br L_if_end_35
     L_else_34:
-        // line 1868
+        .line 1868
         ldloc _F
         ldfld bool @block_procdeclaration::Forw
         ldc.i4.0
         ceq
         brfalse L_if_end_41
-        // line 1868
+        .line 1868
         ldc.i4 123
         call void Error(int32 Ferrnr)
     L_if_end_41:
     L_if_end_35:
     L_if_end_31:
-        // line 1870
+        .line 1870
         ldsfld int32 _G::Sy
         ldc.i4 13
         ceq
         brfalse L_else_42
-        // line 1870
+        .line 1870
         call void Insymbol()
         br L_if_end_43
     L_else_42:
-        // line 1870
+        .line 1870
         ldc.i4 14
         call void Error(int32 Ferrnr)
     L_if_end_43:
-        // line 1871
+        .line 1871
         ldsfld int32 _G::Sy
         ldc.i4 30
         ceq
         brfalse L_else_44
-        // line 1873
+        .line 1873
         ldloc _F
         ldfld bool @block_procdeclaration::Forw
         brfalse L_else_46
-        // line 1873
+        .line 1873
         ldc.i4 161
         call void Error(int32 Ferrnr)
         br L_if_end_47
     L_else_46:
-        // line 1874
+        .line 1874
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldc.i4 1 // (true)
         stfld bool T_identifier::Forwdecl
     L_if_end_47:
-        // line 1875
+        .line 1875
         call void Insymbol()
-        // line 1876
+        .line 1876
         ldsfld int32 _G::Sy
         ldc.i4 13
         ceq
         brfalse L_else_48
-        // line 1876
+        .line 1876
         call void Insymbol()
         br L_if_end_49
     L_else_48:
-        // line 1876
+        .line 1876
         ldc.i4 14
         call void Error(int32 Ferrnr)
     L_if_end_49:
-        // line 1877
+        .line 1877
         ldloc _F
         ldfld class @block @block_procdeclaration::_slink
         ldfld valuetype T_setty @block::Fsys
@@ -25292,10 +25292,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_50
-        // line 1878
+        .line 1878
         ldc.i4 6
         call void Error(int32 Ferrnr)
-        // line 1878
+        .line 1878
         ldloc _F
         ldfld class @block @block_procdeclaration::_slink
         ldloc _F
@@ -25305,18 +25305,18 @@
     L_if_end_50:
         br L_if_end_45
     L_else_44:
-        // line 1881
+        .line 1881
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         ldc.i4 0 // (false)
         stfld bool T_identifier::Forwdecl
-        // line 1881
+        .line 1881
         ldloc _F
         ldflda void* @block_procdeclaration::Markp
         call void Mark(void*& p)
-        // line 1882
+        .line 1882
     L_repeat_51:
-        // line 1882
+        .line 1882
         ldloc _F
         ldfld class @block @block_procdeclaration::_slink
         ldfld valuetype T_setty @block::Fsys
@@ -25324,31 +25324,31 @@
         ldloc _F
         ldfld void* @block_procdeclaration::Lcp
         call void Block(valuetype T_setty Fsys, int32 Fsy, void* Fprocp)
-        // line 1883
+        .line 1883
         ldsfld int32 _G::Sy
         ldc.i4 13
         ceq
         brfalse L_else_52
-        // line 1884
+        .line 1884
         ldsfld bool _G::Prtables
         brfalse L_if_end_54
-        // line 1884
+        .line 1884
         ldc.i4 0 // (false)
         call void Printtables(bool Fb)
     L_if_end_54:
-        // line 1884
+        .line 1884
         call void Insymbol()
-        // line 1885
+        .line 1885
         ldloc $tmpSetLiteral6
         ldsfld int32 _G::Sy
         call bool _SetContains(valuetype T_setty s, int32 val)
         ldc.i4.0
         ceq
         brfalse L_if_end_55
-        // line 1886
+        .line 1886
         ldc.i4 6
         call void Error(int32 Ferrnr)
-        // line 1886
+        .line 1886
         ldloc _F
         ldfld class @block @block_procdeclaration::_slink
         ldloc _F
@@ -25358,7 +25358,7 @@
     L_if_end_55:
         br L_if_end_53
     L_else_52:
-        // line 1888
+        .line 1888
         ldc.i4 14
         call void Error(int32 Ferrnr)
     L_if_end_53:
@@ -25372,21 +25372,21 @@
         call instance bool [lpcRuntime]LPC.File::Eof()
     L_OR_shortcut_56:
         brfalse L_repeat_51
-        // line 1890
+        .line 1890
         ldloc _F
         ldfld void* @block_procdeclaration::Markp
         call void Release(void* p)
         /* nop */
     L_if_end_45:
-        // line 1892
+        .line 1892
         ldloc _F
         ldfld int8 @block_procdeclaration::Oldlev
         stsfld int8 _G::Level
-        // line 1892
+        .line 1892
         ldloc _F
         ldfld int8 @block_procdeclaration::Oldtop
         stsfld int8 _G::Top
-        // line 1892
+        .line 1892
         ldloc _F
         ldfld int32 @block_procdeclaration::Llc
         stsfld int32 _G::Lc
@@ -25396,7 +25396,7 @@
         ret
     }
 
-// line 1895
+.line 1895
 
     .method public
     void Body(valuetype T_setty Fsys)
@@ -25431,7 +25431,7 @@
         call instance void T_setofids::addValue(int32)
     
     L_Entry:
-        // line 3557
+        .line 3557
         ldloc _F
         ldfld class @block @block_body::_slink
         ldfld void* @block::Fprocp
@@ -25440,7 +25440,7 @@
         ldc.i4.0
         ceq
         brfalse L_else_1
-        // line 3557
+        .line 3557
         ldloc _F
         ldloc _F
         ldfld class @block @block_body::_slink
@@ -25449,12 +25449,12 @@
         stfld int32 @block_body::Entname
         br L_if_end_2
     L_else_1:
-        // line 3558
+        .line 3558
         ldloc _F
         ldflda int32 @block_body::Entname
         call void Genlabel(int32& Nxtlab)
     L_if_end_2:
-        // line 3559
+        .line 3559
         ldloc _F
         ldc.i4 0
         dup
@@ -25462,28 +25462,28 @@
         ldc.i4 65
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int8 @block_body::Cstptrix
-        // line 3559
+        .line 3559
         ldloc _F
         ldc.i4 5
         stfld int32 @block_body::Topnew
-        // line 3559
+        .line 3559
         ldloc _F
         ldc.i4 5
         stfld int32 @block_body::Topmax
-        // line 3560
+        .line 3560
         ldloc _F
         ldloc _F
         ldfld int32 @block_body::Entname
         call instance void @block_body::Putlabel(int32 Labname)
-        // line 3560
+        .line 3560
         ldloc _F
         ldflda int32 @block_body::Segsize
         call void Genlabel(int32& Nxtlab)
-        // line 3560
+        .line 3560
         ldloc _F
         ldflda int32 @block_body::Stacktop
         call void Genlabel(int32& Nxtlab)
-        // line 3561
+        .line 3561
         ldloc _F
         ldc.i4 32
         dup
@@ -25494,7 +25494,7 @@
         ldloc _F
         ldfld int32 @block_body::Segsize
         call instance void @block_body::Gencupent(int8 Fop, int32 Fp1, int32 Fp2)
-        // line 3561
+        .line 3561
         ldloc _F
         ldc.i4 32
         dup
@@ -25505,7 +25505,7 @@
         ldloc _F
         ldfld int32 @block_body::Stacktop
         call instance void @block_body::Gencupent(int8 Fop, int32 Fp1, int32 Fp2)
-        // line 3562
+        .line 3562
         ldloc _F
         ldfld class @block @block_body::_slink
         ldfld void* @block::Fprocp
@@ -25514,7 +25514,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_3
-        // line 3563
+        .line 3563
         ldloc _F
         ldc.i4 5
         dup
@@ -25522,29 +25522,29 @@
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int32 @block_body::Llc1
-        // line 3564
+        .line 3564
         ldloc _F
         ldloc _F
         ldfld class @block @block_body::_slink
         ldfld void* @block::Fprocp
         ldfld void* T_identifier::Next
         stfld void* @block_body::Lcp
-        // line 3565
+        .line 3565
         br L_while_test_5
     L_while_4:
-        // line 3568
+        .line 3568
         ldsfld void* _G::Parmptr
         ldloc _F
         ldflda int32 @block_body::Llc1
         call void Align(void* Fsp, int32& Flc)
-        // line 3569
+        .line 3569
         ldloc _F
         ldfld void* @block_body::Lcp
         ldfld int32 T_identifier::Klass
         ldc.i4 2
         ceq
         brfalse L_if_end_6
-        // line 3570
+        .line 3570
         ldloc _F
         ldfld void* @block_body::Lcp
         ldfld void* T_identifier::Idtype
@@ -25553,7 +25553,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_7
-        // line 3571
+        .line 3571
         ldloc _F
         ldfld void* @block_body::Lcp
         ldfld void* T_identifier::Idtype
@@ -25561,14 +25561,14 @@
         ldc.i4 3
         cgt
         brfalse L_else_8
-        // line 3573
+        .line 3573
         ldloc _F
         ldfld void* @block_body::Lcp
         ldfld int32 T_identifier::Vkind
         ldc.i4 0
         ceq
         brfalse L_if_end_10
-        // line 3575
+        .line 3575
         ldloc _F
         ldc.i4 50
         dup
@@ -25580,7 +25580,7 @@
         ldfld void* @block_body::Lcp
         ldfld int32 T_identifier::Vaddr
         call instance void @block_body::Gen2(int8 Fop, int32 Fp1, int32 Fp2)
-        // line 3576
+        .line 3576
         ldloc _F
         ldc.i4 54
         dup
@@ -25592,7 +25592,7 @@
         ldfld int32 @block_body::Llc1
         ldsfld void* _G::Nilptr
         call instance void @block_body::Gen2t(int8 Fop, int32 Fp1, int32 Fp2, void* Fsp)
-        // line 3577
+        .line 3577
         ldloc _F
         ldc.i4 40
         dup
@@ -25606,7 +25606,7 @@
         call instance void @block_body::Gen1(int8 Fop, int32 Fp2)
         /* nop */
     L_if_end_10:
-        // line 3579
+        .line 3579
         ldloc _F
         ldloc _F
         ldfld int32 @block_body::Llc1
@@ -25619,7 +25619,7 @@
         stfld int32 @block_body::Llc1
         br L_if_end_9
     L_else_8:
-        // line 3581
+        .line 3581
         ldloc _F
         ldloc _F
         ldfld int32 @block_body::Llc1
@@ -25636,7 +25636,7 @@
     L_if_end_9:
     L_if_end_7:
     L_if_end_6:
-        // line 3582
+        .line 3582
         ldloc _F
         ldloc _F
         ldfld void* @block_body::Lcp
@@ -25653,15 +25653,15 @@
         brtrue L_while_4
         /* nop */
     L_if_end_3:
-        // line 3585
+        .line 3585
         ldloc _F
         ldsfld int32 _G::Lc
         stfld int32 @block_body::Lcmax
-        // line 3586
+        .line 3586
     L_repeat_11:
-        // line 3587
+        .line 3587
     L_repeat_12:
-        // line 3587
+        .line 3587
         ldloc _F
         ldloc _F
         ldfld valuetype T_setty @block_body::Fsys
@@ -25681,7 +25681,7 @@
         ldc.i4.0
         ceq
         brfalse L_repeat_12
-        // line 3589
+        .line 3589
         ldloc _F
         ldfld class @block @block_body::_slink
         ldsfld int32 _G::Sy
@@ -25690,57 +25690,57 @@
         ldc.i4.0
         ceq
         stfld bool @block::Test
-        // line 3590
+        .line 3590
         ldloc _F
         ldfld class @block @block_body::_slink
         ldfld bool @block::Test
         ldc.i4.0
         ceq
         brfalse L_if_end_13
-        // line 3590
+        .line 3590
         call void Insymbol()
     L_if_end_13:
         ldloc _F
         ldfld class @block @block_body::_slink
         ldfld bool @block::Test
         brfalse L_repeat_11
-        // line 3592
+        .line 3592
         ldsfld int32 _G::Sy
         ldc.i4 39
         ceq
         brfalse L_else_14
-        // line 3592
+        .line 3592
         call void Insymbol()
         br L_if_end_15
     L_else_14:
-        // line 3592
+        .line 3592
         ldc.i4 13
         call void Error(int32 Ferrnr)
     L_if_end_15:
-        // line 3593
+        .line 3593
         ldloc _F
         ldsflda valuetype T_array_23 _G::Display
         ldsfld int8 _G::Top
         call instance valuetype T_record_22& T_array_23::ldadr(int32)
         ldfld void* T_record_22::Flabel
         stfld void* @block_body::Llp
-        // line 3594
+        .line 3594
         br L_while_test_17
     L_while_16:
-        // line 3597
+        .line 3597
         ldloc _F
         ldfld void* @block_body::Llp
         ldfld bool T_labl::Defined
         ldc.i4.0
         ceq
         brfalse L_if_end_18
-        // line 3598
+        .line 3598
         ldc.i4 168
         call void Error(int32 Ferrnr)
-        // line 3599
+        .line 3599
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 3599
+        .line 3599
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr " label "
@@ -25751,7 +25751,7 @@
         ldfld int32 T_labl::Labval
         call instance void [lpcRuntime]LPC.File::Write(int32)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 3600
+        .line 3600
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldsfld int32 _G::Chcnt
@@ -25762,7 +25762,7 @@
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, uint8)
         pop
     L_if_end_18:
-        // line 3602
+        .line 3602
         ldloc _F
         ldloc _F
         ldfld void* @block_body::Llp
@@ -25776,7 +25776,7 @@
         ldc.i4.0
         ceq
         brtrue L_while_16
-        // line 3604
+        .line 3604
         ldloc _F
         ldfld class @block @block_body::_slink
         ldfld void* @block::Fprocp
@@ -25785,7 +25785,7 @@
         ldc.i4.0
         ceq
         brfalse L_else_19
-        // line 3606
+        .line 3606
         ldloc _F
         ldfld class @block @block_body::_slink
         ldfld void* @block::Fprocp
@@ -25793,7 +25793,7 @@
         ldnull
         ceq
         brfalse L_else_21
-        // line 3606
+        .line 3606
         ldloc _F
         ldc.i4 42
         dup
@@ -25804,7 +25804,7 @@
         call instance void @block_body::Gen1(int8 Fop, int32 Fp2)
         br L_if_end_22
     L_else_21:
-        // line 3607
+        .line 3607
         ldloc _F
         ldc.i4 42
         dup
@@ -25817,15 +25817,15 @@
         ldfld void* T_identifier::Idtype
         call instance void @block_body::Gen0t(int8 Fop, void* Fsp)
     L_if_end_22:
-        // line 3608
+        .line 3608
         ldsfld void* _G::Parmptr
         ldloc _F
         ldflda int32 @block_body::Lcmax
         call void Align(void* Fsp, int32& Flc)
-        // line 3609
+        .line 3609
         ldsfld bool _G::Prcode
         brfalse L_if_end_23
-        // line 3610
+        .line 3610
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 108 // 'l'
@@ -25844,7 +25844,7 @@
         ldfld int32 @block_body::Lcmax
         call instance void [lpcRuntime]LPC.File::Write(int32)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 3611
+        .line 3611
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 108 // 'l'
@@ -25866,7 +25866,7 @@
     L_if_end_23:
         br L_if_end_20
     L_else_19:
-        // line 3615
+        .line 3615
         ldloc _F
         ldc.i4 42
         dup
@@ -25875,15 +25875,15 @@
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         ldc.i4 112 // 'p'
         call instance void @block_body::Gen1(int8 Fop, int32 Fp2)
-        // line 3616
+        .line 3616
         ldsfld void* _G::Parmptr
         ldloc _F
         ldflda int32 @block_body::Lcmax
         call void Align(void* Fsp, int32& Flc)
-        // line 3617
+        .line 3617
         ldsfld bool _G::Prcode
         brfalse L_if_end_24
-        // line 3618
+        .line 3618
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 108 // 'l'
@@ -25902,7 +25902,7 @@
         ldfld int32 @block_body::Lcmax
         call instance void [lpcRuntime]LPC.File::Write(int32)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 3619
+        .line 3619
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 108 // 'l'
@@ -25921,21 +25921,21 @@
         ldfld int32 @block_body::Topmax
         call instance void [lpcRuntime]LPC.File::Write(int32)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 3620
+        .line 3620
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 113 // 'q'
         call instance void [lpcRuntime]LPC.File::Write(uint8)
         call instance void [lpcRuntime]LPC.File::WriteLn()
     L_if_end_24:
-        // line 3622
+        .line 3622
         ldc.i4 0
         dup
         ldc.i4 0
         ldc.i4 2147483647
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int32 _G::Ic
-        // line 3625
+        .line 3625
         ldloc _F
         ldc.i4 41
         dup
@@ -25944,7 +25944,7 @@
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         ldc.i4 0
         call instance void @block_body::Gen1(int8 Fop, int32 Fp2)
-        // line 3625
+        .line 3625
         ldloc _F
         ldc.i4 46
         dup
@@ -25955,7 +25955,7 @@
         ldloc _F
         ldfld int32 @block_body::Entname
         call instance void @block_body::Gencupent(int8 Fop, int32 Fp1, int32 Fp2)
-        // line 3625
+        .line 3625
         ldloc _F
         ldc.i4 29
         dup
@@ -25963,24 +25963,24 @@
         ldc.i4 63
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         call instance void @block_body::Gen0(int8 Fop)
-        // line 3626
+        .line 3626
         ldsfld bool _G::Prcode
         brfalse L_if_end_25
-        // line 3627
+        .line 3627
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
         dup
         ldc.i4 113 // 'q'
         call instance void [lpcRuntime]LPC.File::Write(uint8)
         call instance void [lpcRuntime]LPC.File::WriteLn()
     L_if_end_25:
-        // line 3628
+        .line 3628
         ldloc _F
         ldsfld valuetype T_alpha _G::Id
         stfld valuetype T_alpha @block_body::Saveid
-        // line 3629
+        .line 3629
         br L_while_test_27
     L_while_26:
-        // line 3632
+        .line 3632
         ldsfld void* _G::Fextfilep
         ldfld valuetype T_alpha T_filerec::Filename
         call string T_alpha::arrayToString(valuetype T_alpha)
@@ -26016,16 +26016,16 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_31
-        // line 3634
+        .line 3634
         ldsfld void* _G::Fextfilep
         ldfld valuetype T_alpha T_filerec::Filename
         stsfld valuetype T_alpha _G::Id
-        // line 3635
+        .line 3635
         ldloc $tmpSetLiteral2
         ldloc _F
         ldflda void* @block_body::Llcp
         call void Searchid(valuetype T_setofids Fidcls, void*& Fcp)
-        // line 3636
+        .line 3636
         ldloc _F
         ldfld void* @block_body::Llcp
         ldfld void* T_identifier::Idtype
@@ -26034,7 +26034,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_32
-        // line 3637
+        .line 3637
         ldloc _F
         ldfld void* @block_body::Llcp
         ldfld void* T_identifier::Idtype
@@ -26044,10 +26044,10 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_33
-        // line 3638
+        .line 3638
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 3639
+        .line 3639
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 8
@@ -26071,7 +26071,7 @@
         call string T_alpha::arrayToString(valuetype T_alpha)
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 3641
+        .line 3641
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldsfld int32 _G::Chcnt
@@ -26084,7 +26084,7 @@
     L_if_end_33:
     L_if_end_32:
     L_if_end_31:
-        // line 3644
+        .line 3644
         ldsfld void* _G::Fextfilep
         ldfld void* T_filerec::Nextfile
         stsfld void* _G::Fextfilep
@@ -26095,17 +26095,17 @@
         ldc.i4.0
         ceq
         brtrue L_while_26
-        // line 3646
+        .line 3646
         ldloc _F
         ldfld valuetype T_alpha @block_body::Saveid
         stsfld valuetype T_alpha _G::Id
-        // line 3647
+        .line 3647
         ldsfld bool _G::Prtables
         brfalse L_if_end_34
-        // line 3648
+        .line 3648
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 3648
+        .line 3648
         ldc.i4 1 // (true)
         call void Printtables(bool Fb)
     L_if_end_34:
@@ -26118,7 +26118,7 @@
 }
 
 
-// line 3677
+.line 3677
 //================================================================================
 // scope: programme (level : 2)
 
@@ -26139,7 +26139,7 @@
 }
 
 
-// line 3711
+.line 3711
 //================================================================================
 // scope: stdnames (level : 2)
 
@@ -26154,7 +26154,7 @@
 }
 
 
-// line 3728
+.line 3728
 //================================================================================
 // scope: enterstdtypes (level : 2)
 
@@ -26169,7 +26169,7 @@
 }
 
 
-// line 3756
+.line 3756
 //================================================================================
 // scope: entstdnames (level : 2)
 
@@ -26189,7 +26189,7 @@
 }
 
 
-// line 3851
+.line 3851
 //================================================================================
 // scope: enterundecl (level : 2)
 
@@ -26204,7 +26204,7 @@
 }
 
 
-// line 3885
+.line 3885
 //================================================================================
 // scope: initscalars (level : 2)
 
@@ -26219,7 +26219,7 @@
 }
 
 
-// line 3898
+.line 3898
 //================================================================================
 // scope: initsets (level : 2)
 
@@ -26234,7 +26234,7 @@
 }
 
 
-// line 3911
+.line 3911
 //================================================================================
 // scope: inittables_reswords (level : 3)
 
@@ -26252,7 +26252,7 @@
 }
 
 
-// line 3930
+.line 3930
 //================================================================================
 // scope: inittables_symbols (level : 3)
 
@@ -26270,7 +26270,7 @@
 }
 
 
-// line 3954
+.line 3954
 //================================================================================
 // scope: inittables_rators (level : 3)
 
@@ -26291,7 +26291,7 @@
 }
 
 
-// line 3965
+.line 3965
 //================================================================================
 // scope: inittables_procmnemonics (level : 3)
 
@@ -26309,7 +26309,7 @@
 }
 
 
-// line 3975
+.line 3975
 //================================================================================
 // scope: inittables_instrmnemonics (level : 3)
 
@@ -26327,7 +26327,7 @@
 }
 
 
-// line 3995
+.line 3995
 //================================================================================
 // scope: inittables_chartypes (level : 3)
 
@@ -26348,7 +26348,7 @@
 }
 
 
-// line 4033
+.line 4033
 //================================================================================
 // scope: inittables_initdx (level : 3)
 
@@ -26366,7 +26366,7 @@
 }
 
 
-// line 3910
+.line 3910
 //================================================================================
 // scope: inittables (level : 2)
 
@@ -26379,7 +26379,7 @@
         ret
     }
 
-// line 3911
+.line 3911
 
     .method public
     void Reswords()
@@ -26396,217 +26396,217 @@
         stfld class @inittables @inittables_reswords::_slink
     
     L_Entry:
-        // line 3913
+        .line 3913
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 1
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_42    // "if      "
         stobj valuetype T_alpha
-        // line 3913
+        .line 3913
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 2
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_43    // "do      "
         stobj valuetype T_alpha
-        // line 3913
+        .line 3913
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 3
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_44    // "of      "
         stobj valuetype T_alpha
-        // line 3914
+        .line 3914
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 4
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_45    // "to      "
         stobj valuetype T_alpha
-        // line 3914
+        .line 3914
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 5
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_46    // "in      "
         stobj valuetype T_alpha
-        // line 3914
+        .line 3914
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 6
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_47    // "or      "
         stobj valuetype T_alpha
-        // line 3915
+        .line 3915
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 7
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_48    // "end     "
         stobj valuetype T_alpha
-        // line 3915
+        .line 3915
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 8
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_49    // "for     "
         stobj valuetype T_alpha
-        // line 3915
+        .line 3915
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 9
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_50    // "var     "
         stobj valuetype T_alpha
-        // line 3916
+        .line 3916
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 10
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_51    // "div     "
         stobj valuetype T_alpha
-        // line 3916
+        .line 3916
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 11
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_52    // "mod     "
         stobj valuetype T_alpha
-        // line 3916
+        .line 3916
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 12
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_53    // "set     "
         stobj valuetype T_alpha
-        // line 3917
+        .line 3917
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 13
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_54    // "and     "
         stobj valuetype T_alpha
-        // line 3917
+        .line 3917
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 14
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_55    // "not     "
         stobj valuetype T_alpha
-        // line 3917
+        .line 3917
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 15
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_56    // "then    "
         stobj valuetype T_alpha
-        // line 3918
+        .line 3918
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 16
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_57    // "else    "
         stobj valuetype T_alpha
-        // line 3918
+        .line 3918
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 17
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_58    // "with    "
         stobj valuetype T_alpha
-        // line 3918
+        .line 3918
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 18
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_59    // "goto    "
         stobj valuetype T_alpha
-        // line 3919
+        .line 3919
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 19
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_60    // "case    "
         stobj valuetype T_alpha
-        // line 3919
+        .line 3919
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 20
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_61    // "type    "
         stobj valuetype T_alpha
-        // line 3920
+        .line 3920
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 21
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_62    // "file    "
         stobj valuetype T_alpha
-        // line 3920
+        .line 3920
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 22
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_63    // "begin   "
         stobj valuetype T_alpha
-        // line 3921
+        .line 3921
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 23
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_64    // "until   "
         stobj valuetype T_alpha
-        // line 3921
+        .line 3921
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 24
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_65    // "while   "
         stobj valuetype T_alpha
-        // line 3921
+        .line 3921
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 25
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_66    // "array   "
         stobj valuetype T_alpha
-        // line 3922
+        .line 3922
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 26
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_67    // "const   "
         stobj valuetype T_alpha
-        // line 3922
+        .line 3922
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 27
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_68    // "label   "
         stobj valuetype T_alpha
-        // line 3923
+        .line 3923
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 28
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_69    // "repeat  "
         stobj valuetype T_alpha
-        // line 3923
+        .line 3923
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 29
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_70    // "record  "
         stobj valuetype T_alpha
-        // line 3923
+        .line 3923
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 30
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_71    // "downto  "
         stobj valuetype T_alpha
-        // line 3924
+        .line 3924
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 31
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_72    // "packed  "
         stobj valuetype T_alpha
-        // line 3924
+        .line 3924
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 32
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_73    // "forward "
         stobj valuetype T_alpha
-        // line 3924
+        .line 3924
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 33
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_74    // "program "
         stobj valuetype T_alpha
-        // line 3925
+        .line 3925
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 34
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_75    // "function"
         stobj valuetype T_alpha
-        // line 3925
+        .line 3925
         ldsflda valuetype T_array_12 _G::Rw
         ldc.i4 35
         call instance valuetype T_alpha& T_array_12::ldadr(int32)
         ldsfld valuetype T_alpha STRING_76    // "procedur"
         stobj valuetype T_alpha
-        // line 3926
+        .line 3926
         ldsflda valuetype T_array_11 _G::Frw
         ldc.i4 1
         call instance int8& T_array_11::ldadr(int32)
@@ -26616,7 +26616,7 @@
         ldc.i4 36
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 3926
+        .line 3926
         ldsflda valuetype T_array_11 _G::Frw
         ldc.i4 2
         call instance int8& T_array_11::ldadr(int32)
@@ -26626,7 +26626,7 @@
         ldc.i4 36
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 3926
+        .line 3926
         ldsflda valuetype T_array_11 _G::Frw
         ldc.i4 3
         call instance int8& T_array_11::ldadr(int32)
@@ -26636,7 +26636,7 @@
         ldc.i4 36
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 3926
+        .line 3926
         ldsflda valuetype T_array_11 _G::Frw
         ldc.i4 4
         call instance int8& T_array_11::ldadr(int32)
@@ -26646,7 +26646,7 @@
         ldc.i4 36
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 3926
+        .line 3926
         ldsflda valuetype T_array_11 _G::Frw
         ldc.i4 5
         call instance int8& T_array_11::ldadr(int32)
@@ -26656,7 +26656,7 @@
         ldc.i4 36
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 3927
+        .line 3927
         ldsflda valuetype T_array_11 _G::Frw
         ldc.i4 6
         call instance int8& T_array_11::ldadr(int32)
@@ -26666,7 +26666,7 @@
         ldc.i4 36
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 3927
+        .line 3927
         ldsflda valuetype T_array_11 _G::Frw
         ldc.i4 7
         call instance int8& T_array_11::ldadr(int32)
@@ -26676,7 +26676,7 @@
         ldc.i4 36
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 3927
+        .line 3927
         ldsflda valuetype T_array_11 _G::Frw
         ldc.i4 8
         call instance int8& T_array_11::ldadr(int32)
@@ -26686,7 +26686,7 @@
         ldc.i4 36
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 3927
+        .line 3927
         ldsflda valuetype T_array_11 _G::Frw
         ldc.i4 9
         call instance int8& T_array_11::ldadr(int32)
@@ -26702,7 +26702,7 @@
         ret
     }
 
-// line 3930
+.line 3930
 
     .method public
     void Symbols()
@@ -26719,325 +26719,325 @@
         stfld class @inittables @inittables_symbols::_slink
     
     L_Entry:
-        // line 3932
+        .line 3932
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 1
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 32
         stobj int32
-        // line 3932
+        .line 3932
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 2
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 43
         stobj int32
-        // line 3932
+        .line 3932
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 3
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 42
         stobj int32
-        // line 3933
+        .line 3933
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 4
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 44
         stobj int32
-        // line 3933
+        .line 3933
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 5
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 7
         stobj int32
-        // line 3933
+        .line 3933
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 6
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 6
         stobj int32
-        // line 3934
+        .line 3934
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 7
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 39
         stobj int32
-        // line 3934
+        .line 3934
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 8
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 36
         stobj int32
-        // line 3934
+        .line 3934
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 9
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 21
         stobj int32
-        // line 3935
+        .line 3935
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 10
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 5
         stobj int32
-        // line 3935
+        .line 3935
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 11
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 5
         stobj int32
-        // line 3935
+        .line 3935
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 12
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 25
         stobj int32
-        // line 3936
+        .line 3936
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 13
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 5
         stobj int32
-        // line 3936
+        .line 3936
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 14
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 4
         stobj int32
-        // line 3936
+        .line 3936
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 15
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 46
         stobj int32
-        // line 3937
+        .line 3937
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 16
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 40
         stobj int32
-        // line 3937
+        .line 3937
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 17
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 37
         stobj int32
-        // line 3937
+        .line 3937
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 18
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 38
         stobj int32
-        // line 3938
+        .line 3938
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 19
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 33
         stobj int32
-        // line 3938
+        .line 3938
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 20
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 20
         stobj int32
-        // line 3939
+        .line 3939
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 21
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 29
         stobj int32
-        // line 3939
+        .line 3939
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 22
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 31
         stobj int32
-        // line 3940
+        .line 3940
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 23
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 41
         stobj int32
-        // line 3940
+        .line 3940
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 24
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 35
         stobj int32
-        // line 3940
+        .line 3940
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 25
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 27
         stobj int32
-        // line 3941
+        .line 3941
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 26
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 19
         stobj int32
-        // line 3941
+        .line 3941
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 27
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 18
         stobj int32
-        // line 3942
+        .line 3942
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 28
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 34
         stobj int32
-        // line 3942
+        .line 3942
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 29
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 28
         stobj int32
-        // line 3942
+        .line 3942
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 30
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 45
         stobj int32
-        // line 3943
+        .line 3943
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 31
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 26
         stobj int32
-        // line 3943
+        .line 3943
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 32
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 30
         stobj int32
-        // line 3943
+        .line 3943
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 33
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 23
         stobj int32
-        // line 3944
+        .line 3944
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 34
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 22
         stobj int32
-        // line 3944
+        .line 3944
         ldsflda valuetype T_array_13 _G::Rsy
         ldc.i4 35
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 24
         stobj int32
-        // line 3945
+        .line 3945
         ldsflda valuetype T_array_7 _G::Ssy
         ldc.i4 43 // '+'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 6
         stobj int32
-        // line 3945
+        .line 3945
         ldsflda valuetype T_array_7 _G::Ssy
         ldc.i4 45 // '-'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 6
         stobj int32
-        // line 3945
+        .line 3945
         ldsflda valuetype T_array_7 _G::Ssy
         ldc.i4 42 // '*'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 5
         stobj int32
-        // line 3946
+        .line 3946
         ldsflda valuetype T_array_7 _G::Ssy
         ldc.i4 47 // '/'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 5
         stobj int32
-        // line 3946
+        .line 3946
         ldsflda valuetype T_array_7 _G::Ssy
         ldc.i4 40 // '('
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 8
         stobj int32
-        // line 3946
+        .line 3946
         ldsflda valuetype T_array_7 _G::Ssy
         ldc.i4 41 // ')'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 9
         stobj int32
-        // line 3947
+        .line 3947
         ldsflda valuetype T_array_7 _G::Ssy
         ldc.i4 36 // '$'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 47
         stobj int32
-        // line 3947
+        .line 3947
         ldsflda valuetype T_array_7 _G::Ssy
         ldc.i4 61 // '='
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 7
         stobj int32
-        // line 3947
+        .line 3947
         ldsflda valuetype T_array_7 _G::Ssy
         ldc.i4 32 // ' '
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 47
         stobj int32
-        // line 3948
+        .line 3948
         ldsflda valuetype T_array_7 _G::Ssy
         ldc.i4 44 // ','
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 12
         stobj int32
-        // line 3948
+        .line 3948
         ldsflda valuetype T_array_7 _G::Ssy
         ldc.i4 46 // '.'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 14
         stobj int32
-        // line 3948
+        .line 3948
         ldsflda valuetype T_array_7 _G::Ssy
         ldc.i4 39 // '''
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 47
         stobj int32
-        // line 3949
+        .line 3949
         ldsflda valuetype T_array_7 _G::Ssy
         ldc.i4 91 // '['
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 10
         stobj int32
-        // line 3949
+        .line 3949
         ldsflda valuetype T_array_7 _G::Ssy
         ldc.i4 93 // ']'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 11
         stobj int32
-        // line 3949
+        .line 3949
         ldsflda valuetype T_array_7 _G::Ssy
         ldc.i4 58 // ':'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 16
         stobj int32
-        // line 3950
+        .line 3950
         ldsflda valuetype T_array_7 _G::Ssy
         ldc.i4 94 // '^'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 15
         stobj int32
-        // line 3950
+        .line 3950
         ldsflda valuetype T_array_7 _G::Ssy
         ldc.i4 60 // '<'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 7
         stobj int32
-        // line 3950
+        .line 3950
         ldsflda valuetype T_array_7 _G::Ssy
         ldc.i4 62 // '>'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 7
         stobj int32
-        // line 3951
+        .line 3951
         ldsflda valuetype T_array_7 _G::Ssy
         ldc.i4 59 // ';'
         call instance int32& T_array_7::ldadr(int32)
@@ -27049,7 +27049,7 @@
         ret
     }
 
-// line 3954
+.line 3954
 
     .method public
     void Rators()
@@ -27073,7 +27073,7 @@
         stfld class @inittables @inittables_rators::_slink
     
     L_Entry:
-        // line 3957
+        .line 3957
         ldc.i4 35
         stloc $tmpEndValue1
         ldc.i4 1
@@ -27085,7 +27085,7 @@
         ldloc $tmpIndex2
         stfld int32 @inittables_rators::i
     L_for_loop_1:
-        // line 3957
+        .line 3957
         ldsflda valuetype T_array_13 _G::Rop
         ldloc _F
         ldfld int32 @inittables_rators::i
@@ -27106,37 +27106,37 @@
         br L_for_loop_1
     L_for_end_2:
         pop
-        // line 3958
+        .line 3958
         ldsflda valuetype T_array_13 _G::Rop
         ldc.i4 5
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 14
         stobj int32
-        // line 3958
+        .line 3958
         ldsflda valuetype T_array_13 _G::Rop
         ldc.i4 10
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 3
         stobj int32
-        // line 3958
+        .line 3958
         ldsflda valuetype T_array_13 _G::Rop
         ldc.i4 11
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 4
         stobj int32
-        // line 3959
+        .line 3959
         ldsflda valuetype T_array_13 _G::Rop
         ldc.i4 6
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 7
         stobj int32
-        // line 3959
+        .line 3959
         ldsflda valuetype T_array_13 _G::Rop
         ldc.i4 13
         call instance int32& T_array_13::ldadr(int32)
         ldc.i4 2
         stobj int32
-        // line 3960
+        .line 3960
         ldc.i4 255
         stloc $tmpEndValue4
         ldc.i4 0
@@ -27148,7 +27148,7 @@
         ldloc $tmpIndex5
         stfld int32 @inittables_rators::i
     L_for_loop_3:
-        // line 3960
+        .line 3960
         ldsflda valuetype T_array_7 _G::Sop
         ldloc _F
         ldfld int32 @inittables_rators::i
@@ -27169,43 +27169,43 @@
         br L_for_loop_3
     L_for_end_4:
         pop
-        // line 3961
+        .line 3961
         ldsflda valuetype T_array_7 _G::Sop
         ldc.i4 43 // '+'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 5
         stobj int32
-        // line 3961
+        .line 3961
         ldsflda valuetype T_array_7 _G::Sop
         ldc.i4 45 // '-'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 6
         stobj int32
-        // line 3961
+        .line 3961
         ldsflda valuetype T_array_7 _G::Sop
         ldc.i4 42 // '*'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 3961
+        .line 3961
         ldsflda valuetype T_array_7 _G::Sop
         ldc.i4 47 // '/'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 1
         stobj int32
-        // line 3962
+        .line 3962
         ldsflda valuetype T_array_7 _G::Sop
         ldc.i4 61 // '='
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 13
         stobj int32
-        // line 3962
+        .line 3962
         ldsflda valuetype T_array_7 _G::Sop
         ldc.i4 60 // '<'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 8
         stobj int32
-        // line 3962
+        .line 3962
         ldsflda valuetype T_array_7 _G::Sop
         ldc.i4 62 // '>'
         call instance int32& T_array_7::ldadr(int32)
@@ -27217,7 +27217,7 @@
         ret
     }
 
-// line 3965
+.line 3965
 
     .method public
     void Procmnemonics()
@@ -27234,139 +27234,139 @@
         stfld class @inittables @inittables_procmnemonics::_slink
     
     L_Entry:
-        // line 3967
+        .line 3967
         ldsflda valuetype T_array_103 _G::Sna
         ldc.i4 1
         call instance valuetype T_array_100& T_array_103::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_77    // " get"
         stobj valuetype T_array_100
-        // line 3967
+        .line 3967
         ldsflda valuetype T_array_103 _G::Sna
         ldc.i4 2
         call instance valuetype T_array_100& T_array_103::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_78    // " put"
         stobj valuetype T_array_100
-        // line 3967
+        .line 3967
         ldsflda valuetype T_array_103 _G::Sna
         ldc.i4 3
         call instance valuetype T_array_100& T_array_103::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_79    // " rdi"
         stobj valuetype T_array_100
-        // line 3967
+        .line 3967
         ldsflda valuetype T_array_103 _G::Sna
         ldc.i4 4
         call instance valuetype T_array_100& T_array_103::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_80    // " rdr"
         stobj valuetype T_array_100
-        // line 3968
+        .line 3968
         ldsflda valuetype T_array_103 _G::Sna
         ldc.i4 5
         call instance valuetype T_array_100& T_array_103::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_81    // " rdc"
         stobj valuetype T_array_100
-        // line 3968
+        .line 3968
         ldsflda valuetype T_array_103 _G::Sna
         ldc.i4 6
         call instance valuetype T_array_100& T_array_103::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_82    // " wri"
         stobj valuetype T_array_100
-        // line 3968
+        .line 3968
         ldsflda valuetype T_array_103 _G::Sna
         ldc.i4 7
         call instance valuetype T_array_100& T_array_103::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_83    // " wro"
         stobj valuetype T_array_100
-        // line 3968
+        .line 3968
         ldsflda valuetype T_array_103 _G::Sna
         ldc.i4 8
         call instance valuetype T_array_100& T_array_103::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_84    // " wrr"
         stobj valuetype T_array_100
-        // line 3969
+        .line 3969
         ldsflda valuetype T_array_103 _G::Sna
         ldc.i4 9
         call instance valuetype T_array_100& T_array_103::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_85    // " wrc"
         stobj valuetype T_array_100
-        // line 3969
+        .line 3969
         ldsflda valuetype T_array_103 _G::Sna
         ldc.i4 10
         call instance valuetype T_array_100& T_array_103::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_86    // " wrs"
         stobj valuetype T_array_100
-        // line 3969
+        .line 3969
         ldsflda valuetype T_array_103 _G::Sna
         ldc.i4 11
         call instance valuetype T_array_100& T_array_103::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_87    // " pak"
         stobj valuetype T_array_100
-        // line 3969
+        .line 3969
         ldsflda valuetype T_array_103 _G::Sna
         ldc.i4 12
         call instance valuetype T_array_100& T_array_103::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_88    // " new"
         stobj valuetype T_array_100
-        // line 3970
+        .line 3970
         ldsflda valuetype T_array_103 _G::Sna
         ldc.i4 13
         call instance valuetype T_array_100& T_array_103::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_89    // " rst"
         stobj valuetype T_array_100
-        // line 3970
+        .line 3970
         ldsflda valuetype T_array_103 _G::Sna
         ldc.i4 14
         call instance valuetype T_array_100& T_array_103::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_90    // " eln"
         stobj valuetype T_array_100
-        // line 3970
+        .line 3970
         ldsflda valuetype T_array_103 _G::Sna
         ldc.i4 15
         call instance valuetype T_array_100& T_array_103::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_91    // " sin"
         stobj valuetype T_array_100
-        // line 3970
+        .line 3970
         ldsflda valuetype T_array_103 _G::Sna
         ldc.i4 16
         call instance valuetype T_array_100& T_array_103::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_92    // " cos"
         stobj valuetype T_array_100
-        // line 3971
+        .line 3971
         ldsflda valuetype T_array_103 _G::Sna
         ldc.i4 17
         call instance valuetype T_array_100& T_array_103::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_93    // " exp"
         stobj valuetype T_array_100
-        // line 3971
+        .line 3971
         ldsflda valuetype T_array_103 _G::Sna
         ldc.i4 18
         call instance valuetype T_array_100& T_array_103::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_94    // " sqt"
         stobj valuetype T_array_100
-        // line 3971
+        .line 3971
         ldsflda valuetype T_array_103 _G::Sna
         ldc.i4 19
         call instance valuetype T_array_100& T_array_103::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_95    // " log"
         stobj valuetype T_array_100
-        // line 3971
+        .line 3971
         ldsflda valuetype T_array_103 _G::Sna
         ldc.i4 20
         call instance valuetype T_array_100& T_array_103::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_96    // " atn"
         stobj valuetype T_array_100
-        // line 3972
+        .line 3972
         ldsflda valuetype T_array_103 _G::Sna
         ldc.i4 21
         call instance valuetype T_array_100& T_array_103::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_97    // " rln"
         stobj valuetype T_array_100
-        // line 3972
+        .line 3972
         ldsflda valuetype T_array_103 _G::Sna
         ldc.i4 22
         call instance valuetype T_array_100& T_array_103::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_98    // " wln"
         stobj valuetype T_array_100
-        // line 3972
+        .line 3972
         ldsflda valuetype T_array_103 _G::Sna
         ldc.i4 23
         call instance valuetype T_array_100& T_array_103::ldadr(int32)
@@ -27378,7 +27378,7 @@
         ret
     }
 
-// line 3975
+.line 3975
 
     .method public
     void Instrmnemonics()
@@ -27395,367 +27395,367 @@
         stfld class @inittables @inittables_instrmnemonics::_slink
     
     L_Entry:
-        // line 3977
+        .line 3977
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 0
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_100    // " abi"
         stobj valuetype T_array_100
-        // line 3977
+        .line 3977
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 1
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_101    // " abr"
         stobj valuetype T_array_100
-        // line 3977
+        .line 3977
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 2
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_102    // " adi"
         stobj valuetype T_array_100
-        // line 3977
+        .line 3977
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 3
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_103    // " adr"
         stobj valuetype T_array_100
-        // line 3978
+        .line 3978
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 4
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_104    // " and"
         stobj valuetype T_array_100
-        // line 3978
+        .line 3978
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 5
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_105    // " dif"
         stobj valuetype T_array_100
-        // line 3978
+        .line 3978
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 6
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_106    // " dvi"
         stobj valuetype T_array_100
-        // line 3978
+        .line 3978
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 7
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_107    // " dvr"
         stobj valuetype T_array_100
-        // line 3979
+        .line 3979
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 8
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_108    // " eof"
         stobj valuetype T_array_100
-        // line 3979
+        .line 3979
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 9
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_109    // " flo"
         stobj valuetype T_array_100
-        // line 3979
+        .line 3979
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 10
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_110    // " flt"
         stobj valuetype T_array_100
-        // line 3979
+        .line 3979
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 11
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_111    // " inn"
         stobj valuetype T_array_100
-        // line 3980
+        .line 3980
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 12
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_112    // " int"
         stobj valuetype T_array_100
-        // line 3980
+        .line 3980
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 13
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_113    // " ior"
         stobj valuetype T_array_100
-        // line 3980
+        .line 3980
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 14
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_114    // " mod"
         stobj valuetype T_array_100
-        // line 3980
+        .line 3980
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 15
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_115    // " mpi"
         stobj valuetype T_array_100
-        // line 3981
+        .line 3981
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 16
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_116    // " mpr"
         stobj valuetype T_array_100
-        // line 3981
+        .line 3981
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 17
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_117    // " ngi"
         stobj valuetype T_array_100
-        // line 3981
+        .line 3981
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 18
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_118    // " ngr"
         stobj valuetype T_array_100
-        // line 3981
+        .line 3981
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 19
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_119    // " not"
         stobj valuetype T_array_100
-        // line 3982
+        .line 3982
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 20
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_120    // " odd"
         stobj valuetype T_array_100
-        // line 3982
+        .line 3982
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 21
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_121    // " sbi"
         stobj valuetype T_array_100
-        // line 3982
+        .line 3982
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 22
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_122    // " sbr"
         stobj valuetype T_array_100
-        // line 3982
+        .line 3982
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 23
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_123    // " sgs"
         stobj valuetype T_array_100
-        // line 3983
+        .line 3983
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 24
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_124    // " sqi"
         stobj valuetype T_array_100
-        // line 3983
+        .line 3983
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 25
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_125    // " sqr"
         stobj valuetype T_array_100
-        // line 3983
+        .line 3983
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 26
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_126    // " sto"
         stobj valuetype T_array_100
-        // line 3983
+        .line 3983
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 27
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_127    // " trc"
         stobj valuetype T_array_100
-        // line 3984
+        .line 3984
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 28
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_128    // " uni"
         stobj valuetype T_array_100
-        // line 3984
+        .line 3984
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 29
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_129    // " stp"
         stobj valuetype T_array_100
-        // line 3984
+        .line 3984
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 30
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_130    // " csp"
         stobj valuetype T_array_100
-        // line 3984
+        .line 3984
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 31
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_131    // " dec"
         stobj valuetype T_array_100
-        // line 3985
+        .line 3985
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 32
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_132    // " ent"
         stobj valuetype T_array_100
-        // line 3985
+        .line 3985
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 33
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_133    // " fjp"
         stobj valuetype T_array_100
-        // line 3985
+        .line 3985
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 34
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_134    // " inc"
         stobj valuetype T_array_100
-        // line 3985
+        .line 3985
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 35
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_135    // " ind"
         stobj valuetype T_array_100
-        // line 3986
+        .line 3986
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 36
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_136    // " ixa"
         stobj valuetype T_array_100
-        // line 3986
+        .line 3986
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 37
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_137    // " lao"
         stobj valuetype T_array_100
-        // line 3986
+        .line 3986
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 38
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_138    // " lca"
         stobj valuetype T_array_100
-        // line 3986
+        .line 3986
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 39
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_139    // " ldo"
         stobj valuetype T_array_100
-        // line 3987
+        .line 3987
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 40
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_140    // " mov"
         stobj valuetype T_array_100
-        // line 3987
+        .line 3987
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 41
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_141    // " mst"
         stobj valuetype T_array_100
-        // line 3987
+        .line 3987
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 42
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_142    // " ret"
         stobj valuetype T_array_100
-        // line 3987
+        .line 3987
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 43
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_143    // " sro"
         stobj valuetype T_array_100
-        // line 3988
+        .line 3988
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 44
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_144    // " xjp"
         stobj valuetype T_array_100
-        // line 3988
+        .line 3988
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 45
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_145    // " chk"
         stobj valuetype T_array_100
-        // line 3988
+        .line 3988
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 46
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_146    // " cup"
         stobj valuetype T_array_100
-        // line 3988
+        .line 3988
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 47
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_147    // " equ"
         stobj valuetype T_array_100
-        // line 3989
+        .line 3989
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 48
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_148    // " geq"
         stobj valuetype T_array_100
-        // line 3989
+        .line 3989
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 49
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_149    // " grt"
         stobj valuetype T_array_100
-        // line 3989
+        .line 3989
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 50
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_150    // " lda"
         stobj valuetype T_array_100
-        // line 3989
+        .line 3989
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 51
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_151    // " ldc"
         stobj valuetype T_array_100
-        // line 3990
+        .line 3990
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 52
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_152    // " leq"
         stobj valuetype T_array_100
-        // line 3990
+        .line 3990
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 53
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_153    // " les"
         stobj valuetype T_array_100
-        // line 3990
+        .line 3990
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 54
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_154    // " lod"
         stobj valuetype T_array_100
-        // line 3990
+        .line 3990
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 55
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_155    // " neq"
         stobj valuetype T_array_100
-        // line 3991
+        .line 3991
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 56
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_156    // " str"
         stobj valuetype T_array_100
-        // line 3991
+        .line 3991
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 57
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_157    // " ujp"
         stobj valuetype T_array_100
-        // line 3991
+        .line 3991
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 58
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_158    // " ord"
         stobj valuetype T_array_100
-        // line 3991
+        .line 3991
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 59
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
         ldsfld valuetype T_array_100 STRING_159    // " chr"
         stobj valuetype T_array_100
-        // line 3992
+        .line 3992
         ldsflda valuetype T_array_101 _G::Mn
         ldc.i4 60
         call instance valuetype T_array_100& T_array_101::ldadr(int32)
@@ -27767,7 +27767,7 @@
         ret
     }
 
-// line 3995
+.line 3995
 
     .method public
     void Chartypes()
@@ -27788,7 +27788,7 @@
         stfld class @inittables @inittables_chartypes::_slink
     
     L_Entry:
-        // line 3998
+        .line 3998
         ldc.i4 255
         stloc $tmpEndValue1
         ldc.i4 0
@@ -27800,7 +27800,7 @@
         ldloc $tmpIndex2
         stfld int32 @inittables_chartypes::i
     L_for_loop_1:
-        // line 3998
+        .line 3998
         ldsflda valuetype T_array_7 _G::Chartp
         ldloc _F
         ldfld int32 @inittables_chartypes::i
@@ -27821,391 +27821,391 @@
         br L_for_loop_1
     L_for_end_2:
         pop
-        // line 3999
+        .line 3999
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 97 // 'a'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4000
+        .line 4000
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 98 // 'b'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4000
+        .line 4000
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 99 // 'c'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4001
+        .line 4001
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 100 // 'd'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4001
+        .line 4001
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 101 // 'e'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4002
+        .line 4002
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 102 // 'f'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4002
+        .line 4002
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 103 // 'g'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4003
+        .line 4003
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 104 // 'h'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4003
+        .line 4003
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 105 // 'i'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4004
+        .line 4004
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 106 // 'j'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4004
+        .line 4004
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 107 // 'k'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4005
+        .line 4005
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 108 // 'l'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4005
+        .line 4005
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 109 // 'm'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4006
+        .line 4006
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 110 // 'n'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4006
+        .line 4006
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 111 // 'o'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4007
+        .line 4007
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 112 // 'p'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4007
+        .line 4007
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 113 // 'q'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4008
+        .line 4008
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 114 // 'r'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4008
+        .line 4008
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 115 // 's'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4009
+        .line 4009
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 116 // 't'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4009
+        .line 4009
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 117 // 'u'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4010
+        .line 4010
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 118 // 'v'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4010
+        .line 4010
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 119 // 'w'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4011
+        .line 4011
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 120 // 'x'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4011
+        .line 4011
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 121 // 'y'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4012
+        .line 4012
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 122 // 'z'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4012
+        .line 4012
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 48 // '0'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 1
         stobj int32
-        // line 4013
+        .line 4013
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 49 // '1'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 1
         stobj int32
-        // line 4013
+        .line 4013
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 50 // '2'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 1
         stobj int32
-        // line 4014
+        .line 4014
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 51 // '3'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 1
         stobj int32
-        // line 4014
+        .line 4014
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 52 // '4'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 1
         stobj int32
-        // line 4015
+        .line 4015
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 53 // '5'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 1
         stobj int32
-        // line 4015
+        .line 4015
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 54 // '6'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 1
         stobj int32
-        // line 4016
+        .line 4016
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 55 // '7'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 1
         stobj int32
-        // line 4016
+        .line 4016
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 56 // '8'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 1
         stobj int32
-        // line 4017
+        .line 4017
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 57 // '9'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 1
         stobj int32
-        // line 4017
+        .line 4017
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 43 // '+'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 2
         stobj int32
-        // line 4018
+        .line 4018
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 45 // '-'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 2
         stobj int32
-        // line 4018
+        .line 4018
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 42 // '*'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 2
         stobj int32
-        // line 4019
+        .line 4019
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 47 // '/'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 2
         stobj int32
-        // line 4019
+        .line 4019
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 40 // '('
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 9
         stobj int32
-        // line 4020
+        .line 4020
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 41 // ')'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 2
         stobj int32
-        // line 4020
+        .line 4020
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 36 // '$'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 2
         stobj int32
-        // line 4021
+        .line 4021
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 61 // '='
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 2
         stobj int32
-        // line 4021
+        .line 4021
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 32 // ' '
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 10
         stobj int32
-        // line 4022
+        .line 4022
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 44 // ','
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 2
         stobj int32
-        // line 4022
+        .line 4022
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 46 // '.'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 6
         stobj int32
-        // line 4023
+        .line 4023
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 39 // '''
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 4
         stobj int32
-        // line 4023
+        .line 4023
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 91 // '['
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 2
         stobj int32
-        // line 4024
+        .line 4024
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 93 // ']'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 2
         stobj int32
-        // line 4024
+        .line 4024
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 58 // ':'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 5
         stobj int32
-        // line 4025
+        .line 4025
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 94 // '^'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 2
         stobj int32
-        // line 4025
+        .line 4025
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 59 // ';'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 2
         stobj int32
-        // line 4026
+        .line 4026
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 60 // '<'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 7
         stobj int32
-        // line 4026
+        .line 4026
         ldsflda valuetype T_array_7 _G::Chartp
         ldc.i4 62 // '>'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 8
         stobj int32
-        // line 4027
+        .line 4027
         ldsflda valuetype T_array_7 _G::Ordint
         ldc.i4 48 // '0'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 0
         stobj int32
-        // line 4027
+        .line 4027
         ldsflda valuetype T_array_7 _G::Ordint
         ldc.i4 49 // '1'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 1
         stobj int32
-        // line 4027
+        .line 4027
         ldsflda valuetype T_array_7 _G::Ordint
         ldc.i4 50 // '2'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 2
         stobj int32
-        // line 4028
+        .line 4028
         ldsflda valuetype T_array_7 _G::Ordint
         ldc.i4 51 // '3'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 3
         stobj int32
-        // line 4028
+        .line 4028
         ldsflda valuetype T_array_7 _G::Ordint
         ldc.i4 52 // '4'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 4
         stobj int32
-        // line 4028
+        .line 4028
         ldsflda valuetype T_array_7 _G::Ordint
         ldc.i4 53 // '5'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 5
         stobj int32
-        // line 4029
+        .line 4029
         ldsflda valuetype T_array_7 _G::Ordint
         ldc.i4 54 // '6'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 6
         stobj int32
-        // line 4029
+        .line 4029
         ldsflda valuetype T_array_7 _G::Ordint
         ldc.i4 55 // '7'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 7
         stobj int32
-        // line 4029
+        .line 4029
         ldsflda valuetype T_array_7 _G::Ordint
         ldc.i4 56 // '8'
         call instance int32& T_array_7::ldadr(int32)
         ldc.i4 8
         stobj int32
-        // line 4030
+        .line 4030
         ldsflda valuetype T_array_7 _G::Ordint
         ldc.i4 57 // '9'
         call instance int32& T_array_7::ldadr(int32)
@@ -28217,7 +28217,7 @@
         ret
     }
 
-// line 4033
+.line 4033
 
     .method public
     void Initdx()
@@ -28234,7 +28234,7 @@
         stfld class @inittables @inittables_initdx::_slink
     
     L_Entry:
-        // line 4035
+        .line 4035
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 0
         call instance int8& T_array_99::ldadr(int32)
@@ -28244,7 +28244,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4035
+        .line 4035
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 1
         call instance int8& T_array_99::ldadr(int32)
@@ -28254,7 +28254,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4035
+        .line 4035
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 2
         call instance int8& T_array_99::ldadr(int32)
@@ -28265,7 +28265,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4035
+        .line 4035
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 3
         call instance int8& T_array_99::ldadr(int32)
@@ -28276,7 +28276,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4036
+        .line 4036
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 4
         call instance int8& T_array_99::ldadr(int32)
@@ -28287,7 +28287,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4036
+        .line 4036
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 5
         call instance int8& T_array_99::ldadr(int32)
@@ -28298,7 +28298,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4036
+        .line 4036
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 6
         call instance int8& T_array_99::ldadr(int32)
@@ -28309,7 +28309,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4036
+        .line 4036
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 7
         call instance int8& T_array_99::ldadr(int32)
@@ -28320,7 +28320,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4037
+        .line 4037
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 8
         call instance int8& T_array_99::ldadr(int32)
@@ -28330,7 +28330,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4037
+        .line 4037
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 9
         call instance int8& T_array_99::ldadr(int32)
@@ -28340,7 +28340,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4037
+        .line 4037
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 10
         call instance int8& T_array_99::ldadr(int32)
@@ -28350,7 +28350,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4037
+        .line 4037
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 11
         call instance int8& T_array_99::ldadr(int32)
@@ -28361,7 +28361,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4038
+        .line 4038
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 12
         call instance int8& T_array_99::ldadr(int32)
@@ -28372,7 +28372,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4038
+        .line 4038
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 13
         call instance int8& T_array_99::ldadr(int32)
@@ -28383,7 +28383,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4038
+        .line 4038
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 14
         call instance int8& T_array_99::ldadr(int32)
@@ -28394,7 +28394,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4038
+        .line 4038
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 15
         call instance int8& T_array_99::ldadr(int32)
@@ -28405,7 +28405,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4039
+        .line 4039
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 16
         call instance int8& T_array_99::ldadr(int32)
@@ -28416,7 +28416,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4039
+        .line 4039
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 17
         call instance int8& T_array_99::ldadr(int32)
@@ -28426,7 +28426,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4039
+        .line 4039
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 18
         call instance int8& T_array_99::ldadr(int32)
@@ -28436,7 +28436,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4039
+        .line 4039
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 19
         call instance int8& T_array_99::ldadr(int32)
@@ -28446,7 +28446,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4040
+        .line 4040
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 20
         call instance int8& T_array_99::ldadr(int32)
@@ -28456,7 +28456,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4040
+        .line 4040
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 21
         call instance int8& T_array_99::ldadr(int32)
@@ -28467,7 +28467,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4040
+        .line 4040
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 22
         call instance int8& T_array_99::ldadr(int32)
@@ -28478,7 +28478,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4040
+        .line 4040
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 23
         call instance int8& T_array_99::ldadr(int32)
@@ -28488,7 +28488,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4041
+        .line 4041
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 24
         call instance int8& T_array_99::ldadr(int32)
@@ -28498,7 +28498,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4041
+        .line 4041
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 25
         call instance int8& T_array_99::ldadr(int32)
@@ -28508,7 +28508,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4041
+        .line 4041
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 26
         call instance int8& T_array_99::ldadr(int32)
@@ -28519,7 +28519,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4041
+        .line 4041
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 27
         call instance int8& T_array_99::ldadr(int32)
@@ -28529,7 +28529,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4042
+        .line 4042
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 28
         call instance int8& T_array_99::ldadr(int32)
@@ -28540,7 +28540,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4042
+        .line 4042
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 29
         call instance int8& T_array_99::ldadr(int32)
@@ -28550,7 +28550,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4042
+        .line 4042
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 30
         call instance int8& T_array_99::ldadr(int32)
@@ -28560,7 +28560,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4042
+        .line 4042
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 31
         call instance int8& T_array_99::ldadr(int32)
@@ -28570,7 +28570,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4043
+        .line 4043
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 32
         call instance int8& T_array_99::ldadr(int32)
@@ -28580,7 +28580,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4043
+        .line 4043
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 33
         call instance int8& T_array_99::ldadr(int32)
@@ -28591,7 +28591,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4043
+        .line 4043
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 34
         call instance int8& T_array_99::ldadr(int32)
@@ -28601,7 +28601,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4043
+        .line 4043
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 35
         call instance int8& T_array_99::ldadr(int32)
@@ -28611,7 +28611,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4044
+        .line 4044
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 36
         call instance int8& T_array_99::ldadr(int32)
@@ -28622,7 +28622,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4044
+        .line 4044
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 37
         call instance int8& T_array_99::ldadr(int32)
@@ -28632,7 +28632,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4044
+        .line 4044
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 38
         call instance int8& T_array_99::ldadr(int32)
@@ -28642,7 +28642,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4044
+        .line 4044
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 39
         call instance int8& T_array_99::ldadr(int32)
@@ -28652,7 +28652,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4045
+        .line 4045
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 40
         call instance int8& T_array_99::ldadr(int32)
@@ -28663,7 +28663,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4045
+        .line 4045
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 41
         call instance int8& T_array_99::ldadr(int32)
@@ -28673,7 +28673,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4045
+        .line 4045
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 42
         call instance int8& T_array_99::ldadr(int32)
@@ -28683,7 +28683,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4045
+        .line 4045
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 43
         call instance int8& T_array_99::ldadr(int32)
@@ -28694,7 +28694,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4046
+        .line 4046
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 44
         call instance int8& T_array_99::ldadr(int32)
@@ -28705,7 +28705,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4046
+        .line 4046
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 45
         call instance int8& T_array_99::ldadr(int32)
@@ -28715,7 +28715,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4046
+        .line 4046
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 46
         call instance int8& T_array_99::ldadr(int32)
@@ -28725,7 +28725,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4046
+        .line 4046
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 47
         call instance int8& T_array_99::ldadr(int32)
@@ -28736,7 +28736,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4047
+        .line 4047
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 48
         call instance int8& T_array_99::ldadr(int32)
@@ -28747,7 +28747,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4047
+        .line 4047
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 49
         call instance int8& T_array_99::ldadr(int32)
@@ -28758,7 +28758,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4047
+        .line 4047
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 50
         call instance int8& T_array_99::ldadr(int32)
@@ -28768,7 +28768,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4047
+        .line 4047
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 51
         call instance int8& T_array_99::ldadr(int32)
@@ -28778,7 +28778,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4048
+        .line 4048
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 52
         call instance int8& T_array_99::ldadr(int32)
@@ -28789,7 +28789,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4048
+        .line 4048
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 53
         call instance int8& T_array_99::ldadr(int32)
@@ -28800,7 +28800,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4048
+        .line 4048
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 54
         call instance int8& T_array_99::ldadr(int32)
@@ -28810,7 +28810,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4048
+        .line 4048
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 55
         call instance int8& T_array_99::ldadr(int32)
@@ -28821,7 +28821,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4049
+        .line 4049
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 56
         call instance int8& T_array_99::ldadr(int32)
@@ -28832,7 +28832,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4049
+        .line 4049
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 57
         call instance int8& T_array_99::ldadr(int32)
@@ -28842,7 +28842,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4049
+        .line 4049
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 58
         call instance int8& T_array_99::ldadr(int32)
@@ -28852,7 +28852,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4049
+        .line 4049
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 59
         call instance int8& T_array_99::ldadr(int32)
@@ -28862,7 +28862,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4050
+        .line 4050
         ldsflda valuetype T_array_99 _G::Cdx
         ldc.i4 60
         call instance int8& T_array_99::ldadr(int32)
@@ -28872,7 +28872,7 @@
         ldc.i4 4
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4051
+        .line 4051
         ldsflda valuetype T_array_105 _G::Pdx
         ldc.i4 1
         call instance int8& T_array_105::ldadr(int32)
@@ -28883,7 +28883,7 @@
         ldc.i4 7
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4051
+        .line 4051
         ldsflda valuetype T_array_105 _G::Pdx
         ldc.i4 2
         call instance int8& T_array_105::ldadr(int32)
@@ -28894,7 +28894,7 @@
         ldc.i4 7
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4051
+        .line 4051
         ldsflda valuetype T_array_105 _G::Pdx
         ldc.i4 3
         call instance int8& T_array_105::ldadr(int32)
@@ -28905,7 +28905,7 @@
         ldc.i4 7
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4051
+        .line 4051
         ldsflda valuetype T_array_105 _G::Pdx
         ldc.i4 4
         call instance int8& T_array_105::ldadr(int32)
@@ -28916,7 +28916,7 @@
         ldc.i4 7
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4052
+        .line 4052
         ldsflda valuetype T_array_105 _G::Pdx
         ldc.i4 5
         call instance int8& T_array_105::ldadr(int32)
@@ -28927,7 +28927,7 @@
         ldc.i4 7
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4052
+        .line 4052
         ldsflda valuetype T_array_105 _G::Pdx
         ldc.i4 6
         call instance int8& T_array_105::ldadr(int32)
@@ -28938,7 +28938,7 @@
         ldc.i4 7
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4052
+        .line 4052
         ldsflda valuetype T_array_105 _G::Pdx
         ldc.i4 7
         call instance int8& T_array_105::ldadr(int32)
@@ -28949,7 +28949,7 @@
         ldc.i4 7
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4052
+        .line 4052
         ldsflda valuetype T_array_105 _G::Pdx
         ldc.i4 8
         call instance int8& T_array_105::ldadr(int32)
@@ -28960,7 +28960,7 @@
         ldc.i4 7
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4053
+        .line 4053
         ldsflda valuetype T_array_105 _G::Pdx
         ldc.i4 9
         call instance int8& T_array_105::ldadr(int32)
@@ -28971,7 +28971,7 @@
         ldc.i4 7
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4053
+        .line 4053
         ldsflda valuetype T_array_105 _G::Pdx
         ldc.i4 10
         call instance int8& T_array_105::ldadr(int32)
@@ -28982,7 +28982,7 @@
         ldc.i4 7
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4053
+        .line 4053
         ldsflda valuetype T_array_105 _G::Pdx
         ldc.i4 11
         call instance int8& T_array_105::ldadr(int32)
@@ -28992,7 +28992,7 @@
         ldc.i4 7
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4053
+        .line 4053
         ldsflda valuetype T_array_105 _G::Pdx
         ldc.i4 12
         call instance int8& T_array_105::ldadr(int32)
@@ -29003,7 +29003,7 @@
         ldc.i4 7
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4054
+        .line 4054
         ldsflda valuetype T_array_105 _G::Pdx
         ldc.i4 13
         call instance int8& T_array_105::ldadr(int32)
@@ -29014,7 +29014,7 @@
         ldc.i4 7
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4054
+        .line 4054
         ldsflda valuetype T_array_105 _G::Pdx
         ldc.i4 14
         call instance int8& T_array_105::ldadr(int32)
@@ -29024,7 +29024,7 @@
         ldc.i4 7
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4054
+        .line 4054
         ldsflda valuetype T_array_105 _G::Pdx
         ldc.i4 15
         call instance int8& T_array_105::ldadr(int32)
@@ -29034,7 +29034,7 @@
         ldc.i4 7
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4054
+        .line 4054
         ldsflda valuetype T_array_105 _G::Pdx
         ldc.i4 16
         call instance int8& T_array_105::ldadr(int32)
@@ -29044,7 +29044,7 @@
         ldc.i4 7
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4055
+        .line 4055
         ldsflda valuetype T_array_105 _G::Pdx
         ldc.i4 17
         call instance int8& T_array_105::ldadr(int32)
@@ -29054,7 +29054,7 @@
         ldc.i4 7
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4055
+        .line 4055
         ldsflda valuetype T_array_105 _G::Pdx
         ldc.i4 18
         call instance int8& T_array_105::ldadr(int32)
@@ -29064,7 +29064,7 @@
         ldc.i4 7
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4055
+        .line 4055
         ldsflda valuetype T_array_105 _G::Pdx
         ldc.i4 19
         call instance int8& T_array_105::ldadr(int32)
@@ -29074,7 +29074,7 @@
         ldc.i4 7
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4055
+        .line 4055
         ldsflda valuetype T_array_105 _G::Pdx
         ldc.i4 20
         call instance int8& T_array_105::ldadr(int32)
@@ -29084,7 +29084,7 @@
         ldc.i4 7
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4056
+        .line 4056
         ldsflda valuetype T_array_105 _G::Pdx
         ldc.i4 21
         call instance int8& T_array_105::ldadr(int32)
@@ -29095,7 +29095,7 @@
         ldc.i4 7
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4056
+        .line 4056
         ldsflda valuetype T_array_105 _G::Pdx
         ldc.i4 22
         call instance int8& T_array_105::ldadr(int32)
@@ -29106,7 +29106,7 @@
         ldc.i4 7
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stobj int8
-        // line 4056
+        .line 4056
         ldsflda valuetype T_array_105 _G::Pdx
         ldc.i4 23
         call instance int8& T_array_105::ldadr(int32)
@@ -29125,7 +29125,7 @@
 }
 
 
-// line 93
+.line 93
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -29203,7 +29203,7 @@
     .field public static valuetype T_valu Val
 }
 
-// line 366
+.line 366
 
 .method static
 void Mark(void*& p)
@@ -29224,7 +29224,7 @@ void Mark(void*& p)
     stfld void** @mark::p
 
 L_Entry:
-    // line 366
+    .line 366
     ldloc _F
     ldfld void** @mark::p
     ldloc _F
@@ -29236,7 +29236,7 @@ L_Epilogue:
     ret
 }
 
-// line 367
+.line 367
 
 .method static
 void Release(void* p)
@@ -29253,7 +29253,7 @@ void Release(void* p)
     stfld void* @release::p
 
 L_Entry:
-    // line 367
+    .line 367
     ldloc _F
     ldloc _F
     ldfld void* @release::p
@@ -29263,7 +29263,7 @@ L_Epilogue:
     ret
 }
 
-// line 369
+.line 369
 
 .method static
 void Endofline()
@@ -29280,12 +29280,12 @@ void Endofline()
     stloc _F
 
 L_Entry:
-    // line 372
+    .line 372
     ldsfld int8 _G::Errinx
     ldc.i4 0
     cgt
     brfalse L_if_end_1
-    // line 373
+    .line 373
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 6
@@ -29298,15 +29298,15 @@ L_Entry:
     ldstr " ****  "
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
     pop
-    // line 374
+    .line 374
     ldloc _F
     ldc.i4 0
     stfld int32 @endofline::Lastpos
-    // line 374
+    .line 374
     ldloc _F
     ldc.i4 1
     stfld int32 @endofline::Freepos
-    // line 375
+    .line 375
     ldsfld int8 _G::Errinx
     stloc $tmpEndValue1
     ldc.i4 1
@@ -29318,7 +29318,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int32 @endofline::k
 L_for_loop_2:
-    // line 378
+    .line 378
     ldloc _F
     ldsflda valuetype T_array_4 _G::Errlist
     ldloc _F
@@ -29326,7 +29326,7 @@ L_for_loop_2:
     call instance valuetype T_record_2& T_array_4::ldadr(int32)
     ldfld int32 T_record_2::Pos
     stfld int32 @endofline::Currpos
-    // line 378
+    .line 378
     ldloc _F
     ldsflda valuetype T_array_4 _G::Errlist
     ldloc _F
@@ -29334,14 +29334,14 @@ L_for_loop_2:
     call instance valuetype T_record_2& T_array_4::ldadr(int32)
     ldfld int16 T_record_2::Nmr
     stfld int32 @endofline::Currnmr
-    // line 379
+    .line 379
     ldloc _F
     ldfld int32 @endofline::Currpos
     ldloc _F
     ldfld int32 @endofline::Lastpos
     ceq
     brfalse L_else_4
-    // line 379
+    .line 379
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 44 // ','
@@ -29349,16 +29349,16 @@ L_for_loop_2:
     pop
     br L_if_end_5
 L_else_4:
-    // line 382
+    .line 382
     br L_while_test_7
 L_while_6:
-    // line 383
+    .line 383
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 32 // ' '
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 383
+    .line 383
     ldloc _F
     ldloc _F
     ldfld int32 @endofline::Freepos
@@ -29372,49 +29372,49 @@ L_while_test_7:
     ldfld int32 @endofline::Currpos
     clt
     brtrue L_while_6
-    // line 384
+    .line 384
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 94 // '^'
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 385
+    .line 385
     ldloc _F
     ldloc _F
     ldfld int32 @endofline::Currpos
     stfld int32 @endofline::Lastpos
 L_if_end_5:
-    // line 387
+    .line 387
     ldloc _F
     ldfld int32 @endofline::Currnmr
     ldc.i4 10
     clt
     brfalse L_else_8
-    // line 387
+    .line 387
     ldloc _F
     ldc.i4 1
     stfld int32 @endofline::f
     br L_if_end_9
 L_else_8:
-    // line 388
+    .line 388
     ldloc _F
     ldfld int32 @endofline::Currnmr
     ldc.i4 100
     clt
     brfalse L_else_10
-    // line 388
+    .line 388
     ldloc _F
     ldc.i4 2
     stfld int32 @endofline::f
     br L_if_end_11
 L_else_10:
-    // line 389
+    .line 389
     ldloc _F
     ldc.i4 3
     stfld int32 @endofline::f
 L_if_end_11:
 L_if_end_9:
-    // line 390
+    .line 390
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -29424,7 +29424,7 @@ L_if_end_9:
     ldfld int32 @endofline::Currnmr
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
-    // line 391
+    .line 391
     ldloc _F
     ldloc _F
     ldfld int32 @endofline::Freepos
@@ -29448,10 +29448,10 @@ L_if_end_9:
     br L_for_loop_2
 L_for_end_3:
     pop
-    // line 393
+    .line 393
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 393
+    .line 393
     ldc.i4 0
     dup
     ldc.i4 0
@@ -29459,12 +29459,12 @@ L_for_end_3:
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int8 _G::Errinx
 L_if_end_1:
-    // line 395
+    .line 395
     ldsfld int32 _G::Linecount
     ldc.i4 1
     add
     stsfld int32 _G::Linecount
-    // line 396
+    .line 396
     ldsfld bool _G::List
     dup
     brfalse L_AND_shortcut_12
@@ -29475,7 +29475,7 @@ L_if_end_1:
     ceq
 L_AND_shortcut_12:
     brfalse L_if_end_13
-    // line 397
+    .line 397
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 6
@@ -29488,10 +29488,10 @@ L_AND_shortcut_12:
     ldstr "  "
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
     pop
-    // line 398
+    .line 398
     ldsfld bool _G::Dp
     brfalse L_else_14
-    // line 398
+    .line 398
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 7
@@ -29501,7 +29501,7 @@ L_AND_shortcut_12:
     pop
     br L_if_end_15
 L_else_14:
-    // line 398
+    .line 398
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 7
@@ -29510,14 +29510,14 @@ L_else_14:
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
 L_if_end_15:
-    // line 399
+    .line 399
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldc.i4 32 // ' '
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
 L_if_end_13:
-    // line 401
+    .line 401
     ldc.i4 0
     stsfld int32 _G::Chcnt
 
@@ -29525,7 +29525,7 @@ L_Epilogue:
     ret
 }
 
-// line 404
+.line 404
 
 .method static
 void Error(int32 Ferrnr)
@@ -29542,14 +29542,14 @@ void Error(int32 Ferrnr)
     stfld int32 @error::Ferrnr
 
 L_Entry:
-    // line 406
+    .line 406
     ldsfld int8 _G::Errinx
     ldc.i4 9
     clt
     ldc.i4.0
     ceq
     brfalse L_else_1
-    // line 407
+    .line 407
     ldsflda valuetype T_array_4 _G::Errlist
     ldc.i4 10
     call instance valuetype T_record_2& T_array_4::ldadr(int32)
@@ -29559,7 +29559,7 @@ L_Entry:
     ldc.i4 400
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int16 T_record_2::Nmr
-    // line 407
+    .line 407
     ldc.i4 10
     dup
     ldc.i4 0
@@ -29568,7 +29568,7 @@ L_Entry:
     stsfld int8 _G::Errinx
     br L_if_end_2
 L_else_1:
-    // line 409
+    .line 409
     ldsfld int8 _G::Errinx
     ldc.i4 1
     add
@@ -29577,7 +29577,7 @@ L_else_1:
     ldc.i4 10
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int8 _G::Errinx
-    // line 410
+    .line 410
     ldsflda valuetype T_array_4 _G::Errlist
     ldsfld int8 _G::Errinx
     call instance valuetype T_record_2& T_array_4::ldadr(int32)
@@ -29589,7 +29589,7 @@ L_else_1:
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int16 T_record_2::Nmr
 L_if_end_2:
-    // line 412
+    .line 412
     ldsflda valuetype T_array_4 _G::Errlist
     ldsfld int8 _G::Errinx
     call instance valuetype T_record_2& T_array_4::ldadr(int32)
@@ -29600,7 +29600,7 @@ L_Epilogue:
     ret
 }
 
-// line 415
+.line 415
 
 .method static
 void Insymbol()
@@ -29659,13 +29659,13 @@ void Insymbol()
     call instance void T_set_8::addValue(int32)
 
 L_Entry:
-    // line 464
+    .line 464
 L_1:
 L_repeat_1:
-    // line 464
+    .line 464
     br L_while_test_3
 L_while_2:
-    // line 464
+    .line 464
     ldloc _F
     call instance void @insymbol::Nextch()
 L_while_test_3:
@@ -29687,15 +29687,15 @@ L_OR_shortcut_5:
     ceq
 L_AND_shortcut_4:
     brtrue L_while_2
-    // line 465
+    .line 465
     ldloc _F
     ldsfld bool _G::Eol
     stfld bool @insymbol::Test
-    // line 466
+    .line 466
     ldloc _F
     ldfld bool @insymbol::Test
     brfalse L_if_end_6
-    // line 466
+    .line 466
     ldloc _F
     call instance void @insymbol::Nextch()
 L_if_end_6:
@@ -29704,7 +29704,7 @@ L_if_end_6:
     ldc.i4.0
     ceq
     brfalse L_repeat_1
-    // line 468
+    .line 468
     ldsflda valuetype T_array_7 _G::Chartp
     ldsfld uint8 _G::Ch
     call instance int32& T_array_7::ldadr(int32)
@@ -29712,21 +29712,21 @@ L_if_end_6:
     ldc.i4 3
     ceq
     brfalse L_else_7
-    // line 469
+    .line 469
     ldc.i4 47
     stsfld int32 _G::Sy
-    // line 469
+    .line 469
     ldc.i4 15
     stsfld int32 _G::Op
-    // line 470
+    .line 470
     ldc.i4 399
     call void Error(int32 Ferrnr)
-    // line 470
+    .line 470
     ldloc _F
     call instance void @insymbol::Nextch()
     br L_if_end_8
 L_else_7:
-    // line 473
+    .line 473
     ldsflda valuetype T_array_7 _G::Chartp
     ldsfld uint8 _G::Ch
     call instance int32& T_array_7::ldadr(int32)
@@ -29735,26 +29735,26 @@ L_else_7:
     ldloc $tmpSwitchValue1
     ldc.i4 0
     bne.un L_check_case_10
-    // line 475
+    .line 475
     ldloc _F
     ldc.i4 0
     stfld int32 @insymbol::k
-    // line 476
+    .line 476
 L_repeat_11:
-    // line 477
+    .line 477
     ldloc _F
     ldfld int32 @insymbol::k
     ldc.i4 8
     clt
     brfalse L_if_end_12
-    // line 478
+    .line 478
     ldloc _F
     ldloc _F
     ldfld int32 @insymbol::k
     ldc.i4 1
     add
     stfld int32 @insymbol::k
-    // line 478
+    .line 478
     ldsflda valuetype T_alpha _G::Id
     ldloc _F
     ldfld int32 @insymbol::k
@@ -29762,7 +29762,7 @@ L_repeat_11:
     ldsfld uint8 _G::Ch
     stobj uint8
 L_if_end_12:
-    // line 479
+    .line 479
     ldloc _F
     call instance void @insymbol::Nextch()
     ldloc $tmpSetLiteral2
@@ -29772,7 +29772,7 @@ L_if_end_12:
     ldobj int32
     call bool _SetContains(valuetype T_set_8 s, int32 val)
     brfalse L_repeat_11
-    // line 482
+    .line 482
     ldloc _F
     ldfld int32 @insymbol::k
     ldsfld int8 _G::Kk
@@ -29780,7 +29780,7 @@ L_if_end_12:
     ldc.i4.0
     ceq
     brfalse L_else_13
-    // line 482
+    .line 482
     ldloc _F
     ldfld int32 @insymbol::k
     dup
@@ -29790,15 +29790,15 @@ L_if_end_12:
     stsfld int8 _G::Kk
     br L_if_end_14
 L_else_13:
-    // line 484
+    .line 484
 L_repeat_15:
-    // line 484
+    .line 484
     ldsflda valuetype T_alpha _G::Id
     ldsfld int8 _G::Kk
     call instance uint8& T_alpha::ldadr(int32)
     ldc.i4 32 // ' '
     stobj uint8
-    // line 484
+    .line 484
     ldsfld int8 _G::Kk
     ldc.i4 1
     sub
@@ -29813,7 +29813,7 @@ L_repeat_15:
     ceq
     brfalse L_repeat_15
 L_if_end_14:
-    // line 486
+    .line 486
     ldsflda valuetype T_array_11 _G::Frw
     ldloc _F
     ldfld int32 @insymbol::k
@@ -29837,7 +29837,7 @@ L_if_end_14:
     ldloc $tmpIndex4
     stfld int32 @insymbol::i
 L_for_loop_16:
-    // line 487
+    .line 487
     ldsflda valuetype T_array_12 _G::Rw
     ldloc _F
     ldfld int32 @insymbol::i
@@ -29848,21 +29848,21 @@ L_for_loop_16:
     call string T_alpha::arrayToString(valuetype T_alpha)
     call bool [lpcRuntime]LPC.Helpers::StrcmpEQ(string, string)
     brfalse L_if_end_18
-    // line 488
+    .line 488
     ldsflda valuetype T_array_13 _G::Rsy
     ldloc _F
     ldfld int32 @insymbol::i
     call instance int32& T_array_13::ldadr(int32)
     ldobj int32
     stsfld int32 _G::Sy
-    // line 488
+    .line 488
     ldsflda valuetype T_array_13 _G::Rop
     ldloc _F
     ldfld int32 @insymbol::i
     call instance int32& T_array_13::ldadr(int32)
     ldobj int32
     stsfld int32 _G::Op
-    // line 488
+    .line 488
     br L_2
 L_if_end_18:
     ldloc _F
@@ -29879,10 +29879,10 @@ L_if_end_18:
     br L_for_loop_16
 L_for_end_17:
     pop
-    // line 489
+    .line 489
     ldc.i4 0
     stsfld int32 _G::Sy
-    // line 489
+    .line 489
     ldc.i4 15
     stsfld int32 _G::Op
 L_2:
@@ -29892,23 +29892,23 @@ L_check_case_10:
     ldloc $tmpSwitchValue1
     ldc.i4 1
     bne.un L_check_case_19
-    // line 492
+    .line 492
     ldc.i4 15
     stsfld int32 _G::Op
-    // line 492
+    .line 492
     ldloc _F
     ldc.i4 0
     stfld int32 @insymbol::i
-    // line 493
+    .line 493
 L_repeat_20:
-    // line 493
+    .line 493
     ldloc _F
     ldloc _F
     ldfld int32 @insymbol::i
     ldc.i4 1
     add
     stfld int32 @insymbol::i
-    // line 493
+    .line 493
     ldloc _F
     ldfld int32 @insymbol::i
     ldsfld int32 _G::Digmax
@@ -29916,7 +29916,7 @@ L_repeat_20:
     ldc.i4.0
     ceq
     brfalse L_if_end_21
-    // line 493
+    .line 493
     ldloc _F
     ldflda valuetype T_insymbol_array_5 @insymbol::Digit
     ldloc _F
@@ -29925,7 +29925,7 @@ L_repeat_20:
     ldsfld uint8 _G::Ch
     stobj uint8
 L_if_end_21:
-    // line 493
+    .line 493
     ldloc _F
     call instance void @insymbol::Nextch()
     ldsflda valuetype T_array_7 _G::Chartp
@@ -29937,7 +29937,7 @@ L_if_end_21:
     ldc.i4.0
     ceq
     brfalse L_repeat_20
-    // line 495
+    .line 495
     ldsfld uint8 _G::Ch
     ldc.i4 46 // '.'
     ceq
@@ -29962,24 +29962,24 @@ L_AND_shortcut_23:
     ceq
 L_OR_shortcut_22:
     brfalse L_else_24
-    // line 497
+    .line 497
     ldloc _F
     ldloc _F
     ldfld int32 @insymbol::i
     stfld int32 @insymbol::k
-    // line 498
+    .line 498
     ldsfld uint8 _G::Ch
     ldc.i4 46 // '.'
     ceq
     brfalse L_if_end_26
-    // line 499
+    .line 499
     ldloc _F
     ldloc _F
     ldfld int32 @insymbol::k
     ldc.i4 1
     add
     stfld int32 @insymbol::k
-    // line 499
+    .line 499
     ldloc _F
     ldfld int32 @insymbol::k
     ldsfld int32 _G::Digmax
@@ -29987,7 +29987,7 @@ L_OR_shortcut_22:
     ldc.i4.0
     ceq
     brfalse L_if_end_27
-    // line 499
+    .line 499
     ldloc _F
     ldflda valuetype T_insymbol_array_5 @insymbol::Digit
     ldloc _F
@@ -29996,10 +29996,10 @@ L_OR_shortcut_22:
     ldsfld uint8 _G::Ch
     stobj uint8
 L_if_end_27:
-    // line 500
+    .line 500
     ldloc _F
     call instance void @insymbol::Nextch()
-    // line 501
+    .line 501
     ldsflda valuetype T_array_7 _G::Chartp
     ldsfld uint8 _G::Ch
     call instance int32& T_array_7::ldadr(int32)
@@ -30009,21 +30009,21 @@ L_if_end_27:
     ldc.i4.0
     ceq
     brfalse L_else_28
-    // line 501
+    .line 501
     ldc.i4 201
     call void Error(int32 Ferrnr)
     br L_if_end_29
 L_else_28:
-    // line 503
+    .line 503
 L_repeat_30:
-    // line 503
+    .line 503
     ldloc _F
     ldloc _F
     ldfld int32 @insymbol::k
     ldc.i4 1
     add
     stfld int32 @insymbol::k
-    // line 504
+    .line 504
     ldloc _F
     ldfld int32 @insymbol::k
     ldsfld int32 _G::Digmax
@@ -30031,7 +30031,7 @@ L_repeat_30:
     ldc.i4.0
     ceq
     brfalse L_if_end_31
-    // line 504
+    .line 504
     ldloc _F
     ldflda valuetype T_insymbol_array_5 @insymbol::Digit
     ldloc _F
@@ -30040,7 +30040,7 @@ L_repeat_30:
     ldsfld uint8 _G::Ch
     stobj uint8
 L_if_end_31:
-    // line 504
+    .line 504
     ldloc _F
     call instance void @insymbol::Nextch()
     ldsflda valuetype T_array_7 _G::Chartp
@@ -30054,19 +30054,19 @@ L_if_end_31:
     brfalse L_repeat_30
 L_if_end_29:
 L_if_end_26:
-    // line 507
+    .line 507
     ldsfld uint8 _G::Ch
     ldc.i4 101 // 'e'
     ceq
     brfalse L_if_end_32
-    // line 508
+    .line 508
     ldloc _F
     ldloc _F
     ldfld int32 @insymbol::k
     ldc.i4 1
     add
     stfld int32 @insymbol::k
-    // line 508
+    .line 508
     ldloc _F
     ldfld int32 @insymbol::k
     ldsfld int32 _G::Digmax
@@ -30074,7 +30074,7 @@ L_if_end_26:
     ldc.i4.0
     ceq
     brfalse L_if_end_33
-    // line 508
+    .line 508
     ldloc _F
     ldflda valuetype T_insymbol_array_5 @insymbol::Digit
     ldloc _F
@@ -30083,10 +30083,10 @@ L_if_end_26:
     ldsfld uint8 _G::Ch
     stobj uint8
 L_if_end_33:
-    // line 509
+    .line 509
     ldloc _F
     call instance void @insymbol::Nextch()
-    // line 510
+    .line 510
     ldsfld uint8 _G::Ch
     ldc.i4 43 // '+'
     ceq
@@ -30098,14 +30098,14 @@ L_if_end_33:
     ceq
 L_OR_shortcut_34:
     brfalse L_if_end_35
-    // line 511
+    .line 511
     ldloc _F
     ldloc _F
     ldfld int32 @insymbol::k
     ldc.i4 1
     add
     stfld int32 @insymbol::k
-    // line 511
+    .line 511
     ldloc _F
     ldfld int32 @insymbol::k
     ldsfld int32 _G::Digmax
@@ -30113,7 +30113,7 @@ L_OR_shortcut_34:
     ldc.i4.0
     ceq
     brfalse L_if_end_36
-    // line 511
+    .line 511
     ldloc _F
     ldflda valuetype T_insymbol_array_5 @insymbol::Digit
     ldloc _F
@@ -30122,11 +30122,11 @@ L_OR_shortcut_34:
     ldsfld uint8 _G::Ch
     stobj uint8
 L_if_end_36:
-    // line 512
+    .line 512
     ldloc _F
     call instance void @insymbol::Nextch()
 L_if_end_35:
-    // line 514
+    .line 514
     ldsflda valuetype T_array_7 _G::Chartp
     ldsfld uint8 _G::Ch
     call instance int32& T_array_7::ldadr(int32)
@@ -30136,21 +30136,21 @@ L_if_end_35:
     ldc.i4.0
     ceq
     brfalse L_else_37
-    // line 514
+    .line 514
     ldc.i4 201
     call void Error(int32 Ferrnr)
     br L_if_end_38
 L_else_37:
-    // line 516
+    .line 516
 L_repeat_39:
-    // line 516
+    .line 516
     ldloc _F
     ldloc _F
     ldfld int32 @insymbol::k
     ldc.i4 1
     add
     stfld int32 @insymbol::k
-    // line 517
+    .line 517
     ldloc _F
     ldfld int32 @insymbol::k
     ldsfld int32 _G::Digmax
@@ -30158,7 +30158,7 @@ L_repeat_39:
     ldc.i4.0
     ceq
     brfalse L_if_end_40
-    // line 517
+    .line 517
     ldloc _F
     ldflda valuetype T_insymbol_array_5 @insymbol::Digit
     ldloc _F
@@ -30167,7 +30167,7 @@ L_repeat_39:
     ldsfld uint8 _G::Ch
     stobj uint8
 L_if_end_40:
-    // line 517
+    .line 517
     ldloc _F
     call instance void @insymbol::Nextch()
     ldsflda valuetype T_array_7 _G::Chartp
@@ -30181,26 +30181,26 @@ L_if_end_40:
     brfalse L_repeat_39
 L_if_end_38:
 L_if_end_32:
-    // line 520
-    // line 520
+    .line 520
+    .line 520
     ldloc _F
     ldc.i4 109
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @insymbol::Lvp
-    // line 520
+    .line 520
     ldloc _F
     ldfld void* @insymbol::Lvp
     ldc.i4 0
     stfld int32 T_constant::Cclass
-    // line 520
+    .line 520
     ldc.i4 2
     stsfld int32 _G::Sy
-    // line 520
+    .line 520
     ldloc _F
     ldfld void* @insymbol::Lvp
     ldc.i4 0
     stfld int32 T_constant::Cclass
-    // line 522
+    .line 522
     ldc.i4 100
     stloc $tmpEndValue6
     ldc.i4 1
@@ -30212,7 +30212,7 @@ L_if_end_32:
     ldloc $tmpIndex7
     stfld int32 @insymbol::i
 L_for_loop_41:
-    // line 522
+    .line 522
     ldloc _F
     ldfld void* @insymbol::Lvp
     ldflda valuetype T_insymbol_array_5 T_constant::Rval
@@ -30235,7 +30235,7 @@ L_for_loop_41:
     br L_for_loop_41
 L_for_end_42:
     pop
-    // line 523
+    .line 523
     ldloc _F
     ldfld int32 @insymbol::k
     ldsfld int32 _G::Digmax
@@ -30243,7 +30243,7 @@ L_for_end_42:
     ldc.i4.0
     ceq
     brfalse L_else_43
-    // line 524
+    .line 524
     ldloc _F
     ldfld int32 @insymbol::k
     ldc.i4 1
@@ -30258,7 +30258,7 @@ L_for_end_42:
     ldloc $tmpIndex10
     stfld int32 @insymbol::i
 L_for_loop_45:
-    // line 524
+    .line 524
     ldloc _F
     ldfld void* @insymbol::Lvp
     ldflda valuetype T_insymbol_array_5 T_constant::Rval
@@ -30290,10 +30290,10 @@ L_for_end_46:
     pop
     br L_if_end_44
 L_else_43:
-    // line 525
+    .line 525
     ldc.i4 203
     call void Error(int32 Ferrnr)
-    // line 525
+    .line 525
     ldloc _F
     ldfld void* @insymbol::Lvp
     ldflda valuetype T_insymbol_array_5 T_constant::Rval
@@ -30301,7 +30301,7 @@ L_else_43:
     call instance uint8& T_insymbol_array_5::ldadr(int32)
     ldc.i4 48 // '0'
     stobj uint8
-    // line 526
+    .line 526
     ldloc _F
     ldfld void* @insymbol::Lvp
     ldflda valuetype T_insymbol_array_5 T_constant::Rval
@@ -30309,7 +30309,7 @@ L_else_43:
     call instance uint8& T_insymbol_array_5::ldadr(int32)
     ldc.i4 46 // '.'
     stobj uint8
-    // line 526
+    .line 526
     ldloc _F
     ldfld void* @insymbol::Lvp
     ldflda valuetype T_insymbol_array_5 T_constant::Rval
@@ -30318,33 +30318,33 @@ L_else_43:
     ldc.i4 48 // '0'
     stobj uint8
 L_if_end_44:
-    // line 529
+    .line 529
     ldsflda valuetype T_valu _G::Val
     ldloc _F
     ldfld void* @insymbol::Lvp
     stfld void* T_valu::Valp
     br L_if_end_25
 L_else_24:
-    // line 533
+    .line 533
     ldloc _F
     ldfld int32 @insymbol::i
     ldsfld int32 _G::Digmax
     cgt
     brfalse L_else_47
-    // line 533
+    .line 533
     ldc.i4 203
     call void Error(int32 Ferrnr)
-    // line 533
+    .line 533
     ldsflda valuetype T_valu _G::Val
     ldc.i4 0
     stfld int32 T_valu::Ival
     br L_if_end_48
 L_else_47:
-    // line 536
+    .line 536
     ldsflda valuetype T_valu _G::Val
     ldc.i4 0
     stfld int32 T_valu::Ival
-    // line 537
+    .line 537
     ldloc _F
     ldfld int32 @insymbol::i
     stloc $tmpEndValue12
@@ -30357,7 +30357,7 @@ L_else_47:
     ldloc $tmpIndex13
     stfld int32 @insymbol::k
 L_for_loop_49:
-    // line 539
+    .line 539
     ldsflda valuetype T_valu _G::Val
     ldfld int32 T_valu::Ival
     ldsfld int32 _G::Mxint10
@@ -30365,7 +30365,7 @@ L_for_loop_49:
     ldc.i4.0
     ceq
     brfalse L_else_51
-    // line 540
+    .line 540
     ldsflda valuetype T_valu _G::Val
     ldsflda valuetype T_valu _G::Val
     ldfld int32 T_valu::Ival
@@ -30384,10 +30384,10 @@ L_for_loop_49:
     stfld int32 T_valu::Ival
     br L_if_end_52
 L_else_51:
-    // line 541
+    .line 541
     ldc.i4 203
     call void Error(int32 Ferrnr)
-    // line 541
+    .line 541
     ldsflda valuetype T_valu _G::Val
     ldc.i4 0
     stfld int32 T_valu::Ival
@@ -30406,7 +30406,7 @@ L_if_end_52:
     br L_for_loop_49
 L_for_end_50:
     pop
-    // line 543
+    .line 543
     ldc.i4 1
     stsfld int32 _G::Sy
 L_if_end_48:
@@ -30416,35 +30416,35 @@ L_check_case_19:
     ldloc $tmpSwitchValue1
     ldc.i4 4
     bne.un L_check_case_53
-    // line 548
+    .line 548
     ldc.i4 0
     stsfld int32 _G::Lgth
-    // line 548
+    .line 548
     ldc.i4 3
     stsfld int32 _G::Sy
-    // line 548
+    .line 548
     ldc.i4 15
     stsfld int32 _G::Op
-    // line 549
+    .line 549
 L_repeat_54:
-    // line 550
+    .line 550
 L_repeat_55:
-    // line 550
+    .line 550
     ldloc _F
     call instance void @insymbol::Nextch()
-    // line 550
+    .line 550
     ldsfld int32 _G::Lgth
     ldc.i4 1
     add
     stsfld int32 _G::Lgth
-    // line 551
+    .line 551
     ldsfld int32 _G::Lgth
     ldc.i4 100
     cgt
     ldc.i4.0
     ceq
     brfalse L_if_end_56
-    // line 551
+    .line 551
     ldloc _F
     ldflda valuetype T_insymbol_array_5 @insymbol::String
     ldsfld int32 _G::Lgth
@@ -30461,15 +30461,15 @@ L_if_end_56:
     ceq
 L_OR_shortcut_57:
     brfalse L_repeat_55
-    // line 553
+    .line 553
     ldsfld bool _G::Eol
     brfalse L_else_58
-    // line 553
+    .line 553
     ldc.i4 202
     call void Error(int32 Ferrnr)
     br L_if_end_59
 L_else_58:
-    // line 553
+    .line 553
     ldloc _F
     call instance void @insymbol::Nextch()
 L_if_end_59:
@@ -30479,27 +30479,27 @@ L_if_end_59:
     ldc.i4.0
     ceq
     brfalse L_repeat_54
-    // line 555
+    .line 555
     ldsfld int32 _G::Lgth
     ldc.i4 1
     sub
     stsfld int32 _G::Lgth
-    // line 556
+    .line 556
     ldsfld int32 _G::Lgth
     ldc.i4 0
     ceq
     brfalse L_else_60
-    // line 556
+    .line 556
     ldc.i4 205
     call void Error(int32 Ferrnr)
     br L_if_end_61
 L_else_60:
-    // line 557
+    .line 557
     ldsfld int32 _G::Lgth
     ldc.i4 1
     ceq
     brfalse L_else_62
-    // line 557
+    .line 557
     ldsflda valuetype T_valu _G::Val
     ldloc _F
     ldflda valuetype T_insymbol_array_5 @insymbol::String
@@ -30509,35 +30509,35 @@ L_else_60:
     stfld int32 T_valu::Ival
     br L_if_end_63
 L_else_62:
-    // line 559
-    // line 559
+    .line 559
+    .line 559
     ldloc _F
     ldc.i4 109
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @insymbol::Lvp
-    // line 559
+    .line 559
     ldloc _F
     ldfld void* @insymbol::Lvp
     ldc.i4 2
     stfld int32 T_constant::Cclass
-    // line 559
+    .line 559
     ldloc _F
     ldfld void* @insymbol::Lvp
     ldc.i4 2
     stfld int32 T_constant::Cclass
-    // line 560
+    .line 560
     ldsfld int32 _G::Lgth
     ldc.i4 100
     cgt
     brfalse L_if_end_64
-    // line 561
+    .line 561
     ldc.i4 399
     call void Error(int32 Ferrnr)
-    // line 561
+    .line 561
     ldc.i4 100
     stsfld int32 _G::Lgth
 L_if_end_64:
-    // line 563
+    .line 563
     ldloc _F
     ldfld void* @insymbol::Lvp
     ldsfld int32 _G::Lgth
@@ -30546,7 +30546,7 @@ L_if_end_64:
     ldc.i4 100
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_constant::Slgth
-    // line 564
+    .line 564
     ldsfld int32 _G::Lgth
     stloc $tmpEndValue15
     ldc.i4 1
@@ -30558,7 +30558,7 @@ L_if_end_64:
     ldloc $tmpIndex16
     stfld int32 @insymbol::i
 L_for_loop_65:
-    // line 564
+    .line 564
     ldloc _F
     ldfld void* @insymbol::Lvp
     ldflda valuetype T_insymbol_array_5 T_constant::Sval
@@ -30586,7 +30586,7 @@ L_for_loop_65:
     br L_for_loop_65
 L_for_end_66:
     pop
-    // line 566
+    .line 566
     ldsflda valuetype T_valu _G::Val
     ldloc _F
     ldfld void* @insymbol::Lvp
@@ -30598,26 +30598,26 @@ L_check_case_53:
     ldloc $tmpSwitchValue1
     ldc.i4 5
     bne.un L_check_case_67
-    // line 570
+    .line 570
     ldc.i4 15
     stsfld int32 _G::Op
-    // line 570
+    .line 570
     ldloc _F
     call instance void @insymbol::Nextch()
-    // line 571
+    .line 571
     ldsfld uint8 _G::Ch
     ldc.i4 61 // '='
     ceq
     brfalse L_else_68
-    // line 572
+    .line 572
     ldc.i4 17
     stsfld int32 _G::Sy
-    // line 572
+    .line 572
     ldloc _F
     call instance void @insymbol::Nextch()
     br L_if_end_69
 L_else_68:
-    // line 573
+    .line 573
     ldc.i4 16
     stsfld int32 _G::Sy
 L_if_end_69:
@@ -30626,26 +30626,26 @@ L_check_case_67:
     ldloc $tmpSwitchValue1
     ldc.i4 6
     bne.un L_check_case_70
-    // line 576
+    .line 576
     ldc.i4 15
     stsfld int32 _G::Op
-    // line 576
+    .line 576
     ldloc _F
     call instance void @insymbol::Nextch()
-    // line 577
+    .line 577
     ldsfld uint8 _G::Ch
     ldc.i4 46 // '.'
     ceq
     brfalse L_else_71
-    // line 578
+    .line 578
     ldc.i4 16
     stsfld int32 _G::Sy
-    // line 578
+    .line 578
     ldloc _F
     call instance void @insymbol::Nextch()
     br L_if_end_72
 L_else_71:
-    // line 579
+    .line 579
     ldc.i4 14
     stsfld int32 _G::Sy
 L_if_end_72:
@@ -30654,39 +30654,39 @@ L_check_case_70:
     ldloc $tmpSwitchValue1
     ldc.i4 7
     bne.un L_check_case_73
-    // line 582
+    .line 582
     ldloc _F
     call instance void @insymbol::Nextch()
-    // line 582
+    .line 582
     ldc.i4 7
     stsfld int32 _G::Sy
-    // line 583
+    .line 583
     ldsfld uint8 _G::Ch
     ldc.i4 61 // '='
     ceq
     brfalse L_else_74
-    // line 584
+    .line 584
     ldc.i4 9
     stsfld int32 _G::Op
-    // line 584
+    .line 584
     ldloc _F
     call instance void @insymbol::Nextch()
     br L_if_end_75
 L_else_74:
-    // line 586
+    .line 586
     ldsfld uint8 _G::Ch
     ldc.i4 62 // '>'
     ceq
     brfalse L_else_76
-    // line 587
+    .line 587
     ldc.i4 12
     stsfld int32 _G::Op
-    // line 587
+    .line 587
     ldloc _F
     call instance void @insymbol::Nextch()
     br L_if_end_77
 L_else_76:
-    // line 588
+    .line 588
     ldc.i4 8
     stsfld int32 _G::Op
 L_if_end_77:
@@ -30696,26 +30696,26 @@ L_check_case_73:
     ldloc $tmpSwitchValue1
     ldc.i4 8
     bne.un L_check_case_78
-    // line 591
+    .line 591
     ldloc _F
     call instance void @insymbol::Nextch()
-    // line 591
+    .line 591
     ldc.i4 7
     stsfld int32 _G::Sy
-    // line 592
+    .line 592
     ldsfld uint8 _G::Ch
     ldc.i4 61 // '='
     ceq
     brfalse L_else_79
-    // line 593
+    .line 593
     ldc.i4 10
     stsfld int32 _G::Op
-    // line 593
+    .line 593
     ldloc _F
     call instance void @insymbol::Nextch()
     br L_if_end_80
 L_else_79:
-    // line 594
+    .line 594
     ldc.i4 11
     stsfld int32 _G::Op
 L_if_end_80:
@@ -30724,32 +30724,32 @@ L_check_case_78:
     ldloc $tmpSwitchValue1
     ldc.i4 9
     bne.un L_check_case_81
-    // line 597
+    .line 597
     ldloc _F
     call instance void @insymbol::Nextch()
-    // line 598
+    .line 598
     ldsfld uint8 _G::Ch
     ldc.i4 42 // '*'
     ceq
     brfalse L_if_end_82
-    // line 599
+    .line 599
     ldloc _F
     call instance void @insymbol::Nextch()
-    // line 600
+    .line 600
     ldsfld uint8 _G::Ch
     ldc.i4 36 // '$'
     ceq
     brfalse L_if_end_83
-    // line 600
+    .line 600
     ldloc _F
     call instance void @insymbol::Options()
 L_if_end_83:
-    // line 601
+    .line 601
 L_repeat_84:
-    // line 602
+    .line 602
     br L_while_test_86
 L_while_85:
-    // line 602
+    .line 602
     ldloc _F
     call instance void @insymbol::Nextch()
 L_while_test_86:
@@ -30767,7 +30767,7 @@ L_while_test_86:
     ceq
 L_AND_shortcut_87:
     brtrue L_while_85
-    // line 603
+    .line 603
     ldloc _F
     call instance void @insymbol::Nextch()
     ldsfld uint8 _G::Ch
@@ -30780,16 +30780,16 @@ L_AND_shortcut_87:
     call instance bool [lpcRuntime]LPC.File::Eof()
 L_OR_shortcut_88:
     brfalse L_repeat_84
-    // line 605
+    .line 605
     ldloc _F
     call instance void @insymbol::Nextch()
-    // line 605
+    .line 605
     br L_1
 L_if_end_82:
-    // line 607
+    .line 607
     ldc.i4 8
     stsfld int32 _G::Sy
-    // line 607
+    .line 607
     ldc.i4 15
     stsfld int32 _G::Op
     br L_case_end_9
@@ -30797,19 +30797,19 @@ L_check_case_81:
     ldloc $tmpSwitchValue1
     ldc.i4 2
     bne.un L_check_case_89
-    // line 610
+    .line 610
     ldsflda valuetype T_array_7 _G::Ssy
     ldsfld uint8 _G::Ch
     call instance int32& T_array_7::ldadr(int32)
     ldobj int32
     stsfld int32 _G::Sy
-    // line 610
+    .line 610
     ldsflda valuetype T_array_7 _G::Sop
     ldsfld uint8 _G::Ch
     call instance int32& T_array_7::ldadr(int32)
     ldobj int32
     stsfld int32 _G::Op
-    // line 611
+    .line 611
     ldloc _F
     call instance void @insymbol::Nextch()
     br L_case_end_9
@@ -30817,7 +30817,7 @@ L_check_case_89:
     ldloc $tmpSwitchValue1
     ldc.i4 10
     bne.un L_case_end_9
-    // line 613
+    .line 613
     ldc.i4 47
     stsfld int32 _G::Sy
 L_case_end_9:
@@ -30827,7 +30827,7 @@ L_Epilogue:
     ret
 }
 
-// line 617
+.line 617
 
 .method static
 void Enterid(void* Fcp)
@@ -30844,26 +30844,26 @@ void Enterid(void* Fcp)
     stfld void* @enterid::Fcp
 
 L_Entry:
-    // line 622
+    .line 622
     ldloc _F
     ldloc _F
     ldfld void* @enterid::Fcp
     ldfld valuetype T_alpha T_identifier::Name
     stfld valuetype T_alpha @enterid::Nam
-    // line 623
+    .line 623
     ldloc _F
     ldsflda valuetype T_array_23 _G::Display
     ldsfld int8 _G::Top
     call instance valuetype T_record_22& T_array_23::ldadr(int32)
     ldfld void* T_record_22::Fname
     stfld void* @enterid::Lcp
-    // line 624
+    .line 624
     ldloc _F
     ldfld void* @enterid::Lcp
     ldnull
     ceq
     brfalse L_else_1
-    // line 625
+    .line 625
     ldsflda valuetype T_array_23 _G::Display
     ldsfld int8 _G::Top
     call instance valuetype T_record_22& T_array_23::ldadr(int32)
@@ -30872,14 +30872,14 @@ L_Entry:
     stfld void* T_record_22::Fname
     br L_if_end_2
 L_else_1:
-    // line 628
+    .line 628
 L_repeat_3:
-    // line 628
+    .line 628
     ldloc _F
     ldloc _F
     ldfld void* @enterid::Lcp
     stfld void* @enterid::Lcp1
-    // line 629
+    .line 629
     ldloc _F
     ldfld void* @enterid::Lcp
     ldfld valuetype T_alpha T_identifier::Name
@@ -30889,22 +30889,22 @@ L_repeat_3:
     call string T_alpha::arrayToString(valuetype T_alpha)
     call bool [lpcRuntime]LPC.Helpers::StrcmpEQ(string, string)
     brfalse L_else_4
-    // line 630
+    .line 630
     ldc.i4 101
     call void Error(int32 Ferrnr)
-    // line 630
+    .line 630
     ldloc _F
     ldloc _F
     ldfld void* @enterid::Lcp
     ldfld void* T_identifier::Rlink
     stfld void* @enterid::Lcp
-    // line 630
+    .line 630
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @enterid::Lleft
     br L_if_end_5
 L_else_4:
-    // line 632
+    .line 632
     ldloc _F
     ldfld void* @enterid::Lcp
     ldfld valuetype T_alpha T_identifier::Name
@@ -30914,25 +30914,25 @@ L_else_4:
     call string T_alpha::arrayToString(valuetype T_alpha)
     call bool [lpcRuntime]LPC.Helpers::StrcmpLT(string, string)
     brfalse L_else_6
-    // line 633
+    .line 633
     ldloc _F
     ldloc _F
     ldfld void* @enterid::Lcp
     ldfld void* T_identifier::Rlink
     stfld void* @enterid::Lcp
-    // line 633
+    .line 633
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @enterid::Lleft
     br L_if_end_7
 L_else_6:
-    // line 634
+    .line 634
     ldloc _F
     ldloc _F
     ldfld void* @enterid::Lcp
     ldfld void* T_identifier::Llink
     stfld void* @enterid::Lcp
-    // line 634
+    .line 634
     ldloc _F
     ldc.i4 1 // (true)
     stfld bool @enterid::Lleft
@@ -30943,11 +30943,11 @@ L_if_end_5:
     ldnull
     ceq
     brfalse L_repeat_3
-    // line 636
+    .line 636
     ldloc _F
     ldfld bool @enterid::Lleft
     brfalse L_else_8
-    // line 636
+    .line 636
     ldloc _F
     ldfld void* @enterid::Lcp1
     ldloc _F
@@ -30955,7 +30955,7 @@ L_if_end_5:
     stfld void* T_identifier::Llink
     br L_if_end_9
 L_else_8:
-    // line 636
+    .line 636
     ldloc _F
     ldfld void* @enterid::Lcp1
     ldloc _F
@@ -30963,12 +30963,12 @@ L_else_8:
     stfld void* T_identifier::Rlink
 L_if_end_9:
 L_if_end_2:
-    // line 638
+    .line 638
     ldloc _F
     ldfld void* @enterid::Fcp
     ldnull
     stfld void* T_identifier::Llink
-    // line 638
+    .line 638
     ldloc _F
     ldfld void* @enterid::Fcp
     ldnull
@@ -30978,7 +30978,7 @@ L_Epilogue:
     ret
 }
 
-// line 641
+.line 641
 
 .method static
 void Searchsection(void* Fcp, void*& Fcp1)
@@ -31003,10 +31003,10 @@ void Searchsection(void* Fcp, void*& Fcp1)
     stfld void** @searchsection::Fcp1
 
 L_Entry:
-    // line 647
+    .line 647
     br L_while_test_2
 L_while_1:
-    // line 648
+    .line 648
     ldloc _F
     ldfld void* @searchsection::Fcp
     ldfld valuetype T_alpha T_identifier::Name
@@ -31015,11 +31015,11 @@ L_while_1:
     call string T_alpha::arrayToString(valuetype T_alpha)
     call bool [lpcRuntime]LPC.Helpers::StrcmpEQ(string, string)
     brfalse L_else_3
-    // line 648
+    .line 648
     br L_1
     br L_if_end_4
 L_else_3:
-    // line 649
+    .line 649
     ldloc _F
     ldfld void* @searchsection::Fcp
     ldfld valuetype T_alpha T_identifier::Name
@@ -31028,7 +31028,7 @@ L_else_3:
     call string T_alpha::arrayToString(valuetype T_alpha)
     call bool [lpcRuntime]LPC.Helpers::StrcmpLT(string, string)
     brfalse L_else_5
-    // line 649
+    .line 649
     ldloc _F
     ldloc _F
     ldfld void* @searchsection::Fcp
@@ -31036,7 +31036,7 @@ L_else_3:
     stfld void* @searchsection::Fcp
     br L_if_end_6
 L_else_5:
-    // line 650
+    .line 650
     ldloc _F
     ldloc _F
     ldfld void* @searchsection::Fcp
@@ -31052,7 +31052,7 @@ L_while_test_2:
     ldc.i4.0
     ceq
     brtrue L_while_1
-    // line 651
+    .line 651
 L_1:
     ldloc _F
     ldfld void** @searchsection::Fcp1
@@ -31064,7 +31064,7 @@ L_Epilogue:
     ret
 }
 
-// line 659
+.line 659
 
 .method static
 void Searchid(valuetype T_setofids Fidcls, void*& Fcp)
@@ -31093,7 +31093,7 @@ void Searchid(valuetype T_setofids Fidcls, void*& Fcp)
     stfld valuetype T_setofids @searchid::Fidcls
 
 L_Entry:
-    // line 664
+    .line 664
     ldc.i4 0
     stloc $tmpEndValue1
     ldsfld int8 _G::Top
@@ -31109,7 +31109,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int8 @searchid::Disxl
 L_for_loop_1:
-    // line 665
+    .line 665
     ldloc _F
     ldsflda valuetype T_array_23 _G::Display
     ldloc _F
@@ -31117,10 +31117,10 @@ L_for_loop_1:
     call instance valuetype T_record_22& T_array_23::ldadr(int32)
     ldfld void* T_record_22::Fname
     stfld void* @searchid::Lcp
-    // line 666
+    .line 666
     br L_while_test_4
 L_while_3:
-    // line 667
+    .line 667
     ldloc _F
     ldfld void* @searchid::Lcp
     ldfld valuetype T_alpha T_identifier::Name
@@ -31129,7 +31129,7 @@ L_while_3:
     call string T_alpha::arrayToString(valuetype T_alpha)
     call bool [lpcRuntime]LPC.Helpers::StrcmpEQ(string, string)
     brfalse L_else_5
-    // line 668
+    .line 668
     ldloc _F
     ldfld valuetype T_setofids @searchid::Fidcls
     ldloc _F
@@ -31137,22 +31137,22 @@ L_while_3:
     ldfld int32 T_identifier::Klass
     call bool _SetContains(valuetype T_setofids s, int32 val)
     brfalse L_else_7
-    // line 668
+    .line 668
     ldloc _F
     ldfld int8 @searchid::Disxl
     stsfld int8 _G::Disx
-    // line 668
+    .line 668
     br L_1
     br L_if_end_8
 L_else_7:
-    // line 670
+    .line 670
     ldsfld bool _G::Prterr
     brfalse L_if_end_9
-    // line 670
+    .line 670
     ldc.i4 103
     call void Error(int32 Ferrnr)
 L_if_end_9:
-    // line 671
+    .line 671
     ldloc _F
     ldloc _F
     ldfld void* @searchid::Lcp
@@ -31161,7 +31161,7 @@ L_if_end_9:
 L_if_end_8:
     br L_if_end_6
 L_else_5:
-    // line 674
+    .line 674
     ldloc _F
     ldfld void* @searchid::Lcp
     ldfld valuetype T_alpha T_identifier::Name
@@ -31170,7 +31170,7 @@ L_else_5:
     call string T_alpha::arrayToString(valuetype T_alpha)
     call bool [lpcRuntime]LPC.Helpers::StrcmpLT(string, string)
     brfalse L_else_10
-    // line 675
+    .line 675
     ldloc _F
     ldloc _F
     ldfld void* @searchid::Lcp
@@ -31178,7 +31178,7 @@ L_else_5:
     stfld void* @searchid::Lcp
     br L_if_end_11
 L_else_10:
-    // line 676
+    .line 676
     ldloc _F
     ldloc _F
     ldfld void* @searchid::Lcp
@@ -31212,80 +31212,80 @@ L_while_test_4:
     br L_for_loop_1
 L_for_end_2:
     pop
-    // line 678
+    .line 678
     ldc.i4 0
     dup
     ldc.i4 0
     ldc.i4 20
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int8 _G::Disx
-    // line 682
+    .line 682
     ldsfld bool _G::Prterr
     brfalse L_if_end_12
-    // line 683
+    .line 683
     ldc.i4 104
     call void Error(int32 Ferrnr)
-    // line 687
+    .line 687
     ldloc _F
     ldfld valuetype T_setofids @searchid::Fidcls
     ldc.i4 0
     call bool _SetContains(valuetype T_setofids s, int32 val)
     brfalse L_else_13
-    // line 687
+    .line 687
     ldloc _F
     ldsfld void* _G::Utypptr
     stfld void* @searchid::Lcp
     br L_if_end_14
 L_else_13:
-    // line 689
+    .line 689
     ldloc _F
     ldfld valuetype T_setofids @searchid::Fidcls
     ldc.i4 2
     call bool _SetContains(valuetype T_setofids s, int32 val)
     brfalse L_else_15
-    // line 689
+    .line 689
     ldloc _F
     ldsfld void* _G::Uvarptr
     stfld void* @searchid::Lcp
     br L_if_end_16
 L_else_15:
-    // line 691
+    .line 691
     ldloc _F
     ldfld valuetype T_setofids @searchid::Fidcls
     ldc.i4 3
     call bool _SetContains(valuetype T_setofids s, int32 val)
     brfalse L_else_17
-    // line 691
+    .line 691
     ldloc _F
     ldsfld void* _G::Ufldptr
     stfld void* @searchid::Lcp
     br L_if_end_18
 L_else_17:
-    // line 693
+    .line 693
     ldloc _F
     ldfld valuetype T_setofids @searchid::Fidcls
     ldc.i4 1
     call bool _SetContains(valuetype T_setofids s, int32 val)
     brfalse L_else_19
-    // line 693
+    .line 693
     ldloc _F
     ldsfld void* _G::Ucstptr
     stfld void* @searchid::Lcp
     br L_if_end_20
 L_else_19:
-    // line 695
+    .line 695
     ldloc _F
     ldfld valuetype T_setofids @searchid::Fidcls
     ldc.i4 4
     call bool _SetContains(valuetype T_setofids s, int32 val)
     brfalse L_else_21
-    // line 695
+    .line 695
     ldloc _F
     ldsfld void* _G::Uprcptr
     stfld void* @searchid::Lcp
     br L_if_end_22
 L_else_21:
-    // line 696
+    .line 696
     ldloc _F
     ldsfld void* _G::Ufctptr
     stfld void* @searchid::Lcp
@@ -31296,7 +31296,7 @@ L_if_end_16:
 L_if_end_14:
     /* nop */
 L_if_end_12:
-    // line 698
+    .line 698
 L_1:
     ldloc _F
     ldfld void** @searchid::Fcp
@@ -31308,7 +31308,7 @@ L_Epilogue:
     ret
 }
 
-// line 701
+.line 701
 
 .method static
 void Getbounds(void* Fsp, int32& Fmin, int32& Fmax)
@@ -31341,17 +31341,17 @@ void Getbounds(void* Fsp, int32& Fmin, int32& Fmax)
     stfld void* @getbounds::Fsp
 
 L_Entry:
-    // line 705
+    .line 705
     ldloc _F
     ldfld int32* @getbounds::Fmin
     ldc.i4 0
     stobj int32
-    // line 705
+    .line 705
     ldloc _F
     ldfld int32* @getbounds::Fmax
     ldc.i4 0
     stobj int32
-    // line 706
+    .line 706
     ldloc _F
     ldfld void* @getbounds::Fsp
     ldnull
@@ -31359,14 +31359,14 @@ L_Entry:
     ldc.i4.0
     ceq
     brfalse L_if_end_1
-    // line 708
+    .line 708
     ldloc _F
     ldfld void* @getbounds::Fsp
     ldfld int32 T_structure::Form
     ldc.i4 1
     ceq
     brfalse L_else_2
-    // line 709
+    .line 709
     ldloc _F
     ldfld int32* @getbounds::Fmin
     ldloc _F
@@ -31374,7 +31374,7 @@ L_Entry:
     ldflda valuetype T_valu T_structure::Min
     ldfld int32 T_valu::Ival
     stobj int32
-    // line 709
+    .line 709
     ldloc _F
     ldfld int32* @getbounds::Fmax
     ldloc _F
@@ -31384,25 +31384,25 @@ L_Entry:
     stobj int32
     br L_if_end_3
 L_else_2:
-    // line 711
+    .line 711
     ldloc _F
     ldfld void* @getbounds::Fsp
     ldsfld void* _G::Charptr
     ceq
     brfalse L_else_4
-    // line 712
+    .line 712
     ldloc _F
     ldfld int32* @getbounds::Fmin
     ldc.i4 0
     stobj int32
-    // line 712
+    .line 712
     ldloc _F
     ldfld int32* @getbounds::Fmax
     ldc.i4 255
     stobj int32
     br L_if_end_5
 L_else_4:
-    // line 715
+    .line 715
     ldloc _F
     ldfld void* @getbounds::Fsp
     ldfld void* T_structure::Fconst
@@ -31411,7 +31411,7 @@ L_else_4:
     ldc.i4.0
     ceq
     brfalse L_if_end_6
-    // line 716
+    .line 716
     ldloc _F
     ldfld int32* @getbounds::Fmax
     ldloc _F
@@ -31429,7 +31429,7 @@ L_Epilogue:
     ret
 }
 
-// line 719
+.line 719
 
 .method static
 int32 Alignquot(void* Fsp)
@@ -31448,11 +31448,11 @@ int32 Alignquot(void* Fsp)
     stfld void* @alignquot::Fsp
 
 L_Entry:
-    // line 721
+    .line 721
     ldloc _F
     ldc.i4 1
     stfld int32 @alignquot::_fnvalue
-    // line 722
+    .line 722
     ldloc _F
     ldfld void* @alignquot::Fsp
     ldnull
@@ -31460,7 +31460,7 @@ L_Entry:
     ldc.i4.0
     ceq
     brfalse L_if_end_1
-    // line 724
+    .line 724
     ldloc _F
     ldfld void* @alignquot::Fsp
     ldfld int32 T_structure::Form
@@ -31468,68 +31468,68 @@ L_Entry:
     ldloc $tmpSwitchValue1
     ldc.i4 0
     bne.un L_check_case_3
-    // line 725
+    .line 725
     ldloc _F
     ldfld void* @alignquot::Fsp
     ldsfld void* _G::Intptr
     ceq
     brfalse L_else_4
-    // line 725
+    .line 725
     ldloc _F
     ldc.i4 1
     stfld int32 @alignquot::_fnvalue
     br L_if_end_5
 L_else_4:
-    // line 726
+    .line 726
     ldloc _F
     ldfld void* @alignquot::Fsp
     ldsfld void* _G::Boolptr
     ceq
     brfalse L_else_6
-    // line 726
+    .line 726
     ldloc _F
     ldc.i4 1
     stfld int32 @alignquot::_fnvalue
     br L_if_end_7
 L_else_6:
-    // line 727
+    .line 727
     ldloc _F
     ldfld void* @alignquot::Fsp
     ldfld int32 T_structure::Scalkind
     ldc.i4 1
     ceq
     brfalse L_else_8
-    // line 727
+    .line 727
     ldloc _F
     ldc.i4 1
     stfld int32 @alignquot::_fnvalue
     br L_if_end_9
 L_else_8:
-    // line 728
+    .line 728
     ldloc _F
     ldfld void* @alignquot::Fsp
     ldsfld void* _G::Charptr
     ceq
     brfalse L_else_10
-    // line 728
+    .line 728
     ldloc _F
     ldc.i4 1
     stfld int32 @alignquot::_fnvalue
     br L_if_end_11
 L_else_10:
-    // line 729
+    .line 729
     ldloc _F
     ldfld void* @alignquot::Fsp
     ldsfld void* _G::Realptr
     ceq
     brfalse L_else_12
-    // line 729
+    .line 729
     ldloc _F
     ldc.i4 1
     stfld int32 @alignquot::_fnvalue
     br L_if_end_13
 L_else_12:
-    // line 730
+    .line 730
     ldloc _F
     ldc.i4 1
     stfld int32 @alignquot::_fnvalue
@@ -31543,7 +31543,7 @@ L_check_case_3:
     ldloc $tmpSwitchValue1
     ldc.i4 1
     bne.un L_check_case_14
-    // line 731
+    .line 731
     ldloc _F
     ldloc _F
     ldfld void* @alignquot::Fsp
@@ -31555,7 +31555,7 @@ L_check_case_14:
     ldloc $tmpSwitchValue1
     ldc.i4 2
     bne.un L_check_case_15
-    // line 732
+    .line 732
     ldloc _F
     ldc.i4 1
     stfld int32 @alignquot::_fnvalue
@@ -31564,7 +31564,7 @@ L_check_case_15:
     ldloc $tmpSwitchValue1
     ldc.i4 3
     bne.un L_check_case_16
-    // line 733
+    .line 733
     ldloc _F
     ldc.i4 1
     stfld int32 @alignquot::_fnvalue
@@ -31573,7 +31573,7 @@ L_check_case_16:
     ldloc $tmpSwitchValue1
     ldc.i4 6
     bne.un L_check_case_17
-    // line 734
+    .line 734
     ldloc _F
     ldc.i4 1
     stfld int32 @alignquot::_fnvalue
@@ -31582,7 +31582,7 @@ L_check_case_17:
     ldloc $tmpSwitchValue1
     ldc.i4 4
     bne.un L_check_case_18
-    // line 735
+    .line 735
     ldloc _F
     ldloc _F
     ldfld void* @alignquot::Fsp
@@ -31594,7 +31594,7 @@ L_check_case_18:
     ldloc $tmpSwitchValue1
     ldc.i4 5
     bne.un L_check_case_19
-    // line 736
+    .line 736
     ldloc _F
     ldc.i4 1
     stfld int32 @alignquot::_fnvalue
@@ -31608,7 +31608,7 @@ L_check_case_19:
     beq L_case_20
     br L_case_end_2
 L_case_20:
-    // line 737
+    .line 737
     ldc.i4 501
     call void Error(int32 Ferrnr)
 L_case_end_2:
@@ -31620,7 +31620,7 @@ L_Epilogue:
     ret
 }
 
-// line 741
+.line 741
 
 .method static
 void Align(void* Fsp, int32& Flc)
@@ -31645,13 +31645,13 @@ void Align(void* Fsp, int32& Flc)
     stfld void* @align::Fsp
 
 L_Entry:
-    // line 744
+    .line 744
     ldloc _F
     ldloc _F
     ldfld void* @align::Fsp
     call int32 Alignquot(void* Fsp)
     stfld int32 @align::k
-    // line 745
+    .line 745
     ldloc _F
     ldloc _F
     ldfld int32* @align::Flc
@@ -31659,7 +31659,7 @@ L_Entry:
     ldc.i4 1
     sub
     stfld int32 @align::l
-    // line 746
+    .line 746
     ldloc _F
     ldfld int32* @align::Flc
     ldloc _F
@@ -31686,7 +31686,7 @@ L_Epilogue:
     ret
 }
 
-// line 749
+.line 749
 
 .method static
 void Printtables(bool Fb)
@@ -31707,20 +31707,20 @@ void Printtables(bool Fb)
     stfld bool @printtables::Fb
 
 L_Entry:
-    // line 923
+    .line 923
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 923
+    .line 923
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 923
+    .line 923
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 924
+    .line 924
     ldloc _F
     ldfld bool @printtables::Fb
     brfalse L_else_1
-    // line 924
+    .line 924
     ldloc _F
     ldc.i4 0
     dup
@@ -31730,30 +31730,30 @@ L_Entry:
     stfld int8 @printtables::Lim
     br L_if_end_2
 L_else_1:
-    // line 925
+    .line 925
     ldloc _F
     ldsfld int8 _G::Top
     stfld int8 @printtables::Lim
-    // line 925
+    .line 925
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " local"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
 L_if_end_2:
-    // line 926
+    .line 926
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " tables "
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 926
+    .line 926
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 927
+    .line 927
     ldloc _F
     call instance void @printtables::Marker()
-    // line 928
+    .line 928
     ldloc _F
     ldfld int8 @printtables::Lim
     stloc $tmpEndValue1
@@ -31770,7 +31770,7 @@ L_if_end_2:
     ldloc $tmpIndex2
     stfld int8 @printtables::i
 L_for_loop_3:
-    // line 929
+    .line 929
     ldloc _F
     ldsflda valuetype T_array_23 _G::Display
     ldloc _F
@@ -31796,15 +31796,15 @@ L_for_loop_3:
     br L_for_loop_3
 L_for_end_4:
     pop
-    // line 930
+    .line 930
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 931
+    .line 931
     ldsfld bool _G::Eol
     ldc.i4.0
     ceq
     brfalse L_if_end_5
-    // line 931
+    .line 931
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsfld int32 _G::Chcnt
@@ -31820,7 +31820,7 @@ L_Epilogue:
     ret
 }
 
-// line 934
+.line 934
 
 .method static
 void Genlabel(int32& Nxtlab)
@@ -31841,12 +31841,12 @@ void Genlabel(int32& Nxtlab)
     stfld int32* @genlabel::Nxtlab
 
 L_Entry:
-    // line 935
+    .line 935
     ldsfld int32 _G::Intlabel
     ldc.i4 1
     add
     stsfld int32 _G::Intlabel
-    // line 936
+    .line 936
     ldloc _F
     ldfld int32* @genlabel::Nxtlab
     ldsfld int32 _G::Intlabel
@@ -31856,7 +31856,7 @@ L_Epilogue:
     ret
 }
 
-// line 939
+.line 939
 
 .method static
 void Block(valuetype T_setty Fsys, int32 Fsy, void* Fprocp)
@@ -31895,65 +31895,65 @@ void Block(valuetype T_setty Fsys, int32 Fsy, void* Fprocp)
     call instance void T_setty::addValue(int32)
 
 L_Entry:
-    // line 3654
+    .line 3654
     ldc.i4 1 // (true)
     stsfld bool _G::Dp
-    // line 3655
+    .line 3655
 L_repeat_1:
-    // line 3656
+    .line 3656
     ldsfld int32 _G::Sy
     ldc.i4 18
     ceq
     brfalse L_if_end_2
-    // line 3657
+    .line 3657
     call void Insymbol()
-    // line 3657
+    .line 3657
     ldloc _F
     call instance void @block::Labeldeclaration()
 L_if_end_2:
-    // line 3658
+    .line 3658
     ldsfld int32 _G::Sy
     ldc.i4 19
     ceq
     brfalse L_if_end_3
-    // line 3659
+    .line 3659
     call void Insymbol()
-    // line 3659
+    .line 3659
     ldloc _F
     call instance void @block::Constdeclaration()
 L_if_end_3:
-    // line 3660
+    .line 3660
     ldsfld int32 _G::Sy
     ldc.i4 20
     ceq
     brfalse L_if_end_4
-    // line 3661
+    .line 3661
     call void Insymbol()
-    // line 3661
+    .line 3661
     ldloc _F
     call instance void @block::Typedeclaration()
 L_if_end_4:
-    // line 3662
+    .line 3662
     ldsfld int32 _G::Sy
     ldc.i4 21
     ceq
     brfalse L_if_end_5
-    // line 3663
+    .line 3663
     call void Insymbol()
-    // line 3663
+    .line 3663
     ldloc _F
     call instance void @block::Vardeclaration()
 L_if_end_5:
-    // line 3664
+    .line 3664
     br L_while_test_7
 L_while_6:
-    // line 3665
+    .line 3665
     ldloc _F
     ldsfld int32 _G::Sy
     stfld int32 @block::Lsy
-    // line 3665
+    .line 3665
     call void Insymbol()
-    // line 3665
+    .line 3665
     ldloc _F
     ldloc _F
     ldfld int32 @block::Lsy
@@ -31963,17 +31963,17 @@ L_while_test_7:
     ldsfld int32 _G::Sy
     call bool _SetContains(valuetype T_setty s, int32 val)
     brtrue L_while_6
-    // line 3666
+    .line 3666
     ldsfld int32 _G::Sy
     ldc.i4 31
     ceq
     ldc.i4.0
     ceq
     brfalse L_if_end_8
-    // line 3667
+    .line 3667
     ldc.i4 18
     call void Error(int32 Ferrnr)
-    // line 3667
+    .line 3667
     ldloc _F
     ldloc _F
     ldfld valuetype T_setty @block::Fsys
@@ -31989,25 +31989,25 @@ L_if_end_8:
     call instance bool [lpcRuntime]LPC.File::Eof()
 L_OR_shortcut_9:
     brfalse L_repeat_1
-    // line 3669
+    .line 3669
     ldc.i4 0 // (false)
     stsfld bool _G::Dp
-    // line 3670
+    .line 3670
     ldsfld int32 _G::Sy
     ldc.i4 31
     ceq
     brfalse L_else_10
-    // line 3670
+    .line 3670
     call void Insymbol()
     br L_if_end_11
 L_else_10:
-    // line 3670
+    .line 3670
     ldc.i4 17
     call void Error(int32 Ferrnr)
 L_if_end_11:
-    // line 3671
+    .line 3671
 L_repeat_12:
-    // line 3671
+    .line 3671
     ldloc _F
     ldloc _F
     ldfld valuetype T_setty @block::Fsys
@@ -32021,7 +32021,7 @@ L_repeat_12:
     call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
     call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
     call instance void @block::Body(valuetype T_setty Fsys)
-    // line 3672
+    .line 3672
     ldsfld int32 _G::Sy
     ldloc _F
     ldfld int32 @block::Fsy
@@ -32029,10 +32029,10 @@ L_repeat_12:
     ldc.i4.0
     ceq
     brfalse L_if_end_13
-    // line 3673
+    .line 3673
     ldc.i4 6
     call void Error(int32 Ferrnr)
-    // line 3673
+    .line 3673
     ldloc _F
     ldloc _F
     ldfld valuetype T_setty @block::Fsys
@@ -32062,7 +32062,7 @@ L_Epilogue:
     ret
 }
 
-// line 3677
+.line 3677
 
 .method static
 void Programme(valuetype T_setty Fsys)
@@ -32096,87 +32096,87 @@ void Programme(valuetype T_setty Fsys)
     call instance void T_setty::addValue(int32)
 
 L_Entry:
-    // line 3680
+    .line 3680
     ldsfld int32 _G::Sy
     ldc.i4 23
     ceq
     brfalse L_if_end_1
-    // line 3681
+    .line 3681
     call void Insymbol()
-    // line 3681
+    .line 3681
     ldsfld int32 _G::Sy
     ldc.i4 0
     ceq
     ldc.i4.0
     ceq
     brfalse L_if_end_2
-    // line 3681
+    .line 3681
     ldc.i4 2
     call void Error(int32 Ferrnr)
 L_if_end_2:
-    // line 3681
+    .line 3681
     call void Insymbol()
-    // line 3682
+    .line 3682
     ldloc $tmpSetLiteral1
     ldsfld int32 _G::Sy
     call bool _SetContains(valuetype T_setty s, int32 val)
     ldc.i4.0
     ceq
     brfalse L_if_end_3
-    // line 3682
+    .line 3682
     ldc.i4 14
     call void Error(int32 Ferrnr)
 L_if_end_3:
-    // line 3683
+    .line 3683
     ldsfld int32 _G::Sy
     ldc.i4 8
     ceq
     brfalse L_if_end_4
-    // line 3685
+    .line 3685
 L_repeat_5:
-    // line 3685
+    .line 3685
     call void Insymbol()
-    // line 3686
+    .line 3686
     ldsfld int32 _G::Sy
     ldc.i4 0
     ceq
     brfalse L_else_6
-    // line 3687
-    // line 3687
+    .line 3687
+    .line 3687
     ldloc _F
     ldc.i4 16
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @programme::Extfp
-    // line 3689
+    .line 3689
     ldloc _F
     ldfld void* @programme::Extfp
     ldsfld valuetype T_alpha _G::Id
     stfld valuetype T_alpha T_filerec::Filename
-    // line 3689
+    .line 3689
     ldloc _F
     ldfld void* @programme::Extfp
     ldsfld void* _G::Fextfilep
     stfld void* T_filerec::Nextfile
-    // line 3690
+    .line 3690
     ldloc _F
     ldfld void* @programme::Extfp
     stsfld void* _G::Fextfilep
-    // line 3691
+    .line 3691
     call void Insymbol()
-    // line 3692
+    .line 3692
     ldloc $tmpSetLiteral2
     ldsfld int32 _G::Sy
     call bool _SetContains(valuetype T_setty s, int32 val)
     ldc.i4.0
     ceq
     brfalse L_if_end_8
-    // line 3692
+    .line 3692
     ldc.i4 20
     call void Error(int32 Ferrnr)
 L_if_end_8:
     br L_if_end_7
 L_else_6:
-    // line 3694
+    .line 3694
     ldc.i4 2
     call void Error(int32 Ferrnr)
 L_if_end_7:
@@ -32186,53 +32186,53 @@ L_if_end_7:
     ldc.i4.0
     ceq
     brfalse L_repeat_5
-    // line 3696
+    .line 3696
     ldsfld int32 _G::Sy
     ldc.i4 9
     ceq
     ldc.i4.0
     ceq
     brfalse L_if_end_9
-    // line 3696
+    .line 3696
     ldc.i4 4
     call void Error(int32 Ferrnr)
 L_if_end_9:
-    // line 3697
+    .line 3697
     call void Insymbol()
 L_if_end_4:
-    // line 3699
+    .line 3699
     ldsfld int32 _G::Sy
     ldc.i4 13
     ceq
     ldc.i4.0
     ceq
     brfalse L_else_10
-    // line 3699
+    .line 3699
     ldc.i4 14
     call void Error(int32 Ferrnr)
     br L_if_end_11
 L_else_10:
-    // line 3700
+    .line 3700
     call void Insymbol()
 L_if_end_11:
     /* nop */
 L_if_end_1:
-    // line 3702
+    .line 3702
 L_repeat_12:
-    // line 3702
+    .line 3702
     ldloc _F
     ldfld valuetype T_setty @programme::Fsys
     ldc.i4 14
     ldnull
     call void Block(valuetype T_setty Fsys, int32 Fsy, void* Fprocp)
-    // line 3703
+    .line 3703
     ldsfld int32 _G::Sy
     ldc.i4 14
     ceq
     ldc.i4.0
     ceq
     brfalse L_if_end_13
-    // line 3703
+    .line 3703
     ldc.i4 21
     call void Error(int32 Ferrnr)
 L_if_end_13:
@@ -32246,24 +32246,24 @@ L_if_end_13:
     call instance bool [lpcRuntime]LPC.File::Eof()
 L_OR_shortcut_14:
     brfalse L_repeat_12
-    // line 3705
+    .line 3705
     ldsfld bool _G::List
     brfalse L_if_end_15
-    // line 3705
+    .line 3705
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
 L_if_end_15:
-    // line 3706
+    .line 3706
     ldsfld int8 _G::Errinx
     ldc.i4 0
     ceq
     ldc.i4.0
     ceq
     brfalse L_if_end_16
-    // line 3707
+    .line 3707
     ldc.i4 0 // (false)
     stsfld bool _G::List
-    // line 3707
+    .line 3707
     call void Endofline()
 L_if_end_16:
 
@@ -32271,7 +32271,7 @@ L_Epilogue:
     ret
 }
 
-// line 3711
+.line 3711
 
 .method static
 void Stdnames()
@@ -32284,211 +32284,211 @@ void Stdnames()
     stloc _F
 
 L_Entry:
-    // line 3713
+    .line 3713
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 1
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_1    // "false   "
     stobj valuetype T_alpha
-    // line 3713
+    .line 3713
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 2
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_2    // "true    "
     stobj valuetype T_alpha
-    // line 3713
+    .line 3713
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 3
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_3    // "input   "
     stobj valuetype T_alpha
-    // line 3714
+    .line 3714
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 4
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_4    // "output  "
     stobj valuetype T_alpha
-    // line 3714
+    .line 3714
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 5
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_5    // "get     "
     stobj valuetype T_alpha
-    // line 3714
+    .line 3714
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 6
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_6    // "put     "
     stobj valuetype T_alpha
-    // line 3715
+    .line 3715
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 7
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_7    // "reset   "
     stobj valuetype T_alpha
-    // line 3715
+    .line 3715
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 8
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_8    // "rewrite "
     stobj valuetype T_alpha
-    // line 3715
+    .line 3715
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 9
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_9    // "read    "
     stobj valuetype T_alpha
-    // line 3716
+    .line 3716
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 10
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_10    // "write   "
     stobj valuetype T_alpha
-    // line 3716
+    .line 3716
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 11
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_11    // "pack    "
     stobj valuetype T_alpha
-    // line 3716
+    .line 3716
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 12
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_12    // "unpack  "
     stobj valuetype T_alpha
-    // line 3717
+    .line 3717
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 13
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_13    // "new     "
     stobj valuetype T_alpha
-    // line 3717
+    .line 3717
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 14
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_14    // "release "
     stobj valuetype T_alpha
-    // line 3717
+    .line 3717
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 15
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_15    // "readln  "
     stobj valuetype T_alpha
-    // line 3718
+    .line 3718
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 16
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_16    // "writeln "
     stobj valuetype T_alpha
-    // line 3719
+    .line 3719
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 17
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_17    // "abs     "
     stobj valuetype T_alpha
-    // line 3719
+    .line 3719
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 18
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_18    // "sqr     "
     stobj valuetype T_alpha
-    // line 3719
+    .line 3719
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 19
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_19    // "trunc   "
     stobj valuetype T_alpha
-    // line 3720
+    .line 3720
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 20
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_20    // "odd     "
     stobj valuetype T_alpha
-    // line 3720
+    .line 3720
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 21
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_21    // "ord     "
     stobj valuetype T_alpha
-    // line 3720
+    .line 3720
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 22
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_22    // "chr     "
     stobj valuetype T_alpha
-    // line 3721
+    .line 3721
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 23
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_23    // "pred    "
     stobj valuetype T_alpha
-    // line 3721
+    .line 3721
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 24
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_24    // "succ    "
     stobj valuetype T_alpha
-    // line 3721
+    .line 3721
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 25
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_25    // "eof     "
     stobj valuetype T_alpha
-    // line 3722
+    .line 3722
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 26
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_26    // "eoln    "
     stobj valuetype T_alpha
-    // line 3723
+    .line 3723
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 27
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_27    // "sin     "
     stobj valuetype T_alpha
-    // line 3723
+    .line 3723
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 28
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_28    // "cos     "
     stobj valuetype T_alpha
-    // line 3723
+    .line 3723
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 29
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_29    // "exp     "
     stobj valuetype T_alpha
-    // line 3724
+    .line 3724
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 30
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_30    // "sqrt    "
     stobj valuetype T_alpha
-    // line 3724
+    .line 3724
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 31
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_31    // "ln      "
     stobj valuetype T_alpha
-    // line 3724
+    .line 3724
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 32
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_32    // "arctan  "
     stobj valuetype T_alpha
-    // line 3725
+    .line 3725
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 33
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_33    // "prd     "
     stobj valuetype T_alpha
-    // line 3725
+    .line 3725
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 34
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldsfld valuetype T_alpha STRING_34    // "prr     "
     stobj valuetype T_alpha
-    // line 3725
+    .line 3725
     ldsflda valuetype T_array_12 _G::Na
     ldc.i4 35
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
@@ -32500,7 +32500,7 @@ L_Epilogue:
     ret
 }
 
-// line 3728
+.line 3728
 
 .method static
 void Enterstdtypes()
@@ -32513,20 +32513,20 @@ void Enterstdtypes()
     stloc _F
 
 L_Entry:
-    // line 3733
-    // line 3733
+    .line 3733
+    .line 3733
     ldc.i4 77
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Intptr
-    // line 3733
+    .line 3733
     ldsfld void* _G::Intptr
     ldc.i4 0
     stfld int32 T_structure::Form
-    // line 3733
+    .line 3733
     ldsfld void* _G::Intptr
     ldc.i4 0
     stfld int32 T_structure::Scalkind
-    // line 3735
+    .line 3735
     ldsfld void* _G::Intptr
     ldc.i4 1
     dup
@@ -32534,28 +32534,28 @@ L_Entry:
     ldc.i4 2147483647
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_structure::Size
-    // line 3735
+    .line 3735
     ldsfld void* _G::Intptr
     ldc.i4 0
     stfld int32 T_structure::Form
-    // line 3735
+    .line 3735
     ldsfld void* _G::Intptr
     ldc.i4 0
     stfld int32 T_structure::Scalkind
-    // line 3736
-    // line 3736
+    .line 3736
+    .line 3736
     ldc.i4 77
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Realptr
-    // line 3736
+    .line 3736
     ldsfld void* _G::Realptr
     ldc.i4 0
     stfld int32 T_structure::Form
-    // line 3736
+    .line 3736
     ldsfld void* _G::Realptr
     ldc.i4 0
     stfld int32 T_structure::Scalkind
-    // line 3738
+    .line 3738
     ldsfld void* _G::Realptr
     ldc.i4 1
     dup
@@ -32563,28 +32563,28 @@ L_Entry:
     ldc.i4 2147483647
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_structure::Size
-    // line 3738
+    .line 3738
     ldsfld void* _G::Realptr
     ldc.i4 0
     stfld int32 T_structure::Form
-    // line 3738
+    .line 3738
     ldsfld void* _G::Realptr
     ldc.i4 0
     stfld int32 T_structure::Scalkind
-    // line 3739
-    // line 3739
+    .line 3739
+    .line 3739
     ldc.i4 77
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Charptr
-    // line 3739
+    .line 3739
     ldsfld void* _G::Charptr
     ldc.i4 0
     stfld int32 T_structure::Form
-    // line 3739
+    .line 3739
     ldsfld void* _G::Charptr
     ldc.i4 0
     stfld int32 T_structure::Scalkind
-    // line 3741
+    .line 3741
     ldsfld void* _G::Charptr
     ldc.i4 1
     dup
@@ -32592,28 +32592,28 @@ L_Entry:
     ldc.i4 2147483647
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_structure::Size
-    // line 3741
+    .line 3741
     ldsfld void* _G::Charptr
     ldc.i4 0
     stfld int32 T_structure::Form
-    // line 3741
+    .line 3741
     ldsfld void* _G::Charptr
     ldc.i4 0
     stfld int32 T_structure::Scalkind
-    // line 3742
-    // line 3742
+    .line 3742
+    .line 3742
     ldc.i4 77
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Boolptr
-    // line 3742
+    .line 3742
     ldsfld void* _G::Boolptr
     ldc.i4 0
     stfld int32 T_structure::Form
-    // line 3742
+    .line 3742
     ldsfld void* _G::Boolptr
     ldc.i4 1
     stfld int32 T_structure::Scalkind
-    // line 3744
+    .line 3744
     ldsfld void* _G::Boolptr
     ldc.i4 1
     dup
@@ -32621,28 +32621,28 @@ L_Entry:
     ldc.i4 2147483647
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_structure::Size
-    // line 3744
+    .line 3744
     ldsfld void* _G::Boolptr
     ldc.i4 0
     stfld int32 T_structure::Form
-    // line 3744
+    .line 3744
     ldsfld void* _G::Boolptr
     ldc.i4 1
     stfld int32 T_structure::Scalkind
-    // line 3745
-    // line 3745
+    .line 3745
+    .line 3745
     ldc.i4 77
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Nilptr
-    // line 3745
+    .line 3745
     ldsfld void* _G::Nilptr
     ldc.i4 2
     stfld int32 T_structure::Form
-    // line 3747
+    .line 3747
     ldsfld void* _G::Nilptr
     ldnull
     stfld void* T_structure::Eltype
-    // line 3747
+    .line 3747
     ldsfld void* _G::Nilptr
     ldc.i4 1
     dup
@@ -32650,24 +32650,24 @@ L_Entry:
     ldc.i4 2147483647
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_structure::Size
-    // line 3747
+    .line 3747
     ldsfld void* _G::Nilptr
     ldc.i4 2
     stfld int32 T_structure::Form
-    // line 3748
-    // line 3748
+    .line 3748
+    .line 3748
     ldc.i4 77
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Parmptr
-    // line 3748
+    .line 3748
     ldsfld void* _G::Parmptr
     ldc.i4 0
     stfld int32 T_structure::Form
-    // line 3748
+    .line 3748
     ldsfld void* _G::Parmptr
     ldc.i4 0
     stfld int32 T_structure::Scalkind
-    // line 3750
+    .line 3750
     ldsfld void* _G::Parmptr
     ldc.i4 1
     dup
@@ -32675,28 +32675,28 @@ L_Entry:
     ldc.i4 2147483647
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_structure::Size
-    // line 3750
+    .line 3750
     ldsfld void* _G::Parmptr
     ldc.i4 0
     stfld int32 T_structure::Form
-    // line 3750
+    .line 3750
     ldsfld void* _G::Parmptr
     ldc.i4 0
     stfld int32 T_structure::Scalkind
-    // line 3751
-    // line 3751
+    .line 3751
+    .line 3751
     ldc.i4 77
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Textptr
-    // line 3751
+    .line 3751
     ldsfld void* _G::Textptr
     ldc.i4 6
     stfld int32 T_structure::Form
-    // line 3753
+    .line 3753
     ldsfld void* _G::Textptr
     ldsfld void* _G::Charptr
     stfld void* T_structure::Filtype
-    // line 3753
+    .line 3753
     ldsfld void* _G::Textptr
     ldc.i4 1
     dup
@@ -32704,7 +32704,7 @@ L_Entry:
     ldc.i4 2147483647
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_structure::Size
-    // line 3753
+    .line 3753
     ldsfld void* _G::Textptr
     ldc.i4 6
     stfld int32 T_structure::Form
@@ -32713,7 +32713,7 @@ L_Epilogue:
     ret
 }
 
-// line 3756
+.line 3756
 
 .method static
 void Entstdnames()
@@ -32745,131 +32745,131 @@ void Entstdnames()
     stloc _F
 
 L_Entry:
-    // line 3761
-    // line 3761
+    .line 3761
+    .line 3761
     ldloc _F
     ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp
-    // line 3761
+    .line 3761
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 0
     stfld int32 T_identifier::Klass
-    // line 3763
+    .line 3763
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldsfld valuetype T_alpha STRING_36    // "integer "
     stfld valuetype T_alpha T_identifier::Name
-    // line 3763
+    .line 3763
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldsfld void* _G::Intptr
     stfld void* T_identifier::Idtype
-    // line 3763
+    .line 3763
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 0
     stfld int32 T_identifier::Klass
-    // line 3764
+    .line 3764
     ldloc _F
     ldfld void* @entstdnames::Cp
     call void Enterid(void* Fcp)
-    // line 3765
-    // line 3765
+    .line 3765
+    .line 3765
     ldloc _F
     ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp
-    // line 3765
+    .line 3765
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 0
     stfld int32 T_identifier::Klass
-    // line 3767
+    .line 3767
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldsfld valuetype T_alpha STRING_37    // "real    "
     stfld valuetype T_alpha T_identifier::Name
-    // line 3767
+    .line 3767
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldsfld void* _G::Realptr
     stfld void* T_identifier::Idtype
-    // line 3767
+    .line 3767
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 0
     stfld int32 T_identifier::Klass
-    // line 3768
+    .line 3768
     ldloc _F
     ldfld void* @entstdnames::Cp
     call void Enterid(void* Fcp)
-    // line 3769
-    // line 3769
+    .line 3769
+    .line 3769
     ldloc _F
     ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp
-    // line 3769
+    .line 3769
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 0
     stfld int32 T_identifier::Klass
-    // line 3771
+    .line 3771
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldsfld valuetype T_alpha STRING_38    // "char    "
     stfld valuetype T_alpha T_identifier::Name
-    // line 3771
+    .line 3771
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldsfld void* _G::Charptr
     stfld void* T_identifier::Idtype
-    // line 3771
+    .line 3771
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 0
     stfld int32 T_identifier::Klass
-    // line 3772
+    .line 3772
     ldloc _F
     ldfld void* @entstdnames::Cp
     call void Enterid(void* Fcp)
-    // line 3773
-    // line 3773
+    .line 3773
+    .line 3773
     ldloc _F
     ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp
-    // line 3773
+    .line 3773
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 0
     stfld int32 T_identifier::Klass
-    // line 3775
+    .line 3775
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldsfld valuetype T_alpha STRING_39    // "boolean "
     stfld valuetype T_alpha T_identifier::Name
-    // line 3775
+    .line 3775
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldsfld void* _G::Boolptr
     stfld void* T_identifier::Idtype
-    // line 3775
+    .line 3775
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 0
     stfld int32 T_identifier::Klass
-    // line 3776
+    .line 3776
     ldloc _F
     ldfld void* @entstdnames::Cp
     call void Enterid(void* Fcp)
-    // line 3777
+    .line 3777
     ldloc _F
     ldnull
     stfld void* @entstdnames::Cp1
-    // line 3778
+    .line 3778
     ldc.i4 2
     stloc $tmpEndValue1
     ldc.i4 1
@@ -32881,18 +32881,18 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int32 @entstdnames::i
 L_for_loop_1:
-    // line 3779
-    // line 3779
+    .line 3779
+    .line 3779
     ldloc _F
     ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp
-    // line 3779
+    .line 3779
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 1
     stfld int32 T_identifier::Klass
-    // line 3781
+    .line 3781
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldsflda valuetype T_array_12 _G::Na
@@ -32901,18 +32901,18 @@ L_for_loop_1:
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldobj valuetype T_alpha
     stfld valuetype T_alpha T_identifier::Name
-    // line 3781
+    .line 3781
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldsfld void* _G::Boolptr
     stfld void* T_identifier::Idtype
-    // line 3782
+    .line 3782
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldloc _F
     ldfld void* @entstdnames::Cp1
     stfld void* T_identifier::Next
-    // line 3782
+    .line 3782
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldflda valuetype T_valu T_identifier::Values
@@ -32921,16 +32921,16 @@ L_for_loop_1:
     ldc.i4 1
     sub
     stfld int32 T_valu::Ival
-    // line 3782
+    .line 3782
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 1
     stfld int32 T_identifier::Klass
-    // line 3784
+    .line 3784
     ldloc _F
     ldfld void* @entstdnames::Cp
     call void Enterid(void* Fcp)
-    // line 3784
+    .line 3784
     ldloc _F
     ldloc _F
     ldfld void* @entstdnames::Cp
@@ -32949,53 +32949,53 @@ L_for_loop_1:
     br L_for_loop_1
 L_for_end_2:
     pop
-    // line 3786
+    .line 3786
     ldsfld void* _G::Boolptr
     ldloc _F
     ldfld void* @entstdnames::Cp
     stfld void* T_structure::Fconst
-    // line 3787
-    // line 3787
+    .line 3787
+    .line 3787
     ldloc _F
     ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp
-    // line 3787
+    .line 3787
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 1
     stfld int32 T_identifier::Klass
-    // line 3789
+    .line 3789
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldsfld valuetype T_alpha STRING_40    // "nil     "
     stfld valuetype T_alpha T_identifier::Name
-    // line 3789
+    .line 3789
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldsfld void* _G::Nilptr
     stfld void* T_identifier::Idtype
-    // line 3790
+    .line 3790
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldnull
     stfld void* T_identifier::Next
-    // line 3790
+    .line 3790
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldflda valuetype T_valu T_identifier::Values
     ldc.i4 0
     stfld int32 T_valu::Ival
-    // line 3790
+    .line 3790
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 1
     stfld int32 T_identifier::Klass
-    // line 3792
+    .line 3792
     ldloc _F
     ldfld void* @entstdnames::Cp
     call void Enterid(void* Fcp)
-    // line 3793
+    .line 3793
     ldc.i4 4
     stloc $tmpEndValue4
     ldc.i4 3
@@ -33007,18 +33007,18 @@ L_for_end_2:
     ldloc $tmpIndex5
     stfld int32 @entstdnames::i
 L_for_loop_3:
-    // line 3794
-    // line 3794
+    .line 3794
+    .line 3794
     ldloc _F
     ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp
-    // line 3794
+    .line 3794
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 2
     stfld int32 T_identifier::Klass
-    // line 3796
+    .line 3796
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldsflda valuetype T_array_12 _G::Na
@@ -33027,27 +33027,27 @@ L_for_loop_3:
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldobj valuetype T_alpha
     stfld valuetype T_alpha T_identifier::Name
-    // line 3796
+    .line 3796
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldsfld void* _G::Textptr
     stfld void* T_identifier::Idtype
-    // line 3796
+    .line 3796
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 2
     stfld int32 T_identifier::Klass
-    // line 3797
+    .line 3797
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 0
     stfld int32 T_identifier::Vkind
-    // line 3797
+    .line 3797
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldnull
     stfld void* T_identifier::Next
-    // line 3797
+    .line 3797
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 1
@@ -33056,7 +33056,7 @@ L_for_loop_3:
     ldc.i4 10
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_identifier::Vlev
-    // line 3798
+    .line 3798
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 5
@@ -33073,7 +33073,7 @@ L_for_loop_3:
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_identifier::Vaddr
     /* nop */
-    // line 3800
+    .line 3800
     ldloc _F
     ldfld void* @entstdnames::Cp
     call void Enterid(void* Fcp)
@@ -33091,7 +33091,7 @@ L_for_loop_3:
     br L_for_loop_3
 L_for_end_4:
     pop
-    // line 3802
+    .line 3802
     ldc.i4 34
     stloc $tmpEndValue7
     ldc.i4 33
@@ -33103,18 +33103,18 @@ L_for_end_4:
     ldloc $tmpIndex8
     stfld int32 @entstdnames::i
 L_for_loop_5:
-    // line 3803
-    // line 3803
+    .line 3803
+    .line 3803
     ldloc _F
     ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp
-    // line 3803
+    .line 3803
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 2
     stfld int32 T_identifier::Klass
-    // line 3805
+    .line 3805
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldsflda valuetype T_array_12 _G::Na
@@ -33123,27 +33123,27 @@ L_for_loop_5:
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldobj valuetype T_alpha
     stfld valuetype T_alpha T_identifier::Name
-    // line 3805
+    .line 3805
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldsfld void* _G::Textptr
     stfld void* T_identifier::Idtype
-    // line 3805
+    .line 3805
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 2
     stfld int32 T_identifier::Klass
-    // line 3806
+    .line 3806
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 0
     stfld int32 T_identifier::Vkind
-    // line 3806
+    .line 3806
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldnull
     stfld void* T_identifier::Next
-    // line 3806
+    .line 3806
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 1
@@ -33152,7 +33152,7 @@ L_for_loop_5:
     ldc.i4 10
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_identifier::Vlev
-    // line 3807
+    .line 3807
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 5
@@ -33169,7 +33169,7 @@ L_for_loop_5:
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_identifier::Vaddr
     /* nop */
-    // line 3809
+    .line 3809
     ldloc _F
     ldfld void* @entstdnames::Cp
     call void Enterid(void* Fcp)
@@ -33187,7 +33187,7 @@ L_for_loop_5:
     br L_for_loop_5
 L_for_end_6:
     pop
-    // line 3811
+    .line 3811
     ldc.i4 16
     stloc $tmpEndValue10
     ldc.i4 5
@@ -33199,23 +33199,23 @@ L_for_end_6:
     ldloc $tmpIndex11
     stfld int32 @entstdnames::i
 L_for_loop_7:
-    // line 3812
-    // line 3812
+    .line 3812
+    .line 3812
     ldloc _F
     ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp
-    // line 3812
+    .line 3812
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 4
     stfld int32 T_identifier::Klass
-    // line 3812
+    .line 3812
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 0
     stfld int32 T_identifier::Pfdeckind
-    // line 3814
+    .line 3814
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldsflda valuetype T_array_12 _G::Na
@@ -33224,17 +33224,17 @@ L_for_loop_7:
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldobj valuetype T_alpha
     stfld valuetype T_alpha T_identifier::Name
-    // line 3814
+    .line 3814
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldnull
     stfld void* T_identifier::Idtype
-    // line 3815
+    .line 3815
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldnull
     stfld void* T_identifier::Next
-    // line 3815
+    .line 3815
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldloc _F
@@ -33246,17 +33246,17 @@ L_for_loop_7:
     ldc.i4 15
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_identifier::Key
-    // line 3816
+    .line 3816
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 4
     stfld int32 T_identifier::Klass
-    // line 3816
+    .line 3816
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 0
     stfld int32 T_identifier::Pfdeckind
-    // line 3818
+    .line 3818
     ldloc _F
     ldfld void* @entstdnames::Cp
     call void Enterid(void* Fcp)
@@ -33274,23 +33274,23 @@ L_for_loop_7:
     br L_for_loop_7
 L_for_end_8:
     pop
-    // line 3820
-    // line 3820
+    .line 3820
+    .line 3820
     ldloc _F
     ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp
-    // line 3820
+    .line 3820
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 4
     stfld int32 T_identifier::Klass
-    // line 3820
+    .line 3820
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 0
     stfld int32 T_identifier::Pfdeckind
-    // line 3822
+    .line 3822
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldsflda valuetype T_array_12 _G::Na
@@ -33298,17 +33298,17 @@ L_for_end_8:
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldobj valuetype T_alpha
     stfld valuetype T_alpha T_identifier::Name
-    // line 3822
+    .line 3822
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldnull
     stfld void* T_identifier::Idtype
-    // line 3823
+    .line 3823
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldnull
     stfld void* T_identifier::Next
-    // line 3823
+    .line 3823
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 13
@@ -33317,21 +33317,21 @@ L_for_end_8:
     ldc.i4 15
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_identifier::Key
-    // line 3824
+    .line 3824
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 4
     stfld int32 T_identifier::Klass
-    // line 3824
+    .line 3824
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 0
     stfld int32 T_identifier::Pfdeckind
-    // line 3825
+    .line 3825
     ldloc _F
     ldfld void* @entstdnames::Cp
     call void Enterid(void* Fcp)
-    // line 3826
+    .line 3826
     ldc.i4 26
     stloc $tmpEndValue13
     ldc.i4 17
@@ -33343,23 +33343,23 @@ L_for_end_8:
     ldloc $tmpIndex14
     stfld int32 @entstdnames::i
 L_for_loop_9:
-    // line 3827
-    // line 3827
+    .line 3827
+    .line 3827
     ldloc _F
     ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp
-    // line 3827
+    .line 3827
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 5
     stfld int32 T_identifier::Klass
-    // line 3827
+    .line 3827
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 0
     stfld int32 T_identifier::Pfdeckind
-    // line 3829
+    .line 3829
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldsflda valuetype T_array_12 _G::Na
@@ -33368,17 +33368,17 @@ L_for_loop_9:
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldobj valuetype T_alpha
     stfld valuetype T_alpha T_identifier::Name
-    // line 3829
+    .line 3829
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldnull
     stfld void* T_identifier::Idtype
-    // line 3830
+    .line 3830
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldnull
     stfld void* T_identifier::Next
-    // line 3830
+    .line 3830
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldloc _F
@@ -33390,17 +33390,17 @@ L_for_loop_9:
     ldc.i4 15
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_identifier::Key
-    // line 3831
+    .line 3831
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 5
     stfld int32 T_identifier::Klass
-    // line 3831
+    .line 3831
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 0
     stfld int32 T_identifier::Pfdeckind
-    // line 3833
+    .line 3833
     ldloc _F
     ldfld void* @entstdnames::Cp
     call void Enterid(void* Fcp)
@@ -33418,43 +33418,43 @@ L_for_loop_9:
     br L_for_loop_9
 L_for_end_10:
     pop
-    // line 3835
-    // line 3835
+    .line 3835
+    .line 3835
     ldloc _F
     ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp
-    // line 3835
+    .line 3835
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 2
     stfld int32 T_identifier::Klass
-    // line 3837
+    .line 3837
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldsfld valuetype T_alpha STRING_41    // "        "
     stfld valuetype T_alpha T_identifier::Name
-    // line 3837
+    .line 3837
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldsfld void* _G::Realptr
     stfld void* T_identifier::Idtype
-    // line 3837
+    .line 3837
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 2
     stfld int32 T_identifier::Klass
-    // line 3838
+    .line 3838
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 0
     stfld int32 T_identifier::Vkind
-    // line 3838
+    .line 3838
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldnull
     stfld void* T_identifier::Next
-    // line 3838
+    .line 3838
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 1
@@ -33463,7 +33463,7 @@ L_for_end_10:
     ldc.i4 10
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_identifier::Vlev
-    // line 3838
+    .line 3838
     ldloc _F
     ldfld void* @entstdnames::Cp
     ldc.i4 0
@@ -33472,7 +33472,7 @@ L_for_end_10:
     ldc.i4 2147483647
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_identifier::Vaddr
-    // line 3840
+    .line 3840
     ldc.i4 32
     stloc $tmpEndValue16
     ldc.i4 27
@@ -33484,28 +33484,28 @@ L_for_end_10:
     ldloc $tmpIndex17
     stfld int32 @entstdnames::i
 L_for_loop_11:
-    // line 3841
-    // line 3841
+    .line 3841
+    .line 3841
     ldloc _F
     ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @entstdnames::Cp1
-    // line 3841
+    .line 3841
     ldloc _F
     ldfld void* @entstdnames::Cp1
     ldc.i4 5
     stfld int32 T_identifier::Klass
-    // line 3841
+    .line 3841
     ldloc _F
     ldfld void* @entstdnames::Cp1
     ldc.i4 1
     stfld int32 T_identifier::Pfdeckind
-    // line 3841
+    .line 3841
     ldloc _F
     ldfld void* @entstdnames::Cp1
     ldc.i4 0
     stfld int32 T_identifier::Pfkind
-    // line 3843
+    .line 3843
     ldloc _F
     ldfld void* @entstdnames::Cp1
     ldsflda valuetype T_array_12 _G::Na
@@ -33514,28 +33514,28 @@ L_for_loop_11:
     call instance valuetype T_alpha& T_array_12::ldadr(int32)
     ldobj valuetype T_alpha
     stfld valuetype T_alpha T_identifier::Name
-    // line 3843
+    .line 3843
     ldloc _F
     ldfld void* @entstdnames::Cp1
     ldsfld void* _G::Realptr
     stfld void* T_identifier::Idtype
-    // line 3843
+    .line 3843
     ldloc _F
     ldfld void* @entstdnames::Cp1
     ldloc _F
     ldfld void* @entstdnames::Cp
     stfld void* T_identifier::Next
-    // line 3844
+    .line 3844
     ldloc _F
     ldfld void* @entstdnames::Cp1
     ldc.i4 0 // (false)
     stfld bool T_identifier::Forwdecl
-    // line 3844
+    .line 3844
     ldloc _F
     ldfld void* @entstdnames::Cp1
     ldc.i4 1 // (true)
     stfld bool T_identifier::Externl
-    // line 3844
+    .line 3844
     ldloc _F
     ldfld void* @entstdnames::Cp1
     ldc.i4 0
@@ -33544,7 +33544,7 @@ L_for_loop_11:
     ldc.i4 10
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_identifier::Pflev
-    // line 3844
+    .line 3844
     ldloc _F
     ldfld void* @entstdnames::Cp1
     ldloc _F
@@ -33552,22 +33552,22 @@ L_for_loop_11:
     ldc.i4 12
     sub
     stfld int32 T_identifier::Pfname
-    // line 3845
+    .line 3845
     ldloc _F
     ldfld void* @entstdnames::Cp1
     ldc.i4 5
     stfld int32 T_identifier::Klass
-    // line 3845
+    .line 3845
     ldloc _F
     ldfld void* @entstdnames::Cp1
     ldc.i4 1
     stfld int32 T_identifier::Pfdeckind
-    // line 3845
+    .line 3845
     ldloc _F
     ldfld void* @entstdnames::Cp1
     ldc.i4 0
     stfld int32 T_identifier::Pfkind
-    // line 3847
+    .line 3847
     ldloc _F
     ldfld void* @entstdnames::Cp1
     call void Enterid(void* Fcp)
@@ -33590,7 +33590,7 @@ L_Epilogue:
     ret
 }
 
-// line 3851
+.line 3851
 
 .method static
 void Enterundecl()
@@ -33603,83 +33603,83 @@ void Enterundecl()
     stloc _F
 
 L_Entry:
-    // line 3853
-    // line 3853
+    .line 3853
+    .line 3853
     ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Utypptr
-    // line 3853
+    .line 3853
     ldsfld void* _G::Utypptr
     ldc.i4 0
     stfld int32 T_identifier::Klass
-    // line 3855
+    .line 3855
     ldsfld void* _G::Utypptr
     ldsfld valuetype T_alpha STRING_41    // "        "
     stfld valuetype T_alpha T_identifier::Name
-    // line 3855
+    .line 3855
     ldsfld void* _G::Utypptr
     ldnull
     stfld void* T_identifier::Idtype
-    // line 3855
+    .line 3855
     ldsfld void* _G::Utypptr
     ldc.i4 0
     stfld int32 T_identifier::Klass
-    // line 3856
-    // line 3856
+    .line 3856
+    .line 3856
     ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ucstptr
-    // line 3856
+    .line 3856
     ldsfld void* _G::Ucstptr
     ldc.i4 1
     stfld int32 T_identifier::Klass
-    // line 3858
+    .line 3858
     ldsfld void* _G::Ucstptr
     ldsfld valuetype T_alpha STRING_41    // "        "
     stfld valuetype T_alpha T_identifier::Name
-    // line 3858
+    .line 3858
     ldsfld void* _G::Ucstptr
     ldnull
     stfld void* T_identifier::Idtype
-    // line 3858
+    .line 3858
     ldsfld void* _G::Ucstptr
     ldnull
     stfld void* T_identifier::Next
-    // line 3859
+    .line 3859
     ldsfld void* _G::Ucstptr
     ldflda valuetype T_valu T_identifier::Values
     ldc.i4 0
     stfld int32 T_valu::Ival
-    // line 3859
+    .line 3859
     ldsfld void* _G::Ucstptr
     ldc.i4 1
     stfld int32 T_identifier::Klass
-    // line 3861
-    // line 3861
+    .line 3861
+    .line 3861
     ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Uvarptr
-    // line 3861
+    .line 3861
     ldsfld void* _G::Uvarptr
     ldc.i4 2
     stfld int32 T_identifier::Klass
-    // line 3863
+    .line 3863
     ldsfld void* _G::Uvarptr
     ldsfld valuetype T_alpha STRING_41    // "        "
     stfld valuetype T_alpha T_identifier::Name
-    // line 3863
+    .line 3863
     ldsfld void* _G::Uvarptr
     ldnull
     stfld void* T_identifier::Idtype
-    // line 3863
+    .line 3863
     ldsfld void* _G::Uvarptr
     ldc.i4 0
     stfld int32 T_identifier::Vkind
-    // line 3864
+    .line 3864
     ldsfld void* _G::Uvarptr
     ldnull
     stfld void* T_identifier::Next
-    // line 3864
+    .line 3864
     ldsfld void* _G::Uvarptr
     ldc.i4 0
     dup
@@ -33687,7 +33687,7 @@ L_Entry:
     ldc.i4 10
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_identifier::Vlev
-    // line 3864
+    .line 3864
     ldsfld void* _G::Uvarptr
     ldc.i4 0
     dup
@@ -33695,32 +33695,32 @@ L_Entry:
     ldc.i4 2147483647
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_identifier::Vaddr
-    // line 3864
+    .line 3864
     ldsfld void* _G::Uvarptr
     ldc.i4 2
     stfld int32 T_identifier::Klass
-    // line 3866
-    // line 3866
+    .line 3866
+    .line 3866
     ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ufldptr
-    // line 3866
+    .line 3866
     ldsfld void* _G::Ufldptr
     ldc.i4 3
     stfld int32 T_identifier::Klass
-    // line 3868
+    .line 3868
     ldsfld void* _G::Ufldptr
     ldsfld valuetype T_alpha STRING_41    // "        "
     stfld valuetype T_alpha T_identifier::Name
-    // line 3868
+    .line 3868
     ldsfld void* _G::Ufldptr
     ldnull
     stfld void* T_identifier::Idtype
-    // line 3868
+    .line 3868
     ldsfld void* _G::Ufldptr
     ldnull
     stfld void* T_identifier::Next
-    // line 3868
+    .line 3868
     ldsfld void* _G::Ufldptr
     ldc.i4 0
     dup
@@ -33728,48 +33728,48 @@ L_Entry:
     ldc.i4 2147483647
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int32 T_identifier::Fldaddr
-    // line 3869
+    .line 3869
     ldsfld void* _G::Ufldptr
     ldc.i4 3
     stfld int32 T_identifier::Klass
-    // line 3871
-    // line 3871
+    .line 3871
+    .line 3871
     ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Uprcptr
-    // line 3871
+    .line 3871
     ldsfld void* _G::Uprcptr
     ldc.i4 4
     stfld int32 T_identifier::Klass
-    // line 3871
+    .line 3871
     ldsfld void* _G::Uprcptr
     ldc.i4 1
     stfld int32 T_identifier::Pfdeckind
-    // line 3871
+    .line 3871
     ldsfld void* _G::Uprcptr
     ldc.i4 0
     stfld int32 T_identifier::Pfkind
-    // line 3873
+    .line 3873
     ldsfld void* _G::Uprcptr
     ldsfld valuetype T_alpha STRING_41    // "        "
     stfld valuetype T_alpha T_identifier::Name
-    // line 3873
+    .line 3873
     ldsfld void* _G::Uprcptr
     ldnull
     stfld void* T_identifier::Idtype
-    // line 3873
+    .line 3873
     ldsfld void* _G::Uprcptr
     ldc.i4 0 // (false)
     stfld bool T_identifier::Forwdecl
-    // line 3874
+    .line 3874
     ldsfld void* _G::Uprcptr
     ldnull
     stfld void* T_identifier::Next
-    // line 3874
+    .line 3874
     ldsfld void* _G::Uprcptr
     ldc.i4 0 // (false)
     stfld bool T_identifier::Externl
-    // line 3874
+    .line 3874
     ldsfld void* _G::Uprcptr
     ldc.i4 0
     dup
@@ -33777,60 +33777,60 @@ L_Entry:
     ldc.i4 10
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_identifier::Pflev
-    // line 3874
+    .line 3874
     ldsfld void* _G::Uprcptr
     ldflda int32 T_identifier::Pfname
     call void Genlabel(int32& Nxtlab)
-    // line 3875
+    .line 3875
     ldsfld void* _G::Uprcptr
     ldc.i4 4
     stfld int32 T_identifier::Klass
-    // line 3875
+    .line 3875
     ldsfld void* _G::Uprcptr
     ldc.i4 1
     stfld int32 T_identifier::Pfdeckind
-    // line 3875
+    .line 3875
     ldsfld void* _G::Uprcptr
     ldc.i4 0
     stfld int32 T_identifier::Pfkind
-    // line 3877
-    // line 3877
+    .line 3877
+    .line 3877
     ldc.i4 214
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Ufctptr
-    // line 3877
+    .line 3877
     ldsfld void* _G::Ufctptr
     ldc.i4 5
     stfld int32 T_identifier::Klass
-    // line 3877
+    .line 3877
     ldsfld void* _G::Ufctptr
     ldc.i4 1
     stfld int32 T_identifier::Pfdeckind
-    // line 3877
+    .line 3877
     ldsfld void* _G::Ufctptr
     ldc.i4 0
     stfld int32 T_identifier::Pfkind
-    // line 3879
+    .line 3879
     ldsfld void* _G::Ufctptr
     ldsfld valuetype T_alpha STRING_41    // "        "
     stfld valuetype T_alpha T_identifier::Name
-    // line 3879
+    .line 3879
     ldsfld void* _G::Ufctptr
     ldnull
     stfld void* T_identifier::Idtype
-    // line 3879
+    .line 3879
     ldsfld void* _G::Ufctptr
     ldnull
     stfld void* T_identifier::Next
-    // line 3880
+    .line 3880
     ldsfld void* _G::Ufctptr
     ldc.i4 0 // (false)
     stfld bool T_identifier::Forwdecl
-    // line 3880
+    .line 3880
     ldsfld void* _G::Ufctptr
     ldc.i4 0 // (false)
     stfld bool T_identifier::Externl
-    // line 3880
+    .line 3880
     ldsfld void* _G::Ufctptr
     ldc.i4 0
     dup
@@ -33838,19 +33838,19 @@ L_Entry:
     ldc.i4 10
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int8 T_identifier::Pflev
-    // line 3880
+    .line 3880
     ldsfld void* _G::Ufctptr
     ldflda int32 T_identifier::Pfname
     call void Genlabel(int32& Nxtlab)
-    // line 3881
+    .line 3881
     ldsfld void* _G::Ufctptr
     ldc.i4 5
     stfld int32 T_identifier::Klass
-    // line 3881
+    .line 3881
     ldsfld void* _G::Ufctptr
     ldc.i4 1
     stfld int32 T_identifier::Pfdeckind
-    // line 3881
+    .line 3881
     ldsfld void* _G::Ufctptr
     ldc.i4 0
     stfld int32 T_identifier::Pfkind
@@ -33859,7 +33859,7 @@ L_Epilogue:
     ret
 }
 
-// line 3885
+.line 3885
 
 .method static
 void Initscalars()
@@ -33872,48 +33872,48 @@ void Initscalars()
     stloc _F
 
 L_Entry:
-    // line 3886
+    .line 3886
     ldnull
     stsfld void* _G::Fwptr
-    // line 3887
+    .line 3887
     ldc.i4 0 // (false)
     stsfld bool _G::Prtables
-    // line 3887
+    .line 3887
     ldc.i4 1 // (true)
     stsfld bool _G::List
-    // line 3887
+    .line 3887
     ldc.i4 1 // (true)
     stsfld bool _G::Prcode
-    // line 3887
+    .line 3887
     ldc.i4 1 // (true)
     stsfld bool _G::Debug
-    // line 3888
+    .line 3888
     ldc.i4 1 // (true)
     stsfld bool _G::Dp
-    // line 3888
+    .line 3888
     ldc.i4 1 // (true)
     stsfld bool _G::Prterr
-    // line 3888
+    .line 3888
     ldc.i4 0
     dup
     ldc.i4 0
     ldc.i4 10
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int8 _G::Errinx
-    // line 3889
+    .line 3889
     ldc.i4 0
     stsfld int32 _G::Intlabel
-    // line 3889
+    .line 3889
     ldc.i4 8
     dup
     ldc.i4 1
     ldc.i4 8
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int8 _G::Kk
-    // line 3889
+    .line 3889
     ldnull
     stsfld void* _G::Fextfilep
-    // line 3890
+    .line 3890
     ldc.i4 5
     ldc.i4 4
     ldc.i4 1
@@ -33924,34 +33924,34 @@ L_Entry:
     ldc.i4 2147483647
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int32 _G::Lc
-    // line 3892
+    .line 3892
     ldc.i4 3
     dup
     ldc.i4 0
     ldc.i4 2147483647
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int32 _G::Ic
-    // line 3892
+    .line 3892
     ldc.i4 1 // (true)
     stsfld bool _G::Eol
-    // line 3892
+    .line 3892
     ldc.i4 0
     stsfld int32 _G::Linecount
-    // line 3893
+    .line 3893
     ldc.i4 32 // ' '
     stsfld uint8 _G::Ch
-    // line 3893
+    .line 3893
     ldc.i4 0
     stsfld int32 _G::Chcnt
-    // line 3894
+    .line 3894
     ldnull
     stsfld void* _G::Globtestp
-    // line 3895
+    .line 3895
     ldc.i4 2147483647
     ldc.i4 10
     div
     stsfld int32 _G::Mxint10
-    // line 3895
+    .line 3895
     ldc.i4 100
     ldc.i4 1
     sub
@@ -33962,7 +33962,7 @@ L_Epilogue:
     ret
 }
 
-// line 3898
+.line 3898
 
 .method static
 void Initsets()
@@ -34115,10 +34115,10 @@ void Initsets()
     call instance void T_setty::addValue(int32)
 
 L_Entry:
-    // line 3900
+    .line 3900
     ldloc $tmpSetLiteral1
     stsfld valuetype T_setty _G::Constbegsys
-    // line 3901
+    .line 3901
     ldloc $tmpSetLiteral2
     call valuetype T_set_31 _SetCastTo_T_set_31(valuetype T_setty s)
     ldsfld valuetype T_setty _G::Constbegsys
@@ -34130,7 +34130,7 @@ L_Entry:
     call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
     call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
     stsfld valuetype T_setty _G::Simptypebegsys
-    // line 3902
+    .line 3902
     ldloc $tmpSetLiteral3
     call valuetype T_set_31 _SetCastTo_T_set_31(valuetype T_setty s)
     ldsfld valuetype T_setty _G::Simptypebegsys
@@ -34142,19 +34142,19 @@ L_Entry:
     call void _SetCheck(valuetype T_set_31 s, int32 min, int32 max)
     call valuetype T_setty _SetCastTo_T_setty(valuetype T_set_31 s)
     stsfld valuetype T_setty _G::Typebegsys
-    // line 3903
+    .line 3903
     ldloc $tmpSetLiteral4
     stsfld valuetype T_setty _G::Typedels
-    // line 3904
+    .line 3904
     ldloc $tmpSetLiteral5
     stsfld valuetype T_setty _G::Blockbegsys
-    // line 3905
+    .line 3905
     ldloc $tmpSetLiteral6
     stsfld valuetype T_setty _G::Selectsys
-    // line 3906
+    .line 3906
     ldloc $tmpSetLiteral7
     stsfld valuetype T_setty _G::Facbegsys
-    // line 3907
+    .line 3907
     ldloc $tmpSetLiteral8
     stsfld valuetype T_setty _G::Statbegsys
     /* nop */
@@ -34163,7 +34163,7 @@ L_Epilogue:
     ret
 }
 
-// line 3910
+.line 3910
 
 .method static
 void Inittables()
@@ -34176,25 +34176,25 @@ void Inittables()
     stloc _F
 
 L_Entry:
-    // line 4060
+    .line 4060
     ldloc _F
     call instance void @inittables::Reswords()
-    // line 4060
+    .line 4060
     ldloc _F
     call instance void @inittables::Symbols()
-    // line 4060
+    .line 4060
     ldloc _F
     call instance void @inittables::Rators()
-    // line 4061
+    .line 4061
     ldloc _F
     call instance void @inittables::Instrmnemonics()
-    // line 4061
+    .line 4061
     ldloc _F
     call instance void @inittables::Procmnemonics()
-    // line 4062
+    .line 4062
     ldloc _F
     call instance void @inittables::Chartypes()
-    // line 4062
+    .line 4062
     ldloc _F
     call instance void @inittables::Initdx()
     /* nop */
@@ -34203,11 +34203,11 @@ L_Epilogue:
     ret
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 93
+.line 93
 
 .method static
 void _Program()
@@ -34238,93 +34238,93 @@ void _Program()
     call instance void T_setty::addValue(int32)
 
 L_Entry:
-    // line 4067
+    .line 4067
     ldsflda valuetype [lpcRuntime]LPC.File _G::Source
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 4070
+    .line 4070
     call void Initscalars()
-    // line 4070
+    .line 4070
     call void Initsets()
-    // line 4070
+    .line 4070
     call void Inittables()
-    // line 4075
+    .line 4075
     ldc.i4 0
     dup
     ldc.i4 0
     ldc.i4 10
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int8 _G::Level
-    // line 4075
+    .line 4075
     ldc.i4 0
     dup
     ldc.i4 0
     ldc.i4 20
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int8 _G::Top
-    // line 4077
+    .line 4077
     ldsflda valuetype T_array_23 _G::Display
     ldc.i4 0
     call instance valuetype T_record_22& T_array_23::ldadr(int32)
     ldnull
     stfld void* T_record_22::Fname
-    // line 4077
+    .line 4077
     ldsflda valuetype T_array_23 _G::Display
     ldc.i4 0
     call instance valuetype T_record_22& T_array_23::ldadr(int32)
     ldnull
     stfld void* T_record_22::Flabel
-    // line 4077
+    .line 4077
     ldsflda valuetype T_array_23 _G::Display
     ldc.i4 0
     call instance valuetype T_record_22& T_array_23::ldadr(int32)
     ldc.i4 0 // blck 
     stfld int32 T_record_22::Occur
-    // line 4078
+    .line 4078
     call void Enterstdtypes()
-    // line 4078
+    .line 4078
     call void Stdnames()
-    // line 4078
+    .line 4078
     call void Entstdnames()
-    // line 4078
+    .line 4078
     call void Enterundecl()
-    // line 4079
+    .line 4079
     ldc.i4 1
     dup
     ldc.i4 0
     ldc.i4 20
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int8 _G::Top
-    // line 4079
+    .line 4079
     ldc.i4 1
     dup
     ldc.i4 0
     ldc.i4 10
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int8 _G::Level
-    // line 4081
+    .line 4081
     ldsflda valuetype T_array_23 _G::Display
     ldc.i4 1
     call instance valuetype T_record_22& T_array_23::ldadr(int32)
     ldnull
     stfld void* T_record_22::Fname
-    // line 4081
+    .line 4081
     ldsflda valuetype T_array_23 _G::Display
     ldc.i4 1
     call instance valuetype T_record_22& T_array_23::ldadr(int32)
     ldnull
     stfld void* T_record_22::Flabel
-    // line 4081
+    .line 4081
     ldsflda valuetype T_array_23 _G::Display
     ldc.i4 1
     call instance valuetype T_record_22& T_array_23::ldadr(int32)
     ldc.i4 0 // blck 
     stfld int32 T_record_22::Occur
-    // line 4084
+    .line 4084
     ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 4086
+    .line 4086
     call void Insymbol()
-    // line 4087
+    .line 4087
     ldsfld valuetype T_setty _G::Blockbegsys
     ldsfld valuetype T_setty _G::Statbegsys
     call valuetype T_setty _SetUnion(valuetype T_setty a, valuetype T_setty b)
@@ -34363,7 +34363,7 @@ L_Epilogue:
 
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 //================================================================================
 // internal helpers
@@ -34506,7 +34506,7 @@ L_Epilogue:
 
 
 
-// line 0xfeefee
+.line 0xfeefee
 
 //================================================================================
 // global string literals

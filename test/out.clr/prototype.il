@@ -19,13 +19,13 @@
     ret
 }
 
-// "prototype.pas"
+.line 0 "prototype.pas"
 
-// line 34
+.line 34
 //================================================================================
 // scope: foo (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE A = array [0 .. 15] of uint8;
 .class value explicit T_A
@@ -60,7 +60,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE REC = record;
 .class value explicit T_REC
@@ -73,7 +73,7 @@
     .field [16] public valuetype T_A a
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_4 = array [0 .. 3] of uint8;
 .class value explicit T_array_4
@@ -108,7 +108,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_3 = array [0 .. 3] of valuetype T_array_4;
 .class value explicit T_array_3
@@ -145,7 +145,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE UNION = record;
 .class value explicit T_UNION
@@ -164,7 +164,7 @@
         .field [4] public valuetype T_array_3 b
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_2 = function^;
 .class sealed T_subroutine_2 extends [mscorlib]System.MulticastDelegate
@@ -193,7 +193,7 @@
 }
 
 
-// line 56
+.line 56
 //================================================================================
 // scope: test_bar (level : 3)
 
@@ -219,11 +219,11 @@
 }
 
 
-// line 54
+.line 54
 //================================================================================
 // scope: test (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE subroutine_7 = function^;
 .class sealed T_test_subroutine_7 extends [mscorlib]System.MulticastDelegate
@@ -244,7 +244,7 @@
         ret
     }
 
-// line 56
+.line 56
 
     .method public
     int32 Bar(int32 x, valuetype T_REC r, valuetype T_UNION u)
@@ -273,7 +273,7 @@
         stfld int32 @test_bar::x
     
     L_Entry:
-        // line 58
+        .line 58
         ldloc _F
         ldloc _F
         ldfld int32 @test_bar::x
@@ -313,11 +313,11 @@
 }
 
 
-// line 7
+.line 7
 //================================================================================
 // scope: program scope (level : 1)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_8 = array [1 .. 3] of uint8;
 .class value explicit T_array_8
@@ -374,7 +374,7 @@
     .field public static int32 Gv2
 }
 
-// line 34
+.line 34
 
 .method static
 int32 Foo(class T_subroutine_2 Pfn)
@@ -395,12 +395,12 @@ int32 Foo(class T_subroutine_2 Pfn)
     stfld class T_subroutine_2 @foo::Pfn
 
 L_Entry:
-    // line 40
+    .line 40
     ldloc _F
     ldflda valuetype T_UNION @foo::u
     ldc.i4 100000
     stfld int32 T_UNION::i
-    // line 42
+    .line 42
     ldc.i4 15
     stloc $tmpEndValue1
     ldc.i4 0
@@ -412,7 +412,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int32 @foo::i
 L_for_loop_1:
-    // line 42
+    .line 42
     ldloc _F
     ldflda valuetype T_UNION @foo::u
     ldflda valuetype T_A T_UNION::a
@@ -440,7 +440,7 @@ L_for_loop_1:
     br L_for_loop_1
 L_for_end_2:
     pop
-    // line 44
+    .line 44
     ldloc _F
     ldloc _F
     ldfld class T_subroutine_2 @foo::Pfn
@@ -450,13 +450,13 @@ L_for_end_2:
     ldfld valuetype T_UNION @foo::u
     call instance int32 T_subroutine_2::Invoke(int32 x, valuetype T_REC r, valuetype T_UNION u)
     stfld int32 @foo::_fnvalue
-    // line 46
-    // line 46
+    .line 46
+    .line 46
     ldloc _F
     ldc.i4 1
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @foo::p
-    // line 47
+    .line 47
     ldloc _F
     ldfld void* @foo::p
     ldnull
@@ -464,7 +464,7 @@ L_for_end_2:
     ldc.i4.0
     ceq
     brfalse L_if_end_3
-    // line 49
+    .line 49
     ldloc _F
     ldfld void* @foo::p
     ldsfld int32 _G::Gv
@@ -475,11 +475,11 @@ L_for_end_2:
     ldc.i4 255
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj uint8
-    // line 50
+    .line 50
     ldloc _F
     ldfld void* @foo::p
     call void [lpcRuntime]LPC.Heap::Free(void*)
-    // line 50
+    .line 50
     ldloc _F
     ldnull
     stfld void* @foo::p
@@ -493,7 +493,7 @@ L_Epilogue:
     ret
 }
 
-// line 54
+.line 54
 
 .method static
 void Test(int32& y)
@@ -514,10 +514,10 @@ void Test(int32& y)
     stfld int32* @test::y
 
 L_Entry:
-    // line 62
+    .line 62
     ldc.i4 1000
     stsfld int32 _G::Gv
-    // line 63
+    .line 63
     ldsflda valuetype T_REC _G::Gr
     ldflda valuetype T_A T_REC::a
     ldc.i4 0
@@ -528,10 +528,10 @@ L_Entry:
     ldc.i4 255
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stobj uint8
-    // line 64
+    .line 64
     ldc.i4 10000
     stsfld int32 _G::Gv2
-    // line 66
+    .line 66
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "foo"
@@ -546,7 +546,7 @@ L_Entry:
     call int32 Foo(class T_subroutine_2 Pfn)
     call instance void [lpcRuntime]LPC.File::Write(int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 68
+    .line 68
     ldloc _F
     ldfld int32* @test::y
     ldloc _F
@@ -561,11 +561,11 @@ L_Epilogue:
     ret
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 7
+.line 7
 
 .method static
 void _Program()
@@ -583,13 +583,13 @@ void _Program()
     call instance void [lpcRuntime]LPC.File::Init(int32)
 
 L_Entry:
-    // line 72
+    .line 72
     ldc.i4 1
     stsfld int32 _G::Gv2
-    // line 73
+    .line 73
     ldsflda int32 _G::Gv2
     call void Test(int32& y)
-    // line 74
+    .line 74
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "done, gv2 = "

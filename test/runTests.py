@@ -138,7 +138,7 @@ def run_test(test):
     #
     print_dot()
     lpc_out_path = ' -outpath=' + out_path + ' '
-    lpc_options = ' -nologo -warnings -target=%s ' % target_name
+    lpc_options = ' -nologo -debuginfo -warnings -target=%s ' % target_name
     lpc_options += lpc_out_path
     cmd = lpc_cmd + lpc_options + test + ' >> ' + console_out
 

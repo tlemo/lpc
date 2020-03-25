@@ -1,7 +1,7 @@
 
 #include <lpcRuntime.h>
 
-// "test06.pas"
+#line 0 "test06.pas"
 
 //================================================================================
 // command line argument map
@@ -15,7 +15,7 @@ _Filename* _FilenameMap = _FilenameMapEntries;
 const int _FilenameMapSize = _countof(_FilenameMapEntries);
 
 
-// line 0
+#line 0
 //================================================================================
 // scope: global scope (level : 0)
 
@@ -31,7 +31,7 @@ const T_boolean C_false = 0;
 const T_integer C_maxint = 2147483647;
 const T_boolean C_true = 1;
 
-// line 4
+#line 4
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -58,30 +58,30 @@ void P_()
     _output.init(1);
     
     // subroutine body
-    // line 28
+    #line 28
     P_init(nullptr, p);
     
-    // line 30
+    #line 30
     P_setValue(nullptr, i, p);
     
-    // line 32
+    #line 32
     _output << "i = " << i << _WRITELN;
     
-    // line 33
+    #line 33
     _output << "p^ = " << (*p._ptr) << _WRITELN;
     
-    // line 35
+    #line 35
     P_free(nullptr, p);
     
-    // line 37
+    #line 37
     if((p == nullptr))
     {
-        // line 38
+        #line 38
         _output << "ok" << _WRITELN;
     }
     else
     {
-        // line 40
+        #line 40
         _output << "FAILED!" << _WRITELN;
     }
     
@@ -89,7 +89,7 @@ void P_()
 }
 
 
-// line 11
+#line 11
 //================================================================================
 // scope: init (level : 2)
 
@@ -109,14 +109,14 @@ void P_init(void* _slink, T_ptr& Pointer)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 13
+    #line 13
     _new(_F.Pointer._ptr);
     
     { /* NOP */ }
 }
 
 
-// line 16
+#line 16
 //================================================================================
 // scope: setValue (level : 2)
 
@@ -137,17 +137,17 @@ void P_setValue(void* _slink, T_integer& Value, T_ptr& Pointer)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 18
+    #line 18
     i = 12345;
     
-    // line 19
+    #line 19
     (*_F.Pointer._ptr) = _F.Value;
     
     { /* NOP */ }
 }
 
 
-// line 22
+#line 22
 //================================================================================
 // scope: free (level : 2)
 
@@ -167,7 +167,7 @@ void P_free(void* _slink, T_ptr& Pointer)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 24
+    #line 24
     _dispose(_F.Pointer._ptr);
     
     { /* NOP */ }

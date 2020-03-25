@@ -1,7 +1,7 @@
 
 #include <lpcRuntime.h>
 
-// "p5_pint.pas"
+#line 0 "p5_pint.pas"
 
 //================================================================================
 // command line argument map
@@ -17,7 +17,7 @@ _Filename* _FilenameMap = _FilenameMapEntries;
 const int _FilenameMapSize = _countof(_FilenameMapEntries);
 
 
-// line 0
+#line 0
 //================================================================================
 // scope: global scope (level : 0)
 
@@ -33,7 +33,7 @@ const T_boolean C_false = 0;
 const T_integer C_maxint = 2147483647;
 const T_boolean C_true = 1;
 
-// line 262
+#line 262
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -268,1195 +268,1195 @@ void P_()
         }
         
         // subroutine body
-        // line 2065
+        #line 2065
         Output << "P5 Pascal interpreter vs. " << _format(C_majorver, 1, 0) << '.' << _format(C_minorver, 1, 0) << _WRITELN;
         
-        // line 2066
+        #line 2066
         Output << _WRITELN;
         
-        // line 2069
+        #line 2069
         _rewrite(Prr);
         
-        // line 2071
+        #line 2071
         Output << "Assembling/loading program" << _WRITELN;
         
-        // line 2072
+        #line 2072
         P_load(nullptr);
         
-        // line 2073
+        #line 2073
         Pc = 0;
         
-        // line 2073
+        #line 2073
         Sp = Pctop;
         
-        // line 2073
+        #line 2073
         Mp = Pctop;
         
-        // line 2073
+        #line 2073
         Np = Cp;
         
-        // line 2073
+        #line 2073
         Ep = 5;
         
-        // line 2073
+        #line 2073
         Srclin = 0;
         
-        // line 2075
+        #line 2075
         Interpreting = C_true;
         
-        // line 2077
+        #line 2077
         Output << "Running program" << _WRITELN;
         
-        // line 2078
+        #line 2078
         Output << _WRITELN;
         
-        // line 2079
+        #line 2079
         while(Interpreting)
         {
-            // line 2083
+            #line 2083
             Pcs = Pc;
             
-            // line 2084
+            #line 2084
             P_getop(nullptr);
             
-            // line 2089
+            #line 2089
             if(C_dotrcins)
             {
-                // line 2091
+                #line 2091
                 P_wrthex(nullptr, Pcs, C_maxdigh);
                 
-                // line 2092
+                #line 2092
                 Output << '/';
                 
-                // line 2093
+                #line 2093
                 P_wrthex(nullptr, Sp, C_maxdigh);
                 
-                // line 2094
+                #line 2094
                 P_lstins(nullptr, Pcs);
                 
-                // line 2095
+                #line 2095
                 Output << _WRITELN;
             }
             
-            // line 2098
+            #line 2098
             switch(Op)
             {
             case 0:
-                // line 2100
+                #line 2100
                 P_getp(nullptr);
                 
-                // line 2100
+                #line 2100
                 P_getq(nullptr);
                 
-                // line 2100
+                #line 2100
                 P_pshint(nullptr, F_getint(nullptr, T_address::C((F_base(nullptr, p) + q))));
                 break;
             
             case 105:
-                // line 2101
+                #line 2101
                 P_getp(nullptr);
                 
-                // line 2101
+                #line 2101
                 P_getq(nullptr);
                 
-                // line 2101
+                #line 2101
                 P_pshadr(nullptr, F_getadr(nullptr, T_address::C((F_base(nullptr, p) + q))));
                 break;
             
             case 106:
-                // line 2102
+                #line 2102
                 P_getp(nullptr);
                 
-                // line 2102
+                #line 2102
                 P_getq(nullptr);
                 
-                // line 2102
+                #line 2102
                 P_pshrel(nullptr, F_getrel(nullptr, T_address::C((F_base(nullptr, p) + q))));
                 break;
             
             case 107:
-                // line 2103
+                #line 2103
                 P_getp(nullptr);
                 
-                // line 2103
+                #line 2103
                 P_getq(nullptr);
                 
-                // line 2103
+                #line 2103
                 P_getset(nullptr, T_address::C((F_base(nullptr, p) + q)), S1);
                 
-                // line 2103
+                #line 2103
                 P_pshset(nullptr, S1);
                 break;
             
             case 108:
-                // line 2104
+                #line 2104
                 P_getp(nullptr);
                 
-                // line 2104
+                #line 2104
                 P_getq(nullptr);
                 
-                // line 2104
+                #line 2104
                 P_pshint(nullptr, _ord(F_getbol(nullptr, T_address::C((F_base(nullptr, p) + q)))));
                 break;
             
             case 109:
-                // line 2105
+                #line 2105
                 P_getp(nullptr);
                 
-                // line 2105
+                #line 2105
                 P_getq(nullptr);
                 
-                // line 2105
+                #line 2105
                 P_pshint(nullptr, _ord(F_getchr(nullptr, T_address::C((F_base(nullptr, p) + q)))));
                 break;
             
             case 1:
-                // line 2107
+                #line 2107
                 P_getq(nullptr);
                 
-                // line 2107
+                #line 2107
                 P_pshint(nullptr, F_getint(nullptr, T_address::C((Pctop + q))));
                 break;
             
             case 65:
-                // line 2108
+                #line 2108
                 P_getq(nullptr);
                 
-                // line 2108
+                #line 2108
                 P_pshadr(nullptr, F_getadr(nullptr, T_address::C((Pctop + q))));
                 break;
             
             case 66:
-                // line 2109
+                #line 2109
                 P_getq(nullptr);
                 
-                // line 2109
+                #line 2109
                 P_pshrel(nullptr, F_getrel(nullptr, T_address::C((Pctop + q))));
                 break;
             
             case 67:
-                // line 2110
+                #line 2110
                 P_getq(nullptr);
                 
-                // line 2110
+                #line 2110
                 P_getset(nullptr, T_address::C((Pctop + q)), S1);
                 
-                // line 2110
+                #line 2110
                 P_pshset(nullptr, S1);
                 break;
             
             case 68:
-                // line 2111
+                #line 2111
                 P_getq(nullptr);
                 
-                // line 2111
+                #line 2111
                 P_pshint(nullptr, _ord(F_getbol(nullptr, T_address::C((Pctop + q)))));
                 break;
             
             case 69:
-                // line 2112
+                #line 2112
                 P_getq(nullptr);
                 
-                // line 2112
+                #line 2112
                 P_pshint(nullptr, _ord(F_getchr(nullptr, T_address::C((Pctop + q)))));
                 break;
             
             case 2:
-                // line 2114
+                #line 2114
                 P_getp(nullptr);
                 
-                // line 2114
+                #line 2114
                 P_getq(nullptr);
                 
-                // line 2114
+                #line 2114
                 P_popint(nullptr, i);
                 
-                // line 2114
+                #line 2114
                 P_putint(nullptr, T_address::C((F_base(nullptr, p) + q)), i);
                 break;
             
             case 70:
-                // line 2115
+                #line 2115
                 P_getp(nullptr);
                 
-                // line 2115
+                #line 2115
                 P_getq(nullptr);
                 
-                // line 2115
+                #line 2115
                 P_popadr(nullptr, Ad);
                 
-                // line 2115
+                #line 2115
                 P_putadr(nullptr, T_address::C((F_base(nullptr, p) + q)), Ad);
                 break;
             
             case 71:
-                // line 2116
+                #line 2116
                 P_getp(nullptr);
                 
-                // line 2116
+                #line 2116
                 P_getq(nullptr);
                 
-                // line 2116
+                #line 2116
                 P_poprel(nullptr, R1);
                 
-                // line 2116
+                #line 2116
                 P_putrel(nullptr, T_address::C((F_base(nullptr, p) + q)), R1);
                 break;
             
             case 72:
-                // line 2117
+                #line 2117
                 P_getp(nullptr);
                 
-                // line 2117
+                #line 2117
                 P_getq(nullptr);
                 
-                // line 2117
+                #line 2117
                 P_popset(nullptr, S1);
                 
-                // line 2117
+                #line 2117
                 P_putset(nullptr, T_address::C((F_base(nullptr, p) + q)), S1);
                 break;
             
             case 73:
-                // line 2118
+                #line 2118
                 P_getp(nullptr);
                 
-                // line 2118
+                #line 2118
                 P_getq(nullptr);
                 
-                // line 2118
+                #line 2118
                 P_popint(nullptr, I1);
                 
-                // line 2118
+                #line 2118
                 B1 = (I1 != 0);
                 
-                // line 2119
+                #line 2119
                 P_putbol(nullptr, T_address::C((F_base(nullptr, p) + q)), B1);
                 break;
             
             case 74:
-                // line 2120
+                #line 2120
                 P_getp(nullptr);
                 
-                // line 2120
+                #line 2120
                 P_getq(nullptr);
                 
-                // line 2120
+                #line 2120
                 P_popint(nullptr, I1);
                 
-                // line 2120
+                #line 2120
                 C1 = _chr(I1);
                 
-                // line 2121
+                #line 2121
                 P_putchr(nullptr, T_address::C((F_base(nullptr, p) + q)), C1);
                 break;
             
             case 3:
-                // line 2123
+                #line 2123
                 P_getq(nullptr);
                 
-                // line 2123
+                #line 2123
                 P_popint(nullptr, i);
                 
-                // line 2123
+                #line 2123
                 P_putint(nullptr, T_address::C((Pctop + q)), i);
                 
                 { /* NOP */ }
                 break;
             
             case 75:
-                // line 2124
+                #line 2124
                 P_getq(nullptr);
                 
-                // line 2124
+                #line 2124
                 P_popadr(nullptr, Ad);
                 
-                // line 2124
+                #line 2124
                 P_putadr(nullptr, T_address::C((Pctop + q)), Ad);
                 
                 { /* NOP */ }
                 break;
             
             case 76:
-                // line 2125
+                #line 2125
                 P_getq(nullptr);
                 
-                // line 2125
+                #line 2125
                 P_poprel(nullptr, R1);
                 
-                // line 2125
+                #line 2125
                 P_putrel(nullptr, T_address::C((Pctop + q)), R1);
                 
                 { /* NOP */ }
                 break;
             
             case 77:
-                // line 2126
+                #line 2126
                 P_getq(nullptr);
                 
-                // line 2126
+                #line 2126
                 P_popset(nullptr, S1);
                 
-                // line 2126
+                #line 2126
                 P_putset(nullptr, T_address::C((Pctop + q)), S1);
                 
                 { /* NOP */ }
                 break;
             
             case 78:
-                // line 2127
+                #line 2127
                 P_getq(nullptr);
                 
-                // line 2127
+                #line 2127
                 P_popint(nullptr, I1);
                 
-                // line 2127
+                #line 2127
                 B1 = (I1 != 0);
                 
-                // line 2127
+                #line 2127
                 P_putbol(nullptr, T_address::C((Pctop + q)), B1);
                 
                 { /* NOP */ }
                 break;
             
             case 79:
-                // line 2128
+                #line 2128
                 P_getq(nullptr);
                 
-                // line 2128
+                #line 2128
                 P_popint(nullptr, I1);
                 
-                // line 2128
+                #line 2128
                 C1 = _chr(I1);
                 
-                // line 2128
+                #line 2128
                 P_putchr(nullptr, T_address::C((Pctop + q)), C1);
                 
                 { /* NOP */ }
                 break;
             
             case 4:
-                // line 2130
+                #line 2130
                 P_getp(nullptr);
                 
-                // line 2130
+                #line 2130
                 P_getq(nullptr);
                 
-                // line 2130
+                #line 2130
                 P_pshadr(nullptr, T_address::C((F_base(nullptr, p) + q)));
                 break;
             
             case 5:
-                // line 2131
+                #line 2131
                 P_getq(nullptr);
                 
-                // line 2131
+                #line 2131
                 P_pshadr(nullptr, T_address::C((Pctop + q)));
                 break;
             
             case 6:
-                // line 2133
+                #line 2133
                 P_popint(nullptr, i);
                 
-                // line 2133
+                #line 2133
                 P_popadr(nullptr, Ad);
                 
-                // line 2133
+                #line 2133
                 P_putint(nullptr, Ad, i);
                 break;
             
             case 80:
-                // line 2134
+                #line 2134
                 P_popadr(nullptr, Ad1);
                 
-                // line 2134
+                #line 2134
                 P_popadr(nullptr, Ad);
                 
-                // line 2134
+                #line 2134
                 P_putadr(nullptr, Ad, Ad1);
                 break;
             
             case 81:
-                // line 2135
+                #line 2135
                 P_poprel(nullptr, R1);
                 
-                // line 2135
+                #line 2135
                 P_popadr(nullptr, Ad);
                 
-                // line 2135
+                #line 2135
                 P_putrel(nullptr, Ad, R1);
                 break;
             
             case 82:
-                // line 2136
+                #line 2136
                 P_popset(nullptr, S1);
                 
-                // line 2136
+                #line 2136
                 P_popadr(nullptr, Ad);
                 
-                // line 2136
+                #line 2136
                 P_putset(nullptr, Ad, S1);
                 break;
             
             case 83:
-                // line 2137
+                #line 2137
                 P_popint(nullptr, I1);
                 
-                // line 2137
+                #line 2137
                 B1 = (I1 != 0);
                 
-                // line 2137
+                #line 2137
                 P_popadr(nullptr, Ad);
                 
-                // line 2138
+                #line 2138
                 P_putbol(nullptr, Ad, B1);
                 break;
             
             case 84:
-                // line 2139
+                #line 2139
                 P_popint(nullptr, I1);
                 
-                // line 2139
+                #line 2139
                 C1 = _chr(I1);
                 
-                // line 2139
+                #line 2139
                 P_popadr(nullptr, Ad);
                 
-                // line 2140
+                #line 2140
                 P_putchr(nullptr, Ad, C1);
                 break;
             
             case 127:
-                // line 2142
+                #line 2142
                 P_pshint(nullptr, _ord(F_getchr(nullptr, Pc)));
                 
-                // line 2142
+                #line 2142
                 Pc = (Pc + 1);
                 break;
             
             case 126:
-                // line 2143
+                #line 2143
                 P_pshint(nullptr, _ord(F_getbol(nullptr, Pc)));
                 
-                // line 2143
+                #line 2143
                 Pc = (Pc + 1);
                 break;
             
             case 123:
-                // line 2144
+                #line 2144
                 i = F_getint(nullptr, Pc);
                 
-                // line 2144
+                #line 2144
                 Pc = (Pc + C_intsize);
                 
-                // line 2144
+                #line 2144
                 P_pshint(nullptr, i);
                 break;
             
             case 125:
-                // line 2145
+                #line 2145
                 P_pshadr(nullptr, T_address::C(C_nilval));
                 break;
             
             case 124:
-                // line 2146
+                #line 2146
                 P_getq(nullptr);
                 
-                // line 2146
+                #line 2146
                 P_pshrel(nullptr, F_getrel(nullptr, q));
                 break;
             
             case 7:
-                // line 2147
+                #line 2147
                 P_getq(nullptr);
                 
-                // line 2147
+                #line 2147
                 P_getset(nullptr, q, S1);
                 
-                // line 2147
+                #line 2147
                 P_pshset(nullptr, S1);
                 break;
             
             case 9:
-                // line 2149
+                #line 2149
                 P_getq(nullptr);
                 
-                // line 2149
+                #line 2149
                 P_popadr(nullptr, Ad);
                 
-                // line 2149
+                #line 2149
                 P_pshint(nullptr, F_getint(nullptr, T_address::C((Ad + q))));
                 break;
             
             case 85:
-                // line 2150
+                #line 2150
                 P_getq(nullptr);
                 
-                // line 2150
+                #line 2150
                 P_popadr(nullptr, Ad);
                 
-                // line 2150
+                #line 2150
                 Ad1 = F_getadr(nullptr, T_address::C((Ad + q)));
                 
-                // line 2150
+                #line 2150
                 P_pshadr(nullptr, Ad1);
                 break;
             
             case 86:
-                // line 2151
+                #line 2151
                 P_getq(nullptr);
                 
-                // line 2151
+                #line 2151
                 P_popadr(nullptr, Ad);
                 
-                // line 2151
+                #line 2151
                 P_pshrel(nullptr, F_getrel(nullptr, T_address::C((Ad + q))));
                 break;
             
             case 87:
-                // line 2152
+                #line 2152
                 P_getq(nullptr);
                 
-                // line 2152
+                #line 2152
                 P_popadr(nullptr, Ad);
                 
-                // line 2152
+                #line 2152
                 P_getset(nullptr, T_address::C((Ad + q)), S1);
                 
-                // line 2152
+                #line 2152
                 P_pshset(nullptr, S1);
                 break;
             
             case 88:
-                // line 2153
+                #line 2153
                 P_getq(nullptr);
                 
-                // line 2153
+                #line 2153
                 P_popadr(nullptr, Ad);
                 
-                // line 2153
+                #line 2153
                 P_pshint(nullptr, _ord(F_getbol(nullptr, T_address::C((Ad + q)))));
                 break;
             
             case 89:
-                // line 2154
+                #line 2154
                 P_getq(nullptr);
                 
-                // line 2154
+                #line 2154
                 P_popadr(nullptr, Ad);
                 
-                // line 2154
+                #line 2154
                 P_pshint(nullptr, _ord(F_getchr(nullptr, T_address::C((Ad + q)))));
                 break;
             
             case 93:
             case 94:
             case 10:
-                // line 2158
+                #line 2158
                 P_getq(nullptr);
                 
-                // line 2158
+                #line 2158
                 P_popint(nullptr, I1);
                 
-                // line 2158
+                #line 2158
                 P_pshint(nullptr, (I1 + q));
                 break;
             
             case 90:
-                // line 2159
+                #line 2159
                 P_getq(nullptr);
                 
-                // line 2159
+                #line 2159
                 P_popadr(nullptr, A1);
                 
-                // line 2159
+                #line 2159
                 P_pshadr(nullptr, T_address::C((A1 + q)));
                 break;
             
             case 91:
             case 92:
-                // line 2161
+                #line 2161
                 P_errori(nullptr, T_beta::C("Instruction error        "));
                 break;
             
             case 11:
-                // line 2167
+                #line 2167
                 P_getp(nullptr);
                 
-                // line 2168
+                #line 2168
                 Ad = Sp;
                 
-                // line 2169
+                #line 2169
                 Sp = (Sp + C_marksize);
                 
-                // line 2170
+                #line 2170
                 P_putadr(nullptr, T_address::C((Ad + C_marksl)), F_base(nullptr, p));
                 
-                // line 2172
+                #line 2172
                 P_putadr(nullptr, T_address::C((Ad + C_markdl)), Mp);
                 
-                // line 2174
+                #line 2174
                 P_putadr(nullptr, T_address::C((Ad + C_markep)), Ep);
                 
                 { /* NOP */ }
                 break;
             
             case 12:
-                // line 2179
+                #line 2179
                 P_getp(nullptr);
                 
-                // line 2179
+                #line 2179
                 P_getq(nullptr);
                 
-                // line 2180
+                #line 2180
                 Mp = (Sp - (p + C_marksize));
                 
-                // line 2181
+                #line 2181
                 P_putadr(nullptr, T_address::C((Mp + C_markra)), Pc);
                 
-                // line 2182
+                #line 2182
                 Pc = q;
                 break;
             
             case 13:
-                // line 2185
+                #line 2185
                 P_getq(nullptr);
                 
-                // line 2185
+                #line 2185
                 Ad = (Mp + q);
                 
-                // line 2186
+                #line 2186
                 if((Sp >= Np))
                 {
-                    // line 2186
+                    #line 2186
                     P_errori(nullptr, T_beta::C("store overflow           "));
                 }
                 
-                // line 2188
+                #line 2188
                 while((Sp < Ad))
                 {
-                    // line 2188
+                    #line 2188
                     Store[Sp] = 0;
                     
-                    // line 2188
+                    #line 2188
                     Sp = (Sp + 1);
                 }
                 
-                // line 2189
+                #line 2189
                 P_putadr(nullptr, T_address::C((Mp + C_marksb)), Sp);
                 break;
             
             case 173:
-                // line 2192
+                #line 2192
                 P_getq(nullptr);
                 
-                // line 2192
+                #line 2192
                 Ep = (Sp + q);
                 
-                // line 2193
+                #line 2193
                 if((Ep >= Np))
                 {
-                    // line 2193
+                    #line 2193
                     P_errori(nullptr, T_beta::C("store overflow           "));
                 }
                 
-                // line 2194
+                #line 2194
                 P_putadr(nullptr, T_address::C((Mp + C_market)), Ep);
                 break;
             
             case 14:
-                // line 2199
+                #line 2199
                 Sp = Mp;
                 
-                // line 2200
+                #line 2200
                 Pc = F_getadr(nullptr, T_address::C((Mp + C_markra)));
                 
-                // line 2201
+                #line 2201
                 Ep = F_getadr(nullptr, T_address::C((Mp + C_markep)));
                 
-                // line 2202
+                #line 2202
                 Mp = F_getadr(nullptr, T_address::C((Mp + C_markdl)));
                 break;
             
             case 130:
-                // line 2207
+                #line 2207
                 P_putint(nullptr, Mp, _ord(F_getchr(nullptr, Mp)));
                 
-                // line 2208
+                #line 2208
                 Sp = (Mp + C_intsize);
                 
-                // line 2209
+                #line 2209
                 Pc = F_getadr(nullptr, T_address::C((Mp + C_markra)));
                 
-                // line 2210
+                #line 2210
                 Ep = F_getadr(nullptr, T_address::C((Mp + C_markep)));
                 
-                // line 2211
+                #line 2211
                 Mp = F_getadr(nullptr, T_address::C((Mp + C_markdl)));
                 break;
             
             case 131:
-                // line 2214
+                #line 2214
                 P_putint(nullptr, Mp, _ord(F_getbol(nullptr, Mp)));
                 
-                // line 2215
+                #line 2215
                 Sp = (Mp + C_intsize);
                 
-                // line 2216
+                #line 2216
                 Pc = F_getadr(nullptr, T_address::C((Mp + C_markra)));
                 
-                // line 2217
+                #line 2217
                 Ep = F_getadr(nullptr, T_address::C((Mp + C_markep)));
                 
-                // line 2218
+                #line 2218
                 Mp = F_getadr(nullptr, T_address::C((Mp + C_markdl)));
                 break;
             
             case 128:
-                // line 2221
+                #line 2221
                 Sp = (Mp + C_intsize);
                 
-                // line 2222
+                #line 2222
                 Pc = F_getadr(nullptr, T_address::C((Mp + C_markra)));
                 
-                // line 2223
+                #line 2223
                 Ep = F_getadr(nullptr, T_address::C((Mp + C_markep)));
                 
-                // line 2224
+                #line 2224
                 Mp = F_getadr(nullptr, T_address::C((Mp + C_markdl)));
                 break;
             
             case 129:
-                // line 2227
+                #line 2227
                 Sp = (Mp + C_realsize);
                 
-                // line 2228
+                #line 2228
                 Pc = F_getadr(nullptr, T_address::C((Mp + C_markra)));
                 
-                // line 2229
+                #line 2229
                 Ep = F_getadr(nullptr, T_address::C((Mp + C_markep)));
                 
-                // line 2230
+                #line 2230
                 Mp = F_getadr(nullptr, T_address::C((Mp + C_markdl)));
                 break;
             
             case 132:
-                // line 2233
+                #line 2233
                 Sp = (Mp + C_adrsize);
                 
-                // line 2234
+                #line 2234
                 Pc = F_getadr(nullptr, T_address::C((Mp + C_markra)));
                 
-                // line 2235
+                #line 2235
                 Ep = F_getadr(nullptr, T_address::C((Mp + C_markep)));
                 
-                // line 2236
+                #line 2236
                 Mp = F_getadr(nullptr, T_address::C((Mp + C_markdl)));
                 break;
             
             case 15:
-                // line 2239
+                #line 2239
                 P_getq(nullptr);
                 
-                // line 2239
+                #line 2239
                 P_callsp(nullptr);
                 break;
             
             case 16:
-                // line 2241
+                #line 2241
                 P_getq(nullptr);
                 
-                // line 2241
+                #line 2241
                 P_popint(nullptr, i);
                 
-                // line 2241
+                #line 2241
                 P_popadr(nullptr, A1);
                 
-                // line 2241
+                #line 2241
                 P_pshadr(nullptr, T_address::C(((q * i) + A1)));
                 break;
             
             case 17:
-                // line 2243
+                #line 2243
                 P_popadr(nullptr, A2);
                 
-                // line 2243
+                #line 2243
                 P_popadr(nullptr, A1);
                 
-                // line 2243
+                #line 2243
                 P_pshint(nullptr, _ord((A1 == A2)));
                 break;
             
             case 139:
             case 141:
             case 137:
-                // line 2246
+                #line 2246
                 P_popint(nullptr, I2);
                 
-                // line 2246
+                #line 2246
                 P_popint(nullptr, I1);
                 
-                // line 2246
+                #line 2246
                 P_pshint(nullptr, _ord((I1 == I2)));
                 break;
             
             case 138:
-                // line 2247
+                #line 2247
                 P_poprel(nullptr, R2);
                 
-                // line 2247
+                #line 2247
                 P_poprel(nullptr, R1);
                 
-                // line 2247
+                #line 2247
                 P_pshint(nullptr, _ord((R1 == R2)));
                 break;
             
             case 140:
-                // line 2248
+                #line 2248
                 P_popset(nullptr, S2);
                 
-                // line 2248
+                #line 2248
                 P_popset(nullptr, S1);
                 
-                // line 2248
+                #line 2248
                 P_pshint(nullptr, _ord((S1 == S2)));
                 break;
             
             case 142:
-                // line 2249
+                #line 2249
                 P_getq(nullptr);
                 
-                // line 2249
+                #line 2249
                 P_compare(nullptr);
                 
-                // line 2249
+                #line 2249
                 P_pshint(nullptr, _ord(b));
                 break;
             
             case 18:
-                // line 2251
+                #line 2251
                 P_popadr(nullptr, A2);
                 
-                // line 2251
+                #line 2251
                 P_popadr(nullptr, A1);
                 
-                // line 2251
+                #line 2251
                 P_pshint(nullptr, _ord((A1 != A2)));
                 break;
             
             case 145:
             case 147:
             case 143:
-                // line 2254
+                #line 2254
                 P_popint(nullptr, I2);
                 
-                // line 2254
+                #line 2254
                 P_popint(nullptr, I1);
                 
-                // line 2254
+                #line 2254
                 P_pshint(nullptr, _ord((I1 != I2)));
                 break;
             
             case 144:
-                // line 2255
+                #line 2255
                 P_poprel(nullptr, R2);
                 
-                // line 2255
+                #line 2255
                 P_poprel(nullptr, R1);
                 
-                // line 2255
+                #line 2255
                 P_pshint(nullptr, _ord((R1 != R2)));
                 break;
             
             case 146:
-                // line 2256
+                #line 2256
                 P_popset(nullptr, S2);
                 
-                // line 2256
+                #line 2256
                 P_popset(nullptr, S1);
                 
-                // line 2256
+                #line 2256
                 P_pshint(nullptr, _ord((S1 != S2)));
                 break;
             
             case 148:
-                // line 2257
+                #line 2257
                 P_getq(nullptr);
                 
-                // line 2257
+                #line 2257
                 P_compare(nullptr);
                 
-                // line 2257
+                #line 2257
                 P_pshint(nullptr, _ord((!b)));
                 break;
             
             case 19:
-                // line 2259
+                #line 2259
                 P_errori(nullptr, T_beta::C("<,<=,>,>= for address    "));
                 break;
             
             case 151:
             case 153:
             case 149:
-                // line 2262
+                #line 2262
                 P_popint(nullptr, I2);
                 
-                // line 2262
+                #line 2262
                 P_popint(nullptr, I1);
                 
-                // line 2262
+                #line 2262
                 P_pshint(nullptr, _ord((I1 >= I2)));
                 break;
             
             case 150:
-                // line 2263
+                #line 2263
                 P_poprel(nullptr, R2);
                 
-                // line 2263
+                #line 2263
                 P_poprel(nullptr, R1);
                 
-                // line 2263
+                #line 2263
                 P_pshint(nullptr, _ord((R1 >= R2)));
                 break;
             
             case 152:
-                // line 2264
+                #line 2264
                 P_popset(nullptr, S2);
                 
-                // line 2264
+                #line 2264
                 P_popset(nullptr, S1);
                 
-                // line 2264
+                #line 2264
                 P_pshint(nullptr, _ord((S1 >= S2)));
                 break;
             
             case 154:
-                // line 2265
+                #line 2265
                 P_getq(nullptr);
                 
-                // line 2265
+                #line 2265
                 P_compare(nullptr);
                 
-                // line 2265
+                #line 2265
                 P_pshint(nullptr, _ord((b || (Store[(A1 + i)] >= Store[(A2 + i)]))));
                 break;
             
             case 20:
-                // line 2267
+                #line 2267
                 P_errori(nullptr, T_beta::C("<,<=,>,>= for address    "));
                 break;
             
             case 157:
             case 159:
             case 155:
-                // line 2270
+                #line 2270
                 P_popint(nullptr, I2);
                 
-                // line 2270
+                #line 2270
                 P_popint(nullptr, I1);
                 
-                // line 2270
+                #line 2270
                 P_pshint(nullptr, _ord((I1 > I2)));
                 break;
             
             case 156:
-                // line 2271
+                #line 2271
                 P_poprel(nullptr, R2);
                 
-                // line 2271
+                #line 2271
                 P_poprel(nullptr, R1);
                 
-                // line 2271
+                #line 2271
                 P_pshint(nullptr, _ord((R1 > R2)));
                 break;
             
             case 158:
-                // line 2272
+                #line 2272
                 P_errori(nullptr, T_beta::C("set inclusion            "));
                 break;
             
             case 160:
-                // line 2273
+                #line 2273
                 P_getq(nullptr);
                 
-                // line 2273
+                #line 2273
                 P_compare(nullptr);
                 
-                // line 2273
+                #line 2273
                 P_pshint(nullptr, _ord(((!b) && (Store[(A1 + i)] > Store[(A2 + i)]))));
                 break;
             
             case 21:
-                // line 2275
+                #line 2275
                 P_errori(nullptr, T_beta::C("<,<=,>,>= for address    "));
                 break;
             
             case 163:
             case 165:
             case 161:
-                // line 2278
+                #line 2278
                 P_popint(nullptr, I2);
                 
-                // line 2278
+                #line 2278
                 P_popint(nullptr, I1);
                 
-                // line 2278
+                #line 2278
                 P_pshint(nullptr, _ord((I1 <= I2)));
                 break;
             
             case 162:
-                // line 2279
+                #line 2279
                 P_poprel(nullptr, R2);
                 
-                // line 2279
+                #line 2279
                 P_poprel(nullptr, R1);
                 
-                // line 2279
+                #line 2279
                 P_pshint(nullptr, _ord((R1 <= R2)));
                 break;
             
             case 164:
-                // line 2280
+                #line 2280
                 P_popset(nullptr, S2);
                 
-                // line 2280
+                #line 2280
                 P_popset(nullptr, S1);
                 
-                // line 2280
+                #line 2280
                 P_pshint(nullptr, _ord((S1 <= S2)));
                 break;
             
             case 166:
-                // line 2281
+                #line 2281
                 P_getq(nullptr);
                 
-                // line 2281
+                #line 2281
                 P_compare(nullptr);
                 
-                // line 2281
+                #line 2281
                 P_pshint(nullptr, _ord((b || (Store[(A1 + i)] <= Store[(A2 + i)]))));
                 break;
             
             case 22:
-                // line 2283
+                #line 2283
                 P_errori(nullptr, T_beta::C("<,<=,>,>= for address    "));
                 break;
             
             case 169:
             case 171:
             case 167:
-                // line 2286
+                #line 2286
                 P_popint(nullptr, I2);
                 
-                // line 2286
+                #line 2286
                 P_popint(nullptr, I1);
                 
-                // line 2286
+                #line 2286
                 P_pshint(nullptr, _ord((I1 < I2)));
                 break;
             
             case 168:
-                // line 2287
+                #line 2287
                 P_poprel(nullptr, R2);
                 
-                // line 2287
+                #line 2287
                 P_poprel(nullptr, R1);
                 
-                // line 2287
+                #line 2287
                 P_pshint(nullptr, _ord((R1 < R2)));
                 break;
             
             case 170:
-                // line 2288
+                #line 2288
                 P_errori(nullptr, T_beta::C("set inclusion            "));
                 break;
             
             case 172:
-                // line 2289
+                #line 2289
                 P_getq(nullptr);
                 
-                // line 2289
+                #line 2289
                 P_compare(nullptr);
                 
-                // line 2289
+                #line 2289
                 P_pshint(nullptr, _ord(((!b) && (Store[(A1 + i)] < Store[(A2 + i)]))));
                 break;
             
             case 23:
-                // line 2291
+                #line 2291
                 P_getq(nullptr);
                 
-                // line 2291
+                #line 2291
                 Pc = q;
                 break;
             
             case 24:
-                // line 2292
+                #line 2292
                 P_getq(nullptr);
                 
-                // line 2292
+                #line 2292
                 P_popint(nullptr, i);
                 
-                // line 2292
+                #line 2292
                 if((i == 0))
                 {
-                    // line 2292
+                    #line 2292
                     Pc = q;
                 }
                 break;
             
             case 25:
-                // line 2293
+                #line 2293
                 P_getq(nullptr);
                 
-                // line 2293
+                #line 2293
                 P_popint(nullptr, I1);
                 
-                // line 2293
+                #line 2293
                 Pc = ((I1 * C_ujplen) + q);
                 break;
             
             case 95:
-                // line 2295
+                #line 2295
                 P_getq(nullptr);
                 
-                // line 2295
+                #line 2295
                 P_popadr(nullptr, A1);
                 
-                // line 2295
+                #line 2295
                 P_pshadr(nullptr, A1);
                 
-                // line 2298
+                #line 2298
                 if((A1 == 0))
                 {
-                    // line 2300
+                    #line 2300
                     P_errori(nullptr, T_beta::C("uninitialized pointer    "));
                 }
                 else
                 {
-                    // line 2301
+                    #line 2301
                     if(((q != 0) && (A1 == C_nilval)))
                     {
-                        // line 2304
+                        #line 2304
                         P_errori(nullptr, T_beta::C("Dereference of nil ptr   "));
                     }
                     else
                     {
-                        // line 2305
+                        #line 2305
                         if((((A1 < Np) || (A1 >= Cp)) && (A1 != C_nilval)))
                         {
-                            // line 2309
+                            #line 2309
                             P_errori(nullptr, T_beta::C("bad pointer value        "));
                         }
                         else
                         {
-                            // line 2310
+                            #line 2310
                             if((C_dochkrpt && (A1 != C_nilval)))
                             {
-                                // line 2312
+                                #line 2312
                                 if(F_isfree(nullptr, A1))
                                 {
-                                    // line 2315
+                                    #line 2315
                                     P_errori(nullptr, T_beta::C("Ptr used after dispose op"));
                                 }
                             }
@@ -1467,82 +1467,82 @@ void P_()
             
             case 96:
             case 97:
-                // line 2319
+                #line 2319
                 P_errori(nullptr, T_beta::C("Instruction error        "));
                 break;
             
             case 98:
             case 99:
             case 26:
-                // line 2322
+                #line 2322
                 P_getq(nullptr);
                 
-                // line 2322
+                #line 2322
                 P_popint(nullptr, I1);
                 
-                // line 2322
+                #line 2322
                 P_pshint(nullptr, I1);
                 
-                // line 2323
+                #line 2323
                 if(((I1 < F_getint(nullptr, q)) || (I1 > F_getint(nullptr, T_address::C((q + C_intsize))))))
                 {
-                    // line 2324
+                    #line 2324
                     P_errori(nullptr, T_beta::C("value out of range       "));
                 }
                 break;
             
             case 27:
-                // line 2327
+                #line 2327
                 P_popadr(nullptr, Ad);
                 
-                // line 2327
+                #line 2327
                 P_valfil(nullptr, Ad);
                 
-                // line 2327
+                #line 2327
                 Fn = Store[Ad];
                 
-                // line 2328
+                #line 2328
                 if((Fn <= C_prrfn))
                 {
-                    // line 2328
+                    #line 2328
                     switch(Fn)
                     {
                     case C_inputfn:
-                        // line 2329
+                        #line 2329
                         P_pshint(nullptr, _ord(_eof(Input)));
                         break;
                     
                     case C_prdfn:
-                        // line 2330
+                        #line 2330
                         P_pshint(nullptr, _ord(_eof(Prd)));
                         break;
                     
                     case C_outputfn:
                     case C_prrfn:
-                        // line 2332
+                        #line 2332
                         P_errori(nullptr, T_beta::C("eof test on output file  "));
                         break;
                     }
                 }
                 else
                 {
-                    // line 2334
+                    #line 2334
                     if((Filstate[Fn] == C_fwrite))
                     {
-                        // line 2334
+                        #line 2334
                         P_pshint(nullptr, _ord(C_true));
                     }
                     else
                     {
-                        // line 2335
+                        #line 2335
                         if((Filstate[Fn] == C_fread))
                         {
-                            // line 2336
+                            #line 2336
                             P_pshint(nullptr, _ord((_eof(Filtable[Fn]) && (!Filbuff[Fn]))));
                         }
                         else
                         {
-                            // line 2337
+                            #line 2337
                             P_errori(nullptr, T_beta::C("file is not open         "));
                         }
                     }
@@ -1550,54 +1550,54 @@ void P_()
                 break;
             
             case 28:
-                // line 2341
+                #line 2341
                 P_popint(nullptr, I2);
                 
-                // line 2341
+                #line 2341
                 P_popint(nullptr, I1);
                 
-                // line 2341
+                #line 2341
                 P_pshint(nullptr, (I1 + I2));
                 break;
             
             case 29:
-                // line 2342
+                #line 2342
                 P_poprel(nullptr, R2);
                 
-                // line 2342
+                #line 2342
                 P_poprel(nullptr, R1);
                 
-                // line 2342
+                #line 2342
                 P_pshrel(nullptr, (R1 + R2));
                 break;
             
             case 30:
-                // line 2343
+                #line 2343
                 P_popint(nullptr, I2);
                 
-                // line 2343
+                #line 2343
                 P_popint(nullptr, I1);
                 
-                // line 2343
+                #line 2343
                 P_pshint(nullptr, (I1 - I2));
                 break;
             
             case 31:
-                // line 2344
+                #line 2344
                 P_poprel(nullptr, R2);
                 
-                // line 2344
+                #line 2344
                 P_poprel(nullptr, R1);
                 
-                // line 2344
+                #line 2344
                 P_pshrel(nullptr, (R1 - R2));
                 break;
             
             case 32:
-                // line 2345
+                #line 2345
                 P_popint(nullptr, I1);
                 
-                // line 2345
+                #line 2345
                 {
                     _T_GenericSet _setLiteral1;
                     _setLiteral1.set(I1);
@@ -1609,298 +1609,298 @@ void P_()
                 break;
             
             case 33:
-                // line 2346
+                #line 2346
                 P_popint(nullptr, I1);
                 
-                // line 2346
+                #line 2346
                 P_pshrel(nullptr, I1);
                 break;
             
             case 34:
-                // line 2349
+                #line 2349
                 P_poprel(nullptr, R1);
                 
-                // line 2349
+                #line 2349
                 P_popint(nullptr, I1);
                 
-                // line 2349
+                #line 2349
                 P_pshrel(nullptr, I1);
                 
-                // line 2349
+                #line 2349
                 P_pshrel(nullptr, R1);
                 break;
             
             case 35:
-                // line 2351
+                #line 2351
                 P_poprel(nullptr, R1);
                 
-                // line 2351
+                #line 2351
                 P_pshint(nullptr, _trunc(R1));
                 break;
             
             case 36:
-                // line 2352
+                #line 2352
                 P_popint(nullptr, I1);
                 
-                // line 2352
+                #line 2352
                 P_pshint(nullptr, (-I1));
                 break;
             
             case 37:
-                // line 2353
+                #line 2353
                 P_poprel(nullptr, R1);
                 
-                // line 2353
+                #line 2353
                 P_pshrel(nullptr, (-R1));
                 break;
             
             case 38:
-                // line 2354
+                #line 2354
                 P_popint(nullptr, I1);
                 
-                // line 2354
+                #line 2354
                 P_pshint(nullptr, _sqr(I1));
                 break;
             
             case 39:
-                // line 2355
+                #line 2355
                 P_poprel(nullptr, R1);
                 
-                // line 2355
+                #line 2355
                 P_pshrel(nullptr, _sqr(R1));
                 break;
             
             case 40:
-                // line 2356
+                #line 2356
                 P_popint(nullptr, I1);
                 
-                // line 2356
+                #line 2356
                 P_pshint(nullptr, _abs(I1));
                 break;
             
             case 41:
-                // line 2357
+                #line 2357
                 P_poprel(nullptr, R1);
                 
-                // line 2357
+                #line 2357
                 P_pshrel(nullptr, _abs(R1));
                 break;
             
             case 42:
-                // line 2358
+                #line 2358
                 P_popint(nullptr, I1);
                 
-                // line 2358
+                #line 2358
                 B1 = (I1 != 0);
                 
-                // line 2358
+                #line 2358
                 P_pshint(nullptr, _ord((!B1)));
                 break;
             
             case 43:
-                // line 2359
+                #line 2359
                 P_popint(nullptr, I2);
                 
-                // line 2359
+                #line 2359
                 B2 = (I2 != 0);
                 
-                // line 2360
+                #line 2360
                 P_popint(nullptr, I1);
                 
-                // line 2360
+                #line 2360
                 B1 = (I1 != 0);
                 
-                // line 2361
+                #line 2361
                 P_pshint(nullptr, _ord((B1 && B2)));
                 break;
             
             case 44:
-                // line 2362
+                #line 2362
                 P_popint(nullptr, I2);
                 
-                // line 2362
+                #line 2362
                 B2 = (I2 != 0);
                 
-                // line 2363
+                #line 2363
                 P_popint(nullptr, I1);
                 
-                // line 2363
+                #line 2363
                 B1 = (I1 != 0);
                 
-                // line 2364
+                #line 2364
                 P_pshint(nullptr, _ord((B1 || B2)));
                 break;
             
             case 45:
-                // line 2365
+                #line 2365
                 P_popset(nullptr, S2);
                 
-                // line 2365
+                #line 2365
                 P_popset(nullptr, S1);
                 
-                // line 2365
+                #line 2365
                 P_pshset(nullptr, (S1 - S2));
                 break;
             
             case 46:
-                // line 2366
+                #line 2366
                 P_popset(nullptr, S2);
                 
-                // line 2366
+                #line 2366
                 P_popset(nullptr, S1);
                 
-                // line 2366
+                #line 2366
                 P_pshset(nullptr, (S1 * S2));
                 break;
             
             case 47:
-                // line 2367
+                #line 2367
                 P_popset(nullptr, S2);
                 
-                // line 2367
+                #line 2367
                 P_popset(nullptr, S1);
                 
-                // line 2367
+                #line 2367
                 P_pshset(nullptr, (S1 + S2));
                 break;
             
             case 48:
-                // line 2368
+                #line 2368
                 P_popset(nullptr, S1);
                 
-                // line 2368
+                #line 2368
                 P_popint(nullptr, I1);
                 
-                // line 2368
+                #line 2368
                 P_pshint(nullptr, _ord((S1 & I1)));
                 break;
             
             case 49:
-                // line 2369
+                #line 2369
                 P_popint(nullptr, I2);
                 
-                // line 2369
+                #line 2369
                 P_popint(nullptr, I1);
                 
-                // line 2369
+                #line 2369
                 P_pshint(nullptr, _mod(I1 , I2));
                 break;
             
             case 50:
-                // line 2370
+                #line 2370
                 P_popint(nullptr, I1);
                 
-                // line 2370
+                #line 2370
                 P_pshint(nullptr, _ord(_odd(I1)));
                 break;
             
             case 51:
-                // line 2371
+                #line 2371
                 P_popint(nullptr, I2);
                 
-                // line 2371
+                #line 2371
                 P_popint(nullptr, I1);
                 
-                // line 2371
+                #line 2371
                 P_pshint(nullptr, (I1 * I2));
                 break;
             
             case 52:
-                // line 2372
+                #line 2372
                 P_poprel(nullptr, R2);
                 
-                // line 2372
+                #line 2372
                 P_poprel(nullptr, R1);
                 
-                // line 2372
+                #line 2372
                 P_pshrel(nullptr, (R1 * R2));
                 break;
             
             case 53:
-                // line 2373
+                #line 2373
                 P_popint(nullptr, I2);
                 
-                // line 2373
+                #line 2373
                 P_popint(nullptr, I1);
                 
-                // line 2374
+                #line 2374
                 if((I2 == 0))
                 {
-                    // line 2374
+                    #line 2374
                     P_errori(nullptr, T_beta::C("Zero divide              "));
                 }
                 
-                // line 2375
+                #line 2375
                 P_pshint(nullptr, (I1 / I2));
                 break;
             
             case 54:
-                // line 2376
+                #line 2376
                 P_poprel(nullptr, R2);
                 
-                // line 2376
+                #line 2376
                 P_poprel(nullptr, R1);
                 
-                // line 2377
+                #line 2377
                 if((R2 == 0.000000))
                 {
-                    // line 2377
+                    #line 2377
                     P_errori(nullptr, T_beta::C("Zero divide              "));
                 }
                 
-                // line 2378
+                #line 2378
                 P_pshrel(nullptr, ((double)R1 / R2));
                 break;
             
             case 55:
-                // line 2379
+                #line 2379
                 P_getq(nullptr);
                 
-                // line 2379
+                #line 2379
                 P_popint(nullptr, I2);
                 
-                // line 2379
+                #line 2379
                 P_popint(nullptr, I1);
                 
-                // line 2380
+                #line 2380
                 _FOR_TO(I3, 0, (q - 1))
                 {
-                    // line 2380
+                    #line 2380
                     Store[(I1 + I3)] = Store[(I2 + I3)];
                 }
                 _FOR_END(I3)
                 break;
             
             case 56:
-                // line 2383
+                #line 2383
                 P_getq(nullptr);
                 
-                // line 2383
+                #line 2383
                 P_pshadr(nullptr, q);
                 break;
             
             case 103:
             case 104:
             case 57:
-                // line 2387
+                #line 2387
                 P_getq(nullptr);
                 
-                // line 2387
+                #line 2387
                 P_popint(nullptr, I1);
                 
-                // line 2387
+                #line 2387
                 P_pshint(nullptr, (I1 - q));
                 break;
             
             case 100:
             case 101:
             case 102:
-                // line 2390
+                #line 2390
                 P_errori(nullptr, T_beta::C("Instruction error        "));
                 break;
             
             case 58:
-                // line 2392
+                #line 2392
                 Interpreting = C_false;
                 break;
             
@@ -1912,7 +1912,7 @@ void P_()
             
             case 133:
             case 135:
-                // line 2398
+                #line 2398
                 P_errori(nullptr, T_beta::C("Instruction error        "));
                 break;
             
@@ -1921,96 +1921,96 @@ void P_()
                 break;
             
             case 61:
-                // line 2402
+                #line 2402
                 P_errori(nullptr, T_beta::C("case - error             "));
                 break;
             
             case 62:
-                // line 2403
+                #line 2403
                 P_poprel(nullptr, R1);
                 
-                // line 2403
+                #line 2403
                 P_pshint(nullptr, _round(R1));
                 break;
             
             case 63:
-                // line 2405
+                #line 2405
                 P_getq(nullptr);
                 
-                // line 2405
+                #line 2405
                 P_getq1(nullptr);
                 
-                // line 2405
+                #line 2405
                 P_popadr(nullptr, A3);
                 
-                // line 2405
+                #line 2405
                 P_popadr(nullptr, A2);
                 
-                // line 2405
+                #line 2405
                 P_popadr(nullptr, A1);
                 
-                // line 2406
+                #line 2406
                 if(((A2 + q) > Q1))
                 {
-                    // line 2406
+                    #line 2406
                     P_errori(nullptr, T_beta::C("pack elements out of bnds"));
                 }
                 
-                // line 2407
+                #line 2407
                 _FOR_TO(I4, 0, (q - 1))
                 {
-                    // line 2408
+                    #line 2408
                     Store[(A3 + I4)] = Store[(A1 + A2)];
                     
-                    // line 2409
+                    #line 2409
                     A2 = (A2 + 1);
                 }
                 _FOR_END(I4)
                 break;
             
             case 64:
-                // line 2412
+                #line 2412
                 P_getq(nullptr);
                 
-                // line 2412
+                #line 2412
                 P_getq1(nullptr);
                 
-                // line 2412
+                #line 2412
                 P_popadr(nullptr, A3);
                 
-                // line 2412
+                #line 2412
                 P_popadr(nullptr, A2);
                 
-                // line 2412
+                #line 2412
                 P_popadr(nullptr, A1);
                 
-                // line 2413
+                #line 2413
                 if(((A3 + q) > Q1))
                 {
-                    // line 2413
+                    #line 2413
                     P_errori(nullptr, T_beta::C("unpack elem out of bnds  "));
                 }
                 
-                // line 2414
+                #line 2414
                 _FOR_TO(I4, 0, (q - 1))
                 {
-                    // line 2415
+                    #line 2415
                     Store[(A2 + A3)] = Store[(A1 + I4)];
                     
-                    // line 2416
+                    #line 2416
                     A3 = (A3 + 1);
                 }
                 _FOR_END(I4)
                 break;
             
             case 110:
-                // line 2420
+                #line 2420
                 P_popint(nullptr, I2);
                 
-                // line 2420
+                #line 2420
                 P_popint(nullptr, I1);
                 
-                // line 2420
+                #line 2420
                 {
                     _T_GenericSet _setLiteral2;
                     _setLiteral2.set(I1, I2);
@@ -2020,38 +2020,38 @@ void P_()
                 break;
             
             case 111:
-                // line 2421
+                #line 2421
                 P_popadr(nullptr, Ad);
                 
-                // line 2421
+                #line 2421
                 P_pshadr(nullptr, Ad);
                 
-                // line 2421
+                #line 2421
                 P_valfil(nullptr, Ad);
                 
-                // line 2421
+                #line 2421
                 Fn = Store[Ad];
                 
-                // line 2422
+                #line 2422
                 if((Fn == C_inputfn))
                 {
-                    // line 2422
+                    #line 2422
                     P_putchr(nullptr, T_address::C((Ad + C_fileidsize)), Input.bufferVar());
                 }
                 else
                 {
-                    // line 2423
+                    #line 2423
                     if((Fn == C_prdfn))
                     {
-                        // line 2423
+                        #line 2423
                         P_putchr(nullptr, T_address::C((Ad + C_fileidsize)), Prd.bufferVar());
                     }
                     else
                     {
-                        // line 2425
+                        #line 2425
                         if((Filstate[Fn] == C_fread))
                         {
-                            // line 2426
+                            #line 2426
                             P_putchr(nullptr, T_address::C((Ad + C_fileidsize)), Filtable[Fn].bufferVar());
                         }
                     }
@@ -2059,173 +2059,173 @@ void P_()
                 break;
             
             case 112:
-                // line 2429
+                #line 2429
                 P_getp(nullptr);
                 
-                // line 2429
+                #line 2429
                 P_getq(nullptr);
                 
-                // line 2429
+                #line 2429
                 Pc = q;
                 
-                // line 2430
+                #line 2430
                 Mp = F_base(nullptr, p);
                 
-                // line 2432
+                #line 2432
                 Sp = F_getadr(nullptr, T_address::C((Mp + C_marksb)));
                 
-                // line 2433
+                #line 2433
                 Ep = F_getadr(nullptr, T_address::C((Mp + C_market)));
                 break;
             
             case 113:
-                // line 2435
+                #line 2435
                 P_getp(nullptr);
                 
-                // line 2435
+                #line 2435
                 P_popadr(nullptr, Ad);
                 
-                // line 2436
+                #line 2436
                 Mp = (Sp - (p + C_marksize));
                 
-                // line 2438
+                #line 2438
                 P_putadr(nullptr, T_address::C((Mp + C_marksl)), F_getadr(nullptr, Ad));
                 
-                // line 2439
+                #line 2439
                 P_putadr(nullptr, T_address::C((Mp + C_markra)), Pc);
                 
-                // line 2440
+                #line 2440
                 Pc = F_getadr(nullptr, T_address::C((Ad + (1 * C_ptrsize))));
                 break;
             
             case 114:
-                // line 2442
+                #line 2442
                 P_getp(nullptr);
                 
-                // line 2442
+                #line 2442
                 P_getq(nullptr);
                 
-                // line 2443
+                #line 2443
                 P_pshadr(nullptr, F_base(nullptr, p));
                 
-                // line 2444
+                #line 2444
                 P_pshadr(nullptr, q);
                 break;
             
             case 115:
-                // line 2447
+                #line 2447
                 P_popadr(nullptr, Ad);
                 
-                // line 2447
+                #line 2447
                 P_pshadr(nullptr, Ad);
                 
-                // line 2447
+                #line 2447
                 P_valfilrm(nullptr, Ad);
                 
-                // line 2447
+                #line 2447
                 Fn = Store[Ad];
                 
-                // line 2449
+                #line 2449
                 P_pshint(nullptr, _ord((_eof(Bfiltable[Fn]) && (!Filbuff[Fn]))));
                 break;
             
             case 116:
-                // line 2451
+                #line 2451
                 P_popint(nullptr, i);
                 
-                // line 2451
+                #line 2451
                 P_popadr(nullptr, Ad);
                 
-                // line 2451
+                #line 2451
                 P_pshadr(nullptr, Ad);
                 
-                // line 2451
+                #line 2451
                 P_valfil(nullptr, Ad);
                 
-                // line 2452
+                #line 2452
                 Fn = Store[Ad];
                 
-                // line 2454
+                #line 2454
                 if(((Filstate[Fn] == C_fread) && (!Filbuff[Fn])))
                 {
-                    // line 2455
+                    #line 2455
                     _FOR_TO(j, 1, i)
                     {
-                        // line 2456
+                        #line 2456
                         Bfiltable[Fn] >> Store[(((Ad + C_fileidsize) + j) - 1)];
                     }
                     _FOR_END(j)
                     
-                    // line 2457
+                    #line 2457
                     Filbuff[Fn] = C_true;
                 }
                 break;
             
             case 117:
-                // line 2460
+                #line 2460
                 P_getq(nullptr);
                 
-                // line 2460
+                #line 2460
                 Sp = (Sp - q);
                 break;
             
             case 118:
-                // line 2462
+                #line 2462
                 P_getq(nullptr);
                 
-                // line 2462
+                #line 2462
                 P_swpstk(nullptr, q);
                 break;
             
             case 119:
-                // line 2464
+                #line 2464
                 P_getq(nullptr);
                 
-                // line 2464
+                #line 2464
                 P_popint(nullptr, i);
                 
-                // line 2464
+                #line 2464
                 if((i != 0))
                 {
-                    // line 2464
+                    #line 2464
                     Pc = q;
                 }
                 break;
             
             case 120:
-                // line 2466
+                #line 2466
                 P_getp(nullptr);
                 
-                // line 2466
+                #line 2466
                 P_getq(nullptr);
                 
-                // line 2466
+                #line 2466
                 Ad = (F_base(nullptr, p) + q);
                 
-                // line 2467
+                #line 2467
                 i = F_getadr(nullptr, Ad);
                 
-                // line 2467
+                #line 2467
                 A1 = F_getadr(nullptr, T_address::C((Ad + (1 * C_ptrsize))));
                 
-                // line 2468
+                #line 2468
                 P_pshadr(nullptr, T_address::C(i));
                 
-                // line 2468
+                #line 2468
                 P_pshadr(nullptr, A1);
                 break;
             
             case 174:
-                // line 2471
+                #line 2471
                 P_getq(nullptr);
                 
-                // line 2471
+                #line 2471
                 Srclin = q;
                 
-                // line 2472
+                #line 2472
                 if(C_dotrcsrc)
                 {
-                    // line 2473
+                    #line 2473
                     Output << "Source line executed: " << _format(q, 1, 0) << _WRITELN;
                 }
                 break;
@@ -2313,24 +2313,24 @@ void P_()
             case 253:
             case 254:
             case 255:
-                // line 2486
+                #line 2486
                 P_errori(nullptr, T_beta::C("illegal instruction      "));
                 break;
             }
         }
         
-        // line 2492
+        #line 2492
         if(C_dodmpspc)
         {
-            // line 2492
+            #line 2492
             P_repspc(nullptr);
         }
         
-        // line 2496
+        #line 2496
         L_1:
         Output << _WRITELN;
         
-        // line 2497
+        #line 2497
         Output << "program complete" << _WRITELN;
         
         { /* NOP */ }
@@ -2348,7 +2348,7 @@ void P_()
 }
 
 
-// line 499
+#line 499
 //================================================================================
 // scope: getint (level : 2)
 
@@ -2386,15 +2386,15 @@ T_integer F_getint(void* _slink, T_address a)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 511
+    #line 511
     _FOR_TO(_F.i, 1, C_intsize)
     {
-        // line 511
+        #line 511
         _F.r.b[_F.i] = Store[((_F.a + _F.i) - 1)];
     }
     _FOR_END(_F.i)
     
-    // line 513
+    #line 513
     _F._fnvalue = _F.r.i;
     
     // epilogue
@@ -2402,7 +2402,7 @@ T_integer F_getint(void* _slink, T_address a)
 }
 
 
-// line 517
+#line 517
 //================================================================================
 // scope: putint (level : 2)
 
@@ -2440,20 +2440,20 @@ void P_putint(void* _slink, T_address a, T_integer x)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 529
+    #line 529
     _F.r.i = _F.x;
     
-    // line 530
+    #line 530
     _FOR_TO(_F.i, 1, C_intsize)
     {
-        // line 530
+        #line 530
         Store[((_F.a + _F.i) - 1)] = _F.r.b[_F.i];
     }
     _FOR_END(_F.i)
 }
 
 
-// line 534
+#line 534
 //================================================================================
 // scope: getrel (level : 2)
 
@@ -2491,15 +2491,15 @@ T_real F_getrel(void* _slink, T_address a)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 546
+    #line 546
     _FOR_TO(_F.i, 1, C_realsize)
     {
-        // line 546
+        #line 546
         _F.r.b[_F.i] = Store[((_F.a + _F.i) - 1)];
     }
     _FOR_END(_F.i)
     
-    // line 547
+    #line 547
     _F._fnvalue = _F.r.r;
     
     // epilogue
@@ -2507,7 +2507,7 @@ T_real F_getrel(void* _slink, T_address a)
 }
 
 
-// line 551
+#line 551
 //================================================================================
 // scope: putrel (level : 2)
 
@@ -2545,20 +2545,20 @@ void P_putrel(void* _slink, T_address a, T_real f)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 563
+    #line 563
     _F.r.r = _F.f;
     
-    // line 564
+    #line 564
     _FOR_TO(_F.i, 1, C_realsize)
     {
-        // line 564
+        #line 564
         Store[((_F.a + _F.i) - 1)] = _F.r.b[_F.i];
     }
     _FOR_END(_F.i)
 }
 
 
-// line 568
+#line 568
 //================================================================================
 // scope: getbol (level : 2)
 
@@ -2582,19 +2582,19 @@ T_boolean F_getbol(void* _slink, T_address a)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 574
+    #line 574
     if((Store[_F.a] == 0))
     {
-        // line 574
+        #line 574
         _F.b = C_false;
     }
     else
     {
-        // line 574
+        #line 574
         _F.b = C_true;
     }
     
-    // line 575
+    #line 575
     _F._fnvalue = _F.b;
     
     // epilogue
@@ -2602,7 +2602,7 @@ T_boolean F_getbol(void* _slink, T_address a)
 }
 
 
-// line 579
+#line 579
 //================================================================================
 // scope: putbol (level : 2)
 
@@ -2623,12 +2623,12 @@ void P_putbol(void* _slink, T_address a, T_boolean b)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 583
+    #line 583
     Store[_F.a] = _ord(_F.b);
 }
 
 
-// line 587
+#line 587
 //================================================================================
 // scope: getset (level : 2)
 
@@ -2666,20 +2666,20 @@ void P_getset(void* _slink, T_address a, T_settype& s)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 599
+    #line 599
     _FOR_TO(_F.i, 1, C_setsize)
     {
-        // line 599
+        #line 599
         _F.r.b[_F.i] = Store[((_F.a + _F.i) - 1)];
     }
     _FOR_END(_F.i)
     
-    // line 600
+    #line 600
     _F.s = _F.r.s;
 }
 
 
-// line 604
+#line 604
 //================================================================================
 // scope: putset (level : 2)
 
@@ -2717,20 +2717,20 @@ void P_putset(void* _slink, T_address a, T_settype s)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 616
+    #line 616
     _F.r.s = _F.s;
     
-    // line 617
+    #line 617
     _FOR_TO(_F.i, 1, C_setsize)
     {
-        // line 617
+        #line 617
         Store[((_F.a + _F.i) - 1)] = _F.r.b[_F.i];
     }
     _FOR_END(_F.i)
 }
 
 
-// line 621
+#line 621
 //================================================================================
 // scope: getchr (level : 2)
 
@@ -2753,7 +2753,7 @@ T_char F_getchr(void* _slink, T_address a)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 625
+    #line 625
     _F._fnvalue = _chr(Store[_F.a]);
     
     // epilogue
@@ -2761,7 +2761,7 @@ T_char F_getchr(void* _slink, T_address a)
 }
 
 
-// line 629
+#line 629
 //================================================================================
 // scope: putchr (level : 2)
 
@@ -2782,12 +2782,12 @@ void P_putchr(void* _slink, T_address a, T_char c)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 633
+    #line 633
     Store[_F.a] = _ord(_F.c);
 }
 
 
-// line 637
+#line 637
 //================================================================================
 // scope: getadr (level : 2)
 
@@ -2825,15 +2825,15 @@ T_address F_getadr(void* _slink, T_address a)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 649
+    #line 649
     _FOR_TO(_F.i, 1, C_adrsize)
     {
-        // line 649
+        #line 649
         _F.r.b[_F.i] = Store[((_F.a + _F.i) - 1)];
     }
     _FOR_END(_F.i)
     
-    // line 650
+    #line 650
     _F._fnvalue = _F.r.a;
     
     // epilogue
@@ -2841,7 +2841,7 @@ T_address F_getadr(void* _slink, T_address a)
 }
 
 
-// line 654
+#line 654
 //================================================================================
 // scope: putadr (level : 2)
 
@@ -2879,20 +2879,20 @@ void P_putadr(void* _slink, T_address a, T_address Ad)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 666
+    #line 666
     _F.r.a = _F.Ad;
     
-    // line 667
+    #line 667
     _FOR_TO(_F.i, 1, C_adrsize)
     {
-        // line 667
+        #line 667
         Store[((_F.a + _F.i) - 1)] = _F.r.b[_F.i];
     }
     _FOR_END(_F.i)
 }
 
 
-// line 673
+#line 673
 //================================================================================
 // scope: swpstk (level : 2)
 
@@ -2921,31 +2921,31 @@ void P_swpstk(void* _slink, T_address l)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 682
+    #line 682
     _F.p = F_getadr(nullptr, T_address::C((Sp - C_adrsize)));
     
-    // line 684
+    #line 684
     _FOR_TO(_F.i, 1, _F.l)
     {
-        // line 684
+        #line 684
         _F.Sb[_F.i] = Store[((((Sp - C_adrsize) - _F.l) + _F.i) - 1)];
     }
     _FOR_END(_F.i)
     
-    // line 685
+    #line 685
     P_putadr(nullptr, T_address::C(((Sp - C_adrsize) - _F.l)), _F.p);
     
-    // line 686
+    #line 686
     _FOR_TO(_F.i, 1, _F.l)
     {
-        // line 686
+        #line 686
         Store[(((Sp - _F.l) + _F.i) - 1)] = _F.Sb[_F.i];
     }
     _FOR_END(_F.i)
 }
 
 
-// line 700
+#line 700
 //================================================================================
 // scope: popint (level : 2)
 
@@ -2965,15 +2965,15 @@ void P_popint(void* _slink, T_integer& i)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 700
+    #line 700
     Sp = (Sp - C_intsize);
     
-    // line 700
+    #line 700
     _F.i = F_getint(nullptr, Sp);
 }
 
 
-// line 701
+#line 701
 //================================================================================
 // scope: pshint (level : 2)
 
@@ -2993,15 +2993,15 @@ void P_pshint(void* _slink, T_integer i)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 701
+    #line 701
     P_putint(nullptr, Sp, _F.i);
     
-    // line 701
+    #line 701
     Sp = (Sp + C_intsize);
 }
 
 
-// line 702
+#line 702
 //================================================================================
 // scope: poprel (level : 2)
 
@@ -3021,15 +3021,15 @@ void P_poprel(void* _slink, T_real& r)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 702
+    #line 702
     Sp = (Sp - C_realsize);
     
-    // line 702
+    #line 702
     _F.r = F_getrel(nullptr, Sp);
 }
 
 
-// line 703
+#line 703
 //================================================================================
 // scope: pshrel (level : 2)
 
@@ -3049,17 +3049,17 @@ void P_pshrel(void* _slink, T_real r)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 703
+    #line 703
     P_putrel(nullptr, Sp, _F.r);
     
-    // line 703
+    #line 703
     Sp = (Sp + C_realsize);
     
     { /* NOP */ }
 }
 
 
-// line 704
+#line 704
 //================================================================================
 // scope: popset (level : 2)
 
@@ -3079,15 +3079,15 @@ void P_popset(void* _slink, T_settype& s)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 704
+    #line 704
     Sp = (Sp - C_setsize);
     
-    // line 704
+    #line 704
     P_getset(nullptr, Sp, _F.s);
 }
 
 
-// line 705
+#line 705
 //================================================================================
 // scope: pshset (level : 2)
 
@@ -3107,15 +3107,15 @@ void P_pshset(void* _slink, T_settype s)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 705
+    #line 705
     P_putset(nullptr, Sp, _F.s);
     
-    // line 705
+    #line 705
     Sp = (Sp + C_setsize);
 }
 
 
-// line 706
+#line 706
 //================================================================================
 // scope: popadr (level : 2)
 
@@ -3135,15 +3135,15 @@ void P_popadr(void* _slink, T_address& a)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 706
+    #line 706
     Sp = (Sp - C_adrsize);
     
-    // line 706
+    #line 706
     _F.a = F_getadr(nullptr, Sp);
 }
 
 
-// line 707
+#line 707
 //================================================================================
 // scope: pshadr (level : 2)
 
@@ -3163,15 +3163,15 @@ void P_pshadr(void* _slink, T_address a)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 707
+    #line 707
     P_putadr(nullptr, Sp, _F.a);
     
-    // line 707
+    #line 707
     Sp = (Sp + C_adrsize);
 }
 
 
-// line 711
+#line 711
 //================================================================================
 // scope: wrthex (level : 2)
 
@@ -3197,42 +3197,42 @@ void P_wrthex(void* _slink, T_integer v, T_integer f)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 714
+    #line 714
     _F.p = 1;
     
-    // line 715
+    #line 715
     _FOR_TO(_F.i, 1, (_F.f - 1))
     {
-        // line 715
+        #line 715
         _F.p = (_F.p * 16);
     }
     _FOR_END(_F.i)
     
-    // line 716
+    #line 716
     while((_F.p > 0))
     {
-        // line 717
+        #line 717
         _F.d = _mod((_F.v / _F.p) , 16);
         
-        // line 718
+        #line 718
         if((_F.d < 10))
         {
-            // line 718
+            #line 718
             Output << _chr((_F.d + _ord('0')));
         }
         else
         {
-            // line 719
+            #line 719
             Output << _chr(((_F.d - 10) + _ord('A')));
         }
         
-        // line 720
+        #line 720
         _F.p = (_F.p / 16);
     }
 }
 
 
-// line 726
+#line 726
 //================================================================================
 // scope: lstins (level : 2)
 
@@ -3258,87 +3258,87 @@ void P_lstins(void* _slink, T_address& Ad)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 734
+    #line 734
     _F.Ads = _F.Ad;
     
-    // line 735
+    #line 735
     _F.Op = Store[_F.Ad];
     
-    // line 735
+    #line 735
     _F.Ad = (_F.Ad + 1);
     
-    // line 736
+    #line 736
     if(Insp[_F.Op])
     {
-        // line 736
+        #line 736
         _F.p = Store[_F.Ad];
         
-        // line 736
+        #line 736
         _F.Ad = (_F.Ad + 1);
     }
     
-    // line 737
+    #line 737
     if((Insq[_F.Op] > 0))
     {
-        // line 739
+        #line 739
         switch(Insq[_F.Op])
         {
         case 1:
-            // line 741
+            #line 741
             _F.q = Store[_F.Ad];
             break;
         
         case C_intsize:
-            // line 742
+            #line 742
             _F.q = F_getint(nullptr, _F.Ad);
             break;
         }
         
-        // line 745
+        #line 745
         _F.Ad = (_F.Ad + Insq[_F.Op]);
     }
     
-    // line 748
+    #line 748
     Output << ": ";
     
-    // line 749
+    #line 749
     P_wrthex(nullptr, _F.Op, 2);
     
-    // line 750
+    #line 750
     Output << ' ' << _format(Instr[_F.Op], 10, 0) << "  ";
     
-    // line 751
+    #line 751
     if(Insp[_F.Op])
     {
-        // line 753
+        #line 753
         P_wrthex(nullptr, _F.p, 2);
         
-        // line 754
+        #line 754
         if((Insq[_F.Op] > 0))
         {
-            // line 754
+            #line 754
             Output << ',';
             
-            // line 754
+            #line 754
             P_wrthex(nullptr, _F.q, C_maxdigh);
         }
     }
     else
     {
-        // line 756
+        #line 756
         if((Insq[_F.Op] > 0))
         {
-            // line 756
+            #line 756
             Output << "   ";
             
-            // line 756
+            #line 756
             P_wrthex(nullptr, _F.q, C_maxdigh);
         }
     }
 }
 
 
-// line 762
+#line 762
 //================================================================================
 // scope: dmpins (level : 2)
 
@@ -3358,43 +3358,43 @@ void P_dmpins(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 768
+    #line 768
     Output << _WRITELN;
     
-    // line 769
+    #line 769
     Output << "Contents of instruction memory" << _WRITELN;
     
-    // line 770
+    #line 770
     Output << _WRITELN;
     
-    // line 771
+    #line 771
     Output << "  Addr  Opc Ins          P       Q" << _WRITELN;
     
-    // line 772
+    #line 772
     Output << "----------------------------------" << _WRITELN;
     
-    // line 773
+    #line 773
     _F.i = 0;
     
-    // line 774
+    #line 774
     while((_F.i < Pctop))
     {
-        // line 776
+        #line 776
         P_wrthex(nullptr, _F.i, C_maxdigh);
         
-        // line 777
+        #line 777
         P_lstins(nullptr, _F.i);
         
-        // line 778
+        #line 778
         Output << _WRITELN;
     }
     
-    // line 781
+    #line 781
     Output << _WRITELN;
 }
 
 
-// line 787
+#line 787
 //================================================================================
 // scope: alignu (level : 2)
 
@@ -3418,15 +3418,15 @@ void P_alignu(void* _slink, T_address Algn, T_address& Flc)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 790
+    #line 790
     _F.l = (_F.Flc - 1);
     
-    // line 791
+    #line 791
     _F.Flc = ((_F.l + _F.Algn) - _mod((_F.Algn + _F.l) , _F.Algn));
 }
 
 
-// line 796
+#line 796
 //================================================================================
 // scope: alignd (level : 2)
 
@@ -3450,15 +3450,15 @@ void P_alignd(void* _slink, T_address Algn, T_address& Flc)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 799
+    #line 799
     _F.l = (_F.Flc + 1);
     
-    // line 800
+    #line 800
     _F.Flc = ((_F.l - _F.Algn) + _mod((_F.Algn - _F.l) , _F.Algn));
 }
 
 
-// line 807
+#line 807
 //================================================================================
 // scope: load (level : 2)
 
@@ -3508,105 +3508,105 @@ void P_load(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 1407
+    #line 1407
     P_load_init(&_F);
     
-    // line 1408
+    #line 1408
     P_load_generate(&_F);
     
-    // line 1409
+    #line 1409
     Pctop = Pc;
     
-    // line 1410
+    #line 1410
     Pc = 0;
     
-    // line 1411
+    #line 1411
     P_load_generate(&_F);
     
-    // line 1412
+    #line 1412
     P_alignu(nullptr, T_address::C(C_stackal), Pctop);
     
-    // line 1413
+    #line 1413
     P_alignd(nullptr, T_address::C(C_heapal), Cp);
     
-    // line 1415
+    #line 1415
     if(C_dodmpsto)
     {
-        // line 1417
+        #line 1417
         Output << _WRITELN;
         
-        // line 1418
+        #line 1418
         Output << "Storage areas occupied" << _WRITELN;
         
-        // line 1419
+        #line 1419
         Output << _WRITELN;
         
-        // line 1420
+        #line 1420
         Output << "Program     ";
         
-        // line 1420
+        #line 1420
         P_wrthex(nullptr, 0, C_maxdigh);
         
-        // line 1420
+        #line 1420
         Output << '-';
         
-        // line 1420
+        #line 1420
         P_wrthex(nullptr, (Pctop - 1), C_maxdigh);
         
-        // line 1421
+        #line 1421
         Output << " (" << _format(Pctop, C_maxdigd, 0) << ')' << _WRITELN;
         
-        // line 1422
+        #line 1422
         Output << "Stack/Heap  ";
         
-        // line 1422
+        #line 1422
         P_wrthex(nullptr, Pctop, C_maxdigh);
         
-        // line 1422
+        #line 1422
         Output << '-';
         
-        // line 1422
+        #line 1422
         P_wrthex(nullptr, (Cp - 1), C_maxdigh);
         
-        // line 1423
+        #line 1423
         Output << " (" << _format(((Cp - Pctop) + 1), C_maxdigd, 0) << ')' << _WRITELN;
         
-        // line 1424
+        #line 1424
         Output << "Constants   ";
         
-        // line 1424
+        #line 1424
         P_wrthex(nullptr, Cp, C_maxdigh);
         
-        // line 1424
+        #line 1424
         Output << '-';
         
-        // line 1424
+        #line 1424
         P_wrthex(nullptr, C_maxstr, C_maxdigh);
         
-        // line 1425
+        #line 1425
         Output << " (" << _format((C_maxstr - Cp), C_maxdigd, 0) << ')' << _WRITELN;
         
-        // line 1426
+        #line 1426
         Output << _WRITELN;
     }
     
-    // line 1429
+    #line 1429
     if(C_dodmpins)
     {
-        // line 1429
+        #line 1429
         P_dmpins(nullptr);
     }
     
-    // line 1430
+    #line 1430
     if(C_dodmplab)
     {
-        // line 1430
+        #line 1430
         P_load_dmplabs(&_F);
     }
 }
 
 
-// line 819
+#line 819
 //================================================================================
 // scope: load_init (level : 3)
 
@@ -3626,1742 +3626,1742 @@ void P_load_init(void* _slink)
     Frame_load_init _F = { (Frame_load*)_slink };
     
     // subroutine body
-    // line 821
+    #line 821
     _FOR_TO(_F.i, 0, C_maxins)
     {
-        // line 821
+        #line 821
         Instr[_F.i] = "          ";
     }
     _FOR_END(_F.i)
     
-    // line 836
+    #line 836
     Instr[0] = "lodi      ";
     
-    // line 836
+    #line 836
     Insp[0] = C_true;
     
-    // line 836
+    #line 836
     Insq[0] = C_intsize;
     
-    // line 837
+    #line 837
     Instr[1] = "ldoi      ";
     
-    // line 837
+    #line 837
     Insp[1] = C_false;
     
-    // line 837
+    #line 837
     Insq[1] = C_intsize;
     
-    // line 838
+    #line 838
     Instr[2] = "stri      ";
     
-    // line 838
+    #line 838
     Insp[2] = C_true;
     
-    // line 838
+    #line 838
     Insq[2] = C_intsize;
     
-    // line 839
+    #line 839
     Instr[3] = "sroi      ";
     
-    // line 839
+    #line 839
     Insp[3] = C_false;
     
-    // line 839
+    #line 839
     Insq[3] = C_intsize;
     
-    // line 840
+    #line 840
     Instr[4] = "lda       ";
     
-    // line 840
+    #line 840
     Insp[4] = C_true;
     
-    // line 840
+    #line 840
     Insq[4] = C_intsize;
     
-    // line 841
+    #line 841
     Instr[5] = "lao       ";
     
-    // line 841
+    #line 841
     Insp[5] = C_false;
     
-    // line 841
+    #line 841
     Insq[5] = C_intsize;
     
-    // line 842
+    #line 842
     Instr[6] = "stoi      ";
     
-    // line 842
+    #line 842
     Insp[6] = C_false;
     
-    // line 842
+    #line 842
     Insq[6] = 0;
     
-    // line 843
+    #line 843
     Instr[7] = "ldc       ";
     
-    // line 843
+    #line 843
     Insp[7] = C_false;
     
-    // line 843
+    #line 843
     Insq[7] = C_intsize;
     
-    // line 844
+    #line 844
     Instr[8] = "---       ";
     
-    // line 844
+    #line 844
     Insp[8] = C_false;
     
-    // line 844
+    #line 844
     Insq[8] = 0;
     
-    // line 845
+    #line 845
     Instr[9] = "indi      ";
     
-    // line 845
+    #line 845
     Insp[9] = C_false;
     
-    // line 845
+    #line 845
     Insq[9] = C_intsize;
     
-    // line 846
+    #line 846
     Instr[10] = "inci      ";
     
-    // line 846
+    #line 846
     Insp[10] = C_false;
     
-    // line 846
+    #line 846
     Insq[10] = C_intsize;
     
-    // line 847
+    #line 847
     Instr[11] = "mst       ";
     
-    // line 847
+    #line 847
     Insp[11] = C_true;
     
-    // line 847
+    #line 847
     Insq[11] = 0;
     
-    // line 848
+    #line 848
     Instr[12] = "cup       ";
     
-    // line 848
+    #line 848
     Insp[12] = C_true;
     
-    // line 848
+    #line 848
     Insq[12] = C_intsize;
     
-    // line 849
+    #line 849
     Instr[13] = "ents      ";
     
-    // line 849
+    #line 849
     Insp[13] = C_false;
     
-    // line 849
+    #line 849
     Insq[13] = C_intsize;
     
-    // line 850
+    #line 850
     Instr[14] = "retp      ";
     
-    // line 850
+    #line 850
     Insp[14] = C_false;
     
-    // line 850
+    #line 850
     Insq[14] = 0;
     
-    // line 851
+    #line 851
     Instr[15] = "csp       ";
     
-    // line 851
+    #line 851
     Insp[15] = C_false;
     
-    // line 851
+    #line 851
     Insq[15] = C_intsize;
     
-    // line 852
+    #line 852
     Instr[16] = "ixa       ";
     
-    // line 852
+    #line 852
     Insp[16] = C_false;
     
-    // line 852
+    #line 852
     Insq[16] = C_intsize;
     
-    // line 853
+    #line 853
     Instr[17] = "equa      ";
     
-    // line 853
+    #line 853
     Insp[17] = C_false;
     
-    // line 853
+    #line 853
     Insq[17] = 0;
     
-    // line 854
+    #line 854
     Instr[18] = "neqa      ";
     
-    // line 854
+    #line 854
     Insp[18] = C_false;
     
-    // line 854
+    #line 854
     Insq[18] = 0;
     
-    // line 855
+    #line 855
     Instr[19] = "geqa      ";
     
-    // line 855
+    #line 855
     Insp[19] = C_false;
     
-    // line 855
+    #line 855
     Insq[19] = 0;
     
-    // line 856
+    #line 856
     Instr[20] = "grta      ";
     
-    // line 856
+    #line 856
     Insp[20] = C_false;
     
-    // line 856
+    #line 856
     Insq[20] = 0;
     
-    // line 857
+    #line 857
     Instr[21] = "leqa      ";
     
-    // line 857
+    #line 857
     Insp[21] = C_false;
     
-    // line 857
+    #line 857
     Insq[21] = 0;
     
-    // line 858
+    #line 858
     Instr[22] = "lesa      ";
     
-    // line 858
+    #line 858
     Insp[22] = C_false;
     
-    // line 858
+    #line 858
     Insq[22] = 0;
     
-    // line 859
+    #line 859
     Instr[23] = "ujp       ";
     
-    // line 859
+    #line 859
     Insp[23] = C_false;
     
-    // line 859
+    #line 859
     Insq[23] = C_intsize;
     
-    // line 860
+    #line 860
     Instr[24] = "fjp       ";
     
-    // line 860
+    #line 860
     Insp[24] = C_false;
     
-    // line 860
+    #line 860
     Insq[24] = C_intsize;
     
-    // line 861
+    #line 861
     Instr[25] = "xjp       ";
     
-    // line 861
+    #line 861
     Insp[25] = C_false;
     
-    // line 861
+    #line 861
     Insq[25] = C_intsize;
     
-    // line 862
+    #line 862
     Instr[26] = "chki      ";
     
-    // line 862
+    #line 862
     Insp[26] = C_false;
     
-    // line 862
+    #line 862
     Insq[26] = C_intsize;
     
-    // line 863
+    #line 863
     Instr[27] = "eof       ";
     
-    // line 863
+    #line 863
     Insp[27] = C_false;
     
-    // line 863
+    #line 863
     Insq[27] = 0;
     
-    // line 864
+    #line 864
     Instr[28] = "adi       ";
     
-    // line 864
+    #line 864
     Insp[28] = C_false;
     
-    // line 864
+    #line 864
     Insq[28] = 0;
     
-    // line 865
+    #line 865
     Instr[29] = "adr       ";
     
-    // line 865
+    #line 865
     Insp[29] = C_false;
     
-    // line 865
+    #line 865
     Insq[29] = 0;
     
-    // line 866
+    #line 866
     Instr[30] = "sbi       ";
     
-    // line 866
+    #line 866
     Insp[30] = C_false;
     
-    // line 866
+    #line 866
     Insq[30] = 0;
     
-    // line 867
+    #line 867
     Instr[31] = "sbr       ";
     
-    // line 867
+    #line 867
     Insp[31] = C_false;
     
-    // line 867
+    #line 867
     Insq[31] = 0;
     
-    // line 868
+    #line 868
     Instr[32] = "sgs       ";
     
-    // line 868
+    #line 868
     Insp[32] = C_false;
     
-    // line 868
+    #line 868
     Insq[32] = 0;
     
-    // line 869
+    #line 869
     Instr[33] = "flt       ";
     
-    // line 869
+    #line 869
     Insp[33] = C_false;
     
-    // line 869
+    #line 869
     Insq[33] = 0;
     
-    // line 870
+    #line 870
     Instr[34] = "flo       ";
     
-    // line 870
+    #line 870
     Insp[34] = C_false;
     
-    // line 870
+    #line 870
     Insq[34] = 0;
     
-    // line 871
+    #line 871
     Instr[35] = "trc       ";
     
-    // line 871
+    #line 871
     Insp[35] = C_false;
     
-    // line 871
+    #line 871
     Insq[35] = 0;
     
-    // line 872
+    #line 872
     Instr[36] = "ngi       ";
     
-    // line 872
+    #line 872
     Insp[36] = C_false;
     
-    // line 872
+    #line 872
     Insq[36] = 0;
     
-    // line 873
+    #line 873
     Instr[37] = "ngr       ";
     
-    // line 873
+    #line 873
     Insp[37] = C_false;
     
-    // line 873
+    #line 873
     Insq[37] = 0;
     
-    // line 874
+    #line 874
     Instr[38] = "sqi       ";
     
-    // line 874
+    #line 874
     Insp[38] = C_false;
     
-    // line 874
+    #line 874
     Insq[38] = 0;
     
-    // line 875
+    #line 875
     Instr[39] = "sqr       ";
     
-    // line 875
+    #line 875
     Insp[39] = C_false;
     
-    // line 875
+    #line 875
     Insq[39] = 0;
     
-    // line 876
+    #line 876
     Instr[40] = "abi       ";
     
-    // line 876
+    #line 876
     Insp[40] = C_false;
     
-    // line 876
+    #line 876
     Insq[40] = 0;
     
-    // line 877
+    #line 877
     Instr[41] = "abr       ";
     
-    // line 877
+    #line 877
     Insp[41] = C_false;
     
-    // line 877
+    #line 877
     Insq[41] = 0;
     
-    // line 878
+    #line 878
     Instr[42] = "not       ";
     
-    // line 878
+    #line 878
     Insp[42] = C_false;
     
-    // line 878
+    #line 878
     Insq[42] = 0;
     
-    // line 879
+    #line 879
     Instr[43] = "and       ";
     
-    // line 879
+    #line 879
     Insp[43] = C_false;
     
-    // line 879
+    #line 879
     Insq[43] = 0;
     
-    // line 880
+    #line 880
     Instr[44] = "ior       ";
     
-    // line 880
+    #line 880
     Insp[44] = C_false;
     
-    // line 880
+    #line 880
     Insq[44] = 0;
     
-    // line 881
+    #line 881
     Instr[45] = "dif       ";
     
-    // line 881
+    #line 881
     Insp[45] = C_false;
     
-    // line 881
+    #line 881
     Insq[45] = 0;
     
-    // line 882
+    #line 882
     Instr[46] = "int       ";
     
-    // line 882
+    #line 882
     Insp[46] = C_false;
     
-    // line 882
+    #line 882
     Insq[46] = 0;
     
-    // line 883
+    #line 883
     Instr[47] = "uni       ";
     
-    // line 883
+    #line 883
     Insp[47] = C_false;
     
-    // line 883
+    #line 883
     Insq[47] = 0;
     
-    // line 884
+    #line 884
     Instr[48] = "inn       ";
     
-    // line 884
+    #line 884
     Insp[48] = C_false;
     
-    // line 884
+    #line 884
     Insq[48] = 0;
     
-    // line 885
+    #line 885
     Instr[49] = "mod       ";
     
-    // line 885
+    #line 885
     Insp[49] = C_false;
     
-    // line 885
+    #line 885
     Insq[49] = 0;
     
-    // line 886
+    #line 886
     Instr[50] = "odd       ";
     
-    // line 886
+    #line 886
     Insp[50] = C_false;
     
-    // line 886
+    #line 886
     Insq[50] = 0;
     
-    // line 887
+    #line 887
     Instr[51] = "mpi       ";
     
-    // line 887
+    #line 887
     Insp[51] = C_false;
     
-    // line 887
+    #line 887
     Insq[51] = 0;
     
-    // line 888
+    #line 888
     Instr[52] = "mpr       ";
     
-    // line 888
+    #line 888
     Insp[52] = C_false;
     
-    // line 888
+    #line 888
     Insq[52] = 0;
     
-    // line 889
+    #line 889
     Instr[53] = "dvi       ";
     
-    // line 889
+    #line 889
     Insp[53] = C_false;
     
-    // line 889
+    #line 889
     Insq[53] = 0;
     
-    // line 890
+    #line 890
     Instr[54] = "dvr       ";
     
-    // line 890
+    #line 890
     Insp[54] = C_false;
     
-    // line 890
+    #line 890
     Insq[54] = 0;
     
-    // line 891
+    #line 891
     Instr[55] = "mov       ";
     
-    // line 891
+    #line 891
     Insp[55] = C_false;
     
-    // line 891
+    #line 891
     Insq[55] = C_intsize;
     
-    // line 892
+    #line 892
     Instr[56] = "lca       ";
     
-    // line 892
+    #line 892
     Insp[56] = C_false;
     
-    // line 892
+    #line 892
     Insq[56] = C_intsize;
     
-    // line 893
+    #line 893
     Instr[57] = "deci      ";
     
-    // line 893
+    #line 893
     Insp[57] = C_false;
     
-    // line 893
+    #line 893
     Insq[57] = C_intsize;
     
-    // line 894
+    #line 894
     Instr[58] = "stp       ";
     
-    // line 894
+    #line 894
     Insp[58] = C_false;
     
-    // line 894
+    #line 894
     Insq[58] = 0;
     
-    // line 895
+    #line 895
     Instr[59] = "ordi      ";
     
-    // line 895
+    #line 895
     Insp[59] = C_false;
     
-    // line 895
+    #line 895
     Insq[59] = 0;
     
-    // line 896
+    #line 896
     Instr[60] = "chr       ";
     
-    // line 896
+    #line 896
     Insp[60] = C_false;
     
-    // line 896
+    #line 896
     Insq[60] = 0;
     
-    // line 897
+    #line 897
     Instr[61] = "ujc       ";
     
-    // line 897
+    #line 897
     Insp[61] = C_false;
     
-    // line 897
+    #line 897
     Insq[61] = C_intsize;
     
-    // line 898
+    #line 898
     Instr[62] = "rnd       ";
     
-    // line 898
+    #line 898
     Insp[62] = C_false;
     
-    // line 898
+    #line 898
     Insq[62] = 0;
     
-    // line 899
+    #line 899
     Instr[63] = "pck       ";
     
-    // line 899
+    #line 899
     Insp[63] = C_false;
     
-    // line 899
+    #line 899
     Insq[63] = C_intsize;
     
-    // line 900
+    #line 900
     Instr[64] = "upk       ";
     
-    // line 900
+    #line 900
     Insp[64] = C_false;
     
-    // line 900
+    #line 900
     Insq[64] = C_intsize;
     
-    // line 901
+    #line 901
     Instr[65] = "ldoa      ";
     
-    // line 901
+    #line 901
     Insp[65] = C_false;
     
-    // line 901
+    #line 901
     Insq[65] = C_intsize;
     
-    // line 902
+    #line 902
     Instr[66] = "ldor      ";
     
-    // line 902
+    #line 902
     Insp[66] = C_false;
     
-    // line 902
+    #line 902
     Insq[66] = C_intsize;
     
-    // line 903
+    #line 903
     Instr[67] = "ldos      ";
     
-    // line 903
+    #line 903
     Insp[67] = C_false;
     
-    // line 903
+    #line 903
     Insq[67] = C_intsize;
     
-    // line 904
+    #line 904
     Instr[68] = "ldob      ";
     
-    // line 904
+    #line 904
     Insp[68] = C_false;
     
-    // line 904
+    #line 904
     Insq[68] = C_intsize;
     
-    // line 905
+    #line 905
     Instr[69] = "ldoc      ";
     
-    // line 905
+    #line 905
     Insp[69] = C_false;
     
-    // line 905
+    #line 905
     Insq[69] = C_intsize;
     
-    // line 906
+    #line 906
     Instr[70] = "stra      ";
     
-    // line 906
+    #line 906
     Insp[70] = C_true;
     
-    // line 906
+    #line 906
     Insq[70] = C_intsize;
     
-    // line 907
+    #line 907
     Instr[71] = "strr      ";
     
-    // line 907
+    #line 907
     Insp[71] = C_true;
     
-    // line 907
+    #line 907
     Insq[71] = C_intsize;
     
-    // line 908
+    #line 908
     Instr[72] = "strs      ";
     
-    // line 908
+    #line 908
     Insp[72] = C_true;
     
-    // line 908
+    #line 908
     Insq[72] = C_intsize;
     
-    // line 909
+    #line 909
     Instr[73] = "strb      ";
     
-    // line 909
+    #line 909
     Insp[73] = C_true;
     
-    // line 909
+    #line 909
     Insq[73] = C_intsize;
     
-    // line 910
+    #line 910
     Instr[74] = "strc      ";
     
-    // line 910
+    #line 910
     Insp[74] = C_true;
     
-    // line 910
+    #line 910
     Insq[74] = C_intsize;
     
-    // line 911
+    #line 911
     Instr[75] = "sroa      ";
     
-    // line 911
+    #line 911
     Insp[75] = C_false;
     
-    // line 911
+    #line 911
     Insq[75] = C_intsize;
     
-    // line 912
+    #line 912
     Instr[76] = "sror      ";
     
-    // line 912
+    #line 912
     Insp[76] = C_false;
     
-    // line 912
+    #line 912
     Insq[76] = C_intsize;
     
-    // line 913
+    #line 913
     Instr[77] = "sros      ";
     
-    // line 913
+    #line 913
     Insp[77] = C_false;
     
-    // line 913
+    #line 913
     Insq[77] = C_intsize;
     
-    // line 914
+    #line 914
     Instr[78] = "srob      ";
     
-    // line 914
+    #line 914
     Insp[78] = C_false;
     
-    // line 914
+    #line 914
     Insq[78] = C_intsize;
     
-    // line 915
+    #line 915
     Instr[79] = "sroc      ";
     
-    // line 915
+    #line 915
     Insp[79] = C_false;
     
-    // line 915
+    #line 915
     Insq[79] = C_intsize;
     
-    // line 916
+    #line 916
     Instr[80] = "stoa      ";
     
-    // line 916
+    #line 916
     Insp[80] = C_false;
     
-    // line 916
+    #line 916
     Insq[80] = 0;
     
-    // line 917
+    #line 917
     Instr[81] = "stor      ";
     
-    // line 917
+    #line 917
     Insp[81] = C_false;
     
-    // line 917
+    #line 917
     Insq[81] = 0;
     
-    // line 918
+    #line 918
     Instr[82] = "stos      ";
     
-    // line 918
+    #line 918
     Insp[82] = C_false;
     
-    // line 918
+    #line 918
     Insq[82] = 0;
     
-    // line 919
+    #line 919
     Instr[83] = "stob      ";
     
-    // line 919
+    #line 919
     Insp[83] = C_false;
     
-    // line 919
+    #line 919
     Insq[83] = 0;
     
-    // line 920
+    #line 920
     Instr[84] = "stoc      ";
     
-    // line 920
+    #line 920
     Insp[84] = C_false;
     
-    // line 920
+    #line 920
     Insq[84] = 0;
     
-    // line 921
+    #line 921
     Instr[85] = "inda      ";
     
-    // line 921
+    #line 921
     Insp[85] = C_false;
     
-    // line 921
+    #line 921
     Insq[85] = C_intsize;
     
-    // line 922
+    #line 922
     Instr[86] = "indr      ";
     
-    // line 922
+    #line 922
     Insp[86] = C_false;
     
-    // line 922
+    #line 922
     Insq[86] = C_intsize;
     
-    // line 923
+    #line 923
     Instr[87] = "inds      ";
     
-    // line 923
+    #line 923
     Insp[87] = C_false;
     
-    // line 923
+    #line 923
     Insq[87] = C_intsize;
     
-    // line 924
+    #line 924
     Instr[88] = "indb      ";
     
-    // line 924
+    #line 924
     Insp[88] = C_false;
     
-    // line 924
+    #line 924
     Insq[88] = C_intsize;
     
-    // line 925
+    #line 925
     Instr[89] = "indc      ";
     
-    // line 925
+    #line 925
     Insp[89] = C_false;
     
-    // line 925
+    #line 925
     Insq[89] = C_intsize;
     
-    // line 926
+    #line 926
     Instr[90] = "inca      ";
     
-    // line 926
+    #line 926
     Insp[90] = C_false;
     
-    // line 926
+    #line 926
     Insq[90] = C_intsize;
     
-    // line 927
+    #line 927
     Instr[91] = "incr      ";
     
-    // line 927
+    #line 927
     Insp[91] = C_false;
     
-    // line 927
+    #line 927
     Insq[91] = C_intsize;
     
-    // line 928
+    #line 928
     Instr[92] = "incs      ";
     
-    // line 928
+    #line 928
     Insp[92] = C_false;
     
-    // line 928
+    #line 928
     Insq[92] = C_intsize;
     
-    // line 929
+    #line 929
     Instr[93] = "incb      ";
     
-    // line 929
+    #line 929
     Insp[93] = C_false;
     
-    // line 929
+    #line 929
     Insq[93] = C_intsize;
     
-    // line 930
+    #line 930
     Instr[94] = "incc      ";
     
-    // line 930
+    #line 930
     Insp[94] = C_false;
     
-    // line 930
+    #line 930
     Insq[94] = C_intsize;
     
-    // line 931
+    #line 931
     Instr[95] = "chka      ";
     
-    // line 931
+    #line 931
     Insp[95] = C_false;
     
-    // line 931
+    #line 931
     Insq[95] = C_intsize;
     
-    // line 932
+    #line 932
     Instr[96] = "chkr      ";
     
-    // line 932
+    #line 932
     Insp[96] = C_false;
     
-    // line 932
+    #line 932
     Insq[96] = C_intsize;
     
-    // line 933
+    #line 933
     Instr[97] = "chks      ";
     
-    // line 933
+    #line 933
     Insp[97] = C_false;
     
-    // line 933
+    #line 933
     Insq[97] = C_intsize;
     
-    // line 934
+    #line 934
     Instr[98] = "chkb      ";
     
-    // line 934
+    #line 934
     Insp[98] = C_false;
     
-    // line 934
+    #line 934
     Insq[98] = C_intsize;
     
-    // line 935
+    #line 935
     Instr[99] = "chkc      ";
     
-    // line 935
+    #line 935
     Insp[99] = C_false;
     
-    // line 935
+    #line 935
     Insq[99] = C_intsize;
     
-    // line 936
+    #line 936
     Instr[100] = "deca      ";
     
-    // line 936
+    #line 936
     Insp[100] = C_false;
     
-    // line 936
+    #line 936
     Insq[100] = C_intsize;
     
-    // line 937
+    #line 937
     Instr[101] = "decr      ";
     
-    // line 937
+    #line 937
     Insp[101] = C_false;
     
-    // line 937
+    #line 937
     Insq[101] = C_intsize;
     
-    // line 938
+    #line 938
     Instr[102] = "decs      ";
     
-    // line 938
+    #line 938
     Insp[102] = C_false;
     
-    // line 938
+    #line 938
     Insq[102] = C_intsize;
     
-    // line 939
+    #line 939
     Instr[103] = "decb      ";
     
-    // line 939
+    #line 939
     Insp[103] = C_false;
     
-    // line 939
+    #line 939
     Insq[103] = C_intsize;
     
-    // line 940
+    #line 940
     Instr[104] = "decc      ";
     
-    // line 940
+    #line 940
     Insp[104] = C_false;
     
-    // line 940
+    #line 940
     Insq[104] = C_intsize;
     
-    // line 941
+    #line 941
     Instr[105] = "loda      ";
     
-    // line 941
+    #line 941
     Insp[105] = C_true;
     
-    // line 941
+    #line 941
     Insq[105] = C_intsize;
     
-    // line 942
+    #line 942
     Instr[106] = "lodr      ";
     
-    // line 942
+    #line 942
     Insp[106] = C_true;
     
-    // line 942
+    #line 942
     Insq[106] = C_intsize;
     
-    // line 943
+    #line 943
     Instr[107] = "lods      ";
     
-    // line 943
+    #line 943
     Insp[107] = C_true;
     
-    // line 943
+    #line 943
     Insq[107] = C_intsize;
     
-    // line 944
+    #line 944
     Instr[108] = "lodb      ";
     
-    // line 944
+    #line 944
     Insp[108] = C_true;
     
-    // line 944
+    #line 944
     Insq[108] = C_intsize;
     
-    // line 945
+    #line 945
     Instr[109] = "lodc      ";
     
-    // line 945
+    #line 945
     Insp[109] = C_true;
     
-    // line 945
+    #line 945
     Insq[109] = C_intsize;
     
-    // line 946
+    #line 946
     Instr[110] = "rgs       ";
     
-    // line 946
+    #line 946
     Insp[110] = C_false;
     
-    // line 946
+    #line 946
     Insq[110] = 0;
     
-    // line 947
+    #line 947
     Instr[111] = "fbv       ";
     
-    // line 947
+    #line 947
     Insp[111] = C_false;
     
-    // line 947
+    #line 947
     Insq[111] = 0;
     
-    // line 948
+    #line 948
     Instr[112] = "ipj       ";
     
-    // line 948
+    #line 948
     Insp[112] = C_true;
     
-    // line 948
+    #line 948
     Insq[112] = C_intsize;
     
-    // line 949
+    #line 949
     Instr[113] = "cip       ";
     
-    // line 949
+    #line 949
     Insp[113] = C_true;
     
-    // line 949
+    #line 949
     Insq[113] = 0;
     
-    // line 950
+    #line 950
     Instr[114] = "lpa       ";
     
-    // line 950
+    #line 950
     Insp[114] = C_true;
     
-    // line 950
+    #line 950
     Insq[114] = C_intsize;
     
-    // line 951
+    #line 951
     Instr[115] = "efb       ";
     
-    // line 951
+    #line 951
     Insp[115] = C_false;
     
-    // line 951
+    #line 951
     Insq[115] = 0;
     
-    // line 952
+    #line 952
     Instr[116] = "fvb       ";
     
-    // line 952
+    #line 952
     Insp[116] = C_false;
     
-    // line 952
+    #line 952
     Insq[116] = 0;
     
-    // line 953
+    #line 953
     Instr[117] = "dmp       ";
     
-    // line 953
+    #line 953
     Insp[117] = C_false;
     
-    // line 953
+    #line 953
     Insq[117] = C_intsize;
     
-    // line 954
+    #line 954
     Instr[118] = "swp       ";
     
-    // line 954
+    #line 954
     Insp[118] = C_false;
     
-    // line 954
+    #line 954
     Insq[118] = C_intsize;
     
-    // line 955
+    #line 955
     Instr[119] = "tjp       ";
     
-    // line 955
+    #line 955
     Insp[119] = C_false;
     
-    // line 955
+    #line 955
     Insq[119] = C_intsize;
     
-    // line 956
+    #line 956
     Instr[120] = "lip       ";
     
-    // line 956
+    #line 956
     Insp[120] = C_true;
     
-    // line 956
+    #line 956
     Insq[120] = C_intsize;
     
-    // line 957
+    #line 957
     Instr[121] = "---       ";
     
-    // line 957
+    #line 957
     Insp[121] = C_false;
     
-    // line 957
+    #line 957
     Insq[121] = 0;
     
-    // line 958
+    #line 958
     Instr[122] = "---       ";
     
-    // line 958
+    #line 958
     Insp[122] = C_false;
     
-    // line 958
+    #line 958
     Insq[122] = 0;
     
-    // line 959
+    #line 959
     Instr[123] = "ldci      ";
     
-    // line 959
+    #line 959
     Insp[123] = C_false;
     
-    // line 959
+    #line 959
     Insq[123] = C_intsize;
     
-    // line 960
+    #line 960
     Instr[124] = "ldcr      ";
     
-    // line 960
+    #line 960
     Insp[124] = C_false;
     
-    // line 960
+    #line 960
     Insq[124] = C_intsize;
     
-    // line 961
+    #line 961
     Instr[125] = "ldcn      ";
     
-    // line 961
+    #line 961
     Insp[125] = C_false;
     
-    // line 961
+    #line 961
     Insq[125] = 0;
     
-    // line 962
+    #line 962
     Instr[126] = "ldcb      ";
     
-    // line 962
+    #line 962
     Insp[126] = C_false;
     
-    // line 962
+    #line 962
     Insq[126] = C_boolsize;
     
-    // line 963
+    #line 963
     Instr[127] = "ldcc      ";
     
-    // line 963
+    #line 963
     Insp[127] = C_false;
     
-    // line 963
+    #line 963
     Insq[127] = C_charsize;
     
-    // line 964
+    #line 964
     Instr[128] = "reti      ";
     
-    // line 964
+    #line 964
     Insp[128] = C_false;
     
-    // line 964
+    #line 964
     Insq[128] = 0;
     
-    // line 965
+    #line 965
     Instr[129] = "retr      ";
     
-    // line 965
+    #line 965
     Insp[129] = C_false;
     
-    // line 965
+    #line 965
     Insq[129] = 0;
     
-    // line 966
+    #line 966
     Instr[130] = "retc      ";
     
-    // line 966
+    #line 966
     Insp[130] = C_false;
     
-    // line 966
+    #line 966
     Insq[130] = 0;
     
-    // line 967
+    #line 967
     Instr[131] = "retb      ";
     
-    // line 967
+    #line 967
     Insp[131] = C_false;
     
-    // line 967
+    #line 967
     Insq[131] = 0;
     
-    // line 968
+    #line 968
     Instr[132] = "reta      ";
     
-    // line 968
+    #line 968
     Insp[132] = C_false;
     
-    // line 968
+    #line 968
     Insq[132] = 0;
     
-    // line 969
+    #line 969
     Instr[133] = "ordr      ";
     
-    // line 969
+    #line 969
     Insp[133] = C_false;
     
-    // line 969
+    #line 969
     Insq[133] = 0;
     
-    // line 970
+    #line 970
     Instr[134] = "ordb      ";
     
-    // line 970
+    #line 970
     Insp[134] = C_false;
     
-    // line 970
+    #line 970
     Insq[134] = 0;
     
-    // line 971
+    #line 971
     Instr[135] = "ords      ";
     
-    // line 971
+    #line 971
     Insp[135] = C_false;
     
-    // line 971
+    #line 971
     Insq[135] = 0;
     
-    // line 972
+    #line 972
     Instr[136] = "ordc      ";
     
-    // line 972
+    #line 972
     Insp[136] = C_false;
     
-    // line 972
+    #line 972
     Insq[136] = 0;
     
-    // line 973
+    #line 973
     Instr[137] = "equi      ";
     
-    // line 973
+    #line 973
     Insp[137] = C_false;
     
-    // line 973
+    #line 973
     Insq[137] = 0;
     
-    // line 974
+    #line 974
     Instr[138] = "equr      ";
     
-    // line 974
+    #line 974
     Insp[138] = C_false;
     
-    // line 974
+    #line 974
     Insq[138] = 0;
     
-    // line 975
+    #line 975
     Instr[139] = "equb      ";
     
-    // line 975
+    #line 975
     Insp[139] = C_false;
     
-    // line 975
+    #line 975
     Insq[139] = 0;
     
-    // line 976
+    #line 976
     Instr[140] = "equs      ";
     
-    // line 976
+    #line 976
     Insp[140] = C_false;
     
-    // line 976
+    #line 976
     Insq[140] = 0;
     
-    // line 977
+    #line 977
     Instr[141] = "equc      ";
     
-    // line 977
+    #line 977
     Insp[141] = C_false;
     
-    // line 977
+    #line 977
     Insq[141] = 0;
     
-    // line 978
+    #line 978
     Instr[142] = "equm      ";
     
-    // line 978
+    #line 978
     Insp[142] = C_false;
     
-    // line 978
+    #line 978
     Insq[142] = C_intsize;
     
-    // line 979
+    #line 979
     Instr[143] = "neqi      ";
     
-    // line 979
+    #line 979
     Insp[143] = C_false;
     
-    // line 979
+    #line 979
     Insq[143] = 0;
     
-    // line 980
+    #line 980
     Instr[144] = "neqr      ";
     
-    // line 980
+    #line 980
     Insp[144] = C_false;
     
-    // line 980
+    #line 980
     Insq[144] = 0;
     
-    // line 981
+    #line 981
     Instr[145] = "neqb      ";
     
-    // line 981
+    #line 981
     Insp[145] = C_false;
     
-    // line 981
+    #line 981
     Insq[145] = 0;
     
-    // line 982
+    #line 982
     Instr[146] = "neqs      ";
     
-    // line 982
+    #line 982
     Insp[146] = C_false;
     
-    // line 982
+    #line 982
     Insq[146] = 0;
     
-    // line 983
+    #line 983
     Instr[147] = "neqc      ";
     
-    // line 983
+    #line 983
     Insp[147] = C_false;
     
-    // line 983
+    #line 983
     Insq[147] = 0;
     
-    // line 984
+    #line 984
     Instr[148] = "neqm      ";
     
-    // line 984
+    #line 984
     Insp[148] = C_false;
     
-    // line 984
+    #line 984
     Insq[148] = C_intsize;
     
-    // line 985
+    #line 985
     Instr[149] = "geqi      ";
     
-    // line 985
+    #line 985
     Insp[149] = C_false;
     
-    // line 985
+    #line 985
     Insq[149] = 0;
     
-    // line 986
+    #line 986
     Instr[150] = "geqr      ";
     
-    // line 986
+    #line 986
     Insp[150] = C_false;
     
-    // line 986
+    #line 986
     Insq[150] = 0;
     
-    // line 987
+    #line 987
     Instr[151] = "geqb      ";
     
-    // line 987
+    #line 987
     Insp[151] = C_false;
     
-    // line 987
+    #line 987
     Insq[151] = 0;
     
-    // line 988
+    #line 988
     Instr[152] = "geqs      ";
     
-    // line 988
+    #line 988
     Insp[152] = C_false;
     
-    // line 988
+    #line 988
     Insq[152] = 0;
     
-    // line 989
+    #line 989
     Instr[153] = "geqc      ";
     
-    // line 989
+    #line 989
     Insp[153] = C_false;
     
-    // line 989
+    #line 989
     Insq[153] = 0;
     
-    // line 990
+    #line 990
     Instr[154] = "geqm      ";
     
-    // line 990
+    #line 990
     Insp[154] = C_false;
     
-    // line 990
+    #line 990
     Insq[154] = C_intsize;
     
-    // line 991
+    #line 991
     Instr[155] = "grti      ";
     
-    // line 991
+    #line 991
     Insp[155] = C_false;
     
-    // line 991
+    #line 991
     Insq[155] = 0;
     
-    // line 992
+    #line 992
     Instr[156] = "grtr      ";
     
-    // line 992
+    #line 992
     Insp[156] = C_false;
     
-    // line 992
+    #line 992
     Insq[156] = 0;
     
-    // line 993
+    #line 993
     Instr[157] = "grtb      ";
     
-    // line 993
+    #line 993
     Insp[157] = C_false;
     
-    // line 993
+    #line 993
     Insq[157] = 0;
     
-    // line 994
+    #line 994
     Instr[158] = "grts      ";
     
-    // line 994
+    #line 994
     Insp[158] = C_false;
     
-    // line 994
+    #line 994
     Insq[158] = 0;
     
-    // line 995
+    #line 995
     Instr[159] = "grtc      ";
     
-    // line 995
+    #line 995
     Insp[159] = C_false;
     
-    // line 995
+    #line 995
     Insq[159] = 0;
     
-    // line 996
+    #line 996
     Instr[160] = "grtm      ";
     
-    // line 996
+    #line 996
     Insp[160] = C_false;
     
-    // line 996
+    #line 996
     Insq[160] = C_intsize;
     
-    // line 997
+    #line 997
     Instr[161] = "leqi      ";
     
-    // line 997
+    #line 997
     Insp[161] = C_false;
     
-    // line 997
+    #line 997
     Insq[161] = 0;
     
-    // line 998
+    #line 998
     Instr[162] = "leqr      ";
     
-    // line 998
+    #line 998
     Insp[162] = C_false;
     
-    // line 998
+    #line 998
     Insq[162] = 0;
     
-    // line 999
+    #line 999
     Instr[163] = "leqb      ";
     
-    // line 999
+    #line 999
     Insp[163] = C_false;
     
-    // line 999
+    #line 999
     Insq[163] = 0;
     
-    // line 1000
+    #line 1000
     Instr[164] = "leqs      ";
     
-    // line 1000
+    #line 1000
     Insp[164] = C_false;
     
-    // line 1000
+    #line 1000
     Insq[164] = 0;
     
-    // line 1001
+    #line 1001
     Instr[165] = "leqc      ";
     
-    // line 1001
+    #line 1001
     Insp[165] = C_false;
     
-    // line 1001
+    #line 1001
     Insq[165] = 0;
     
-    // line 1002
+    #line 1002
     Instr[166] = "leqm      ";
     
-    // line 1002
+    #line 1002
     Insp[166] = C_false;
     
-    // line 1002
+    #line 1002
     Insq[166] = C_intsize;
     
-    // line 1003
+    #line 1003
     Instr[167] = "lesi      ";
     
-    // line 1003
+    #line 1003
     Insp[167] = C_false;
     
-    // line 1003
+    #line 1003
     Insq[167] = 0;
     
-    // line 1004
+    #line 1004
     Instr[168] = "lesr      ";
     
-    // line 1004
+    #line 1004
     Insp[168] = C_false;
     
-    // line 1004
+    #line 1004
     Insq[168] = 0;
     
-    // line 1005
+    #line 1005
     Instr[169] = "lesb      ";
     
-    // line 1005
+    #line 1005
     Insp[169] = C_false;
     
-    // line 1005
+    #line 1005
     Insq[169] = 0;
     
-    // line 1006
+    #line 1006
     Instr[170] = "less      ";
     
-    // line 1006
+    #line 1006
     Insp[170] = C_false;
     
-    // line 1006
+    #line 1006
     Insq[170] = 0;
     
-    // line 1007
+    #line 1007
     Instr[171] = "lesc      ";
     
-    // line 1007
+    #line 1007
     Insp[171] = C_false;
     
-    // line 1007
+    #line 1007
     Insq[171] = 0;
     
-    // line 1008
+    #line 1008
     Instr[172] = "lesm      ";
     
-    // line 1008
+    #line 1008
     Insp[172] = C_false;
     
-    // line 1008
+    #line 1008
     Insq[172] = C_intsize;
     
-    // line 1009
+    #line 1009
     Instr[173] = "ente      ";
     
-    // line 1009
+    #line 1009
     Insp[173] = C_false;
     
-    // line 1009
+    #line 1009
     Insq[173] = C_intsize;
     
-    // line 1010
+    #line 1010
     Instr[174] = "mrkl*     ";
     
-    // line 1010
+    #line 1010
     Insp[174] = C_false;
     
-    // line 1010
+    #line 1010
     Insq[174] = C_intsize;
     
-    // line 1013
+    #line 1013
     Sptable[0] = "get       ";
     
-    // line 1013
+    #line 1013
     Sptable[1] = "put       ";
     
-    // line 1014
+    #line 1014
     Sptable[2] = "---       ";
     
-    // line 1014
+    #line 1014
     Sptable[3] = "rln       ";
     
-    // line 1015
+    #line 1015
     Sptable[4] = "new       ";
     
-    // line 1015
+    #line 1015
     Sptable[5] = "wln       ";
     
-    // line 1016
+    #line 1016
     Sptable[6] = "wrs       ";
     
-    // line 1016
+    #line 1016
     Sptable[7] = "eln       ";
     
-    // line 1017
+    #line 1017
     Sptable[8] = "wri       ";
     
-    // line 1017
+    #line 1017
     Sptable[9] = "wrr       ";
     
-    // line 1018
+    #line 1018
     Sptable[10] = "wrc       ";
     
-    // line 1018
+    #line 1018
     Sptable[11] = "rdi       ";
     
-    // line 1019
+    #line 1019
     Sptable[12] = "rdr       ";
     
-    // line 1019
+    #line 1019
     Sptable[13] = "rdc       ";
     
-    // line 1020
+    #line 1020
     Sptable[14] = "sin       ";
     
-    // line 1020
+    #line 1020
     Sptable[15] = "cos       ";
     
-    // line 1021
+    #line 1021
     Sptable[16] = "exp       ";
     
-    // line 1021
+    #line 1021
     Sptable[17] = "log       ";
     
-    // line 1022
+    #line 1022
     Sptable[18] = "sqt       ";
     
-    // line 1022
+    #line 1022
     Sptable[19] = "atn       ";
     
-    // line 1023
+    #line 1023
     Sptable[20] = "---       ";
     
-    // line 1023
+    #line 1023
     Sptable[21] = "pag       ";
     
-    // line 1024
+    #line 1024
     Sptable[22] = "rsf       ";
     
-    // line 1024
+    #line 1024
     Sptable[23] = "rwf       ";
     
-    // line 1025
+    #line 1025
     Sptable[24] = "wrb       ";
     
-    // line 1025
+    #line 1025
     Sptable[25] = "wrf       ";
     
-    // line 1026
+    #line 1026
     Sptable[26] = "dsp       ";
     
-    // line 1026
+    #line 1026
     Sptable[27] = "wbf       ";
     
-    // line 1027
+    #line 1027
     Sptable[28] = "wbi       ";
     
-    // line 1027
+    #line 1027
     Sptable[29] = "wbr       ";
     
-    // line 1028
+    #line 1028
     Sptable[30] = "wbc       ";
     
-    // line 1028
+    #line 1028
     Sptable[31] = "wbb       ";
     
-    // line 1029
+    #line 1029
     Sptable[32] = "rbf       ";
     
-    // line 1029
+    #line 1029
     Sptable[33] = "rsb       ";
     
-    // line 1030
+    #line 1030
     Sptable[34] = "rwb       ";
     
-    // line 1030
+    #line 1030
     Sptable[35] = "gbf       ";
     
-    // line 1031
+    #line 1031
     Sptable[36] = "pbf       ";
     
-    // line 1033
+    #line 1033
     Pc = C_begincode;
     
-    // line 1034
+    #line 1034
     Cp = C_maxstr;
     
-    // line 1035
+    #line 1035
     _FOR_TO(_F.i, 1, 10)
     {
-        // line 1035
+        #line 1035
         _F._slink->Word[_F.i] = ' ';
     }
     _FOR_END(_F.i)
     
-    // line 1036
+    #line 1036
     _FOR_TO(_F.i, 0, C_maxlabel)
     {
-        // line 1037
+        #line 1037
         _F._slink->Labeltab[_F.i].Val = (-1);
         
-        // line 1037
+        #line 1037
         _F._slink->Labeltab[_F.i].St = C_load_entered;
     }
     _FOR_END(_F.i)
     
-    // line 1039
+    #line 1039
     _FOR_TO(_F.i, 1, C_maxfil)
     {
-        // line 1039
+        #line 1039
         Filstate[_F.i] = C_fclosed;
     }
     _FOR_END(_F.i)
     
-    // line 1042
+    #line 1042
     _reset(Prd);
     
-    // line 1044
+    #line 1044
     _F._slink->Iline = 1;
 }
 
 
-// line 1047
+#line 1047
 //================================================================================
 // scope: load_errorl (level : 3)
 
@@ -5381,18 +5381,18 @@ void P_load_errorl(void* _slink, T_beta String)
     Frame_load_errorl _F = { (Frame_load*)_slink, String };
     
     // subroutine body
-    // line 1048
+    #line 1048
     Output << _WRITELN;
     
-    // line 1049
+    #line 1049
     Output << "*** Program load error: [" << _format(_F._slink->Iline, 1, 0) << "] " << _F.String << _WRITELN;
     
-    // line 1050
+    #line 1050
     throw NL_1;
 }
 
 
-// line 1053
+#line 1053
 //================================================================================
 // scope: load_dmplabs (level : 3)
 
@@ -5412,45 +5412,45 @@ void P_load_dmplabs(void* _slink)
     Frame_load_dmplabs _F = { (Frame_load*)_slink };
     
     // subroutine body
-    // line 1059
+    #line 1059
     Output << _WRITELN;
     
-    // line 1060
+    #line 1060
     Output << "Label table" << _WRITELN;
     
-    // line 1061
+    #line 1061
     Output << _WRITELN;
     
-    // line 1062
+    #line 1062
     _FOR_TO(_F.i, 1, C_maxlabel)
     {
-        // line 1062
+        #line 1062
         if((_F._slink->Labeltab[_F.i].Val != (-1)))
         {
-            // line 1064
+            #line 1064
             Output << "Label: " << _format(_F.i, 5, 0) << " value: " << _F._slink->Labeltab[_F.i].Val << ' ';
             
-            // line 1065
+            #line 1065
             if((_F._slink->Labeltab[_F.i].St == C_load_entered))
             {
-                // line 1065
+                #line 1065
                 Output << "Entered" << _WRITELN;
             }
             else
             {
-                // line 1066
+                #line 1066
                 Output << "Defined" << _WRITELN;
             }
         }
     }
     _FOR_END(_F.i)
     
-    // line 1069
+    #line 1069
     Output << _WRITELN;
 }
 
 
-// line 1073
+#line 1073
 //================================================================================
 // scope: load_update (level : 3)
 
@@ -5478,65 +5478,65 @@ void P_load_update(void* _slink, T_load_labelrg x)
     Frame_load_update _F = { (Frame_load*)_slink, x };
     
     // subroutine body
-    // line 1079
+    #line 1079
     if((_F._slink->Labeltab[_F.x].St == C_load_defined))
     {
-        // line 1079
+        #line 1079
         P_load_errorl(_F._slink, T_beta::C("duplicated label         "));
     }
     else
     {
-        // line 1081
+        #line 1081
         if((_F._slink->Labeltab[_F.x].Val != (-1)))
         {
-            // line 1082
+            #line 1082
             _F.Curr = _F._slink->Labeltab[_F.x].Val;
             
-            // line 1082
+            #line 1082
             _F.Endlist = C_false;
             
-            // line 1083
+            #line 1083
             while((!_F.Endlist))
             {
-                // line 1084
+                #line 1084
                 _F.Ad = _F.Curr;
                 
-                // line 1085
+                #line 1085
                 _F.Op = Store[_F.Ad];
                 
-                // line 1086
+                #line 1086
                 _F.q = F_getadr(nullptr, T_address::C(((_F.Ad + 1) + _ord(Insp[_F.Op]))));
                 
-                // line 1087
+                #line 1087
                 _F.Succ = _F.q;
                 
-                // line 1088
+                #line 1088
                 _F.q = _F._slink->Labelvalue;
                 
-                // line 1089
+                #line 1089
                 _F.Ad = _F.Curr;
                 
-                // line 1090
+                #line 1090
                 P_putadr(nullptr, T_address::C(((_F.Ad + 1) + _ord(Insp[_F.Op]))), _F.q);
                 
-                // line 1091
+                #line 1091
                 if((_F.Succ == (-1)))
                 {
-                    // line 1091
+                    #line 1091
                     _F.Endlist = C_true;
                 }
                 else
                 {
-                    // line 1092
+                    #line 1092
                     _F.Curr = _F.Succ;
                 }
             }
         }
         
-        // line 1095
+        #line 1095
         _F._slink->Labeltab[_F.x].St = C_load_defined;
         
-        // line 1096
+        #line 1096
         _F._slink->Labeltab[_F.x].Val = _F._slink->Labelvalue;
         
         { /* NOP */ }
@@ -5544,7 +5544,7 @@ void P_load_update(void* _slink, T_load_labelrg x)
 }
 
 
-// line 1100
+#line 1100
 //================================================================================
 // scope: load_getnxt (level : 3)
 
@@ -5561,19 +5561,19 @@ void P_load_getnxt(void* _slink)
     Frame_load_getnxt _F = { (Frame_load*)_slink };
     
     // subroutine body
-    // line 1102
+    #line 1102
     _F._slink->Ch = ' ';
     
-    // line 1103
+    #line 1103
     if((!_eoln(Prd)))
     {
-        // line 1103
+        #line 1103
         Prd >> _F._slink->Ch;
     }
 }
 
 
-// line 1106
+#line 1106
 //================================================================================
 // scope: load_skpspc (level : 3)
 
@@ -5590,16 +5590,16 @@ void P_load_skpspc(void* _slink)
     Frame_load_skpspc _F = { (Frame_load*)_slink };
     
     // subroutine body
-    // line 1108
+    #line 1108
     while(((_F._slink->Ch == ' ') && (!_eoln(Prd))))
     {
-        // line 1108
+        #line 1108
         P_load_getnxt(_F._slink);
     }
 }
 
 
-// line 1111
+#line 1111
 //================================================================================
 // scope: load_getlin (level : 3)
 
@@ -5616,15 +5616,15 @@ void P_load_getlin(void* _slink)
     Frame_load_getlin _F = { (Frame_load*)_slink };
     
     // subroutine body
-    // line 1113
+    #line 1113
     Prd >> _READLN;
     
-    // line 1114
+    #line 1114
     _F._slink->Iline = (_F._slink->Iline + 1);
 }
 
 
-// line 1119
+#line 1119
 //================================================================================
 // scope: load_generate (level : 3)
 
@@ -5654,107 +5654,107 @@ void P_load_generate(void* _slink)
     _setLiteral1.set(':');
     
     // subroutine body
-    // line 1123
+    #line 1123
     _F.Again = C_true;
     
-    // line 1124
+    #line 1124
     while(_F.Again)
     {
-        // line 1125
+        #line 1125
         if(_eof(Prd))
         {
-            // line 1125
+            #line 1125
             P_load_errorl(_F._slink, T_beta::C("unexpected eof on input  "));
         }
         
-        // line 1126
+        #line 1126
         P_load_getnxt(_F._slink);
         
-        // line 1127
+        #line 1127
         if((!(_setLiteral1 & _F._slink->Ch)))
         {
-            // line 1128
+            #line 1128
             P_load_errorl(_F._slink, T_beta::C("unexpected line start    "));
         }
         
-        // line 1129
+        #line 1129
         switch(_F._slink->Ch)
         {
         case 'i':
-            // line 1130
+            #line 1130
             P_load_getlin(_F._slink);
             break;
         
         case 'l':
-            // line 1131
+            #line 1131
             Prd >> _F.x;
             
-            // line 1132
+            #line 1132
             P_load_getnxt(_F._slink);
             
-            // line 1133
+            #line 1133
             if((_F._slink->Ch == '='))
             {
-                // line 1133
+                #line 1133
                 Prd >> _F._slink->Labelvalue;
             }
             else
             {
-                // line 1134
+                #line 1134
                 _F._slink->Labelvalue = Pc;
             }
             
-            // line 1135
+            #line 1135
             P_load_update(_F._slink, T_load_labelrg::C(_F.x));
             
-            // line 1135
+            #line 1135
             P_load_getlin(_F._slink);
             break;
         
         case 'q':
-            // line 1137
+            #line 1137
             _F.Again = C_false;
             
-            // line 1137
+            #line 1137
             P_load_getlin(_F._slink);
             break;
         
         case ' ':
-            // line 1138
+            #line 1138
             P_load_getnxt(_F._slink);
             
-            // line 1138
+            #line 1138
             P_load_assemble(_F._slink);
             break;
         
         case ':':
-            // line 1141
+            #line 1141
             Prd >> _F.x;
             
-            // line 1142
+            #line 1142
             if(C_dosrclin)
             {
-                // line 1145
+                #line 1145
                 Store[Pc] = 174;
                 
-                // line 1145
+                #line 1145
                 Pc = (Pc + 1);
                 
-                // line 1146
+                #line 1146
                 P_putint(nullptr, Pc, _F.x);
                 
-                // line 1146
+                #line 1146
                 Pc = (Pc + C_intsize);
             }
             
-            // line 1151
+            #line 1151
             while((!_eoln(Prd)))
             {
-                // line 1152
+                #line 1152
                 Prd >> c;
             }
             
-            // line 1153
+            #line 1153
             P_load_getlin(_F._slink);
             break;
         }
@@ -5764,7 +5764,7 @@ void P_load_generate(void* _slink)
 }
 
 
-// line 1160
+#line 1160
 //================================================================================
 // scope: load_assemble (level : 3)
 
@@ -5810,33 +5810,33 @@ void P_load_assemble(void* _slink)
     _T_GenericSet _setLiteral1;
     
     // subroutine body
-    // line 1220
+    #line 1220
     p = 0;
     
-    // line 1220
+    #line 1220
     q = 0;
     
-    // line 1220
+    #line 1220
     Op = 0;
     
-    // line 1221
+    #line 1221
     P_load_assemble_getname(&_F);
     
-    // line 1223
+    #line 1223
     while((_strcmpNE<10>(Instr[Op], _F.Name) && (Op < C_maxins)))
     {
-        // line 1223
+        #line 1223
         Op = (Op + 1);
     }
     
-    // line 1224
+    #line 1224
     if((Op == C_maxins))
     {
-        // line 1224
+        #line 1224
         P_load_errorl(_F._slink, T_beta::C("illegal instruction      "));
     }
     
-    // line 1226
+    #line 1226
     switch(Op)
     {
     case 0:
@@ -5853,48 +5853,48 @@ void P_load_assemble(void* _slink)
     case 74:
     case 4:
     case 120:
-        // line 1230
+        #line 1230
         Prd >> p >> q;
         
-        // line 1230
+        #line 1230
         P_load_assemble_storeop(&_F);
         
-        // line 1230
+        #line 1230
         P_load_assemble_storep(&_F);
         
-        // line 1231
+        #line 1231
         P_load_assemble_storeq(&_F);
         break;
     
     case 12:
-        // line 1236
+        #line 1236
         Prd >> _F.t;
         
-        // line 1236
+        #line 1236
         p = _F.t;
         
-        // line 1236
+        #line 1236
         P_load_assemble_labelsearch(&_F);
         
-        // line 1236
+        #line 1236
         P_load_assemble_storeop(&_F);
         
-        // line 1237
+        #line 1237
         P_load_assemble_storep(&_F);
         
-        // line 1237
+        #line 1237
         P_load_assemble_storeq(&_F);
         break;
     
     case 11:
     case 113:
-        // line 1240
+        #line 1240
         Prd >> p;
         
-        // line 1240
+        #line 1240
         P_load_assemble_storeop(&_F);
         
-        // line 1240
+        #line 1240
         P_load_assemble_storep(&_F);
         break;
     
@@ -5939,31 +5939,31 @@ void P_load_assemble(void* _slink)
     case 102:
     case 103:
     case 104:
-        // line 1253
+        #line 1253
         Prd >> q;
         
-        // line 1253
+        #line 1253
         P_load_assemble_storeop(&_F);
         
-        // line 1253
+        #line 1253
         P_load_assemble_storeq(&_F);
         break;
     
     case 63:
     case 64:
-        // line 1256
+        #line 1256
         Prd >> q;
         
-        // line 1256
+        #line 1256
         Prd >> Q1;
         
-        // line 1256
+        #line 1256
         P_load_assemble_storeop(&_F);
         
-        // line 1256
+        #line 1256
         P_load_assemble_storeq(&_F);
         
-        // line 1256
+        #line 1256
         P_load_assemble_storeq1(&_F);
         break;
     
@@ -5973,59 +5973,59 @@ void P_load_assemble(void* _slink)
     case 119:
     case 13:
     case 173:
-        // line 1262
+        #line 1262
         P_load_assemble_labelsearch(&_F);
         
-        // line 1262
+        #line 1262
         P_load_assemble_storeop(&_F);
         
-        // line 1262
+        #line 1262
         P_load_assemble_storeq(&_F);
         break;
     
     case 112:
     case 114:
-        // line 1265
+        #line 1265
         Prd >> p;
         
-        // line 1265
+        #line 1265
         P_load_assemble_labelsearch(&_F);
         
-        // line 1265
+        #line 1265
         P_load_assemble_storeop(&_F);
         
-        // line 1265
+        #line 1265
         P_load_assemble_storep(&_F);
         
-        // line 1265
+        #line 1265
         P_load_assemble_storeq(&_F);
         break;
     
     case 15:
-        // line 1267
+        #line 1267
         P_load_skpspc(_F._slink);
         
-        // line 1267
+        #line 1267
         P_load_assemble_getname(&_F);
         
-        // line 1268
+        #line 1268
         while(_strcmpNE<10>(_F.Name, Sptable[q]))
         {
-            // line 1269
+            #line 1269
             q = (q + 1);
             
-            // line 1269
+            #line 1269
             if((q > C_maxsp))
             {
-                // line 1270
+                #line 1270
                 P_load_errorl(_F._slink, T_beta::C("std proc/func not found  "));
             }
         }
         
-        // line 1272
+        #line 1272
         P_load_assemble_storeop(&_F);
         
-        // line 1272
+        #line 1272
         P_load_assemble_storeq(&_F);
         break;
     
@@ -6035,157 +6035,157 @@ void P_load_assemble(void* _slink)
     case 125:
     case 126:
     case 127:
-        // line 1275
+        #line 1275
         switch(Op)
         {
         case 123:
-            // line 1276
+            #line 1276
             Prd >> _F.i;
             
-            // line 1276
+            #line 1276
             P_load_assemble_storeop(&_F);
             
-            // line 1277
+            #line 1277
             if(((Pc + C_intsize) > Cp))
             {
-                // line 1278
+                #line 1278
                 P_load_errorl(_F._slink, T_beta::C("Program code overflow    "));
             }
             
-            // line 1279
+            #line 1279
             P_putint(nullptr, Pc, _F.i);
             
-            // line 1279
+            #line 1279
             Pc = (Pc + C_intsize);
             break;
         
         case 124:
-            // line 1282
+            #line 1282
             Prd >> _F.r;
             
-            // line 1283
+            #line 1283
             Cp = (Cp - C_realsize);
             
-            // line 1284
+            #line 1284
             P_alignd(nullptr, T_address::C(C_realal), Cp);
             
-            // line 1285
+            #line 1285
             if((Cp <= 0))
             {
-                // line 1286
+                #line 1286
                 P_load_errorl(_F._slink, T_beta::C("constant table overflow  "));
             }
             
-            // line 1287
+            #line 1287
             P_putrel(nullptr, Cp, _F.r);
             
-            // line 1287
+            #line 1287
             q = Cp;
             
-            // line 1288
+            #line 1288
             P_load_assemble_storeop(&_F);
             
-            // line 1288
+            #line 1288
             P_load_assemble_storeq(&_F);
             break;
         
         case 125:
-            // line 1291
+            #line 1291
             P_load_assemble_storeop(&_F);
             break;
         
         case 126:
-            // line 1293
+            #line 1293
             Prd >> q;
             
-            // line 1293
+            #line 1293
             P_load_assemble_storeop(&_F);
             
-            // line 1294
+            #line 1294
             if(((Pc + 1) > Cp))
             {
-                // line 1295
+                #line 1295
                 P_load_errorl(_F._slink, T_beta::C("Program code overflow    "));
             }
             
-            // line 1296
+            #line 1296
             P_putbol(nullptr, Pc, (q != 0));
             
-            // line 1296
+            #line 1296
             Pc = (Pc + 1);
             break;
         
         case 127:
-            // line 1299
+            #line 1299
             P_load_skpspc(_F._slink);
             
-            // line 1300
+            #line 1300
             if((_F._slink->Ch != '\''))
             {
-                // line 1301
+                #line 1301
                 P_load_errorl(_F._slink, T_beta::C("illegal character        "));
             }
             
-            // line 1302
+            #line 1302
             P_load_getnxt(_F._slink);
             
-            // line 1302
+            #line 1302
             _F.c = _F._slink->Ch;
             
-            // line 1303
+            #line 1303
             P_load_getnxt(_F._slink);
             
-            // line 1304
+            #line 1304
             if((_F._slink->Ch != '\''))
             {
-                // line 1305
+                #line 1305
                 P_load_errorl(_F._slink, T_beta::C("illegal character        "));
             }
             
-            // line 1306
+            #line 1306
             P_load_assemble_storeop(&_F);
             
-            // line 1307
+            #line 1307
             if(((Pc + 1) > Cp))
             {
-                // line 1308
+                #line 1308
                 P_load_errorl(_F._slink, T_beta::C("Program code overflow    "));
             }
             
-            // line 1309
+            #line 1309
             P_putchr(nullptr, Pc, _F.c);
             
-            // line 1309
+            #line 1309
             Pc = (Pc + 1);
             break;
         
         case 7:
-            // line 1311
+            #line 1311
             P_load_skpspc(_F._slink);
             
-            // line 1312
+            #line 1312
             if((_F._slink->Ch != '('))
             {
-                // line 1312
+                #line 1312
                 P_load_errorl(_F._slink, T_beta::C("ldc() expected           "));
             }
             
-            // line 1313
+            #line 1313
             _F.s = _setLiteral1;
             
-            // line 1313
+            #line 1313
             P_load_getnxt(_F._slink);
             
-            // line 1314
+            #line 1314
             while((_F._slink->Ch != ')'))
             {
-                // line 1315
+                #line 1315
                 Prd >> _F.S1;
                 
-                // line 1315
+                #line 1315
                 P_load_getnxt(_F._slink);
                 
-                // line 1315
+                #line 1315
                 {
                     _T_GenericSet _setLiteral2;
                     _setLiteral2.set(_F.S1);
@@ -6194,29 +6194,29 @@ void P_load_assemble(void* _slink)
                 }
             }
             
-            // line 1317
+            #line 1317
             Cp = (Cp - C_setsize);
             
-            // line 1318
+            #line 1318
             P_alignd(nullptr, T_address::C(C_setal), Cp);
             
-            // line 1319
+            #line 1319
             if((Cp <= 0))
             {
-                // line 1320
+                #line 1320
                 P_load_errorl(_F._slink, T_beta::C("constant table overflow  "));
             }
             
-            // line 1321
+            #line 1321
             P_putset(nullptr, Cp, _F.s);
             
-            // line 1322
+            #line 1322
             q = Cp;
             
-            // line 1323
+            #line 1323
             P_load_assemble_storeop(&_F);
             
-            // line 1323
+            #line 1323
             P_load_assemble_storeq(&_F);
             break;
         }
@@ -6228,155 +6228,155 @@ void P_load_assemble(void* _slink)
     case 97:
     case 98:
     case 99:
-        // line 1329
+        #line 1329
         Prd >> _F.Lb >> _F.Ub;
         
-        // line 1330
+        #line 1330
         if((Op == 95))
         {
-            // line 1330
+            #line 1330
             q = _F.Lb;
         }
         else
         {
-            // line 1333
+            #line 1333
             Cp = (Cp - C_intsize);
             
-            // line 1334
+            #line 1334
             P_alignd(nullptr, T_address::C(C_intal), Cp);
             
-            // line 1335
+            #line 1335
             if((Cp <= 0))
             {
-                // line 1335
+                #line 1335
                 P_load_errorl(_F._slink, T_beta::C("constant table overflow  "));
             }
             
-            // line 1336
+            #line 1336
             P_putint(nullptr, Cp, _F.Ub);
             
-            // line 1337
+            #line 1337
             Cp = (Cp - C_intsize);
             
-            // line 1338
+            #line 1338
             P_alignd(nullptr, T_address::C(C_intal), Cp);
             
-            // line 1339
+            #line 1339
             if((Cp <= 0))
             {
-                // line 1339
+                #line 1339
                 P_load_errorl(_F._slink, T_beta::C("constant table overflow  "));
             }
             
-            // line 1340
+            #line 1340
             P_putint(nullptr, Cp, _F.Lb);
             
-            // line 1340
+            #line 1340
             q = Cp;
         }
         
-        // line 1342
+        #line 1342
         P_load_assemble_storeop(&_F);
         
-        // line 1342
+        #line 1342
         P_load_assemble_storeq(&_F);
         break;
     
     case 56:
-        // line 1345
+        #line 1345
         Prd >> _F.l;
         
-        // line 1345
+        #line 1345
         P_load_skpspc(_F._slink);
         
-        // line 1346
+        #line 1346
         _FOR_TO(_F.i, 1, C_stringlgth)
         {
-            // line 1346
+            #line 1346
             _F.Str[_F.i] = ' ';
         }
         _FOR_END(_F.i)
         
-        // line 1347
+        #line 1347
         if((_F._slink->Ch != '\''))
         {
-            // line 1347
+            #line 1347
             P_load_errorl(_F._slink, T_beta::C("bad string format        "));
         }
         
-        // line 1348
+        #line 1348
         _F.i = 0;
         
-        // line 1349
+        #line 1349
         do
         {
-            // line 1350
+            #line 1350
             if(_eoln(Prd))
             {
-                // line 1350
+                #line 1350
                 P_load_errorl(_F._slink, T_beta::C("unterminated string      "));
             }
             
-            // line 1351
+            #line 1351
             P_load_getnxt(_F._slink);
             
-            // line 1352
+            #line 1352
             _F.c = _F._slink->Ch;
             
-            // line 1352
+            #line 1352
             if(((_F._slink->Ch == '\'') && (Prd.bufferVar() == '\'')))
             {
-                // line 1353
+                #line 1353
                 P_load_getnxt(_F._slink);
                 
-                // line 1353
+                #line 1353
                 _F.c = ' ';
             }
             
-            // line 1355
+            #line 1355
             if((_F.c != '\''))
             {
-                // line 1356
+                #line 1356
                 if((_F.i >= C_stringlgth))
                 {
-                    // line 1356
+                    #line 1356
                     P_load_errorl(_F._slink, T_beta::C("string overflow          "));
                 }
                 
-                // line 1357
+                #line 1357
                 _F.Str[(_F.i + 1)] = _F._slink->Ch;
                 
-                // line 1358
+                #line 1358
                 _F.i = (_F.i + 1);
             }
         }
         while(!(_F.c == '\''));
         
-        // line 1362
+        #line 1362
         Cp = (Cp - _F.l);
         
-        // line 1363
+        #line 1363
         if((Cp <= 0))
         {
-            // line 1363
+            #line 1363
             P_load_errorl(_F._slink, T_beta::C("constant table overflow  "));
         }
         
-        // line 1364
+        #line 1364
         q = Cp;
         
-        // line 1365
+        #line 1365
         _FOR_TO(_F.x, 1, _F.l)
         {
-            // line 1365
+            #line 1365
             P_putchr(nullptr, T_address::C(((q + _F.x) - 1)), _F.Str[_F.x]);
         }
         _FOR_END(_F.x)
         
-        // line 1371
+        #line 1371
         P_load_assemble_storeop(&_F);
         
-        // line 1371
+        #line 1371
         P_load_assemble_storeq(&_F);
         break;
     
@@ -6468,28 +6468,28 @@ void P_load_assemble(void* _slink)
     case 111:
     case 115:
     case 116:
-        // line 1393
+        #line 1393
         P_load_assemble_storeop(&_F);
         break;
     
     case 61:
-        // line 1397
+        #line 1397
         P_load_assemble_storeop(&_F);
         
-        // line 1397
+        #line 1397
         q = 0;
         
-        // line 1397
+        #line 1397
         P_load_assemble_storeq(&_F);
         break;
     }
     
-    // line 1401
+    #line 1401
     P_load_getlin(_F._slink);
 }
 
 
-// line 1166
+#line 1166
 //================================================================================
 // scope: load_assemble_lookup (level : 4)
 
@@ -6509,26 +6509,26 @@ void P_load_assemble_lookup(void* _slink, T_load_labelrg x)
     Frame_load_assemble_lookup _F = { (Frame_load_assemble*)_slink, x };
     
     // subroutine body
-    // line 1167
+    #line 1167
     switch(_F._slink->_slink->Labeltab[_F.x].St)
     {
     case C_load_entered:
-        // line 1168
+        #line 1168
         q = _F._slink->_slink->Labeltab[_F.x].Val;
         
-        // line 1169
+        #line 1169
         _F._slink->_slink->Labeltab[_F.x].Val = Pc;
         break;
     
     case C_load_defined:
-        // line 1171
+        #line 1171
         q = _F._slink->_slink->Labeltab[_F.x].Val;
         break;
     }
 }
 
 
-// line 1175
+#line 1175
 //================================================================================
 // scope: load_assemble_labelsearch (level : 4)
 
@@ -6548,22 +6548,22 @@ void P_load_assemble_labelsearch(void* _slink)
     Frame_load_assemble_labelsearch _F = { (Frame_load_assemble*)_slink };
     
     // subroutine body
-    // line 1177
+    #line 1177
     while(((_F._slink->_slink->Ch != 'l') && (!_eoln(Prd))))
     {
-        // line 1177
+        #line 1177
         Prd >> _F._slink->_slink->Ch;
     }
     
-    // line 1178
+    #line 1178
     Prd >> _F.x;
     
-    // line 1178
+    #line 1178
     P_load_assemble_lookup(_F._slink, _F.x);
 }
 
 
-// line 1181
+#line 1181
 //================================================================================
 // scope: load_assemble_getname (level : 4)
 
@@ -6587,59 +6587,59 @@ void P_load_assemble_getname(void* _slink)
     _setLiteral1.set('a', 'z');
     
     // subroutine body
-    // line 1184
+    #line 1184
     if(_eof(Prd))
     {
-        // line 1184
+        #line 1184
         P_load_errorl(_F._slink->_slink, T_beta::C("unexpected eof on input  "));
     }
     
-    // line 1185
+    #line 1185
     _FOR_TO(_F.i, 1, C_maxalfa)
     {
-        // line 1185
+        #line 1185
         _F._slink->_slink->Word[_F.i] = ' ';
     }
     _FOR_END(_F.i)
     
-    // line 1186
+    #line 1186
     _F.i = 1;
     
-    // line 1187
+    #line 1187
     while((_setLiteral1 & _F._slink->_slink->Ch))
     {
-        // line 1188
+        #line 1188
         if((_F.i == C_maxalfa))
         {
-            // line 1188
+            #line 1188
             P_load_errorl(_F._slink->_slink, T_beta::C("Opcode label is too long "));
         }
         
-        // line 1189
+        #line 1189
         _F._slink->_slink->Word[_F.i] = _F._slink->_slink->Ch;
         
-        // line 1190
+        #line 1190
         _F.i = (_F.i + 1);
         
-        // line 1190
+        #line 1190
         _F._slink->_slink->Ch = ' ';
         
-        // line 1191
+        #line 1191
         if((!_eoln(Prd)))
         {
-            // line 1191
+            #line 1191
             Prd >> _F._slink->_slink->Ch;
         }
         
         { /* NOP */ }
     }
     
-    // line 1193
+    #line 1193
     _pack(_F._slink->_slink->Word, 1, _F._slink->Name);
 }
 
 
-// line 1196
+#line 1196
 //================================================================================
 // scope: load_assemble_storeop (level : 4)
 
@@ -6656,22 +6656,22 @@ void P_load_assemble_storeop(void* _slink)
     Frame_load_assemble_storeop _F = { (Frame_load_assemble*)_slink };
     
     // subroutine body
-    // line 1198
+    #line 1198
     if(((Pc + 1) > Cp))
     {
-        // line 1198
+        #line 1198
         P_load_errorl(_F._slink->_slink, T_beta::C("Program code overflow    "));
     }
     
-    // line 1199
+    #line 1199
     Store[Pc] = Op;
     
-    // line 1199
+    #line 1199
     Pc = (Pc + 1);
 }
 
 
-// line 1202
+#line 1202
 //================================================================================
 // scope: load_assemble_storep (level : 4)
 
@@ -6688,22 +6688,22 @@ void P_load_assemble_storep(void* _slink)
     Frame_load_assemble_storep _F = { (Frame_load_assemble*)_slink };
     
     // subroutine body
-    // line 1204
+    #line 1204
     if(((Pc + 1) > Cp))
     {
-        // line 1204
+        #line 1204
         P_load_errorl(_F._slink->_slink, T_beta::C("Program code overflow    "));
     }
     
-    // line 1205
+    #line 1205
     Store[Pc] = p;
     
-    // line 1205
+    #line 1205
     Pc = (Pc + 1);
 }
 
 
-// line 1208
+#line 1208
 //================================================================================
 // scope: load_assemble_storeq (level : 4)
 
@@ -6720,22 +6720,22 @@ void P_load_assemble_storeq(void* _slink)
     Frame_load_assemble_storeq _F = { (Frame_load_assemble*)_slink };
     
     // subroutine body
-    // line 1210
+    #line 1210
     if(((Pc + C_adrsize) > Cp))
     {
-        // line 1210
+        #line 1210
         P_load_errorl(_F._slink->_slink, T_beta::C("Program code overflow    "));
     }
     
-    // line 1211
+    #line 1211
     P_putadr(nullptr, Pc, q);
     
-    // line 1211
+    #line 1211
     Pc = (Pc + C_adrsize);
 }
 
 
-// line 1214
+#line 1214
 //================================================================================
 // scope: load_assemble_storeq1 (level : 4)
 
@@ -6752,22 +6752,22 @@ void P_load_assemble_storeq1(void* _slink)
     Frame_load_assemble_storeq1 _F = { (Frame_load_assemble*)_slink };
     
     // subroutine body
-    // line 1216
+    #line 1216
     if(((Pc + C_adrsize) > Cp))
     {
-        // line 1216
+        #line 1216
         P_load_errorl(_F._slink->_slink, T_beta::C("Program code overflow    "));
     }
     
-    // line 1217
+    #line 1217
     P_putadr(nullptr, Pc, Q1);
     
-    // line 1217
+    #line 1217
     Pc = (Pc + C_adrsize);
 }
 
 
-// line 1436
+#line 1436
 //================================================================================
 // scope: pmd (level : 2)
 
@@ -6791,127 +6791,127 @@ void P_pmd(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 1449
+    #line 1449
     if(C_dopmd)
     {
-        // line 1450
+        #line 1450
         Output << _WRITELN;
         
-        // line 1451
+        #line 1451
         Output << "pc = ";
         
-        // line 1451
+        #line 1451
         P_wrthex(nullptr, (Pc - 1), C_maxdigh);
         
-        // line 1452
+        #line 1452
         Output << " op = " << _format(Op, 3, 0);
         
-        // line 1453
+        #line 1453
         Output << " sp = ";
         
-        // line 1453
+        #line 1453
         P_wrthex(nullptr, Sp, C_maxdigh);
         
-        // line 1454
+        #line 1454
         Output << " mp = ";
         
-        // line 1454
+        #line 1454
         P_wrthex(nullptr, Mp, C_maxdigh);
         
-        // line 1455
+        #line 1455
         Output << " np = ";
         
-        // line 1455
+        #line 1455
         P_wrthex(nullptr, Np, C_maxdigh);
         
-        // line 1456
+        #line 1456
         Output << " cp = ";
         
-        // line 1456
+        #line 1456
         P_wrthex(nullptr, Cp, C_maxdigh);
         
-        // line 1457
+        #line 1457
         Output << _WRITELN;
         
-        // line 1458
+        #line 1458
         Output << "------------------------------------------------------------";
         
-        // line 1459
+        #line 1459
         Output << "-------------" << _WRITELN;
         
-        // line 1461
+        #line 1461
         Output << _WRITELN;
         
-        // line 1462
+        #line 1462
         Output << "Stack" << _WRITELN;
         
-        // line 1463
+        #line 1463
         Output << _WRITELN;
         
-        // line 1464
+        #line 1464
         _F.s = Sp;
         
-        // line 1464
+        #line 1464
         _F.i = 0;
         
-        // line 1465
+        #line 1465
         while((_F.s >= Pctop))
         {
-            // line 1465
+            #line 1465
             P_pmd_pt(&_F);
         }
         
-        // line 1466
+        #line 1466
         Output << _WRITELN;
         
-        // line 1467
+        #line 1467
         Output << _WRITELN;
         
-        // line 1468
+        #line 1468
         Output << "Constants" << _WRITELN;
         
-        // line 1469
+        #line 1469
         Output << _WRITELN;
         
-        // line 1470
+        #line 1470
         _F.s = C_maxstr;
         
-        // line 1470
+        #line 1470
         _F.i = 0;
         
-        // line 1471
+        #line 1471
         while((_F.s >= Cp))
         {
-            // line 1471
+            #line 1471
             P_pmd_pt(&_F);
         }
         
-        // line 1472
+        #line 1472
         Output << _WRITELN;
         
-        // line 1473
+        #line 1473
         Output << _WRITELN;
         
-        // line 1474
+        #line 1474
         Output << "Heap" << _WRITELN;
         
-        // line 1475
+        #line 1475
         Output << _WRITELN;
         
-        // line 1476
+        #line 1476
         _F.s = (Cp - 1);
         
-        // line 1476
+        #line 1476
         _F.i = 0;
         
-        // line 1477
+        #line 1477
         while((_F.s >= Np))
         {
-            // line 1477
+            #line 1477
             P_pmd_pt(&_F);
         }
         
-        // line 1478
+        #line 1478
         Output << _WRITELN;
         
         { /* NOP */ }
@@ -6919,7 +6919,7 @@ void P_pmd(void* _slink)
 }
 
 
-// line 1439
+#line 1439
 //================================================================================
 // scope: pmd_pt (level : 3)
 
@@ -6936,35 +6936,35 @@ void P_pmd_pt(void* _slink)
     Frame_pmd_pt _F = { (Frame_pmd*)_slink };
     
     // subroutine body
-    // line 1440
+    #line 1440
     if((_F._slink->i == 0))
     {
-        // line 1440
+        #line 1440
         P_wrthex(nullptr, _F._slink->s, C_maxdigh);
         
-        // line 1440
+        #line 1440
         Output << ": ";
     }
     
-    // line 1441
+    #line 1441
     P_wrthex(nullptr, Store[_F._slink->s], 2);
     
-    // line 1441
+    #line 1441
     Output << ' ';
     
-    // line 1442
+    #line 1442
     _F._slink->s = (_F._slink->s - 1);
     
-    // line 1443
+    #line 1443
     _F._slink->i = (_F._slink->i + 1);
     
-    // line 1444
+    #line 1444
     if((_F._slink->i == 16))
     {
-        // line 1445
+        #line 1445
         Output << _WRITELN;
         
-        // line 1445
+        #line 1445
         _F._slink->i = 0;
     }
     
@@ -6972,7 +6972,7 @@ void P_pmd_pt(void* _slink)
 }
 
 
-// line 1482
+#line 1482
 //================================================================================
 // scope: errori (level : 2)
 
@@ -6992,31 +6992,31 @@ void P_errori(void* _slink, T_beta String)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 1483
+    #line 1483
     Output << _WRITELN;
     
-    // line 1483
+    #line 1483
     Output << "*** Runtime error";
     
-    // line 1484
+    #line 1484
     if((Srclin > 0))
     {
-        // line 1484
+        #line 1484
         Output << " [" << _format(Srclin, 1, 0) << ']';
     }
     
-    // line 1485
+    #line 1485
     Output << ": " << _F.String << _WRITELN;
     
-    // line 1486
+    #line 1486
     P_pmd(nullptr);
     
-    // line 1486
+    #line 1486
     throw NL_1;
 }
 
 
-// line 1489
+#line 1489
 //================================================================================
 // scope: base (level : 2)
 
@@ -7040,20 +7040,20 @@ T_address F_base(void* _slink, T_integer Ld)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 1491
+    #line 1491
     _F.Ad = Mp;
     
-    // line 1492
+    #line 1492
     while((_F.Ld > 0))
     {
-        // line 1492
+        #line 1492
         _F.Ad = F_getadr(nullptr, T_address::C((_F.Ad + C_marksl)));
         
-        // line 1492
+        #line 1492
         _F.Ld = (_F.Ld - 1);
     }
     
-    // line 1493
+    #line 1493
     _F._fnvalue = _F.Ad;
     
     // epilogue
@@ -7061,7 +7061,7 @@ T_address F_base(void* _slink, T_integer Ld)
 }
 
 
-// line 1496
+#line 1496
 //================================================================================
 // scope: compare (level : 2)
 
@@ -7078,37 +7078,37 @@ void P_compare(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 1499
+    #line 1499
     P_popadr(nullptr, A2);
     
-    // line 1500
+    #line 1500
     P_popadr(nullptr, A1);
     
-    // line 1501
+    #line 1501
     i = 0;
     
-    // line 1501
+    #line 1501
     b = C_true;
     
-    // line 1502
+    #line 1502
     while((b && (i != q)))
     {
-        // line 1503
+        #line 1503
         if((Store[(A1 + i)] == Store[(A2 + i)]))
         {
-            // line 1503
+            #line 1503
             i = (i + 1);
         }
         else
         {
-            // line 1504
+            #line 1504
             b = C_false;
         }
     }
 }
 
 
-// line 1507
+#line 1507
 //================================================================================
 // scope: valfil (level : 2)
 
@@ -7132,68 +7132,68 @@ void P_valfil(void* _slink, T_address Fa)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 1510
+    #line 1510
     if((Store[_F.Fa] == 0))
     {
-        // line 1511
+        #line 1511
         if((_F.Fa == (Pctop + C_inputoff)))
         {
-            // line 1511
+            #line 1511
             _F.Ff = C_inputfn;
         }
         else
         {
-            // line 1512
+            #line 1512
             if((_F.Fa == (Pctop + C_outputoff)))
             {
-                // line 1512
+                #line 1512
                 _F.Ff = C_outputfn;
             }
             else
             {
-                // line 1513
+                #line 1513
                 if((_F.Fa == (Pctop + C_prdoff)))
                 {
-                    // line 1513
+                    #line 1513
                     _F.Ff = C_prdfn;
                 }
                 else
                 {
-                    // line 1514
+                    #line 1514
                     if((_F.Fa == (Pctop + C_prroff)))
                     {
-                        // line 1514
+                        #line 1514
                         _F.Ff = C_prrfn;
                     }
                     else
                     {
-                        // line 1516
+                        #line 1516
                         _F.i = 5;
                         
-                        // line 1517
+                        #line 1517
                         _F.Ff = 0;
                         
-                        // line 1518
+                        #line 1518
                         while((_F.i <= C_maxfil))
                         {
-                            // line 1519
+                            #line 1519
                             if((Filstate[_F.i] == C_fclosed))
                             {
-                                // line 1519
+                                #line 1519
                                 _F.Ff = _F.i;
                                 
-                                // line 1519
+                                #line 1519
                                 _F.i = C_maxfil;
                             }
                             
-                            // line 1520
+                            #line 1520
                             _F.i = (_F.i + 1);
                         }
                         
-                        // line 1522
+                        #line 1522
                         if((_F.Ff == 0))
                         {
-                            // line 1522
+                            #line 1522
                             P_errori(nullptr, T_beta::C("To many files            "));
                         }
                         
@@ -7203,13 +7203,13 @@ void P_valfil(void* _slink, T_address Fa)
             }
         }
         
-        // line 1524
+        #line 1524
         Store[_F.Fa] = _F.Ff;
     }
 }
 
 
-// line 1528
+#line 1528
 //================================================================================
 // scope: valfilwm (level : 2)
 
@@ -7229,19 +7229,19 @@ void P_valfilwm(void* _slink, T_address Fa)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 1530
+    #line 1530
     P_valfil(nullptr, _F.Fa);
     
-    // line 1531
+    #line 1531
     if((Filstate[Store[_F.Fa]] != C_fwrite))
     {
-        // line 1531
+        #line 1531
         P_errori(nullptr, T_beta::C("File not in write mode   "));
     }
 }
 
 
-// line 1534
+#line 1534
 //================================================================================
 // scope: valfilrm (level : 2)
 
@@ -7261,19 +7261,19 @@ void P_valfilrm(void* _slink, T_address Fa)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 1536
+    #line 1536
     P_valfil(nullptr, _F.Fa);
     
-    // line 1537
+    #line 1537
     if((Filstate[Store[_F.Fa]] != C_fread))
     {
-        // line 1537
+        #line 1537
         P_errori(nullptr, T_beta::C("File not in read mode    "));
     }
 }
 
 
-// line 1540
+#line 1540
 //================================================================================
 // scope: getop (level : 2)
 
@@ -7290,15 +7290,15 @@ void P_getop(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 1544
+    #line 1544
     Op = Store[Pc];
     
-    // line 1544
+    #line 1544
     Pc = (Pc + 1);
 }
 
 
-// line 1548
+#line 1548
 //================================================================================
 // scope: getp (level : 2)
 
@@ -7315,15 +7315,15 @@ void P_getp(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 1552
+    #line 1552
     p = Store[Pc];
     
-    // line 1552
+    #line 1552
     Pc = (Pc + 1);
 }
 
 
-// line 1556
+#line 1556
 //================================================================================
 // scope: getq (level : 2)
 
@@ -7340,15 +7340,15 @@ void P_getq(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 1560
+    #line 1560
     q = F_getadr(nullptr, Pc);
     
-    // line 1560
+    #line 1560
     Pc = (Pc + C_adrsize);
 }
 
 
-// line 1564
+#line 1564
 //================================================================================
 // scope: getq1 (level : 2)
 
@@ -7365,15 +7365,15 @@ void P_getq1(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 1568
+    #line 1568
     Q1 = F_getadr(nullptr, Pc);
     
-    // line 1568
+    #line 1568
     Pc = (Pc + C_adrsize);
 }
 
 
-// line 1585
+#line 1585
 //================================================================================
 // scope: repspc (level : 2)
 
@@ -7394,52 +7394,52 @@ void P_repspc(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 1588
+    #line 1588
     Output << _WRITELN;
     
-    // line 1589
+    #line 1589
     Output << "Heap space breakdown" << _WRITELN;
     
-    // line 1590
+    #line 1590
     Output << _WRITELN;
     
-    // line 1591
+    #line 1591
     _F.Ad = Np;
     
-    // line 1592
+    #line 1592
     while((_F.Ad < Cp))
     {
-        // line 1593
+        #line 1593
         _F.l = F_getadr(nullptr, _F.Ad);
         
-        // line 1594
+        #line 1594
         Output << "addr: ";
         
-        // line 1594
+        #line 1594
         P_wrthex(nullptr, _F.Ad, C_maxdigh);
         
-        // line 1594
+        #line 1594
         Output << ": " << _format(_abs(_F.l), 6, 0) << ": ";
         
-        // line 1595
+        #line 1595
         if((_F.l >= 0))
         {
-            // line 1595
+            #line 1595
             Output << "free" << _WRITELN;
         }
         else
         {
-            // line 1595
+            #line 1595
             Output << "alloc" << _WRITELN;
         }
         
-        // line 1596
+        #line 1596
         _F.Ad = (_F.Ad + _abs(_F.l));
     }
 }
 
 
-// line 1602
+#line 1602
 //================================================================================
 // scope: fndfre (level : 2)
 
@@ -7464,62 +7464,62 @@ void P_fndfre(void* _slink, T_address Len, T_address& Blk)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 1605
+    #line 1605
     _F.b = 0;
     
-    // line 1606
+    #line 1606
     _F.Blk = Np;
     
-    // line 1607
+    #line 1607
     while((_F.Blk < Cp))
     {
-        // line 1608
+        #line 1608
         _F.l = F_getadr(nullptr, _F.Blk);
         
-        // line 1609
+        #line 1609
         if((_F.l >= (_F.Len + C_adrsize)))
         {
-            // line 1609
+            #line 1609
             _F.b = _F.Blk;
             
-            // line 1609
+            #line 1609
             _F.Blk = Cp;
         }
         else
         {
-            // line 1610
+            #line 1610
             _F.Blk = (_F.Blk + _abs(_F.l));
         }
     }
     
-    // line 1612
+    #line 1612
     if((_F.b > 0))
     {
-        // line 1613
+        #line 1613
         P_putadr(nullptr, _F.b, T_address::C((-(_F.Len + C_adrsize))));
         
-        // line 1614
+        #line 1614
         _F.Blk = (_F.b + C_adrsize);
         
-        // line 1615
+        #line 1615
         if((_F.l > (((_F.Len + C_adrsize) + C_adrsize) + C_resspc)))
         {
-            // line 1618
+            #line 1618
             _F.b = ((_F.b + _F.Len) + C_adrsize);
             
-            // line 1619
+            #line 1619
             P_putadr(nullptr, _F.b, T_address::C((_F.l - (_F.Len + C_adrsize))));
         }
     }
     else
     {
-        // line 1621
+        #line 1621
         _F.Blk = 0;
     }
 }
 
 
-// line 1626
+#line 1626
 //================================================================================
 // scope: cscspc (level : 2)
 
@@ -7543,77 +7543,77 @@ void P_cscspc(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 1631
+    #line 1631
     _F.Done = C_false;
     
-    // line 1632
+    #line 1632
     while(((!_F.Done) && (Np < Cp)))
     {
-        // line 1633
+        #line 1633
         _F.l = F_getadr(nullptr, Np);
         
-        // line 1634
+        #line 1634
         if((_F.l >= 0))
         {
-            // line 1634
+            #line 1634
             Np = (Np + F_getadr(nullptr, Np));
         }
         else
         {
-            // line 1635
+            #line 1635
             _F.Done = C_true;
         }
     }
     
-    // line 1638
+    #line 1638
     _F.Ad = Np;
     
-    // line 1639
+    #line 1639
     while((_F.Ad < Cp))
     {
-        // line 1640
+        #line 1640
         _F.l = F_getadr(nullptr, _F.Ad);
         
-        // line 1641
+        #line 1641
         if((_F.l >= 0))
         {
-            // line 1642
+            #line 1642
             _F.Ad1 = (_F.Ad + _F.l);
             
-            // line 1643
+            #line 1643
             if((_F.Ad1 < Cp))
             {
-                // line 1644
+                #line 1644
                 _F.L1 = F_getadr(nullptr, _F.Ad1);
                 
-                // line 1645
+                #line 1645
                 if((_F.L1 >= 0))
                 {
-                    // line 1646
+                    #line 1646
                     P_putadr(nullptr, _F.Ad, T_address::C((_F.l + _F.L1)));
                 }
                 else
                 {
-                    // line 1647
+                    #line 1647
                     _F.Ad = ((_F.Ad + _F.l) + _abs(_F.L1));
                 }
             }
             else
             {
-                // line 1648
+                #line 1648
                 _F.Ad = ((_F.Ad + _F.l) + _abs(_F.L1));
             }
         }
         else
         {
-            // line 1649
+            #line 1649
             _F.Ad = (_F.Ad + _abs(_F.l));
         }
     }
 }
 
 
-// line 1655
+#line 1655
 //================================================================================
 // scope: newspc (level : 2)
 
@@ -7638,44 +7638,44 @@ void P_newspc(void* _slink, T_address Len, T_address& Blk)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 1658
+    #line 1658
     P_fndfre(nullptr, _F.Len, _F.Blk);
     
-    // line 1659
+    #line 1659
     if((_F.Blk == 0))
     {
-        // line 1660
+        #line 1660
         _F.Ad = (Np - (_F.Len + C_adrsize));
         
-        // line 1661
+        #line 1661
         _F.Ad1 = _F.Ad;
         
-        // line 1662
+        #line 1662
         P_alignd(nullptr, T_address::C(C_heapal), _F.Ad);
         
-        // line 1663
+        #line 1663
         _F.Len = (_F.Len + (_F.Ad1 - _F.Ad));
         
-        // line 1664
+        #line 1664
         if((_F.Ad <= Ep))
         {
-            // line 1664
+            #line 1664
             P_errori(nullptr, T_beta::C("store overflow           "));
         }
         
-        // line 1665
+        #line 1665
         Np = _F.Ad;
         
-        // line 1666
+        #line 1666
         P_putadr(nullptr, _F.Ad, T_address::C((-(_F.Len + C_adrsize))));
         
-        // line 1667
+        #line 1667
         _F.Blk = (_F.Ad + C_adrsize);
     }
 }
 
 
-// line 1673
+#line 1673
 //================================================================================
 // scope: dspspc (level : 2)
 
@@ -7699,57 +7699,57 @@ void P_dspspc(void* _slink, T_address Len, T_address Blk)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 1676
+    #line 1676
     _F.Len = _F.Len;
     
-    // line 1677
+    #line 1677
     if((_F.Blk == 0))
     {
-        // line 1677
+        #line 1677
         P_errori(nullptr, T_beta::C("dispose uninit pointer   "));
     }
     else
     {
-        // line 1678
+        #line 1678
         if((_F.Blk == C_nilval))
         {
-            // line 1678
+            #line 1678
             P_errori(nullptr, T_beta::C("Dispose nil pointer      "));
         }
         else
         {
-            // line 1679
+            #line 1679
             if(((_F.Blk < Np) || (_F.Blk >= Cp)))
             {
-                // line 1679
+                #line 1679
                 P_errori(nullptr, T_beta::C("bad pointer value        "));
             }
         }
     }
     
-    // line 1680
+    #line 1680
     _F.Ad = (_F.Blk - C_adrsize);
     
-    // line 1681
+    #line 1681
     if((F_getadr(nullptr, _F.Ad) >= 0))
     {
-        // line 1681
+        #line 1681
         P_errori(nullptr, T_beta::C("block already freed      "));
     }
     
-    // line 1682
+    #line 1682
     if((C_dorecycl && (!C_dochkrpt)))
     {
-        // line 1683
+        #line 1683
         P_putadr(nullptr, _F.Ad, T_address::C(_abs(F_getadr(nullptr, _F.Ad))));
         
-        // line 1684
+        #line 1684
         P_cscspc(nullptr);
     }
 }
 
 
-// line 1690
+#line 1690
 //================================================================================
 // scope: isfree (level : 2)
 
@@ -7772,7 +7772,7 @@ T_boolean F_isfree(void* _slink, T_address Blk)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 1692
+    #line 1692
     _F._fnvalue = (F_getadr(nullptr, T_address::C((_F.Blk - C_adrsize))) >= 0);
     
     // epilogue
@@ -7780,7 +7780,7 @@ T_boolean F_isfree(void* _slink, T_address Blk)
 }
 
 
-// line 1697
+#line 1697
 //================================================================================
 // scope: callsp (level : 2)
 
@@ -7819,332 +7819,332 @@ void P_callsp(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 1739
+    #line 1739
     if((q > C_maxsp))
     {
-        // line 1739
+        #line 1739
         P_errori(nullptr, T_beta::C("invalid std proc/func    "));
     }
     
-    // line 1742
+    #line 1742
     if(C_dotrcrot)
     {
-        // line 1742
+        #line 1742
         Output << _format(Pc, 6, 0) << '/' << _format(Sp, 6, 0) << "-> " << _format(q, 2, 0) << _WRITELN;
     }
     
-    // line 1744
+    #line 1744
     switch(q)
     {
     case 0:
-        // line 1745
+        #line 1745
         P_popadr(nullptr, _F.Ad);
         
-        // line 1745
+        #line 1745
         P_valfil(nullptr, _F.Ad);
         
-        // line 1745
+        #line 1745
         _F.Fn = Store[_F.Ad];
         
-        // line 1746
+        #line 1746
         if((_F.Fn <= C_prrfn))
         {
-            // line 1746
+            #line 1746
             switch(_F.Fn)
             {
             case C_inputfn:
-                // line 1747
+                #line 1747
                 P_callsp_getfile(&_F, Input);
                 break;
             
             case C_outputfn:
-                // line 1748
+                #line 1748
                 P_errori(nullptr, T_beta::C("get on output file       "));
                 break;
             
             case C_prdfn:
-                // line 1749
+                #line 1749
                 P_callsp_getfile(&_F, Prd);
                 break;
             
             case C_prrfn:
-                // line 1750
+                #line 1750
                 P_errori(nullptr, T_beta::C("get on prr file          "));
                 break;
             }
         }
         else
         {
-            // line 1752
+            #line 1752
             if((Filstate[_F.Fn] != C_fread))
             {
-                // line 1753
+                #line 1753
                 P_errori(nullptr, T_beta::C("File not in read mode    "));
             }
             
-            // line 1754
+            #line 1754
             P_callsp_getfile(&_F, Filtable[_F.Fn]);
         }
         break;
     
     case 1:
-        // line 1757
+        #line 1757
         P_popadr(nullptr, _F.Ad);
         
-        // line 1757
+        #line 1757
         P_valfil(nullptr, _F.Ad);
         
-        // line 1757
+        #line 1757
         _F.Fn = Store[_F.Ad];
         
-        // line 1758
+        #line 1758
         if((_F.Fn <= C_prrfn))
         {
-            // line 1758
+            #line 1758
             switch(_F.Fn)
             {
             case C_inputfn:
-                // line 1759
+                #line 1759
                 P_errori(nullptr, T_beta::C("put on read file         "));
                 break;
             
             case C_outputfn:
-                // line 1760
+                #line 1760
                 P_callsp_putfile(&_F, Output, _F.Ad);
                 break;
             
             case C_prdfn:
-                // line 1761
+                #line 1761
                 P_errori(nullptr, T_beta::C("put on prd file          "));
                 break;
             
             case C_prrfn:
-                // line 1762
+                #line 1762
                 P_callsp_putfile(&_F, Prr, _F.Ad);
                 break;
             }
         }
         else
         {
-            // line 1764
+            #line 1764
             if((Filstate[_F.Fn] != C_fwrite))
             {
-                // line 1765
+                #line 1765
                 P_errori(nullptr, T_beta::C("File not in write mode   "));
             }
             
-            // line 1766
+            #line 1766
             P_callsp_putfile(&_F, Filtable[_F.Fn], _F.Ad);
         }
         break;
     
     case 2:
-        // line 1770
+        #line 1770
         P_errori(nullptr, T_beta::C("invalid std proc/func    "));
         break;
     
     case 3:
-        // line 1771
+        #line 1771
         P_popadr(nullptr, _F.Ad);
         
-        // line 1771
+        #line 1771
         P_pshadr(nullptr, _F.Ad);
         
-        // line 1771
+        #line 1771
         P_valfil(nullptr, _F.Ad);
         
-        // line 1771
+        #line 1771
         _F.Fn = Store[_F.Ad];
         
-        // line 1772
+        #line 1772
         if((_F.Fn <= C_prrfn))
         {
-            // line 1772
+            #line 1772
             switch(_F.Fn)
             {
             case C_inputfn:
-                // line 1774
+                #line 1774
                 if(_eof(Input))
                 {
-                    // line 1774
+                    #line 1774
                     P_errori(nullptr, T_beta::C("End of file              "));
                 }
                 
-                // line 1775
+                #line 1775
                 Input >> _READLN;
                 break;
             
             case C_outputfn:
-                // line 1777
+                #line 1777
                 P_errori(nullptr, T_beta::C("readln on output file    "));
                 break;
             
             case C_prdfn:
-                // line 1779
+                #line 1779
                 if(_eof(Prd))
                 {
-                    // line 1779
+                    #line 1779
                     P_errori(nullptr, T_beta::C("End of file              "));
                 }
                 
-                // line 1780
+                #line 1780
                 Prd >> _READLN;
                 break;
             
             case C_prrfn:
-                // line 1782
+                #line 1782
                 P_errori(nullptr, T_beta::C("readln on prr file       "));
                 break;
             }
         }
         else
         {
-            // line 1784
+            #line 1784
             if((Filstate[_F.Fn] != C_fread))
             {
-                // line 1785
+                #line 1785
                 P_errori(nullptr, T_beta::C("File not in read mode    "));
             }
             
-            // line 1786
+            #line 1786
             if(_eof(Filtable[_F.Fn]))
             {
-                // line 1786
+                #line 1786
                 P_errori(nullptr, T_beta::C("End of file              "));
             }
             
-            // line 1787
+            #line 1787
             Filtable[_F.Fn] >> _READLN;
         }
         break;
     
     case 4:
-        // line 1790
+        #line 1790
         P_popadr(nullptr, _F.Ad1);
         
-        // line 1790
+        #line 1790
         P_newspc(nullptr, _F.Ad1, _F.Ad);
         
-        // line 1792
+        #line 1792
         P_popadr(nullptr, _F.Ad1);
         
-        // line 1792
+        #line 1792
         P_putadr(nullptr, _F.Ad1, _F.Ad);
         break;
     
     case 5:
-        // line 1794
+        #line 1794
         P_popadr(nullptr, _F.Ad);
         
-        // line 1794
+        #line 1794
         P_pshadr(nullptr, _F.Ad);
         
-        // line 1794
+        #line 1794
         P_valfil(nullptr, _F.Ad);
         
-        // line 1794
+        #line 1794
         _F.Fn = Store[_F.Ad];
         
-        // line 1795
+        #line 1795
         if((_F.Fn <= C_prrfn))
         {
-            // line 1795
+            #line 1795
             switch(_F.Fn)
             {
             case C_inputfn:
-                // line 1796
+                #line 1796
                 P_errori(nullptr, T_beta::C("writeln on input file    "));
                 break;
             
             case C_outputfn:
-                // line 1797
+                #line 1797
                 Output << _WRITELN;
                 break;
             
             case C_prdfn:
-                // line 1798
+                #line 1798
                 P_errori(nullptr, T_beta::C("writeln on prd file      "));
                 break;
             
             case C_prrfn:
-                // line 1799
+                #line 1799
                 Prr << _WRITELN;
                 break;
             }
         }
         else
         {
-            // line 1801
+            #line 1801
             if((Filstate[_F.Fn] != C_fwrite))
             {
-                // line 1802
+                #line 1802
                 P_errori(nullptr, T_beta::C("File not in write mode   "));
             }
             
-            // line 1803
+            #line 1803
             Filtable[_F.Fn] << _WRITELN;
         }
         break;
     
     case 6:
-        // line 1806
+        #line 1806
         P_popint(nullptr, _F.l);
         
-        // line 1806
+        #line 1806
         P_popint(nullptr, _F.w);
         
-        // line 1806
+        #line 1806
         P_popadr(nullptr, _F.Ad1);
         
-        // line 1807
+        #line 1807
         P_popadr(nullptr, _F.Ad);
         
-        // line 1807
+        #line 1807
         P_pshadr(nullptr, _F.Ad);
         
-        // line 1807
+        #line 1807
         P_valfil(nullptr, _F.Ad);
         
-        // line 1807
+        #line 1807
         _F.Fn = Store[_F.Ad];
         
-        // line 1808
+        #line 1808
         if((_F.Fn <= C_prrfn))
         {
-            // line 1808
+            #line 1808
             switch(_F.Fn)
             {
             case C_inputfn:
-                // line 1809
+                #line 1809
                 P_errori(nullptr, T_beta::C("write on input file      "));
                 break;
             
             case C_outputfn:
-                // line 1810
+                #line 1810
                 P_callsp_writestr(&_F, Output, _F.Ad1, _F.w, _F.l);
                 break;
             
             case C_prdfn:
-                // line 1811
+                #line 1811
                 P_errori(nullptr, T_beta::C("write on prd file        "));
                 break;
             
             case C_prrfn:
-                // line 1812
+                #line 1812
                 P_callsp_writestr(&_F, Prr, _F.Ad1, _F.w, _F.l);
                 break;
             }
         }
         else
         {
-            // line 1814
+            #line 1814
             if((Filstate[_F.Fn] != C_fwrite))
             {
-                // line 1815
+                #line 1815
                 P_errori(nullptr, T_beta::C("File not in write mode   "));
             }
             
-            // line 1816
+            #line 1816
             P_callsp_writestr(&_F, Filtable[_F.Fn], _F.Ad1, _F.w, _F.l);
         }
         
@@ -8152,175 +8152,175 @@ void P_callsp(void* _slink)
         break;
     
     case 7:
-        // line 1819
+        #line 1819
         P_popadr(nullptr, _F.Ad);
         
-        // line 1819
+        #line 1819
         P_valfil(nullptr, _F.Ad);
         
-        // line 1819
+        #line 1819
         _F.Fn = Store[_F.Ad];
         
-        // line 1820
+        #line 1820
         if((_F.Fn <= C_prrfn))
         {
-            // line 1820
+            #line 1820
             switch(_F.Fn)
             {
             case C_inputfn:
-                // line 1821
+                #line 1821
                 _F.Line = _eoln(Input);
                 break;
             
             case C_outputfn:
-                // line 1822
+                #line 1822
                 P_errori(nullptr, T_beta::C("eoln output file         "));
                 break;
             
             case C_prdfn:
-                // line 1823
+                #line 1823
                 _F.Line = _eoln(Prd);
                 break;
             
             case C_prrfn:
-                // line 1824
+                #line 1824
                 P_errori(nullptr, T_beta::C("eoln on prr file         "));
                 break;
             }
         }
         else
         {
-            // line 1827
+            #line 1827
             if((Filstate[_F.Fn] != C_fread))
             {
-                // line 1828
+                #line 1828
                 P_errori(nullptr, T_beta::C("File not in read mode    "));
             }
             
-            // line 1829
+            #line 1829
             _F.Line = _eoln(Filtable[_F.Fn]);
         }
         
-        // line 1831
+        #line 1831
         P_pshint(nullptr, _ord(_F.Line));
         break;
     
     case 8:
-        // line 1833
+        #line 1833
         P_popint(nullptr, _F.w);
         
-        // line 1833
+        #line 1833
         P_popint(nullptr, _F.i);
         
-        // line 1833
+        #line 1833
         P_popadr(nullptr, _F.Ad);
         
-        // line 1833
+        #line 1833
         P_pshadr(nullptr, _F.Ad);
         
-        // line 1834
+        #line 1834
         P_valfil(nullptr, _F.Ad);
         
-        // line 1834
+        #line 1834
         _F.Fn = Store[_F.Ad];
         
-        // line 1835
+        #line 1835
         if((_F.Fn <= C_prrfn))
         {
-            // line 1835
+            #line 1835
             switch(_F.Fn)
             {
             case C_inputfn:
-                // line 1836
+                #line 1836
                 P_errori(nullptr, T_beta::C("write on input file      "));
                 break;
             
             case C_outputfn:
-                // line 1837
+                #line 1837
                 Output << _format(_F.i, _F.w, 0);
                 break;
             
             case C_prdfn:
-                // line 1838
+                #line 1838
                 P_errori(nullptr, T_beta::C("write on prd file        "));
                 break;
             
             case C_prrfn:
-                // line 1839
+                #line 1839
                 Prr << _format(_F.i, _F.w, 0);
                 break;
             }
         }
         else
         {
-            // line 1842
+            #line 1842
             if((Filstate[_F.Fn] != C_fwrite))
             {
-                // line 1843
+                #line 1843
                 P_errori(nullptr, T_beta::C("File not in write mode   "));
             }
             
-            // line 1844
+            #line 1844
             Filtable[_F.Fn] << _format(_F.i, _F.w, 0);
         }
         break;
     
     case 9:
-        // line 1847
+        #line 1847
         P_popint(nullptr, _F.w);
         
-        // line 1847
+        #line 1847
         P_poprel(nullptr, _F.r);
         
-        // line 1847
+        #line 1847
         P_popadr(nullptr, _F.Ad);
         
-        // line 1847
+        #line 1847
         P_pshadr(nullptr, _F.Ad);
         
-        // line 1848
+        #line 1848
         P_valfil(nullptr, _F.Ad);
         
-        // line 1848
+        #line 1848
         _F.Fn = Store[_F.Ad];
         
-        // line 1849
+        #line 1849
         if((_F.Fn <= C_prrfn))
         {
-            // line 1849
+            #line 1849
             switch(_F.Fn)
             {
             case C_inputfn:
-                // line 1850
+                #line 1850
                 P_errori(nullptr, T_beta::C("write on input file      "));
                 break;
             
             case C_outputfn:
-                // line 1851
+                #line 1851
                 Output << _format(_F.r, _F.w, 0);
                 break;
             
             case C_prdfn:
-                // line 1852
+                #line 1852
                 P_errori(nullptr, T_beta::C("write on prd file        "));
                 break;
             
             case C_prrfn:
-                // line 1853
+                #line 1853
                 Prr << _format(_F.r, _F.w, 0);
                 break;
             }
         }
         else
         {
-            // line 1856
+            #line 1856
             if((Filstate[_F.Fn] != C_fwrite))
             {
-                // line 1857
+                #line 1857
                 P_errori(nullptr, T_beta::C("File not in write mode   "));
             }
             
-            // line 1858
+            #line 1858
             Filtable[_F.Fn] << _format(_F.r, _F.w, 0);
         }
         
@@ -8328,413 +8328,413 @@ void P_callsp(void* _slink)
         break;
     
     case 10:
-        // line 1861
+        #line 1861
         P_popint(nullptr, _F.w);
         
-        // line 1861
+        #line 1861
         P_popint(nullptr, _F.i);
         
-        // line 1861
+        #line 1861
         _F.c = _chr(_F.i);
         
-        // line 1861
+        #line 1861
         P_popadr(nullptr, _F.Ad);
         
-        // line 1862
+        #line 1862
         P_pshadr(nullptr, _F.Ad);
         
-        // line 1862
+        #line 1862
         P_valfil(nullptr, _F.Ad);
         
-        // line 1862
+        #line 1862
         _F.Fn = Store[_F.Ad];
         
-        // line 1863
+        #line 1863
         if((_F.Fn <= C_prrfn))
         {
-            // line 1863
+            #line 1863
             switch(_F.Fn)
             {
             case C_inputfn:
-                // line 1864
+                #line 1864
                 P_errori(nullptr, T_beta::C("write on input file      "));
                 break;
             
             case C_outputfn:
-                // line 1865
+                #line 1865
                 Output << _format(_F.c, _F.w, 0);
                 break;
             
             case C_prdfn:
-                // line 1866
+                #line 1866
                 P_errori(nullptr, T_beta::C("write on prd file        "));
                 break;
             
             case C_prrfn:
-                // line 1867
+                #line 1867
                 Prr << _format(_F.c, _F.w, 0);
                 break;
             }
         }
         else
         {
-            // line 1870
+            #line 1870
             if((Filstate[_F.Fn] != C_fwrite))
             {
-                // line 1871
+                #line 1871
                 P_errori(nullptr, T_beta::C("File not in write mode   "));
             }
             
-            // line 1872
+            #line 1872
             Filtable[_F.Fn] << _format(_F.c, _F.w, 0);
         }
         break;
     
     case 11:
-        // line 1875
+        #line 1875
         P_popadr(nullptr, _F.Ad1);
         
-        // line 1875
+        #line 1875
         P_popadr(nullptr, _F.Ad);
         
-        // line 1875
+        #line 1875
         P_pshadr(nullptr, _F.Ad);
         
-        // line 1875
+        #line 1875
         P_valfil(nullptr, _F.Ad);
         
-        // line 1876
+        #line 1876
         _F.Fn = Store[_F.Ad];
         
-        // line 1877
+        #line 1877
         if((_F.Fn <= C_prrfn))
         {
-            // line 1877
+            #line 1877
             switch(_F.Fn)
             {
             case C_inputfn:
-                // line 1878
+                #line 1878
                 P_callsp_readi(&_F, Input, _F.i);
                 
-                // line 1878
+                #line 1878
                 P_putint(nullptr, _F.Ad1, _F.i);
                 break;
             
             case C_outputfn:
-                // line 1879
+                #line 1879
                 P_errori(nullptr, T_beta::C("read on output file      "));
                 break;
             
             case C_prdfn:
-                // line 1880
+                #line 1880
                 P_callsp_readi(&_F, Prd, _F.i);
                 
-                // line 1880
+                #line 1880
                 P_putint(nullptr, _F.Ad1, _F.i);
                 break;
             
             case C_prrfn:
-                // line 1881
+                #line 1881
                 P_errori(nullptr, T_beta::C("read on prr file         "));
                 break;
             }
         }
         else
         {
-            // line 1884
+            #line 1884
             if((Filstate[_F.Fn] != C_fread))
             {
-                // line 1885
+                #line 1885
                 P_errori(nullptr, T_beta::C("File not in read mode    "));
             }
             
-            // line 1886
+            #line 1886
             P_callsp_readi(&_F, Filtable[_F.Fn], _F.i);
             
-            // line 1887
+            #line 1887
             P_putint(nullptr, _F.Ad1, _F.i);
         }
         break;
     
     case 12:
-        // line 1890
+        #line 1890
         P_popadr(nullptr, _F.Ad1);
         
-        // line 1890
+        #line 1890
         P_popadr(nullptr, _F.Ad);
         
-        // line 1890
+        #line 1890
         P_pshadr(nullptr, _F.Ad);
         
-        // line 1890
+        #line 1890
         P_valfil(nullptr, _F.Ad);
         
-        // line 1891
+        #line 1891
         _F.Fn = Store[_F.Ad];
         
-        // line 1892
+        #line 1892
         if((_F.Fn <= C_prrfn))
         {
-            // line 1892
+            #line 1892
             switch(_F.Fn)
             {
             case C_inputfn:
-                // line 1893
+                #line 1893
                 P_callsp_readr(&_F, Input, _F.r);
                 
-                // line 1893
+                #line 1893
                 P_putrel(nullptr, _F.Ad1, _F.r);
                 break;
             
             case C_outputfn:
-                // line 1894
+                #line 1894
                 P_errori(nullptr, T_beta::C("read on output file      "));
                 break;
             
             case C_prdfn:
-                // line 1895
+                #line 1895
                 P_callsp_readr(&_F, Prd, _F.r);
                 
-                // line 1895
+                #line 1895
                 P_putrel(nullptr, _F.Ad1, _F.r);
                 break;
             
             case C_prrfn:
-                // line 1896
+                #line 1896
                 P_errori(nullptr, T_beta::C("read on prr file         "));
                 break;
             }
         }
         else
         {
-            // line 1899
+            #line 1899
             if((Filstate[_F.Fn] != C_fread))
             {
-                // line 1900
+                #line 1900
                 P_errori(nullptr, T_beta::C("File not in read mode    "));
             }
             
-            // line 1901
+            #line 1901
             P_callsp_readr(&_F, Filtable[_F.Fn], _F.r);
             
-            // line 1902
+            #line 1902
             P_putrel(nullptr, _F.Ad1, _F.r);
         }
         break;
     
     case 13:
-        // line 1905
+        #line 1905
         P_popadr(nullptr, _F.Ad1);
         
-        // line 1905
+        #line 1905
         P_popadr(nullptr, _F.Ad);
         
-        // line 1905
+        #line 1905
         P_pshadr(nullptr, _F.Ad);
         
-        // line 1905
+        #line 1905
         P_valfil(nullptr, _F.Ad);
         
-        // line 1906
+        #line 1906
         _F.Fn = Store[_F.Ad];
         
-        // line 1907
+        #line 1907
         if((_F.Fn <= C_prrfn))
         {
-            // line 1907
+            #line 1907
             switch(_F.Fn)
             {
             case C_inputfn:
-                // line 1908
+                #line 1908
                 P_callsp_readc(&_F, Input, _F.c);
                 
-                // line 1908
+                #line 1908
                 P_putchr(nullptr, _F.Ad1, _F.c);
                 break;
             
             case C_outputfn:
-                // line 1909
+                #line 1909
                 P_errori(nullptr, T_beta::C("read on output file      "));
                 break;
             
             case C_prdfn:
-                // line 1910
+                #line 1910
                 P_callsp_readc(&_F, Prd, _F.c);
                 
-                // line 1910
+                #line 1910
                 P_putchr(nullptr, _F.Ad1, _F.c);
                 break;
             
             case C_prrfn:
-                // line 1911
+                #line 1911
                 P_errori(nullptr, T_beta::C("read on prr file         "));
                 break;
             }
         }
         else
         {
-            // line 1914
+            #line 1914
             if((Filstate[_F.Fn] != C_fread))
             {
-                // line 1915
+                #line 1915
                 P_errori(nullptr, T_beta::C("File not in read mode    "));
             }
             
-            // line 1916
+            #line 1916
             P_callsp_readc(&_F, Filtable[_F.Fn], _F.c);
             
-            // line 1917
+            #line 1917
             P_putchr(nullptr, _F.Ad1, _F.c);
         }
         break;
     
     case 14:
-        // line 1920
+        #line 1920
         P_poprel(nullptr, R1);
         
-        // line 1920
+        #line 1920
         P_pshrel(nullptr, _sin(R1));
         break;
     
     case 15:
-        // line 1921
+        #line 1921
         P_poprel(nullptr, R1);
         
-        // line 1921
+        #line 1921
         P_pshrel(nullptr, _cos(R1));
         break;
     
     case 16:
-        // line 1922
+        #line 1922
         P_poprel(nullptr, R1);
         
-        // line 1922
+        #line 1922
         P_pshrel(nullptr, _exp(R1));
         break;
     
     case 17:
-        // line 1923
+        #line 1923
         P_poprel(nullptr, R1);
         
-        // line 1923
+        #line 1923
         P_pshrel(nullptr, _ln(R1));
         break;
     
     case 18:
-        // line 1924
+        #line 1924
         P_poprel(nullptr, R1);
         
-        // line 1924
+        #line 1924
         P_pshrel(nullptr, _sqrt(R1));
         break;
     
     case 19:
-        // line 1925
+        #line 1925
         P_poprel(nullptr, R1);
         
-        // line 1925
+        #line 1925
         P_pshrel(nullptr, _arctan(R1));
         break;
     
     case 20:
-        // line 1927
+        #line 1927
         P_errori(nullptr, T_beta::C("invalid std proc/func    "));
         break;
     
     case 21:
-        // line 1928
+        #line 1928
         P_popadr(nullptr, _F.Ad);
         
-        // line 1928
+        #line 1928
         P_valfil(nullptr, _F.Ad);
         
-        // line 1928
+        #line 1928
         _F.Fn = Store[_F.Ad];
         
-        // line 1929
+        #line 1929
         if((_F.Fn <= C_prrfn))
         {
-            // line 1929
+            #line 1929
             switch(_F.Fn)
             {
             case C_inputfn:
-                // line 1930
+                #line 1930
                 P_errori(nullptr, T_beta::C("page on read file        "));
                 break;
             
             case C_outputfn:
-                // line 1931
+                #line 1931
                 _page(Output);
                 break;
             
             case C_prdfn:
-                // line 1932
+                #line 1932
                 P_errori(nullptr, T_beta::C("page on prd file         "));
                 break;
             
             case C_prrfn:
-                // line 1933
+                #line 1933
                 _page(Prr);
                 break;
             }
         }
         else
         {
-            // line 1936
+            #line 1936
             if((Filstate[_F.Fn] != C_fwrite))
             {
-                // line 1937
+                #line 1937
                 P_errori(nullptr, T_beta::C("File not in write mode   "));
             }
             
-            // line 1938
+            #line 1938
             _page(Filtable[_F.Fn]);
         }
         break;
     
     case 22:
-        // line 1941
+        #line 1941
         P_popadr(nullptr, _F.Ad);
         
-        // line 1941
+        #line 1941
         P_valfil(nullptr, _F.Ad);
         
-        // line 1941
+        #line 1941
         _F.Fn = Store[_F.Ad];
         
-        // line 1942
+        #line 1942
         if((_F.Fn <= C_prrfn))
         {
-            // line 1942
+            #line 1942
             switch(_F.Fn)
             {
             case C_inputfn:
-                // line 1943
+                #line 1943
                 P_errori(nullptr, T_beta::C("reset on input file      "));
                 break;
             
             case C_outputfn:
-                // line 1944
+                #line 1944
                 P_errori(nullptr, T_beta::C("reset on output file     "));
                 break;
             
             case C_prdfn:
-                // line 1945
+                #line 1945
                 _reset(Prd);
                 break;
             
             case C_prrfn:
-                // line 1946
+                #line 1946
                 P_errori(nullptr, T_beta::C("reset on prr file        "));
                 break;
             }
         }
         else
         {
-            // line 1949
+            #line 1949
             Filstate[_F.Fn] = C_fread;
             
-            // line 1950
+            #line 1950
             _reset(Filtable[_F.Fn]);
             
             { /* NOP */ }
@@ -8742,48 +8742,48 @@ void P_callsp(void* _slink)
         break;
     
     case 23:
-        // line 1953
+        #line 1953
         P_popadr(nullptr, _F.Ad);
         
-        // line 1953
+        #line 1953
         P_valfil(nullptr, _F.Ad);
         
-        // line 1953
+        #line 1953
         _F.Fn = Store[_F.Ad];
         
-        // line 1954
+        #line 1954
         if((_F.Fn <= C_prrfn))
         {
-            // line 1954
+            #line 1954
             switch(_F.Fn)
             {
             case C_inputfn:
-                // line 1955
+                #line 1955
                 P_errori(nullptr, T_beta::C("rewrite on input file    "));
                 break;
             
             case C_outputfn:
-                // line 1956
+                #line 1956
                 P_errori(nullptr, T_beta::C("rewrite on output file   "));
                 break;
             
             case C_prdfn:
-                // line 1957
+                #line 1957
                 P_errori(nullptr, T_beta::C("rewrite on prd file      "));
                 break;
             
             case C_prrfn:
-                // line 1958
+                #line 1958
                 _rewrite(Prr);
                 break;
             }
         }
         else
         {
-            // line 1961
+            #line 1961
             Filstate[_F.Fn] = C_fwrite;
             
-            // line 1962
+            #line 1962
             _rewrite(Filtable[_F.Fn]);
             
             { /* NOP */ }
@@ -8791,343 +8791,343 @@ void P_callsp(void* _slink)
         break;
     
     case 24:
-        // line 1965
+        #line 1965
         P_popint(nullptr, _F.w);
         
-        // line 1965
+        #line 1965
         P_popint(nullptr, _F.i);
         
-        // line 1965
+        #line 1965
         _F.b = (_F.i != 0);
         
-        // line 1965
+        #line 1965
         P_popadr(nullptr, _F.Ad);
         
-        // line 1966
+        #line 1966
         P_pshadr(nullptr, _F.Ad);
         
-        // line 1966
+        #line 1966
         P_valfil(nullptr, _F.Ad);
         
-        // line 1966
+        #line 1966
         _F.Fn = Store[_F.Ad];
         
-        // line 1967
+        #line 1967
         if((_F.Fn <= C_prrfn))
         {
-            // line 1967
+            #line 1967
             switch(_F.Fn)
             {
             case C_inputfn:
-                // line 1968
+                #line 1968
                 P_errori(nullptr, T_beta::C("write on input file      "));
                 break;
             
             case C_outputfn:
-                // line 1969
+                #line 1969
                 Output << _format(_str(_F.b), _F.w, 0);
                 break;
             
             case C_prdfn:
-                // line 1970
+                #line 1970
                 P_errori(nullptr, T_beta::C("write on prd file        "));
                 break;
             
             case C_prrfn:
-                // line 1971
+                #line 1971
                 Prr << _format(_str(_F.b), _F.w, 0);
                 break;
             }
         }
         else
         {
-            // line 1974
+            #line 1974
             if((Filstate[_F.Fn] != C_fwrite))
             {
-                // line 1975
+                #line 1975
                 P_errori(nullptr, T_beta::C("File not in write mode   "));
             }
             
-            // line 1976
+            #line 1976
             Filtable[_F.Fn] << _format(_str(_F.b), _F.w, 0);
         }
         break;
     
     case 25:
-        // line 1979
+        #line 1979
         P_popint(nullptr, _F.f);
         
-        // line 1979
+        #line 1979
         P_popint(nullptr, _F.w);
         
-        // line 1979
+        #line 1979
         P_poprel(nullptr, _F.r);
         
-        // line 1979
+        #line 1979
         P_popadr(nullptr, _F.Ad);
         
-        // line 1979
+        #line 1979
         P_pshadr(nullptr, _F.Ad);
         
-        // line 1980
+        #line 1980
         P_valfil(nullptr, _F.Ad);
         
-        // line 1980
+        #line 1980
         _F.Fn = Store[_F.Ad];
         
-        // line 1981
+        #line 1981
         if((_F.Fn <= C_prrfn))
         {
-            // line 1981
+            #line 1981
             switch(_F.Fn)
             {
             case C_inputfn:
-                // line 1982
+                #line 1982
                 P_errori(nullptr, T_beta::C("write on input file      "));
                 break;
             
             case C_outputfn:
-                // line 1983
+                #line 1983
                 Output << _format(_F.r, _F.w, _F.f);
                 break;
             
             case C_prdfn:
-                // line 1984
+                #line 1984
                 P_errori(nullptr, T_beta::C("write on prd file        "));
                 break;
             
             case C_prrfn:
-                // line 1985
+                #line 1985
                 Prr << _format(_F.r, _F.w, _F.f);
                 break;
             }
         }
         else
         {
-            // line 1988
+            #line 1988
             if((Filstate[_F.Fn] != C_fwrite))
             {
-                // line 1989
+                #line 1989
                 P_errori(nullptr, T_beta::C("File not in write mode   "));
             }
             
-            // line 1990
+            #line 1990
             Filtable[_F.Fn] << _format(_F.r, _F.w, _F.f);
         }
         break;
     
     case 26:
-        // line 1994
+        #line 1994
         P_popadr(nullptr, _F.Ad1);
         
-        // line 1994
+        #line 1994
         P_popadr(nullptr, _F.Ad);
         
-        // line 1994
+        #line 1994
         P_dspspc(nullptr, _F.Ad1, F_getadr(nullptr, _F.Ad));
         break;
     
     case 27:
-        // line 1996
+        #line 1996
         P_popint(nullptr, _F.l);
         
-        // line 1996
+        #line 1996
         P_popadr(nullptr, _F.Ad1);
         
-        // line 1996
+        #line 1996
         P_popadr(nullptr, _F.Ad);
         
-        // line 1997
+        #line 1997
         P_valfilwm(nullptr, _F.Ad);
         
-        // line 1997
+        #line 1997
         _F.Fn = Store[_F.Ad];
         
-        // line 1998
+        #line 1998
         _FOR_TO(_F.i, 1, _F.l)
         {
-            // line 1999
+            #line 1999
             Bfiltable[_F.Fn] << Store[_F.Ad1];
             
-            // line 2000
+            #line 2000
             _F.Ad1 = (_F.Ad1 + 1);
         }
         _FOR_END(_F.i)
         break;
     
     case 28:
-        // line 2003
+        #line 2003
         P_popint(nullptr, _F.i);
         
-        // line 2003
+        #line 2003
         P_popadr(nullptr, _F.Ad);
         
-        // line 2003
+        #line 2003
         P_pshadr(nullptr, _F.Ad);
         
-        // line 2003
+        #line 2003
         P_pshint(nullptr, _F.i);
         
-        // line 2004
+        #line 2004
         P_valfilwm(nullptr, _F.Ad);
         
-        // line 2004
+        #line 2004
         _F.Fn = Store[_F.Ad];
         
-        // line 2005
+        #line 2005
         _FOR_TO(_F.i, 1, C_intsize)
         {
-            // line 2006
+            #line 2006
             Bfiltable[_F.Fn] << Store[(((Sp - C_intsize) + _F.i) - 1)];
         }
         _FOR_END(_F.i)
         
-        // line 2007
+        #line 2007
         P_popint(nullptr, _F.i);
         break;
     
     case 29:
-        // line 2009
+        #line 2009
         P_poprel(nullptr, _F.r);
         
-        // line 2009
+        #line 2009
         P_popadr(nullptr, _F.Ad);
         
-        // line 2009
+        #line 2009
         P_pshadr(nullptr, _F.Ad);
         
-        // line 2009
+        #line 2009
         P_pshrel(nullptr, _F.r);
         
-        // line 2010
+        #line 2010
         P_valfilwm(nullptr, _F.Ad);
         
-        // line 2010
+        #line 2010
         _F.Fn = Store[_F.Ad];
         
-        // line 2011
+        #line 2011
         _FOR_TO(_F.i, 1, C_realsize)
         {
-            // line 2012
+            #line 2012
             Bfiltable[_F.Fn] << Store[(((Sp - C_realsize) + _F.i) - 1)];
         }
         _FOR_END(_F.i)
         
-        // line 2013
+        #line 2013
         P_poprel(nullptr, _F.r);
         break;
     
     case 30:
-        // line 2015
+        #line 2015
         P_popint(nullptr, _F.i);
         
-        // line 2015
+        #line 2015
         _F.c = _chr(_F.i);
         
-        // line 2015
+        #line 2015
         P_popadr(nullptr, _F.Ad);
         
-        // line 2015
+        #line 2015
         P_pshadr(nullptr, _F.Ad);
         
-        // line 2015
+        #line 2015
         P_pshint(nullptr, _F.i);
         
-        // line 2016
+        #line 2016
         P_valfilwm(nullptr, _F.Ad);
         
-        // line 2016
+        #line 2016
         _F.Fn = Store[_F.Ad];
         
-        // line 2017
+        #line 2017
         _FOR_TO(_F.i, 1, C_charsize)
         {
-            // line 2018
+            #line 2018
             Bfiltable[_F.Fn] << Store[(((Sp - C_intsize) + _F.i) - 1)];
         }
         _FOR_END(_F.i)
         
-        // line 2019
+        #line 2019
         P_popint(nullptr, _F.i);
         break;
     
     case 31:
-        // line 2021
+        #line 2021
         P_popint(nullptr, _F.i);
         
-        // line 2021
+        #line 2021
         P_popadr(nullptr, _F.Ad);
         
-        // line 2021
+        #line 2021
         P_pshadr(nullptr, _F.Ad);
         
-        // line 2021
+        #line 2021
         P_pshint(nullptr, _F.i);
         
-        // line 2022
+        #line 2022
         P_valfilwm(nullptr, _F.Ad);
         
-        // line 2022
+        #line 2022
         _F.Fn = Store[_F.Ad];
         
-        // line 2023
+        #line 2023
         _FOR_TO(_F.i, 1, C_boolsize)
         {
-            // line 2024
+            #line 2024
             Bfiltable[_F.Fn] << Store[(((Sp - C_intsize) + _F.i) - 1)];
         }
         _FOR_END(_F.i)
         
-        // line 2025
+        #line 2025
         P_popint(nullptr, _F.i);
         break;
     
     case 32:
-        // line 2027
+        #line 2027
         P_popint(nullptr, _F.l);
         
-        // line 2027
+        #line 2027
         P_popadr(nullptr, _F.Ad1);
         
-        // line 2027
+        #line 2027
         P_popadr(nullptr, _F.Ad);
         
-        // line 2027
+        #line 2027
         P_pshadr(nullptr, _F.Ad);
         
-        // line 2028
+        #line 2028
         P_valfilrm(nullptr, _F.Ad);
         
-        // line 2028
+        #line 2028
         _F.Fn = Store[_F.Ad];
         
-        // line 2029
+        #line 2029
         if(Filbuff[_F.Fn])
         {
-            // line 2030
+            #line 2030
             _FOR_TO(_F.i, 1, _F.l)
             {
-                // line 2031
+                #line 2031
                 Store[((_F.Ad1 + _F.i) - 1)] = Store[(((_F.Ad + C_fileidsize) + _F.i) - 1)];
             }
             _FOR_END(_F.i)
         }
         else
         {
-            // line 2033
+            #line 2033
             if(_eof(Bfiltable[_F.Fn]))
             {
-                // line 2033
+                #line 2033
                 P_errori(nullptr, T_beta::C("End of file              "));
             }
             
-            // line 2034
+            #line 2034
             _FOR_TO(_F.i, 1, _F.l)
             {
-                // line 2035
+                #line 2035
                 Bfiltable[_F.Fn] >> Store[_F.Ad1];
                 
-                // line 2036
+                #line 2036
                 _F.Ad1 = (_F.Ad1 + 1);
             }
             _FOR_END(_F.i)
@@ -9135,70 +9135,70 @@ void P_callsp(void* _slink)
         break;
     
     case 33:
-        // line 2040
+        #line 2040
         P_popadr(nullptr, _F.Ad);
         
-        // line 2040
+        #line 2040
         P_valfil(nullptr, _F.Ad);
         
-        // line 2040
+        #line 2040
         _F.Fn = Store[_F.Ad];
         
-        // line 2041
+        #line 2041
         Filstate[_F.Fn] = C_fread;
         
-        // line 2042
+        #line 2042
         _reset(Bfiltable[_F.Fn]);
         
-        // line 2043
+        #line 2043
         Filbuff[_F.Fn] = C_false;
         break;
     
     case 34:
-        // line 2045
+        #line 2045
         P_popadr(nullptr, _F.Ad);
         
-        // line 2045
+        #line 2045
         P_valfil(nullptr, _F.Ad);
         
-        // line 2045
+        #line 2045
         _F.Fn = Store[_F.Ad];
         
-        // line 2046
+        #line 2046
         Filstate[_F.Fn] = C_fwrite;
         
-        // line 2047
+        #line 2047
         _rewrite(Bfiltable[_F.Fn]);
         
-        // line 2048
+        #line 2048
         Filbuff[_F.Fn] = C_false;
         break;
     
     case 35:
-        // line 2050
+        #line 2050
         P_popint(nullptr, _F.i);
         
-        // line 2050
+        #line 2050
         P_popadr(nullptr, _F.Ad);
         
-        // line 2050
+        #line 2050
         P_valfilrm(nullptr, _F.Ad);
         
-        // line 2050
+        #line 2050
         _F.Fn = Store[_F.Ad];
         
-        // line 2051
+        #line 2051
         if(Filbuff[_F.Fn])
         {
-            // line 2051
+            #line 2051
             Filbuff[_F.Fn] = C_false;
         }
         else
         {
-            // line 2053
+            #line 2053
             _FOR_TO(_F.j, 1, _F.i)
             {
-                // line 2054
+                #line 2054
                 Bfiltable[_F.Fn] >> Store[(((_F.Ad + C_fileidsize) + _F.j) - 1)];
             }
             _FOR_END(_F.j)
@@ -9206,22 +9206,22 @@ void P_callsp(void* _slink)
         break;
     
     case 36:
-        // line 2056
+        #line 2056
         P_popint(nullptr, _F.i);
         
-        // line 2056
+        #line 2056
         P_popadr(nullptr, _F.Ad);
         
-        // line 2056
+        #line 2056
         P_valfilwm(nullptr, _F.Ad);
         
-        // line 2056
+        #line 2056
         _F.Fn = Store[_F.Ad];
         
-        // line 2057
+        #line 2057
         _FOR_TO(_F.j, 1, _F.i)
         {
-            // line 2058
+            #line 2058
             Bfiltable[_F.Fn] << Store[(((_F.Ad + C_fileidsize) + _F.j) - 1)];
         }
         _FOR_END(_F.j)
@@ -9234,7 +9234,7 @@ void P_callsp(void* _slink)
 }
 
 
-// line 1706
+#line 1706
 //================================================================================
 // scope: callsp_readi (level : 3)
 
@@ -9255,21 +9255,21 @@ void P_callsp_readi(void* _slink, T_text& f, T_integer& i)
     Frame_callsp_readi _F = { (Frame_callsp*)_slink, f, i };
     
     // subroutine body
-    // line 1707
+    #line 1707
     if(_eof(_F.f))
     {
-        // line 1707
+        #line 1707
         P_errori(nullptr, T_beta::C("End of file              "));
     }
     
-    // line 1708
+    #line 1708
     _F.f >> _F.i;
     
     { /* NOP */ }
 }
 
 
-// line 1711
+#line 1711
 //================================================================================
 // scope: callsp_readr (level : 3)
 
@@ -9290,21 +9290,21 @@ void P_callsp_readr(void* _slink, T_text& f, T_real& r)
     Frame_callsp_readr _F = { (Frame_callsp*)_slink, f, r };
     
     // subroutine body
-    // line 1712
+    #line 1712
     if(_eof(_F.f))
     {
-        // line 1712
+        #line 1712
         P_errori(nullptr, T_beta::C("End of file              "));
     }
     
-    // line 1713
+    #line 1713
     _F.f >> _F.r;
     
     { /* NOP */ }
 }
 
 
-// line 1716
+#line 1716
 //================================================================================
 // scope: callsp_readc (level : 3)
 
@@ -9325,21 +9325,21 @@ void P_callsp_readc(void* _slink, T_text& f, T_char& c)
     Frame_callsp_readc _F = { (Frame_callsp*)_slink, f, c };
     
     // subroutine body
-    // line 1717
+    #line 1717
     if(_eof(_F.f))
     {
-        // line 1717
+        #line 1717
         P_errori(nullptr, T_beta::C("End of file              "));
     }
     
-    // line 1718
+    #line 1718
     _F.f >> _F.c;
     
     { /* NOP */ }
 }
 
 
-// line 1721
+#line 1721
 //================================================================================
 // scope: callsp_writestr (level : 3)
 
@@ -9365,34 +9365,34 @@ void P_callsp_writestr(void* _slink, T_text& f, T_address Ad, T_integer w, T_int
     Frame_callsp_writestr _F = { (Frame_callsp*)_slink, f, Ad, w, l };
     
     // subroutine body
-    // line 1724
+    #line 1724
     if((_F.w > _F.l))
     {
-        // line 1724
+        #line 1724
         _FOR_TO(_F.i, 1, (_F.w - _F.l))
         {
-            // line 1724
+            #line 1724
             _F.f << ' ';
         }
         _FOR_END(_F.i)
     }
     else
     {
-        // line 1725
+        #line 1725
         _F.l = _F.w;
     }
     
-    // line 1726
+    #line 1726
     _FOR_TO(_F.i, 0, (_F.l - 1))
     {
-        // line 1726
+        #line 1726
         _F.f << F_getchr(nullptr, T_address::C((_F.Ad + _F.i)));
     }
     _FOR_END(_F.i)
 }
 
 
-// line 1729
+#line 1729
 //================================================================================
 // scope: callsp_getfile (level : 3)
 
@@ -9412,21 +9412,21 @@ void P_callsp_getfile(void* _slink, T_text& f)
     Frame_callsp_getfile _F = { (Frame_callsp*)_slink, f };
     
     // subroutine body
-    // line 1730
+    #line 1730
     if(_eof(_F.f))
     {
-        // line 1730
+        #line 1730
         P_errori(nullptr, T_beta::C("End of file              "));
     }
     
-    // line 1731
+    #line 1731
     _get(_F.f);
     
     { /* NOP */ }
 }
 
 
-// line 1734
+#line 1734
 //================================================================================
 // scope: callsp_putfile (level : 3)
 
@@ -9447,10 +9447,10 @@ void P_callsp_putfile(void* _slink, T_text& f, T_address& Ad)
     Frame_callsp_putfile _F = { (Frame_callsp*)_slink, f, Ad };
     
     // subroutine body
-    // line 1735
+    #line 1735
     _F.f.bufferVar() = F_getchr(nullptr, T_address::C((_F.Ad + C_fileidsize)));
     
-    // line 1735
+    #line 1735
     _put(_F.f);
 }
 

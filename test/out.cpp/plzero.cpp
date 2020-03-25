@@ -1,7 +1,7 @@
 
 #include <lpcRuntime.h>
 
-// "plzero.pas"
+#line 0 "plzero.pas"
 
 //================================================================================
 // command line argument map
@@ -15,7 +15,7 @@ _Filename* _FilenameMap = _FilenameMapEntries;
 const int _FilenameMapSize = _countof(_FilenameMapEntries);
 
 
-// line 0
+#line 0
 //================================================================================
 // scope: global scope (level : 0)
 
@@ -31,7 +31,7 @@ const T_boolean C_false = 0;
 const T_integer C_maxint = 2147483647;
 const T_boolean C_true = 1;
 
-// line 1
+#line 1
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -200,202 +200,202 @@ void P_()
         }
         
         // subroutine body
-        // line 423
+        #line 423
         _FOR_TO(Ch, _chr(0), _chr(255))
         {
-            // line 423
+            #line 423
             Ssym[Ch] = C_nul;
         }
         _FOR_END(Ch)
         
-        // line 424
+        #line 424
         Word[1] = "begin     ";
         
-        // line 424
+        #line 424
         Word[2] = "call      ";
         
-        // line 425
+        #line 425
         Word[3] = "const     ";
         
-        // line 425
+        #line 425
         Word[4] = "do        ";
         
-        // line 426
+        #line 426
         Word[5] = "end       ";
         
-        // line 426
+        #line 426
         Word[6] = "if        ";
         
-        // line 427
+        #line 427
         Word[7] = "odd       ";
         
-        // line 427
+        #line 427
         Word[8] = "procedure ";
         
-        // line 428
+        #line 428
         Word[9] = "then      ";
         
-        // line 428
+        #line 428
         Word[10] = "var       ";
         
-        // line 429
+        #line 429
         Word[11] = "while     ";
         
-        // line 430
+        #line 430
         Wsym[1] = C_beginsym;
         
-        // line 430
+        #line 430
         Wsym[2] = C_callsym;
         
-        // line 431
+        #line 431
         Wsym[3] = C_constsym;
         
-        // line 431
+        #line 431
         Wsym[4] = C_dosym;
         
-        // line 432
+        #line 432
         Wsym[5] = C_endsym;
         
-        // line 432
+        #line 432
         Wsym[6] = C_ifsym;
         
-        // line 433
+        #line 433
         Wsym[7] = C_oddsym;
         
-        // line 433
+        #line 433
         Wsym[8] = C_procsym;
         
-        // line 434
+        #line 434
         Wsym[9] = C_thensym;
         
-        // line 434
+        #line 434
         Wsym[10] = C_varsym;
         
-        // line 435
+        #line 435
         Wsym[11] = C_whilesym;
         
-        // line 436
+        #line 436
         Ssym['+'] = C_plus;
         
-        // line 436
+        #line 436
         Ssym['-'] = C_minus;
         
-        // line 437
+        #line 437
         Ssym['*'] = C_times;
         
-        // line 437
+        #line 437
         Ssym['/'] = C_slash;
         
-        // line 438
+        #line 438
         Ssym['('] = C_lparen;
         
-        // line 438
+        #line 438
         Ssym[')'] = C_rparen;
         
-        // line 439
+        #line 439
         Ssym['='] = C_eql;
         
-        // line 439
+        #line 439
         Ssym[','] = C_comma;
         
-        // line 440
+        #line 440
         Ssym['.'] = C_period;
         
-        // line 440
+        #line 440
         Ssym['#'] = C_neq;
         
-        // line 441
+        #line 441
         Ssym['<'] = C_lss;
         
-        // line 441
+        #line 441
         Ssym['>'] = C_gtr;
         
-        // line 442
+        #line 442
         Ssym['['] = C_leq;
         
-        // line 442
+        #line 442
         Ssym[']'] = C_geq;
         
-        // line 443
+        #line 443
         Ssym[';'] = C_semicolon;
         
-        // line 444
+        #line 444
         Mnemonic[C_lit] = "  lit";
         
-        // line 444
+        #line 444
         Mnemonic[C_opr] = "  opr";
         
-        // line 445
+        #line 445
         Mnemonic[C_lod] = "  lod";
         
-        // line 445
+        #line 445
         Mnemonic[C_sto] = "  sto";
         
-        // line 446
+        #line 446
         Mnemonic[C_cal] = "  cal";
         
-        // line 446
+        #line 446
         Mnemonic[C_int] = "  int";
         
-        // line 447
+        #line 447
         Mnemonic[C_jmp] = "  jmp";
         
-        // line 447
+        #line 447
         Mnemonic[C_jpc] = "  jpc";
         
-        // line 448
+        #line 448
         Declbegsys = _setLiteral1;
         
-        // line 449
+        #line 449
         Statbegsys = _setLiteral2;
         
-        // line 450
+        #line 450
         Facbegsys = _setLiteral3;
         
-        // line 451
+        #line 451
         Err = 0;
         
-        // line 452
+        #line 452
         Cc = 0;
         
-        // line 452
+        #line 452
         Cx = 0;
         
-        // line 452
+        #line 452
         Ll = 0;
         
-        // line 452
+        #line 452
         Ch = ' ';
         
-        // line 452
+        #line 452
         Kk = C_al;
         
-        // line 452
+        #line 452
         P_getsym(nullptr);
         
-        // line 453
+        #line 453
         P_block(nullptr, 0, 0, T_symset::C(((_setLiteral4 + Declbegsys) + Statbegsys)));
         
-        // line 454
+        #line 454
         if((Sym != C_period))
         {
-            // line 454
+            #line 454
             P_error(nullptr, 9);
         }
         
-        // line 455
+        #line 455
         if((Err == 0))
         {
-            // line 455
+            #line 455
             P_interpret(nullptr);
         }
         else
         {
-            // line 455
+            #line 455
             Output << " errors in pl/0 program";
         }
         
-        // line 456
+        #line 456
         L_99:
         Output << _WRITELN;
     }
@@ -412,7 +412,7 @@ void P_()
 }
 
 
-// line 56
+#line 56
 //================================================================================
 // scope: error (level : 2)
 
@@ -432,15 +432,15 @@ void P_error(void* _slink, T_integer n)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 57
+    #line 57
     Output << " ****" << _format(' ', (Cc - 1), 0) << '^' << _format(_F.n, 2, 0) << _WRITELN;
     
-    // line 57
+    #line 57
     Err = (Err + 1);
 }
 
 
-// line 60
+#line 60
 //================================================================================
 // scope: getsym (level : 2)
 
@@ -479,157 +479,157 @@ void P_getsym(void* _slink)
     _setLiteral4.set('0', '9');
     
     // subroutine body
-    // line 78
+    #line 78
     while((Ch == ' '))
     {
-        // line 78
+        #line 78
         P_getsym_getch(&_F);
     }
     
-    // line 79
+    #line 79
     if((_setLiteral1 & Ch))
     {
-        // line 80
+        #line 80
         _F.k = 0;
         
-        // line 81
+        #line 81
         do
         {
-            // line 81
+            #line 81
             if((_F.k < C_al))
             {
-                // line 82
+                #line 82
                 _F.k = (_F.k + 1);
                 
-                // line 82
+                #line 82
                 a[_F.k] = Ch;
             }
             
-            // line 84
+            #line 84
             P_getsym_getch(&_F);
             
             { /* NOP */ }
         }
         while(!(!(_setLiteral2 & Ch)));
         
-        // line 86
+        #line 86
         if((_F.k >= Kk))
         {
-            // line 86
+            #line 86
             Kk = _F.k;
         }
         else
         {
-            // line 87
+            #line 87
             do
             {
-                // line 87
+                #line 87
                 a[Kk] = ' ';
                 
-                // line 87
+                #line 87
                 Kk = (Kk - 1);
             }
             while(!(Kk == _F.k));
         }
         
-        // line 89
+        #line 89
         Id = a;
         
-        // line 89
+        #line 89
         _F.i = 1;
         
-        // line 89
+        #line 89
         _F.j = C_norw;
         
-        // line 90
+        #line 90
         do
         {
-            // line 90
+            #line 90
             _F.k = ((_F.i + _F.j) / 2);
             
-            // line 91
+            #line 91
             if(_strcmpLE<10>(Id, Word[_F.k]))
             {
-                // line 91
+                #line 91
                 _F.j = (_F.k - 1);
             }
             
-            // line 92
+            #line 92
             if(_strcmpGE<10>(Id, Word[_F.k]))
             {
-                // line 92
+                #line 92
                 _F.i = (_F.k + 1);
             }
         }
         while(!(_F.i > _F.j));
         
-        // line 94
+        #line 94
         if(((_F.i - 1) > _F.j))
         {
-            // line 94
+            #line 94
             Sym = Wsym[_F.k];
         }
         else
         {
-            // line 94
+            #line 94
             Sym = C_ident;
         }
     }
     else
     {
-        // line 96
+        #line 96
         if((_setLiteral3 & Ch))
         {
-            // line 97
+            #line 97
             _F.k = 0;
             
-            // line 97
+            #line 97
             Num = 0;
             
-            // line 97
+            #line 97
             Sym = C_number;
             
-            // line 98
+            #line 98
             do
             {
-                // line 98
+                #line 98
                 Num = ((10 * Num) + (_ord(Ch) - _ord('0')));
                 
-                // line 99
+                #line 99
                 _F.k = (_F.k + 1);
                 
-                // line 99
+                #line 99
                 P_getsym_getch(&_F);
             }
             while(!(!(_setLiteral4 & Ch)));
             
-            // line 101
+            #line 101
             if((_F.k > C_nmax))
             {
-                // line 101
+                #line 101
                 P_error(nullptr, 30);
             }
         }
         else
         {
-            // line 103
+            #line 103
             if((Ch == ':'))
             {
-                // line 104
+                #line 104
                 P_getsym_getch(&_F);
                 
-                // line 105
+                #line 105
                 if((Ch == '='))
                 {
-                    // line 106
+                    #line 106
                     Sym = C_becomes;
                     
-                    // line 106
+                    #line 106
                     P_getsym_getch(&_F);
                 }
                 else
                 {
-                    // line 107
+                    #line 107
                     Sym = C_nul;
                 }
                 
@@ -637,10 +637,10 @@ void P_getsym(void* _slink)
             }
             else
             {
-                // line 109
+                #line 109
                 Sym = Ssym[Ch];
                 
-                // line 109
+                #line 109
                 P_getsym_getch(&_F);
             }
         }
@@ -648,7 +648,7 @@ void P_getsym(void* _slink)
 }
 
 
-// line 63
+#line 63
 //================================================================================
 // scope: getsym_getch (level : 3)
 
@@ -665,68 +665,68 @@ void P_getsym_getch(void* _slink)
     Frame_getsym_getch _F = { (Frame_getsym*)_slink };
     
     // subroutine body
-    // line 64
+    #line 64
     if((Cc == Ll))
     {
-        // line 65
+        #line 65
         if(_eof(Input))
         {
-            // line 66
+            #line 66
             Output << " program incomplete";
             
-            // line 66
+            #line 66
             throw NL_99;
         }
         
-        // line 68
+        #line 68
         Ll = 0;
         
-        // line 68
+        #line 68
         Cc = 0;
         
-        // line 68
+        #line 68
         Output << _format(Cx, 5, 0) << ' ';
         
-        // line 69
+        #line 69
         while((!_eoln(Input)))
         {
-            // line 70
+            #line 70
             Ll = (Ll + 1);
             
-            // line 70
+            #line 70
             Input >> Ch;
             
-            // line 70
+            #line 70
             Output << Ch;
             
-            // line 70
+            #line 70
             Line[Ll] = Ch;
         }
         
-        // line 72
+        #line 72
         Output << _WRITELN;
         
-        // line 72
+        #line 72
         Input >> _READLN;
         
-        // line 72
+        #line 72
         Ll = (Ll + 1);
         
-        // line 72
+        #line 72
         Line[Ll] = ' ';
         
         { /* NOP */ }
     }
     
-    // line 74
+    #line 74
     Cc = (Cc + 1);
     
-    // line 74
+    #line 74
     Ch = Line[Cc];
 }
 
 
-// line 113
+#line 113
 //================================================================================
 // scope: gen (level : 2)
 
@@ -748,31 +748,31 @@ void P_gen(void* _slink, T_fct x, T_integer y, T_integer z)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 114
+    #line 114
     if((Cx > C_cxmax))
     {
-        // line 115
+        #line 115
         Output << " program too long";
         
-        // line 115
+        #line 115
         throw NL_99;
     }
     
-    // line 118
+    #line 118
     Code[Cx].f = _F.x;
     
-    // line 118
+    #line 118
     Code[Cx].l = _F.y;
     
-    // line 118
+    #line 118
     Code[Cx].a = _F.z;
     
-    // line 120
+    #line 120
     Cx = (Cx + 1);
 }
 
 
-// line 123
+#line 123
 //================================================================================
 // scope: test (level : 2)
 
@@ -794,26 +794,26 @@ void P_test(void* _slink, T_symset S1, T_symset S2, T_integer n)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 124
+    #line 124
     if((!(_F.S1 & Sym)))
     {
-        // line 125
+        #line 125
         P_error(nullptr, _F.n);
         
-        // line 125
+        #line 125
         _F.S1 = (_F.S1 + _F.S2);
         
-        // line 126
+        #line 126
         while((!(_F.S1 & Sym)))
         {
-            // line 126
+            #line 126
             P_getsym(nullptr);
         }
     }
 }
 
 
-// line 130
+#line 130
 //================================================================================
 // scope: block (level : 2)
 
@@ -865,96 +865,96 @@ void P_block(void* _slink, T_integer Lev, T_integer Tx, T_symset Fsys)
     _T_GenericSet _setLiteral5;
     
     // subroutine body
-    // line 309
+    #line 309
     _F.Dx = 3;
     
-    // line 309
+    #line 309
     _F.Tx0 = _F.Tx;
     
-    // line 309
+    #line 309
     Table[_F.Tx].Adr = Cx;
     
-    // line 309
+    #line 309
     P_gen(nullptr, C_jmp, 0, 0);
     
-    // line 310
+    #line 310
     if((_F.Lev > C_levmax))
     {
-        // line 310
+        #line 310
         P_error(nullptr, 32);
     }
     
-    // line 311
+    #line 311
     do
     {
-        // line 312
+        #line 312
         if((Sym == C_constsym))
         {
-            // line 313
+            #line 313
             P_getsym(nullptr);
             
-            // line 314
+            #line 314
             do
             {
-                // line 314
+                #line 314
                 P_block_constdeclaration(&_F);
                 
-                // line 315
+                #line 315
                 while((Sym == C_comma))
                 {
-                    // line 316
+                    #line 316
                     P_getsym(nullptr);
                     
-                    // line 316
+                    #line 316
                     P_block_constdeclaration(&_F);
                 }
                 
-                // line 318
+                #line 318
                 if((Sym == C_semicolon))
                 {
-                    // line 318
+                    #line 318
                     P_getsym(nullptr);
                 }
                 else
                 {
-                    // line 318
+                    #line 318
                     P_error(nullptr, 5);
                 }
             }
             while(!(Sym != C_ident));
         }
         
-        // line 321
+        #line 321
         if((Sym == C_varsym))
         {
-            // line 322
+            #line 322
             P_getsym(nullptr);
             
-            // line 323
+            #line 323
             do
             {
-                // line 323
+                #line 323
                 P_block_vardeclaration(&_F);
                 
-                // line 324
+                #line 324
                 while((Sym == C_comma))
                 {
-                    // line 325
+                    #line 325
                     P_getsym(nullptr);
                     
-                    // line 325
+                    #line 325
                     P_block_vardeclaration(&_F);
                 }
                 
-                // line 327
+                #line 327
                 if((Sym == C_semicolon))
                 {
-                    // line 327
+                    #line 327
                     P_getsym(nullptr);
                 }
                 else
                 {
-                    // line 327
+                    #line 327
                     P_error(nullptr, 5);
                 }
             }
@@ -963,94 +963,94 @@ void P_block(void* _slink, T_integer Lev, T_integer Tx, T_symset Fsys)
             { /* NOP */ }
         }
         
-        // line 330
+        #line 330
         while((Sym == C_procsym))
         {
-            // line 331
+            #line 331
             P_getsym(nullptr);
             
-            // line 332
+            #line 332
             if((Sym == C_ident))
             {
-                // line 333
+                #line 333
                 P_block_enter(&_F, C_proc);
                 
-                // line 333
+                #line 333
                 P_getsym(nullptr);
             }
             else
             {
-                // line 335
+                #line 335
                 P_error(nullptr, 4);
             }
             
-            // line 336
+            #line 336
             if((Sym == C_semicolon))
             {
-                // line 336
+                #line 336
                 P_getsym(nullptr);
             }
             else
             {
-                // line 336
+                #line 336
                 P_error(nullptr, 5);
             }
             
-            // line 337
+            #line 337
             P_block(nullptr, (_F.Lev + 1), _F.Tx, T_symset::C((_setLiteral1 + _F.Fsys)));
             
-            // line 338
+            #line 338
             if((Sym == C_semicolon))
             {
-                // line 339
+                #line 339
                 P_getsym(nullptr);
                 
-                // line 339
+                #line 339
                 P_test(nullptr, T_symset::C((Statbegsys + _setLiteral2)), _F.Fsys, 6);
             }
             else
             {
-                // line 341
+                #line 341
                 P_error(nullptr, 5);
             }
         }
         
-        // line 343
+        #line 343
         P_test(nullptr, T_symset::C((Statbegsys + _setLiteral3)), Declbegsys, 7);
     }
     while(!(!(Declbegsys & Sym)));
     
-    // line 345
+    #line 345
     Code[Table[_F.Tx0].Adr].a = Cx;
     
-    // line 347
+    #line 347
     Table[_F.Tx0].Adr = Cx;
     
     { /* NOP */ }
     
-    // line 349
+    #line 349
     _F.Cx0 = 0;
     
-    // line 349
+    #line 349
     P_gen(nullptr, C_int, 0, _F.Dx);
     
-    // line 350
+    #line 350
     P_block_statement(&_F, T_symset::C((_setLiteral4 + _F.Fsys)));
     
-    // line 351
+    #line 351
     P_gen(nullptr, C_opr, 0, 0);
     
-    // line 352
+    #line 352
     P_test(nullptr, _F.Fsys, T_symset::C(_setLiteral5), 8);
     
-    // line 353
+    #line 353
     P_block_listcode(&_F);
     
     { /* NOP */ }
 }
 
 
-// line 134
+#line 134
 //================================================================================
 // scope: block_enter (level : 3)
 
@@ -1070,55 +1070,55 @@ void P_block_enter(void* _slink, T_object k)
     Frame_block_enter _F = { (Frame_block*)_slink, k };
     
     // subroutine body
-    // line 136
+    #line 136
     _F._slink->Tx = (_F._slink->Tx + 1);
     
-    // line 138
+    #line 138
     Table[_F._slink->Tx].Name = Id;
     
-    // line 138
+    #line 138
     Table[_F._slink->Tx].Kind = _F.k;
     
-    // line 139
+    #line 139
     switch(_F.k)
     {
     case C_constant:
-        // line 140
+        #line 140
         if((Num > C_amax))
         {
-            // line 141
+            #line 141
             P_error(nullptr, 30);
             
-            // line 141
+            #line 141
             Num = 0;
         }
         
-        // line 142
+        #line 142
         Table[_F._slink->Tx].Val = Num;
         break;
     
     case C_varible:
-        // line 144
+        #line 144
         Table[_F._slink->Tx].Level = _F._slink->Lev;
         
-        // line 144
+        #line 144
         Table[_F._slink->Tx].Adr = _F._slink->Dx;
         
-        // line 144
+        #line 144
         _F._slink->Dx = (_F._slink->Dx + 1);
         
         { /* NOP */ }
         break;
     
     case C_proc:
-        // line 146
+        #line 146
         Table[_F._slink->Tx].Level = _F._slink->Lev;
         break;
     }
 }
 
 
-// line 151
+#line 151
 //================================================================================
 // scope: block_position (level : 3)
 
@@ -1142,20 +1142,20 @@ T_integer F_block_position(void* _slink, T_alfa Id)
     Frame_block_position _F = { (Frame_block*)_slink, Id };
     
     // subroutine body
-    // line 154
+    #line 154
     Table[0].Name = _F.Id;
     
-    // line 154
+    #line 154
     _F.i = _F._slink->Tx;
     
-    // line 155
+    #line 155
     while(_strcmpNE<10>(Table[_F.i].Name, _F.Id))
     {
-        // line 155
+        #line 155
         _F.i = (_F.i - 1);
     }
     
-    // line 156
+    #line 156
     _F._fnvalue = _F.i;
     
     // epilogue
@@ -1163,7 +1163,7 @@ T_integer F_block_position(void* _slink, T_alfa Id)
 }
 
 
-// line 159
+#line 159
 //================================================================================
 // scope: block_constdeclaration (level : 3)
 
@@ -1185,55 +1185,55 @@ void P_block_constdeclaration(void* _slink)
     _setLiteral1.set(C_becomes);
     
     // subroutine body
-    // line 160
+    #line 160
     if((Sym == C_ident))
     {
-        // line 161
+        #line 161
         P_getsym(nullptr);
         
-        // line 162
+        #line 162
         if((_setLiteral1 & Sym))
         {
-            // line 163
+            #line 163
             if((Sym == C_becomes))
             {
-                // line 163
+                #line 163
                 P_error(nullptr, 1);
             }
             
-            // line 164
+            #line 164
             P_getsym(nullptr);
             
-            // line 165
+            #line 165
             if((Sym == C_number))
             {
-                // line 166
+                #line 166
                 P_block_enter(_F._slink, C_constant);
                 
-                // line 166
+                #line 166
                 P_getsym(nullptr);
             }
             else
             {
-                // line 168
+                #line 168
                 P_error(nullptr, 2);
             }
         }
         else
         {
-            // line 169
+            #line 169
             P_error(nullptr, 3);
         }
     }
     else
     {
-        // line 170
+        #line 170
         P_error(nullptr, 4);
     }
 }
 
 
-// line 173
+#line 173
 //================================================================================
 // scope: block_vardeclaration (level : 3)
 
@@ -1250,24 +1250,24 @@ void P_block_vardeclaration(void* _slink)
     Frame_block_vardeclaration _F = { (Frame_block*)_slink };
     
     // subroutine body
-    // line 174
+    #line 174
     if((Sym == C_ident))
     {
-        // line 175
+        #line 175
         P_block_enter(_F._slink, C_varible);
         
-        // line 175
+        #line 175
         P_getsym(nullptr);
     }
     else
     {
-        // line 176
+        #line 176
         P_error(nullptr, 4);
     }
 }
 
 
-// line 179
+#line 179
 //================================================================================
 // scope: block_listcode (level : 3)
 
@@ -1287,17 +1287,17 @@ void P_block_listcode(void* _slink)
     Frame_block_listcode _F = { (Frame_block*)_slink };
     
     // subroutine body
-    // line 182
+    #line 182
     _FOR_TO(_F.i, _F._slink->Cx0, (Cx - 1))
     {
-        // line 184
+        #line 184
         Output << _format(_F.i, 5, 0) << _format(Mnemonic[Code[_F.i].f], 5, 0) << _format(1, 3, 0) << _format(Code[_F.i].a, 5, 0) << _WRITELN;
     }
     _FOR_END(_F.i)
 }
 
 
-// line 187
+#line 187
 //================================================================================
 // scope: block_statement (level : 3)
 
@@ -1347,216 +1347,216 @@ void P_block_statement(void* _slink, T_symset Fsys)
     _T_GenericSet _setLiteral6;
     
     // subroutine body
-    // line 263
+    #line 263
     if((Sym == C_ident))
     {
-        // line 264
+        #line 264
         _F.i = F_block_position(_F._slink, Id);
         
-        // line 265
+        #line 265
         if((_F.i == 0))
         {
-            // line 265
+            #line 265
             P_error(nullptr, 11);
         }
         else
         {
-            // line 266
+            #line 266
             if((Table[_F.i].Kind != C_varible))
             {
-                // line 267
+                #line 267
                 P_error(nullptr, 12);
                 
-                // line 267
+                #line 267
                 _F.i = 0;
             }
         }
         
-        // line 269
+        #line 269
         P_getsym(nullptr);
         
-        // line 269
+        #line 269
         if((Sym == C_becomes))
         {
-            // line 269
+            #line 269
             P_getsym(nullptr);
         }
         else
         {
-            // line 269
+            #line 269
             P_error(nullptr, 13);
         }
         
-        // line 270
+        #line 270
         P_block_statement_expression(&_F, _F.Fsys);
         
-        // line 271
+        #line 271
         if((_F.i != 0))
         {
-            // line 272
+            #line 272
             P_gen(nullptr, C_sto, (_F._slink->Lev - Table[_F.i].Level), Table[_F.i].Adr);
         }
     }
     else
     {
-        // line 274
+        #line 274
         if((Sym == C_callsym))
         {
-            // line 275
+            #line 275
             P_getsym(nullptr);
             
-            // line 276
+            #line 276
             if((Sym != C_ident))
             {
-                // line 276
+                #line 276
                 P_error(nullptr, 14);
             }
             else
             {
-                // line 277
+                #line 277
                 _F.i = F_block_position(_F._slink, Id);
                 
-                // line 278
+                #line 278
                 if((_F.i == 0))
                 {
-                    // line 278
+                    #line 278
                     P_error(nullptr, 11);
                 }
                 else
                 {
-                    // line 280
+                    #line 280
                     if((Table[_F.i].Kind == C_proc))
                     {
-                        // line 280
+                        #line 280
                         P_gen(nullptr, C_cal, (_F._slink->Lev - Table[_F.i].Level), Table[_F.i].Adr);
                     }
                     else
                     {
-                        // line 281
+                        #line 281
                         P_error(nullptr, 15);
                     }
                 }
                 
-                // line 282
+                #line 282
                 P_getsym(nullptr);
             }
         }
         else
         {
-            // line 285
+            #line 285
             if((Sym == C_ifsym))
             {
-                // line 286
+                #line 286
                 P_getsym(nullptr);
                 
-                // line 286
+                #line 286
                 P_block_statement_condition(&_F, T_symset::C((_setLiteral1 + _F.Fsys)));
                 
-                // line 287
+                #line 287
                 if((Sym == C_thensym))
                 {
-                    // line 287
+                    #line 287
                     P_getsym(nullptr);
                 }
                 else
                 {
-                    // line 287
+                    #line 287
                     P_error(nullptr, 16);
                 }
                 
-                // line 288
+                #line 288
                 _F.Cx1 = Cx;
                 
-                // line 288
+                #line 288
                 P_gen(nullptr, C_jpc, 0, 0);
                 
-                // line 289
+                #line 289
                 P_block_statement(_F._slink, _F.Fsys);
                 
-                // line 289
+                #line 289
                 Code[_F.Cx1].a = Cx;
             }
             else
             {
-                // line 291
+                #line 291
                 if((Sym == C_beginsym))
                 {
-                    // line 292
+                    #line 292
                     P_getsym(nullptr);
                     
-                    // line 292
+                    #line 292
                     P_block_statement(_F._slink, T_symset::C((_setLiteral2 + _F.Fsys)));
                     
-                    // line 293
+                    #line 293
                     while(((_setLiteral4 + Statbegsys) & Sym))
                     {
-                        // line 295
+                        #line 295
                         if((Sym == C_semicolon))
                         {
-                            // line 295
+                            #line 295
                             P_getsym(nullptr);
                         }
                         else
                         {
-                            // line 295
+                            #line 295
                             P_error(nullptr, 10);
                         }
                         
-                        // line 296
+                        #line 296
                         P_block_statement(_F._slink, T_symset::C((_setLiteral3 + _F.Fsys)));
                     }
                     
-                    // line 298
+                    #line 298
                     if((Sym == C_endsym))
                     {
-                        // line 298
+                        #line 298
                         P_getsym(nullptr);
                     }
                     else
                     {
-                        // line 298
+                        #line 298
                         P_error(nullptr, 17);
                     }
                 }
                 else
                 {
-                    // line 300
+                    #line 300
                     if((Sym == C_whilesym))
                     {
-                        // line 301
+                        #line 301
                         _F.Cx1 = Cx;
                         
-                        // line 301
+                        #line 301
                         P_getsym(nullptr);
                         
-                        // line 301
+                        #line 301
                         P_block_statement_condition(&_F, T_symset::C((_setLiteral5 + _F.Fsys)));
                         
-                        // line 302
+                        #line 302
                         _F.Cx2 = Cx;
                         
-                        // line 302
+                        #line 302
                         P_gen(nullptr, C_jpc, 0, 0);
                         
-                        // line 303
+                        #line 303
                         if((Sym == C_dosym))
                         {
-                            // line 303
+                            #line 303
                             P_getsym(nullptr);
                         }
                         else
                         {
-                            // line 303
+                            #line 303
                             P_error(nullptr, 18);
                         }
                         
-                        // line 304
+                        #line 304
                         P_block_statement(_F._slink, _F.Fsys);
                         
-                        // line 304
+                        #line 304
                         P_gen(nullptr, C_jmp, 0, _F.Cx1);
                         
-                        // line 304
+                        #line 304
                         Code[_F.Cx2].a = Cx;
                     }
                 }
@@ -1564,12 +1564,12 @@ void P_block_statement(void* _slink, T_symset Fsys)
         }
     }
     
-    // line 306
+    #line 306
     P_test(nullptr, _F.Fsys, T_symset::C(_setLiteral6), 19);
 }
 
 
-// line 189
+#line 189
 //================================================================================
 // scope: block_statement_expression (level : 4)
 
@@ -1616,59 +1616,59 @@ void P_block_statement_expression(void* _slink, T_symset Fsys)
     _setLiteral5.set(C_minus);
     
     // subroutine body
-    // line 230
+    #line 230
     if((_setLiteral1 & Sym))
     {
-        // line 231
+        #line 231
         _F.Addop = Sym;
         
-        // line 231
+        #line 231
         P_getsym(nullptr);
         
-        // line 231
+        #line 231
         P_block_statement_expression_term(&_F, T_symset::C((_F.Fsys + _setLiteral2)));
         
-        // line 232
+        #line 232
         if((_F.Addop == C_minus))
         {
-            // line 232
+            #line 232
             P_gen(nullptr, C_opr, 0, 1);
         }
     }
     else
     {
-        // line 233
+        #line 233
         P_block_statement_expression_term(&_F, T_symset::C((_F.Fsys + _setLiteral3)));
     }
     
-    // line 234
+    #line 234
     while((_setLiteral5 & Sym))
     {
-        // line 235
+        #line 235
         _F.Addop = Sym;
         
-        // line 235
+        #line 235
         P_getsym(nullptr);
         
-        // line 235
+        #line 235
         P_block_statement_expression_term(&_F, T_symset::C((_F.Fsys + _setLiteral4)));
         
-        // line 236
+        #line 236
         if((_F.Addop == C_plus))
         {
-            // line 236
+            #line 236
             P_gen(nullptr, C_opr, 0, 2);
         }
         else
         {
-            // line 236
+            #line 236
             P_gen(nullptr, C_opr, 0, 3);
         }
     }
 }
 
 
-// line 191
+#line 191
 //================================================================================
 // scope: block_statement_expression_term (level : 5)
 
@@ -1707,37 +1707,37 @@ void P_block_statement_expression_term(void* _slink, T_symset Fsys)
     _setLiteral3.set(C_slash);
     
     // subroutine body
-    // line 223
+    #line 223
     P_block_statement_expression_term_factor(&_F, T_symset::C((_F.Fsys + _setLiteral1)));
     
-    // line 224
+    #line 224
     while((_setLiteral3 & Sym))
     {
-        // line 225
+        #line 225
         _F.Mulop = Sym;
         
-        // line 225
+        #line 225
         P_getsym(nullptr);
         
-        // line 225
+        #line 225
         P_block_statement_expression_term_factor(&_F, T_symset::C((_F.Fsys + _setLiteral2)));
         
-        // line 226
+        #line 226
         if((_F.Mulop == C_times))
         {
-            // line 226
+            #line 226
             P_gen(nullptr, C_opr, 0, 4);
         }
         else
         {
-            // line 226
+            #line 226
             P_gen(nullptr, C_opr, 0, 5);
         }
     }
 }
 
 
-// line 193
+#line 193
 //================================================================================
 // scope: block_statement_expression_term_factor (level : 6)
 
@@ -1767,103 +1767,103 @@ void P_block_statement_expression_term_factor(void* _slink, T_symset Fsys)
     _setLiteral2.set(C_lparen);
     
     // subroutine body
-    // line 195
+    #line 195
     P_test(nullptr, Facbegsys, _F.Fsys, 24);
     
-    // line 196
+    #line 196
     while((Facbegsys & Sym))
     {
-        // line 198
+        #line 198
         if((Sym == C_ident))
         {
-            // line 199
+            #line 199
             _F.i = F_block_position(_F._slink->_slink->_slink->_slink, Id);
             
-            // line 200
+            #line 200
             if((_F.i == 0))
             {
-                // line 200
+                #line 200
                 P_error(nullptr, 11);
             }
             else
             {
-                // line 202
+                #line 202
                 switch(Table[_F.i].Kind)
                 {
                 case C_constant:
-                    // line 203
+                    #line 203
                     P_gen(nullptr, C_lit, 0, Table[_F.i].Val);
                     break;
                 
                 case C_varible:
-                    // line 204
+                    #line 204
                     P_gen(nullptr, C_lod, (_F._slink->_slink->_slink->_slink->Lev - Table[_F.i].Level), Table[_F.i].Adr);
                     break;
                 
                 case C_proc:
-                    // line 205
+                    #line 205
                     P_error(nullptr, 21);
                     break;
                 }
             }
             
-            // line 207
+            #line 207
             P_getsym(nullptr);
         }
         else
         {
-            // line 209
+            #line 209
             if((Sym == C_number))
             {
-                // line 210
+                #line 210
                 if((Num > C_amax))
                 {
-                    // line 211
+                    #line 211
                     P_error(nullptr, 30);
                     
-                    // line 211
+                    #line 211
                     Num = 0;
                 }
                 
-                // line 213
+                #line 213
                 P_gen(nullptr, C_lit, 0, Num);
                 
-                // line 213
+                #line 213
                 P_getsym(nullptr);
             }
             else
             {
-                // line 215
+                #line 215
                 if((Sym == C_lparen))
                 {
-                    // line 216
+                    #line 216
                     P_getsym(nullptr);
                     
-                    // line 216
+                    #line 216
                     P_block_statement_expression(_F._slink->_slink->_slink, T_symset::C((_setLiteral1 + _F.Fsys)));
                     
-                    // line 217
+                    #line 217
                     if((Sym == C_rparen))
                     {
-                        // line 217
+                        #line 217
                         P_getsym(nullptr);
                     }
                     else
                     {
-                        // line 217
+                        #line 217
                         P_error(nullptr, 22);
                     }
                 }
             }
         }
         
-        // line 219
+        #line 219
         P_test(nullptr, _F.Fsys, T_symset::C(_setLiteral2), 23);
     }
 }
 
 
-// line 240
+#line 240
 //================================================================================
 // scope: block_statement_condition (level : 4)
 
@@ -1903,70 +1903,70 @@ void P_block_statement_condition(void* _slink, T_symset Fsys)
     _setLiteral2.set(C_geq);
     
     // subroutine body
-    // line 243
+    #line 243
     if((Sym == C_oddsym))
     {
-        // line 244
+        #line 244
         P_getsym(nullptr);
         
-        // line 244
+        #line 244
         P_block_statement_expression(_F._slink, _F.Fsys);
         
-        // line 244
+        #line 244
         P_gen(nullptr, C_opr, 0, 6);
     }
     else
     {
-        // line 246
+        #line 246
         P_block_statement_expression(_F._slink, T_symset::C((_setLiteral1 + _F.Fsys)));
         
-        // line 247
+        #line 247
         if((!(_setLiteral2 & Sym)))
         {
-            // line 248
+            #line 248
             P_error(nullptr, 20);
         }
         else
         {
-            // line 249
+            #line 249
             _F.Relop = Sym;
             
-            // line 249
+            #line 249
             P_getsym(nullptr);
             
-            // line 249
+            #line 249
             P_block_statement_expression(_F._slink, _F.Fsys);
             
-            // line 250
+            #line 250
             switch(_F.Relop)
             {
             case C_eql:
-                // line 251
+                #line 251
                 P_gen(nullptr, C_opr, 0, 8);
                 break;
             
             case C_neq:
-                // line 252
+                #line 252
                 P_gen(nullptr, C_opr, 0, 9);
                 break;
             
             case C_lss:
-                // line 253
+                #line 253
                 P_gen(nullptr, C_opr, 0, 10);
                 break;
             
             case C_geq:
-                // line 254
+                #line 254
                 P_gen(nullptr, C_opr, 0, 11);
                 break;
             
             case C_gtr:
-                // line 255
+                #line 255
                 P_gen(nullptr, C_opr, 0, 12);
                 break;
             
             case C_leq:
-                // line 256
+                #line 256
                 P_gen(nullptr, C_opr, 0, 13);
                 break;
             }
@@ -1975,7 +1975,7 @@ void P_block_statement_condition(void* _slink, T_symset Fsys)
 }
 
 
-// line 356
+#line 356
 //================================================================================
 // scope: interpret (level : 2)
 
@@ -2008,225 +2008,225 @@ void P_interpret(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 370
+    #line 370
     Output << " start pl/0" << _WRITELN;
     
-    // line 371
+    #line 371
     _F.t = 0;
     
-    // line 371
+    #line 371
     _F.b = 1;
     
-    // line 371
+    #line 371
     _F.p = 0;
     
-    // line 372
+    #line 372
     _F.s[1] = 0;
     
-    // line 372
+    #line 372
     _F.s[2] = 0;
     
-    // line 372
+    #line 372
     _F.s[3] = 0;
     
-    // line 373
+    #line 373
     do
     {
-        // line 373
+        #line 373
         _F.i = Code[_F.p];
         
-        // line 373
+        #line 373
         _F.p = (_F.p + 1);
         
-        // line 375
+        #line 375
         switch(_F.i.f)
         {
         case C_lit:
-            // line 376
+            #line 376
             _F.t = (_F.t + 1);
             
-            // line 376
+            #line 376
             _F.s[_F.t] = _F.i.a;
             break;
         
         case C_opr:
-            // line 378
+            #line 378
             switch(_F.i.a)
             {
             case 0:
-                // line 380
+                #line 380
                 _F.t = (_F.b - 1);
                 
-                // line 380
+                #line 380
                 _F.p = _F.s[(_F.t + 3)];
                 
-                // line 380
+                #line 380
                 _F.b = _F.s[(_F.t + 2)];
                 
                 { /* NOP */ }
                 break;
             
             case 1:
-                // line 382
+                #line 382
                 _F.s[_F.t] = (-_F.s[_F.t]);
                 break;
             
             case 2:
-                // line 383
+                #line 383
                 _F.t = (_F.t - 1);
                 
-                // line 383
+                #line 383
                 _F.s[_F.t] = (_F.s[_F.t] + _F.s[(_F.t + 1)]);
                 break;
             
             case 3:
-                // line 385
+                #line 385
                 _F.t = (_F.t - 1);
                 
-                // line 385
+                #line 385
                 _F.s[_F.t] = (_F.s[_F.t] - _F.s[(_F.t + 1)]);
                 break;
             
             case 4:
-                // line 387
+                #line 387
                 _F.t = (_F.t - 1);
                 
-                // line 387
+                #line 387
                 _F.s[_F.t] = (_F.s[_F.t] * _F.s[(_F.t + 1)]);
                 break;
             
             case 5:
-                // line 389
+                #line 389
                 _F.t = (_F.t - 1);
                 
-                // line 389
+                #line 389
                 _F.s[_F.t] = (_F.s[_F.t] / _F.s[(_F.t + 1)]);
                 break;
             
             case 6:
-                // line 391
+                #line 391
                 _F.s[_F.t] = _ord(_odd(_F.s[_F.t]));
                 break;
             
             case 8:
-                // line 392
+                #line 392
                 _F.t = (_F.t - 1);
                 
-                // line 392
+                #line 392
                 _F.s[_F.t] = _ord((_F.s[_F.t] == _F.s[(_F.t + 1)]));
                 break;
             
             case 9:
-                // line 394
+                #line 394
                 _F.t = (_F.t - 1);
                 
-                // line 394
+                #line 394
                 _F.s[_F.t] = _ord((_F.s[_F.t] != _F.s[(_F.t + 1)]));
                 break;
             
             case 10:
-                // line 396
+                #line 396
                 _F.t = (_F.t - 1);
                 
-                // line 396
+                #line 396
                 _F.s[_F.t] = _ord((_F.s[_F.t] < _F.s[(_F.t + 1)]));
                 break;
             
             case 11:
-                // line 398
+                #line 398
                 _F.t = (_F.t - 1);
                 
-                // line 398
+                #line 398
                 _F.s[_F.t] = _ord((_F.s[_F.t] >= _F.s[(_F.t + 1)]));
                 break;
             
             case 12:
-                // line 400
+                #line 400
                 _F.t = (_F.t - 1);
                 
-                // line 400
+                #line 400
                 _F.s[_F.t] = _ord((_F.s[_F.t] > _F.s[(_F.t + 1)]));
                 break;
             
             case 13:
-                // line 402
+                #line 402
                 _F.t = (_F.t - 1);
                 
-                // line 402
+                #line 402
                 _F.s[_F.t] = _ord((_F.s[_F.t] <= _F.s[(_F.t + 1)]));
                 break;
             }
             break;
         
         case C_lod:
-            // line 405
+            #line 405
             _F.t = (_F.t + 1);
             
-            // line 405
+            #line 405
             _F.s[_F.t] = _F.s[(F_interpret_base(&_F, _F.i.l) + _F.i.a)];
             break;
         
         case C_sto:
-            // line 407
+            #line 407
             _F.s[(F_interpret_base(&_F, _F.i.l) + _F.i.a)] = _F.s[_F.t];
             
-            // line 407
+            #line 407
             Output << _F.s[_F.t] << _WRITELN;
             
-            // line 407
+            #line 407
             _F.t = (_F.t - 1);
             break;
         
         case C_cal:
-            // line 410
+            #line 410
             _F.s[(_F.t + 1)] = F_interpret_base(&_F, _F.i.l);
             
-            // line 410
+            #line 410
             _F.s[(_F.t + 2)] = _F.b;
             
-            // line 410
+            #line 410
             _F.s[(_F.t + 3)] = _F.p;
             
-            // line 411
+            #line 411
             _F.b = (_F.t + 1);
             
-            // line 411
+            #line 411
             _F.p = _F.i.a;
             break;
         
         case C_int:
-            // line 413
+            #line 413
             _F.t = (_F.t + _F.i.a);
             break;
         
         case C_jmp:
-            // line 414
+            #line 414
             _F.p = _F.i.a;
             break;
         
         case C_jpc:
-            // line 415
+            #line 415
             if((_F.s[_F.t] == 0))
             {
-                // line 415
+                #line 415
                 _F.p = _F.i.a;
             }
             
-            // line 415
+            #line 415
             _F.t = (_F.t - 1);
             break;
         }
     }
     while(!(_F.p == 0));
     
-    // line 419
+    #line 419
     Output << " end pl/0";
     
     { /* NOP */ }
 }
 
 
-// line 361
+#line 361
 //================================================================================
 // scope: interpret_base (level : 3)
 
@@ -2250,20 +2250,20 @@ T_integer F_interpret_base(void* _slink, T_integer l)
     Frame_interpret_base _F = { (Frame_interpret*)_slink, l };
     
     // subroutine body
-    // line 363
+    #line 363
     _F.B1 = _F._slink->b;
     
-    // line 364
+    #line 364
     while((_F.l > 0))
     {
-        // line 365
+        #line 365
         _F.B1 = _F._slink->s[_F.B1];
         
-        // line 365
+        #line 365
         _F.l = (_F.l - 1);
     }
     
-    // line 367
+    #line 367
     _F._fnvalue = _F.B1;
     
     // epilogue

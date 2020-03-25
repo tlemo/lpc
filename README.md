@@ -56,6 +56,8 @@ The tests are under the `test` directory (Python3 is required to run the tests)
 ## TODO ##
 
 - Dump/Serialize the AST
+- Runtime benchmarks
+- Compile-time benchmarks
 - Optimize out slinks
 - Generate LLVM debug info metadata for the activation record
 

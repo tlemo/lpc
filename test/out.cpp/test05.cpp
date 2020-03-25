@@ -1,7 +1,7 @@
 
 #include <lpcRuntime.h>
 
-// "test05.pas"
+#line 0 "test05.pas"
 
 //================================================================================
 // command line argument map
@@ -15,7 +15,7 @@ _Filename* _FilenameMap = _FilenameMapEntries;
 const int _FilenameMapSize = _countof(_FilenameMapEntries);
 
 
-// line 0
+#line 0
 //================================================================================
 // scope: global scope (level : 0)
 
@@ -31,7 +31,7 @@ const T_boolean C_false = 0;
 const T_integer C_maxint = 2147483647;
 const T_boolean C_true = 1;
 
-// line 4
+#line 4
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -68,26 +68,26 @@ void P_()
     _output.init(1);
     
     // subroutine body
-    // line 31
+    #line 31
     _output << "hello, world" << _WRITELN;
     
-    // line 32
+    #line 32
     x[3][C_c]['a'][4] = '!';
     
-    // line 33
+    #line 33
     y[2]['x'] = _ord(x[3][C_c]['a'][4]);
     
-    // line 34
+    #line 34
     _output << "outter = " << F_outter(nullptr, 7) << _WRITELN;
     
-    // line 35
+    #line 35
     _input >> _READLN;
     
     { /* NOP */ }
 }
 
 
-// line 14
+#line 14
 //================================================================================
 // scope: outter (level : 2)
 
@@ -113,13 +113,13 @@ T_integer F_outter(void* _slink, T_integer x)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 26
+    #line 26
     _F._fnvalue = 1;
     
-    // line 27
+    #line 27
     if((F_outter_inner(&_F, _F.x) == 7))
     {
-        // line 27
+        #line 27
         _F._fnvalue = 2;
     }
     
@@ -130,7 +130,7 @@ T_integer F_outter(void* _slink, T_integer x)
 }
 
 
-// line 15
+#line 15
 //================================================================================
 // scope: outter_inner (level : 3)
 
@@ -156,13 +156,13 @@ T_integer F_outter_inner(void* _slink, T_integer x)
     Frame_outter_inner _F = { (Frame_outter*)_slink, x };
     
     // subroutine body
-    // line 21
+    #line 21
     _F._fnvalue = (_F.x * 2);
     
-    // line 22
+    #line 22
     _F._slink->_fnvalue = 7;
     
-    // line 23
+    #line 23
     P_outter_inner_setOutter(&_F, (100 + _F.x));
     
     { /* NOP */ }
@@ -172,7 +172,7 @@ T_integer F_outter_inner(void* _slink, T_integer x)
 }
 
 
-// line 16
+#line 16
 //================================================================================
 // scope: outter_inner_setOutter (level : 4)
 
@@ -192,7 +192,7 @@ void P_outter_inner_setOutter(void* _slink, T_integer x)
     Frame_outter_inner_setOutter _F = { (Frame_outter_inner*)_slink, x };
     
     // subroutine body
-    // line 18
+    #line 18
     _F._slink->_slink->_fnvalue = _F.x;
     
     { /* NOP */ }

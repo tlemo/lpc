@@ -1,7 +1,7 @@
 
 #include <lpcRuntime.h>
 
-// "enums.pas"
+#line 0 "enums.pas"
 
 //================================================================================
 // command line argument map
@@ -15,7 +15,7 @@ _Filename* _FilenameMap = _FilenameMapEntries;
 const int _FilenameMapSize = _countof(_FilenameMapEntries);
 
 
-// line 0
+#line 0
 //================================================================================
 // scope: global scope (level : 0)
 
@@ -31,7 +31,7 @@ const T_boolean C_false = 0;
 const T_integer C_maxint = 2147483647;
 const T_boolean C_true = 1;
 
-// line 2
+#line 2
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -72,124 +72,124 @@ void P_()
     _output.init(1);
     
     // subroutine body
-    // line 16
+    #line 16
     _output << _format("Pay rate table", 33, 0) << _WRITELN;
     
-    // line 17
+    #line 17
     _output << _WRITELN;
     
-    // line 18
+    #line 18
     _output << "  DAY        Morning  Afternoon";
     
-    // line 19
+    #line 19
     _output << "  Evening    Night" << _WRITELN;
     
-    // line 20
+    #line 20
     _output << _WRITELN;
     
-    // line 22
+    #line 22
     RegularRate = 12.0000;
     
-    // line 23
+    #line 23
     EveningPremium = 1.10000;
     
-    // line 24
+    #line 24
     NightPremium = 1.33000;
     
-    // line 25
+    #line 25
     WeekendPremium = 1.25000;
     
-    // line 27
+    #line 27
     _FOR_TO(Day, C_Mon, C_Sun)
     {
-        // line 28
+        #line 28
         switch(Day)
         {
         case C_Mon:
-            // line 29
+            #line 29
             _output << "Monday   ";
             break;
         
         case C_Tue:
-            // line 30
+            #line 30
             _output << "Tuesday  ";
             break;
         
         case C_Wed:
-            // line 31
+            #line 31
             _output << "Wednesday";
             break;
         
         case C_Thu:
-            // line 32
+            #line 32
             _output << "Thursday ";
             break;
         
         case C_Fri:
-            // line 33
+            #line 33
             _output << "Friday   ";
             break;
         
         case C_Sat:
-            // line 34
+            #line 34
             _output << "Saturday ";
             break;
         
         case C_Sun:
-            // line 35
+            #line 35
             _output << "Sunday   ";
             break;
         }
         
-        // line 38
+        #line 38
         _FOR_TO(Time, C_Morning, C_Night)
         {
-            // line 39
+            #line 39
             switch(Time)
             {
             case C_Morning:
-                // line 40
+                #line 40
                 TotalPay = RegularRate;
                 break;
             
             case C_Afternoon:
-                // line 41
+                #line 41
                 TotalPay = RegularRate;
                 break;
             
             case C_Evening:
-                // line 42
+                #line 42
                 TotalPay = (RegularRate * EveningPremium);
                 break;
             
             case C_Night:
-                // line 43
+                #line 43
                 TotalPay = (RegularRate * NightPremium);
                 break;
             }
             
-            // line 46
+            #line 46
             switch(Day)
             {
             case C_Sat:
-                // line 47
+                #line 47
                 TotalPay = (TotalPay * WeekendPremium);
                 break;
             
             case C_Sun:
-                // line 48
+                #line 48
                 TotalPay = (TotalPay * WeekendPremium);
                 break;
             }
             
-            // line 51
+            #line 51
             _output << _format(TotalPay, 10, 2);
             
             { /* NOP */ }
         }
         _FOR_END(Time)
         
-        // line 53
+        #line 53
         _output << _WRITELN;
         
         { /* NOP */ }

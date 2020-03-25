@@ -19,9 +19,9 @@
     ret
 }
 
-// "test06.pas"
+.line 0 "test06.pas"
 
-// line 11
+.line 11
 //================================================================================
 // scope: init (level : 2)
 
@@ -39,7 +39,7 @@
 }
 
 
-// line 16
+.line 16
 //================================================================================
 // scope: setValue (level : 2)
 
@@ -58,7 +58,7 @@
 }
 
 
-// line 22
+.line 22
 //================================================================================
 // scope: free (level : 2)
 
@@ -76,7 +76,7 @@
 }
 
 
-// line 4
+.line 4
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -89,7 +89,7 @@
     .field public static void* p
 }
 
-// line 11
+.line 11
 
 .method static
 void Init(void*& Pointer)
@@ -110,8 +110,8 @@ void Init(void*& Pointer)
     stfld void** @init::Pointer
 
 L_Entry:
-    // line 13
-    // line 13
+    .line 13
+    .line 13
     ldloc _F
     ldfld void** @init::Pointer
     ldc.i4 4
@@ -123,7 +123,7 @@ L_Epilogue:
     ret
 }
 
-// line 16
+.line 16
 
 .method static
 void SetValue(int32& Value, void*& Pointer)
@@ -152,10 +152,10 @@ void SetValue(int32& Value, void*& Pointer)
     stfld int32* @setValue::Value
 
 L_Entry:
-    // line 18
+    .line 18
     ldc.i4 12345
     stsfld int32 _G::i
-    // line 19
+    .line 19
     ldloc _F
     ldfld void** @setValue::Pointer
     ldobj void*
@@ -169,7 +169,7 @@ L_Epilogue:
     ret
 }
 
-// line 22
+.line 22
 
 .method static
 void Free(void*& Pointer)
@@ -190,12 +190,12 @@ void Free(void*& Pointer)
     stfld void** @free::Pointer
 
 L_Entry:
-    // line 24
+    .line 24
     ldloc _F
     ldfld void** @free::Pointer
     ldobj void*
     call void [lpcRuntime]LPC.Heap::Free(void*)
-    // line 24
+    .line 24
     ldloc _F
     ldfld void** @free::Pointer
     ldnull
@@ -206,11 +206,11 @@ L_Epilogue:
     ret
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 4
+.line 4
 
 .method static
 void _Program()
@@ -228,14 +228,14 @@ void _Program()
     call instance void [lpcRuntime]LPC.File::Init(int32)
 
 L_Entry:
-    // line 28
+    .line 28
     ldsflda void* _G::p
     call void Init(void*& Pointer)
-    // line 30
+    .line 30
     ldsflda int32 _G::i
     ldsflda void* _G::p
     call void SetValue(int32& Value, void*& Pointer)
-    // line 32
+    .line 32
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "i = "
@@ -244,7 +244,7 @@ L_Entry:
     ldsfld int32 _G::i
     call instance void [lpcRuntime]LPC.File::Write(int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 33
+    .line 33
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "p^ = "
@@ -254,15 +254,15 @@ L_Entry:
     ldobj int32
     call instance void [lpcRuntime]LPC.File::Write(int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 35
+    .line 35
     ldsflda void* _G::p
     call void Free(void*& Pointer)
-    // line 37
+    .line 37
     ldsfld void* _G::p
     ldnull
     ceq
     brfalse L_else_1
-    // line 38
+    .line 38
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "ok"
@@ -270,7 +270,7 @@ L_Entry:
     call instance void [lpcRuntime]LPC.File::WriteLn()
     br L_if_end_2
 L_else_1:
-    // line 40
+    .line 40
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "FAILED!"

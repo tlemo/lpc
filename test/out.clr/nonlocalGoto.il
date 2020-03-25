@@ -19,9 +19,9 @@
     ret
 }
 
-// "nonlocalGoto.pas"
+.line 0 "nonlocalGoto.pas"
 
-// line 12
+.line 12
 //================================================================================
 // scope: foo (level : 2)
 
@@ -42,7 +42,7 @@
 }
 
 
-// line 27
+.line 27
 //================================================================================
 // scope: bar_moo (level : 3)
 
@@ -60,7 +60,7 @@
 }
 
 
-// line 23
+.line 23
 //================================================================================
 // scope: bar (level : 2)
 
@@ -76,7 +76,7 @@
         ret
     }
 
-// line 27
+.line 27
 
     .method public
     void Moo()
@@ -93,7 +93,7 @@
         stfld class @bar @bar_moo::_slink
     
     L_Entry:
-        // line 29
+        .line 29
         ldc.i4 3
         newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
         throw
@@ -105,7 +105,7 @@
 }
 
 
-// line 4
+.line 4
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -118,7 +118,7 @@
     .field public static int32 P2
 }
 
-// line 12
+.line 12
 
 .method static
 int32 Foo(int32 x)
@@ -137,14 +137,14 @@ int32 Foo(int32 x)
     stfld int32 @foo::x
 
 L_Entry:
-    // line 14
+    .line 14
     ldloc _F
     ldfld int32 @foo::x
     stloc $tmpSwitchValue1
     ldloc $tmpSwitchValue1
     ldc.i4 1
     bne.un L_check_case_2
-    // line 15
+    .line 15
     ldloc _F
     ldfld int32 @foo::x
     call void Bar(int32 x)
@@ -153,7 +153,7 @@ L_check_case_2:
     ldloc $tmpSwitchValue1
     ldc.i4 3
     bne.un L_check_case_3
-    // line 16
+    .line 16
     ldc.i4 1
     newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
     throw
@@ -162,18 +162,18 @@ L_check_case_3:
     ldloc $tmpSwitchValue1
     ldc.i4 2
     bne.un L_case_end_1
-    // line 17
+    .line 17
     ldc.i4 2
     newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
     throw
 L_case_end_1:
-    // line 19
+    .line 19
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "UNEXPECTED"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 20
+    .line 20
     ldloc _F
     ldc.i4 1
     neg
@@ -186,7 +186,7 @@ L_Epilogue:
     ret
 }
 
-// line 23
+.line 23
 
 .method static
 void Bar(int32 x)
@@ -205,16 +205,16 @@ void Bar(int32 x)
 L_Entry:
 .try
 {
-    // line 33
+    .line 33
     ldloc _F
     call instance void @bar::Moo()
-    // line 34
+    .line 34
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "UNEXPECTED"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 36
+    .line 36
 L_1:
     ldc.i4 3
     call int32 Foo(int32 x)
@@ -237,11 +237,11 @@ L_Epilogue:
     ret
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 4
+.line 4
 
 .method static
 void _Program()
@@ -261,20 +261,20 @@ void _Program()
 L_Entry:
 .try
 {
-    // line 40
+    .line 40
     ldc.i4 0
     stsfld int32 _G::P1
-    // line 41
+    .line 41
     ldc.i4 0
     stsfld int32 _G::P2
-    // line 44
+    .line 44
 L_1:
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "P_L1"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 45
+    .line 45
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "p1 = "
@@ -283,7 +283,7 @@ L_1:
     ldsfld int32 _G::P1
     call instance void [lpcRuntime]LPC.File::Write(int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 46
+    .line 46
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "p2 = "
@@ -292,31 +292,31 @@ L_1:
     ldsfld int32 _G::P2
     call instance void [lpcRuntime]LPC.File::Write(int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 48
+    .line 48
     ldsfld int32 _G::P1
     ldc.i4 1
     add
     stsfld int32 _G::P1
-    // line 50
+    .line 50
     ldsfld int32 _G::P1
     call int32 Foo(int32 x)
     stsfld int32 _G::P2
-    // line 51
+    .line 51
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "UNEXPECTED"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 52
+    .line 52
     br L_1
-    // line 55
+    .line 55
 L_2:
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "P_L2"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 56
+    .line 56
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "p1 = "
@@ -325,7 +325,7 @@ L_2:
     ldsfld int32 _G::P1
     call instance void [lpcRuntime]LPC.File::Write(int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 57
+    .line 57
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "p2 = "

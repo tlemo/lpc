@@ -19,13 +19,13 @@
     ret
 }
 
-// "aggregates.pas"
+.line 0 "aggregates.pas"
 
-// line 4
+.line 4
 //================================================================================
 // scope: program scope (level : 1)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE A = array [1 .. 10] of uint8;
 .class value explicit T_A
@@ -72,7 +72,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE R = record;
 .class value explicit T_R
@@ -96,11 +96,11 @@
     .field public static valuetype T_R V4
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 4
+.line 4
 
 .method static
 void _Program()
@@ -118,18 +118,18 @@ void _Program()
     call instance void [lpcRuntime]LPC.File::Init(int32)
 
 L_Entry:
-    // line 20
+    .line 20
     ldsfld valuetype T_A _G::V2
     stsfld valuetype T_A _G::V1
-    // line 21
+    .line 21
     ldsfld valuetype T_R _G::V4
     stsfld valuetype T_R _G::V3
-    // line 25
+    .line 25
     ldsflda valuetype T_R _G::V3
     ldsflda valuetype T_R _G::V4
     ldfld valuetype T_A T_R::Vector
     stfld valuetype T_A T_R::Vector
-    // line 29
+    .line 29
     ldsflda valuetype T_R _G::V3
     ldsflda valuetype T_R _G::V4
     ldfld valuetype T_A T_R::Vector

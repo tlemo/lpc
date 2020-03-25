@@ -19,13 +19,13 @@
     ret
 }
 
-// "ranges.pas"
+.line 0 "ranges.pas"
 
-// line 4
+.line 4
 //================================================================================
 // scope: program scope (level : 1)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_1 = array [1 .. 3] of uint8;
 .class value explicit T_array_1
@@ -92,11 +92,11 @@
     .field public static int32 V6
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 4
+.line 4
 
 .method static
 void _Program()
@@ -118,42 +118,42 @@ void _Program()
     call instance void [lpcRuntime]LPC.File::Init(string)
 
 L_Entry:
-    // line 22
+    .line 22
     ldc.i4 120 // 'x'
     dup
     ldc.i4 97
     ldc.i4 122
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld uint8 _G::V1
-    // line 23
+    .line 23
     ldc.i4 1
     dup
     ldc.i4 1
     ldc.i4 10
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int8 _G::V2
-    // line 24
+    .line 24
     ldc.i4 200
     dup
     ldc.i4 100
     ldc.i4 200
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld uint8 _G::V3
-    // line 25
+    .line 25
     ldc.i4 123
     dup
     ldc.i4 0
     ldc.i4 300
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::V4
-    // line 26
+    .line 26
     ldc.i4 32768
     dup
     ldc.i4 0
     ldc.i4 65535
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld uint16 _G::V5
-    // line 27
+    .line 27
     ldc.i4 1
     neg
     dup
@@ -161,7 +161,7 @@ L_Entry:
     ldc.i4 65536
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int32 _G::V6
-    // line 29
+    .line 29
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "initial   : "
@@ -200,16 +200,16 @@ L_Entry:
     ldsfld int32 _G::V6
     call instance void [lpcRuntime]LPC.File::Write(int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 31
+    .line 31
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "write part  1 ..."
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 32
+    .line 32
     ldsflda valuetype [lpcRuntime]LPC.File _G::Tmp
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 33
+    .line 33
     ldsflda valuetype [lpcRuntime]LPC.File _G::Tmp
     dup
     ldsfld uint8 _G::V1
@@ -227,16 +227,16 @@ L_Entry:
     ldsfld uint8 _G::V3
     call instance void [lpcRuntime]LPC.File::Write(int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 35
+    .line 35
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "read part   1 ..."
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 36
+    .line 36
     ldsflda valuetype [lpcRuntime]LPC.File _G::Tmp
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 37
+    .line 37
     ldsflda valuetype [lpcRuntime]LPC.File _G::Tmp
     dup
     ldsflda uint8 _G::T1
@@ -254,16 +254,16 @@ L_Entry:
     ldc.i4 200
     call instance void [lpcRuntime]LPC.File::Read(uint8*, int32, int32)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 39
+    .line 39
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "write part  2 ..."
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 40
+    .line 40
     ldsflda valuetype [lpcRuntime]LPC.File _G::Tmp
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 41
+    .line 41
     ldsflda valuetype [lpcRuntime]LPC.File _G::Tmp
     dup
     ldsfld int16 _G::V4
@@ -281,16 +281,16 @@ L_Entry:
     ldsfld int32 _G::V6
     call instance void [lpcRuntime]LPC.File::Write(int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 43
+    .line 43
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "read part   2 ..."
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 44
+    .line 44
     ldsflda valuetype [lpcRuntime]LPC.File _G::Tmp
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 45
+    .line 45
     ldsflda valuetype [lpcRuntime]LPC.File _G::Tmp
     dup
     ldsflda int16 _G::T4
@@ -308,7 +308,7 @@ L_Entry:
     ldc.i4 65536
     call instance void [lpcRuntime]LPC.File::Read(int32*, int32, int32)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 47
+    .line 47
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "final     : "

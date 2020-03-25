@@ -19,13 +19,13 @@
     ret
 }
 
-// "hanoi2.pas"
+.line 0 "hanoi2.pas"
 
-// line 12
+.line 12
 //================================================================================
 // scope: punere (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE nod = record;
 .class value explicit T_nod
@@ -58,7 +58,7 @@
 }
 
 
-// line 23
+.line 23
 //================================================================================
 // scope: scoatere (level : 2)
 
@@ -73,7 +73,7 @@
 }
 
 
-// line 1
+.line 1
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -93,7 +93,7 @@
     .field public static void* Virf
 }
 
-// line 12
+.line 12
 
 .method static
 void Punere(int32& x, int32& y, int32& z)
@@ -130,36 +130,36 @@ void Punere(int32& x, int32& y, int32& z)
     stfld int32* @punere::z
 
 L_Entry:
-    // line 15
-    // line 15
+    .line 15
+    .line 15
     ldloc _F
     ldc.i4 24
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stfld void* @punere::p
-    // line 16
+    .line 16
     ldloc _F
     ldfld void* @punere::p
     ldsfld void* _G::Virf
     ldobj valuetype T_nod
     stobj valuetype T_nod
-    // line 17
+    .line 17
     ldsfld void* _G::Virf
     ldloc _F
     ldfld void* @punere::p
     stfld void* T_nod::Urm
-    // line 18
+    .line 18
     ldsfld void* _G::Virf
     ldloc _F
     ldfld int32* @punere::x
     ldobj int32
     stfld int32 T_nod::Inf1
-    // line 19
+    .line 19
     ldsfld void* _G::Virf
     ldloc _F
     ldfld int32* @punere::y
     ldobj int32
     stfld int32 T_nod::Inf2
-    // line 20
+    .line 20
     ldsfld void* _G::Virf
     ldloc _F
     ldfld int32* @punere::z
@@ -171,7 +171,7 @@ L_Epilogue:
     ret
 }
 
-// line 23
+.line 23
 
 .method static
 void Scoatere()
@@ -184,7 +184,7 @@ void Scoatere()
     stloc _F
 
 L_Entry:
-    // line 25
+    .line 25
     ldsfld void* _G::Virf
     ldfld void* T_nod::Urm
     stsfld void* _G::Virf
@@ -194,11 +194,11 @@ L_Epilogue:
     ret
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 1
+.line 1
 
 .method static
 void _Program()
@@ -219,13 +219,13 @@ void _Program()
     call instance void [lpcRuntime]LPC.File::Init(int32)
 
 L_Entry:
-    // line 29
+    .line 29
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "n="
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 29
+    .line 29
     ldsflda valuetype [lpcRuntime]LPC.File _G::_input
     dup
     ldsflda int32 _G::n
@@ -233,16 +233,16 @@ L_Entry:
     ldc.i4 2147483647
     call instance void [lpcRuntime]LPC.File::Read(int32*, int32, int32)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 29
+    .line 29
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldsfld int32 _G::n
     call instance void [lpcRuntime]LPC.File::Write(int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 30
+    .line 30
     ldc.i4 1
     stsfld int32 _G::N1
-    // line 31
+    .line 31
     ldsfld int32 _G::n
     stloc $tmpEndValue1
     ldc.i4 1
@@ -253,7 +253,7 @@ L_Entry:
     ldloc $tmpIndex2
     stsfld int32 _G::i
 L_for_loop_1:
-    // line 31
+    .line 31
     ldsfld int32 _G::N1
     ldc.i4 2
     mul
@@ -270,58 +270,58 @@ L_for_loop_1:
     br L_for_loop_1
 L_for_end_2:
     pop
-    // line 32
-    // line 32
+    .line 32
+    .line 32
     ldc.i4 24
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stsfld void* _G::Virf
-    // line 33
+    .line 33
     ldsfld void* _G::Virf
     ldnull
     stfld void* T_nod::Urm
-    // line 34
+    .line 34
     ldc.i4 1
     stsfld int32 _G::i
-    // line 34
+    .line 34
     ldc.i4 2
     stsfld int32 _G::j
-    // line 35
+    .line 35
     ldc.i4 0
     stsfld int32 _G::Ns
-    // line 35
+    .line 35
     ldc.i4 1
     stsfld int32 _G::Niv
-    // line 36
+    .line 36
 L_repeat_3:
-    // line 37
+    .line 37
     ldc.i4 6
     ldsfld int32 _G::i
     sub
     ldsfld int32 _G::j
     sub
     stsfld int32 _G::k
-    // line 38
+    .line 38
     br L_while_test_5
 L_while_4:
-    // line 39
+    .line 39
     ldsfld int32 _G::Ns
     ldc.i4 1
     add
     stsfld int32 _G::Ns
-    // line 40
+    .line 40
     ldsfld int32 _G::Niv
     ldc.i4 1
     add
     stsfld int32 _G::Niv
-    // line 41
+    .line 41
     ldsflda int32 _G::i
     ldsflda int32 _G::j
     ldsflda int32 _G::Niv
     call void Punere(int32& x, int32& y, int32& z)
-    // line 41
+    .line 41
     ldsfld int32 _G::k
     stsfld int32 _G::j
-    // line 41
+    .line 41
     ldc.i4 6
     ldsfld int32 _G::i
     sub
@@ -336,7 +336,7 @@ L_while_test_5:
     sub
     clt
     brtrue L_while_4
-    // line 43
+    .line 43
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldsfld int32 _G::i
@@ -348,7 +348,7 @@ L_while_test_5:
     ldsfld int32 _G::k
     call instance void [lpcRuntime]LPC.File::Write(int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 44
+    .line 44
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldsfld int32 _G::i
@@ -360,7 +360,7 @@ L_while_test_5:
     ldsfld int32 _G::j
     call instance void [lpcRuntime]LPC.File::Write(int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 45
+    .line 45
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldsfld int32 _G::k
@@ -372,32 +372,32 @@ L_while_test_5:
     ldsfld int32 _G::j
     call instance void [lpcRuntime]LPC.File::Write(int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 46
+    .line 46
     ldsfld int32 _G::Ns
     ldc.i4 0
     ceq
     brfalse L_if_end_6
-    // line 46
+    .line 46
     br L_1
 L_if_end_6:
-    // line 47
+    .line 47
     ldsfld void* _G::Virf
     ldfld int32 T_nod::Inf1
     stsfld int32 _G::i
-    // line 47
+    .line 47
     ldsfld void* _G::Virf
     ldfld int32 T_nod::Inf2
     stsfld int32 _G::j
-    // line 47
+    .line 47
     ldsfld void* _G::Virf
     ldfld int32 T_nod::Inf3
     stsfld int32 _G::Niv
-    // line 48
+    .line 48
     ldsfld int32 _G::Ns
     ldc.i4 1
     sub
     stsfld int32 _G::Ns
-    // line 49
+    .line 49
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldsfld int32 _G::i
@@ -409,7 +409,7 @@ L_if_end_6:
     ldsfld int32 _G::j
     call instance void [lpcRuntime]LPC.File::Write(int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 50
+    .line 50
     ldc.i4 6
     ldsfld int32 _G::i
     sub

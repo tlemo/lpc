@@ -1,7 +1,7 @@
 
 #include <lpcRuntime.h>
 
-// "allvar.pas"
+#line 0 "allvar.pas"
 
 //================================================================================
 // command line argument map
@@ -15,7 +15,7 @@ _Filename* _FilenameMap = _FilenameMapEntries;
 const int _FilenameMapSize = _countof(_FilenameMapEntries);
 
 
-// line 0
+#line 0
 //================================================================================
 // scope: global scope (level : 0)
 
@@ -31,7 +31,7 @@ const T_boolean C_false = 0;
 const T_integer C_maxint = 2147483647;
 const T_boolean C_true = 1;
 
-// line 2
+#line 2
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -58,43 +58,43 @@ void P_()
     _output.init(1);
     
     // subroutine body
-    // line 11
+    #line 11
     A = 4;
     
-    // line 12
+    #line 12
     B = 5;
     
-    // line 13
+    #line 13
     C = 212;
     
-    // line 14
+    #line 14
     D = (C + 3);
     
-    // line 15
+    #line 15
     DogTail = 345.125;
     
-    // line 16
+    #line 16
     Puppy = (B > A);
     
-    // line 18
+    #line 18
     AnimalCookies = 'R';
     
-    // line 20
+    #line 20
     _output << "The integers are" << _format(A, 5, 0) << _format(B, 5, 0) << _WRITELN;
     
-    // line 21
+    #line 21
     _output << "The bytes are" << _format(C, 5, 0) << _format(D, 5, 0) << _WRITELN;
     
-    // line 24
+    #line 24
     _output << "The real value is" << _format(DogTail, 12, 2) << _format(DogTail, 12, 4) << _WRITELN;
     
-    // line 25
+    #line 25
     _output << _WRITELN;
     
-    // line 26
+    #line 26
     _output << "The boolean value is " << _str(Puppy) << _format(_str(Puppy), 13, 0) << _WRITELN;
     
-    // line 27
+    #line 27
     _output << "The char variable is an " << AnimalCookies << _WRITELN;
     
     { /* NOP */ }

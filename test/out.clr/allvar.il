@@ -19,9 +19,9 @@
     ret
 }
 
-// "allvar.pas"
+.line 0 "allvar.pas"
 
-// line 2
+.line 2
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -39,11 +39,11 @@
     .field public static bool Puppy
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 2
+.line 2
 
 .method static
 void _Program()
@@ -61,20 +61,20 @@ void _Program()
     call instance void [lpcRuntime]LPC.File::Init(int32)
 
 L_Entry:
-    // line 11
+    .line 11
     ldc.i4 4
     stsfld int32 _G::A
-    // line 12
+    .line 12
     ldc.i4 5
     stsfld int32 _G::B
-    // line 13
+    .line 13
     ldc.i4 212
     dup
     ldc.i4 0
     ldc.i4 255
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld uint8 _G::C
-    // line 14
+    .line 14
     ldsfld uint8 _G::C
     ldc.i4 3
     add
@@ -83,18 +83,18 @@ L_Entry:
     ldc.i4 255
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld uint8 _G::D
-    // line 15
+    .line 15
     ldc.r8 345.125
     stsfld float64 _G::DogTail
-    // line 16
+    .line 16
     ldsfld int32 _G::B
     ldsfld int32 _G::A
     cgt
     stsfld bool _G::Puppy
-    // line 18
+    .line 18
     ldc.i4 82 // 'R'
     stsfld uint8 _G::AnimalCookies
-    // line 20
+    .line 20
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "The integers are"
@@ -110,7 +110,7 @@ L_Entry:
     ldsfld int32 _G::B
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 21
+    .line 21
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "The bytes are"
@@ -126,7 +126,7 @@ L_Entry:
     ldsfld uint8 _G::D
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 24
+    .line 24
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "The real value is"
@@ -142,10 +142,10 @@ L_Entry:
     ldsfld float64 _G::DogTail
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, float64)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 25
+    .line 25
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 26
+    .line 26
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "The boolean value is "
@@ -171,7 +171,7 @@ L_bool_to_string_true_3:
 L_bool_to_string_false_4:
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 27
+    .line 27
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "The char variable is an "

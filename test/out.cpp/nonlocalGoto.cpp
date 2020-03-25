@@ -1,7 +1,7 @@
 
 #include <lpcRuntime.h>
 
-// "nonlocalGoto.pas"
+#line 0 "nonlocalGoto.pas"
 
 //================================================================================
 // command line argument map
@@ -15,7 +15,7 @@ _Filename* _FilenameMap = _FilenameMapEntries;
 const int _FilenameMapSize = _countof(_FilenameMapEntries);
 
 
-// line 0
+#line 0
 //================================================================================
 // scope: global scope (level : 0)
 
@@ -31,7 +31,7 @@ const T_boolean C_false = 0;
 const T_integer C_maxint = 2147483647;
 const T_boolean C_true = 1;
 
-// line 4
+#line 4
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -71,42 +71,42 @@ void P_()
         }
         
         // subroutine body
-        // line 40
+        #line 40
         P1 = 0;
         
-        // line 41
+        #line 41
         P2 = 0;
         
-        // line 44
+        #line 44
         L_1:
         _output << "P_L1" << _WRITELN;
         
-        // line 45
+        #line 45
         _output << "p1 = " << P1 << _WRITELN;
         
-        // line 46
+        #line 46
         _output << "p2 = " << P2 << _WRITELN;
         
-        // line 48
+        #line 48
         P1 = (P1 + 1);
         
-        // line 50
+        #line 50
         P2 = F_foo(nullptr, P1);
         
-        // line 51
+        #line 51
         _output << "UNEXPECTED" << _WRITELN;
         
-        // line 52
+        #line 52
         goto L_1;
         
-        // line 55
+        #line 55
         L_2:
         _output << "P_L2" << _WRITELN;
         
-        // line 56
+        #line 56
         _output << "p1 = " << P1 << _WRITELN;
         
-        // line 57
+        #line 57
         _output << "p2 = " << P2 << _WRITELN;
         
         { /* NOP */ }
@@ -125,7 +125,7 @@ void P_()
 }
 
 
-// line 12
+#line 12
 //================================================================================
 // scope: foo (level : 2)
 
@@ -148,29 +148,29 @@ T_integer F_foo(void* _slink, T_integer x)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 14
+    #line 14
     switch(_F.x)
     {
     case 1:
-        // line 15
+        #line 15
         P_bar(nullptr, _F.x);
         break;
     
     case 3:
-        // line 16
+        #line 16
         throw NL_1;
         break;
     
     case 2:
-        // line 17
+        #line 17
         throw NL_2;
         break;
     }
     
-    // line 19
+    #line 19
     _output << "UNEXPECTED" << _WRITELN;
     
-    // line 20
+    #line 20
     _F._fnvalue = (-1);
     
     { /* NOP */ }
@@ -180,7 +180,7 @@ T_integer F_foo(void* _slink, T_integer x)
 }
 
 
-// line 23
+#line 23
 //================================================================================
 // scope: bar (level : 2)
 
@@ -218,13 +218,13 @@ void P_bar(void* _slink, T_integer x)
         }
         
         // subroutine body
-        // line 33
+        #line 33
         P_bar_moo(&_F);
         
-        // line 34
+        #line 34
         _output << "UNEXPECTED" << _WRITELN;
         
-        // line 36
+        #line 36
         L_1:
         P2 = F_foo(nullptr, 3);
         
@@ -243,7 +243,7 @@ void P_bar(void* _slink, T_integer x)
 }
 
 
-// line 27
+#line 27
 //================================================================================
 // scope: bar_moo (level : 3)
 
@@ -260,7 +260,7 @@ void P_bar_moo(void* _slink)
     Frame_bar_moo _F = { (Frame_bar*)_slink };
     
     // subroutine body
-    // line 29
+    #line 29
     throw NL_bar_1;
     
     { /* NOP */ }

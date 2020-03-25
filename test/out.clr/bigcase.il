@@ -19,9 +19,9 @@
     ret
 }
 
-// "bigcase.pas"
+.line 0 "bigcase.pas"
 
-// line 2
+.line 2
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -34,11 +34,11 @@
     .field public static uint8 Index
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 2
+.line 2
 
 .method static
 void _Program()
@@ -63,7 +63,7 @@ void _Program()
     call instance void [lpcRuntime]LPC.File::Init(int32)
 
 L_Entry:
-    // line 8
+    .line 8
     ldc.i4 10
     stloc $tmpEndValue1
     ldc.i4 1
@@ -74,7 +74,7 @@ L_Entry:
     ldloc $tmpIndex2
     stsfld int32 _G::Count
 L_for_loop_1:
-    // line 9
+    .line 9
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldc.i4 5
@@ -82,7 +82,7 @@ L_for_loop_1:
     ldsfld int32 _G::Count
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
-    // line 10
+    .line 10
     ldsfld int32 _G::Count
     stloc $tmpSwitchValue3
     ldloc $tmpSwitchValue3
@@ -96,7 +96,7 @@ L_for_loop_1:
     beq L_case_5
     br L_check_case_4
 L_case_5:
-    // line 11
+    .line 11
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr " Big Number"
@@ -115,19 +115,19 @@ L_check_case_4:
     beq L_case_7
     br L_check_case_6
 L_case_7:
-    // line 12
+    .line 12
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr " Small"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 13
+    .line 13
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr " even"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 14
+    .line 14
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr " number."
@@ -139,7 +139,7 @@ L_check_case_6:
     ldloc $tmpSwitchValue3
     ldc.i4 3
     bne.un L_check_case_8
-    // line 16
+    .line 16
     ldc.i4 3
     stloc $tmpEndValue4
     ldc.i4 1
@@ -154,7 +154,7 @@ L_check_case_6:
     ldloc $tmpIndex5
     stsfld uint8 _G::Index
 L_for_loop_9:
-    // line 16
+    .line 16
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr " Boo"
@@ -181,16 +181,16 @@ L_check_case_8:
     ldloc $tmpSwitchValue3
     ldc.i4 1
     bne.un L_case_end_3
-    // line 17
+    .line 17
     ldc.i4 1 // (true)
     brfalse L_if_end_11
-    // line 17
+    .line 17
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr " TRUE is True,"
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 18
+    .line 18
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr " and this is dumb."
@@ -199,7 +199,7 @@ L_check_case_8:
     /* nop */
 L_if_end_11:
 L_case_end_3:
-    // line 22
+    .line 22
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     call instance void [lpcRuntime]LPC.File::WriteLn()
     /* nop */

@@ -27,13 +27,13 @@
     ret
 }
 
-// "pint.pas"
+.line 0 "pint.pas"
 
-// line 138
+.line 138
 //================================================================================
 // scope: load_init (level : 3)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE alfa = array [1 .. 10] of uint8;
 .class value explicit T_alfa
@@ -80,7 +80,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_1 = array [0 .. 127] of valuetype T_alfa;
 .class value explicit T_array_1
@@ -117,7 +117,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_64 = array [0 .. 20] of valuetype T_alfa;
 .class value explicit T_array_64
@@ -154,7 +154,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_86 = array [0 .. 127] of int32;
 .class value explicit T_array_86
@@ -191,7 +191,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE labelrec = record;
 .class value explicit T_load_labelrec
@@ -203,7 +203,7 @@
     .field [4] public int32 St
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_89 = array [0 .. 1850] of valuetype T_load_labelrec;
 .class value explicit T_load_array_89
@@ -257,11 +257,11 @@
 }
 
 
-// line 202
+.line 202
 //================================================================================
 // scope: load_errorl (level : 3)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE beta = array [1 .. 25] of uint8;
 .class value explicit T_beta
@@ -325,11 +325,11 @@
 }
 
 
-// line 208
+.line 208
 //================================================================================
 // scope: load_update (level : 3)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_92 = record;
 .class value explicit T_record_92
@@ -345,7 +345,7 @@
     .field [6] public int16 Q2
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_93 = array [0 .. 8650] of valuetype T_record_92;
 .class value explicit T_array_93
@@ -404,7 +404,7 @@
 }
 
 
-// line 237
+.line 237
 //================================================================================
 // scope: load_generate (level : 3)
 
@@ -426,7 +426,7 @@
 }
 
 
-// line 264
+.line 264
 //================================================================================
 // scope: load_assemble_lookup (level : 4)
 
@@ -447,7 +447,7 @@
 }
 
 
-// line 273
+.line 273
 //================================================================================
 // scope: load_assemble_labelsearch (level : 4)
 
@@ -468,7 +468,7 @@
 }
 
 
-// line 279
+.line 279
 //================================================================================
 // scope: load_assemble_getname (level : 4)
 
@@ -486,7 +486,7 @@
 }
 
 
-// line 286
+.line 286
 //================================================================================
 // scope: load_assemble_typesymbol (level : 4)
 
@@ -507,11 +507,11 @@
 }
 
 
-// line 259
+.line 259
 //================================================================================
 // scope: load_assemble (level : 3)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE settype = set of 0 .. 58
 .class value explicit T_settype
@@ -595,7 +595,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE record_97 = record;
 .class value explicit T_record_97
@@ -634,7 +634,7 @@
         .field [0] public int32 Vm
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_98 = array [0 .. 18000] of valuetype T_record_97;
 .class value explicit T_array_98
@@ -671,7 +671,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_103 = set of 0 .. 255
 .class value explicit T_set_103
@@ -782,7 +782,7 @@
         ret
     }
 
-// line 264
+.line 264
 
     .method public
     void Lookup(int16 x)
@@ -805,7 +805,7 @@
         stfld int16 @load_assemble_lookup::x
     
     L_Entry:
-        // line 265
+        .line 265
         ldloc _F
         ldfld class @load_assemble @load_assemble_lookup::_slink
         ldfld class @load @load_assemble::_slink
@@ -818,7 +818,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 0
         bne.un L_check_case_2
-        // line 266
+        .line 266
         ldloc _F
         ldfld class @load_assemble @load_assemble_lookup::_slink
         ldfld class @load @load_assemble::_slink
@@ -828,7 +828,7 @@
         call instance valuetype T_load_labelrec& T_load_array_89::ldadr(int32)
         ldfld int16 T_load_labelrec::Val
         stsfld int16 _G::q
-        // line 267
+        .line 267
         ldloc _F
         ldfld class @load_assemble @load_assemble_lookup::_slink
         ldfld class @load @load_assemble::_slink
@@ -843,7 +843,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 1
         bne.un L_case_end_1
-        // line 269
+        .line 269
         ldloc _F
         ldfld class @load_assemble @load_assemble_lookup::_slink
         ldfld class @load @load_assemble::_slink
@@ -859,7 +859,7 @@
         ret
     }
 
-// line 273
+.line 273
 
     .method public
     void Labelsearch()
@@ -876,10 +876,10 @@
         stfld class @load_assemble @load_assemble_labelsearch::_slink
     
     L_Entry:
-        // line 275
+        .line 275
         br L_while_test_2
     L_while_1:
-        // line 275
+        .line 275
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldloc _F
@@ -908,7 +908,7 @@
         ceq
     L_AND_shortcut_3:
         brtrue L_while_1
-        // line 276
+        .line 276
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldloc _F
@@ -917,7 +917,7 @@
         ldc.i4 1850
         call instance void [lpcRuntime]LPC.File::Read(int16*, int32, int32)
         pop
-        // line 276
+        .line 276
         ldloc _F
         ldfld class @load_assemble @load_assemble_labelsearch::_slink
         ldloc _F
@@ -928,7 +928,7 @@
         ret
     }
 
-// line 279
+.line 279
 
     .method public
     void Getname()
@@ -948,7 +948,7 @@
         stfld class @load_assemble @load_assemble_getname::_slink
     
     L_Entry:
-        // line 280
+        .line 280
         ldloc _F
         ldfld class @load_assemble @load_assemble_getname::_slink
         ldfld class @load @load_assemble::_slink
@@ -960,7 +960,7 @@
         ldfld class @load @load_assemble::_slink
         ldfld uint8 @load::Ch
         stobj uint8
-        // line 281
+        .line 281
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldloc _F
@@ -983,13 +983,13 @@
         ldc.i4 255
         call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
         pop
-        // line 282
+        .line 282
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         call instance bool [lpcRuntime]LPC.File::Eoln()
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 282
+        .line 282
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldloc _F
@@ -1001,13 +1001,13 @@
         call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
         pop
     L_if_end_1:
-        // line 283
+        .line 283
         ldc.i4 1
         stloc $tmpSrcIndex1
         ldc.i4 1
         stloc $tmpDstIndex2
     L_pack_loop_2:
-        // line 283
+        .line 283
         ldloc _F
         ldfld class @load_assemble @load_assemble_getname::_slink
         ldflda valuetype T_alfa @load_assemble::Name
@@ -1037,7 +1037,7 @@
         ret
     }
 
-// line 286
+.line 286
 
     .method public
     void Typesymbol()
@@ -1056,7 +1056,7 @@
         stfld class @load_assemble @load_assemble_typesymbol::_slink
     
     L_Entry:
-        // line 289
+        .line 289
         ldloc _F
         ldfld class @load_assemble @load_assemble_typesymbol::_slink
         ldfld class @load @load_assemble::_slink
@@ -1066,7 +1066,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_1
-        // line 291
+        .line 291
         ldloc _F
         ldfld class @load_assemble @load_assemble_typesymbol::_slink
         ldfld class @load @load_assemble::_slink
@@ -1075,7 +1075,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 97 // 'a'
         bne.un L_check_case_3
-        // line 292
+        .line 292
         ldloc _F
         ldc.i4 0
         stfld int32 @load_assemble_typesymbol::i
@@ -1084,7 +1084,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 114 // 'r'
         bne.un L_check_case_4
-        // line 293
+        .line 293
         ldloc _F
         ldc.i4 1
         stfld int32 @load_assemble_typesymbol::i
@@ -1093,7 +1093,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 115 // 's'
         bne.un L_check_case_5
-        // line 294
+        .line 294
         ldloc _F
         ldc.i4 2
         stfld int32 @load_assemble_typesymbol::i
@@ -1102,7 +1102,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 98 // 'b'
         bne.un L_check_case_6
-        // line 295
+        .line 295
         ldloc _F
         ldc.i4 3
         stfld int32 @load_assemble_typesymbol::i
@@ -1111,12 +1111,12 @@
         ldloc $tmpSwitchValue1
         ldc.i4 99 // 'c'
         bne.un L_case_end_2
-        // line 296
+        .line 296
         ldloc _F
         ldc.i4 4
         stfld int32 @load_assemble_typesymbol::i
     L_case_end_2:
-        // line 298
+        .line 298
         ldsflda valuetype T_array_86 _G::Cop
         ldsfld int8 _G::Op
         call instance int32& T_array_86::ldadr(int32)
@@ -1139,7 +1139,7 @@
 }
 
 
-// line 124
+.line 124
 //================================================================================
 // scope: load (level : 2)
 
@@ -1163,7 +1163,7 @@
         ret
     }
 
-// line 138
+.line 138
 
     .method public
     void Init()
@@ -1187,566 +1187,566 @@
         stfld class @load @load_init::_slink
     
     L_Entry:
-        // line 140
+        .line 140
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 0
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_1    // "lod       "
         stobj valuetype T_alfa
-        // line 140
+        .line 140
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 1
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_2    // "ldo       "
         stobj valuetype T_alfa
-        // line 141
+        .line 141
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 2
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_3    // "str       "
         stobj valuetype T_alfa
-        // line 141
+        .line 141
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 3
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_4    // "sro       "
         stobj valuetype T_alfa
-        // line 142
+        .line 142
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 4
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_5    // "lda       "
         stobj valuetype T_alfa
-        // line 142
+        .line 142
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 5
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_6    // "lao       "
         stobj valuetype T_alfa
-        // line 143
+        .line 143
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 6
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_7    // "sto       "
         stobj valuetype T_alfa
-        // line 143
+        .line 143
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 7
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_8    // "ldc       "
         stobj valuetype T_alfa
-        // line 144
+        .line 144
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 8
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_9    // "...       "
         stobj valuetype T_alfa
-        // line 144
+        .line 144
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 9
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_10    // "ind       "
         stobj valuetype T_alfa
-        // line 145
+        .line 145
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 10
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_11    // "inc       "
         stobj valuetype T_alfa
-        // line 145
+        .line 145
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 11
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_12    // "mst       "
         stobj valuetype T_alfa
-        // line 146
+        .line 146
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 12
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_13    // "cup       "
         stobj valuetype T_alfa
-        // line 146
+        .line 146
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 13
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_14    // "ent       "
         stobj valuetype T_alfa
-        // line 147
+        .line 147
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 14
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_15    // "ret       "
         stobj valuetype T_alfa
-        // line 147
+        .line 147
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 15
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_16    // "csp       "
         stobj valuetype T_alfa
-        // line 148
+        .line 148
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 16
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_17    // "ixa       "
         stobj valuetype T_alfa
-        // line 148
+        .line 148
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 17
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_18    // "equ       "
         stobj valuetype T_alfa
-        // line 149
+        .line 149
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 18
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_19    // "neq       "
         stobj valuetype T_alfa
-        // line 149
+        .line 149
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 19
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_20    // "geq       "
         stobj valuetype T_alfa
-        // line 150
+        .line 150
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 20
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_21    // "grt       "
         stobj valuetype T_alfa
-        // line 150
+        .line 150
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 21
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_22    // "leq       "
         stobj valuetype T_alfa
-        // line 151
+        .line 151
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 22
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_23    // "les       "
         stobj valuetype T_alfa
-        // line 151
+        .line 151
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 23
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_24    // "ujp       "
         stobj valuetype T_alfa
-        // line 152
+        .line 152
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 24
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_25    // "fjp       "
         stobj valuetype T_alfa
-        // line 152
+        .line 152
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 25
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_26    // "xjp       "
         stobj valuetype T_alfa
-        // line 153
+        .line 153
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 26
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_27    // "chk       "
         stobj valuetype T_alfa
-        // line 153
+        .line 153
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 27
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_28    // "eof       "
         stobj valuetype T_alfa
-        // line 154
+        .line 154
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 28
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_29    // "adi       "
         stobj valuetype T_alfa
-        // line 154
+        .line 154
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 29
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_30    // "adr       "
         stobj valuetype T_alfa
-        // line 155
+        .line 155
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 30
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_31    // "sbi       "
         stobj valuetype T_alfa
-        // line 155
+        .line 155
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 31
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_32    // "sbr       "
         stobj valuetype T_alfa
-        // line 156
+        .line 156
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 32
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_33    // "sgs       "
         stobj valuetype T_alfa
-        // line 156
+        .line 156
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 33
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_34    // "flt       "
         stobj valuetype T_alfa
-        // line 157
+        .line 157
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 34
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_35    // "flo       "
         stobj valuetype T_alfa
-        // line 157
+        .line 157
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 35
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_36    // "trc       "
         stobj valuetype T_alfa
-        // line 158
+        .line 158
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 36
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_37    // "ngi       "
         stobj valuetype T_alfa
-        // line 158
+        .line 158
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 37
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_38    // "ngr       "
         stobj valuetype T_alfa
-        // line 159
+        .line 159
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 38
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_39    // "sqi       "
         stobj valuetype T_alfa
-        // line 159
+        .line 159
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 39
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_40    // "sqr       "
         stobj valuetype T_alfa
-        // line 160
+        .line 160
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 40
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_41    // "abi       "
         stobj valuetype T_alfa
-        // line 160
+        .line 160
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 41
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_42    // "abr       "
         stobj valuetype T_alfa
-        // line 161
+        .line 161
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 42
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_43    // "not       "
         stobj valuetype T_alfa
-        // line 161
+        .line 161
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 43
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_44    // "and       "
         stobj valuetype T_alfa
-        // line 162
+        .line 162
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 44
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_45    // "ior       "
         stobj valuetype T_alfa
-        // line 162
+        .line 162
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 45
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_46    // "dif       "
         stobj valuetype T_alfa
-        // line 163
+        .line 163
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 46
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_47    // "int       "
         stobj valuetype T_alfa
-        // line 163
+        .line 163
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 47
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_48    // "uni       "
         stobj valuetype T_alfa
-        // line 164
+        .line 164
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 48
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_49    // "inn       "
         stobj valuetype T_alfa
-        // line 164
+        .line 164
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 49
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_50    // "mod       "
         stobj valuetype T_alfa
-        // line 165
+        .line 165
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 50
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_51    // "odd       "
         stobj valuetype T_alfa
-        // line 165
+        .line 165
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 51
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_52    // "mpi       "
         stobj valuetype T_alfa
-        // line 166
+        .line 166
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 52
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_53    // "mpr       "
         stobj valuetype T_alfa
-        // line 166
+        .line 166
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 53
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_54    // "dvi       "
         stobj valuetype T_alfa
-        // line 167
+        .line 167
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 54
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_55    // "dvr       "
         stobj valuetype T_alfa
-        // line 167
+        .line 167
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 55
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_56    // "mov       "
         stobj valuetype T_alfa
-        // line 168
+        .line 168
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 56
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_57    // "lca       "
         stobj valuetype T_alfa
-        // line 168
+        .line 168
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 57
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_58    // "dec       "
         stobj valuetype T_alfa
-        // line 169
+        .line 169
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 58
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_59    // "stp       "
         stobj valuetype T_alfa
-        // line 169
+        .line 169
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 59
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_60    // "ord       "
         stobj valuetype T_alfa
-        // line 170
+        .line 170
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 60
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_61    // "chr       "
         stobj valuetype T_alfa
-        // line 170
+        .line 170
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 61
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldsfld valuetype T_alfa STRING_62    // "ujc       "
         stobj valuetype T_alfa
-        // line 172
+        .line 172
         ldsflda valuetype T_array_64 _G::Sptable
         ldc.i4 0
         call instance valuetype T_alfa& T_array_64::ldadr(int32)
         ldsfld valuetype T_alfa STRING_63    // "get       "
         stobj valuetype T_alfa
-        // line 172
+        .line 172
         ldsflda valuetype T_array_64 _G::Sptable
         ldc.i4 1
         call instance valuetype T_alfa& T_array_64::ldadr(int32)
         ldsfld valuetype T_alfa STRING_64    // "put       "
         stobj valuetype T_alfa
-        // line 173
+        .line 173
         ldsflda valuetype T_array_64 _G::Sptable
         ldc.i4 2
         call instance valuetype T_alfa& T_array_64::ldadr(int32)
         ldsfld valuetype T_alfa STRING_65    // "rst       "
         stobj valuetype T_alfa
-        // line 173
+        .line 173
         ldsflda valuetype T_array_64 _G::Sptable
         ldc.i4 3
         call instance valuetype T_alfa& T_array_64::ldadr(int32)
         ldsfld valuetype T_alfa STRING_66    // "rln       "
         stobj valuetype T_alfa
-        // line 174
+        .line 174
         ldsflda valuetype T_array_64 _G::Sptable
         ldc.i4 4
         call instance valuetype T_alfa& T_array_64::ldadr(int32)
         ldsfld valuetype T_alfa STRING_67    // "new       "
         stobj valuetype T_alfa
-        // line 174
+        .line 174
         ldsflda valuetype T_array_64 _G::Sptable
         ldc.i4 5
         call instance valuetype T_alfa& T_array_64::ldadr(int32)
         ldsfld valuetype T_alfa STRING_68    // "wln       "
         stobj valuetype T_alfa
-        // line 175
+        .line 175
         ldsflda valuetype T_array_64 _G::Sptable
         ldc.i4 6
         call instance valuetype T_alfa& T_array_64::ldadr(int32)
         ldsfld valuetype T_alfa STRING_69    // "wrs       "
         stobj valuetype T_alfa
-        // line 175
+        .line 175
         ldsflda valuetype T_array_64 _G::Sptable
         ldc.i4 7
         call instance valuetype T_alfa& T_array_64::ldadr(int32)
         ldsfld valuetype T_alfa STRING_70    // "eln       "
         stobj valuetype T_alfa
-        // line 176
+        .line 176
         ldsflda valuetype T_array_64 _G::Sptable
         ldc.i4 8
         call instance valuetype T_alfa& T_array_64::ldadr(int32)
         ldsfld valuetype T_alfa STRING_71    // "wri       "
         stobj valuetype T_alfa
-        // line 176
+        .line 176
         ldsflda valuetype T_array_64 _G::Sptable
         ldc.i4 9
         call instance valuetype T_alfa& T_array_64::ldadr(int32)
         ldsfld valuetype T_alfa STRING_72    // "wrr       "
         stobj valuetype T_alfa
-        // line 177
+        .line 177
         ldsflda valuetype T_array_64 _G::Sptable
         ldc.i4 10
         call instance valuetype T_alfa& T_array_64::ldadr(int32)
         ldsfld valuetype T_alfa STRING_73    // "wrc       "
         stobj valuetype T_alfa
-        // line 177
+        .line 177
         ldsflda valuetype T_array_64 _G::Sptable
         ldc.i4 11
         call instance valuetype T_alfa& T_array_64::ldadr(int32)
         ldsfld valuetype T_alfa STRING_74    // "rdi       "
         stobj valuetype T_alfa
-        // line 178
+        .line 178
         ldsflda valuetype T_array_64 _G::Sptable
         ldc.i4 12
         call instance valuetype T_alfa& T_array_64::ldadr(int32)
         ldsfld valuetype T_alfa STRING_75    // "rdr       "
         stobj valuetype T_alfa
-        // line 178
+        .line 178
         ldsflda valuetype T_array_64 _G::Sptable
         ldc.i4 13
         call instance valuetype T_alfa& T_array_64::ldadr(int32)
         ldsfld valuetype T_alfa STRING_76    // "rdc       "
         stobj valuetype T_alfa
-        // line 179
+        .line 179
         ldsflda valuetype T_array_64 _G::Sptable
         ldc.i4 14
         call instance valuetype T_alfa& T_array_64::ldadr(int32)
         ldsfld valuetype T_alfa STRING_77    // "sin       "
         stobj valuetype T_alfa
-        // line 179
+        .line 179
         ldsflda valuetype T_array_64 _G::Sptable
         ldc.i4 15
         call instance valuetype T_alfa& T_array_64::ldadr(int32)
         ldsfld valuetype T_alfa STRING_78    // "cos       "
         stobj valuetype T_alfa
-        // line 180
+        .line 180
         ldsflda valuetype T_array_64 _G::Sptable
         ldc.i4 16
         call instance valuetype T_alfa& T_array_64::ldadr(int32)
         ldsfld valuetype T_alfa STRING_79    // "exp       "
         stobj valuetype T_alfa
-        // line 180
+        .line 180
         ldsflda valuetype T_array_64 _G::Sptable
         ldc.i4 17
         call instance valuetype T_alfa& T_array_64::ldadr(int32)
         ldsfld valuetype T_alfa STRING_80    // "log       "
         stobj valuetype T_alfa
-        // line 181
+        .line 181
         ldsflda valuetype T_array_64 _G::Sptable
         ldc.i4 18
         call instance valuetype T_alfa& T_array_64::ldadr(int32)
         ldsfld valuetype T_alfa STRING_81    // "sqt       "
         stobj valuetype T_alfa
-        // line 181
+        .line 181
         ldsflda valuetype T_array_64 _G::Sptable
         ldc.i4 19
         call instance valuetype T_alfa& T_array_64::ldadr(int32)
         ldsfld valuetype T_alfa STRING_82    // "atn       "
         stobj valuetype T_alfa
-        // line 182
+        .line 182
         ldsflda valuetype T_array_64 _G::Sptable
         ldc.i4 20
         call instance valuetype T_alfa& T_array_64::ldadr(int32)
         ldsfld valuetype T_alfa STRING_83    // "sav       "
         stobj valuetype T_alfa
-        // line 184
+        .line 184
         ldsflda valuetype T_array_86 _G::Cop
         ldc.i4 0
         call instance int32& T_array_86::ldadr(int32)
         ldc.i4 105
         stobj int32
-        // line 184
+        .line 184
         ldsflda valuetype T_array_86 _G::Cop
         ldc.i4 1
         call instance int32& T_array_86::ldadr(int32)
         ldc.i4 65
         stobj int32
-        // line 185
+        .line 185
         ldsflda valuetype T_array_86 _G::Cop
         ldc.i4 2
         call instance int32& T_array_86::ldadr(int32)
         ldc.i4 70
         stobj int32
-        // line 185
+        .line 185
         ldsflda valuetype T_array_86 _G::Cop
         ldc.i4 3
         call instance int32& T_array_86::ldadr(int32)
         ldc.i4 75
         stobj int32
-        // line 186
+        .line 186
         ldsflda valuetype T_array_86 _G::Cop
         ldc.i4 6
         call instance int32& T_array_86::ldadr(int32)
         ldc.i4 80
         stobj int32
-        // line 186
+        .line 186
         ldsflda valuetype T_array_86 _G::Cop
         ldc.i4 9
         call instance int32& T_array_86::ldadr(int32)
         ldc.i4 85
         stobj int32
-        // line 187
+        .line 187
         ldsflda valuetype T_array_86 _G::Cop
         ldc.i4 10
         call instance int32& T_array_86::ldadr(int32)
         ldc.i4 90
         stobj int32
-        // line 187
+        .line 187
         ldsflda valuetype T_array_86 _G::Cop
         ldc.i4 26
         call instance int32& T_array_86::ldadr(int32)
         ldc.i4 95
         stobj int32
-        // line 188
+        .line 188
         ldsflda valuetype T_array_86 _G::Cop
         ldc.i4 57
         call instance int32& T_array_86::ldadr(int32)
         ldc.i4 100
         stobj int32
-        // line 190
+        .line 190
         ldc.i4 3
         dup
         ldc.i4 0
         ldc.i4 17500
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int16 _G::Pc
-        // line 191
+        .line 191
         ldloc _F
         ldfld class @load @load_init::_slink
         ldc.i4 13650
@@ -1757,7 +1757,7 @@
         ldc.i4 18001
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @load::Icp
-        // line 192
+        .line 192
         ldloc _F
         ldfld class @load @load_init::_slink
         ldc.i4 13655
@@ -1768,7 +1768,7 @@
         ldc.i4 18001
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @load::Rcp
-        // line 193
+        .line 193
         ldloc _F
         ldfld class @load @load_init::_slink
         ldc.i4 13660
@@ -1779,7 +1779,7 @@
         ldc.i4 18001
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @load::Scp
-        // line 194
+        .line 194
         ldloc _F
         ldfld class @load @load_init::_slink
         ldc.i4 13730
@@ -1790,7 +1790,7 @@
         ldc.i4 18001
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @load::Bcp
-        // line 195
+        .line 195
         ldloc _F
         ldfld class @load @load_init::_slink
         ldc.i4 13820
@@ -1801,7 +1801,7 @@
         ldc.i4 18001
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @load::Mcp
-        // line 196
+        .line 196
         ldc.i4 10
         stloc $tmpEndValue1
         ldc.i4 1
@@ -1813,7 +1813,7 @@
         ldloc $tmpIndex2
         stfld int32 @load_init::i
     L_for_loop_1:
-        // line 196
+        .line 196
         ldloc _F
         ldfld class @load @load_init::_slink
         ldflda valuetype T_alfa @load::Word
@@ -1836,7 +1836,7 @@
         br L_for_loop_1
     L_for_end_2:
         pop
-        // line 197
+        .line 197
         ldc.i4 1850
         stloc $tmpEndValue4
         ldc.i4 0
@@ -1848,7 +1848,7 @@
         ldloc $tmpIndex5
         stfld int32 @load_init::i
     L_for_loop_3:
-        // line 198
+        .line 198
         ldloc _F
         ldfld class @load @load_init::_slink
         ldflda valuetype T_load_array_89 @load::Labeltab
@@ -1862,7 +1862,7 @@
         ldc.i4 18001
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 T_load_labelrec::Val
-        // line 198
+        .line 198
         ldloc _F
         ldfld class @load @load_init::_slink
         ldflda valuetype T_load_array_89 @load::Labeltab
@@ -1885,7 +1885,7 @@
         br L_for_loop_3
     L_for_end_4:
         pop
-        // line 199
+        .line 199
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         call instance void [lpcRuntime]LPC.File::Reset()
         /* nop */
@@ -1894,7 +1894,7 @@
         ret
     }
 
-// line 202
+.line 202
 
     .method public
     void Errorl(valuetype T_beta String)
@@ -1915,10 +1915,10 @@
         stfld valuetype T_beta @load_errorl::String
     
     L_Entry:
-        // line 203
+        .line 203
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 204
+        .line 204
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldloc _F
@@ -1926,14 +1926,14 @@
         call string T_beta::arrayToString(valuetype T_beta)
         call instance void [lpcRuntime]LPC.File::Write(string)
         pop
-        // line 205
+        .line 205
         call void [lpcRuntime]LPC.Helpers::Halt()
     
     L_Epilogue:
         ret
     }
 
-// line 208
+.line 208
 
     .method public
     void Update(int16 x)
@@ -1954,7 +1954,7 @@
         stfld int16 @load_update::x
     
     L_Entry:
-        // line 213
+        .line 213
         ldloc _F
         ldfld class @load @load_update::_slink
         ldflda valuetype T_load_array_89 @load::Labeltab
@@ -1965,14 +1965,14 @@
         ldc.i4 1
         ceq
         brfalse L_else_1
-        // line 213
+        .line 213
         ldloc _F
         ldfld class @load @load_update::_slink
         ldsfld valuetype T_beta STRING_84    // " duplicated label        "
         call instance void @load::Errorl(valuetype T_beta String)
         br L_if_end_2
     L_else_1:
-        // line 215
+        .line 215
         ldloc _F
         ldfld class @load @load_update::_slink
         ldflda valuetype T_load_array_89 @load::Labeltab
@@ -1986,7 +1986,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_3
-        // line 216
+        .line 216
         ldloc _F
         ldloc _F
         ldfld class @load @load_update::_slink
@@ -2000,20 +2000,20 @@
         ldc.i4 17500
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @load_update::Curr
-        // line 216
+        .line 216
         ldloc _F
         ldc.i4 0 // (false)
         stfld bool @load_update::Endlist
-        // line 217
+        .line 217
         br L_while_test_5
     L_while_4:
-        // line 220
+        .line 220
         ldloc _F
         ldfld int16 @load_update::Curr
         ldc.i4.1
         and
         brfalse L_else_6
-        // line 220
+        .line 220
         ldloc _F
         ldsflda valuetype T_array_93 _G::Code
         ldloc _F
@@ -2027,7 +2027,7 @@
         ldc.i4 17500
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @load_update::Succ
-        // line 221
+        .line 221
         ldsflda valuetype T_array_93 _G::Code
         ldloc _F
         ldfld int16 @load_update::Curr
@@ -2040,7 +2040,7 @@
         stfld int16 T_record_92::Q2
         br L_if_end_7
     L_else_6:
-        // line 223
+        .line 223
         ldloc _F
         ldsflda valuetype T_array_93 _G::Code
         ldloc _F
@@ -2054,7 +2054,7 @@
         ldc.i4 17500
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @load_update::Succ
-        // line 224
+        .line 224
         ldsflda valuetype T_array_93 _G::Code
         ldloc _F
         ldfld int16 @load_update::Curr
@@ -2066,20 +2066,20 @@
         ldfld int16 @load::Labelvalue
         stfld int16 T_record_92::Q1
     L_if_end_7:
-        // line 226
+        .line 226
         ldloc _F
         ldfld int16 @load_update::Succ
         ldc.i4 1
         neg
         ceq
         brfalse L_else_8
-        // line 226
+        .line 226
         ldloc _F
         ldc.i4 1 // (true)
         stfld bool @load_update::Endlist
         br L_if_end_9
     L_else_8:
-        // line 227
+        .line 227
         ldloc _F
         ldloc _F
         ldfld int16 @load_update::Succ
@@ -2093,7 +2093,7 @@
         brtrue L_while_4
         /* nop */
     L_if_end_3:
-        // line 230
+        .line 230
         ldloc _F
         ldfld class @load @load_update::_slink
         ldflda valuetype T_load_array_89 @load::Labeltab
@@ -2102,7 +2102,7 @@
         call instance valuetype T_load_labelrec& T_load_array_89::ldadr(int32)
         ldc.i4 1
         stfld int32 T_load_labelrec::St
-        // line 231
+        .line 231
         ldloc _F
         ldfld class @load @load_update::_slink
         ldflda valuetype T_load_array_89 @load::Labeltab
@@ -2120,7 +2120,7 @@
         ret
     }
 
-// line 237
+.line 237
 
     .method public
     void Generate()
@@ -2139,14 +2139,14 @@
         stfld class @load @load_generate::_slink
     
     L_Entry:
-        // line 241
+        .line 241
         ldloc _F
         ldc.i4 1 // (true)
         stfld bool @load_generate::Again
-        // line 242
+        .line 242
         br L_while_test_2
     L_while_1:
-        // line 243
+        .line 243
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldloc _F
@@ -2156,7 +2156,7 @@
         ldc.i4 255
         call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
         pop
-        // line 244
+        .line 244
         ldloc _F
         ldfld class @load @load_generate::_slink
         ldfld uint8 @load::Ch
@@ -2164,7 +2164,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 105 // 'i'
         bne.un L_check_case_4
-        // line 245
+        .line 245
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         call instance void [lpcRuntime]LPC.File::ReadLn()
         br L_case_end_3
@@ -2172,7 +2172,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 108 // 'l'
         bne.un L_check_case_5
-        // line 246
+        .line 246
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldloc _F
@@ -2181,13 +2181,13 @@
         ldc.i4 2147483647
         call instance void [lpcRuntime]LPC.File::Read(int32*, int32, int32)
         pop
-        // line 247
+        .line 247
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         call instance bool [lpcRuntime]LPC.File::Eoln()
         ldc.i4.0
         ceq
         brfalse L_if_end_6
-        // line 247
+        .line 247
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldloc _F
@@ -2198,14 +2198,14 @@
         call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
         pop
     L_if_end_6:
-        // line 248
+        .line 248
         ldloc _F
         ldfld class @load @load_generate::_slink
         ldfld uint8 @load::Ch
         ldc.i4 61 // '='
         ceq
         brfalse L_else_7
-        // line 248
+        .line 248
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldloc _F
@@ -2217,13 +2217,13 @@
         pop
         br L_if_end_8
     L_else_7:
-        // line 249
+        .line 249
         ldloc _F
         ldfld class @load @load_generate::_slink
         ldsfld int16 _G::Pc
         stfld int16 @load::Labelvalue
     L_if_end_8:
-        // line 250
+        .line 250
         ldloc _F
         ldfld class @load @load_generate::_slink
         ldloc _F
@@ -2233,7 +2233,7 @@
         ldc.i4 1850
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         call instance void @load::Update(int16 x)
-        // line 250
+        .line 250
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         call instance void [lpcRuntime]LPC.File::ReadLn()
         /* nop */
@@ -2242,11 +2242,11 @@
         ldloc $tmpSwitchValue1
         ldc.i4 113 // 'q'
         bne.un L_check_case_9
-        // line 252
+        .line 252
         ldloc _F
         ldc.i4 0 // (false)
         stfld bool @load_generate::Again
-        // line 252
+        .line 252
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         call instance void [lpcRuntime]LPC.File::ReadLn()
         br L_case_end_3
@@ -2254,7 +2254,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 32 // ' '
         bne.un L_case_end_3
-        // line 253
+        .line 253
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldloc _F
@@ -2264,7 +2264,7 @@
         ldc.i4 255
         call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
         pop
-        // line 253
+        .line 253
         ldloc _F
         ldfld class @load @load_generate::_slink
         call instance void @load::Assemble()
@@ -2279,7 +2279,7 @@
         ret
     }
 
-// line 259
+.line 259
 
     .method public
     void Assemble()
@@ -2310,41 +2310,41 @@
     
     
     L_Entry:
-        // line 302
+        .line 302
         ldc.i4 0
         dup
         ldc.i4 0
         ldc.i4 15
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int8 _G::p
-        // line 302
+        .line 302
         ldc.i4 0
         dup
         ldc.i4 -26143
         ldc.i4 26143
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int16 _G::q
-        // line 302
+        .line 302
         ldc.i4 0
         dup
         ldc.i4 0
         ldc.i4 127
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int8 _G::Op
-        // line 303
+        .line 303
         ldloc _F
         call instance void @load_assemble::Getname()
-        // line 304
+        .line 304
         ldsflda valuetype T_array_1 _G::Instr
         ldc.i4 62
         call instance valuetype T_alfa& T_array_1::ldadr(int32)
         ldloc _F
         ldfld valuetype T_alfa @load_assemble::Name
         stobj valuetype T_alfa
-        // line 305
+        .line 305
         br L_while_test_2
     L_while_1:
-        // line 305
+        .line 305
         ldsfld int8 _G::Op
         ldc.i4 1
         add
@@ -2364,18 +2364,18 @@
         call string T_alfa::arrayToString(valuetype T_alfa)
         call bool [lpcRuntime]LPC.Helpers::StrcmpNE(string, string)
         brtrue L_while_1
-        // line 306
+        .line 306
         ldsfld int8 _G::Op
         ldc.i4 62
         ceq
         brfalse L_if_end_3
-        // line 306
+        .line 306
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldsfld valuetype T_beta STRING_85    // " illegal instruction     "
         call instance void @load::Errorl(valuetype T_beta String)
     L_if_end_3:
-        // line 308
+        .line 308
         ldsfld int8 _G::Op
         stloc $tmpSwitchValue1
         ldloc $tmpSwitchValue1
@@ -2398,7 +2398,7 @@
         beq L_case_6
         br L_check_case_5
     L_case_6:
-        // line 312
+        .line 312
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldfld uint8 @load::Ch
@@ -2412,7 +2412,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 105 // 'i'
         bne.un L_check_case_9
-        // line 314
+        .line 314
         ldc.i4 1
         dup
         ldc.i4 0
@@ -2424,7 +2424,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 114 // 'r'
         bne.un L_check_case_10
-        // line 315
+        .line 315
         ldc.i4 2
         dup
         ldc.i4 0
@@ -2436,7 +2436,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 98 // 'b'
         bne.un L_check_case_11
-        // line 316
+        .line 316
         ldc.i4 3
         dup
         ldc.i4 0
@@ -2448,7 +2448,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 115 // 's'
         bne.un L_check_case_12
-        // line 317
+        .line 317
         ldc.i4 4
         dup
         ldc.i4 0
@@ -2460,7 +2460,7 @@
         ldloc $tmpSwitchValue2
         ldc.i4 99 // 'c'
         bne.un L_check_case_13
-        // line 318
+        .line 318
         ldc.i4 6
         dup
         ldc.i4 0
@@ -2472,14 +2472,14 @@
         ldloc $tmpSwitchValue2
         ldc.i4 109 // 'm'
         bne.un L_case_end_7
-        // line 319
+        .line 319
         ldc.i4 5
         dup
         ldc.i4 0
         ldc.i4 15
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int8 _G::p
-        // line 320
+        .line 320
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldsflda int16 _G::q
@@ -2498,10 +2498,10 @@
         beq L_case_15
         br L_check_case_14
     L_case_15:
-        // line 326
+        .line 326
         ldloc _F
         call instance void @load_assemble::Typesymbol()
-        // line 326
+        .line 326
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldsflda int8 _G::p
@@ -2519,7 +2519,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 4
         bne.un L_check_case_16
-        // line 329
+        .line 329
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldsflda int8 _G::p
@@ -2537,7 +2537,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 12
         bne.un L_check_case_17
-        // line 331
+        .line 331
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldsflda int8 _G::p
@@ -2545,7 +2545,7 @@
         ldc.i4 15
         call instance void [lpcRuntime]LPC.File::Read(int8*, int32, int32)
         pop
-        // line 331
+        .line 331
         ldloc _F
         call instance void @load_assemble::Labelsearch()
         br L_case_end_4
@@ -2553,7 +2553,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 11
         bne.un L_check_case_18
-        // line 333
+        .line 333
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldsflda int8 _G::p
@@ -2566,7 +2566,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 14
         bne.un L_check_case_19
-        // line 335
+        .line 335
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldfld uint8 @load::Ch
@@ -2574,7 +2574,7 @@
         ldloc $tmpSwitchValue3
         ldc.i4 112 // 'p'
         bne.un L_check_case_21
-        // line 336
+        .line 336
         ldc.i4 0
         dup
         ldc.i4 0
@@ -2586,7 +2586,7 @@
         ldloc $tmpSwitchValue3
         ldc.i4 105 // 'i'
         bne.un L_check_case_22
-        // line 337
+        .line 337
         ldc.i4 1
         dup
         ldc.i4 0
@@ -2598,7 +2598,7 @@
         ldloc $tmpSwitchValue3
         ldc.i4 114 // 'r'
         bne.un L_check_case_23
-        // line 338
+        .line 338
         ldc.i4 2
         dup
         ldc.i4 0
@@ -2610,7 +2610,7 @@
         ldloc $tmpSwitchValue3
         ldc.i4 99 // 'c'
         bne.un L_check_case_24
-        // line 339
+        .line 339
         ldc.i4 3
         dup
         ldc.i4 0
@@ -2622,7 +2622,7 @@
         ldloc $tmpSwitchValue3
         ldc.i4 98 // 'b'
         bne.un L_check_case_25
-        // line 340
+        .line 340
         ldc.i4 4
         dup
         ldc.i4 0
@@ -2634,7 +2634,7 @@
         ldloc $tmpSwitchValue3
         ldc.i4 97 // 'a'
         bne.un L_case_end_20
-        // line 341
+        .line 341
         ldc.i4 5
         dup
         ldc.i4 0
@@ -2655,7 +2655,7 @@
         beq L_case_27
         br L_check_case_26
     L_case_27:
-        // line 345
+        .line 345
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldsflda int16 _G::q
@@ -2682,10 +2682,10 @@
         beq L_case_29
         br L_check_case_28
     L_case_29:
-        // line 348
+        .line 348
         ldloc _F
         call instance void @load_assemble::Typesymbol()
-        // line 348
+        .line 348
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldsflda int16 _G::q
@@ -2706,7 +2706,7 @@
         beq L_case_31
         br L_check_case_30
     L_case_31:
-        // line 352
+        .line 352
         ldloc _F
         call instance void @load_assemble::Labelsearch()
         br L_case_end_4
@@ -2714,7 +2714,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 13
         bne.un L_check_case_32
-        // line 354
+        .line 354
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldsflda int8 _G::p
@@ -2722,7 +2722,7 @@
         ldc.i4 15
         call instance void [lpcRuntime]LPC.File::Read(int8*, int32, int32)
         pop
-        // line 354
+        .line 354
         ldloc _F
         call instance void @load_assemble::Labelsearch()
         br L_case_end_4
@@ -2730,7 +2730,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 15
         bne.un L_check_case_33
-        // line 357
+        .line 357
         ldc.i4 9
         stloc $tmpEndValue4
         ldc.i4 1
@@ -2742,7 +2742,7 @@
         ldloc $tmpIndex5
         stfld int32 @load_assemble::i
     L_for_loop_34:
-        // line 357
+        .line 357
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldloc _F
@@ -2766,13 +2766,13 @@
         br L_for_loop_34
     L_for_end_35:
         pop
-        // line 358
+        .line 358
         ldloc _F
         call instance void @load_assemble::Getname()
-        // line 359
+        .line 359
         br L_while_test_37
     L_while_36:
-        // line 359
+        .line 359
         ldsfld int16 _G::q
         ldc.i4 1
         add
@@ -2798,7 +2798,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 7
         bne.un L_check_case_38
-        // line 362
+        .line 362
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldfld uint8 @load::Ch
@@ -2806,14 +2806,14 @@
         ldloc $tmpSwitchValue7
         ldc.i4 105 // 'i'
         bne.un L_check_case_40
-        // line 363
+        .line 363
         ldc.i4 1
         dup
         ldc.i4 0
         ldc.i4 15
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int8 _G::p
-        // line 363
+        .line 363
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldloc _F
@@ -2822,7 +2822,7 @@
         ldc.i4 2147483647
         call instance void [lpcRuntime]LPC.File::Read(int32*, int32, int32)
         pop
-        // line 364
+        .line 364
         ldloc _F
         ldfld int32 @load_assemble::i
         dup
@@ -2835,14 +2835,14 @@
         ldc.i4.0
         ceq
         brfalse L_else_42
-        // line 365
+        .line 365
         ldc.i4 8
         dup
         ldc.i4 0
         ldc.i4 127
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int8 _G::Op
-        // line 366
+        .line 366
         ldsflda valuetype T_array_98 _G::Store
         ldloc _F
         ldfld class @load @load_assemble::_slink
@@ -2851,16 +2851,16 @@
         ldloc _F
         ldfld int32 @load_assemble::i
         stfld int32 T_record_97::Vi
-        // line 366
+        .line 366
         ldc.i4 13650
         dup
         ldc.i4 -26143
         ldc.i4 26143
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int16 _G::q
-        // line 367
+        .line 367
     L_repeat_44:
-        // line 367
+        .line 367
         ldsfld int16 _G::q
         ldc.i4 1
         add
@@ -2877,14 +2877,14 @@
         ldfld int32 @load_assemble::i
         ceq
         brfalse L_repeat_44
-        // line 368
+        .line 368
         ldsfld int16 _G::q
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldfld int16 @load::Icp
         ceq
         brfalse L_if_end_45
-        // line 369
+        .line 369
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldloc _F
@@ -2897,14 +2897,14 @@
         ldc.i4 18001
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @load::Icp
-        // line 370
+        .line 370
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldfld int16 @load::Icp
         ldc.i4 13655
         ceq
         brfalse L_if_end_46
-        // line 371
+        .line 371
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldsfld valuetype T_beta STRING_86    // " integer table overflow  "
@@ -2914,7 +2914,7 @@
     L_if_end_45:
         br L_if_end_43
     L_else_42:
-        // line 373
+        .line 373
         ldloc _F
         ldfld int32 @load_assemble::i
         dup
@@ -2928,28 +2928,28 @@
         ldloc $tmpSwitchValue7
         ldc.i4 114 // 'r'
         bne.un L_check_case_47
-        // line 376
+        .line 376
         ldc.i4 8
         dup
         ldc.i4 0
         ldc.i4 127
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int8 _G::Op
-        // line 376
+        .line 376
         ldc.i4 2
         dup
         ldc.i4 0
         ldc.i4 15
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int8 _G::p
-        // line 377
+        .line 377
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldloc _F
         ldflda float64 @load_assemble::r
         call instance void [lpcRuntime]LPC.File::Read(float64*)
         pop
-        // line 378
+        .line 378
         ldsflda valuetype T_array_98 _G::Store
         ldloc _F
         ldfld class @load @load_assemble::_slink
@@ -2958,16 +2958,16 @@
         ldloc _F
         ldfld float64 @load_assemble::r
         stfld float64 T_record_97::Vr
-        // line 378
+        .line 378
         ldc.i4 13655
         dup
         ldc.i4 -26143
         ldc.i4 26143
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int16 _G::q
-        // line 379
+        .line 379
     L_repeat_48:
-        // line 379
+        .line 379
         ldsfld int16 _G::q
         ldc.i4 1
         add
@@ -2984,14 +2984,14 @@
         ldfld float64 @load_assemble::r
         ceq
         brfalse L_repeat_48
-        // line 380
+        .line 380
         ldsfld int16 _G::q
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldfld int16 @load::Rcp
         ceq
         brfalse L_if_end_49
-        // line 381
+        .line 381
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldloc _F
@@ -3004,14 +3004,14 @@
         ldc.i4 18001
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @load::Rcp
-        // line 382
+        .line 382
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldfld int16 @load::Rcp
         ldc.i4 13660
         ceq
         brfalse L_if_end_50
-        // line 383
+        .line 383
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldsfld valuetype T_beta STRING_87    // " real table overflow     "
@@ -3030,14 +3030,14 @@
         ldloc $tmpSwitchValue7
         ldc.i4 98 // 'b'
         bne.un L_check_case_52
-        // line 389
+        .line 389
         ldc.i4 3
         dup
         ldc.i4 0
         ldc.i4 15
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int8 _G::p
-        // line 389
+        .line 389
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldsflda int16 _G::q
@@ -3050,16 +3050,16 @@
         ldloc $tmpSwitchValue7
         ldc.i4 99 // 'c'
         bne.un L_check_case_53
-        // line 391
+        .line 391
         ldc.i4 6
         dup
         ldc.i4 0
         ldc.i4 15
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int8 _G::p
-        // line 392
+        .line 392
     L_repeat_54:
-        // line 392
+        .line 392
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldloc _F
@@ -3078,7 +3078,7 @@
         ldc.i4.0
         ceq
         brfalse L_repeat_54
-        // line 393
+        .line 393
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldfld uint8 @load::Ch
@@ -3087,13 +3087,13 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_55
-        // line 394
+        .line 394
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldsfld valuetype T_beta STRING_88    // " illegal character       "
         call instance void @load::Errorl(valuetype T_beta String)
     L_if_end_55:
-        // line 395
+        .line 395
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldloc _F
@@ -3103,7 +3103,7 @@
         ldc.i4 255
         call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
         pop
-        // line 395
+        .line 395
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldfld uint8 @load::Ch
@@ -3112,7 +3112,7 @@
         ldc.i4 26143
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int16 _G::q
-        // line 396
+        .line 396
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldloc _F
@@ -3122,7 +3122,7 @@
         ldc.i4 255
         call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
         pop
-        // line 397
+        .line 397
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldfld uint8 @load::Ch
@@ -3131,7 +3131,7 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_56
-        // line 398
+        .line 398
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldsfld valuetype T_beta STRING_88    // " illegal character       "
@@ -3143,21 +3143,21 @@
         ldloc $tmpSwitchValue7
         ldc.i4 40 // '('
         bne.un L_case_end_39
-        // line 400
+        .line 400
         ldc.i4 8
         dup
         ldc.i4 0
         ldc.i4 127
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int8 _G::Op
-        // line 400
+        .line 400
         ldc.i4 4
         dup
         ldc.i4 0
         ldc.i4 15
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int8 _G::p
-        // line 401
+        .line 401
         ldloc _F
         ldloc $tmpSetLiteral8
         dup
@@ -3166,7 +3166,7 @@
         call void _SetCheck(valuetype T_set_103 s, int32 min, int32 max)
         call valuetype T_settype _SetCastTo_T_settype(valuetype T_set_103 s)
         stfld valuetype T_settype @load_assemble::s
-        // line 401
+        .line 401
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldloc _F
@@ -3176,10 +3176,10 @@
         ldc.i4 255
         call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
         pop
-        // line 402
+        .line 402
         br L_while_test_58
     L_while_57:
-        // line 403
+        .line 403
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldloc _F
@@ -3195,7 +3195,7 @@
         ldc.i4 255
         call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
         pop
-        // line 403
+        .line 403
         ldloca $tmpSetLiteral9
         call instance void T_set_103::clear()
         ldloca $tmpSetLiteral9
@@ -3223,7 +3223,7 @@
         ldc.i4.0
         ceq
         brtrue L_while_57
-        // line 405
+        .line 405
         ldsflda valuetype T_array_98 _G::Store
         ldloc _F
         ldfld class @load @load_assemble::_slink
@@ -3232,16 +3232,16 @@
         ldloc _F
         ldfld valuetype T_settype @load_assemble::s
         stfld valuetype T_settype T_record_97::Vs
-        // line 405
+        .line 405
         ldc.i4 13660
         dup
         ldc.i4 -26143
         ldc.i4 26143
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int16 _G::q
-        // line 406
+        .line 406
     L_repeat_59:
-        // line 406
+        .line 406
         ldsfld int16 _G::q
         ldc.i4 1
         add
@@ -3258,14 +3258,14 @@
         ldfld valuetype T_settype @load_assemble::s
         call bool _SetEqual(valuetype T_settype a, valuetype T_settype b)
         brfalse L_repeat_59
-        // line 407
+        .line 407
         ldsfld int16 _G::q
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldfld int16 @load::Scp
         ceq
         brfalse L_if_end_60
-        // line 408
+        .line 408
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldloc _F
@@ -3278,14 +3278,14 @@
         ldc.i4 18001
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @load::Scp
-        // line 409
+        .line 409
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldfld int16 @load::Scp
         ldc.i4 13730
         ceq
         brfalse L_if_end_61
-        // line 410
+        .line 410
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldsfld valuetype T_beta STRING_89    // " set table overflow      "
@@ -3299,10 +3299,10 @@
         ldloc $tmpSwitchValue1
         ldc.i4 26
         bne.un L_check_case_62
-        // line 416
+        .line 416
         ldloc _F
         call instance void @load_assemble::Typesymbol()
-        // line 417
+        .line 417
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldloc _F
@@ -3317,12 +3317,12 @@
         ldc.i4 2147483647
         call instance void [lpcRuntime]LPC.File::Read(int32*, int32, int32)
         pop
-        // line 418
+        .line 418
         ldsfld int8 _G::Op
         ldc.i4 95
         ceq
         brfalse L_else_63
-        // line 418
+        .line 418
         ldloc _F
         ldfld int32 @load_assemble::Lb
         dup
@@ -3332,7 +3332,7 @@
         stsfld int16 _G::q
         br L_if_end_64
     L_else_63:
-        // line 421
+        .line 421
         ldsflda valuetype T_array_98 _G::Store
         ldloc _F
         ldfld class @load @load_assemble::_slink
@@ -3343,7 +3343,7 @@
         ldloc _F
         ldfld int32 @load_assemble::Lb
         stfld int32 T_record_97::Vi
-        // line 421
+        .line 421
         ldsflda valuetype T_array_98 _G::Store
         ldloc _F
         ldfld class @load @load_assemble::_slink
@@ -3352,16 +3352,16 @@
         ldloc _F
         ldfld int32 @load_assemble::Ub
         stfld int32 T_record_97::Vi
-        // line 422
+        .line 422
         ldc.i4 13730
         dup
         ldc.i4 -26143
         ldc.i4 26143
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int16 _G::q
-        // line 423
+        .line 423
     L_repeat_65:
-        // line 423
+        .line 423
         ldsfld int16 _G::q
         ldc.i4 2
         add
@@ -3391,14 +3391,14 @@
         ceq
     L_AND_shortcut_66:
         brfalse L_repeat_65
-        // line 425
+        .line 425
         ldsfld int16 _G::q
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldfld int16 @load::Bcp
         ceq
         brfalse L_if_end_67
-        // line 426
+        .line 426
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldloc _F
@@ -3411,14 +3411,14 @@
         ldc.i4 18001
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @load::Bcp
-        // line 427
+        .line 427
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldfld int16 @load::Bcp
         ldc.i4 13820
         ceq
         brfalse L_if_end_68
-        // line 428
+        .line 428
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldsfld valuetype T_beta STRING_90    // " boundary table overflow "
@@ -3432,7 +3432,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 56
         bne.un L_check_case_69
-        // line 434
+        .line 434
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldfld int16 @load::Mcp
@@ -3443,13 +3443,13 @@
         ldc.i4.0
         ceq
         brfalse L_if_end_70
-        // line 435
+        .line 435
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldsfld valuetype T_beta STRING_91    // " multiple table overflow "
         call instance void @load::Errorl(valuetype T_beta String)
     L_if_end_70:
-        // line 436
+        .line 436
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldloc _F
@@ -3462,12 +3462,12 @@
         ldc.i4 18001
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stfld int16 @load::Mcp
-        // line 437
+        .line 437
         ldloc _F
         ldfld class @load @load_assemble::_slink
         ldfld int16 @load::Mcp
         stsfld int16 _G::q
-        // line 438
+        .line 438
         ldc.i4 15
         stloc $tmpEndValue10
         ldc.i4 0
@@ -3479,7 +3479,7 @@
         ldloc $tmpIndex11
         stfld int32 @load_assemble::i
     L_for_loop_71:
-        // line 439
+        .line 439
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         dup
         ldloc _F
@@ -3489,7 +3489,7 @@
         ldc.i4 255
         call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
         pop
-        // line 440
+        .line 440
         ldsflda valuetype T_array_98 _G::Store
         ldsfld int16 _G::q
         ldloc _F
@@ -3520,7 +3520,7 @@
         ldloc $tmpSwitchValue1
         ldc.i4 6
         bne.un L_check_case_73
-        // line 444
+        .line 444
         ldloc _F
         call instance void @load_assemble::Typesymbol()
         br L_case_end_4
@@ -3625,7 +3625,7 @@
         beq L_case_77
         br L_check_case_76
     L_case_77:
-        // line 450
+        .line 450
         br L_1
         br L_case_end_4
     L_check_case_76:
@@ -3634,12 +3634,12 @@
         bne.un L_case_end_4
         /* nop */
     L_case_end_4:
-        // line 458
+        .line 458
         ldsfld int16 _G::Pc
         ldc.i4.1
         and
         brfalse L_else_78
-        // line 459
+        .line 459
         ldsflda valuetype T_array_93 _G::Code
         ldsfld int16 _G::Pc
         ldc.i4 2
@@ -3647,7 +3647,7 @@
         call instance valuetype T_record_92& T_array_93::ldadr(int32)
         ldsfld int8 _G::Op
         stfld int8 T_record_92::Op2
-        // line 459
+        .line 459
         ldsflda valuetype T_array_93 _G::Code
         ldsfld int16 _G::Pc
         ldc.i4 2
@@ -3655,7 +3655,7 @@
         call instance valuetype T_record_92& T_array_93::ldadr(int32)
         ldsfld int8 _G::p
         stfld int8 T_record_92::P2
-        // line 459
+        .line 459
         ldsflda valuetype T_array_93 _G::Code
         ldsfld int16 _G::Pc
         ldc.i4 2
@@ -3665,7 +3665,7 @@
         stfld int16 T_record_92::Q2
         br L_if_end_79
     L_else_78:
-        // line 461
+        .line 461
         ldsflda valuetype T_array_93 _G::Code
         ldsfld int16 _G::Pc
         ldc.i4 2
@@ -3673,7 +3673,7 @@
         call instance valuetype T_record_92& T_array_93::ldadr(int32)
         ldsfld int8 _G::Op
         stfld int8 T_record_92::Op1
-        // line 461
+        .line 461
         ldsflda valuetype T_array_93 _G::Code
         ldsfld int16 _G::Pc
         ldc.i4 2
@@ -3681,7 +3681,7 @@
         call instance valuetype T_record_92& T_array_93::ldadr(int32)
         ldsfld int8 _G::p
         stfld int8 T_record_92::P1
-        // line 461
+        .line 461
         ldsflda valuetype T_array_93 _G::Code
         ldsfld int16 _G::Pc
         ldc.i4 2
@@ -3690,7 +3690,7 @@
         ldsfld int16 _G::q
         stfld int16 T_record_92::Q1
     L_if_end_79:
-        // line 463
+        .line 463
         ldsfld int16 _G::Pc
         ldc.i4 1
         add
@@ -3699,7 +3699,7 @@
         ldc.i4 17500
         call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
         stsfld int16 _G::Pc
-        // line 464
+        .line 464
     L_1:
         ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
         call instance void [lpcRuntime]LPC.File::ReadLn()
@@ -3711,7 +3711,7 @@
 }
 
 
-// line 479
+.line 479
 //================================================================================
 // scope: pmd_pt (level : 3)
 
@@ -3729,7 +3729,7 @@
 }
 
 
-// line 476
+.line 476
 //================================================================================
 // scope: pmd (level : 2)
 
@@ -3746,7 +3746,7 @@
         ret
     }
 
-// line 479
+.line 479
 
     .method public
     void Pt()
@@ -3763,7 +3763,7 @@
         stfld class @pmd @pmd_pt::_slink
     
     L_Entry:
-        // line 480
+        .line 480
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldc.i4 6
@@ -3773,7 +3773,7 @@
         ldfld int32 @pmd::s
         call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
         pop
-        // line 481
+        .line 481
         ldsflda valuetype T_array_98 _G::Store
         ldloc _F
         ldfld class @pmd @pmd_pt::_slink
@@ -3788,7 +3788,7 @@
         ldc.i4 2147483647
         clt
         brfalse L_else_2
-        // line 481
+        .line 481
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldsflda valuetype T_array_98 _G::Store
@@ -3801,14 +3801,14 @@
         pop
         br L_if_end_3
     L_else_2:
-        // line 482
+        .line 482
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         dup
         ldstr "too big "
         call instance void [lpcRuntime]LPC.File::Write(string)
         pop
     L_if_end_3:
-        // line 483
+        .line 483
         ldloc _F
         ldfld class @pmd @pmd_pt::_slink
         ldloc _F
@@ -3817,7 +3817,7 @@
         ldc.i4 1
         sub
         stfld int32 @pmd::s
-        // line 484
+        .line 484
         ldloc _F
         ldfld class @pmd @pmd_pt::_slink
         ldloc _F
@@ -3826,17 +3826,17 @@
         ldc.i4 1
         add
         stfld int32 @pmd::i
-        // line 485
+        .line 485
         ldloc _F
         ldfld class @pmd @pmd_pt::_slink
         ldfld int32 @pmd::i
         ldc.i4 4
         ceq
         brfalse L_if_end_4
-        // line 486
+        .line 486
         ldsflda valuetype [lpcRuntime]LPC.File _G::Output
         call instance void [lpcRuntime]LPC.File::WriteLn()
-        // line 486
+        .line 486
         ldloc _F
         ldfld class @pmd @pmd_pt::_slink
         ldc.i4 0
@@ -3850,7 +3850,7 @@
 }
 
 
-// line 500
+.line 500
 //================================================================================
 // scope: errori (level : 2)
 
@@ -3868,7 +3868,7 @@
 }
 
 
-// line 505
+.line 505
 //================================================================================
 // scope: base (level : 2)
 
@@ -3890,7 +3890,7 @@
 }
 
 
-// line 514
+.line 514
 //================================================================================
 // scope: compare (level : 2)
 
@@ -3905,7 +3905,7 @@
 }
 
 
-// line 530
+.line 530
 //================================================================================
 // scope: callsp_readi (level : 3)
 
@@ -3929,7 +3929,7 @@
 }
 
 
-// line 538
+.line 538
 //================================================================================
 // scope: callsp_readr (level : 3)
 
@@ -3953,7 +3953,7 @@
 }
 
 
-// line 546
+.line 546
 //================================================================================
 // scope: callsp_readc (level : 3)
 
@@ -3978,7 +3978,7 @@
 }
 
 
-// line 556
+.line 556
 //================================================================================
 // scope: callsp_writestr (level : 3)
 
@@ -4005,7 +4005,7 @@
 }
 
 
-// line 568
+.line 568
 //================================================================================
 // scope: callsp_getfile (level : 3)
 
@@ -4029,7 +4029,7 @@
 }
 
 
-// line 575
+.line 575
 //================================================================================
 // scope: callsp_putfile (level : 3)
 
@@ -4053,7 +4053,7 @@
 }
 
 
-// line 526
+.line 526
 //================================================================================
 // scope: callsp (level : 2)
 
@@ -4069,7 +4069,7 @@
         ret
     }
 
-// line 530
+.line 530
 
     .method public
     void Readi(valuetype [lpcRuntime]LPC.File& f)
@@ -4094,7 +4094,7 @@
         stfld valuetype [lpcRuntime]LPC.File* @callsp_readi::f
     
     L_Entry:
-        // line 532
+        .line 532
         ldloc _F
         ldsflda valuetype T_array_98 _G::Store
         ldsfld int16 _G::Sp
@@ -4103,7 +4103,7 @@
         call instance valuetype T_record_97& T_array_98::ldadr(int32)
         ldfld int16 T_record_97::Va
         stfld int16 @callsp_readi::Ad
-        // line 533
+        .line 533
         ldloc _F
         ldfld valuetype [lpcRuntime]LPC.File* @callsp_readi::f
         dup
@@ -4116,7 +4116,7 @@
         ldc.i4 2147483647
         call instance void [lpcRuntime]LPC.File::Read(int32*, int32, int32)
         pop
-        // line 534
+        .line 534
         ldsflda valuetype T_array_98 _G::Store
         ldsflda valuetype T_array_98 _G::Store
         ldsfld int16 _G::Sp
@@ -4130,7 +4130,7 @@
         ldflda uint8 [lpcRuntime]LPC.File::FileVar
         ldobj uint8
         stfld uint8 T_record_97::Vc
-        // line 535
+        .line 535
         ldsfld int16 _G::Sp
         ldc.i4 2
         sub
@@ -4144,7 +4144,7 @@
         ret
     }
 
-// line 538
+.line 538
 
     .method public
     void Readr(valuetype [lpcRuntime]LPC.File& f)
@@ -4169,7 +4169,7 @@
         stfld valuetype [lpcRuntime]LPC.File* @callsp_readr::f
     
     L_Entry:
-        // line 540
+        .line 540
         ldloc _F
         ldsflda valuetype T_array_98 _G::Store
         ldsfld int16 _G::Sp
@@ -4178,7 +4178,7 @@
         call instance valuetype T_record_97& T_array_98::ldadr(int32)
         ldfld int16 T_record_97::Va
         stfld int16 @callsp_readr::Ad
-        // line 541
+        .line 541
         ldloc _F
         ldfld valuetype [lpcRuntime]LPC.File* @callsp_readr::f
         dup
@@ -4189,7 +4189,7 @@
         ldflda float64 T_record_97::Vr
         call instance void [lpcRuntime]LPC.File::Read(float64*)
         pop
-        // line 542
+        .line 542
         ldsflda valuetype T_array_98 _G::Store
         ldsflda valuetype T_array_98 _G::Store
         ldsfld int16 _G::Sp
@@ -4203,7 +4203,7 @@
         ldflda uint8 [lpcRuntime]LPC.File::FileVar
         ldobj uint8
         stfld uint8 T_record_97::Vc
-        // line 543
+        .line 543
         ldsfld int16 _G::Sp
         ldc.i4 2
         sub
@@ -4217,7 +4217,7 @@
         ret
     }
 
-// line 546
+.line 546
 
     .method public
     void Readc(valuetype [lpcRuntime]LPC.File& f)
@@ -4242,7 +4242,7 @@
         stfld valuetype [lpcRuntime]LPC.File* @callsp_readc::f
     
     L_Entry:
-        // line 548
+        .line 548
         ldloc _F
         ldfld valuetype [lpcRuntime]LPC.File* @callsp_readc::f
         dup
@@ -4252,7 +4252,7 @@
         ldc.i4 255
         call instance void [lpcRuntime]LPC.File::ReadChar(uint8*, int32, int32)
         pop
-        // line 549
+        .line 549
         ldloc _F
         ldsflda valuetype T_array_98 _G::Store
         ldsfld int16 _G::Sp
@@ -4261,7 +4261,7 @@
         call instance valuetype T_record_97& T_array_98::ldadr(int32)
         ldfld int16 T_record_97::Va
         stfld int16 @callsp_readc::Ad
-        // line 550
+        .line 550
         ldsflda valuetype T_array_98 _G::Store
         ldloc _F
         ldfld int16 @callsp_readc::Ad
@@ -4269,7 +4269,7 @@
         ldloc _F
         ldfld uint8 @callsp_readc::c
         stfld uint8 T_record_97::Vc
-        // line 551
+        .line 551
         ldsflda valuetype T_array_98 _G::Store
         ldsflda valuetype T_array_98 _G::Store
         ldsfld int16 _G::Sp
@@ -4283,7 +4283,7 @@
         ldflda uint8 [lpcRuntime]LPC.File::FileVar
         ldobj uint8
         stfld uint8 T_record_97::Vc
-        // line 552
+        .line 552
         ldsflda valuetype T_array_98 _G::Store
         ldsflda valuetype T_array_98 _G::Store
         ldsfld int16 _G::Sp
@@ -4297,7 +4297,7 @@
         ldflda uint8 [lpcRuntime]LPC.File::FileVar
         ldobj uint8
         stfld int32 T_record_97::Vi
-        // line 553
+        .line 553
         ldsfld int16 _G::Sp
         ldc.i4 2
         sub
@@ -4311,7 +4311,7 @@
         ret
     }
 
-// line 556
+.line 556
 
     .method public
     void Writestr(valuetype [lpcRuntime]LPC.File& f)
@@ -4343,7 +4343,7 @@
         stfld valuetype [lpcRuntime]LPC.File* @callsp_writestr::f
     
     L_Entry:
-        // line 559
+        .line 559
         ldloc _F
         ldsflda valuetype T_array_98 _G::Store
         ldsfld int16 _G::Sp
@@ -4352,7 +4352,7 @@
         call instance valuetype T_record_97& T_array_98::ldadr(int32)
         ldfld int16 T_record_97::Va
         stfld int16 @callsp_writestr::Ad
-        // line 560
+        .line 560
         ldloc _F
         ldsflda valuetype T_array_98 _G::Store
         ldsfld int16 _G::Sp
@@ -4361,7 +4361,7 @@
         call instance valuetype T_record_97& T_array_98::ldadr(int32)
         ldfld int32 T_record_97::Vi
         stfld int32 @callsp_writestr::k
-        // line 560
+        .line 560
         ldloc _F
         ldsflda valuetype T_array_98 _G::Store
         ldsfld int16 _G::Sp
@@ -4370,14 +4370,14 @@
         call instance valuetype T_record_97& T_array_98::ldadr(int32)
         ldfld int32 T_record_97::Vi
         stfld int32 @callsp_writestr::j
-        // line 562
+        .line 562
         ldloc _F
         ldfld int32 @callsp_writestr::k
         ldloc _F
         ldfld int32 @callsp_writestr::j
         cgt
         brfalse L_else_1
-        // line 562
+        .line 562
         ldloc _F
         ldfld int32 @callsp_writestr::k
         ldloc _F
@@ -4393,7 +4393,7 @@
         ldloc $tmpIndex2
         stfld int32 @callsp_writestr::i
     L_for_loop_3:
-        // line 562
+        .line 562
         ldloc _F
         ldfld valuetype [lpcRuntime]LPC.File* @callsp_writestr::f
         dup
@@ -4416,13 +4416,13 @@
         pop
         br L_if_end_2
     L_else_1:
-        // line 563
+        .line 563
         ldloc _F
         ldloc _F
         ldfld int32 @callsp_writestr::k
         stfld int32 @callsp_writestr::j
     L_if_end_2:
-        // line 564
+        .line 564
         ldloc _F
         ldfld int32 @callsp_writestr::j
         ldc.i4 1
@@ -4437,7 +4437,7 @@
         ldloc $tmpIndex5
         stfld int32 @callsp_writestr::i
     L_for_loop_5:
-        // line 564
+        .line 564
         ldloc _F
         ldfld valuetype [lpcRuntime]LPC.File* @callsp_writestr::f
         dup
@@ -4465,7 +4465,7 @@
         br L_for_loop_5
     L_for_end_6:
         pop
-        // line 565
+        .line 565
         ldsfld int16 _G::Sp
         ldc.i4 4
         sub
@@ -4479,7 +4479,7 @@
         ret
     }
 
-// line 568
+.line 568
 
     .method public
     void Getfile(valuetype [lpcRuntime]LPC.File& f)
@@ -4504,18 +4504,18 @@
         stfld valuetype [lpcRuntime]LPC.File* @callsp_getfile::f
     
     L_Entry:
-        // line 570
+        .line 570
         ldloc _F
         ldsflda valuetype T_array_98 _G::Store
         ldsfld int16 _G::Sp
         call instance valuetype T_record_97& T_array_98::ldadr(int32)
         ldfld int16 T_record_97::Va
         stfld int16 @callsp_getfile::Ad
-        // line 571
+        .line 571
         ldloc _F
         ldfld valuetype [lpcRuntime]LPC.File* @callsp_getfile::f
         call instance void [lpcRuntime]LPC.File::Get()
-        // line 571
+        .line 571
         ldsflda valuetype T_array_98 _G::Store
         ldloc _F
         ldfld int16 @callsp_getfile::Ad
@@ -4527,7 +4527,7 @@
         ldflda uint8 [lpcRuntime]LPC.File::FileVar
         ldobj uint8
         stfld uint8 T_record_97::Vc
-        // line 572
+        .line 572
         ldsfld int16 _G::Sp
         ldc.i4 1
         sub
@@ -4541,7 +4541,7 @@
         ret
     }
 
-// line 575
+.line 575
 
     .method public
     void Putfile(valuetype [lpcRuntime]LPC.File& f)
@@ -4566,14 +4566,14 @@
         stfld valuetype [lpcRuntime]LPC.File* @callsp_putfile::f
     
     L_Entry:
-        // line 577
+        .line 577
         ldloc _F
         ldsflda valuetype T_array_98 _G::Store
         ldsfld int16 _G::Sp
         call instance valuetype T_record_97& T_array_98::ldadr(int32)
         ldfld int16 T_record_97::Va
         stfld int16 @callsp_putfile::Ad
-        // line 578
+        .line 578
         ldloc _F
         ldfld valuetype [lpcRuntime]LPC.File* @callsp_putfile::f
         ldflda uint8 [lpcRuntime]LPC.File::FileVar
@@ -4583,11 +4583,11 @@
         call instance valuetype T_record_97& T_array_98::ldadr(int32)
         ldfld uint8 T_record_97::Vc
         stobj uint8
-        // line 578
+        .line 578
         ldloc _F
         ldfld valuetype [lpcRuntime]LPC.File* @callsp_putfile::f
         call instance void [lpcRuntime]LPC.File::Put()
-        // line 579
+        .line 579
         ldsfld int16 _G::Sp
         ldc.i4 1
         sub
@@ -4604,7 +4604,7 @@
 }
 
 
-// line 6
+.line 6
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -4640,7 +4640,7 @@
     .field public static valuetype T_array_98 Store
 }
 
-// line 124
+.line 124
 
 .method static
 void Load()
@@ -4653,20 +4653,20 @@ void Load()
     stloc _F
 
 L_Entry:
-    // line 468
+    .line 468
     ldloc _F
     call instance void @load::Init()
-    // line 469
+    .line 469
     ldloc _F
     call instance void @load::Generate()
-    // line 470
+    .line 470
     ldc.i4 0
     dup
     ldc.i4 0
     ldc.i4 17500
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Pc
-    // line 471
+    .line 471
     ldloc _F
     call instance void @load::Generate()
     /* nop */
@@ -4675,7 +4675,7 @@ L_Epilogue:
     ret
 }
 
-// line 476
+.line 476
 
 .method static
 void Pmd()
@@ -4688,7 +4688,7 @@ void Pmd()
     stloc _F
 
 L_Entry:
-    // line 490
+    .line 490
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr " pc ="
@@ -4733,27 +4733,27 @@ L_Entry:
     ldsfld int16 _G::Np
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
-    // line 492
+    .line 492
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 492
+    .line 492
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldstr "--------------------------------------"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 494
+    .line 494
     ldloc _F
     ldsfld int16 _G::Sp
     stfld int32 @pmd::s
-    // line 494
+    .line 494
     ldloc _F
     ldc.i4 0
     stfld int32 @pmd::i
-    // line 495
+    .line 495
     br L_while_test_2
 L_while_1:
-    // line 495
+    .line 495
     ldloc _F
     call instance void @pmd::Pt()
 L_while_test_2:
@@ -4764,14 +4764,14 @@ L_while_test_2:
     ldc.i4.0
     ceq
     brtrue L_while_1
-    // line 496
+    .line 496
     ldloc _F
     ldc.i4 13650
     stfld int32 @pmd::s
-    // line 497
+    .line 497
     br L_while_test_4
 L_while_3:
-    // line 497
+    .line 497
     ldloc _F
     call instance void @pmd::Pt()
 L_while_test_4:
@@ -4788,7 +4788,7 @@ L_Epilogue:
     ret
 }
 
-// line 500
+.line 500
 
 .method static
 void Errori(valuetype T_beta String)
@@ -4805,10 +4805,10 @@ void Errori(valuetype T_beta String)
     stfld valuetype T_beta @errori::String
 
 L_Entry:
-    // line 501
+    .line 501
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 501
+    .line 501
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldloc _F
@@ -4816,9 +4816,9 @@ L_Entry:
     call string T_beta::arrayToString(valuetype T_beta)
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 502
+    .line 502
     call void Pmd()
-    // line 502
+    .line 502
     ldc.i4 1
     newobj instance void [lpcRuntime]LPC.NonLocalGoto::.ctor(int32)
     throw
@@ -4827,7 +4827,7 @@ L_Epilogue:
     ret
 }
 
-// line 505
+.line 505
 
 .method static
 int16 Base(int32 Ld)
@@ -4844,14 +4844,14 @@ int16 Base(int32 Ld)
     stfld int32 @base::Ld
 
 L_Entry:
-    // line 507
+    .line 507
     ldloc _F
     ldsfld int16 _G::Mp
     stfld int16 @base::Ad
-    // line 508
+    .line 508
     br L_while_test_2
 L_while_1:
-    // line 509
+    .line 509
     ldloc _F
     ldsflda valuetype T_array_98 _G::Store
     ldloc _F
@@ -4865,7 +4865,7 @@ L_while_1:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stfld int16 @base::Ad
-    // line 509
+    .line 509
     ldloc _F
     ldloc _F
     ldfld int32 @base::Ld
@@ -4878,7 +4878,7 @@ L_while_test_2:
     ldc.i4 0
     cgt
     brtrue L_while_1
-    // line 511
+    .line 511
     ldloc _F
     ldloc _F
     ldfld int16 @base::Ad
@@ -4890,7 +4890,7 @@ L_Epilogue:
     ret
 }
 
-// line 514
+.line 514
 
 .method static
 void Compare()
@@ -4903,13 +4903,13 @@ void Compare()
     stloc _F
 
 L_Entry:
-    // line 517
+    .line 517
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
     ldfld int16 T_record_97::Va
     stsfld int32 _G::I1
-    // line 518
+    .line 518
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     ldc.i4 1
@@ -4917,16 +4917,16 @@ L_Entry:
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
     ldfld int16 T_record_97::Va
     stsfld int32 _G::I2
-    // line 519
+    .line 519
     ldc.i4 0
     stsfld int32 _G::i
-    // line 519
+    .line 519
     ldc.i4 1 // (true)
     stsfld bool _G::b
-    // line 520
+    .line 520
     br L_while_test_2
 L_while_1:
-    // line 521
+    .line 521
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int32 _G::I1
     ldsfld int32 _G::i
@@ -4941,14 +4941,14 @@ L_while_1:
     ldfld int32 T_record_97::Vi
     ceq
     brfalse L_else_3
-    // line 521
+    .line 521
     ldsfld int32 _G::i
     ldc.i4 1
     add
     stsfld int32 _G::i
     br L_if_end_4
 L_else_3:
-    // line 522
+    .line 522
     ldc.i4 0 // (false)
     stsfld bool _G::b
 L_if_end_4:
@@ -4969,7 +4969,7 @@ L_Epilogue:
     ret
 }
 
-// line 526
+.line 526
 
 .method static
 void Callsp()
@@ -4996,13 +4996,13 @@ void Callsp()
     stloc _F
 
 L_Entry:
-    // line 583
+    .line 583
     ldsfld int16 _G::q
     stloc $tmpSwitchValue1
     ldloc $tmpSwitchValue1
     ldc.i4 0
     bne.un L_check_case_2
-    // line 584
+    .line 584
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -5011,7 +5011,7 @@ L_Entry:
     ldloc $tmpSwitchValue2
     ldc.i4 5
     bne.un L_check_case_4
-    // line 585
+    .line 585
     ldloc _F
     ldsflda valuetype [lpcRuntime]LPC.File _G::Input
     call instance void @callsp::Getfile(valuetype [lpcRuntime]LPC.File& f)
@@ -5020,7 +5020,7 @@ L_check_case_4:
     ldloc $tmpSwitchValue2
     ldc.i4 6
     bne.un L_check_case_5
-    // line 586
+    .line 586
     ldsfld valuetype T_beta STRING_92    // " get on output file      "
     call void Errori(valuetype T_beta String)
     br L_case_end_3
@@ -5028,7 +5028,7 @@ L_check_case_5:
     ldloc $tmpSwitchValue2
     ldc.i4 7
     bne.un L_check_case_6
-    // line 587
+    .line 587
     ldloc _F
     ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
     call instance void @callsp::Getfile(valuetype [lpcRuntime]LPC.File& f)
@@ -5037,7 +5037,7 @@ L_check_case_6:
     ldloc $tmpSwitchValue2
     ldc.i4 8
     bne.un L_case_end_3
-    // line 588
+    .line 588
     ldsfld valuetype T_beta STRING_93    // " get on prr file         "
     call void Errori(valuetype T_beta String)
 L_case_end_3:
@@ -5046,7 +5046,7 @@ L_check_case_2:
     ldloc $tmpSwitchValue1
     ldc.i4 1
     bne.un L_check_case_7
-    // line 590
+    .line 590
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -5055,7 +5055,7 @@ L_check_case_2:
     ldloc $tmpSwitchValue3
     ldc.i4 5
     bne.un L_check_case_9
-    // line 591
+    .line 591
     ldsfld valuetype T_beta STRING_94    // " put on read file        "
     call void Errori(valuetype T_beta String)
     br L_case_end_8
@@ -5063,7 +5063,7 @@ L_check_case_9:
     ldloc $tmpSwitchValue3
     ldc.i4 6
     bne.un L_check_case_10
-    // line 592
+    .line 592
     ldloc _F
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void @callsp::Putfile(valuetype [lpcRuntime]LPC.File& f)
@@ -5072,7 +5072,7 @@ L_check_case_10:
     ldloc $tmpSwitchValue3
     ldc.i4 7
     bne.un L_check_case_11
-    // line 593
+    .line 593
     ldsfld valuetype T_beta STRING_95    // " put on prd file         "
     call void Errori(valuetype T_beta String)
     br L_case_end_8
@@ -5080,7 +5080,7 @@ L_check_case_11:
     ldloc $tmpSwitchValue3
     ldc.i4 8
     bne.un L_case_end_8
-    // line 594
+    .line 594
     ldloc _F
     ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
     call instance void @callsp::Putfile(valuetype [lpcRuntime]LPC.File& f)
@@ -5090,13 +5090,13 @@ L_check_case_7:
     ldloc $tmpSwitchValue1
     ldc.i4 2
     bne.un L_check_case_12
-    // line 598
+    .line 598
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
     ldfld int16 T_record_97::Va
     stsfld int16 _G::Np
-    // line 598
+    .line 598
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -5110,7 +5110,7 @@ L_check_case_12:
     ldloc $tmpSwitchValue1
     ldc.i4 3
     bne.un L_check_case_13
-    // line 600
+    .line 600
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -5119,10 +5119,10 @@ L_check_case_12:
     ldloc $tmpSwitchValue4
     ldc.i4 5
     bne.un L_check_case_15
-    // line 601
+    .line 601
     ldsflda valuetype [lpcRuntime]LPC.File _G::Input
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 602
+    .line 602
     ldsflda valuetype T_array_98 _G::Store
     ldc.i4 5
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -5137,7 +5137,7 @@ L_check_case_15:
     ldloc $tmpSwitchValue4
     ldc.i4 6
     bne.un L_check_case_16
-    // line 604
+    .line 604
     ldsfld valuetype T_beta STRING_96    // " readln on output file   "
     call void Errori(valuetype T_beta String)
     br L_case_end_14
@@ -5145,10 +5145,10 @@ L_check_case_16:
     ldloc $tmpSwitchValue4
     ldc.i4 7
     bne.un L_check_case_17
-    // line 605
+    .line 605
     ldsflda valuetype [lpcRuntime]LPC.File _G::Input
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 606
+    .line 606
     ldsflda valuetype T_array_98 _G::Store
     ldc.i4 5
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -5163,11 +5163,11 @@ L_check_case_17:
     ldloc $tmpSwitchValue4
     ldc.i4 8
     bne.un L_case_end_14
-    // line 608
+    .line 608
     ldsfld valuetype T_beta STRING_97    // " readln on prr file      "
     call void Errori(valuetype T_beta String)
 L_case_end_14:
-    // line 610
+    .line 610
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -5181,7 +5181,7 @@ L_check_case_13:
     ldloc $tmpSwitchValue1
     ldc.i4 4
     bne.un L_check_case_18
-    // line 612
+    .line 612
     ldsfld int16 _G::Np
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
@@ -5193,21 +5193,21 @@ L_check_case_13:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Ad
-    // line 614
+    .line 614
     ldsfld int16 _G::Ad
     ldsfld int16 _G::Ep
     cgt
     ldc.i4.0
     ceq
     brfalse L_if_end_19
-    // line 615
+    .line 615
     ldsfld valuetype T_beta STRING_98    // " store overflow          "
     call void Errori(valuetype T_beta String)
 L_if_end_19:
-    // line 616
+    .line 616
     ldsfld int16 _G::Ad
     stsfld int16 _G::Np
-    // line 616
+    .line 616
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     ldc.i4 1
@@ -5215,13 +5215,13 @@ L_if_end_19:
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
     ldfld int16 T_record_97::Va
     stsfld int16 _G::Ad
-    // line 617
+    .line 617
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Ad
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
     ldsfld int16 _G::Np
     stfld int16 T_record_97::Va
-    // line 618
+    .line 618
     ldsfld int16 _G::Sp
     ldc.i4 2
     sub
@@ -5235,7 +5235,7 @@ L_check_case_18:
     ldloc $tmpSwitchValue1
     ldc.i4 5
     bne.un L_check_case_20
-    // line 620
+    .line 620
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -5244,7 +5244,7 @@ L_check_case_18:
     ldloc $tmpSwitchValue5
     ldc.i4 5
     bne.un L_check_case_22
-    // line 621
+    .line 621
     ldsfld valuetype T_beta STRING_99    // " writeln on input file   "
     call void Errori(valuetype T_beta String)
     br L_case_end_21
@@ -5252,7 +5252,7 @@ L_check_case_22:
     ldloc $tmpSwitchValue5
     ldc.i4 6
     bne.un L_check_case_23
-    // line 622
+    .line 622
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void [lpcRuntime]LPC.File::WriteLn()
     br L_case_end_21
@@ -5260,7 +5260,7 @@ L_check_case_23:
     ldloc $tmpSwitchValue5
     ldc.i4 7
     bne.un L_check_case_24
-    // line 623
+    .line 623
     ldsfld valuetype T_beta STRING_100    // " writeln on prd file     "
     call void Errori(valuetype T_beta String)
     br L_case_end_21
@@ -5268,11 +5268,11 @@ L_check_case_24:
     ldloc $tmpSwitchValue5
     ldc.i4 8
     bne.un L_case_end_21
-    // line 624
+    .line 624
     ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
     call instance void [lpcRuntime]LPC.File::WriteLn()
 L_case_end_21:
-    // line 626
+    .line 626
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -5286,7 +5286,7 @@ L_check_case_20:
     ldloc $tmpSwitchValue1
     ldc.i4 6
     bne.un L_check_case_25
-    // line 628
+    .line 628
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -5295,7 +5295,7 @@ L_check_case_20:
     ldloc $tmpSwitchValue6
     ldc.i4 5
     bne.un L_check_case_27
-    // line 629
+    .line 629
     ldsfld valuetype T_beta STRING_101    // " write on input file     "
     call void Errori(valuetype T_beta String)
     br L_case_end_26
@@ -5303,7 +5303,7 @@ L_check_case_27:
     ldloc $tmpSwitchValue6
     ldc.i4 6
     bne.un L_check_case_28
-    // line 630
+    .line 630
     ldloc _F
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     call instance void @callsp::Writestr(valuetype [lpcRuntime]LPC.File& f)
@@ -5312,7 +5312,7 @@ L_check_case_28:
     ldloc $tmpSwitchValue6
     ldc.i4 7
     bne.un L_check_case_29
-    // line 631
+    .line 631
     ldsfld valuetype T_beta STRING_102    // " write on prd file       "
     call void Errori(valuetype T_beta String)
     br L_case_end_26
@@ -5320,7 +5320,7 @@ L_check_case_29:
     ldloc $tmpSwitchValue6
     ldc.i4 8
     bne.un L_case_end_26
-    // line 632
+    .line 632
     ldloc _F
     ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
     call instance void @callsp::Writestr(valuetype [lpcRuntime]LPC.File& f)
@@ -5330,7 +5330,7 @@ L_check_case_25:
     ldloc $tmpSwitchValue1
     ldc.i4 7
     bne.un L_check_case_30
-    // line 634
+    .line 634
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -5339,7 +5339,7 @@ L_check_case_25:
     ldloc $tmpSwitchValue7
     ldc.i4 5
     bne.un L_check_case_32
-    // line 635
+    .line 635
     ldloc _F
     ldsflda valuetype [lpcRuntime]LPC.File _G::Input
     call instance bool [lpcRuntime]LPC.File::Eoln()
@@ -5349,7 +5349,7 @@ L_check_case_32:
     ldloc $tmpSwitchValue7
     ldc.i4 6
     bne.un L_check_case_33
-    // line 636
+    .line 636
     ldsfld valuetype T_beta STRING_103    // " eoln output file        "
     call void Errori(valuetype T_beta String)
     br L_case_end_31
@@ -5357,7 +5357,7 @@ L_check_case_33:
     ldloc $tmpSwitchValue7
     ldc.i4 7
     bne.un L_check_case_34
-    // line 637
+    .line 637
     ldloc _F
     ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
     call instance bool [lpcRuntime]LPC.File::Eoln()
@@ -5367,11 +5367,11 @@ L_check_case_34:
     ldloc $tmpSwitchValue7
     ldc.i4 8
     bne.un L_case_end_31
-    // line 638
+    .line 638
     ldsfld valuetype T_beta STRING_104    // " eoln on prr file        "
     call void Errori(valuetype T_beta String)
 L_case_end_31:
-    // line 640
+    .line 640
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -5383,7 +5383,7 @@ L_check_case_30:
     ldloc $tmpSwitchValue1
     ldc.i4 8
     bne.un L_check_case_35
-    // line 642
+    .line 642
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -5392,7 +5392,7 @@ L_check_case_30:
     ldloc $tmpSwitchValue8
     ldc.i4 5
     bne.un L_check_case_37
-    // line 643
+    .line 643
     ldsfld valuetype T_beta STRING_101    // " write on input file     "
     call void Errori(valuetype T_beta String)
     br L_case_end_36
@@ -5400,7 +5400,7 @@ L_check_case_37:
     ldloc $tmpSwitchValue8
     ldc.i4 6
     bne.un L_check_case_38
-    // line 644
+    .line 644
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsflda valuetype T_array_98 _G::Store
@@ -5423,7 +5423,7 @@ L_check_case_38:
     ldloc $tmpSwitchValue8
     ldc.i4 7
     bne.un L_check_case_39
-    // line 646
+    .line 646
     ldsfld valuetype T_beta STRING_102    // " write on prd file       "
     call void Errori(valuetype T_beta String)
     br L_case_end_36
@@ -5431,7 +5431,7 @@ L_check_case_39:
     ldloc $tmpSwitchValue8
     ldc.i4 8
     bne.un L_case_end_36
-    // line 647
+    .line 647
     ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
     dup
     ldsflda valuetype T_array_98 _G::Store
@@ -5450,7 +5450,7 @@ L_check_case_39:
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, int32)
     pop
 L_case_end_36:
-    // line 650
+    .line 650
     ldsfld int16 _G::Sp
     ldc.i4 3
     sub
@@ -5464,7 +5464,7 @@ L_check_case_35:
     ldloc $tmpSwitchValue1
     ldc.i4 9
     bne.un L_check_case_40
-    // line 652
+    .line 652
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -5473,7 +5473,7 @@ L_check_case_35:
     ldloc $tmpSwitchValue9
     ldc.i4 5
     bne.un L_check_case_42
-    // line 653
+    .line 653
     ldsfld valuetype T_beta STRING_101    // " write on input file     "
     call void Errori(valuetype T_beta String)
     br L_case_end_41
@@ -5481,7 +5481,7 @@ L_check_case_42:
     ldloc $tmpSwitchValue9
     ldc.i4 6
     bne.un L_check_case_43
-    // line 654
+    .line 654
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsflda valuetype T_array_98 _G::Store
@@ -5504,7 +5504,7 @@ L_check_case_43:
     ldloc $tmpSwitchValue9
     ldc.i4 7
     bne.un L_check_case_44
-    // line 656
+    .line 656
     ldsfld valuetype T_beta STRING_102    // " write on prd file       "
     call void Errori(valuetype T_beta String)
     br L_case_end_41
@@ -5512,7 +5512,7 @@ L_check_case_44:
     ldloc $tmpSwitchValue9
     ldc.i4 8
     bne.un L_case_end_41
-    // line 657
+    .line 657
     ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
     dup
     ldsflda valuetype T_array_98 _G::Store
@@ -5531,7 +5531,7 @@ L_check_case_44:
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, float64)
     pop
 L_case_end_41:
-    // line 660
+    .line 660
     ldsfld int16 _G::Sp
     ldc.i4 3
     sub
@@ -5545,7 +5545,7 @@ L_check_case_40:
     ldloc $tmpSwitchValue1
     ldc.i4 10
     bne.un L_check_case_45
-    // line 662
+    .line 662
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -5554,7 +5554,7 @@ L_check_case_40:
     ldloc $tmpSwitchValue10
     ldc.i4 5
     bne.un L_check_case_47
-    // line 663
+    .line 663
     ldsfld valuetype T_beta STRING_101    // " write on input file     "
     call void Errori(valuetype T_beta String)
     br L_case_end_46
@@ -5562,7 +5562,7 @@ L_check_case_47:
     ldloc $tmpSwitchValue10
     ldc.i4 6
     bne.un L_check_case_48
-    // line 664
+    .line 664
     ldsflda valuetype [lpcRuntime]LPC.File _G::Output
     dup
     ldsflda valuetype T_array_98 _G::Store
@@ -5585,7 +5585,7 @@ L_check_case_48:
     ldloc $tmpSwitchValue10
     ldc.i4 7
     bne.un L_check_case_49
-    // line 666
+    .line 666
     ldsfld valuetype T_beta STRING_102    // " write on prd file       "
     call void Errori(valuetype T_beta String)
     br L_case_end_46
@@ -5593,7 +5593,7 @@ L_check_case_49:
     ldloc $tmpSwitchValue10
     ldc.i4 8
     bne.un L_case_end_46
-    // line 667
+    .line 667
     ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
     dup
     ldsflda valuetype T_array_98 _G::Store
@@ -5612,7 +5612,7 @@ L_check_case_49:
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, uint8)
     pop
 L_case_end_46:
-    // line 670
+    .line 670
     ldsfld int16 _G::Sp
     ldc.i4 3
     sub
@@ -5626,7 +5626,7 @@ L_check_case_45:
     ldloc $tmpSwitchValue1
     ldc.i4 11
     bne.un L_check_case_50
-    // line 672
+    .line 672
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -5635,7 +5635,7 @@ L_check_case_45:
     ldloc $tmpSwitchValue11
     ldc.i4 5
     bne.un L_check_case_52
-    // line 673
+    .line 673
     ldloc _F
     ldsflda valuetype [lpcRuntime]LPC.File _G::Input
     call instance void @callsp::Readi(valuetype [lpcRuntime]LPC.File& f)
@@ -5644,7 +5644,7 @@ L_check_case_52:
     ldloc $tmpSwitchValue11
     ldc.i4 6
     bne.un L_check_case_53
-    // line 674
+    .line 674
     ldsfld valuetype T_beta STRING_105    // " read on output file     "
     call void Errori(valuetype T_beta String)
     br L_case_end_51
@@ -5652,7 +5652,7 @@ L_check_case_53:
     ldloc $tmpSwitchValue11
     ldc.i4 7
     bne.un L_check_case_54
-    // line 675
+    .line 675
     ldloc _F
     ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
     call instance void @callsp::Readi(valuetype [lpcRuntime]LPC.File& f)
@@ -5661,7 +5661,7 @@ L_check_case_54:
     ldloc $tmpSwitchValue11
     ldc.i4 8
     bne.un L_case_end_51
-    // line 676
+    .line 676
     ldsfld valuetype T_beta STRING_106    // " read on prr file        "
     call void Errori(valuetype T_beta String)
 L_case_end_51:
@@ -5670,7 +5670,7 @@ L_check_case_50:
     ldloc $tmpSwitchValue1
     ldc.i4 12
     bne.un L_check_case_55
-    // line 678
+    .line 678
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -5679,7 +5679,7 @@ L_check_case_50:
     ldloc $tmpSwitchValue12
     ldc.i4 5
     bne.un L_check_case_57
-    // line 679
+    .line 679
     ldloc _F
     ldsflda valuetype [lpcRuntime]LPC.File _G::Input
     call instance void @callsp::Readr(valuetype [lpcRuntime]LPC.File& f)
@@ -5688,7 +5688,7 @@ L_check_case_57:
     ldloc $tmpSwitchValue12
     ldc.i4 6
     bne.un L_check_case_58
-    // line 680
+    .line 680
     ldsfld valuetype T_beta STRING_105    // " read on output file     "
     call void Errori(valuetype T_beta String)
     br L_case_end_56
@@ -5696,7 +5696,7 @@ L_check_case_58:
     ldloc $tmpSwitchValue12
     ldc.i4 7
     bne.un L_check_case_59
-    // line 681
+    .line 681
     ldloc _F
     ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
     call instance void @callsp::Readr(valuetype [lpcRuntime]LPC.File& f)
@@ -5705,7 +5705,7 @@ L_check_case_59:
     ldloc $tmpSwitchValue12
     ldc.i4 8
     bne.un L_case_end_56
-    // line 682
+    .line 682
     ldsfld valuetype T_beta STRING_106    // " read on prr file        "
     call void Errori(valuetype T_beta String)
 L_case_end_56:
@@ -5714,7 +5714,7 @@ L_check_case_55:
     ldloc $tmpSwitchValue1
     ldc.i4 13
     bne.un L_check_case_60
-    // line 684
+    .line 684
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -5723,7 +5723,7 @@ L_check_case_55:
     ldloc $tmpSwitchValue13
     ldc.i4 5
     bne.un L_check_case_62
-    // line 685
+    .line 685
     ldloc _F
     ldsflda valuetype [lpcRuntime]LPC.File _G::Input
     call instance void @callsp::Readc(valuetype [lpcRuntime]LPC.File& f)
@@ -5732,7 +5732,7 @@ L_check_case_62:
     ldloc $tmpSwitchValue13
     ldc.i4 6
     bne.un L_check_case_63
-    // line 686
+    .line 686
     ldsfld valuetype T_beta STRING_105    // " read on output file     "
     call void Errori(valuetype T_beta String)
     br L_case_end_61
@@ -5740,7 +5740,7 @@ L_check_case_63:
     ldloc $tmpSwitchValue13
     ldc.i4 7
     bne.un L_check_case_64
-    // line 687
+    .line 687
     ldloc _F
     ldsflda valuetype [lpcRuntime]LPC.File _G::Prd
     call instance void @callsp::Readc(valuetype [lpcRuntime]LPC.File& f)
@@ -5749,7 +5749,7 @@ L_check_case_64:
     ldloc $tmpSwitchValue13
     ldc.i4 8
     bne.un L_case_end_61
-    // line 688
+    .line 688
     ldsfld valuetype T_beta STRING_106    // " read on prr file        "
     call void Errori(valuetype T_beta String)
 L_case_end_61:
@@ -5758,7 +5758,7 @@ L_check_case_60:
     ldloc $tmpSwitchValue1
     ldc.i4 14
     bne.un L_check_case_65
-    // line 690
+    .line 690
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -5773,7 +5773,7 @@ L_check_case_65:
     ldloc $tmpSwitchValue1
     ldc.i4 15
     bne.un L_check_case_66
-    // line 691
+    .line 691
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -5788,7 +5788,7 @@ L_check_case_66:
     ldloc $tmpSwitchValue1
     ldc.i4 16
     bne.un L_check_case_67
-    // line 692
+    .line 692
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -5803,7 +5803,7 @@ L_check_case_67:
     ldloc $tmpSwitchValue1
     ldc.i4 17
     bne.un L_check_case_68
-    // line 693
+    .line 693
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -5818,7 +5818,7 @@ L_check_case_68:
     ldloc $tmpSwitchValue1
     ldc.i4 18
     bne.un L_check_case_69
-    // line 694
+    .line 694
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -5833,7 +5833,7 @@ L_check_case_69:
     ldloc $tmpSwitchValue1
     ldc.i4 19
     bne.un L_check_case_70
-    // line 695
+    .line 695
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -5848,19 +5848,19 @@ L_check_case_70:
     ldloc $tmpSwitchValue1
     ldc.i4 20
     bne.un L_case_end_1
-    // line 696
+    .line 696
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
     ldfld int16 T_record_97::Va
     stsfld int16 _G::Ad
-    // line 697
+    .line 697
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Ad
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
     ldsfld int16 _G::Np
     stfld int16 T_record_97::Va
-    // line 698
+    .line 698
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -5876,11 +5876,11 @@ L_Epilogue:
     ret
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 6
+.line 6
 
 .method static
 void _Program()
@@ -5920,19 +5920,19 @@ void _Program()
 L_Entry:
 .try
 {
-    // line 704
+    .line 704
     ldsflda valuetype [lpcRuntime]LPC.File _G::Prr
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 705
+    .line 705
     call void Load()
-    // line 707
+    .line 707
     ldc.i4 0
     dup
     ldc.i4 0
     ldc.i4 17500
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Pc
-    // line 707
+    .line 707
     ldc.i4 1
     neg
     dup
@@ -5940,14 +5940,14 @@ L_Entry:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 707
+    .line 707
     ldc.i4 0
     dup
     ldc.i4 -1
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Mp
-    // line 707
+    .line 707
     ldc.i4 13650 // maxstk 
     ldc.i4 1
     add
@@ -5956,14 +5956,14 @@ L_Entry:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Np
-    // line 707
+    .line 707
     ldc.i4 5
     dup
     ldc.i4 -1
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Ep
-    // line 708
+    .line 708
     ldsflda valuetype T_array_98 _G::Store
     ldc.i4 5 // inputadr 
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -5973,18 +5973,18 @@ L_Entry:
     ldflda uint8 [lpcRuntime]LPC.File::FileVar
     ldobj uint8
     stfld uint8 T_record_97::Vc
-    // line 710
+    .line 710
     ldc.i4 1 // (true)
     stsfld bool _G::Interpreting
-    // line 712
+    .line 712
     br L_while_test_2
 L_while_1:
-    // line 716
+    .line 716
     ldsfld int16 _G::Pc
     ldc.i4.1
     and
     brfalse L_else_3
-    // line 717
+    .line 717
     ldsflda valuetype T_array_93 _G::Code
     ldsfld int16 _G::Pc
     ldc.i4 2
@@ -5992,7 +5992,7 @@ L_while_1:
     call instance valuetype T_record_92& T_array_93::ldadr(int32)
     ldfld int8 T_record_92::Op2
     stsfld int8 _G::Op
-    // line 717
+    .line 717
     ldsflda valuetype T_array_93 _G::Code
     ldsfld int16 _G::Pc
     ldc.i4 2
@@ -6000,7 +6000,7 @@ L_while_1:
     call instance valuetype T_record_92& T_array_93::ldadr(int32)
     ldfld int8 T_record_92::P2
     stsfld int8 _G::p
-    // line 717
+    .line 717
     ldsflda valuetype T_array_93 _G::Code
     ldsfld int16 _G::Pc
     ldc.i4 2
@@ -6010,7 +6010,7 @@ L_while_1:
     stsfld int16 _G::q
     br L_if_end_4
 L_else_3:
-    // line 719
+    .line 719
     ldsflda valuetype T_array_93 _G::Code
     ldsfld int16 _G::Pc
     ldc.i4 2
@@ -6018,7 +6018,7 @@ L_else_3:
     call instance valuetype T_record_92& T_array_93::ldadr(int32)
     ldfld int8 T_record_92::Op1
     stsfld int8 _G::Op
-    // line 719
+    .line 719
     ldsflda valuetype T_array_93 _G::Code
     ldsfld int16 _G::Pc
     ldc.i4 2
@@ -6026,7 +6026,7 @@ L_else_3:
     call instance valuetype T_record_92& T_array_93::ldadr(int32)
     ldfld int8 T_record_92::P1
     stsfld int8 _G::p
-    // line 719
+    .line 719
     ldsflda valuetype T_array_93 _G::Code
     ldsfld int16 _G::Pc
     ldc.i4 2
@@ -6035,7 +6035,7 @@ L_else_3:
     ldfld int16 T_record_92::Q1
     stsfld int16 _G::q
 L_if_end_4:
-    // line 721
+    .line 721
     ldsfld int16 _G::Pc
     ldc.i4 1
     add
@@ -6044,7 +6044,7 @@ L_if_end_4:
     ldc.i4 17500
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Pc
-    // line 724
+    .line 724
     ldsfld int8 _G::Op
     stloc $tmpSwitchValue1
     ldloc $tmpSwitchValue1
@@ -6067,7 +6067,7 @@ L_if_end_4:
     beq L_case_7
     br L_check_case_6
 L_case_7:
-    // line 727
+    .line 727
     ldsfld int8 _G::p
     call int16 Base(int32 Ld)
     ldsfld int16 _G::q
@@ -6077,7 +6077,7 @@ L_case_7:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Ad
-    // line 728
+    .line 728
     ldsfld int16 _G::Sp
     ldc.i4 1
     add
@@ -6086,7 +6086,7 @@ L_case_7:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 729
+    .line 729
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6117,7 +6117,7 @@ L_check_case_6:
     beq L_case_9
     br L_check_case_8
 L_case_9:
-    // line 734
+    .line 734
     ldsfld int16 _G::Sp
     ldc.i4 1
     add
@@ -6126,7 +6126,7 @@ L_case_9:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 735
+    .line 735
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6157,7 +6157,7 @@ L_check_case_8:
     beq L_case_11
     br L_check_case_10
 L_case_11:
-    // line 739
+    .line 739
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int8 _G::p
     call int16 Base(int32 Ld)
@@ -6169,7 +6169,7 @@ L_case_11:
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
     ldobj valuetype T_record_97
     stobj valuetype T_record_97
-    // line 740
+    .line 740
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -6200,7 +6200,7 @@ L_check_case_10:
     beq L_case_13
     br L_check_case_12
 L_case_13:
-    // line 744
+    .line 744
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::q
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6209,7 +6209,7 @@ L_case_13:
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
     ldobj valuetype T_record_97
     stobj valuetype T_record_97
-    // line 745
+    .line 745
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -6223,7 +6223,7 @@ L_check_case_12:
     ldloc $tmpSwitchValue1
     ldc.i4 4
     bne.un L_check_case_14
-    // line 748
+    .line 748
     ldsfld int16 _G::Sp
     ldc.i4 1
     add
@@ -6232,7 +6232,7 @@ L_check_case_12:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 749
+    .line 749
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6250,7 +6250,7 @@ L_check_case_14:
     ldloc $tmpSwitchValue1
     ldc.i4 5
     bne.un L_check_case_15
-    // line 752
+    .line 752
     ldsfld int16 _G::Sp
     ldc.i4 1
     add
@@ -6259,7 +6259,7 @@ L_check_case_14:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 753
+    .line 753
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6291,7 +6291,7 @@ L_check_case_15:
     beq L_case_17
     br L_check_case_16
 L_case_17:
-    // line 758
+    .line 758
     ldsflda valuetype T_array_98 _G::Store
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
@@ -6305,7 +6305,7 @@ L_case_17:
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
     ldobj valuetype T_record_97
     stobj valuetype T_record_97
-    // line 759
+    .line 759
     ldsfld int16 _G::Sp
     ldc.i4 2
     sub
@@ -6320,7 +6320,7 @@ L_check_case_16:
     ldloc $tmpSwitchValue1
     ldc.i4 7
     bne.un L_check_case_18
-    // line 762
+    .line 762
     ldsfld int16 _G::Sp
     ldc.i4 1
     add
@@ -6329,12 +6329,12 @@ L_check_case_16:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 763
+    .line 763
     ldsfld int8 _G::p
     ldc.i4 1
     ceq
     brfalse L_else_19
-    // line 764
+    .line 764
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6343,12 +6343,12 @@ L_check_case_16:
     /* nop */
     br L_if_end_20
 L_else_19:
-    // line 766
+    .line 766
     ldsfld int8 _G::p
     ldc.i4 6
     ceq
     brfalse L_else_21
-    // line 766
+    .line 766
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6356,12 +6356,12 @@ L_else_19:
     stfld uint8 T_record_97::Vc
     br L_if_end_22
 L_else_21:
-    // line 768
+    .line 768
     ldsfld int8 _G::p
     ldc.i4 3
     ceq
     brfalse L_else_23
-    // line 768
+    .line 768
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6371,7 +6371,7 @@ L_else_21:
     stfld bool T_record_97::Vb
     br L_if_end_24
 L_else_23:
-    // line 769
+    .line 769
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6389,7 +6389,7 @@ L_check_case_18:
     ldloc $tmpSwitchValue1
     ldc.i4 8
     bne.un L_check_case_25
-    // line 772
+    .line 772
     ldsfld int16 _G::Sp
     ldc.i4 1
     add
@@ -6398,7 +6398,7 @@ L_check_case_18:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 773
+    .line 773
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6429,7 +6429,7 @@ L_check_case_25:
     beq L_case_27
     br L_check_case_26
 L_case_27:
-    // line 777
+    .line 777
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6441,7 +6441,7 @@ L_case_27:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Ad
-    // line 779
+    .line 779
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6472,7 +6472,7 @@ L_check_case_26:
     beq L_case_29
     br L_check_case_28
 L_case_29:
-    // line 783
+    .line 783
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6488,7 +6488,7 @@ L_check_case_28:
     ldloc $tmpSwitchValue1
     ldc.i4 11
     bne.un L_check_case_30
-    // line 789
+    .line 789
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     ldc.i4 2
@@ -6497,7 +6497,7 @@ L_check_case_28:
     ldsfld int8 _G::p
     call int16 Base(int32 Ld)
     stfld int32 T_record_97::Vm
-    // line 791
+    .line 791
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     ldc.i4 3
@@ -6505,7 +6505,7 @@ L_check_case_28:
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
     ldsfld int16 _G::Mp
     stfld int32 T_record_97::Vm
-    // line 793
+    .line 793
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     ldc.i4 4
@@ -6513,7 +6513,7 @@ L_check_case_28:
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
     ldsfld int16 _G::Ep
     stfld int32 T_record_97::Vm
-    // line 795
+    .line 795
     ldsfld int16 _G::Sp
     ldc.i4 5
     add
@@ -6527,7 +6527,7 @@ L_check_case_30:
     ldloc $tmpSwitchValue1
     ldc.i4 12
     bne.un L_check_case_31
-    // line 799
+    .line 799
     ldsfld int16 _G::Sp
     ldsfld int8 _G::p
     ldc.i4 4
@@ -6538,7 +6538,7 @@ L_check_case_30:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Mp
-    // line 800
+    .line 800
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Mp
     ldc.i4 4
@@ -6546,7 +6546,7 @@ L_check_case_30:
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
     ldsfld int16 _G::Pc
     stfld int32 T_record_97::Vm
-    // line 801
+    .line 801
     ldsfld int16 _G::q
     dup
     ldc.i4 0
@@ -6558,12 +6558,12 @@ L_check_case_31:
     ldloc $tmpSwitchValue1
     ldc.i4 13
     bne.un L_check_case_32
-    // line 804
+    .line 804
     ldsfld int8 _G::p
     ldc.i4 1
     ceq
     brfalse L_else_33
-    // line 805
+    .line 805
     ldsfld int16 _G::Mp
     ldsfld int16 _G::q
     add
@@ -6572,19 +6572,19 @@ L_check_case_31:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 806
+    .line 806
     ldsfld int16 _G::Sp
     ldsfld int16 _G::Np
     cgt
     brfalse L_if_end_35
-    // line 806
+    .line 806
     ldsfld valuetype T_beta STRING_98    // " store overflow          "
     call void Errori(valuetype T_beta String)
 L_if_end_35:
     /* nop */
     br L_if_end_34
 L_else_33:
-    // line 809
+    .line 809
     ldsfld int16 _G::Sp
     ldsfld int16 _G::q
     add
@@ -6593,12 +6593,12 @@ L_else_33:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Ep
-    // line 810
+    .line 810
     ldsfld int16 _G::Ep
     ldsfld int16 _G::Np
     cgt
     brfalse L_if_end_36
-    // line 810
+    .line 810
     ldsfld valuetype T_beta STRING_98    // " store overflow          "
     call void Errori(valuetype T_beta String)
 L_if_end_36:
@@ -6609,13 +6609,13 @@ L_check_case_32:
     ldloc $tmpSwitchValue1
     ldc.i4 14
     bne.un L_check_case_37
-    // line 814
+    .line 814
     ldsfld int8 _G::p
     stloc $tmpSwitchValue2
     ldloc $tmpSwitchValue2
     ldc.i4 0
     bne.un L_check_case_39
-    // line 815
+    .line 815
     ldsfld int16 _G::Mp
     ldc.i4 1
     sub
@@ -6643,11 +6643,11 @@ L_check_case_39:
     beq L_case_40
     br L_case_end_38
 L_case_40:
-    // line 816
+    .line 816
     ldsfld int16 _G::Mp
     stsfld int16 _G::Sp
 L_case_end_38:
-    // line 818
+    .line 818
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Mp
     ldc.i4 4
@@ -6659,7 +6659,7 @@ L_case_end_38:
     ldc.i4 17500
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Pc
-    // line 819
+    .line 819
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Mp
     ldc.i4 3
@@ -6671,7 +6671,7 @@ L_case_end_38:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Ep
-    // line 820
+    .line 820
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Mp
     ldc.i4 2
@@ -6689,20 +6689,20 @@ L_check_case_37:
     ldloc $tmpSwitchValue1
     ldc.i4 15
     bne.un L_check_case_41
-    // line 823
+    .line 823
     call void Callsp()
     br L_case_end_5
 L_check_case_41:
     ldloc $tmpSwitchValue1
     ldc.i4 16
     bne.un L_check_case_42
-    // line 826
+    .line 826
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
     ldfld int32 T_record_97::Vi
     stsfld int32 _G::i
-    // line 827
+    .line 827
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -6711,7 +6711,7 @@ L_check_case_41:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 828
+    .line 828
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6734,7 +6734,7 @@ L_check_case_42:
     ldloc $tmpSwitchValue1
     ldc.i4 17
     bne.un L_check_case_43
-    // line 831
+    .line 831
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -6743,13 +6743,13 @@ L_check_case_42:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 832
+    .line 832
     ldsfld int8 _G::p
     stloc $tmpSwitchValue3
     ldloc $tmpSwitchValue3
     ldc.i4 1
     bne.un L_check_case_45
-    // line 833
+    .line 833
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6770,7 +6770,7 @@ L_check_case_45:
     ldloc $tmpSwitchValue3
     ldc.i4 0
     bne.un L_check_case_46
-    // line 834
+    .line 834
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6791,7 +6791,7 @@ L_check_case_46:
     ldloc $tmpSwitchValue3
     ldc.i4 6
     bne.un L_check_case_47
-    // line 835
+    .line 835
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6812,7 +6812,7 @@ L_check_case_47:
     ldloc $tmpSwitchValue3
     ldc.i4 2
     bne.un L_check_case_48
-    // line 836
+    .line 836
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6833,7 +6833,7 @@ L_check_case_48:
     ldloc $tmpSwitchValue3
     ldc.i4 3
     bne.un L_check_case_49
-    // line 837
+    .line 837
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6854,7 +6854,7 @@ L_check_case_49:
     ldloc $tmpSwitchValue3
     ldc.i4 4
     bne.un L_check_case_50
-    // line 838
+    .line 838
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6875,9 +6875,9 @@ L_check_case_50:
     ldloc $tmpSwitchValue3
     ldc.i4 5
     bne.un L_case_end_44
-    // line 839
+    .line 839
     call void Compare()
-    // line 840
+    .line 840
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6891,7 +6891,7 @@ L_check_case_43:
     ldloc $tmpSwitchValue1
     ldc.i4 18
     bne.un L_check_case_51
-    // line 845
+    .line 845
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -6900,13 +6900,13 @@ L_check_case_43:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 846
+    .line 846
     ldsfld int8 _G::p
     stloc $tmpSwitchValue4
     ldloc $tmpSwitchValue4
     ldc.i4 0
     bne.un L_check_case_53
-    // line 847
+    .line 847
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6929,7 +6929,7 @@ L_check_case_53:
     ldloc $tmpSwitchValue4
     ldc.i4 1
     bne.un L_check_case_54
-    // line 848
+    .line 848
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6952,7 +6952,7 @@ L_check_case_54:
     ldloc $tmpSwitchValue4
     ldc.i4 6
     bne.un L_check_case_55
-    // line 849
+    .line 849
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6975,7 +6975,7 @@ L_check_case_55:
     ldloc $tmpSwitchValue4
     ldc.i4 2
     bne.un L_check_case_56
-    // line 850
+    .line 850
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -6998,7 +6998,7 @@ L_check_case_56:
     ldloc $tmpSwitchValue4
     ldc.i4 3
     bne.un L_check_case_57
-    // line 851
+    .line 851
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7021,7 +7021,7 @@ L_check_case_57:
     ldloc $tmpSwitchValue4
     ldc.i4 4
     bne.un L_check_case_58
-    // line 852
+    .line 852
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7044,9 +7044,9 @@ L_check_case_58:
     ldloc $tmpSwitchValue4
     ldc.i4 5
     bne.un L_case_end_52
-    // line 853
+    .line 853
     call void Compare()
-    // line 854
+    .line 854
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7062,7 +7062,7 @@ L_check_case_51:
     ldloc $tmpSwitchValue1
     ldc.i4 19
     bne.un L_check_case_59
-    // line 859
+    .line 859
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -7071,13 +7071,13 @@ L_check_case_51:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 860
+    .line 860
     ldsfld int8 _G::p
     stloc $tmpSwitchValue5
     ldloc $tmpSwitchValue5
     ldc.i4 0
     bne.un L_check_case_61
-    // line 861
+    .line 861
     ldsfld valuetype T_beta STRING_107    // " <,<=,>,>= for address   "
     call void Errori(valuetype T_beta String)
     br L_case_end_60
@@ -7085,7 +7085,7 @@ L_check_case_61:
     ldloc $tmpSwitchValue5
     ldc.i4 1
     bne.un L_check_case_62
-    // line 862
+    .line 862
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7108,7 +7108,7 @@ L_check_case_62:
     ldloc $tmpSwitchValue5
     ldc.i4 6
     bne.un L_check_case_63
-    // line 863
+    .line 863
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7131,7 +7131,7 @@ L_check_case_63:
     ldloc $tmpSwitchValue5
     ldc.i4 2
     bne.un L_check_case_64
-    // line 864
+    .line 864
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7154,7 +7154,7 @@ L_check_case_64:
     ldloc $tmpSwitchValue5
     ldc.i4 3
     bne.un L_check_case_65
-    // line 865
+    .line 865
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7177,7 +7177,7 @@ L_check_case_65:
     ldloc $tmpSwitchValue5
     ldc.i4 4
     bne.un L_check_case_66
-    // line 866
+    .line 866
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7198,9 +7198,9 @@ L_check_case_66:
     ldloc $tmpSwitchValue5
     ldc.i4 5
     bne.un L_case_end_60
-    // line 867
+    .line 867
     call void Compare()
-    // line 868
+    .line 868
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7232,7 +7232,7 @@ L_check_case_59:
     ldloc $tmpSwitchValue1
     ldc.i4 20
     bne.un L_check_case_68
-    // line 874
+    .line 874
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -7241,13 +7241,13 @@ L_check_case_59:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 875
+    .line 875
     ldsfld int8 _G::p
     stloc $tmpSwitchValue6
     ldloc $tmpSwitchValue6
     ldc.i4 0
     bne.un L_check_case_70
-    // line 876
+    .line 876
     ldsfld valuetype T_beta STRING_107    // " <,<=,>,>= for address   "
     call void Errori(valuetype T_beta String)
     br L_case_end_69
@@ -7255,7 +7255,7 @@ L_check_case_70:
     ldloc $tmpSwitchValue6
     ldc.i4 1
     bne.un L_check_case_71
-    // line 877
+    .line 877
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7276,7 +7276,7 @@ L_check_case_71:
     ldloc $tmpSwitchValue6
     ldc.i4 6
     bne.un L_check_case_72
-    // line 878
+    .line 878
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7297,7 +7297,7 @@ L_check_case_72:
     ldloc $tmpSwitchValue6
     ldc.i4 2
     bne.un L_check_case_73
-    // line 879
+    .line 879
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7318,7 +7318,7 @@ L_check_case_73:
     ldloc $tmpSwitchValue6
     ldc.i4 3
     bne.un L_check_case_74
-    // line 880
+    .line 880
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7339,7 +7339,7 @@ L_check_case_74:
     ldloc $tmpSwitchValue6
     ldc.i4 4
     bne.un L_check_case_75
-    // line 881
+    .line 881
     ldsfld valuetype T_beta STRING_108    // " set inclusion           "
     call void Errori(valuetype T_beta String)
     br L_case_end_69
@@ -7347,9 +7347,9 @@ L_check_case_75:
     ldloc $tmpSwitchValue6
     ldc.i4 5
     bne.un L_case_end_69
-    // line 882
+    .line 882
     call void Compare()
-    // line 883
+    .line 883
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7381,7 +7381,7 @@ L_check_case_68:
     ldloc $tmpSwitchValue1
     ldc.i4 21
     bne.un L_check_case_77
-    // line 889
+    .line 889
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -7390,13 +7390,13 @@ L_check_case_68:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 890
+    .line 890
     ldsfld int8 _G::p
     stloc $tmpSwitchValue7
     ldloc $tmpSwitchValue7
     ldc.i4 0
     bne.un L_check_case_79
-    // line 891
+    .line 891
     ldsfld valuetype T_beta STRING_107    // " <,<=,>,>= for address   "
     call void Errori(valuetype T_beta String)
     br L_case_end_78
@@ -7404,7 +7404,7 @@ L_check_case_79:
     ldloc $tmpSwitchValue7
     ldc.i4 1
     bne.un L_check_case_80
-    // line 892
+    .line 892
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7427,7 +7427,7 @@ L_check_case_80:
     ldloc $tmpSwitchValue7
     ldc.i4 6
     bne.un L_check_case_81
-    // line 893
+    .line 893
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7450,7 +7450,7 @@ L_check_case_81:
     ldloc $tmpSwitchValue7
     ldc.i4 2
     bne.un L_check_case_82
-    // line 894
+    .line 894
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7473,7 +7473,7 @@ L_check_case_82:
     ldloc $tmpSwitchValue7
     ldc.i4 3
     bne.un L_check_case_83
-    // line 895
+    .line 895
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7496,7 +7496,7 @@ L_check_case_83:
     ldloc $tmpSwitchValue7
     ldc.i4 4
     bne.un L_check_case_84
-    // line 896
+    .line 896
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7517,9 +7517,9 @@ L_check_case_84:
     ldloc $tmpSwitchValue7
     ldc.i4 5
     bne.un L_case_end_78
-    // line 897
+    .line 897
     call void Compare()
-    // line 898
+    .line 898
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7551,7 +7551,7 @@ L_check_case_77:
     ldloc $tmpSwitchValue1
     ldc.i4 22
     bne.un L_check_case_86
-    // line 904
+    .line 904
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -7560,13 +7560,13 @@ L_check_case_77:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 905
+    .line 905
     ldsfld int8 _G::p
     stloc $tmpSwitchValue8
     ldloc $tmpSwitchValue8
     ldc.i4 0
     bne.un L_check_case_88
-    // line 906
+    .line 906
     ldsfld valuetype T_beta STRING_107    // " <,<=,>,>= for address   "
     call void Errori(valuetype T_beta String)
     br L_case_end_87
@@ -7574,7 +7574,7 @@ L_check_case_88:
     ldloc $tmpSwitchValue8
     ldc.i4 1
     bne.un L_check_case_89
-    // line 907
+    .line 907
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7595,7 +7595,7 @@ L_check_case_89:
     ldloc $tmpSwitchValue8
     ldc.i4 6
     bne.un L_check_case_90
-    // line 908
+    .line 908
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7616,7 +7616,7 @@ L_check_case_90:
     ldloc $tmpSwitchValue8
     ldc.i4 2
     bne.un L_check_case_91
-    // line 909
+    .line 909
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7637,7 +7637,7 @@ L_check_case_91:
     ldloc $tmpSwitchValue8
     ldc.i4 3
     bne.un L_check_case_92
-    // line 910
+    .line 910
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7658,9 +7658,9 @@ L_check_case_92:
     ldloc $tmpSwitchValue8
     ldc.i4 5
     bne.un L_case_end_87
-    // line 911
+    .line 911
     call void Compare()
-    // line 912
+    .line 912
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7692,7 +7692,7 @@ L_check_case_86:
     ldloc $tmpSwitchValue1
     ldc.i4 23
     bne.un L_check_case_94
-    // line 918
+    .line 918
     ldsfld int16 _G::q
     dup
     ldc.i4 0
@@ -7704,7 +7704,7 @@ L_check_case_94:
     ldloc $tmpSwitchValue1
     ldc.i4 24
     bne.un L_check_case_95
-    // line 920
+    .line 920
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7712,7 +7712,7 @@ L_check_case_94:
     ldc.i4.0
     ceq
     brfalse L_if_end_96
-    // line 920
+    .line 920
     ldsfld int16 _G::q
     dup
     ldc.i4 0
@@ -7720,7 +7720,7 @@ L_check_case_94:
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Pc
 L_if_end_96:
-    // line 921
+    .line 921
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -7734,7 +7734,7 @@ L_check_case_95:
     ldloc $tmpSwitchValue1
     ldc.i4 25
     bne.un L_check_case_97
-    // line 925
+    .line 925
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7746,7 +7746,7 @@ L_check_case_95:
     ldc.i4 17500
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Pc
-    // line 926
+    .line 926
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -7760,7 +7760,7 @@ L_check_case_97:
     ldloc $tmpSwitchValue1
     ldc.i4 95
     bne.un L_check_case_98
-    // line 929
+    .line 929
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7780,7 +7780,7 @@ L_check_case_97:
     cgt
 L_OR_shortcut_99:
     brfalse L_if_end_100
-    // line 931
+    .line 931
     ldsfld valuetype T_beta STRING_109    // " bad pointer value       "
     call void Errori(valuetype T_beta String)
 L_if_end_100:
@@ -7803,7 +7803,7 @@ L_check_case_98:
     beq L_case_102
     br L_check_case_101
 L_case_102:
-    // line 934
+    .line 934
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7829,7 +7829,7 @@ L_case_102:
     cgt
 L_OR_shortcut_103:
     brfalse L_if_end_104
-    // line 936
+    .line 936
     ldsfld valuetype T_beta STRING_110    // " value out of range      "
     call void Errori(valuetype T_beta String)
 L_if_end_104:
@@ -7838,18 +7838,18 @@ L_check_case_101:
     ldloc $tmpSwitchValue1
     ldc.i4 27
     bne.un L_check_case_105
-    // line 938
+    .line 938
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
     ldfld int32 T_record_97::Vi
     stsfld int32 _G::i
-    // line 939
+    .line 939
     ldsfld int32 _G::i
     ldc.i4 5 // inputadr 
     ceq
     brfalse L_else_106
-    // line 940
+    .line 940
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7859,7 +7859,7 @@ L_check_case_101:
     /* nop */
     br L_if_end_107
 L_else_106:
-    // line 941
+    .line 941
     ldsfld valuetype T_beta STRING_111    // " code in error           "
     call void Errori(valuetype T_beta String)
 L_if_end_107:
@@ -7868,7 +7868,7 @@ L_check_case_105:
     ldloc $tmpSwitchValue1
     ldc.i4 28
     bne.un L_check_case_108
-    // line 944
+    .line 944
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -7877,7 +7877,7 @@ L_check_case_105:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 945
+    .line 945
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7898,7 +7898,7 @@ L_check_case_108:
     ldloc $tmpSwitchValue1
     ldc.i4 29
     bne.un L_check_case_109
-    // line 948
+    .line 948
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -7907,7 +7907,7 @@ L_check_case_108:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 949
+    .line 949
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7928,7 +7928,7 @@ L_check_case_109:
     ldloc $tmpSwitchValue1
     ldc.i4 30
     bne.un L_check_case_110
-    // line 952
+    .line 952
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -7937,7 +7937,7 @@ L_check_case_109:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 953
+    .line 953
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7958,7 +7958,7 @@ L_check_case_110:
     ldloc $tmpSwitchValue1
     ldc.i4 31
     bne.un L_check_case_111
-    // line 956
+    .line 956
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -7967,7 +7967,7 @@ L_check_case_110:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 957
+    .line 957
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -7988,7 +7988,7 @@ L_check_case_111:
     ldloc $tmpSwitchValue1
     ldc.i4 32
     bne.un L_check_case_112
-    // line 960
+    .line 960
     ldloca $tmpSetLiteral9
     call instance void T_set_103::clear()
     ldloca $tmpSetLiteral9
@@ -8012,7 +8012,7 @@ L_check_case_112:
     ldloc $tmpSwitchValue1
     ldc.i4 33
     bne.un L_check_case_113
-    // line 962
+    .line 962
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -8027,7 +8027,7 @@ L_check_case_113:
     ldloc $tmpSwitchValue1
     ldc.i4 34
     bne.un L_check_case_114
-    // line 964
+    .line 964
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     ldc.i4 1
@@ -8046,7 +8046,7 @@ L_check_case_114:
     ldloc $tmpSwitchValue1
     ldc.i4 35
     bne.un L_check_case_115
-    // line 966
+    .line 966
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -8061,7 +8061,7 @@ L_check_case_115:
     ldloc $tmpSwitchValue1
     ldc.i4 36
     bne.un L_check_case_116
-    // line 968
+    .line 968
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -8076,7 +8076,7 @@ L_check_case_116:
     ldloc $tmpSwitchValue1
     ldc.i4 37
     bne.un L_check_case_117
-    // line 970
+    .line 970
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -8091,7 +8091,7 @@ L_check_case_117:
     ldloc $tmpSwitchValue1
     ldc.i4 38
     bne.un L_check_case_118
-    // line 972
+    .line 972
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -8107,7 +8107,7 @@ L_check_case_118:
     ldloc $tmpSwitchValue1
     ldc.i4 39
     bne.un L_check_case_119
-    // line 974
+    .line 974
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -8123,7 +8123,7 @@ L_check_case_119:
     ldloc $tmpSwitchValue1
     ldc.i4 40
     bne.un L_check_case_120
-    // line 976
+    .line 976
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -8142,7 +8142,7 @@ L_check_case_120:
     ldloc $tmpSwitchValue1
     ldc.i4 41
     bne.un L_check_case_122
-    // line 978
+    .line 978
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -8161,7 +8161,7 @@ L_check_case_122:
     ldloc $tmpSwitchValue1
     ldc.i4 42
     bne.un L_check_case_124
-    // line 980
+    .line 980
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -8177,7 +8177,7 @@ L_check_case_124:
     ldloc $tmpSwitchValue1
     ldc.i4 43
     bne.un L_check_case_125
-    // line 982
+    .line 982
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -8186,7 +8186,7 @@ L_check_case_124:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 983
+    .line 983
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -8210,7 +8210,7 @@ L_check_case_125:
     ldloc $tmpSwitchValue1
     ldc.i4 44
     bne.un L_check_case_127
-    // line 986
+    .line 986
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -8219,7 +8219,7 @@ L_check_case_125:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 987
+    .line 987
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -8243,7 +8243,7 @@ L_check_case_127:
     ldloc $tmpSwitchValue1
     ldc.i4 45
     bne.un L_check_case_129
-    // line 990
+    .line 990
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -8252,7 +8252,7 @@ L_check_case_127:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 991
+    .line 991
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -8273,7 +8273,7 @@ L_check_case_129:
     ldloc $tmpSwitchValue1
     ldc.i4 46
     bne.un L_check_case_130
-    // line 994
+    .line 994
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -8282,7 +8282,7 @@ L_check_case_129:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 995
+    .line 995
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -8303,7 +8303,7 @@ L_check_case_130:
     ldloc $tmpSwitchValue1
     ldc.i4 47
     bne.un L_check_case_131
-    // line 998
+    .line 998
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -8312,7 +8312,7 @@ L_check_case_130:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 999
+    .line 999
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -8333,7 +8333,7 @@ L_check_case_131:
     ldloc $tmpSwitchValue1
     ldc.i4 48
     bne.un L_check_case_132
-    // line 1003
+    .line 1003
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -8342,13 +8342,13 @@ L_check_case_131:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 1003
+    .line 1003
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
     ldfld int32 T_record_97::Vi
     stsfld int32 _G::i
-    // line 1004
+    .line 1004
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -8367,7 +8367,7 @@ L_check_case_132:
     ldloc $tmpSwitchValue1
     ldc.i4 49
     bne.un L_check_case_133
-    // line 1007
+    .line 1007
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -8376,7 +8376,7 @@ L_check_case_132:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 1008
+    .line 1008
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -8397,7 +8397,7 @@ L_check_case_133:
     ldloc $tmpSwitchValue1
     ldc.i4 50
     bne.un L_check_case_134
-    // line 1011
+    .line 1011
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -8413,7 +8413,7 @@ L_check_case_134:
     ldloc $tmpSwitchValue1
     ldc.i4 51
     bne.un L_check_case_135
-    // line 1013
+    .line 1013
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -8422,7 +8422,7 @@ L_check_case_134:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 1014
+    .line 1014
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -8443,7 +8443,7 @@ L_check_case_135:
     ldloc $tmpSwitchValue1
     ldc.i4 52
     bne.un L_check_case_136
-    // line 1017
+    .line 1017
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -8452,7 +8452,7 @@ L_check_case_135:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 1018
+    .line 1018
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -8473,7 +8473,7 @@ L_check_case_136:
     ldloc $tmpSwitchValue1
     ldc.i4 53
     bne.un L_check_case_137
-    // line 1021
+    .line 1021
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -8482,7 +8482,7 @@ L_check_case_136:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 1022
+    .line 1022
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -8503,7 +8503,7 @@ L_check_case_137:
     ldloc $tmpSwitchValue1
     ldc.i4 54
     bne.un L_check_case_138
-    // line 1025
+    .line 1025
     ldsfld int16 _G::Sp
     ldc.i4 1
     sub
@@ -8512,7 +8512,7 @@ L_check_case_137:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 1026
+    .line 1026
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -8533,7 +8533,7 @@ L_check_case_138:
     ldloc $tmpSwitchValue1
     ldc.i4 55
     bne.un L_check_case_139
-    // line 1029
+    .line 1029
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     ldc.i4 1
@@ -8541,13 +8541,13 @@ L_check_case_138:
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
     ldfld int16 T_record_97::Va
     stsfld int32 _G::I1
-    // line 1030
+    .line 1030
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
     ldfld int16 T_record_97::Va
     stsfld int32 _G::I2
-    // line 1030
+    .line 1030
     ldsfld int16 _G::Sp
     ldc.i4 2
     sub
@@ -8556,7 +8556,7 @@ L_check_case_138:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 1031
+    .line 1031
     ldsfld int16 _G::q
     ldc.i4 1
     sub
@@ -8569,7 +8569,7 @@ L_check_case_138:
     ldloc $tmpIndex11
     stsfld int32 _G::I3
 L_for_loop_140:
-    // line 1031
+    .line 1031
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int32 _G::I1
     ldsfld int32 _G::I3
@@ -8599,7 +8599,7 @@ L_check_case_139:
     ldloc $tmpSwitchValue1
     ldc.i4 56
     bne.un L_check_case_142
-    // line 1035
+    .line 1035
     ldsfld int16 _G::Sp
     ldc.i4 1
     add
@@ -8608,7 +8608,7 @@ L_check_case_139:
     ldc.i4 18001
     call void [lpcRuntime]LPC.Runtime::RTCheckRange(int32, int32, int32)
     stsfld int16 _G::Sp
-    // line 1036
+    .line 1036
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -8641,7 +8641,7 @@ L_check_case_142:
     beq L_case_144
     br L_check_case_143
 L_case_144:
-    // line 1040
+    .line 1040
     ldsflda valuetype T_array_98 _G::Store
     ldsfld int16 _G::Sp
     call instance valuetype T_record_97& T_array_98::ldadr(int32)
@@ -8657,7 +8657,7 @@ L_check_case_143:
     ldloc $tmpSwitchValue1
     ldc.i4 58
     bne.un L_check_case_145
-    // line 1042
+    .line 1042
     ldc.i4 0 // (false)
     stsfld bool _G::Interpreting
     br L_case_end_5
@@ -8677,7 +8677,7 @@ L_check_case_147:
     ldloc $tmpSwitchValue1
     ldc.i4 61
     bne.un L_case_end_5
-    // line 1051
+    .line 1051
     ldsfld valuetype T_beta STRING_112    // " case - error            "
     call void Errori(valuetype T_beta String)
 L_case_end_5:
@@ -8721,7 +8721,7 @@ L_Epilogue:
 
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 //================================================================================
 // internal helpers
@@ -8841,7 +8841,7 @@ L_Epilogue:
 
 
 
-// line 0xfeefee
+.line 0xfeefee
 
 //================================================================================
 // global string literals

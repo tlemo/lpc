@@ -19,13 +19,13 @@
     ret
 }
 
-// "test02.pas"
+.line 0 "test02.pas"
 
-// line 2
+.line 2
 //================================================================================
 // scope: program scope (level : 1)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE array_1 = array [1 .. 16] of uint8;
 .class value explicit T_array_1
@@ -80,11 +80,11 @@
     .field public static valuetype T_array_1 MyName
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 2
+.line 2
 
 .method static
 void _Program()
@@ -102,20 +102,20 @@ void _Program()
     call instance void [lpcRuntime]LPC.File::Init(int32)
 
 L_Entry:
-    // line 6
+    .line 6
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "What is your name?"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 7
+    .line 7
     ldsflda valuetype [lpcRuntime]LPC.File _G::_input
     dup
     ldsflda valuetype T_array_1 _G::MyName
     ldc.i4 16
     call instance void [lpcRuntime]LPC.File::Read(uint8*, int32)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 8
+    .line 8
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "Hello,"

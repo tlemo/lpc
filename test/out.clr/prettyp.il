@@ -27,13 +27,13 @@
     ret
 }
 
-// "prettyp.pas"
+.line 0 "prettyp.pas"
 
-// line 317
+.line 317
 //================================================================================
 // scope: GETCHAR (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE CHARINFO = record;
 .class value explicit T_CHARINFO
@@ -45,7 +45,7 @@
     .field [4] public uint8 VALUE
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_1 = set of 0 .. 255
 .class value explicit T_set_1
@@ -135,7 +135,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_3 = set of 0 .. 6
 .class value explicit T_set_3
@@ -234,11 +234,11 @@
 }
 
 
-// line 369
+.line 369
 //================================================================================
 // scope: STORENEXTCHAR (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE STRING = array [1 .. 200] of uint8;
 .class value explicit T_STRING
@@ -303,7 +303,7 @@
 }
 
 
-// line 392
+.line 392
 //================================================================================
 // scope: SKIPSPACES (level : 2)
 
@@ -325,7 +325,7 @@
 }
 
 
-// line 426
+.line 426
 //================================================================================
 // scope: GETCOMMENT (level : 2)
 
@@ -348,11 +348,11 @@
 }
 
 
-// line 465
+.line 465
 //================================================================================
 // scope: IDTYPE (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE KEY = array [1 .. 10] of uint8;
 .class value explicit T_KEY
@@ -399,7 +399,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE KEYWORDTABLE = array [0 .. 21] of valuetype T_KEY;
 .class value explicit T_KEYWORDTABLE
@@ -458,11 +458,11 @@
 }
 
 
-// line 508
+.line 508
 //================================================================================
 // scope: GETIDENTIFIER (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE set_6 = set of 0 .. 32
 .class value explicit T_set_6
@@ -565,7 +565,7 @@
 }
 
 
-// line 546
+.line 546
 //================================================================================
 // scope: GETNUMBER (level : 2)
 
@@ -588,7 +588,7 @@
 }
 
 
-// line 568
+.line 568
 //================================================================================
 // scope: GETCHARLITERAL (level : 2)
 
@@ -611,11 +611,11 @@
 }
 
 
-// line 608
+.line 608
 //================================================================================
 // scope: CHARTYPE (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE SPECIALCHAR = array [1 .. 2] of uint8;
 .class value explicit T_SPECIALCHAR
@@ -662,7 +662,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE DBLCHARTABLE = array [22 .. 23] of valuetype T_SPECIALCHAR;
 .class value explicit T_DBLCHARTABLE
@@ -701,7 +701,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE SGLCHARTABLE = array [25 .. 30] of uint8;
 .class value explicit T_SGLCHARTABLE
@@ -759,11 +759,11 @@
 }
 
 
-// line 654
+.line 654
 //================================================================================
 // scope: GETSPECIALCHAR (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE DBLCHRSET = set of 22 .. 23
 .class value explicit T_DBLCHRSET
@@ -865,7 +865,7 @@
 }
 
 
-// line 682
+.line 682
 //================================================================================
 // scope: GETNEXTSYMBOL (level : 2)
 
@@ -888,11 +888,11 @@
 }
 
 
-// line 741
+.line 741
 //================================================================================
 // scope: GETSYMBOL (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE SYMBOL = record;
 .class value explicit T_SYMBOL
@@ -926,11 +926,11 @@
 }
 
 
-// line 784
+.line 784
 //================================================================================
 // scope: INITIALISE (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE OPTIONSET = set of 0 .. 10
 .class value explicit T_OPTIONSET
@@ -1013,7 +1013,7 @@
     }
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE TABLEENTRY = record;
 .class value explicit T_TABLEENTRY
@@ -1026,7 +1026,7 @@
     .field [12] public valuetype T_set_6 GOBBLETERMINATORS
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE OPTIONTABLE = array [0 .. 32] of valuetype T_TABLEENTRY;
 .class value explicit T_OPTIONTABLE
@@ -1091,7 +1091,7 @@
 }
 
 
-// line 1175
+.line 1175
 //================================================================================
 // scope: STACKEMPTY (level : 2)
 
@@ -1109,7 +1109,7 @@
 }
 
 
-// line 1187
+.line 1187
 //================================================================================
 // scope: STACKFULL (level : 2)
 
@@ -1127,11 +1127,11 @@
 }
 
 
-// line 1199
+.line 1199
 //================================================================================
 // scope: POPSTACK (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE STACKENTRY = record;
 .class value explicit T_STACKENTRY
@@ -1143,7 +1143,7 @@
     .field [4] public int32 PREVMARGIN
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE SYMBOLSTACK = array [1 .. 100] of valuetype T_STACKENTRY;
 .class value explicit T_SYMBOLSTACK
@@ -1197,7 +1197,7 @@
 }
 
 
-// line 1222
+.line 1222
 //================================================================================
 // scope: PUSHSTACK (level : 2)
 
@@ -1216,7 +1216,7 @@
 }
 
 
-// line 1235
+.line 1235
 //================================================================================
 // scope: WRITECRS (level : 2)
 
@@ -1239,7 +1239,7 @@
 }
 
 
-// line 1256
+.line 1256
 //================================================================================
 // scope: INSERTCR (level : 2)
 
@@ -1258,7 +1258,7 @@
 }
 
 
-// line 1276
+.line 1276
 //================================================================================
 // scope: INSERTBLANKLINE (level : 2)
 
@@ -1277,7 +1277,7 @@
 }
 
 
-// line 1306
+.line 1306
 //================================================================================
 // scope: LSHIFTON (level : 2)
 
@@ -1299,7 +1299,7 @@
 }
 
 
-// line 1335
+.line 1335
 //================================================================================
 // scope: LSHIFT (level : 2)
 
@@ -1318,7 +1318,7 @@
 }
 
 
-// line 1352
+.line 1352
 //================================================================================
 // scope: INSERTSPACE (level : 2)
 
@@ -1337,7 +1337,7 @@
 }
 
 
-// line 1372
+.line 1372
 //================================================================================
 // scope: MOVELINEPOS (level : 2)
 
@@ -1360,7 +1360,7 @@
 }
 
 
-// line 1389
+.line 1389
 //================================================================================
 // scope: PRINTSYMBOL (level : 2)
 
@@ -1383,7 +1383,7 @@
 }
 
 
-// line 1410
+.line 1410
 //================================================================================
 // scope: PPSYMBOL (level : 2)
 
@@ -1405,7 +1405,7 @@
 }
 
 
-// line 1465
+.line 1465
 //================================================================================
 // scope: GOBBLE (level : 2)
 
@@ -1427,7 +1427,7 @@
 }
 
 
-// line 1491
+.line 1491
 //================================================================================
 // scope: RSHIFT (level : 2)
 
@@ -1445,7 +1445,7 @@
 }
 
 
-// line 1508
+.line 1508
 //================================================================================
 // scope: RSHIFTTOCLP (level : 2)
 
@@ -1463,7 +1463,7 @@
 }
 
 
-// line 167
+.line 167
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -1491,7 +1491,7 @@
     .field public static int32 TOP
 }
 
-// line 317
+.line 317
 
 .method static
 void GETCHAR(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_CHARINFO& NEXTCHAR, valuetype T_CHARINFO& CURRCHAR)
@@ -1553,38 +1553,38 @@ void GETCHAR(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_CHARINFO& NE
     call instance void T_set_3::addValue(int32)
 
 L_Entry:
-    // line 323
+    .line 323
     ldloc _F
     ldfld valuetype T_CHARINFO* @GETCHAR::CURRCHAR
     ldloc _F
     ldfld valuetype T_CHARINFO* @GETCHAR::NEXTCHAR
     ldobj valuetype T_CHARINFO
     stobj valuetype T_CHARINFO
-    // line 328
+    .line 328
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GETCHAR::INPUTFILE
     call instance bool [lpcRuntime]LPC.File::Eof()
     brfalse L_else_1
-    // line 330
+    .line 330
     ldloc _F
     ldfld valuetype T_CHARINFO* @GETCHAR::NEXTCHAR
     ldc.i4 5
     stfld int32 T_CHARINFO::NAME
     br L_if_end_2
 L_else_1:
-    // line 332
+    .line 332
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GETCHAR::INPUTFILE
     call instance bool [lpcRuntime]LPC.File::Eoln()
     brfalse L_else_3
-    // line 334
+    .line 334
     ldloc _F
     ldfld valuetype T_CHARINFO* @GETCHAR::NEXTCHAR
     ldc.i4 4
     stfld int32 T_CHARINFO::NAME
     br L_if_end_4
 L_else_3:
-    // line 336
+    .line 336
     ldloc $tmpSetLiteral1
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GETCHAR::INPUTFILE
@@ -1594,14 +1594,14 @@ L_else_3:
     ldobj uint8
     call bool _SetContains(valuetype T_set_1 s, int32 val)
     brfalse L_else_5
-    // line 338
+    .line 338
     ldloc _F
     ldfld valuetype T_CHARINFO* @GETCHAR::NEXTCHAR
     ldc.i4 0
     stfld int32 T_CHARINFO::NAME
     br L_if_end_6
 L_else_5:
-    // line 340
+    .line 340
     ldloc $tmpSetLiteral2
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GETCHAR::INPUTFILE
@@ -1611,14 +1611,14 @@ L_else_5:
     ldobj uint8
     call bool _SetContains(valuetype T_set_1 s, int32 val)
     brfalse L_else_7
-    // line 342
+    .line 342
     ldloc _F
     ldfld valuetype T_CHARINFO* @GETCHAR::NEXTCHAR
     ldc.i4 1
     stfld int32 T_CHARINFO::NAME
     br L_if_end_8
 L_else_7:
-    // line 344
+    .line 344
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GETCHAR::INPUTFILE
     dup
@@ -1628,14 +1628,14 @@ L_else_7:
     ldc.i4 39 // '''
     ceq
     brfalse L_else_9
-    // line 346
+    .line 346
     ldloc _F
     ldfld valuetype T_CHARINFO* @GETCHAR::NEXTCHAR
     ldc.i4 3
     stfld int32 T_CHARINFO::NAME
     br L_if_end_10
 L_else_9:
-    // line 348
+    .line 348
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GETCHAR::INPUTFILE
     dup
@@ -1645,14 +1645,14 @@ L_else_9:
     ldc.i4 32 // ' '
     ceq
     brfalse L_else_11
-    // line 350
+    .line 350
     ldloc _F
     ldfld valuetype T_CHARINFO* @GETCHAR::NEXTCHAR
     ldc.i4 2
     stfld int32 T_CHARINFO::NAME
     br L_if_end_12
 L_else_11:
-    // line 352
+    .line 352
     ldloc _F
     ldfld valuetype T_CHARINFO* @GETCHAR::NEXTCHAR
     ldc.i4 6
@@ -1663,21 +1663,21 @@ L_if_end_8:
 L_if_end_6:
 L_if_end_4:
 L_if_end_2:
-    // line 355
+    .line 355
     ldloc $tmpSetLiteral3
     ldloc _F
     ldfld valuetype T_CHARINFO* @GETCHAR::NEXTCHAR
     ldfld int32 T_CHARINFO::NAME
     call bool _SetContains(valuetype T_set_3 s, int32 val)
     brfalse L_else_13
-    // line 357
+    .line 357
     ldloc _F
     ldfld valuetype T_CHARINFO* @GETCHAR::NEXTCHAR
     ldc.i4 32 // ' '
     stfld uint8 T_CHARINFO::VALUE
     br L_if_end_14
 L_else_13:
-    // line 359
+    .line 359
     ldloc _F
     ldfld valuetype T_CHARINFO* @GETCHAR::NEXTCHAR
     ldloc _F
@@ -1688,7 +1688,7 @@ L_else_13:
     ldobj uint8
     stfld uint8 T_CHARINFO::VALUE
 L_if_end_14:
-    // line 361
+    .line 361
     ldloc _F
     ldfld valuetype T_CHARINFO* @GETCHAR::NEXTCHAR
     ldfld int32 T_CHARINFO::NAME
@@ -1697,7 +1697,7 @@ L_if_end_14:
     ldc.i4.0
     ceq
     brfalse L_if_end_15
-    // line 362
+    .line 362
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GETCHAR::INPUTFILE
     call instance void [lpcRuntime]LPC.File::Get()
@@ -1707,7 +1707,7 @@ L_Epilogue:
     ret
 }
 
-// line 369
+.line 369
 
 .method static
 void STORENEXTCHAR(valuetype [lpcRuntime]LPC.File& INPUTFILE, int32& LENGTH, valuetype T_CHARINFO& CURRCHAR, valuetype T_CHARINFO& NEXTCHAR, valuetype T_STRING& VALUE)
@@ -1760,7 +1760,7 @@ void STORENEXTCHAR(valuetype [lpcRuntime]LPC.File& INPUTFILE, int32& LENGTH, val
     stfld valuetype T_STRING* @STORENEXTCHAR::VALUE
 
 L_Entry:
-    // line 377
+    .line 377
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @STORENEXTCHAR::INPUTFILE
     ldloc _F
@@ -1768,14 +1768,14 @@ L_Entry:
     ldloc _F
     ldfld valuetype T_CHARINFO* @STORENEXTCHAR::CURRCHAR
     call void GETCHAR(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_CHARINFO& NEXTCHAR, valuetype T_CHARINFO& CURRCHAR)
-    // line 381
+    .line 381
     ldloc _F
     ldfld int32* @STORENEXTCHAR::LENGTH
     ldobj int32
     ldc.i4 200
     clt
     brfalse L_if_end_1
-    // line 383
+    .line 383
     ldloc _F
     ldfld int32* @STORENEXTCHAR::LENGTH
     ldloc _F
@@ -1784,7 +1784,7 @@ L_Entry:
     ldc.i4 1
     add
     stobj int32
-    // line 385
+    .line 385
     ldloc _F
     ldfld valuetype T_STRING* @STORENEXTCHAR::VALUE
     ldloc _F
@@ -1801,7 +1801,7 @@ L_Epilogue:
     ret
 }
 
-// line 392
+.line 392
 
 .method static
 void SKIPSPACES(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_CHARINFO& CURRCHAR, valuetype T_CHARINFO& NEXTCHAR, int32& SPACESBEFORE, int32& CRSBEFORE)
@@ -1864,20 +1864,20 @@ void SKIPSPACES(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_CHARINFO&
     call instance void T_set_3::addValue(int32)
 
 L_Entry:
-    // line 400
+    .line 400
     ldloc _F
     ldfld int32* @SKIPSPACES::CRSBEFORE
     ldc.i4 0
     stobj int32
-    // line 401
+    .line 401
     ldloc _F
     ldfld int32* @SKIPSPACES::SPACESBEFORE
     ldc.i4 0
     stobj int32
-    // line 403
+    .line 403
     br L_while_test_2
 L_while_1:
-    // line 406
+    .line 406
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @SKIPSPACES::INPUTFILE
     ldloc _F
@@ -1885,7 +1885,7 @@ L_while_1:
     ldloc _F
     ldfld valuetype T_CHARINFO* @SKIPSPACES::CURRCHAR
     call void GETCHAR(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_CHARINFO& NEXTCHAR, valuetype T_CHARINFO& CURRCHAR)
-    // line 410
+    .line 410
     ldloc _F
     ldfld valuetype T_CHARINFO* @SKIPSPACES::CURRCHAR
     ldfld int32 T_CHARINFO::NAME
@@ -1893,7 +1893,7 @@ L_while_1:
     ldloc $tmpSwitchValue1
     ldc.i4 2
     bne.un L_check_case_4
-    // line 412
+    .line 412
     ldloc _F
     ldfld int32* @SKIPSPACES::SPACESBEFORE
     ldloc _F
@@ -1907,7 +1907,7 @@ L_check_case_4:
     ldloc $tmpSwitchValue1
     ldc.i4 4
     bne.un L_case_end_3
-    // line 415
+    .line 415
     ldloc _F
     ldfld int32* @SKIPSPACES::CRSBEFORE
     ldloc _F
@@ -1916,7 +1916,7 @@ L_check_case_4:
     ldc.i4 1
     add
     stobj int32
-    // line 416
+    .line 416
     ldloc _F
     ldfld int32* @SKIPSPACES::SPACESBEFORE
     ldc.i4 0
@@ -1934,7 +1934,7 @@ L_Epilogue:
     ret
 }
 
-// line 426
+.line 426
 
 .method static
 void GETCOMMENT(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_CHARINFO& CURRCHAR, valuetype T_CHARINFO& NEXTCHAR, int32& NAME, valuetype T_STRING& VALUE, int32& LENGTH)
@@ -1995,15 +1995,15 @@ void GETCOMMENT(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_CHARINFO&
     stfld valuetype T_STRING* @GETCOMMENT::VALUE
 
 L_Entry:
-    // line 435
+    .line 435
     ldloc _F
     ldfld int32* @GETCOMMENT::NAME
     ldc.i4 23
     stobj int32
-    // line 437
+    .line 437
     br L_while_test_2
 L_while_1:
-    // line 441
+    .line 441
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GETCOMMENT::INPUTFILE
     ldloc _F
@@ -2051,7 +2051,7 @@ L_OR_shortcut_3:
     ldc.i4.0
     ceq
     brtrue L_while_1
-    // line 448
+    .line 448
     ldloc _F
     ldfld valuetype T_CHARINFO* @GETCOMMENT::CURRCHAR
     ldfld uint8 T_CHARINFO::VALUE
@@ -2067,7 +2067,7 @@ L_OR_shortcut_3:
     ceq
 L_AND_shortcut_6:
     brfalse L_if_end_7
-    // line 452
+    .line 452
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GETCOMMENT::INPUTFILE
     ldloc _F
@@ -2079,7 +2079,7 @@ L_AND_shortcut_6:
     ldloc _F
     ldfld valuetype T_STRING* @GETCOMMENT::VALUE
     call void STORENEXTCHAR(valuetype [lpcRuntime]LPC.File& INPUTFILE, int32& LENGTH, valuetype T_CHARINFO& CURRCHAR, valuetype T_CHARINFO& NEXTCHAR, valuetype T_STRING& VALUE)
-    // line 458
+    .line 458
     ldloc _F
     ldfld int32* @GETCOMMENT::NAME
     ldc.i4 24
@@ -2091,7 +2091,7 @@ L_Epilogue:
     ret
 }
 
-// line 465
+.line 465
 
 .method static
 int32 IDTYPE(valuetype T_STRING VALUE, int32 LENGTH)
@@ -2119,11 +2119,11 @@ int32 IDTYPE(valuetype T_STRING VALUE, int32 LENGTH)
     stfld valuetype T_STRING @IDTYPE::VALUE
 
 L_Entry:
-    // line 481
+    .line 481
     ldloc _F
     ldc.i4 32
     stfld int32 @IDTYPE::_fnvalue
-    // line 483
+    .line 483
     ldloc _F
     ldfld int32 @IDTYPE::LENGTH
     ldc.i4 10
@@ -2131,7 +2131,7 @@ L_Entry:
     ldc.i4.0
     ceq
     brfalse L_if_end_1
-    // line 485
+    .line 485
     ldloc _F
     ldfld int32 @IDTYPE::LENGTH
     stloc $tmpEndValue1
@@ -2144,7 +2144,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int32 @IDTYPE::I
 L_for_loop_2:
-    // line 486
+    .line 486
     ldloc _F
     ldflda valuetype T_KEY @IDTYPE::KEYVALUE
     ldloc _F
@@ -2171,7 +2171,7 @@ L_for_loop_2:
     br L_for_loop_2
 L_for_end_3:
     pop
-    // line 488
+    .line 488
     ldc.i4 10
     stloc $tmpEndValue4
     ldloc _F
@@ -2186,7 +2186,7 @@ L_for_end_3:
     ldloc $tmpIndex5
     stfld int32 @IDTYPE::I
 L_for_loop_4:
-    // line 489
+    .line 489
     ldloc _F
     ldflda valuetype T_KEY @IDTYPE::KEYVALUE
     ldloc _F
@@ -2208,18 +2208,18 @@ L_for_loop_4:
     br L_for_loop_4
 L_for_end_5:
     pop
-    // line 491
+    .line 491
     ldloc _F
     ldc.i4 0
     stfld int32 @IDTYPE::THISKEY
-    // line 492
+    .line 492
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @IDTYPE::HIT
-    // line 494
+    .line 494
     br L_while_test_7
 L_while_6:
-    // line 495
+    .line 495
     ldloc _F
     ldfld valuetype T_KEY @IDTYPE::KEYVALUE
     call string T_KEY::arrayToString(valuetype T_KEY)
@@ -2231,13 +2231,13 @@ L_while_6:
     call string T_KEY::arrayToString(valuetype T_KEY)
     call bool [lpcRuntime]LPC.Helpers::StrcmpEQ(string, string)
     brfalse L_else_8
-    // line 496
+    .line 496
     ldloc _F
     ldc.i4 1 // (true)
     stfld bool @IDTYPE::HIT
     br L_if_end_9
 L_else_8:
-    // line 498
+    .line 498
     ldloc _F
     ldloc _F
     ldfld int32 @IDTYPE::THISKEY
@@ -2261,11 +2261,11 @@ L_OR_shortcut_10:
     ldc.i4.0
     ceq
     brtrue L_while_6
-    // line 500
+    .line 500
     ldloc _F
     ldfld bool @IDTYPE::HIT
     brfalse L_if_end_11
-    // line 501
+    .line 501
     ldloc _F
     ldloc _F
     ldfld int32 @IDTYPE::THISKEY
@@ -2280,7 +2280,7 @@ L_Epilogue:
     ret
 }
 
-// line 508
+.line 508
 
 .method static
 void GETIDENTIFIER(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_CHARINFO& CURRCHAR, valuetype T_CHARINFO& NEXTCHAR, int32& NAME, valuetype T_STRING& VALUE, int32& LENGTH)
@@ -2362,10 +2362,10 @@ void GETIDENTIFIER(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_CHARIN
     call instance void T_set_6::addValue(int32)
 
 L_Entry:
-    // line 517
+    .line 517
     br L_while_test_2
 L_while_1:
-    // line 519
+    .line 519
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GETIDENTIFIER::INPUTFILE
     ldloc _F
@@ -2384,7 +2384,7 @@ L_while_test_2:
     ldfld int32 T_CHARINFO::NAME
     call bool _SetContains(valuetype T_set_3 s, int32 val)
     brtrue L_while_1
-    // line 526
+    .line 526
     ldloc _F
     ldfld int32* @GETIDENTIFIER::NAME
     ldloc _F
@@ -2395,14 +2395,14 @@ L_while_test_2:
     ldobj int32
     call int32 IDTYPE(valuetype T_STRING VALUE, int32 LENGTH)
     stobj int32
-    // line 529
+    .line 529
     ldloc $tmpSetLiteral2
     ldloc _F
     ldfld int32* @GETIDENTIFIER::NAME
     ldobj int32
     call bool _SetContains(valuetype T_set_6 s, int32 val)
     brfalse L_if_end_3
-    // line 531
+    .line 531
     ldloc _F
     ldfld int32* @GETIDENTIFIER::NAME
     ldobj int32
@@ -2410,7 +2410,7 @@ L_while_test_2:
     ldloc $tmpSwitchValue3
     ldc.i4 9
     bne.un L_check_case_5
-    // line 533
+    .line 533
     ldc.i4 1 // (true)
     stsfld bool _G::RECORDSEEN
     br L_case_end_4
@@ -2418,10 +2418,10 @@ L_check_case_5:
     ldloc $tmpSwitchValue3
     ldc.i4 10
     bne.un L_check_case_6
-    // line 535
+    .line 535
     ldsfld bool _G::RECORDSEEN
     brfalse L_if_end_7
-    // line 537
+    .line 537
     ldloc _F
     ldfld int32* @GETIDENTIFIER::NAME
     ldc.i4 11
@@ -2432,7 +2432,7 @@ L_check_case_6:
     ldloc $tmpSwitchValue3
     ldc.i4 20
     bne.un L_case_end_4
-    // line 539
+    .line 539
     ldc.i4 0 // (false)
     stsfld bool _G::RECORDSEEN
 L_case_end_4:
@@ -2442,7 +2442,7 @@ L_Epilogue:
     ret
 }
 
-// line 546
+.line 546
 
 .method static
 void GETNUMBER(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_CHARINFO& CURRCHAR, valuetype T_CHARINFO& NEXTCHAR, int32& NAME, valuetype T_STRING& VALUE, int32& LENGTH)
@@ -2503,10 +2503,10 @@ void GETNUMBER(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_CHARINFO& 
     stfld valuetype T_STRING* @GETNUMBER::VALUE
 
 L_Entry:
-    // line 555
+    .line 555
     br L_while_test_2
 L_while_1:
-    // line 557
+    .line 557
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GETNUMBER::INPUTFILE
     ldloc _F
@@ -2525,7 +2525,7 @@ L_while_test_2:
     ldc.i4 1
     ceq
     brtrue L_while_1
-    // line 563
+    .line 563
     ldloc _F
     ldfld int32* @GETNUMBER::NAME
     ldc.i4 32
@@ -2535,7 +2535,7 @@ L_Epilogue:
     ret
 }
 
-// line 568
+.line 568
 
 .method static
 void GETCHARLITERAL(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_CHARINFO& CURRCHAR, valuetype T_CHARINFO& NEXTCHAR, int32& NAME, valuetype T_STRING& VALUE, int32& LENGTH)
@@ -2608,10 +2608,10 @@ void GETCHARLITERAL(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_CHARI
     call instance void T_set_3::addValue(int32)
 
 L_Entry:
-    // line 577
+    .line 577
     br L_while_test_2
 L_while_1:
-    // line 579
+    .line 579
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GETCHARLITERAL::INPUTFILE
     ldloc _F
@@ -2623,10 +2623,10 @@ L_while_1:
     ldloc _F
     ldfld valuetype T_STRING* @GETCHARLITERAL::VALUE
     call void STORENEXTCHAR(valuetype [lpcRuntime]LPC.File& INPUTFILE, int32& LENGTH, valuetype T_CHARINFO& CURRCHAR, valuetype T_CHARINFO& NEXTCHAR, valuetype T_STRING& VALUE)
-    // line 585
+    .line 585
     br L_while_test_4
 L_while_3:
-    // line 587
+    .line 587
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GETCHARLITERAL::INPUTFILE
     ldloc _F
@@ -2647,14 +2647,14 @@ L_while_test_4:
     ldc.i4.0
     ceq
     brtrue L_while_3
-    // line 594
+    .line 594
     ldloc _F
     ldfld valuetype T_CHARINFO* @GETCHARLITERAL::NEXTCHAR
     ldfld int32 T_CHARINFO::NAME
     ldc.i4 3
     ceq
     brfalse L_if_end_5
-    // line 595
+    .line 595
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GETCHARLITERAL::INPUTFILE
     ldloc _F
@@ -2674,7 +2674,7 @@ L_while_test_2:
     ldc.i4 3
     ceq
     brtrue L_while_1
-    // line 603
+    .line 603
     ldloc _F
     ldfld int32* @GETCHARLITERAL::NAME
     ldc.i4 32
@@ -2684,7 +2684,7 @@ L_Epilogue:
     ret
 }
 
-// line 608
+.line 608
 
 .method static
 int32 CHARTYPE(valuetype T_CHARINFO CURRCHAR, valuetype T_CHARINFO NEXTCHAR)
@@ -2705,7 +2705,7 @@ int32 CHARTYPE(valuetype T_CHARINFO CURRCHAR, valuetype T_CHARINFO NEXTCHAR)
     stfld valuetype T_CHARINFO @CHARTYPE::NEXTCHAR
 
 L_Entry:
-    // line 622
+    .line 622
     ldloc _F
     ldflda valuetype T_SPECIALCHAR @CHARTYPE::NEXTTWOCHARS
     ldc.i4 1
@@ -2714,7 +2714,7 @@ L_Entry:
     ldflda valuetype T_CHARINFO @CHARTYPE::CURRCHAR
     ldfld uint8 T_CHARINFO::VALUE
     stobj uint8
-    // line 623
+    .line 623
     ldloc _F
     ldflda valuetype T_SPECIALCHAR @CHARTYPE::NEXTTWOCHARS
     ldc.i4 2
@@ -2723,18 +2723,18 @@ L_Entry:
     ldflda valuetype T_CHARINFO @CHARTYPE::NEXTCHAR
     ldfld uint8 T_CHARINFO::VALUE
     stobj uint8
-    // line 625
+    .line 625
     ldloc _F
     ldc.i4 22
     stfld int32 @CHARTYPE::THISCHAR
-    // line 626
+    .line 626
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @CHARTYPE::HIT
-    // line 628
+    .line 628
     br L_while_test_2
 L_while_1:
-    // line 629
+    .line 629
     ldloc _F
     ldfld valuetype T_SPECIALCHAR @CHARTYPE::NEXTTWOCHARS
     call string T_SPECIALCHAR::arrayToString(valuetype T_SPECIALCHAR)
@@ -2746,13 +2746,13 @@ L_while_1:
     call string T_SPECIALCHAR::arrayToString(valuetype T_SPECIALCHAR)
     call bool [lpcRuntime]LPC.Helpers::StrcmpEQ(string, string)
     brfalse L_else_3
-    // line 630
+    .line 630
     ldloc _F
     ldc.i4 1 // (true)
     stfld bool @CHARTYPE::HIT
     br L_if_end_4
 L_else_3:
-    // line 632
+    .line 632
     ldloc _F
     ldloc _F
     ldfld int32 @CHARTYPE::THISCHAR
@@ -2774,20 +2774,20 @@ L_OR_shortcut_5:
     ldc.i4.0
     ceq
     brtrue L_while_1
-    // line 634
+    .line 634
     ldloc _F
     ldfld bool @CHARTYPE::HIT
     ldc.i4.0
     ceq
     brfalse L_if_end_6
-    // line 636
+    .line 636
     ldloc _F
     ldc.i4 25
     stfld int32 @CHARTYPE::THISCHAR
-    // line 638
+    .line 638
     br L_while_test_8
 L_while_7:
-    // line 639
+    .line 639
     ldloc _F
     ldflda valuetype T_CHARINFO @CHARTYPE::CURRCHAR
     ldfld uint8 T_CHARINFO::VALUE
@@ -2798,13 +2798,13 @@ L_while_7:
     ldobj uint8
     ceq
     brfalse L_else_9
-    // line 640
+    .line 640
     ldloc _F
     ldc.i4 1 // (true)
     stfld bool @CHARTYPE::HIT
     br L_if_end_10
 L_else_9:
-    // line 642
+    .line 642
     ldloc _F
     ldloc _F
     ldfld int32 @CHARTYPE::THISCHAR
@@ -2829,18 +2829,18 @@ L_OR_shortcut_11:
     ceq
     brtrue L_while_7
 L_if_end_6:
-    // line 646
+    .line 646
     ldloc _F
     ldfld bool @CHARTYPE::HIT
     brfalse L_else_12
-    // line 647
+    .line 647
     ldloc _F
     ldloc _F
     ldfld int32 @CHARTYPE::THISCHAR
     stfld int32 @CHARTYPE::_fnvalue
     br L_if_end_13
 L_else_12:
-    // line 649
+    .line 649
     ldloc _F
     ldc.i4 32
     stfld int32 @CHARTYPE::_fnvalue
@@ -2852,7 +2852,7 @@ L_Epilogue:
     ret
 }
 
-// line 654
+.line 654
 
 .method static
 void GETSPECIALCHAR(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_CHARINFO& CURRCHAR, valuetype T_CHARINFO& NEXTCHAR, int32& NAME, valuetype T_STRING& VALUE, int32& LENGTH)
@@ -2913,7 +2913,7 @@ void GETSPECIALCHAR(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_CHARI
     stfld valuetype T_STRING* @GETSPECIALCHAR::VALUE
 
 L_Entry:
-    // line 663
+    .line 663
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GETSPECIALCHAR::INPUTFILE
     ldloc _F
@@ -2925,7 +2925,7 @@ L_Entry:
     ldloc _F
     ldfld valuetype T_STRING* @GETSPECIALCHAR::VALUE
     call void STORENEXTCHAR(valuetype [lpcRuntime]LPC.File& INPUTFILE, int32& LENGTH, valuetype T_CHARINFO& CURRCHAR, valuetype T_CHARINFO& NEXTCHAR, valuetype T_STRING& VALUE)
-    // line 669
+    .line 669
     ldloc _F
     ldfld int32* @GETSPECIALCHAR::NAME
     ldloc _F
@@ -2936,14 +2936,14 @@ L_Entry:
     ldobj valuetype T_CHARINFO
     call int32 CHARTYPE(valuetype T_CHARINFO CURRCHAR, valuetype T_CHARINFO NEXTCHAR)
     stobj int32
-    // line 672
+    .line 672
     ldsfld valuetype T_DBLCHRSET _G::DBLCHARS
     ldloc _F
     ldfld int32* @GETSPECIALCHAR::NAME
     ldobj int32
     call bool _SetContains(valuetype T_DBLCHRSET s, int32 val)
     brfalse L_if_end_1
-    // line 673
+    .line 673
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GETSPECIALCHAR::INPUTFILE
     ldloc _F
@@ -2962,7 +2962,7 @@ L_Epilogue:
     ret
 }
 
-// line 682
+.line 682
 
 .method static
 void GETNEXTSYMBOL(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_CHARINFO& CURRCHAR, valuetype T_CHARINFO& NEXTCHAR, int32& NAME, valuetype T_STRING& VALUE, int32& LENGTH)
@@ -3025,7 +3025,7 @@ void GETNEXTSYMBOL(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_CHARIN
     stfld valuetype T_STRING* @GETNEXTSYMBOL::VALUE
 
 L_Entry:
-    // line 691
+    .line 691
     ldloc _F
     ldfld valuetype T_CHARINFO* @GETNEXTSYMBOL::NEXTCHAR
     ldfld int32 T_CHARINFO::NAME
@@ -3033,7 +3033,7 @@ L_Entry:
     ldloc $tmpSwitchValue1
     ldc.i4 0
     bne.un L_check_case_2
-    // line 693
+    .line 693
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GETNEXTSYMBOL::INPUTFILE
     ldloc _F
@@ -3052,7 +3052,7 @@ L_check_case_2:
     ldloc $tmpSwitchValue1
     ldc.i4 1
     bne.un L_check_case_3
-    // line 700
+    .line 700
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GETNEXTSYMBOL::INPUTFILE
     ldloc _F
@@ -3071,7 +3071,7 @@ L_check_case_3:
     ldloc $tmpSwitchValue1
     ldc.i4 3
     bne.un L_check_case_4
-    // line 707
+    .line 707
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GETNEXTSYMBOL::INPUTFILE
     ldloc _F
@@ -3090,7 +3090,7 @@ L_check_case_4:
     ldloc $tmpSwitchValue1
     ldc.i4 6
     bne.un L_check_case_5
-    // line 716
+    .line 716
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GETNEXTSYMBOL::INPUTFILE
     ldloc _F
@@ -3104,14 +3104,14 @@ L_check_case_4:
     ldloc _F
     ldfld int32* @GETNEXTSYMBOL::LENGTH
     call void GETSPECIALCHAR(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_CHARINFO& CURRCHAR, valuetype T_CHARINFO& NEXTCHAR, int32& NAME, valuetype T_STRING& VALUE, int32& LENGTH)
-    // line 723
+    .line 723
     ldloc _F
     ldfld int32* @GETNEXTSYMBOL::NAME
     ldobj int32
     ldc.i4 23
     ceq
     brfalse L_if_end_6
-    // line 725
+    .line 725
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GETNEXTSYMBOL::INPUTFILE
     ldloc _F
@@ -3132,7 +3132,7 @@ L_check_case_5:
     ldloc $tmpSwitchValue1
     ldc.i4 5
     bne.un L_case_end_1
-    // line 734
+    .line 734
     ldloc _F
     ldfld int32* @GETNEXTSYMBOL::NAME
     ldc.i4 31
@@ -3143,7 +3143,7 @@ L_Epilogue:
     ret
 }
 
-// line 741
+.line 741
 
 .method static
 void GETSYMBOL(valuetype [lpcRuntime]LPC.File& INPUTFILE, void*& NEXTSYM, void*& CURRSYM)
@@ -3180,26 +3180,26 @@ void GETSYMBOL(valuetype [lpcRuntime]LPC.File& INPUTFILE, void*& NEXTSYM, void*&
     stfld void** @GETSYMBOL::NEXTSYM
 
 L_Entry:
-    // line 750
+    .line 750
     ldloc _F
     ldloc _F
     ldfld void** @GETSYMBOL::CURRSYM
     ldobj void*
     stfld void* @GETSYMBOL::DUMMY
-    // line 751
+    .line 751
     ldloc _F
     ldfld void** @GETSYMBOL::CURRSYM
     ldloc _F
     ldfld void** @GETSYMBOL::NEXTSYM
     ldobj void*
     stobj void*
-    // line 752
+    .line 752
     ldloc _F
     ldfld void** @GETSYMBOL::NEXTSYM
     ldloc _F
     ldfld void* @GETSYMBOL::DUMMY
     stobj void*
-    // line 756
+    .line 756
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GETSYMBOL::INPUTFILE
     ldsflda valuetype T_CHARINFO _G::CURRCHAR
@@ -3213,13 +3213,13 @@ L_Entry:
     ldobj void*
     ldflda int32 T_SYMBOL::CRSBEFORE
     call void SKIPSPACES(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_CHARINFO& CURRCHAR, valuetype T_CHARINFO& NEXTCHAR, int32& SPACESBEFORE, int32& CRSBEFORE)
-    // line 762
+    .line 762
     ldloc _F
     ldfld void** @GETSYMBOL::NEXTSYM
     ldobj void*
     ldc.i4 0
     stfld int32 T_SYMBOL::LENGTH
-    // line 764
+    .line 764
     ldloc _F
     ldfld void** @GETSYMBOL::CURRSYM
     ldobj void*
@@ -3227,7 +3227,7 @@ L_Entry:
     ldc.i4 23
     ceq
     brfalse L_else_1
-    // line 765
+    .line 765
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GETSYMBOL::INPUTFILE
     ldsflda valuetype T_CHARINFO _G::CURRCHAR
@@ -3247,7 +3247,7 @@ L_Entry:
     call void GETCOMMENT(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_CHARINFO& CURRCHAR, valuetype T_CHARINFO& NEXTCHAR, int32& NAME, valuetype T_STRING& VALUE, int32& LENGTH)
     br L_if_end_2
 L_else_1:
-    // line 772
+    .line 772
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GETSYMBOL::INPUTFILE
     ldsflda valuetype T_CHARINFO _G::CURRCHAR
@@ -3273,7 +3273,7 @@ L_Epilogue:
     ret
 }
 
-// line 784
+.line 784
 
 .method static
 void INITIALISE(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype [lpcRuntime]LPC.File& OUTPUTFILE, int32& TOPOFSTACK, int32& CURRLINEPOS, int32& CURRMARGIN, valuetype T_KEYWORDTABLE& KEYWORD, valuetype T_DBLCHRSET& DBLCHARS, valuetype T_DBLCHARTABLE& DBLCHAR, valuetype T_SGLCHARTABLE& SGLCHAR, bool& RECORDSEEN, valuetype T_CHARINFO& CURRCHAR, valuetype T_CHARINFO& NEXTCHAR, void*& CURRSYM, void*& NEXTSYM, valuetype T_OPTIONTABLE& PPOPTION)
@@ -4063,184 +4063,184 @@ void INITIALISE(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype [lpcRuntime
 
 
 L_Entry:
-    // line 813
+    .line 813
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @INITIALISE::INPUTFILE
     call instance void [lpcRuntime]LPC.File::Reset()
-    // line 814
+    .line 814
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @INITIALISE::OUTPUTFILE
     call instance void [lpcRuntime]LPC.File::Rewrite()
-    // line 816
+    .line 816
     ldloc _F
     ldfld int32* @INITIALISE::TOPOFSTACK
     ldc.i4 0
     stobj int32
-    // line 817
+    .line 817
     ldloc _F
     ldfld int32* @INITIALISE::CURRLINEPOS
     ldc.i4 0
     stobj int32
-    // line 818
+    .line 818
     ldloc _F
     ldfld int32* @INITIALISE::CURRMARGIN
     ldc.i4 0
     stobj int32
-    // line 820
+    .line 820
     ldloc _F
     ldfld valuetype T_KEYWORDTABLE* @INITIALISE::KEYWORD
     ldc.i4 0
     call instance valuetype T_KEY& T_KEYWORDTABLE::ldadr(int32)
     ldsfld valuetype T_KEY STRING_1    // "PROGRAM   "
     stobj valuetype T_KEY
-    // line 821
+    .line 821
     ldloc _F
     ldfld valuetype T_KEYWORDTABLE* @INITIALISE::KEYWORD
     ldc.i4 1
     call instance valuetype T_KEY& T_KEYWORDTABLE::ldadr(int32)
     ldsfld valuetype T_KEY STRING_2    // "FUNCTION  "
     stobj valuetype T_KEY
-    // line 822
+    .line 822
     ldloc _F
     ldfld valuetype T_KEYWORDTABLE* @INITIALISE::KEYWORD
     ldc.i4 2
     call instance valuetype T_KEY& T_KEYWORDTABLE::ldadr(int32)
     ldsfld valuetype T_KEY STRING_3    // "PROCEDURE "
     stobj valuetype T_KEY
-    // line 823
+    .line 823
     ldloc _F
     ldfld valuetype T_KEYWORDTABLE* @INITIALISE::KEYWORD
     ldc.i4 3
     call instance valuetype T_KEY& T_KEYWORDTABLE::ldadr(int32)
     ldsfld valuetype T_KEY STRING_4    // "LABEL     "
     stobj valuetype T_KEY
-    // line 824
+    .line 824
     ldloc _F
     ldfld valuetype T_KEYWORDTABLE* @INITIALISE::KEYWORD
     ldc.i4 4
     call instance valuetype T_KEY& T_KEYWORDTABLE::ldadr(int32)
     ldsfld valuetype T_KEY STRING_5    // "CONST     "
     stobj valuetype T_KEY
-    // line 825
+    .line 825
     ldloc _F
     ldfld valuetype T_KEYWORDTABLE* @INITIALISE::KEYWORD
     ldc.i4 5
     call instance valuetype T_KEY& T_KEYWORDTABLE::ldadr(int32)
     ldsfld valuetype T_KEY STRING_6    // "TYPE      "
     stobj valuetype T_KEY
-    // line 826
+    .line 826
     ldloc _F
     ldfld valuetype T_KEYWORDTABLE* @INITIALISE::KEYWORD
     ldc.i4 6
     call instance valuetype T_KEY& T_KEYWORDTABLE::ldadr(int32)
     ldsfld valuetype T_KEY STRING_7    // "VAR       "
     stobj valuetype T_KEY
-    // line 827
+    .line 827
     ldloc _F
     ldfld valuetype T_KEYWORDTABLE* @INITIALISE::KEYWORD
     ldc.i4 7
     call instance valuetype T_KEY& T_KEYWORDTABLE::ldadr(int32)
     ldsfld valuetype T_KEY STRING_8    // "BEGIN     "
     stobj valuetype T_KEY
-    // line 828
+    .line 828
     ldloc _F
     ldfld valuetype T_KEYWORDTABLE* @INITIALISE::KEYWORD
     ldc.i4 8
     call instance valuetype T_KEY& T_KEYWORDTABLE::ldadr(int32)
     ldsfld valuetype T_KEY STRING_9    // "REPEAT    "
     stobj valuetype T_KEY
-    // line 829
+    .line 829
     ldloc _F
     ldfld valuetype T_KEYWORDTABLE* @INITIALISE::KEYWORD
     ldc.i4 9
     call instance valuetype T_KEY& T_KEYWORDTABLE::ldadr(int32)
     ldsfld valuetype T_KEY STRING_10    // "RECORD    "
     stobj valuetype T_KEY
-    // line 830
+    .line 830
     ldloc _F
     ldfld valuetype T_KEYWORDTABLE* @INITIALISE::KEYWORD
     ldc.i4 10
     call instance valuetype T_KEY& T_KEYWORDTABLE::ldadr(int32)
     ldsfld valuetype T_KEY STRING_11    // "CASE      "
     stobj valuetype T_KEY
-    // line 831
+    .line 831
     ldloc _F
     ldfld valuetype T_KEYWORDTABLE* @INITIALISE::KEYWORD
     ldc.i4 11
     call instance valuetype T_KEY& T_KEYWORDTABLE::ldadr(int32)
     ldsfld valuetype T_KEY STRING_11    // "CASE      "
     stobj valuetype T_KEY
-    // line 832
+    .line 832
     ldloc _F
     ldfld valuetype T_KEYWORDTABLE* @INITIALISE::KEYWORD
     ldc.i4 12
     call instance valuetype T_KEY& T_KEYWORDTABLE::ldadr(int32)
     ldsfld valuetype T_KEY STRING_12    // "OF        "
     stobj valuetype T_KEY
-    // line 833
+    .line 833
     ldloc _F
     ldfld valuetype T_KEYWORDTABLE* @INITIALISE::KEYWORD
     ldc.i4 13
     call instance valuetype T_KEY& T_KEYWORDTABLE::ldadr(int32)
     ldsfld valuetype T_KEY STRING_13    // "FOR       "
     stobj valuetype T_KEY
-    // line 834
+    .line 834
     ldloc _F
     ldfld valuetype T_KEYWORDTABLE* @INITIALISE::KEYWORD
     ldc.i4 14
     call instance valuetype T_KEY& T_KEYWORDTABLE::ldadr(int32)
     ldsfld valuetype T_KEY STRING_14    // "WHILE     "
     stobj valuetype T_KEY
-    // line 835
+    .line 835
     ldloc _F
     ldfld valuetype T_KEYWORDTABLE* @INITIALISE::KEYWORD
     ldc.i4 15
     call instance valuetype T_KEY& T_KEYWORDTABLE::ldadr(int32)
     ldsfld valuetype T_KEY STRING_15    // "WITH      "
     stobj valuetype T_KEY
-    // line 836
+    .line 836
     ldloc _F
     ldfld valuetype T_KEYWORDTABLE* @INITIALISE::KEYWORD
     ldc.i4 16
     call instance valuetype T_KEY& T_KEYWORDTABLE::ldadr(int32)
     ldsfld valuetype T_KEY STRING_16    // "DO        "
     stobj valuetype T_KEY
-    // line 837
+    .line 837
     ldloc _F
     ldfld valuetype T_KEYWORDTABLE* @INITIALISE::KEYWORD
     ldc.i4 17
     call instance valuetype T_KEY& T_KEYWORDTABLE::ldadr(int32)
     ldsfld valuetype T_KEY STRING_17    // "IF        "
     stobj valuetype T_KEY
-    // line 838
+    .line 838
     ldloc _F
     ldfld valuetype T_KEYWORDTABLE* @INITIALISE::KEYWORD
     ldc.i4 18
     call instance valuetype T_KEY& T_KEYWORDTABLE::ldadr(int32)
     ldsfld valuetype T_KEY STRING_18    // "THEN      "
     stobj valuetype T_KEY
-    // line 839
+    .line 839
     ldloc _F
     ldfld valuetype T_KEYWORDTABLE* @INITIALISE::KEYWORD
     ldc.i4 19
     call instance valuetype T_KEY& T_KEYWORDTABLE::ldadr(int32)
     ldsfld valuetype T_KEY STRING_19    // "ELSE      "
     stobj valuetype T_KEY
-    // line 840
+    .line 840
     ldloc _F
     ldfld valuetype T_KEYWORDTABLE* @INITIALISE::KEYWORD
     ldc.i4 20
     call instance valuetype T_KEY& T_KEYWORDTABLE::ldadr(int32)
     ldsfld valuetype T_KEY STRING_20    // "END       "
     stobj valuetype T_KEY
-    // line 841
+    .line 841
     ldloc _F
     ldfld valuetype T_KEYWORDTABLE* @INITIALISE::KEYWORD
     ldc.i4 21
     call instance valuetype T_KEY& T_KEYWORDTABLE::ldadr(int32)
     ldsfld valuetype T_KEY STRING_21    // "UNTIL     "
     stobj valuetype T_KEY
-    // line 844
+    .line 844
     ldloc _F
     ldfld valuetype T_DBLCHRSET* @INITIALISE::DBLCHARS
     ldloc $tmpSetLiteral1
@@ -4250,68 +4250,68 @@ L_Entry:
     call void _SetCheck(valuetype T_set_6 s, int32 min, int32 max)
     call valuetype T_DBLCHRSET _SetCastTo_T_DBLCHRSET(valuetype T_set_6 s)
     stobj valuetype T_DBLCHRSET
-    // line 846
+    .line 846
     ldloc _F
     ldfld valuetype T_DBLCHARTABLE* @INITIALISE::DBLCHAR
     ldc.i4 22
     call instance valuetype T_SPECIALCHAR& T_DBLCHARTABLE::ldadr(int32)
     ldsfld valuetype T_SPECIALCHAR STRING_22    // ":="
     stobj valuetype T_SPECIALCHAR
-    // line 847
+    .line 847
     ldloc _F
     ldfld valuetype T_DBLCHARTABLE* @INITIALISE::DBLCHAR
     ldc.i4 23
     call instance valuetype T_SPECIALCHAR& T_DBLCHARTABLE::ldadr(int32)
     ldsfld valuetype T_SPECIALCHAR STRING_23    // "(*"
     stobj valuetype T_SPECIALCHAR
-    // line 849
+    .line 849
     ldloc _F
     ldfld valuetype T_SGLCHARTABLE* @INITIALISE::SGLCHAR
     ldc.i4 25
     call instance uint8& T_SGLCHARTABLE::ldadr(int32)
     ldc.i4 59 // ';'
     stobj uint8
-    // line 850
+    .line 850
     ldloc _F
     ldfld valuetype T_SGLCHARTABLE* @INITIALISE::SGLCHAR
     ldc.i4 26
     call instance uint8& T_SGLCHARTABLE::ldadr(int32)
     ldc.i4 58 // ':'
     stobj uint8
-    // line 851
+    .line 851
     ldloc _F
     ldfld valuetype T_SGLCHARTABLE* @INITIALISE::SGLCHAR
     ldc.i4 27
     call instance uint8& T_SGLCHARTABLE::ldadr(int32)
     ldc.i4 61 // '='
     stobj uint8
-    // line 852
+    .line 852
     ldloc _F
     ldfld valuetype T_SGLCHARTABLE* @INITIALISE::SGLCHAR
     ldc.i4 28
     call instance uint8& T_SGLCHARTABLE::ldadr(int32)
     ldc.i4 40 // '('
     stobj uint8
-    // line 853
+    .line 853
     ldloc _F
     ldfld valuetype T_SGLCHARTABLE* @INITIALISE::SGLCHAR
     ldc.i4 29
     call instance uint8& T_SGLCHARTABLE::ldadr(int32)
     ldc.i4 41 // ')'
     stobj uint8
-    // line 854
+    .line 854
     ldloc _F
     ldfld valuetype T_SGLCHARTABLE* @INITIALISE::SGLCHAR
     ldc.i4 30
     call instance uint8& T_SGLCHARTABLE::ldadr(int32)
     ldc.i4 46 // '.'
     stobj uint8
-    // line 856
+    .line 856
     ldloc _F
     ldfld bool* @INITIALISE::RECORDSEEN
     ldc.i4 0 // (false)
     stobj bool
-    // line 859
+    .line 859
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @INITIALISE::INPUTFILE
     ldloc _F
@@ -4319,21 +4319,21 @@ L_Entry:
     ldloc _F
     ldfld valuetype T_CHARINFO* @INITIALISE::CURRCHAR
     call void GETCHAR(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_CHARINFO& NEXTCHAR, valuetype T_CHARINFO& CURRCHAR)
-    // line 863
-    // line 863
+    .line 863
+    .line 863
     ldloc _F
     ldfld void** @INITIALISE::CURRSYM
     ldc.i4 216
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stobj void*
-    // line 864
-    // line 864
+    .line 864
+    .line 864
     ldloc _F
     ldfld void** @INITIALISE::NEXTSYM
     ldc.i4 216
     call void* [lpcRuntime]LPC.Heap::Malloc(int32)
     stobj void*
-    // line 866
+    .line 866
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @INITIALISE::INPUTFILE
     ldloc _F
@@ -4341,14 +4341,14 @@ L_Entry:
     ldloc _F
     ldfld void** @INITIALISE::CURRSYM
     call void GETSYMBOL(valuetype [lpcRuntime]LPC.File& INPUTFILE, void*& NEXTSYM, void*& CURRSYM)
-    // line 872
+    .line 872
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 0
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral2
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 874
+    .line 874
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 0
@@ -4360,7 +4360,7 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 875
+    .line 875
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 0
@@ -4372,21 +4372,21 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 879
+    .line 879
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 1
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral5
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 882
+    .line 882
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 1
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral6
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 886
+    .line 886
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 1
@@ -4398,21 +4398,21 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 890
+    .line 890
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 2
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral8
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 893
+    .line 893
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 2
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral9
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 897
+    .line 897
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 2
@@ -4424,14 +4424,14 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 901
+    .line 901
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 3
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral11
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 904
+    .line 904
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 3
@@ -4443,7 +4443,7 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 905
+    .line 905
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 3
@@ -4455,21 +4455,21 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 909
+    .line 909
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 4
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral14
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 913
+    .line 913
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 4
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral15
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 914
+    .line 914
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 4
@@ -4481,21 +4481,21 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 918
+    .line 918
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 5
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral17
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 922
+    .line 922
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 5
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral18
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 924
+    .line 924
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 5
@@ -4507,21 +4507,21 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 928
+    .line 928
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 6
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral20
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 932
+    .line 932
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 6
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral21
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 935
+    .line 935
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 6
@@ -4533,21 +4533,21 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 939
+    .line 939
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 7
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral23
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 942
+    .line 942
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 7
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral24
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 946
+    .line 946
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 7
@@ -4559,14 +4559,14 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 950
+    .line 950
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 8
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral26
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 952
+    .line 952
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 8
@@ -4578,7 +4578,7 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 953
+    .line 953
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 8
@@ -4590,14 +4590,14 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 957
+    .line 957
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 9
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral29
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 959
+    .line 959
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 9
@@ -4609,7 +4609,7 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 960
+    .line 960
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 9
@@ -4621,14 +4621,14 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 964
+    .line 964
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 10
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral32
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 968
+    .line 968
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 10
@@ -4640,21 +4640,21 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 969
+    .line 969
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 10
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral34
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 973
+    .line 973
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 11
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral35
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 977
+    .line 977
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 11
@@ -4666,21 +4666,21 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 978
+    .line 978
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 11
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral37
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 982
+    .line 982
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 12
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral38
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 984
+    .line 984
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 12
@@ -4692,7 +4692,7 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 985
+    .line 985
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 12
@@ -4704,14 +4704,14 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 989
+    .line 989
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 13
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral41
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 993
+    .line 993
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 13
@@ -4723,21 +4723,21 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 994
+    .line 994
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 13
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral43
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 998
+    .line 998
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 14
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral44
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 1002
+    .line 1002
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 14
@@ -4749,21 +4749,21 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 1003
+    .line 1003
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 14
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral46
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 1007
+    .line 1007
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 15
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral47
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 1011
+    .line 1011
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 15
@@ -4775,21 +4775,21 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 1012
+    .line 1012
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 15
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral49
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 1016
+    .line 1016
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 16
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral50
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 1018
+    .line 1018
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 16
@@ -4801,7 +4801,7 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 1019
+    .line 1019
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 16
@@ -4814,14 +4814,14 @@ L_Entry:
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
     /* nop */
-    // line 1023
+    .line 1023
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 17
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral53
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 1027
+    .line 1027
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 17
@@ -4833,21 +4833,21 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 1028
+    .line 1028
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 17
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral55
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 1032
+    .line 1032
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 18
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral56
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 1034
+    .line 1034
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 18
@@ -4859,7 +4859,7 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 1035
+    .line 1035
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 18
@@ -4871,21 +4871,21 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 1039
+    .line 1039
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 19
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral59
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 1044
+    .line 1044
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 19
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral60
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 1046
+    .line 1046
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 19
@@ -4897,21 +4897,21 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 1050
+    .line 1050
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 20
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral62
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 1054
+    .line 1054
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 20
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral63
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 1063
+    .line 1063
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 20
@@ -4923,21 +4923,21 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 1067
+    .line 1067
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 21
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral65
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 1073
+    .line 1073
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 21
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral66
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 1081
+    .line 1081
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 21
@@ -4945,14 +4945,14 @@ L_Entry:
     ldloc $tmpSetLiteral67
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
     /* nop */
-    // line 1088
+    .line 1088
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 22
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral68
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 1091
+    .line 1091
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 22
@@ -4964,21 +4964,21 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 1092
+    .line 1092
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 22
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral70
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 1099
+    .line 1099
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 23
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral71
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 1100
+    .line 1100
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 23
@@ -4990,7 +4990,7 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 1101
+    .line 1101
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 23
@@ -5002,14 +5002,14 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 1105
+    .line 1105
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 24
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral74
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 1106
+    .line 1106
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 24
@@ -5021,7 +5021,7 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 1107
+    .line 1107
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 24
@@ -5033,21 +5033,21 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 1111
+    .line 1111
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 25
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral77
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 1114
+    .line 1114
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 25
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral78
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 1122
+    .line 1122
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 25
@@ -5059,14 +5059,14 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 1126
+    .line 1126
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 26
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral80
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 1128
+    .line 1128
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 26
@@ -5078,7 +5078,7 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 1129
+    .line 1129
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 26
@@ -5090,14 +5090,14 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 1133
+    .line 1133
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 27
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral83
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 1136
+    .line 1136
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 27
@@ -5109,7 +5109,7 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 1137
+    .line 1137
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 27
@@ -5121,14 +5121,14 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 1141
+    .line 1141
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 28
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral86
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 1142
+    .line 1142
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 28
@@ -5140,14 +5140,14 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 1143
+    .line 1143
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 28
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral88
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 1147
+    .line 1147
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 29
@@ -5159,7 +5159,7 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_OPTIONSET _SetCastTo_T_OPTIONSET(valuetype T_set_1 s)
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 1148
+    .line 1148
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 29
@@ -5171,7 +5171,7 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 1149
+    .line 1149
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 29
@@ -5183,14 +5183,14 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 1153
+    .line 1153
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 30
     call instance valuetype T_TABLEENTRY& T_OPTIONTABLE::ldadr(int32)
     ldloc $tmpSetLiteral92
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 1154
+    .line 1154
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 30
@@ -5202,7 +5202,7 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 1155
+    .line 1155
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 30
@@ -5214,7 +5214,7 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 1159
+    .line 1159
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 31
@@ -5226,7 +5226,7 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_OPTIONSET _SetCastTo_T_OPTIONSET(valuetype T_set_1 s)
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 1160
+    .line 1160
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 31
@@ -5238,7 +5238,7 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 1161
+    .line 1161
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 31
@@ -5250,7 +5250,7 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::GOBBLETERMINATORS
-    // line 1165
+    .line 1165
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 32
@@ -5262,7 +5262,7 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_OPTIONSET _SetCastTo_T_OPTIONSET(valuetype T_set_1 s)
     stfld valuetype T_OPTIONSET T_TABLEENTRY::OPTIONSSELECTED
-    // line 1166
+    .line 1166
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 32
@@ -5274,7 +5274,7 @@ L_Entry:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_set_6 _SetCastTo_T_set_6(valuetype T_set_1 s)
     stfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
-    // line 1167
+    .line 1167
     ldloc _F
     ldfld valuetype T_OPTIONTABLE* @INITIALISE::PPOPTION
     ldc.i4 32
@@ -5292,7 +5292,7 @@ L_Epilogue:
     ret
 }
 
-// line 1175
+.line 1175
 
 .method static
 bool STACKEMPTY()
@@ -5305,18 +5305,18 @@ bool STACKEMPTY()
     stloc _F
 
 L_Entry:
-    // line 1179
+    .line 1179
     ldsfld int32 _G::TOP
     ldc.i4 0
     ceq
     brfalse L_else_1
-    // line 1180
+    .line 1180
     ldloc _F
     ldc.i4 1 // (true)
     stfld bool @STACKEMPTY::_fnvalue
     br L_if_end_2
 L_else_1:
-    // line 1182
+    .line 1182
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @STACKEMPTY::_fnvalue
@@ -5328,7 +5328,7 @@ L_Epilogue:
     ret
 }
 
-// line 1187
+.line 1187
 
 .method static
 bool STACKFULL()
@@ -5341,18 +5341,18 @@ bool STACKFULL()
     stloc _F
 
 L_Entry:
-    // line 1191
+    .line 1191
     ldsfld int32 _G::TOP
     ldc.i4 100
     ceq
     brfalse L_else_1
-    // line 1192
+    .line 1192
     ldloc _F
     ldc.i4 1 // (true)
     stfld bool @STACKFULL::_fnvalue
     br L_if_end_2
 L_else_1:
-    // line 1194
+    .line 1194
     ldloc _F
     ldc.i4 0 // (false)
     stfld bool @STACKFULL::_fnvalue
@@ -5364,7 +5364,7 @@ L_Epilogue:
     ret
 }
 
-// line 1199
+.line 1199
 
 .method static
 void POPSTACK(int32& INDENTSYMBOL, int32& PREVMARGIN)
@@ -5393,12 +5393,12 @@ void POPSTACK(int32& INDENTSYMBOL, int32& PREVMARGIN)
     stfld int32* @POPSTACK::PREVMARGIN
 
 L_Entry:
-    // line 1204
+    .line 1204
     call bool STACKEMPTY()
     ldc.i4.0
     ceq
     brfalse L_else_1
-    // line 1206
+    .line 1206
     ldloc _F
     ldfld int32* @POPSTACK::INDENTSYMBOL
     ldsflda valuetype T_SYMBOLSTACK _G::STACK
@@ -5406,7 +5406,7 @@ L_Entry:
     call instance valuetype T_STACKENTRY& T_SYMBOLSTACK::ldadr(int32)
     ldfld int32 T_STACKENTRY::INDENTSYMBOL
     stobj int32
-    // line 1207
+    .line 1207
     ldloc _F
     ldfld int32* @POPSTACK::PREVMARGIN
     ldsflda valuetype T_SYMBOLSTACK _G::STACK
@@ -5414,19 +5414,19 @@ L_Entry:
     call instance valuetype T_STACKENTRY& T_SYMBOLSTACK::ldadr(int32)
     ldfld int32 T_STACKENTRY::PREVMARGIN
     stobj int32
-    // line 1209
+    .line 1209
     ldsfld int32 _G::TOP
     ldc.i4 1
     sub
     stsfld int32 _G::TOP
     br L_if_end_2
 L_else_1:
-    // line 1214
+    .line 1214
     ldloc _F
     ldfld int32* @POPSTACK::INDENTSYMBOL
     ldc.i4 32
     stobj int32
-    // line 1215
+    .line 1215
     ldloc _F
     ldfld int32* @POPSTACK::PREVMARGIN
     ldc.i4 0
@@ -5438,7 +5438,7 @@ L_Epilogue:
     ret
 }
 
-// line 1222
+.line 1222
 
 .method static
 void PUSHSTACK(int32 INDENTSYMBOL, int32 PREVMARGIN)
@@ -5459,19 +5459,19 @@ void PUSHSTACK(int32 INDENTSYMBOL, int32 PREVMARGIN)
     stfld int32 @PUSHSTACK::PREVMARGIN
 
 L_Entry:
-    // line 1227
+    .line 1227
     ldsfld int32 _G::TOP
     ldc.i4 1
     add
     stsfld int32 _G::TOP
-    // line 1229
+    .line 1229
     ldsflda valuetype T_SYMBOLSTACK _G::STACK
     ldsfld int32 _G::TOP
     call instance valuetype T_STACKENTRY& T_SYMBOLSTACK::ldadr(int32)
     ldloc _F
     ldfld int32 @PUSHSTACK::INDENTSYMBOL
     stfld int32 T_STACKENTRY::INDENTSYMBOL
-    // line 1230
+    .line 1230
     ldsflda valuetype T_SYMBOLSTACK _G::STACK
     ldsfld int32 _G::TOP
     call instance valuetype T_STACKENTRY& T_SYMBOLSTACK::ldadr(int32)
@@ -5484,7 +5484,7 @@ L_Epilogue:
     ret
 }
 
-// line 1235
+.line 1235
 
 .method static
 void WRITECRS(int32 NUMBEROFCRS, int32& CURRLINEPOS, valuetype [lpcRuntime]LPC.File& OUTPUTFILE)
@@ -5521,13 +5521,13 @@ void WRITECRS(int32 NUMBEROFCRS, int32& CURRLINEPOS, valuetype [lpcRuntime]LPC.F
     stfld valuetype [lpcRuntime]LPC.File* @WRITECRS::OUTPUTFILE
 
 L_Entry:
-    // line 1244
+    .line 1244
     ldloc _F
     ldfld int32 @WRITECRS::NUMBEROFCRS
     ldc.i4 0
     cgt
     brfalse L_if_end_1
-    // line 1246
+    .line 1246
     ldloc _F
     ldfld int32 @WRITECRS::NUMBEROFCRS
     stloc $tmpEndValue1
@@ -5540,7 +5540,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int32 @WRITECRS::I
 L_for_loop_2:
-    // line 1247
+    .line 1247
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @WRITECRS::OUTPUTFILE
     call instance void [lpcRuntime]LPC.File::WriteLn()
@@ -5558,7 +5558,7 @@ L_for_loop_2:
     br L_for_loop_2
 L_for_end_3:
     pop
-    // line 1249
+    .line 1249
     ldloc _F
     ldfld int32* @WRITECRS::CURRLINEPOS
     ldc.i4 0
@@ -5569,7 +5569,7 @@ L_Epilogue:
     ret
 }
 
-// line 1256
+.line 1256
 
 .method static
 void INSERTCR(void*& CURRSYM, valuetype [lpcRuntime]LPC.File& OUTPUTFILE)
@@ -5598,7 +5598,7 @@ void INSERTCR(void*& CURRSYM, valuetype [lpcRuntime]LPC.File& OUTPUTFILE)
     stfld valuetype [lpcRuntime]LPC.File* @INSERTCR::OUTPUTFILE
 
 L_Entry:
-    // line 1264
+    .line 1264
     ldloc _F
     ldfld void** @INSERTCR::CURRSYM
     ldobj void*
@@ -5606,13 +5606,13 @@ L_Entry:
     ldc.i4 0
     ceq
     brfalse L_if_end_1
-    // line 1266
+    .line 1266
     ldc.i4 1 // ONCE 
     ldsflda int32 _G::CURRLINEPOS
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @INSERTCR::OUTPUTFILE
     call void WRITECRS(int32 NUMBEROFCRS, int32& CURRLINEPOS, valuetype [lpcRuntime]LPC.File& OUTPUTFILE)
-    // line 1269
+    .line 1269
     ldloc _F
     ldfld void** @INSERTCR::CURRSYM
     ldobj void*
@@ -5624,7 +5624,7 @@ L_Epilogue:
     ret
 }
 
-// line 1276
+.line 1276
 
 .method static
 void INSERTBLANKLINE(void*& CURRSYM, valuetype [lpcRuntime]LPC.File& OUTPUTFILE)
@@ -5653,7 +5653,7 @@ void INSERTBLANKLINE(void*& CURRSYM, valuetype [lpcRuntime]LPC.File& OUTPUTFILE)
     stfld valuetype [lpcRuntime]LPC.File* @INSERTBLANKLINE::OUTPUTFILE
 
 L_Entry:
-    // line 1285
+    .line 1285
     ldloc _F
     ldfld void** @INSERTBLANKLINE::CURRSYM
     ldobj void*
@@ -5661,12 +5661,12 @@ L_Entry:
     ldc.i4 0
     ceq
     brfalse L_else_1
-    // line 1287
+    .line 1287
     ldsfld int32 _G::CURRLINEPOS
     ldc.i4 0
     ceq
     brfalse L_else_3
-    // line 1288
+    .line 1288
     ldc.i4 1 // ONCE 
     ldsflda int32 _G::CURRLINEPOS
     ldloc _F
@@ -5674,14 +5674,14 @@ L_Entry:
     call void WRITECRS(int32 NUMBEROFCRS, int32& CURRLINEPOS, valuetype [lpcRuntime]LPC.File& OUTPUTFILE)
     br L_if_end_4
 L_else_3:
-    // line 1291
+    .line 1291
     ldc.i4 2 // TWICE 
     ldsflda int32 _G::CURRLINEPOS
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @INSERTBLANKLINE::OUTPUTFILE
     call void WRITECRS(int32 NUMBEROFCRS, int32& CURRLINEPOS, valuetype [lpcRuntime]LPC.File& OUTPUTFILE)
 L_if_end_4:
-    // line 1294
+    .line 1294
     ldloc _F
     ldfld void** @INSERTBLANKLINE::CURRSYM
     ldobj void*
@@ -5689,7 +5689,7 @@ L_if_end_4:
     stfld int32 T_SYMBOL::SPACESBEFORE
     br L_if_end_2
 L_else_1:
-    // line 1298
+    .line 1298
     ldloc _F
     ldfld void** @INSERTBLANKLINE::CURRSYM
     ldobj void*
@@ -5697,12 +5697,12 @@ L_else_1:
     ldc.i4 1
     ceq
     brfalse L_if_end_5
-    // line 1299
+    .line 1299
     ldsfld int32 _G::CURRLINEPOS
     ldc.i4 0
     cgt
     brfalse L_if_end_6
-    // line 1300
+    .line 1300
     ldc.i4 1 // ONCE 
     ldsflda int32 _G::CURRLINEPOS
     ldloc _F
@@ -5716,7 +5716,7 @@ L_Epilogue:
     ret
 }
 
-// line 1306
+.line 1306
 
 .method static
 void LSHIFTON(valuetype T_set_6 DINDENTSYMBOLS)
@@ -5733,27 +5733,27 @@ void LSHIFTON(valuetype T_set_6 DINDENTSYMBOLS)
     stfld valuetype T_set_6 @LSHIFTON::DINDENTSYMBOLS
 
 L_Entry:
-    // line 1314
+    .line 1314
     call bool STACKEMPTY()
     ldc.i4.0
     ceq
     brfalse L_if_end_1
-    // line 1316
+    .line 1316
 L_repeat_2:
-    // line 1317
+    .line 1317
     ldloc _F
     ldflda int32 @LSHIFTON::INDENTSYMBOL
     ldloc _F
     ldflda int32 @LSHIFTON::PREVMARGIN
     call void POPSTACK(int32& INDENTSYMBOL, int32& PREVMARGIN)
-    // line 1320
+    .line 1320
     ldloc _F
     ldfld valuetype T_set_6 @LSHIFTON::DINDENTSYMBOLS
     ldloc _F
     ldfld int32 @LSHIFTON::INDENTSYMBOL
     call bool _SetContains(valuetype T_set_6 s, int32 val)
     brfalse L_if_end_3
-    // line 1321
+    .line 1321
     ldloc _F
     ldfld int32 @LSHIFTON::PREVMARGIN
     stsfld int32 _G::CURRMARGIN
@@ -5771,7 +5771,7 @@ L_if_end_3:
     call bool STACKEMPTY()
 L_OR_shortcut_4:
     brfalse L_repeat_2
-    // line 1326
+    .line 1326
     ldloc _F
     ldfld valuetype T_set_6 @LSHIFTON::DINDENTSYMBOLS
     ldloc _F
@@ -5780,7 +5780,7 @@ L_OR_shortcut_4:
     ldc.i4.0
     ceq
     brfalse L_if_end_5
-    // line 1327
+    .line 1327
     ldloc _F
     ldfld int32 @LSHIFTON::INDENTSYMBOL
     ldloc _F
@@ -5794,7 +5794,7 @@ L_Epilogue:
     ret
 }
 
-// line 1335
+.line 1335
 
 .method static
 void LSHIFT()
@@ -5807,18 +5807,18 @@ void LSHIFT()
     stloc _F
 
 L_Entry:
-    // line 1343
+    .line 1343
     call bool STACKEMPTY()
     ldc.i4.0
     ceq
     brfalse L_if_end_1
-    // line 1344
+    .line 1344
     ldloc _F
     ldflda int32 @LSHIFT::INDENTSYMBOL
     ldloc _F
     ldflda int32 @LSHIFT::PREVMARGIN
     call void POPSTACK(int32& INDENTSYMBOL, int32& PREVMARGIN)
-    // line 1346
+    .line 1346
     ldloc _F
     ldfld int32 @LSHIFT::PREVMARGIN
     stsfld int32 _G::CURRMARGIN
@@ -5828,7 +5828,7 @@ L_Epilogue:
     ret
 }
 
-// line 1352
+.line 1352
 
 .method static
 void INSERTSPACE(void*& SYMBOL, valuetype [lpcRuntime]LPC.File& OUTPUTFILE)
@@ -5857,24 +5857,24 @@ void INSERTSPACE(void*& SYMBOL, valuetype [lpcRuntime]LPC.File& OUTPUTFILE)
     stfld void** @INSERTSPACE::SYMBOL
 
 L_Entry:
-    // line 1357
+    .line 1357
     ldsfld int32 _G::CURRLINEPOS
     ldc.i4 72
     clt
     brfalse L_if_end_1
-    // line 1359
+    .line 1359
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @INSERTSPACE::OUTPUTFILE
     dup
     ldc.i4 32 // ' '
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     pop
-    // line 1361
+    .line 1361
     ldsfld int32 _G::CURRLINEPOS
     ldc.i4 1
     add
     stsfld int32 _G::CURRLINEPOS
-    // line 1364
+    .line 1364
     ldloc _F
     ldfld void** @INSERTSPACE::SYMBOL
     ldobj void*
@@ -5892,7 +5892,7 @@ L_Entry:
     cgt
 L_AND_shortcut_2:
     brfalse L_if_end_3
-    // line 1365
+    .line 1365
     ldloc _F
     ldfld void** @INSERTSPACE::SYMBOL
     ldobj void*
@@ -5910,7 +5910,7 @@ L_Epilogue:
     ret
 }
 
-// line 1372
+.line 1372
 
 .method static
 void MOVELINEPOS(int32 NEWLINEPOS, int32& CURRLINEPOS, valuetype [lpcRuntime]LPC.File& OUTPUTFILE)
@@ -5947,7 +5947,7 @@ void MOVELINEPOS(int32 NEWLINEPOS, int32& CURRLINEPOS, valuetype [lpcRuntime]LPC
     stfld valuetype [lpcRuntime]LPC.File* @MOVELINEPOS::OUTPUTFILE
 
 L_Entry:
-    // line 1381
+    .line 1381
     ldloc _F
     ldfld int32 @MOVELINEPOS::NEWLINEPOS
     stloc $tmpEndValue1
@@ -5964,7 +5964,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int32 @MOVELINEPOS::I
 L_for_loop_1:
-    // line 1382
+    .line 1382
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @MOVELINEPOS::OUTPUTFILE
     dup
@@ -5985,7 +5985,7 @@ L_for_loop_1:
     br L_for_loop_1
 L_for_end_2:
     pop
-    // line 1384
+    .line 1384
     ldloc _F
     ldfld int32* @MOVELINEPOS::CURRLINEPOS
     ldloc _F
@@ -5996,7 +5996,7 @@ L_Epilogue:
     ret
 }
 
-// line 1389
+.line 1389
 
 .method static
 void PRINTSYMBOL(void* CURRSYM, int32& CURRLINEPOS, valuetype [lpcRuntime]LPC.File& OUTPUTFILE)
@@ -6033,7 +6033,7 @@ void PRINTSYMBOL(void* CURRSYM, int32& CURRLINEPOS, valuetype [lpcRuntime]LPC.Fi
     stfld valuetype [lpcRuntime]LPC.File* @PRINTSYMBOL::OUTPUTFILE
 
 L_Entry:
-    // line 1400
+    .line 1400
     ldloc _F
     ldfld void* @PRINTSYMBOL::CURRSYM
     ldfld int32 T_SYMBOL::LENGTH
@@ -6047,7 +6047,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int32 @PRINTSYMBOL::I
 L_for_loop_1:
-    // line 1401
+    .line 1401
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @PRINTSYMBOL::OUTPUTFILE
     dup
@@ -6074,7 +6074,7 @@ L_for_loop_1:
     br L_for_loop_1
 L_for_end_2:
     pop
-    // line 1403
+    .line 1403
     ldloc _F
     ldfld int32* @PRINTSYMBOL::CURRLINEPOS
     ldloc _F
@@ -6090,7 +6090,7 @@ L_Epilogue:
     ret
 }
 
-// line 1410
+.line 1410
 
 .method static
 void PPSYMBOL(void* CURRSYM, valuetype [lpcRuntime]LPC.File& OUTPUTFILE)
@@ -6124,7 +6124,7 @@ void PPSYMBOL(void* CURRSYM, valuetype [lpcRuntime]LPC.File& OUTPUTFILE)
     call instance void T_set_6::addValue(int32)
 
 L_Entry:
-    // line 1423
+    .line 1423
     ldloc _F
     ldfld void* @PPSYMBOL::CURRSYM
     ldfld int32 T_SYMBOL::CRSBEFORE
@@ -6132,7 +6132,7 @@ L_Entry:
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @PPSYMBOL::OUTPUTFILE
     call void WRITECRS(int32 NUMBEROFCRS, int32& CURRLINEPOS, valuetype [lpcRuntime]LPC.File& OUTPUTFILE)
-    // line 1427
+    .line 1427
     ldsfld int32 _G::CURRLINEPOS
     ldloc _F
     ldfld void* @PPSYMBOL::CURRSYM
@@ -6150,7 +6150,7 @@ L_Entry:
     call bool _SetContains(valuetype T_set_6 s, int32 val)
 L_OR_shortcut_1:
     brfalse L_else_2
-    // line 1430
+    .line 1430
     ldloc _F
     ldsfld int32 _G::CURRLINEPOS
     ldloc _F
@@ -6160,12 +6160,12 @@ L_OR_shortcut_1:
     stfld int32 @PPSYMBOL::NEWLINEPOS
     br L_if_end_3
 L_else_2:
-    // line 1432
+    .line 1432
     ldloc _F
     ldsfld int32 _G::CURRMARGIN
     stfld int32 @PPSYMBOL::NEWLINEPOS
 L_if_end_3:
-    // line 1434
+    .line 1434
     ldloc _F
     ldfld int32 @PPSYMBOL::NEWLINEPOS
     ldloc _F
@@ -6175,13 +6175,13 @@ L_if_end_3:
     ldc.i4 72
     cgt
     brfalse L_if_end_4
-    // line 1436
+    .line 1436
     ldc.i4 1 // ONCE 
     ldsflda int32 _G::CURRLINEPOS
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @PPSYMBOL::OUTPUTFILE
     call void WRITECRS(int32 NUMBEROFCRS, int32& CURRLINEPOS, valuetype [lpcRuntime]LPC.File& OUTPUTFILE)
-    // line 1439
+    .line 1439
     ldsfld int32 _G::CURRMARGIN
     ldloc _F
     ldfld void* @PPSYMBOL::CURRSYM
@@ -6192,13 +6192,13 @@ L_if_end_3:
     ldc.i4.0
     ceq
     brfalse L_else_5
-    // line 1440
+    .line 1440
     ldloc _F
     ldsfld int32 _G::CURRMARGIN
     stfld int32 @PPSYMBOL::NEWLINEPOS
     br L_if_end_6
 L_else_5:
-    // line 1441
+    .line 1441
     ldloc _F
     ldfld void* @PPSYMBOL::CURRSYM
     ldfld int32 T_SYMBOL::LENGTH
@@ -6207,7 +6207,7 @@ L_else_5:
     ldc.i4.0
     ceq
     brfalse L_else_7
-    // line 1442
+    .line 1442
     ldloc _F
     ldc.i4 72
     ldloc _F
@@ -6217,21 +6217,21 @@ L_else_5:
     stfld int32 @PPSYMBOL::NEWLINEPOS
     br L_if_end_8
 L_else_7:
-    // line 1444
+    .line 1444
     ldloc _F
     ldc.i4 0
     stfld int32 @PPSYMBOL::NEWLINEPOS
 L_if_end_8:
 L_if_end_6:
 L_if_end_4:
-    // line 1448
+    .line 1448
     ldloc _F
     ldfld int32 @PPSYMBOL::NEWLINEPOS
     ldsflda int32 _G::CURRLINEPOS
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @PPSYMBOL::OUTPUTFILE
     call void MOVELINEPOS(int32 NEWLINEPOS, int32& CURRLINEPOS, valuetype [lpcRuntime]LPC.File& OUTPUTFILE)
-    // line 1452
+    .line 1452
     ldloc _F
     ldfld void* @PPSYMBOL::CURRSYM
     ldsflda int32 _G::CURRLINEPOS
@@ -6243,7 +6243,7 @@ L_Epilogue:
     ret
 }
 
-// line 1465
+.line 1465
 
 .method static
 void GOBBLE(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_set_6 TERMINATORS, void*& CURRSYM, void*& NEXTSYM, valuetype [lpcRuntime]LPC.File& OUTPUTFILE)
@@ -6298,16 +6298,16 @@ void GOBBLE(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_set_6 TERMINA
     call instance void T_set_6::addValue(int32)
 
 L_Entry:
-    // line 1473
+    .line 1473
     ldloc _F
     ldfld void** @GOBBLE::CURRSYM
     ldobj void*
     ldfld int32 T_SYMBOL::NAME
     call void RSHIFTTOCLP(int32 CURRSYM)
-    // line 1475
+    .line 1475
     br L_while_test_2
 L_while_1:
-    // line 1477
+    .line 1477
     ldloc _F
     ldfld valuetype [lpcRuntime]LPC.File* @GOBBLE::INPUTFILE
     ldloc _F
@@ -6315,7 +6315,7 @@ L_while_1:
     ldloc _F
     ldfld void** @GOBBLE::CURRSYM
     call void GETSYMBOL(valuetype [lpcRuntime]LPC.File& INPUTFILE, void*& NEXTSYM, void*& CURRSYM)
-    // line 1481
+    .line 1481
     ldloc _F
     ldfld void** @GOBBLE::CURRSYM
     ldobj void*
@@ -6337,14 +6337,14 @@ L_while_test_2:
     ldc.i4.0
     ceq
     brtrue L_while_1
-    // line 1486
+    .line 1486
     call void LSHIFT()
 
 L_Epilogue:
     ret
 }
 
-// line 1491
+.line 1491
 
 .method static
 void RSHIFT(int32 CURRSYM)
@@ -6361,35 +6361,35 @@ void RSHIFT(int32 CURRSYM)
     stfld int32 @RSHIFT::CURRSYM
 
 L_Entry:
-    // line 1495
+    .line 1495
     call bool STACKFULL()
     ldc.i4.0
     ceq
     brfalse L_if_end_1
-    // line 1496
+    .line 1496
     ldloc _F
     ldfld int32 @RSHIFT::CURRSYM
     ldsfld int32 _G::CURRMARGIN
     call void PUSHSTACK(int32 INDENTSYMBOL, int32 PREVMARGIN)
 L_if_end_1:
-    // line 1499
+    .line 1499
     ldsfld int32 _G::CURRMARGIN
     ldc.i4 30
     clt
     brfalse L_else_2
-    // line 1500
+    .line 1500
     ldsfld int32 _G::CURRMARGIN
     ldc.i4 3
     add
     stsfld int32 _G::CURRMARGIN
     br L_if_end_3
 L_else_2:
-    // line 1502
+    .line 1502
     ldsfld int32 _G::CURRMARGIN
     ldc.i4 48
     clt
     brfalse L_if_end_4
-    // line 1503
+    .line 1503
     ldsfld int32 _G::CURRMARGIN
     ldc.i4 1
     add
@@ -6401,7 +6401,7 @@ L_Epilogue:
     ret
 }
 
-// line 1508
+.line 1508
 
 .method static
 void RSHIFTTOCLP(int32 CURRSYM)
@@ -6418,18 +6418,18 @@ void RSHIFTTOCLP(int32 CURRSYM)
     stfld int32 @RSHIFTTOCLP::CURRSYM
 
 L_Entry:
-    // line 1512
+    .line 1512
     call bool STACKFULL()
     ldc.i4.0
     ceq
     brfalse L_if_end_1
-    // line 1513
+    .line 1513
     ldloc _F
     ldfld int32 @RSHIFTTOCLP::CURRSYM
     ldsfld int32 _G::CURRMARGIN
     call void PUSHSTACK(int32 INDENTSYMBOL, int32 PREVMARGIN)
 L_if_end_1:
-    // line 1516
+    .line 1516
     ldsfld int32 _G::CURRLINEPOS
     stsfld int32 _G::CURRMARGIN
     /* nop */
@@ -6438,11 +6438,11 @@ L_Epilogue:
     ret
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 167
+.line 167
 
 .method static
 void _Program()
@@ -6468,7 +6468,7 @@ void _Program()
     call instance void [lpcRuntime]LPC.File::Init(int32)
 
 L_Entry:
-    // line 1522
+    .line 1522
     ldsflda valuetype [lpcRuntime]LPC.File _G::INPUTFILE
     ldsflda valuetype [lpcRuntime]LPC.File _G::OUTPUTFILE
     ldsflda int32 _G::TOP
@@ -6485,18 +6485,18 @@ L_Entry:
     ldsflda void* _G::NEXTSYM
     ldsflda valuetype T_OPTIONTABLE _G::PPOPTION
     call void INITIALISE(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype [lpcRuntime]LPC.File& OUTPUTFILE, int32& TOPOFSTACK, int32& CURRLINEPOS, int32& CURRMARGIN, valuetype T_KEYWORDTABLE& KEYWORD, valuetype T_DBLCHRSET& DBLCHARS, valuetype T_DBLCHARTABLE& DBLCHAR, valuetype T_SGLCHARTABLE& SGLCHAR, bool& RECORDSEEN, valuetype T_CHARINFO& CURRCHAR, valuetype T_CHARINFO& NEXTCHAR, void*& CURRSYM, void*& NEXTSYM, valuetype T_OPTIONTABLE& PPOPTION)
-    // line 1527
+    .line 1527
     ldc.i4 0 // (false)
     stsfld bool _G::CRPENDING
-    // line 1529
+    .line 1529
     br L_while_test_2
 L_while_1:
-    // line 1531
+    .line 1531
     ldsflda valuetype [lpcRuntime]LPC.File _G::INPUTFILE
     ldsflda void* _G::NEXTSYM
     ldsflda void* _G::CURRSYM
     call void GETSYMBOL(valuetype [lpcRuntime]LPC.File& INPUTFILE, void*& NEXTSYM, void*& CURRSYM)
-    // line 1538
+    .line 1538
     ldsfld bool _G::CRPENDING
     dup
     brfalse L_AND_shortcut_4
@@ -6523,16 +6523,16 @@ L_AND_shortcut_4:
     call bool _SetContains(valuetype T_OPTIONSET s, int32 val)
 L_OR_shortcut_3:
     brfalse L_if_end_5
-    // line 1540
+    .line 1540
     ldsflda void* _G::CURRSYM
     ldsflda valuetype [lpcRuntime]LPC.File _G::OUTPUTFILE
     call void INSERTCR(void*& CURRSYM, valuetype [lpcRuntime]LPC.File& OUTPUTFILE)
-    // line 1542
+    .line 1542
     ldc.i4 0 // (false)
     stsfld bool _G::CRPENDING
     /* nop */
 L_if_end_5:
-    // line 1545
+    .line 1545
     ldsflda valuetype T_OPTIONTABLE _G::PPOPTION
     ldsfld void* _G::CURRSYM
     ldfld int32 T_SYMBOL::NAME
@@ -6541,15 +6541,15 @@ L_if_end_5:
     ldc.i4 2 // BLANKLINEBEFORE 
     call bool _SetContains(valuetype T_OPTIONSET s, int32 val)
     brfalse L_if_end_6
-    // line 1546
+    .line 1546
     ldsflda void* _G::CURRSYM
     ldsflda valuetype [lpcRuntime]LPC.File _G::OUTPUTFILE
     call void INSERTBLANKLINE(void*& CURRSYM, valuetype [lpcRuntime]LPC.File& OUTPUTFILE)
-    // line 1548
+    .line 1548
     ldc.i4 0 // (false)
     stsfld bool _G::CRPENDING
 L_if_end_6:
-    // line 1551
+    .line 1551
     ldsflda valuetype T_OPTIONTABLE _G::PPOPTION
     ldsfld void* _G::CURRSYM
     ldfld int32 T_SYMBOL::NAME
@@ -6558,7 +6558,7 @@ L_if_end_6:
     ldc.i4 3 // DINDENTONKEYS 
     call bool _SetContains(valuetype T_OPTIONSET s, int32 val)
     brfalse L_if_end_7
-    // line 1552
+    .line 1552
     ldsflda valuetype T_OPTIONTABLE _G::PPOPTION
     ldsfld void* _G::CURRSYM
     ldfld int32 T_SYMBOL::NAME
@@ -6566,7 +6566,7 @@ L_if_end_6:
     ldfld valuetype T_set_6 T_TABLEENTRY::DINDENTSYMBOLS
     call void LSHIFTON(valuetype T_set_6 DINDENTSYMBOLS)
 L_if_end_7:
-    // line 1554
+    .line 1554
     ldsflda valuetype T_OPTIONTABLE _G::PPOPTION
     ldsfld void* _G::CURRSYM
     ldfld int32 T_SYMBOL::NAME
@@ -6575,10 +6575,10 @@ L_if_end_7:
     ldc.i4 4 // DINDENT 
     call bool _SetContains(valuetype T_OPTIONSET s, int32 val)
     brfalse L_if_end_8
-    // line 1555
+    .line 1555
     call void LSHIFT()
 L_if_end_8:
-    // line 1557
+    .line 1557
     ldsflda valuetype T_OPTIONTABLE _G::PPOPTION
     ldsfld void* _G::CURRSYM
     ldfld int32 T_SYMBOL::NAME
@@ -6587,16 +6587,16 @@ L_if_end_8:
     ldc.i4 5 // SPACEBEFORE 
     call bool _SetContains(valuetype T_OPTIONSET s, int32 val)
     brfalse L_if_end_9
-    // line 1558
+    .line 1558
     ldsflda void* _G::CURRSYM
     ldsflda valuetype [lpcRuntime]LPC.File _G::OUTPUTFILE
     call void INSERTSPACE(void*& SYMBOL, valuetype [lpcRuntime]LPC.File& OUTPUTFILE)
 L_if_end_9:
-    // line 1561
+    .line 1561
     ldsfld void* _G::CURRSYM
     ldsflda valuetype [lpcRuntime]LPC.File _G::OUTPUTFILE
     call void PPSYMBOL(void* CURRSYM, valuetype [lpcRuntime]LPC.File& OUTPUTFILE)
-    // line 1564
+    .line 1564
     ldsflda valuetype T_OPTIONTABLE _G::PPOPTION
     ldsfld void* _G::CURRSYM
     ldfld int32 T_SYMBOL::NAME
@@ -6605,12 +6605,12 @@ L_if_end_9:
     ldc.i4 6 // SPACEAFTER 
     call bool _SetContains(valuetype T_OPTIONSET s, int32 val)
     brfalse L_if_end_10
-    // line 1565
+    .line 1565
     ldsflda void* _G::NEXTSYM
     ldsflda valuetype [lpcRuntime]LPC.File _G::OUTPUTFILE
     call void INSERTSPACE(void*& SYMBOL, valuetype [lpcRuntime]LPC.File& OUTPUTFILE)
 L_if_end_10:
-    // line 1568
+    .line 1568
     ldsflda valuetype T_OPTIONTABLE _G::PPOPTION
     ldsfld void* _G::CURRSYM
     ldfld int32 T_SYMBOL::NAME
@@ -6619,12 +6619,12 @@ L_if_end_10:
     ldc.i4 8 // INDENTBYTAB 
     call bool _SetContains(valuetype T_OPTIONSET s, int32 val)
     brfalse L_if_end_11
-    // line 1570
+    .line 1570
     ldsfld void* _G::CURRSYM
     ldfld int32 T_SYMBOL::NAME
     call void RSHIFT(int32 CURRSYM)
 L_if_end_11:
-    // line 1572
+    .line 1572
     ldsflda valuetype T_OPTIONTABLE _G::PPOPTION
     ldsfld void* _G::CURRSYM
     ldfld int32 T_SYMBOL::NAME
@@ -6633,12 +6633,12 @@ L_if_end_11:
     ldc.i4 9 // INDENTTOCLP 
     call bool _SetContains(valuetype T_OPTIONSET s, int32 val)
     brfalse L_if_end_12
-    // line 1573
+    .line 1573
     ldsfld void* _G::CURRSYM
     ldfld int32 T_SYMBOL::NAME
     call void RSHIFTTOCLP(int32 CURRSYM)
 L_if_end_12:
-    // line 1575
+    .line 1575
     ldsflda valuetype T_OPTIONTABLE _G::PPOPTION
     ldsfld void* _G::CURRSYM
     ldfld int32 T_SYMBOL::NAME
@@ -6647,7 +6647,7 @@ L_if_end_12:
     ldc.i4 7 // GOBBLESYMBOLS 
     call bool _SetContains(valuetype T_OPTIONSET s, int32 val)
     brfalse L_if_end_13
-    // line 1576
+    .line 1576
     ldsflda valuetype [lpcRuntime]LPC.File _G::INPUTFILE
     ldsflda valuetype T_OPTIONTABLE _G::PPOPTION
     ldsfld void* _G::CURRSYM
@@ -6659,7 +6659,7 @@ L_if_end_12:
     ldsflda valuetype [lpcRuntime]LPC.File _G::OUTPUTFILE
     call void GOBBLE(valuetype [lpcRuntime]LPC.File& INPUTFILE, valuetype T_set_6 TERMINATORS, void*& CURRSYM, void*& NEXTSYM, valuetype [lpcRuntime]LPC.File& OUTPUTFILE)
 L_if_end_13:
-    // line 1582
+    .line 1582
     ldsflda valuetype T_OPTIONTABLE _G::PPOPTION
     ldsfld void* _G::CURRSYM
     ldfld int32 T_SYMBOL::NAME
@@ -6668,7 +6668,7 @@ L_if_end_13:
     ldc.i4 10 // CRAFTER 
     call bool _SetContains(valuetype T_OPTIONSET s, int32 val)
     brfalse L_if_end_14
-    // line 1583
+    .line 1583
     ldc.i4 1 // (true)
     stsfld bool _G::CRPENDING
 L_if_end_14:
@@ -6682,10 +6682,10 @@ L_while_test_2:
     ldc.i4.0
     ceq
     brtrue L_while_1
-    // line 1589
+    .line 1589
     ldsfld bool _G::CRPENDING
     brfalse L_if_end_15
-    // line 1590
+    .line 1590
     ldsflda valuetype [lpcRuntime]LPC.File _G::OUTPUTFILE
     call instance void [lpcRuntime]LPC.File::WriteLn()
 L_if_end_15:
@@ -6714,7 +6714,7 @@ L_Epilogue:
 
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 //================================================================================
 // internal helpers
@@ -6847,7 +6847,7 @@ L_Epilogue:
 
 
 
-// line 0xfeefee
+.line 0xfeefee
 
 //================================================================================
 // global string literals

@@ -1,7 +1,7 @@
 
 #include <lpcRuntime.h>
 
-// "startrek.pas"
+#line 0 "startrek.pas"
 
 //================================================================================
 // command line argument map
@@ -15,7 +15,7 @@ _Filename* _FilenameMap = _FilenameMapEntries;
 const int _FilenameMapSize = _countof(_FilenameMapEntries);
 
 
-// line 0
+#line 0
 //================================================================================
 // scope: global scope (level : 0)
 
@@ -31,7 +31,7 @@ const T_boolean C_false = 0;
 const T_integer C_maxint = 2147483647;
 const T_boolean C_true = 1;
 
-// line 1
+#line 1
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -182,35 +182,35 @@ void P_()
         }
         
         // subroutine body
-        // line 946
+        #line 946
         Rndseq = 1;
         
-        // line 947
+        #line 947
         P_initialize(nullptr);
         
-        // line 948
+        #line 948
         P_setupquad(nullptr, Curquad, Cursect);
         
-        // line 949
+        #line 949
         P_setcondition(nullptr);
         
-        // line 950
+        #line 950
         P_instructions(nullptr);
         
-        // line 951
+        #line 951
         P_klingonattack(nullptr);
         
-        // line 952
+        #line 952
         P_printquadrant(nullptr);
         
-        // line 953
+        #line 953
         while(((((Curenergy > 0) && (Totalklingons > 0)) && (Totalkbases > 0)) && (Curyear != Endyear)))
         {
-            // line 955
+            #line 955
             P_command(nullptr);
         }
         
-        // line 956
+        #line 956
         P_finishgame(nullptr);
         
         L_99:
@@ -229,7 +229,7 @@ void P_()
 }
 
 
-// line 65
+#line 65
 //================================================================================
 // scope: expp (level : 2)
 
@@ -255,24 +255,24 @@ T_real F_expp(void* _slink, T_real r)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 72
+    #line 72
     _F.t = 0.000000;
     
-    // line 73
+    #line 73
     _F.m = 1.00000;
     
-    // line 74
+    #line 74
     _FOR_TO(_F.i, 1, 55)
     {
-        // line 76
+        #line 76
         _F.t = (_F.t + _F.m);
         
-        // line 77
+        #line 77
         _F.m = (_F.m * ((double)_F.r / _F.i));
     }
     _FOR_END(_F.i)
     
-    // line 80
+    #line 80
     _F._fnvalue = _F.t;
     
     // epilogue
@@ -280,7 +280,7 @@ T_real F_expp(void* _slink, T_real r)
 }
 
 
-// line 84
+#line 84
 //================================================================================
 // scope: random (level : 2)
 
@@ -309,22 +309,22 @@ T_integer F_random(void* _slink, T_integer Low, T_integer Hi)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 90
+    #line 90
     _F.Gamma = ((C_random_a * _mod(Rndseq , (C_random_m / C_random_a))) - (_mod(C_random_m , C_random_a) * (Rndseq / (C_random_m / C_random_a))));
     
-    // line 91
+    #line 91
     if((_F.Gamma > 0))
     {
-        // line 91
+        #line 91
         Rndseq = _F.Gamma;
     }
     else
     {
-        // line 91
+        #line 91
         Rndseq = (_F.Gamma + C_random_m);
     }
     
-    // line 92
+    #line 92
     _F._fnvalue = ((Rndseq / (C_maxint / ((_F.Hi - _F.Low) + 1))) + _F.Low);
     
     // epilogue
@@ -332,7 +332,7 @@ T_integer F_random(void* _slink, T_integer Low, T_integer Hi)
 }
 
 
-// line 95
+#line 95
 //================================================================================
 // scope: distance (level : 2)
 
@@ -357,7 +357,7 @@ T_integer F_distance(void* _slink, T_sectrange Pos1x, T_sectrange Pos1y, T_sectx
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 97
+    #line 97
     _F._fnvalue = _round(_sqrt((_sqr((_F.Pos1x - _F.Pos2.x)) + _sqr((_F.Pos1y - _F.Pos2.y)))));
     
     { /* NOP */ }
@@ -367,7 +367,7 @@ T_integer F_distance(void* _slink, T_sectrange Pos1x, T_sectrange Pos1y, T_sectx
 }
 
 
-// line 100
+#line 100
 //================================================================================
 // scope: radians (level : 2)
 
@@ -390,7 +390,7 @@ T_real F_radians(void* _slink, T_integer Degrees)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 102
+    #line 102
     _F._fnvalue = (_F.Degrees * 0.0174533);
     
     { /* NOP */ }
@@ -400,7 +400,7 @@ T_real F_radians(void* _slink, T_integer Degrees)
 }
 
 
-// line 105
+#line 105
 //================================================================================
 // scope: interval (level : 2)
 
@@ -425,23 +425,23 @@ T_integer F_interval(void* _slink, T_integer Number, T_integer Minvalue, T_integ
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 107
+    #line 107
     if((_F.Number < _F.Minvalue))
     {
-        // line 108
+        #line 108
         _F._fnvalue = _F.Minvalue;
     }
     else
     {
-        // line 110
+        #line 110
         if((_F.Number > _F.Maxvalue))
         {
-            // line 111
+            #line 111
             _F._fnvalue = _F.Maxvalue;
         }
         else
         {
-            // line 113
+            #line 113
             _F._fnvalue = _F.Number;
         }
     }
@@ -453,7 +453,7 @@ T_integer F_interval(void* _slink, T_integer Number, T_integer Minvalue, T_integ
 }
 
 
-// line 116
+#line 116
 //================================================================================
 // scope: reinitialize (level : 2)
 
@@ -473,16 +473,16 @@ void P_reinitialize(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 119
+    #line 119
     Curenergy = C_entenergy;
     
-    // line 120
+    #line 120
     Curtorps = C_starttorps;
     
-    // line 121
+    #line 121
     _FOR_TO(_F.Ch, C_mindevice, C_maxdevice)
     {
-        // line 122
+        #line 122
         Device[_F.Ch].Downtime = 0;
     }
     _FOR_END(_F.Ch)
@@ -491,7 +491,7 @@ void P_reinitialize(void* _slink)
 }
 
 
-// line 125
+#line 125
 //================================================================================
 // scope: initialize (level : 2)
 
@@ -514,133 +514,133 @@ void P_initialize(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 128
+    #line 128
     Device['0'].Name = "Warp Engines        ";
     
-    // line 129
+    #line 129
     Device['1'].Name = "Short Range Sensors ";
     
-    // line 130
+    #line 130
     Device['2'].Name = "Long Range Sensors  ";
     
-    // line 131
+    #line 131
     Device['3'].Name = "Phaser Control      ";
     
-    // line 132
+    #line 132
     Device['4'].Name = "Photon Tubes        ";
     
-    // line 133
+    #line 133
     Device['5'].Name = "Damage Control      ";
     
-    // line 134
+    #line 134
     Device['6'].Name = "History Computers   ";
     
-    // line 135
+    #line 135
     Device['7'].Name = "Self Destruct       ";
     
-    // line 136
+    #line 136
     Symbols[C_snothing] = C_nosym;
     
-    // line 137
+    #line 137
     Symbols[C_sstar] = C_starsym;
     
-    // line 138
+    #line 138
     Symbols[C_senterprise] = C_entsym;
     
-    // line 139
+    #line 139
     Symbols[C_snova] = C_novasym;
     
-    // line 140
+    #line 140
     Symbols[C_sklingon] = C_klingsym;
     
-    // line 141
+    #line 141
     Symbols[C_sfedbase] = C_fbasesym;
     
-    // line 142
+    #line 142
     Symbols[C_sklingbase] = C_kbasesym;
     
-    // line 143
+    #line 143
     Condnames[C_cred] = "Red       ";
     
-    // line 144
+    #line 144
     Condnames[C_cgreen] = "Green     ";
     
-    // line 145
+    #line 145
     Condnames[C_cyellow] = "Yellow    ";
     
-    // line 146
+    #line 146
     Condnames[C_cblack] = "Black     ";
     
-    // line 147
+    #line 147
     Condnames[C_cdocked] = "Docked    ";
     
-    // line 148
+    #line 148
     Cursect.x = F_random(nullptr, 0, C_quadsize);
     
-    // line 149
+    #line 149
     Cursect.y = F_random(nullptr, 0, C_quadsize);
     
-    // line 150
+    #line 150
     Curquad.x = F_random(nullptr, 0, C_galaxysize);
     
-    // line 151
+    #line 151
     Curquad.y = F_random(nullptr, 0, C_galaxysize);
     
-    // line 152
+    #line 152
     Totalklingons = 0;
     
-    // line 153
+    #line 153
     Totalkbases = 0;
     
-    // line 154
+    #line 154
     _FOR_TO(_F.i, 0, C_galaxysize)
     {
-        // line 155
+        #line 155
         _FOR_TO(_F.j, 0, C_galaxysize)
         {
-            // line 158
+            #line 158
             Galaxy[_F.i][_F.j].Ishistory = C_false;
             
-            // line 159
+            #line 159
             _F.Rnum = F_random(nullptr, 0, _sqr(C_galaxysize));
             
-            // line 160
+            #line 160
             if((F_random(nullptr, 0, _sqr(C_galaxysize)) <= 6))
             {
-                // line 161
+                #line 161
                 Galaxy[_F.i][_F.j].Klingbasenum = 1;
             }
             else
             {
-                // line 163
+                #line 163
                 Galaxy[_F.i][_F.j].Klingbasenum = 0;
             }
             
-            // line 164
+            #line 164
             Totalkbases = (Totalkbases + Galaxy[_F.i][_F.j].Klingbasenum);
             
-            // line 165
+            #line 165
             Galaxy[_F.i][_F.j].Klingnum = (_trunc((F_expp(nullptr, (-F_random(nullptr, 0, C_galaxysize))) * C_maxdigit)) / 2);
             
-            // line 166
+            #line 166
             Totalklingons = (Totalklingons + Galaxy[_F.i][_F.j].Klingnum);
             
-            // line 167
+            #line 167
             if((F_random(nullptr, 0, _sqr(C_galaxysize)) < 3))
             {
-                // line 168
+                #line 168
                 Galaxy[_F.i][_F.j].Fedbasenum = 1;
             }
             else
             {
-                // line 170
+                #line 170
                 Galaxy[_F.i][_F.j].Fedbasenum = 0;
             }
             
-            // line 171
+            #line 171
             _F.Totalfedbase = (_F.Totalfedbase + Galaxy[_F.i][_F.j].Fedbasenum);
             
-            // line 172
+            #line 172
             Galaxy[_F.i][_F.j].Starnum = F_random(nullptr, 0, C_quadsize);
             
             { /* NOP */ }
@@ -649,51 +649,51 @@ void P_initialize(void* _slink)
     }
     _FOR_END(_F.i)
     
-    // line 174
+    #line 174
     Startklingons = Totalklingons;
     
-    // line 175
+    #line 175
     if((_F.Totalfedbase == 0))
     {
-        // line 176
+        #line 176
         Galaxy[F_random(nullptr, 0, C_galaxysize)][F_random(nullptr, 0, C_galaxysize)].Fedbasenum = 1;
     }
     
-    // line 177
+    #line 177
     if((Totalkbases == 0))
     {
-        // line 179
+        #line 179
         Galaxy[F_random(nullptr, 0, C_galaxysize)][F_random(nullptr, 0, C_galaxysize)].Klingbasenum = 1;
         
-        // line 181
+        #line 181
         Totalkbases = 1;
         
         { /* NOP */ }
     }
     
-    // line 183
+    #line 183
     Curyear = F_random(nullptr, 3000, 4000);
     
-    // line 184
+    #line 184
     Startyear = Curyear;
     
-    // line 185
+    #line 185
     Endyear = (Startyear + F_random(nullptr, 10, 40));
     
-    // line 186
+    #line 186
     Badpoints = 0;
     
-    // line 187
+    #line 187
     Bell = _chr(C_alarm);
     
-    // line 188
+    #line 188
     P_reinitialize(nullptr);
     
     { /* NOP */ }
 }
 
 
-// line 191
+#line 191
 //================================================================================
 // scope: setcondition (level : 2)
 
@@ -714,46 +714,46 @@ void P_setcondition(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 194
+    #line 194
     if((Galaxy[Curquad.x][Curquad.y].Klingbasenum != 0))
     {
-        // line 195
+        #line 195
         Condition = C_cblack;
     }
     else
     {
-        // line 197
+        #line 197
         if((Galaxy[Curquad.x][Curquad.y].Klingnum != 0))
         {
-            // line 198
+            #line 198
             Condition = C_cred;
         }
         else
         {
-            // line 200
+            #line 200
             if((Curenergy < (C_entenergy / 10)))
             {
-                // line 201
+                #line 201
                 Condition = C_cyellow;
             }
             else
             {
-                // line 203
+                #line 203
                 Condition = C_cgreen;
             }
         }
     }
     
-    // line 204
+    #line 204
     _FOR_TO(_F.i, (Cursect.x - 1), (Cursect.x + 1))
     {
-        // line 205
+        #line 205
         _FOR_TO(_F.j, (Cursect.y - 1), (Cursect.y + 1))
         {
-            // line 206
+            #line 206
             if((Quadrant[F_interval(nullptr, _F.i, 0, C_quadsize)][F_interval(nullptr, _F.j, 0, C_quadsize)] == C_sfedbase))
             {
-                // line 208
+                #line 208
                 Condition = C_cdocked;
             }
         }
@@ -765,7 +765,7 @@ void P_setcondition(void* _slink)
 }
 
 
-// line 211
+#line 211
 //================================================================================
 // scope: klingonattack (level : 2)
 
@@ -790,52 +790,52 @@ void P_klingonattack(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 216
+    #line 216
     if(((Galaxy[Curquad.x][Curquad.y].Klingbasenum != 0) || (Galaxy[Curquad.x][Curquad.y].Klingnum != 0)))
     {
-        // line 218
+        #line 218
         if((Condition == C_cdocked))
         {
-            // line 219
+            #line 219
             Output << "Starbase shields protect the Enterprise" << _WRITELN;
         }
         else
         {
-            // line 221
+            #line 221
             _FOR_TO(_F.i, 0, C_maxklingons)
             {
-                // line 223
+                #line 223
                 if((Klingons[_F.i].Energyleft > 0))
                 {
-                    // line 225
+                    #line 225
                     _F.Hit = _trunc(((double)(((double)Klingons[_F.i].Energyleft / F_distance(nullptr, Klingons[_F.i].Position.x, Klingons[_F.i].Position.y, Cursect)) * (10 + F_random(nullptr, 0, 10))) / 10));
                     
-                    // line 228
+                    #line 228
                     Curenergy = (Curenergy - _F.Hit);
                     
-                    // line 229
+                    #line 229
                     if((Klingons[_F.i].Energyleft == C_entenergy))
                     {
-                        // line 230
+                        #line 230
                         _F.Shiptype = "Starbase";
                     }
                     else
                     {
-                        // line 232
+                        #line 232
                         _F.Shiptype = "        ";
                     }
                     
-                    // line 233
+                    #line 233
                     Output << _format(_F.Hit, 1, 0) << " unit hit on Enterprise from Klingon ";
                     
-                    // line 234
+                    #line 234
                     if((_F.Shiptype[1] != ' '))
                     {
-                        // line 234
+                        #line 234
                         Output << _F.Shiptype << ' ';
                     }
                     
-                    // line 235
+                    #line 235
                     Output << "at sector " << _format(Klingons[_F.i].Position.x, 1, 0) << '-' << _format(Klingons[_F.i].Position.y, 1, 0) << " (" << _format(Curenergy, 1, 0) << " left)" << _WRITELN;
                     
                     { /* NOP */ }
@@ -851,7 +851,7 @@ void P_klingonattack(void* _slink)
 }
 
 
-// line 241
+#line 241
 //================================================================================
 // scope: printdigit (level : 2)
 
@@ -872,18 +872,18 @@ void P_printdigit(void* _slink, T_integer Number, T_boolean& Mustprint)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 243
+    #line 243
     _F.Mustprint = (_F.Mustprint || (_F.Number != 0));
     
-    // line 244
+    #line 244
     if(_F.Mustprint)
     {
-        // line 245
+        #line 245
         Output << _format(_F.Number, 1, 0);
     }
     else
     {
-        // line 247
+        #line 247
         Output << ' ';
     }
     
@@ -891,7 +891,7 @@ void P_printdigit(void* _slink, T_integer Number, T_boolean& Mustprint)
 }
 
 
-// line 250
+#line 250
 //================================================================================
 // scope: setupquad (level : 2)
 
@@ -926,79 +926,79 @@ void P_setupquad(void* _slink, T_quadxy Quad, T_sectxy& Entsect)
     _setLiteral1.set(C_sklingbase);
     
     // subroutine body
-    // line 268
+    #line 268
     _FOR_TO(_F.i, 0, C_quadsize)
     {
-        // line 269
+        #line 269
         _FOR_TO(_F.j, 0, C_quadsize)
         {
-            // line 270
+            #line 270
             Quadrant[_F.i][_F.j] = C_snothing;
         }
         _FOR_END(_F.j)
     }
     _FOR_END(_F.i)
     
-    // line 271
+    #line 271
     _F.Entsect.x = F_random(nullptr, 0, C_quadsize);
     
-    // line 272
+    #line 272
     _F.Entsect.y = F_random(nullptr, 0, C_quadsize);
     
-    // line 273
+    #line 273
     Quadrant[_F.Entsect.x][_F.Entsect.y] = C_senterprise;
     
-    // line 276
+    #line 276
     _F.Novacount = F_random(nullptr, 0, (Galaxy[_F.Quad.x][_F.Quad.y].Starnum / 2));
     
-    // line 277
+    #line 277
     P_setupquad_setupstuff(&_F, C_sstar, (Galaxy[_F.Quad.x][_F.Quad.y].Starnum - _F.Novacount));
     
-    // line 278
+    #line 278
     P_setupquad_setupstuff(&_F, C_snova, _F.Novacount);
     
-    // line 279
+    #line 279
     P_setupquad_setupstuff(&_F, C_sklingon, Galaxy[_F.Quad.x][_F.Quad.y].Klingnum);
     
-    // line 280
+    #line 280
     P_setupquad_setupstuff(&_F, C_sfedbase, Galaxy[_F.Quad.x][_F.Quad.y].Fedbasenum);
     
-    // line 281
+    #line 281
     P_setupquad_setupstuff(&_F, C_sklingbase, Galaxy[_F.Quad.x][_F.Quad.y].Klingbasenum);
     
     { /* NOP */ }
     
-    // line 283
+    #line 283
     _F.Klingindex = 0;
     
-    // line 284
+    #line 284
     _FOR_TO(_F.i, 0, C_quadsize)
     {
-        // line 285
+        #line 285
         _FOR_TO(_F.j, 0, C_quadsize)
         {
-            // line 286
+            #line 286
             if((_setLiteral1 & Quadrant[_F.i][_F.j]))
             {
-                // line 289
+                #line 289
                 Klingons[_F.Klingindex].Position.x = _F.i;
                 
-                // line 290
+                #line 290
                 Klingons[_F.Klingindex].Position.y = _F.j;
                 
-                // line 291
+                #line 291
                 if((Quadrant[_F.i][_F.j] == C_sklingbase))
                 {
-                    // line 292
+                    #line 292
                     Klingons[_F.Klingindex].Energyleft = C_entenergy;
                 }
                 else
                 {
-                    // line 294
+                    #line 294
                     Klingons[_F.Klingindex].Energyleft = C_klingenergy;
                 }
                 
-                // line 295
+                #line 295
                 _F.Klingindex = (_F.Klingindex + 1);
                 
                 { /* NOP */ }
@@ -1008,10 +1008,10 @@ void P_setupquad(void* _slink, T_quadxy Quad, T_sectxy& Entsect)
     }
     _FOR_END(_F.i)
     
-    // line 297
+    #line 297
     _FOR_TO(_F.Klingindex, _F.Klingindex, C_maxklingons)
     {
-        // line 298
+        #line 298
         Klingons[_F.Klingindex].Energyleft = 0;
     }
     _FOR_END(_F.Klingindex)
@@ -1020,7 +1020,7 @@ void P_setupquad(void* _slink, T_quadxy Quad, T_sectxy& Entsect)
 }
 
 
-// line 253
+#line 253
 //================================================================================
 // scope: setupquad_setupstuff (level : 3)
 
@@ -1045,26 +1045,26 @@ void P_setupquad_setupstuff(void* _slink, T_objects Object, T_integer Count)
     Frame_setupquad_setupstuff _F = { (Frame_setupquad*)_slink, Object, Count };
     
     // subroutine body
-    // line 256
+    #line 256
     while((_F.Count != 0))
     {
-        // line 258
+        #line 258
         do
         {
-            // line 259
+            #line 259
             _F.x = F_random(nullptr, 0, C_quadsize);
             
-            // line 260
+            #line 260
             _F.y = F_random(nullptr, 0, C_quadsize);
             
             { /* NOP */ }
         }
         while(!(Quadrant[_F.x][_F.y] == C_snothing));
         
-        // line 262
+        #line 262
         Quadrant[_F.x][_F.y] = _F.Object;
         
-        // line 263
+        #line 263
         _F.Count = (_F.Count - 1);
         
         { /* NOP */ }
@@ -1074,7 +1074,7 @@ void P_setupquad_setupstuff(void* _slink, T_objects Object, T_integer Count)
 }
 
 
-// line 301
+#line 301
 //================================================================================
 // scope: printquadrant (level : 2)
 
@@ -1095,74 +1095,74 @@ void P_printquadrant(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 304
+    #line 304
     P_setcondition(nullptr);
     
-    // line 305
+    #line 305
     if((Device['1'].Downtime != 0))
     {
-        // line 306
+        #line 306
         Output << "*** Short Range Sensors Inoperable ***" << _WRITELN;
     }
     else
     {
-        // line 309
+        #line 309
         Output << "----------------------" << _WRITELN;
         
-        // line 310
+        #line 310
         _FOR_TO(_F.i, 0, C_quadsize)
         {
-            // line 312
+            #line 312
             _FOR_TO(_F.j, 0, C_quadsize)
             {
-                // line 313
+                #line 313
                 Output << Symbols[Quadrant[_F.i][_F.j]] << ' ';
             }
             _FOR_END(_F.j)
             
-            // line 314
+            #line 314
             Output << "   ";
             
-            // line 315
+            #line 315
             switch(_F.i)
             {
             case 0:
-                // line 316
+                #line 316
                 Output << "Stardate         " << _format(Curyear, 1, 0) << _WRITELN;
                 break;
             
             case 1:
-                // line 317
+                #line 317
                 Output << "Condition        " << Condnames[Condition] << _WRITELN;
                 break;
             
             case 2:
-                // line 318
+                #line 318
                 Output << "Quadrant         " << _format(Curquad.x, 1, 0) << '-' << _format(Curquad.y, 1, 0) << _WRITELN;
                 break;
             
             case 3:
-                // line 319
+                #line 319
                 Output << "Sector           " << _format(Cursect.x, 1, 0) << '-' << _format(Cursect.y, 1, 0) << _WRITELN;
                 break;
             
             case 4:
-                // line 320
+                #line 320
                 Output << "Energy           " << _format(Curenergy, 1, 0) << _WRITELN;
                 break;
             
             case 5:
-                // line 321
+                #line 321
                 Output << "Photon torpedoes " << _format(Curtorps, 1, 0) << _WRITELN;
                 break;
             
             case 6:
-                // line 322
+                #line 322
                 Output << "Klingons left    " << _format(Totalklingons, 1, 0) << _WRITELN;
                 break;
             
             case 7:
-                // line 323
+                #line 323
                 Output << _WRITELN;
                 break;
             }
@@ -1171,7 +1171,7 @@ void P_printquadrant(void* _slink)
         }
         _FOR_END(_F.i)
         
-        // line 326
+        #line 326
         Output << "----------------------" << _WRITELN;
         
         { /* NOP */ }
@@ -1181,7 +1181,7 @@ void P_printquadrant(void* _slink)
 }
 
 
-// line 330
+#line 330
 //================================================================================
 // scope: printgalaxy (level : 2)
 
@@ -1219,89 +1219,89 @@ void P_printgalaxy(void* _slink, T_integer Topx, T_integer Lefty, T_integer Size
     _setLiteral2.set(0, C_quadsize);
     
     // subroutine body
-    // line 344
+    #line 344
     if(_F.Markhistory)
     {
-        // line 345
+        #line 345
         Output << "Long Range Sensor Scan For Quadrant " << _format(Curquad.x, 1, 0) << '-' << _format(Curquad.y, 1, 0) << _WRITELN;
     }
     else
     {
-        // line 349
+        #line 349
         Output << "History Computer Report; Stardate " << _format(Curyear, 1, 0) << _WRITELN;
         
-        // line 350
+        #line 350
         if((Condition != C_cdocked))
         {
-            // line 351
+            #line 351
             Curenergy = (Curenergy - 100);
         }
         
         { /* NOP */ }
     }
     
-    // line 353
+    #line 353
     P_printgalaxy_printseparator(&_F, _F.Size);
     
-    // line 354
+    #line 354
     _FOR_TO(_F.i, _F.Topx, (_F.Topx + _F.Size))
     {
-        // line 356
+        #line 356
         _FOR_TO(_F.j, _F.Lefty, (_F.Lefty + _F.Size))
         {
-            // line 357
+            #line 357
             if(((_setLiteral1 & _F.i) && (_setLiteral2 & _F.j)))
             {
-                // line 359
+                #line 359
                 if((_F.Markhistory || Galaxy[_F.i][_F.j].Ishistory))
                 {
-                    // line 361
+                    #line 361
                     Galaxy[_F.i][_F.j].Ishistory = (Galaxy[_F.i][_F.j].Ishistory || (Device['6'].Downtime == 0));
                     
-                    // line 362
+                    #line 362
                     _F.Mustprint = C_false;
                     
-                    // line 363
+                    #line 363
                     Output << '|';
                     
-                    // line 364
+                    #line 364
                     P_printdigit(nullptr, Galaxy[_F.i][_F.j].Klingbasenum, _F.Mustprint);
                     
-                    // line 365
+                    #line 365
                     P_printdigit(nullptr, Galaxy[_F.i][_F.j].Klingnum, _F.Mustprint);
                     
-                    // line 366
+                    #line 366
                     P_printdigit(nullptr, Galaxy[_F.i][_F.j].Fedbasenum, _F.Mustprint);
                     
-                    // line 367
+                    #line 367
                     _F.Mustprint = C_true;
                     
-                    // line 368
+                    #line 368
                     P_printdigit(nullptr, Galaxy[_F.i][_F.j].Starnum, _F.Mustprint);
                     
-                    // line 369
+                    #line 369
                     Output << ' ';
                     
                     { /* NOP */ }
                 }
                 else
                 {
-                    // line 372
+                    #line 372
                     Output << "|+++++";
                 }
             }
             else
             {
-                // line 374
+                #line 374
                 Output << "|xxxxx";
             }
         }
         _FOR_END(_F.j)
         
-        // line 375
+        #line 375
         Output << '|' << _WRITELN;
         
-        // line 376
+        #line 376
         P_printgalaxy_printseparator(&_F, _F.Size);
         
         { /* NOP */ }
@@ -1312,7 +1312,7 @@ void P_printgalaxy(void* _slink, T_integer Topx, T_integer Lefty, T_integer Size
 }
 
 
-// line 335
+#line 335
 //================================================================================
 // scope: printgalaxy_printseparator (level : 3)
 
@@ -1335,22 +1335,22 @@ void P_printgalaxy_printseparator(void* _slink, T_integer Entries)
     Frame_printgalaxy_printseparator _F = { (Frame_printgalaxy*)_slink, Entries };
     
     // subroutine body
-    // line 338
+    #line 338
     _FOR_TO(_F.Count, 0, _F.Entries)
     {
-        // line 339
+        #line 339
         Output << "|-----";
     }
     _FOR_END(_F.Count)
     
-    // line 340
+    #line 340
     Output << '|' << _WRITELN;
     
     { /* NOP */ }
 }
 
 
-// line 380
+#line 380
 //================================================================================
 // scope: printdamage (level : 2)
 
@@ -1370,13 +1370,13 @@ void P_printdamage(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 383
+    #line 383
     Output << "Device name:      Repair Time:" << _WRITELN;
     
-    // line 384
+    #line 384
     _FOR_TO(_F.Ch, C_mindevice, C_maxdevice)
     {
-        // line 385
+        #line 385
         Output << _format(Device[_F.Ch].Name, 20, 0) << _format(Device[_F.Ch].Downtime, 5, 0) << _WRITELN;
     }
     _FOR_END(_F.Ch)
@@ -1385,7 +1385,7 @@ void P_printdamage(void* _slink)
 }
 
 
-// line 388
+#line 388
 //================================================================================
 // scope: moveenterprise (level : 2)
 
@@ -1433,95 +1433,95 @@ void P_moveenterprise(void* _slink)
     _setLiteral5.set(C_sklingbase);
     
     // subroutine body
-    // line 445
+    #line 445
     Output << "Course: ";
     
-    // line 446
+    #line 446
     Input >> _F.Course >> _READLN;
     
-    // line 447
+    #line 447
     Output << "Warp factor (0-12): ";
     
-    // line 448
+    #line 448
     Input >> _F.Warp >> _READLN;
     
-    // line 449
+    #line 449
     if((((_F.Warp < 0.000000) || (_F.Warp > 12.0000)) || ((_F.Warp > 0.200000) && (Device[C_mindevice].Downtime != 0))))
     {
-        // line 451
+        #line 451
         Output << "Can't move that fast !!" << _WRITELN;
     }
     else
     {
-        // line 454
+        #line 454
         Curyear = (Curyear + 1);
         
-        // line 455
+        #line 455
         Curenergy = _trunc((Curenergy - (8 * _F.Warp)));
         
-        // line 456
+        #line 456
         P_moveenterprise_handledamage(&_F);
         
-        // line 457
+        #line 457
         Quadrant[Cursect.x][Cursect.y] = C_snothing;
         
-        // line 458
+        #line 458
         P_moveenterprise_moveintra(&_F, _F.Xpos, _F.Ypos, _F.Xinc, _F.Yinc, _F.Course, _F.Warp);
         
-        // line 459
+        #line 459
         if(((_setLiteral1 & _round(_F.Xpos)) && (_setLiteral2 & _round(_F.Ypos))))
         {
-            // line 461
+            #line 461
             if((Quadrant[_round(_F.Xpos)][_round(_F.Ypos)] == C_sfedbase))
             {
-                // line 463
+                #line 463
                 Output << "Collision with starbase's elastic shields at sector " << _format(_round(_F.Xpos), 1, 0) << '-' << _format(_round(_F.Ypos), 1, 0) << _WRITELN;
                 
-                // line 465
+                #line 465
                 P_moveenterprise_moveintra(&_F, _F.Xpos, _F.Ypos, _F.Xinc, _F.Yinc, _mod((_F.Course + 180) , 360), _F.Warp);
                 
                 { /* NOP */ }
             }
         }
         
-        // line 467
+        #line 467
         if(((_setLiteral3 & _round(_F.Xpos)) && (_setLiteral4 & _round(_F.Ypos))))
         {
-            // line 470
+            #line 470
             if((_setLiteral5 & Quadrant[_round(_F.Xpos)][_round(_F.Ypos)]))
             {
-                // line 473
+                #line 473
                 Output << "Enterprise blocked by object at sector " << _format(_round(_F.Xpos), 1, 0) << '-' << _format(_round(_F.Ypos), 1, 0) << _WRITELN;
                 
-                // line 475
+                #line 475
                 _F.Xpos = (_F.Xpos - _F.Xinc);
                 
-                // line 476
+                #line 476
                 _F.Ypos = (_F.Ypos - _F.Yinc);
                 
                 { /* NOP */ }
             }
             
-            // line 478
+            #line 478
             Cursect.x = F_interval(nullptr, _round(_F.Xpos), 0, C_quadsize);
             
-            // line 479
+            #line 479
             Cursect.y = F_interval(nullptr, _round(_F.Ypos), 0, C_quadsize);
             
-            // line 480
+            #line 480
             Quadrant[Cursect.x][Cursect.y] = C_senterprise;
             
             { /* NOP */ }
         }
         else
         {
-            // line 484
+            #line 484
             Curquad.x = F_interval(nullptr, _trunc(((Curquad.x + (_F.Warp * _F.Xinc)) + (Cursect.x * 0.125000))), 0, C_galaxysize);
             
-            // line 486
+            #line 486
             Curquad.y = F_interval(nullptr, _trunc(((Curquad.y + (_F.Warp * _F.Yinc)) + (Cursect.y * 0.125000))), 0, C_galaxysize);
             
-            // line 488
+            #line 488
             P_setupquad(nullptr, Curquad, Cursect);
             
             { /* NOP */ }
@@ -1530,13 +1530,13 @@ void P_moveenterprise(void* _slink)
         { /* NOP */ }
     }
     
-    // line 491
+    #line 491
     P_setcondition(nullptr);
     
-    // line 492
+    #line 492
     if((Condition == C_cdocked))
     {
-        // line 493
+        #line 493
         P_reinitialize(nullptr);
     }
     
@@ -1544,7 +1544,7 @@ void P_moveenterprise(void* _slink)
 }
 
 
-// line 392
+#line 392
 //================================================================================
 // scope: moveenterprise_handledamage (level : 3)
 
@@ -1565,55 +1565,55 @@ void P_moveenterprise_handledamage(void* _slink)
     Frame_moveenterprise_handledamage _F = { (Frame_moveenterprise*)_slink };
     
     // subroutine body
-    // line 395
+    #line 395
     _FOR_TO(_F.Ch, C_mindevice, C_maxdevice)
     {
-        // line 396
+        #line 396
         if((Device[_F.Ch].Downtime != 0))
         {
-            // line 397
+            #line 397
             Device[_F.Ch].Downtime = (Device[_F.Ch].Downtime - 1);
         }
     }
     _FOR_END(_F.Ch)
     
-    // line 398
+    #line 398
     if((F_random(nullptr, 0, 100) < 6))
     {
-        // line 400
+        #line 400
         _F.Ch = _chr(F_random(nullptr, _ord(C_mindevice), _ord(C_maxdevice)));
         
-        // line 401
+        #line 401
         Output << "*** Space storm, " << Device[_F.Ch].Name << " damaged ***" << _WRITELN;
         
-        // line 402
+        #line 402
         Device[_F.Ch].Downtime = F_random(nullptr, Device[_F.Ch].Downtime, 5);
         
         { /* NOP */ }
     }
     else
     {
-        // line 405
+        #line 405
         if((F_random(nullptr, 0, 100) < 12))
         {
-            // line 407
+            #line 407
             _F.Ch = _chr(F_random(nullptr, _ord(C_mindevice), _ord(C_maxdevice)));
             
-            // line 408
+            #line 408
             _F.Startch = _F.Ch;
             
-            // line 409
+            #line 409
             do
             {
-                // line 410
+                #line 410
                 if((_F.Ch == C_maxdevice))
                 {
-                    // line 411
+                    #line 411
                     _F.Ch = C_mindevice;
                 }
                 else
                 {
-                    // line 413
+                    #line 413
                     _F.Ch = _succ(_F.Ch);
                 }
                 
@@ -1621,13 +1621,13 @@ void P_moveenterprise_handledamage(void* _slink)
             }
             while(!((_F.Ch == _F.Startch) || (Device[_F.Ch].Downtime != 0)));
             
-            // line 416
+            #line 416
             if((Device[_F.Ch].Downtime != 0))
             {
-                // line 418
+                #line 418
                 Output << "*** Truce, " << Device[_F.Ch].Name << " state of repair improved ***" << _WRITELN;
                 
-                // line 420
+                #line 420
                 Device[_F.Ch].Downtime = F_random(nullptr, 0, (Device[_F.Ch].Downtime - 1));
                 
                 { /* NOP */ }
@@ -1641,7 +1641,7 @@ void P_moveenterprise_handledamage(void* _slink)
 }
 
 
-// line 425
+#line 425
 //================================================================================
 // scope: moveenterprise_moveintra (level : 3)
 
@@ -1673,38 +1673,38 @@ void P_moveenterprise_moveintra(void* _slink, T_real& Xpos, T_real& Ypos, T_real
     _setLiteral2.set(0, C_quadsize);
     
     // subroutine body
-    // line 428
+    #line 428
     _F.Xinc = (-_cos(F_radians(nullptr, _F.Course)));
     
-    // line 429
+    #line 429
     _F.Yinc = _sin(F_radians(nullptr, _F.Course));
     
-    // line 430
+    #line 430
     _F.Xpos = Cursect.x;
     
-    // line 431
+    #line 431
     _F.Ypos = Cursect.y;
     
-    // line 432
+    #line 432
     while((((_setLiteral1 & _round(_F.Xpos)) && (_setLiteral2 & _round(_F.Ypos))) && (_F.Warp >= 0.125000)))
     {
-        // line 434
+        #line 434
         if((Quadrant[_round(_F.Xpos)][_round(_F.Ypos)] == C_snothing))
         {
-            // line 436
+            #line 436
             _F.Xpos = (_F.Xpos + _F.Xinc);
             
-            // line 437
+            #line 437
             _F.Ypos = (_F.Ypos + _F.Yinc);
             
-            // line 438
+            #line 438
             _F.Warp = (_F.Warp - 0.125000);
             
             { /* NOP */ }
         }
         else
         {
-            // line 441
+            #line 441
             _F.Warp = 0.000000;
         }
     }
@@ -1713,7 +1713,7 @@ void P_moveenterprise_moveintra(void* _slink, T_real& Xpos, T_real& Ypos, T_real
 }
 
 
-// line 496
+#line 496
 //================================================================================
 // scope: firephasers (level : 2)
 
@@ -1735,66 +1735,66 @@ void P_firephasers(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 499
+    #line 499
     Output << "Phasers locked on target.  Energy available = " << _format(Curenergy, 1, 0) << _WRITELN;
     
-    // line 500
+    #line 500
     Output << "Number of units to fire: ";
     
-    // line 501
+    #line 501
     Input >> _F.Fireamount >> _READLN;
     
-    // line 502
+    #line 502
     if((_F.Fireamount > Curenergy))
     {
-        // line 503
+        #line 503
         Output << "Unable to fire." << _WRITELN;
     }
     else
     {
-        // line 505
+        #line 505
         if((_F.Fireamount > 0))
         {
-            // line 507
+            #line 507
             if((Condition != C_cdocked))
             {
-                // line 508
+                #line 508
                 Curenergy = (Curenergy - _F.Fireamount);
             }
             
-            // line 509
+            #line 509
             _FOR_TO(_F.i, 0, C_maxklingons)
             {
-                // line 511
+                #line 511
                 if((Klingons[_F.i].Energyleft > 0))
                 {
-                    // line 513
+                    #line 513
                     _F.Hit = (_trunc((((double)_F.Fireamount / F_distance(nullptr, Klingons[_F.i].Position.x, Klingons[_F.i].Position.y, Cursect)) * (10 + F_random(nullptr, 0, 10)))) / 10);
                     
-                    // line 516
+                    #line 516
                     Klingons[_F.i].Energyleft = (Klingons[_F.i].Energyleft - _F.Hit);
                     
-                    // line 517
+                    #line 517
                     Output << _F.Hit << " unit hit on Klingon at sector " << _format(Klingons[_F.i].Position.x, 1, 0) << '-' << _format(Klingons[_F.i].Position.y, 1, 0);
                     
-                    // line 519
+                    #line 519
                     if((Klingons[_F.i].Energyleft > 0))
                     {
-                        // line 520
+                        #line 520
                         Output << " (" << _format(Klingons[_F.i].Energyleft, 1, 0) << " left)" << _WRITELN;
                     }
                     else
                     {
-                        // line 523
+                        #line 523
                         Output << ".  Klingon DESTROYED" << Bell << _WRITELN;
                         
-                        // line 524
+                        #line 524
                         Totalklingons = (Totalklingons - 1);
                         
-                        // line 525
+                        #line 525
                         Galaxy[Curquad.x][Curquad.y].Klingnum = (Galaxy[Curquad.x][Curquad.y].Klingnum - 1);
                         
-                        // line 527
+                        #line 527
                         Quadrant[Klingons[_F.i].Position.x][Klingons[_F.i].Position.y] = C_snothing;
                         
                         { /* NOP */ }
@@ -1811,7 +1811,7 @@ void P_firephasers(void* _slink)
 }
 
 
-// line 533
+#line 533
 //================================================================================
 // scope: firetorpedoes (level : 2)
 
@@ -1848,124 +1848,124 @@ void P_firetorpedoes(void* _slink)
     _setLiteral2.set(0, C_quadsize);
     
     // subroutine body
-    // line 585
+    #line 585
     if((Curtorps == 0))
     {
-        // line 586
+        #line 586
         Output << "All photon torpedoes expended." << _WRITELN;
     }
     else
     {
-        // line 589
+        #line 589
         Output << "Torpedo course: ";
         
-        // line 590
+        #line 590
         Input >> _F.Course >> _READLN;
         
-        // line 591
+        #line 591
         if((Condition != C_cdocked))
         {
-            // line 592
+            #line 592
             Curtorps = (Curtorps - 1);
         }
         
-        // line 593
+        #line 593
         _F.Xinc = (-_cos(F_radians(nullptr, _F.Course)));
         
-        // line 594
+        #line 594
         _F.Yinc = _sin(F_radians(nullptr, _F.Course));
         
-        // line 595
+        #line 595
         _F.Xpos = Cursect.x;
         
-        // line 596
+        #line 596
         _F.Ypos = Cursect.y;
         
-        // line 597
+        #line 597
         _F.Hitsomething = C_false;
         
-        // line 598
+        #line 598
         Output << "Torpedo track:" << _WRITELN;
         
-        // line 600
+        #line 600
         while((((!_F.Hitsomething) && (_setLiteral1 & _round(_F.Xpos))) && (_setLiteral2 & _round(_F.Ypos))))
         {
-            // line 602
+            #line 602
             switch(Quadrant[_round(_F.Xpos)][_round(_F.Ypos)])
             {
             case C_senterprise:
             case C_snothing:
-                // line 605
+                #line 605
                 Output << _format(_round(_F.Xpos), 1, 0) << '-' << _format(_round(_F.Ypos), 1, 0) << _WRITELN;
                 
-                // line 606
+                #line 606
                 _F.Xpos = (_F.Xpos + _F.Xinc);
                 
-                // line 607
+                #line 607
                 _F.Ypos = (_F.Ypos + _F.Yinc);
                 
                 { /* NOP */ }
                 break;
             
             case C_sstar:
-                // line 610
+                #line 610
                 _F.Hitsomething = C_true;
                 
-                // line 611
+                #line 611
                 Output << "Star destroyed, you got the planets, " << "too!  Nice shot!" << _WRITELN;
                 
-                // line 613
+                #line 613
                 Badpoints = (Badpoints + F_random(nullptr, 0, 500));
                 
-                // line 614
+                #line 614
                 Galaxy[Curquad.x][Curquad.y].Starnum = (Galaxy[Curquad.x][Curquad.y].Starnum - 1);
                 
                 { /* NOP */ }
                 break;
             
             case C_snova:
-                // line 617
+                #line 617
                 _F.Hitsomething = C_true;
                 
-                // line 618
+                #line 618
                 Galaxy[Curquad.x][Curquad.y].Starnum = (Galaxy[Curquad.x][Curquad.y].Starnum - 1);
                 
-                // line 619
+                #line 619
                 P_firetorpedoes_hitnova(&_F, T_sectrange::C(_round(_F.Xpos)), T_sectrange::C(_round(_F.Ypos)), Galaxy[Curquad.x][Curquad.y].Klingnum);
                 
                 { /* NOP */ }
                 break;
             
             case C_sklingon:
-                // line 622
+                #line 622
                 _F.Hitsomething = C_true;
                 
-                // line 623
+                #line 623
                 Output << "*** Klingon DESTROYED ***" << Bell;
                 
-                // line 624
+                #line 624
                 if((F_random(nullptr, 0, 100) < 30))
                 {
-                    // line 625
+                    #line 625
                     Output << " (The only good Klingon is a dead" << " Klingon)";
                 }
                 
-                // line 627
+                #line 627
                 Output << _WRITELN;
                 
-                // line 628
+                #line 628
                 Galaxy[Curquad.x][Curquad.y].Klingnum = (Galaxy[Curquad.x][Curquad.y].Klingnum - 1);
                 
-                // line 629
+                #line 629
                 Totalklingons = (Totalklingons - 1);
                 
-                // line 630
+                #line 630
                 _FOR_TO(_F.i, 0, C_maxklingons)
                 {
-                    // line 632
+                    #line 632
                     if((((Klingons[_F.i].Energyleft > 0) && (_round(_F.Xpos) == Klingons[_F.i].Position.x)) && (_round(_F.Ypos) == Klingons[_F.i].Position.y)))
                     {
-                        // line 635
+                        #line 635
                         Klingons[_F.i].Energyleft = 0;
                     }
                 }
@@ -1975,29 +1975,29 @@ void P_firetorpedoes(void* _slink)
                 break;
             
             case C_sfedbase:
-                // line 638
+                #line 638
                 _F.Hitsomething = C_true;
                 
-                // line 639
+                #line 639
                 Output << "*** Starbase destroyed ... Not good ***" << _WRITELN;
                 
-                // line 640
+                #line 640
                 Badpoints = (Badpoints + F_random(nullptr, 0, 500));
                 
-                // line 641
+                #line 641
                 Galaxy[Curquad.x][Curquad.y].Fedbasenum = (Galaxy[Curquad.x][Curquad.y].Fedbasenum - 1);
                 
                 { /* NOP */ }
                 break;
             
             case C_sklingbase:
-                // line 644
+                #line 644
                 _F.Hitsomething = C_true;
                 
-                // line 645
+                #line 645
                 P_firetorpedoes_hitklingbase(&_F, Galaxy[Curquad.x][Curquad.y].Klingbasenum);
                 
-                // line 646
+                #line 646
                 Totalkbases = (Totalkbases - 1);
                 
                 { /* NOP */ }
@@ -2005,15 +2005,15 @@ void P_firetorpedoes(void* _slink)
             }
         }
         
-        // line 649
+        #line 649
         if(_F.Hitsomething)
         {
-            // line 650
+            #line 650
             Quadrant[_round(_F.Xpos)][_round(_F.Ypos)] = C_snothing;
         }
         else
         {
-            // line 652
+            #line 652
             Output << "Torpedo missed." << _WRITELN;
         }
         
@@ -2024,7 +2024,7 @@ void P_firetorpedoes(void* _slink)
 }
 
 
-// line 538
+#line 538
 //================================================================================
 // scope: firetorpedoes_hitnova (level : 3)
 
@@ -2050,47 +2050,47 @@ void P_firetorpedoes_hitnova(void* _slink, T_sectrange Novax, T_sectrange Novay,
     Frame_firetorpedoes_hitnova _F = { (Frame_firetorpedoes*)_slink, Novax, Novay, Klingnum };
     
     // subroutine body
-    // line 541
+    #line 541
     Output << "Torpedo causes unstable star to nova" << _WRITELN;
     
-    // line 542
+    #line 542
     if((Condition != C_cdocked))
     {
-        // line 544
+        #line 544
         _F.Hit = ((600 * F_random(nullptr, 0, 10)) / F_distance(nullptr, _F.Novax, _F.Novay, Cursect));
         
-        // line 545
+        #line 545
         if((_F.Hit > 0))
         {
-            // line 546
+            #line 546
             Output << "Enterprise loses " << _format(_F.Hit, 1, 0) << " units of energy" << _WRITELN;
         }
         
-        // line 547
+        #line 547
         Curenergy = (Curenergy - _F.Hit);
         
         { /* NOP */ }
     }
     
-    // line 549
+    #line 549
     _FOR_TO(_F.i, 0, C_maxklingons)
     {
-        // line 551
+        #line 551
         if((Klingons[_F.i].Energyleft > 0))
         {
-            // line 553
+            #line 553
             Klingons[_F.i].Energyleft = (Klingons[_F.i].Energyleft - ((120 * F_random(nullptr, 0, 10)) / F_distance(nullptr, _F.Novax, _F.Novay, Klingons[_F.i].Position)));
             
-            // line 555
+            #line 555
             if((Klingons[_F.i].Energyleft <= 0))
             {
-                // line 557
+                #line 557
                 Quadrant[Klingons[_F.i].Position.x][Klingons[_F.i].Position.y] = C_snothing;
                 
-                // line 558
+                #line 558
                 Totalklingons = (Totalklingons - 1);
                 
-                // line 559
+                #line 559
                 _F.Klingnum = (_F.Klingnum - 1);
                 
                 { /* NOP */ }
@@ -2105,7 +2105,7 @@ void P_firetorpedoes_hitnova(void* _slink, T_sectrange Novax, T_sectrange Novay,
 }
 
 
-// line 564
+#line 564
 //================================================================================
 // scope: firetorpedoes_hitklingbase (level : 3)
 
@@ -2131,52 +2131,52 @@ void P_firetorpedoes_hitklingbase(void* _slink, T_digits& Klingbasenum)
     Frame_firetorpedoes_hitklingbase _F = { (Frame_firetorpedoes*)_slink, Klingbasenum };
     
     // subroutine body
-    // line 568
+    #line 568
     Output << "*** Klingon Starbase DESTROYED ***" << Bell << _WRITELN;
     
-    // line 569
+    #line 569
     _F.Klingbasenum = (_F.Klingbasenum - 1);
     
-    // line 570
+    #line 570
     _F.Kdocked = 0;
     
-    // line 571
+    #line 571
     _FOR_TO(_F.i, 1, F_random(nullptr, 0, _sqr(C_galaxysize)))
     {
-        // line 573
+        #line 573
         do
         {
-            // line 574
+            #line 574
             _F.Quadx = F_random(nullptr, 0, C_galaxysize);
             
-            // line 575
+            #line 575
             _F.Quady = F_random(nullptr, 0, C_galaxysize);
             
             { /* NOP */ }
         }
         while(!((_F.Quadx != Curquad.x) || (_F.Quady != Curquad.y)));
         
-        // line 577
+        #line 577
         _F.Kdocked = (_F.Kdocked + Galaxy[_F.Quadx][_F.Quady].Klingnum);
         
-        // line 578
+        #line 578
         Galaxy[_F.Quadx][_F.Quady].Klingnum = 0;
         
         { /* NOP */ }
     }
     _FOR_END(_F.i)
     
-    // line 580
+    #line 580
     Output << _format(_F.Kdocked, 1, 0) << " Klingons were killed while docked" << _WRITELN;
     
-    // line 581
+    #line 581
     Totalklingons = (Totalklingons - _F.Kdocked);
     
     { /* NOP */ }
 }
 
 
-// line 656
+#line 656
 //================================================================================
 // scope: selfdestruct (level : 2)
 
@@ -2207,32 +2207,32 @@ void P_selfdestruct(void* _slink)
     _setLiteral2.set('Y');
     
     // subroutine body
-    // line 659
+    #line 659
     do
     {
-        // line 660
+        #line 660
         Output << "Are you SURE ? ";
         
-        // line 661
+        #line 661
         Input >> _F.Ch >> _READLN;
         
-        // line 662
+        #line 662
         Output << _WRITELN;
         
         { /* NOP */ }
     }
     while(!(_setLiteral1 & _F.Ch));
     
-    // line 664
+    #line 664
     if((_setLiteral2 & _F.Ch))
     {
-        // line 665
+        #line 665
         throw NL_99;
     }
 }
 
 
-// line 668
+#line 668
 //================================================================================
 // scope: command (level : 2)
 
@@ -2262,72 +2262,72 @@ void P_command(void* _slink)
     _setLiteral2.set('4');
     
     // subroutine body
-    // line 672
+    #line 672
     do
     {
-        // line 673
+        #line 673
         Output << "Command: ";
         
-        // line 674
+        #line 674
         Input >> _F.Ch >> _READLN;
         
-        // line 675
+        #line 675
         Output << _WRITELN;
         
-        // line 676
+        #line 676
         _F.Validcommand = (_setLiteral1 & _F.Ch);
         
-        // line 677
+        #line 677
         if(_F.Validcommand)
         {
-            // line 679
+            #line 679
             if(((Device[_F.Ch].Downtime != 0) && (_F.Ch > _succ(C_mindevice))))
             {
-                // line 680
+                #line 680
                 Output << "*** " << Device[_F.Ch].Name << " INOPERABLE ***" << _WRITELN;
             }
             else
             {
-                // line 682
+                #line 682
                 switch(_F.Ch)
                 {
                 case '0':
-                    // line 683
+                    #line 683
                     P_moveenterprise(nullptr);
                     break;
                 
                 case '1':
-                    // line 684
+                    #line 684
                     P_printquadrant(nullptr);
                     break;
                 
                 case '2':
-                    // line 685
+                    #line 685
                     P_printgalaxy(nullptr, (Curquad.x - 1), (Curquad.y - 1), 2, C_true);
                     break;
                 
                 case '3':
-                    // line 686
+                    #line 686
                     P_firephasers(nullptr);
                     break;
                 
                 case '4':
-                    // line 687
+                    #line 687
                     P_firetorpedoes(nullptr);
                     break;
                 
                 case '5':
-                    // line 688
+                    #line 688
                     P_printdamage(nullptr);
                     break;
                 
                 case '6':
-                    // line 689
+                    #line 689
                     P_printgalaxy(nullptr, 0, 0, C_galaxysize, C_false);
                     break;
                 
                 case '7':
-                    // line 690
+                    #line 690
                     P_selfdestruct(nullptr);
                     break;
                 }
@@ -2337,28 +2337,28 @@ void P_command(void* _slink)
         }
         else
         {
-            // line 695
+            #line 695
             Output << "0 = Set course" << _WRITELN;
             
-            // line 696
+            #line 696
             Output << "1 = Short range sensor scan" << _WRITELN;
             
-            // line 697
+            #line 697
             Output << "2 = Long range sensor scan" << _WRITELN;
             
-            // line 698
+            #line 698
             Output << "3 = Fire phasors" << _WRITELN;
             
-            // line 699
+            #line 699
             Output << "4 = Fire photon torpedoes" << _WRITELN;
             
-            // line 700
+            #line 700
             Output << "5 = Damage control report" << _WRITELN;
             
-            // line 701
+            #line 701
             Output << "6 = History computer report" << _WRITELN;
             
-            // line 702
+            #line 702
             Output << "7 = Self destruct" << _WRITELN;
             
             { /* NOP */ }
@@ -2368,13 +2368,13 @@ void P_command(void* _slink)
     }
     while(!_F.Validcommand);
     
-    // line 705
+    #line 705
     if((_setLiteral2 & _F.Ch))
     {
-        // line 707
+        #line 707
         P_klingonattack(nullptr);
         
-        // line 708
+        #line 708
         P_printquadrant(nullptr);
         
         { /* NOP */ }
@@ -2384,7 +2384,7 @@ void P_command(void* _slink)
 }
 
 
-// line 712
+#line 712
 //================================================================================
 // scope: instructions (level : 2)
 
@@ -2418,73 +2418,73 @@ void P_instructions(void* _slink)
     _setLiteral1.set('y');
     
     // subroutine body
-    // line 885
+    #line 885
     Output << "Orders:  Stardate " << _format(Curyear, 1, 0) << _WRITELN;
     
-    // line 886
+    #line 886
     Output << _WRITELN;
     
-    // line 887
+    #line 887
     Output << "As commander of the United Starship Enterprise," << _WRITELN;
     
-    // line 888
+    #line 888
     Output << "your mission is to rid the galaxy of the deadly" << _WRITELN;
     
-    // line 889
+    #line 889
     Output << "Klingon menace.  To do this, you must destroy the " << _WRITELN;
     
-    // line 890
+    #line 890
     Output << "Klingon invasion force of " << _format(Totalklingons, 1, 0) << " battle cruisers." << _WRITELN;
     
-    // line 891
+    #line 891
     Output << "You have " << _format(((Endyear - Curyear) + 1), 1, 0) << " solar years to complete" << _WRITELN;
     
-    // line 892
+    #line 892
     Output << "your mission (i.e. until stardate " << _format(Endyear, 1, 0) << ").  The " << _WRITELN;
     
-    // line 893
+    #line 893
     Output << "Enterprise is currently in quadrant " << _format(Curquad.x, 1, 0) << '-' << _format(Curquad.y, 1, 0) << ", sector " << _format(Cursect.x, 1, 0) << '-' << _format(Cursect.y, 1, 0) << '.' << _WRITELN;
     
-    // line 895
+    #line 895
     Output << _WRITELN;
     
-    // line 896
+    #line 896
     Output << "Do you need further instructions (y/n) ? ";
     
-    // line 897
+    #line 897
     Input >> _F.Ch;
     
-    // line 898
+    #line 898
     Output << _WRITELN;
     
-    // line 899
+    #line 899
     Output << _WRITELN;
     
-    // line 900
+    #line 900
     if((_setLiteral1 & _F.Ch))
     {
-        // line 902
+        #line 902
         P_instructions_page1(&_F);
         
-        // line 903
+        #line 903
         P_instructions_page2(&_F);
         
-        // line 904
+        #line 904
         P_instructions_page3(&_F);
         
-        // line 905
+        #line 905
         P_instructions_page4(&_F);
         
-        // line 906
+        #line 906
         P_instructions_page5(&_F);
         
-        // line 907
+        #line 907
         P_instructions_page6(&_F);
         
-        // line 908
+        #line 908
         Output << _WRITELN;
         
-        // line 909
+        #line 909
         Output << _WRITELN;
         
         { /* NOP */ }
@@ -2494,7 +2494,7 @@ void P_instructions(void* _slink)
 }
 
 
-// line 715
+#line 715
 //================================================================================
 // scope: instructions_spacewait (level : 3)
 
@@ -2511,23 +2511,23 @@ void P_instructions_spacewait(void* _slink)
     Frame_instructions_spacewait _F = { (Frame_instructions*)_slink };
     
     // subroutine body
-    // line 717
+    #line 717
     Output << _WRITELN;
     
-    // line 718
+    #line 718
     Output << "Hit <return> to continue";
     
-    // line 719
+    #line 719
     Input >> _READLN;
     
-    // line 720
+    #line 720
     Output << _WRITELN;
     
     { /* NOP */ }
 }
 
 
-// line 723
+#line 723
 //================================================================================
 // scope: instructions_page1 (level : 3)
 
@@ -2544,80 +2544,80 @@ void P_instructions_page1(void* _slink)
     Frame_instructions_page1 _F = { (Frame_instructions*)_slink };
     
     // subroutine body
-    // line 725
+    #line 725
     Output << "The galaxy is divided into 64 quadrants with the" << _WRITELN;
     
-    // line 726
+    #line 726
     Output << "following coordinates:" << _WRITELN;
     
-    // line 727
+    #line 727
     Output << _WRITELN;
     
-    // line 728
+    #line 728
     Output << "  0   1   2   3   4   5   6   7" << _WRITELN;
     
-    // line 729
+    #line 729
     Output << "---------------------------------" << _WRITELN;
     
-    // line 730
+    #line 730
     Output << "|   |   |   |   |   |   |   |   |  0" << _WRITELN;
     
-    // line 731
+    #line 731
     Output << "---------------------------------" << _WRITELN;
     
-    // line 732
+    #line 732
     Output << "|   |   |   |   |   |   |   |   |  1" << _WRITELN;
     
-    // line 733
+    #line 733
     Output << "---------------------------------" << _WRITELN;
     
-    // line 734
+    #line 734
     Output << "|   |   |   |   |   |   |   |   |  2" << _WRITELN;
     
-    // line 735
+    #line 735
     Output << "---------------------------------" << _WRITELN;
     
-    // line 736
+    #line 736
     Output << "|   |   |   |   |   |   |   |   |  3" << _WRITELN;
     
-    // line 737
+    #line 737
     Output << "---------------------------------" << _WRITELN;
     
-    // line 738
+    #line 738
     Output << "|   |   |   |   |   |   |   |   |  4" << _WRITELN;
     
-    // line 739
+    #line 739
     Output << "---------------------------------" << _WRITELN;
     
-    // line 740
+    #line 740
     Output << "|   |   |   |   |   |   |   |   |  5" << _WRITELN;
     
-    // line 741
+    #line 741
     Output << "---------------------------------" << _WRITELN;
     
-    // line 742
+    #line 742
     Output << "|   |   |   |   |   |   |   |   |  6" << _WRITELN;
     
-    // line 743
+    #line 743
     Output << "---------------------------------" << _WRITELN;
     
-    // line 744
+    #line 744
     Output << "|   |   |   |   |   |   |   |   |  7" << _WRITELN;
     
-    // line 745
+    #line 745
     Output << _WRITELN;
     
-    // line 746
+    #line 746
     Output << "Each quadrant is similarly divided into 64 sectors." << _WRITELN;
     
-    // line 747
+    #line 747
     P_instructions_spacewait(_F._slink);
     
     { /* NOP */ }
 }
 
 
-// line 750
+#line 750
 //================================================================================
 // scope: instructions_page2 (level : 3)
 
@@ -2634,83 +2634,83 @@ void P_instructions_page2(void* _slink)
     Frame_instructions_page2 _F = { (Frame_instructions*)_slink };
     
     // subroutine body
-    // line 752
+    #line 752
     Output << _WRITELN;
     
-    // line 753
+    #line 753
     Output << "::: DEVICES :::" << _WRITELN;
     
-    // line 754
+    #line 754
     Output << _WRITELN;
     
-    // line 755
+    #line 755
     Output << " :: Warp Engines ::" << _WRITELN;
     
-    // line 756
+    #line 756
     Output << _WRITELN;
     
-    // line 757
+    #line 757
     Output << " Course = a number in degrees." << _WRITELN;
     
-    // line 758
+    #line 758
     Output << "   Numbers indicate direction starting at the top and" << _WRITELN;
     
-    // line 759
+    #line 759
     Output << "   going counter clockwise." << _WRITELN;
     
-    // line 760
+    #line 760
     Output << _WRITELN;
     
-    // line 761
+    #line 761
     Output << "                     0" << _WRITELN;
     
-    // line 762
+    #line 762
     Output << "                 315 | 45" << _WRITELN;
     
-    // line 763
+    #line 763
     Output << "                    \\\\|/" << _WRITELN;
     
-    // line 764
+    #line 764
     Output << "               270 --*-- 90" << _WRITELN;
     
-    // line 765
+    #line 765
     Output << "                    /|\\\\" << _WRITELN;
     
-    // line 766
+    #line 766
     Output << "                 225 | 135" << _WRITELN;
     
-    // line 767
+    #line 767
     Output << "                    180" << _WRITELN;
     
-    // line 768
+    #line 768
     Output << _WRITELN;
     
-    // line 769
+    #line 769
     Output << " Warp Factor = a REAL number from 0 to 12." << _WRITELN;
     
-    // line 770
+    #line 770
     Output << "   Distance traveled = <warp factor> quadrants." << _WRITELN;
     
-    // line 771
+    #line 771
     Output << "     Warp  .2  =  The Enterprise travels 1 sector." << _WRITELN;
     
-    // line 772
+    #line 772
     Output << "           .5  =                         4 sectors." << _WRITELN;
     
-    // line 773
+    #line 773
     Output << "            1  =                         1 quadrant." << _WRITELN;
     
-    // line 774
+    #line 774
     Output << "            2  =                         2 quadrants." << _WRITELN;
     
-    // line 775
+    #line 775
     P_instructions_spacewait(_F._slink);
     
     { /* NOP */ }
 }
 
 
-// line 778
+#line 778
 //================================================================================
 // scope: instructions_page3 (level : 3)
 
@@ -2727,80 +2727,80 @@ void P_instructions_page3(void* _slink)
     Frame_instructions_page3 _F = { (Frame_instructions*)_slink };
     
     // subroutine body
-    // line 780
+    #line 780
     Output << _WRITELN;
     
-    // line 781
+    #line 781
     Output << "   For example, if you travel from quadrant 1-1 in the" << _WRITELN;
     
-    // line 782
+    #line 782
     Output << "   direction of 90 degrees at warp 2, you would stop at" << _WRITELN;
     
-    // line 783
+    #line 783
     Output << "   quadrant 1-3 in the next stardate.  NOTE: every use of" << _WRITELN;
     
-    // line 784
+    #line 784
     Output << "   the warp engines takes one stardate.  If the Enterprise" << _WRITELN;
     
-    // line 785
+    #line 785
     Output << "   is blocked by something during an intra-quadrant travel," << _WRITELN;
     
-    // line 786
+    #line 786
     Output << "   it will stop in front of it (and waste a stardate)." << _WRITELN;
     
-    // line 787
+    #line 787
     Output << _WRITELN;
     
-    // line 788
+    #line 788
     Output << " :: Short Range Sensors ::" << _WRITELN;
     
-    // line 789
+    #line 789
     Output << _WRITELN;
     
-    // line 790
+    #line 790
     Output << "  The short range sensors display a detailed view of the " << _WRITELN;
     
-    // line 791
+    #line 791
     Output << "  quadrant currently occupied by the Enterprise.  The " << _WRITELN;
     
-    // line 792
+    #line 792
     Output << "  The following symbols have meanings as follows:" << _WRITELN;
     
-    // line 793
+    #line 793
     Output << _WRITELN;
     
-    // line 794
+    #line 794
     Output << "          Symbol          Meaning" << _WRITELN;
     
-    // line 795
+    #line 795
     Output << "             " << C_nosym << "            empty space" << _WRITELN;
     
-    // line 796
+    #line 796
     Output << "             " << C_starsym << "            a stable star" << _WRITELN;
     
-    // line 797
+    #line 797
     Output << "             " << C_novasym << "            an unstable star" << _WRITELN;
     
-    // line 798
+    #line 798
     Output << "             " << C_entsym << "            the Enterprise" << _WRITELN;
     
-    // line 799
+    #line 799
     Output << "             " << C_fbasesym << "            a Federation base" << _WRITELN;
     
-    // line 800
+    #line 800
     Output << "             " << C_klingsym << "            a Klingon ship" << _WRITELN;
     
-    // line 801
+    #line 801
     Output << "             " << C_kbasesym << "            a Klingon base" << _WRITELN;
     
-    // line 802
+    #line 802
     P_instructions_spacewait(_F._slink);
     
     { /* NOP */ }
 }
 
 
-// line 805
+#line 805
 //================================================================================
 // scope: instructions_page4 (level : 3)
 
@@ -2817,80 +2817,80 @@ void P_instructions_page4(void* _slink)
     Frame_instructions_page4 _F = { (Frame_instructions*)_slink };
     
     // subroutine body
-    // line 807
+    #line 807
     Output << _WRITELN;
     
-    // line 808
+    #line 808
     Output << " :: Long Range Sensors ::" << _WRITELN;
     
-    // line 809
+    #line 809
     Output << _WRITELN;
     
-    // line 810
+    #line 810
     Output << "  The long range sensors display the objects in the nine" << _WRITELN;
     
-    // line 811
+    #line 811
     Output << "  closest quadrants.  Each digit in each box means " << _WRITELN;
     
-    // line 812
+    #line 812
     Output << "  means something:" << _WRITELN;
     
-    // line 813
+    #line 813
     Output << _WRITELN;
     
-    // line 814
+    #line 814
     Output << "    The ONES digit represents the number of STARS." << _WRITELN;
     
-    // line 815
+    #line 815
     Output << "        TENS                                FEDERATION BASES." << _WRITELN;
     
-    // line 816
+    #line 816
     Output << "        HUNDREDS                            KLINGON SHIPS" << _WRITELN;
     
-    // line 817
+    #line 817
     Output << "        THOUSANDS                           KLINGON BASES" << _WRITELN;
     
-    // line 818
+    #line 818
     Output << _WRITELN;
     
-    // line 819
+    #line 819
     Output << "  For example:" << _WRITELN;
     
-    // line 820
+    #line 820
     Output << "    319 means 3 Klingons, 1 Federation base, and 9 stars." << _WRITELN;
     
-    // line 821
+    #line 821
     Output << "    206 means 2 Klingons, 0 Federation bases, and 6 stars." << _WRITELN;
     
-    // line 822
+    #line 822
     Output << "   1007 means 1 Klingon base and 7 stars." << _WRITELN;
     
-    // line 823
+    #line 823
     Output << _WRITELN;
     
-    // line 824
+    #line 824
     Output << " :: Phasers ::" << _WRITELN;
     
-    // line 825
+    #line 825
     Output << _WRITELN;
     
-    // line 826
+    #line 826
     Output << "  Any portion of the energy available can be fired.  The" << _WRITELN;
     
-    // line 827
+    #line 827
     Output << "  battle computer divides this amount among the Klingon" << _WRITELN;
     
-    // line 828
+    #line 828
     Output << "  ships in the quadrant and determines the various directions" << _WRITELN;
     
-    // line 829
+    #line 829
     P_instructions_spacewait(_F._slink);
     
     { /* NOP */ }
 }
 
 
-// line 832
+#line 832
 //================================================================================
 // scope: instructions_page5 (level : 3)
 
@@ -2907,80 +2907,80 @@ void P_instructions_page5(void* _slink)
     Frame_instructions_page5 _F = { (Frame_instructions*)_slink };
     
     // subroutine body
-    // line 834
+    #line 834
     Output << _WRITELN;
     
-    // line 835
+    #line 835
     Output << "  of fire.  The effectiveness of a hit depends mostly on the" << _WRITELN;
     
-    // line 836
+    #line 836
     Output << "  distance to the target.  A Klingon battle cruiser starts with" << _WRITELN;
     
-    // line 837
+    #line 837
     Output << _format(C_klingenergy, 5, 0) << " units of energy.  It can fire an amount equal to" << _WRITELN;
     
-    // line 838
+    #line 838
     Output << "  whatever energy is left.  Note that phasers are ineffective " << _WRITELN;
     
-    // line 839
+    #line 839
     Output << "  against stars, Klingon bases, and Federation bases." << _WRITELN;
     
-    // line 840
+    #line 840
     Output << _WRITELN;
     
-    // line 841
+    #line 841
     Output << " :: Photon Torpedoes ::" << _WRITELN;
     
-    // line 842
+    #line 842
     Output << _WRITELN;
     
-    // line 843
+    #line 843
     Output << "  Initially the Enterprise has " << C_starttorps << " photon torpedoes." << _WRITELN;
     
-    // line 844
+    #line 844
     Output << "  One torpedo destroys whatever it hits.  The range of the" << _WRITELN;
     
-    // line 845
+    #line 845
     Output << "  photon torpedoes (like phasers) is limited to the current" << _WRITELN;
     
-    // line 846
+    #line 846
     Output << "  quadrant.  The course of a photon torpedo is set the same" << _WRITELN;
     
-    // line 847
+    #line 847
     Output << "  way as that of the Enterprise.  Torpedoes and phasers are" << _WRITELN;
     
-    // line 848
+    #line 848
     Output << "  restocked when the Enterprise docks at a Federation base." << _WRITELN;
     
-    // line 849
+    #line 849
     Output << _WRITELN;
     
-    // line 850
+    #line 850
     Output << " :: Damage Control Report ::" << _WRITELN;
     
-    // line 851
+    #line 851
     Output << _WRITELN;
     
-    // line 852
+    #line 852
     Output << "  The damage control report lists the state of repair of each" << _WRITELN;
     
-    // line 853
+    #line 853
     Output << "  device.  A non-zero state indicates the number of stardates" << _WRITELN;
     
-    // line 854
+    #line 854
     Output << "  required to repair the device.  Devices can be damaged by" << _WRITELN;
     
-    // line 855
+    #line 855
     Output << "  space storms, and are repaired by time and truces." << _WRITELN;
     
-    // line 856
+    #line 856
     P_instructions_spacewait(_F._slink);
     
     { /* NOP */ }
 }
 
 
-// line 859
+#line 859
 //================================================================================
 // scope: instructions_page6 (level : 3)
 
@@ -2997,74 +2997,74 @@ void P_instructions_page6(void* _slink)
     Frame_instructions_page6 _F = { (Frame_instructions*)_slink };
     
     // subroutine body
-    // line 861
+    #line 861
     Output << _WRITELN;
     
-    // line 862
+    #line 862
     Output << " :: History Computers ::" << _WRITELN;
     
-    // line 863
+    #line 863
     Output << _WRITELN;
     
-    // line 864
+    #line 864
     Output << "  The history computers keep a record of all the quadrants" << _WRITELN;
     
-    // line 865
+    #line 865
     Output << "  scanned with the long range scanners.  The history report" << _WRITELN;
     
-    // line 866
+    #line 866
     Output << "  uses the same display format as the long range scanners," << _WRITELN;
     
-    // line 867
+    #line 867
     Output << "  except that the entire galaxy is displayed.  A quadrant" << _WRITELN;
     
-    // line 868
+    #line 868
     Output << "  that has not been scanned is printed as \"+++++\"." << _WRITELN;
     
-    // line 869
+    #line 869
     Output << _WRITELN;
     
-    // line 870
+    #line 870
     Output << " :: Suicide Device ::" << _WRITELN;
     
-    // line 871
+    #line 871
     Output << _WRITELN;
     
-    // line 872
+    #line 872
     Output << "  It is possible to implement a self-destruct sequence merely" << _WRITELN;
     
-    // line 873
+    #line 873
     Output << "  by invoking this command.  The game is terminated." << _WRITELN;
     
-    // line 874
+    #line 874
     Output << _WRITELN;
     
-    // line 875
+    #line 875
     Output << "To get a list of all commands, type \"9\" when asked for a" << _WRITELN;
     
-    // line 876
+    #line 876
     Output << "command.  All commands are terminated by the [RETURN] key." << _WRITELN;
     
-    // line 877
+    #line 877
     Output << "You have at least on supporting starbase.  Your energy and" << _WRITELN;
     
-    // line 878
+    #line 878
     Output << "photon torpedoes are replenished when you are docked at a" << _WRITELN;
     
-    // line 879
+    #line 879
     Output << "Federation starbase.  G O O D   L U C K !" << _WRITELN;
     
-    // line 880
+    #line 880
     Output << _WRITELN;
     
-    // line 881
+    #line 881
     P_instructions_spacewait(_F._slink);
     
     { /* NOP */ }
 }
 
 
-// line 913
+#line 913
 //================================================================================
 // scope: finishgame (level : 2)
 
@@ -3084,60 +3084,60 @@ void P_finishgame(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 916
+    #line 916
     if(((Curenergy <= 0) || (Curyear >= Endyear)))
     {
-        // line 918
+        #line 918
         Output << "It is stardate " << _format(Curyear, 1, 0) << ".  The Enterprise has been" << _WRITELN;
         
-        // line 919
+        #line 919
         Output << "destroyed.  The Federation will be conquered.  There" << _WRITELN;
         
-        // line 920
+        #line 920
         Output << "are still " << _format(Totalklingons, 1, 0) << " Klingon battle cruisers." << _WRITELN;
         
-        // line 921
+        #line 921
         Output << "You are dead." << _WRITELN;
         
         { /* NOP */ }
     }
     else
     {
-        // line 925
+        #line 925
         _F.Rating = ((Startklingons / (Curyear - Startyear)) * 100);
         
-        // line 926
+        #line 926
         Output << "It is stardate " << _format(Curyear, 1, 0) << ".  The last Klingon battle" << _WRITELN;
         
-        // line 927
+        #line 927
         Output << "cruiser in the galaxy has been destroyed.  The Federation" << _WRITELN;
         
-        // line 928
+        #line 928
         Output << "has been saved.  ";
         
-        // line 929
+        #line 929
         if((Badpoints > _F.Rating))
         {
-            // line 931
+            #line 931
             Output << "However, because of your wanton " << _WRITELN;
             
-            // line 932
+            #line 932
             Output << "destruction of Federation bases and planet systems," << _WRITELN;
             
-            // line 933
+            #line 933
             Output << "you have been thrown in the brig never to see the" << _WRITELN;
             
-            // line 934
+            #line 934
             Output << "light of day again." << _WRITELN;
             
             { /* NOP */ }
         }
         else
         {
-            // line 938
+            #line 938
             Output << "You are a hero and a new admiral." << _WRITELN;
             
-            // line 939
+            #line 939
             Output << _format(Startklingons, 1, 0) << " Klingons in " << _format((Curyear - Startyear), 1, 0) << " years gives a rating of " << _format(_F.Rating, 1, 0) << _WRITELN;
             
             { /* NOP */ }

@@ -19,9 +19,9 @@
     ret
 }
 
-// "test01.pas"
+.line 0 "test01.pas"
 
-// line 4
+.line 4
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -32,11 +32,11 @@
     .field public static valuetype [lpcRuntime]LPC.File _output
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 4
+.line 4
 
 .method static
 void _Program()
@@ -54,7 +54,7 @@ void _Program()
     call instance void [lpcRuntime]LPC.File::Init(int32)
 
 L_Entry:
-    // line 6
+    .line 6
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "Hello, world!"

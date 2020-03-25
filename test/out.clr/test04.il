@@ -19,9 +19,9 @@
     ret
 }
 
-// "test04.pas"
+.line 0 "test04.pas"
 
-// line 27
+.line 27
 //================================================================================
 // scope: foo (level : 2)
 
@@ -39,11 +39,11 @@
 }
 
 
-// line 3
+.line 3
 //================================================================================
 // scope: program scope (level : 1)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE R1 = record;
 .class value explicit T_R1
@@ -54,7 +54,7 @@
     .field [0] public void* p
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE R2 = record;
 .class value explicit T_R2
@@ -65,7 +65,7 @@
     .field [0] public void* p
 }
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE R3 = record;
 .class value explicit T_R3
@@ -84,7 +84,7 @@
     .field public static valuetype [lpcRuntime]LPC.File _output
 }
 
-// line 27
+.line 27
 
 .method static
 void Foo()
@@ -103,11 +103,11 @@ L_Epilogue:
     ret
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 3
+.line 3
 
 .method static
 void _Program()

@@ -1,7 +1,7 @@
 
 #include <lpcRuntime.h>
 
-// "hanoi.pas"
+#line 0 "hanoi.pas"
 
 //================================================================================
 // command line argument map
@@ -15,7 +15,7 @@ _Filename* _FilenameMap = _FilenameMapEntries;
 const int _FilenameMapSize = _countof(_FilenameMapEntries);
 
 
-// line 0
+#line 0
 //================================================================================
 // scope: global scope (level : 0)
 
@@ -31,7 +31,7 @@ const T_boolean C_false = 0;
 const T_integer C_maxint = 2147483647;
 const T_boolean C_true = 1;
 
-// line 1
+#line 1
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -65,66 +65,66 @@ void P_()
     _output.init(1);
     
     // subroutine body
-    // line 47
+    #line 47
     _output << "HANOI" << _WRITELN;
     
-    // line 47
+    #line 47
     _output << "n=";
     
-    // line 47
+    #line 47
     _input >> n >> _READLN;
     
-    // line 47
+    #line 47
     _output << n << _WRITELN;
     
-    // line 48
+    #line 48
     _output << "1.HANOI1(umplerea matricii) 2.HANOI2(construire arbore complet)" << _WRITELN;
     
-    // line 49
+    #line 49
     _output << "3.HANOI3(recursiv)  4.EXIT" << _WRITELN;
     
-    // line 50
+    #line 50
     Nn = 1;
     
-    // line 50
+    #line 50
     _FOR_TO(i, 1, n)
     {
-        // line 50
+        #line 50
         Nn = (2 * Nn);
     }
     _FOR_END(i)
     
-    // line 50
+    #line 50
     Nn = (Nn - 1);
     
-    // line 51
+    #line 51
     do
     {
-        // line 52
+        #line 52
         _output << "optiunea dvs:";
         
-        // line 52
+        #line 52
         _input >> i >> _READLN;
         
-        // line 53
+        #line 53
         switch(i)
         {
         case 1:
-            // line 54
+            #line 54
             P_hanoi1(nullptr);
             
-            // line 55
+            #line 55
             _FOR_TO(i, 1, 2)
             {
-                // line 56
+                #line 56
                 _FOR_TO(j, 1, Nn)
                 {
-                    // line 56
+                    #line 56
                     _output << _format(M[i][j], 4, 0);
                 }
                 _FOR_END(j)
                 
-                // line 57
+                #line 57
                 _output << _WRITELN;
                 
                 { /* NOP */ }
@@ -135,25 +135,25 @@ void P_()
             break;
         
         case 2:
-            // line 58
+            #line 58
             P_hanoi2(nullptr);
             
-            // line 58
+            #line 58
             _output << _WRITELN;
             
             { /* NOP */ }
             break;
         
         case 3:
-            // line 59
+            #line 59
             P_hanoi3(nullptr, n, 1, 2);
             
-            // line 59
+            #line 59
             _output << _WRITELN;
             break;
         
         case 4:
-            // line 60
+            #line 60
             _output << "BYE-BYE!" << _WRITELN;
             break;
         }
@@ -166,7 +166,7 @@ void P_()
 }
 
 
-// line 5
+#line 5
 //================================================================================
 // scope: hanoi1 (level : 2)
 
@@ -193,64 +193,64 @@ void P_hanoi1(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 8
+    #line 8
     _F.K1 = (Nn + 1);
     
-    // line 8
+    #line 8
     _F.K2 = (_F.K1 / 2);
     
-    // line 8
+    #line 8
     _F.K3 = (_F.K2 / 2);
     
-    // line 8
+    #line 8
     M[1][_F.K2] = 1;
     
-    // line 8
+    #line 8
     M[2][_F.K2] = 2;
     
-    // line 9
+    #line 9
     _FOR_DOWNTO(_F.w, n, 2)
     {
-        // line 10
+        #line 10
         _F.l = _F.K2;
         
-        // line 11
+        #line 11
         while((_F.l <= Nn))
         {
-            // line 12
+            #line 12
             _F.i = M[1][_F.l];
             
-            // line 12
+            #line 12
             _F.j = M[2][_F.l];
             
-            // line 12
+            #line 12
             _F.k = ((6 - _F.i) - _F.j);
             
-            // line 13
+            #line 13
             M[1][(_F.l - _F.K3)] = _F.i;
             
-            // line 13
+            #line 13
             M[2][(_F.l - _F.K3)] = _F.k;
             
-            // line 14
+            #line 14
             M[1][(_F.l + _F.K3)] = _F.k;
             
-            // line 14
+            #line 14
             M[2][(_F.l + _F.K3)] = _F.j;
             
-            // line 15
+            #line 15
             _F.l = (_F.l + _F.K1);
             
             { /* NOP */ }
         }
         
-        // line 16
+        #line 16
         _F.K1 = _F.K2;
         
-        // line 16
+        #line 16
         _F.K2 = _F.K3;
         
-        // line 16
+        #line 16
         _F.K3 = (_F.K3 / 2);
         
         { /* NOP */ }
@@ -261,7 +261,7 @@ void P_hanoi1(void* _slink)
 }
 
 
-// line 19
+#line 19
 //================================================================================
 // scope: hanoi2 (level : 2)
 
@@ -285,77 +285,77 @@ void P_hanoi2(void* _slink)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 23
+    #line 23
     _F.i = 1;
     
-    // line 23
+    #line 23
     _F.j = 2;
     
-    // line 23
+    #line 23
     _F.Ns = 0;
     
-    // line 23
+    #line 23
     _F.Niv = 1;
     
-    // line 24
+    #line 24
     do
     {
-        // line 25
+        #line 25
         _F.k = ((6 - _F.i) - _F.j);
         
-        // line 26
+        #line 26
         while((_F.Niv < (n - 1)))
         {
-            // line 27
+            #line 27
             _F.Ns = (_F.Ns + 1);
             
-            // line 27
+            #line 27
             S[1][_F.Ns] = _F.i;
             
-            // line 27
+            #line 27
             S[2][_F.Ns] = _F.j;
             
-            // line 27
+            #line 27
             _F.j = _F.k;
             
-            // line 28
+            #line 28
             _F.k = ((6 - _F.i) - _F.j);
             
-            // line 28
+            #line 28
             _F.Niv = (_F.Niv + 1);
             
-            // line 28
+            #line 28
             S[3][_F.Ns] = _F.Niv;
             
             { /* NOP */ }
         }
         
-        // line 30
+        #line 30
         _output << '(' << _F.i << ',' << _F.k << ')' << '(' << _F.i << ',' << _F.j << ')' << '(' << _F.k << ',' << _F.j << ')';
         
-        // line 31
+        #line 31
         if((_F.Ns == 0))
         {
-            // line 31
+            #line 31
             goto L_1;
         }
         
-        // line 32
+        #line 32
         _F.i = S[1][_F.Ns];
         
-        // line 32
+        #line 32
         _F.j = S[2][_F.Ns];
         
-        // line 32
+        #line 32
         _F.Niv = S[3][_F.Ns];
         
-        // line 32
+        #line 32
         _F.Ns = (_F.Ns - 1);
         
-        // line 33
+        #line 33
         _output << '(' << _F.i << ',' << _F.j << ')';
         
-        // line 34
+        #line 34
         _F.i = ((6 - _F.i) - _F.j);
         
         { /* NOP */ }
@@ -367,7 +367,7 @@ void P_hanoi2(void* _slink)
 }
 
 
-// line 38
+#line 38
 //================================================================================
 // scope: hanoi3 (level : 2)
 
@@ -392,24 +392,24 @@ void P_hanoi3(void* _slink, T_integer n, T_integer i, T_integer j)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 41
+    #line 41
     if((_F.n == 1))
     {
-        // line 41
+        #line 41
         _output << '(' << _F.i << ',' << _F.j << ')';
     }
     else
     {
-        // line 42
+        #line 42
         _F.k = ((6 - _F.i) - _F.j);
         
-        // line 43
+        #line 43
         P_hanoi3(nullptr, (_F.n - 1), _F.i, _F.k);
         
-        // line 43
+        #line 43
         _output << '(' << _F.i << ',' << _F.j << ')';
         
-        // line 43
+        #line 43
         P_hanoi3(nullptr, (_F.n - 1), _F.k, _F.j);
         
         { /* NOP */ }

@@ -19,13 +19,13 @@
     ret
 }
 
-// "gencomb.pas"
+.line 0 "gencomb.pas"
 
-// line 7
+.line 7
 //================================================================================
 // scope: gen (level : 2)
 
-// line 0xfeefee
+.line 0xfeefee
 
 // TYPE vec = array [1 .. 50] of int32;
 .class value explicit T_vec
@@ -82,7 +82,7 @@
 }
 
 
-// line 23
+.line 23
 //================================================================================
 // scope: prel (level : 2)
 
@@ -103,7 +103,7 @@
 }
 
 
-// line 1
+.line 1
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -120,7 +120,7 @@
     .field public static valuetype T_vec v
 }
 
-// line 7
+.line 7
 
 .method static
 void Gen(valuetype T_vec& v)
@@ -151,12 +151,12 @@ void Gen(valuetype T_vec& v)
     stfld valuetype T_vec* @gen::v
 
 L_Entry:
-    // line 11
+    .line 11
     ldsfld int32 _G::Ig
     ldc.i4 0
     ceq
     brfalse L_if_end_1
-    // line 12
+    .line 12
     ldsfld int32 _G::n
     stloc $tmpEndValue1
     ldc.i4 1
@@ -172,7 +172,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld uint8 @gen::i
 L_for_loop_2:
-    // line 12
+    .line 12
     ldloc _F
     ldfld valuetype T_vec* @gen::v
     ldloc _F
@@ -199,14 +199,14 @@ L_for_loop_2:
     br L_for_loop_2
 L_for_end_3:
     pop
-    // line 13
+    .line 13
     ldc.i4 1
     stsfld int32 _G::Ig
-    // line 13
+    .line 13
     br L_10
     /* nop */
 L_if_end_1:
-    // line 15
+    .line 15
     ldc.i4 1
     stloc $tmpEndValue4
     ldsfld int32 _G::k
@@ -222,7 +222,7 @@ L_if_end_1:
     ldloc $tmpIndex5
     stfld uint8 @gen::i
 L_for_loop_4:
-    // line 16
+    .line 16
     ldloc _F
     ldfld valuetype T_vec* @gen::v
     ldloc _F
@@ -237,7 +237,7 @@ L_for_loop_4:
     sub
     clt
     brfalse L_if_end_6
-    // line 16
+    .line 16
     ldloc _F
     ldfld valuetype T_vec* @gen::v
     ldloc _F
@@ -252,7 +252,7 @@ L_for_loop_4:
     ldc.i4 1
     add
     stobj int32
-    // line 17
+    .line 17
     ldsfld int32 _G::k
     stloc $tmpEndValue6
     ldloc _F
@@ -271,7 +271,7 @@ L_for_loop_4:
     ldloc $tmpIndex7
     stfld uint8 @gen::j
 L_for_loop_7:
-    // line 17
+    .line 17
     ldloc _F
     ldfld valuetype T_vec* @gen::v
     ldloc _F
@@ -306,7 +306,7 @@ L_for_loop_7:
     br L_for_loop_7
 L_for_end_8:
     pop
-    // line 18
+    .line 18
     br L_10
     /* nop */
 L_if_end_6:
@@ -328,7 +328,7 @@ L_if_end_6:
     br L_for_loop_4
 L_for_end_5:
     pop
-    // line 20
+    .line 20
     ldc.i4 0
     stsfld int32 _G::Ig
 L_10:
@@ -338,7 +338,7 @@ L_Epilogue:
     ret
 }
 
-// line 23
+.line 23
 
 .method static
 void Prel(valuetype T_vec v)
@@ -359,7 +359,7 @@ void Prel(valuetype T_vec v)
     stfld valuetype T_vec @prel::v
 
 L_Entry:
-    // line 26
+    .line 26
     ldsfld int32 _G::k
     stloc $tmpEndValue1
     ldc.i4 1
@@ -371,7 +371,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int32 @prel::i
 L_for_loop_1:
-    // line 26
+    .line 26
     ldloc _F
     ldflda valuetype T_vec @prel::v
     ldloc _F
@@ -383,7 +383,7 @@ L_for_loop_1:
     ldc.i4.0
     ceq
     brfalse L_if_end_3
-    // line 26
+    .line 26
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldloc _F
@@ -412,7 +412,7 @@ L_if_end_3:
     br L_for_loop_1
 L_for_end_2:
     pop
-    // line 27
+    .line 27
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     call instance void [lpcRuntime]LPC.File::WriteLn()
     /* nop */
@@ -421,11 +421,11 @@ L_Epilogue:
     ret
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 1
+.line 1
 
 .method static
 void _Program()
@@ -443,19 +443,19 @@ void _Program()
     call instance void [lpcRuntime]LPC.File::Init(int32)
 
 L_Entry:
-    // line 31
+    .line 31
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "generarea combinarilor de n luate cåte k"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 32
+    .line 32
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "n="
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 32
+    .line 32
     ldsflda valuetype [lpcRuntime]LPC.File _G::_input
     dup
     ldsflda int32 _G::n
@@ -463,19 +463,19 @@ L_Entry:
     ldc.i4 2147483647
     call instance void [lpcRuntime]LPC.File::Read(int32*, int32, int32)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 32
+    .line 32
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldsfld int32 _G::n
     call instance void [lpcRuntime]LPC.File::Write(int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 33
+    .line 33
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "k="
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 33
+    .line 33
     ldsflda valuetype [lpcRuntime]LPC.File _G::_input
     dup
     ldsflda int32 _G::k
@@ -483,29 +483,29 @@ L_Entry:
     ldc.i4 2147483647
     call instance void [lpcRuntime]LPC.File::Read(int32*, int32, int32)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 33
+    .line 33
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldsfld int32 _G::k
     call instance void [lpcRuntime]LPC.File::Write(int32)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 34
+    .line 34
     ldc.i4 0
     stsfld int32 _G::Ig
-    // line 35
+    .line 35
 L_repeat_1:
-    // line 36
+    .line 36
     ldsflda valuetype T_vec _G::v
     call void Gen(valuetype T_vec& v)
-    // line 37
+    .line 37
     ldsfld int32 _G::Ig
     ldc.i4 0
     ceq
     brfalse L_if_end_2
-    // line 37
+    .line 37
     br L_1
 L_if_end_2:
-    // line 38
+    .line 38
     ldsfld valuetype T_vec _G::v
     call void Prel(valuetype T_vec v)
     /* nop */

@@ -19,9 +19,9 @@
     ret
 }
 
-// "amort4.pas"
+.line 0 "amort4.pas"
 
-// line 15
+.line 15
 //================================================================================
 // scope: CalculatePayment (level : 2)
 
@@ -40,7 +40,7 @@
 }
 
 
-// line 25
+.line 25
 //================================================================================
 // scope: InitializeData (level : 2)
 
@@ -55,7 +55,7 @@
 }
 
 
-// line 45
+.line 45
 //================================================================================
 // scope: PrintAnnualHeader (level : 2)
 
@@ -70,7 +70,7 @@
 }
 
 
-// line 56
+.line 56
 //================================================================================
 // scope: CalculateAndPrint (level : 2)
 
@@ -89,7 +89,7 @@
 }
 
 
-// line 78
+.line 78
 //================================================================================
 // scope: PrintAnnualSummary (level : 2)
 
@@ -104,7 +104,7 @@
 }
 
 
-// line 2
+.line 2
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -124,7 +124,7 @@
     .field public static int32 Year
 }
 
-// line 15
+.line 15
 
 .method static
 void CalculatePayment()
@@ -141,11 +141,11 @@ void CalculatePayment()
     stloc _F
 
 L_Entry:
-    // line 19
+    .line 19
     ldloc _F
     ldc.r8 1.00000
     stfld float64 @CalculatePayment::Temp
-    // line 20
+    .line 20
     ldc.i4 12
     ldsfld int32 _G::NumberOfYears
     mul
@@ -159,7 +159,7 @@ L_Entry:
     ldloc $tmpIndex2
     stfld int32 @CalculatePayment::Index
 L_for_loop_1:
-    // line 21
+    .line 21
     ldloc _F
     ldloc _F
     ldfld float64 @CalculatePayment::Temp
@@ -182,7 +182,7 @@ L_for_loop_1:
     br L_for_loop_1
 L_for_end_2:
     pop
-    // line 22
+    .line 22
     ldsfld float64 _G::OriginalLoan
     ldsfld float64 _G::InterestRate
     mul
@@ -200,7 +200,7 @@ L_Epilogue:
     ret
 }
 
-// line 25
+.line 25
 
 .method static
 void InitializeData()
@@ -213,54 +213,54 @@ void InitializeData()
     stloc _F
 
 L_Entry:
-    // line 27
+    .line 27
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "   Pascal amortization program"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 28
+    .line 28
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 29
+    .line 29
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "Enter amount borrowed                         "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 30
+    .line 30
     ldsflda valuetype [lpcRuntime]LPC.File _G::_input
     dup
     ldsflda float64 _G::OriginalLoan
     call instance void [lpcRuntime]LPC.File::Read(float64*)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 31
+    .line 31
     ldsfld float64 _G::OriginalLoan
     stsfld float64 _G::Balance
-    // line 32
+    .line 32
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "Enter interest rate as percentage (i.e. 13.5) "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 33
+    .line 33
     ldsflda valuetype [lpcRuntime]LPC.File _G::_input
     dup
     ldsflda float64 _G::InterestRate
     call instance void [lpcRuntime]LPC.File::Read(float64*)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 34
+    .line 34
     ldsfld float64 _G::InterestRate
     ldc.r8 1200.00
     div
     stsfld float64 _G::InterestRate
-    // line 35
+    .line 35
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "Enter number of years of payoff               "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 36
+    .line 36
     ldsflda valuetype [lpcRuntime]LPC.File _G::_input
     dup
     ldsflda int32 _G::NumberOfYears
@@ -268,13 +268,13 @@ L_Entry:
     ldc.i4 2147483647
     call instance void [lpcRuntime]LPC.File::Read(int32*, int32, int32)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 37
+    .line 37
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "Enter month of first payment (i.e. 5 for May) "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 38
+    .line 38
     ldsflda valuetype [lpcRuntime]LPC.File _G::_input
     dup
     ldsflda int8 _G::StartingMonth
@@ -282,13 +282,13 @@ L_Entry:
     ldc.i4 12
     call instance void [lpcRuntime]LPC.File::Read(int8*, int32, int32)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 39
+    .line 39
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "Enter year of first payment (i.e. 1991)       "
     call instance void [lpcRuntime]LPC.File::Write(string)
     pop
-    // line 40
+    .line 40
     ldsflda valuetype [lpcRuntime]LPC.File _G::_input
     dup
     ldsflda int32 _G::Year
@@ -296,9 +296,9 @@ L_Entry:
     ldc.i4 2147483647
     call instance void [lpcRuntime]LPC.File::Read(int32*, int32, int32)
     call instance void [lpcRuntime]LPC.File::ReadLn()
-    // line 41
+    .line 41
     call void CalculatePayment()
-    // line 42
+    .line 42
     ldc.r8 0.000000
     stsfld float64 _G::AnnualAccumInterest
     /* nop */
@@ -307,7 +307,7 @@ L_Epilogue:
     ret
 }
 
-// line 45
+.line 45
 
 .method static
 void PrintAnnualHeader()
@@ -320,13 +320,13 @@ void PrintAnnualHeader()
     stloc _F
 
 L_Entry:
-    // line 47
+    .line 47
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 48
+    .line 48
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 49
+    .line 49
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "Original loan amount = "
@@ -350,16 +350,16 @@ L_Entry:
     ldc.i4 37 // '%'
     call instance void [lpcRuntime]LPC.File::Write(uint8)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 51
+    .line 51
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 52
+    .line 52
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "Month    payment  interest    princ   balance"
     call instance void [lpcRuntime]LPC.File::Write(string)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 53
+    .line 53
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     call instance void [lpcRuntime]LPC.File::WriteLn()
     /* nop */
@@ -368,7 +368,7 @@ L_Epilogue:
     ret
 }
 
-// line 56
+.line 56
 
 .method static
 void CalculateAndPrint()
@@ -381,48 +381,48 @@ void CalculateAndPrint()
     stloc _F
 
 L_Entry:
-    // line 60
+    .line 60
     ldsfld float64 _G::Balance
     ldc.r8 0.000000
     cgt
     brfalse L_if_end_1
-    // line 61
+    .line 61
     ldloc _F
     ldsfld float64 _G::InterestRate
     ldsfld float64 _G::Balance
     mul
     stfld float64 @CalculateAndPrint::InterestPayment
-    // line 62
+    .line 62
     ldloc _F
     ldsfld float64 _G::Payment
     ldloc _F
     ldfld float64 @CalculateAndPrint::InterestPayment
     sub
     stfld float64 @CalculateAndPrint::PrincipalPayment
-    // line 63
+    .line 63
     ldloc _F
     ldfld float64 @CalculateAndPrint::PrincipalPayment
     ldsfld float64 _G::Balance
     cgt
     brfalse L_else_2
-    // line 64
+    .line 64
     ldloc _F
     ldsfld float64 _G::Balance
     stfld float64 @CalculateAndPrint::PrincipalPayment
-    // line 65
+    .line 65
     ldloc _F
     ldfld float64 @CalculateAndPrint::PrincipalPayment
     ldloc _F
     ldfld float64 @CalculateAndPrint::InterestPayment
     add
     stsfld float64 _G::Payment
-    // line 66
+    .line 66
     ldc.r8 0.000000
     stsfld float64 _G::Balance
     /* nop */
     br L_if_end_3
 L_else_2:
-    // line 69
+    .line 69
     ldsfld float64 _G::Balance
     ldloc _F
     ldfld float64 @CalculateAndPrint::PrincipalPayment
@@ -430,13 +430,13 @@ L_else_2:
     stsfld float64 _G::Balance
     /* nop */
 L_if_end_3:
-    // line 71
+    .line 71
     ldsfld float64 _G::AnnualAccumInterest
     ldloc _F
     ldfld float64 @CalculateAndPrint::InterestPayment
     add
     stsfld float64 _G::AnnualAccumInterest
-    // line 73
+    .line 73
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldc.i4 5
@@ -474,7 +474,7 @@ L_Epilogue:
     ret
 }
 
-// line 78
+.line 78
 
 .method static
 void PrintAnnualSummary()
@@ -487,10 +487,10 @@ void PrintAnnualSummary()
     stloc _F
 
 L_Entry:
-    // line 80
+    .line 80
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 81
+    .line 81
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "Total interest for "
@@ -509,15 +509,15 @@ L_Entry:
     ldsfld float64 _G::AnnualAccumInterest
     call instance void [lpcRuntime]LPC.File::Format(int32, int32, float64)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 83
+    .line 83
     ldc.r8 0.000000
     stsfld float64 _G::AnnualAccumInterest
-    // line 84
+    .line 84
     ldsfld int32 _G::Year
     ldc.i4 1
     add
     stsfld int32 _G::Year
-    // line 85
+    .line 85
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     call instance void [lpcRuntime]LPC.File::WriteLn()
     /* nop */
@@ -526,11 +526,11 @@ L_Epilogue:
     ret
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 2
+.line 2
 
 .method static
 void _Program()
@@ -551,13 +551,13 @@ void _Program()
     call instance void [lpcRuntime]LPC.File::Init(int32)
 
 L_Entry:
-    // line 89
+    .line 89
     call void InitializeData()
-    // line 90
+    .line 90
 L_repeat_1:
-    // line 91
+    .line 91
     call void PrintAnnualHeader()
-    // line 92
+    .line 92
     ldc.i4 12
     stloc $tmpEndValue1
     ldsfld int8 _G::StartingMonth
@@ -572,7 +572,7 @@ L_repeat_1:
     ldloc $tmpIndex2
     stsfld int8 _G::Month
 L_for_loop_2:
-    // line 93
+    .line 93
     call void CalculateAndPrint()
     /* nop */
     ldsfld int8 _G::Month
@@ -591,9 +591,9 @@ L_for_loop_2:
     br L_for_loop_2
 L_for_end_3:
     pop
-    // line 95
+    .line 95
     call void PrintAnnualSummary()
-    // line 96
+    .line 96
     ldc.i4 1
     dup
     ldc.i4 1

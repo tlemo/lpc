@@ -1,7 +1,7 @@
 
 #include <lpcRuntime.h>
 
-// "e.pas"
+#line 0 "e.pas"
 
 //================================================================================
 // command line argument map
@@ -15,7 +15,7 @@ _Filename* _FilenameMap = _FilenameMapEntries;
 const int _FilenameMapSize = _countof(_FilenameMapEntries);
 
 
-// line 0
+#line 0
 //================================================================================
 // scope: global scope (level : 0)
 
@@ -31,7 +31,7 @@ const T_boolean C_false = 0;
 const T_integer C_maxint = 2147483647;
 const T_boolean C_true = 1;
 
-// line 2
+#line 2
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -69,80 +69,80 @@ void P_()
     Output.init(1);
     
     // subroutine body
-    // line 102
+    #line 102
     _new(s._ptr);
     
-    // line 102
+    #line 102
     _new(x._ptr);
     
-    // line 103
+    #line 103
     P_initinteger(nullptr, (*s._ptr), 0);
     
-    // line 104
+    #line 104
     P_initinteger(nullptr, (*x._ptr), 1);
     
-    // line 105
+    #line 105
     Xs = 0;
     
-    // line 106
+    #line 106
     P_add(nullptr, (*s._ptr), (*x._ptr), Xs);
     
-    // line 107
+    #line 107
     i = 0;
     
-    // line 108
+    #line 108
     do
     {
-        // line 109
+        #line 109
         i = (i + 1);
         
-        // line 110
+        #line 110
         P_divide(nullptr, (*x._ptr), Xs, i, (*x._ptr), Xs);
         
-        // line 111
+        #line 111
         P_add(nullptr, (*s._ptr), (*x._ptr), Xs);
         
-        // line 112
+        #line 112
         Output << "Series: " << _format(((double)(100 * Xs) / (C_NDIGITS + 1)), 5, 2) << '%' << _WRITELN;
         
         { /* NOP */ }
     }
     while(!(Xs > C_NDIGITS));
     
-    // line 114
+    #line 114
     Output << _WRITELN;
     
-    // line 115
+    #line 115
     Output << _format(' ', 45, 0) << "e = " << _format((*s._ptr)[0], 1, 0) << '.' << _WRITELN;
     
-    // line 116
+    #line 116
     i = 0;
     
-    // line 117
+    #line 117
     _FOR_TO(i, 1, C_NPRINT)
     {
-        // line 118
+        #line 118
         Output << _format((*s._ptr)[i], 1, 0);
         
-        // line 119
+        #line 119
         if((_mod(i , 1000) == 0))
         {
-            // line 119
+            #line 119
             Output << _WRITELN;
         }
         
-        // line 120
+        #line 120
         if((_mod(i , 100) == 0))
         {
-            // line 120
+            #line 120
             Output << _WRITELN;
         }
         else
         {
-            // line 121
+            #line 121
             if((_mod(i , 10) == 0))
             {
-                // line 121
+                #line 121
                 Output << ' ';
             }
         }
@@ -151,30 +151,30 @@ void P_()
     }
     _FOR_END(i)
     
-    // line 123
+    #line 123
     Output << _WRITELN;
     
-    // line 124
+    #line 124
     Output << "Final digits: ";
     
-    // line 125
+    #line 125
     _FOR_TO(i, (C_NPRINT + 1), C_NDIGITS)
     {
-        // line 126
+        #line 126
         Output << _format((*s._ptr)[i], 1, 0);
         
         { /* NOP */ }
     }
     _FOR_END(i)
     
-    // line 128
+    #line 128
     Output << _WRITELN;
     
     { /* NOP */ }
 }
 
 
-// line 17
+#line 17
 //================================================================================
 // scope: initinteger (level : 2)
 
@@ -198,13 +198,13 @@ void P_initinteger(void* _slink, T_digitarray& x, T_integer n)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 21
+    #line 21
     _F.x[0] = _F.n;
     
-    // line 22
+    #line 22
     _FOR_TO(_F.i, 1, C_NDIGITS)
     {
-        // line 22
+        #line 22
         _F.x[_F.i] = 0;
     }
     _FOR_END(_F.i)
@@ -213,7 +213,7 @@ void P_initinteger(void* _slink, T_digitarray& x, T_integer n)
 }
 
 
-// line 25
+#line 25
 //================================================================================
 // scope: divide (level : 2)
 
@@ -241,32 +241,32 @@ void P_divide(void* _slink, T_digitarray& x, T_integer Xs, T_integer n, T_digita
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 31
+    #line 31
     _F.c = 0;
     
-    // line 32
+    #line 32
     _FOR_TO(_F.i, _F.Xs, C_NDIGITS)
     {
-        // line 33
+        #line 33
         _F.c = ((10 * _F.c) + _F.x[_F.i]);
         
-        // line 34
+        #line 34
         _F.y[_F.i] = (_F.c / _F.n);
         
-        // line 35
+        #line 35
         _F.c = _mod(_F.c , _F.n);
         
         { /* NOP */ }
     }
     _FOR_END(_F.i)
     
-    // line 37
+    #line 37
     _F.Ys = _F.Xs;
     
-    // line 38
+    #line 38
     while(((_F.Ys <= C_NDIGITS) && (_F.y[_F.Ys] == 0)))
     {
-        // line 38
+        #line 38
         _F.Ys = (_F.Ys + 1);
     }
     
@@ -274,7 +274,7 @@ void P_divide(void* _slink, T_digitarray& x, T_integer Xs, T_integer n, T_digita
 }
 
 
-// line 41
+#line 41
 //================================================================================
 // scope: add (level : 2)
 
@@ -300,32 +300,32 @@ void P_add(void* _slink, T_digitarray& s, T_digitarray& x, T_integer Xs)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 46
+    #line 46
     _F.c = 0;
     
-    // line 47
+    #line 47
     _FOR_DOWNTO(_F.i, C_NDIGITS, _F.Xs)
     {
-        // line 48
+        #line 48
         _F.c = ((_F.s[_F.i] + _F.x[_F.i]) + _F.c);
         
-        // line 49
+        #line 49
         if((_F.c >= 10))
         {
-            // line 50
+            #line 50
             _F.s[_F.i] = (_F.c - 10);
             
-            // line 51
+            #line 51
             _F.c = 1;
             
             { /* NOP */ }
         }
         else
         {
-            // line 53
+            #line 53
             _F.s[_F.i] = _F.c;
             
-            // line 54
+            #line 54
             _F.c = 0;
             
             { /* NOP */ }
@@ -335,35 +335,35 @@ void P_add(void* _slink, T_digitarray& s, T_digitarray& x, T_integer Xs)
     }
     _FOR_END(_F.i)
     
-    // line 57
+    #line 57
     _F.i = _F.Xs;
     
-    // line 58
+    #line 58
     while((_F.c != 0))
     {
-        // line 59
+        #line 59
         _F.i = (_F.i - 1);
         
-        // line 60
+        #line 60
         _F.c = (_F.s[_F.i] + _F.c);
         
-        // line 61
+        #line 61
         if((_F.c >= 10))
         {
-            // line 62
+            #line 62
             _F.s[_F.i] = (_F.c - 10);
             
-            // line 63
+            #line 63
             _F.c = 1;
             
             { /* NOP */ }
         }
         else
         {
-            // line 65
+            #line 65
             _F.s[_F.i] = _F.c;
             
-            // line 66
+            #line 66
             _F.c = 0;
             
             { /* NOP */ }
@@ -376,7 +376,7 @@ void P_add(void* _slink, T_digitarray& s, T_digitarray& x, T_integer Xs)
 }
 
 
-// line 71
+#line 71
 //================================================================================
 // scope: sub (level : 2)
 
@@ -402,32 +402,32 @@ void P_sub(void* _slink, T_digitarray& s, T_digitarray& x, T_integer Xs)
     assert(nullptr == _slink);
     
     // subroutine body
-    // line 76
+    #line 76
     _F.c = 0;
     
-    // line 77
+    #line 77
     _FOR_DOWNTO(_F.i, C_NDIGITS, _F.Xs)
     {
-        // line 78
+        #line 78
         _F.c = ((_F.s[_F.i] - _F.x[_F.i]) + _F.c);
         
-        // line 79
+        #line 79
         if((_F.c < 0))
         {
-            // line 80
+            #line 80
             _F.s[_F.i] = (_F.c + 10);
             
-            // line 81
+            #line 81
             _F.c = (-1);
             
             { /* NOP */ }
         }
         else
         {
-            // line 83
+            #line 83
             _F.s[_F.i] = _F.c;
             
-            // line 84
+            #line 84
             _F.c = 0;
             
             { /* NOP */ }
@@ -437,35 +437,35 @@ void P_sub(void* _slink, T_digitarray& s, T_digitarray& x, T_integer Xs)
     }
     _FOR_END(_F.i)
     
-    // line 87
+    #line 87
     _F.i = _F.Xs;
     
-    // line 88
+    #line 88
     while((_F.c != 0))
     {
-        // line 89
+        #line 89
         _F.i = (_F.i - 1);
         
-        // line 90
+        #line 90
         _F.c = (_F.s[_F.i] + _F.c);
         
-        // line 91
+        #line 91
         if((_F.c < 0))
         {
-            // line 92
+            #line 92
             _F.s[_F.i] = (_F.c + 10);
             
-            // line 93
+            #line 93
             _F.c = (-1);
             
             { /* NOP */ }
         }
         else
         {
-            // line 95
+            #line 95
             _F.s[_F.i] = _F.c;
             
-            // line 96
+            #line 96
             _F.c = 0;
             
             { /* NOP */ }

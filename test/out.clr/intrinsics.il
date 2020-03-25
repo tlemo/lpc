@@ -19,9 +19,9 @@
     ret
 }
 
-// "intrinsics.pas"
+.line 0 "intrinsics.pas"
 
-// line 4
+.line 4
 //================================================================================
 // scope: program scope (level : 1)
 
@@ -32,11 +32,11 @@
     .field public static valuetype [lpcRuntime]LPC.File _output
 }
 
-// line 0
+.line 0
 //================================================================================
 // scope: global scope (level : 0)
 
-// line 4
+.line 4
 
 .method static
 void _Program()
@@ -54,7 +54,7 @@ void _Program()
     call instance void [lpcRuntime]LPC.File::Init(int32)
 
 L_Entry:
-    // line 6
+    .line 6
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "sqrt(9.0) = "
@@ -64,7 +64,7 @@ L_Entry:
     call float64 [lpcRuntime]LPC.Helpers::Sqrt(float64)
     call instance void [lpcRuntime]LPC.File::Write(float64)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 7
+    .line 7
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "sqrt(9) = "
@@ -75,7 +75,7 @@ L_Entry:
     call float64 [lpcRuntime]LPC.Helpers::Sqrt(float64)
     call instance void [lpcRuntime]LPC.File::Write(float64)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 8
+    .line 8
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "abs(-5.0) = "
@@ -90,7 +90,7 @@ L_Entry:
 L_abs_question_1:
     call instance void [lpcRuntime]LPC.File::Write(float64)
     call instance void [lpcRuntime]LPC.File::WriteLn()
-    // line 9
+    .line 9
     ldsflda valuetype [lpcRuntime]LPC.File _G::_output
     dup
     ldstr "abs(-5) = "
