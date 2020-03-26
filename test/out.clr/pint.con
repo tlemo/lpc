@@ -21,15 +21,15 @@ compiling pass 1 (LPC)
 
 0 error(s), 17 warning(s)
 
-P1 errcode = 0
+Exit code: 0
 
 compiling pass 2 (target = clr)
 -----------------------------------------------------
 
-P2 errcode = 0
+Invoking ILASM ...
+Exit code: 0
 
-verifying the resulting binary
------------------------------------------------------
+Verifying the compiled binary (PEVERIFY) ...
 [IL]: Error: [pint.exe : <Module>::_SetContains][offset 0x00000004][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
 [IL]: Error: [pint.exe : <Module>::_SetEqual][offset 0x00000005][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
 [IL]: Error: [pint.exe : <Module>::_SetEqual][offset 0x00000005][found address of value 'T_settype'][expected unmanaged pointer] Unexpected type on the stack.
@@ -115,3 +115,9 @@ verifying the resulting binary
 [IL]: Error: [pint.exe : @callsp::Putfile][offset 0x00000036][found unmanaged pointer][expected readonly address of value 'LPC.File'] Unexpected type on the stack.
 [IL]: Error: [pint.exe : @callsp::Putfile][offset 0x0000005B][found unmanaged pointer][expected address of value 'LPC.File'] Unexpected type on the stack.
 84 Error(s) Verifying pint.exe
+Exit code: 1
+
+running the executable
+-----------------------------------------------------
+
+Exit code: 0

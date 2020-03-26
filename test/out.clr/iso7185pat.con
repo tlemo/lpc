@@ -198,15 +198,15 @@ compiling pass 1 (LPC)
 
 0 error(s), 194 warning(s)
 
-P1 errcode = 0
+Exit code: 0
 
 compiling pass 2 (target = clr)
 -----------------------------------------------------
 
-P2 errcode = 0
+Invoking ILASM ...
+Exit code: 0
 
-verifying the resulting binary
------------------------------------------------------
+Verifying the compiled binary (PEVERIFY) ...
 [IL]: Error: [iso7185pat.exe : <Module>::Junk2][offset 0x0000000A][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
 [IL]: Error: [iso7185pat.exe : <Module>::Junk2][offset 0x0000001B][found unmanaged pointer] Expected ByRef on the stack.
 [IL]: Error: [iso7185pat.exe : <Module>::Junk3][offset 0x0000000A][found address of value 'T_string10'][expected unmanaged pointer] Unexpected type on the stack.
@@ -308,3 +308,9 @@ verifying the resulting binary
 [IL]: Error: [iso7185pat.exe : T_array_274::arrayToString][offset 0x00000005][found address of value 'T_array_274'][expected unmanaged pointer] Unexpected type on the stack.
 [IL]: Error: [iso7185pat.exe : T_array_287::arrayToString][offset 0x00000005][found address of value 'T_array_287'][expected unmanaged pointer] Unexpected type on the stack.
 100 Error(s) Verifying iso7185pat.exe
+Exit code: 1
+
+running the executable
+-----------------------------------------------------
+
+Exit code: 0

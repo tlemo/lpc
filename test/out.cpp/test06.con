@@ -3,10 +3,14 @@ compiling pass 1 (LPC)
 -----------------------------------------------------
 0 error(s), 0 warning(s)
 
-P1 errcode = 0
+Exit code: 0
 
 compiling pass 2 (target = cpp)
 -----------------------------------------------------
 test06.cpp
+Exit code: 0
 
-P2 errcode = 0
+running the executable
+-----------------------------------------------------
+
+Exit code: 0

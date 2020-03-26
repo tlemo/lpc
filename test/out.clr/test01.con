@@ -3,13 +3,19 @@ compiling pass 1 (LPC)
 -----------------------------------------------------
 0 error(s), 0 warning(s)
 
-P1 errcode = 0
+Exit code: 0
 
 compiling pass 2 (target = clr)
 -----------------------------------------------------
 
-P2 errcode = 0
+Invoking ILASM ...
+Exit code: 0
 
-verifying the resulting binary
------------------------------------------------------
+Verifying the compiled binary (PEVERIFY) ...
 All Classes and Methods in test01.exe Verified.
+Exit code: 0
+
+running the executable
+-----------------------------------------------------
+
+Exit code: 0

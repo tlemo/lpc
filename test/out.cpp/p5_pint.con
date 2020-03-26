@@ -79,10 +79,14 @@ compiling pass 1 (LPC)
 
 0 error(s), 75 warning(s)
 
-P1 errcode = 0
+Exit code: 0
 
 compiling pass 2 (target = cpp)
 -----------------------------------------------------
 p5_pint.cpp
+Exit code: 0
 
-P2 errcode = 0
+running the executable
+-----------------------------------------------------
+
+Exit code: 0

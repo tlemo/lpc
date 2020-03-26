@@ -44,15 +44,15 @@ compiling pass 1 (LPC)
 
 0 error(s), 40 warning(s)
 
-P1 errcode = 0
+Exit code: 0
 
 compiling pass 2 (target = clr)
 -----------------------------------------------------
 
-P2 errcode = 0
+Invoking ILASM ...
+Exit code: 0
 
-verifying the resulting binary
------------------------------------------------------
+Verifying the compiled binary (PEVERIFY) ...
 [IL]: Error: [chess05ISO.exe : <Module>::SORTIT][offset 0x0000000B][found address of value 'T_RE'][expected unmanaged pointer] Unexpected type on the stack.
 [IL]: Error: [chess05ISO.exe : <Module>::SORTIT][offset 0x00000015][found address of value 'T_RF'][expected unmanaged pointer] Unexpected type on the stack.
 [IL]: Error: [chess05ISO.exe : <Module>::SORTIT][offset 0x00000061][found unmanaged pointer][expected address of value 'T_RE'] Unexpected type on the stack.
@@ -234,3 +234,9 @@ verifying the resulting binary
 [IL]: Error: [chess05ISO.exe : @MINENG::SETSQD][offset 0x0000002C][found address of value 'T_set_100'][expected unmanaged pointer] Unexpected type on the stack.
 [IL]: Error: [chess05ISO.exe : @MINENG::SETSQD][offset 0x0000008A][found unmanaged pointer] Expected ByRef on the stack.
 180 Error(s) Verifying chess05ISO.exe
+Exit code: 1
+
+running the executable
+-----------------------------------------------------
+
+Exit code: 0

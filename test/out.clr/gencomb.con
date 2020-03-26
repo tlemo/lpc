@@ -8,15 +8,15 @@ compiling pass 1 (LPC)
 
 0 error(s), 4 warning(s)
 
-P1 errcode = 0
+Exit code: 0
 
 compiling pass 2 (target = clr)
 -----------------------------------------------------
 
-P2 errcode = 0
+Invoking ILASM ...
+Exit code: 0
 
-verifying the resulting binary
------------------------------------------------------
+Verifying the compiled binary (PEVERIFY) ...
 [IL]: Error: [gencomb.exe : <Module>::Gen][offset 0x0000000B][found address of value 'T_vec'][expected unmanaged pointer] Unexpected type on the stack.
 [IL]: Error: [gencomb.exe : <Module>::Gen][offset 0x0000004B][found unmanaged pointer][expected address of value 'T_vec'] Unexpected type on the stack.
 [IL]: Error: [gencomb.exe : <Module>::Gen][offset 0x000000BE][found unmanaged pointer][expected address of value 'T_vec'] Unexpected type on the stack.
@@ -27,3 +27,9 @@ verifying the resulting binary
 [IL]: Error: [gencomb.exe : <Module>::_Program][offset 0x00000051][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
 [IL]: Error: [gencomb.exe : <Module>::_Program][offset 0x00000096][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
 9 Error(s) Verifying gencomb.exe
+Exit code: 1
+
+running the executable
+-----------------------------------------------------
+
+Exit code: 0

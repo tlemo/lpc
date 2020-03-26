@@ -14,4 +14,4 @@ compiling pass 1 (LPC)
 
 5 error(s), 5 warning(s)
 
-P1 errcode = 1
+Exit code: 1

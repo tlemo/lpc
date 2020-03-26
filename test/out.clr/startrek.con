@@ -13,15 +13,15 @@ compiling pass 1 (LPC)
 
 0 error(s), 9 warning(s)
 
-P1 errcode = 0
+Exit code: 0
 
 compiling pass 2 (target = clr)
 -----------------------------------------------------
 
-P2 errcode = 0
+Invoking ILASM ...
+Exit code: 0
 
-verifying the resulting binary
------------------------------------------------------
+Verifying the compiled binary (PEVERIFY) ...
 [IL]: Error: [startrek.exe : <Module>::Printdigit][offset 0x0000000A][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
 [IL]: Error: [startrek.exe : <Module>::Printdigit][offset 0x00000022][found unmanaged pointer] Expected ByRef on the stack.
 [IL]: Error: [startrek.exe : <Module>::Setupquad][offset 0x0000000B][found address of value 'T_sectxy'][expected unmanaged pointer] Unexpected type on the stack.
@@ -53,3 +53,9 @@ verifying the resulting binary
 [IL]: Error: [startrek.exe : @firetorpedoes::Hitklingbase][offset 0x00000012][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
 [IL]: Error: [startrek.exe : @firetorpedoes::Hitklingbase][offset 0x00000043][found unmanaged pointer] Expected ByRef on the stack.
 30 Error(s) Verifying startrek.exe
+Exit code: 1
+
+running the executable
+-----------------------------------------------------
+
+Exit code: 0

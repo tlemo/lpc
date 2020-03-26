@@ -105,15 +105,15 @@ compiling pass 1 (LPC)
 
 0 error(s), 101 warning(s)
 
-P1 errcode = 0
+Exit code: 0
 
 compiling pass 2 (target = clr)
 -----------------------------------------------------
 
-P2 errcode = 0
+Invoking ILASM ...
+Exit code: 0
 
-verifying the resulting binary
------------------------------------------------------
+Verifying the compiled binary (PEVERIFY) ...
 [IL]: Error: [pcom.exe : <Module>::Insymbol][offset 0x00000590][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
 [IL]: Error: [pcom.exe : <Module>::Insymbol][offset 0x0000059C][found unmanaged pointer][expected readonly address of value 'T_constant'] Unexpected type on the stack.
 [IL]: Error: [pcom.exe : <Module>::Insymbol][offset 0x000005AE][found unmanaged pointer][expected readonly address of value 'T_constant'] Unexpected type on the stack.
@@ -628,3 +628,9 @@ verifying the resulting binary
 [IL]: Error: [pcom.exe : @block_body_statement_expression::Simpleexpression][offset 0x000000C6][found unmanaged pointer] Non-compatible types on the stack.
 [IL]: Error: [pcom.exe : @block_body_statement_expression::Simpleexpression][offset 0x000001C2][found unmanaged pointer] Non-compatible types on the stack.
 513 Error(s) Verifying pcom.exe
+Exit code: 1
+
+running the executable
+-----------------------------------------------------
+
+Exit code: 0

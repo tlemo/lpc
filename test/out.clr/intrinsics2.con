@@ -3,15 +3,15 @@ compiling pass 1 (LPC)
 -----------------------------------------------------
 0 error(s), 0 warning(s)
 
-P1 errcode = 0
+Exit code: 0
 
 compiling pass 2 (target = clr)
 -----------------------------------------------------
 
-P2 errcode = 0
+Invoking ILASM ...
+Exit code: 0
 
-verifying the resulting binary
------------------------------------------------------
+Verifying the compiled binary (PEVERIFY) ...
 [IL]: Error: [intrinsics2.exe : <Module>::_Program][offset 0x0000001C][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
 [IL]: Error: [intrinsics2.exe : <Module>::_Program][offset 0x00000028][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
 [IL]: Error: [intrinsics2.exe : <Module>::_Program][offset 0x00000033][found unmanaged pointer][expected readonly address of value 'T_rec'] Unexpected type on the stack.
@@ -27,3 +27,9 @@ verifying the resulting binary
 [IL]: Error: [intrinsics2.exe : <Module>::_Program][offset 0x000000A8][found Nullobjref 'NullReference'][expected unmanaged pointer] Unexpected type on the stack.
 [IL]: Error: [intrinsics2.exe : T_set_9::clear][offset 0x00000003] Instruction cannot be verified.
 14 Error(s) Verifying intrinsics2.exe
+Exit code: 1
+
+running the executable
+-----------------------------------------------------
+
+Exit code: 0

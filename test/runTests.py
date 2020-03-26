@@ -18,7 +18,9 @@ import os
 import re
 import sys
 import argparse
-from subprocess import Popen, PIPE
+import subprocess
+
+from typing import Dict, List, Union, Optional, Any, Set, Tuple
 
 
 # ------------------------------------------------------------------------------
@@ -31,7 +33,13 @@ def print_dot():
 
 
 def shell_cmd(command, cwd=None):
-    return Popen(command, stdout=PIPE, universal_newlines=True, cwd=cwd).communicate()[0]
+    return subprocess.run(
+        args=command,
+        cwd=cwd,
+        shell=True,
+        text=True,
+        stdout=subprocess.PIPE,
+        stderr=subprocess.STDOUT)
 
 
 def extra_args(test):
@@ -40,18 +48,18 @@ def extra_args(test):
     f.close()
     if m:
         args = re.findall(r'[^, ]+', m.group(1))
-        args = [re.sub('@', outDir, a) for a in args]
+        args = [re.sub('@', out_dir, a) for a in args]
         args = [os.path.join(root, a) for a in args]
-        return ' %s ' % (' '.join(args))
+        return f' {" ".join(args)} '
     else:
         return ''
 
 
 def is_different(file):
     if args.vcs == 'svn':
-        return shell_cmd(f'svn status {file}')
+        return bool(shell_cmd(f'svn status {file}').stdout)
     elif args.vcs == 'git':
-        return shell_cmd(f'git diff -- {file}')
+        return shell_cmd(f'git diff --exit-code -- {file}').returncode != 0
     else:
         print(f'Unsupported VCS: {args.vcs}')
         sys.exit(1)
@@ -61,62 +69,102 @@ def is_different(file):
 # target definitions
 # ------------------------------------------------------------------------------
 
-def cpp_build_cmd(p2_source, exe_name):
-    cmd = 'cl'
+def cpp_build(base_name, exe_name, log):
+    global out_path
+    global tmp_path
+
+    p2_source = os.path.join(out_path, base_name + '.cpp')
+    
     options = ' -nologo -Od -J -EHsc -Zi '
-    options += ' -I%s ' % os.path.join(root, '..', 'cppRuntime')
-    options += ' -Fo%s\\ ' % tmp_path
-    options += ' -Fd%s\\ ' % tmp_path
-    options += ' -Fe%s\\ ' % tmp_path
+    options += f' -I{os.path.join(root, "..", "cppRuntime")} '
+    options += f' -Fo{tmp_path}\\ '
+    options += f' -Fd{tmp_path}\\ '
+    options += f' -Fe{tmp_path}\\ '
     link_options = ' /link /incremental:no '
-    return cmd + options + p2_source + link_options
+    cmd = f'cl {options} {p2_source} {link_options}'
+    result = shell_cmd(cmd, cwd=tmp_path)
+    log.write(result.stdout)
+    log.write(f'Exit code: {result.returncode}\n')
+    return result.returncode == 0
 
 
-def clr_build_cmd(p2_source, exe_name):
-    cmd = 'ilasm'
+def clr_build(base_name, exe_name, log):
+    global out_path
+    global tmp_path
+
+    p2_source = os.path.join(out_path, base_name + '.il')
+
+    # ilasm (.il -> .exe)
+    log.write('\nInvoking ILASM ...\n')
     options = ' -nologo -quiet -debug -32bitpreferred -optimize '
-    options += ' -output=%s ' % exe_name
-    options += ' -include=%s ' % os.path.join(root, '..', 'clrRuntime')
-    return cmd + options + p2_source
+    options += f' -output="{exe_name}" '
+    options += f' -include="{os.path.join(root, "..", "clrRuntime")}" '
+    cmd = f'ilasm {options} {p2_source}'
+    result = shell_cmd(cmd, cwd=tmp_path)
+    log.write(result.stdout)
+    log.write(f'Exit code: {result.returncode}\n')
+    if result.returncode != 0:
+        return False
 
-
-def clr_verify_cmd(exe_name):
-    cmd = 'peverify'
+    # peverify
+    print_dot()
+    log.write('\nVerifying the compiled binary (PEVERIFY) ...\n')
     options = r' -nologo -il -ignore=@.peverify.ignore '
-    return cmd + options + exe_name
+    verify_cmd = f'peverify {options} {exe_name}'
+    verify_result = shell_cmd(verify_cmd, cwd=tmp_path)
+    log.write(re.sub(re.escape(exe_name), base_name + '.exe', verify_result.stdout))
+    log.write(f'Exit code: {verify_result.returncode}\n')
+    
+    return True
 
 
-def llvm_build_cmd(p2_source, exe_name):
-    base, _ = os.path.splitext(exe_name)
-    obj_fileName = base + '.obj'
-    options = '-O3 --frame-pointer=all -filetype=obj --mtriple=x86_64-pc-windows-msvc19'
-    return f'llc {options} {p2_source} -o {obj_fileName}'
+def llvm_build(base_name, exe_name, log):
+    global out_path
+    global tmp_path
+
+    p2_source = os.path.join(out_path, base_name + '.ll')
+    obj = os.path.join(tmp_path, base_name + '.obj')
+
+    # LLC (.ll -> .obj)
+    log.write('\nInvoking LLC ...\n')
+    llc_options = '-O3 --frame-pointer=all -filetype=obj --mtriple=x86_64-pc-windows-msvc19'
+    llc_cmd = f'llc {llc_options} {p2_source} -o {obj}'
+    llc_result = shell_cmd(llc_cmd, cwd=tmp_path)
+    log.write(llc_result.stdout)
+    log.write(f'Exit code: {llc_result.returncode}\n')
+    if llc_result.returncode != 0:
+        return False
+
+    # link (.obj -> .exe)
+    print_dot()
+    log.write('\nLinking...\n')
+    runtime_lib = os.path.join(root, '..', 'x64', build_flavor, 'llvmRuntime.lib')
+    link_options = '/nologo /debug /include:main'
+    link_cmd = f'link {link_options} {obj} {runtime_lib} /out:{exe_name}'
+    link_result = shell_cmd(link_cmd, cwd=tmp_path)
+    log.write(link_result.stdout)
+    log.write(f'Exit code: {link_result.returncode}\n')
+    return link_result.returncode == 0
 
 
-target_def = {
-    'cpp':
-    {
-        'outDir': 'out.cpp',
-        'p2ext': '.cpp',
-        'p2cmd': cpp_build_cmd,
-    },
-
-    'clr':
-    {
-        'outDir': 'out.clr',
-        'p2ext': '.il',
-        'p2cmd': clr_build_cmd,
-        'verifyCmd': clr_verify_cmd,
-    },
-
-    'llvm':
-    {
-        'outDir': 'out.llvm',
-        'p2ext': '.ll',
-        'p2cmd': llvm_build_cmd,
-        # TODO: verify cmd
-    },
+target_step = {
+    'cpp': cpp_build,
+    'clr': clr_build,
+    'llvm': llvm_build,
 }
+
+
+# ------------------------------------------------------------------------------
+# LPC wrapper
+# ------------------------------------------------------------------------------
+
+def lpc_step(source_file, cwd, log) -> bool:
+    options = f'-nologo -debuginfo -warnings -target={target_name} -outpath={cwd}'
+    cmd = f'{lpc_cmd} {options} {source_file}'
+    result = shell_cmd(cmd, cwd=cwd)
+    log.write(result.stdout)
+    log.write(f'Exit code: {result.returncode}\n')
+    return result.returncode == 0
 
 
 # ------------------------------------------------------------------------------
@@ -124,92 +172,54 @@ target_def = {
 # ------------------------------------------------------------------------------
 
 def run_test(test):
+    global out_path
+    global tmp_path
+    global target_name
+
     test_name = os.path.basename(test)
     base_name = os.path.splitext(test_name)[0]
     console_out = os.path.join(out_path, base_name + '.con')
     exe_out = os.path.join(out_path, base_name + '.out')
     exe_input = os.path.join(root, base_name + '.input')
+    exe_name = os.path.join(tmp_path, base_name + '.exe')
     status = 'ok'
 
     print('%-26s: ' % test_name, end='')
     sys.stdout.flush()
 
-    # compile pass 1 (LPC)
-    #
-    print_dot()
-    lpc_out_path = ' -outpath=' + out_path + ' '
-    lpc_options = ' -nologo -debuginfo -warnings -target=%s ' % target_name
-    lpc_options += lpc_out_path
-    cmd = lpc_cmd + lpc_options + test + ' >> ' + console_out
-
     with open(console_out, 'w') as log:
+        # pass 1 (LPC)
+        print_dot()
         log.write('\ncompiling pass 1 (LPC)\n')
         log.write('-----------------------------------------------------\n')
 
-    errcode = os.system(cmd)
+        if lpc_step(test, out_path, log):
+            # pass 2 (target specific)
+            print_dot()
+            log.write(f'\ncompiling pass 2 (target = {target_name})\n')
+            log.write('-----------------------------------------------------\n')
 
-    with open(console_out, 'a') as log:
-        log.write('P1 errcode = %d\n' % errcode)
-
-    if errcode == 0:
-        # compile pass 2 (target specific)
-        #
-        print_dot()
-        p2_source = os.path.join(out_path, base_name + target['p2ext'])
-        exe_name = os.path.join(root, 'tmp', base_name + '.exe')
-
-        if os.path.exists(p2_source):
-            cmd = target['p2cmd'](p2_source, exe_name) + ' >> ' + console_out
-
-            with open(console_out, 'a') as log:
-                log.write('\ncompiling pass 2 (target = %s)\n' % target_name)
-                log.write(
-                    '-----------------------------------------------------\n')
-
-            errcode = os.system(cmd)
-
-            with open(console_out, 'a') as log:
-                log.write('\nP2 errcode = %d\n' % errcode)
-
-            if errcode != 0:
+            if not target_step[target_name](base_name, exe_name, log):
                 status = 'FAILED_P2'
-            elif not os.path.exists(exe_name):
-                status = 'NO_BINARY'
             else:
-                # optionally validate the executable
-                #
-                if 'verifyCmd' in target:
-                    print_dot()
-
-                    with open(console_out, 'a') as log:
-                        log.write('\nverifying the resulting binary\n')
-                        log.write(
-                            '-----------------------------------------------------\n')
-
-                        exe_path, exe_base_name = os.path.split(exe_name)
-                        result = shell_cmd(target['verifyCmd'](
-                            exe_base_name), cwd=exe_path)
-                        result = re.sub(re.escape(exe_name),
-                                        exe_base_name, result)
-                        log.write(result)
-
-                # shell_cmd the executable
-                #
+                # run the compiled executable
                 print_dot()
+                log.write('\nrunning the executable\n')
+                log.write('-----------------------------------------------------\n')
 
                 cmd = exe_name
                 if os.path.exists(exe_input):
                     cmd += ' -input=' + exe_input
                 cmd += ' -output=' + exe_out
                 cmd += extra_args(test)
+                result = shell_cmd(cmd, cwd=tmp_path)
+                log.write(result.stdout)
+                log.write(f'\nExit code: {result.returncode}')
 
-                errCode = os.system(cmd)
-
-                if errCode != 0:
+                if result.returncode != 0:
                     status = 'FAILED_RUN'
 
     # finally, compare the output against the checked in (golden) version
-    #
     for output_file in glob.glob(os.path.join(out_path, base_name + '.*')):
         if is_different(output_file):
             status += ', DIFF'
@@ -247,11 +257,9 @@ if test_name is not None and not os.path.exists(test_name):
     print(f'Invalid test case ({test_name})')
     sys.exit(1)
 
-if target_name not in target_def:
-    print(f'Invalid target name ({target_name})')
+if target_name not in target_step:
+    print(f'Invalid target name ({target_name}), must be one of: {[t for t in target_step]}')
     sys.exit(1)
-
-target = target_def[target_name]
 
 
 # ------------------------------------------------------------------------------
@@ -259,9 +267,9 @@ target = target_def[target_name]
 # ------------------------------------------------------------------------------
 
 root = sys.path[0]
-outDir = target['outDir']
+out_dir = f'out.{target_name}'
 tmp_path = os.path.join(root, 'tmp')
-out_path = os.path.join(root, outDir)
+out_path = os.path.join(root, out_dir)
 
 lpc_cmd = os.path.join(root, '..', build_flavor, 'lpc.exe')
 if not os.path.exists(lpc_cmd):
@@ -270,7 +278,6 @@ if not os.path.exists(lpc_cmd):
     sys.exit(1)
 
 # wipe the output location clean if requested
-#
 if args.clean:
     cleanup_pattern = os.path.join(out_path, '*.*')
     print(f'\nCleaning up [{cleanup_pattern}]\n')
@@ -280,7 +287,6 @@ print(f'Running LPC test suite: build={build_flavor}, target={target_name}')
 print('-----------------------------------------------')
 
 # process each test case (or just the one specified)
-#
 if test_name is not None:
     run_test(test_name)
 else:

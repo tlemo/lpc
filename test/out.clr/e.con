@@ -17,15 +17,15 @@ compiling pass 1 (LPC)
 
 0 error(s), 13 warning(s)
 
-P1 errcode = 0
+Exit code: 0
 
 compiling pass 2 (target = clr)
 -----------------------------------------------------
 
-P2 errcode = 0
+Invoking ILASM ...
+Exit code: 0
 
-verifying the resulting binary
------------------------------------------------------
+Verifying the compiled binary (PEVERIFY) ...
 [IL]: Error: [e.exe : <Module>::Initinteger][offset 0x00000012][found address of value 'T_digitarray'][expected unmanaged pointer] Unexpected type on the stack.
 [IL]: Error: [e.exe : <Module>::Initinteger][offset 0x0000001E][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
 [IL]: Error: [e.exe : <Module>::Initinteger][offset 0x0000005C][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
@@ -67,3 +67,9 @@ verifying the resulting binary
 [IL]: Error: [e.exe : <Module>::_Program][offset 0x00000167][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
 [IL]: Error: [e.exe : <Module>::_Program][offset 0x00000242][found unmanaged pointer][expected address of value 'T_digitarray'] Unexpected type on the stack.
 40 Error(s) Verifying e.exe
+Exit code: 1
+
+running the executable
+-----------------------------------------------------
+
+Exit code: 0

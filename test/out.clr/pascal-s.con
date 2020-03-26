@@ -88,15 +88,15 @@ compiling pass 1 (LPC)
 
 0 error(s), 84 warning(s)
 
-P1 errcode = 0
+Exit code: 0
 
 compiling pass 2 (target = clr)
 -----------------------------------------------------
 
-P2 errcode = 0
+Invoking ILASM ...
+Exit code: 0
 
-verifying the resulting binary
------------------------------------------------------
+Verifying the compiled binary (PEVERIFY) ...
 [IL]: Error: [pascal-s.exe : <Module>::Nextch][offset 0x000000BD][found address of Byte][expected unmanaged pointer] Unexpected type on the stack.
 [IL]: Error: [pascal-s.exe : <Module>::Interpret][offset 0x00001415][found address of Int32][expected unmanaged pointer] Unexpected type on the stack.
 [IL]: Error: [pascal-s.exe : <Module>::Interpret][offset 0x00001454][found address of Double][expected unmanaged pointer] Unexpected type on the stack.
@@ -221,3 +221,9 @@ verifying the resulting binary
 [IL]: Error: [pascal-s.exe : @block_statement_expression::Simpleexpression][offset 0x0000010E][found unmanaged pointer][expected readonly address of value 'T_item'] Unexpected type on the stack.
 [IL]: Error: [pascal-s.exe : @block_statement_expression::Simpleexpression][offset 0x00000148][found unmanaged pointer][expected address of value 'T_item'] Unexpected type on the stack.
 123 Error(s) Verifying pascal-s.exe
+Exit code: 1
+
+running the executable
+-----------------------------------------------------
+
+Exit code: 0

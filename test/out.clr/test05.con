@@ -10,14 +10,20 @@ compiling pass 1 (LPC)
 
 0 error(s), 6 warning(s)
 
-P1 errcode = 0
+Exit code: 0
 
 compiling pass 2 (target = clr)
 -----------------------------------------------------
 
-P2 errcode = 0
+Invoking ILASM ...
+Exit code: 0
 
-verifying the resulting binary
------------------------------------------------------
+Verifying the compiled binary (PEVERIFY) ...
 [IL]: Error: [test05.exe : T_array_6::arrayToString][offset 0x00000005][found address of value 'T_array_6'][expected unmanaged pointer] Unexpected type on the stack.
 1 Error(s) Verifying test05.exe
+Exit code: 1
+
+running the executable
+-----------------------------------------------------
+
+Exit code: 0

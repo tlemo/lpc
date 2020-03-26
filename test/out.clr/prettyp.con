@@ -71,15 +71,15 @@ compiling pass 1 (LPC)
 
 0 error(s), 67 warning(s)
 
-P1 errcode = 0
+Exit code: 0
 
 compiling pass 2 (target = clr)
 -----------------------------------------------------
 
-P2 errcode = 0
+Invoking ILASM ...
+Exit code: 0
 
-verifying the resulting binary
------------------------------------------------------
+Verifying the compiled binary (PEVERIFY) ...
 [IL]: Error: [prettyp.exe : <Module>::GETCHAR][offset 0x0000000B][found address of value 'T_CHARINFO'][expected unmanaged pointer] Unexpected type on the stack.
 [IL]: Error: [prettyp.exe : <Module>::GETCHAR][offset 0x00000015][found address of value 'LPC.File'][expected unmanaged pointer] Unexpected type on the stack.
 [IL]: Error: [prettyp.exe : <Module>::GETCHAR][offset 0x0000001F][found address of value 'T_CHARINFO'][expected unmanaged pointer] Unexpected type on the stack.
@@ -268,3 +268,9 @@ verifying the resulting binary
 [IL]: Error: [prettyp.exe : T_DBLCHRSET::clear][offset 0x00000003] Instruction cannot be verified.
 [IL]: Error: [prettyp.exe : T_OPTIONSET::clear][offset 0x00000003] Instruction cannot be verified.
 187 Error(s) Verifying prettyp.exe
+Exit code: 1
+
+running the executable
+-----------------------------------------------------
+
+Exit code: 0

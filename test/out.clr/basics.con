@@ -21,15 +21,15 @@ compiling pass 1 (LPC)
 
 0 error(s), 17 warning(s)
 
-P1 errcode = 0
+Exit code: 0
 
 compiling pass 2 (target = clr)
 -----------------------------------------------------
 
-P2 errcode = 0
+Invoking ILASM ...
+Exit code: 0
 
-verifying the resulting binary
------------------------------------------------------
+Verifying the compiled binary (PEVERIFY) ...
 [IL]: Error: [basics.exe : <Module>::Prtlin][offset 0x0000000A][found address of value 'T_string80'][expected unmanaged pointer] Unexpected type on the stack.
 [IL]: Error: [basics.exe : <Module>::Prtlin][offset 0x00000036][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
 [IL]: Error: [basics.exe : <Module>::Prtlin][offset 0x0000007C][found unmanaged pointer][expected address of value 'T_string80'] Unexpected type on the stack.
@@ -117,3 +117,9 @@ verifying the resulting binary
 [IL]: Error: [basics.exe : @keycom::Matstr][offset 0x0000002F][found unmanaged pointer] Expected ByRef on the stack.
 [IL]: Error: [basics.exe : T_set_7::clear][offset 0x00000004] Instruction cannot be verified.
 86 Error(s) Verifying basics.exe
+Exit code: 1
+
+running the executable
+-----------------------------------------------------
+
+Exit code: 0

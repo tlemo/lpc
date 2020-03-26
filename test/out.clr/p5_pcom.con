@@ -145,15 +145,15 @@ compiling pass 1 (LPC)
 
 0 error(s), 141 warning(s)
 
-P1 errcode = 0
+Exit code: 0
 
 compiling pass 2 (target = clr)
 -----------------------------------------------------
 
-P2 errcode = 0
+Invoking ILASM ...
+Exit code: 0
 
-verifying the resulting binary
------------------------------------------------------
+Verifying the compiled binary (PEVERIFY) ...
 [IL]: Error: [p5_pcom.exe : <Module>::Putdsp][offset 0x00000022][found unmanaged pointer][expected unmanaged pointer] Unexpected type on the stack.
 [IL]: Error: [p5_pcom.exe : <Module>::Putdsp][offset 0x00000088][found unmanaged pointer] Non-compatible types on the stack.
 [IL]: Error: [p5_pcom.exe : <Module>::Lcases][offset 0x0000000B][found address of value 'T_idstr'][expected unmanaged pointer] Unexpected type on the stack.
@@ -816,3 +816,9 @@ verifying the resulting binary
 [IL]: Error: [p5_pcom.exe : @block_body_statement_expression::Simpleexpression][offset 0x000000C6][found unmanaged pointer] Non-compatible types on the stack.
 [IL]: Error: [p5_pcom.exe : @block_body_statement_expression::Simpleexpression][offset 0x000001C2][found unmanaged pointer] Non-compatible types on the stack.
 661 Error(s) Verifying p5_pcom.exe
+Exit code: 1
+
+running the executable
+-----------------------------------------------------
+
+Exit code: 0
