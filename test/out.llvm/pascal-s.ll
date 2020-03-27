@@ -95,6 +95,7 @@ define void @P_()
     ret void
 }
 
+
 ; line 268
 ;================================================================================
 ; scope: errormsg (level : 2)
@@ -120,6 +121,7 @@ define void @P_errormsg()
     ret void
 }
 
+
 ; line 310
 ;================================================================================
 ; scope: nextch (level : 2)
@@ -137,6 +139,7 @@ define void @P_nextch()
     %1 = alloca %Frame_nextch, align 8
     ret void
 }
+
 
 ; line 330
 ;================================================================================
@@ -158,6 +161,7 @@ define void @P_error()
     %1 = alloca %Frame_error, align 8
     ret void
 }
+
 
 ; line 338
 ;================================================================================
@@ -186,6 +190,7 @@ define void @P_fatal()
     ret void
 }
 
+
 ; line 349
 ;================================================================================
 ; scope: insymbol (level : 2)
@@ -210,6 +215,7 @@ define void @P_insymbol()
     ret void
 }
 
+
 ; line 353
 ;================================================================================
 ; scope: insymbol_readscale (level : 3)
@@ -231,6 +237,7 @@ define void @P_insymbol_readscale()
     %1 = alloca %Frame_insymbol_readscale, align 8
     ret void
 }
+
 
 ; line 364
 ;================================================================================
@@ -254,6 +261,7 @@ define void @P_insymbol_adjustscale()
     %1 = alloca %Frame_insymbol_adjustscale, align 8
     ret void
 }
+
 
 ; line 477
 ;================================================================================
@@ -279,6 +287,7 @@ define void @P_enter()
     ret void
 }
 
+
 ; line 487
 ;================================================================================
 ; scope: enterarray (level : 2)
@@ -302,6 +311,7 @@ define void @P_enterarray()
     ret void
 }
 
+
 ; line 500
 ;================================================================================
 ; scope: enterblock (level : 2)
@@ -319,6 +329,7 @@ define void @P_enterblock()
     %1 = alloca %Frame_enterblock, align 8
     ret void
 }
+
 
 ; line 506
 ;================================================================================
@@ -341,6 +352,7 @@ define void @P_enterreal()
     ret void
 }
 
+
 ; line 514
 ;================================================================================
 ; scope: emit (level : 2)
@@ -361,6 +373,7 @@ define void @P_emit()
     %1 = alloca %Frame_emit, align 8
     ret void
 }
+
 
 ; line 519
 ;================================================================================
@@ -383,6 +396,7 @@ define void @P_emit1()
     %1 = alloca %Frame_emit1, align 8
     ret void
 }
+
 
 ; line 526
 ;================================================================================
@@ -407,6 +421,7 @@ define void @P_emit2()
     ret void
 }
 
+
 ; line 533
 ;================================================================================
 ; scope: printtables (level : 2)
@@ -428,6 +443,7 @@ define void @P_printtables()
     %1 = alloca %Frame_printtables, align 8
     ret void
 }
+
 
 ; line 574
 ;================================================================================
@@ -461,6 +477,7 @@ define void @P_block()
     ret void
 }
 
+
 ; line 587
 ;================================================================================
 ; scope: block_skip (level : 3)
@@ -482,6 +499,7 @@ define void @P_block_skip()
     %1 = alloca %Frame_block_skip, align 8
     ret void
 }
+
 
 ; line 592
 ;================================================================================
@@ -506,6 +524,7 @@ define void @P_block_test()
     ret void
 }
 
+
 ; line 597
 ;================================================================================
 ; scope: block_testsemicolon (level : 3)
@@ -523,6 +542,7 @@ define void @P_block_testsemicolon()
     %1 = alloca %Frame_block_testsemicolon, align 8
     ret void
 }
+
 
 ; line 606
 ;================================================================================
@@ -549,6 +569,7 @@ define void @P_block_enter()
     %1 = alloca %Frame_block_enter, align 8
     ret void
 }
+
 
 ; line 624
 ;================================================================================
@@ -578,6 +599,7 @@ define i32 @F_block_loc()
     ret i32 %3
 }
 
+
 ; line 634
 ;================================================================================
 ; scope: block_entervariable (level : 3)
@@ -595,6 +617,7 @@ define void @P_block_entervariable()
     %1 = alloca %Frame_block_entervariable, align 8
     ret void
 }
+
 
 ; line 641
 ;================================================================================
@@ -621,6 +644,7 @@ define void @P_block_constant()
     %1 = alloca %Frame_block_constant, align 8
     ret void
 }
+
 
 ; line 679
 ;================================================================================
@@ -655,6 +679,7 @@ define void @P_block_typ()
     ret void
 }
 
+
 ; line 684
 ;================================================================================
 ; scope: block_typ_arraytyp (level : 4)
@@ -684,6 +709,7 @@ define void @P_block_typ_arraytyp()
     ret void
 }
 
+
 ; line 775
 ;================================================================================
 ; scope: block_parameterlist (level : 3)
@@ -710,6 +736,7 @@ define void @P_block_parameterlist()
     ret void
 }
 
+
 ; line 826
 ;================================================================================
 ; scope: block_constantdeclaration (level : 3)
@@ -730,6 +757,7 @@ define void @P_block_constantdeclaration()
     %1 = alloca %Frame_block_constantdeclaration, align 8
     ret void
 }
+
 
 ; line 845
 ;================================================================================
@@ -754,6 +782,7 @@ define void @P_block_typedeclaration()
     %1 = alloca %Frame_block_typedeclaration, align 8
     ret void
 }
+
 
 ; line 863
 ;================================================================================
@@ -780,6 +809,7 @@ define void @P_block_variabledeclaration()
     ret void
 }
 
+
 ; line 887
 ;================================================================================
 ; scope: block_procdeclaration (level : 3)
@@ -800,6 +830,7 @@ define void @P_block_procdeclaration()
     %1 = alloca %Frame_block_procdeclaration, align 8
     ret void
 }
+
 
 ; line 900
 ;================================================================================
@@ -824,6 +855,7 @@ define void @P_block_statement()
     %1 = alloca %Frame_block_statement, align 8
     ret void
 }
+
 
 ; line 904
 ;================================================================================
@@ -851,6 +883,7 @@ define void @P_block_statement_selector()
     %1 = alloca %Frame_block_statement_selector, align 8
     ret void
 }
+
 
 ; line 942
 ;================================================================================
@@ -880,6 +913,7 @@ define void @P_block_statement_call()
     ret void
 }
 
+
 ; line 992
 ;================================================================================
 ; scope: block_statement_resulttype (level : 4)
@@ -907,6 +941,7 @@ define i32 @F_block_statement_resulttype()
     ret i32 %3
 }
 
+
 ; line 1008
 ;================================================================================
 ; scope: block_statement_expression (level : 4)
@@ -932,6 +967,7 @@ define void @P_block_statement_expression()
     %1 = alloca %Frame_block_statement_expression, align 8
     ret void
 }
+
 
 ; line 1011
 ;================================================================================
@@ -959,6 +995,7 @@ define void @P_block_statement_expression_simpleexpression()
     ret void
 }
 
+
 ; line 1014
 ;================================================================================
 ; scope: block_statement_expression_simpleexpression_term (level : 6)
@@ -984,6 +1021,7 @@ define void @P_block_statement_expression_simpleexpression_term()
     %1 = alloca %Frame_block_statement_expression_simpleexpression_term, align 8
     ret void
 }
+
 
 ; line 1017
 ;================================================================================
@@ -1011,6 +1049,7 @@ define void @P_block_statement_expression_simpleexpression_term_factor()
     ret void
 }
 
+
 ; line 1020
 ;================================================================================
 ; scope: block_statement_expression_simpleexpression_term_factor_standfct (level : 8)
@@ -1034,6 +1073,7 @@ define void @P_block_statement_expression_simpleexpression_term_factor_standfct(
     %1 = alloca %Frame_block_statement_expression_simpleexpression_term_factor_standfct, align 8
     ret void
 }
+
 
 ; line 1229
 ;================================================================================
@@ -1062,6 +1102,7 @@ define void @P_block_statement_assignment()
     ret void
 }
 
+
 ; line 1253
 ;================================================================================
 ; scope: block_statement_compoundstatement (level : 4)
@@ -1079,6 +1120,7 @@ define void @P_block_statement_compoundstatement()
     %1 = alloca %Frame_block_statement_compoundstatement, align 8
     ret void
 }
+
 
 ; line 1263
 ;================================================================================
@@ -1102,6 +1144,7 @@ define void @P_block_statement_ifstatement()
     %1 = alloca %Frame_block_statement_ifstatement, align 8
     ret void
 }
+
 
 ; line 1280
 ;================================================================================
@@ -1135,6 +1178,7 @@ define void @P_block_statement_casestatement()
     ret void
 }
 
+
 ; line 1287
 ;================================================================================
 ; scope: block_statement_casestatement_caselabel (level : 5)
@@ -1157,6 +1201,7 @@ define void @P_block_statement_casestatement_caselabel()
     ret void
 }
 
+
 ; line 1299
 ;================================================================================
 ; scope: block_statement_casestatement_onecase (level : 5)
@@ -1174,6 +1219,7 @@ define void @P_block_statement_casestatement_onecase()
     %1 = alloca %Frame_block_statement_casestatement_onecase, align 8
     ret void
 }
+
 
 ; line 1329
 ;================================================================================
@@ -1197,6 +1243,7 @@ define void @P_block_statement_repeatstatement()
     ret void
 }
 
+
 ; line 1345
 ;================================================================================
 ; scope: block_statement_whilestatement (level : 4)
@@ -1219,6 +1266,7 @@ define void @P_block_statement_whilestatement()
     %1 = alloca %Frame_block_statement_whilestatement, align 8
     ret void
 }
+
 
 ; line 1355
 ;================================================================================
@@ -1246,6 +1294,7 @@ define void @P_block_statement_forstatement()
     ret void
 }
 
+
 ; line 1387
 ;================================================================================
 ; scope: block_statement_standproc (level : 4)
@@ -1272,6 +1321,7 @@ define void @P_block_statement_standproc()
     %1 = alloca %Frame_block_statement_standproc, align 8
     ret void
 }
+
 
 ; line 1515
 ;================================================================================
@@ -1314,6 +1364,7 @@ define void @P_interpret()
     %1 = alloca %Frame_interpret, align 8
     ret void
 }
+
 
 ;================================================================================
 ; string literals

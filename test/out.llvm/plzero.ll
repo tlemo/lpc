@@ -68,6 +68,7 @@ define void @P_()
     ret void
 }
 
+
 ; line 56
 ;================================================================================
 ; scope: error (level : 2)
@@ -88,6 +89,7 @@ define void @P_error()
     %1 = alloca %Frame_error, align 8
     ret void
 }
+
 
 ; line 60
 ;================================================================================
@@ -112,6 +114,7 @@ define void @P_getsym()
     ret void
 }
 
+
 ; line 63
 ;================================================================================
 ; scope: getsym_getch (level : 3)
@@ -129,6 +132,7 @@ define void @P_getsym_getch()
     %1 = alloca %Frame_getsym_getch, align 8
     ret void
 }
+
 
 ; line 113
 ;================================================================================
@@ -153,6 +157,7 @@ define void @P_gen()
     ret void
 }
 
+
 ; line 123
 ;================================================================================
 ; scope: test (level : 2)
@@ -175,6 +180,7 @@ define void @P_test()
     %1 = alloca %Frame_test, align 8
     ret void
 }
+
 
 ; line 130
 ;================================================================================
@@ -204,6 +210,7 @@ define void @P_block()
     ret void
 }
 
+
 ; line 134
 ;================================================================================
 ; scope: block_enter (level : 3)
@@ -224,6 +231,7 @@ define void @P_block_enter()
     %1 = alloca %Frame_block_enter, align 8
     ret void
 }
+
 
 ; line 151
 ;================================================================================
@@ -252,6 +260,7 @@ define i32 @F_block_position()
     ret i32 %3
 }
 
+
 ; line 159
 ;================================================================================
 ; scope: block_constdeclaration (level : 3)
@@ -270,6 +279,7 @@ define void @P_block_constdeclaration()
     ret void
 }
 
+
 ; line 173
 ;================================================================================
 ; scope: block_vardeclaration (level : 3)
@@ -287,6 +297,7 @@ define void @P_block_vardeclaration()
     %1 = alloca %Frame_block_vardeclaration, align 8
     ret void
 }
+
 
 ; line 179
 ;================================================================================
@@ -308,6 +319,7 @@ define void @P_block_listcode()
     %1 = alloca %Frame_block_listcode, align 8
     ret void
 }
+
 
 ; line 187
 ;================================================================================
@@ -335,6 +347,7 @@ define void @P_block_statement()
     ret void
 }
 
+
 ; line 189
 ;================================================================================
 ; scope: block_statement_expression (level : 4)
@@ -358,6 +371,7 @@ define void @P_block_statement_expression()
     %1 = alloca %Frame_block_statement_expression, align 8
     ret void
 }
+
 
 ; line 191
 ;================================================================================
@@ -383,6 +397,7 @@ define void @P_block_statement_expression_term()
     ret void
 }
 
+
 ; line 193
 ;================================================================================
 ; scope: block_statement_expression_term_factor (level : 6)
@@ -407,6 +422,7 @@ define void @P_block_statement_expression_term_factor()
     ret void
 }
 
+
 ; line 240
 ;================================================================================
 ; scope: block_statement_condition (level : 4)
@@ -430,6 +446,7 @@ define void @P_block_statement_condition()
     %1 = alloca %Frame_block_statement_condition, align 8
     ret void
 }
+
 
 ; line 356
 ;================================================================================
@@ -459,6 +476,7 @@ define void @P_interpret()
     ret void
 }
 
+
 ; line 361
 ;================================================================================
 ; scope: interpret_base (level : 3)
@@ -485,6 +503,7 @@ define i32 @F_interpret_base()
     %3 = load i32, i32* %2
     ret i32 %3
 }
+
 
 ;================================================================================
 ; string literals

@@ -43,6 +43,7 @@ define void @P_()
     ret void
 }
 
+
 ; line 15
 ;================================================================================
 ; scope: CalculatePayment (level : 2)
@@ -65,6 +66,7 @@ define void @P_CalculatePayment()
     ret void
 }
 
+
 ; line 25
 ;================================================================================
 ; scope: InitializeData (level : 2)
@@ -83,6 +85,7 @@ define void @P_InitializeData()
     ret void
 }
 
+
 ; line 45
 ;================================================================================
 ; scope: PrintAnnualHeader (level : 2)
@@ -100,6 +103,7 @@ define void @P_PrintAnnualHeader()
     %1 = alloca %Frame_PrintAnnualHeader, align 8
     ret void
 }
+
 
 ; line 56
 ;================================================================================
@@ -123,6 +127,7 @@ define void @P_CalculateAndPrint()
     ret void
 }
 
+
 ; line 78
 ;================================================================================
 ; scope: PrintAnnualSummary (level : 2)
@@ -140,6 +145,7 @@ define void @P_PrintAnnualSummary()
     %1 = alloca %Frame_PrintAnnualSummary, align 8
     ret void
 }
+
 
 ;================================================================================
 ; string literals

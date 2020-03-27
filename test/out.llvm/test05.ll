@@ -44,6 +44,7 @@ define void @P_()
     ret void
 }
 
+
 ; line 14
 ;================================================================================
 ; scope: outter (level : 2)
@@ -69,6 +70,7 @@ define i32 @F_outter()
     %3 = load i32, i32* %2
     ret i32 %3
 }
+
 
 ; line 15
 ;================================================================================
@@ -96,6 +98,7 @@ define i32 @F_outter_inner()
     ret i32 %3
 }
 
+
 ; line 16
 ;================================================================================
 ; scope: outter_inner_setOutter (level : 4)
@@ -116,6 +119,7 @@ define void @P_outter_inner_setOutter()
     %1 = alloca %Frame_outter_inner_setOutter, align 8
     ret void
 }
+
 
 ;================================================================================
 ; string literals

@@ -212,6 +212,7 @@ define void @P_()
     ret void
 }
 
+
 ; line 290
 ;================================================================================
 ; scope: MAX (level : 2)
@@ -238,6 +239,7 @@ define i32 @F_MAX()
     %3 = load i32, i32* %2
     ret i32 %3
 }
+
 
 ; line 300
 ;================================================================================
@@ -266,6 +268,7 @@ define i32 @F_MIN()
     ret i32 %3
 }
 
+
 ; line 310
 ;================================================================================
 ; scope: SIGN (level : 2)
@@ -292,6 +295,7 @@ define i32 @F_SIGN()
     %3 = load i32, i32* %2
     ret i32 %3
 }
+
 
 ; line 320
 ;================================================================================
@@ -323,6 +327,7 @@ define void @P_SORTIT()
     ret void
 }
 
+
 ; line 354
 ;================================================================================
 ; scope: ANDRS (level : 2)
@@ -349,6 +354,7 @@ define void @P_ANDRS()
     ret void
 }
 
+
 ; line 368
 ;================================================================================
 ; scope: CLRRS (level : 2)
@@ -370,6 +376,7 @@ define void @P_CLRRS()
     %1 = alloca %Frame_CLRRS, align 8
     ret void
 }
+
 
 ; line 377
 ;================================================================================
@@ -395,6 +402,7 @@ define void @P_CPYRS()
     %1 = alloca %Frame_CPYRS, align 8
     ret void
 }
+
 
 ; line 390
 ;================================================================================
@@ -422,6 +430,7 @@ define void @P_IORRS()
     ret void
 }
 
+
 ; line 403
 ;================================================================================
 ; scope: NEWRS (level : 2)
@@ -445,6 +454,7 @@ define void @P_NEWRS()
     %1 = alloca %Frame_NEWRS, align 8
     ret void
 }
+
 
 ; line 415
 ;================================================================================
@@ -470,6 +480,7 @@ define void @P_NOTRS()
     %1 = alloca %Frame_NOTRS, align 8
     ret void
 }
+
 
 ; line 427
 ;================================================================================
@@ -500,6 +511,7 @@ define i1 @F_NXTTS()
     ret i1 %3
 }
 
+
 ; line 477
 ;================================================================================
 ; scope: CNTRS (level : 2)
@@ -529,6 +541,7 @@ define i32 @F_CNTRS()
     ret i32 %3
 }
 
+
 ; line 502
 ;================================================================================
 ; scope: SETRS (level : 2)
@@ -550,6 +563,7 @@ define void @P_SETRS()
     %1 = alloca %Frame_SETRS, align 8
     ret void
 }
+
 
 ; line 511
 ;================================================================================
@@ -577,6 +591,7 @@ define void @P_SFTRS()
     ret void
 }
 
+
 ; line 619
 ;================================================================================
 ; scope: INRSTB (level : 2)
@@ -603,6 +618,7 @@ define i1 @F_INRSTB()
     %3 = load i1, i1* %2
     ret i1 %3
 }
+
 
 ; line 627
 ;================================================================================
@@ -632,6 +648,7 @@ define i1 @F_NULRS()
     ret i1 %3
 }
 
+
 ; line 643
 ;================================================================================
 ; scope: NULMVB (level : 2)
@@ -657,6 +674,7 @@ define i1 @F_NULMVB()
     %3 = load i1, i1* %2
     ret i1 %3
 }
+
 
 ; line 653
 ;================================================================================
@@ -691,6 +709,7 @@ define void @P_INICON()
     ret void
 }
 
+
 ; line 670
 ;================================================================================
 ; scope: INICON_INISYN (level : 3)
@@ -711,6 +730,7 @@ define void @P_INICON_INISYN()
     %1 = alloca %Frame_INICON_INISYN, align 8
     ret void
 }
+
 
 ; line 698
 ;================================================================================
@@ -740,6 +760,7 @@ define void @P_INICON_INIXTP()
     ret void
 }
 
+
 ; line 1057
 ;================================================================================
 ; scope: INITAL (level : 2)
@@ -765,6 +786,7 @@ define void @P_INITAL()
     ret void
 }
 
+
 ; line 1101
 ;================================================================================
 ; scope: PAUSER (level : 2)
@@ -782,6 +804,7 @@ define void @P_PAUSER()
     %1 = alloca %Frame_PAUSER, align 8
     ret void
 }
+
 
 ; line 1112
 ;================================================================================
@@ -803,6 +826,7 @@ define void @P_PRIMOV()
     %1 = alloca %Frame_PRIMOV, align 8
     ret void
 }
+
 
 ; line 1168
 ;================================================================================
@@ -828,6 +852,7 @@ define void @P_PRINTB()
     %1 = alloca %Frame_PRINTB, align 8
     ret void
 }
+
 
 ; line 1208
 ;================================================================================
@@ -856,6 +881,7 @@ define void @P_PRINAM()
     ret void
 }
 
+
 ; line 1237
 ;================================================================================
 ; scope: PRISWI (level : 2)
@@ -878,6 +904,7 @@ define void @P_PRISWI()
     ret void
 }
 
+
 ; line 1248
 ;================================================================================
 ; scope: MBEVAL (level : 2)
@@ -898,6 +925,7 @@ define void @P_MBEVAL()
     %1 = alloca %Frame_MBEVAL, align 8
     ret void
 }
+
 
 ; line 1267
 ;================================================================================
@@ -920,6 +948,7 @@ define void @P_MBCAPT()
     ret void
 }
 
+
 ; line 1281
 ;================================================================================
 ; scope: MBTPAC (level : 2)
@@ -940,6 +969,7 @@ define void @P_MBTPAC()
     %1 = alloca %Frame_MBTPAC, align 8
     ret void
 }
+
 
 ; line 1294
 ;================================================================================
@@ -962,6 +992,7 @@ define void @P_MBPROM()
     ret void
 }
 
+
 ; line 1308
 ;================================================================================
 ; scope: MBMORP (level : 2)
@@ -982,6 +1013,7 @@ define void @P_MBMORP()
     %1 = alloca %Frame_MBMORP, align 8
     ret void
 }
+
 
 ; line 1321
 ;================================================================================
@@ -1012,6 +1044,7 @@ define void @P_ADDATK()
     ret void
 }
 
+
 ; line 1359
 ;================================================================================
 ; scope: ADDLOC (level : 2)
@@ -1034,6 +1067,7 @@ define void @P_ADDLOC()
     ret void
 }
 
+
 ; line 1372
 ;================================================================================
 ; scope: CLSTAT (level : 2)
@@ -1051,6 +1085,7 @@ define void @P_CLSTAT()
     %1 = alloca %Frame_CLSTAT, align 8
     ret void
 }
+
 
 ; line 1384
 ;================================================================================
@@ -1082,6 +1117,7 @@ define void @P_CUTATK()
     ret void
 }
 
+
 ; line 1428
 ;================================================================================
 ; scope: DELATK (level : 2)
@@ -1108,6 +1144,7 @@ define void @P_DELATK()
     %1 = alloca %Frame_DELATK, align 8
     ret void
 }
+
 
 ; line 1462
 ;================================================================================
@@ -1138,6 +1175,7 @@ define void @P_PRPATK()
     ret void
 }
 
+
 ; line 1502
 ;================================================================================
 ; scope: GAINIT (level : 2)
@@ -1158,6 +1196,7 @@ define void @P_GAINIT()
     %1 = alloca %Frame_GAINIT, align 8
     ret void
 }
+
 
 ; line 1520
 ;================================================================================
@@ -1180,6 +1219,7 @@ define void @P_LOSEIT()
     ret void
 }
 
+
 ; line 1540
 ;================================================================================
 ; scope: MOVEIT (level : 2)
@@ -1200,6 +1240,7 @@ define void @P_MOVEIT()
     %1 = alloca %Frame_MOVEIT, align 8
     ret void
 }
+
 
 ; line 1558
 ;================================================================================
@@ -1222,6 +1263,7 @@ define void @P_RTRKIT()
     ret void
 }
 
+
 ; line 1578
 ;================================================================================
 ; scope: PAWNIT (level : 2)
@@ -1242,6 +1284,7 @@ define void @P_PAWNIT()
     %1 = alloca %Frame_PAWNIT, align 8
     ret void
 }
+
 
 ; line 1590
 ;================================================================================
@@ -1268,6 +1311,7 @@ define void @P_PROACA()
     ret void
 }
 
+
 ; line 1614
 ;================================================================================
 ; scope: PROACS (level : 2)
@@ -1289,6 +1333,7 @@ define void @P_PROACS()
     ret void
 }
 
+
 ; line 1629
 ;================================================================================
 ; scope: PROMOT (level : 2)
@@ -1309,6 +1354,7 @@ define void @P_PROMOT()
     %1 = alloca %Frame_PROMOT, align 8
     ret void
 }
+
 
 ; line 1641
 ;================================================================================
@@ -1334,6 +1380,7 @@ define void @P_CREATE()
     %1 = alloca %Frame_CREATE, align 8
     ret void
 }
+
 
 ; line 1718
 ;================================================================================
@@ -1362,6 +1409,7 @@ define void @P_DNDATE()
     %1 = alloca %Frame_DNDATE, align 8
     ret void
 }
+
 
 ; line 1792
 ;================================================================================
@@ -1396,6 +1444,7 @@ define i1 @F_UPDATE()
     ret i1 %3
 }
 
+
 ; line 1919
 ;================================================================================
 ; scope: GENONE (level : 2)
@@ -1421,6 +1470,7 @@ define void @P_GENONE()
     ret void
 }
 
+
 ; line 1950
 ;================================================================================
 ; scope: PWNPRO (level : 2)
@@ -1441,6 +1491,7 @@ define void @P_PWNPRO()
     %1 = alloca %Frame_PWNPRO, align 8
     ret void
 }
+
 
 ; line 1967
 ;================================================================================
@@ -1468,6 +1519,7 @@ define void @P_GENPWN()
     %1 = alloca %Frame_GENPWN, align 8
     ret void
 }
+
 
 ; line 2095
 ;================================================================================
@@ -1497,6 +1549,7 @@ define void @P_GENFSL()
     ret void
 }
 
+
 ; line 2124
 ;================================================================================
 ; scope: GENTSL (level : 2)
@@ -1525,6 +1578,7 @@ define void @P_GENTSL()
     ret void
 }
 
+
 ; line 2151
 ;================================================================================
 ; scope: GENCAP (level : 2)
@@ -1545,6 +1599,7 @@ define void @P_GENCAP()
     %1 = alloca %Frame_GENCAP, align 8
     ret void
 }
+
 
 ; line 2163
 ;================================================================================
@@ -1569,6 +1624,7 @@ define void @P_GENCAS()
     ret void
 }
 
+
 ; line 2191
 ;================================================================================
 ; scope: GENALL (level : 2)
@@ -1586,6 +1642,7 @@ define void @P_GENALL()
     %1 = alloca %Frame_GENALL, align 8
     ret void
 }
+
 
 ; line 2199
 ;================================================================================
@@ -1607,6 +1664,7 @@ define void @P_LSTMOV()
     %1 = alloca %Frame_LSTMOV, align 8
     ret void
 }
+
 
 ; line 2215
 ;================================================================================
@@ -1635,6 +1693,7 @@ define void @P_THEMOV()
     ret void
 }
 
+
 ; line 2249
 ;================================================================================
 ; scope: EVALU8 (level : 2)
@@ -1655,6 +1714,7 @@ define void @P_EVALU8()
     %1 = alloca %Frame_EVALU8, align 8
     ret void
 }
+
 
 ; line 2254
 ;================================================================================
@@ -1686,6 +1746,7 @@ define i32 @F_EVALU8_EVKING()
     ret i32 %3
 }
 
+
 ; line 2280
 ;================================================================================
 ; scope: EVALU8_EVMOBL (level : 3)
@@ -1715,6 +1776,7 @@ define i32 @F_EVALU8_EVMOBL()
     %3 = load i32, i32* %2
     ret i32 %3
 }
+
 
 ; line 2297
 ;================================================================================
@@ -1748,6 +1810,7 @@ define i32 @F_EVALU8_EVPAWN()
     ret i32 %3
 }
 
+
 ; line 2332
 ;================================================================================
 ; scope: EVALU8_EVROOK (level : 3)
@@ -1779,6 +1842,7 @@ define i32 @F_EVALU8_EVROOK()
     ret i32 %3
 }
 
+
 ; line 2382
 ;================================================================================
 ; scope: SEARCH (level : 2)
@@ -1802,6 +1866,7 @@ define i32 @F_SEARCH()
     %3 = load i32, i32* %2
     ret i32 %3
 }
+
 
 ; line 2395
 ;================================================================================
@@ -1827,6 +1892,7 @@ define void @P_SEARCH_NEWBST()
     %1 = alloca %Frame_SEARCH_NEWBST, align 8
     ret void
 }
+
 
 ; line 2418
 ;================================================================================
@@ -1854,6 +1920,7 @@ define i1 @F_SEARCH_MINMAX()
     ret i1 %3
 }
 
+
 ; line 2440
 ;================================================================================
 ; scope: SEARCH_SCOREM (level : 3)
@@ -1871,6 +1938,7 @@ define void @P_SEARCH_SCOREM()
     %1 = alloca %Frame_SEARCH_SCOREM, align 8
     ret void
 }
+
 
 ; line 2453
 ;================================================================================
@@ -1900,6 +1968,7 @@ define i1 @F_SEARCH_SELECT()
     ret i1 %3
 }
 
+
 ; line 2467
 ;================================================================================
 ; scope: SEARCH_SELECT_SELDON (level : 4)
@@ -1917,6 +1986,7 @@ define void @P_SEARCH_SELECT_SELDON()
     %1 = alloca %Frame_SEARCH_SELECT_SELDON, align 8
     ret void
 }
+
 
 ; line 2482
 ;================================================================================
@@ -1939,6 +2009,7 @@ define void @P_SEARCH_SELECT_SELMOV()
     ret void
 }
 
+
 ; line 2501
 ;================================================================================
 ; scope: SEARCH_SELECT_SELNXT (level : 4)
@@ -1959,6 +2030,7 @@ define void @P_SEARCH_SELECT_SELNXT()
     %1 = alloca %Frame_SEARCH_SELECT_SELNXT, align 8
     ret void
 }
+
 
 ; line 2513
 ;================================================================================
@@ -1981,6 +2053,7 @@ define void @P_SEARCH_SELECT_SELANY()
     ret void
 }
 
+
 ; line 2748
 ;================================================================================
 ; scope: READER (level : 2)
@@ -2002,6 +2075,7 @@ define void @P_READER()
     %1 = alloca %Frame_READER, align 8
     ret void
 }
+
 
 ; line 2757
 ;================================================================================
@@ -2027,6 +2101,7 @@ define void @P_READER_RDRERR()
     %1 = alloca %Frame_READER_RDRERR, align 8
     ret void
 }
+
 
 ; line 2782
 ;================================================================================
@@ -2055,6 +2130,7 @@ define i1 @F_READER_RDRGNT()
     ret i1 %3
 }
 
+
 ; line 2812
 ;================================================================================
 ; scope: READER_RDRSFT (level : 3)
@@ -2076,6 +2152,7 @@ define void @P_READER_RDRSFT()
     %1 = alloca %Frame_READER_RDRSFT, align 8
     ret void
 }
+
 
 ; line 2825
 ;================================================================================
@@ -2102,6 +2179,7 @@ define void @P_READER_RDRCMD()
     ret void
 }
 
+
 ; line 2840
 ;================================================================================
 ; scope: READER_RDLINE (level : 3)
@@ -2123,6 +2201,7 @@ define void @P_READER_RDLINE()
     %1 = alloca %Frame_READER_RDLINE, align 8
     ret void
 }
+
 
 ; line 2867
 ;================================================================================
@@ -2147,6 +2226,7 @@ define i1 @F_READER_RDRMOV()
     %3 = load i1, i1* %2
     ret i1 %3
 }
+
 
 ; line 2898
 ;================================================================================
@@ -2173,6 +2253,7 @@ define i32 @F_READER_RDRNUM()
     ret i32 %3
 }
 
+
 ; line 2938
 ;================================================================================
 ; scope: READER_BOACMD (level : 3)
@@ -2196,6 +2277,7 @@ define void @P_READER_BOACMD()
     ret void
 }
 
+
 ; line 2946
 ;================================================================================
 ; scope: READER_BOACMD_BOAADV (level : 4)
@@ -2216,6 +2298,7 @@ define void @P_READER_BOACMD_BOAADV()
     %1 = alloca %Frame_READER_BOACMD_BOAADV, align 8
     ret void
 }
+
 
 ; line 2956
 ;================================================================================
@@ -2238,6 +2321,7 @@ define void @P_READER_BOACMD_BOASTO()
     ret void
 }
 
+
 ; line 2996
 ;================================================================================
 ; scope: READER_ENDCMD (level : 3)
@@ -2255,6 +2339,7 @@ define void @P_READER_ENDCMD()
     %1 = alloca %Frame_READER_ENDCMD, align 8
     ret void
 }
+
 
 ; line 3003
 ;================================================================================
@@ -2274,6 +2359,7 @@ define void @P_READER_GONCMD()
     ret void
 }
 
+
 ; line 3015
 ;================================================================================
 ; scope: READER_INICMD (level : 3)
@@ -2292,6 +2378,7 @@ define void @P_READER_INICMD()
     ret void
 }
 
+
 ; line 3022
 ;================================================================================
 ; scope: READER_LETCMD (level : 3)
@@ -2309,6 +2396,7 @@ define void @P_READER_LETCMD()
     %1 = alloca %Frame_READER_LETCMD, align 8
     ret void
 }
+
 
 ; line 3027
 ;================================================================================
@@ -2332,6 +2420,7 @@ define void @P_READER_LETCMD_LETONE()
     ret void
 }
 
+
 ; line 3076
 ;================================================================================
 ; scope: READER_PLECMD (level : 3)
@@ -2349,6 +2438,7 @@ define void @P_READER_PLECMD()
     %1 = alloca %Frame_READER_PLECMD, align 8
     ret void
 }
+
 
 ; line 3081
 ;================================================================================
@@ -2372,6 +2462,7 @@ define void @P_READER_PLECMD_PRIONE()
     ret void
 }
 
+
 ; line 3131
 ;================================================================================
 ; scope: READER_PRICMD (level : 3)
@@ -2390,6 +2481,7 @@ define void @P_READER_PRICMD()
     ret void
 }
 
+
 ; line 3141
 ;================================================================================
 ; scope: READER_PAMCMD (level : 3)
@@ -2407,6 +2499,7 @@ define void @P_READER_PAMCMD()
     %1 = alloca %Frame_READER_PAMCMD, align 8
     ret void
 }
+
 
 ; line 3155
 ;================================================================================
@@ -2429,6 +2522,7 @@ define void @P_READER_POPCMD()
     ret void
 }
 
+
 ; line 3173
 ;================================================================================
 ; scope: READER_PMVCMD (level : 3)
@@ -2450,6 +2544,7 @@ define void @P_READER_PMVCMD()
     ret void
 }
 
+
 ; line 3190
 ;================================================================================
 ; scope: READER_SWICMD (level : 3)
@@ -2467,6 +2562,7 @@ define void @P_READER_SWICMD()
     %1 = alloca %Frame_READER_SWICMD, align 8
     ret void
 }
+
 
 ; line 3195
 ;================================================================================
@@ -2493,6 +2589,7 @@ define void @P_READER_SWICMD_SWIONE()
     ret void
 }
 
+
 ; line 3241
 ;================================================================================
 ; scope: READER_STACMD (level : 3)
@@ -2514,6 +2611,7 @@ define void @P_READER_STACMD()
     %1 = alloca %Frame_READER_STACMD, align 8
     ret void
 }
+
 
 ; line 3250
 ;================================================================================
@@ -2537,6 +2635,7 @@ define void @P_READER_STACMD_STAEPF()
     ret void
 }
 
+
 ; line 3266
 ;================================================================================
 ; scope: READER_STACMD_STACAK (level : 4)
@@ -2554,6 +2653,7 @@ define void @P_READER_STACMD_STACAK()
     %1 = alloca %Frame_READER_STACMD_STACAK, align 8
     ret void
 }
+
 
 ; line 3276
 ;================================================================================
@@ -2573,6 +2673,7 @@ define void @P_READER_STACMD_STACAQ()
     ret void
 }
 
+
 ; line 3286
 ;================================================================================
 ; scope: READER_STACMD_STADRK (level : 4)
@@ -2590,6 +2691,7 @@ define void @P_READER_STACMD_STADRK()
     %1 = alloca %Frame_READER_STACMD_STADRK, align 8
     ret void
 }
+
 
 ; line 3293
 ;================================================================================
@@ -2609,6 +2711,7 @@ define void @P_READER_STACMD_STAENP()
     ret void
 }
 
+
 ; line 3314
 ;================================================================================
 ; scope: READER_STACMD_STAGOS (level : 4)
@@ -2626,6 +2729,7 @@ define void @P_READER_STACMD_STAGOS()
     %1 = alloca %Frame_READER_STACMD_STAGOS, align 8
     ret void
 }
+
 
 ; line 3322
 ;================================================================================
@@ -2645,6 +2749,7 @@ define void @P_READER_STACMD_STALIT()
     ret void
 }
 
+
 ; line 3329
 ;================================================================================
 ; scope: READER_STACMD_STANUM (level : 4)
@@ -2662,6 +2767,7 @@ define void @P_READER_STACMD_STANUM()
     %1 = alloca %Frame_READER_STACMD_STANUM, align 8
     ret void
 }
+
 
 ; line 3336
 ;================================================================================
@@ -2688,6 +2794,7 @@ define void @P_READER_STACMD_STAOPT()
     ret void
 }
 
+
 ; line 3368
 ;================================================================================
 ; scope: READER_WHACMD (level : 3)
@@ -2705,6 +2812,7 @@ define void @P_READER_WHACMD()
     %1 = alloca %Frame_READER_WHACMD, align 8
     ret void
 }
+
 
 ; line 3410
 ;================================================================================
@@ -2731,6 +2839,7 @@ define void @P_MINENG()
     ret void
 }
 
+
 ; line 3418
 ;================================================================================
 ; scope: MINENG_ADDCHR (level : 3)
@@ -2751,6 +2860,7 @@ define void @P_MINENG_ADDCHR()
     %1 = alloca %Frame_MINENG_ADDCHR, align 8
     ret void
 }
+
 
 ; line 3428
 ;================================================================================
@@ -2773,6 +2883,7 @@ define void @P_MINENG_ADDSQR()
     %1 = alloca %Frame_MINENG_ADDSQR, align 8
     ret void
 }
+
 
 ; line 3478
 ;================================================================================
@@ -2798,6 +2909,7 @@ define void @P_MINENG_ADDWRD()
     %1 = alloca %Frame_MINENG_ADDWRD, align 8
     ret void
 }
+
 
 ; line 3491
 ;================================================================================
@@ -2827,6 +2939,7 @@ define i1 @F_MINENG_DIFFER()
     ret i1 %3
 }
 
+
 ; line 3516
 ;================================================================================
 ; scope: MINENG_SETSQD (level : 3)
@@ -2850,6 +2963,7 @@ define void @P_MINENG_SETSQD()
     %1 = alloca %Frame_MINENG_SETSQD, align 8
     ret void
 }
+
 
 ; line 3544
 ;================================================================================
@@ -2883,6 +2997,7 @@ define void @P_MINENG_MINGEN()
     ret void
 }
 
+
 ; line 3635
 ;================================================================================
 ; scope: MYMOVE (level : 2)
@@ -2903,6 +3018,7 @@ define void @P_MYMOVE()
     %1 = alloca %Frame_MYMOVE, align 8
     ret void
 }
+
 
 ; line 3662
 ;================================================================================
@@ -2945,6 +3061,7 @@ define void @P_YRMOVE()
     ret void
 }
 
+
 ; line 3696
 ;================================================================================
 ; scope: YRMOVE_YRMHIT (level : 3)
@@ -2962,6 +3079,7 @@ define void @P_YRMOVE_YRMHIT()
     %1 = alloca %Frame_YRMOVE_YRMHIT, align 8
     ret void
 }
+
 
 ; line 3714
 ;================================================================================
@@ -2981,6 +3099,7 @@ define void @P_YRMOVE_YRMCOM()
     ret void
 }
 
+
 ; line 3738
 ;================================================================================
 ; scope: YRMOVE_YRMCAP (level : 3)
@@ -2998,6 +3117,7 @@ define void @P_YRMOVE_YRMCAP()
     %1 = alloca %Frame_YRMOVE_YRMCAP, align 8
     ret void
 }
+
 
 ; line 3745
 ;================================================================================
@@ -3017,6 +3137,7 @@ define void @P_YRMOVE_YRMCAS()
     ret void
 }
 
+
 ; line 3752
 ;================================================================================
 ; scope: YRMOVE_YRMCPC (level : 3)
@@ -3034,6 +3155,7 @@ define void @P_YRMOVE_YRMCPC()
     %1 = alloca %Frame_YRMOVE_YRMCPC, align 8
     ret void
 }
+
 
 ; line 3765
 ;================================================================================
@@ -3053,6 +3175,7 @@ define void @P_YRMOVE_YRMCQS()
     ret void
 }
 
+
 ; line 3772
 ;================================================================================
 ; scope: YRMOVE_YRMLKQ (level : 3)
@@ -3070,6 +3193,7 @@ define void @P_YRMOVE_YRMLKQ()
     %1 = alloca %Frame_YRMOVE_YRMLKQ, align 8
     ret void
 }
+
 
 ; line 3783
 ;================================================================================
@@ -3089,6 +3213,7 @@ define void @P_YRMOVE_YRMLRB()
     ret void
 }
 
+
 ; line 3795
 ;================================================================================
 ; scope: YRMOVE_YRMLRK (level : 3)
@@ -3106,6 +3231,7 @@ define void @P_YRMOVE_YRMLRK()
     %1 = alloca %Frame_YRMOVE_YRMLRK, align 8
     ret void
 }
+
 
 ; line 3823
 ;================================================================================
@@ -3125,6 +3251,7 @@ define void @P_YRMOVE_YRMNUL()
     ret void
 }
 
+
 ; line 3829
 ;================================================================================
 ; scope: YRMOVE_YRMPCM (level : 3)
@@ -3142,6 +3269,7 @@ define void @P_YRMOVE_YRMPCM()
     %1 = alloca %Frame_YRMOVE_YRMPCM, align 8
     ret void
 }
+
 
 ; line 3842
 ;================================================================================
@@ -3161,6 +3289,7 @@ define void @P_YRMOVE_YRMPRO()
     ret void
 }
 
+
 ; line 3855
 ;================================================================================
 ; scope: YRMOVE_YRMRKQ (level : 3)
@@ -3178,6 +3307,7 @@ define void @P_YRMOVE_YRMRKQ()
     %1 = alloca %Frame_YRMOVE_YRMRKQ, align 8
     ret void
 }
+
 
 ; line 3866
 ;================================================================================
@@ -3197,6 +3327,7 @@ define void @P_YRMOVE_YRMRRB()
     ret void
 }
 
+
 ; line 3878
 ;================================================================================
 ; scope: YRMOVE_YRMRRK (level : 3)
@@ -3214,6 +3345,7 @@ define void @P_YRMOVE_YRMRRK()
     %1 = alloca %Frame_YRMOVE_YRMRRK, align 8
     ret void
 }
+
 
 ; line 3906
 ;================================================================================
@@ -3245,6 +3377,7 @@ define i1 @F_YRMOVE_NCHIN()
     %3 = load i1, i1* %2
     ret i1 %3
 }
+
 
 ;================================================================================
 ; string literals

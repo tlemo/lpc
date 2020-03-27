@@ -71,6 +71,7 @@ define void @P_()
     ret void
 }
 
+
 ; line 65
 ;================================================================================
 ; scope: expp (level : 2)
@@ -100,6 +101,7 @@ define double @F_expp()
     ret double %3
 }
 
+
 ; line 84
 ;================================================================================
 ; scope: random (level : 2)
@@ -127,6 +129,7 @@ define i32 @F_random()
     %3 = load i32, i32* %2
     ret i32 %3
 }
+
 
 ; line 95
 ;================================================================================
@@ -156,6 +159,7 @@ define i32 @F_distance()
     ret i32 %3
 }
 
+
 ; line 100
 ;================================================================================
 ; scope: radians (level : 2)
@@ -181,6 +185,7 @@ define double @F_radians()
     %3 = load double, double* %2
     ret double %3
 }
+
 
 ; line 105
 ;================================================================================
@@ -210,6 +215,7 @@ define i32 @F_interval()
     ret i32 %3
 }
 
+
 ; line 116
 ;================================================================================
 ; scope: reinitialize (level : 2)
@@ -230,6 +236,7 @@ define void @P_reinitialize()
     %1 = alloca %Frame_reinitialize, align 8
     ret void
 }
+
 
 ; line 125
 ;================================================================================
@@ -255,6 +262,7 @@ define void @P_initialize()
     ret void
 }
 
+
 ; line 191
 ;================================================================================
 ; scope: setcondition (level : 2)
@@ -276,6 +284,7 @@ define void @P_setcondition()
     %1 = alloca %Frame_setcondition, align 8
     ret void
 }
+
 
 ; line 211
 ;================================================================================
@@ -303,6 +312,7 @@ define void @P_klingonattack()
     ret void
 }
 
+
 ; line 241
 ;================================================================================
 ; scope: printdigit (level : 2)
@@ -324,6 +334,7 @@ define void @P_printdigit()
     %1 = alloca %Frame_printdigit, align 8
     ret void
 }
+
 
 ; line 250
 ;================================================================================
@@ -353,6 +364,7 @@ define void @P_setupquad()
     ret void
 }
 
+
 ; line 253
 ;================================================================================
 ; scope: setupquad_setupstuff (level : 3)
@@ -379,6 +391,7 @@ define void @P_setupquad_setupstuff()
     ret void
 }
 
+
 ; line 301
 ;================================================================================
 ; scope: printquadrant (level : 2)
@@ -400,6 +413,7 @@ define void @P_printquadrant()
     %1 = alloca %Frame_printquadrant, align 8
     ret void
 }
+
 
 ; line 330
 ;================================================================================
@@ -430,6 +444,7 @@ define void @P_printgalaxy()
     ret void
 }
 
+
 ; line 335
 ;================================================================================
 ; scope: printgalaxy_printseparator (level : 3)
@@ -454,6 +469,7 @@ define void @P_printgalaxy_printseparator()
     ret void
 }
 
+
 ; line 380
 ;================================================================================
 ; scope: printdamage (level : 2)
@@ -474,6 +490,7 @@ define void @P_printdamage()
     %1 = alloca %Frame_printdamage, align 8
     ret void
 }
+
 
 ; line 388
 ;================================================================================
@@ -501,6 +518,7 @@ define void @P_moveenterprise()
     ret void
 }
 
+
 ; line 392
 ;================================================================================
 ; scope: moveenterprise_handledamage (level : 3)
@@ -522,6 +540,7 @@ define void @P_moveenterprise_handledamage()
     %1 = alloca %Frame_moveenterprise_handledamage, align 8
     ret void
 }
+
 
 ; line 425
 ;================================================================================
@@ -549,6 +568,7 @@ define void @P_moveenterprise_moveintra()
     ret void
 }
 
+
 ; line 496
 ;================================================================================
 ; scope: firephasers (level : 2)
@@ -571,6 +591,7 @@ define void @P_firephasers()
     %1 = alloca %Frame_firephasers, align 8
     ret void
 }
+
 
 ; line 533
 ;================================================================================
@@ -599,6 +620,7 @@ define void @P_firetorpedoes()
     ret void
 }
 
+
 ; line 538
 ;================================================================================
 ; scope: firetorpedoes_hitnova (level : 3)
@@ -625,6 +647,7 @@ define void @P_firetorpedoes_hitnova()
     %1 = alloca %Frame_firetorpedoes_hitnova, align 8
     ret void
 }
+
 
 ; line 564
 ;================================================================================
@@ -653,6 +676,7 @@ define void @P_firetorpedoes_hitklingbase()
     ret void
 }
 
+
 ; line 656
 ;================================================================================
 ; scope: selfdestruct (level : 2)
@@ -673,6 +697,7 @@ define void @P_selfdestruct()
     %1 = alloca %Frame_selfdestruct, align 8
     ret void
 }
+
 
 ; line 668
 ;================================================================================
@@ -696,6 +721,7 @@ define void @P_command()
     ret void
 }
 
+
 ; line 712
 ;================================================================================
 ; scope: instructions (level : 2)
@@ -717,6 +743,7 @@ define void @P_instructions()
     ret void
 }
 
+
 ; line 715
 ;================================================================================
 ; scope: instructions_spacewait (level : 3)
@@ -734,6 +761,7 @@ define void @P_instructions_spacewait()
     %1 = alloca %Frame_instructions_spacewait, align 8
     ret void
 }
+
 
 ; line 723
 ;================================================================================
@@ -753,6 +781,7 @@ define void @P_instructions_page1()
     ret void
 }
 
+
 ; line 750
 ;================================================================================
 ; scope: instructions_page2 (level : 3)
@@ -770,6 +799,7 @@ define void @P_instructions_page2()
     %1 = alloca %Frame_instructions_page2, align 8
     ret void
 }
+
 
 ; line 778
 ;================================================================================
@@ -789,6 +819,7 @@ define void @P_instructions_page3()
     ret void
 }
 
+
 ; line 805
 ;================================================================================
 ; scope: instructions_page4 (level : 3)
@@ -806,6 +837,7 @@ define void @P_instructions_page4()
     %1 = alloca %Frame_instructions_page4, align 8
     ret void
 }
+
 
 ; line 832
 ;================================================================================
@@ -825,6 +857,7 @@ define void @P_instructions_page5()
     ret void
 }
 
+
 ; line 859
 ;================================================================================
 ; scope: instructions_page6 (level : 3)
@@ -842,6 +875,7 @@ define void @P_instructions_page6()
     %1 = alloca %Frame_instructions_page6, align 8
     ret void
 }
+
 
 ; line 913
 ;================================================================================
@@ -863,6 +897,7 @@ define void @P_finishgame()
     %1 = alloca %Frame_finishgame, align 8
     ret void
 }
+
 
 ;================================================================================
 ; string literals

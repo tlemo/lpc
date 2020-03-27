@@ -73,6 +73,7 @@ define void @P_()
     ret void
 }
 
+
 ; line 124
 ;================================================================================
 ; scope: load (level : 2)
@@ -107,6 +108,7 @@ define void @P_load()
     ret void
 }
 
+
 ; line 138
 ;================================================================================
 ; scope: load_init (level : 3)
@@ -128,6 +130,7 @@ define void @P_load_init()
     ret void
 }
 
+
 ; line 202
 ;================================================================================
 ; scope: load_errorl (level : 3)
@@ -148,6 +151,7 @@ define void @P_load_errorl()
     %1 = alloca %Frame_load_errorl, align 8
     ret void
 }
+
 
 ; line 208
 ;================================================================================
@@ -175,6 +179,7 @@ define void @P_load_update()
     ret void
 }
 
+
 ; line 237
 ;================================================================================
 ; scope: load_generate (level : 3)
@@ -196,6 +201,7 @@ define void @P_load_generate()
     %1 = alloca %Frame_load_generate, align 8
     ret void
 }
+
 
 ; line 259
 ;================================================================================
@@ -224,6 +230,7 @@ define void @P_load_assemble()
     ret void
 }
 
+
 ; line 264
 ;================================================================================
 ; scope: load_assemble_lookup (level : 4)
@@ -244,6 +251,7 @@ define void @P_load_assemble_lookup()
     %1 = alloca %Frame_load_assemble_lookup, align 8
     ret void
 }
+
 
 ; line 273
 ;================================================================================
@@ -266,6 +274,7 @@ define void @P_load_assemble_labelsearch()
     ret void
 }
 
+
 ; line 279
 ;================================================================================
 ; scope: load_assemble_getname (level : 4)
@@ -283,6 +292,7 @@ define void @P_load_assemble_getname()
     %1 = alloca %Frame_load_assemble_getname, align 8
     ret void
 }
+
 
 ; line 286
 ;================================================================================
@@ -304,6 +314,7 @@ define void @P_load_assemble_typesymbol()
     %1 = alloca %Frame_load_assemble_typesymbol, align 8
     ret void
 }
+
 
 ; line 476
 ;================================================================================
@@ -327,6 +338,7 @@ define void @P_pmd()
     ret void
 }
 
+
 ; line 479
 ;================================================================================
 ; scope: pmd_pt (level : 3)
@@ -344,6 +356,7 @@ define void @P_pmd_pt()
     %1 = alloca %Frame_pmd_pt, align 8
     ret void
 }
+
 
 ; line 500
 ;================================================================================
@@ -365,6 +378,7 @@ define void @P_errori()
     %1 = alloca %Frame_errori, align 8
     ret void
 }
+
 
 ; line 505
 ;================================================================================
@@ -393,6 +407,7 @@ define i32 @F_base()
     ret i32 %3
 }
 
+
 ; line 514
 ;================================================================================
 ; scope: compare (level : 2)
@@ -410,6 +425,7 @@ define void @P_compare()
     %1 = alloca %Frame_compare, align 8
     ret void
 }
+
 
 ; line 526
 ;================================================================================
@@ -431,6 +447,7 @@ define void @P_callsp()
     %1 = alloca %Frame_callsp, align 8
     ret void
 }
+
 
 ; line 530
 ;================================================================================
@@ -456,6 +473,7 @@ define void @P_callsp_readi()
     ret void
 }
 
+
 ; line 538
 ;================================================================================
 ; scope: callsp_readr (level : 3)
@@ -479,6 +497,7 @@ define void @P_callsp_readr()
     %1 = alloca %Frame_callsp_readr, align 8
     ret void
 }
+
 
 ; line 546
 ;================================================================================
@@ -504,6 +523,7 @@ define void @P_callsp_readc()
     %1 = alloca %Frame_callsp_readc, align 8
     ret void
 }
+
 
 ; line 556
 ;================================================================================
@@ -532,6 +552,7 @@ define void @P_callsp_writestr()
     ret void
 }
 
+
 ; line 568
 ;================================================================================
 ; scope: callsp_getfile (level : 3)
@@ -556,6 +577,7 @@ define void @P_callsp_getfile()
     ret void
 }
 
+
 ; line 575
 ;================================================================================
 ; scope: callsp_putfile (level : 3)
@@ -579,6 +601,7 @@ define void @P_callsp_putfile()
     %1 = alloca %Frame_callsp_putfile, align 8
     ret void
 }
+
 
 ;================================================================================
 ; string literals

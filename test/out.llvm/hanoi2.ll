@@ -46,6 +46,7 @@ define void @P_()
     ret void
 }
 
+
 ; line 12
 ;================================================================================
 ; scope: punere (level : 2)
@@ -72,6 +73,7 @@ define void @P_punere()
     ret void
 }
 
+
 ; line 23
 ;================================================================================
 ; scope: scoatere (level : 2)
@@ -89,6 +91,7 @@ define void @P_scoatere()
     %1 = alloca %Frame_scoatere, align 8
     ret void
 }
+
 
 ;================================================================================
 ; string literals

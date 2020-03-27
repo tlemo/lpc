@@ -678,6 +678,75 @@ void LlvmBackend::_outputMetadata()
 
 ///////////////////////////////////////////////////////////////////////////////
 //
+void LlvmBackend::_start()
+{
+    // reset per-program state
+    //
+    m_metadata.clear();
+    m_metadataIdGen = 0;
+
+    m_stringLiterals.clear();
+    m_stringLiteralGen = 1;
+
+    std::stringstream code;
+
+    // source file metadata
+    //
+    stringstream srcFile;
+    const auto path = filesystem::path(context()->commandLine()->getInputName());
+    srcFile << "!DIFile(" <<
+        "filename: \"" << path.filename().string() << "\", " <<
+        "directory: \"" << path.parent_path().string() << "\")";
+    m_sourceFileMd = _newMetadata(Metadata::Kind::Generic, srcFile.str());
+
+    // module header
+    //
+    code << "; ModuleID = '" << path.filename().string() << "'\n";
+    code << "source_filename = \"" << path.string() << "\"\n";
+    code << "target datalayout = \"e-m:w-i64:64-f80:128-n8:16:32:64-S128\"\n";
+    code << "\n";
+
+    // generate the command line mapping
+    //
+    const auto& args = context()->symbolTable()->programArgs();
+
+    stringstream entriesType;
+    entriesType << "[" << args.size() + 1 << " x %struct._Filename]";
+
+    code << "; program arguments (command line mapping)\n";
+    code << "%struct._Filename = type { i8*, i8* }\n";
+    code << "@_FilenameMapEntries = internal global " << entriesType.str() << "\n";
+    code << TAB << "[\n";
+    for (const auto& arg : args)
+    {
+        auto literal = _genLiteral(arg);
+        code << TAB << "%struct._Filename { i8* getelementptr inbounds (" <<
+            literal->llvmType << ", " << literal->llvmType << "* " <<
+            literal->name << ", i32 0, i32 0), i8* null },\n";
+    }
+    code << TAB << "%struct._Filename { i8* null, i8* null }\n";
+    code << TAB << "], align 16\n";
+
+    code << "@_FilenameMap = dso_local global %struct._Filename* " <<
+        "getelementptr inbounds (" << entriesType.str() << ", " <<
+        entriesType.str() << "* @_FilenameMapEntries, i32 0, i32 0), align 8\n";
+    code << "@_FilenameMapSize = dso_local constant i32 " << args.size() << ", align 4\n";
+
+    write(code);
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+void LlvmBackend::_end()
+{
+    _outputStringLiterals();
+    _outputMetadata();
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
 void LlvmBackend::_outputFrame(obj::Subroutine* pSubroutine)
 {
     std::stringstream code;
@@ -832,7 +901,7 @@ void LlvmBackend::_outputSubroutine(obj::Subroutine* pSubroutine)
         code << TAB << "ret void\n";
     }
     
-    code << "}\n";
+    code << "}\n\n";
 
     write(code);
 }

@@ -70,6 +70,7 @@ define void @P_()
     ret void
 }
 
+
 ; line 317
 ;================================================================================
 ; scope: GETCHAR (level : 2)
@@ -92,6 +93,7 @@ define void @P_GETCHAR()
     %1 = alloca %Frame_GETCHAR, align 8
     ret void
 }
+
 
 ; line 369
 ;================================================================================
@@ -118,6 +120,7 @@ define void @P_STORENEXTCHAR()
     ret void
 }
 
+
 ; line 392
 ;================================================================================
 ; scope: SKIPSPACES (level : 2)
@@ -142,6 +145,7 @@ define void @P_SKIPSPACES()
     %1 = alloca %Frame_SKIPSPACES, align 8
     ret void
 }
+
 
 ; line 426
 ;================================================================================
@@ -168,6 +172,7 @@ define void @P_GETCOMMENT()
     %1 = alloca %Frame_GETCOMMENT, align 8
     ret void
 }
+
 
 ; line 465
 ;================================================================================
@@ -200,6 +205,7 @@ define i32 @F_IDTYPE()
     ret i32 %3
 }
 
+
 ; line 508
 ;================================================================================
 ; scope: GETIDENTIFIER (level : 2)
@@ -225,6 +231,7 @@ define void @P_GETIDENTIFIER()
     %1 = alloca %Frame_GETIDENTIFIER, align 8
     ret void
 }
+
 
 ; line 546
 ;================================================================================
@@ -252,6 +259,7 @@ define void @P_GETNUMBER()
     ret void
 }
 
+
 ; line 568
 ;================================================================================
 ; scope: GETCHARLITERAL (level : 2)
@@ -277,6 +285,7 @@ define void @P_GETCHARLITERAL()
     %1 = alloca %Frame_GETCHARLITERAL, align 8
     ret void
 }
+
 
 ; line 608
 ;================================================================================
@@ -308,6 +317,7 @@ define i32 @F_CHARTYPE()
     ret i32 %3
 }
 
+
 ; line 654
 ;================================================================================
 ; scope: GETSPECIALCHAR (level : 2)
@@ -333,6 +343,7 @@ define void @P_GETSPECIALCHAR()
     %1 = alloca %Frame_GETSPECIALCHAR, align 8
     ret void
 }
+
 
 ; line 682
 ;================================================================================
@@ -360,6 +371,7 @@ define void @P_GETNEXTSYMBOL()
     ret void
 }
 
+
 ; line 741
 ;================================================================================
 ; scope: GETSYMBOL (level : 2)
@@ -385,6 +397,7 @@ define void @P_GETSYMBOL()
     %1 = alloca %Frame_GETSYMBOL, align 8
     ret void
 }
+
 
 ; line 784
 ;================================================================================
@@ -421,6 +434,7 @@ define void @P_INITIALISE()
     ret void
 }
 
+
 ; line 1175
 ;================================================================================
 ; scope: STACKEMPTY (level : 2)
@@ -443,6 +457,7 @@ define i1 @F_STACKEMPTY()
     %3 = load i1, i1* %2
     ret i1 %3
 }
+
 
 ; line 1187
 ;================================================================================
@@ -467,6 +482,7 @@ define i1 @F_STACKFULL()
     ret i1 %3
 }
 
+
 ; line 1199
 ;================================================================================
 ; scope: POPSTACK (level : 2)
@@ -489,6 +505,7 @@ define void @P_POPSTACK()
     ret void
 }
 
+
 ; line 1222
 ;================================================================================
 ; scope: PUSHSTACK (level : 2)
@@ -510,6 +527,7 @@ define void @P_PUSHSTACK()
     %1 = alloca %Frame_PUSHSTACK, align 8
     ret void
 }
+
 
 ; line 1235
 ;================================================================================
@@ -537,6 +555,7 @@ define void @P_WRITECRS()
     ret void
 }
 
+
 ; line 1256
 ;================================================================================
 ; scope: INSERTCR (level : 2)
@@ -559,6 +578,7 @@ define void @P_INSERTCR()
     ret void
 }
 
+
 ; line 1276
 ;================================================================================
 ; scope: INSERTBLANKLINE (level : 2)
@@ -580,6 +600,7 @@ define void @P_INSERTBLANKLINE()
     %1 = alloca %Frame_INSERTBLANKLINE, align 8
     ret void
 }
+
 
 ; line 1306
 ;================================================================================
@@ -606,6 +627,7 @@ define void @P_LSHIFTON()
     ret void
 }
 
+
 ; line 1335
 ;================================================================================
 ; scope: LSHIFT (level : 2)
@@ -628,6 +650,7 @@ define void @P_LSHIFT()
     ret void
 }
 
+
 ; line 1352
 ;================================================================================
 ; scope: INSERTSPACE (level : 2)
@@ -649,6 +672,7 @@ define void @P_INSERTSPACE()
     %1 = alloca %Frame_INSERTSPACE, align 8
     ret void
 }
+
 
 ; line 1372
 ;================================================================================
@@ -676,6 +700,7 @@ define void @P_MOVELINEPOS()
     ret void
 }
 
+
 ; line 1389
 ;================================================================================
 ; scope: PRINTSYMBOL (level : 2)
@@ -702,6 +727,7 @@ define void @P_PRINTSYMBOL()
     ret void
 }
 
+
 ; line 1410
 ;================================================================================
 ; scope: PPSYMBOL (level : 2)
@@ -726,6 +752,7 @@ define void @P_PPSYMBOL()
     %1 = alloca %Frame_PPSYMBOL, align 8
     ret void
 }
+
 
 ; line 1465
 ;================================================================================
@@ -752,6 +779,7 @@ define void @P_GOBBLE()
     ret void
 }
 
+
 ; line 1491
 ;================================================================================
 ; scope: RSHIFT (level : 2)
@@ -773,6 +801,7 @@ define void @P_RSHIFT()
     ret void
 }
 
+
 ; line 1508
 ;================================================================================
 ; scope: RSHIFTTOCLP (level : 2)
@@ -793,6 +822,7 @@ define void @P_RSHIFTTOCLP()
     %1 = alloca %Frame_RSHIFTTOCLP, align 8
     ret void
 }
+
 
 ;================================================================================
 ; string literals
