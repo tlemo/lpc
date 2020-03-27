@@ -27,6 +27,7 @@
 
 #include <string>
 #include <vector>
+#include <map>
 #include <unordered_map>
 #include <sstream>
 #include <tuple>
@@ -53,6 +54,15 @@ struct Metadata
     string id;
     string def;
     Kind kind = Kind::None;
+};
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+struct StringLiteral
+{
+    string name;
+    string llvmType;
 };
 
 
@@ -304,6 +314,9 @@ private:
 
     // global (per program) state
     //
+    map<string, StringLiteral*> m_stringLiterals;
+    int m_stringLiteralGen = 0;
+
     vector<Metadata*> m_metadata;
     int m_metadataIdGen = 0;
 
@@ -324,6 +337,28 @@ private:
         m_metadata.push_back(pMetadata);
 
         return pMetadata;
+    }
+
+    const StringLiteral* _genLiteral(const string& str)
+    {
+        if (auto it = m_stringLiterals.find(str); it != m_stringLiterals.end())
+        {
+            return it->second;
+        }
+
+        // generate string literal name
+        //
+        stringstream literalName;
+        literalName << "@.str." << m_stringLiteralGen++;
+
+        // generate llvm type
+        //
+        stringstream llvmType;
+        llvmType << "[" << str.length() + 1 << " x i8]";
+
+        auto newLiteral = new StringLiteral{ literalName.str(), llvmType.str() };
+        m_stringLiterals.insert({ str, newLiteral });
+        return newLiteral;
     }
 
     // sets the current scope name
@@ -405,12 +440,20 @@ private:
 private:
     const char* _outputExt() const override { return ".ll"; }
 
+    void _outputStringLiterals();
     void _outputMetadata();
 
     void _start() override
     {
+        // reset per-program state
+        //
         m_metadata.clear();
         m_metadataIdGen = 0;
+
+        m_stringLiterals.clear();
+        m_stringLiteralGen = 1;
+
+        std::stringstream code;
 
         // source file metadata
         //
@@ -423,16 +466,43 @@ private:
 
         // module header
         //
-        std::stringstream code;
         code << "; ModuleID = '" << path.filename().string() << "'\n";
         code << "source_filename = \"" << path.string() << "\"\n";
         code << "target datalayout = \"e-m:w-i64:64-f80:128-n8:16:32:64-S128\"\n";
         code << "\n";
+
+        // generate the command line mapping
+        //
+        const auto& args = context()->symbolTable()->programArgs();
+
+        stringstream entriesType;
+        entriesType << "[" << args.size() + 1 << " x %struct._Filename]";
+
+        code << "; program arguments (command line mapping)\n";
+        code << "%struct._Filename = type { i8*, i8* }\n";
+        code << "@_FilenameMapEntries = internal global " << entriesType.str() << "\n";
+        code << TAB << "[\n";
+        for (const auto& arg : args)
+        {
+            auto literal = _genLiteral(arg);
+            code << TAB << "%struct._Filename { i8* getelementptr inbounds (" <<
+                literal->llvmType << ", " << literal->llvmType << "* " <<
+                literal->name << ", i32 0, i32 0), i8* null },\n";
+        }
+        code << TAB << "%struct._Filename { i8* null, i8* null }\n";
+        code << TAB << "], align 16\n";
+
+        code << "@_FilenameMap = dso_local global %struct._Filename* " <<
+            "getelementptr inbounds (" << entriesType.str() << ", " <<
+            entriesType.str() << "* @_FilenameMapEntries, i32 0, i32 0), align 8\n";
+        code << "@_FilenameMapSize = dso_local constant i32 " << args.size() << ", align 4\n";
+
         write(code);
     }
 
     void _end() override
     {
+        _outputStringLiterals();
         _outputMetadata();
     }
 

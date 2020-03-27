@@ -16,12 +16,111 @@
 #include "llvmRuntime.h"
 
 #include <stdio.h>
+#include <stdlib.h>
+#include <stdarg.h>
+#include <assert.h>
+
+#include <windows.h>
+
+
+extern "C"
+{
 
 ///////////////////////////////////////////////////////////////////////////////
 //
 // Entry point for the generated code 
 //
 extern "C" void P_();
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+[[noreturn]] static
+void _RTAbort(const char* message, va_list argptr)
+{
+    ::printf("\nRuntime Error: ");
+    vprintf(message, argptr);
+    ::printf("\n\n");
+    
+    if(::IsDebuggerPresent())
+    {
+        __debugbreak();
+    }
+    
+	::abort();
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+void _RTError(const char* message, ...)
+{
+    va_list argptr;
+    va_start(argptr, message);
+    _RTAbort(message, argptr);
+    va_end(argptr);
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+void _RTCheck(bool cond, const char* message, ...)
+{
+    if(!cond)
+    {
+        va_list argptr;
+        va_start(argptr, message);
+        _RTAbort(message, argptr);
+        va_end(argptr);
+    }
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+static
+void printHelp()
+{
+    printf("\nCommand line arguments: ");
+    for(int i = _FIRST_ARG_FILE_IDX; i < _FilenameMapSize; ++i)
+        printf("<%s> ", _FilenameMap[i].argName);
+    printf("[-input=<filename>] [-output=<filename>]\n");
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+static
+bool handleArg(const char* arg, const char* opt, int idx)
+{
+    auto *s = opt;
+
+    assert(nullptr != _FilenameMap[idx].argName);
+
+    while(*arg && *s && *arg == *s)
+    {
+        ++arg;
+        ++s;
+    }
+
+    if(*s != '\0')
+        return false;
+
+    if(*arg == '\0')
+    {
+        printHelp();
+        _RTError("missing argument value for %s", opt);
+    }
+
+    if(nullptr != _FilenameMap[idx].fileName)
+    {
+        printHelp();
+        _RTError("%s was already specified", opt);
+    }
+
+    _FilenameMap[idx].fileName = arg;
+    return true;
+}
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -33,10 +132,50 @@ extern "C" void P_();
 //
 int main(int argc, const char* argv[])
 {
-    // TODO
-    printf("\nCalling P_()...\n");
+    assert(nullptr != _FilenameMap);
+
+    // parse the command line arguments
+    //
+    int idx = _FIRST_ARG_FILE_IDX;
+
+    for(int i = 1; i < argc; ++i)
+    {
+        const char* arg = argv[i];
+
+        if(strcmp(arg, "-debug") == 0)
+        {
+            __debugbreak();
+        }
+        else if(handleArg(arg, "-input=", _INPUT_FILE_IDX))
+        {
+            continue;
+        }
+        else if(handleArg(arg, "-output=", _OUTPUT_FILE_IDX))
+        {
+            continue;
+        }
+        else
+        {
+            if(idx >= _FilenameMapSize)
+            {
+                printHelp();
+                _RTError("too many command line arguments");
+            }
+
+            assert(_FilenameMap[idx].fileName == nullptr);
+            _FilenameMap[idx++].fileName = arg;
+        }
+    }
+
+    if(idx != _FilenameMapSize)
+    {
+        printHelp();
+        _RTError("missing required command line arguments");
+    }
+    
+    // call the generated code entry point
+    //
     P_();
-    printf("\nDone.\n");
-    return 0;
 }
 
+} // extern "C"

@@ -567,6 +567,40 @@ VarPtr TypeGen::visit(ts::RangeType* pType)
 
 ///////////////////////////////////////////////////////////////////////////////
 //
+void LlvmBackend::_outputStringLiterals()
+{
+    if (m_stringLiterals.empty())
+        return;
+
+    std::stringstream code;
+
+    code << "\n";
+    code << ";================================================================================\n";
+    code << "; string literals\n";
+    code << "\n";
+    for (const auto& [str, literal] : m_stringLiterals)
+    {
+        code << literal->name << " = private unnamed_addr constant " << literal->llvmType;
+        code << " c\"";
+        for (char c : str)
+        {
+            switch (c)
+            {
+            case '"': code << "\\22"; break;
+            case '\\': code << "\\5C"; break;
+            default: code << c; break;
+            }
+        }
+        code << "\\00\", align 1\n";
+    }
+    code << "\n";
+
+    write(code);
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
 void LlvmBackend::_outputMetadata()
 {
     auto filterMetadata = [&](Metadata::Kind kind)

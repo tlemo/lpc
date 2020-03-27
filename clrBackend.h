@@ -123,7 +123,7 @@ struct LabelExt
 
 struct StringLiteral
 {
-    ts::Type* pType;
+    ts::Type* pType = nullptr;
     string literalName;
 };
 

@@ -2,6 +2,18 @@
 source_filename = "C:\Users\lemo\work\compilers\lpc\test\prettyp.pas"
 target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 
+; program arguments (command line mapping)
+%struct._Filename = type { i8*, i8* }
+@_FilenameMapEntries = internal global [5 x %struct._Filename]
+    [
+    %struct._Filename { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.1, i32 0, i32 0), i8* null },
+    %struct._Filename { i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.2, i32 0, i32 0), i8* null },
+    %struct._Filename { i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.3, i32 0, i32 0), i8* null },
+    %struct._Filename { i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.4, i32 0, i32 0), i8* null },
+    %struct._Filename { i8* null, i8* null }
+    ], align 16
+@_FilenameMap = dso_local global %struct._Filename* getelementptr inbounds ([5 x %struct._Filename], [5 x %struct._Filename]* @_FilenameMapEntries, i32 0, i32 0), align 8
+@_FilenameMapSize = dso_local constant i32 4, align 4
 
 ; line 0
 ;================================================================================
@@ -781,6 +793,15 @@ define void @P_RSHIFTTOCLP()
     %1 = alloca %Frame_RSHIFTTOCLP, align 8
     ret void
 }
+
+;================================================================================
+; string literals
+
+@.str.3 = private unnamed_addr constant [10 x i8] c"INPUTFILE\00", align 1
+@.str.4 = private unnamed_addr constant [11 x i8] c"OUTPUTFILE\00", align 1
+@.str.1 = private unnamed_addr constant [7 x i8] c"_input\00", align 1
+@.str.2 = private unnamed_addr constant [8 x i8] c"_output\00", align 1
+
 
 ;================================================================================
 ; metadata

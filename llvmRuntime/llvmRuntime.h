@@ -14,3 +14,32 @@
 // limitations under the License.
 
 #pragma once
+
+extern "C"
+{
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// Program arguments (input/output files)
+//
+struct _Filename
+{
+    const char* argName;
+    const char* fileName;
+};
+
+constexpr int _INPUT_FILE_IDX = 0;
+constexpr int _OUTPUT_FILE_IDX = 1;
+constexpr int _FIRST_ARG_FILE_IDX = 2;
+
+extern _Filename* _FilenameMap;
+extern const int _FilenameMapSize;
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+void _RTError(const char* message, ...);
+void _RTCheck(bool cond, const char* message, ...);
+
+} // extern "C"
+

@@ -2,6 +2,17 @@
 source_filename = "C:\Users\lemo\work\compilers\lpc\test\pascal-s.pas"
 target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 
+; program arguments (command line mapping)
+%struct._Filename = type { i8*, i8* }
+@_FilenameMapEntries = internal global [4 x %struct._Filename]
+    [
+    %struct._Filename { i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.1, i32 0, i32 0), i8* null },
+    %struct._Filename { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.2, i32 0, i32 0), i8* null },
+    %struct._Filename { i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.3, i32 0, i32 0), i8* null },
+    %struct._Filename { i8* null, i8* null }
+    ], align 16
+@_FilenameMap = dso_local global %struct._Filename* getelementptr inbounds ([4 x %struct._Filename], [4 x %struct._Filename]* @_FilenameMapEntries, i32 0, i32 0), align 8
+@_FilenameMapSize = dso_local constant i32 3, align 4
 
 ; line 0
 ;================================================================================
@@ -1303,6 +1314,14 @@ define void @P_interpret()
     %1 = alloca %Frame_interpret, align 8
     ret void
 }
+
+;================================================================================
+; string literals
+
+@.str.1 = private unnamed_addr constant [6 x i8] c"input\00", align 1
+@.str.2 = private unnamed_addr constant [7 x i8] c"output\00", align 1
+@.str.3 = private unnamed_addr constant [7 x i8] c"srcfil\00", align 1
+
 
 ;================================================================================
 ; metadata
