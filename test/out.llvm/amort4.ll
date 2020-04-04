@@ -62,7 +62,7 @@ define void @P_()
 ; procedure body
 define void @P_CalculatePayment()
 {
-    %1 = alloca %Frame_CalculatePayment, align 8
+    %frame = alloca %Frame_CalculatePayment, align 8
     ret void
 }
 
@@ -81,7 +81,7 @@ define void @P_CalculatePayment()
 ; procedure body
 define void @P_InitializeData()
 {
-    %1 = alloca %Frame_InitializeData, align 8
+    %frame = alloca %Frame_InitializeData, align 8
     ret void
 }
 
@@ -100,7 +100,7 @@ define void @P_InitializeData()
 ; procedure body
 define void @P_PrintAnnualHeader()
 {
-    %1 = alloca %Frame_PrintAnnualHeader, align 8
+    %frame = alloca %Frame_PrintAnnualHeader, align 8
     ret void
 }
 
@@ -123,7 +123,7 @@ define void @P_PrintAnnualHeader()
 ; procedure body
 define void @P_CalculateAndPrint()
 {
-    %1 = alloca %Frame_CalculateAndPrint, align 8
+    %frame = alloca %Frame_CalculateAndPrint, align 8
     ret void
 }
 
@@ -142,7 +142,7 @@ define void @P_CalculateAndPrint()
 ; procedure body
 define void @P_PrintAnnualSummary()
 {
-    %1 = alloca %Frame_PrintAnnualSummary, align 8
+    %frame = alloca %Frame_PrintAnnualSummary, align 8
     ret void
 }
 

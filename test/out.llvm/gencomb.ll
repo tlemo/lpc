@@ -65,7 +65,7 @@ define void @P_()
 ; procedure body
 define void @P_gen()
 {
-    %1 = alloca %Frame_gen, align 8
+    %frame = alloca %Frame_gen, align 8
     ret void
 }
 
@@ -90,7 +90,7 @@ define void @P_gen()
 ; procedure body
 define void @P_prel()
 {
-    %1 = alloca %Frame_prel, align 8
+    %frame = alloca %Frame_prel, align 8
     ret void
 }
 

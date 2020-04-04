@@ -71,7 +71,7 @@ define void @P_()
 ; procedure body
 define void @P_hanoi1()
 {
-    %1 = alloca %Frame_hanoi1, align 8
+    %frame = alloca %Frame_hanoi1, align 8
     ret void
 }
 
@@ -97,7 +97,7 @@ define void @P_hanoi1()
 ; procedure body
 define void @P_hanoi2()
 {
-    %1 = alloca %Frame_hanoi2, align 8
+    %frame = alloca %Frame_hanoi2, align 8
     ret void
 }
 
@@ -124,7 +124,7 @@ define void @P_hanoi2()
 ; procedure body
 define void @P_hanoi3()
 {
-    %1 = alloca %Frame_hanoi3, align 8
+    %frame = alloca %Frame_hanoi3, align 8
     ret void
 }
 

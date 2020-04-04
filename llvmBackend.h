@@ -33,6 +33,7 @@
 #include <tuple>
 #include <iomanip>
 #include <filesystem>
+#include <memory>
 
 using namespace std;
 
@@ -59,11 +60,34 @@ struct Metadata
 
 ///////////////////////////////////////////////////////////////////////////////
 //
+// A contiguous llvm IR fragment. May contain multiple basic blocks.
+//
+// code: zero or more LLVM IR instructions
+// value: the result of the code, if any
+//
+struct IrFragment
+{
+    string code;
+    string value;
+};
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
 struct StringLiteral
 {
     string name;
     string llvmType;
 };
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+inline
+VarPtr newIrFragment(const std::stringstream& code, const string& value)
+{
+    return VarPtr(new IrFragment{code.str(), value});
+}
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -117,6 +141,7 @@ struct SubroutineExt
 {
     string genName;
     string frameName;
+    int slinkIndex = -1;
 };
 
 struct ScopeExt
@@ -312,6 +337,8 @@ private:
     obj::VarList m_varList;
     obj::ParamList m_paramList;
 
+    int m_tempValueGen = 0;
+
     // global (per program) state
     //
     map<string, StringLiteral*> m_stringLiterals;
@@ -402,37 +429,11 @@ private:
                 prefix + scopeName + "_" + idName);
     }
 
-    // a friendly wrapper around the AST visitor pattern
+    // safe wrapper around the AST visitor interface
     //
-    const char* gen(const ast::Node* pNode)
+    unique_ptr<IrFragment> gen(const ast::Node* pNode)
     {
-        return pNode->accept(this).get<const char>();
-    }
-
-    // the Stm* overload of gen()
-    //
-    const char* gen(const ast::Stm* pStm)
-    {
-        std::stringstream code;
-
-        // generate the statement "header"
-        // (line number and optional label)
-        //
-        if(NO_LOCATION != pStm->line)
-            code << TAB << genLine(pStm->line);
-
-        if(nullptr != pStm->pLabel)
-        {
-            const auto pExt = ext(pStm->pLabel);
-            assert(!pExt->genName.empty());
-            code << pExt->genName << ":\n";
-        }
-
-        // the actual code
-        //
-        code << pStm->accept(this).get<const char>();
-
-        return allocStr(code).get<const char>();
+        return unique_ptr<IrFragment>(pNode->accept(this).get<IrFragment>());
     }
 
     // backend interface
@@ -445,6 +446,13 @@ private:
 
     void _start() override;
     void _end() override;
+
+    string _genTempValue()
+    {
+        stringstream tempValueName;
+        tempValueName << "%t" << m_tempValueGen++;
+        return tempValueName.str();
+    }
 
     // this is the main entry point for generating code for a scope
     //
@@ -462,6 +470,7 @@ private:
         m_typeList.clear();
         m_varList.clear();
         m_paramList.clear();
+        m_tempValueGen = 1;
 
         // generate symbols (types, consts, locals...)
         //
@@ -615,9 +624,12 @@ private:
     {
         _generateType(pVar->pType);
 
-        auto pExt = ext(pVar);
-        assert(pExt->genName.empty());
-        pExt->genName = "@" + idName;
+        if (pVar->pScope->level <= Scope::PROGRAM_SCOPE_LEVEL)
+        {
+            auto pExt = ext(pVar);
+            assert(pExt->genName.empty());
+            pExt->genName = "@" + idName;
+        }
 
         m_varList.push_back(pVar);
     }
@@ -645,12 +657,45 @@ private:
     VarPtr visit(const ast::VarExpr* pVarExpr) override
     {
         auto pVar = pVarExpr->pVariable;
-
         _generateType(pVar->pType);
 
+        const auto* pVarExt = ext(pVar);
+        const auto* pTypeExt = ext(pVar->pType);
+
+        const auto value = _genTempValue();
+        const auto irType = pTypeExt->genName;
+
         stringstream code;
-        // TODO
-        return allocStr(code);
+        string varPtr;
+
+        // frame-based?
+        if (pVarExt->genName.empty())
+        {
+            assert(pVarExt->frameIndex >= 0);
+            
+            varPtr = _genTempValue();
+
+            const auto frameIr = _genFrameAddress(pVar->pScope);
+            const auto& frameName = ext(pVar->pScope->subroutine())->frameName;
+
+            code << frameIr.code;
+            code << TAB << varPtr << " = getelementptr inbounds " <<
+                frameName << ", " << frameName << "* " << frameIr.value <<
+                ", i32 0, i32 " << pVarExt->frameIndex << "\n";
+        }
+        else
+        {
+            // global variable
+            varPtr = pVarExt->genName;
+        }
+
+        // load the value
+        assert(!varPtr.empty());
+        assert(!irType.empty());
+        code << TAB << value << " = load " << irType << ", " <<
+            irType << "* " << varPtr << "\n";
+
+        return newIrFragment(code, value);
     }
 
     VarPtr visit(const ast::ParamExpr* pParamExpr) override
@@ -1314,23 +1359,55 @@ private:
         return allocStr(code);
     }
 
-    // generates the address of a lvalue expression or stores a value into a lvalue
-    // (pRValue == nullptr means generate the address of the lvalue)
+    // generates the address of the specified activation record
+    // (based on the current scope)
     //
-    // the actual code generation is specific to the kind of lvalue:
-    //  - variable
-    //  - parameter
-    //  - indirection
-    //  - array element
-    //  - field
+    IrFragment _genFrameAddress(const Scope* pTargetScope)
+    {
+        const auto targetLevel = pTargetScope->level;
+        assert(targetLevel > Scope::PROGRAM_SCOPE_LEVEL);
+        assert(targetLevel <= m_pCurrentScope->level);
+
+        stringstream code;
+        string framePtr = "%frame";
+
+        auto pScope = m_pCurrentScope;
+
+        for (; pScope->level != targetLevel; pScope = pScope->pParent)
+        {
+            const auto* pExt = ext(pScope->subroutine());
+
+            const auto slinkPtr = _genTempValue();
+            code << TAB << slinkPtr << " = getelementptr inbounds " <<
+                pExt->frameName << ", " << pExt->frameName << "* " << framePtr <<
+                ", i32 0, i32 " << pExt->slinkIndex << "\n";
+
+            const auto* pParentExt = ext(pScope->pParent->subroutine());
+            assert(!pParentExt->frameName.empty());
+
+            framePtr = _genTempValue();
+            code << TAB << framePtr << " = load " << pParentExt->frameName <<
+                "*, " << pParentExt->frameName << "** " << slinkPtr << "\n";
+        }
+        
+        assert(pScope == pTargetScope);
+
+        return { code.str(), framePtr };
+    }
+
+
+    // generates the address of a lvalue expression
     //
-    string _genLValueAccess(const ast::Expr* pLValue, const ast::Expr* pRValue = nullptr)
+    IrFragment _genLValueAddress(const ast::Expr* pLValue)
     {
         assert(pLValue->isLValue());
         
         stringstream code;
+        string value;
+
         // TODO
-        return code.str();
+
+        return { code.str(), value };
     }
 
     // generates the assignment to a "lvalue"

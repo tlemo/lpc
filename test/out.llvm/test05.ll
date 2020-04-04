@@ -65,10 +65,10 @@ define void @P_()
 ; function body
 define i32 @F_outter()
 {
-    %1 = alloca %Frame_outter, align 8
-    %2 = getelementptr inbounds %Frame_outter, %Frame_outter* %1, i32 0, i32 1
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_outter, align 8
+    %t1 = getelementptr inbounds %Frame_outter, %Frame_outter* %frame, i32 0, i32 1
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -92,10 +92,10 @@ define i32 @F_outter()
 ; function body
 define i32 @F_outter_inner()
 {
-    %1 = alloca %Frame_outter_inner, align 8
-    %2 = getelementptr inbounds %Frame_outter_inner, %Frame_outter_inner* %1, i32 0, i32 1
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_outter_inner, align 8
+    %t1 = getelementptr inbounds %Frame_outter_inner, %Frame_outter_inner* %frame, i32 0, i32 1
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -116,7 +116,7 @@ define i32 @F_outter_inner()
 ; procedure body
 define void @P_outter_inner_setOutter()
 {
-    %1 = alloca %Frame_outter_inner_setOutter, align 8
+    %frame = alloca %Frame_outter_inner_setOutter, align 8
     ret void
 }
 

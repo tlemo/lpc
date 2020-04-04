@@ -1814,7 +1814,7 @@ private:
     //
     string _genFrameAccess(const Scope* pTargetScope)
     {
-        auto targetLevel = pTargetScope->level;
+        const auto targetLevel = pTargetScope->level;
 
         assert(targetLevel > Scope::GLOBAL_SCOPE_LEVEL);
         assert(targetLevel <= m_pCurrentScope->level);

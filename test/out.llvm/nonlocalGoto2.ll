@@ -49,7 +49,7 @@ define void @P_()
 ; procedure body
 define void @P_foo()
 {
-    %1 = alloca %Frame_foo, align 8
+    %frame = alloca %Frame_foo, align 8
     ret void
 }
 
@@ -68,7 +68,7 @@ define void @P_foo()
 ; procedure body
 define void @P_bar()
 {
-    %1 = alloca %Frame_bar, align 8
+    %frame = alloca %Frame_bar, align 8
     ret void
 }
 
@@ -87,7 +87,7 @@ define void @P_bar()
 ; procedure body
 define void @P_bar_moo()
 {
-    %1 = alloca %Frame_bar_moo, align 8
+    %frame = alloca %Frame_bar_moo, align 8
     ret void
 }
 

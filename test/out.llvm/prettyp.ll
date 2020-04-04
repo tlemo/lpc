@@ -90,7 +90,7 @@ define void @P_()
 ; procedure body
 define void @P_GETCHAR()
 {
-    %1 = alloca %Frame_GETCHAR, align 8
+    %frame = alloca %Frame_GETCHAR, align 8
     ret void
 }
 
@@ -116,7 +116,7 @@ define void @P_GETCHAR()
 ; procedure body
 define void @P_STORENEXTCHAR()
 {
-    %1 = alloca %Frame_STORENEXTCHAR, align 8
+    %frame = alloca %Frame_STORENEXTCHAR, align 8
     ret void
 }
 
@@ -142,7 +142,7 @@ define void @P_STORENEXTCHAR()
 ; procedure body
 define void @P_SKIPSPACES()
 {
-    %1 = alloca %Frame_SKIPSPACES, align 8
+    %frame = alloca %Frame_SKIPSPACES, align 8
     ret void
 }
 
@@ -169,7 +169,7 @@ define void @P_SKIPSPACES()
 ; procedure body
 define void @P_GETCOMMENT()
 {
-    %1 = alloca %Frame_GETCOMMENT, align 8
+    %frame = alloca %Frame_GETCOMMENT, align 8
     ret void
 }
 
@@ -199,10 +199,10 @@ define void @P_GETCOMMENT()
 ; function body
 define i32 @F_IDTYPE()
 {
-    %1 = alloca %Frame_IDTYPE, align 8
-    %2 = getelementptr inbounds %Frame_IDTYPE, %Frame_IDTYPE* %1, i32 0, i32 2
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_IDTYPE, align 8
+    %t1 = getelementptr inbounds %Frame_IDTYPE, %Frame_IDTYPE* %frame, i32 0, i32 2
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -228,7 +228,7 @@ define i32 @F_IDTYPE()
 ; procedure body
 define void @P_GETIDENTIFIER()
 {
-    %1 = alloca %Frame_GETIDENTIFIER, align 8
+    %frame = alloca %Frame_GETIDENTIFIER, align 8
     ret void
 }
 
@@ -255,7 +255,7 @@ define void @P_GETIDENTIFIER()
 ; procedure body
 define void @P_GETNUMBER()
 {
-    %1 = alloca %Frame_GETNUMBER, align 8
+    %frame = alloca %Frame_GETNUMBER, align 8
     ret void
 }
 
@@ -282,7 +282,7 @@ define void @P_GETNUMBER()
 ; procedure body
 define void @P_GETCHARLITERAL()
 {
-    %1 = alloca %Frame_GETCHARLITERAL, align 8
+    %frame = alloca %Frame_GETCHARLITERAL, align 8
     ret void
 }
 
@@ -311,10 +311,10 @@ define void @P_GETCHARLITERAL()
 ; function body
 define i32 @F_CHARTYPE()
 {
-    %1 = alloca %Frame_CHARTYPE, align 8
-    %2 = getelementptr inbounds %Frame_CHARTYPE, %Frame_CHARTYPE* %1, i32 0, i32 2
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_CHARTYPE, align 8
+    %t1 = getelementptr inbounds %Frame_CHARTYPE, %Frame_CHARTYPE* %frame, i32 0, i32 2
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -340,7 +340,7 @@ define i32 @F_CHARTYPE()
 ; procedure body
 define void @P_GETSPECIALCHAR()
 {
-    %1 = alloca %Frame_GETSPECIALCHAR, align 8
+    %frame = alloca %Frame_GETSPECIALCHAR, align 8
     ret void
 }
 
@@ -367,7 +367,7 @@ define void @P_GETSPECIALCHAR()
 ; procedure body
 define void @P_GETNEXTSYMBOL()
 {
-    %1 = alloca %Frame_GETNEXTSYMBOL, align 8
+    %frame = alloca %Frame_GETNEXTSYMBOL, align 8
     ret void
 }
 
@@ -394,7 +394,7 @@ define void @P_GETNEXTSYMBOL()
 ; procedure body
 define void @P_GETSYMBOL()
 {
-    %1 = alloca %Frame_GETSYMBOL, align 8
+    %frame = alloca %Frame_GETSYMBOL, align 8
     ret void
 }
 
@@ -430,7 +430,7 @@ define void @P_GETSYMBOL()
 ; procedure body
 define void @P_INITIALISE()
 {
-    %1 = alloca %Frame_INITIALISE, align 8
+    %frame = alloca %Frame_INITIALISE, align 8
     ret void
 }
 
@@ -452,10 +452,10 @@ define void @P_INITIALISE()
 ; function body
 define i1 @F_STACKEMPTY()
 {
-    %1 = alloca %Frame_STACKEMPTY, align 8
-    %2 = getelementptr inbounds %Frame_STACKEMPTY, %Frame_STACKEMPTY* %1, i32 0, i32 0
-    %3 = load i1, i1* %2
-    ret i1 %3
+    %frame = alloca %Frame_STACKEMPTY, align 8
+    %t1 = getelementptr inbounds %Frame_STACKEMPTY, %Frame_STACKEMPTY* %frame, i32 0, i32 0
+    %t2 = load i1, i1* %t1
+    ret i1 %t2
 }
 
 
@@ -476,10 +476,10 @@ define i1 @F_STACKEMPTY()
 ; function body
 define i1 @F_STACKFULL()
 {
-    %1 = alloca %Frame_STACKFULL, align 8
-    %2 = getelementptr inbounds %Frame_STACKFULL, %Frame_STACKFULL* %1, i32 0, i32 0
-    %3 = load i1, i1* %2
-    ret i1 %3
+    %frame = alloca %Frame_STACKFULL, align 8
+    %t1 = getelementptr inbounds %Frame_STACKFULL, %Frame_STACKFULL* %frame, i32 0, i32 0
+    %t2 = load i1, i1* %t1
+    ret i1 %t2
 }
 
 
@@ -501,7 +501,7 @@ define i1 @F_STACKFULL()
 ; procedure body
 define void @P_POPSTACK()
 {
-    %1 = alloca %Frame_POPSTACK, align 8
+    %frame = alloca %Frame_POPSTACK, align 8
     ret void
 }
 
@@ -524,7 +524,7 @@ define void @P_POPSTACK()
 ; procedure body
 define void @P_PUSHSTACK()
 {
-    %1 = alloca %Frame_PUSHSTACK, align 8
+    %frame = alloca %Frame_PUSHSTACK, align 8
     ret void
 }
 
@@ -551,7 +551,7 @@ define void @P_PUSHSTACK()
 ; procedure body
 define void @P_WRITECRS()
 {
-    %1 = alloca %Frame_WRITECRS, align 8
+    %frame = alloca %Frame_WRITECRS, align 8
     ret void
 }
 
@@ -574,7 +574,7 @@ define void @P_WRITECRS()
 ; procedure body
 define void @P_INSERTCR()
 {
-    %1 = alloca %Frame_INSERTCR, align 8
+    %frame = alloca %Frame_INSERTCR, align 8
     ret void
 }
 
@@ -597,7 +597,7 @@ define void @P_INSERTCR()
 ; procedure body
 define void @P_INSERTBLANKLINE()
 {
-    %1 = alloca %Frame_INSERTBLANKLINE, align 8
+    %frame = alloca %Frame_INSERTBLANKLINE, align 8
     ret void
 }
 
@@ -623,7 +623,7 @@ define void @P_INSERTBLANKLINE()
 ; procedure body
 define void @P_LSHIFTON()
 {
-    %1 = alloca %Frame_LSHIFTON, align 8
+    %frame = alloca %Frame_LSHIFTON, align 8
     ret void
 }
 
@@ -646,7 +646,7 @@ define void @P_LSHIFTON()
 ; procedure body
 define void @P_LSHIFT()
 {
-    %1 = alloca %Frame_LSHIFT, align 8
+    %frame = alloca %Frame_LSHIFT, align 8
     ret void
 }
 
@@ -669,7 +669,7 @@ define void @P_LSHIFT()
 ; procedure body
 define void @P_INSERTSPACE()
 {
-    %1 = alloca %Frame_INSERTSPACE, align 8
+    %frame = alloca %Frame_INSERTSPACE, align 8
     ret void
 }
 
@@ -696,7 +696,7 @@ define void @P_INSERTSPACE()
 ; procedure body
 define void @P_MOVELINEPOS()
 {
-    %1 = alloca %Frame_MOVELINEPOS, align 8
+    %frame = alloca %Frame_MOVELINEPOS, align 8
     ret void
 }
 
@@ -723,7 +723,7 @@ define void @P_MOVELINEPOS()
 ; procedure body
 define void @P_PRINTSYMBOL()
 {
-    %1 = alloca %Frame_PRINTSYMBOL, align 8
+    %frame = alloca %Frame_PRINTSYMBOL, align 8
     ret void
 }
 
@@ -749,7 +749,7 @@ define void @P_PRINTSYMBOL()
 ; procedure body
 define void @P_PPSYMBOL()
 {
-    %1 = alloca %Frame_PPSYMBOL, align 8
+    %frame = alloca %Frame_PPSYMBOL, align 8
     ret void
 }
 
@@ -775,7 +775,7 @@ define void @P_PPSYMBOL()
 ; procedure body
 define void @P_GOBBLE()
 {
-    %1 = alloca %Frame_GOBBLE, align 8
+    %frame = alloca %Frame_GOBBLE, align 8
     ret void
 }
 
@@ -797,7 +797,7 @@ define void @P_GOBBLE()
 ; procedure body
 define void @P_RSHIFT()
 {
-    %1 = alloca %Frame_RSHIFT, align 8
+    %frame = alloca %Frame_RSHIFT, align 8
     ret void
 }
 
@@ -819,7 +819,7 @@ define void @P_RSHIFT()
 ; procedure body
 define void @P_RSHIFTTOCLP()
 {
-    %1 = alloca %Frame_RSHIFTTOCLP, align 8
+    %frame = alloca %Frame_RSHIFTTOCLP, align 8
     ret void
 }
 

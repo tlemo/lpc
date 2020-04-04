@@ -348,7 +348,7 @@ define void @P_()
 ; procedure body
 define void @P_junk1()
 {
-    %1 = alloca %Frame_junk1, align 8
+    %frame = alloca %Frame_junk1, align 8
     ret void
 }
 
@@ -370,7 +370,7 @@ define void @P_junk1()
 ; procedure body
 define void @P_junk2()
 {
-    %1 = alloca %Frame_junk2, align 8
+    %frame = alloca %Frame_junk2, align 8
     ret void
 }
 
@@ -392,7 +392,7 @@ define void @P_junk2()
 ; procedure body
 define void @P_junk3()
 {
-    %1 = alloca %Frame_junk3, align 8
+    %frame = alloca %Frame_junk3, align 8
     ret void
 }
 
@@ -414,7 +414,7 @@ define void @P_junk3()
 ; procedure body
 define void @P_junk4()
 {
-    %1 = alloca %Frame_junk4, align 8
+    %frame = alloca %Frame_junk4, align 8
     ret void
 }
 
@@ -439,10 +439,10 @@ define void @P_junk4()
 ; function body
 define i32 @F_junk5()
 {
-    %1 = alloca %Frame_junk5, align 8
-    %2 = getelementptr inbounds %Frame_junk5, %Frame_junk5* %1, i32 0, i32 1
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_junk5, align 8
+    %t1 = getelementptr inbounds %Frame_junk5, %Frame_junk5* %frame, i32 0, i32 1
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -460,7 +460,7 @@ define i32 @F_junk5()
 ; procedure body
 define void @P_junk6()
 {
-    %1 = alloca %Frame_junk6, align 8
+    %frame = alloca %Frame_junk6, align 8
     ret void
 }
 
@@ -490,10 +490,10 @@ define void @P_junk6()
 ; function body
 define i32 @F_junk7()
 {
-    %1 = alloca %Frame_junk7, align 8
-    %2 = getelementptr inbounds %Frame_junk7, %Frame_junk7* %1, i32 0, i32 3
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_junk7, align 8
+    %t1 = getelementptr inbounds %Frame_junk7, %Frame_junk7* %frame, i32 0, i32 3
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -530,7 +530,7 @@ define i32 @F_junk7()
 ; procedure body
 define void @P_junk8()
 {
-    %1 = alloca %Frame_junk8, align 8
+    %frame = alloca %Frame_junk8, align 8
     ret void
 }
 
@@ -557,7 +557,7 @@ define void @P_junk8()
 ; procedure body
 define void @P_junk9()
 {
-    %1 = alloca %Frame_junk9, align 8
+    %frame = alloca %Frame_junk9, align 8
     ret void
 }
 
@@ -581,7 +581,7 @@ define void @P_junk9()
 ; procedure body
 define void @P_junk10()
 {
-    %1 = alloca %Frame_junk10, align 8
+    %frame = alloca %Frame_junk10, align 8
     ret void
 }
 
@@ -606,10 +606,10 @@ define void @P_junk10()
 ; function body
 define i32 @F_junk11()
 {
-    %1 = alloca %Frame_junk11, align 8
-    %2 = getelementptr inbounds %Frame_junk11, %Frame_junk11* %1, i32 0, i32 1
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_junk11, align 8
+    %t1 = getelementptr inbounds %Frame_junk11, %Frame_junk11* %frame, i32 0, i32 1
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -636,7 +636,7 @@ define i32 @F_junk11()
 ; procedure body
 define void @P_junk12()
 {
-    %1 = alloca %Frame_junk12, align 8
+    %frame = alloca %Frame_junk12, align 8
     ret void
 }
 
@@ -661,7 +661,7 @@ define void @P_junk12()
 ; procedure body
 define void @P_junk13()
 {
-    %1 = alloca %Frame_junk13, align 8
+    %frame = alloca %Frame_junk13, align 8
     ret void
 }
 
@@ -684,7 +684,7 @@ define void @P_junk13()
 ; procedure body
 define void @P_junk14()
 {
-    %1 = alloca %Frame_junk14, align 8
+    %frame = alloca %Frame_junk14, align 8
     ret void
 }
 
@@ -703,7 +703,7 @@ define void @P_junk14()
 ; procedure body
 define void @P_junk14_junk15()
 {
-    %1 = alloca %Frame_junk14_junk15, align 8
+    %frame = alloca %Frame_junk14_junk15, align 8
     ret void
 }
 
@@ -722,7 +722,7 @@ define void @P_junk14_junk15()
 ; procedure body
 define void @P_junk16()
 {
-    %1 = alloca %Frame_junk16, align 8
+    %frame = alloca %Frame_junk16, align 8
     ret void
 }
 
@@ -748,7 +748,7 @@ define void @P_junk16()
 ; procedure body
 define void @P_junk17()
 {
-    %1 = alloca %Frame_junk17, align 8
+    %frame = alloca %Frame_junk17, align 8
     ret void
 }
 
@@ -767,7 +767,7 @@ define void @P_junk17()
 ; procedure body
 define void @P_junk17_junk18()
 {
-    %1 = alloca %Frame_junk17_junk18, align 8
+    %frame = alloca %Frame_junk17_junk18, align 8
     ret void
 }
 
@@ -789,7 +789,7 @@ define void @P_junk17_junk18()
 ; procedure body
 define void @P_junk19()
 {
-    %1 = alloca %Frame_junk19, align 8
+    %frame = alloca %Frame_junk19, align 8
     ret void
 }
 
@@ -811,10 +811,10 @@ define void @P_junk19()
 ; function body
 define i32 @F_junk20()
 {
-    %1 = alloca %Frame_junk20, align 8
-    %2 = getelementptr inbounds %Frame_junk20, %Frame_junk20* %1, i32 0, i32 0
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_junk20, align 8
+    %t1 = getelementptr inbounds %Frame_junk20, %Frame_junk20* %frame, i32 0, i32 0
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -835,10 +835,10 @@ define i32 @F_junk20()
 ; function body
 define i32 @F_junk20_inner()
 {
-    %1 = alloca %Frame_junk20_inner, align 8
-    %2 = getelementptr inbounds %Frame_junk20_inner, %Frame_junk20_inner* %1, i32 0, i32 0
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_junk20_inner, align 8
+    %t1 = getelementptr inbounds %Frame_junk20_inner, %Frame_junk20_inner* %frame, i32 0, i32 0
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -864,10 +864,10 @@ define i32 @F_junk20_inner()
 ; function body
 define i32 @F_random()
 {
-    %1 = alloca %Frame_random, align 8
-    %2 = getelementptr inbounds %Frame_random, %Frame_random* %1, i32 0, i32 2
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_random, align 8
+    %t1 = getelementptr inbounds %Frame_random, %Frame_random* %frame, i32 0, i32 2
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 

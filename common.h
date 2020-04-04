@@ -98,7 +98,7 @@ public:
     VarPtr() : m_pNaked(nullptr), m_pTypeInfo(nullptr) {}
 
     template<class T>
-    VarPtr(T* p) : m_pNaked(p), m_pTypeInfo(&typeid(T)) {}
+    explicit VarPtr(T* p) : m_pNaked(p), m_pTypeInfo(&typeid(T)) {}
 
     template<class T>
     T* get() const
@@ -108,7 +108,7 @@ public:
     }
 
 private:
-    void* m_pNaked;
+    void* m_pNaked = nullptr;
     const std::type_info* m_pTypeInfo;
 };
 
@@ -120,7 +120,6 @@ private:
 struct _DontCopy
 {
     _DontCopy() = default;
-
     _DontCopy(const _DontCopy&) = delete;
     void operator=(const _DontCopy&) = delete;
 };

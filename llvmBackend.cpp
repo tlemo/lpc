@@ -759,7 +759,9 @@ void LlvmBackend::_outputFrame(obj::Subroutine* pSubroutine)
         code << "\n; program variables\n";
         for (const auto pVar : m_varList)
         {
-            code << ext(pVar)->genName << " = dso_local global " <<
+            const auto& varName = ext(pVar)->genName;
+            assert(!varName.empty());
+            code << varName << " = dso_local global " <<
                 ext(pVar->pType)->genName << " zeroinitializer\n";
         }
     }
@@ -807,6 +809,7 @@ void LlvmBackend::_outputFrame(obj::Subroutine* pSubroutine)
                 code << TAB << "; " << fieldIndex << ": " << pVar->pId->name << "\n";
 
                 auto pVarExt = ext(pVar);
+                assert(pVarExt->genName.empty());
                 assert(pVarExt->frameIndex == -1);
                 pVarExt->frameIndex = fieldIndex++;
             }
@@ -822,6 +825,7 @@ void LlvmBackend::_outputFrame(obj::Subroutine* pSubroutine)
             code << TAB << "; slink\n";
             code << TAB << pParentExt->frameName << "*";
             code << TAB << "; " << fieldIndex << "\n";
+            pExt->slinkIndex = fieldIndex;
         }
         else
         {
@@ -883,18 +887,24 @@ void LlvmBackend::_outputSubroutine(obj::Subroutine* pSubroutine)
     
     if (!pExt->frameName.empty())
     {
-        code << TAB << "%1 = alloca " << pExt->frameName << ", align 8\n";
+        code << TAB << "%frame = alloca " << pExt->frameName << ", align 8\n";
     }
     
     if (pType->isFunction())
     {
+        // return value
+        //
         assert(pSubroutine->pFnValue != nullptr);
         const auto& returnType = ext(pType->returnType())->genName;
-        code << TAB << "%2 = getelementptr inbounds " << pExt->frameName << ", " <<
-            pExt->frameName << "* %1, i32 0, " <<
+        const auto retValuePtr = _genTempValue();
+        const auto retValue = _genTempValue();
+        code << TAB << retValuePtr << " = getelementptr inbounds " <<
+            pExt->frameName << ", " <<
+            pExt->frameName << "* %frame, i32 0, " <<
             "i32 " << ext(pSubroutine->pFnValue)->frameIndex << "\n";
-        code << TAB << "%3 = load " << returnType << ", " << returnType << "* %2\n";
-        code << TAB << "ret " << returnType << " %3\n";
+        code << TAB << retValue << " = load " << returnType << ", " <<
+            returnType << "* " << retValuePtr << "\n";
+        code << TAB << "ret " << returnType << " " << retValue << "\n";
     }
     else
     {

@@ -62,10 +62,10 @@ define void @P_()
 ; function body
 define %T_A @F_fooA()
 {
-    %1 = alloca %Frame_fooA, align 8
-    %2 = getelementptr inbounds %Frame_fooA, %Frame_fooA* %1, i32 0, i32 0
-    %3 = load %T_A, %T_A* %2
-    ret %T_A %3
+    %frame = alloca %Frame_fooA, align 8
+    %t1 = getelementptr inbounds %Frame_fooA, %Frame_fooA* %frame, i32 0, i32 0
+    %t2 = load %T_A, %T_A* %t1
+    ret %T_A %t2
 }
 
 
@@ -86,10 +86,10 @@ define %T_A @F_fooA()
 ; function body
 define %T_S @F_fooS()
 {
-    %1 = alloca %Frame_fooS, align 8
-    %2 = getelementptr inbounds %Frame_fooS, %Frame_fooS* %1, i32 0, i32 0
-    %3 = load %T_S, %T_S* %2
-    ret %T_S %3
+    %frame = alloca %Frame_fooS, align 8
+    %t1 = getelementptr inbounds %Frame_fooS, %Frame_fooS* %frame, i32 0, i32 0
+    %t2 = load %T_S, %T_S* %t1
+    ret %T_S %t2
 }
 
 
@@ -111,10 +111,10 @@ define %T_S @F_fooS()
 ; function body
 define %T_R @F_fooR()
 {
-    %1 = alloca %Frame_fooR, align 8
-    %2 = getelementptr inbounds %Frame_fooR, %Frame_fooR* %1, i32 0, i32 0
-    %3 = load %T_R, %T_R* %2
-    ret %T_R %3
+    %frame = alloca %Frame_fooR, align 8
+    %t1 = getelementptr inbounds %Frame_fooR, %Frame_fooR* %frame, i32 0, i32 0
+    %t2 = load %T_R, %T_R* %t1
+    ret %T_R %t2
 }
 
 

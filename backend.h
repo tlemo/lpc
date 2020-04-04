@@ -17,15 +17,17 @@
 
 #pragma once
 
+#include "symbols.h"
+#include "objects.h"
+#include "compilationContext.h"
+
 #include <assert.h>
 #include <stdio.h>
 #include <shlwapi.h>
 #include <string.h>
 #include <sstream>
-
-#include "symbols.h"
-#include "objects.h"
-#include "compilationContext.h"
+#include <utility>
+#include <type_traits>
 
 
 ///////////////////////////////////////////////////////////////////////////////
@@ -38,6 +40,15 @@ template<class T>
 T* funcAlloc(size_t size)
 {
     return static_cast<T*>(context()->heapManager()->allocate(size));
+}
+
+template<class T, class... ARGS>
+T* allocObject(ARGS&&... args)
+{
+    static_assert(std::is_trivially_destructible<T>::value,
+        "only types with trivial destructors are supported");
+    auto ptr = funcAlloc<T>(sizeof(T));
+    return new (ptr) T(std::forward<ARGS>(args)...);
 }
 
 inline

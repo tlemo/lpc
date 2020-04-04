@@ -117,7 +117,7 @@ define void @P_()
 ; procedure body
 define void @P_errormsg()
 {
-    %1 = alloca %Frame_errormsg, align 8
+    %frame = alloca %Frame_errormsg, align 8
     ret void
 }
 
@@ -136,7 +136,7 @@ define void @P_errormsg()
 ; procedure body
 define void @P_nextch()
 {
-    %1 = alloca %Frame_nextch, align 8
+    %frame = alloca %Frame_nextch, align 8
     ret void
 }
 
@@ -158,7 +158,7 @@ define void @P_nextch()
 ; procedure body
 define void @P_error()
 {
-    %1 = alloca %Frame_error, align 8
+    %frame = alloca %Frame_error, align 8
     ret void
 }
 
@@ -186,7 +186,7 @@ define void @P_error()
 ; procedure body
 define void @P_fatal()
 {
-    %1 = alloca %Frame_fatal, align 8
+    %frame = alloca %Frame_fatal, align 8
     ret void
 }
 
@@ -211,7 +211,7 @@ define void @P_fatal()
 ; procedure body
 define void @P_insymbol()
 {
-    %1 = alloca %Frame_insymbol, align 8
+    %frame = alloca %Frame_insymbol, align 8
     ret void
 }
 
@@ -234,7 +234,7 @@ define void @P_insymbol()
 ; procedure body
 define void @P_insymbol_readscale()
 {
-    %1 = alloca %Frame_insymbol_readscale, align 8
+    %frame = alloca %Frame_insymbol_readscale, align 8
     ret void
 }
 
@@ -258,7 +258,7 @@ define void @P_insymbol_readscale()
 ; procedure body
 define void @P_insymbol_adjustscale()
 {
-    %1 = alloca %Frame_insymbol_adjustscale, align 8
+    %frame = alloca %Frame_insymbol_adjustscale, align 8
     ret void
 }
 
@@ -283,7 +283,7 @@ define void @P_insymbol_adjustscale()
 ; procedure body
 define void @P_enter()
 {
-    %1 = alloca %Frame_enter, align 8
+    %frame = alloca %Frame_enter, align 8
     ret void
 }
 
@@ -307,7 +307,7 @@ define void @P_enter()
 ; procedure body
 define void @P_enterarray()
 {
-    %1 = alloca %Frame_enterarray, align 8
+    %frame = alloca %Frame_enterarray, align 8
     ret void
 }
 
@@ -326,7 +326,7 @@ define void @P_enterarray()
 ; procedure body
 define void @P_enterblock()
 {
-    %1 = alloca %Frame_enterblock, align 8
+    %frame = alloca %Frame_enterblock, align 8
     ret void
 }
 
@@ -348,7 +348,7 @@ define void @P_enterblock()
 ; procedure body
 define void @P_enterreal()
 {
-    %1 = alloca %Frame_enterreal, align 8
+    %frame = alloca %Frame_enterreal, align 8
     ret void
 }
 
@@ -370,7 +370,7 @@ define void @P_enterreal()
 ; procedure body
 define void @P_emit()
 {
-    %1 = alloca %Frame_emit, align 8
+    %frame = alloca %Frame_emit, align 8
     ret void
 }
 
@@ -393,7 +393,7 @@ define void @P_emit()
 ; procedure body
 define void @P_emit1()
 {
-    %1 = alloca %Frame_emit1, align 8
+    %frame = alloca %Frame_emit1, align 8
     ret void
 }
 
@@ -417,7 +417,7 @@ define void @P_emit1()
 ; procedure body
 define void @P_emit2()
 {
-    %1 = alloca %Frame_emit2, align 8
+    %frame = alloca %Frame_emit2, align 8
     ret void
 }
 
@@ -440,7 +440,7 @@ define void @P_emit2()
 ; procedure body
 define void @P_printtables()
 {
-    %1 = alloca %Frame_printtables, align 8
+    %frame = alloca %Frame_printtables, align 8
     ret void
 }
 
@@ -473,7 +473,7 @@ define void @P_printtables()
 ; procedure body
 define void @P_block()
 {
-    %1 = alloca %Frame_block, align 8
+    %frame = alloca %Frame_block, align 8
     ret void
 }
 
@@ -496,7 +496,7 @@ define void @P_block()
 ; procedure body
 define void @P_block_skip()
 {
-    %1 = alloca %Frame_block_skip, align 8
+    %frame = alloca %Frame_block_skip, align 8
     ret void
 }
 
@@ -520,7 +520,7 @@ define void @P_block_skip()
 ; procedure body
 define void @P_block_test()
 {
-    %1 = alloca %Frame_block_test, align 8
+    %frame = alloca %Frame_block_test, align 8
     ret void
 }
 
@@ -539,7 +539,7 @@ define void @P_block_test()
 ; procedure body
 define void @P_block_testsemicolon()
 {
-    %1 = alloca %Frame_block_testsemicolon, align 8
+    %frame = alloca %Frame_block_testsemicolon, align 8
     ret void
 }
 
@@ -566,7 +566,7 @@ define void @P_block_testsemicolon()
 ; procedure body
 define void @P_block_enter()
 {
-    %1 = alloca %Frame_block_enter, align 8
+    %frame = alloca %Frame_block_enter, align 8
     ret void
 }
 
@@ -593,10 +593,10 @@ define void @P_block_enter()
 ; function body
 define i32 @F_block_loc()
 {
-    %1 = alloca %Frame_block_loc, align 8
-    %2 = getelementptr inbounds %Frame_block_loc, %Frame_block_loc* %1, i32 0, i32 1
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_block_loc, align 8
+    %t1 = getelementptr inbounds %Frame_block_loc, %Frame_block_loc* %frame, i32 0, i32 1
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -614,7 +614,7 @@ define i32 @F_block_loc()
 ; procedure body
 define void @P_block_entervariable()
 {
-    %1 = alloca %Frame_block_entervariable, align 8
+    %frame = alloca %Frame_block_entervariable, align 8
     ret void
 }
 
@@ -641,7 +641,7 @@ define void @P_block_entervariable()
 ; procedure body
 define void @P_block_constant()
 {
-    %1 = alloca %Frame_block_constant, align 8
+    %frame = alloca %Frame_block_constant, align 8
     ret void
 }
 
@@ -675,7 +675,7 @@ define void @P_block_constant()
 ; procedure body
 define void @P_block_typ()
 {
-    %1 = alloca %Frame_block_typ, align 8
+    %frame = alloca %Frame_block_typ, align 8
     ret void
 }
 
@@ -705,7 +705,7 @@ define void @P_block_typ()
 ; procedure body
 define void @P_block_typ_arraytyp()
 {
-    %1 = alloca %Frame_block_typ_arraytyp, align 8
+    %frame = alloca %Frame_block_typ_arraytyp, align 8
     ret void
 }
 
@@ -732,7 +732,7 @@ define void @P_block_typ_arraytyp()
 ; procedure body
 define void @P_block_parameterlist()
 {
-    %1 = alloca %Frame_block_parameterlist, align 8
+    %frame = alloca %Frame_block_parameterlist, align 8
     ret void
 }
 
@@ -754,7 +754,7 @@ define void @P_block_parameterlist()
 ; procedure body
 define void @P_block_constantdeclaration()
 {
-    %1 = alloca %Frame_block_constantdeclaration, align 8
+    %frame = alloca %Frame_block_constantdeclaration, align 8
     ret void
 }
 
@@ -779,7 +779,7 @@ define void @P_block_constantdeclaration()
 ; procedure body
 define void @P_block_typedeclaration()
 {
-    %1 = alloca %Frame_block_typedeclaration, align 8
+    %frame = alloca %Frame_block_typedeclaration, align 8
     ret void
 }
 
@@ -805,7 +805,7 @@ define void @P_block_typedeclaration()
 ; procedure body
 define void @P_block_variabledeclaration()
 {
-    %1 = alloca %Frame_block_variabledeclaration, align 8
+    %frame = alloca %Frame_block_variabledeclaration, align 8
     ret void
 }
 
@@ -827,7 +827,7 @@ define void @P_block_variabledeclaration()
 ; procedure body
 define void @P_block_procdeclaration()
 {
-    %1 = alloca %Frame_block_procdeclaration, align 8
+    %frame = alloca %Frame_block_procdeclaration, align 8
     ret void
 }
 
@@ -852,7 +852,7 @@ define void @P_block_procdeclaration()
 ; procedure body
 define void @P_block_statement()
 {
-    %1 = alloca %Frame_block_statement, align 8
+    %frame = alloca %Frame_block_statement, align 8
     ret void
 }
 
@@ -880,7 +880,7 @@ define void @P_block_statement()
 ; procedure body
 define void @P_block_statement_selector()
 {
-    %1 = alloca %Frame_block_statement_selector, align 8
+    %frame = alloca %Frame_block_statement_selector, align 8
     ret void
 }
 
@@ -909,7 +909,7 @@ define void @P_block_statement_selector()
 ; procedure body
 define void @P_block_statement_call()
 {
-    %1 = alloca %Frame_block_statement_call, align 8
+    %frame = alloca %Frame_block_statement_call, align 8
     ret void
 }
 
@@ -935,10 +935,10 @@ define void @P_block_statement_call()
 ; function body
 define i32 @F_block_statement_resulttype()
 {
-    %1 = alloca %Frame_block_statement_resulttype, align 8
-    %2 = getelementptr inbounds %Frame_block_statement_resulttype, %Frame_block_statement_resulttype* %1, i32 0, i32 2
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_block_statement_resulttype, align 8
+    %t1 = getelementptr inbounds %Frame_block_statement_resulttype, %Frame_block_statement_resulttype* %frame, i32 0, i32 2
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -964,7 +964,7 @@ define i32 @F_block_statement_resulttype()
 ; procedure body
 define void @P_block_statement_expression()
 {
-    %1 = alloca %Frame_block_statement_expression, align 8
+    %frame = alloca %Frame_block_statement_expression, align 8
     ret void
 }
 
@@ -991,7 +991,7 @@ define void @P_block_statement_expression()
 ; procedure body
 define void @P_block_statement_expression_simpleexpression()
 {
-    %1 = alloca %Frame_block_statement_expression_simpleexpression, align 8
+    %frame = alloca %Frame_block_statement_expression_simpleexpression, align 8
     ret void
 }
 
@@ -1018,7 +1018,7 @@ define void @P_block_statement_expression_simpleexpression()
 ; procedure body
 define void @P_block_statement_expression_simpleexpression_term()
 {
-    %1 = alloca %Frame_block_statement_expression_simpleexpression_term, align 8
+    %frame = alloca %Frame_block_statement_expression_simpleexpression_term, align 8
     ret void
 }
 
@@ -1045,7 +1045,7 @@ define void @P_block_statement_expression_simpleexpression_term()
 ; procedure body
 define void @P_block_statement_expression_simpleexpression_term_factor()
 {
-    %1 = alloca %Frame_block_statement_expression_simpleexpression_term_factor, align 8
+    %frame = alloca %Frame_block_statement_expression_simpleexpression_term_factor, align 8
     ret void
 }
 
@@ -1070,7 +1070,7 @@ define void @P_block_statement_expression_simpleexpression_term_factor()
 ; procedure body
 define void @P_block_statement_expression_simpleexpression_term_factor_standfct()
 {
-    %1 = alloca %Frame_block_statement_expression_simpleexpression_term_factor_standfct, align 8
+    %frame = alloca %Frame_block_statement_expression_simpleexpression_term_factor_standfct, align 8
     ret void
 }
 
@@ -1098,7 +1098,7 @@ define void @P_block_statement_expression_simpleexpression_term_factor_standfct(
 ; procedure body
 define void @P_block_statement_assignment()
 {
-    %1 = alloca %Frame_block_statement_assignment, align 8
+    %frame = alloca %Frame_block_statement_assignment, align 8
     ret void
 }
 
@@ -1117,7 +1117,7 @@ define void @P_block_statement_assignment()
 ; procedure body
 define void @P_block_statement_compoundstatement()
 {
-    %1 = alloca %Frame_block_statement_compoundstatement, align 8
+    %frame = alloca %Frame_block_statement_compoundstatement, align 8
     ret void
 }
 
@@ -1141,7 +1141,7 @@ define void @P_block_statement_compoundstatement()
 ; procedure body
 define void @P_block_statement_ifstatement()
 {
-    %1 = alloca %Frame_block_statement_ifstatement, align 8
+    %frame = alloca %Frame_block_statement_ifstatement, align 8
     ret void
 }
 
@@ -1174,7 +1174,7 @@ define void @P_block_statement_ifstatement()
 ; procedure body
 define void @P_block_statement_casestatement()
 {
-    %1 = alloca %Frame_block_statement_casestatement, align 8
+    %frame = alloca %Frame_block_statement_casestatement, align 8
     ret void
 }
 
@@ -1197,7 +1197,7 @@ define void @P_block_statement_casestatement()
 ; procedure body
 define void @P_block_statement_casestatement_caselabel()
 {
-    %1 = alloca %Frame_block_statement_casestatement_caselabel, align 8
+    %frame = alloca %Frame_block_statement_casestatement_caselabel, align 8
     ret void
 }
 
@@ -1216,7 +1216,7 @@ define void @P_block_statement_casestatement_caselabel()
 ; procedure body
 define void @P_block_statement_casestatement_onecase()
 {
-    %1 = alloca %Frame_block_statement_casestatement_onecase, align 8
+    %frame = alloca %Frame_block_statement_casestatement_onecase, align 8
     ret void
 }
 
@@ -1239,7 +1239,7 @@ define void @P_block_statement_casestatement_onecase()
 ; procedure body
 define void @P_block_statement_repeatstatement()
 {
-    %1 = alloca %Frame_block_statement_repeatstatement, align 8
+    %frame = alloca %Frame_block_statement_repeatstatement, align 8
     ret void
 }
 
@@ -1263,7 +1263,7 @@ define void @P_block_statement_repeatstatement()
 ; procedure body
 define void @P_block_statement_whilestatement()
 {
-    %1 = alloca %Frame_block_statement_whilestatement, align 8
+    %frame = alloca %Frame_block_statement_whilestatement, align 8
     ret void
 }
 
@@ -1290,7 +1290,7 @@ define void @P_block_statement_whilestatement()
 ; procedure body
 define void @P_block_statement_forstatement()
 {
-    %1 = alloca %Frame_block_statement_forstatement, align 8
+    %frame = alloca %Frame_block_statement_forstatement, align 8
     ret void
 }
 
@@ -1318,7 +1318,7 @@ define void @P_block_statement_forstatement()
 ; procedure body
 define void @P_block_statement_standproc()
 {
-    %1 = alloca %Frame_block_statement_standproc, align 8
+    %frame = alloca %Frame_block_statement_standproc, align 8
     ret void
 }
 
@@ -1361,7 +1361,7 @@ define void @P_block_statement_standproc()
 ; procedure body
 define void @P_interpret()
 {
-    %1 = alloca %Frame_interpret, align 8
+    %frame = alloca %Frame_interpret, align 8
     ret void
 }
 

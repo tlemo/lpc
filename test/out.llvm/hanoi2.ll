@@ -69,7 +69,7 @@ define void @P_()
 ; procedure body
 define void @P_punere()
 {
-    %1 = alloca %Frame_punere, align 8
+    %frame = alloca %Frame_punere, align 8
     ret void
 }
 
@@ -88,7 +88,7 @@ define void @P_punere()
 ; procedure body
 define void @P_scoatere()
 {
-    %1 = alloca %Frame_scoatere, align 8
+    %frame = alloca %Frame_scoatere, align 8
     ret void
 }
 

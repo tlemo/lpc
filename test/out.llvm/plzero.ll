@@ -86,7 +86,7 @@ define void @P_()
 ; procedure body
 define void @P_error()
 {
-    %1 = alloca %Frame_error, align 8
+    %frame = alloca %Frame_error, align 8
     ret void
 }
 
@@ -110,7 +110,7 @@ define void @P_error()
 ; procedure body
 define void @P_getsym()
 {
-    %1 = alloca %Frame_getsym, align 8
+    %frame = alloca %Frame_getsym, align 8
     ret void
 }
 
@@ -129,7 +129,7 @@ define void @P_getsym()
 ; procedure body
 define void @P_getsym_getch()
 {
-    %1 = alloca %Frame_getsym_getch, align 8
+    %frame = alloca %Frame_getsym_getch, align 8
     ret void
 }
 
@@ -153,7 +153,7 @@ define void @P_getsym_getch()
 ; procedure body
 define void @P_gen()
 {
-    %1 = alloca %Frame_gen, align 8
+    %frame = alloca %Frame_gen, align 8
     ret void
 }
 
@@ -177,7 +177,7 @@ define void @P_gen()
 ; procedure body
 define void @P_test()
 {
-    %1 = alloca %Frame_test, align 8
+    %frame = alloca %Frame_test, align 8
     ret void
 }
 
@@ -206,7 +206,7 @@ define void @P_test()
 ; procedure body
 define void @P_block()
 {
-    %1 = alloca %Frame_block, align 8
+    %frame = alloca %Frame_block, align 8
     ret void
 }
 
@@ -228,7 +228,7 @@ define void @P_block()
 ; procedure body
 define void @P_block_enter()
 {
-    %1 = alloca %Frame_block_enter, align 8
+    %frame = alloca %Frame_block_enter, align 8
     ret void
 }
 
@@ -254,10 +254,10 @@ define void @P_block_enter()
 ; function body
 define i32 @F_block_position()
 {
-    %1 = alloca %Frame_block_position, align 8
-    %2 = getelementptr inbounds %Frame_block_position, %Frame_block_position* %1, i32 0, i32 1
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_block_position, align 8
+    %t1 = getelementptr inbounds %Frame_block_position, %Frame_block_position* %frame, i32 0, i32 1
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -275,7 +275,7 @@ define i32 @F_block_position()
 ; procedure body
 define void @P_block_constdeclaration()
 {
-    %1 = alloca %Frame_block_constdeclaration, align 8
+    %frame = alloca %Frame_block_constdeclaration, align 8
     ret void
 }
 
@@ -294,7 +294,7 @@ define void @P_block_constdeclaration()
 ; procedure body
 define void @P_block_vardeclaration()
 {
-    %1 = alloca %Frame_block_vardeclaration, align 8
+    %frame = alloca %Frame_block_vardeclaration, align 8
     ret void
 }
 
@@ -316,7 +316,7 @@ define void @P_block_vardeclaration()
 ; procedure body
 define void @P_block_listcode()
 {
-    %1 = alloca %Frame_block_listcode, align 8
+    %frame = alloca %Frame_block_listcode, align 8
     ret void
 }
 
@@ -343,7 +343,7 @@ define void @P_block_listcode()
 ; procedure body
 define void @P_block_statement()
 {
-    %1 = alloca %Frame_block_statement, align 8
+    %frame = alloca %Frame_block_statement, align 8
     ret void
 }
 
@@ -368,7 +368,7 @@ define void @P_block_statement()
 ; procedure body
 define void @P_block_statement_expression()
 {
-    %1 = alloca %Frame_block_statement_expression, align 8
+    %frame = alloca %Frame_block_statement_expression, align 8
     ret void
 }
 
@@ -393,7 +393,7 @@ define void @P_block_statement_expression()
 ; procedure body
 define void @P_block_statement_expression_term()
 {
-    %1 = alloca %Frame_block_statement_expression_term, align 8
+    %frame = alloca %Frame_block_statement_expression_term, align 8
     ret void
 }
 
@@ -418,7 +418,7 @@ define void @P_block_statement_expression_term()
 ; procedure body
 define void @P_block_statement_expression_term_factor()
 {
-    %1 = alloca %Frame_block_statement_expression_term_factor, align 8
+    %frame = alloca %Frame_block_statement_expression_term_factor, align 8
     ret void
 }
 
@@ -443,7 +443,7 @@ define void @P_block_statement_expression_term_factor()
 ; procedure body
 define void @P_block_statement_condition()
 {
-    %1 = alloca %Frame_block_statement_condition, align 8
+    %frame = alloca %Frame_block_statement_condition, align 8
     ret void
 }
 
@@ -472,7 +472,7 @@ define void @P_block_statement_condition()
 ; procedure body
 define void @P_interpret()
 {
-    %1 = alloca %Frame_interpret, align 8
+    %frame = alloca %Frame_interpret, align 8
     ret void
 }
 
@@ -498,10 +498,10 @@ define void @P_interpret()
 ; function body
 define i32 @F_interpret_base()
 {
-    %1 = alloca %Frame_interpret_base, align 8
-    %2 = getelementptr inbounds %Frame_interpret_base, %Frame_interpret_base* %1, i32 0, i32 1
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_interpret_base, align 8
+    %t1 = getelementptr inbounds %Frame_interpret_base, %Frame_interpret_base* %frame, i32 0, i32 1
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 

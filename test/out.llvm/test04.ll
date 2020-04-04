@@ -57,7 +57,7 @@ define void @P_()
 ; procedure body
 define void @P_foo()
 {
-    %1 = alloca %Frame_foo, align 8
+    %frame = alloca %Frame_foo, align 8
     ret void
 }
 

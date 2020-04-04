@@ -104,7 +104,7 @@ define void @P_()
 ; procedure body
 define void @P_load()
 {
-    %1 = alloca %Frame_load, align 8
+    %frame = alloca %Frame_load, align 8
     ret void
 }
 
@@ -126,7 +126,7 @@ define void @P_load()
 ; procedure body
 define void @P_load_init()
 {
-    %1 = alloca %Frame_load_init, align 8
+    %frame = alloca %Frame_load_init, align 8
     ret void
 }
 
@@ -148,7 +148,7 @@ define void @P_load_init()
 ; procedure body
 define void @P_load_errorl()
 {
-    %1 = alloca %Frame_load_errorl, align 8
+    %frame = alloca %Frame_load_errorl, align 8
     ret void
 }
 
@@ -175,7 +175,7 @@ define void @P_load_errorl()
 ; procedure body
 define void @P_load_update()
 {
-    %1 = alloca %Frame_load_update, align 8
+    %frame = alloca %Frame_load_update, align 8
     ret void
 }
 
@@ -198,7 +198,7 @@ define void @P_load_update()
 ; procedure body
 define void @P_load_generate()
 {
-    %1 = alloca %Frame_load_generate, align 8
+    %frame = alloca %Frame_load_generate, align 8
     ret void
 }
 
@@ -226,7 +226,7 @@ define void @P_load_generate()
 ; procedure body
 define void @P_load_assemble()
 {
-    %1 = alloca %Frame_load_assemble, align 8
+    %frame = alloca %Frame_load_assemble, align 8
     ret void
 }
 
@@ -248,7 +248,7 @@ define void @P_load_assemble()
 ; procedure body
 define void @P_load_assemble_lookup()
 {
-    %1 = alloca %Frame_load_assemble_lookup, align 8
+    %frame = alloca %Frame_load_assemble_lookup, align 8
     ret void
 }
 
@@ -270,7 +270,7 @@ define void @P_load_assemble_lookup()
 ; procedure body
 define void @P_load_assemble_labelsearch()
 {
-    %1 = alloca %Frame_load_assemble_labelsearch, align 8
+    %frame = alloca %Frame_load_assemble_labelsearch, align 8
     ret void
 }
 
@@ -289,7 +289,7 @@ define void @P_load_assemble_labelsearch()
 ; procedure body
 define void @P_load_assemble_getname()
 {
-    %1 = alloca %Frame_load_assemble_getname, align 8
+    %frame = alloca %Frame_load_assemble_getname, align 8
     ret void
 }
 
@@ -311,7 +311,7 @@ define void @P_load_assemble_getname()
 ; procedure body
 define void @P_load_assemble_typesymbol()
 {
-    %1 = alloca %Frame_load_assemble_typesymbol, align 8
+    %frame = alloca %Frame_load_assemble_typesymbol, align 8
     ret void
 }
 
@@ -334,7 +334,7 @@ define void @P_load_assemble_typesymbol()
 ; procedure body
 define void @P_pmd()
 {
-    %1 = alloca %Frame_pmd, align 8
+    %frame = alloca %Frame_pmd, align 8
     ret void
 }
 
@@ -353,7 +353,7 @@ define void @P_pmd()
 ; procedure body
 define void @P_pmd_pt()
 {
-    %1 = alloca %Frame_pmd_pt, align 8
+    %frame = alloca %Frame_pmd_pt, align 8
     ret void
 }
 
@@ -375,7 +375,7 @@ define void @P_pmd_pt()
 ; procedure body
 define void @P_errori()
 {
-    %1 = alloca %Frame_errori, align 8
+    %frame = alloca %Frame_errori, align 8
     ret void
 }
 
@@ -401,10 +401,10 @@ define void @P_errori()
 ; function body
 define i32 @F_base()
 {
-    %1 = alloca %Frame_base, align 8
-    %2 = getelementptr inbounds %Frame_base, %Frame_base* %1, i32 0, i32 1
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_base, align 8
+    %t1 = getelementptr inbounds %Frame_base, %Frame_base* %frame, i32 0, i32 1
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -422,7 +422,7 @@ define i32 @F_base()
 ; procedure body
 define void @P_compare()
 {
-    %1 = alloca %Frame_compare, align 8
+    %frame = alloca %Frame_compare, align 8
     ret void
 }
 
@@ -444,7 +444,7 @@ define void @P_compare()
 ; procedure body
 define void @P_callsp()
 {
-    %1 = alloca %Frame_callsp, align 8
+    %frame = alloca %Frame_callsp, align 8
     ret void
 }
 
@@ -469,7 +469,7 @@ define void @P_callsp()
 ; procedure body
 define void @P_callsp_readi()
 {
-    %1 = alloca %Frame_callsp_readi, align 8
+    %frame = alloca %Frame_callsp_readi, align 8
     ret void
 }
 
@@ -494,7 +494,7 @@ define void @P_callsp_readi()
 ; procedure body
 define void @P_callsp_readr()
 {
-    %1 = alloca %Frame_callsp_readr, align 8
+    %frame = alloca %Frame_callsp_readr, align 8
     ret void
 }
 
@@ -520,7 +520,7 @@ define void @P_callsp_readr()
 ; procedure body
 define void @P_callsp_readc()
 {
-    %1 = alloca %Frame_callsp_readc, align 8
+    %frame = alloca %Frame_callsp_readc, align 8
     ret void
 }
 
@@ -548,7 +548,7 @@ define void @P_callsp_readc()
 ; procedure body
 define void @P_callsp_writestr()
 {
-    %1 = alloca %Frame_callsp_writestr, align 8
+    %frame = alloca %Frame_callsp_writestr, align 8
     ret void
 }
 
@@ -573,7 +573,7 @@ define void @P_callsp_writestr()
 ; procedure body
 define void @P_callsp_getfile()
 {
-    %1 = alloca %Frame_callsp_getfile, align 8
+    %frame = alloca %Frame_callsp_getfile, align 8
     ret void
 }
 
@@ -598,7 +598,7 @@ define void @P_callsp_getfile()
 ; procedure body
 define void @P_callsp_putfile()
 {
-    %1 = alloca %Frame_callsp_putfile, align 8
+    %frame = alloca %Frame_callsp_putfile, align 8
     ret void
 }
 

@@ -57,10 +57,10 @@ define void @P_()
 ; function body
 define i32 @F_foo()
 {
-    %1 = alloca %Frame_foo, align 8
-    %2 = getelementptr inbounds %Frame_foo, %Frame_foo* %1, i32 0, i32 1
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_foo, align 8
+    %t1 = getelementptr inbounds %Frame_foo, %Frame_foo* %frame, i32 0, i32 1
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -81,7 +81,7 @@ define i32 @F_foo()
 ; procedure body
 define void @P_bar()
 {
-    %1 = alloca %Frame_bar, align 8
+    %frame = alloca %Frame_bar, align 8
     ret void
 }
 
@@ -100,7 +100,7 @@ define void @P_bar()
 ; procedure body
 define void @P_bar_moo()
 {
-    %1 = alloca %Frame_bar_moo, align 8
+    %frame = alloca %Frame_bar_moo, align 8
     ret void
 }
 

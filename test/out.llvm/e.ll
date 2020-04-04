@@ -65,7 +65,7 @@ define void @P_()
 ; procedure body
 define void @P_initinteger()
 {
-    %1 = alloca %Frame_initinteger, align 8
+    %frame = alloca %Frame_initinteger, align 8
     ret void
 }
 
@@ -95,7 +95,7 @@ define void @P_initinteger()
 ; procedure body
 define void @P_divide()
 {
-    %1 = alloca %Frame_divide, align 8
+    %frame = alloca %Frame_divide, align 8
     ret void
 }
 
@@ -123,7 +123,7 @@ define void @P_divide()
 ; procedure body
 define void @P_add()
 {
-    %1 = alloca %Frame_add, align 8
+    %frame = alloca %Frame_add, align 8
     ret void
 }
 
@@ -151,7 +151,7 @@ define void @P_add()
 ; procedure body
 define void @P_sub()
 {
-    %1 = alloca %Frame_sub, align 8
+    %frame = alloca %Frame_sub, align 8
     ret void
 }
 

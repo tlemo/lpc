@@ -95,10 +95,10 @@ define void @P_()
 ; function body
 define double @F_expp()
 {
-    %1 = alloca %Frame_expp, align 8
-    %2 = getelementptr inbounds %Frame_expp, %Frame_expp* %1, i32 0, i32 1
-    %3 = load double, double* %2
-    ret double %3
+    %frame = alloca %Frame_expp, align 8
+    %t1 = getelementptr inbounds %Frame_expp, %Frame_expp* %frame, i32 0, i32 1
+    %t2 = load double, double* %t1
+    ret double %t2
 }
 
 
@@ -124,10 +124,10 @@ define double @F_expp()
 ; function body
 define i32 @F_random()
 {
-    %1 = alloca %Frame_random, align 8
-    %2 = getelementptr inbounds %Frame_random, %Frame_random* %1, i32 0, i32 2
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_random, align 8
+    %t1 = getelementptr inbounds %Frame_random, %Frame_random* %frame, i32 0, i32 2
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -153,10 +153,10 @@ define i32 @F_random()
 ; function body
 define i32 @F_distance()
 {
-    %1 = alloca %Frame_distance, align 8
-    %2 = getelementptr inbounds %Frame_distance, %Frame_distance* %1, i32 0, i32 3
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_distance, align 8
+    %t1 = getelementptr inbounds %Frame_distance, %Frame_distance* %frame, i32 0, i32 3
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -180,10 +180,10 @@ define i32 @F_distance()
 ; function body
 define double @F_radians()
 {
-    %1 = alloca %Frame_radians, align 8
-    %2 = getelementptr inbounds %Frame_radians, %Frame_radians* %1, i32 0, i32 1
-    %3 = load double, double* %2
-    ret double %3
+    %frame = alloca %Frame_radians, align 8
+    %t1 = getelementptr inbounds %Frame_radians, %Frame_radians* %frame, i32 0, i32 1
+    %t2 = load double, double* %t1
+    ret double %t2
 }
 
 
@@ -209,10 +209,10 @@ define double @F_radians()
 ; function body
 define i32 @F_interval()
 {
-    %1 = alloca %Frame_interval, align 8
-    %2 = getelementptr inbounds %Frame_interval, %Frame_interval* %1, i32 0, i32 3
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_interval, align 8
+    %t1 = getelementptr inbounds %Frame_interval, %Frame_interval* %frame, i32 0, i32 3
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -233,7 +233,7 @@ define i32 @F_interval()
 ; procedure body
 define void @P_reinitialize()
 {
-    %1 = alloca %Frame_reinitialize, align 8
+    %frame = alloca %Frame_reinitialize, align 8
     ret void
 }
 
@@ -258,7 +258,7 @@ define void @P_reinitialize()
 ; procedure body
 define void @P_initialize()
 {
-    %1 = alloca %Frame_initialize, align 8
+    %frame = alloca %Frame_initialize, align 8
     ret void
 }
 
@@ -281,7 +281,7 @@ define void @P_initialize()
 ; procedure body
 define void @P_setcondition()
 {
-    %1 = alloca %Frame_setcondition, align 8
+    %frame = alloca %Frame_setcondition, align 8
     ret void
 }
 
@@ -308,7 +308,7 @@ define void @P_setcondition()
 ; procedure body
 define void @P_klingonattack()
 {
-    %1 = alloca %Frame_klingonattack, align 8
+    %frame = alloca %Frame_klingonattack, align 8
     ret void
 }
 
@@ -331,7 +331,7 @@ define void @P_klingonattack()
 ; procedure body
 define void @P_printdigit()
 {
-    %1 = alloca %Frame_printdigit, align 8
+    %frame = alloca %Frame_printdigit, align 8
     ret void
 }
 
@@ -360,7 +360,7 @@ define void @P_printdigit()
 ; procedure body
 define void @P_setupquad()
 {
-    %1 = alloca %Frame_setupquad, align 8
+    %frame = alloca %Frame_setupquad, align 8
     ret void
 }
 
@@ -387,7 +387,7 @@ define void @P_setupquad()
 ; procedure body
 define void @P_setupquad_setupstuff()
 {
-    %1 = alloca %Frame_setupquad_setupstuff, align 8
+    %frame = alloca %Frame_setupquad_setupstuff, align 8
     ret void
 }
 
@@ -410,7 +410,7 @@ define void @P_setupquad_setupstuff()
 ; procedure body
 define void @P_printquadrant()
 {
-    %1 = alloca %Frame_printquadrant, align 8
+    %frame = alloca %Frame_printquadrant, align 8
     ret void
 }
 
@@ -440,7 +440,7 @@ define void @P_printquadrant()
 ; procedure body
 define void @P_printgalaxy()
 {
-    %1 = alloca %Frame_printgalaxy, align 8
+    %frame = alloca %Frame_printgalaxy, align 8
     ret void
 }
 
@@ -465,7 +465,7 @@ define void @P_printgalaxy()
 ; procedure body
 define void @P_printgalaxy_printseparator()
 {
-    %1 = alloca %Frame_printgalaxy_printseparator, align 8
+    %frame = alloca %Frame_printgalaxy_printseparator, align 8
     ret void
 }
 
@@ -487,7 +487,7 @@ define void @P_printgalaxy_printseparator()
 ; procedure body
 define void @P_printdamage()
 {
-    %1 = alloca %Frame_printdamage, align 8
+    %frame = alloca %Frame_printdamage, align 8
     ret void
 }
 
@@ -514,7 +514,7 @@ define void @P_printdamage()
 ; procedure body
 define void @P_moveenterprise()
 {
-    %1 = alloca %Frame_moveenterprise, align 8
+    %frame = alloca %Frame_moveenterprise, align 8
     ret void
 }
 
@@ -537,7 +537,7 @@ define void @P_moveenterprise()
 ; procedure body
 define void @P_moveenterprise_handledamage()
 {
-    %1 = alloca %Frame_moveenterprise_handledamage, align 8
+    %frame = alloca %Frame_moveenterprise_handledamage, align 8
     ret void
 }
 
@@ -564,7 +564,7 @@ define void @P_moveenterprise_handledamage()
 ; procedure body
 define void @P_moveenterprise_moveintra()
 {
-    %1 = alloca %Frame_moveenterprise_moveintra, align 8
+    %frame = alloca %Frame_moveenterprise_moveintra, align 8
     ret void
 }
 
@@ -588,7 +588,7 @@ define void @P_moveenterprise_moveintra()
 ; procedure body
 define void @P_firephasers()
 {
-    %1 = alloca %Frame_firephasers, align 8
+    %frame = alloca %Frame_firephasers, align 8
     ret void
 }
 
@@ -616,7 +616,7 @@ define void @P_firephasers()
 ; procedure body
 define void @P_firetorpedoes()
 {
-    %1 = alloca %Frame_firetorpedoes, align 8
+    %frame = alloca %Frame_firetorpedoes, align 8
     ret void
 }
 
@@ -644,7 +644,7 @@ define void @P_firetorpedoes()
 ; procedure body
 define void @P_firetorpedoes_hitnova()
 {
-    %1 = alloca %Frame_firetorpedoes_hitnova, align 8
+    %frame = alloca %Frame_firetorpedoes_hitnova, align 8
     ret void
 }
 
@@ -672,7 +672,7 @@ define void @P_firetorpedoes_hitnova()
 ; procedure body
 define void @P_firetorpedoes_hitklingbase()
 {
-    %1 = alloca %Frame_firetorpedoes_hitklingbase, align 8
+    %frame = alloca %Frame_firetorpedoes_hitklingbase, align 8
     ret void
 }
 
@@ -694,7 +694,7 @@ define void @P_firetorpedoes_hitklingbase()
 ; procedure body
 define void @P_selfdestruct()
 {
-    %1 = alloca %Frame_selfdestruct, align 8
+    %frame = alloca %Frame_selfdestruct, align 8
     ret void
 }
 
@@ -717,7 +717,7 @@ define void @P_selfdestruct()
 ; procedure body
 define void @P_command()
 {
-    %1 = alloca %Frame_command, align 8
+    %frame = alloca %Frame_command, align 8
     ret void
 }
 
@@ -739,7 +739,7 @@ define void @P_command()
 ; procedure body
 define void @P_instructions()
 {
-    %1 = alloca %Frame_instructions, align 8
+    %frame = alloca %Frame_instructions, align 8
     ret void
 }
 
@@ -758,7 +758,7 @@ define void @P_instructions()
 ; procedure body
 define void @P_instructions_spacewait()
 {
-    %1 = alloca %Frame_instructions_spacewait, align 8
+    %frame = alloca %Frame_instructions_spacewait, align 8
     ret void
 }
 
@@ -777,7 +777,7 @@ define void @P_instructions_spacewait()
 ; procedure body
 define void @P_instructions_page1()
 {
-    %1 = alloca %Frame_instructions_page1, align 8
+    %frame = alloca %Frame_instructions_page1, align 8
     ret void
 }
 
@@ -796,7 +796,7 @@ define void @P_instructions_page1()
 ; procedure body
 define void @P_instructions_page2()
 {
-    %1 = alloca %Frame_instructions_page2, align 8
+    %frame = alloca %Frame_instructions_page2, align 8
     ret void
 }
 
@@ -815,7 +815,7 @@ define void @P_instructions_page2()
 ; procedure body
 define void @P_instructions_page3()
 {
-    %1 = alloca %Frame_instructions_page3, align 8
+    %frame = alloca %Frame_instructions_page3, align 8
     ret void
 }
 
@@ -834,7 +834,7 @@ define void @P_instructions_page3()
 ; procedure body
 define void @P_instructions_page4()
 {
-    %1 = alloca %Frame_instructions_page4, align 8
+    %frame = alloca %Frame_instructions_page4, align 8
     ret void
 }
 
@@ -853,7 +853,7 @@ define void @P_instructions_page4()
 ; procedure body
 define void @P_instructions_page5()
 {
-    %1 = alloca %Frame_instructions_page5, align 8
+    %frame = alloca %Frame_instructions_page5, align 8
     ret void
 }
 
@@ -872,7 +872,7 @@ define void @P_instructions_page5()
 ; procedure body
 define void @P_instructions_page6()
 {
-    %1 = alloca %Frame_instructions_page6, align 8
+    %frame = alloca %Frame_instructions_page6, align 8
     ret void
 }
 
@@ -894,7 +894,7 @@ define void @P_instructions_page6()
 ; procedure body
 define void @P_finishgame()
 {
-    %1 = alloca %Frame_finishgame, align 8
+    %frame = alloca %Frame_finishgame, align 8
     ret void
 }
 

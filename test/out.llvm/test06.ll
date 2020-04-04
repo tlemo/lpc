@@ -54,7 +54,7 @@ define void @P_()
 ; procedure body
 define void @P_init()
 {
-    %1 = alloca %Frame_init, align 8
+    %frame = alloca %Frame_init, align 8
     ret void
 }
 
@@ -77,7 +77,7 @@ define void @P_init()
 ; procedure body
 define void @P_setValue()
 {
-    %1 = alloca %Frame_setValue, align 8
+    %frame = alloca %Frame_setValue, align 8
     ret void
 }
 
@@ -99,7 +99,7 @@ define void @P_setValue()
 ; procedure body
 define void @P_free()
 {
-    %1 = alloca %Frame_free, align 8
+    %frame = alloca %Frame_free, align 8
     ret void
 }
 

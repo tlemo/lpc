@@ -234,10 +234,10 @@ define void @P_()
 ; function body
 define i32 @F_MAX()
 {
-    %1 = alloca %Frame_MAX, align 8
-    %2 = getelementptr inbounds %Frame_MAX, %Frame_MAX* %1, i32 0, i32 2
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_MAX, align 8
+    %t1 = getelementptr inbounds %Frame_MAX, %Frame_MAX* %frame, i32 0, i32 2
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -262,10 +262,10 @@ define i32 @F_MAX()
 ; function body
 define i32 @F_MIN()
 {
-    %1 = alloca %Frame_MIN, align 8
-    %2 = getelementptr inbounds %Frame_MIN, %Frame_MIN* %1, i32 0, i32 2
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_MIN, align 8
+    %t1 = getelementptr inbounds %Frame_MIN, %Frame_MIN* %frame, i32 0, i32 2
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -290,10 +290,10 @@ define i32 @F_MIN()
 ; function body
 define i32 @F_SIGN()
 {
-    %1 = alloca %Frame_SIGN, align 8
-    %2 = getelementptr inbounds %Frame_SIGN, %Frame_SIGN* %1, i32 0, i32 2
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_SIGN, align 8
+    %t1 = getelementptr inbounds %Frame_SIGN, %Frame_SIGN* %frame, i32 0, i32 2
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -323,7 +323,7 @@ define i32 @F_SIGN()
 ; procedure body
 define void @P_SORTIT()
 {
-    %1 = alloca %Frame_SORTIT, align 8
+    %frame = alloca %Frame_SORTIT, align 8
     ret void
 }
 
@@ -350,7 +350,7 @@ define void @P_SORTIT()
 ; procedure body
 define void @P_ANDRS()
 {
-    %1 = alloca %Frame_ANDRS, align 8
+    %frame = alloca %Frame_ANDRS, align 8
     ret void
 }
 
@@ -373,7 +373,7 @@ define void @P_ANDRS()
 ; procedure body
 define void @P_CLRRS()
 {
-    %1 = alloca %Frame_CLRRS, align 8
+    %frame = alloca %Frame_CLRRS, align 8
     ret void
 }
 
@@ -399,7 +399,7 @@ define void @P_CLRRS()
 ; procedure body
 define void @P_CPYRS()
 {
-    %1 = alloca %Frame_CPYRS, align 8
+    %frame = alloca %Frame_CPYRS, align 8
     ret void
 }
 
@@ -426,7 +426,7 @@ define void @P_CPYRS()
 ; procedure body
 define void @P_IORRS()
 {
-    %1 = alloca %Frame_IORRS, align 8
+    %frame = alloca %Frame_IORRS, align 8
     ret void
 }
 
@@ -451,7 +451,7 @@ define void @P_IORRS()
 ; procedure body
 define void @P_NEWRS()
 {
-    %1 = alloca %Frame_NEWRS, align 8
+    %frame = alloca %Frame_NEWRS, align 8
     ret void
 }
 
@@ -477,7 +477,7 @@ define void @P_NEWRS()
 ; procedure body
 define void @P_NOTRS()
 {
-    %1 = alloca %Frame_NOTRS, align 8
+    %frame = alloca %Frame_NOTRS, align 8
     ret void
 }
 
@@ -505,10 +505,10 @@ define void @P_NOTRS()
 ; function body
 define i1 @F_NXTTS()
 {
-    %1 = alloca %Frame_NXTTS, align 8
-    %2 = getelementptr inbounds %Frame_NXTTS, %Frame_NXTTS* %1, i32 0, i32 2
-    %3 = load i1, i1* %2
-    ret i1 %3
+    %frame = alloca %Frame_NXTTS, align 8
+    %t1 = getelementptr inbounds %Frame_NXTTS, %Frame_NXTTS* %frame, i32 0, i32 2
+    %t2 = load i1, i1* %t1
+    ret i1 %t2
 }
 
 
@@ -535,10 +535,10 @@ define i1 @F_NXTTS()
 ; function body
 define i32 @F_CNTRS()
 {
-    %1 = alloca %Frame_CNTRS, align 8
-    %2 = getelementptr inbounds %Frame_CNTRS, %Frame_CNTRS* %1, i32 0, i32 1
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_CNTRS, align 8
+    %t1 = getelementptr inbounds %Frame_CNTRS, %Frame_CNTRS* %frame, i32 0, i32 1
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -560,7 +560,7 @@ define i32 @F_CNTRS()
 ; procedure body
 define void @P_SETRS()
 {
-    %1 = alloca %Frame_SETRS, align 8
+    %frame = alloca %Frame_SETRS, align 8
     ret void
 }
 
@@ -587,7 +587,7 @@ define void @P_SETRS()
 ; procedure body
 define void @P_SFTRS()
 {
-    %1 = alloca %Frame_SFTRS, align 8
+    %frame = alloca %Frame_SFTRS, align 8
     ret void
 }
 
@@ -613,10 +613,10 @@ define void @P_SFTRS()
 ; function body
 define i1 @F_INRSTB()
 {
-    %1 = alloca %Frame_INRSTB, align 8
-    %2 = getelementptr inbounds %Frame_INRSTB, %Frame_INRSTB* %1, i32 0, i32 2
-    %3 = load i1, i1* %2
-    ret i1 %3
+    %frame = alloca %Frame_INRSTB, align 8
+    %t1 = getelementptr inbounds %Frame_INRSTB, %Frame_INRSTB* %frame, i32 0, i32 2
+    %t2 = load i1, i1* %t1
+    ret i1 %t2
 }
 
 
@@ -642,10 +642,10 @@ define i1 @F_INRSTB()
 ; function body
 define i1 @F_NULRS()
 {
-    %1 = alloca %Frame_NULRS, align 8
-    %2 = getelementptr inbounds %Frame_NULRS, %Frame_NULRS* %1, i32 0, i32 1
-    %3 = load i1, i1* %2
-    ret i1 %3
+    %frame = alloca %Frame_NULRS, align 8
+    %t1 = getelementptr inbounds %Frame_NULRS, %Frame_NULRS* %frame, i32 0, i32 1
+    %t2 = load i1, i1* %t1
+    ret i1 %t2
 }
 
 
@@ -669,10 +669,10 @@ define i1 @F_NULRS()
 ; function body
 define i1 @F_NULMVB()
 {
-    %1 = alloca %Frame_NULMVB, align 8
-    %2 = getelementptr inbounds %Frame_NULMVB, %Frame_NULMVB* %1, i32 0, i32 1
-    %3 = load i1, i1* %2
-    ret i1 %3
+    %frame = alloca %Frame_NULMVB, align 8
+    %t1 = getelementptr inbounds %Frame_NULMVB, %Frame_NULMVB* %frame, i32 0, i32 1
+    %t2 = load i1, i1* %t1
+    ret i1 %t2
 }
 
 
@@ -705,7 +705,7 @@ define i1 @F_NULMVB()
 ; procedure body
 define void @P_INICON()
 {
-    %1 = alloca %Frame_INICON, align 8
+    %frame = alloca %Frame_INICON, align 8
     ret void
 }
 
@@ -727,7 +727,7 @@ define void @P_INICON()
 ; procedure body
 define void @P_INICON_INISYN()
 {
-    %1 = alloca %Frame_INICON_INISYN, align 8
+    %frame = alloca %Frame_INICON_INISYN, align 8
     ret void
 }
 
@@ -756,7 +756,7 @@ define void @P_INICON_INISYN()
 ; procedure body
 define void @P_INICON_INIXTP()
 {
-    %1 = alloca %Frame_INICON_INIXTP, align 8
+    %frame = alloca %Frame_INICON_INIXTP, align 8
     ret void
 }
 
@@ -782,7 +782,7 @@ define void @P_INICON_INIXTP()
 ; procedure body
 define void @P_INITAL()
 {
-    %1 = alloca %Frame_INITAL, align 8
+    %frame = alloca %Frame_INITAL, align 8
     ret void
 }
 
@@ -801,7 +801,7 @@ define void @P_INITAL()
 ; procedure body
 define void @P_PAUSER()
 {
-    %1 = alloca %Frame_PAUSER, align 8
+    %frame = alloca %Frame_PAUSER, align 8
     ret void
 }
 
@@ -823,7 +823,7 @@ define void @P_PAUSER()
 ; procedure body
 define void @P_PRIMOV()
 {
-    %1 = alloca %Frame_PRIMOV, align 8
+    %frame = alloca %Frame_PRIMOV, align 8
     ret void
 }
 
@@ -849,7 +849,7 @@ define void @P_PRIMOV()
 ; procedure body
 define void @P_PRINTB()
 {
-    %1 = alloca %Frame_PRINTB, align 8
+    %frame = alloca %Frame_PRINTB, align 8
     ret void
 }
 
@@ -877,7 +877,7 @@ define void @P_PRINTB()
 ; procedure body
 define void @P_PRINAM()
 {
-    %1 = alloca %Frame_PRINAM, align 8
+    %frame = alloca %Frame_PRINAM, align 8
     ret void
 }
 
@@ -900,7 +900,7 @@ define void @P_PRINAM()
 ; procedure body
 define void @P_PRISWI()
 {
-    %1 = alloca %Frame_PRISWI, align 8
+    %frame = alloca %Frame_PRISWI, align 8
     ret void
 }
 
@@ -922,7 +922,7 @@ define void @P_PRISWI()
 ; procedure body
 define void @P_MBEVAL()
 {
-    %1 = alloca %Frame_MBEVAL, align 8
+    %frame = alloca %Frame_MBEVAL, align 8
     ret void
 }
 
@@ -944,7 +944,7 @@ define void @P_MBEVAL()
 ; procedure body
 define void @P_MBCAPT()
 {
-    %1 = alloca %Frame_MBCAPT, align 8
+    %frame = alloca %Frame_MBCAPT, align 8
     ret void
 }
 
@@ -966,7 +966,7 @@ define void @P_MBCAPT()
 ; procedure body
 define void @P_MBTPAC()
 {
-    %1 = alloca %Frame_MBTPAC, align 8
+    %frame = alloca %Frame_MBTPAC, align 8
     ret void
 }
 
@@ -988,7 +988,7 @@ define void @P_MBTPAC()
 ; procedure body
 define void @P_MBPROM()
 {
-    %1 = alloca %Frame_MBPROM, align 8
+    %frame = alloca %Frame_MBPROM, align 8
     ret void
 }
 
@@ -1010,7 +1010,7 @@ define void @P_MBPROM()
 ; procedure body
 define void @P_MBMORP()
 {
-    %1 = alloca %Frame_MBMORP, align 8
+    %frame = alloca %Frame_MBMORP, align 8
     ret void
 }
 
@@ -1040,7 +1040,7 @@ define void @P_MBMORP()
 ; procedure body
 define void @P_ADDATK()
 {
-    %1 = alloca %Frame_ADDATK, align 8
+    %frame = alloca %Frame_ADDATK, align 8
     ret void
 }
 
@@ -1063,7 +1063,7 @@ define void @P_ADDATK()
 ; procedure body
 define void @P_ADDLOC()
 {
-    %1 = alloca %Frame_ADDLOC, align 8
+    %frame = alloca %Frame_ADDLOC, align 8
     ret void
 }
 
@@ -1082,7 +1082,7 @@ define void @P_ADDLOC()
 ; procedure body
 define void @P_CLSTAT()
 {
-    %1 = alloca %Frame_CLSTAT, align 8
+    %frame = alloca %Frame_CLSTAT, align 8
     ret void
 }
 
@@ -1113,7 +1113,7 @@ define void @P_CLSTAT()
 ; procedure body
 define void @P_CUTATK()
 {
-    %1 = alloca %Frame_CUTATK, align 8
+    %frame = alloca %Frame_CUTATK, align 8
     ret void
 }
 
@@ -1141,7 +1141,7 @@ define void @P_CUTATK()
 ; procedure body
 define void @P_DELATK()
 {
-    %1 = alloca %Frame_DELATK, align 8
+    %frame = alloca %Frame_DELATK, align 8
     ret void
 }
 
@@ -1171,7 +1171,7 @@ define void @P_DELATK()
 ; procedure body
 define void @P_PRPATK()
 {
-    %1 = alloca %Frame_PRPATK, align 8
+    %frame = alloca %Frame_PRPATK, align 8
     ret void
 }
 
@@ -1193,7 +1193,7 @@ define void @P_PRPATK()
 ; procedure body
 define void @P_GAINIT()
 {
-    %1 = alloca %Frame_GAINIT, align 8
+    %frame = alloca %Frame_GAINIT, align 8
     ret void
 }
 
@@ -1215,7 +1215,7 @@ define void @P_GAINIT()
 ; procedure body
 define void @P_LOSEIT()
 {
-    %1 = alloca %Frame_LOSEIT, align 8
+    %frame = alloca %Frame_LOSEIT, align 8
     ret void
 }
 
@@ -1237,7 +1237,7 @@ define void @P_LOSEIT()
 ; procedure body
 define void @P_MOVEIT()
 {
-    %1 = alloca %Frame_MOVEIT, align 8
+    %frame = alloca %Frame_MOVEIT, align 8
     ret void
 }
 
@@ -1259,7 +1259,7 @@ define void @P_MOVEIT()
 ; procedure body
 define void @P_RTRKIT()
 {
-    %1 = alloca %Frame_RTRKIT, align 8
+    %frame = alloca %Frame_RTRKIT, align 8
     ret void
 }
 
@@ -1281,7 +1281,7 @@ define void @P_RTRKIT()
 ; procedure body
 define void @P_PAWNIT()
 {
-    %1 = alloca %Frame_PAWNIT, align 8
+    %frame = alloca %Frame_PAWNIT, align 8
     ret void
 }
 
@@ -1307,7 +1307,7 @@ define void @P_PAWNIT()
 ; procedure body
 define void @P_PROACA()
 {
-    %1 = alloca %Frame_PROACA, align 8
+    %frame = alloca %Frame_PROACA, align 8
     ret void
 }
 
@@ -1329,7 +1329,7 @@ define void @P_PROACA()
 ; procedure body
 define void @P_PROACS()
 {
-    %1 = alloca %Frame_PROACS, align 8
+    %frame = alloca %Frame_PROACS, align 8
     ret void
 }
 
@@ -1351,7 +1351,7 @@ define void @P_PROACS()
 ; procedure body
 define void @P_PROMOT()
 {
-    %1 = alloca %Frame_PROMOT, align 8
+    %frame = alloca %Frame_PROMOT, align 8
     ret void
 }
 
@@ -1377,7 +1377,7 @@ define void @P_PROMOT()
 ; procedure body
 define void @P_CREATE()
 {
-    %1 = alloca %Frame_CREATE, align 8
+    %frame = alloca %Frame_CREATE, align 8
     ret void
 }
 
@@ -1406,7 +1406,7 @@ define void @P_CREATE()
 ; procedure body
 define void @P_DNDATE()
 {
-    %1 = alloca %Frame_DNDATE, align 8
+    %frame = alloca %Frame_DNDATE, align 8
     ret void
 }
 
@@ -1438,10 +1438,10 @@ define void @P_DNDATE()
 ; function body
 define i1 @F_UPDATE()
 {
-    %1 = alloca %Frame_UPDATE, align 8
-    %2 = getelementptr inbounds %Frame_UPDATE, %Frame_UPDATE* %1, i32 0, i32 1
-    %3 = load i1, i1* %2
-    ret i1 %3
+    %frame = alloca %Frame_UPDATE, align 8
+    %t1 = getelementptr inbounds %Frame_UPDATE, %Frame_UPDATE* %frame, i32 0, i32 1
+    %t2 = load i1, i1* %t1
+    ret i1 %t2
 }
 
 
@@ -1466,7 +1466,7 @@ define i1 @F_UPDATE()
 ; procedure body
 define void @P_GENONE()
 {
-    %1 = alloca %Frame_GENONE, align 8
+    %frame = alloca %Frame_GENONE, align 8
     ret void
 }
 
@@ -1488,7 +1488,7 @@ define void @P_GENONE()
 ; procedure body
 define void @P_PWNPRO()
 {
-    %1 = alloca %Frame_PWNPRO, align 8
+    %frame = alloca %Frame_PWNPRO, align 8
     ret void
 }
 
@@ -1516,7 +1516,7 @@ define void @P_PWNPRO()
 ; procedure body
 define void @P_GENPWN()
 {
-    %1 = alloca %Frame_GENPWN, align 8
+    %frame = alloca %Frame_GENPWN, align 8
     ret void
 }
 
@@ -1545,7 +1545,7 @@ define void @P_GENPWN()
 ; procedure body
 define void @P_GENFSL()
 {
-    %1 = alloca %Frame_GENFSL, align 8
+    %frame = alloca %Frame_GENFSL, align 8
     ret void
 }
 
@@ -1574,7 +1574,7 @@ define void @P_GENFSL()
 ; procedure body
 define void @P_GENTSL()
 {
-    %1 = alloca %Frame_GENTSL, align 8
+    %frame = alloca %Frame_GENTSL, align 8
     ret void
 }
 
@@ -1596,7 +1596,7 @@ define void @P_GENTSL()
 ; procedure body
 define void @P_GENCAP()
 {
-    %1 = alloca %Frame_GENCAP, align 8
+    %frame = alloca %Frame_GENCAP, align 8
     ret void
 }
 
@@ -1620,7 +1620,7 @@ define void @P_GENCAP()
 ; procedure body
 define void @P_GENCAS()
 {
-    %1 = alloca %Frame_GENCAS, align 8
+    %frame = alloca %Frame_GENCAS, align 8
     ret void
 }
 
@@ -1639,7 +1639,7 @@ define void @P_GENCAS()
 ; procedure body
 define void @P_GENALL()
 {
-    %1 = alloca %Frame_GENALL, align 8
+    %frame = alloca %Frame_GENALL, align 8
     ret void
 }
 
@@ -1661,7 +1661,7 @@ define void @P_GENALL()
 ; procedure body
 define void @P_LSTMOV()
 {
-    %1 = alloca %Frame_LSTMOV, align 8
+    %frame = alloca %Frame_LSTMOV, align 8
     ret void
 }
 
@@ -1689,7 +1689,7 @@ define void @P_LSTMOV()
 ; procedure body
 define void @P_THEMOV()
 {
-    %1 = alloca %Frame_THEMOV, align 8
+    %frame = alloca %Frame_THEMOV, align 8
     ret void
 }
 
@@ -1711,7 +1711,7 @@ define void @P_THEMOV()
 ; procedure body
 define void @P_EVALU8()
 {
-    %1 = alloca %Frame_EVALU8, align 8
+    %frame = alloca %Frame_EVALU8, align 8
     ret void
 }
 
@@ -1740,10 +1740,10 @@ define void @P_EVALU8()
 ; function body
 define i32 @F_EVALU8_EVKING()
 {
-    %1 = alloca %Frame_EVALU8_EVKING, align 8
-    %2 = getelementptr inbounds %Frame_EVALU8_EVKING, %Frame_EVALU8_EVKING* %1, i32 0, i32 2
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_EVALU8_EVKING, align 8
+    %t1 = getelementptr inbounds %Frame_EVALU8_EVKING, %Frame_EVALU8_EVKING* %frame, i32 0, i32 2
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -1771,10 +1771,10 @@ define i32 @F_EVALU8_EVKING()
 ; function body
 define i32 @F_EVALU8_EVMOBL()
 {
-    %1 = alloca %Frame_EVALU8_EVMOBL, align 8
-    %2 = getelementptr inbounds %Frame_EVALU8_EVMOBL, %Frame_EVALU8_EVMOBL* %1, i32 0, i32 2
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_EVALU8_EVMOBL, align 8
+    %t1 = getelementptr inbounds %Frame_EVALU8_EVMOBL, %Frame_EVALU8_EVMOBL* %frame, i32 0, i32 2
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -1804,10 +1804,10 @@ define i32 @F_EVALU8_EVMOBL()
 ; function body
 define i32 @F_EVALU8_EVPAWN()
 {
-    %1 = alloca %Frame_EVALU8_EVPAWN, align 8
-    %2 = getelementptr inbounds %Frame_EVALU8_EVPAWN, %Frame_EVALU8_EVPAWN* %1, i32 0, i32 3
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_EVALU8_EVPAWN, align 8
+    %t1 = getelementptr inbounds %Frame_EVALU8_EVPAWN, %Frame_EVALU8_EVPAWN* %frame, i32 0, i32 3
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -1836,10 +1836,10 @@ define i32 @F_EVALU8_EVPAWN()
 ; function body
 define i32 @F_EVALU8_EVROOK()
 {
-    %1 = alloca %Frame_EVALU8_EVROOK, align 8
-    %2 = getelementptr inbounds %Frame_EVALU8_EVROOK, %Frame_EVALU8_EVROOK* %1, i32 0, i32 2
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_EVALU8_EVROOK, align 8
+    %t1 = getelementptr inbounds %Frame_EVALU8_EVROOK, %Frame_EVALU8_EVROOK* %frame, i32 0, i32 2
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -1861,10 +1861,10 @@ define i32 @F_EVALU8_EVROOK()
 ; function body
 define i32 @F_SEARCH()
 {
-    %1 = alloca %Frame_SEARCH, align 8
-    %2 = getelementptr inbounds %Frame_SEARCH, %Frame_SEARCH* %1, i32 0, i32 0
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_SEARCH, align 8
+    %t1 = getelementptr inbounds %Frame_SEARCH, %Frame_SEARCH* %frame, i32 0, i32 0
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -1889,7 +1889,7 @@ define i32 @F_SEARCH()
 ; procedure body
 define void @P_SEARCH_NEWBST()
 {
-    %1 = alloca %Frame_SEARCH_NEWBST, align 8
+    %frame = alloca %Frame_SEARCH_NEWBST, align 8
     ret void
 }
 
@@ -1914,10 +1914,10 @@ define void @P_SEARCH_NEWBST()
 ; function body
 define i1 @F_SEARCH_MINMAX()
 {
-    %1 = alloca %Frame_SEARCH_MINMAX, align 8
-    %2 = getelementptr inbounds %Frame_SEARCH_MINMAX, %Frame_SEARCH_MINMAX* %1, i32 0, i32 1
-    %3 = load i1, i1* %2
-    ret i1 %3
+    %frame = alloca %Frame_SEARCH_MINMAX, align 8
+    %t1 = getelementptr inbounds %Frame_SEARCH_MINMAX, %Frame_SEARCH_MINMAX* %frame, i32 0, i32 1
+    %t2 = load i1, i1* %t1
+    ret i1 %t2
 }
 
 
@@ -1935,7 +1935,7 @@ define i1 @F_SEARCH_MINMAX()
 ; procedure body
 define void @P_SEARCH_SCOREM()
 {
-    %1 = alloca %Frame_SEARCH_SCOREM, align 8
+    %frame = alloca %Frame_SEARCH_SCOREM, align 8
     ret void
 }
 
@@ -1962,10 +1962,10 @@ define void @P_SEARCH_SCOREM()
 ; function body
 define i1 @F_SEARCH_SELECT()
 {
-    %1 = alloca %Frame_SEARCH_SELECT, align 8
-    %2 = getelementptr inbounds %Frame_SEARCH_SELECT, %Frame_SEARCH_SELECT* %1, i32 0, i32 0
-    %3 = load i1, i1* %2
-    ret i1 %3
+    %frame = alloca %Frame_SEARCH_SELECT, align 8
+    %t1 = getelementptr inbounds %Frame_SEARCH_SELECT, %Frame_SEARCH_SELECT* %frame, i32 0, i32 0
+    %t2 = load i1, i1* %t1
+    ret i1 %t2
 }
 
 
@@ -1983,7 +1983,7 @@ define i1 @F_SEARCH_SELECT()
 ; procedure body
 define void @P_SEARCH_SELECT_SELDON()
 {
-    %1 = alloca %Frame_SEARCH_SELECT_SELDON, align 8
+    %frame = alloca %Frame_SEARCH_SELECT_SELDON, align 8
     ret void
 }
 
@@ -2005,7 +2005,7 @@ define void @P_SEARCH_SELECT_SELDON()
 ; procedure body
 define void @P_SEARCH_SELECT_SELMOV()
 {
-    %1 = alloca %Frame_SEARCH_SELECT_SELMOV, align 8
+    %frame = alloca %Frame_SEARCH_SELECT_SELMOV, align 8
     ret void
 }
 
@@ -2027,7 +2027,7 @@ define void @P_SEARCH_SELECT_SELMOV()
 ; procedure body
 define void @P_SEARCH_SELECT_SELNXT()
 {
-    %1 = alloca %Frame_SEARCH_SELECT_SELNXT, align 8
+    %frame = alloca %Frame_SEARCH_SELECT_SELNXT, align 8
     ret void
 }
 
@@ -2049,7 +2049,7 @@ define void @P_SEARCH_SELECT_SELNXT()
 ; procedure body
 define void @P_SEARCH_SELECT_SELANY()
 {
-    %1 = alloca %Frame_SEARCH_SELECT_SELANY, align 8
+    %frame = alloca %Frame_SEARCH_SELECT_SELANY, align 8
     ret void
 }
 
@@ -2072,7 +2072,7 @@ define void @P_SEARCH_SELECT_SELANY()
 ; procedure body
 define void @P_READER()
 {
-    %1 = alloca %Frame_READER, align 8
+    %frame = alloca %Frame_READER, align 8
     ret void
 }
 
@@ -2098,7 +2098,7 @@ define void @P_READER()
 ; procedure body
 define void @P_READER_RDRERR()
 {
-    %1 = alloca %Frame_READER_RDRERR, align 8
+    %frame = alloca %Frame_READER_RDRERR, align 8
     ret void
 }
 
@@ -2124,10 +2124,10 @@ define void @P_READER_RDRERR()
 ; function body
 define i1 @F_READER_RDRGNT()
 {
-    %1 = alloca %Frame_READER_RDRGNT, align 8
-    %2 = getelementptr inbounds %Frame_READER_RDRGNT, %Frame_READER_RDRGNT* %1, i32 0, i32 1
-    %3 = load i1, i1* %2
-    ret i1 %3
+    %frame = alloca %Frame_READER_RDRGNT, align 8
+    %t1 = getelementptr inbounds %Frame_READER_RDRGNT, %Frame_READER_RDRGNT* %frame, i32 0, i32 1
+    %t2 = load i1, i1* %t1
+    ret i1 %t2
 }
 
 
@@ -2149,7 +2149,7 @@ define i1 @F_READER_RDRGNT()
 ; procedure body
 define void @P_READER_RDRSFT()
 {
-    %1 = alloca %Frame_READER_RDRSFT, align 8
+    %frame = alloca %Frame_READER_RDRSFT, align 8
     ret void
 }
 
@@ -2175,7 +2175,7 @@ define void @P_READER_RDRSFT()
 ; procedure body
 define void @P_READER_RDRCMD()
 {
-    %1 = alloca %Frame_READER_RDRCMD, align 8
+    %frame = alloca %Frame_READER_RDRCMD, align 8
     ret void
 }
 
@@ -2198,7 +2198,7 @@ define void @P_READER_RDRCMD()
 ; procedure body
 define void @P_READER_RDLINE()
 {
-    %1 = alloca %Frame_READER_RDLINE, align 8
+    %frame = alloca %Frame_READER_RDLINE, align 8
     ret void
 }
 
@@ -2221,10 +2221,10 @@ define void @P_READER_RDLINE()
 ; function body
 define i1 @F_READER_RDRMOV()
 {
-    %1 = alloca %Frame_READER_RDRMOV, align 8
-    %2 = getelementptr inbounds %Frame_READER_RDRMOV, %Frame_READER_RDRMOV* %1, i32 0, i32 0
-    %3 = load i1, i1* %2
-    ret i1 %3
+    %frame = alloca %Frame_READER_RDRMOV, align 8
+    %t1 = getelementptr inbounds %Frame_READER_RDRMOV, %Frame_READER_RDRMOV* %frame, i32 0, i32 0
+    %t2 = load i1, i1* %t1
+    ret i1 %t2
 }
 
 
@@ -2247,10 +2247,10 @@ define i1 @F_READER_RDRMOV()
 ; function body
 define i32 @F_READER_RDRNUM()
 {
-    %1 = alloca %Frame_READER_RDRNUM, align 8
-    %2 = getelementptr inbounds %Frame_READER_RDRNUM, %Frame_READER_RDRNUM* %1, i32 0, i32 0
-    %3 = load i32, i32* %2
-    ret i32 %3
+    %frame = alloca %Frame_READER_RDRNUM, align 8
+    %t1 = getelementptr inbounds %Frame_READER_RDRNUM, %Frame_READER_RDRNUM* %frame, i32 0, i32 0
+    %t2 = load i32, i32* %t1
+    ret i32 %t2
 }
 
 
@@ -2273,7 +2273,7 @@ define i32 @F_READER_RDRNUM()
 ; procedure body
 define void @P_READER_BOACMD()
 {
-    %1 = alloca %Frame_READER_BOACMD, align 8
+    %frame = alloca %Frame_READER_BOACMD, align 8
     ret void
 }
 
@@ -2295,7 +2295,7 @@ define void @P_READER_BOACMD()
 ; procedure body
 define void @P_READER_BOACMD_BOAADV()
 {
-    %1 = alloca %Frame_READER_BOACMD_BOAADV, align 8
+    %frame = alloca %Frame_READER_BOACMD_BOAADV, align 8
     ret void
 }
 
@@ -2317,7 +2317,7 @@ define void @P_READER_BOACMD_BOAADV()
 ; procedure body
 define void @P_READER_BOACMD_BOASTO()
 {
-    %1 = alloca %Frame_READER_BOACMD_BOASTO, align 8
+    %frame = alloca %Frame_READER_BOACMD_BOASTO, align 8
     ret void
 }
 
@@ -2336,7 +2336,7 @@ define void @P_READER_BOACMD_BOASTO()
 ; procedure body
 define void @P_READER_ENDCMD()
 {
-    %1 = alloca %Frame_READER_ENDCMD, align 8
+    %frame = alloca %Frame_READER_ENDCMD, align 8
     ret void
 }
 
@@ -2355,7 +2355,7 @@ define void @P_READER_ENDCMD()
 ; procedure body
 define void @P_READER_GONCMD()
 {
-    %1 = alloca %Frame_READER_GONCMD, align 8
+    %frame = alloca %Frame_READER_GONCMD, align 8
     ret void
 }
 
@@ -2374,7 +2374,7 @@ define void @P_READER_GONCMD()
 ; procedure body
 define void @P_READER_INICMD()
 {
-    %1 = alloca %Frame_READER_INICMD, align 8
+    %frame = alloca %Frame_READER_INICMD, align 8
     ret void
 }
 
@@ -2393,7 +2393,7 @@ define void @P_READER_INICMD()
 ; procedure body
 define void @P_READER_LETCMD()
 {
-    %1 = alloca %Frame_READER_LETCMD, align 8
+    %frame = alloca %Frame_READER_LETCMD, align 8
     ret void
 }
 
@@ -2416,7 +2416,7 @@ define void @P_READER_LETCMD()
 ; procedure body
 define void @P_READER_LETCMD_LETONE()
 {
-    %1 = alloca %Frame_READER_LETCMD_LETONE, align 8
+    %frame = alloca %Frame_READER_LETCMD_LETONE, align 8
     ret void
 }
 
@@ -2435,7 +2435,7 @@ define void @P_READER_LETCMD_LETONE()
 ; procedure body
 define void @P_READER_PLECMD()
 {
-    %1 = alloca %Frame_READER_PLECMD, align 8
+    %frame = alloca %Frame_READER_PLECMD, align 8
     ret void
 }
 
@@ -2458,7 +2458,7 @@ define void @P_READER_PLECMD()
 ; procedure body
 define void @P_READER_PLECMD_PRIONE()
 {
-    %1 = alloca %Frame_READER_PLECMD_PRIONE, align 8
+    %frame = alloca %Frame_READER_PLECMD_PRIONE, align 8
     ret void
 }
 
@@ -2477,7 +2477,7 @@ define void @P_READER_PLECMD_PRIONE()
 ; procedure body
 define void @P_READER_PRICMD()
 {
-    %1 = alloca %Frame_READER_PRICMD, align 8
+    %frame = alloca %Frame_READER_PRICMD, align 8
     ret void
 }
 
@@ -2496,7 +2496,7 @@ define void @P_READER_PRICMD()
 ; procedure body
 define void @P_READER_PAMCMD()
 {
-    %1 = alloca %Frame_READER_PAMCMD, align 8
+    %frame = alloca %Frame_READER_PAMCMD, align 8
     ret void
 }
 
@@ -2518,7 +2518,7 @@ define void @P_READER_PAMCMD()
 ; procedure body
 define void @P_READER_POPCMD()
 {
-    %1 = alloca %Frame_READER_POPCMD, align 8
+    %frame = alloca %Frame_READER_POPCMD, align 8
     ret void
 }
 
@@ -2540,7 +2540,7 @@ define void @P_READER_POPCMD()
 ; procedure body
 define void @P_READER_PMVCMD()
 {
-    %1 = alloca %Frame_READER_PMVCMD, align 8
+    %frame = alloca %Frame_READER_PMVCMD, align 8
     ret void
 }
 
@@ -2559,7 +2559,7 @@ define void @P_READER_PMVCMD()
 ; procedure body
 define void @P_READER_SWICMD()
 {
-    %1 = alloca %Frame_READER_SWICMD, align 8
+    %frame = alloca %Frame_READER_SWICMD, align 8
     ret void
 }
 
@@ -2585,7 +2585,7 @@ define void @P_READER_SWICMD()
 ; procedure body
 define void @P_READER_SWICMD_SWIONE()
 {
-    %1 = alloca %Frame_READER_SWICMD_SWIONE, align 8
+    %frame = alloca %Frame_READER_SWICMD_SWIONE, align 8
     ret void
 }
 
@@ -2608,7 +2608,7 @@ define void @P_READER_SWICMD_SWIONE()
 ; procedure body
 define void @P_READER_STACMD()
 {
-    %1 = alloca %Frame_READER_STACMD, align 8
+    %frame = alloca %Frame_READER_STACMD, align 8
     ret void
 }
 
@@ -2631,7 +2631,7 @@ define void @P_READER_STACMD()
 ; procedure body
 define void @P_READER_STACMD_STAEPF()
 {
-    %1 = alloca %Frame_READER_STACMD_STAEPF, align 8
+    %frame = alloca %Frame_READER_STACMD_STAEPF, align 8
     ret void
 }
 
@@ -2650,7 +2650,7 @@ define void @P_READER_STACMD_STAEPF()
 ; procedure body
 define void @P_READER_STACMD_STACAK()
 {
-    %1 = alloca %Frame_READER_STACMD_STACAK, align 8
+    %frame = alloca %Frame_READER_STACMD_STACAK, align 8
     ret void
 }
 
@@ -2669,7 +2669,7 @@ define void @P_READER_STACMD_STACAK()
 ; procedure body
 define void @P_READER_STACMD_STACAQ()
 {
-    %1 = alloca %Frame_READER_STACMD_STACAQ, align 8
+    %frame = alloca %Frame_READER_STACMD_STACAQ, align 8
     ret void
 }
 
@@ -2688,7 +2688,7 @@ define void @P_READER_STACMD_STACAQ()
 ; procedure body
 define void @P_READER_STACMD_STADRK()
 {
-    %1 = alloca %Frame_READER_STACMD_STADRK, align 8
+    %frame = alloca %Frame_READER_STACMD_STADRK, align 8
     ret void
 }
 
@@ -2707,7 +2707,7 @@ define void @P_READER_STACMD_STADRK()
 ; procedure body
 define void @P_READER_STACMD_STAENP()
 {
-    %1 = alloca %Frame_READER_STACMD_STAENP, align 8
+    %frame = alloca %Frame_READER_STACMD_STAENP, align 8
     ret void
 }
 
@@ -2726,7 +2726,7 @@ define void @P_READER_STACMD_STAENP()
 ; procedure body
 define void @P_READER_STACMD_STAGOS()
 {
-    %1 = alloca %Frame_READER_STACMD_STAGOS, align 8
+    %frame = alloca %Frame_READER_STACMD_STAGOS, align 8
     ret void
 }
 
@@ -2745,7 +2745,7 @@ define void @P_READER_STACMD_STAGOS()
 ; procedure body
 define void @P_READER_STACMD_STALIT()
 {
-    %1 = alloca %Frame_READER_STACMD_STALIT, align 8
+    %frame = alloca %Frame_READER_STACMD_STALIT, align 8
     ret void
 }
 
@@ -2764,7 +2764,7 @@ define void @P_READER_STACMD_STALIT()
 ; procedure body
 define void @P_READER_STACMD_STANUM()
 {
-    %1 = alloca %Frame_READER_STACMD_STANUM, align 8
+    %frame = alloca %Frame_READER_STACMD_STANUM, align 8
     ret void
 }
 
@@ -2790,7 +2790,7 @@ define void @P_READER_STACMD_STANUM()
 ; procedure body
 define void @P_READER_STACMD_STAOPT()
 {
-    %1 = alloca %Frame_READER_STACMD_STAOPT, align 8
+    %frame = alloca %Frame_READER_STACMD_STAOPT, align 8
     ret void
 }
 
@@ -2809,7 +2809,7 @@ define void @P_READER_STACMD_STAOPT()
 ; procedure body
 define void @P_READER_WHACMD()
 {
-    %1 = alloca %Frame_READER_WHACMD, align 8
+    %frame = alloca %Frame_READER_WHACMD, align 8
     ret void
 }
 
@@ -2835,7 +2835,7 @@ define void @P_READER_WHACMD()
 ; procedure body
 define void @P_MINENG()
 {
-    %1 = alloca %Frame_MINENG, align 8
+    %frame = alloca %Frame_MINENG, align 8
     ret void
 }
 
@@ -2857,7 +2857,7 @@ define void @P_MINENG()
 ; procedure body
 define void @P_MINENG_ADDCHR()
 {
-    %1 = alloca %Frame_MINENG_ADDCHR, align 8
+    %frame = alloca %Frame_MINENG_ADDCHR, align 8
     ret void
 }
 
@@ -2880,7 +2880,7 @@ define void @P_MINENG_ADDCHR()
 ; procedure body
 define void @P_MINENG_ADDSQR()
 {
-    %1 = alloca %Frame_MINENG_ADDSQR, align 8
+    %frame = alloca %Frame_MINENG_ADDSQR, align 8
     ret void
 }
 
@@ -2906,7 +2906,7 @@ define void @P_MINENG_ADDSQR()
 ; procedure body
 define void @P_MINENG_ADDWRD()
 {
-    %1 = alloca %Frame_MINENG_ADDWRD, align 8
+    %frame = alloca %Frame_MINENG_ADDWRD, align 8
     ret void
 }
 
@@ -2933,10 +2933,10 @@ define void @P_MINENG_ADDWRD()
 ; function body
 define i1 @F_MINENG_DIFFER()
 {
-    %1 = alloca %Frame_MINENG_DIFFER, align 8
-    %2 = getelementptr inbounds %Frame_MINENG_DIFFER, %Frame_MINENG_DIFFER* %1, i32 0, i32 2
-    %3 = load i1, i1* %2
-    ret i1 %3
+    %frame = alloca %Frame_MINENG_DIFFER, align 8
+    %t1 = getelementptr inbounds %Frame_MINENG_DIFFER, %Frame_MINENG_DIFFER* %frame, i32 0, i32 2
+    %t2 = load i1, i1* %t1
+    ret i1 %t2
 }
 
 
@@ -2960,7 +2960,7 @@ define i1 @F_MINENG_DIFFER()
 ; procedure body
 define void @P_MINENG_SETSQD()
 {
-    %1 = alloca %Frame_MINENG_SETSQD, align 8
+    %frame = alloca %Frame_MINENG_SETSQD, align 8
     ret void
 }
 
@@ -2993,7 +2993,7 @@ define void @P_MINENG_SETSQD()
 ; procedure body
 define void @P_MINENG_MINGEN()
 {
-    %1 = alloca %Frame_MINENG_MINGEN, align 8
+    %frame = alloca %Frame_MINENG_MINGEN, align 8
     ret void
 }
 
@@ -3015,7 +3015,7 @@ define void @P_MINENG_MINGEN()
 ; procedure body
 define void @P_MYMOVE()
 {
-    %1 = alloca %Frame_MYMOVE, align 8
+    %frame = alloca %Frame_MYMOVE, align 8
     ret void
 }
 
@@ -3057,7 +3057,7 @@ define void @P_MYMOVE()
 ; procedure body
 define void @P_YRMOVE()
 {
-    %1 = alloca %Frame_YRMOVE, align 8
+    %frame = alloca %Frame_YRMOVE, align 8
     ret void
 }
 
@@ -3076,7 +3076,7 @@ define void @P_YRMOVE()
 ; procedure body
 define void @P_YRMOVE_YRMHIT()
 {
-    %1 = alloca %Frame_YRMOVE_YRMHIT, align 8
+    %frame = alloca %Frame_YRMOVE_YRMHIT, align 8
     ret void
 }
 
@@ -3095,7 +3095,7 @@ define void @P_YRMOVE_YRMHIT()
 ; procedure body
 define void @P_YRMOVE_YRMCOM()
 {
-    %1 = alloca %Frame_YRMOVE_YRMCOM, align 8
+    %frame = alloca %Frame_YRMOVE_YRMCOM, align 8
     ret void
 }
 
@@ -3114,7 +3114,7 @@ define void @P_YRMOVE_YRMCOM()
 ; procedure body
 define void @P_YRMOVE_YRMCAP()
 {
-    %1 = alloca %Frame_YRMOVE_YRMCAP, align 8
+    %frame = alloca %Frame_YRMOVE_YRMCAP, align 8
     ret void
 }
 
@@ -3133,7 +3133,7 @@ define void @P_YRMOVE_YRMCAP()
 ; procedure body
 define void @P_YRMOVE_YRMCAS()
 {
-    %1 = alloca %Frame_YRMOVE_YRMCAS, align 8
+    %frame = alloca %Frame_YRMOVE_YRMCAS, align 8
     ret void
 }
 
@@ -3152,7 +3152,7 @@ define void @P_YRMOVE_YRMCAS()
 ; procedure body
 define void @P_YRMOVE_YRMCPC()
 {
-    %1 = alloca %Frame_YRMOVE_YRMCPC, align 8
+    %frame = alloca %Frame_YRMOVE_YRMCPC, align 8
     ret void
 }
 
@@ -3171,7 +3171,7 @@ define void @P_YRMOVE_YRMCPC()
 ; procedure body
 define void @P_YRMOVE_YRMCQS()
 {
-    %1 = alloca %Frame_YRMOVE_YRMCQS, align 8
+    %frame = alloca %Frame_YRMOVE_YRMCQS, align 8
     ret void
 }
 
@@ -3190,7 +3190,7 @@ define void @P_YRMOVE_YRMCQS()
 ; procedure body
 define void @P_YRMOVE_YRMLKQ()
 {
-    %1 = alloca %Frame_YRMOVE_YRMLKQ, align 8
+    %frame = alloca %Frame_YRMOVE_YRMLKQ, align 8
     ret void
 }
 
@@ -3209,7 +3209,7 @@ define void @P_YRMOVE_YRMLKQ()
 ; procedure body
 define void @P_YRMOVE_YRMLRB()
 {
-    %1 = alloca %Frame_YRMOVE_YRMLRB, align 8
+    %frame = alloca %Frame_YRMOVE_YRMLRB, align 8
     ret void
 }
 
@@ -3228,7 +3228,7 @@ define void @P_YRMOVE_YRMLRB()
 ; procedure body
 define void @P_YRMOVE_YRMLRK()
 {
-    %1 = alloca %Frame_YRMOVE_YRMLRK, align 8
+    %frame = alloca %Frame_YRMOVE_YRMLRK, align 8
     ret void
 }
 
@@ -3247,7 +3247,7 @@ define void @P_YRMOVE_YRMLRK()
 ; procedure body
 define void @P_YRMOVE_YRMNUL()
 {
-    %1 = alloca %Frame_YRMOVE_YRMNUL, align 8
+    %frame = alloca %Frame_YRMOVE_YRMNUL, align 8
     ret void
 }
 
@@ -3266,7 +3266,7 @@ define void @P_YRMOVE_YRMNUL()
 ; procedure body
 define void @P_YRMOVE_YRMPCM()
 {
-    %1 = alloca %Frame_YRMOVE_YRMPCM, align 8
+    %frame = alloca %Frame_YRMOVE_YRMPCM, align 8
     ret void
 }
 
@@ -3285,7 +3285,7 @@ define void @P_YRMOVE_YRMPCM()
 ; procedure body
 define void @P_YRMOVE_YRMPRO()
 {
-    %1 = alloca %Frame_YRMOVE_YRMPRO, align 8
+    %frame = alloca %Frame_YRMOVE_YRMPRO, align 8
     ret void
 }
 
@@ -3304,7 +3304,7 @@ define void @P_YRMOVE_YRMPRO()
 ; procedure body
 define void @P_YRMOVE_YRMRKQ()
 {
-    %1 = alloca %Frame_YRMOVE_YRMRKQ, align 8
+    %frame = alloca %Frame_YRMOVE_YRMRKQ, align 8
     ret void
 }
 
@@ -3323,7 +3323,7 @@ define void @P_YRMOVE_YRMRKQ()
 ; procedure body
 define void @P_YRMOVE_YRMRRB()
 {
-    %1 = alloca %Frame_YRMOVE_YRMRRB, align 8
+    %frame = alloca %Frame_YRMOVE_YRMRRB, align 8
     ret void
 }
 
@@ -3342,7 +3342,7 @@ define void @P_YRMOVE_YRMRRB()
 ; procedure body
 define void @P_YRMOVE_YRMRRK()
 {
-    %1 = alloca %Frame_YRMOVE_YRMRRK, align 8
+    %frame = alloca %Frame_YRMOVE_YRMRRK, align 8
     ret void
 }
 
@@ -3372,10 +3372,10 @@ define void @P_YRMOVE_YRMRRK()
 ; function body
 define i1 @F_YRMOVE_NCHIN()
 {
-    %1 = alloca %Frame_YRMOVE_NCHIN, align 8
-    %2 = getelementptr inbounds %Frame_YRMOVE_NCHIN, %Frame_YRMOVE_NCHIN* %1, i32 0, i32 2
-    %3 = load i1, i1* %2
-    ret i1 %3
+    %frame = alloca %Frame_YRMOVE_NCHIN, align 8
+    %t1 = getelementptr inbounds %Frame_YRMOVE_NCHIN, %Frame_YRMOVE_NCHIN* %frame, i32 0, i32 2
+    %t2 = load i1, i1* %t1
+    ret i1 %t2
 }
 
 
