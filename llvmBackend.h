@@ -659,41 +659,17 @@ private:
         auto pVar = pVarExpr->pVariable;
         _generateType(pVar->pType);
 
-        const auto* pVarExt = ext(pVar);
-        const auto* pTypeExt = ext(pVar->pType);
-
         const auto value = _genTempValue();
-        const auto irType = pTypeExt->genName;
+        const auto& irType = ext(pVar->pType)->genName;
+        const auto varPtrIr = _genVarAddress(pVar);
 
         stringstream code;
-        string varPtr;
 
-        // frame-based?
-        if (pVarExt->genName.empty())
-        {
-            assert(pVarExt->frameIndex >= 0);
-            
-            varPtr = _genTempValue();
-
-            const auto frameIr = _genFrameAddress(pVar->pScope);
-            const auto& frameName = ext(pVar->pScope->subroutine())->frameName;
-
-            code << frameIr.code;
-            code << TAB << varPtr << " = getelementptr inbounds " <<
-                frameName << ", " << frameName << "* " << frameIr.value <<
-                ", i32 0, i32 " << pVarExt->frameIndex << "\n";
-        }
-        else
-        {
-            // global variable
-            varPtr = pVarExt->genName;
-        }
+        code << varPtrIr.code;
 
         // load the value
-        assert(!varPtr.empty());
-        assert(!irType.empty());
         code << TAB << value << " = load " << irType << ", " <<
-            irType << "* " << varPtr << "\n";
+            irType << "* " << varPtrIr.value << "\n";
 
         return newIrFragment(code, value);
     }
@@ -1395,6 +1371,36 @@ private:
         return { code.str(), framePtr };
     }
 
+    IrFragment _genVarAddress(obj::Variable* pVar)
+    {
+        const auto* pVarExt = ext(pVar);
+
+        stringstream code;
+        string varPtr;
+
+        // frame-based?
+        if (pVarExt->genName.empty())
+        {
+            assert(pVarExt->frameIndex >= 0);
+            
+            varPtr = _genTempValue();
+
+            const auto frameIr = _genFrameAddress(pVar->pScope);
+            const auto& frameName = ext(pVar->pScope->subroutine())->frameName;
+
+            code << frameIr.code;
+            code << TAB << varPtr << " = getelementptr inbounds " <<
+                frameName << ", " << frameName << "* " << frameIr.value <<
+                ", i32 0, i32 " << pVarExt->frameIndex << "\n";
+        }
+        else
+        {
+            // global variable
+            varPtr = pVarExt->genName;
+        }
+
+        return { code.str(), varPtr };
+    }
 
     // generates the address of a lvalue expression
     //
@@ -1405,7 +1411,63 @@ private:
         stringstream code;
         string value;
 
-        // TODO
+        // variable?
+        //
+        if(auto pVarExpr = pLValue->as<ast::VarExpr>())
+        {
+            return _genVarAddress(pVarExpr->pVariable);
+        }
+        // parameter?
+        //
+        else if(auto pParamExpr = pLValue->as<ast::ParamExpr>())
+        {
+            auto pParam = pParamExpr->pParameter;
+
+            // TODO
+        }
+        // indirection?
+        //
+        else if(auto pIndirection = pLValue->as<ast::Indirection>())
+        {
+            if(pIndirection->pObject->pType->isPointer())
+            {
+                // TODO
+            }
+            else
+            {
+                assert(pIndirection->pObject->pType->isFile());
+
+                // TODO
+            }
+        }
+        // array element?
+        //
+        else if(auto pArrayIndex = pLValue->as<ast::ArrayIndex>())
+        {
+            auto pElemType = pArrayIndex->pType;
+            auto pArrayType = pArrayIndex->pObject->pType;
+
+            _generateType(pElemType);
+            _generateType(pArrayType);
+
+            // TODO
+        }
+        // field?
+        //
+        else if(auto pFieldDst = pLValue->as<ast::FieldExpr>())
+        {
+            auto pFieldType = pFieldDst->pType;
+            auto pRecordType = pFieldDst->pField->pRecord->pType;
+
+            _generateType(pFieldType);
+            _generateType(pRecordType);
+
+            // TODO
+        }
+        else
+        {
+            assert(pLValue->isA<ast::DummyValue>());
+        }
 
         return { code.str(), value };
     }
