@@ -78,15 +78,16 @@ struct StringLiteral
 {
     string name;
     string llvmType;
+    string address;
 };
 
 
 ///////////////////////////////////////////////////////////////////////////////
 //
 inline
-VarPtr newIrFragment(const std::stringstream& code, const string& value)
+VarPtr newIrFragment(const string& code, const string& value)
 {
-    return VarPtr(new IrFragment{code.str(), value});
+    return VarPtr(new IrFragment{code, value});
 }
 
 
@@ -383,7 +384,15 @@ private:
         stringstream llvmType;
         llvmType << "[" << str.length() + 1 << " x i8]";
 
-        auto newLiteral = new StringLiteral{ literalName.str(), llvmType.str() };
+        // address value (as i8*)
+        //
+        stringstream address;
+        address << "getelementptr inbounds (" <<
+            llvmType.str() << ", " << llvmType.str() << "* " <<
+            literalName.str() << ", i32 0, i32 0)";
+
+        auto newLiteral = new StringLiteral{
+            literalName.str(), llvmType.str(), address.str() };
         m_stringLiterals.insert({ str, newLiteral });
         return newLiteral;
     }
@@ -641,9 +650,37 @@ private:
     {
         _generateType(pConstExpr->pType);
 
-        stringstream code;
-        // TODO
-        return allocStr(code);
+        const auto* pType = pConstExpr->pType;
+        const auto* pConst = pConstExpr->pConstant;
+        stringstream value;
+
+        if (pType->isString())
+        {
+            auto literal = _genLiteral(*pConst->strValue);
+            value << literal->address;
+        }
+        else if (pType->isInteger())
+        {
+            value << pConst->intValue;
+        }
+        else if (pType->isReal())
+        {
+            value << std::showpoint << pConst->realValue;
+        }
+        else if (pType->isBool())
+        {
+            value << pConst->intValue;
+        }
+        else if (pType->isChar())
+        {
+            value << pConst->intValue;
+        }
+        else if (pType->isPointer())
+        {
+            value << "null";
+        }
+
+        return newIrFragment("", value.str());
     }
 
     // ast::Intrinsic should only appear part of a intrinsic call
@@ -671,7 +708,7 @@ private:
         code << TAB << value << " = load " << irType << ", " <<
             irType << "* " << varPtrIr.value << "\n";
 
-        return newIrFragment(code, value);
+        return newIrFragment(code.str(), value);
     }
 
     VarPtr visit(const ast::ParamExpr* pParamExpr) override
@@ -1470,6 +1507,47 @@ private:
         }
 
         return { code.str(), value };
+    }
+
+    // explicit variable initializers
+    //
+    // NOTE: for now, this is very specific to File objects initialization
+    // 
+    IrFragment _genExplicitInitializers(obj::Subroutine* pSubroutine)
+    {
+        stringstream code;
+
+        for(auto pVar : m_varList)
+        {
+            if(pVar->pInitializer == nullptr)
+                continue;
+
+            assert(pVar->pType->isFile());
+            assert(pVar->pInitializer->isConst());
+
+            // initializer value
+            const auto pInitExprIr = gen(pVar->pInitializer);
+            assert(!pInitExprIr->value.empty());
+            code << pInitExprIr->code;
+
+            // call init function
+            const auto fileHandle = _genTempValue();
+            code << TAB << fileHandle;
+            if (pVar->pInitializer->pType->isString())
+                code << " = call i8* @_OpenTempFile(i8* " << pInitExprIr->value << ")\n";
+            else
+                code << " = call i8* @_OpenFile(i32 " << pInitExprIr->value << ")\n";
+
+            // variable address
+            const auto varPtrIr = _genVarAddress(pVar);
+            code << varPtrIr.code;
+
+            // store value
+            code << TAB << "store i8* " << fileHandle <<
+                ", i8** " << varPtrIr.value << "\n";
+        }
+
+        return { code.str(), "" };
     }
 
     // generates the assignment to a "lvalue"

@@ -2,6 +2,10 @@
 source_filename = "C:\Users\lemo\work\compilers\lpc\test\roman.pas"
 target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 
+; runtime functions
+declare dso_local i8* @_OpenFile(i32)
+declare dso_local i8* @_OpenTempFile(i8*)
+
 ; program arguments (command line mapping)
 %struct._Filename = type { i8*, i8* }
 @_FilenameMapEntries = internal global [3 x %struct._Filename]
@@ -33,6 +37,10 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; procedure body
 define void @P_()
 {
+    %t1 = call i8* @_OpenFile(i32 0)
+    store i8* %t1, i8** @_input
+    %t2 = call i8* @_OpenFile(i32 1)
+    store i8* %t2, i8** @output
     ret void
 }
 

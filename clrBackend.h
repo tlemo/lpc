@@ -1100,6 +1100,7 @@ private:
             if(pVar->pInitializer == nullptr)
                 continue;
 
+            assert(pVar->pType->isFile());
             assert(pVar->pInitializer->isConst());
 
             auto pOverloadType = pVar->pInitializer->pType;

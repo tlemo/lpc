@@ -706,6 +706,13 @@ void LlvmBackend::_start()
     code << "target datalayout = \"e-m:w-i64:64-f80:128-n8:16:32:64-S128\"\n";
     code << "\n";
 
+    // runtime interface
+    //
+    code << "; runtime functions\n";
+    code << "declare dso_local i8* @_OpenFile(i32)\n";
+    code << "declare dso_local i8* @_OpenTempFile(i8*)\n";
+    code << "\n";
+
     // generate the command line mapping
     //
     const auto& args = context()->symbolTable()->programArgs();
@@ -720,9 +727,7 @@ void LlvmBackend::_start()
     for (const auto& arg : args)
     {
         auto literal = _genLiteral(arg);
-        code << TAB << "%struct._Filename { i8* getelementptr inbounds (" <<
-            literal->llvmType << ", " << literal->llvmType << "* " <<
-            literal->name << ", i32 0, i32 0), i8* null },\n";
+        code << TAB << "%struct._Filename { i8* " << literal->address << ", i8* null },\n";
     }
     code << TAB << "%struct._Filename { i8* null, i8* null }\n";
     code << TAB << "], align 16\n";
@@ -885,10 +890,18 @@ void LlvmBackend::_outputSubroutine(obj::Subroutine* pSubroutine)
     //
     code << "{\n";
     
+    // allocate frame
+    //
     if (!pExt->frameName.empty())
     {
         code << TAB << "%frame = alloca " << pExt->frameName << ", align 8\n";
     }
+
+    // initializers
+    //
+    auto initializersIr = _genExplicitInitializers(pSubroutine);
+    assert(initializersIr.value.empty());
+    code << initializersIr.code;
     
     if (pType->isFunction())
     {
