@@ -332,15 +332,16 @@ class LlvmBackend : public Backend, public ast::Visitor
 private:
     Scope* m_pCurrentScope = nullptr;
 
-    // per scope state
+    // per-subroutine state
     //
-    ts::TypeList m_typeList;
-    obj::VarList m_varList;
-    obj::ParamList m_paramList;
+    vector<ts::Type*> m_typeList; 
+    vector<obj::Variable*> m_varList;
+    vector<obj::Parameter*> m_paramList;
+    vector<obj::Variable*> m_cleanupList;
 
     int m_tempValueGen = 0;
 
-    // global (per program) state
+    // global (per-program) state
     //
     map<string, StringLiteral*> m_stringLiterals;
     int m_stringLiteralGen = 0;
@@ -479,6 +480,7 @@ private:
         m_typeList.clear();
         m_varList.clear();
         m_paramList.clear();
+        m_cleanupList.clear();
         m_tempValueGen = 1;
 
         // generate symbols (types, consts, locals...)
@@ -1513,7 +1515,7 @@ private:
     //
     // NOTE: for now, this is very specific to File objects initialization
     // 
-    IrFragment _genExplicitInitializers(obj::Subroutine* pSubroutine)
+    string _genInitializers(obj::Subroutine* pSubroutine)
     {
         stringstream code;
 
@@ -1525,12 +1527,16 @@ private:
             assert(pVar->pType->isFile());
             assert(pVar->pInitializer->isConst());
 
+            m_cleanupList.push_back(pVar);
+
             // initializer value
+            //
             const auto pInitExprIr = gen(pVar->pInitializer);
             assert(!pInitExprIr->value.empty());
             code << pInitExprIr->code;
 
             // call init function
+            //
             const auto fileHandle = _genTempValue();
             code << TAB << fileHandle;
             if (pVar->pInitializer->pType->isString())
@@ -1539,15 +1545,67 @@ private:
                 code << " = call i8* @_OpenFile(i32 " << pInitExprIr->value << ")\n";
 
             // variable address
+            //
             const auto varPtrIr = _genVarAddress(pVar);
             code << varPtrIr.code;
 
             // store value
+            //
             code << TAB << "store i8* " << fileHandle <<
                 ", i8** " << varPtrIr.value << "\n";
         }
 
-        return { code.str(), "" };
+        return code.str();
+    }
+
+    // cleanup file variables
+    //
+    string _genCleanup(obj::Subroutine* pSubroutine)
+    {
+        stringstream code;
+
+        for (auto pVar : m_cleanupList)
+        {
+            assert(pVar->pType->isFile());
+
+            // call file "destructor"
+            //
+            ast::VarExpr handleExpr(pVar, NO_LOCATION);
+            const auto pFileHandleIr = gen(&handleExpr);
+            assert(!pFileHandleIr->value.empty());
+            code << pFileHandleIr->code;
+            code << TAB << "call void @_CloseFile(i8* " << pFileHandleIr->value << ")\n";
+        }
+
+        return code.str();
+    }
+
+    string _genEpilogue(obj::Subroutine* pSubroutine)
+    {
+        stringstream code;
+        
+        if (pSubroutine->pType->isFunction())
+        {
+            // return value
+            //
+            assert(pSubroutine->pFnValue != nullptr);
+            const auto& returnType = ext(pSubroutine->pType->returnType())->genName;
+            const auto retValuePtr = _genTempValue();
+            const auto retValue = _genTempValue();
+            const auto& frameName = ext(pSubroutine)->frameName;
+            code << TAB << retValuePtr << " = getelementptr inbounds " <<
+                frameName << ", " << frameName << "* %frame, i32 0, " <<
+                "i32 " << ext(pSubroutine->pFnValue)->frameIndex << "\n";
+            code << TAB << retValue << " = load " << returnType << ", " <<
+                returnType << "* " << retValuePtr << "\n";
+            code << TAB << "ret " << returnType << " " << retValue << "\n";
+        }
+        else
+        {
+            code << TAB << "ret void\n";
+        }
+
+        return code.str();
     }
 
     // generates the assignment to a "lvalue"

@@ -14,13 +14,21 @@
 // limitations under the License.
 
 #include "llvmRuntime.h"
+#include "textFile.h"
 
 #include <stdio.h>
 #include <stdlib.h>
 #include <stdarg.h>
 #include <assert.h>
+#include <unordered_map>
 
 #include <windows.h>
+
+
+// keeps track of the opened files
+// (g_fileHandles[handle] is true if the file is currently open)
+//
+static std::unordered_map<void*, bool> g_fileHandles;
 
 
 extern "C"
@@ -47,7 +55,7 @@ void _RTAbort(const char* message, va_list argptr)
         __debugbreak();
     }
     
-	::abort();
+    ::abort();
 }
 
 
@@ -78,10 +86,23 @@ void _RTCheck(bool cond, const char* message, ...)
 
 ///////////////////////////////////////////////////////////////////////////////
 //
+static
+void registerFile(void* handle)
+{
+    const bool inserted = g_fileHandles.insert({ handle, true }).second;
+    assert(inserted);
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
 void* _OpenFile(int index)
 {
     // TODO
-    return nullptr;
+    printf("openFile(%d)\n", index);
+    auto pFile = new lpcrt::TextFile();
+    registerFile(pFile);
+    return pFile;
 }
 
 
@@ -90,7 +111,39 @@ void* _OpenFile(int index)
 void* _OpenTempFile(const char* name)
 {
     // TODO
-    return nullptr;
+    printf("openFile('%s')\n", name);
+    auto pFile = new lpcrt::TextFile();
+    registerFile(pFile);
+    return pFile;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+void _CloseFile(void* handle)
+{
+    // TODO
+    printf("closeFile()\n");
+    auto it = g_fileHandles.find(handle);
+    _RTCheck(it != g_fileHandles.end(), "Attempting to close invalid file handle");
+    _RTCheck(it->second, "Attempting to close already closed file handle");
+    auto pFile = static_cast<lpcrt::TextFile*>(handle);
+    delete pFile;
+    it->second = false;
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+static
+void runtimeShutdown()
+{
+    // check for open file handles
+    //
+    for (const auto [handle, flag] : g_fileHandles)
+    {
+        _RTCheck(!flag, "File handle not closed");
+    }
 }
 
 
@@ -152,6 +205,13 @@ int main(int argc, const char* argv[])
 {
     assert(nullptr != _FilenameMap);
 
+    // set up crash/abort behavior
+    //
+    SetErrorMode(SEM_FAILCRITICALERRORS | SEM_NOGPFAULTERRORBOX);
+
+    _set_error_mode(_OUT_TO_STDERR);
+    _set_abort_behavior(0x0, _WRITE_ABORT_MSG | _CALL_REPORTFAULT);
+
     // parse the command line arguments
     //
     int idx = _FIRST_ARG_FILE_IDX;
@@ -194,6 +254,8 @@ int main(int argc, const char* argv[])
     // call the generated code entry point
     //
     P_();
+
+    runtimeShutdown();
 }
 
 } // extern "C"

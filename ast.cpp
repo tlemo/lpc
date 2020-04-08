@@ -439,6 +439,13 @@ AssignStm::AssignStm(Expr* pLValue, Expr* pRValue, int line) :
         context()->error(line, "value type incompatible with the assignment destination");
     }
 
+    // file assignments are not supported
+    //
+    if (pLValue->pType->isFile())
+    {
+        context()->error(line, "file assignment is not supported");
+    }
+
     // do we need an implicit cast?
     //
     if(!pLValue->pType->isSameType(pRValue->pType))

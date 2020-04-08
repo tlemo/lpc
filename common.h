@@ -121,7 +121,7 @@ struct _DontCopy
 {
     _DontCopy() = default;
     _DontCopy(const _DontCopy&) = delete;
-    void operator=(const _DontCopy&) = delete;
+    _DontCopy& operator=(const _DontCopy&) = delete;
 };
 
 

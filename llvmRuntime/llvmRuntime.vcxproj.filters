@@ -18,9 +18,15 @@
     <ClCompile Include="llvmRuntime.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
+    <ClCompile Include="textFile.cpp">
+      <Filter>Source Files</Filter>
+    </ClCompile>
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="llvmRuntime.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
+    <ClInclude Include="textFile.h">
       <Filter>Header Files</Filter>
     </ClInclude>
   </ItemGroup>

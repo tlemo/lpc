@@ -20,9 +20,11 @@
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="llvmRuntime.cpp" />
+    <ClCompile Include="textFile.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="llvmRuntime.h" />
+    <ClInclude Include="textFile.h" />
   </ItemGroup>
   <PropertyGroup Label="Globals">
     <VCProjectVersion>16.0</VCProjectVersion>

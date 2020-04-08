@@ -5,6 +5,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; runtime functions
 declare dso_local i8* @_OpenFile(i32)
 declare dso_local i8* @_OpenTempFile(i8*)
+declare dso_local void @_CloseFile(i8*)
 
 ; program arguments (command line mapping)
 %struct._Filename = type { i8*, i8* }
@@ -54,6 +55,12 @@ define void @P_()
     store i8* %t2, i8** @_output
     %t3 = call i8* @_OpenTempFile(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.3, i32 0, i32 0))
     store i8* %t3, i8** @tmp
+    %t4 = load %T_text, %T_text* @_input
+    call void @_CloseFile(i8* %t4)
+    %t5 = load %T_text, %T_text* @_output
+    call void @_CloseFile(i8* %t5)
+    %t6 = load %T_text, %T_text* @tmp
+    call void @_CloseFile(i8* %t6)
     ret void
 }
 

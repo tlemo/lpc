@@ -16,5 +16,11 @@ Exit code: 0
 
 running the executable
 -----------------------------------------------------
+openFile(0)
+openFile(1)
+openFile('tmp')
+closeFile()
+closeFile()
+closeFile()
 
 Exit code: 0

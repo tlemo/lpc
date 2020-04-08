@@ -20,5 +20,9 @@ Exit code: 0
 
 running the executable
 -----------------------------------------------------
+openFile(0)
+openFile(1)
+closeFile()
+closeFile()
 
 Exit code: 0

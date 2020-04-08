@@ -1226,8 +1226,8 @@ private:
         if(pSubroutine->pType->isFunction())
         {
             assert(pSubroutine->pFnValue != nullptr);
-            auto pFnValueExpr = new ast::VarExpr(pSubroutine->pFnValue, NO_LOCATION);
-            code << gen(pFnValueExpr);
+            ast::VarExpr fnValueExpr(pSubroutine->pFnValue, NO_LOCATION);
+            code << gen(&fnValueExpr);
         }
 
         code << TAB << "ret\n";

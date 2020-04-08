@@ -711,6 +711,7 @@ void LlvmBackend::_start()
     code << "; runtime functions\n";
     code << "declare dso_local i8* @_OpenFile(i32)\n";
     code << "declare dso_local i8* @_OpenTempFile(i8*)\n";
+    code << "declare dso_local void @_CloseFile(i8*)\n";
     code << "\n";
 
     // generate the command line mapping
@@ -897,32 +898,9 @@ void LlvmBackend::_outputSubroutine(obj::Subroutine* pSubroutine)
         code << TAB << "%frame = alloca " << pExt->frameName << ", align 8\n";
     }
 
-    // initializers
-    //
-    auto initializersIr = _genExplicitInitializers(pSubroutine);
-    assert(initializersIr.value.empty());
-    code << initializersIr.code;
-    
-    if (pType->isFunction())
-    {
-        // return value
-        //
-        assert(pSubroutine->pFnValue != nullptr);
-        const auto& returnType = ext(pType->returnType())->genName;
-        const auto retValuePtr = _genTempValue();
-        const auto retValue = _genTempValue();
-        code << TAB << retValuePtr << " = getelementptr inbounds " <<
-            pExt->frameName << ", " <<
-            pExt->frameName << "* %frame, i32 0, " <<
-            "i32 " << ext(pSubroutine->pFnValue)->frameIndex << "\n";
-        code << TAB << retValue << " = load " << returnType << ", " <<
-            returnType << "* " << retValuePtr << "\n";
-        code << TAB << "ret " << returnType << " " << retValue << "\n";
-    }
-    else
-    {
-        code << TAB << "ret void\n";
-    }
+    code << _genInitializers(pSubroutine);
+    code << _genCleanup(pSubroutine);
+    code << _genEpilogue(pSubroutine);
     
     code << "}\n\n";
 

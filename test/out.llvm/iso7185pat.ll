@@ -5,6 +5,7 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 ; runtime functions
 declare dso_local i8* @_OpenFile(i32)
 declare dso_local i8* @_OpenTempFile(i8*)
+declare dso_local void @_CloseFile(i8*)
 
 ; program arguments (command line mapping)
 %struct._Filename = type { i8*, i8* }
@@ -384,6 +385,60 @@ define void @P_()
     store i8* %t26, i8** @pfst
     %t27 = call i8* @_OpenTempFile(i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.27, i32 0, i32 0))
     store i8* %t27, i8** @pfstc
+    %t28 = load %T_text, %T_text* @_input
+    call void @_CloseFile(i8* %t28)
+    %t29 = load %T_file_33, %T_file_33* @fa
+    call void @_CloseFile(i8* %t29)
+    %t30 = load %T_file_34, %T_file_34* @fb
+    call void @_CloseFile(i8* %t30)
+    %t31 = load %T_text_35, %T_text_35* @fc
+    call void @_CloseFile(i8* %t31)
+    %t32 = load %T_file_36, %T_file_36* @fe
+    call void @_CloseFile(i8* %t32)
+    %t33 = load %T_file_37, %T_file_37* @fes
+    call void @_CloseFile(i8* %t33)
+    %t34 = load %T_file_38, %T_file_38* @fi
+    call void @_CloseFile(i8* %t34)
+    %t35 = load %T_file_39, %T_file_39* @fp
+    call void @_CloseFile(i8* %t35)
+    %t36 = load %T_file_40, %T_file_40* @fr
+    call void @_CloseFile(i8* %t36)
+    %t37 = load %T_file_41, %T_file_41* @frc
+    call void @_CloseFile(i8* %t37)
+    %t38 = load %T_file_43, %T_file_43* @fs
+    call void @_CloseFile(i8* %t38)
+    %t39 = load %T_file_44, %T_file_44* @fst
+    call void @_CloseFile(i8* %t39)
+    %t40 = load %T_file_45, %T_file_45* @fstc
+    call void @_CloseFile(i8* %t40)
+    %t41 = load %T_text, %T_text* @ft
+    call void @_CloseFile(i8* %t41)
+    %t42 = load %T_text, %T_text* @output
+    call void @_CloseFile(i8* %t42)
+    %t43 = load %T_file_78, %T_file_78* @pfa
+    call void @_CloseFile(i8* %t43)
+    %t44 = load %T_file_79, %T_file_79* @pfb
+    call void @_CloseFile(i8* %t44)
+    %t45 = load %T_text_80, %T_text_80* @pfc
+    call void @_CloseFile(i8* %t45)
+    %t46 = load %T_file_81, %T_file_81* @pfe
+    call void @_CloseFile(i8* %t46)
+    %t47 = load %T_file_82, %T_file_82* @pfes
+    call void @_CloseFile(i8* %t47)
+    %t48 = load %T_file_83, %T_file_83* @pfi
+    call void @_CloseFile(i8* %t48)
+    %t49 = load %T_file_84, %T_file_84* @pfp
+    call void @_CloseFile(i8* %t49)
+    %t50 = load %T_file_85, %T_file_85* @pfr
+    call void @_CloseFile(i8* %t50)
+    %t51 = load %T_file_86, %T_file_86* @pfrc
+    call void @_CloseFile(i8* %t51)
+    %t52 = load %T_file_87, %T_file_87* @pfs
+    call void @_CloseFile(i8* %t52)
+    %t53 = load %T_file_88, %T_file_88* @pfst
+    call void @_CloseFile(i8* %t53)
+    %t54 = load %T_file_89, %T_file_89* @pfstc
+    call void @_CloseFile(i8* %t54)
     ret void
 }
 

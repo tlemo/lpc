@@ -40,6 +40,7 @@ extern const int _FilenameMapSize;
 //
 void* _OpenFile(int index);
 void* _OpenTempFile(const char* name);
+void _CloseFile(void* handle);
 
 
 ///////////////////////////////////////////////////////////////////////////////
