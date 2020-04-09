@@ -986,51 +986,51 @@ private:
         return allocStr(code);
     }
 
-    string _expandRead(ast::ExprList* pArguments, bool readln)
+    IrFragment _expandRead(ast::ExprList* pArguments, bool readln)
     {
         stringstream code;
         // TODO
-        return code.str();
+        return { code.str(), "" };
     }
 
-    string _expandWrite(ast::ExprList* pArguments, bool writeln)
+    IrFragment _expandWrite(ast::ExprList* pArguments, bool writeln)
     {
         stringstream code;
         // TODO
-        return code.str();
+        return { code.str(), "" };
     }
 
-    string _expandTranscendental(const char* name, ast::ExprList* pArguments)
-    {
-        assert(nullptr != pArguments);
-        assert(pArguments->size() == 1);
-
-        stringstream code;
-        // TODO
-        return code.str();
-    }
-
-    string _expandSqr(ast::ExprList* pArguments)
+    IrFragment _expandTranscendental(const char* name, ast::ExprList* pArguments)
     {
         assert(nullptr != pArguments);
         assert(pArguments->size() == 1);
 
         stringstream code;
         // TODO
-        return code.str();
+        return { code.str(), "" };
     }
 
-    string _expandAbs(ast::ExprList* pArguments)
+    IrFragment _expandSqr(ast::ExprList* pArguments)
     {
         assert(nullptr != pArguments);
         assert(pArguments->size() == 1);
 
         stringstream code;
         // TODO
-        return code.str();
+        return { code.str(), "" };
     }
 
-    string _expandFileIntrinsic(obj::IntrinsicId intrinsicId, ast::ExprList* pArguments)
+    IrFragment _expandAbs(ast::ExprList* pArguments)
+    {
+        assert(nullptr != pArguments);
+        assert(pArguments->size() == 1);
+
+        stringstream code;
+        // TODO
+        return { code.str(), "" };
+    }
+
+    IrFragment _expandFileIntrinsic(obj::IntrinsicId intrinsicId, ast::ExprList* pArguments)
     {
         const static unordered_map<obj::IntrinsicId, string> fileIntrinsics = 
         {
@@ -1049,7 +1049,7 @@ private:
 
         stringstream code;
         // TODO
-        return code.str();
+        return { code.str(), "" };
     }
 
     // pack(a, start, z) intrinsic
@@ -1069,13 +1069,13 @@ private:
     //
     //  ... TODO ...
     //
-    string _expandPack(ast::ExprList* pArguments, int line)
+    IrFragment _expandPack(ast::ExprList* pArguments, int line)
     {
         assert(pArguments->size() == 3);
 
         stringstream code;
         // TODO
-        return code.str();
+        return { code.str(), "" };
     }
 
     // unpack(z, a, start) intrinsic
@@ -1095,83 +1095,83 @@ private:
     //
     //  ... TODO ...
     //
-    string _expandUnpack(ast::ExprList* pArguments, int line)
+    IrFragment _expandUnpack(ast::ExprList* pArguments, int line)
     {
         assert(pArguments->size() == 3);
 
         stringstream code;
         // TODO
-        return code.str();
+        return { code.str(), "" };
     }
 
-    string _expandOdd(ast::ExprList* pArguments)
+    IrFragment _expandOdd(ast::ExprList* pArguments)
     {
         assert(nullptr != pArguments);
         assert(pArguments->size() == 1);
 
         stringstream code;
         // TODO
-        return code.str();
+        return { code.str(), "" };
     }
 
-    string _expandHalt()
+    IrFragment _expandHalt()
     {
         stringstream code;
         // TODO
-        return code.str();
+        return { code.str(), "" };
     }
 
-    string _expandIncDec(ast::ExprList* pArguments, bool inc)
+    IrFragment _expandIncDec(ast::ExprList* pArguments, bool inc)
     {
         assert(nullptr != pArguments);
         assert(pArguments->size() == 1);
 
         stringstream code;
         // TODO
-        return code.str();
+        return { code.str(), "" };
     }
 
-    string _expandTrivialCast(ast::ExprList* pArguments)
+    IrFragment _expandTrivialCast(ast::ExprList* pArguments)
     {
         assert(nullptr != pArguments);
         assert(pArguments->size() == 1);
 
         stringstream code;
         code << gen(pArguments->front());
-        return code.str();
+        return { code.str(), "" };
     }
 
-    string _expandTrunc(const char* name, ast::ExprList* pArguments)
+    IrFragment _expandTrunc(const char* name, ast::ExprList* pArguments)
     {
         assert(nullptr != pArguments);
         assert(pArguments->size() == 1);
 
         stringstream code;
         // TODO
-        return code.str();
+        return { code.str(), "" };
     }
 
-    string _expandDispose(ast::ExprList* pArguments, int line)
+    IrFragment _expandDispose(ast::ExprList* pArguments, int line)
     {
         assert(nullptr != pArguments);
         assert(pArguments->size() >= 1);
 
         stringstream code;
         // TODO
-        return code.str();
+        return { code.str(), "" };
     }
 
-    string _expandNew(ast::ExprList* pArguments, int line)
+    IrFragment _expandNew(ast::ExprList* pArguments, int line)
     {
         assert(nullptr != pArguments);
         assert(pArguments->size() >= 1);
 
         stringstream code;
         // TODO
-        return code.str();
+        return { code.str(), "" };
     }
 
-    string _expandIntrinsic(const ast::Intrinsic* pIntrinsic, ast::ExprList* pArguments)
+    IrFragment _expandIntrinsic(const ast::Intrinsic* pIntrinsic, ast::ExprList* pArguments)
     {
         switch(pIntrinsic->intrinsicId)
         {
@@ -1258,7 +1258,7 @@ private:
 
         default:
             assert(!"unexpected intrinsic id");
-            return "";
+            return {};
         }
     }
 
@@ -1300,10 +1300,22 @@ private:
         return code.str();
     }
 
+    IrFragment _genFrameAddress(const Scope* pTargetScope);
+
+    IrFragment _genVarAddress(obj::Variable* pVar);
+
+    IrFragment _genLValueAddress(const ast::Expr* pLValue);
+
+    string _genInitializers(obj::Subroutine* pSubroutine);
+
+    string _genCleanup(obj::Subroutine* pSubroutine);
+
+    string _genEpilogue(obj::Subroutine* pSubroutine);
+
     // generate a subroutine (func/proc) call, either a direct call
     // or an indirect call through a subroutine pointer
     //
-    string _genCall(ast::Expr* pSubroutine, ast::ExprList* pArguments)
+    IrFragment _genCall(ast::Expr* pSubroutine, ast::ExprList* pArguments)
     {
         // intrinsic function/procedure?
         //
@@ -1314,7 +1326,7 @@ private:
 
         stringstream code;
         // TODO
-        return code.str();
+        return { code.str(), "" };
     }
 
     VarPtr visit(const ast::FuncCall* pFuncCall) override
@@ -1374,20 +1386,6 @@ private:
         return allocStr(code);
     }
 
-    IrFragment _genFrameAddress(const Scope* pTargetScope);
-
-    IrFragment _genVarAddress(obj::Variable* pVar);
-
-    IrFragment _genLValueAddress(const ast::Expr* pLValue);
-
-    string _genInitializers(obj::Subroutine* pSubroutine);
-
-    string _genCleanup(obj::Subroutine* pSubroutine);
-
-    string _genEpilogue(obj::Subroutine* pSubroutine);
-
-    // generates the assignment to a "lvalue"
-    //
     VarPtr visit(const ast::AssignStm* pAssignStm) override
     {
         stringstream code;
@@ -1445,7 +1443,8 @@ private:
 
     VarPtr visit(const ast::ProcCallStm* pProcCallStm) override
     {
-        return allocStr(_genCall(pProcCallStm->pProc, pProcCallStm->pArguments));
+        // TODO
+        return VarPtr();
     }
 };
 
