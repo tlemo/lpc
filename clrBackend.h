@@ -2419,10 +2419,10 @@ private:
                 else
                     code << TAB << "ldc.i4.0\n";
 
-                // precission (optional)
+                // precision (optional)
                 //
-                if(pWriteArgExpr->pPrecission != nullptr)
-                    code << gen(pWriteArgExpr->pPrecission);
+                if(pWriteArgExpr->pPrecision != nullptr)
+                    code << gen(pWriteArgExpr->pPrecision);
                 else
                     code << TAB << "ldc.i4.0\n";
 

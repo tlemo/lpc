@@ -1521,8 +1521,8 @@ private:
 
                 code << ", ";
 
-                code << ((nullptr != pWriteArgExpr->pPrecission) ?
-                    gen(pWriteArgExpr->pPrecission) : "0");
+                code << ((nullptr != pWriteArgExpr->pPrecision) ?
+                    gen(pWriteArgExpr->pPrecision) : "0");
 
                 code << ")";
             }

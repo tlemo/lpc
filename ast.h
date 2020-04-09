@@ -332,13 +332,13 @@ struct WriteArgExpr : public Expr
 {
     Expr* pValue;
     Expr* pWidth;
-    Expr* pPrecission;
+    Expr* pPrecision;
 
-    WriteArgExpr(Expr* pValue, Expr* pWidth, Expr* pPrecission, int line) :
-        Expr(line), pValue(pValue), pWidth(pWidth), pPrecission(pPrecission)
+    WriteArgExpr(Expr* pValue, Expr* pWidth, Expr* pPrecision, int line) :
+        Expr(line), pValue(pValue), pWidth(pWidth), pPrecision(pPrecision)
     {
         if(!pWidth->pType->isInteger()
-            || (pPrecission != nullptr && !pPrecission->pType->isInteger()))
+            || (pPrecision != nullptr && !pPrecision->pType->isInteger()))
         {
             context()->error(pValue->pType->line(), "invalid value format specifier");
         }
