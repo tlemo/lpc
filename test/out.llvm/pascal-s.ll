@@ -103,11 +103,11 @@ define void @P_()
     store i8* %t2, i8** @output
     %t3 = call i8* @_OpenFile(i32 2)
     store i8* %t3, i8** @srcfil
-    %t4 = load %T_text, %T_text* @input
+    %t4 = load %T_text, %T_text* @srcfil
     call void @_CloseFile(i8* %t4)
     %t5 = load %T_text, %T_text* @output
     call void @_CloseFile(i8* %t5)
-    %t6 = load %T_text, %T_text* @srcfil
+    %t6 = load %T_text, %T_text* @input
     call void @_CloseFile(i8* %t6)
     ret void
 }

@@ -1112,8 +1112,9 @@ string LlvmBackend::_genCleanup(obj::Subroutine* pSubroutine)
 {
     stringstream code;
 
-    for (auto pVar : m_cleanupList)
+    for (auto it = m_cleanupList.rbegin(); it != m_cleanupList.rend(); ++it)
     {
+        auto* pVar = *it;
         assert(pVar->pType->isFile());
 
         // call file "destructor"

@@ -80,13 +80,13 @@ define void @P_()
     store i8* %t3, i8** @INPUTFILE
     %t4 = call i8* @_OpenFile(i32 3)
     store i8* %t4, i8** @OUTPUTFILE
-    %t5 = load %T_text, %T_text* @_input
+    %t5 = load %T_text, %T_text* @OUTPUTFILE
     call void @_CloseFile(i8* %t5)
-    %t6 = load %T_text, %T_text* @_output
+    %t6 = load %T_text, %T_text* @INPUTFILE
     call void @_CloseFile(i8* %t6)
-    %t7 = load %T_text, %T_text* @INPUTFILE
+    %t7 = load %T_text, %T_text* @_output
     call void @_CloseFile(i8* %t7)
-    %t8 = load %T_text, %T_text* @OUTPUTFILE
+    %t8 = load %T_text, %T_text* @_input
     call void @_CloseFile(i8* %t8)
     ret void
 }

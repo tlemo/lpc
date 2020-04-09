@@ -41,9 +41,9 @@ define void @P_()
     store i8* %t1, i8** @_input
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
-    %t3 = load %T_text, %T_text* @_input
+    %t3 = load %T_text, %T_text* @_output
     call void @_CloseFile(i8* %t3)
-    %t4 = load %T_text, %T_text* @_output
+    %t4 = load %T_text, %T_text* @_input
     call void @_CloseFile(i8* %t4)
     ret void
 }
