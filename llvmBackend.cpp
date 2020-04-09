@@ -907,6 +907,258 @@ void LlvmBackend::_outputSubroutine(obj::Subroutine* pSubroutine)
     write(code);
 }
 
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// generates the address of the specified activation record
+// (based on the current scope)
+//
+IrFragment LlvmBackend::_genFrameAddress(const Scope* pTargetScope)
+{
+    const auto targetLevel = pTargetScope->level;
+    assert(targetLevel > Scope::PROGRAM_SCOPE_LEVEL);
+    assert(targetLevel <= m_pCurrentScope->level);
+
+    stringstream code;
+    string framePtr = "%frame";
+
+    auto pScope = m_pCurrentScope;
+
+    for (; pScope->level != targetLevel; pScope = pScope->pParent)
+    {
+        const auto* pExt = ext(pScope->subroutine());
+
+        const auto slinkPtr = _genTempValue();
+        code << TAB << slinkPtr << " = getelementptr inbounds " <<
+            pExt->frameName << ", " << pExt->frameName << "* " << framePtr <<
+            ", i32 0, i32 " << pExt->slinkIndex << "\n";
+
+        const auto* pParentExt = ext(pScope->pParent->subroutine());
+        assert(!pParentExt->frameName.empty());
+
+        framePtr = _genTempValue();
+        code << TAB << framePtr << " = load " << pParentExt->frameName <<
+            "*, " << pParentExt->frameName << "** " << slinkPtr << "\n";
+    }
+
+    assert(pScope == pTargetScope);
+
+    return { code.str(), framePtr };
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+IrFragment LlvmBackend::_genVarAddress(obj::Variable* pVar)
+{
+    const auto* pVarExt = ext(pVar);
+
+    stringstream code;
+    string varPtr;
+
+    // frame-based?
+    if (pVarExt->genName.empty())
+    {
+        assert(pVarExt->frameIndex >= 0);
+
+        varPtr = _genTempValue();
+
+        const auto frameIr = _genFrameAddress(pVar->pScope);
+        const auto& frameName = ext(pVar->pScope->subroutine())->frameName;
+
+        code << frameIr.code;
+        code << TAB << varPtr << " = getelementptr inbounds " <<
+            frameName << ", " << frameName << "* " << frameIr.value <<
+            ", i32 0, i32 " << pVarExt->frameIndex << "\n";
+    }
+    else
+    {
+        // global variable
+        varPtr = pVarExt->genName;
+    }
+
+    return { code.str(), varPtr };
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// generates the address of a lvalue expression
+//
+IrFragment LlvmBackend::_genLValueAddress(const ast::Expr* pLValue)
+{
+    assert(pLValue->isLValue());
+
+    stringstream code;
+    string value;
+
+    // variable?
+    //
+    if (auto pVarExpr = pLValue->as<ast::VarExpr>())
+    {
+        return _genVarAddress(pVarExpr->pVariable);
+    }
+    // parameter?
+    //
+    else if (auto pParamExpr = pLValue->as<ast::ParamExpr>())
+    {
+        auto pParam = pParamExpr->pParameter;
+
+        // TODO
+    }
+    // indirection?
+    //
+    else if (auto pIndirection = pLValue->as<ast::Indirection>())
+    {
+        if (pIndirection->pObject->pType->isPointer())
+        {
+            // TODO
+        }
+        else
+        {
+            assert(pIndirection->pObject->pType->isFile());
+
+            // TODO
+        }
+    }
+    // array element?
+    //
+    else if (auto pArrayIndex = pLValue->as<ast::ArrayIndex>())
+    {
+        auto pElemType = pArrayIndex->pType;
+        auto pArrayType = pArrayIndex->pObject->pType;
+
+        _generateType(pElemType);
+        _generateType(pArrayType);
+
+        // TODO
+    }
+    // field?
+    //
+    else if (auto pFieldDst = pLValue->as<ast::FieldExpr>())
+    {
+        auto pFieldType = pFieldDst->pType;
+        auto pRecordType = pFieldDst->pField->pRecord->pType;
+
+        _generateType(pFieldType);
+        _generateType(pRecordType);
+
+        // TODO
+    }
+    else
+    {
+        assert(pLValue->isA<ast::DummyValue>());
+    }
+
+    return { code.str(), value };
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// explicit variable initializers
+//
+// NOTE: for now, this is very specific to File objects initialization
+// 
+string LlvmBackend::_genInitializers(obj::Subroutine* pSubroutine)
+{
+    stringstream code;
+
+    for (auto pVar : m_varList)
+    {
+        if (pVar->pInitializer == nullptr)
+            continue;
+
+        assert(pVar->pType->isFile());
+        assert(pVar->pInitializer->isConst());
+
+        m_cleanupList.push_back(pVar);
+
+        // initializer value
+        //
+        const auto pInitExprIr = gen(pVar->pInitializer);
+        assert(!pInitExprIr->value.empty());
+        code << pInitExprIr->code;
+
+        // call init function
+        //
+        const auto fileHandle = _genTempValue();
+        code << TAB << fileHandle;
+        if (pVar->pInitializer->pType->isString())
+            code << " = call i8* @_OpenTempFile(i8* " << pInitExprIr->value << ")\n";
+        else
+            code << " = call i8* @_OpenFile(i32 " << pInitExprIr->value << ")\n";
+
+        // variable address
+        //
+        const auto varPtrIr = _genVarAddress(pVar);
+        code << varPtrIr.code;
+
+        // store value
+        //
+        code << TAB << "store i8* " << fileHandle <<
+            ", i8** " << varPtrIr.value << "\n";
+    }
+
+    return code.str();
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+// cleanup file variables
+//
+string LlvmBackend::_genCleanup(obj::Subroutine* pSubroutine)
+{
+    stringstream code;
+
+    for (auto pVar : m_cleanupList)
+    {
+        assert(pVar->pType->isFile());
+
+        // call file "destructor"
+        //
+        ast::VarExpr handleExpr(pVar, NO_LOCATION);
+        const auto pFileHandleIr = gen(&handleExpr);
+        assert(!pFileHandleIr->value.empty());
+        code << pFileHandleIr->code;
+        code << TAB << "call void @_CloseFile(i8* " << pFileHandleIr->value << ")\n";
+    }
+
+    return code.str();
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+string LlvmBackend::_genEpilogue(obj::Subroutine* pSubroutine)
+{
+    stringstream code;
+
+    if (pSubroutine->pType->isFunction())
+    {
+        // return value
+        //
+        assert(pSubroutine->pFnValue != nullptr);
+        const auto& returnType = ext(pSubroutine->pType->returnType())->genName;
+        const auto retValuePtr = _genTempValue();
+        const auto retValue = _genTempValue();
+        const auto& frameName = ext(pSubroutine)->frameName;
+        code << TAB << retValuePtr << " = getelementptr inbounds " <<
+            frameName << ", " << frameName << "* %frame, i32 0, " <<
+            "i32 " << ext(pSubroutine->pFnValue)->frameIndex << "\n";
+        code << TAB << retValue << " = load " << returnType << ", " <<
+            returnType << "* " << retValuePtr << "\n";
+        code << TAB << "ret " << returnType << " " << retValue << "\n";
+    }
+    else
+    {
+        code << TAB << "ret void\n";
+    }
+
+    return code.str();
+}
+
 } // end namespace llvm
 
 
