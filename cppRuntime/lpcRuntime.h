@@ -1086,16 +1086,16 @@ struct _FormattedValue
 {
     const T& value;
     int width;
-    int precission;
+    int precision;
 
-    _FormattedValue(const T& v, int w, int p) : value(v), width(w), precission(p) {}
+    _FormattedValue(const T& v, int w, int p) : value(v), width(w), precision(p) {}
 };
 
 
 template<typename T>
-_FormattedValue<T> _format(const T& value, int width, int precission)
+_FormattedValue<T> _format(const T& value, int width, int precision)
 {
-    return _FormattedValue<T>(value, width, precission);
+    return _FormattedValue<T>(value, width, precision);
 }
 
 
@@ -1338,10 +1338,10 @@ public:
 
     // write operations
     //
-    _T_Text& write(int value, int width = 0, int precission = 0)
+    _T_Text& write(int value, int width = 0, int precision = 0)
     {
         _RTCheck(m_mode == Writting, "file is not in writting mode");
-        _RTCheck(precission == 0, "precission is only valid for 'real' numbers");
+        _RTCheck(precision == 0, "precision is only valid for 'real' numbers");
 
         if(width == 0)
             width = 1;
@@ -1357,10 +1357,10 @@ public:
         return *this;
     }
 
-    _T_Text& write(const char* value, int width = 0, int precission = 0)
+    _T_Text& write(const char* value, int width = 0, int precision = 0)
     {
         _RTCheck(m_mode == Writting, "file is not in writting mode");
-        _RTCheck(precission == 0, "precission is only valid for 'real' numbers");
+        _RTCheck(precision == 0, "precision is only valid for 'real' numbers");
 
         _RTCheck(width >= 0, "invalid write() field width");
 
@@ -1382,10 +1382,10 @@ public:
     }
 
     template<int N>
-    _T_Text& write(const _T_Array<1, N, char>& value, int width = 0, int precission = 0)
+    _T_Text& write(const _T_Array<1, N, char>& value, int width = 0, int precision = 0)
     {
         _RTCheck(m_mode == Writting, "file is not in writting mode");
-        _RTCheck(precission == 0, "precission is only valid for 'real' numbers");
+        _RTCheck(precision == 0, "precision is only valid for 'real' numbers");
 
         if(width == 0)
             width = N;
@@ -1401,12 +1401,12 @@ public:
         return *this;
     }
 
-    _T_Text& write(char value, int width = 0, int precission = 0)
+    _T_Text& write(char value, int width = 0, int precision = 0)
     {
         assert(value > 0 && value < 128);
 
         _RTCheck(m_mode == Writting, "file is not in writting mode");
-        _RTCheck(precission == 0, "precission is only valid for 'real' numbers");
+        _RTCheck(precision == 0, "precision is only valid for 'real' numbers");
 
         if(width == 0)
             width = 1;
@@ -1422,7 +1422,7 @@ public:
         return *this;
     }
 
-    _T_Text& write(double value, int width = 0, int precission = 0)
+    _T_Text& write(double value, int width = 0, int precision = 0)
     {
         _RTCheck(m_mode == Writting, "file is not in writting mode");
 
@@ -1433,14 +1433,14 @@ public:
 
         char tmpFmt[_TMPFMT_BUFF_SIZE] = {};
 
-        if(precission == 0)
+        if(precision == 0)
         {
             ::sprintf_s(tmpFmt, "%%#%d.9g", width);
         }
         else
         {
-            _RTCheck(precission > 0, "invalid write() field precission");
-            ::sprintf_s(tmpFmt, "%%#%d.%df", width, precission);
+            _RTCheck(precision > 0, "invalid write() field precision");
+            ::sprintf_s(tmpFmt, "%%#%d.%df", width, precision);
         }
 
         ::fprintf(m_stream, tmpFmt, value);
@@ -1458,7 +1458,7 @@ public:
     template<typename T>
     _T_Text& operator<<(const _FormattedValue<T>& fv)
     {
-        return write(fv.value, fv.width, fv.precission);
+        return write(fv.value, fv.width, fv.precision);
     }
 
     // read operations

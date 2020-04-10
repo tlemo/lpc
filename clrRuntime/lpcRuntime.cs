@@ -715,9 +715,9 @@ public struct File
 
     // 'char'
     //
-    public void Format(Int32 width, Int32 precission, Byte c)
+    public void Format(Int32 width, Int32 precision, Byte c)
     {
-        Runtime.RTCheck(precission == 0, "precission is only valid for 'real' numbers");
+        Runtime.RTCheck(precision == 0, "precision is only valid for 'real' numbers");
 
         if(width == 0)
             width = 1;
@@ -727,9 +727,9 @@ public struct File
         _WriteString(str);
     }
 
-    public void Format(Int32 width, Int32 precission, Int32 i)
+    public void Format(Int32 width, Int32 precision, Int32 i)
     {
-        Runtime.RTCheck(precission == 0, "precission is only valid for 'real' numbers");
+        Runtime.RTCheck(precision == 0, "precision is only valid for 'real' numbers");
 
         if(width == 0)
             width = 1;
@@ -739,28 +739,28 @@ public struct File
         _WriteString(str);
     }
 
-    public void Format(Int32 width, Int32 precission, Double d)
+    public void Format(Int32 width, Int32 precision, Double d)
     {
         Runtime.RTCheck(width >= 0, "invalid write() field width");
-        Runtime.RTCheck(precission >= 0, "invalid write() field precission");
+        Runtime.RTCheck(precision >= 0, "invalid write() field precision");
 
         if(width == 0)
             width = 10;
 
         string format;
 
-        if(precission == 0)
+        if(precision == 0)
             format = String.Format("{{0,{0}}}", width);
         else
-            format = String.Format("{{0,{0}:f{1}}}", width, precission);
+            format = String.Format("{{0,{0}:f{1}}}", width, precision);
 
         var str = String.Format(format, d);
         _WriteString(str);
     }
 
-    public void Format(Int32 width, Int32 precission, string s)
+    public void Format(Int32 width, Int32 precision, string s)
     {
-        Runtime.RTCheck(precission == 0, "precission is only valid for 'real' numbers");
+        Runtime.RTCheck(precision == 0, "precision is only valid for 'real' numbers");
 
         if(width == 0)
         {
