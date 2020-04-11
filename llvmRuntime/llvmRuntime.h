@@ -42,6 +42,12 @@ void* _OpenFile(int index);
 void* _OpenTempFile(const char* name);
 void _CloseFile(void* handle);
 
+void _WriteBool(void* handle, int width, int precision, bool value);
+void _WriteChar(void* handle, int width, int precision, char value);
+void _WriteInteger(void* handle, int width, int precision, int value);
+void _WriteReal(void* handle, int width, int precision, double value);
+void _WriteString(void* handle, int width, int precision, const char* value);
+void _WriteLn(void* handle);
 
 ///////////////////////////////////////////////////////////////////////////////
 //

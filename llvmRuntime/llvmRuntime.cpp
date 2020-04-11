@@ -135,6 +135,71 @@ void _CloseFile(void* handle)
 
 ///////////////////////////////////////////////////////////////////////////////
 //
+void _WriteBool(void* handle, int width, int precision, bool value)
+{
+    _RTCheck(precision == 0, "precision is only valid for 'real' numbers");
+
+    if(width == 0)
+        width = 1;
+
+    // TODO    
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+void _WriteChar(void* handle, int width, int precision, char value)
+{
+    _RTCheck(precision == 0, "precision is only valid for 'real' numbers");
+
+    if(width == 0)
+        width = 1;
+
+    // TODO    
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+void _WriteInteger(void* handle, int width, int precision, int value)
+{
+    _RTCheck(precision == 0, "precision is only valid for 'real' numbers");
+
+    if(width == 0)
+        width = 1;
+
+    // TODO    
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+void _WriteReal(void* handle, int width, int precision, double value)
+{
+    if(width == 0)
+        width = 10;
+
+    // TODO    
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+void _WriteString(void* handle, int width, int precision, const char* value)
+{
+    _RTCheck(precision == 0, "precision is only valid for 'real' numbers");
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+void _WriteLn(void* handle)
+{
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
 static
 void runtimeShutdown()
 {

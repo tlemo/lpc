@@ -996,7 +996,101 @@ private:
     IrFragment _expandWrite(ast::ExprList* pArguments, bool writeln)
     {
         stringstream code;
-        // TODO
+
+        auto it = pArguments->begin();
+
+        // first argument is always the file
+        //
+        auto pFile = *it++;
+        assert(pFile->pType->isFile());
+        auto pFileHandleIr = gen(pFile);
+        code << pFileHandleIr->code;
+
+        // values
+        //
+        for (; it != pArguments->end(); ++it)
+        {
+            auto pValue = *it;
+
+            string widthValue = "0";
+            string precisionValue = "0";
+
+            // formatted argument?
+            //
+            if(auto pWriteArgExpr = pValue->as<ast::WriteArgExpr>())
+            {
+                // width (optional)
+                //
+                if (pWriteArgExpr->pWidth != nullptr)
+                {
+                    auto widthValueIr = gen(pWriteArgExpr->pWidth);
+                    code << widthValueIr->code;
+                    widthValue = widthValueIr->value;
+                }
+
+                // precision (optional)
+                //
+                if (pWriteArgExpr->pPrecision != nullptr)
+                {
+                    auto precisionValueIr = gen(pWriteArgExpr->pPrecision);
+                    code << precisionValueIr->code;
+                    precisionValue = precisionValueIr->value;
+                }
+
+                pValue = pWriteArgExpr->pValue;
+            }
+
+            auto valueIr = gen(pValue);
+            code << valueIr->code;
+
+            auto pType = pValue->pType;
+            string irType;
+            string helper;
+
+            if(pType->isBool())
+            {
+                helper = "@_WriteBool(";
+                irType = "i8";
+            }
+            else if(pType->isChar())
+            {
+                helper = "@_WriteChar(";
+                irType = "i8";
+            }
+            else if(pType->isOrdinal())
+            {
+                helper = "@_WriteInteger(";
+                irType = "i32";
+            }
+            else if(pType->isReal())
+            {
+                helper = "@_WriteReal(";
+                irType = "double";
+            }
+            else if(pType->isString())
+            {
+                helper = "@_WriteString(";
+                irType = "i8*";
+            }
+            else
+            {
+                assert(!"unexpected write argument type");
+            }
+
+            code << TAB << "call void " << helper <<
+                "i8* " << pFileHandleIr->value << ", " <<
+                "i32 " << widthValue << ", " <<
+                "i32 " << precisionValue << ", " <<
+                irType << " " << valueIr->value << ")\n";
+        }
+
+        // writeln?
+        //
+        if (writeln)
+        {
+            code << TAB << "call void @_WriteLn(i8* " << pFileHandleIr->value << ")\n";
+        }
+
         return { code.str(), "" };
     }
 
@@ -1315,7 +1409,7 @@ private:
     // generate a subroutine (func/proc) call, either a direct call
     // or an indirect call through a subroutine pointer
     //
-    IrFragment _genCall(ast::Expr* pSubroutine, ast::ExprList* pArguments)
+    IrFragment _genCall(ast::Expr* pSubroutine, ast::ExprList* pArguments, ts::Type* pReturnType)
     {
         // intrinsic function/procedure?
         //
@@ -1325,19 +1419,111 @@ private:
         }
 
         stringstream code;
-        // TODO
-        return { code.str(), "" };
+
+        // slink / pfn
+        //
+        IrFragment slinkIr;
+        string pfn;
+
+        if(auto pFuncPtr = pSubroutine->as<ast::FuncPtr>())
+        {
+            // normal function call, generate the slink if needed
+            //
+            auto pSlinkScope = pFuncPtr->pFunc->pScope->pParent;
+            if (pSlinkScope->level > Scope::PROGRAM_SCOPE_LEVEL)
+            {
+                slinkIr = _genFrameAddress(pSlinkScope);
+                assert(!slinkIr.value.empty());
+                code << slinkIr.code;
+            }
+            pfn = "@" + ext(pFuncPtr->pFunc)->genName;
+        }
+        else
+        {
+            // calling through a function pointer passed as argument
+            //
+            // TODO
+        }
+
+        // actual arguments
+        //
+        vector<string> argumentValues;
+        if (nullptr != pArguments)
+        {
+            auto pParamList = pSubroutine->pType->as<ts::SubroutineType>()->paramList();
+
+            auto paramIt = pParamList->begin();
+            auto argIt = pArguments->begin();
+
+            // iterate the arguments/parameters lists in sync
+            //
+            for (; argIt != pArguments->end(); ++argIt, ++paramIt)
+            {
+                assert(paramIt != pParamList->end());
+
+                auto pArgExpr = *argIt;
+                _generateType(pArgExpr->pType);
+
+                stringstream argValue;
+
+                if(paramIt->byRef)
+                {
+                    assert(pArgExpr->pType->isSameType(paramIt->pType));
+                    const auto argPtrIr = _genLValueAddress(pArgExpr);
+                    code << argPtrIr.code;
+                    argValue << ext(pArgExpr->pType)->genName << "* " << argPtrIr.value;
+                }
+                else
+                {
+                    const auto argIr = gen(pArgExpr);
+                    code << argIr->code;
+                    argValue << ext(pArgExpr->pType)->genName << " " << argIr->value;
+                }
+
+                argumentValues.push_back(argValue.str());
+            }
+
+            assert(paramIt == pParamList->end());
+        }
+
+        // generate the call instruction
+        //
+        code << TAB;
+
+        string retValue;
+        if (pReturnType != nullptr)
+        {
+            retValue = _genTempValue();
+            code << retValue << " = ";
+        }
+
+        code << "call " << pfn << "(";
+
+        bool firstArg = true;
+
+        if (!slinkIr.value.empty())
+        {
+            code << "i8* " << slinkIr.value;
+            firstArg = false;
+        }
+
+        for (const auto& arg : argumentValues)
+        {
+            if (!firstArg)
+                code << ", ";
+            code << arg;
+            firstArg = false;
+        }
+
+        code << ")\n";
+
+        return { code.str(), retValue };
     }
 
     VarPtr visit(const ast::FuncCall* pFuncCall) override
     {
-        _generateType(pFuncCall->pType);
-
-        auto pExt = ext(pFuncCall->pType);
-
-        stringstream code;
-        // TODO
-        return allocStr(code);
+        auto callIr = _genCall(pFuncCall->pFunc, pFuncCall->pArguments, pFuncCall->pType);
+        return newIrFragment(callIr.code, callIr.value);
     }
 
     VarPtr visit(const ast::Set* pSet) override
@@ -1360,58 +1546,62 @@ private:
     VarPtr visit(const ast::NopStm*) override
     {
         stringstream code;
-        // TODO
-        return allocStr(code);
+        code << TAB << "; nop\n";
+        return newIrFragment(code.str(), "");
     }
 
     VarPtr visit(const ast::CompoundStm* pCompoundStm) override
     {
         stringstream code;
-        for(auto pStm : pCompoundStm->statements)
-            code << gen(pStm);
-        return allocStr(code);
+        for (auto pStm : pCompoundStm->statements)
+        {
+            const auto pStmIr = gen(pStm);
+            assert(pStmIr->value.empty());
+            code << pStmIr->code;
+        }
+        return newIrFragment(code.str(), "");
     }
 
     VarPtr visit(const ast::IfStm* pIfStm) override
     {
         stringstream code;
         // TODO
-        return allocStr(code);
+        return newIrFragment(code.str(), "");
     }
 
     VarPtr visit(const ast::CaseStm* pCaseStm) override
     {
         stringstream code;
         // TODO
-        return allocStr(code);
+        return newIrFragment(code.str(), "");
     }
 
     VarPtr visit(const ast::AssignStm* pAssignStm) override
     {
         stringstream code;
         // TODO
-        return allocStr(code);
+        return newIrFragment(code.str(), "");
     }
 
     VarPtr visit(const ast::WhileStm* pWhileStm) override
     {
         stringstream code;
         // TODO
-        return allocStr(code);
+        return newIrFragment(code.str(), "");
     }
 
     VarPtr visit(const ast::RepeatStm* pRepeatStm) override
     {
         stringstream code;
         // TODO
-        return allocStr(code);
+        return newIrFragment(code.str(), "");
     }
 
     VarPtr visit(const ast::ForStm* pForStm) override
     {
         stringstream code;
         // TODO
-        return allocStr(code);
+        return newIrFragment(code.str(), "");
     }
 
     // for local GOTOs:
@@ -1438,13 +1628,14 @@ private:
             // TODO
         }
 
-        return allocStr(code);
+        return newIrFragment(code.str(), "");
     }
 
     VarPtr visit(const ast::ProcCallStm* pProcCallStm) override
     {
-        // TODO
-        return VarPtr();
+        auto callIr = _genCall(pProcCallStm->pProc, pProcCallStm->pArguments, nullptr);
+        assert(callIr.value.empty());
+        return newIrFragment(callIr.code, callIr.value);
     }
 };
 

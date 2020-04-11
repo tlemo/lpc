@@ -1,0 +1,27 @@
+
+compiling pass 1 (LPC)
+-----------------------------------------------------
+  warning on line 20: 'i' hiding existing declaration on line 17
+  warning on line 28: 'i' hiding existing declaration on line 17
+
+0 error(s), 2 warning(s)
+
+Exit code: 0
+
+compiling pass 2 (target = llvm)
+-----------------------------------------------------
+
+Invoking LLC ...
+Exit code: 0
+
+Linking...
+Exit code: 0
+
+running the executable
+-----------------------------------------------------
+openFile(0)
+openFile(1)
+closeFile()
+closeFile()
+
+Exit code: 0

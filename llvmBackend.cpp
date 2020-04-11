@@ -887,7 +887,7 @@ void LlvmBackend::_outputSubroutine(obj::Subroutine* pSubroutine)
     // TODO
     code << ")\n";
 
-    // TODO: body
+    // body
     //
     code << "{\n";
     
@@ -899,6 +899,13 @@ void LlvmBackend::_outputSubroutine(obj::Subroutine* pSubroutine)
     }
 
     code << _genInitializers(pSubroutine);
+
+#if 0 // WIP
+    auto bodyIr = gen(pSubroutine->pBody);
+    assert(bodyIr->value.empty());
+    code << "\n" << bodyIr->code << "\n";
+#endif
+
     code << _genCleanup(pSubroutine);
     code << _genEpilogue(pSubroutine);
     
