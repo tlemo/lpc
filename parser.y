@@ -568,7 +568,7 @@ assignmentStm
         { $$ = new ast::AssignStm($1, $3, $1->line); }
     | objAccess T_EQ expr
         {
-            context()->error($1->line, "parse error, did you use = instead of := for assignement?");
+            context()->error($1->line, "parse error, did you use = instead of := for assignment?");
             $$ = new ast::AssignStm($1, $3, $1->line);
         }
     ;

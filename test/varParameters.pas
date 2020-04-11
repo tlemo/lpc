@@ -45,50 +45,45 @@ begin
     writeln;
 end;
     
-procedure testA(arg : A);
+procedure test(var a : A; var s : S; var r : R; var i : integer);
 begin
-    printA(arg);
-    arg[0] := 123;
-    arg[9] := 321;
-end;
+    printA(a);
+    printS(s);
+    printR(r);
+    writeln('i = ', i);
+    
+    a[0] := 123;
+    a[9] := 321;
 
-procedure testS(arg : S);
-begin
-    printS(arg);
-    arg := [];
-end;
+    s := [];
 
-procedure testR(arg : R);
-begin
-    printR(arg);
-    arg.a := 0;
-    arg.b := -1;
-    arg.c := 0;
-    arg.d := -3.14;
+    r.a := 0;
+    r.b := -1;
+    r.c := 0;
+    r.d := -3.14;
+    
+    i := 1024;
 end;
 
 begin
     for i := 0 to 9 do vA[i] := i;
-    testA(vA);
-    printA(vA);
-    
-    writeln('------------------------------');
     
     vS := [1, 2, 3, 5, 7];
-    testS(vS);
-    printS(vS);
-
-    writeln('------------------------------');
-    
-    testS([5, 4, 9]);
-
-    writeln('------------------------------');
 
     vR.a := 11;
     vR.b := 22;
     vR.c := 1.1;
     vR.d := 2.2;
-    testR(vR);
+    
+    i := 1000;
+    
+    test(vA, vS, vR, i);
+    
+    writeln('------------------------------');
+    
+    printA(vA);
+    printS(vS);
     printR(vR);
+    writeln('i = ', i);
 end.
 

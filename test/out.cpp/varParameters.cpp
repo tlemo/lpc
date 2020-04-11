@@ -1,7 +1,7 @@
 
 #include <lpcRuntime.h>
 
-#line 0 "udtParameters.pas"
+#line 0 "varParameters.pas"
 
 //================================================================================
 // command line argument map
@@ -50,9 +50,7 @@ typedef _T_Set<1, 10> T_S;
 void P_printA(void* _slink, T_A Arg);
 void P_printS(void* _slink, T_S Arg);
 void P_printR(void* _slink, T_R Arg);
-void P_testA(void* _slink, T_A Arg);
-void P_testS(void* _slink, T_S Arg);
-void P_testR(void* _slink, T_R Arg);
+void P_test(void* _slink, T_A& a, T_S& s, T_R& r, T_integer& i);
 
 // program variables
 T_text _input;
@@ -78,64 +76,50 @@ void P_()
     _setLiteral1.set(5);
     _setLiteral1.set(7);
     
-    _T_GenericSet _setLiteral2;
-    _setLiteral2.set(5);
-    _setLiteral2.set(4);
-    _setLiteral2.set(9);
-    
     // subroutine body
-    #line 71
+    #line 69
     _FOR_TO(i, 0, 9)
     {
-        #line 71
+        #line 69
         VA[i] = i;
     }
     _FOR_END(i)
     
-    #line 72
-    P_testA(nullptr, VA);
-    
-    #line 73
-    P_printA(nullptr, VA);
-    
-    #line 75
-    _output << "------------------------------" << _WRITELN;
-    
-    #line 77
+    #line 71
     VS = _setLiteral1;
     
-    #line 78
-    P_testS(nullptr, VS);
-    
-    #line 79
-    P_printS(nullptr, VS);
-    
-    #line 81
-    _output << "------------------------------" << _WRITELN;
-    
-    #line 83
-    P_testS(nullptr, T_S::C(_setLiteral2));
-    
-    #line 85
-    _output << "------------------------------" << _WRITELN;
-    
-    #line 87
+    #line 73
     VR.a = 11;
     
-    #line 88
+    #line 74
     VR.b = 22;
     
-    #line 89
+    #line 75
     VR.c = 1.10000;
     
-    #line 90
+    #line 76
     VR.d = 2.20000;
     
-    #line 91
-    P_testR(nullptr, VR);
+    #line 78
+    i = 1000;
     
-    #line 92
+    #line 80
+    P_test(nullptr, VA, VS, VR, i);
+    
+    #line 82
+    _output << "------------------------------" << _WRITELN;
+    
+    #line 84
+    P_printA(nullptr, VA);
+    
+    #line 85
+    P_printS(nullptr, VS);
+    
+    #line 86
     P_printR(nullptr, VR);
+    
+    #line 87
+    _output << "i = " << i << _WRITELN;
     
     { /* NOP */ }
 }
@@ -268,53 +252,23 @@ void P_printR(void* _slink, T_R Arg)
 
 #line 48
 //================================================================================
-// scope: testA (level : 2)
+// scope: test (level : 2)
 
 // activation record
-struct Frame_testA
+struct Frame_test
 {
     // parameters
-    T_A Arg;
+    T_A& a;
+    T_S& s;
+    T_R& r;
+    T_integer& i;
 };
 
 // function body
-void P_testA(void* _slink, T_A Arg)
+void P_test(void* _slink, T_A& a, T_S& s, T_R& r, T_integer& i)
 {
     // prologue/frame definition
-    Frame_testA _F = {Arg };
-    
-    assert(nullptr == _slink);
-    
-    // subroutine body
-    #line 50
-    P_printA(nullptr, _F.Arg);
-    
-    #line 51
-    _F.Arg[0] = 123;
-    
-    #line 52
-    _F.Arg[9] = 321;
-    
-    { /* NOP */ }
-}
-
-
-#line 55
-//================================================================================
-// scope: testS (level : 2)
-
-// activation record
-struct Frame_testS
-{
-    // parameters
-    T_S Arg;
-};
-
-// function body
-void P_testS(void* _slink, T_S Arg)
-{
-    // prologue/frame definition
-    Frame_testS _F = {Arg };
+    Frame_test _F = {a, s, r, i };
     
     assert(nullptr == _slink);
     
@@ -322,50 +276,41 @@ void P_testS(void* _slink, T_S Arg)
     _T_GenericSet _setLiteral1;
     
     // subroutine body
-    #line 57
-    P_printS(nullptr, _F.Arg);
+    #line 50
+    P_printA(nullptr, _F.a);
+    
+    #line 51
+    P_printS(nullptr, _F.s);
+    
+    #line 52
+    P_printR(nullptr, _F.r);
+    
+    #line 53
+    _output << "i = " << _F.i << _WRITELN;
+    
+    #line 55
+    _F.a[0] = 123;
+    
+    #line 56
+    _F.a[9] = 321;
     
     #line 58
-    _F.Arg = _setLiteral1;
+    _F.s = _setLiteral1;
     
-    { /* NOP */ }
-}
-
-
-#line 61
-//================================================================================
-// scope: testR (level : 2)
-
-// activation record
-struct Frame_testR
-{
-    // parameters
-    T_R Arg;
-};
-
-// function body
-void P_testR(void* _slink, T_R Arg)
-{
-    // prologue/frame definition
-    Frame_testR _F = {Arg };
+    #line 60
+    _F.r.a = 0;
     
-    assert(nullptr == _slink);
+    #line 61
+    _F.r.b = (-1);
     
-    // subroutine body
+    #line 62
+    _F.r.c = 0;
+    
     #line 63
-    P_printR(nullptr, _F.Arg);
-    
-    #line 64
-    _F.Arg.a = 0;
+    _F.r.d = (-3.14000);
     
     #line 65
-    _F.Arg.b = (-1);
-    
-    #line 66
-    _F.Arg.c = 0;
-    
-    #line 67
-    _F.Arg.d = (-3.14000);
+    _F.i = 1024;
     
     { /* NOP */ }
 }

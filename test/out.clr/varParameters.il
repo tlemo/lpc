@@ -19,7 +19,7 @@
     ret
 }
 
-.line 0 "udtParameters.pas"
+.line 0 "varParameters.pas"
 
 .line 20
 //================================================================================
@@ -217,25 +217,7 @@
 
 .line 48
 //================================================================================
-// scope: testA (level : 2)
-
-.class @testA
-{
-    // parameters
-    .field public valuetype T_A Arg
-
-    .method public void .ctor()
-    {
-        ldarg.0
-        call instance void [mscorlib]System.Object::.ctor()
-        ret
-    }
-}
-
-
-.line 55
-//================================================================================
-// scope: testS (level : 2)
+// scope: test (level : 2)
 
 .line 0xfeefee
 
@@ -327,28 +309,13 @@
     }
 }
 
-.class @testS
+.class @test
 {
     // parameters
-    .field public valuetype T_S Arg
-
-    .method public void .ctor()
-    {
-        ldarg.0
-        call instance void [mscorlib]System.Object::.ctor()
-        ret
-    }
-}
-
-
-.line 61
-//================================================================================
-// scope: testR (level : 2)
-
-.class @testR
-{
-    // parameters
-    .field public valuetype T_R Arg
+    .field public valuetype T_A* a
+    .field public int32* i
+    .field public valuetype T_R* r
+    .field public valuetype T_S* s
 
     .method public void .ctor()
     {
@@ -610,127 +577,129 @@ L_Epilogue:
 .line 48
 
 .method static
-void TestA(valuetype T_A Arg)
-{
-    .maxstack 32
-
-    .locals init(class @testA _F)
-    
-    newobj instance void @testA::.ctor()
-    stloc _F
-    
-    ldloc _F
-    ldarg Arg
-    stfld valuetype T_A @testA::Arg
-
-L_Entry:
-    .line 50
-    ldloc _F
-    ldfld valuetype T_A @testA::Arg
-    call void PrintA(valuetype T_A Arg)
-    .line 51
-    ldloc _F
-    ldflda valuetype T_A @testA::Arg
-    ldc.i4 0
-    call instance int32& T_A::ldadr(int32)
-    ldc.i4 123
-    stobj int32
-    .line 52
-    ldloc _F
-    ldflda valuetype T_A @testA::Arg
-    ldc.i4 9
-    call instance int32& T_A::ldadr(int32)
-    ldc.i4 321
-    stobj int32
-    /* nop */
-
-L_Epilogue:
-    ret
-}
-
-.line 55
-
-.method static
-void TestS(valuetype T_S Arg)
+void Test(valuetype T_A& a, valuetype T_S& s, valuetype T_R& r, int32& i)
 {
     .maxstack 32
 
     .locals init(
-        class @testS _F,
-        valuetype T_set_1 $tmpSetLiteral1)
+        class @test _F,
+        valuetype T_set_1 $tmpSetLiteral1,
+        valuetype T_A& pinned $a,
+        int32& pinned $i,
+        valuetype T_R& pinned $r,
+        valuetype T_S& pinned $s)
     
-    newobj instance void @testS::.ctor()
+    newobj instance void @test::.ctor()
     stloc _F
     
+    ldarg a
+    stloc $a
+    
     ldloc _F
-    ldarg Arg
-    stfld valuetype T_S @testS::Arg
+    ldarg a
+    stfld valuetype T_A* @test::a
+    
+    ldarg i
+    stloc $i
+    
+    ldloc _F
+    ldarg i
+    stfld int32* @test::i
+    
+    ldarg r
+    stloc $r
+    
+    ldloc _F
+    ldarg r
+    stfld valuetype T_R* @test::r
+    
+    ldarg s
+    stloc $s
+    
+    ldloc _F
+    ldarg s
+    stfld valuetype T_S* @test::s
 
 
 L_Entry:
-    .line 57
+    .line 50
     ldloc _F
-    ldfld valuetype T_S @testS::Arg
+    ldfld valuetype T_A* @test::a
+    ldobj valuetype T_A
+    call void PrintA(valuetype T_A Arg)
+    .line 51
+    ldloc _F
+    ldfld valuetype T_S* @test::s
+    ldobj valuetype T_S
     call void PrintS(valuetype T_S Arg)
+    .line 52
+    ldloc _F
+    ldfld valuetype T_R* @test::r
+    ldobj valuetype T_R
+    call void PrintR(valuetype T_R Arg)
+    .line 53
+    ldsflda valuetype [lpcRuntime]LPC.File _G::_output
+    dup
+    ldstr "i = "
+    call instance void [lpcRuntime]LPC.File::Write(string)
+    dup
+    ldloc _F
+    ldfld int32* @test::i
+    ldobj int32
+    call instance void [lpcRuntime]LPC.File::Write(int32)
+    call instance void [lpcRuntime]LPC.File::WriteLn()
+    .line 55
+    ldloc _F
+    ldfld valuetype T_A* @test::a
+    ldc.i4 0
+    call instance int32& T_A::ldadr(int32)
+    ldc.i4 123
+    stobj int32
+    .line 56
+    ldloc _F
+    ldfld valuetype T_A* @test::a
+    ldc.i4 9
+    call instance int32& T_A::ldadr(int32)
+    ldc.i4 321
+    stobj int32
     .line 58
     ldloc _F
+    ldfld valuetype T_S* @test::s
     ldloc $tmpSetLiteral1
     dup
     ldc.i4 1
     ldc.i4 10
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_S _SetCastTo_T_S(valuetype T_set_1 s)
-    stfld valuetype T_S @testS::Arg
-    /* nop */
-
-L_Epilogue:
-    ret
-}
-
-.line 61
-
-.method static
-void TestR(valuetype T_R Arg)
-{
-    .maxstack 32
-
-    .locals init(class @testR _F)
-    
-    newobj instance void @testR::.ctor()
-    stloc _F
-    
+    stobj valuetype T_S
+    .line 60
     ldloc _F
-    ldarg Arg
-    stfld valuetype T_R @testR::Arg
-
-L_Entry:
-    .line 63
-    ldloc _F
-    ldfld valuetype T_R @testR::Arg
-    call void PrintR(valuetype T_R Arg)
-    .line 64
-    ldloc _F
-    ldflda valuetype T_R @testR::Arg
+    ldfld valuetype T_R* @test::r
     ldc.i4 0
     stfld int32 T_R::a
-    .line 65
+    .line 61
     ldloc _F
-    ldflda valuetype T_R @testR::Arg
+    ldfld valuetype T_R* @test::r
     ldc.i4 1
     neg
     stfld int32 T_R::b
-    .line 66
+    .line 62
     ldloc _F
-    ldflda valuetype T_R @testR::Arg
+    ldfld valuetype T_R* @test::r
     ldc.i4 0
     conv.r8
     stfld float64 T_R::c
-    .line 67
+    .line 63
     ldloc _F
-    ldflda valuetype T_R @testR::Arg
+    ldfld valuetype T_R* @test::r
     ldc.r8 3.14000
     neg
     stfld float64 T_R::d
+    .line 65
+    ldloc _F
+    ldfld int32* @test::i
+    ldc.i4 1024
+    stobj int32
     /* nop */
 
 L_Epilogue:
@@ -752,8 +721,7 @@ void _Program()
         int32 $tmpEndValue1,
         int32 $tmpIndex2,
         int32 $tmpIndex3,
-        valuetype T_set_1 $tmpSetLiteral4,
-        valuetype T_set_1 $tmpSetLiteral5)
+        valuetype T_set_1 $tmpSetLiteral4)
 
     ldsflda valuetype [lpcRuntime]LPC.File _G::_input
     ldc.i4 0
@@ -779,18 +747,8 @@ void _Program()
     ldc.i4 7
     call instance void T_set_1::addValue(int32)
 
-    ldloca $tmpSetLiteral5
-    ldc.i4 5
-    call instance void T_set_1::addValue(int32)
-    ldloca $tmpSetLiteral5
-    ldc.i4 4
-    call instance void T_set_1::addValue(int32)
-    ldloca $tmpSetLiteral5
-    ldc.i4 9
-    call instance void T_set_1::addValue(int32)
-
 L_Entry:
-    .line 71
+    .line 69
     ldc.i4 9
     stloc $tmpEndValue1
     ldc.i4 0
@@ -801,7 +759,7 @@ L_Entry:
     ldloc $tmpIndex2
     stsfld int32 _G::i
 L_for_loop_1:
-    .line 71
+    .line 69
     ldsflda valuetype T_A _G::VA
     ldsfld int32 _G::i
     call instance int32& T_A::ldadr(int32)
@@ -819,19 +777,7 @@ L_for_loop_1:
     br L_for_loop_1
 L_for_end_2:
     pop
-    .line 72
-    ldsfld valuetype T_A _G::VA
-    call void TestA(valuetype T_A Arg)
-    .line 73
-    ldsfld valuetype T_A _G::VA
-    call void PrintA(valuetype T_A Arg)
-    .line 75
-    ldsflda valuetype [lpcRuntime]LPC.File _G::_output
-    dup
-    ldstr "------------------------------"
-    call instance void [lpcRuntime]LPC.File::Write(string)
-    call instance void [lpcRuntime]LPC.File::WriteLn()
-    .line 77
+    .line 71
     ldloc $tmpSetLiteral4
     dup
     ldc.i4 1
@@ -839,54 +785,55 @@ L_for_end_2:
     call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
     call valuetype T_S _SetCastTo_T_S(valuetype T_set_1 s)
     stsfld valuetype T_S _G::VS
-    .line 78
-    ldsfld valuetype T_S _G::VS
-    call void TestS(valuetype T_S Arg)
-    .line 79
-    ldsfld valuetype T_S _G::VS
-    call void PrintS(valuetype T_S Arg)
-    .line 81
-    ldsflda valuetype [lpcRuntime]LPC.File _G::_output
-    dup
-    ldstr "------------------------------"
-    call instance void [lpcRuntime]LPC.File::Write(string)
-    call instance void [lpcRuntime]LPC.File::WriteLn()
-    .line 83
-    ldloc $tmpSetLiteral5
-    dup
-    ldc.i4 1
-    ldc.i4 10
-    call void _SetCheck(valuetype T_set_1 s, int32 min, int32 max)
-    call valuetype T_S _SetCastTo_T_S(valuetype T_set_1 s)
-    call void TestS(valuetype T_S Arg)
-    .line 85
-    ldsflda valuetype [lpcRuntime]LPC.File _G::_output
-    dup
-    ldstr "------------------------------"
-    call instance void [lpcRuntime]LPC.File::Write(string)
-    call instance void [lpcRuntime]LPC.File::WriteLn()
-    .line 87
+    .line 73
     ldsflda valuetype T_R _G::VR
     ldc.i4 11
     stfld int32 T_R::a
-    .line 88
+    .line 74
     ldsflda valuetype T_R _G::VR
     ldc.i4 22
     stfld int32 T_R::b
-    .line 89
+    .line 75
     ldsflda valuetype T_R _G::VR
     ldc.r8 1.10000
     stfld float64 T_R::c
-    .line 90
+    .line 76
     ldsflda valuetype T_R _G::VR
     ldc.r8 2.20000
     stfld float64 T_R::d
-    .line 91
-    ldsfld valuetype T_R _G::VR
-    call void TestR(valuetype T_R Arg)
-    .line 92
+    .line 78
+    ldc.i4 1000
+    stsfld int32 _G::i
+    .line 80
+    ldsflda valuetype T_A _G::VA
+    ldsflda valuetype T_S _G::VS
+    ldsflda valuetype T_R _G::VR
+    ldsflda int32 _G::i
+    call void Test(valuetype T_A& a, valuetype T_S& s, valuetype T_R& r, int32& i)
+    .line 82
+    ldsflda valuetype [lpcRuntime]LPC.File _G::_output
+    dup
+    ldstr "------------------------------"
+    call instance void [lpcRuntime]LPC.File::Write(string)
+    call instance void [lpcRuntime]LPC.File::WriteLn()
+    .line 84
+    ldsfld valuetype T_A _G::VA
+    call void PrintA(valuetype T_A Arg)
+    .line 85
+    ldsfld valuetype T_S _G::VS
+    call void PrintS(valuetype T_S Arg)
+    .line 86
     ldsfld valuetype T_R _G::VR
     call void PrintR(valuetype T_R Arg)
+    .line 87
+    ldsflda valuetype [lpcRuntime]LPC.File _G::_output
+    dup
+    ldstr "i = "
+    call instance void [lpcRuntime]LPC.File::Write(string)
+    dup
+    ldsfld int32 _G::i
+    call instance void [lpcRuntime]LPC.File::Write(int32)
+    call instance void [lpcRuntime]LPC.File::WriteLn()
     /* nop */
     leave L_Epilogue
 

@@ -288,7 +288,7 @@ print('-----------------------------------------------')
 
 # process each test case (or just the one specified)
 if test_name is not None:
-    run_test(test_name)
+    run_test(os.path.join(root, test_name))
 else:
     for test in glob.glob(os.path.join(root, '*.pas')):
         run_test(test)
