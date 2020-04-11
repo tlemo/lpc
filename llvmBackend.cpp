@@ -863,7 +863,6 @@ void LlvmBackend::_outputSubroutine(obj::Subroutine* pSubroutine)
     //
     if (pType->isFunction())
     {
-        _generateType(pType->returnType());
         code << "\n; function body\n";
         code << "define " << ext(pType->returnType())->genName << " ";
         prefix = "@F_";
@@ -1035,9 +1034,6 @@ IrFragment LlvmBackend::_genLValueAddress(const ast::Expr* pLValue)
         auto pElemType = pArrayIndex->pType;
         auto pArrayType = pArrayIndex->pObject->pType;
 
-        _generateType(pElemType);
-        _generateType(pArrayType);
-
         // TODO
     }
     // field?
@@ -1046,9 +1042,6 @@ IrFragment LlvmBackend::_genLValueAddress(const ast::Expr* pLValue)
     {
         auto pFieldType = pFieldDst->pType;
         auto pRecordType = pFieldDst->pField->pRecord->pType;
-
-        _generateType(pFieldType);
-        _generateType(pRecordType);
 
         // TODO
     }

@@ -76,9 +76,9 @@ define void @P_()
 ;================================================================================
 ; metadata
 
-!llvm.dbg.cu = !{!21}
-!llvm.module.flags = !{!22, !23}
-!llvm.ident = !{!20}
+!llvm.dbg.cu = !{!18}
+!llvm.module.flags = !{!19, !20}
+!llvm.ident = !{!17}
 
 !0 = !DIFile(filename: "ranges.pas", directory: "C:\Users\lemo\work\compilers\lpc\test")
 !1 = !DIBasicType(name: "boolean", size: 8, encoding: DW_ATE_boolean)
@@ -94,14 +94,11 @@ define void @P_()
 !11 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !12 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !13 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
-!14 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 20, baseType: !2, size: 24, elements: !16)
-!15 = !DISubrange(count: 3)
-!16 = !{!15}
-!17 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9,!10,!11,!12,!13,!14}
-!18 = !{}
-!19 = !{}
-!20 = !{!"LPC 1.1"}
-!21 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !18, retainedTypes: !17, globals: !19, nameTableKind: None)
-!22 = !{i32 2, !"CodeView", i32 1}
-!23 = !{i32 2, !"Debug Info Version", i32 3}
+!14 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9,!10,!11,!12,!13}
+!15 = !{}
+!16 = !{}
+!17 = !{!"LPC 1.1"}
+!18 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !15, retainedTypes: !14, globals: !16, nameTableKind: None)
+!19 = !{i32 2, !"CodeView", i32 1}
+!20 = !{i32 2, !"Debug Info Version", i32 3}
 

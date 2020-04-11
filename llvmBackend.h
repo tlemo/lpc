@@ -532,7 +532,6 @@ private:
         //
         if(pType->isFunction())
         {
-            _generateType(pType->returnType());
             proto << ext(pType->returnType())->genName << " ";
         }
         else
@@ -548,8 +547,6 @@ private:
         bool firstParam = true;
         for(const auto& param : *pType->paramList())
         {
-            _generateType(param.pType);
-
             if (!firstParam)
                 proto << ", ";
             firstParam = false;
@@ -650,8 +647,6 @@ private:
 private:
     VarPtr visit(const ast::ConstExpr* pConstExpr) override
     {
-        _generateType(pConstExpr->pType);
-
         const auto* pType = pConstExpr->pType;
         const auto* pConst = pConstExpr->pConstant;
         stringstream value;
@@ -696,7 +691,6 @@ private:
     VarPtr visit(const ast::VarExpr* pVarExpr) override
     {
         auto pVar = pVarExpr->pVariable;
-        _generateType(pVar->pType);
 
         const auto value = _genTempValue();
         const auto& irType = ext(pVar->pType)->genName;
@@ -716,8 +710,6 @@ private:
     VarPtr visit(const ast::ParamExpr* pParamExpr) override
     {
         auto pParam = pParamExpr->pParameter;
-
-        _generateType(pParam->pType);
 
         stringstream code;
         // TODO
@@ -743,9 +735,6 @@ private:
         auto pSrcType = pTypeCast->pExpr->pType;
         auto pDstType = pTypeCast->pType;
 
-        _generateType(pSrcType);
-        _generateType(pDstType);
-
         stringstream code;
         // TODO
         return allocStr(code);
@@ -760,8 +749,6 @@ private:
 
         const auto pResultType = pBinaryOp->pType;
         const auto token = pBinaryOp->pOperator->token;
-
-        _generateType(pResultType);
 
         stringstream code;
 
@@ -919,8 +906,6 @@ private:
 
     VarPtr visit(const ast::UnaryOp* pUnaryOp) override
     {
-        _generateType(pUnaryOp->pType);
-
         stringstream code;
 
         code << gen(pUnaryOp->pExpr);
@@ -954,9 +939,6 @@ private:
         const auto pElemType = pArrayIndex->pType;
         const auto pArrayType = pArrayIndex->pObject->pType;
 
-        _generateType(pElemType);
-        _generateType(pArrayType);
-
         stringstream code;
         // TODO
         return allocStr(code);
@@ -967,9 +949,6 @@ private:
         const auto pFieldType = pFieldUse->pType;
         const auto pRecordType = pFieldUse->pField->pRecord->pType;
 
-        _generateType(pFieldType);
-        _generateType(pRecordType);
-
         stringstream code;
         // TODO
         return allocStr(code);
@@ -978,8 +957,6 @@ private:
     VarPtr visit(const ast::Indirection* pIndirection) override
     {
         const auto pType = pIndirection->pType;
-
-        _generateType(pType);
 
         stringstream code;
         // TODO
@@ -1462,7 +1439,6 @@ private:
                 assert(paramIt != pParamList->end());
 
                 auto pArgExpr = *argIt;
-                _generateType(pArgExpr->pType);
 
                 stringstream argValue;
 
@@ -1528,8 +1504,6 @@ private:
 
     VarPtr visit(const ast::Set* pSet) override
     {
-        _generateType(pSet->pType);
-
         stringstream code;
         // TODO
         return allocStr(code);
