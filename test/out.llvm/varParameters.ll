@@ -1,5 +1,5 @@
-; ModuleID = 'udtParameters.pas'
-source_filename = "C:\Users\lemo\work\compilers\lpc\test\udtParameters.pas"
+; ModuleID = 'varParameters.pas'
+source_filename = "C:\Users\lemo\work\compilers\lpc\test\varParameters.pas"
 target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 
 ; runtime functions
@@ -131,66 +131,25 @@ define void @P_printR()
 
 ; line 48
 ;================================================================================
-; scope: testA (level : 2)
+; scope: test (level : 2)
 
 ; activation record
-%Frame_testA = type
+%Frame_test = type
 {
     ; parameters
-    %T_A,    ; 0: arg
+    %T_A,    ; 0: a
+    i32,    ; 1: i
+    %T_R,    ; 2: r
+    %T_S,    ; 3: s
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_testA()
+define void @P_test()
 {
-    %frame = alloca %Frame_testA, align 8
-    ret void
-}
-
-
-; line 55
-;================================================================================
-; scope: testS (level : 2)
-
-; activation record
-%Frame_testS = type
-{
-    ; parameters
-    %T_S,    ; 0: arg
-
-    ; dummy
-    i8*
-};
-
-; procedure body
-define void @P_testS()
-{
-    %frame = alloca %Frame_testS, align 8
-    ret void
-}
-
-
-; line 61
-;================================================================================
-; scope: testR (level : 2)
-
-; activation record
-%Frame_testR = type
-{
-    ; parameters
-    %T_R,    ; 0: arg
-
-    ; dummy
-    i8*
-};
-
-; procedure body
-define void @P_testR()
-{
-    %frame = alloca %Frame_testR, align 8
+    %frame = alloca %Frame_test, align 8
     ret void
 }
 
@@ -209,7 +168,7 @@ define void @P_testR()
 !llvm.module.flags = !{!26, !27}
 !llvm.ident = !{!24}
 
-!0 = !DIFile(filename: "udtParameters.pas", directory: "C:\Users\lemo\work\compilers\lpc\test")
+!0 = !DIFile(filename: "varParameters.pas", directory: "C:\Users\lemo\work\compilers\lpc\test")
 !1 = !DIBasicType(name: "boolean", size: 8, encoding: DW_ATE_boolean)
 !2 = !DIBasicType(name: "char", size: 8, encoding: DW_ATE_unsigned_char)
 !3 = !DIBasicType(name: "integer", size: 32, encoding: DW_ATE_signed)

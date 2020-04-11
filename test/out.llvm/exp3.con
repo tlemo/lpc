@@ -2,7 +2,7 @@
 compiling pass 1 (LPC)
 -----------------------------------------------------
 ! error on line 14: index type must be ordinal
-! error on line 21: parse error, did you use = instead of := for assignement?
+! error on line 21: parse error, did you use = instead of := for assignment?
 
 2 error(s), 0 warning(s)
 
