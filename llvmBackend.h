@@ -674,7 +674,8 @@ private:
 
         stringstream code;
         // TODO
-        return allocStr(code);
+        auto value = "%.dummy";
+        return newIrFragment(code.str(), value);
     }
 
     // generates a "subroutine pointer object"
@@ -686,7 +687,8 @@ private:
 
         stringstream code;
         // TODO
-        return allocStr(code);
+        auto value = "%.dummy";
+        return newIrFragment(code.str(), value);
     }
 
     // generates the actual cast and value checks as needed
@@ -698,7 +700,8 @@ private:
 
         stringstream code;
         // TODO
-        return allocStr(code);
+        auto value = "%.dummy";
+        return newIrFragment(code.str(), value);
     }
 
     // generates the code for the right (op, T1, T2) operator overload
@@ -862,7 +865,8 @@ private:
             }
         }
 
-        return allocStr(code);
+        auto value = "%.dummy";
+        return newIrFragment(code.str(), value);
     }
 
     VarPtr visit(const ast::UnaryOp* pUnaryOp) override
@@ -892,7 +896,8 @@ private:
             assert(!"unexpected operator");
         }
 
-        return allocStr(code);
+        auto value = "%.dummy";
+        return newIrFragment(code.str(), value);
     }
 
     VarPtr visit(const ast::ArrayIndex* pArrayIndex) override
@@ -902,7 +907,8 @@ private:
 
         stringstream code;
         // TODO
-        return allocStr(code);
+        auto value = "%.dummy";
+        return newIrFragment(code.str(), value);
     }
 
     VarPtr visit(const ast::FieldExpr* pFieldUse) override
@@ -912,7 +918,8 @@ private:
 
         stringstream code;
         // TODO
-        return allocStr(code);
+        auto value = "%.dummy";
+        return newIrFragment(code.str(), value);
     }
 
     VarPtr visit(const ast::Indirection* pIndirection) override
@@ -921,7 +928,8 @@ private:
 
         stringstream code;
         // TODO
-        return allocStr(code);
+        auto value = "%.dummy";
+        return newIrFragment(code.str(), value);
     }
 
     IrFragment _expandRead(ast::ExprList* pArguments, bool readln)
@@ -988,7 +996,7 @@ private:
             if(pType->isBool())
             {
                 helper = "@_WriteBool(";
-                irType = "i8";
+                irType = "i1";
             }
             else if(pType->isChar())
             {

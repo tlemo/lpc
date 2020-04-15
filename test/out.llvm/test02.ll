@@ -6,6 +6,12 @@ target datalayout = "e-m:w-i64:64-f80:128-n8:16:32:64-S128"
 declare dso_local i8* @_OpenFile(i32)
 declare dso_local i8* @_OpenTempFile(i8*)
 declare dso_local void @_CloseFile(i8*)
+declare dso_local void @_WriteBool(i8*, i32, i32, i1)
+declare dso_local void @_WriteChar(i8*, i32, i32, i8)
+declare dso_local void @_WriteInteger(i8*, i32, i32, i32)
+declare dso_local void @_WriteReal(i8*, i32, i32, double)
+declare dso_local void @_WriteString(i8*, i32, i32, i8*)
+declare dso_local void @_WriteLn(i8*)
 
 ; program arguments (command line mapping)
 %struct._Filename = type { i8*, i8* }

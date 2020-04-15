@@ -712,6 +712,12 @@ void LlvmBackend::_start()
     code << "declare dso_local i8* @_OpenFile(i32)\n";
     code << "declare dso_local i8* @_OpenTempFile(i8*)\n";
     code << "declare dso_local void @_CloseFile(i8*)\n";
+    code << "declare dso_local void @_WriteBool(i8*, i32, i32, i1)\n";
+    code << "declare dso_local void @_WriteChar(i8*, i32, i32, i8)\n";
+    code << "declare dso_local void @_WriteInteger(i8*, i32, i32, i32)\n";
+    code << "declare dso_local void @_WriteReal(i8*, i32, i32, double)\n";
+    code << "declare dso_local void @_WriteString(i8*, i32, i32, i8*)\n";
+    code << "declare dso_local void @_WriteLn(i8*)\n";
     code << "\n";
 
     // generate the command line mapping
@@ -915,7 +921,8 @@ void LlvmBackend::_outputSubroutine(obj::Subroutine* pSubroutine)
 #if 0 // WIP
     auto bodyIr = gen(pSubroutine->pBody);
     assert(bodyIr->value.empty());
-    code << "\n" << bodyIr->code << "\n";
+    code << TAB << "; body\n";
+    code << bodyIr->code << "\n";
 #endif
 
     code << _genCleanup(pSubroutine);
