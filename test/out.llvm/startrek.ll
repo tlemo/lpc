@@ -73,14 +73,19 @@ declare dso_local void @_CloseFile(i8*)
 ; procedure body
 define void @P_()
 {
+    ; initialize file handles
     %t1 = call i8* @_OpenFile(i32 0)
     store i8* %t1, i8** @input
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @output
+
+    ; cleanup
     %t3 = load %T_text, %T_text* @output
     call void @_CloseFile(i8* %t3)
     %t4 = load %T_text, %T_text* @input
     call void @_CloseFile(i8* %t4)
+
+    ; epilogue
     ret void
 }
 
@@ -106,12 +111,17 @@ define void @P_()
 };
 
 ; function body
-define double @F_expp()
+define double @F_expp(double %r)
 {
-    %frame = alloca %Frame_expp, align 8
-    %t1 = getelementptr inbounds %Frame_expp, %Frame_expp* %frame, i32 0, i32 1
-    %t2 = load double, double* %t1
-    ret double %t2
+    ; allocate frame
+    %.frame = alloca %Frame_expp, align 8
+    %t1 = getelementptr inbounds %Frame_expp, %Frame_expp* %.frame, i32 0, i32 0
+    store double %r, double* %t1
+
+    ; epilogue
+    %t2 = getelementptr inbounds %Frame_expp, %Frame_expp* %.frame, i32 0, i32 1
+    %t3 = load double, double* %t2
+    ret double %t3
 }
 
 
@@ -135,12 +145,19 @@ define double @F_expp()
 };
 
 ; function body
-define i32 @F_random()
+define i32 @F_random(i32 %low, i32 %hi)
 {
-    %frame = alloca %Frame_random, align 8
-    %t1 = getelementptr inbounds %Frame_random, %Frame_random* %frame, i32 0, i32 2
-    %t2 = load i32, i32* %t1
-    ret i32 %t2
+    ; allocate frame
+    %.frame = alloca %Frame_random, align 8
+    %t1 = getelementptr inbounds %Frame_random, %Frame_random* %.frame, i32 0, i32 0
+    store i32 %hi, i32* %t1
+    %t2 = getelementptr inbounds %Frame_random, %Frame_random* %.frame, i32 0, i32 1
+    store i32 %low, i32* %t2
+
+    ; epilogue
+    %t3 = getelementptr inbounds %Frame_random, %Frame_random* %.frame, i32 0, i32 2
+    %t4 = load i32, i32* %t3
+    ret i32 %t4
 }
 
 
@@ -164,12 +181,21 @@ define i32 @F_random()
 };
 
 ; function body
-define i32 @F_distance()
+define i32 @F_distance(i32 %pos1x, i32 %pos1y, %T_sectxy %pos2)
 {
-    %frame = alloca %Frame_distance, align 8
-    %t1 = getelementptr inbounds %Frame_distance, %Frame_distance* %frame, i32 0, i32 3
-    %t2 = load i32, i32* %t1
-    ret i32 %t2
+    ; allocate frame
+    %.frame = alloca %Frame_distance, align 8
+    %t1 = getelementptr inbounds %Frame_distance, %Frame_distance* %.frame, i32 0, i32 0
+    store i32 %pos1x, i32* %t1
+    %t2 = getelementptr inbounds %Frame_distance, %Frame_distance* %.frame, i32 0, i32 1
+    store i32 %pos1y, i32* %t2
+    %t3 = getelementptr inbounds %Frame_distance, %Frame_distance* %.frame, i32 0, i32 2
+    store %T_sectxy %pos2, %T_sectxy* %t3
+
+    ; epilogue
+    %t4 = getelementptr inbounds %Frame_distance, %Frame_distance* %.frame, i32 0, i32 3
+    %t5 = load i32, i32* %t4
+    ret i32 %t5
 }
 
 
@@ -191,12 +217,17 @@ define i32 @F_distance()
 };
 
 ; function body
-define double @F_radians()
+define double @F_radians(i32 %degrees)
 {
-    %frame = alloca %Frame_radians, align 8
-    %t1 = getelementptr inbounds %Frame_radians, %Frame_radians* %frame, i32 0, i32 1
-    %t2 = load double, double* %t1
-    ret double %t2
+    ; allocate frame
+    %.frame = alloca %Frame_radians, align 8
+    %t1 = getelementptr inbounds %Frame_radians, %Frame_radians* %.frame, i32 0, i32 0
+    store i32 %degrees, i32* %t1
+
+    ; epilogue
+    %t2 = getelementptr inbounds %Frame_radians, %Frame_radians* %.frame, i32 0, i32 1
+    %t3 = load double, double* %t2
+    ret double %t3
 }
 
 
@@ -220,12 +251,21 @@ define double @F_radians()
 };
 
 ; function body
-define i32 @F_interval()
+define i32 @F_interval(i32 %number, i32 %minvalue, i32 %maxvalue)
 {
-    %frame = alloca %Frame_interval, align 8
-    %t1 = getelementptr inbounds %Frame_interval, %Frame_interval* %frame, i32 0, i32 3
-    %t2 = load i32, i32* %t1
-    ret i32 %t2
+    ; allocate frame
+    %.frame = alloca %Frame_interval, align 8
+    %t1 = getelementptr inbounds %Frame_interval, %Frame_interval* %.frame, i32 0, i32 0
+    store i32 %maxvalue, i32* %t1
+    %t2 = getelementptr inbounds %Frame_interval, %Frame_interval* %.frame, i32 0, i32 1
+    store i32 %minvalue, i32* %t2
+    %t3 = getelementptr inbounds %Frame_interval, %Frame_interval* %.frame, i32 0, i32 2
+    store i32 %number, i32* %t3
+
+    ; epilogue
+    %t4 = getelementptr inbounds %Frame_interval, %Frame_interval* %.frame, i32 0, i32 3
+    %t5 = load i32, i32* %t4
+    ret i32 %t5
 }
 
 
@@ -246,7 +286,10 @@ define i32 @F_interval()
 ; procedure body
 define void @P_reinitialize()
 {
-    %frame = alloca %Frame_reinitialize, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_reinitialize, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -271,7 +314,10 @@ define void @P_reinitialize()
 ; procedure body
 define void @P_initialize()
 {
-    %frame = alloca %Frame_initialize, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_initialize, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -294,7 +340,10 @@ define void @P_initialize()
 ; procedure body
 define void @P_setcondition()
 {
-    %frame = alloca %Frame_setcondition, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_setcondition, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -321,7 +370,10 @@ define void @P_setcondition()
 ; procedure body
 define void @P_klingonattack()
 {
-    %frame = alloca %Frame_klingonattack, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_klingonattack, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -334,7 +386,7 @@ define void @P_klingonattack()
 %Frame_printdigit = type
 {
     ; parameters
-    i1,    ; 0: mustprint
+    i1*,    ; 0: mustprint
     i32,    ; 1: number
 
     ; dummy
@@ -342,9 +394,16 @@ define void @P_klingonattack()
 };
 
 ; procedure body
-define void @P_printdigit()
+define void @P_printdigit(i32 %number, i1* %mustprint)
 {
-    %frame = alloca %Frame_printdigit, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_printdigit, align 8
+    %t1 = getelementptr inbounds %Frame_printdigit, %Frame_printdigit* %.frame, i32 0, i32 0
+    store i1* %mustprint, i1** %t1
+    %t2 = getelementptr inbounds %Frame_printdigit, %Frame_printdigit* %.frame, i32 0, i32 1
+    store i32 %number, i32* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -357,7 +416,7 @@ define void @P_printdigit()
 %Frame_setupquad = type
 {
     ; parameters
-    %T_sectxy,    ; 0: entsect
+    %T_sectxy*,    ; 0: entsect
     %T_quadxy,    ; 1: quad
 
     ; variables
@@ -371,9 +430,16 @@ define void @P_printdigit()
 };
 
 ; procedure body
-define void @P_setupquad()
+define void @P_setupquad(%T_quadxy %quad, %T_sectxy* %entsect)
 {
-    %frame = alloca %Frame_setupquad, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_setupquad, align 8
+    %t1 = getelementptr inbounds %Frame_setupquad, %Frame_setupquad* %.frame, i32 0, i32 0
+    store %T_sectxy* %entsect, %T_sectxy** %t1
+    %t2 = getelementptr inbounds %Frame_setupquad, %Frame_setupquad* %.frame, i32 0, i32 1
+    store %T_quadxy %quad, %T_quadxy* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -398,9 +464,18 @@ define void @P_setupquad()
 };
 
 ; procedure body
-define void @P_setupquad_setupstuff()
+define void @P_setupquad_setupstuff(%Frame_setupquad* %.slink, i32 %object, i32 %count)
 {
-    %frame = alloca %Frame_setupquad_setupstuff, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_setupquad_setupstuff, align 8
+    %t1 = getelementptr inbounds %Frame_setupquad_setupstuff, %Frame_setupquad_setupstuff* %.frame, i32 0, i32 4
+    store %Frame_setupquad* %.slink, %Frame_setupquad** %t1
+    %t2 = getelementptr inbounds %Frame_setupquad_setupstuff, %Frame_setupquad_setupstuff* %.frame, i32 0, i32 0
+    store i32 %count, i32* %t2
+    %t3 = getelementptr inbounds %Frame_setupquad_setupstuff, %Frame_setupquad_setupstuff* %.frame, i32 0, i32 1
+    store i32 %object, i32* %t3
+
+    ; epilogue
     ret void
 }
 
@@ -423,7 +498,10 @@ define void @P_setupquad_setupstuff()
 ; procedure body
 define void @P_printquadrant()
 {
-    %frame = alloca %Frame_printquadrant, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_printquadrant, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -451,9 +529,20 @@ define void @P_printquadrant()
 };
 
 ; procedure body
-define void @P_printgalaxy()
+define void @P_printgalaxy(i32 %topx, i32 %lefty, i32 %size, i1 %markhistory)
 {
-    %frame = alloca %Frame_printgalaxy, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_printgalaxy, align 8
+    %t1 = getelementptr inbounds %Frame_printgalaxy, %Frame_printgalaxy* %.frame, i32 0, i32 0
+    store i32 %lefty, i32* %t1
+    %t2 = getelementptr inbounds %Frame_printgalaxy, %Frame_printgalaxy* %.frame, i32 0, i32 1
+    store i1 %markhistory, i1* %t2
+    %t3 = getelementptr inbounds %Frame_printgalaxy, %Frame_printgalaxy* %.frame, i32 0, i32 2
+    store i32 %size, i32* %t3
+    %t4 = getelementptr inbounds %Frame_printgalaxy, %Frame_printgalaxy* %.frame, i32 0, i32 3
+    store i32 %topx, i32* %t4
+
+    ; epilogue
     ret void
 }
 
@@ -476,9 +565,16 @@ define void @P_printgalaxy()
 };
 
 ; procedure body
-define void @P_printgalaxy_printseparator()
+define void @P_printgalaxy_printseparator(%Frame_printgalaxy* %.slink, i32 %entries)
 {
-    %frame = alloca %Frame_printgalaxy_printseparator, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_printgalaxy_printseparator, align 8
+    %t1 = getelementptr inbounds %Frame_printgalaxy_printseparator, %Frame_printgalaxy_printseparator* %.frame, i32 0, i32 2
+    store %Frame_printgalaxy* %.slink, %Frame_printgalaxy** %t1
+    %t2 = getelementptr inbounds %Frame_printgalaxy_printseparator, %Frame_printgalaxy_printseparator* %.frame, i32 0, i32 0
+    store i32 %entries, i32* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -500,7 +596,10 @@ define void @P_printgalaxy_printseparator()
 ; procedure body
 define void @P_printdamage()
 {
-    %frame = alloca %Frame_printdamage, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_printdamage, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -527,7 +626,10 @@ define void @P_printdamage()
 ; procedure body
 define void @P_moveenterprise()
 {
-    %frame = alloca %Frame_moveenterprise, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_moveenterprise, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -548,9 +650,14 @@ define void @P_moveenterprise()
 };
 
 ; procedure body
-define void @P_moveenterprise_handledamage()
+define void @P_moveenterprise_handledamage(%Frame_moveenterprise* %.slink)
 {
-    %frame = alloca %Frame_moveenterprise_handledamage, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_moveenterprise_handledamage, align 8
+    %t1 = getelementptr inbounds %Frame_moveenterprise_handledamage, %Frame_moveenterprise_handledamage* %.frame, i32 0, i32 2
+    store %Frame_moveenterprise* %.slink, %Frame_moveenterprise** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -565,19 +672,36 @@ define void @P_moveenterprise_handledamage()
     ; parameters
     i32,    ; 0: course
     double,    ; 1: warp
-    double,    ; 2: xinc
-    double,    ; 3: xpos
-    double,    ; 4: yinc
-    double,    ; 5: ypos
+    double*,    ; 2: xinc
+    double*,    ; 3: xpos
+    double*,    ; 4: yinc
+    double*,    ; 5: ypos
 
     ; slink
     %Frame_moveenterprise*    ; 6
 };
 
 ; procedure body
-define void @P_moveenterprise_moveintra()
+define void @P_moveenterprise_moveintra(%Frame_moveenterprise* %.slink, double* %xpos, double* %ypos, double* %xinc, double* %yinc, i32 %course, double %warp)
 {
-    %frame = alloca %Frame_moveenterprise_moveintra, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_moveenterprise_moveintra, align 8
+    %t1 = getelementptr inbounds %Frame_moveenterprise_moveintra, %Frame_moveenterprise_moveintra* %.frame, i32 0, i32 6
+    store %Frame_moveenterprise* %.slink, %Frame_moveenterprise** %t1
+    %t2 = getelementptr inbounds %Frame_moveenterprise_moveintra, %Frame_moveenterprise_moveintra* %.frame, i32 0, i32 0
+    store i32 %course, i32* %t2
+    %t3 = getelementptr inbounds %Frame_moveenterprise_moveintra, %Frame_moveenterprise_moveintra* %.frame, i32 0, i32 1
+    store double %warp, double* %t3
+    %t4 = getelementptr inbounds %Frame_moveenterprise_moveintra, %Frame_moveenterprise_moveintra* %.frame, i32 0, i32 2
+    store double* %xinc, double** %t4
+    %t5 = getelementptr inbounds %Frame_moveenterprise_moveintra, %Frame_moveenterprise_moveintra* %.frame, i32 0, i32 3
+    store double* %xpos, double** %t5
+    %t6 = getelementptr inbounds %Frame_moveenterprise_moveintra, %Frame_moveenterprise_moveintra* %.frame, i32 0, i32 4
+    store double* %yinc, double** %t6
+    %t7 = getelementptr inbounds %Frame_moveenterprise_moveintra, %Frame_moveenterprise_moveintra* %.frame, i32 0, i32 5
+    store double* %ypos, double** %t7
+
+    ; epilogue
     ret void
 }
 
@@ -601,7 +725,10 @@ define void @P_moveenterprise_moveintra()
 ; procedure body
 define void @P_firephasers()
 {
-    %frame = alloca %Frame_firephasers, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_firephasers, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -629,7 +756,10 @@ define void @P_firephasers()
 ; procedure body
 define void @P_firetorpedoes()
 {
-    %frame = alloca %Frame_firetorpedoes, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_firetorpedoes, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -642,7 +772,7 @@ define void @P_firetorpedoes()
 %Frame_firetorpedoes_hitnova = type
 {
     ; parameters
-    i32,    ; 0: klingnum
+    i32*,    ; 0: klingnum
     i32,    ; 1: novax
     i32,    ; 2: novay
 
@@ -655,9 +785,20 @@ define void @P_firetorpedoes()
 };
 
 ; procedure body
-define void @P_firetorpedoes_hitnova()
+define void @P_firetorpedoes_hitnova(%Frame_firetorpedoes* %.slink, i32 %novax, i32 %novay, i32* %klingnum)
 {
-    %frame = alloca %Frame_firetorpedoes_hitnova, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_firetorpedoes_hitnova, align 8
+    %t1 = getelementptr inbounds %Frame_firetorpedoes_hitnova, %Frame_firetorpedoes_hitnova* %.frame, i32 0, i32 5
+    store %Frame_firetorpedoes* %.slink, %Frame_firetorpedoes** %t1
+    %t2 = getelementptr inbounds %Frame_firetorpedoes_hitnova, %Frame_firetorpedoes_hitnova* %.frame, i32 0, i32 0
+    store i32* %klingnum, i32** %t2
+    %t3 = getelementptr inbounds %Frame_firetorpedoes_hitnova, %Frame_firetorpedoes_hitnova* %.frame, i32 0, i32 1
+    store i32 %novax, i32* %t3
+    %t4 = getelementptr inbounds %Frame_firetorpedoes_hitnova, %Frame_firetorpedoes_hitnova* %.frame, i32 0, i32 2
+    store i32 %novay, i32* %t4
+
+    ; epilogue
     ret void
 }
 
@@ -670,7 +811,7 @@ define void @P_firetorpedoes_hitnova()
 %Frame_firetorpedoes_hitklingbase = type
 {
     ; parameters
-    i32,    ; 0: klingbasenum
+    i32*,    ; 0: klingbasenum
 
     ; variables
     i32,    ; 1: i
@@ -683,9 +824,16 @@ define void @P_firetorpedoes_hitnova()
 };
 
 ; procedure body
-define void @P_firetorpedoes_hitklingbase()
+define void @P_firetorpedoes_hitklingbase(%Frame_firetorpedoes* %.slink, i32* %klingbasenum)
 {
-    %frame = alloca %Frame_firetorpedoes_hitklingbase, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_firetorpedoes_hitklingbase, align 8
+    %t1 = getelementptr inbounds %Frame_firetorpedoes_hitklingbase, %Frame_firetorpedoes_hitklingbase* %.frame, i32 0, i32 5
+    store %Frame_firetorpedoes* %.slink, %Frame_firetorpedoes** %t1
+    %t2 = getelementptr inbounds %Frame_firetorpedoes_hitklingbase, %Frame_firetorpedoes_hitklingbase* %.frame, i32 0, i32 0
+    store i32* %klingbasenum, i32** %t2
+
+    ; epilogue
     ret void
 }
 
@@ -707,7 +855,10 @@ define void @P_firetorpedoes_hitklingbase()
 ; procedure body
 define void @P_selfdestruct()
 {
-    %frame = alloca %Frame_selfdestruct, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_selfdestruct, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -730,7 +881,10 @@ define void @P_selfdestruct()
 ; procedure body
 define void @P_command()
 {
-    %frame = alloca %Frame_command, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_command, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -752,7 +906,10 @@ define void @P_command()
 ; procedure body
 define void @P_instructions()
 {
-    %frame = alloca %Frame_instructions, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_instructions, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -769,9 +926,14 @@ define void @P_instructions()
 };
 
 ; procedure body
-define void @P_instructions_spacewait()
+define void @P_instructions_spacewait(%Frame_instructions* %.slink)
 {
-    %frame = alloca %Frame_instructions_spacewait, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_instructions_spacewait, align 8
+    %t1 = getelementptr inbounds %Frame_instructions_spacewait, %Frame_instructions_spacewait* %.frame, i32 0, i32 0
+    store %Frame_instructions* %.slink, %Frame_instructions** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -788,9 +950,14 @@ define void @P_instructions_spacewait()
 };
 
 ; procedure body
-define void @P_instructions_page1()
+define void @P_instructions_page1(%Frame_instructions* %.slink)
 {
-    %frame = alloca %Frame_instructions_page1, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_instructions_page1, align 8
+    %t1 = getelementptr inbounds %Frame_instructions_page1, %Frame_instructions_page1* %.frame, i32 0, i32 0
+    store %Frame_instructions* %.slink, %Frame_instructions** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -807,9 +974,14 @@ define void @P_instructions_page1()
 };
 
 ; procedure body
-define void @P_instructions_page2()
+define void @P_instructions_page2(%Frame_instructions* %.slink)
 {
-    %frame = alloca %Frame_instructions_page2, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_instructions_page2, align 8
+    %t1 = getelementptr inbounds %Frame_instructions_page2, %Frame_instructions_page2* %.frame, i32 0, i32 0
+    store %Frame_instructions* %.slink, %Frame_instructions** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -826,9 +998,14 @@ define void @P_instructions_page2()
 };
 
 ; procedure body
-define void @P_instructions_page3()
+define void @P_instructions_page3(%Frame_instructions* %.slink)
 {
-    %frame = alloca %Frame_instructions_page3, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_instructions_page3, align 8
+    %t1 = getelementptr inbounds %Frame_instructions_page3, %Frame_instructions_page3* %.frame, i32 0, i32 0
+    store %Frame_instructions* %.slink, %Frame_instructions** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -845,9 +1022,14 @@ define void @P_instructions_page3()
 };
 
 ; procedure body
-define void @P_instructions_page4()
+define void @P_instructions_page4(%Frame_instructions* %.slink)
 {
-    %frame = alloca %Frame_instructions_page4, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_instructions_page4, align 8
+    %t1 = getelementptr inbounds %Frame_instructions_page4, %Frame_instructions_page4* %.frame, i32 0, i32 0
+    store %Frame_instructions* %.slink, %Frame_instructions** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -864,9 +1046,14 @@ define void @P_instructions_page4()
 };
 
 ; procedure body
-define void @P_instructions_page5()
+define void @P_instructions_page5(%Frame_instructions* %.slink)
 {
-    %frame = alloca %Frame_instructions_page5, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_instructions_page5, align 8
+    %t1 = getelementptr inbounds %Frame_instructions_page5, %Frame_instructions_page5* %.frame, i32 0, i32 0
+    store %Frame_instructions* %.slink, %Frame_instructions** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -883,9 +1070,14 @@ define void @P_instructions_page5()
 };
 
 ; procedure body
-define void @P_instructions_page6()
+define void @P_instructions_page6(%Frame_instructions* %.slink)
 {
-    %frame = alloca %Frame_instructions_page6, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_instructions_page6, align 8
+    %t1 = getelementptr inbounds %Frame_instructions_page6, %Frame_instructions_page6* %.frame, i32 0, i32 0
+    store %Frame_instructions* %.slink, %Frame_instructions** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -907,7 +1099,10 @@ define void @P_instructions_page6()
 ; procedure body
 define void @P_finishgame()
 {
-    %frame = alloca %Frame_finishgame, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_finishgame, align 8
+
+    ; epilogue
     ret void
 }
 

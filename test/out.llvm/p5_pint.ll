@@ -101,6 +101,7 @@ declare dso_local void @_CloseFile(i8*)
 ; procedure body
 define void @P_()
 {
+    ; initialize file handles
     %t1 = call i8* @_OpenFile(i32 0)
     store i8* %t1, i8** @input
     %t2 = call i8* @_OpenFile(i32 1)
@@ -109,6 +110,8 @@ define void @P_()
     store i8* %t3, i8** @prd
     %t4 = call i8* @_OpenFile(i32 3)
     store i8* %t4, i8** @prr
+
+    ; cleanup
     %t5 = load %T_text, %T_text* @prr
     call void @_CloseFile(i8* %t5)
     %t6 = load %T_text, %T_text* @prd
@@ -117,6 +120,8 @@ define void @P_()
     call void @_CloseFile(i8* %t7)
     %t8 = load %T_text, %T_text* @input
     call void @_CloseFile(i8* %t8)
+
+    ; epilogue
     ret void
 }
 
@@ -145,12 +150,17 @@ define void @P_()
 };
 
 ; function body
-define i32 @F_getint()
+define i32 @F_getint(i32 %a)
 {
-    %frame = alloca %Frame_getint, align 8
-    %t1 = getelementptr inbounds %Frame_getint, %Frame_getint* %frame, i32 0, i32 1
-    %t2 = load i32, i32* %t1
-    ret i32 %t2
+    ; allocate frame
+    %.frame = alloca %Frame_getint, align 8
+    %t1 = getelementptr inbounds %Frame_getint, %Frame_getint* %.frame, i32 0, i32 0
+    store i32 %a, i32* %t1
+
+    ; epilogue
+    %t2 = getelementptr inbounds %Frame_getint, %Frame_getint* %.frame, i32 0, i32 1
+    %t3 = load i32, i32* %t2
+    ret i32 %t3
 }
 
 
@@ -178,9 +188,16 @@ define i32 @F_getint()
 };
 
 ; procedure body
-define void @P_putint()
+define void @P_putint(i32 %a, i32 %x)
 {
-    %frame = alloca %Frame_putint, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_putint, align 8
+    %t1 = getelementptr inbounds %Frame_putint, %Frame_putint* %.frame, i32 0, i32 0
+    store i32 %a, i32* %t1
+    %t2 = getelementptr inbounds %Frame_putint, %Frame_putint* %.frame, i32 0, i32 1
+    store i32 %x, i32* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -209,12 +226,17 @@ define void @P_putint()
 };
 
 ; function body
-define double @F_getrel()
+define double @F_getrel(i32 %a)
 {
-    %frame = alloca %Frame_getrel, align 8
-    %t1 = getelementptr inbounds %Frame_getrel, %Frame_getrel* %frame, i32 0, i32 1
-    %t2 = load double, double* %t1
-    ret double %t2
+    ; allocate frame
+    %.frame = alloca %Frame_getrel, align 8
+    %t1 = getelementptr inbounds %Frame_getrel, %Frame_getrel* %.frame, i32 0, i32 0
+    store i32 %a, i32* %t1
+
+    ; epilogue
+    %t2 = getelementptr inbounds %Frame_getrel, %Frame_getrel* %.frame, i32 0, i32 1
+    %t3 = load double, double* %t2
+    ret double %t3
 }
 
 
@@ -242,9 +264,16 @@ define double @F_getrel()
 };
 
 ; procedure body
-define void @P_putrel()
+define void @P_putrel(i32 %a, double %f)
 {
-    %frame = alloca %Frame_putrel, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_putrel, align 8
+    %t1 = getelementptr inbounds %Frame_putrel, %Frame_putrel* %.frame, i32 0, i32 0
+    store i32 %a, i32* %t1
+    %t2 = getelementptr inbounds %Frame_putrel, %Frame_putrel* %.frame, i32 0, i32 1
+    store double %f, double* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -268,12 +297,17 @@ define void @P_putrel()
 };
 
 ; function body
-define i1 @F_getbol()
+define i1 @F_getbol(i32 %a)
 {
-    %frame = alloca %Frame_getbol, align 8
-    %t1 = getelementptr inbounds %Frame_getbol, %Frame_getbol* %frame, i32 0, i32 1
-    %t2 = load i1, i1* %t1
-    ret i1 %t2
+    ; allocate frame
+    %.frame = alloca %Frame_getbol, align 8
+    %t1 = getelementptr inbounds %Frame_getbol, %Frame_getbol* %.frame, i32 0, i32 0
+    store i32 %a, i32* %t1
+
+    ; epilogue
+    %t2 = getelementptr inbounds %Frame_getbol, %Frame_getbol* %.frame, i32 0, i32 1
+    %t3 = load i1, i1* %t2
+    ret i1 %t3
 }
 
 
@@ -293,9 +327,16 @@ define i1 @F_getbol()
 };
 
 ; procedure body
-define void @P_putbol()
+define void @P_putbol(i32 %a, i1 %b)
 {
-    %frame = alloca %Frame_putbol, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_putbol, align 8
+    %t1 = getelementptr inbounds %Frame_putbol, %Frame_putbol* %.frame, i32 0, i32 0
+    store i32 %a, i32* %t1
+    %t2 = getelementptr inbounds %Frame_putbol, %Frame_putbol* %.frame, i32 0, i32 1
+    store i1 %b, i1* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -313,7 +354,7 @@ define void @P_putbol()
 {
     ; parameters
     i32,    ; 0: a
-    %T_settype,    ; 1: s
+    %T_settype*,    ; 1: s
 
     ; variables
     i32,    ; 2: i
@@ -324,9 +365,16 @@ define void @P_putbol()
 };
 
 ; procedure body
-define void @P_getset()
+define void @P_getset(i32 %a, %T_settype* %s)
 {
-    %frame = alloca %Frame_getset, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_getset, align 8
+    %t1 = getelementptr inbounds %Frame_getset, %Frame_getset* %.frame, i32 0, i32 0
+    store i32 %a, i32* %t1
+    %t2 = getelementptr inbounds %Frame_getset, %Frame_getset* %.frame, i32 0, i32 1
+    store %T_settype* %s, %T_settype** %t2
+
+    ; epilogue
     ret void
 }
 
@@ -355,9 +403,16 @@ define void @P_getset()
 };
 
 ; procedure body
-define void @P_putset()
+define void @P_putset(i32 %a, %T_settype %s)
 {
-    %frame = alloca %Frame_putset, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_putset, align 8
+    %t1 = getelementptr inbounds %Frame_putset, %Frame_putset* %.frame, i32 0, i32 0
+    store i32 %a, i32* %t1
+    %t2 = getelementptr inbounds %Frame_putset, %Frame_putset* %.frame, i32 0, i32 1
+    store %T_settype %s, %T_settype* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -380,12 +435,17 @@ define void @P_putset()
 };
 
 ; function body
-define i8 @F_getchr()
+define i8 @F_getchr(i32 %a)
 {
-    %frame = alloca %Frame_getchr, align 8
-    %t1 = getelementptr inbounds %Frame_getchr, %Frame_getchr* %frame, i32 0, i32 1
-    %t2 = load i8, i8* %t1
-    ret i8 %t2
+    ; allocate frame
+    %.frame = alloca %Frame_getchr, align 8
+    %t1 = getelementptr inbounds %Frame_getchr, %Frame_getchr* %.frame, i32 0, i32 0
+    store i32 %a, i32* %t1
+
+    ; epilogue
+    %t2 = getelementptr inbounds %Frame_getchr, %Frame_getchr* %.frame, i32 0, i32 1
+    %t3 = load i8, i8* %t2
+    ret i8 %t3
 }
 
 
@@ -405,9 +465,16 @@ define i8 @F_getchr()
 };
 
 ; procedure body
-define void @P_putchr()
+define void @P_putchr(i32 %a, i8 %c)
 {
-    %frame = alloca %Frame_putchr, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_putchr, align 8
+    %t1 = getelementptr inbounds %Frame_putchr, %Frame_putchr* %.frame, i32 0, i32 0
+    store i32 %a, i32* %t1
+    %t2 = getelementptr inbounds %Frame_putchr, %Frame_putchr* %.frame, i32 0, i32 1
+    store i8 %c, i8* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -436,12 +503,17 @@ define void @P_putchr()
 };
 
 ; function body
-define i32 @F_getadr()
+define i32 @F_getadr(i32 %a)
 {
-    %frame = alloca %Frame_getadr, align 8
-    %t1 = getelementptr inbounds %Frame_getadr, %Frame_getadr* %frame, i32 0, i32 1
-    %t2 = load i32, i32* %t1
-    ret i32 %t2
+    ; allocate frame
+    %.frame = alloca %Frame_getadr, align 8
+    %t1 = getelementptr inbounds %Frame_getadr, %Frame_getadr* %.frame, i32 0, i32 0
+    store i32 %a, i32* %t1
+
+    ; epilogue
+    %t2 = getelementptr inbounds %Frame_getadr, %Frame_getadr* %.frame, i32 0, i32 1
+    %t3 = load i32, i32* %t2
+    ret i32 %t3
 }
 
 
@@ -469,9 +541,16 @@ define i32 @F_getadr()
 };
 
 ; procedure body
-define void @P_putadr()
+define void @P_putadr(i32 %a, i32 %ad)
 {
-    %frame = alloca %Frame_putadr, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_putadr, align 8
+    %t1 = getelementptr inbounds %Frame_putadr, %Frame_putadr* %.frame, i32 0, i32 0
+    store i32 %a, i32* %t1
+    %t2 = getelementptr inbounds %Frame_putadr, %Frame_putadr* %.frame, i32 0, i32 1
+    store i32 %ad, i32* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -499,9 +578,14 @@ define void @P_putadr()
 };
 
 ; procedure body
-define void @P_swpstk()
+define void @P_swpstk(i32 %l)
 {
-    %frame = alloca %Frame_swpstk, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_swpstk, align 8
+    %t1 = getelementptr inbounds %Frame_swpstk, %Frame_swpstk* %.frame, i32 0, i32 0
+    store i32 %l, i32* %t1
+
+    ; epilogue
     ret void
 }
 
@@ -514,16 +598,21 @@ define void @P_swpstk()
 %Frame_popint = type
 {
     ; parameters
-    i32,    ; 0: i
+    i32*,    ; 0: i
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_popint()
+define void @P_popint(i32* %i)
 {
-    %frame = alloca %Frame_popint, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_popint, align 8
+    %t1 = getelementptr inbounds %Frame_popint, %Frame_popint* %.frame, i32 0, i32 0
+    store i32* %i, i32** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -543,9 +632,14 @@ define void @P_popint()
 };
 
 ; procedure body
-define void @P_pshint()
+define void @P_pshint(i32 %i)
 {
-    %frame = alloca %Frame_pshint, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_pshint, align 8
+    %t1 = getelementptr inbounds %Frame_pshint, %Frame_pshint* %.frame, i32 0, i32 0
+    store i32 %i, i32* %t1
+
+    ; epilogue
     ret void
 }
 
@@ -558,16 +652,21 @@ define void @P_pshint()
 %Frame_poprel = type
 {
     ; parameters
-    double,    ; 0: r
+    double*,    ; 0: r
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_poprel()
+define void @P_poprel(double* %r)
 {
-    %frame = alloca %Frame_poprel, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_poprel, align 8
+    %t1 = getelementptr inbounds %Frame_poprel, %Frame_poprel* %.frame, i32 0, i32 0
+    store double* %r, double** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -587,9 +686,14 @@ define void @P_poprel()
 };
 
 ; procedure body
-define void @P_pshrel()
+define void @P_pshrel(double %r)
 {
-    %frame = alloca %Frame_pshrel, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_pshrel, align 8
+    %t1 = getelementptr inbounds %Frame_pshrel, %Frame_pshrel* %.frame, i32 0, i32 0
+    store double %r, double* %t1
+
+    ; epilogue
     ret void
 }
 
@@ -602,16 +706,21 @@ define void @P_pshrel()
 %Frame_popset = type
 {
     ; parameters
-    %T_settype,    ; 0: s
+    %T_settype*,    ; 0: s
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_popset()
+define void @P_popset(%T_settype* %s)
 {
-    %frame = alloca %Frame_popset, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_popset, align 8
+    %t1 = getelementptr inbounds %Frame_popset, %Frame_popset* %.frame, i32 0, i32 0
+    store %T_settype* %s, %T_settype** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -631,9 +740,14 @@ define void @P_popset()
 };
 
 ; procedure body
-define void @P_pshset()
+define void @P_pshset(%T_settype %s)
 {
-    %frame = alloca %Frame_pshset, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_pshset, align 8
+    %t1 = getelementptr inbounds %Frame_pshset, %Frame_pshset* %.frame, i32 0, i32 0
+    store %T_settype %s, %T_settype* %t1
+
+    ; epilogue
     ret void
 }
 
@@ -646,16 +760,21 @@ define void @P_pshset()
 %Frame_popadr = type
 {
     ; parameters
-    i32,    ; 0: a
+    i32*,    ; 0: a
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_popadr()
+define void @P_popadr(i32* %a)
 {
-    %frame = alloca %Frame_popadr, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_popadr, align 8
+    %t1 = getelementptr inbounds %Frame_popadr, %Frame_popadr* %.frame, i32 0, i32 0
+    store i32* %a, i32** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -675,9 +794,14 @@ define void @P_popadr()
 };
 
 ; procedure body
-define void @P_pshadr()
+define void @P_pshadr(i32 %a)
 {
-    %frame = alloca %Frame_pshadr, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_pshadr, align 8
+    %t1 = getelementptr inbounds %Frame_pshadr, %Frame_pshadr* %.frame, i32 0, i32 0
+    store i32 %a, i32* %t1
+
+    ; epilogue
     ret void
 }
 
@@ -703,9 +827,16 @@ define void @P_pshadr()
 };
 
 ; procedure body
-define void @P_wrthex()
+define void @P_wrthex(i32 %v, i32 %f)
 {
-    %frame = alloca %Frame_wrthex, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_wrthex, align 8
+    %t1 = getelementptr inbounds %Frame_wrthex, %Frame_wrthex* %.frame, i32 0, i32 0
+    store i32 %f, i32* %t1
+    %t2 = getelementptr inbounds %Frame_wrthex, %Frame_wrthex* %.frame, i32 0, i32 1
+    store i32 %v, i32* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -718,7 +849,7 @@ define void @P_wrthex()
 %Frame_lstins = type
 {
     ; parameters
-    i32,    ; 0: ad
+    i32*,    ; 0: ad
 
     ; variables
     i32,    ; 1: ads
@@ -731,9 +862,14 @@ define void @P_wrthex()
 };
 
 ; procedure body
-define void @P_lstins()
+define void @P_lstins(i32* %ad)
 {
-    %frame = alloca %Frame_lstins, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_lstins, align 8
+    %t1 = getelementptr inbounds %Frame_lstins, %Frame_lstins* %.frame, i32 0, i32 0
+    store i32* %ad, i32** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -755,7 +891,10 @@ define void @P_lstins()
 ; procedure body
 define void @P_dmpins()
 {
-    %frame = alloca %Frame_dmpins, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_dmpins, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -769,7 +908,7 @@ define void @P_dmpins()
 {
     ; parameters
     i32,    ; 0: algn
-    i32,    ; 1: flc
+    i32*,    ; 1: flc
 
     ; variables
     i32,    ; 2: l
@@ -779,9 +918,16 @@ define void @P_dmpins()
 };
 
 ; procedure body
-define void @P_alignu()
+define void @P_alignu(i32 %algn, i32* %flc)
 {
-    %frame = alloca %Frame_alignu, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_alignu, align 8
+    %t1 = getelementptr inbounds %Frame_alignu, %Frame_alignu* %.frame, i32 0, i32 0
+    store i32 %algn, i32* %t1
+    %t2 = getelementptr inbounds %Frame_alignu, %Frame_alignu* %.frame, i32 0, i32 1
+    store i32* %flc, i32** %t2
+
+    ; epilogue
     ret void
 }
 
@@ -795,7 +941,7 @@ define void @P_alignu()
 {
     ; parameters
     i32,    ; 0: algn
-    i32,    ; 1: flc
+    i32*,    ; 1: flc
 
     ; variables
     i32,    ; 2: l
@@ -805,9 +951,16 @@ define void @P_alignu()
 };
 
 ; procedure body
-define void @P_alignd()
+define void @P_alignd(i32 %algn, i32* %flc)
 {
-    %frame = alloca %Frame_alignd, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_alignd, align 8
+    %t1 = getelementptr inbounds %Frame_alignd, %Frame_alignd* %.frame, i32 0, i32 0
+    store i32 %algn, i32* %t1
+    %t2 = getelementptr inbounds %Frame_alignd, %Frame_alignd* %.frame, i32 0, i32 1
+    store i32* %flc, i32** %t2
+
+    ; epilogue
     ret void
 }
 
@@ -838,7 +991,10 @@ define void @P_alignd()
 ; procedure body
 define void @P_load()
 {
-    %frame = alloca %Frame_load, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_load, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -858,9 +1014,14 @@ define void @P_load()
 };
 
 ; procedure body
-define void @P_load_init()
+define void @P_load_init(%Frame_load* %.slink)
 {
-    %frame = alloca %Frame_load_init, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_load_init, align 8
+    %t1 = getelementptr inbounds %Frame_load_init, %Frame_load_init* %.frame, i32 0, i32 1
+    store %Frame_load* %.slink, %Frame_load** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -880,9 +1041,16 @@ define void @P_load_init()
 };
 
 ; procedure body
-define void @P_load_errorl()
+define void @P_load_errorl(%Frame_load* %.slink, %T_beta %string)
 {
-    %frame = alloca %Frame_load_errorl, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_load_errorl, align 8
+    %t1 = getelementptr inbounds %Frame_load_errorl, %Frame_load_errorl* %.frame, i32 0, i32 1
+    store %Frame_load* %.slink, %Frame_load** %t1
+    %t2 = getelementptr inbounds %Frame_load_errorl, %Frame_load_errorl* %.frame, i32 0, i32 0
+    store %T_beta %string, %T_beta* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -902,9 +1070,14 @@ define void @P_load_errorl()
 };
 
 ; procedure body
-define void @P_load_dmplabs()
+define void @P_load_dmplabs(%Frame_load* %.slink)
 {
-    %frame = alloca %Frame_load_dmplabs, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_load_dmplabs, align 8
+    %t1 = getelementptr inbounds %Frame_load_dmplabs, %Frame_load_dmplabs* %.frame, i32 0, i32 1
+    store %Frame_load* %.slink, %Frame_load** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -932,9 +1105,16 @@ define void @P_load_dmplabs()
 };
 
 ; procedure body
-define void @P_load_update()
+define void @P_load_update(%Frame_load* %.slink, i32 %x)
 {
-    %frame = alloca %Frame_load_update, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_load_update, align 8
+    %t1 = getelementptr inbounds %Frame_load_update, %Frame_load_update* %.frame, i32 0, i32 7
+    store %Frame_load* %.slink, %Frame_load** %t1
+    %t2 = getelementptr inbounds %Frame_load_update, %Frame_load_update* %.frame, i32 0, i32 0
+    store i32 %x, i32* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -951,9 +1131,14 @@ define void @P_load_update()
 };
 
 ; procedure body
-define void @P_load_getnxt()
+define void @P_load_getnxt(%Frame_load* %.slink)
 {
-    %frame = alloca %Frame_load_getnxt, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_load_getnxt, align 8
+    %t1 = getelementptr inbounds %Frame_load_getnxt, %Frame_load_getnxt* %.frame, i32 0, i32 0
+    store %Frame_load* %.slink, %Frame_load** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -970,9 +1155,14 @@ define void @P_load_getnxt()
 };
 
 ; procedure body
-define void @P_load_skpspc()
+define void @P_load_skpspc(%Frame_load* %.slink)
 {
-    %frame = alloca %Frame_load_skpspc, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_load_skpspc, align 8
+    %t1 = getelementptr inbounds %Frame_load_skpspc, %Frame_load_skpspc* %.frame, i32 0, i32 0
+    store %Frame_load* %.slink, %Frame_load** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -989,9 +1179,14 @@ define void @P_load_skpspc()
 };
 
 ; procedure body
-define void @P_load_getlin()
+define void @P_load_getlin(%Frame_load* %.slink)
 {
-    %frame = alloca %Frame_load_getlin, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_load_getlin, align 8
+    %t1 = getelementptr inbounds %Frame_load_getlin, %Frame_load_getlin* %.frame, i32 0, i32 0
+    store %Frame_load* %.slink, %Frame_load** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -1012,9 +1207,14 @@ define void @P_load_getlin()
 };
 
 ; procedure body
-define void @P_load_generate()
+define void @P_load_generate(%Frame_load* %.slink)
 {
-    %frame = alloca %Frame_load_generate, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_load_generate, align 8
+    %t1 = getelementptr inbounds %Frame_load_generate, %Frame_load_generate* %.frame, i32 0, i32 2
+    store %Frame_load* %.slink, %Frame_load** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -1048,9 +1248,14 @@ define void @P_load_generate()
 };
 
 ; procedure body
-define void @P_load_assemble()
+define void @P_load_assemble(%Frame_load* %.slink)
 {
-    %frame = alloca %Frame_load_assemble, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_load_assemble, align 8
+    %t1 = getelementptr inbounds %Frame_load_assemble, %Frame_load_assemble* %.frame, i32 0, i32 12
+    store %Frame_load* %.slink, %Frame_load** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -1070,9 +1275,16 @@ define void @P_load_assemble()
 };
 
 ; procedure body
-define void @P_load_assemble_lookup()
+define void @P_load_assemble_lookup(%Frame_load_assemble* %.slink, i32 %x)
 {
-    %frame = alloca %Frame_load_assemble_lookup, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_load_assemble_lookup, align 8
+    %t1 = getelementptr inbounds %Frame_load_assemble_lookup, %Frame_load_assemble_lookup* %.frame, i32 0, i32 1
+    store %Frame_load_assemble* %.slink, %Frame_load_assemble** %t1
+    %t2 = getelementptr inbounds %Frame_load_assemble_lookup, %Frame_load_assemble_lookup* %.frame, i32 0, i32 0
+    store i32 %x, i32* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -1092,9 +1304,14 @@ define void @P_load_assemble_lookup()
 };
 
 ; procedure body
-define void @P_load_assemble_labelsearch()
+define void @P_load_assemble_labelsearch(%Frame_load_assemble* %.slink)
 {
-    %frame = alloca %Frame_load_assemble_labelsearch, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_load_assemble_labelsearch, align 8
+    %t1 = getelementptr inbounds %Frame_load_assemble_labelsearch, %Frame_load_assemble_labelsearch* %.frame, i32 0, i32 1
+    store %Frame_load_assemble* %.slink, %Frame_load_assemble** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -1114,9 +1331,14 @@ define void @P_load_assemble_labelsearch()
 };
 
 ; procedure body
-define void @P_load_assemble_getname()
+define void @P_load_assemble_getname(%Frame_load_assemble* %.slink)
 {
-    %frame = alloca %Frame_load_assemble_getname, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_load_assemble_getname, align 8
+    %t1 = getelementptr inbounds %Frame_load_assemble_getname, %Frame_load_assemble_getname* %.frame, i32 0, i32 1
+    store %Frame_load_assemble* %.slink, %Frame_load_assemble** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -1133,9 +1355,14 @@ define void @P_load_assemble_getname()
 };
 
 ; procedure body
-define void @P_load_assemble_storeop()
+define void @P_load_assemble_storeop(%Frame_load_assemble* %.slink)
 {
-    %frame = alloca %Frame_load_assemble_storeop, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_load_assemble_storeop, align 8
+    %t1 = getelementptr inbounds %Frame_load_assemble_storeop, %Frame_load_assemble_storeop* %.frame, i32 0, i32 0
+    store %Frame_load_assemble* %.slink, %Frame_load_assemble** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -1152,9 +1379,14 @@ define void @P_load_assemble_storeop()
 };
 
 ; procedure body
-define void @P_load_assemble_storep()
+define void @P_load_assemble_storep(%Frame_load_assemble* %.slink)
 {
-    %frame = alloca %Frame_load_assemble_storep, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_load_assemble_storep, align 8
+    %t1 = getelementptr inbounds %Frame_load_assemble_storep, %Frame_load_assemble_storep* %.frame, i32 0, i32 0
+    store %Frame_load_assemble* %.slink, %Frame_load_assemble** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -1171,9 +1403,14 @@ define void @P_load_assemble_storep()
 };
 
 ; procedure body
-define void @P_load_assemble_storeq()
+define void @P_load_assemble_storeq(%Frame_load_assemble* %.slink)
 {
-    %frame = alloca %Frame_load_assemble_storeq, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_load_assemble_storeq, align 8
+    %t1 = getelementptr inbounds %Frame_load_assemble_storeq, %Frame_load_assemble_storeq* %.frame, i32 0, i32 0
+    store %Frame_load_assemble* %.slink, %Frame_load_assemble** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -1190,9 +1427,14 @@ define void @P_load_assemble_storeq()
 };
 
 ; procedure body
-define void @P_load_assemble_storeq1()
+define void @P_load_assemble_storeq1(%Frame_load_assemble* %.slink)
 {
-    %frame = alloca %Frame_load_assemble_storeq1, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_load_assemble_storeq1, align 8
+    %t1 = getelementptr inbounds %Frame_load_assemble_storeq1, %Frame_load_assemble_storeq1* %.frame, i32 0, i32 0
+    store %Frame_load_assemble* %.slink, %Frame_load_assemble** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -1215,7 +1457,10 @@ define void @P_load_assemble_storeq1()
 ; procedure body
 define void @P_pmd()
 {
-    %frame = alloca %Frame_pmd, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_pmd, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -1232,9 +1477,14 @@ define void @P_pmd()
 };
 
 ; procedure body
-define void @P_pmd_pt()
+define void @P_pmd_pt(%Frame_pmd* %.slink)
 {
-    %frame = alloca %Frame_pmd_pt, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_pmd_pt, align 8
+    %t1 = getelementptr inbounds %Frame_pmd_pt, %Frame_pmd_pt* %.frame, i32 0, i32 0
+    store %Frame_pmd* %.slink, %Frame_pmd** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -1254,9 +1504,14 @@ define void @P_pmd_pt()
 };
 
 ; procedure body
-define void @P_errori()
+define void @P_errori(%T_beta %string)
 {
-    %frame = alloca %Frame_errori, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_errori, align 8
+    %t1 = getelementptr inbounds %Frame_errori, %Frame_errori* %.frame, i32 0, i32 0
+    store %T_beta %string, %T_beta* %t1
+
+    ; epilogue
     ret void
 }
 
@@ -1280,12 +1535,17 @@ define void @P_errori()
 };
 
 ; function body
-define i32 @F_base()
+define i32 @F_base(i32 %ld)
 {
-    %frame = alloca %Frame_base, align 8
-    %t1 = getelementptr inbounds %Frame_base, %Frame_base* %frame, i32 0, i32 1
-    %t2 = load i32, i32* %t1
-    ret i32 %t2
+    ; allocate frame
+    %.frame = alloca %Frame_base, align 8
+    %t1 = getelementptr inbounds %Frame_base, %Frame_base* %.frame, i32 0, i32 0
+    store i32 %ld, i32* %t1
+
+    ; epilogue
+    %t2 = getelementptr inbounds %Frame_base, %Frame_base* %.frame, i32 0, i32 1
+    %t3 = load i32, i32* %t2
+    ret i32 %t3
 }
 
 
@@ -1303,7 +1563,10 @@ define i32 @F_base()
 ; procedure body
 define void @P_compare()
 {
-    %frame = alloca %Frame_compare, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_compare, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -1327,9 +1590,14 @@ define void @P_compare()
 };
 
 ; procedure body
-define void @P_valfil()
+define void @P_valfil(i32 %fa)
 {
-    %frame = alloca %Frame_valfil, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_valfil, align 8
+    %t1 = getelementptr inbounds %Frame_valfil, %Frame_valfil* %.frame, i32 0, i32 0
+    store i32 %fa, i32* %t1
+
+    ; epilogue
     ret void
 }
 
@@ -1349,9 +1617,14 @@ define void @P_valfil()
 };
 
 ; procedure body
-define void @P_valfilwm()
+define void @P_valfilwm(i32 %fa)
 {
-    %frame = alloca %Frame_valfilwm, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_valfilwm, align 8
+    %t1 = getelementptr inbounds %Frame_valfilwm, %Frame_valfilwm* %.frame, i32 0, i32 0
+    store i32 %fa, i32* %t1
+
+    ; epilogue
     ret void
 }
 
@@ -1371,9 +1644,14 @@ define void @P_valfilwm()
 };
 
 ; procedure body
-define void @P_valfilrm()
+define void @P_valfilrm(i32 %fa)
 {
-    %frame = alloca %Frame_valfilrm, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_valfilrm, align 8
+    %t1 = getelementptr inbounds %Frame_valfilrm, %Frame_valfilrm* %.frame, i32 0, i32 0
+    store i32 %fa, i32* %t1
+
+    ; epilogue
     ret void
 }
 
@@ -1392,7 +1670,10 @@ define void @P_valfilrm()
 ; procedure body
 define void @P_getop()
 {
-    %frame = alloca %Frame_getop, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_getop, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -1411,7 +1692,10 @@ define void @P_getop()
 ; procedure body
 define void @P_getp()
 {
-    %frame = alloca %Frame_getp, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_getp, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -1430,7 +1714,10 @@ define void @P_getp()
 ; procedure body
 define void @P_getq()
 {
-    %frame = alloca %Frame_getq, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_getq, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -1449,7 +1736,10 @@ define void @P_getq()
 ; procedure body
 define void @P_getq1()
 {
-    %frame = alloca %Frame_getq1, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_getq1, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -1472,7 +1762,10 @@ define void @P_getq1()
 ; procedure body
 define void @P_repspc()
 {
-    %frame = alloca %Frame_repspc, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_repspc, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -1485,7 +1778,7 @@ define void @P_repspc()
 %Frame_fndfre = type
 {
     ; parameters
-    i32,    ; 0: blk
+    i32*,    ; 0: blk
     i32,    ; 1: len
 
     ; variables
@@ -1497,9 +1790,16 @@ define void @P_repspc()
 };
 
 ; procedure body
-define void @P_fndfre()
+define void @P_fndfre(i32 %len, i32* %blk)
 {
-    %frame = alloca %Frame_fndfre, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_fndfre, align 8
+    %t1 = getelementptr inbounds %Frame_fndfre, %Frame_fndfre* %.frame, i32 0, i32 0
+    store i32* %blk, i32** %t1
+    %t2 = getelementptr inbounds %Frame_fndfre, %Frame_fndfre* %.frame, i32 0, i32 1
+    store i32 %len, i32* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -1525,7 +1825,10 @@ define void @P_fndfre()
 ; procedure body
 define void @P_cscspc()
 {
-    %frame = alloca %Frame_cscspc, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_cscspc, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -1538,7 +1841,7 @@ define void @P_cscspc()
 %Frame_newspc = type
 {
     ; parameters
-    i32,    ; 0: blk
+    i32*,    ; 0: blk
     i32,    ; 1: len
 
     ; variables
@@ -1550,9 +1853,16 @@ define void @P_cscspc()
 };
 
 ; procedure body
-define void @P_newspc()
+define void @P_newspc(i32 %len, i32* %blk)
 {
-    %frame = alloca %Frame_newspc, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_newspc, align 8
+    %t1 = getelementptr inbounds %Frame_newspc, %Frame_newspc* %.frame, i32 0, i32 0
+    store i32* %blk, i32** %t1
+    %t2 = getelementptr inbounds %Frame_newspc, %Frame_newspc* %.frame, i32 0, i32 1
+    store i32 %len, i32* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -1576,9 +1886,16 @@ define void @P_newspc()
 };
 
 ; procedure body
-define void @P_dspspc()
+define void @P_dspspc(i32 %len, i32 %blk)
 {
-    %frame = alloca %Frame_dspspc, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_dspspc, align 8
+    %t1 = getelementptr inbounds %Frame_dspspc, %Frame_dspspc* %.frame, i32 0, i32 0
+    store i32 %blk, i32* %t1
+    %t2 = getelementptr inbounds %Frame_dspspc, %Frame_dspspc* %.frame, i32 0, i32 1
+    store i32 %len, i32* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -1601,12 +1918,17 @@ define void @P_dspspc()
 };
 
 ; function body
-define i1 @F_isfree()
+define i1 @F_isfree(i32 %blk)
 {
-    %frame = alloca %Frame_isfree, align 8
-    %t1 = getelementptr inbounds %Frame_isfree, %Frame_isfree* %frame, i32 0, i32 1
-    %t2 = load i1, i1* %t1
-    ret i1 %t2
+    ; allocate frame
+    %.frame = alloca %Frame_isfree, align 8
+    %t1 = getelementptr inbounds %Frame_isfree, %Frame_isfree* %.frame, i32 0, i32 0
+    store i32 %blk, i32* %t1
+
+    ; epilogue
+    %t2 = getelementptr inbounds %Frame_isfree, %Frame_isfree* %.frame, i32 0, i32 1
+    %t3 = load i1, i1* %t2
+    ret i1 %t3
 }
 
 
@@ -1638,7 +1960,10 @@ define i1 @F_isfree()
 ; procedure body
 define void @P_callsp()
 {
-    %frame = alloca %Frame_callsp, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_callsp, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -1651,17 +1976,26 @@ define void @P_callsp()
 %Frame_callsp_readi = type
 {
     ; parameters
-    %T_text,    ; 0: f
-    i32,    ; 1: i
+    %T_text*,    ; 0: f
+    i32*,    ; 1: i
 
     ; slink
     %Frame_callsp*    ; 2
 };
 
 ; procedure body
-define void @P_callsp_readi()
+define void @P_callsp_readi(%Frame_callsp* %.slink, %T_text* %f, i32* %i)
 {
-    %frame = alloca %Frame_callsp_readi, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_callsp_readi, align 8
+    %t1 = getelementptr inbounds %Frame_callsp_readi, %Frame_callsp_readi* %.frame, i32 0, i32 2
+    store %Frame_callsp* %.slink, %Frame_callsp** %t1
+    %t2 = getelementptr inbounds %Frame_callsp_readi, %Frame_callsp_readi* %.frame, i32 0, i32 0
+    store %T_text* %f, %T_text** %t2
+    %t3 = getelementptr inbounds %Frame_callsp_readi, %Frame_callsp_readi* %.frame, i32 0, i32 1
+    store i32* %i, i32** %t3
+
+    ; epilogue
     ret void
 }
 
@@ -1674,17 +2008,26 @@ define void @P_callsp_readi()
 %Frame_callsp_readr = type
 {
     ; parameters
-    %T_text,    ; 0: f
-    double,    ; 1: r
+    %T_text*,    ; 0: f
+    double*,    ; 1: r
 
     ; slink
     %Frame_callsp*    ; 2
 };
 
 ; procedure body
-define void @P_callsp_readr()
+define void @P_callsp_readr(%Frame_callsp* %.slink, %T_text* %f, double* %r)
 {
-    %frame = alloca %Frame_callsp_readr, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_callsp_readr, align 8
+    %t1 = getelementptr inbounds %Frame_callsp_readr, %Frame_callsp_readr* %.frame, i32 0, i32 2
+    store %Frame_callsp* %.slink, %Frame_callsp** %t1
+    %t2 = getelementptr inbounds %Frame_callsp_readr, %Frame_callsp_readr* %.frame, i32 0, i32 0
+    store %T_text* %f, %T_text** %t2
+    %t3 = getelementptr inbounds %Frame_callsp_readr, %Frame_callsp_readr* %.frame, i32 0, i32 1
+    store double* %r, double** %t3
+
+    ; epilogue
     ret void
 }
 
@@ -1697,17 +2040,26 @@ define void @P_callsp_readr()
 %Frame_callsp_readc = type
 {
     ; parameters
-    i8,    ; 0: c
-    %T_text,    ; 1: f
+    i8*,    ; 0: c
+    %T_text*,    ; 1: f
 
     ; slink
     %Frame_callsp*    ; 2
 };
 
 ; procedure body
-define void @P_callsp_readc()
+define void @P_callsp_readc(%Frame_callsp* %.slink, %T_text* %f, i8* %c)
 {
-    %frame = alloca %Frame_callsp_readc, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_callsp_readc, align 8
+    %t1 = getelementptr inbounds %Frame_callsp_readc, %Frame_callsp_readc* %.frame, i32 0, i32 2
+    store %Frame_callsp* %.slink, %Frame_callsp** %t1
+    %t2 = getelementptr inbounds %Frame_callsp_readc, %Frame_callsp_readc* %.frame, i32 0, i32 0
+    store i8* %c, i8** %t2
+    %t3 = getelementptr inbounds %Frame_callsp_readc, %Frame_callsp_readc* %.frame, i32 0, i32 1
+    store %T_text* %f, %T_text** %t3
+
+    ; epilogue
     ret void
 }
 
@@ -1721,7 +2073,7 @@ define void @P_callsp_readc()
 {
     ; parameters
     i32,    ; 0: ad
-    %T_text,    ; 1: f
+    %T_text*,    ; 1: f
     i32,    ; 2: l
     i32,    ; 3: w
 
@@ -1733,9 +2085,22 @@ define void @P_callsp_readc()
 };
 
 ; procedure body
-define void @P_callsp_writestr()
+define void @P_callsp_writestr(%Frame_callsp* %.slink, %T_text* %f, i32 %ad, i32 %w, i32 %l)
 {
-    %frame = alloca %Frame_callsp_writestr, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_callsp_writestr, align 8
+    %t1 = getelementptr inbounds %Frame_callsp_writestr, %Frame_callsp_writestr* %.frame, i32 0, i32 5
+    store %Frame_callsp* %.slink, %Frame_callsp** %t1
+    %t2 = getelementptr inbounds %Frame_callsp_writestr, %Frame_callsp_writestr* %.frame, i32 0, i32 0
+    store i32 %ad, i32* %t2
+    %t3 = getelementptr inbounds %Frame_callsp_writestr, %Frame_callsp_writestr* %.frame, i32 0, i32 1
+    store %T_text* %f, %T_text** %t3
+    %t4 = getelementptr inbounds %Frame_callsp_writestr, %Frame_callsp_writestr* %.frame, i32 0, i32 2
+    store i32 %l, i32* %t4
+    %t5 = getelementptr inbounds %Frame_callsp_writestr, %Frame_callsp_writestr* %.frame, i32 0, i32 3
+    store i32 %w, i32* %t5
+
+    ; epilogue
     ret void
 }
 
@@ -1748,16 +2113,23 @@ define void @P_callsp_writestr()
 %Frame_callsp_getfile = type
 {
     ; parameters
-    %T_text,    ; 0: f
+    %T_text*,    ; 0: f
 
     ; slink
     %Frame_callsp*    ; 1
 };
 
 ; procedure body
-define void @P_callsp_getfile()
+define void @P_callsp_getfile(%Frame_callsp* %.slink, %T_text* %f)
 {
-    %frame = alloca %Frame_callsp_getfile, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_callsp_getfile, align 8
+    %t1 = getelementptr inbounds %Frame_callsp_getfile, %Frame_callsp_getfile* %.frame, i32 0, i32 1
+    store %Frame_callsp* %.slink, %Frame_callsp** %t1
+    %t2 = getelementptr inbounds %Frame_callsp_getfile, %Frame_callsp_getfile* %.frame, i32 0, i32 0
+    store %T_text* %f, %T_text** %t2
+
+    ; epilogue
     ret void
 }
 
@@ -1770,17 +2142,26 @@ define void @P_callsp_getfile()
 %Frame_callsp_putfile = type
 {
     ; parameters
-    i32,    ; 0: ad
-    %T_text,    ; 1: f
+    i32*,    ; 0: ad
+    %T_text*,    ; 1: f
 
     ; slink
     %Frame_callsp*    ; 2
 };
 
 ; procedure body
-define void @P_callsp_putfile()
+define void @P_callsp_putfile(%Frame_callsp* %.slink, %T_text* %f, i32* %ad)
 {
-    %frame = alloca %Frame_callsp_putfile, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_callsp_putfile, align 8
+    %t1 = getelementptr inbounds %Frame_callsp_putfile, %Frame_callsp_putfile* %.frame, i32 0, i32 2
+    store %Frame_callsp* %.slink, %Frame_callsp** %t1
+    %t2 = getelementptr inbounds %Frame_callsp_putfile, %Frame_callsp_putfile* %.frame, i32 0, i32 0
+    store i32* %ad, i32** %t2
+    %t3 = getelementptr inbounds %Frame_callsp_putfile, %Frame_callsp_putfile* %.frame, i32 0, i32 1
+    store %T_text* %f, %T_text** %t3
+
+    ; epilogue
     ret void
 }
 

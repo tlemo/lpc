@@ -38,14 +38,19 @@ declare dso_local void @_CloseFile(i8*)
 ; procedure body
 define void @P_()
 {
+    ; initialize file handles
     %t1 = call i8* @_OpenFile(i32 0)
     store i8* %t1, i8** @_input
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
+
+    ; cleanup
     %t3 = load %T_text, %T_text* @_output
     call void @_CloseFile(i8* %t3)
     %t4 = load %T_text, %T_text* @_input
     call void @_CloseFile(i8* %t4)
+
+    ; epilogue
     ret void
 }
 
@@ -58,16 +63,21 @@ define void @P_()
 %Frame_init = type
 {
     ; parameters
-    i8*,    ; 0: pointer
+    i8**,    ; 0: pointer
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_init()
+define void @P_init(i8** %pointer)
 {
-    %frame = alloca %Frame_init, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_init, align 8
+    %t1 = getelementptr inbounds %Frame_init, %Frame_init* %.frame, i32 0, i32 0
+    store i8** %pointer, i8*** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -80,17 +90,24 @@ define void @P_init()
 %Frame_setValue = type
 {
     ; parameters
-    i8*,    ; 0: pointer
-    i32,    ; 1: value
+    i8**,    ; 0: pointer
+    i32*,    ; 1: value
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_setValue()
+define void @P_setValue(i32* %value, i8** %pointer)
 {
-    %frame = alloca %Frame_setValue, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_setValue, align 8
+    %t1 = getelementptr inbounds %Frame_setValue, %Frame_setValue* %.frame, i32 0, i32 0
+    store i8** %pointer, i8*** %t1
+    %t2 = getelementptr inbounds %Frame_setValue, %Frame_setValue* %.frame, i32 0, i32 1
+    store i32* %value, i32** %t2
+
+    ; epilogue
     ret void
 }
 
@@ -103,16 +120,21 @@ define void @P_setValue()
 %Frame_free = type
 {
     ; parameters
-    i8*,    ; 0: pointer
+    i8**,    ; 0: pointer
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_free()
+define void @P_free(i8** %pointer)
 {
-    %frame = alloca %Frame_free, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_free, align 8
+    %t1 = getelementptr inbounds %Frame_free, %Frame_free* %.frame, i32 0, i32 0
+    store i8** %pointer, i8*** %t1
+
+    ; epilogue
     ret void
 }
 

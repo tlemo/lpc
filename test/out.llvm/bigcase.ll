@@ -38,14 +38,19 @@ declare dso_local void @_CloseFile(i8*)
 ; procedure body
 define void @P_()
 {
+    ; initialize file handles
     %t1 = call i8* @_OpenFile(i32 0)
     store i8* %t1, i8** @_input
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
+
+    ; cleanup
     %t3 = load %T_text, %T_text* @_output
     call void @_CloseFile(i8* %t3)
     %t4 = load %T_text, %T_text* @_input
     call void @_CloseFile(i8* %t4)
+
+    ; epilogue
     ret void
 }
 

@@ -97,18 +97,23 @@ declare dso_local void @_CloseFile(i8*)
 ; procedure body
 define void @P_()
 {
+    ; initialize file handles
     %t1 = call i8* @_OpenFile(i32 0)
     store i8* %t1, i8** @input
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @output
     %t3 = call i8* @_OpenFile(i32 2)
     store i8* %t3, i8** @srcfil
+
+    ; cleanup
     %t4 = load %T_text, %T_text* @srcfil
     call void @_CloseFile(i8* %t4)
     %t5 = load %T_text, %T_text* @output
     call void @_CloseFile(i8* %t5)
     %t6 = load %T_text, %T_text* @input
     call void @_CloseFile(i8* %t6)
+
+    ; epilogue
     ret void
 }
 
@@ -134,7 +139,10 @@ define void @P_()
 ; procedure body
 define void @P_errormsg()
 {
-    %frame = alloca %Frame_errormsg, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_errormsg, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -153,7 +161,10 @@ define void @P_errormsg()
 ; procedure body
 define void @P_nextch()
 {
-    %frame = alloca %Frame_nextch, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_nextch, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -173,9 +184,14 @@ define void @P_nextch()
 };
 
 ; procedure body
-define void @P_error()
+define void @P_error(i32 %n)
 {
-    %frame = alloca %Frame_error, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_error, align 8
+    %t1 = getelementptr inbounds %Frame_error, %Frame_error* %.frame, i32 0, i32 0
+    store i32 %n, i32* %t1
+
+    ; epilogue
     ret void
 }
 
@@ -201,9 +217,14 @@ define void @P_error()
 };
 
 ; procedure body
-define void @P_fatal()
+define void @P_fatal(i32 %n)
 {
-    %frame = alloca %Frame_fatal, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_fatal, align 8
+    %t1 = getelementptr inbounds %Frame_fatal, %Frame_fatal* %.frame, i32 0, i32 0
+    store i32 %n, i32* %t1
+
+    ; epilogue
     ret void
 }
 
@@ -228,7 +249,10 @@ define void @P_fatal()
 ; procedure body
 define void @P_insymbol()
 {
-    %frame = alloca %Frame_insymbol, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_insymbol, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -249,9 +273,14 @@ define void @P_insymbol()
 };
 
 ; procedure body
-define void @P_insymbol_readscale()
+define void @P_insymbol_readscale(%Frame_insymbol* %.slink)
 {
-    %frame = alloca %Frame_insymbol_readscale, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_insymbol_readscale, align 8
+    %t1 = getelementptr inbounds %Frame_insymbol_readscale, %Frame_insymbol_readscale* %.frame, i32 0, i32 2
+    store %Frame_insymbol* %.slink, %Frame_insymbol** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -273,9 +302,14 @@ define void @P_insymbol_readscale()
 };
 
 ; procedure body
-define void @P_insymbol_adjustscale()
+define void @P_insymbol_adjustscale(%Frame_insymbol* %.slink)
 {
-    %frame = alloca %Frame_insymbol_adjustscale, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_insymbol_adjustscale, align 8
+    %t1 = getelementptr inbounds %Frame_insymbol_adjustscale, %Frame_insymbol_adjustscale* %.frame, i32 0, i32 3
+    store %Frame_insymbol* %.slink, %Frame_insymbol** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -298,9 +332,20 @@ define void @P_insymbol_adjustscale()
 };
 
 ; procedure body
-define void @P_enter()
+define void @P_enter(%T_alfa %x0, i32 %x1, i32 %x2, i32 %x3)
 {
-    %frame = alloca %Frame_enter, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_enter, align 8
+    %t1 = getelementptr inbounds %Frame_enter, %Frame_enter* %.frame, i32 0, i32 0
+    store %T_alfa %x0, %T_alfa* %t1
+    %t2 = getelementptr inbounds %Frame_enter, %Frame_enter* %.frame, i32 0, i32 1
+    store i32 %x1, i32* %t2
+    %t3 = getelementptr inbounds %Frame_enter, %Frame_enter* %.frame, i32 0, i32 2
+    store i32 %x2, i32* %t3
+    %t4 = getelementptr inbounds %Frame_enter, %Frame_enter* %.frame, i32 0, i32 3
+    store i32 %x3, i32* %t4
+
+    ; epilogue
     ret void
 }
 
@@ -322,9 +367,18 @@ define void @P_enter()
 };
 
 ; procedure body
-define void @P_enterarray()
+define void @P_enterarray(i32 %tp, i32 %l, i32 %h)
 {
-    %frame = alloca %Frame_enterarray, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_enterarray, align 8
+    %t1 = getelementptr inbounds %Frame_enterarray, %Frame_enterarray* %.frame, i32 0, i32 0
+    store i32 %h, i32* %t1
+    %t2 = getelementptr inbounds %Frame_enterarray, %Frame_enterarray* %.frame, i32 0, i32 1
+    store i32 %l, i32* %t2
+    %t3 = getelementptr inbounds %Frame_enterarray, %Frame_enterarray* %.frame, i32 0, i32 2
+    store i32 %tp, i32* %t3
+
+    ; epilogue
     ret void
 }
 
@@ -343,7 +397,10 @@ define void @P_enterarray()
 ; procedure body
 define void @P_enterblock()
 {
-    %frame = alloca %Frame_enterblock, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_enterblock, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -363,9 +420,14 @@ define void @P_enterblock()
 };
 
 ; procedure body
-define void @P_enterreal()
+define void @P_enterreal(double %x)
 {
-    %frame = alloca %Frame_enterreal, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_enterreal, align 8
+    %t1 = getelementptr inbounds %Frame_enterreal, %Frame_enterreal* %.frame, i32 0, i32 0
+    store double %x, double* %t1
+
+    ; epilogue
     ret void
 }
 
@@ -385,9 +447,14 @@ define void @P_enterreal()
 };
 
 ; procedure body
-define void @P_emit()
+define void @P_emit(i32 %fct)
 {
-    %frame = alloca %Frame_emit, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_emit, align 8
+    %t1 = getelementptr inbounds %Frame_emit, %Frame_emit* %.frame, i32 0, i32 0
+    store i32 %fct, i32* %t1
+
+    ; epilogue
     ret void
 }
 
@@ -408,9 +475,16 @@ define void @P_emit()
 };
 
 ; procedure body
-define void @P_emit1()
+define void @P_emit1(i32 %fct, i32 %b)
 {
-    %frame = alloca %Frame_emit1, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_emit1, align 8
+    %t1 = getelementptr inbounds %Frame_emit1, %Frame_emit1* %.frame, i32 0, i32 0
+    store i32 %b, i32* %t1
+    %t2 = getelementptr inbounds %Frame_emit1, %Frame_emit1* %.frame, i32 0, i32 1
+    store i32 %fct, i32* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -432,9 +506,18 @@ define void @P_emit1()
 };
 
 ; procedure body
-define void @P_emit2()
+define void @P_emit2(i32 %fct, i32 %a, i32 %b)
 {
-    %frame = alloca %Frame_emit2, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_emit2, align 8
+    %t1 = getelementptr inbounds %Frame_emit2, %Frame_emit2* %.frame, i32 0, i32 0
+    store i32 %a, i32* %t1
+    %t2 = getelementptr inbounds %Frame_emit2, %Frame_emit2* %.frame, i32 0, i32 1
+    store i32 %b, i32* %t2
+    %t3 = getelementptr inbounds %Frame_emit2, %Frame_emit2* %.frame, i32 0, i32 2
+    store i32 %fct, i32* %t3
+
+    ; epilogue
     ret void
 }
 
@@ -457,7 +540,10 @@ define void @P_emit2()
 ; procedure body
 define void @P_printtables()
 {
-    %frame = alloca %Frame_printtables, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_printtables, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -488,9 +574,18 @@ define void @P_printtables()
 };
 
 ; procedure body
-define void @P_block()
+define void @P_block(%T_symset %fsys, i1 %isfun, i32 %level)
 {
-    %frame = alloca %Frame_block, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block, align 8
+    %t1 = getelementptr inbounds %Frame_block, %Frame_block* %.frame, i32 0, i32 0
+    store %T_symset %fsys, %T_symset* %t1
+    %t2 = getelementptr inbounds %Frame_block, %Frame_block* %.frame, i32 0, i32 1
+    store i1 %isfun, i1* %t2
+    %t3 = getelementptr inbounds %Frame_block, %Frame_block* %.frame, i32 0, i32 2
+    store i32 %level, i32* %t3
+
+    ; epilogue
     ret void
 }
 
@@ -511,9 +606,18 @@ define void @P_block()
 };
 
 ; procedure body
-define void @P_block_skip()
+define void @P_block_skip(%Frame_block* %.slink, %T_symset %fsys, i32 %n)
 {
-    %frame = alloca %Frame_block_skip, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_skip, align 8
+    %t1 = getelementptr inbounds %Frame_block_skip, %Frame_block_skip* %.frame, i32 0, i32 2
+    store %Frame_block* %.slink, %Frame_block** %t1
+    %t2 = getelementptr inbounds %Frame_block_skip, %Frame_block_skip* %.frame, i32 0, i32 0
+    store %T_symset %fsys, %T_symset* %t2
+    %t3 = getelementptr inbounds %Frame_block_skip, %Frame_block_skip* %.frame, i32 0, i32 1
+    store i32 %n, i32* %t3
+
+    ; epilogue
     ret void
 }
 
@@ -535,9 +639,20 @@ define void @P_block_skip()
 };
 
 ; procedure body
-define void @P_block_test()
+define void @P_block_test(%Frame_block* %.slink, %T_symset %s1, %T_symset %s2, i32 %n)
 {
-    %frame = alloca %Frame_block_test, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_test, align 8
+    %t1 = getelementptr inbounds %Frame_block_test, %Frame_block_test* %.frame, i32 0, i32 3
+    store %Frame_block* %.slink, %Frame_block** %t1
+    %t2 = getelementptr inbounds %Frame_block_test, %Frame_block_test* %.frame, i32 0, i32 0
+    store i32 %n, i32* %t2
+    %t3 = getelementptr inbounds %Frame_block_test, %Frame_block_test* %.frame, i32 0, i32 1
+    store %T_symset %s1, %T_symset* %t3
+    %t4 = getelementptr inbounds %Frame_block_test, %Frame_block_test* %.frame, i32 0, i32 2
+    store %T_symset %s2, %T_symset* %t4
+
+    ; epilogue
     ret void
 }
 
@@ -554,9 +669,14 @@ define void @P_block_test()
 };
 
 ; procedure body
-define void @P_block_testsemicolon()
+define void @P_block_testsemicolon(%Frame_block* %.slink)
 {
-    %frame = alloca %Frame_block_testsemicolon, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_testsemicolon, align 8
+    %t1 = getelementptr inbounds %Frame_block_testsemicolon, %Frame_block_testsemicolon* %.frame, i32 0, i32 0
+    store %Frame_block* %.slink, %Frame_block** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -581,9 +701,18 @@ define void @P_block_testsemicolon()
 };
 
 ; procedure body
-define void @P_block_enter()
+define void @P_block_enter(%Frame_block* %.slink, %T_alfa %id, i32 %k)
 {
-    %frame = alloca %Frame_block_enter, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_enter, align 8
+    %t1 = getelementptr inbounds %Frame_block_enter, %Frame_block_enter* %.frame, i32 0, i32 4
+    store %Frame_block* %.slink, %Frame_block** %t1
+    %t2 = getelementptr inbounds %Frame_block_enter, %Frame_block_enter* %.frame, i32 0, i32 0
+    store %T_alfa %id, %T_alfa* %t2
+    %t3 = getelementptr inbounds %Frame_block_enter, %Frame_block_enter* %.frame, i32 0, i32 1
+    store i32 %k, i32* %t3
+
+    ; epilogue
     ret void
 }
 
@@ -608,12 +737,19 @@ define void @P_block_enter()
 };
 
 ; function body
-define i32 @F_block_loc()
+define i32 @F_block_loc(%Frame_block* %.slink, %T_alfa %id)
 {
-    %frame = alloca %Frame_block_loc, align 8
-    %t1 = getelementptr inbounds %Frame_block_loc, %Frame_block_loc* %frame, i32 0, i32 1
-    %t2 = load i32, i32* %t1
-    ret i32 %t2
+    ; allocate frame
+    %.frame = alloca %Frame_block_loc, align 8
+    %t1 = getelementptr inbounds %Frame_block_loc, %Frame_block_loc* %.frame, i32 0, i32 4
+    store %Frame_block* %.slink, %Frame_block** %t1
+    %t2 = getelementptr inbounds %Frame_block_loc, %Frame_block_loc* %.frame, i32 0, i32 0
+    store %T_alfa %id, %T_alfa* %t2
+
+    ; epilogue
+    %t3 = getelementptr inbounds %Frame_block_loc, %Frame_block_loc* %.frame, i32 0, i32 1
+    %t4 = load i32, i32* %t3
+    ret i32 %t4
 }
 
 
@@ -629,9 +765,14 @@ define i32 @F_block_loc()
 };
 
 ; procedure body
-define void @P_block_entervariable()
+define void @P_block_entervariable(%Frame_block* %.slink)
 {
-    %frame = alloca %Frame_block_entervariable, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_entervariable, align 8
+    %t1 = getelementptr inbounds %Frame_block_entervariable, %Frame_block_entervariable* %.frame, i32 0, i32 0
+    store %Frame_block* %.slink, %Frame_block** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -644,7 +785,7 @@ define void @P_block_entervariable()
 %Frame_block_constant = type
 {
     ; parameters
-    %T_block_conrec,    ; 0: c
+    %T_block_conrec*,    ; 0: c
     %T_symset,    ; 1: fsys
 
     ; variables
@@ -656,9 +797,18 @@ define void @P_block_entervariable()
 };
 
 ; procedure body
-define void @P_block_constant()
+define void @P_block_constant(%Frame_block* %.slink, %T_symset %fsys, %T_block_conrec* %c)
 {
-    %frame = alloca %Frame_block_constant, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_constant, align 8
+    %t1 = getelementptr inbounds %Frame_block_constant, %Frame_block_constant* %.frame, i32 0, i32 4
+    store %Frame_block* %.slink, %Frame_block** %t1
+    %t2 = getelementptr inbounds %Frame_block_constant, %Frame_block_constant* %.frame, i32 0, i32 0
+    store %T_block_conrec* %c, %T_block_conrec** %t2
+    %t3 = getelementptr inbounds %Frame_block_constant, %Frame_block_constant* %.frame, i32 0, i32 1
+    store %T_symset %fsys, %T_symset* %t3
+
+    ; epilogue
     ret void
 }
 
@@ -672,9 +822,9 @@ define void @P_block_constant()
 {
     ; parameters
     %T_symset,    ; 0: fsys
-    i32,    ; 1: rf
-    i32,    ; 2: sz
-    i32,    ; 3: tp
+    i32*,    ; 1: rf
+    i32*,    ; 2: sz
+    i32*,    ; 3: tp
 
     ; variables
     i32,    ; 4: elrf
@@ -690,9 +840,22 @@ define void @P_block_constant()
 };
 
 ; procedure body
-define void @P_block_typ()
+define void @P_block_typ(%Frame_block* %.slink, %T_symset %fsys, i32* %tp, i32* %rf, i32* %sz)
 {
-    %frame = alloca %Frame_block_typ, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_typ, align 8
+    %t1 = getelementptr inbounds %Frame_block_typ, %Frame_block_typ* %.frame, i32 0, i32 11
+    store %Frame_block* %.slink, %Frame_block** %t1
+    %t2 = getelementptr inbounds %Frame_block_typ, %Frame_block_typ* %.frame, i32 0, i32 0
+    store %T_symset %fsys, %T_symset* %t2
+    %t3 = getelementptr inbounds %Frame_block_typ, %Frame_block_typ* %.frame, i32 0, i32 1
+    store i32* %rf, i32** %t3
+    %t4 = getelementptr inbounds %Frame_block_typ, %Frame_block_typ* %.frame, i32 0, i32 2
+    store i32* %sz, i32** %t4
+    %t5 = getelementptr inbounds %Frame_block_typ, %Frame_block_typ* %.frame, i32 0, i32 3
+    store i32* %tp, i32** %t5
+
+    ; epilogue
     ret void
 }
 
@@ -705,8 +868,8 @@ define void @P_block_typ()
 %Frame_block_typ_arraytyp = type
 {
     ; parameters
-    i32,    ; 0: aref
-    i32,    ; 1: arsz
+    i32*,    ; 0: aref
+    i32*,    ; 1: arsz
 
     ; variables
     i32,    ; 2: elrf
@@ -720,9 +883,18 @@ define void @P_block_typ()
 };
 
 ; procedure body
-define void @P_block_typ_arraytyp()
+define void @P_block_typ_arraytyp(%Frame_block_typ* %.slink, i32* %aref, i32* %arsz)
 {
-    %frame = alloca %Frame_block_typ_arraytyp, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_typ_arraytyp, align 8
+    %t1 = getelementptr inbounds %Frame_block_typ_arraytyp, %Frame_block_typ_arraytyp* %.frame, i32 0, i32 7
+    store %Frame_block_typ* %.slink, %Frame_block_typ** %t1
+    %t2 = getelementptr inbounds %Frame_block_typ_arraytyp, %Frame_block_typ_arraytyp* %.frame, i32 0, i32 0
+    store i32* %aref, i32** %t2
+    %t3 = getelementptr inbounds %Frame_block_typ_arraytyp, %Frame_block_typ_arraytyp* %.frame, i32 0, i32 1
+    store i32* %arsz, i32** %t3
+
+    ; epilogue
     ret void
 }
 
@@ -747,9 +919,14 @@ define void @P_block_typ_arraytyp()
 };
 
 ; procedure body
-define void @P_block_parameterlist()
+define void @P_block_parameterlist(%Frame_block* %.slink)
 {
-    %frame = alloca %Frame_block_parameterlist, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_parameterlist, align 8
+    %t1 = getelementptr inbounds %Frame_block_parameterlist, %Frame_block_parameterlist* %.frame, i32 0, i32 6
+    store %Frame_block* %.slink, %Frame_block** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -769,9 +946,14 @@ define void @P_block_parameterlist()
 };
 
 ; procedure body
-define void @P_block_constantdeclaration()
+define void @P_block_constantdeclaration(%Frame_block* %.slink)
 {
-    %frame = alloca %Frame_block_constantdeclaration, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_constantdeclaration, align 8
+    %t1 = getelementptr inbounds %Frame_block_constantdeclaration, %Frame_block_constantdeclaration* %.frame, i32 0, i32 1
+    store %Frame_block* %.slink, %Frame_block** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -794,9 +976,14 @@ define void @P_block_constantdeclaration()
 };
 
 ; procedure body
-define void @P_block_typedeclaration()
+define void @P_block_typedeclaration(%Frame_block* %.slink)
 {
-    %frame = alloca %Frame_block_typedeclaration, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_typedeclaration, align 8
+    %t1 = getelementptr inbounds %Frame_block_typedeclaration, %Frame_block_typedeclaration* %.frame, i32 0, i32 4
+    store %Frame_block* %.slink, %Frame_block** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -820,9 +1007,14 @@ define void @P_block_typedeclaration()
 };
 
 ; procedure body
-define void @P_block_variabledeclaration()
+define void @P_block_variabledeclaration(%Frame_block* %.slink)
 {
-    %frame = alloca %Frame_block_variabledeclaration, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_variabledeclaration, align 8
+    %t1 = getelementptr inbounds %Frame_block_variabledeclaration, %Frame_block_variabledeclaration* %.frame, i32 0, i32 5
+    store %Frame_block* %.slink, %Frame_block** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -842,9 +1034,14 @@ define void @P_block_variabledeclaration()
 };
 
 ; procedure body
-define void @P_block_procdeclaration()
+define void @P_block_procdeclaration(%Frame_block* %.slink)
 {
-    %frame = alloca %Frame_block_procdeclaration, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_procdeclaration, align 8
+    %t1 = getelementptr inbounds %Frame_block_procdeclaration, %Frame_block_procdeclaration* %.frame, i32 0, i32 1
+    store %Frame_block* %.slink, %Frame_block** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -867,9 +1064,16 @@ define void @P_block_procdeclaration()
 };
 
 ; procedure body
-define void @P_block_statement()
+define void @P_block_statement(%Frame_block* %.slink, %T_symset %fsys)
 {
-    %frame = alloca %Frame_block_statement, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_statement, align 8
+    %t1 = getelementptr inbounds %Frame_block_statement, %Frame_block_statement* %.frame, i32 0, i32 2
+    store %Frame_block* %.slink, %Frame_block** %t1
+    %t2 = getelementptr inbounds %Frame_block_statement, %Frame_block_statement* %.frame, i32 0, i32 0
+    store %T_symset %fsys, %T_symset* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -883,7 +1087,7 @@ define void @P_block_statement()
 {
     ; parameters
     %T_symset,    ; 0: fsys
-    %T_item,    ; 1: v
+    %T_item*,    ; 1: v
 
     ; variables
     i32,    ; 2: a
@@ -895,9 +1099,18 @@ define void @P_block_statement()
 };
 
 ; procedure body
-define void @P_block_statement_selector()
+define void @P_block_statement_selector(%Frame_block_statement* %.slink, %T_symset %fsys, %T_item* %v)
 {
-    %frame = alloca %Frame_block_statement_selector, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_statement_selector, align 8
+    %t1 = getelementptr inbounds %Frame_block_statement_selector, %Frame_block_statement_selector* %.frame, i32 0, i32 5
+    store %Frame_block_statement* %.slink, %Frame_block_statement** %t1
+    %t2 = getelementptr inbounds %Frame_block_statement_selector, %Frame_block_statement_selector* %.frame, i32 0, i32 0
+    store %T_symset %fsys, %T_symset* %t2
+    %t3 = getelementptr inbounds %Frame_block_statement_selector, %Frame_block_statement_selector* %.frame, i32 0, i32 1
+    store %T_item* %v, %T_item** %t3
+
+    ; epilogue
     ret void
 }
 
@@ -924,9 +1137,18 @@ define void @P_block_statement_selector()
 };
 
 ; procedure body
-define void @P_block_statement_call()
+define void @P_block_statement_call(%Frame_block_statement* %.slink, %T_symset %fsys, i32 %i)
 {
-    %frame = alloca %Frame_block_statement_call, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_statement_call, align 8
+    %t1 = getelementptr inbounds %Frame_block_statement_call, %Frame_block_statement_call* %.frame, i32 0, i32 6
+    store %Frame_block_statement* %.slink, %Frame_block_statement** %t1
+    %t2 = getelementptr inbounds %Frame_block_statement_call, %Frame_block_statement_call* %.frame, i32 0, i32 0
+    store %T_symset %fsys, %T_symset* %t2
+    %t3 = getelementptr inbounds %Frame_block_statement_call, %Frame_block_statement_call* %.frame, i32 0, i32 1
+    store i32 %i, i32* %t3
+
+    ; epilogue
     ret void
 }
 
@@ -950,12 +1172,21 @@ define void @P_block_statement_call()
 };
 
 ; function body
-define i32 @F_block_statement_resulttype()
+define i32 @F_block_statement_resulttype(%Frame_block_statement* %.slink, i32 %a, i32 %b)
 {
-    %frame = alloca %Frame_block_statement_resulttype, align 8
-    %t1 = getelementptr inbounds %Frame_block_statement_resulttype, %Frame_block_statement_resulttype* %frame, i32 0, i32 2
-    %t2 = load i32, i32* %t1
-    ret i32 %t2
+    ; allocate frame
+    %.frame = alloca %Frame_block_statement_resulttype, align 8
+    %t1 = getelementptr inbounds %Frame_block_statement_resulttype, %Frame_block_statement_resulttype* %.frame, i32 0, i32 3
+    store %Frame_block_statement* %.slink, %Frame_block_statement** %t1
+    %t2 = getelementptr inbounds %Frame_block_statement_resulttype, %Frame_block_statement_resulttype* %.frame, i32 0, i32 0
+    store i32 %a, i32* %t2
+    %t3 = getelementptr inbounds %Frame_block_statement_resulttype, %Frame_block_statement_resulttype* %.frame, i32 0, i32 1
+    store i32 %b, i32* %t3
+
+    ; epilogue
+    %t4 = getelementptr inbounds %Frame_block_statement_resulttype, %Frame_block_statement_resulttype* %.frame, i32 0, i32 2
+    %t5 = load i32, i32* %t4
+    ret i32 %t5
 }
 
 
@@ -968,7 +1199,7 @@ define i32 @F_block_statement_resulttype()
 {
     ; parameters
     %T_symset,    ; 0: fsys
-    %T_item,    ; 1: x
+    %T_item*,    ; 1: x
 
     ; variables
     i32,    ; 2: op
@@ -979,9 +1210,18 @@ define i32 @F_block_statement_resulttype()
 };
 
 ; procedure body
-define void @P_block_statement_expression()
+define void @P_block_statement_expression(%Frame_block_statement* %.slink, %T_symset %fsys, %T_item* %x)
 {
-    %frame = alloca %Frame_block_statement_expression, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_statement_expression, align 8
+    %t1 = getelementptr inbounds %Frame_block_statement_expression, %Frame_block_statement_expression* %.frame, i32 0, i32 4
+    store %Frame_block_statement* %.slink, %Frame_block_statement** %t1
+    %t2 = getelementptr inbounds %Frame_block_statement_expression, %Frame_block_statement_expression* %.frame, i32 0, i32 0
+    store %T_symset %fsys, %T_symset* %t2
+    %t3 = getelementptr inbounds %Frame_block_statement_expression, %Frame_block_statement_expression* %.frame, i32 0, i32 1
+    store %T_item* %x, %T_item** %t3
+
+    ; epilogue
     ret void
 }
 
@@ -995,7 +1235,7 @@ define void @P_block_statement_expression()
 {
     ; parameters
     %T_symset,    ; 0: fsys
-    %T_item,    ; 1: x
+    %T_item*,    ; 1: x
 
     ; variables
     i32,    ; 2: op
@@ -1006,9 +1246,18 @@ define void @P_block_statement_expression()
 };
 
 ; procedure body
-define void @P_block_statement_expression_simpleexpression()
+define void @P_block_statement_expression_simpleexpression(%Frame_block_statement_expression* %.slink, %T_symset %fsys, %T_item* %x)
 {
-    %frame = alloca %Frame_block_statement_expression_simpleexpression, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_statement_expression_simpleexpression, align 8
+    %t1 = getelementptr inbounds %Frame_block_statement_expression_simpleexpression, %Frame_block_statement_expression_simpleexpression* %.frame, i32 0, i32 4
+    store %Frame_block_statement_expression* %.slink, %Frame_block_statement_expression** %t1
+    %t2 = getelementptr inbounds %Frame_block_statement_expression_simpleexpression, %Frame_block_statement_expression_simpleexpression* %.frame, i32 0, i32 0
+    store %T_symset %fsys, %T_symset* %t2
+    %t3 = getelementptr inbounds %Frame_block_statement_expression_simpleexpression, %Frame_block_statement_expression_simpleexpression* %.frame, i32 0, i32 1
+    store %T_item* %x, %T_item** %t3
+
+    ; epilogue
     ret void
 }
 
@@ -1022,7 +1271,7 @@ define void @P_block_statement_expression_simpleexpression()
 {
     ; parameters
     %T_symset,    ; 0: fsys
-    %T_item,    ; 1: x
+    %T_item*,    ; 1: x
 
     ; variables
     i32,    ; 2: op
@@ -1033,9 +1282,18 @@ define void @P_block_statement_expression_simpleexpression()
 };
 
 ; procedure body
-define void @P_block_statement_expression_simpleexpression_term()
+define void @P_block_statement_expression_simpleexpression_term(%Frame_block_statement_expression_simpleexpression* %.slink, %T_symset %fsys, %T_item* %x)
 {
-    %frame = alloca %Frame_block_statement_expression_simpleexpression_term, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_statement_expression_simpleexpression_term, align 8
+    %t1 = getelementptr inbounds %Frame_block_statement_expression_simpleexpression_term, %Frame_block_statement_expression_simpleexpression_term* %.frame, i32 0, i32 4
+    store %Frame_block_statement_expression_simpleexpression* %.slink, %Frame_block_statement_expression_simpleexpression** %t1
+    %t2 = getelementptr inbounds %Frame_block_statement_expression_simpleexpression_term, %Frame_block_statement_expression_simpleexpression_term* %.frame, i32 0, i32 0
+    store %T_symset %fsys, %T_symset* %t2
+    %t3 = getelementptr inbounds %Frame_block_statement_expression_simpleexpression_term, %Frame_block_statement_expression_simpleexpression_term* %.frame, i32 0, i32 1
+    store %T_item* %x, %T_item** %t3
+
+    ; epilogue
     ret void
 }
 
@@ -1049,7 +1307,7 @@ define void @P_block_statement_expression_simpleexpression_term()
 {
     ; parameters
     %T_symset,    ; 0: fsys
-    %T_item,    ; 1: x
+    %T_item*,    ; 1: x
 
     ; variables
     i32,    ; 2: f
@@ -1060,9 +1318,18 @@ define void @P_block_statement_expression_simpleexpression_term()
 };
 
 ; procedure body
-define void @P_block_statement_expression_simpleexpression_term_factor()
+define void @P_block_statement_expression_simpleexpression_term_factor(%Frame_block_statement_expression_simpleexpression_term* %.slink, %T_symset %fsys, %T_item* %x)
 {
-    %frame = alloca %Frame_block_statement_expression_simpleexpression_term_factor, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_statement_expression_simpleexpression_term_factor, align 8
+    %t1 = getelementptr inbounds %Frame_block_statement_expression_simpleexpression_term_factor, %Frame_block_statement_expression_simpleexpression_term_factor* %.frame, i32 0, i32 4
+    store %Frame_block_statement_expression_simpleexpression_term* %.slink, %Frame_block_statement_expression_simpleexpression_term** %t1
+    %t2 = getelementptr inbounds %Frame_block_statement_expression_simpleexpression_term_factor, %Frame_block_statement_expression_simpleexpression_term_factor* %.frame, i32 0, i32 0
+    store %T_symset %fsys, %T_symset* %t2
+    %t3 = getelementptr inbounds %Frame_block_statement_expression_simpleexpression_term_factor, %Frame_block_statement_expression_simpleexpression_term_factor* %.frame, i32 0, i32 1
+    store %T_item* %x, %T_item** %t3
+
+    ; epilogue
     ret void
 }
 
@@ -1085,9 +1352,16 @@ define void @P_block_statement_expression_simpleexpression_term_factor()
 };
 
 ; procedure body
-define void @P_block_statement_expression_simpleexpression_term_factor_standfct()
+define void @P_block_statement_expression_simpleexpression_term_factor_standfct(%Frame_block_statement_expression_simpleexpression_term_factor* %.slink, i32 %n)
 {
-    %frame = alloca %Frame_block_statement_expression_simpleexpression_term_factor_standfct, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_statement_expression_simpleexpression_term_factor_standfct, align 8
+    %t1 = getelementptr inbounds %Frame_block_statement_expression_simpleexpression_term_factor_standfct, %Frame_block_statement_expression_simpleexpression_term_factor_standfct* %.frame, i32 0, i32 2
+    store %Frame_block_statement_expression_simpleexpression_term_factor* %.slink, %Frame_block_statement_expression_simpleexpression_term_factor** %t1
+    %t2 = getelementptr inbounds %Frame_block_statement_expression_simpleexpression_term_factor_standfct, %Frame_block_statement_expression_simpleexpression_term_factor_standfct* %.frame, i32 0, i32 0
+    store i32 %n, i32* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -1113,9 +1387,18 @@ define void @P_block_statement_expression_simpleexpression_term_factor_standfct(
 };
 
 ; procedure body
-define void @P_block_statement_assignment()
+define void @P_block_statement_assignment(%Frame_block_statement* %.slink, i32 %lv, i32 %ad)
 {
-    %frame = alloca %Frame_block_statement_assignment, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_statement_assignment, align 8
+    %t1 = getelementptr inbounds %Frame_block_statement_assignment, %Frame_block_statement_assignment* %.frame, i32 0, i32 5
+    store %Frame_block_statement* %.slink, %Frame_block_statement** %t1
+    %t2 = getelementptr inbounds %Frame_block_statement_assignment, %Frame_block_statement_assignment* %.frame, i32 0, i32 0
+    store i32 %ad, i32* %t2
+    %t3 = getelementptr inbounds %Frame_block_statement_assignment, %Frame_block_statement_assignment* %.frame, i32 0, i32 1
+    store i32 %lv, i32* %t3
+
+    ; epilogue
     ret void
 }
 
@@ -1132,9 +1415,14 @@ define void @P_block_statement_assignment()
 };
 
 ; procedure body
-define void @P_block_statement_compoundstatement()
+define void @P_block_statement_compoundstatement(%Frame_block_statement* %.slink)
 {
-    %frame = alloca %Frame_block_statement_compoundstatement, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_statement_compoundstatement, align 8
+    %t1 = getelementptr inbounds %Frame_block_statement_compoundstatement, %Frame_block_statement_compoundstatement* %.frame, i32 0, i32 0
+    store %Frame_block_statement* %.slink, %Frame_block_statement** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -1156,9 +1444,14 @@ define void @P_block_statement_compoundstatement()
 };
 
 ; procedure body
-define void @P_block_statement_ifstatement()
+define void @P_block_statement_ifstatement(%Frame_block_statement* %.slink)
 {
-    %frame = alloca %Frame_block_statement_ifstatement, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_statement_ifstatement, align 8
+    %t1 = getelementptr inbounds %Frame_block_statement_ifstatement, %Frame_block_statement_ifstatement* %.frame, i32 0, i32 3
+    store %Frame_block_statement* %.slink, %Frame_block_statement** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -1189,9 +1482,14 @@ define void @P_block_statement_ifstatement()
 };
 
 ; procedure body
-define void @P_block_statement_casestatement()
+define void @P_block_statement_casestatement(%Frame_block_statement* %.slink)
 {
-    %frame = alloca %Frame_block_statement_casestatement, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_statement_casestatement, align 8
+    %t1 = getelementptr inbounds %Frame_block_statement_casestatement, %Frame_block_statement_casestatement* %.frame, i32 0, i32 7
+    store %Frame_block_statement* %.slink, %Frame_block_statement** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -1212,9 +1510,14 @@ define void @P_block_statement_casestatement()
 };
 
 ; procedure body
-define void @P_block_statement_casestatement_caselabel()
+define void @P_block_statement_casestatement_caselabel(%Frame_block_statement_casestatement* %.slink)
 {
-    %frame = alloca %Frame_block_statement_casestatement_caselabel, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_statement_casestatement_caselabel, align 8
+    %t1 = getelementptr inbounds %Frame_block_statement_casestatement_caselabel, %Frame_block_statement_casestatement_caselabel* %.frame, i32 0, i32 2
+    store %Frame_block_statement_casestatement* %.slink, %Frame_block_statement_casestatement** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -1231,9 +1534,14 @@ define void @P_block_statement_casestatement_caselabel()
 };
 
 ; procedure body
-define void @P_block_statement_casestatement_onecase()
+define void @P_block_statement_casestatement_onecase(%Frame_block_statement_casestatement* %.slink)
 {
-    %frame = alloca %Frame_block_statement_casestatement_onecase, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_statement_casestatement_onecase, align 8
+    %t1 = getelementptr inbounds %Frame_block_statement_casestatement_onecase, %Frame_block_statement_casestatement_onecase* %.frame, i32 0, i32 0
+    store %Frame_block_statement_casestatement* %.slink, %Frame_block_statement_casestatement** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -1254,9 +1562,14 @@ define void @P_block_statement_casestatement_onecase()
 };
 
 ; procedure body
-define void @P_block_statement_repeatstatement()
+define void @P_block_statement_repeatstatement(%Frame_block_statement* %.slink)
 {
-    %frame = alloca %Frame_block_statement_repeatstatement, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_statement_repeatstatement, align 8
+    %t1 = getelementptr inbounds %Frame_block_statement_repeatstatement, %Frame_block_statement_repeatstatement* %.frame, i32 0, i32 2
+    store %Frame_block_statement* %.slink, %Frame_block_statement** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -1278,9 +1591,14 @@ define void @P_block_statement_repeatstatement()
 };
 
 ; procedure body
-define void @P_block_statement_whilestatement()
+define void @P_block_statement_whilestatement(%Frame_block_statement* %.slink)
 {
-    %frame = alloca %Frame_block_statement_whilestatement, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_statement_whilestatement, align 8
+    %t1 = getelementptr inbounds %Frame_block_statement_whilestatement, %Frame_block_statement_whilestatement* %.frame, i32 0, i32 3
+    store %Frame_block_statement* %.slink, %Frame_block_statement** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -1305,9 +1623,14 @@ define void @P_block_statement_whilestatement()
 };
 
 ; procedure body
-define void @P_block_statement_forstatement()
+define void @P_block_statement_forstatement(%Frame_block_statement* %.slink)
 {
-    %frame = alloca %Frame_block_statement_forstatement, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_statement_forstatement, align 8
+    %t1 = getelementptr inbounds %Frame_block_statement_forstatement, %Frame_block_statement_forstatement* %.frame, i32 0, i32 6
+    store %Frame_block_statement* %.slink, %Frame_block_statement** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -1333,9 +1656,16 @@ define void @P_block_statement_forstatement()
 };
 
 ; procedure body
-define void @P_block_statement_standproc()
+define void @P_block_statement_standproc(%Frame_block_statement* %.slink, i32 %n)
 {
-    %frame = alloca %Frame_block_statement_standproc, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_block_statement_standproc, align 8
+    %t1 = getelementptr inbounds %Frame_block_statement_standproc, %Frame_block_statement_standproc* %.frame, i32 0, i32 5
+    store %Frame_block_statement* %.slink, %Frame_block_statement** %t1
+    %t2 = getelementptr inbounds %Frame_block_statement_standproc, %Frame_block_statement_standproc* %.frame, i32 0, i32 0
+    store i32 %n, i32* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -1378,7 +1708,10 @@ define void @P_block_statement_standproc()
 ; procedure body
 define void @P_interpret()
 {
-    %frame = alloca %Frame_interpret, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_interpret, align 8
+
+    ; epilogue
     ret void
 }
 

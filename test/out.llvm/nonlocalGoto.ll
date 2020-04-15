@@ -38,14 +38,19 @@ declare dso_local void @_CloseFile(i8*)
 ; procedure body
 define void @P_()
 {
+    ; initialize file handles
     %t1 = call i8* @_OpenFile(i32 0)
     store i8* %t1, i8** @_input
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
+
+    ; cleanup
     %t3 = load %T_text, %T_text* @_output
     call void @_CloseFile(i8* %t3)
     %t4 = load %T_text, %T_text* @_input
     call void @_CloseFile(i8* %t4)
+
+    ; epilogue
     ret void
 }
 
@@ -68,12 +73,17 @@ define void @P_()
 };
 
 ; function body
-define i32 @F_foo()
+define i32 @F_foo(i32 %x)
 {
-    %frame = alloca %Frame_foo, align 8
-    %t1 = getelementptr inbounds %Frame_foo, %Frame_foo* %frame, i32 0, i32 1
-    %t2 = load i32, i32* %t1
-    ret i32 %t2
+    ; allocate frame
+    %.frame = alloca %Frame_foo, align 8
+    %t1 = getelementptr inbounds %Frame_foo, %Frame_foo* %.frame, i32 0, i32 0
+    store i32 %x, i32* %t1
+
+    ; epilogue
+    %t2 = getelementptr inbounds %Frame_foo, %Frame_foo* %.frame, i32 0, i32 1
+    %t3 = load i32, i32* %t2
+    ret i32 %t3
 }
 
 
@@ -92,9 +102,14 @@ define i32 @F_foo()
 };
 
 ; procedure body
-define void @P_bar()
+define void @P_bar(i32 %x)
 {
-    %frame = alloca %Frame_bar, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_bar, align 8
+    %t1 = getelementptr inbounds %Frame_bar, %Frame_bar* %.frame, i32 0, i32 0
+    store i32 %x, i32* %t1
+
+    ; epilogue
     ret void
 }
 
@@ -111,9 +126,14 @@ define void @P_bar()
 };
 
 ; procedure body
-define void @P_bar_moo()
+define void @P_bar_moo(%Frame_bar* %.slink)
 {
-    %frame = alloca %Frame_bar_moo, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_bar_moo, align 8
+    %t1 = getelementptr inbounds %Frame_bar_moo, %Frame_bar_moo* %.frame, i32 0, i32 0
+    store %Frame_bar* %.slink, %Frame_bar** %t1
+
+    ; epilogue
     ret void
 }
 

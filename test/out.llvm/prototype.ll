@@ -47,14 +47,19 @@ declare dso_local void @_CloseFile(i8*)
 ; procedure body
 define void @P_()
 {
+    ; initialize file handles
     %t1 = call i8* @_OpenFile(i32 0)
     store i8* %t1, i8** @_input
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
+
+    ; cleanup
     %t3 = load %T_text, %T_text* @_output
     call void @_CloseFile(i8* %t3)
     %t4 = load %T_text, %T_text* @_input
     call void @_CloseFile(i8* %t4)
+
+    ; epilogue
     ret void
 }
 
@@ -83,12 +88,17 @@ define void @P_()
 };
 
 ; function body
-define i32 @F_foo()
+define i32 @F_foo(%T_foo_subroutine_6 %pfn)
 {
-    %frame = alloca %Frame_foo, align 8
-    %t1 = getelementptr inbounds %Frame_foo, %Frame_foo* %frame, i32 0, i32 1
-    %t2 = load i32, i32* %t1
-    ret i32 %t2
+    ; allocate frame
+    %.frame = alloca %Frame_foo, align 8
+    %t1 = getelementptr inbounds %Frame_foo, %Frame_foo* %.frame, i32 0, i32 0
+    store %T_foo_subroutine_6 %pfn, %T_foo_subroutine_6* %t1
+
+    ; epilogue
+    %t2 = getelementptr inbounds %Frame_foo, %Frame_foo* %.frame, i32 0, i32 1
+    %t3 = load i32, i32* %t2
+    ret i32 %t3
 }
 
 
@@ -100,16 +110,21 @@ define i32 @F_foo()
 %Frame_test = type
 {
     ; parameters
-    i32,    ; 0: y
+    i32*,    ; 0: y
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_test()
+define void @P_test(i32* %y)
 {
-    %frame = alloca %Frame_test, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_test, align 8
+    %t1 = getelementptr inbounds %Frame_test, %Frame_test* %.frame, i32 0, i32 0
+    store i32* %y, i32** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -134,12 +149,23 @@ define void @P_test()
 };
 
 ; function body
-define i32 @F_test_bar()
+define i32 @F_test_bar(%Frame_test* %.slink, i32 %x, %T_REC %r, %T_UNION %u)
 {
-    %frame = alloca %Frame_test_bar, align 8
-    %t1 = getelementptr inbounds %Frame_test_bar, %Frame_test_bar* %frame, i32 0, i32 3
-    %t2 = load i32, i32* %t1
-    ret i32 %t2
+    ; allocate frame
+    %.frame = alloca %Frame_test_bar, align 8
+    %t1 = getelementptr inbounds %Frame_test_bar, %Frame_test_bar* %.frame, i32 0, i32 4
+    store %Frame_test* %.slink, %Frame_test** %t1
+    %t2 = getelementptr inbounds %Frame_test_bar, %Frame_test_bar* %.frame, i32 0, i32 0
+    store %T_REC %r, %T_REC* %t2
+    %t3 = getelementptr inbounds %Frame_test_bar, %Frame_test_bar* %.frame, i32 0, i32 1
+    store %T_UNION %u, %T_UNION* %t3
+    %t4 = getelementptr inbounds %Frame_test_bar, %Frame_test_bar* %.frame, i32 0, i32 2
+    store i32 %x, i32* %t4
+
+    ; epilogue
+    %t5 = getelementptr inbounds %Frame_test_bar, %Frame_test_bar* %.frame, i32 0, i32 3
+    %t6 = load i32, i32* %t5
+    ret i32 %t6
 }
 
 

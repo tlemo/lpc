@@ -48,14 +48,19 @@ declare dso_local void @_CloseFile(i8*)
 ; procedure body
 define void @P_()
 {
+    ; initialize file handles
     %t1 = call i8* @_OpenFile(i32 0)
     store i8* %t1, i8** @_input
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
+
+    ; cleanup
     %t3 = load %T_text, %T_text* @_output
     call void @_CloseFile(i8* %t3)
     %t4 = load %T_text, %T_text* @_input
     call void @_CloseFile(i8* %t4)
+
+    ; epilogue
     ret void
 }
 
@@ -84,7 +89,10 @@ define void @P_()
 ; procedure body
 define void @P_hanoi1()
 {
-    %frame = alloca %Frame_hanoi1, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_hanoi1, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -110,7 +118,10 @@ define void @P_hanoi1()
 ; procedure body
 define void @P_hanoi2()
 {
-    %frame = alloca %Frame_hanoi2, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_hanoi2, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -135,9 +146,18 @@ define void @P_hanoi2()
 };
 
 ; procedure body
-define void @P_hanoi3()
+define void @P_hanoi3(i32 %n, i32 %i, i32 %j)
 {
-    %frame = alloca %Frame_hanoi3, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_hanoi3, align 8
+    %t1 = getelementptr inbounds %Frame_hanoi3, %Frame_hanoi3* %.frame, i32 0, i32 0
+    store i32 %i, i32* %t1
+    %t2 = getelementptr inbounds %Frame_hanoi3, %Frame_hanoi3* %.frame, i32 0, i32 1
+    store i32 %j, i32* %t2
+    %t3 = getelementptr inbounds %Frame_hanoi3, %Frame_hanoi3* %.frame, i32 0, i32 2
+    store i32 %n, i32* %t3
+
+    ; epilogue
     ret void
 }
 

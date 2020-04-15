@@ -524,45 +524,6 @@ private:
         }
     }
 
-    string _genPrototype(const ts::SubroutineType* pType, string name)
-    {
-        stringstream proto;
-
-        // return type
-        //
-        if(pType->isFunction())
-        {
-            proto << ext(pType->returnType())->genName << " ";
-        }
-        else
-            proto << "void ";
-
-        // name
-        //
-        proto << name;
-
-        // arguments
-        //
-        proto << "(";
-        bool firstParam = true;
-        for(const auto& param : *pType->paramList())
-        {
-            if (!firstParam)
-                proto << ", ";
-            firstParam = false;
-
-            // TODO: byref
-            proto << ext(param.pType)->genName;
-            if(param.byRef)
-                proto << "&";
-            proto << " " << param.pId->name;
-        }
-
-        proto << ")";
-
-        return proto.str();
-    }
-
     void _outputFrame(obj::Subroutine* pSubroutine);
 
     void _outputSubroutine(obj::Subroutine* pSubroutine);
@@ -1376,6 +1337,8 @@ private:
     IrFragment _genVarAddress(obj::Variable* pVar);
 
     IrFragment _genLValueAddress(const ast::Expr* pLValue);
+
+    string _initFrame(obj::Subroutine* pSubroutine);
 
     string _genInitializers(obj::Subroutine* pSubroutine);
 

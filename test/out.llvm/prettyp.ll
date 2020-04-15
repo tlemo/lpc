@@ -72,6 +72,7 @@ declare dso_local void @_CloseFile(i8*)
 ; procedure body
 define void @P_()
 {
+    ; initialize file handles
     %t1 = call i8* @_OpenFile(i32 0)
     store i8* %t1, i8** @_input
     %t2 = call i8* @_OpenFile(i32 1)
@@ -80,6 +81,8 @@ define void @P_()
     store i8* %t3, i8** @INPUTFILE
     %t4 = call i8* @_OpenFile(i32 3)
     store i8* %t4, i8** @OUTPUTFILE
+
+    ; cleanup
     %t5 = load %T_text, %T_text* @OUTPUTFILE
     call void @_CloseFile(i8* %t5)
     %t6 = load %T_text, %T_text* @INPUTFILE
@@ -88,6 +91,8 @@ define void @P_()
     call void @_CloseFile(i8* %t7)
     %t8 = load %T_text, %T_text* @_input
     call void @_CloseFile(i8* %t8)
+
+    ; epilogue
     ret void
 }
 
@@ -100,18 +105,27 @@ define void @P_()
 %Frame_GETCHAR = type
 {
     ; parameters
-    %T_CHARINFO,    ; 0: CURRCHAR
-    %T_text,    ; 1: INPUTFILE
-    %T_CHARINFO,    ; 2: NEXTCHAR
+    %T_CHARINFO*,    ; 0: CURRCHAR
+    %T_text*,    ; 1: INPUTFILE
+    %T_CHARINFO*,    ; 2: NEXTCHAR
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_GETCHAR()
+define void @P_GETCHAR(%T_text* %INPUTFILE, %T_CHARINFO* %NEXTCHAR, %T_CHARINFO* %CURRCHAR)
 {
-    %frame = alloca %Frame_GETCHAR, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_GETCHAR, align 8
+    %t1 = getelementptr inbounds %Frame_GETCHAR, %Frame_GETCHAR* %.frame, i32 0, i32 0
+    store %T_CHARINFO* %CURRCHAR, %T_CHARINFO** %t1
+    %t2 = getelementptr inbounds %Frame_GETCHAR, %Frame_GETCHAR* %.frame, i32 0, i32 1
+    store %T_text* %INPUTFILE, %T_text** %t2
+    %t3 = getelementptr inbounds %Frame_GETCHAR, %Frame_GETCHAR* %.frame, i32 0, i32 2
+    store %T_CHARINFO* %NEXTCHAR, %T_CHARINFO** %t3
+
+    ; epilogue
     ret void
 }
 
@@ -124,20 +138,33 @@ define void @P_GETCHAR()
 %Frame_STORENEXTCHAR = type
 {
     ; parameters
-    %T_CHARINFO,    ; 0: CURRCHAR
-    %T_text,    ; 1: INPUTFILE
-    i32,    ; 2: LENGTH
-    %T_CHARINFO,    ; 3: NEXTCHAR
-    %T_STRING,    ; 4: VALUE
+    %T_CHARINFO*,    ; 0: CURRCHAR
+    %T_text*,    ; 1: INPUTFILE
+    i32*,    ; 2: LENGTH
+    %T_CHARINFO*,    ; 3: NEXTCHAR
+    %T_STRING*,    ; 4: VALUE
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_STORENEXTCHAR()
+define void @P_STORENEXTCHAR(%T_text* %INPUTFILE, i32* %LENGTH, %T_CHARINFO* %CURRCHAR, %T_CHARINFO* %NEXTCHAR, %T_STRING* %VALUE)
 {
-    %frame = alloca %Frame_STORENEXTCHAR, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_STORENEXTCHAR, align 8
+    %t1 = getelementptr inbounds %Frame_STORENEXTCHAR, %Frame_STORENEXTCHAR* %.frame, i32 0, i32 0
+    store %T_CHARINFO* %CURRCHAR, %T_CHARINFO** %t1
+    %t2 = getelementptr inbounds %Frame_STORENEXTCHAR, %Frame_STORENEXTCHAR* %.frame, i32 0, i32 1
+    store %T_text* %INPUTFILE, %T_text** %t2
+    %t3 = getelementptr inbounds %Frame_STORENEXTCHAR, %Frame_STORENEXTCHAR* %.frame, i32 0, i32 2
+    store i32* %LENGTH, i32** %t3
+    %t4 = getelementptr inbounds %Frame_STORENEXTCHAR, %Frame_STORENEXTCHAR* %.frame, i32 0, i32 3
+    store %T_CHARINFO* %NEXTCHAR, %T_CHARINFO** %t4
+    %t5 = getelementptr inbounds %Frame_STORENEXTCHAR, %Frame_STORENEXTCHAR* %.frame, i32 0, i32 4
+    store %T_STRING* %VALUE, %T_STRING** %t5
+
+    ; epilogue
     ret void
 }
 
@@ -150,20 +177,33 @@ define void @P_STORENEXTCHAR()
 %Frame_SKIPSPACES = type
 {
     ; parameters
-    i32,    ; 0: CRSBEFORE
-    %T_CHARINFO,    ; 1: CURRCHAR
-    %T_text,    ; 2: INPUTFILE
-    %T_CHARINFO,    ; 3: NEXTCHAR
-    i32,    ; 4: SPACESBEFORE
+    i32*,    ; 0: CRSBEFORE
+    %T_CHARINFO*,    ; 1: CURRCHAR
+    %T_text*,    ; 2: INPUTFILE
+    %T_CHARINFO*,    ; 3: NEXTCHAR
+    i32*,    ; 4: SPACESBEFORE
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_SKIPSPACES()
+define void @P_SKIPSPACES(%T_text* %INPUTFILE, %T_CHARINFO* %CURRCHAR, %T_CHARINFO* %NEXTCHAR, i32* %SPACESBEFORE, i32* %CRSBEFORE)
 {
-    %frame = alloca %Frame_SKIPSPACES, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_SKIPSPACES, align 8
+    %t1 = getelementptr inbounds %Frame_SKIPSPACES, %Frame_SKIPSPACES* %.frame, i32 0, i32 0
+    store i32* %CRSBEFORE, i32** %t1
+    %t2 = getelementptr inbounds %Frame_SKIPSPACES, %Frame_SKIPSPACES* %.frame, i32 0, i32 1
+    store %T_CHARINFO* %CURRCHAR, %T_CHARINFO** %t2
+    %t3 = getelementptr inbounds %Frame_SKIPSPACES, %Frame_SKIPSPACES* %.frame, i32 0, i32 2
+    store %T_text* %INPUTFILE, %T_text** %t3
+    %t4 = getelementptr inbounds %Frame_SKIPSPACES, %Frame_SKIPSPACES* %.frame, i32 0, i32 3
+    store %T_CHARINFO* %NEXTCHAR, %T_CHARINFO** %t4
+    %t5 = getelementptr inbounds %Frame_SKIPSPACES, %Frame_SKIPSPACES* %.frame, i32 0, i32 4
+    store i32* %SPACESBEFORE, i32** %t5
+
+    ; epilogue
     ret void
 }
 
@@ -176,21 +216,36 @@ define void @P_SKIPSPACES()
 %Frame_GETCOMMENT = type
 {
     ; parameters
-    %T_CHARINFO,    ; 0: CURRCHAR
-    %T_text,    ; 1: INPUTFILE
-    i32,    ; 2: LENGTH
-    i32,    ; 3: NAME
-    %T_CHARINFO,    ; 4: NEXTCHAR
-    %T_STRING,    ; 5: VALUE
+    %T_CHARINFO*,    ; 0: CURRCHAR
+    %T_text*,    ; 1: INPUTFILE
+    i32*,    ; 2: LENGTH
+    i32*,    ; 3: NAME
+    %T_CHARINFO*,    ; 4: NEXTCHAR
+    %T_STRING*,    ; 5: VALUE
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_GETCOMMENT()
+define void @P_GETCOMMENT(%T_text* %INPUTFILE, %T_CHARINFO* %CURRCHAR, %T_CHARINFO* %NEXTCHAR, i32* %NAME, %T_STRING* %VALUE, i32* %LENGTH)
 {
-    %frame = alloca %Frame_GETCOMMENT, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_GETCOMMENT, align 8
+    %t1 = getelementptr inbounds %Frame_GETCOMMENT, %Frame_GETCOMMENT* %.frame, i32 0, i32 0
+    store %T_CHARINFO* %CURRCHAR, %T_CHARINFO** %t1
+    %t2 = getelementptr inbounds %Frame_GETCOMMENT, %Frame_GETCOMMENT* %.frame, i32 0, i32 1
+    store %T_text* %INPUTFILE, %T_text** %t2
+    %t3 = getelementptr inbounds %Frame_GETCOMMENT, %Frame_GETCOMMENT* %.frame, i32 0, i32 2
+    store i32* %LENGTH, i32** %t3
+    %t4 = getelementptr inbounds %Frame_GETCOMMENT, %Frame_GETCOMMENT* %.frame, i32 0, i32 3
+    store i32* %NAME, i32** %t4
+    %t5 = getelementptr inbounds %Frame_GETCOMMENT, %Frame_GETCOMMENT* %.frame, i32 0, i32 4
+    store %T_CHARINFO* %NEXTCHAR, %T_CHARINFO** %t5
+    %t6 = getelementptr inbounds %Frame_GETCOMMENT, %Frame_GETCOMMENT* %.frame, i32 0, i32 5
+    store %T_STRING* %VALUE, %T_STRING** %t6
+
+    ; epilogue
     ret void
 }
 
@@ -218,12 +273,19 @@ define void @P_GETCOMMENT()
 };
 
 ; function body
-define i32 @F_IDTYPE()
+define i32 @F_IDTYPE(%T_STRING %VALUE, i32 %LENGTH)
 {
-    %frame = alloca %Frame_IDTYPE, align 8
-    %t1 = getelementptr inbounds %Frame_IDTYPE, %Frame_IDTYPE* %frame, i32 0, i32 2
-    %t2 = load i32, i32* %t1
-    ret i32 %t2
+    ; allocate frame
+    %.frame = alloca %Frame_IDTYPE, align 8
+    %t1 = getelementptr inbounds %Frame_IDTYPE, %Frame_IDTYPE* %.frame, i32 0, i32 0
+    store i32 %LENGTH, i32* %t1
+    %t2 = getelementptr inbounds %Frame_IDTYPE, %Frame_IDTYPE* %.frame, i32 0, i32 1
+    store %T_STRING %VALUE, %T_STRING* %t2
+
+    ; epilogue
+    %t3 = getelementptr inbounds %Frame_IDTYPE, %Frame_IDTYPE* %.frame, i32 0, i32 2
+    %t4 = load i32, i32* %t3
+    ret i32 %t4
 }
 
 
@@ -235,21 +297,36 @@ define i32 @F_IDTYPE()
 %Frame_GETIDENTIFIER = type
 {
     ; parameters
-    %T_CHARINFO,    ; 0: CURRCHAR
-    %T_text,    ; 1: INPUTFILE
-    i32,    ; 2: LENGTH
-    i32,    ; 3: NAME
-    %T_CHARINFO,    ; 4: NEXTCHAR
-    %T_STRING,    ; 5: VALUE
+    %T_CHARINFO*,    ; 0: CURRCHAR
+    %T_text*,    ; 1: INPUTFILE
+    i32*,    ; 2: LENGTH
+    i32*,    ; 3: NAME
+    %T_CHARINFO*,    ; 4: NEXTCHAR
+    %T_STRING*,    ; 5: VALUE
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_GETIDENTIFIER()
+define void @P_GETIDENTIFIER(%T_text* %INPUTFILE, %T_CHARINFO* %CURRCHAR, %T_CHARINFO* %NEXTCHAR, i32* %NAME, %T_STRING* %VALUE, i32* %LENGTH)
 {
-    %frame = alloca %Frame_GETIDENTIFIER, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_GETIDENTIFIER, align 8
+    %t1 = getelementptr inbounds %Frame_GETIDENTIFIER, %Frame_GETIDENTIFIER* %.frame, i32 0, i32 0
+    store %T_CHARINFO* %CURRCHAR, %T_CHARINFO** %t1
+    %t2 = getelementptr inbounds %Frame_GETIDENTIFIER, %Frame_GETIDENTIFIER* %.frame, i32 0, i32 1
+    store %T_text* %INPUTFILE, %T_text** %t2
+    %t3 = getelementptr inbounds %Frame_GETIDENTIFIER, %Frame_GETIDENTIFIER* %.frame, i32 0, i32 2
+    store i32* %LENGTH, i32** %t3
+    %t4 = getelementptr inbounds %Frame_GETIDENTIFIER, %Frame_GETIDENTIFIER* %.frame, i32 0, i32 3
+    store i32* %NAME, i32** %t4
+    %t5 = getelementptr inbounds %Frame_GETIDENTIFIER, %Frame_GETIDENTIFIER* %.frame, i32 0, i32 4
+    store %T_CHARINFO* %NEXTCHAR, %T_CHARINFO** %t5
+    %t6 = getelementptr inbounds %Frame_GETIDENTIFIER, %Frame_GETIDENTIFIER* %.frame, i32 0, i32 5
+    store %T_STRING* %VALUE, %T_STRING** %t6
+
+    ; epilogue
     ret void
 }
 
@@ -262,21 +339,36 @@ define void @P_GETIDENTIFIER()
 %Frame_GETNUMBER = type
 {
     ; parameters
-    %T_CHARINFO,    ; 0: CURRCHAR
-    %T_text,    ; 1: INPUTFILE
-    i32,    ; 2: LENGTH
-    i32,    ; 3: NAME
-    %T_CHARINFO,    ; 4: NEXTCHAR
-    %T_STRING,    ; 5: VALUE
+    %T_CHARINFO*,    ; 0: CURRCHAR
+    %T_text*,    ; 1: INPUTFILE
+    i32*,    ; 2: LENGTH
+    i32*,    ; 3: NAME
+    %T_CHARINFO*,    ; 4: NEXTCHAR
+    %T_STRING*,    ; 5: VALUE
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_GETNUMBER()
+define void @P_GETNUMBER(%T_text* %INPUTFILE, %T_CHARINFO* %CURRCHAR, %T_CHARINFO* %NEXTCHAR, i32* %NAME, %T_STRING* %VALUE, i32* %LENGTH)
 {
-    %frame = alloca %Frame_GETNUMBER, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_GETNUMBER, align 8
+    %t1 = getelementptr inbounds %Frame_GETNUMBER, %Frame_GETNUMBER* %.frame, i32 0, i32 0
+    store %T_CHARINFO* %CURRCHAR, %T_CHARINFO** %t1
+    %t2 = getelementptr inbounds %Frame_GETNUMBER, %Frame_GETNUMBER* %.frame, i32 0, i32 1
+    store %T_text* %INPUTFILE, %T_text** %t2
+    %t3 = getelementptr inbounds %Frame_GETNUMBER, %Frame_GETNUMBER* %.frame, i32 0, i32 2
+    store i32* %LENGTH, i32** %t3
+    %t4 = getelementptr inbounds %Frame_GETNUMBER, %Frame_GETNUMBER* %.frame, i32 0, i32 3
+    store i32* %NAME, i32** %t4
+    %t5 = getelementptr inbounds %Frame_GETNUMBER, %Frame_GETNUMBER* %.frame, i32 0, i32 4
+    store %T_CHARINFO* %NEXTCHAR, %T_CHARINFO** %t5
+    %t6 = getelementptr inbounds %Frame_GETNUMBER, %Frame_GETNUMBER* %.frame, i32 0, i32 5
+    store %T_STRING* %VALUE, %T_STRING** %t6
+
+    ; epilogue
     ret void
 }
 
@@ -289,21 +381,36 @@ define void @P_GETNUMBER()
 %Frame_GETCHARLITERAL = type
 {
     ; parameters
-    %T_CHARINFO,    ; 0: CURRCHAR
-    %T_text,    ; 1: INPUTFILE
-    i32,    ; 2: LENGTH
-    i32,    ; 3: NAME
-    %T_CHARINFO,    ; 4: NEXTCHAR
-    %T_STRING,    ; 5: VALUE
+    %T_CHARINFO*,    ; 0: CURRCHAR
+    %T_text*,    ; 1: INPUTFILE
+    i32*,    ; 2: LENGTH
+    i32*,    ; 3: NAME
+    %T_CHARINFO*,    ; 4: NEXTCHAR
+    %T_STRING*,    ; 5: VALUE
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_GETCHARLITERAL()
+define void @P_GETCHARLITERAL(%T_text* %INPUTFILE, %T_CHARINFO* %CURRCHAR, %T_CHARINFO* %NEXTCHAR, i32* %NAME, %T_STRING* %VALUE, i32* %LENGTH)
 {
-    %frame = alloca %Frame_GETCHARLITERAL, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_GETCHARLITERAL, align 8
+    %t1 = getelementptr inbounds %Frame_GETCHARLITERAL, %Frame_GETCHARLITERAL* %.frame, i32 0, i32 0
+    store %T_CHARINFO* %CURRCHAR, %T_CHARINFO** %t1
+    %t2 = getelementptr inbounds %Frame_GETCHARLITERAL, %Frame_GETCHARLITERAL* %.frame, i32 0, i32 1
+    store %T_text* %INPUTFILE, %T_text** %t2
+    %t3 = getelementptr inbounds %Frame_GETCHARLITERAL, %Frame_GETCHARLITERAL* %.frame, i32 0, i32 2
+    store i32* %LENGTH, i32** %t3
+    %t4 = getelementptr inbounds %Frame_GETCHARLITERAL, %Frame_GETCHARLITERAL* %.frame, i32 0, i32 3
+    store i32* %NAME, i32** %t4
+    %t5 = getelementptr inbounds %Frame_GETCHARLITERAL, %Frame_GETCHARLITERAL* %.frame, i32 0, i32 4
+    store %T_CHARINFO* %NEXTCHAR, %T_CHARINFO** %t5
+    %t6 = getelementptr inbounds %Frame_GETCHARLITERAL, %Frame_GETCHARLITERAL* %.frame, i32 0, i32 5
+    store %T_STRING* %VALUE, %T_STRING** %t6
+
+    ; epilogue
     ret void
 }
 
@@ -330,12 +437,19 @@ define void @P_GETCHARLITERAL()
 };
 
 ; function body
-define i32 @F_CHARTYPE()
+define i32 @F_CHARTYPE(%T_CHARINFO %CURRCHAR, %T_CHARINFO %NEXTCHAR)
 {
-    %frame = alloca %Frame_CHARTYPE, align 8
-    %t1 = getelementptr inbounds %Frame_CHARTYPE, %Frame_CHARTYPE* %frame, i32 0, i32 2
-    %t2 = load i32, i32* %t1
-    ret i32 %t2
+    ; allocate frame
+    %.frame = alloca %Frame_CHARTYPE, align 8
+    %t1 = getelementptr inbounds %Frame_CHARTYPE, %Frame_CHARTYPE* %.frame, i32 0, i32 0
+    store %T_CHARINFO %CURRCHAR, %T_CHARINFO* %t1
+    %t2 = getelementptr inbounds %Frame_CHARTYPE, %Frame_CHARTYPE* %.frame, i32 0, i32 1
+    store %T_CHARINFO %NEXTCHAR, %T_CHARINFO* %t2
+
+    ; epilogue
+    %t3 = getelementptr inbounds %Frame_CHARTYPE, %Frame_CHARTYPE* %.frame, i32 0, i32 2
+    %t4 = load i32, i32* %t3
+    ret i32 %t4
 }
 
 
@@ -347,21 +461,36 @@ define i32 @F_CHARTYPE()
 %Frame_GETSPECIALCHAR = type
 {
     ; parameters
-    %T_CHARINFO,    ; 0: CURRCHAR
-    %T_text,    ; 1: INPUTFILE
-    i32,    ; 2: LENGTH
-    i32,    ; 3: NAME
-    %T_CHARINFO,    ; 4: NEXTCHAR
-    %T_STRING,    ; 5: VALUE
+    %T_CHARINFO*,    ; 0: CURRCHAR
+    %T_text*,    ; 1: INPUTFILE
+    i32*,    ; 2: LENGTH
+    i32*,    ; 3: NAME
+    %T_CHARINFO*,    ; 4: NEXTCHAR
+    %T_STRING*,    ; 5: VALUE
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_GETSPECIALCHAR()
+define void @P_GETSPECIALCHAR(%T_text* %INPUTFILE, %T_CHARINFO* %CURRCHAR, %T_CHARINFO* %NEXTCHAR, i32* %NAME, %T_STRING* %VALUE, i32* %LENGTH)
 {
-    %frame = alloca %Frame_GETSPECIALCHAR, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_GETSPECIALCHAR, align 8
+    %t1 = getelementptr inbounds %Frame_GETSPECIALCHAR, %Frame_GETSPECIALCHAR* %.frame, i32 0, i32 0
+    store %T_CHARINFO* %CURRCHAR, %T_CHARINFO** %t1
+    %t2 = getelementptr inbounds %Frame_GETSPECIALCHAR, %Frame_GETSPECIALCHAR* %.frame, i32 0, i32 1
+    store %T_text* %INPUTFILE, %T_text** %t2
+    %t3 = getelementptr inbounds %Frame_GETSPECIALCHAR, %Frame_GETSPECIALCHAR* %.frame, i32 0, i32 2
+    store i32* %LENGTH, i32** %t3
+    %t4 = getelementptr inbounds %Frame_GETSPECIALCHAR, %Frame_GETSPECIALCHAR* %.frame, i32 0, i32 3
+    store i32* %NAME, i32** %t4
+    %t5 = getelementptr inbounds %Frame_GETSPECIALCHAR, %Frame_GETSPECIALCHAR* %.frame, i32 0, i32 4
+    store %T_CHARINFO* %NEXTCHAR, %T_CHARINFO** %t5
+    %t6 = getelementptr inbounds %Frame_GETSPECIALCHAR, %Frame_GETSPECIALCHAR* %.frame, i32 0, i32 5
+    store %T_STRING* %VALUE, %T_STRING** %t6
+
+    ; epilogue
     ret void
 }
 
@@ -374,21 +503,36 @@ define void @P_GETSPECIALCHAR()
 %Frame_GETNEXTSYMBOL = type
 {
     ; parameters
-    %T_CHARINFO,    ; 0: CURRCHAR
-    %T_text,    ; 1: INPUTFILE
-    i32,    ; 2: LENGTH
-    i32,    ; 3: NAME
-    %T_CHARINFO,    ; 4: NEXTCHAR
-    %T_STRING,    ; 5: VALUE
+    %T_CHARINFO*,    ; 0: CURRCHAR
+    %T_text*,    ; 1: INPUTFILE
+    i32*,    ; 2: LENGTH
+    i32*,    ; 3: NAME
+    %T_CHARINFO*,    ; 4: NEXTCHAR
+    %T_STRING*,    ; 5: VALUE
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_GETNEXTSYMBOL()
+define void @P_GETNEXTSYMBOL(%T_text* %INPUTFILE, %T_CHARINFO* %CURRCHAR, %T_CHARINFO* %NEXTCHAR, i32* %NAME, %T_STRING* %VALUE, i32* %LENGTH)
 {
-    %frame = alloca %Frame_GETNEXTSYMBOL, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_GETNEXTSYMBOL, align 8
+    %t1 = getelementptr inbounds %Frame_GETNEXTSYMBOL, %Frame_GETNEXTSYMBOL* %.frame, i32 0, i32 0
+    store %T_CHARINFO* %CURRCHAR, %T_CHARINFO** %t1
+    %t2 = getelementptr inbounds %Frame_GETNEXTSYMBOL, %Frame_GETNEXTSYMBOL* %.frame, i32 0, i32 1
+    store %T_text* %INPUTFILE, %T_text** %t2
+    %t3 = getelementptr inbounds %Frame_GETNEXTSYMBOL, %Frame_GETNEXTSYMBOL* %.frame, i32 0, i32 2
+    store i32* %LENGTH, i32** %t3
+    %t4 = getelementptr inbounds %Frame_GETNEXTSYMBOL, %Frame_GETNEXTSYMBOL* %.frame, i32 0, i32 3
+    store i32* %NAME, i32** %t4
+    %t5 = getelementptr inbounds %Frame_GETNEXTSYMBOL, %Frame_GETNEXTSYMBOL* %.frame, i32 0, i32 4
+    store %T_CHARINFO* %NEXTCHAR, %T_CHARINFO** %t5
+    %t6 = getelementptr inbounds %Frame_GETNEXTSYMBOL, %Frame_GETNEXTSYMBOL* %.frame, i32 0, i32 5
+    store %T_STRING* %VALUE, %T_STRING** %t6
+
+    ; epilogue
     ret void
 }
 
@@ -401,9 +545,9 @@ define void @P_GETNEXTSYMBOL()
 %Frame_GETSYMBOL = type
 {
     ; parameters
-    i8*,    ; 0: CURRSYM
-    %T_text,    ; 1: INPUTFILE
-    i8*,    ; 2: NEXTSYM
+    i8**,    ; 0: CURRSYM
+    %T_text*,    ; 1: INPUTFILE
+    i8**,    ; 2: NEXTSYM
 
     ; variables
     i8*,    ; 3: DUMMY
@@ -413,9 +557,18 @@ define void @P_GETNEXTSYMBOL()
 };
 
 ; procedure body
-define void @P_GETSYMBOL()
+define void @P_GETSYMBOL(%T_text* %INPUTFILE, i8** %NEXTSYM, i8** %CURRSYM)
 {
-    %frame = alloca %Frame_GETSYMBOL, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_GETSYMBOL, align 8
+    %t1 = getelementptr inbounds %Frame_GETSYMBOL, %Frame_GETSYMBOL* %.frame, i32 0, i32 0
+    store i8** %CURRSYM, i8*** %t1
+    %t2 = getelementptr inbounds %Frame_GETSYMBOL, %Frame_GETSYMBOL* %.frame, i32 0, i32 1
+    store %T_text* %INPUTFILE, %T_text** %t2
+    %t3 = getelementptr inbounds %Frame_GETSYMBOL, %Frame_GETSYMBOL* %.frame, i32 0, i32 2
+    store i8** %NEXTSYM, i8*** %t3
+
+    ; epilogue
     ret void
 }
 
@@ -428,30 +581,63 @@ define void @P_GETSYMBOL()
 %Frame_INITIALISE = type
 {
     ; parameters
-    %T_CHARINFO,    ; 0: CURRCHAR
-    i32,    ; 1: CURRLINEPOS
-    i32,    ; 2: CURRMARGIN
-    i8*,    ; 3: CURRSYM
-    %T_DBLCHARTABLE,    ; 4: DBLCHAR
-    %T_DBLCHRSET,    ; 5: DBLCHARS
-    %T_text,    ; 6: INPUTFILE
-    %T_KEYWORDTABLE,    ; 7: KEYWORD
-    %T_CHARINFO,    ; 8: NEXTCHAR
-    i8*,    ; 9: NEXTSYM
-    %T_text,    ; 10: OUTPUTFILE
-    %T_OPTIONTABLE,    ; 11: PPOPTION
-    i1,    ; 12: RECORDSEEN
-    %T_SGLCHARTABLE,    ; 13: SGLCHAR
-    i32,    ; 14: TOPOFSTACK
+    %T_CHARINFO*,    ; 0: CURRCHAR
+    i32*,    ; 1: CURRLINEPOS
+    i32*,    ; 2: CURRMARGIN
+    i8**,    ; 3: CURRSYM
+    %T_DBLCHARTABLE*,    ; 4: DBLCHAR
+    %T_DBLCHRSET*,    ; 5: DBLCHARS
+    %T_text*,    ; 6: INPUTFILE
+    %T_KEYWORDTABLE*,    ; 7: KEYWORD
+    %T_CHARINFO*,    ; 8: NEXTCHAR
+    i8**,    ; 9: NEXTSYM
+    %T_text*,    ; 10: OUTPUTFILE
+    %T_OPTIONTABLE*,    ; 11: PPOPTION
+    i1*,    ; 12: RECORDSEEN
+    %T_SGLCHARTABLE*,    ; 13: SGLCHAR
+    i32*,    ; 14: TOPOFSTACK
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_INITIALISE()
+define void @P_INITIALISE(%T_text* %INPUTFILE, %T_text* %OUTPUTFILE, i32* %TOPOFSTACK, i32* %CURRLINEPOS, i32* %CURRMARGIN, %T_KEYWORDTABLE* %KEYWORD, %T_DBLCHRSET* %DBLCHARS, %T_DBLCHARTABLE* %DBLCHAR, %T_SGLCHARTABLE* %SGLCHAR, i1* %RECORDSEEN, %T_CHARINFO* %CURRCHAR, %T_CHARINFO* %NEXTCHAR, i8** %CURRSYM, i8** %NEXTSYM, %T_OPTIONTABLE* %PPOPTION)
 {
-    %frame = alloca %Frame_INITIALISE, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_INITIALISE, align 8
+    %t1 = getelementptr inbounds %Frame_INITIALISE, %Frame_INITIALISE* %.frame, i32 0, i32 0
+    store %T_CHARINFO* %CURRCHAR, %T_CHARINFO** %t1
+    %t2 = getelementptr inbounds %Frame_INITIALISE, %Frame_INITIALISE* %.frame, i32 0, i32 1
+    store i32* %CURRLINEPOS, i32** %t2
+    %t3 = getelementptr inbounds %Frame_INITIALISE, %Frame_INITIALISE* %.frame, i32 0, i32 2
+    store i32* %CURRMARGIN, i32** %t3
+    %t4 = getelementptr inbounds %Frame_INITIALISE, %Frame_INITIALISE* %.frame, i32 0, i32 3
+    store i8** %CURRSYM, i8*** %t4
+    %t5 = getelementptr inbounds %Frame_INITIALISE, %Frame_INITIALISE* %.frame, i32 0, i32 4
+    store %T_DBLCHARTABLE* %DBLCHAR, %T_DBLCHARTABLE** %t5
+    %t6 = getelementptr inbounds %Frame_INITIALISE, %Frame_INITIALISE* %.frame, i32 0, i32 5
+    store %T_DBLCHRSET* %DBLCHARS, %T_DBLCHRSET** %t6
+    %t7 = getelementptr inbounds %Frame_INITIALISE, %Frame_INITIALISE* %.frame, i32 0, i32 6
+    store %T_text* %INPUTFILE, %T_text** %t7
+    %t8 = getelementptr inbounds %Frame_INITIALISE, %Frame_INITIALISE* %.frame, i32 0, i32 7
+    store %T_KEYWORDTABLE* %KEYWORD, %T_KEYWORDTABLE** %t8
+    %t9 = getelementptr inbounds %Frame_INITIALISE, %Frame_INITIALISE* %.frame, i32 0, i32 8
+    store %T_CHARINFO* %NEXTCHAR, %T_CHARINFO** %t9
+    %t10 = getelementptr inbounds %Frame_INITIALISE, %Frame_INITIALISE* %.frame, i32 0, i32 9
+    store i8** %NEXTSYM, i8*** %t10
+    %t11 = getelementptr inbounds %Frame_INITIALISE, %Frame_INITIALISE* %.frame, i32 0, i32 10
+    store %T_text* %OUTPUTFILE, %T_text** %t11
+    %t12 = getelementptr inbounds %Frame_INITIALISE, %Frame_INITIALISE* %.frame, i32 0, i32 11
+    store %T_OPTIONTABLE* %PPOPTION, %T_OPTIONTABLE** %t12
+    %t13 = getelementptr inbounds %Frame_INITIALISE, %Frame_INITIALISE* %.frame, i32 0, i32 12
+    store i1* %RECORDSEEN, i1** %t13
+    %t14 = getelementptr inbounds %Frame_INITIALISE, %Frame_INITIALISE* %.frame, i32 0, i32 13
+    store %T_SGLCHARTABLE* %SGLCHAR, %T_SGLCHARTABLE** %t14
+    %t15 = getelementptr inbounds %Frame_INITIALISE, %Frame_INITIALISE* %.frame, i32 0, i32 14
+    store i32* %TOPOFSTACK, i32** %t15
+
+    ; epilogue
     ret void
 }
 
@@ -473,8 +659,11 @@ define void @P_INITIALISE()
 ; function body
 define i1 @F_STACKEMPTY()
 {
-    %frame = alloca %Frame_STACKEMPTY, align 8
-    %t1 = getelementptr inbounds %Frame_STACKEMPTY, %Frame_STACKEMPTY* %frame, i32 0, i32 0
+    ; allocate frame
+    %.frame = alloca %Frame_STACKEMPTY, align 8
+
+    ; epilogue
+    %t1 = getelementptr inbounds %Frame_STACKEMPTY, %Frame_STACKEMPTY* %.frame, i32 0, i32 0
     %t2 = load i1, i1* %t1
     ret i1 %t2
 }
@@ -497,8 +686,11 @@ define i1 @F_STACKEMPTY()
 ; function body
 define i1 @F_STACKFULL()
 {
-    %frame = alloca %Frame_STACKFULL, align 8
-    %t1 = getelementptr inbounds %Frame_STACKFULL, %Frame_STACKFULL* %frame, i32 0, i32 0
+    ; allocate frame
+    %.frame = alloca %Frame_STACKFULL, align 8
+
+    ; epilogue
+    %t1 = getelementptr inbounds %Frame_STACKFULL, %Frame_STACKFULL* %.frame, i32 0, i32 0
     %t2 = load i1, i1* %t1
     ret i1 %t2
 }
@@ -512,17 +704,24 @@ define i1 @F_STACKFULL()
 %Frame_POPSTACK = type
 {
     ; parameters
-    i32,    ; 0: INDENTSYMBOL
-    i32,    ; 1: PREVMARGIN
+    i32*,    ; 0: INDENTSYMBOL
+    i32*,    ; 1: PREVMARGIN
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_POPSTACK()
+define void @P_POPSTACK(i32* %INDENTSYMBOL, i32* %PREVMARGIN)
 {
-    %frame = alloca %Frame_POPSTACK, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_POPSTACK, align 8
+    %t1 = getelementptr inbounds %Frame_POPSTACK, %Frame_POPSTACK* %.frame, i32 0, i32 0
+    store i32* %INDENTSYMBOL, i32** %t1
+    %t2 = getelementptr inbounds %Frame_POPSTACK, %Frame_POPSTACK* %.frame, i32 0, i32 1
+    store i32* %PREVMARGIN, i32** %t2
+
+    ; epilogue
     ret void
 }
 
@@ -543,9 +742,16 @@ define void @P_POPSTACK()
 };
 
 ; procedure body
-define void @P_PUSHSTACK()
+define void @P_PUSHSTACK(i32 %INDENTSYMBOL, i32 %PREVMARGIN)
 {
-    %frame = alloca %Frame_PUSHSTACK, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_PUSHSTACK, align 8
+    %t1 = getelementptr inbounds %Frame_PUSHSTACK, %Frame_PUSHSTACK* %.frame, i32 0, i32 0
+    store i32 %INDENTSYMBOL, i32* %t1
+    %t2 = getelementptr inbounds %Frame_PUSHSTACK, %Frame_PUSHSTACK* %.frame, i32 0, i32 1
+    store i32 %PREVMARGIN, i32* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -558,9 +764,9 @@ define void @P_PUSHSTACK()
 %Frame_WRITECRS = type
 {
     ; parameters
-    i32,    ; 0: CURRLINEPOS
+    i32*,    ; 0: CURRLINEPOS
     i32,    ; 1: NUMBEROFCRS
-    %T_text,    ; 2: OUTPUTFILE
+    %T_text*,    ; 2: OUTPUTFILE
 
     ; variables
     i32,    ; 3: I
@@ -570,9 +776,18 @@ define void @P_PUSHSTACK()
 };
 
 ; procedure body
-define void @P_WRITECRS()
+define void @P_WRITECRS(i32 %NUMBEROFCRS, i32* %CURRLINEPOS, %T_text* %OUTPUTFILE)
 {
-    %frame = alloca %Frame_WRITECRS, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_WRITECRS, align 8
+    %t1 = getelementptr inbounds %Frame_WRITECRS, %Frame_WRITECRS* %.frame, i32 0, i32 0
+    store i32* %CURRLINEPOS, i32** %t1
+    %t2 = getelementptr inbounds %Frame_WRITECRS, %Frame_WRITECRS* %.frame, i32 0, i32 1
+    store i32 %NUMBEROFCRS, i32* %t2
+    %t3 = getelementptr inbounds %Frame_WRITECRS, %Frame_WRITECRS* %.frame, i32 0, i32 2
+    store %T_text* %OUTPUTFILE, %T_text** %t3
+
+    ; epilogue
     ret void
 }
 
@@ -585,17 +800,24 @@ define void @P_WRITECRS()
 %Frame_INSERTCR = type
 {
     ; parameters
-    i8*,    ; 0: CURRSYM
-    %T_text,    ; 1: OUTPUTFILE
+    i8**,    ; 0: CURRSYM
+    %T_text*,    ; 1: OUTPUTFILE
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_INSERTCR()
+define void @P_INSERTCR(i8** %CURRSYM, %T_text* %OUTPUTFILE)
 {
-    %frame = alloca %Frame_INSERTCR, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_INSERTCR, align 8
+    %t1 = getelementptr inbounds %Frame_INSERTCR, %Frame_INSERTCR* %.frame, i32 0, i32 0
+    store i8** %CURRSYM, i8*** %t1
+    %t2 = getelementptr inbounds %Frame_INSERTCR, %Frame_INSERTCR* %.frame, i32 0, i32 1
+    store %T_text* %OUTPUTFILE, %T_text** %t2
+
+    ; epilogue
     ret void
 }
 
@@ -608,17 +830,24 @@ define void @P_INSERTCR()
 %Frame_INSERTBLANKLINE = type
 {
     ; parameters
-    i8*,    ; 0: CURRSYM
-    %T_text,    ; 1: OUTPUTFILE
+    i8**,    ; 0: CURRSYM
+    %T_text*,    ; 1: OUTPUTFILE
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_INSERTBLANKLINE()
+define void @P_INSERTBLANKLINE(i8** %CURRSYM, %T_text* %OUTPUTFILE)
 {
-    %frame = alloca %Frame_INSERTBLANKLINE, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_INSERTBLANKLINE, align 8
+    %t1 = getelementptr inbounds %Frame_INSERTBLANKLINE, %Frame_INSERTBLANKLINE* %.frame, i32 0, i32 0
+    store i8** %CURRSYM, i8*** %t1
+    %t2 = getelementptr inbounds %Frame_INSERTBLANKLINE, %Frame_INSERTBLANKLINE* %.frame, i32 0, i32 1
+    store %T_text* %OUTPUTFILE, %T_text** %t2
+
+    ; epilogue
     ret void
 }
 
@@ -642,9 +871,14 @@ define void @P_INSERTBLANKLINE()
 };
 
 ; procedure body
-define void @P_LSHIFTON()
+define void @P_LSHIFTON(%T_KEYSYMSET %DINDENTSYMBOLS)
 {
-    %frame = alloca %Frame_LSHIFTON, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_LSHIFTON, align 8
+    %t1 = getelementptr inbounds %Frame_LSHIFTON, %Frame_LSHIFTON* %.frame, i32 0, i32 0
+    store %T_KEYSYMSET %DINDENTSYMBOLS, %T_KEYSYMSET* %t1
+
+    ; epilogue
     ret void
 }
 
@@ -667,7 +901,10 @@ define void @P_LSHIFTON()
 ; procedure body
 define void @P_LSHIFT()
 {
-    %frame = alloca %Frame_LSHIFT, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_LSHIFT, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -680,17 +917,24 @@ define void @P_LSHIFT()
 %Frame_INSERTSPACE = type
 {
     ; parameters
-    %T_text,    ; 0: OUTPUTFILE
-    i8*,    ; 1: SYMBOL
+    %T_text*,    ; 0: OUTPUTFILE
+    i8**,    ; 1: SYMBOL
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_INSERTSPACE()
+define void @P_INSERTSPACE(i8** %SYMBOL, %T_text* %OUTPUTFILE)
 {
-    %frame = alloca %Frame_INSERTSPACE, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_INSERTSPACE, align 8
+    %t1 = getelementptr inbounds %Frame_INSERTSPACE, %Frame_INSERTSPACE* %.frame, i32 0, i32 0
+    store %T_text* %OUTPUTFILE, %T_text** %t1
+    %t2 = getelementptr inbounds %Frame_INSERTSPACE, %Frame_INSERTSPACE* %.frame, i32 0, i32 1
+    store i8** %SYMBOL, i8*** %t2
+
+    ; epilogue
     ret void
 }
 
@@ -703,9 +947,9 @@ define void @P_INSERTSPACE()
 %Frame_MOVELINEPOS = type
 {
     ; parameters
-    i32,    ; 0: CURRLINEPOS
+    i32*,    ; 0: CURRLINEPOS
     i32,    ; 1: NEWLINEPOS
-    %T_text,    ; 2: OUTPUTFILE
+    %T_text*,    ; 2: OUTPUTFILE
 
     ; variables
     i32,    ; 3: I
@@ -715,9 +959,18 @@ define void @P_INSERTSPACE()
 };
 
 ; procedure body
-define void @P_MOVELINEPOS()
+define void @P_MOVELINEPOS(i32 %NEWLINEPOS, i32* %CURRLINEPOS, %T_text* %OUTPUTFILE)
 {
-    %frame = alloca %Frame_MOVELINEPOS, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_MOVELINEPOS, align 8
+    %t1 = getelementptr inbounds %Frame_MOVELINEPOS, %Frame_MOVELINEPOS* %.frame, i32 0, i32 0
+    store i32* %CURRLINEPOS, i32** %t1
+    %t2 = getelementptr inbounds %Frame_MOVELINEPOS, %Frame_MOVELINEPOS* %.frame, i32 0, i32 1
+    store i32 %NEWLINEPOS, i32* %t2
+    %t3 = getelementptr inbounds %Frame_MOVELINEPOS, %Frame_MOVELINEPOS* %.frame, i32 0, i32 2
+    store %T_text* %OUTPUTFILE, %T_text** %t3
+
+    ; epilogue
     ret void
 }
 
@@ -730,9 +983,9 @@ define void @P_MOVELINEPOS()
 %Frame_PRINTSYMBOL = type
 {
     ; parameters
-    i32,    ; 0: CURRLINEPOS
+    i32*,    ; 0: CURRLINEPOS
     i8*,    ; 1: CURRSYM
-    %T_text,    ; 2: OUTPUTFILE
+    %T_text*,    ; 2: OUTPUTFILE
 
     ; variables
     i32,    ; 3: I
@@ -742,9 +995,18 @@ define void @P_MOVELINEPOS()
 };
 
 ; procedure body
-define void @P_PRINTSYMBOL()
+define void @P_PRINTSYMBOL(i8* %CURRSYM, i32* %CURRLINEPOS, %T_text* %OUTPUTFILE)
 {
-    %frame = alloca %Frame_PRINTSYMBOL, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_PRINTSYMBOL, align 8
+    %t1 = getelementptr inbounds %Frame_PRINTSYMBOL, %Frame_PRINTSYMBOL* %.frame, i32 0, i32 0
+    store i32* %CURRLINEPOS, i32** %t1
+    %t2 = getelementptr inbounds %Frame_PRINTSYMBOL, %Frame_PRINTSYMBOL* %.frame, i32 0, i32 1
+    store i8* %CURRSYM, i8** %t2
+    %t3 = getelementptr inbounds %Frame_PRINTSYMBOL, %Frame_PRINTSYMBOL* %.frame, i32 0, i32 2
+    store %T_text* %OUTPUTFILE, %T_text** %t3
+
+    ; epilogue
     ret void
 }
 
@@ -758,7 +1020,7 @@ define void @P_PRINTSYMBOL()
 {
     ; parameters
     i8*,    ; 0: CURRSYM
-    %T_text,    ; 1: OUTPUTFILE
+    %T_text*,    ; 1: OUTPUTFILE
 
     ; variables
     i32,    ; 2: NEWLINEPOS
@@ -768,9 +1030,16 @@ define void @P_PRINTSYMBOL()
 };
 
 ; procedure body
-define void @P_PPSYMBOL()
+define void @P_PPSYMBOL(i8* %CURRSYM, %T_text* %OUTPUTFILE)
 {
-    %frame = alloca %Frame_PPSYMBOL, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_PPSYMBOL, align 8
+    %t1 = getelementptr inbounds %Frame_PPSYMBOL, %Frame_PPSYMBOL* %.frame, i32 0, i32 0
+    store i8* %CURRSYM, i8** %t1
+    %t2 = getelementptr inbounds %Frame_PPSYMBOL, %Frame_PPSYMBOL* %.frame, i32 0, i32 1
+    store %T_text* %OUTPUTFILE, %T_text** %t2
+
+    ; epilogue
     ret void
 }
 
@@ -783,10 +1052,10 @@ define void @P_PPSYMBOL()
 %Frame_GOBBLE = type
 {
     ; parameters
-    i8*,    ; 0: CURRSYM
-    %T_text,    ; 1: INPUTFILE
-    i8*,    ; 2: NEXTSYM
-    %T_text,    ; 3: OUTPUTFILE
+    i8**,    ; 0: CURRSYM
+    %T_text*,    ; 1: INPUTFILE
+    i8**,    ; 2: NEXTSYM
+    %T_text*,    ; 3: OUTPUTFILE
     %T_KEYSYMSET,    ; 4: TERMINATORS
 
     ; dummy
@@ -794,9 +1063,22 @@ define void @P_PPSYMBOL()
 };
 
 ; procedure body
-define void @P_GOBBLE()
+define void @P_GOBBLE(%T_text* %INPUTFILE, %T_KEYSYMSET %TERMINATORS, i8** %CURRSYM, i8** %NEXTSYM, %T_text* %OUTPUTFILE)
 {
-    %frame = alloca %Frame_GOBBLE, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_GOBBLE, align 8
+    %t1 = getelementptr inbounds %Frame_GOBBLE, %Frame_GOBBLE* %.frame, i32 0, i32 0
+    store i8** %CURRSYM, i8*** %t1
+    %t2 = getelementptr inbounds %Frame_GOBBLE, %Frame_GOBBLE* %.frame, i32 0, i32 1
+    store %T_text* %INPUTFILE, %T_text** %t2
+    %t3 = getelementptr inbounds %Frame_GOBBLE, %Frame_GOBBLE* %.frame, i32 0, i32 2
+    store i8** %NEXTSYM, i8*** %t3
+    %t4 = getelementptr inbounds %Frame_GOBBLE, %Frame_GOBBLE* %.frame, i32 0, i32 3
+    store %T_text* %OUTPUTFILE, %T_text** %t4
+    %t5 = getelementptr inbounds %Frame_GOBBLE, %Frame_GOBBLE* %.frame, i32 0, i32 4
+    store %T_KEYSYMSET %TERMINATORS, %T_KEYSYMSET* %t5
+
+    ; epilogue
     ret void
 }
 
@@ -816,9 +1098,14 @@ define void @P_GOBBLE()
 };
 
 ; procedure body
-define void @P_RSHIFT()
+define void @P_RSHIFT(i32 %CURRSYM)
 {
-    %frame = alloca %Frame_RSHIFT, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_RSHIFT, align 8
+    %t1 = getelementptr inbounds %Frame_RSHIFT, %Frame_RSHIFT* %.frame, i32 0, i32 0
+    store i32 %CURRSYM, i32* %t1
+
+    ; epilogue
     ret void
 }
 
@@ -838,9 +1125,14 @@ define void @P_RSHIFT()
 };
 
 ; procedure body
-define void @P_RSHIFTTOCLP()
+define void @P_RSHIFTTOCLP(i32 %CURRSYM)
 {
-    %frame = alloca %Frame_RSHIFTTOCLP, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_RSHIFTTOCLP, align 8
+    %t1 = getelementptr inbounds %Frame_RSHIFTTOCLP, %Frame_RSHIFTTOCLP* %.frame, i32 0, i32 0
+    store i32 %CURRSYM, i32* %t1
+
+    ; epilogue
     ret void
 }
 

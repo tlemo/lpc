@@ -48,14 +48,19 @@ declare dso_local void @_CloseFile(i8*)
 ; procedure body
 define void @P_()
 {
+    ; initialize file handles
     %t1 = call i8* @_OpenFile(i32 0)
     store i8* %t1, i8** @_input
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
+
+    ; cleanup
     %t3 = load %T_text, %T_text* @_output
     call void @_CloseFile(i8* %t3)
     %t4 = load %T_text, %T_text* @_input
     call void @_CloseFile(i8* %t4)
+
+    ; epilogue
     ret void
 }
 
@@ -68,9 +73,9 @@ define void @P_()
 %Frame_punere = type
 {
     ; parameters
-    i32,    ; 0: x
-    i32,    ; 1: y
-    i32,    ; 2: z
+    i32*,    ; 0: x
+    i32*,    ; 1: y
+    i32*,    ; 2: z
 
     ; variables
     i8*,    ; 3: p
@@ -80,9 +85,18 @@ define void @P_()
 };
 
 ; procedure body
-define void @P_punere()
+define void @P_punere(i32* %x, i32* %y, i32* %z)
 {
-    %frame = alloca %Frame_punere, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_punere, align 8
+    %t1 = getelementptr inbounds %Frame_punere, %Frame_punere* %.frame, i32 0, i32 0
+    store i32* %x, i32** %t1
+    %t2 = getelementptr inbounds %Frame_punere, %Frame_punere* %.frame, i32 0, i32 1
+    store i32* %y, i32** %t2
+    %t3 = getelementptr inbounds %Frame_punere, %Frame_punere* %.frame, i32 0, i32 2
+    store i32* %z, i32** %t3
+
+    ; epilogue
     ret void
 }
 
@@ -101,7 +115,10 @@ define void @P_punere()
 ; procedure body
 define void @P_scoatere()
 {
-    %frame = alloca %Frame_scoatere, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_scoatere, align 8
+
+    ; epilogue
     ret void
 }
 

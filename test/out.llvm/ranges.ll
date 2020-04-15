@@ -49,18 +49,23 @@ declare dso_local void @_CloseFile(i8*)
 ; procedure body
 define void @P_()
 {
+    ; initialize file handles
     %t1 = call i8* @_OpenFile(i32 0)
     store i8* %t1, i8** @_input
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
     %t3 = call i8* @_OpenTempFile(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.3, i32 0, i32 0))
     store i8* %t3, i8** @tmp
+
+    ; cleanup
     %t4 = load %T_text, %T_text* @tmp
     call void @_CloseFile(i8* %t4)
     %t5 = load %T_text, %T_text* @_output
     call void @_CloseFile(i8* %t5)
     %t6 = load %T_text, %T_text* @_input
     call void @_CloseFile(i8* %t6)
+
+    ; epilogue
     ret void
 }
 

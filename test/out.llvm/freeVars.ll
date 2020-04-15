@@ -37,14 +37,19 @@ declare dso_local void @_CloseFile(i8*)
 ; procedure body
 define void @P_()
 {
+    ; initialize file handles
     %t1 = call i8* @_OpenFile(i32 0)
     store i8* %t1, i8** @_input
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
+
+    ; cleanup
     %t3 = load %T_text, %T_text* @_output
     call void @_CloseFile(i8* %t3)
     %t4 = load %T_text, %T_text* @_input
     call void @_CloseFile(i8* %t4)
+
+    ; epilogue
     ret void
 }
 
@@ -66,7 +71,10 @@ define void @P_()
 ; procedure body
 define void @P_foo()
 {
-    %frame = alloca %Frame_foo, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_foo, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -89,9 +97,16 @@ define void @P_foo()
 };
 
 ; procedure body
-define void @P_foo_bar1()
+define void @P_foo_bar1(%Frame_foo* %.slink, i32 %i)
 {
-    %frame = alloca %Frame_foo_bar1, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_foo_bar1, align 8
+    %t1 = getelementptr inbounds %Frame_foo_bar1, %Frame_foo_bar1* %.frame, i32 0, i32 2
+    store %Frame_foo* %.slink, %Frame_foo** %t1
+    %t2 = getelementptr inbounds %Frame_foo_bar1, %Frame_foo_bar1* %.frame, i32 0, i32 0
+    store i32 %i, i32* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -114,9 +129,16 @@ define void @P_foo_bar1()
 };
 
 ; procedure body
-define void @P_foo_bar2()
+define void @P_foo_bar2(%Frame_foo* %.slink, i32 %i)
 {
-    %frame = alloca %Frame_foo_bar2, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_foo_bar2, align 8
+    %t1 = getelementptr inbounds %Frame_foo_bar2, %Frame_foo_bar2* %.frame, i32 0, i32 2
+    store %Frame_foo* %.slink, %Frame_foo** %t1
+    %t2 = getelementptr inbounds %Frame_foo_bar2, %Frame_foo_bar2* %.frame, i32 0, i32 0
+    store i32 %i, i32* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -136,9 +158,14 @@ define void @P_foo_bar2()
 };
 
 ; procedure body
-define void @P_foo_bar2_moo()
+define void @P_foo_bar2_moo(%Frame_foo_bar2* %.slink)
 {
-    %frame = alloca %Frame_foo_bar2_moo, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_foo_bar2_moo, align 8
+    %t1 = getelementptr inbounds %Frame_foo_bar2_moo, %Frame_foo_bar2_moo* %.frame, i32 0, i32 1
+    store %Frame_foo_bar2* %.slink, %Frame_foo_bar2** %t1
+
+    ; epilogue
     ret void
 }
 

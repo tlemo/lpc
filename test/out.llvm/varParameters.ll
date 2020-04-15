@@ -45,14 +45,19 @@ declare dso_local void @_CloseFile(i8*)
 ; procedure body
 define void @P_()
 {
+    ; initialize file handles
     %t1 = call i8* @_OpenFile(i32 0)
     store i8* %t1, i8** @_input
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
+
+    ; cleanup
     %t3 = load %T_text, %T_text* @_output
     call void @_CloseFile(i8* %t3)
     %t4 = load %T_text, %T_text* @_input
     call void @_CloseFile(i8* %t4)
+
+    ; epilogue
     ret void
 }
 
@@ -75,9 +80,14 @@ define void @P_()
 };
 
 ; procedure body
-define void @P_printA()
+define void @P_printA(%T_A %arg)
 {
-    %frame = alloca %Frame_printA, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_printA, align 8
+    %t1 = getelementptr inbounds %Frame_printA, %Frame_printA* %.frame, i32 0, i32 0
+    store %T_A %arg, %T_A* %t1
+
+    ; epilogue
     ret void
 }
 
@@ -100,9 +110,14 @@ define void @P_printA()
 };
 
 ; procedure body
-define void @P_printS()
+define void @P_printS(%T_S %arg)
 {
-    %frame = alloca %Frame_printS, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_printS, align 8
+    %t1 = getelementptr inbounds %Frame_printS, %Frame_printS* %.frame, i32 0, i32 0
+    store %T_S %arg, %T_S* %t1
+
+    ; epilogue
     ret void
 }
 
@@ -122,9 +137,14 @@ define void @P_printS()
 };
 
 ; procedure body
-define void @P_printR()
+define void @P_printR(%T_R %arg)
 {
-    %frame = alloca %Frame_printR, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_printR, align 8
+    %t1 = getelementptr inbounds %Frame_printR, %Frame_printR* %.frame, i32 0, i32 0
+    store %T_R %arg, %T_R* %t1
+
+    ; epilogue
     ret void
 }
 
@@ -137,19 +157,30 @@ define void @P_printR()
 %Frame_test = type
 {
     ; parameters
-    %T_A,    ; 0: a
-    i32,    ; 1: i
-    %T_R,    ; 2: r
-    %T_S,    ; 3: s
+    %T_A*,    ; 0: a
+    i32*,    ; 1: i
+    %T_R*,    ; 2: r
+    %T_S*,    ; 3: s
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_test()
+define void @P_test(%T_A* %a, %T_S* %s, %T_R* %r, i32* %i)
 {
-    %frame = alloca %Frame_test, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_test, align 8
+    %t1 = getelementptr inbounds %Frame_test, %Frame_test* %.frame, i32 0, i32 0
+    store %T_A* %a, %T_A** %t1
+    %t2 = getelementptr inbounds %Frame_test, %Frame_test* %.frame, i32 0, i32 1
+    store i32* %i, i32** %t2
+    %t3 = getelementptr inbounds %Frame_test, %Frame_test* %.frame, i32 0, i32 2
+    store %T_R* %r, %T_R** %t3
+    %t4 = getelementptr inbounds %Frame_test, %Frame_test* %.frame, i32 0, i32 3
+    store %T_S* %s, %T_S** %t4
+
+    ; epilogue
     ret void
 }
 

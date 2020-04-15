@@ -792,7 +792,7 @@ void LlvmBackend::_outputFrame(obj::Subroutine* pSubroutine)
             {
                 const auto* pParamTypeExt = ext(pParam->pType);
                 assert(!pParamTypeExt->genName.empty());
-                code << TAB << pParamTypeExt->genName << ",";
+                code << TAB << pParamTypeExt->genName << (pParam->byRef ? "*," : ",");
                 code << TAB << "; " << fieldIndex << ": " << pParam->pId->name << "\n";
 
                 auto pParamExt = ext(pParam);
@@ -883,20 +883,33 @@ void LlvmBackend::_outputSubroutine(obj::Subroutine* pSubroutine)
     // parameters
     //
     code << "(";
-    // TODO
+
+    string paramSep = "";
+
+    if (pSubroutine->hasSlink())
+    {
+        const auto* pParentExt = ext(pSubroutine->parent());
+        assert(!pParentExt->frameName.empty());
+        code << pParentExt->frameName << "* %.slink";
+        paramSep = ", ";
+    }
+
+    for (const auto& param : *pType->paramList())
+    {
+        code << paramSep << ext(param.pType)->genName;
+        if (param.byRef)
+            code << "*";
+        code << " %" << param.pId->name;
+        paramSep = ", ";
+    }
+
     code << ")\n";
 
     // body
     //
     code << "{\n";
     
-    // allocate frame
-    //
-    if (!pExt->frameName.empty())
-    {
-        code << TAB << "%frame = alloca " << pExt->frameName << ", align 8\n";
-    }
-
+    code << _initFrame(pSubroutine);
     code << _genInitializers(pSubroutine);
 
 #if 0 // WIP
@@ -926,7 +939,7 @@ IrFragment LlvmBackend::_genFrameAddress(const Scope* pTargetScope)
     assert(targetLevel <= m_pCurrentScope->level);
 
     stringstream code;
-    string framePtr = "%frame";
+    string framePtr = "%.frame";
 
     auto pScope = m_pCurrentScope;
 
@@ -1056,6 +1069,65 @@ IrFragment LlvmBackend::_genLValueAddress(const ast::Expr* pLValue)
 
 ///////////////////////////////////////////////////////////////////////////////
 //
+string LlvmBackend::_initFrame(obj::Subroutine* pSubroutine)
+{
+    auto pExt = ext(pSubroutine);
+    const auto* pType = pSubroutine->pType;
+
+    if (pExt->frameName.empty())
+    {
+        assert(pType->paramList()->empty());
+        return "";
+    }
+
+    auto cloneArg = [&](const string& param, const string& type, int frameIndex)
+    {
+        assert(frameIndex >= 0);
+        stringstream code;
+        const auto clonePtr = _genTempValue();
+        const auto& frameName = pExt->frameName;
+        code << TAB << clonePtr << " = getelementptr inbounds " <<
+            frameName << ", " << frameName << "* %.frame, i32 0, " <<
+            "i32 " << frameIndex << "\n";
+        code << TAB << "store " << type << " " << param << ", " <<
+            type << "* " << clonePtr << "\n";
+        return code.str();
+    };
+
+    stringstream code;
+
+    // allocate frame
+    //
+    code << TAB << "; allocate frame\n";
+    code << TAB << "%.frame = alloca " << pExt->frameName << ", align 8\n";
+
+    // init .slink
+    //
+    if (pSubroutine->hasSlink())
+    {
+        const auto* pParentExt = ext(pSubroutine->parent());
+        code << cloneArg("%.slink", pParentExt->frameName + "*", pExt->slinkIndex);
+    }
+
+    // init parameter clones
+    //
+    for (const auto pParam : m_paramList)
+    {
+        const auto* pParamExt = ext(pParam);
+        string typeName = ext(pParam->pType)->genName;
+        if (pParam->byRef)
+            typeName += "*";
+        code << cloneArg(pParamExt->genName, typeName, pParamExt->frameIndex);
+    }
+
+    code << "\n";
+
+    return code.str();
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
 // explicit variable initializers
 //
 // NOTE: for now, this is very specific to File objects initialization
@@ -1063,6 +1135,7 @@ IrFragment LlvmBackend::_genLValueAddress(const ast::Expr* pLValue)
 string LlvmBackend::_genInitializers(obj::Subroutine* pSubroutine)
 {
     stringstream code;
+    bool first = true;
 
     for (auto pVar : m_varList)
     {
@@ -1073,6 +1146,12 @@ string LlvmBackend::_genInitializers(obj::Subroutine* pSubroutine)
         assert(pVar->pInitializer->isConst());
 
         m_cleanupList.push_back(pVar);
+
+        if (first)
+        {
+            code << TAB << "; initialize file handles\n";
+            first = false;
+        }
 
         // initializer value
         //
@@ -1100,6 +1179,9 @@ string LlvmBackend::_genInitializers(obj::Subroutine* pSubroutine)
             ", i8** " << varPtrIr.value << "\n";
     }
 
+    if (!first)
+        code << "\n";
+
     return code.str();
 }
 
@@ -1111,6 +1193,9 @@ string LlvmBackend::_genInitializers(obj::Subroutine* pSubroutine)
 string LlvmBackend::_genCleanup(obj::Subroutine* pSubroutine)
 {
     stringstream code;
+
+    if (!m_cleanupList.empty())
+        code << TAB << "; cleanup\n";
 
     for (auto it = m_cleanupList.rbegin(); it != m_cleanupList.rend(); ++it)
     {
@@ -1126,6 +1211,9 @@ string LlvmBackend::_genCleanup(obj::Subroutine* pSubroutine)
         code << TAB << "call void @_CloseFile(i8* " << pFileHandleIr->value << ")\n";
     }
 
+    if (!m_cleanupList.empty())
+    code << "\n";
+
     return code.str();
 }
 
@@ -1136,6 +1224,8 @@ string LlvmBackend::_genEpilogue(obj::Subroutine* pSubroutine)
 {
     stringstream code;
 
+    code << TAB << "; epilogue\n";
+
     if (pSubroutine->pType->isFunction())
     {
         // return value
@@ -1145,8 +1235,9 @@ string LlvmBackend::_genEpilogue(obj::Subroutine* pSubroutine)
         const auto retValuePtr = _genTempValue();
         const auto retValue = _genTempValue();
         const auto& frameName = ext(pSubroutine)->frameName;
+        assert(!frameName.empty());
         code << TAB << retValuePtr << " = getelementptr inbounds " <<
-            frameName << ", " << frameName << "* %frame, i32 0, " <<
+            frameName << ", " << frameName << "* %.frame, i32 0, " <<
             "i32 " << ext(pSubroutine->pFnValue)->frameIndex << "\n";
         code << TAB << retValue << " = load " << returnType << ", " <<
             returnType << "* " << retValuePtr << "\n";

@@ -45,14 +45,19 @@ declare dso_local void @_CloseFile(i8*)
 ; procedure body
 define void @P_()
 {
+    ; initialize file handles
     %t1 = call i8* @_OpenFile(i32 0)
     store i8* %t1, i8** @input
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @output
+
+    ; cleanup
     %t3 = load %T_text, %T_text* @output
     call void @_CloseFile(i8* %t3)
     %t4 = load %T_text, %T_text* @input
     call void @_CloseFile(i8* %t4)
+
+    ; epilogue
     ret void
 }
 
@@ -66,7 +71,7 @@ define void @P_()
 {
     ; parameters
     i32,    ; 0: n
-    %T_digitarray,    ; 1: x
+    %T_digitarray*,    ; 1: x
 
     ; variables
     i32,    ; 2: i
@@ -76,9 +81,16 @@ define void @P_()
 };
 
 ; procedure body
-define void @P_initinteger()
+define void @P_initinteger(%T_digitarray* %x, i32 %n)
 {
-    %frame = alloca %Frame_initinteger, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_initinteger, align 8
+    %t1 = getelementptr inbounds %Frame_initinteger, %Frame_initinteger* %.frame, i32 0, i32 0
+    store i32 %n, i32* %t1
+    %t2 = getelementptr inbounds %Frame_initinteger, %Frame_initinteger* %.frame, i32 0, i32 1
+    store %T_digitarray* %x, %T_digitarray** %t2
+
+    ; epilogue
     ret void
 }
 
@@ -92,10 +104,10 @@ define void @P_initinteger()
 {
     ; parameters
     i32,    ; 0: n
-    %T_digitarray,    ; 1: x
+    %T_digitarray*,    ; 1: x
     i32,    ; 2: xs
-    %T_digitarray,    ; 3: y
-    i32,    ; 4: ys
+    %T_digitarray*,    ; 3: y
+    i32*,    ; 4: ys
 
     ; variables
     i32,    ; 5: c
@@ -106,9 +118,22 @@ define void @P_initinteger()
 };
 
 ; procedure body
-define void @P_divide()
+define void @P_divide(%T_digitarray* %x, i32 %xs, i32 %n, %T_digitarray* %y, i32* %ys)
 {
-    %frame = alloca %Frame_divide, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_divide, align 8
+    %t1 = getelementptr inbounds %Frame_divide, %Frame_divide* %.frame, i32 0, i32 0
+    store i32 %n, i32* %t1
+    %t2 = getelementptr inbounds %Frame_divide, %Frame_divide* %.frame, i32 0, i32 1
+    store %T_digitarray* %x, %T_digitarray** %t2
+    %t3 = getelementptr inbounds %Frame_divide, %Frame_divide* %.frame, i32 0, i32 2
+    store i32 %xs, i32* %t3
+    %t4 = getelementptr inbounds %Frame_divide, %Frame_divide* %.frame, i32 0, i32 3
+    store %T_digitarray* %y, %T_digitarray** %t4
+    %t5 = getelementptr inbounds %Frame_divide, %Frame_divide* %.frame, i32 0, i32 4
+    store i32* %ys, i32** %t5
+
+    ; epilogue
     ret void
 }
 
@@ -121,8 +146,8 @@ define void @P_divide()
 %Frame_add = type
 {
     ; parameters
-    %T_digitarray,    ; 0: s
-    %T_digitarray,    ; 1: x
+    %T_digitarray*,    ; 0: s
+    %T_digitarray*,    ; 1: x
     i32,    ; 2: xs
 
     ; variables
@@ -134,9 +159,18 @@ define void @P_divide()
 };
 
 ; procedure body
-define void @P_add()
+define void @P_add(%T_digitarray* %s, %T_digitarray* %x, i32 %xs)
 {
-    %frame = alloca %Frame_add, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_add, align 8
+    %t1 = getelementptr inbounds %Frame_add, %Frame_add* %.frame, i32 0, i32 0
+    store %T_digitarray* %s, %T_digitarray** %t1
+    %t2 = getelementptr inbounds %Frame_add, %Frame_add* %.frame, i32 0, i32 1
+    store %T_digitarray* %x, %T_digitarray** %t2
+    %t3 = getelementptr inbounds %Frame_add, %Frame_add* %.frame, i32 0, i32 2
+    store i32 %xs, i32* %t3
+
+    ; epilogue
     ret void
 }
 
@@ -149,8 +183,8 @@ define void @P_add()
 %Frame_sub = type
 {
     ; parameters
-    %T_digitarray,    ; 0: s
-    %T_digitarray,    ; 1: x
+    %T_digitarray*,    ; 0: s
+    %T_digitarray*,    ; 1: x
     i32,    ; 2: xs
 
     ; variables
@@ -162,9 +196,18 @@ define void @P_add()
 };
 
 ; procedure body
-define void @P_sub()
+define void @P_sub(%T_digitarray* %s, %T_digitarray* %x, i32 %xs)
 {
-    %frame = alloca %Frame_sub, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_sub, align 8
+    %t1 = getelementptr inbounds %Frame_sub, %Frame_sub* %.frame, i32 0, i32 0
+    store %T_digitarray* %s, %T_digitarray** %t1
+    %t2 = getelementptr inbounds %Frame_sub, %Frame_sub* %.frame, i32 0, i32 1
+    store %T_digitarray* %x, %T_digitarray** %t2
+    %t3 = getelementptr inbounds %Frame_sub, %Frame_sub* %.frame, i32 0, i32 2
+    store i32 %xs, i32* %t3
+
+    ; epilogue
     ret void
 }
 

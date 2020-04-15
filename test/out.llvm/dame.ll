@@ -42,14 +42,19 @@ declare dso_local void @_CloseFile(i8*)
 ; procedure body
 define void @P_()
 {
+    ; initialize file handles
     %t1 = call i8* @_OpenFile(i32 0)
     store i8* %t1, i8** @_input
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
+
+    ; cleanup
     %t3 = load %T_text, %T_text* @_output
     call void @_CloseFile(i8* %t3)
     %t4 = load %T_text, %T_text* @_input
     call void @_CloseFile(i8* %t4)
+
+    ; epilogue
     ret void
 }
 
@@ -74,12 +79,19 @@ define void @P_()
 };
 
 ; function body
-define i1 @F_f()
+define i1 @F_f(%T_vec %x, i32 %i)
 {
-    %frame = alloca %Frame_f, align 8
-    %t1 = getelementptr inbounds %Frame_f, %Frame_f* %frame, i32 0, i32 2
-    %t2 = load i1, i1* %t1
-    ret i1 %t2
+    ; allocate frame
+    %.frame = alloca %Frame_f, align 8
+    %t1 = getelementptr inbounds %Frame_f, %Frame_f* %.frame, i32 0, i32 0
+    store i32 %i, i32* %t1
+    %t2 = getelementptr inbounds %Frame_f, %Frame_f* %.frame, i32 0, i32 1
+    store %T_vec %x, %T_vec* %t2
+
+    ; epilogue
+    %t3 = getelementptr inbounds %Frame_f, %Frame_f* %.frame, i32 0, i32 2
+    %t4 = load i1, i1* %t3
+    ret i1 %t4
 }
 
 

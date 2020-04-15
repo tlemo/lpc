@@ -45,14 +45,19 @@ declare dso_local void @_CloseFile(i8*)
 ; procedure body
 define void @P_()
 {
+    ; initialize file handles
     %t1 = call i8* @_OpenFile(i32 0)
     store i8* %t1, i8** @_input
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
+
+    ; cleanup
     %t3 = load %T_text, %T_text* @_output
     call void @_CloseFile(i8* %t3)
     %t4 = load %T_text, %T_text* @_input
     call void @_CloseFile(i8* %t4)
+
+    ; epilogue
     ret void
 }
 
@@ -65,7 +70,7 @@ define void @P_()
 %Frame_gen = type
 {
     ; parameters
-    %T_vec,    ; 0: v
+    %T_vec*,    ; 0: v
 
     ; variables
     i32,    ; 1: i
@@ -76,9 +81,14 @@ define void @P_()
 };
 
 ; procedure body
-define void @P_gen()
+define void @P_gen(%T_vec* %v)
 {
-    %frame = alloca %Frame_gen, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_gen, align 8
+    %t1 = getelementptr inbounds %Frame_gen, %Frame_gen* %.frame, i32 0, i32 0
+    store %T_vec* %v, %T_vec** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -101,9 +111,14 @@ define void @P_gen()
 };
 
 ; procedure body
-define void @P_prel()
+define void @P_prel(%T_vec %v)
 {
-    %frame = alloca %Frame_prel, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_prel, align 8
+    %t1 = getelementptr inbounds %Frame_prel, %Frame_prel* %.frame, i32 0, i32 0
+    store %T_vec %v, %T_vec* %t1
+
+    ; epilogue
     ret void
 }
 

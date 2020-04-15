@@ -331,6 +331,7 @@ declare dso_local void @_CloseFile(i8*)
 ; procedure body
 define void @P_()
 {
+    ; initialize file handles
     %t1 = call i8* @_OpenFile(i32 0)
     store i8* %t1, i8** @_input
     %t2 = call i8* @_OpenTempFile(i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.3, i32 0, i32 0))
@@ -385,6 +386,8 @@ define void @P_()
     store i8* %t26, i8** @pfst
     %t27 = call i8* @_OpenTempFile(i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.27, i32 0, i32 0))
     store i8* %t27, i8** @pfstc
+
+    ; cleanup
     %t28 = load %T_file_89, %T_file_89* @pfstc
     call void @_CloseFile(i8* %t28)
     %t29 = load %T_file_88, %T_file_88* @pfst
@@ -439,6 +442,8 @@ define void @P_()
     call void @_CloseFile(i8* %t53)
     %t54 = load %T_text, %T_text* @_input
     call void @_CloseFile(i8* %t54)
+
+    ; epilogue
     ret void
 }
 
@@ -459,9 +464,16 @@ define void @P_()
 };
 
 ; procedure body
-define void @P_junk1()
+define void @P_junk1(i32 %z, i32 %q)
 {
-    %frame = alloca %Frame_junk1, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_junk1, align 8
+    %t1 = getelementptr inbounds %Frame_junk1, %Frame_junk1* %.frame, i32 0, i32 0
+    store i32 %q, i32* %t1
+    %t2 = getelementptr inbounds %Frame_junk1, %Frame_junk1* %.frame, i32 0, i32 1
+    store i32 %z, i32* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -474,16 +486,21 @@ define void @P_junk1()
 %Frame_junk2 = type
 {
     ; parameters
-    i32,    ; 0: z
+    i32*,    ; 0: z
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_junk2()
+define void @P_junk2(i32* %z)
 {
-    %frame = alloca %Frame_junk2, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_junk2, align 8
+    %t1 = getelementptr inbounds %Frame_junk2, %Frame_junk2* %.frame, i32 0, i32 0
+    store i32* %z, i32** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -496,16 +513,21 @@ define void @P_junk2()
 %Frame_junk3 = type
 {
     ; parameters
-    %T_string10,    ; 0: p
+    %T_string10*,    ; 0: p
 
     ; dummy
     i8*
 };
 
 ; procedure body
-define void @P_junk3()
+define void @P_junk3(%T_string10* %p)
 {
-    %frame = alloca %Frame_junk3, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_junk3, align 8
+    %t1 = getelementptr inbounds %Frame_junk3, %Frame_junk3* %.frame, i32 0, i32 0
+    store %T_string10* %p, %T_string10** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -525,9 +547,14 @@ define void @P_junk3()
 };
 
 ; procedure body
-define void @P_junk4()
+define void @P_junk4(%T_string10 %p)
 {
-    %frame = alloca %Frame_junk4, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_junk4, align 8
+    %t1 = getelementptr inbounds %Frame_junk4, %Frame_junk4* %.frame, i32 0, i32 0
+    store %T_string10 %p, %T_string10* %t1
+
+    ; epilogue
     ret void
 }
 
@@ -550,12 +577,17 @@ define void @P_junk4()
 };
 
 ; function body
-define i32 @F_junk5()
+define i32 @F_junk5(i32 %x)
 {
-    %frame = alloca %Frame_junk5, align 8
-    %t1 = getelementptr inbounds %Frame_junk5, %Frame_junk5* %frame, i32 0, i32 1
-    %t2 = load i32, i32* %t1
-    ret i32 %t2
+    ; allocate frame
+    %.frame = alloca %Frame_junk5, align 8
+    %t1 = getelementptr inbounds %Frame_junk5, %Frame_junk5* %.frame, i32 0, i32 0
+    store i32 %x, i32* %t1
+
+    ; epilogue
+    %t2 = getelementptr inbounds %Frame_junk5, %Frame_junk5* %.frame, i32 0, i32 1
+    %t3 = load i32, i32* %t2
+    ret i32 %t3
 }
 
 
@@ -573,7 +605,10 @@ define i32 @F_junk5()
 ; procedure body
 define void @P_junk6()
 {
-    %frame = alloca %Frame_junk6, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_junk6, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -601,12 +636,21 @@ define void @P_junk6()
 };
 
 ; function body
-define i32 @F_junk7()
+define i32 @F_junk7(i32 %a, i32 %b, i32 %c)
 {
-    %frame = alloca %Frame_junk7, align 8
-    %t1 = getelementptr inbounds %Frame_junk7, %Frame_junk7* %frame, i32 0, i32 3
-    %t2 = load i32, i32* %t1
-    ret i32 %t2
+    ; allocate frame
+    %.frame = alloca %Frame_junk7, align 8
+    %t1 = getelementptr inbounds %Frame_junk7, %Frame_junk7* %.frame, i32 0, i32 0
+    store i32 %a, i32* %t1
+    %t2 = getelementptr inbounds %Frame_junk7, %Frame_junk7* %.frame, i32 0, i32 1
+    store i32 %b, i32* %t2
+    %t3 = getelementptr inbounds %Frame_junk7, %Frame_junk7* %.frame, i32 0, i32 2
+    store i32 %c, i32* %t3
+
+    ; epilogue
+    %t4 = getelementptr inbounds %Frame_junk7, %Frame_junk7* %.frame, i32 0, i32 3
+    %t5 = load i32, i32* %t4
+    ret i32 %t5
 }
 
 
@@ -641,9 +685,38 @@ define i32 @F_junk7()
 };
 
 ; procedure body
-define void @P_junk8()
+define void @P_junk8(i32 %a, i1 %b, i8 %c, i32 %e, i32 %es, i32 %s, double %r, %T_string10 %st, %T_arri %ar, %T_rec %rc, %T_recv %rv, %T_cset %stc, i8* %p)
 {
-    %frame = alloca %Frame_junk8, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_junk8, align 8
+    %t1 = getelementptr inbounds %Frame_junk8, %Frame_junk8* %.frame, i32 0, i32 0
+    store i32 %a, i32* %t1
+    %t2 = getelementptr inbounds %Frame_junk8, %Frame_junk8* %.frame, i32 0, i32 1
+    store %T_arri %ar, %T_arri* %t2
+    %t3 = getelementptr inbounds %Frame_junk8, %Frame_junk8* %.frame, i32 0, i32 2
+    store i1 %b, i1* %t3
+    %t4 = getelementptr inbounds %Frame_junk8, %Frame_junk8* %.frame, i32 0, i32 3
+    store i8 %c, i8* %t4
+    %t5 = getelementptr inbounds %Frame_junk8, %Frame_junk8* %.frame, i32 0, i32 4
+    store i32 %e, i32* %t5
+    %t6 = getelementptr inbounds %Frame_junk8, %Frame_junk8* %.frame, i32 0, i32 5
+    store i32 %es, i32* %t6
+    %t7 = getelementptr inbounds %Frame_junk8, %Frame_junk8* %.frame, i32 0, i32 6
+    store i8* %p, i8** %t7
+    %t8 = getelementptr inbounds %Frame_junk8, %Frame_junk8* %.frame, i32 0, i32 7
+    store double %r, double* %t8
+    %t9 = getelementptr inbounds %Frame_junk8, %Frame_junk8* %.frame, i32 0, i32 8
+    store %T_rec %rc, %T_rec* %t9
+    %t10 = getelementptr inbounds %Frame_junk8, %Frame_junk8* %.frame, i32 0, i32 9
+    store %T_recv %rv, %T_recv* %t10
+    %t11 = getelementptr inbounds %Frame_junk8, %Frame_junk8* %.frame, i32 0, i32 10
+    store i32 %s, i32* %t11
+    %t12 = getelementptr inbounds %Frame_junk8, %Frame_junk8* %.frame, i32 0, i32 11
+    store %T_string10 %st, %T_string10* %t12
+    %t13 = getelementptr inbounds %Frame_junk8, %Frame_junk8* %.frame, i32 0, i32 12
+    store %T_cset %stc, %T_cset* %t13
+
+    ; epilogue
     ret void
 }
 
@@ -668,9 +741,16 @@ define void @P_junk8()
 };
 
 ; procedure body
-define void @P_junk9()
+define void @P_junk9(%T_junk9_subroutine_131 %junk9, %T_junk9_subroutine_132 %y)
 {
-    %frame = alloca %Frame_junk9, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_junk9, align 8
+    %t1 = getelementptr inbounds %Frame_junk9, %Frame_junk9* %.frame, i32 0, i32 0
+    store %T_junk9_subroutine_131 %junk9, %T_junk9_subroutine_131* %t1
+    %t2 = getelementptr inbounds %Frame_junk9, %Frame_junk9* %.frame, i32 0, i32 1
+    store %T_junk9_subroutine_132 %y, %T_junk9_subroutine_132* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -692,9 +772,18 @@ define void @P_junk9()
 };
 
 ; procedure body
-define void @P_junk10()
+define void @P_junk10(i32 %x, i32 %y, i8 %junk10)
 {
-    %frame = alloca %Frame_junk10, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_junk10, align 8
+    %t1 = getelementptr inbounds %Frame_junk10, %Frame_junk10* %.frame, i32 0, i32 0
+    store i8 %junk10, i8* %t1
+    %t2 = getelementptr inbounds %Frame_junk10, %Frame_junk10* %.frame, i32 0, i32 1
+    store i32 %x, i32* %t2
+    %t3 = getelementptr inbounds %Frame_junk10, %Frame_junk10* %.frame, i32 0, i32 2
+    store i32 %y, i32* %t3
+
+    ; epilogue
     ret void
 }
 
@@ -717,12 +806,17 @@ define void @P_junk10()
 };
 
 ; function body
-define i32 @F_junk11()
+define i32 @F_junk11(i32 %x)
 {
-    %frame = alloca %Frame_junk11, align 8
-    %t1 = getelementptr inbounds %Frame_junk11, %Frame_junk11* %frame, i32 0, i32 1
-    %t2 = load i32, i32* %t1
-    ret i32 %t2
+    ; allocate frame
+    %.frame = alloca %Frame_junk11, align 8
+    %t1 = getelementptr inbounds %Frame_junk11, %Frame_junk11* %.frame, i32 0, i32 0
+    store i32 %x, i32* %t1
+
+    ; epilogue
+    %t2 = getelementptr inbounds %Frame_junk11, %Frame_junk11* %.frame, i32 0, i32 1
+    %t3 = load i32, i32* %t2
+    ret i32 %t3
 }
 
 
@@ -747,9 +841,16 @@ define i32 @F_junk11()
 };
 
 ; procedure body
-define void @P_junk12()
+define void @P_junk12(%T_junk12_subroutine_134 %xq, %T_junk12_subroutine_133 %q)
 {
-    %frame = alloca %Frame_junk12, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_junk12, align 8
+    %t1 = getelementptr inbounds %Frame_junk12, %Frame_junk12* %.frame, i32 0, i32 0
+    store %T_junk12_subroutine_133 %q, %T_junk12_subroutine_133* %t1
+    %t2 = getelementptr inbounds %Frame_junk12, %Frame_junk12* %.frame, i32 0, i32 1
+    store %T_junk12_subroutine_134 %xq, %T_junk12_subroutine_134* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -772,9 +873,14 @@ define void @P_junk12()
 };
 
 ; procedure body
-define void @P_junk13()
+define void @P_junk13(%T_junk13_subroutine_136 %xz)
 {
-    %frame = alloca %Frame_junk13, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_junk13, align 8
+    %t1 = getelementptr inbounds %Frame_junk13, %Frame_junk13* %.frame, i32 0, i32 0
+    store %T_junk13_subroutine_136 %xz, %T_junk13_subroutine_136* %t1
+
+    ; epilogue
     ret void
 }
 
@@ -797,7 +903,10 @@ define void @P_junk13()
 ; procedure body
 define void @P_junk14()
 {
-    %frame = alloca %Frame_junk14, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_junk14, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -814,9 +923,14 @@ define void @P_junk14()
 };
 
 ; procedure body
-define void @P_junk14_junk15()
+define void @P_junk14_junk15(%Frame_junk14* %.slink)
 {
-    %frame = alloca %Frame_junk14_junk15, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_junk14_junk15, align 8
+    %t1 = getelementptr inbounds %Frame_junk14_junk15, %Frame_junk14_junk15* %.frame, i32 0, i32 0
+    store %Frame_junk14* %.slink, %Frame_junk14** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -835,7 +949,10 @@ define void @P_junk14_junk15()
 ; procedure body
 define void @P_junk16()
 {
-    %frame = alloca %Frame_junk16, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_junk16, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -859,9 +976,16 @@ define void @P_junk16()
 };
 
 ; procedure body
-define void @P_junk17()
+define void @P_junk17(%T_junk17_subroutine_137 %x, i32 %i)
 {
-    %frame = alloca %Frame_junk17, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_junk17, align 8
+    %t1 = getelementptr inbounds %Frame_junk17, %Frame_junk17* %.frame, i32 0, i32 0
+    store i32 %i, i32* %t1
+    %t2 = getelementptr inbounds %Frame_junk17, %Frame_junk17* %.frame, i32 0, i32 1
+    store %T_junk17_subroutine_137 %x, %T_junk17_subroutine_137* %t2
+
+    ; epilogue
     ret void
 }
 
@@ -878,9 +1002,14 @@ define void @P_junk17()
 };
 
 ; procedure body
-define void @P_junk17_junk18()
+define void @P_junk17_junk18(%Frame_junk17* %.slink)
 {
-    %frame = alloca %Frame_junk17_junk18, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_junk17_junk18, align 8
+    %t1 = getelementptr inbounds %Frame_junk17_junk18, %Frame_junk17_junk18* %.frame, i32 0, i32 0
+    store %Frame_junk17* %.slink, %Frame_junk17** %t1
+
+    ; epilogue
     ret void
 }
 
@@ -902,7 +1031,10 @@ define void @P_junk17_junk18()
 ; procedure body
 define void @P_junk19()
 {
-    %frame = alloca %Frame_junk19, align 8
+    ; allocate frame
+    %.frame = alloca %Frame_junk19, align 8
+
+    ; epilogue
     ret void
 }
 
@@ -924,8 +1056,11 @@ define void @P_junk19()
 ; function body
 define i32 @F_junk20()
 {
-    %frame = alloca %Frame_junk20, align 8
-    %t1 = getelementptr inbounds %Frame_junk20, %Frame_junk20* %frame, i32 0, i32 0
+    ; allocate frame
+    %.frame = alloca %Frame_junk20, align 8
+
+    ; epilogue
+    %t1 = getelementptr inbounds %Frame_junk20, %Frame_junk20* %.frame, i32 0, i32 0
     %t2 = load i32, i32* %t1
     ret i32 %t2
 }
@@ -946,12 +1081,17 @@ define i32 @F_junk20()
 };
 
 ; function body
-define i32 @F_junk20_inner()
+define i32 @F_junk20_inner(%Frame_junk20* %.slink)
 {
-    %frame = alloca %Frame_junk20_inner, align 8
-    %t1 = getelementptr inbounds %Frame_junk20_inner, %Frame_junk20_inner* %frame, i32 0, i32 0
-    %t2 = load i32, i32* %t1
-    ret i32 %t2
+    ; allocate frame
+    %.frame = alloca %Frame_junk20_inner, align 8
+    %t1 = getelementptr inbounds %Frame_junk20_inner, %Frame_junk20_inner* %.frame, i32 0, i32 1
+    store %Frame_junk20* %.slink, %Frame_junk20** %t1
+
+    ; epilogue
+    %t2 = getelementptr inbounds %Frame_junk20_inner, %Frame_junk20_inner* %.frame, i32 0, i32 0
+    %t3 = load i32, i32* %t2
+    ret i32 %t3
 }
 
 
@@ -975,12 +1115,19 @@ define i32 @F_junk20_inner()
 };
 
 ; function body
-define i32 @F_random()
+define i32 @F_random(i32 %low, i32 %hi)
 {
-    %frame = alloca %Frame_random, align 8
-    %t1 = getelementptr inbounds %Frame_random, %Frame_random* %frame, i32 0, i32 2
-    %t2 = load i32, i32* %t1
-    ret i32 %t2
+    ; allocate frame
+    %.frame = alloca %Frame_random, align 8
+    %t1 = getelementptr inbounds %Frame_random, %Frame_random* %.frame, i32 0, i32 0
+    store i32 %hi, i32* %t1
+    %t2 = getelementptr inbounds %Frame_random, %Frame_random* %.frame, i32 0, i32 1
+    store i32 %low, i32* %t2
+
+    ; epilogue
+    %t3 = getelementptr inbounds %Frame_random, %Frame_random* %.frame, i32 0, i32 2
+    %t4 = load i32, i32* %t3
+    ret i32 %t4
 }
 
 
