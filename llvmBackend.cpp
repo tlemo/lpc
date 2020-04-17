@@ -716,7 +716,7 @@ void LlvmBackend::_start()
     code << "declare dso_local void @_WriteChar(i8*, i32, i32, i8)\n";
     code << "declare dso_local void @_WriteInteger(i8*, i32, i32, i32)\n";
     code << "declare dso_local void @_WriteReal(i8*, i32, i32, double)\n";
-    code << "declare dso_local void @_WriteString(i8*, i32, i32, i8*)\n";
+    code << "declare dso_local void @_WriteString(i8*, i32, i32, i8*, i32)\n";
     code << "declare dso_local void @_WriteLn(i8*)\n";
     code << "\n";
 
@@ -859,9 +859,7 @@ void LlvmBackend::_outputFrame(obj::Subroutine* pSubroutine)
 void LlvmBackend::_outputSubroutine(obj::Subroutine* pSubroutine)
 {
     auto pExt = ext(pSubroutine);
-
     const auto* pType = pSubroutine->pType;
-    const char* prefix = nullptr;
 
     std::stringstream code;
 
@@ -871,20 +869,16 @@ void LlvmBackend::_outputSubroutine(obj::Subroutine* pSubroutine)
     {
         code << "\n; function body\n";
         code << "define " << ext(pType->returnType())->genName << " ";
-        prefix = "@F_";
     }
     else
     {
         code << "\n; procedure body\n";
         code << "define void ";
-        prefix = "@P_";
     }
 
     // name
     //
-    assert(pExt->genName.empty());
-    pExt->genName = _genName("", prefix, pSubroutine->pScope);
-    code << pExt->genName;
+    code << _genName(pSubroutine);
 
     // parameters
     //
@@ -975,6 +969,44 @@ IrFragment LlvmBackend::_genFrameAddress(const Scope* pTargetScope)
 
 ///////////////////////////////////////////////////////////////////////////////
 //
+IrFragment LlvmBackend::_getStringAddress(ast::Expr* pString)
+{
+    assert(pString->pType->isString());
+
+    stringstream code;
+    string stringPtr;
+
+    if(auto pConstExpr = pString->as<ast::ConstExpr>())
+    {
+        auto literal = _genLiteral(*pConstExpr->pConstant->strValue);
+        stringPtr = literal->address;
+    }
+    else if (auto pVarExpr = pString->as<ast::VarExpr>())
+    {
+        const auto varPtrIr = _genVarAddress(pVarExpr->pVariable);
+        code << varPtrIr.code;
+
+        // address value (as i8*)
+        //
+        const auto& llvmType = ext(pVarExpr->pType)->genName;
+        stringstream address;
+        address << "getelementptr inbounds (" <<
+            llvmType << ", " << llvmType << "* " <<
+            varPtrIr.value << ", i32 0, i32 0)";
+
+        stringPtr = address.str();
+    }
+    else
+    {
+        assert(!"Unexpected string expression");
+    }
+
+    return { code.str(), stringPtr };
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
 IrFragment LlvmBackend::_genVarAddress(obj::Variable* pVar)
 {
     const auto* pVarExt = ext(pVar);
@@ -983,6 +1015,7 @@ IrFragment LlvmBackend::_genVarAddress(obj::Variable* pVar)
     string varPtr;
 
     // frame-based?
+    //
     if (pVarExt->genName.empty())
     {
         assert(pVarExt->frameIndex >= 0);
@@ -1000,10 +1033,44 @@ IrFragment LlvmBackend::_genVarAddress(obj::Variable* pVar)
     else
     {
         // global variable
+        //
         varPtr = pVarExt->genName;
     }
 
     return { code.str(), varPtr };
+}
+
+
+///////////////////////////////////////////////////////////////////////////////
+//
+IrFragment LlvmBackend::_genParamAddress(obj::Parameter* pParam)
+{
+    const auto* pParamExt = ext(pParam);
+    assert(pParamExt->frameIndex >= 0);
+
+    auto paramPtr = _genTempValue();
+
+    const auto frameIr = _genFrameAddress(pParam->pScope);
+    const auto& frameName = ext(pParam->pScope->subroutine())->frameName;
+
+    stringstream code;
+
+    code << frameIr.code;
+
+    code << TAB << paramPtr << " = getelementptr inbounds " <<
+        frameName << ", " << frameName << "* " << frameIr.value <<
+        ", i32 0, i32 " << pParamExt->frameIndex << "\n";
+
+    if (pParam->byRef)
+    {
+        auto finalPtr = _genTempValue();
+        auto type = ext(pParam->pType)->genName;
+        code << TAB << finalPtr << " = load " << type << "*, " <<
+            type << "** " << paramPtr << "\n";
+        paramPtr = finalPtr;
+    }
+
+    return { code.str(), paramPtr };
 }
 
 
@@ -1028,9 +1095,7 @@ IrFragment LlvmBackend::_genLValueAddress(const ast::Expr* pLValue)
     //
     else if (auto pParamExpr = pLValue->as<ast::ParamExpr>())
     {
-        auto pParam = pParamExpr->pParameter;
-
-        // TODO
+        return _genParamAddress(pParamExpr->pParameter);
     }
     // indirection?
     //

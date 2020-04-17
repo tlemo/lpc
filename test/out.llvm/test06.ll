@@ -10,7 +10,7 @@ declare dso_local void @_WriteBool(i8*, i32, i32, i1)
 declare dso_local void @_WriteChar(i8*, i32, i32, i8)
 declare dso_local void @_WriteInteger(i8*, i32, i32, i32)
 declare dso_local void @_WriteReal(i8*, i32, i32, double)
-declare dso_local void @_WriteString(i8*, i32, i32, i8*)
+declare dso_local void @_WriteString(i8*, i32, i32, i8*, i32)
 declare dso_local void @_WriteLn(i8*)
 
 ; program arguments (command line mapping)

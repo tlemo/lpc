@@ -140,7 +140,6 @@ struct ParamExt
 
 struct SubroutineExt
 {
-    string genName;
     string frameName;
     int slinkIndex = -1;
 };
@@ -437,6 +436,13 @@ private:
             (idName.empty() ? 
                 prefix + scopeName :
                 prefix + scopeName + "_" + idName);
+    }
+
+    string _genName(obj::Subroutine* pSubroutine) const
+    {
+        const bool isFunction = pSubroutine->pType->isFunction();
+        const char* prefix = isFunction ? "@F_" : "@P_";
+        return _genName("", prefix, pSubroutine->pScope);
     }
 
     // safe wrapper around the AST visitor interface
@@ -986,37 +992,46 @@ private:
                 pValue = pWriteArgExpr->pValue;
             }
 
-            auto valueIr = gen(pValue);
-            code << valueIr->code;
-
-            auto pType = pValue->pType;
-            string irType;
+            stringstream valueArgs;
             string helper;
 
-            if(pType->isBool())
+            auto pType = pValue->pType;
+
+            if (pType->isString())
             {
+                auto valueIr = _getStringAddress(pValue);
+                code << valueIr.code;
+                valueArgs << "i8* " << valueIr.value <<
+                    ", i32 " << pType->as<ts::ArrayType>()->strLength();
+                helper = "@_WriteString(";
+            }
+            else if(pType->isBool())
+            {
+                auto valueIr = gen(pValue);
+                code << valueIr->code;
+                valueArgs << "i1 " << valueIr->value;
                 helper = "@_WriteBool(";
-                irType = "i1";
             }
             else if(pType->isChar())
             {
+                auto valueIr = gen(pValue);
+                code << valueIr->code;
+                valueArgs << "i8 " << valueIr->value;
                 helper = "@_WriteChar(";
-                irType = "i8";
             }
             else if(pType->isOrdinal())
             {
+                auto valueIr = gen(pValue);
+                code << valueIr->code;
+                valueArgs << "i32 " << valueIr->value;
                 helper = "@_WriteInteger(";
-                irType = "i32";
             }
             else if(pType->isReal())
             {
+                auto valueIr = gen(pValue);
+                code << valueIr->code;
+                valueArgs << "double " << valueIr->value;
                 helper = "@_WriteReal(";
-                irType = "double";
-            }
-            else if(pType->isString())
-            {
-                helper = "@_WriteString(";
-                irType = "i8*";
             }
             else
             {
@@ -1027,7 +1042,7 @@ private:
                 "i8* " << pFileHandleIr->value << ", " <<
                 "i32 " << widthValue << ", " <<
                 "i32 " << precisionValue << ", " <<
-                irType << " " << valueIr->value << ")\n";
+                valueArgs.str() << ")\n";
         }
 
         // writeln?
@@ -1342,7 +1357,11 @@ private:
 
     IrFragment _genFrameAddress(const Scope* pTargetScope);
 
+    IrFragment _getStringAddress(ast::Expr* pString);
+
     IrFragment _genVarAddress(obj::Variable* pVar);
+
+    IrFragment _genParamAddress(obj::Parameter* pParam);
 
     IrFragment _genLValueAddress(const ast::Expr* pLValue);
 
@@ -1357,11 +1376,11 @@ private:
     // generate a subroutine (func/proc) call, either a direct call
     // or an indirect call through a subroutine pointer
     //
-    IrFragment _genCall(ast::Expr* pSubroutine, ast::ExprList* pArguments, ts::Type* pReturnType)
+    IrFragment _genCall(ast::Expr* pCallee, ast::ExprList* pArguments, ts::Type* pReturnType)
     {
         // intrinsic function/procedure?
         //
-        if(auto pIntrinsic = pSubroutine->as<ast::Intrinsic>())
+        if(auto pIntrinsic = pCallee->as<ast::Intrinsic>())
         {
             return _expandIntrinsic(pIntrinsic, pArguments);
         }
@@ -1371,9 +1390,10 @@ private:
         // slink / pfn
         //
         IrFragment slinkIr;
+        string slinkType;
         string pfn;
 
-        if(auto pFuncPtr = pSubroutine->as<ast::FuncPtr>())
+        if(auto pFuncPtr = pCallee->as<ast::FuncPtr>())
         {
             // normal function call, generate the slink if needed
             //
@@ -1383,8 +1403,9 @@ private:
                 slinkIr = _genFrameAddress(pSlinkScope);
                 assert(!slinkIr.value.empty());
                 code << slinkIr.code;
+                slinkType = ext(pSlinkScope->subroutine())->frameName;
             }
-            pfn = "@" + ext(pFuncPtr->pFunc)->genName;
+            pfn = _genName(pFuncPtr->pFunc);
         }
         else
         {
@@ -1398,7 +1419,7 @@ private:
         vector<string> argumentValues;
         if (nullptr != pArguments)
         {
-            auto pParamList = pSubroutine->pType->as<ts::SubroutineType>()->paramList();
+            auto pParamList = pCallee->pType->as<ts::SubroutineType>()->paramList();
 
             auto paramIt = pParamList->begin();
             auto argIt = pArguments->begin();
@@ -1435,22 +1456,24 @@ private:
 
         // generate the call instruction
         //
-        code << TAB;
-
         string retValue;
         if (pReturnType != nullptr)
         {
             retValue = _genTempValue();
-            code << retValue << " = ";
+            code << TAB << retValue << " = call " << ext(pReturnType)->genName << " ";
         }
-
-        code << "call " << pfn << "(";
+        else
+        {
+            code << TAB << "call void ";
+        }
+        code << pfn << "(";
 
         bool firstArg = true;
 
         if (!slinkIr.value.empty())
         {
-            code << "i8* " << slinkIr.value;
+            assert(!slinkType.empty());
+            code << slinkType << "* " << slinkIr.value;
             firstArg = false;
         }
 

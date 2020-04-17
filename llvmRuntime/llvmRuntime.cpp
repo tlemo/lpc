@@ -185,7 +185,7 @@ void _WriteReal(void* handle, int width, int precision, double value)
 
 ///////////////////////////////////////////////////////////////////////////////
 //
-void _WriteString(void* handle, int width, int precision, const char* value)
+void _WriteString(void* handle, int width, int precision, const char* value, int length)
 {
     _RTCheck(precision == 0, "precision is only valid for 'real' numbers");
 }
