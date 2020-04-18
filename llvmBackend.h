@@ -192,6 +192,16 @@ string genBlock(const string& str)
     return "{\n" + indentBlock(str) + "}";
 }
 
+inline
+string labelName(const obj::Label* pLabel)
+{
+    assert(pLabel->labelId > 0);
+
+    stringstream name;
+    name << "L_" << pLabel->labelId;
+    return name.str(); 
+}
+
 // this is the magic "hidden" line number used to mark compiler-generated code
 //
 constexpr int HIDDEN_CODE = 0xfeefee;
@@ -337,8 +347,10 @@ private:
     vector<obj::Variable*> m_varList;
     vector<obj::Parameter*> m_paramList;
     vector<obj::Variable*> m_cleanupList;
+    vector<obj::Label*> m_nonLocalLabels;
 
     int m_tempValueGen = 0;
+    int m_labelGen = 0;
 
     // global (per-program) state
     //
@@ -445,6 +457,17 @@ private:
         return _genName("", prefix, pSubroutine->pScope);
     }
 
+    // generates a local label for code generation (flow) purposes
+    //
+    // L_<prefix>_<N>
+    //
+    string _genLabel(const char* prefix)
+    {
+        stringstream label;
+        label << "L_" << prefix << "_" << m_labelGen++;
+        return label.str();
+    }
+
     // safe wrapper around the AST visitor interface
     //
     unique_ptr<IrFragment> gen(const ast::Node* pNode)
@@ -487,7 +510,9 @@ private:
         m_varList.clear();
         m_paramList.clear();
         m_cleanupList.clear();
+        m_nonLocalLabels.clear();
         m_tempValueGen = 1;
+        m_labelGen = 1;
 
         // generate symbols (types, consts, locals...)
         //
@@ -571,15 +596,16 @@ private:
     void _generateLabel(obj::Label* pLabel)
     {
         auto pExt = ext(pLabel);
-        // TODO
+        assert(pExt->genName.empty());
+        pExt->genName = labelName(pLabel);
+
+        if(pLabel->isNonLocalTarget())
+            m_nonLocalLabels.push_back(pLabel);
     }
 
     void _generateConst(const string& idName, obj::Constant* pConst)
     {
         _generateType(pConst->pType);
-
-        auto pExt = ext(pConst);
-        // TODO
     }
 
     void _generateParam(const string& idName, obj::Parameter* pParam)
@@ -668,6 +694,7 @@ private:
         code << varPtrIr.code;
 
         // load the value
+        //
         code << TAB << value << " = load " << irType << ", " <<
             irType << "* " << varPtrIr.value << "\n";
 
@@ -678,9 +705,19 @@ private:
     {
         auto pParam = pParamExpr->pParameter;
 
+        const auto value = _genTempValue();
+        const auto& irType = ext(pParam->pType)->genName;
+        const auto paramPtrIr = _genParamAddress(pParam);
+
         stringstream code;
-        // TODO
-        auto value = "%.dummy";
+
+        code << paramPtrIr.code;
+
+        // load the value
+        //
+        code << TAB << value << " = load " << irType << ", " <<
+            irType << "* " << paramPtrIr.value << "\n";
+
         return newIrFragment(code.str(), value);
     }
 
@@ -704,9 +741,37 @@ private:
         auto pSrcType = pTypeCast->pExpr->pType;
         auto pDstType = pTypeCast->pType;
 
+        // child expression
+        //
+        const auto valueIr = gen(pTypeCast->pExpr);
+
         stringstream code;
-        // TODO
-        auto value = "%.dummy";
+        string value = valueIr->value;
+
+        code << valueIr->code;
+
+        // TODO: value checks
+
+        // actual cast code (if needed)
+        //
+        if(pDstType->isReal() && pSrcType->isInteger())
+        {
+            value = _genTempValue();
+            code << TAB << value << " = sitofp i32 " << valueIr->value << " to double\n";
+        }
+        else if(pDstType->isSet())
+        {
+            assert(pSrcType->isSet());
+
+            // no need for a cast if the underlaying implementation is the same
+            //
+            if(ext(pSrcType)->genName != ext(pDstType)->genName)
+            {
+                // TODO
+                value = "%.dummy_set";
+            }
+        }
+
         return newIrFragment(code.str(), value);
     }
 
@@ -721,6 +786,7 @@ private:
         const auto token = pBinaryOp->pOperator->token;
 
         stringstream code;
+        auto result = _genTempValue();
 
         // strings?
         //
@@ -733,18 +799,28 @@ private:
 
             switch (token)
             {
-            case Parser::T_EQ:  helper = "StrcmpEQ"; break;
-            case Parser::T_NE:  helper = "StrcmpNE"; break;
-            case Parser::T_LT:  helper = "StrcmpLT"; break;
-            case Parser::T_GT:  helper = "StrcmpGT"; break;
-            case Parser::T_LE:  helper = "StrcmpLE"; break;
-            case Parser::T_GE:  helper = "StrcmpGE"; break;
+            case Parser::T_EQ:  helper = "_StrcmpEQ"; break;
+            case Parser::T_NE:  helper = "_StrcmpNE"; break;
+            case Parser::T_LT:  helper = "_StrcmpLT"; break;
+            case Parser::T_GT:  helper = "_StrcmpGT"; break;
+            case Parser::T_LE:  helper = "_StrcmpLE"; break;
+            case Parser::T_GE:  helper = "_StrcmpGE"; break;
 
             default:
                 assert(!"unexpected string operator");
             }
 
-            // TODO
+            const auto leftStrIr = _getStringAddress(pLeft);
+            const auto rightStrIr = _getStringAddress(pRight);
+            const auto leftStrLen = pLeft->pType->as<ts::ArrayType>()->strLength();
+            const auto rightStrLen = pRight->pType->as<ts::ArrayType>()->strLength();
+
+            code << leftStrIr.code;
+            code << rightStrIr.code;
+
+            code << TAB << result << " = call i1 @" << helper << "(" <<
+                "i8* " << leftStrIr.value << ", i32 " << leftStrLen << ", " <<
+                "i8* " << rightStrIr.value << ", i32 " << rightStrLen << ")\n";
         }
         // a IN b ?
         //
@@ -755,6 +831,7 @@ private:
             assert(pRight->pType->isSet());
 
             // TODO
+            result = "true";
         }
         // set operator overloads?
         //
@@ -789,6 +866,7 @@ private:
             }
 
             // TODO
+            result = "true";
         }
         // boolean and/or operators?
         //
@@ -801,12 +879,63 @@ private:
             assert(pLeft->pType->isBool());
             assert(pRight->pType->isBool());
 
-            // TODO
+            // the Pascal specification doesn't guarantee short-circuit semantics
+            // for logical AND/OR operators but some of the existing programs depend on it
+            //
+            const auto leftIr = gen(pLeft);
+            const auto rightIr = gen(pRight);
+            const auto exprLabel = _genLabel("expr");
+
+            code << exprLabel << ":\n";
+
+            if (token == Parser::T_OR)
+            {
+                const auto evalLabel = _genLabel("OR_eval");
+                const auto shortcutLabel = _genLabel("OR_shortcut");
+
+                code << leftIr->code;
+                code << TAB << "br i1 " << leftIr->value <<
+                    ", label %" << shortcutLabel <<
+                    ", label %" << evalLabel << "\n";
+                code << evalLabel << ":\n";
+                code << rightIr->code;
+                code << TAB << "br label %" << shortcutLabel << "\n";
+                code << shortcutLabel << ":\n";
+                code << TAB << result << " = phi " <<
+                    "[" << rightIr->value << ", %" << evalLabel << "], " <<
+                    "[true, %" << exprLabel << "]\n";
+            }
+            else
+            {
+                const auto evalLabel = _genLabel("AND_eval");
+                const auto shortcutLabel = _genLabel("AND_shortcut");
+
+                code << leftIr->code;
+                code << TAB << "br i1 " << leftIr->value <<
+                    ", label %" << evalLabel <<
+                    ", label %" << shortcutLabel << "\n";
+                code << evalLabel << ":\n";
+                code << rightIr->code;
+                code << TAB << "br label %" << shortcutLabel << "\n";
+                code << shortcutLabel << ":\n";
+                code << TAB << result << " = phi " <<
+                    "[" << rightIr->value << ", %" << evalLabel << "], " <<
+                    "[false, %" << exprLabel << "]\n";
+            }
         }
         // everything else...
         //
         else
         {
+            const auto leftIr = gen(pLeft);
+            const auto rightIr = gen(pRight);
+
+            string leftValue = leftIr->value;
+            string rightValue = rightIr->value;
+
+            code << leftIr->code;
+            code << rightIr->code;
+
             // implicit conversion to "real"?
             //
             const bool castToReal = 
@@ -814,127 +943,168 @@ private:
                 pLeft->pType->isReal() ||
                 pRight->pType->isReal();
 
-            // TODO
+            if (castToReal && pLeft->pType->isInteger())
+            {
+                const auto tmp = _genTempValue();
+                code << TAB << tmp << " = sitofp i32 " << leftValue << " to double\n";
+                leftValue = tmp;
+            }
+
+            if (castToReal && pRight->pType->isInteger())
+            {
+                const auto tmp = _genTempValue();
+                code << TAB << tmp << " = sitofp i32 " << rightValue << " to double\n";
+                rightValue = tmp;
+            }
+
+            string instr;
 
             // operator-specific code generation
             //
             switch (token)
             {
             case Parser::T_EQ:
-                // TODO
+                instr = castToReal ? "fcmp ueq double" : "icmp eq i32";
                 break;
 
             case Parser::T_LT:
-                // TODO
+                instr = castToReal ? "fcmp ult double" : "icmp slt i32";
                 break;
 
             case Parser::T_GT:
-                // TODO
+                instr = castToReal ? "fcmp ugt double" : "icmp sgt i32";
                 break;
 
             case Parser::T_NE:
-                // TODO
+                instr = castToReal ? "fcmp une double" : "icmp ne i32";
                 break;
 
             case Parser::T_LE:
-                // TODO
+                instr = castToReal ? "fcmp ule double" : "icmp sle i32";
                 break;
 
             case Parser::T_GE:
-                // TODO
+                instr = castToReal ? "fcmp uge double" : "icmp sge i32";
                 break;
 
             case Parser::T_PLUS:
-                // TODO
+                instr = castToReal ? "fadd double" : "add i32";
                 break;
 
             case Parser::T_MINUS:
-                // TODO
+                instr = castToReal ? "fsub double" : "sub i32";
                 break;
 
             case Parser::T_STAR:
-                // TODO
+                instr = castToReal ? "fmul double" : "mul i32";
                 break;
 
             case Parser::T_DIV:
             case Parser::T_SLASH:
-                // TODO
+                instr = castToReal ? "fdiv double" : "sdiv i32";
                 break;
 
             case Parser::T_MOD:
                 assert(pLeft->pType->isInteger());
-                // TODO
+                assert(!castToReal);
+                instr = "srem i32";
                 break;
 
             default:
                 assert(!"unexpected operator");
             }
+
+            code << TAB << result << " = " << instr << " " <<
+                leftValue << ", " << rightValue << "\n";
         }
 
-        auto value = "%.dummy";
-        return newIrFragment(code.str(), value);
+        return newIrFragment(code.str(), result);
     }
 
     VarPtr visit(const ast::UnaryOp* pUnaryOp) override
     {
-        stringstream code;
+        const auto operandIr = gen(pUnaryOp->pExpr);
 
-        code << gen(pUnaryOp->pExpr);
+        stringstream code;
+        string result;
+
+        code << operandIr->code;
 
         switch (pUnaryOp->pOperator->token)
         {
         case Parser::T_PLUS:
             assert(pUnaryOp->pType->isNumber());
             // nop
+            result = operandIr->value;
             break;
 
         case Parser::T_MINUS:
             assert(pUnaryOp->pType->isNumber());
-            // TODO
+            result = _genTempValue();
+            if (pUnaryOp->pType->isReal())
+                code << TAB << result << " = fneg double " << operandIr->value << "\n";
+            else
+                code << TAB << result << " = sub i32 0, " << operandIr->value << "\n";
             break;
 
         case Parser::T_NOT:
             assert(pUnaryOp->pType->isBool());
-            // TODO
+            result = _genTempValue();
+            code << TAB << result << " = icmp eq 0, " << operandIr->value << "\n";
             break;
 
         default:
             assert(!"unexpected operator");
         }
 
-        auto value = "%.dummy";
-        return newIrFragment(code.str(), value);
+        return newIrFragment(code.str(), result);
     }
 
     VarPtr visit(const ast::ArrayIndex* pArrayIndex) override
     {
-        const auto pElemType = pArrayIndex->pType;
-        const auto pArrayType = pArrayIndex->pObject->pType;
+        auto ptrIr = _genLValueAddress(pArrayIndex);
+        const auto irType = ext(pArrayIndex->pType)->genName;
+        const auto value = _genTempValue();
 
         stringstream code;
-        // TODO
-        auto value = "%.dummy";
+
+        code << ptrIr.code;
+
+        code << TAB << value << " = load " << irType << ", " <<
+            irType << "* " << ptrIr.value << "\n";
+
         return newIrFragment(code.str(), value);
     }
 
     VarPtr visit(const ast::FieldExpr* pFieldUse) override
     {
-        const auto pFieldType = pFieldUse->pType;
-        const auto pRecordType = pFieldUse->pField->pRecord->pType;
+        auto ptrIr = _genLValueAddress(pFieldUse);
+        const auto irType = ext(pFieldUse->pType)->genName;
+        const auto value = _genTempValue();
 
         stringstream code;
-        // TODO
-        auto value = "%.dummy";
+
+        code << ptrIr.code;
+
+        code << TAB << value << " = load " << irType << ", " <<
+            irType << "* " << ptrIr.value << "\n";
+
         return newIrFragment(code.str(), value);
     }
 
     VarPtr visit(const ast::Indirection* pIndirection) override
     {
-        const auto pType = pIndirection->pType;
+        auto ptrIr = _genLValueAddress(pIndirection);
+        const auto irType = ext(pIndirection->pType)->genName;
+        const auto value = _genTempValue();
 
         stringstream code;
-        // TODO
-        auto value = "%.dummy";
+
+        code << ptrIr.code;
+
+        code << TAB << value << " = load " << irType << ", " <<
+            irType << "* " << ptrIr.value << "\n";
+
         return newIrFragment(code.str(), value);
     }
 
@@ -1546,8 +1716,23 @@ private:
 
     VarPtr visit(const ast::AssignStm* pAssignStm) override
     {
+        auto pType = pAssignStm->pLValue->pType;
+        assert(!pType->isFile());
+
+        const auto irType = ext(pType)->genName;
+
+        const auto lvaluePtr = _genLValueAddress(pAssignStm->pLValue);
+        const auto rvalueIr = gen(pAssignStm->pRValue);
+
+        // TODO: handle file indirections
+
         stringstream code;
-        // TODO
+
+        code << lvaluePtr.code;
+        code << rvalueIr->code;
+        code << TAB << "store " << irType << " " << rvalueIr->value << ", " <<
+            irType << "* " << lvaluePtr.value << "\n";
+
         return newIrFragment(code.str(), "");
     }
 

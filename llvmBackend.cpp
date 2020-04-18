@@ -1101,34 +1101,62 @@ IrFragment LlvmBackend::_genLValueAddress(const ast::Expr* pLValue)
     //
     else if (auto pIndirection = pLValue->as<ast::Indirection>())
     {
+        auto ptrIr = gen(pIndirection->pObject);
+        code << ptrIr->code;
+        value = ptrIr->value;
+
+        // we need to explicitly cast pointer values
+        // (see TypeGen::visit(ts::PointerType*) for an explanation)
+        //
         if (pIndirection->pObject->pType->isPointer())
         {
-            // TODO
-        }
-        else
-        {
-            assert(pIndirection->pObject->pType->isFile());
-
-            // TODO
+            const auto castPtr = _genTempValue();
+            code << TAB << castPtr << " = bitcast i8* " << value <<
+                " to " << ext(pIndirection->pType)->genName << "*\n";
+            value = castPtr;
         }
     }
     // array element?
     //
     else if (auto pArrayIndex = pLValue->as<ast::ArrayIndex>())
     {
-        auto pElemType = pArrayIndex->pType;
-        auto pArrayType = pArrayIndex->pObject->pType;
+        const auto arrayPtrIr = _genLValueAddress(pArrayIndex->pObject);
+        const auto indexIr = gen(pArrayIndex->pIndex);
+        const auto& arrayIrType = ext(pArrayIndex->pObject->pType)->genName;
 
-        // TODO
+        code << arrayPtrIr.code;
+        code << indexIr->code;
+
+        value = _genTempValue();
+
+        code << TAB << value << " = getelementptr inbounds " <<
+            arrayIrType << ", " << arrayIrType << "* " <<
+            arrayPtrIr.value << ", i32 0, i32 " << indexIr->value << "\n";
     }
     // field?
     //
-    else if (auto pFieldDst = pLValue->as<ast::FieldExpr>())
+    else if (auto pFieldExpr = pLValue->as<ast::FieldExpr>())
     {
-        auto pFieldType = pFieldDst->pType;
-        auto pRecordType = pFieldDst->pField->pRecord->pType;
+        const auto* pField = pFieldExpr->pField;
+        const auto* pFieldTypeExt = ext(pFieldExpr->pType);
+        const auto* pRecordTypeExt = ext(pField->pRecord->pType);
 
-        // TODO
+        const auto recordPtrIr = _genLValueAddress(pField->pRecord);
+        const auto recordIrType = pRecordTypeExt->genName;
+
+        code << recordPtrIr.code;
+
+        value = _genTempValue();
+        
+        const auto rawFieldPtr = _genTempValue();
+        const int fieldOffset = pRecordTypeExt->fields.at(pField->pId->name);
+
+        code << TAB << rawFieldPtr << " = getelementptr inbounds " << recordIrType <<
+            ", " << recordIrType << "* " << recordPtrIr.value <<
+            ", i32 0, i32 " << fieldOffset << "\n";
+
+        code << TAB << value << " = bitcast i8* " << rawFieldPtr <<
+            " to " << pFieldTypeExt->genName << "*\n";
     }
     else
     {

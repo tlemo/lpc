@@ -2154,7 +2154,7 @@ private:
         {
             // implicit conversion to "real"?
             //
-            bool castToReal = 
+            const bool castToReal = 
                 token == Parser::T_SLASH ||
                 pLeft->pType->isReal() ||
                 pRight->pType->isReal();
