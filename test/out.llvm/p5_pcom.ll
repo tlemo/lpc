@@ -261,6 +261,8 @@ define void @P_()
     call void @_WriteInteger(i8* %t47, i32 1, i32 0, i32 %t48)
     call void @_WriteLn(i8* %t47)
     store i1 1, i1* @f
+    br label %L_99
+L_99:
     ; nop
 
     ; cleanup
@@ -1916,6 +1918,8 @@ define void @P_insymbol()
     %.frame = alloca %Frame_insymbol, align 8
 
     ; body
+    br label %L_1
+L_1:
 
     ; epilogue
     ret void
@@ -2053,6 +2057,8 @@ define void @P_searchsection(i8* %fcp, i8** %fcp1)
     store i8** %fcp1, i8*** %t2
 
     ; body
+    br label %L_1
+L_1:
     %t3 = getelementptr inbounds %Frame_searchsection, %Frame_searchsection* %.frame, i32 0, i32 1
     %t4 = load i8**, i8*** %t3
     %t6 = getelementptr inbounds %Frame_searchsection, %Frame_searchsection* %.frame, i32 0, i32 0
@@ -2103,6 +2109,8 @@ define void @P_searchidnenm(%T_setofids %fidcls, i8** %fcp, i1* %mm)
     store i32 0, i32* @disx
     %t6 = getelementptr inbounds %Frame_searchidnenm, %Frame_searchidnenm* %.frame, i32 0, i32 4
     store i8* null, i8** %t6
+    br label %L_1
+L_1:
     %t7 = getelementptr inbounds %Frame_searchidnenm, %Frame_searchidnenm* %.frame, i32 0, i32 0
     %t8 = load i8**, i8*** %t7
     %t10 = getelementptr inbounds %Frame_searchidnenm, %Frame_searchidnenm* %.frame, i32 0, i32 4
@@ -2189,6 +2197,8 @@ define void @P_searchid(%T_setofids %fidcls, i8** %fcp)
     %t5 = getelementptr inbounds %Frame_searchid, %Frame_searchid* %.frame, i32 0, i32 2
     call void @P_searchidne(%T_setofids %t3, i8** %t5)
     call void @P_error(i32 104)
+    br label %L_1
+L_1:
     %t6 = getelementptr inbounds %Frame_searchid, %Frame_searchid* %.frame, i32 0, i32 0
     %t7 = load i8**, i8*** %t6
     %t9 = getelementptr inbounds %Frame_searchid, %Frame_searchid* %.frame, i32 0, i32 2

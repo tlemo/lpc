@@ -185,6 +185,8 @@ define void @P_hanoi2()
     store i32 0, i32* %t3
     %t4 = getelementptr inbounds %Frame_hanoi2, %Frame_hanoi2* %.frame, i32 0, i32 3
     store i32 1, i32* %t4
+    br label %L_1
+L_1:
     ; nop
 
     ; epilogue

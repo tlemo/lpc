@@ -145,6 +145,8 @@ define void @P_()
     call void @_WriteLn(i8* %t11)
     %t12 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t12)
+    br label %L_1
+L_1:
     %t13 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t13)
     %t14 = load %T_text, %T_text* @output

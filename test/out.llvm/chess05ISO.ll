@@ -232,7 +232,13 @@ define void @P_()
     call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([23 x i8], [23 x i8]* @.str.3, i32 0, i32 0), i32 22)
     call void @_WriteLn(i8* %t3)
     call void @P_INICON()
+    br label %L_1
+L_1:
     call void @P_INITAL(%T_RB* @BOARD)
+    br label %L_2
+L_2:
+    br label %L_9
+L_9:
     ; nop
 
     ; cleanup
@@ -661,6 +667,8 @@ define i1 @F_NXTTS(%T_RS* %A, i32* %B)
     ; body
     %t3 = getelementptr inbounds %Frame_NXTTS, %Frame_NXTTS* %.frame, i32 0, i32 2
     store i1 0, i1* %t3
+    br label %L_11
+L_11:
     ; nop
 
     ; epilogue
@@ -4593,6 +4601,8 @@ define i32 @F_SEARCH()
     store i32 %t15, i32* %t14
     %t20 = add i32 0, 1
     store i32 %t20, i32* @JMTK
+    br label %L_16
+L_16:
     %t21 = getelementptr inbounds %Frame_SEARCH, %Frame_SEARCH* %.frame, i32 0, i32 0
     %t22 = getelementptr inbounds %T_arraytkoftw, %T_arraytkoftw* @BSTMV, i32 0, i32 0
     %t23 = load i32, i32* %t22
@@ -4752,6 +4762,10 @@ define i1 @F_SEARCH_SELECT(%Frame_SEARCH* %.slink)
     store %Frame_SEARCH* %.slink, %Frame_SEARCH** %t1
 
     ; body
+    br label %L_21
+L_21:
+    br label %L_22
+L_22:
     %t2 = getelementptr inbounds %Frame_SEARCH_SELECT, %Frame_SEARCH_SELECT* %.frame, i32 0, i32 0
     %t4 = getelementptr inbounds %Frame_SEARCH_SELECT, %Frame_SEARCH_SELECT* %.frame, i32 0, i32 2
     %t3 = load i1, i1* %t4
@@ -4941,6 +4955,8 @@ define void @P_READER()
     %.frame = alloca %Frame_READER, align 8
 
     ; body
+    br label %L_11
+L_11:
     ; nop
 
     ; epilogue
@@ -5451,6 +5467,8 @@ define void @P_READER_LETCMD(%Frame_READER* %.slink)
     store %Frame_READER* %.slink, %Frame_READER** %t1
 
     ; body
+    br label %L_21
+L_21:
     ; nop
 
     ; epilogue
@@ -5513,6 +5531,8 @@ define void @P_READER_PLECMD(%Frame_READER* %.slink)
     store %Frame_READER* %.slink, %Frame_READER** %t1
 
     ; body
+    br label %L_21
+L_21:
     ; nop
 
     ; epilogue
@@ -5713,6 +5733,8 @@ define void @P_READER_SWICMD(%Frame_READER* %.slink)
     store %Frame_READER* %.slink, %Frame_READER** %t1
 
     ; body
+    br label %L_21
+L_21:
     ; nop
 
     ; epilogue
@@ -5785,6 +5807,8 @@ define void @P_READER_STACMD(%Frame_READER* %.slink)
     call void @P_CLSTAT()
     %t2 = getelementptr inbounds %Frame_READER_STACMD, %Frame_READER_STACMD* %.frame, i32 0, i32 1
     store i32 0, i32* %t2
+    br label %L_21
+L_21:
     ; nop
 
     ; epilogue
@@ -6472,6 +6496,8 @@ define void @P_MINENG_MINGEN(%Frame_MINENG* %.slink, %T_RM %A, i32 %B, i32 %C)
     store i32 %C, i32* %t4
 
     ; body
+    br label %L_22
+L_22:
     ; nop
 
     ; epilogue
@@ -6558,6 +6584,10 @@ define void @P_YRMOVE()
     store i1 0, i1* %t1
     %t2 = getelementptr inbounds %Frame_YRMOVE, %Frame_YRMOVE* %.frame, i32 0, i32 15
     store i1 0, i1* %t2
+    br label %L_19
+L_19:
+    br label %L_17
+L_17:
     ; nop
 
     ; epilogue

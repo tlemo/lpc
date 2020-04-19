@@ -103,6 +103,8 @@ define i1 @F_f(%T_vec %x, i32 %i)
     store i1 0, i1* %t3
     %t4 = getelementptr inbounds %Frame_f, %Frame_f* %.frame, i32 0, i32 2
     store i1 1, i1* %t4
+    br label %L_10
+L_10:
     ; nop
 
     ; epilogue

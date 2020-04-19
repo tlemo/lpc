@@ -107,6 +107,8 @@ define void @P_()
     %t11 = load i8, i8* %t10
     store i8 %t11, i8* %t8
     store i1 1, i1* @interpreting
+    br label %L_1
+L_1:
     ; nop
 
     ; cleanup
@@ -553,6 +555,8 @@ define void @P_load_assemble(%Frame_load* %.slink)
     %t6 = load i32, i32* @pc
     %t5 = add i32 %t6, 1
     store i32 %t5, i32* @pc
+    br label %L_1
+L_1:
     ; nop
 
     ; epilogue

@@ -184,6 +184,8 @@ define void @P_()
     store i32 10, i32* @kk
     call void @P_getsym()
     call void @P_block(i32 0, i32 0, %T_symset %.dummy_set)
+    br label %L_99
+L_99:
     %t49 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t49)
 

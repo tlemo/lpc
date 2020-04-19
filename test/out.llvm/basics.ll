@@ -134,6 +134,10 @@ define void @P_()
     call void @_WriteLn(i8* %t33)
     %t34 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t34)
+    br label %L_88
+L_88:
+    br label %L_99
+L_99:
     %t35 = load %T_text, %T_text* @output
     call void @_WriteString(i8* %t35, i32 0, i32 0, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.33, i32 0, i32 0), i32 6)
     call void @_WriteLn(i8* %t35)
@@ -1522,6 +1526,8 @@ define void @P_exec()
     ; body
     store i32 1, i32* @linec
     call void @P_skpspc()
+    br label %L_1
+L_1:
     ; nop
 
     ; epilogue

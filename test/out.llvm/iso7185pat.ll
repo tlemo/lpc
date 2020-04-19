@@ -519,6 +519,8 @@ define void @P_()
     %t72 = load %T_text, %T_text* @output
     call void @_WriteString(i8* %t72, i32 0, i32 0, i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.49, i32 0, i32 0), i32 10)
     store i32 1, i32* @i
+    br label %L_1
+L_1:
     %t73 = load %T_text, %T_text* @output
     %t74 = load i32, i32* @i
     call void @_WriteInteger(i8* %t73, i32 1, i32 0, i32 %t74)
@@ -569,6 +571,8 @@ define void @P_()
     call void @P_junk6()
     %t94 = load %T_text, %T_text* @output
     call void @_WriteString(i8* %t94, i32 0, i32 0, i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.63, i32 0, i32 0), i32 9)
+    br label %L_2
+L_2:
     %t95 = load %T_text, %T_text* @output
     call void @_WriteString(i8* %t95, i32 0, i32 0, i8* getelementptr inbounds ([20 x i8], [20 x i8]* @.str.64, i32 0, i32 0), i32 19)
     call void @_WriteLn(i8* %t95)
@@ -576,6 +580,8 @@ define void @P_()
     call void @_WriteString(i8* %t96, i32 0, i32 0, i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.65, i32 0, i32 0), i32 17)
     %t97 = load %T_text, %T_text* @output
     call void @_WriteString(i8* %t97, i32 0, i32 0, i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.63, i32 0, i32 0), i32 9)
+    br label %L_3
+L_3:
     %t98 = load %T_text, %T_text* @output
     call void @_WriteString(i8* %t98, i32 0, i32 0, i8* getelementptr inbounds ([20 x i8], [20 x i8]* @.str.64, i32 0, i32 0), i32 19)
     call void @_WriteLn(i8* %t98)

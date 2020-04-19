@@ -475,6 +475,35 @@ private:
         return unique_ptr<IrFragment>(pNode->accept(this).get<IrFragment>());
     }
 
+    // the Stm* overload of gen()
+    //
+    unique_ptr<IrFragment> gen(const ast::Stm* pStm)
+    {
+        stringstream code;
+
+        // generate the statement "header"
+        // (line number and optional label)
+        //
+#if 0
+        if(NO_LOCATION != pStm->line)
+            code << TAB << genLine(pStm->line);
+#endif
+
+        if(pStm->pLabel != nullptr)
+        {
+            auto pExt = ext(pStm->pLabel);
+            assert(!pExt->genName.empty());
+            code << TAB << "br label %" << pExt->genName << "\n";
+            code << pExt->genName << ":\n";
+        }
+
+        auto stmIr = unique_ptr<IrFragment>(pStm->accept(this).get<IrFragment>());
+        assert(stmIr->value.empty());
+        code << stmIr->code;
+
+        return unique_ptr<IrFragment>(new IrFragment{code.str(), ""});
+    }
+
     // backend interface
     //
 private:
@@ -1778,7 +1807,9 @@ private:
         {
             const auto pExt = ext(pGotoStm->pTargetLabel);
             assert(!pExt->genName.empty());
-            // TODO
+            #if 0
+            code << TAB << "br label %" << pExt->genName << "\n";
+            #endif
         }
 
         return newIrFragment(code.str(), "");

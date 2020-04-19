@@ -95,6 +95,8 @@ define void @P_()
     call void @P_klingonattack()
     call void @P_printquadrant()
     call void @P_finishgame()
+    br label %L_99
+L_99:
     ; nop
 
     ; cleanup

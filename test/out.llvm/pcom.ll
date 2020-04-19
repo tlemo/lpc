@@ -380,6 +380,8 @@ define void @P_insymbol()
     %.frame = alloca %Frame_insymbol, align 8
 
     ; body
+    br label %L_1
+L_1:
 
     ; epilogue
     ret void
@@ -526,6 +528,8 @@ define void @P_searchsection(i8* %fcp, i8** %fcp1)
     store i8** %fcp1, i8*** %t2
 
     ; body
+    br label %L_1
+L_1:
     %t3 = getelementptr inbounds %Frame_searchsection, %Frame_searchsection* %.frame, i32 0, i32 1
     %t4 = load i8**, i8*** %t3
     %t6 = getelementptr inbounds %Frame_searchsection, %Frame_searchsection* %.frame, i32 0, i32 0
@@ -568,6 +572,8 @@ define void @P_searchid(%T_setofids %fidcls, i8** %fcp)
 
     ; body
     store i32 0, i32* @disx
+    br label %L_1
+L_1:
     %t3 = getelementptr inbounds %Frame_searchid, %Frame_searchid* %.frame, i32 0, i32 0
     %t4 = load i8**, i8*** %t3
     %t6 = getelementptr inbounds %Frame_searchid, %Frame_searchid* %.frame, i32 0, i32 3

@@ -77,6 +77,8 @@ define void @P_()
     store i32 2, i32* @j
     store i32 0, i32* @ns
     store i32 1, i32* @niv
+    br label %L_1
+L_1:
     ; nop
 
     ; cleanup

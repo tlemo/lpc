@@ -322,6 +322,8 @@ define void @P_()
     store i32 0, i32* %t86
     call void @P_block(%T_symset true, i1 0, i32 1)
     call void @P_emit(i32 31)
+    br label %L_99
+L_99:
     ; nop
 
     ; cleanup
@@ -705,6 +707,8 @@ define void @P_insymbol()
     %.frame = alloca %Frame_insymbol, align 8
 
     ; body
+    br label %L_1
+L_1:
 
     ; epilogue
     ret void

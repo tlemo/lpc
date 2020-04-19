@@ -74,6 +74,8 @@ define void @P_()
     call void @_WriteInteger(i8* %t8, i32 0, i32 0, i32 %t9)
     call void @_WriteLn(i8* %t8)
     store i32 0, i32* @ig
+    br label %L_1
+L_1:
     ; nop
 
     ; cleanup
@@ -115,6 +117,8 @@ define void @P_gen(%T_vec* %v)
 
     ; body
     store i32 0, i32* @ig
+    br label %L_10
+L_10:
     ; nop
 
     ; epilogue
