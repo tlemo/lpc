@@ -6269,45 +6269,45 @@ define void @P_block_body_statement_forstatement(%Frame_block_body_statement* %.
     %t59 = load %Frame_block_body_statement*, %Frame_block_body_statement** %t58
     %t60 = getelementptr inbounds %Frame_block_body_statement, %Frame_block_body_statement* %t59, i32 0, i32 3
     %t61 = load %Frame_block_body*, %Frame_block_body** %t60
-0276BF40    call void @P_block_body_gen2(%Frame_block_body* %t61, i32 47, i32 , i32 1)
-    %t64 = getelementptr inbounds %Frame_block_body_statement_forstatement, %Frame_block_body_statement_forstatement* %.frame, i32 0, i32 7
-    %t65 = load %Frame_block_body_statement*, %Frame_block_body_statement** %t64
-    %t66 = getelementptr inbounds %Frame_block_body_statement, %Frame_block_body_statement* %t65, i32 0, i32 3
-    %t67 = load %Frame_block_body*, %Frame_block_body** %t66
-    %t69 = getelementptr inbounds %Frame_block_body_statement_forstatement, %Frame_block_body_statement_forstatement* %.frame, i32 0, i32 2
-    %t68 = load i32, i32* %t69
-    call void @P_block_body_genujpxjp(%Frame_block_body* %t67, i32 73, i32 %t68)
-    %t71 = getelementptr inbounds %Frame_block_body_statement_forstatement, %Frame_block_body_statement_forstatement* %.frame, i32 0, i32 1
-    %t70 = load %T_attr, %T_attr* %t71
-    store %T_attr %t70, %T_attr* @gattr
-    %t72 = getelementptr inbounds %Frame_block_body_statement_forstatement, %Frame_block_body_statement_forstatement* %.frame, i32 0, i32 7
-    %t73 = load %Frame_block_body_statement*, %Frame_block_body_statement** %t72
-    %t74 = getelementptr inbounds %Frame_block_body_statement, %Frame_block_body_statement* %t73, i32 0, i32 3
-    %t75 = load %Frame_block_body*, %Frame_block_body** %t74
-    call void @P_block_body_load(%Frame_block_body* %t75)
-    %t76 = getelementptr inbounds %Frame_block_body_statement_forstatement, %Frame_block_body_statement_forstatement* %.frame, i32 0, i32 7
-    %t77 = load %Frame_block_body_statement*, %Frame_block_body_statement** %t76
-    %t78 = getelementptr inbounds %Frame_block_body_statement, %Frame_block_body_statement* %t77, i32 0, i32 3
-    %t79 = load %Frame_block_body*, %Frame_block_body** %t78
-    %t80 = getelementptr inbounds %Frame_block_body_statement_forstatement, %Frame_block_body_statement_forstatement* %.frame, i32 0, i32 1
-    call void @P_block_body_store(%Frame_block_body* %t79, %T_attr* %t80)
-    %t81 = getelementptr inbounds %Frame_block_body_statement_forstatement, %Frame_block_body_statement_forstatement* %.frame, i32 0, i32 7
-    %t82 = load %Frame_block_body_statement*, %Frame_block_body_statement** %t81
-    %t83 = getelementptr inbounds %Frame_block_body_statement, %Frame_block_body_statement* %t82, i32 0, i32 3
-    %t84 = load %Frame_block_body*, %Frame_block_body** %t83
-    %t86 = getelementptr inbounds %Frame_block_body_statement_forstatement, %Frame_block_body_statement_forstatement* %.frame, i32 0, i32 0
-    %t85 = load i32, i32* %t86
-    call void @P_block_body_genujpxjp(%Frame_block_body* %t84, i32 57, i32 %t85)
-    %t87 = getelementptr inbounds %Frame_block_body_statement_forstatement, %Frame_block_body_statement_forstatement* %.frame, i32 0, i32 7
-    %t88 = load %Frame_block_body_statement*, %Frame_block_body_statement** %t87
-    %t89 = getelementptr inbounds %Frame_block_body_statement, %Frame_block_body_statement* %t88, i32 0, i32 3
-    %t90 = load %Frame_block_body*, %Frame_block_body** %t89
-    %t92 = getelementptr inbounds %Frame_block_body_statement_forstatement, %Frame_block_body_statement_forstatement* %.frame, i32 0, i32 2
+    call void @P_block_body_gen2(%Frame_block_body* %t61, i32 47, i32 , i32 1)
+    %t62 = getelementptr inbounds %Frame_block_body_statement_forstatement, %Frame_block_body_statement_forstatement* %.frame, i32 0, i32 7
+    %t63 = load %Frame_block_body_statement*, %Frame_block_body_statement** %t62
+    %t64 = getelementptr inbounds %Frame_block_body_statement, %Frame_block_body_statement* %t63, i32 0, i32 3
+    %t65 = load %Frame_block_body*, %Frame_block_body** %t64
+    %t67 = getelementptr inbounds %Frame_block_body_statement_forstatement, %Frame_block_body_statement_forstatement* %.frame, i32 0, i32 2
+    %t66 = load i32, i32* %t67
+    call void @P_block_body_genujpxjp(%Frame_block_body* %t65, i32 73, i32 %t66)
+    %t69 = getelementptr inbounds %Frame_block_body_statement_forstatement, %Frame_block_body_statement_forstatement* %.frame, i32 0, i32 1
+    %t68 = load %T_attr, %T_attr* %t69
+    store %T_attr %t68, %T_attr* @gattr
+    %t70 = getelementptr inbounds %Frame_block_body_statement_forstatement, %Frame_block_body_statement_forstatement* %.frame, i32 0, i32 7
+    %t71 = load %Frame_block_body_statement*, %Frame_block_body_statement** %t70
+    %t72 = getelementptr inbounds %Frame_block_body_statement, %Frame_block_body_statement* %t71, i32 0, i32 3
+    %t73 = load %Frame_block_body*, %Frame_block_body** %t72
+    call void @P_block_body_load(%Frame_block_body* %t73)
+    %t74 = getelementptr inbounds %Frame_block_body_statement_forstatement, %Frame_block_body_statement_forstatement* %.frame, i32 0, i32 7
+    %t75 = load %Frame_block_body_statement*, %Frame_block_body_statement** %t74
+    %t76 = getelementptr inbounds %Frame_block_body_statement, %Frame_block_body_statement* %t75, i32 0, i32 3
+    %t77 = load %Frame_block_body*, %Frame_block_body** %t76
+    %t78 = getelementptr inbounds %Frame_block_body_statement_forstatement, %Frame_block_body_statement_forstatement* %.frame, i32 0, i32 1
+    call void @P_block_body_store(%Frame_block_body* %t77, %T_attr* %t78)
+    %t79 = getelementptr inbounds %Frame_block_body_statement_forstatement, %Frame_block_body_statement_forstatement* %.frame, i32 0, i32 7
+    %t80 = load %Frame_block_body_statement*, %Frame_block_body_statement** %t79
+    %t81 = getelementptr inbounds %Frame_block_body_statement, %Frame_block_body_statement* %t80, i32 0, i32 3
+    %t82 = load %Frame_block_body*, %Frame_block_body** %t81
+    %t84 = getelementptr inbounds %Frame_block_body_statement_forstatement, %Frame_block_body_statement_forstatement* %.frame, i32 0, i32 0
+    %t83 = load i32, i32* %t84
+    call void @P_block_body_genujpxjp(%Frame_block_body* %t82, i32 57, i32 %t83)
+    %t85 = getelementptr inbounds %Frame_block_body_statement_forstatement, %Frame_block_body_statement_forstatement* %.frame, i32 0, i32 7
+    %t86 = load %Frame_block_body_statement*, %Frame_block_body_statement** %t85
+    %t87 = getelementptr inbounds %Frame_block_body_statement, %Frame_block_body_statement* %t86, i32 0, i32 3
+    %t88 = load %Frame_block_body*, %Frame_block_body** %t87
+    %t90 = getelementptr inbounds %Frame_block_body_statement_forstatement, %Frame_block_body_statement_forstatement* %.frame, i32 0, i32 2
+    %t89 = load i32, i32* %t90
+    call void @P_block_body_putlabel(%Frame_block_body* %t88, i32 %t89)
+    %t92 = getelementptr inbounds %Frame_block_body_statement_forstatement, %Frame_block_body_statement_forstatement* %.frame, i32 0, i32 4
     %t91 = load i32, i32* %t92
-    call void @P_block_body_putlabel(%Frame_block_body* %t90, i32 %t91)
-    %t94 = getelementptr inbounds %Frame_block_body_statement_forstatement, %Frame_block_body_statement_forstatement* %.frame, i32 0, i32 4
-    %t93 = load i32, i32* %t94
-    store i32 %t93, i32* @lc
+    store i32 %t91, i32* @lc
     ; nop
 
     ; epilogue

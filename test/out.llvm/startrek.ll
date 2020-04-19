@@ -481,7 +481,7 @@ define void @P_initialize()
     %t52 = add i32 %t53, %t54
     store i32 %t52, i32* @endyear
     store i32 0, i32* @badpoints
-007F5AE8    store i8 , i8* @bell
+    store i8 , i8* @bell
     call void @P_reinitialize()
     ; nop
 

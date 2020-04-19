@@ -1362,7 +1362,7 @@ private:
         assert(pArguments->size() == 1);
 
         stringstream code;
-        code << gen(pArguments->front());
+        // TODO
         return { code.str(), "" };
     }
 

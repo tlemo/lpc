@@ -419,7 +419,7 @@ define void @P_putbol(i32 %a, i1 %b)
     %t4 = getelementptr inbounds %Frame_putbol, %Frame_putbol* %.frame, i32 0, i32 0
     %t3 = load i32, i32* %t4
     %t5 = getelementptr inbounds %T_array_12, %T_array_12* @store, i32 0, i32 %t3
-0277C010    store i32 , i32* %t5
+    store i32 , i32* %t5
 
     ; epilogue
     ret void
@@ -546,12 +546,12 @@ define i8 @F_getchr(i32 %a)
 
     ; body
     %t2 = getelementptr inbounds %Frame_getchr, %Frame_getchr* %.frame, i32 0, i32 1
-0277BB30    store i8 , i8* %t2
+    store i8 , i8* %t2
 
     ; epilogue
-    %t7 = getelementptr inbounds %Frame_getchr, %Frame_getchr* %.frame, i32 0, i32 1
-    %t8 = load i8, i8* %t7
-    ret i8 %t8
+    %t3 = getelementptr inbounds %Frame_getchr, %Frame_getchr* %.frame, i32 0, i32 1
+    %t4 = load i8, i8* %t3
+    ret i8 %t4
 }
 
 
@@ -584,7 +584,7 @@ define void @P_putchr(i32 %a, i8 %c)
     %t4 = getelementptr inbounds %Frame_putchr, %Frame_putchr* %.frame, i32 0, i32 0
     %t3 = load i32, i32* %t4
     %t5 = getelementptr inbounds %T_array_12, %T_array_12* @store, i32 0, i32 %t3
-0277B6B8    store i32 , i32* %t5
+    store i32 , i32* %t5
 
     ; epilogue
     ret void

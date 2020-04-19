@@ -1931,7 +1931,7 @@ define void @P_block_procdeclaration(%Frame_block* %.slink)
     %t13 = load i32, i32* %t14
     %t12 = add i32 %t13, 1
     call void @P_block(%T_symset %.dummy_set, i1 %t10, i32 %t12)
-0275AA08    %t17 = add i32 32, 
+    %t17 = add i32 32, 
     call void @P_emit(i32 %t17)
 
     ; epilogue

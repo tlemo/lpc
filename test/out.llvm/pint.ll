@@ -1130,10 +1130,10 @@ define void @P_callsp_readc(%Frame_callsp* %.slink, %T_text* %f)
     %t34 = getelementptr inbounds %T_array_8, %T_array_8* @store, i32 0, i32 %t33
     %t36 = getelementptr inbounds %T_record_9, %T_record_9* %t34, i32 0, i32 0
     %t35 = bitcast i8* %t36 to i32*
-0251CE38    store i32 , i32* %t35
-    %t42 = load i32, i32* @sp
-    %t41 = sub i32 %t42, 2
-    store i32 %t41, i32* @sp
+    store i32 , i32* %t35
+    %t38 = load i32, i32* @sp
+    %t37 = sub i32 %t38, 2
+    store i32 %t37, i32* @sp
 
     ; epilogue
     ret void
