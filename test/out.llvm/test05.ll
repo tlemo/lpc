@@ -69,7 +69,7 @@ define void @P_()
     store i8 33, i8* %t7
     %t8 = getelementptr inbounds %T_t1, %T_t1* @y, i32 0, i32 2
     %t9 = getelementptr inbounds %T_array_3, %T_array_3* %t8, i32 0, i32 120
-009D1C00    store i32 , i32* %t9
+00896710    store i32 , i32* %t9
     %t15 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t15, i32 0, i32 0, i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.4, i32 0, i32 0), i32 9)
     %t16 = call i32 @F_outter(i32 7)

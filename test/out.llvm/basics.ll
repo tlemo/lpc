@@ -546,10 +546,10 @@ define i1 @F_digit(i8 %c)
     ; body
     %t2 = getelementptr inbounds %Frame_digit, %Frame_digit* %.frame, i32 0, i32 1
 L_expr_1:
-009A1990009A1AC8    %t4 = icmp sge i32 , 
+024EBA50024EBF98    %t4 = icmp sge i32 , 
     br i1 %t4, label %L_AND_eval_2, label %L_AND_shortcut_3
 L_AND_eval_2:
-009A1CD0009A16B8    %t7 = icmp sle i32 , 
+024EB980024EB6A8    %t7 = icmp sle i32 , 
     br label %L_AND_shortcut_3
 L_AND_shortcut_3:
     %t3 = phi [%t7, %L_AND_eval_2], [false, %L_expr_1]
@@ -628,10 +628,10 @@ define i1 @F_alpha(i8 %c)
     ; body
     %t2 = getelementptr inbounds %Frame_alpha, %Frame_alpha* %.frame, i32 0, i32 1
 L_expr_1:
-009A1990009A13E0    %t4 = icmp sge i32 , 
+024EB508024EBF98    %t4 = icmp sge i32 , 
     br i1 %t4, label %L_AND_eval_2, label %L_AND_shortcut_3
 L_AND_eval_2:
-009A1650009A1650    %t8 = icmp sle i32 , 
+024EC340024EC410    %t8 = icmp sle i32 , 
     br label %L_AND_shortcut_3
 L_AND_shortcut_3:
     %t3 = phi [%t8, %L_AND_eval_2], [false, %L_expr_1]

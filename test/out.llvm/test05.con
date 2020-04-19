@@ -17,6 +17,6 @@ compiling pass 2 (target = llvm)
 
 Invoking LLC ...
 llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\test05.ll:72:1: error: expected instruction opcode
-009D1C00    store i32 , i32* %t9
+00896710    store i32 , i32* %t9
 ^
 Exit code: 1

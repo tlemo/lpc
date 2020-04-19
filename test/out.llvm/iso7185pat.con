@@ -182,5 +182,29 @@ compiling pass 1 (LPC)
   warning on line 364: only Text files are supported
   warning on line 370: only Text files are supported
   warning on line 362: only Text files are supported
-  warning on line 366:Assertion failed: !"Unexpected string expression", file C:\Users\lemo\work\compilers\lpc\llvmBackend.cpp, line 1028
-Exit code: 3
+  warning on line 366: only Text files are supported
+  warning on line 372: only Text files are supported
+  warning on line 369: only Text files are supported
+  warning on line 355: only Text files are supported
+  warning on line 359: only Text files are supported
+  warning on line 361: only Text files are supported
+  warning on line 353: only Text files are supported
+  warning on line 375: only Text files are supported
+  warning on line 365: only Text files are supported
+  warning on line 371: only Text files are supported
+  warning on line 363: only Text files are supported
+  warning on line 367: only Text files are supported
+  warning on line 373: only Text files are supported
+
+0 error(s), 194 warning(s)
+
+Exit code: 0
+
+compiling pass 2 (target = llvm)
+-----------------------------------------------------
+
+Invoking LLC ...
+llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\iso7185pat.ll:663:59: error: expected value token
+    call void @_WriteInteger(i8* %t133, i32 1, i32 0, i32 )
+                                                          ^
+Exit code: 1

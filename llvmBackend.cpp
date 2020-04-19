@@ -993,39 +993,20 @@ IrFragment LlvmBackend::_getStringAddress(ast::Expr* pString)
         auto literal = _genLiteral(*pConstExpr->pConstant->strValue);
         stringPtr = literal->address;
     }
-    else if (auto pVarExpr = pString->as<ast::VarExpr>())
-    {
-        const auto varPtrIr = _genVarAddress(pVarExpr->pVariable);
-        code << varPtrIr.code;
-
-        // address value (as i8*)
-        //
-        const auto& llvmType = ext(pVarExpr->pType)->genName;
-        stringstream address;
-        address << "getelementptr inbounds (" <<
-            llvmType << ", " << llvmType << "* " <<
-            varPtrIr.value << ", i32 0, i32 0)";
-
-        stringPtr = address.str();
-    }
-    else if (auto pParamExpr = pString->as<ast::ParamExpr>())
-    {
-        const auto paramPtrIr = _genParamAddress(pParamExpr->pParameter);
-        code << paramPtrIr.code;
-
-        // address value (as i8*)
-        //
-        const auto& llvmType = ext(pParamExpr->pType)->genName;
-        stringstream address;
-        address << "getelementptr inbounds (" <<
-            llvmType << ", " << llvmType << "* " <<
-            paramPtrIr.value << ", i32 0, i32 0)";
-
-        stringPtr = address.str();
-    }
     else
     {
-        assert(!"Unexpected string expression");
+        const auto strPtrIr = _genLValueAddress(pString);
+        code << strPtrIr.code;
+
+        // address value (as i8*)
+        //
+        const auto& irType = ext(pString->pType)->genName;
+        stringstream address;
+        address << "getelementptr inbounds (" <<
+            irType << ", " << irType << "* " <<
+            strPtrIr.value << ", i32 0, i32 0)";
+
+        stringPtr = address.str();
     }
 
     return { code.str(), stringPtr };

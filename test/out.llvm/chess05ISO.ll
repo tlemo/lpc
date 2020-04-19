@@ -5571,4 +5571,1871 @@ define void @P_READER_PRICMD(%Frame_READER* %.slink)
 {
     ; allocate frame
     %.frame = alloca %Frame_READER_PRICMD, align 8
-    %t1 = getelementptr inbounds %Frame_READER_PRICMD, %Frame_READ
+    %t1 = getelementptr inbounds %Frame_READER_PRICMD, %Frame_READER_PRICMD* %.frame, i32 0, i32 0
+    store %Frame_READER* %.slink, %Frame_READER** %t1
+
+    ; body
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3141
+;================================================================================
+; scope: READER_PAMCMD (level : 3)
+
+; activation record
+%Frame_READER_PAMCMD = type
+{
+    ; slink
+    %Frame_READER*    ; 0
+};
+
+; procedure body
+define void @P_READER_PAMCMD(%Frame_READER* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_READER_PAMCMD, align 8
+    %t1 = getelementptr inbounds %Frame_READER_PAMCMD, %Frame_READER_PAMCMD* %.frame, i32 0, i32 0
+    store %Frame_READER* %.slink, %Frame_READER** %t1
+
+    ; body
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3155
+;================================================================================
+; scope: READER_POPCMD (level : 3)
+
+; activation record
+%Frame_READER_POPCMD = type
+{
+    ; variables
+    i32,    ; 0: INTQ
+
+    ; slink
+    %Frame_READER*    ; 1
+};
+
+; procedure body
+define void @P_READER_POPCMD(%Frame_READER* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_READER_POPCMD, align 8
+    %t1 = getelementptr inbounds %Frame_READER_POPCMD, %Frame_READER_POPCMD* %.frame, i32 0, i32 1
+    store %Frame_READER* %.slink, %Frame_READER** %t1
+
+    ; body
+    %t2 = load %T_text, %T_text* @output
+    %t4 = getelementptr inbounds %T_RB, %T_RB* @BOARD, i32 0, i32 0
+    %t3 = bitcast i8* %t4 to i32*
+    %t5 = load i32, i32* %t3
+    %t6 = getelementptr inbounds %T_array_28, %T_array_28* @XTMA, i32 0, i32 %t5
+    call void @_WriteString(i8* %t2, i32 0, i32 0, i8* getelementptr inbounds (%T_RA, %T_RA* %t6, i32 0, i32 0), i32 10)
+    call void @_WriteString(i8* %t2, i32 0, i32 0, i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.63, i32 0, i32 0), i32 9)
+    call void @_WriteLn(i8* %t2)
+    %t7 = load %T_text, %T_text* @output
+    %t9 = getelementptr inbounds %T_RB, %T_RB* @BOARD, i32 0, i32 4
+    %t8 = bitcast i8* %t9 to i32*
+    %t10 = load i32, i32* %t8
+    call void @_WriteInteger(i8* %t7, i32 0, i32 0, i32 %t10)
+    call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([12 x i8], [12 x i8]* @.str.64, i32 0, i32 0), i32 11)
+    call void @_WriteLn(i8* %t7)
+    %t11 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t11, i32 0, i32 0, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.65, i32 0, i32 0), i32 12)
+    %t13 = getelementptr inbounds %T_RB, %T_RB* @BOARD, i32 0, i32 8
+    %t12 = bitcast i8* %t13 to i32*
+    %t14 = load i32, i32* %t12
+    call void @_WriteInteger(i8* %t11, i32 0, i32 0, i32 %t14)
+    call void @_WriteLn(i8* %t11)
+    ; nop
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3173
+;================================================================================
+; scope: READER_PMVCMD (level : 3)
+
+; activation record
+%Frame_READER_PMVCMD = type
+{
+    ; variables
+    i32,    ; 0: INTW
+
+    ; slink
+    %Frame_READER*    ; 1
+};
+
+; procedure body
+define void @P_READER_PMVCMD(%Frame_READER* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_READER_PMVCMD, align 8
+    %t1 = getelementptr inbounds %Frame_READER_PMVCMD, %Frame_READER_PMVCMD* %.frame, i32 0, i32 1
+    store %Frame_READER* %.slink, %Frame_READER** %t1
+
+    ; body
+    call void @P_LSTMOV()
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3190
+;================================================================================
+; scope: READER_SWICMD (level : 3)
+
+; activation record
+%Frame_READER_SWICMD = type
+{
+    ; slink
+    %Frame_READER*    ; 0
+};
+
+; procedure body
+define void @P_READER_SWICMD(%Frame_READER* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_READER_SWICMD, align 8
+    %t1 = getelementptr inbounds %Frame_READER_SWICMD, %Frame_READER_SWICMD* %.frame, i32 0, i32 0
+    store %Frame_READER* %.slink, %Frame_READER** %t1
+
+    ; body
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3195
+;================================================================================
+; scope: READER_SWICMD_SWIONE (level : 4)
+
+; activation record
+%Frame_READER_SWICMD_SWIONE = type
+{
+    ; parameters
+    %T_RA,    ; 0: A
+    i1*,    ; 1: B
+
+    ; variables
+    i32,    ; 2: IMTJ
+
+    ; slink
+    %Frame_READER_SWICMD*    ; 3
+};
+
+; procedure body
+define void @P_READER_SWICMD_SWIONE(%Frame_READER_SWICMD* %.slink, %T_RA %A, i1* %B)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_READER_SWICMD_SWIONE, align 8
+    %t1 = getelementptr inbounds %Frame_READER_SWICMD_SWIONE, %Frame_READER_SWICMD_SWIONE* %.frame, i32 0, i32 3
+    store %Frame_READER_SWICMD* %.slink, %Frame_READER_SWICMD** %t1
+    %t2 = getelementptr inbounds %Frame_READER_SWICMD_SWIONE, %Frame_READER_SWICMD_SWIONE* %.frame, i32 0, i32 0
+    store %T_RA %A, %T_RA* %t2
+    %t3 = getelementptr inbounds %Frame_READER_SWICMD_SWIONE, %Frame_READER_SWICMD_SWIONE* %.frame, i32 0, i32 1
+    store i1* %B, i1** %t3
+
+    ; body
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3241
+;================================================================================
+; scope: READER_STACMD (level : 3)
+
+; activation record
+%Frame_READER_STACMD = type
+{
+    ; variables
+    %T_RA,    ; 0: INRA
+    i32,    ; 1: INTM
+
+    ; slink
+    %Frame_READER*    ; 2
+};
+
+; procedure body
+define void @P_READER_STACMD(%Frame_READER* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_READER_STACMD, align 8
+    %t1 = getelementptr inbounds %Frame_READER_STACMD, %Frame_READER_STACMD* %.frame, i32 0, i32 2
+    store %Frame_READER* %.slink, %Frame_READER** %t1
+
+    ; body
+    call void @P_CLSTAT()
+    %t2 = getelementptr inbounds %Frame_READER_STACMD, %Frame_READER_STACMD* %.frame, i32 0, i32 1
+    store i32 0, i32* %t2
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3250
+;================================================================================
+; scope: READER_STACMD_STAEPF (level : 4)
+
+; activation record
+%Frame_READER_STACMD_STAEPF = type
+{
+    ; parameters
+    %T_RA,    ; 0: A
+    i32,    ; 1: B
+
+    ; slink
+    %Frame_READER_STACMD*    ; 2
+};
+
+; procedure body
+define void @P_READER_STACMD_STAEPF(%Frame_READER_STACMD* %.slink, %T_RA %A, i32 %B)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_READER_STACMD_STAEPF, align 8
+    %t1 = getelementptr inbounds %Frame_READER_STACMD_STAEPF, %Frame_READER_STACMD_STAEPF* %.frame, i32 0, i32 2
+    store %Frame_READER_STACMD* %.slink, %Frame_READER_STACMD** %t1
+    %t2 = getelementptr inbounds %Frame_READER_STACMD_STAEPF, %Frame_READER_STACMD_STAEPF* %.frame, i32 0, i32 0
+    store %T_RA %A, %T_RA* %t2
+    %t3 = getelementptr inbounds %Frame_READER_STACMD_STAEPF, %Frame_READER_STACMD_STAEPF* %.frame, i32 0, i32 1
+    store i32 %B, i32* %t3
+
+    ; body
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3266
+;================================================================================
+; scope: READER_STACMD_STACAK (level : 4)
+
+; activation record
+%Frame_READER_STACMD_STACAK = type
+{
+    ; slink
+    %Frame_READER_STACMD*    ; 0
+};
+
+; procedure body
+define void @P_READER_STACMD_STACAK(%Frame_READER_STACMD* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_READER_STACMD_STACAK, align 8
+    %t1 = getelementptr inbounds %Frame_READER_STACMD_STACAK, %Frame_READER_STACMD_STACAK* %.frame, i32 0, i32 0
+    store %Frame_READER_STACMD* %.slink, %Frame_READER_STACMD** %t1
+
+    ; body
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3276
+;================================================================================
+; scope: READER_STACMD_STACAQ (level : 4)
+
+; activation record
+%Frame_READER_STACMD_STACAQ = type
+{
+    ; slink
+    %Frame_READER_STACMD*    ; 0
+};
+
+; procedure body
+define void @P_READER_STACMD_STACAQ(%Frame_READER_STACMD* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_READER_STACMD_STACAQ, align 8
+    %t1 = getelementptr inbounds %Frame_READER_STACMD_STACAQ, %Frame_READER_STACMD_STACAQ* %.frame, i32 0, i32 0
+    store %Frame_READER_STACMD* %.slink, %Frame_READER_STACMD** %t1
+
+    ; body
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3286
+;================================================================================
+; scope: READER_STACMD_STADRK (level : 4)
+
+; activation record
+%Frame_READER_STACMD_STADRK = type
+{
+    ; slink
+    %Frame_READER_STACMD*    ; 0
+};
+
+; procedure body
+define void @P_READER_STACMD_STADRK(%Frame_READER_STACMD* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_READER_STACMD_STADRK, align 8
+    %t1 = getelementptr inbounds %Frame_READER_STACMD_STADRK, %Frame_READER_STACMD_STADRK* %.frame, i32 0, i32 0
+    store %Frame_READER_STACMD* %.slink, %Frame_READER_STACMD** %t1
+
+    ; body
+    %t3 = getelementptr inbounds %Frame_READER_STACMD_STADRK, %Frame_READER_STACMD_STADRK* %.frame, i32 0, i32 0
+    %t4 = load %Frame_READER_STACMD*, %Frame_READER_STACMD** %t3
+    %t2 = getelementptr inbounds %Frame_READER_STACMD, %Frame_READER_STACMD* %t4, i32 0, i32 1
+    store i32 1, i32* %t2
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3293
+;================================================================================
+; scope: READER_STACMD_STAENP (level : 4)
+
+; activation record
+%Frame_READER_STACMD_STAENP = type
+{
+    ; slink
+    %Frame_READER_STACMD*    ; 0
+};
+
+; procedure body
+define void @P_READER_STACMD_STAENP(%Frame_READER_STACMD* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_READER_STACMD_STAENP, align 8
+    %t1 = getelementptr inbounds %Frame_READER_STACMD_STAENP, %Frame_READER_STACMD_STAENP* %.frame, i32 0, i32 0
+    store %Frame_READER_STACMD* %.slink, %Frame_READER_STACMD** %t1
+
+    ; body
+    %t2 = getelementptr inbounds %Frame_READER_STACMD_STAENP, %Frame_READER_STACMD_STAENP* %.frame, i32 0, i32 0
+    %t3 = load %Frame_READER_STACMD*, %Frame_READER_STACMD** %t2
+    call void @P_READER_STACMD_STAEPF(%Frame_READER_STACMD* %t3, %T_RA getelementptr inbounds ([11 x i8], [11 x i8]* @.str.66, i32 0, i32 0), i32 0)
+    %t4 = getelementptr inbounds %Frame_READER_STACMD_STAENP, %Frame_READER_STACMD_STAENP* %.frame, i32 0, i32 0
+    %t5 = load %Frame_READER_STACMD*, %Frame_READER_STACMD** %t4
+    call void @P_READER_STACMD_STAEPF(%Frame_READER_STACMD* %t5, %T_RA getelementptr inbounds ([11 x i8], [11 x i8]* @.str.67, i32 0, i32 0), i32 1)
+    %t6 = getelementptr inbounds %Frame_READER_STACMD_STAENP, %Frame_READER_STACMD_STAENP* %.frame, i32 0, i32 0
+    %t7 = load %Frame_READER_STACMD*, %Frame_READER_STACMD** %t6
+    call void @P_READER_STACMD_STAEPF(%Frame_READER_STACMD* %t7, %T_RA getelementptr inbounds ([11 x i8], [11 x i8]* @.str.68, i32 0, i32 0), i32 2)
+    %t8 = getelementptr inbounds %Frame_READER_STACMD_STAENP, %Frame_READER_STACMD_STAENP* %.frame, i32 0, i32 0
+    %t9 = load %Frame_READER_STACMD*, %Frame_READER_STACMD** %t8
+    call void @P_READER_STACMD_STAEPF(%Frame_READER_STACMD* %t9, %T_RA getelementptr inbounds ([11 x i8], [11 x i8]* @.str.69, i32 0, i32 0), i32 3)
+    %t10 = getelementptr inbounds %Frame_READER_STACMD_STAENP, %Frame_READER_STACMD_STAENP* %.frame, i32 0, i32 0
+    %t11 = load %Frame_READER_STACMD*, %Frame_READER_STACMD** %t10
+    call void @P_READER_STACMD_STAEPF(%Frame_READER_STACMD* %t11, %T_RA getelementptr inbounds ([11 x i8], [11 x i8]* @.str.70, i32 0, i32 0), i32 4)
+    %t12 = getelementptr inbounds %Frame_READER_STACMD_STAENP, %Frame_READER_STACMD_STAENP* %.frame, i32 0, i32 0
+    %t13 = load %Frame_READER_STACMD*, %Frame_READER_STACMD** %t12
+    call void @P_READER_STACMD_STAEPF(%Frame_READER_STACMD* %t13, %T_RA getelementptr inbounds ([11 x i8], [11 x i8]* @.str.71, i32 0, i32 0), i32 5)
+    %t14 = getelementptr inbounds %Frame_READER_STACMD_STAENP, %Frame_READER_STACMD_STAENP* %.frame, i32 0, i32 0
+    %t15 = load %Frame_READER_STACMD*, %Frame_READER_STACMD** %t14
+    call void @P_READER_STACMD_STAEPF(%Frame_READER_STACMD* %t15, %T_RA getelementptr inbounds ([11 x i8], [11 x i8]* @.str.72, i32 0, i32 0), i32 6)
+    %t16 = getelementptr inbounds %Frame_READER_STACMD_STAENP, %Frame_READER_STACMD_STAENP* %.frame, i32 0, i32 0
+    %t17 = load %Frame_READER_STACMD*, %Frame_READER_STACMD** %t16
+    call void @P_READER_STACMD_STAEPF(%Frame_READER_STACMD* %t17, %T_RA getelementptr inbounds ([11 x i8], [11 x i8]* @.str.73, i32 0, i32 0), i32 7)
+    call void @P_CLSTAT()
+    %t18 = getelementptr inbounds %Frame_READER_STACMD_STAENP, %Frame_READER_STACMD_STAENP* %.frame, i32 0, i32 0
+    %t19 = load %Frame_READER_STACMD*, %Frame_READER_STACMD** %t18
+    %t20 = getelementptr inbounds %Frame_READER_STACMD, %Frame_READER_STACMD* %t19, i32 0, i32 2
+    %t21 = load %Frame_READER*, %Frame_READER** %t20
+    call void @P_READER_RDRERR(%Frame_READER* %t21, %T_RN getelementptr inbounds ([31 x i8], [31 x i8]* @.str.74, i32 0, i32 0))
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3314
+;================================================================================
+; scope: READER_STACMD_STAGOS (level : 4)
+
+; activation record
+%Frame_READER_STACMD_STAGOS = type
+{
+    ; slink
+    %Frame_READER_STACMD*    ; 0
+};
+
+; procedure body
+define void @P_READER_STACMD_STAGOS(%Frame_READER_STACMD* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_READER_STACMD_STAGOS, align 8
+    %t1 = getelementptr inbounds %Frame_READER_STACMD_STAGOS, %Frame_READER_STACMD_STAGOS* %.frame, i32 0, i32 0
+    store %Frame_READER_STACMD* %.slink, %Frame_READER_STACMD** %t1
+
+    ; body
+    %t3 = getelementptr inbounds %T_RB, %T_RB* @BOARD, i32 0, i32 0
+    %t2 = bitcast i8* %t3 to i32*
+    %t6 = getelementptr inbounds %Frame_READER_STACMD_STAGOS, %Frame_READER_STACMD_STAGOS* %.frame, i32 0, i32 0
+    %t7 = load %Frame_READER_STACMD*, %Frame_READER_STACMD** %t6
+    %t5 = getelementptr inbounds %Frame_READER_STACMD, %Frame_READER_STACMD* %t7, i32 0, i32 1
+    %t4 = load i32, i32* %t5
+    store i32 %t4, i32* %t2
+    %t10 = getelementptr inbounds %Frame_READER_STACMD_STAGOS, %Frame_READER_STACMD_STAGOS* %.frame, i32 0, i32 0
+    %t11 = load %Frame_READER_STACMD*, %Frame_READER_STACMD** %t10
+    %t9 = getelementptr inbounds %Frame_READER_STACMD, %Frame_READER_STACMD* %t11, i32 0, i32 1
+    %t8 = load i32, i32* %t9
+    store i32 %t8, i32* @JNTM
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3322
+;================================================================================
+; scope: READER_STACMD_STALIT (level : 4)
+
+; activation record
+%Frame_READER_STACMD_STALIT = type
+{
+    ; slink
+    %Frame_READER_STACMD*    ; 0
+};
+
+; procedure body
+define void @P_READER_STACMD_STALIT(%Frame_READER_STACMD* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_READER_STACMD_STALIT, align 8
+    %t1 = getelementptr inbounds %Frame_READER_STACMD_STALIT, %Frame_READER_STACMD_STALIT* %.frame, i32 0, i32 0
+    store %Frame_READER_STACMD* %.slink, %Frame_READER_STACMD** %t1
+
+    ; body
+    %t3 = getelementptr inbounds %Frame_READER_STACMD_STALIT, %Frame_READER_STACMD_STALIT* %.frame, i32 0, i32 0
+    %t4 = load %Frame_READER_STACMD*, %Frame_READER_STACMD** %t3
+    %t2 = getelementptr inbounds %Frame_READER_STACMD, %Frame_READER_STACMD* %t4, i32 0, i32 1
+    store i32 0, i32* %t2
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3329
+;================================================================================
+; scope: READER_STACMD_STANUM (level : 4)
+
+; activation record
+%Frame_READER_STACMD_STANUM = type
+{
+    ; slink
+    %Frame_READER_STACMD*    ; 0
+};
+
+; procedure body
+define void @P_READER_STACMD_STANUM(%Frame_READER_STACMD* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_READER_STACMD_STANUM, align 8
+    %t1 = getelementptr inbounds %Frame_READER_STACMD_STANUM, %Frame_READER_STACMD_STANUM* %.frame, i32 0, i32 0
+    store %Frame_READER_STACMD* %.slink, %Frame_READER_STACMD** %t1
+
+    ; body
+    %t3 = getelementptr inbounds %T_RB, %T_RB* @BOARD, i32 0, i32 8
+    %t2 = bitcast i8* %t3 to i32*
+    %t4 = getelementptr inbounds %Frame_READER_STACMD_STANUM, %Frame_READER_STACMD_STANUM* %.frame, i32 0, i32 0
+    %t5 = load %Frame_READER_STACMD*, %Frame_READER_STACMD** %t4
+    %t6 = getelementptr inbounds %Frame_READER_STACMD, %Frame_READER_STACMD* %t5, i32 0, i32 2
+    %t7 = load %Frame_READER*, %Frame_READER** %t6
+    %t8 = call i32 @F_READER_RDRNUM(%Frame_READER* %t7)
+    store i32 %t8, i32* %t2
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3336
+;================================================================================
+; scope: READER_STACMD_STAOPT (level : 4)
+
+; types
+%T_READER_STACMD_STAOPT_subroutine_48 = type void (i8*)*
+
+; activation record
+%Frame_READER_STACMD_STAOPT = type
+{
+    ; parameters
+    %T_RA,    ; 0: A
+    %T_READER_STACMD_STAOPT_subroutine_48,    ; 1: STAXXX
+
+    ; slink
+    %Frame_READER_STACMD*    ; 2
+};
+
+; procedure body
+define void @P_READER_STACMD_STAOPT(%Frame_READER_STACMD* %.slink, %T_RA %A, %T_READER_STACMD_STAOPT_subroutine_48 %STAXXX)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_READER_STACMD_STAOPT, align 8
+    %t1 = getelementptr inbounds %Frame_READER_STACMD_STAOPT, %Frame_READER_STACMD_STAOPT* %.frame, i32 0, i32 2
+    store %Frame_READER_STACMD* %.slink, %Frame_READER_STACMD** %t1
+    %t2 = getelementptr inbounds %Frame_READER_STACMD_STAOPT, %Frame_READER_STACMD_STAOPT* %.frame, i32 0, i32 0
+    store %T_RA %A, %T_RA* %t2
+    %t3 = getelementptr inbounds %Frame_READER_STACMD_STAOPT, %Frame_READER_STACMD_STAOPT* %.frame, i32 0, i32 1
+    store %T_READER_STACMD_STAOPT_subroutine_48 %STAXXX, %T_READER_STACMD_STAOPT_subroutine_48* %t3
+
+    ; body
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3368
+;================================================================================
+; scope: READER_WHACMD (level : 3)
+
+; activation record
+%Frame_READER_WHACMD = type
+{
+    ; slink
+    %Frame_READER*    ; 0
+};
+
+; procedure body
+define void @P_READER_WHACMD(%Frame_READER* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_READER_WHACMD, align 8
+    %t1 = getelementptr inbounds %Frame_READER_WHACMD, %Frame_READER_WHACMD* %.frame, i32 0, i32 0
+    store %Frame_READER* %.slink, %Frame_READER** %t1
+
+    ; body
+    %t2 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t2, i32 0, i32 0, i8* getelementptr inbounds (%T_RN, %T_RN* @MOVMS, i32 0, i32 0), i32 30)
+    call void @_WriteLn(i8* %t2)
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3410
+;================================================================================
+; scope: MINENG (level : 2)
+
+; activation record
+%Frame_MINENG = type
+{
+    ; parameters
+    %T_RM,    ; 0: A
+    %T_RA,    ; 1: B
+
+    ; variables
+    i32,    ; 2: INTN
+
+    ; dummy
+    i8*
+};
+
+; procedure body
+define void @P_MINENG(%T_RM %A, %T_RA %B)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_MINENG, align 8
+    %t1 = getelementptr inbounds %Frame_MINENG, %Frame_MINENG* %.frame, i32 0, i32 0
+    store %T_RM %A, %T_RM* %t1
+    %t2 = getelementptr inbounds %Frame_MINENG, %Frame_MINENG* %.frame, i32 0, i32 1
+    store %T_RA %B, %T_RA* %t2
+
+    ; body
+    store %T_RN getelementptr inbounds ([31 x i8], [31 x i8]* @.str.75, i32 0, i32 0), %T_RN* @MOVMS
+    %t3 = getelementptr inbounds %Frame_MINENG, %Frame_MINENG* %.frame, i32 0, i32 2
+    %t4 = add i32 1, 1
+    store i32 %t4, i32* %t3
+    %t6 = getelementptr inbounds %Frame_MINENG, %Frame_MINENG* %.frame, i32 0, i32 1
+    %t5 = load %T_RA, %T_RA* %t6
+    call void @P_MINENG_ADDWRD(%Frame_MINENG* %.frame, %T_RA %t5, i32 10)
+    call void @P_MINENG_ADDWRD(%Frame_MINENG* %.frame, %T_RA getelementptr inbounds ([11 x i8], [11 x i8]* @.str.76, i32 0, i32 0), i32 2)
+    call void @P_MINENG_ADDWRD(%Frame_MINENG* %.frame, %T_RA getelementptr inbounds ([11 x i8], [11 x i8]* @.str.77, i32 0, i32 0), i32 3)
+    ; nop
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3418
+;================================================================================
+; scope: MINENG_ADDCHR (level : 3)
+
+; activation record
+%Frame_MINENG_ADDCHR = type
+{
+    ; parameters
+    i8,    ; 0: A
+
+    ; slink
+    %Frame_MINENG*    ; 1
+};
+
+; procedure body
+define void @P_MINENG_ADDCHR(%Frame_MINENG* %.slink, i8 %A)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_MINENG_ADDCHR, align 8
+    %t1 = getelementptr inbounds %Frame_MINENG_ADDCHR, %Frame_MINENG_ADDCHR* %.frame, i32 0, i32 1
+    store %Frame_MINENG* %.slink, %Frame_MINENG** %t1
+    %t2 = getelementptr inbounds %Frame_MINENG_ADDCHR, %Frame_MINENG_ADDCHR* %.frame, i32 0, i32 0
+    store i8 %A, i8* %t2
+
+    ; body
+    %t5 = getelementptr inbounds %Frame_MINENG_ADDCHR, %Frame_MINENG_ADDCHR* %.frame, i32 0, i32 1
+    %t6 = load %Frame_MINENG*, %Frame_MINENG** %t5
+    %t4 = getelementptr inbounds %Frame_MINENG, %Frame_MINENG* %t6, i32 0, i32 2
+    %t3 = load i32, i32* %t4
+    %t7 = getelementptr inbounds %T_RN, %T_RN* @MOVMS, i32 0, i32 %t3
+    %t9 = getelementptr inbounds %Frame_MINENG_ADDCHR, %Frame_MINENG_ADDCHR* %.frame, i32 0, i32 0
+    %t8 = load i8, i8* %t9
+    store i8 %t8, i8* %t7
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3428
+;================================================================================
+; scope: MINENG_ADDSQR (level : 3)
+
+; activation record
+%Frame_MINENG_ADDSQR = type
+{
+    ; parameters
+    i32,    ; 0: A
+    %T_RD,    ; 1: B
+
+    ; slink
+    %Frame_MINENG*    ; 2
+};
+
+; procedure body
+define void @P_MINENG_ADDSQR(%Frame_MINENG* %.slink, i32 %A, %T_RD %B)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_MINENG_ADDSQR, align 8
+    %t1 = getelementptr inbounds %Frame_MINENG_ADDSQR, %Frame_MINENG_ADDSQR* %.frame, i32 0, i32 2
+    store %Frame_MINENG* %.slink, %Frame_MINENG** %t1
+    %t2 = getelementptr inbounds %Frame_MINENG_ADDSQR, %Frame_MINENG_ADDSQR* %.frame, i32 0, i32 0
+    store i32 %A, i32* %t2
+    %t3 = getelementptr inbounds %Frame_MINENG_ADDSQR, %Frame_MINENG_ADDSQR* %.frame, i32 0, i32 1
+    store %T_RD %B, %T_RD* %t3
+
+    ; body
+    ; nop
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3478
+;================================================================================
+; scope: MINENG_ADDWRD (level : 3)
+
+; activation record
+%Frame_MINENG_ADDWRD = type
+{
+    ; parameters
+    %T_RA,    ; 0: A
+    i32,    ; 1: B
+
+    ; variables
+    i32,    ; 2: INTA
+
+    ; slink
+    %Frame_MINENG*    ; 3
+};
+
+; procedure body
+define void @P_MINENG_ADDWRD(%Frame_MINENG* %.slink, %T_RA %A, i32 %B)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_MINENG_ADDWRD, align 8
+    %t1 = getelementptr inbounds %Frame_MINENG_ADDWRD, %Frame_MINENG_ADDWRD* %.frame, i32 0, i32 3
+    store %Frame_MINENG* %.slink, %Frame_MINENG** %t1
+    %t2 = getelementptr inbounds %Frame_MINENG_ADDWRD, %Frame_MINENG_ADDWRD* %.frame, i32 0, i32 0
+    store %T_RA %A, %T_RA* %t2
+    %t3 = getelementptr inbounds %Frame_MINENG_ADDWRD, %Frame_MINENG_ADDWRD* %.frame, i32 0, i32 1
+    store i32 %B, i32* %t3
+
+    ; body
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3491
+;================================================================================
+; scope: MINENG_DIFFER (level : 3)
+
+; activation record
+%Frame_MINENG_DIFFER = type
+{
+    ; parameters
+    %T_RM,    ; 0: A
+    %T_RM,    ; 1: B
+
+    ; variables
+    i1,    ; 2: _fnvalue
+    i1,    ; 3: INTB
+
+    ; slink
+    %Frame_MINENG*    ; 4
+};
+
+; function body
+define i1 @F_MINENG_DIFFER(%Frame_MINENG* %.slink, %T_RM %A, %T_RM %B)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_MINENG_DIFFER, align 8
+    %t1 = getelementptr inbounds %Frame_MINENG_DIFFER, %Frame_MINENG_DIFFER* %.frame, i32 0, i32 4
+    store %Frame_MINENG* %.slink, %Frame_MINENG** %t1
+    %t2 = getelementptr inbounds %Frame_MINENG_DIFFER, %Frame_MINENG_DIFFER* %.frame, i32 0, i32 0
+    store %T_RM %A, %T_RM* %t2
+    %t3 = getelementptr inbounds %Frame_MINENG_DIFFER, %Frame_MINENG_DIFFER* %.frame, i32 0, i32 1
+    store %T_RM %B, %T_RM* %t3
+
+    ; body
+    %t4 = getelementptr inbounds %Frame_MINENG_DIFFER, %Frame_MINENG_DIFFER* %.frame, i32 0, i32 3
+L_expr_4:
+L_expr_1:
+    %t8 = getelementptr inbounds %Frame_MINENG_DIFFER, %Frame_MINENG_DIFFER* %.frame, i32 0, i32 0
+    %t10 = getelementptr inbounds %T_RM, %T_RM* %t8, i32 0, i32 0
+    %t9 = bitcast i8* %t10 to i32*
+    %t11 = load i32, i32* %t9
+    %t12 = getelementptr inbounds %Frame_MINENG_DIFFER, %Frame_MINENG_DIFFER* %.frame, i32 0, i32 1
+    %t14 = getelementptr inbounds %T_RM, %T_RM* %t12, i32 0, i32 0
+    %t13 = bitcast i8* %t14 to i32*
+    %t15 = load i32, i32* %t13
+    %t7 = icmp ne i32 %t11, %t15
+    br i1 %t7, label %L_OR_shortcut_3, label %L_OR_eval_2
+L_OR_eval_2:
+    %t17 = getelementptr inbounds %Frame_MINENG_DIFFER, %Frame_MINENG_DIFFER* %.frame, i32 0, i32 0
+    %t19 = getelementptr inbounds %T_RM, %T_RM* %t17, i32 0, i32 4
+    %t18 = bitcast i8* %t19 to i32*
+    %t20 = load i32, i32* %t18
+    %t21 = getelementptr inbounds %Frame_MINENG_DIFFER, %Frame_MINENG_DIFFER* %.frame, i32 0, i32 1
+    %t23 = getelementptr inbounds %T_RM, %T_RM* %t21, i32 0, i32 4
+    %t22 = bitcast i8* %t23 to i32*
+    %t24 = load i32, i32* %t22
+    %t16 = icmp ne i32 %t20, %t24
+    br label %L_OR_shortcut_3
+L_OR_shortcut_3:
+    %t6 = phi [%t16, %L_OR_eval_2], [true, %L_expr_1]
+    br i1 %t6, label %L_OR_shortcut_6, label %L_OR_eval_5
+L_OR_eval_5:
+    %t26 = getelementptr inbounds %Frame_MINENG_DIFFER, %Frame_MINENG_DIFFER* %.frame, i32 0, i32 0
+    %t28 = getelementptr inbounds %T_RM, %T_RM* %t26, i32 0, i32 8
+    %t27 = bitcast i8* %t28 to i32*
+    %t29 = load i32, i32* %t27
+    %t30 = getelementptr inbounds %Frame_MINENG_DIFFER, %Frame_MINENG_DIFFER* %.frame, i32 0, i32 1
+    %t32 = getelementptr inbounds %T_RM, %T_RM* %t30, i32 0, i32 8
+    %t31 = bitcast i8* %t32 to i32*
+    %t33 = load i32, i32* %t31
+    %t25 = icmp ne i32 %t29, %t33
+    br label %L_OR_shortcut_6
+L_OR_shortcut_6:
+    %t5 = phi [%t25, %L_OR_eval_5], [true, %L_expr_4]
+    store i1 %t5, i1* %t4
+    ; nop
+
+    ; epilogue
+    %t34 = getelementptr inbounds %Frame_MINENG_DIFFER, %Frame_MINENG_DIFFER* %.frame, i32 0, i32 2
+    %t35 = load i1, i1* %t34
+    ret i1 %t35
+}
+
+
+; line 3516
+;================================================================================
+; scope: MINENG_SETSQD (level : 3)
+
+; activation record
+%Frame_MINENG_SETSQD = type
+{
+    ; parameters
+    i32,    ; 0: A
+    %T_RD,    ; 1: B
+    %T_SR*,    ; 2: C
+    %T_SF*,    ; 3: O
+
+    ; slink
+    %Frame_MINENG*    ; 4
+};
+
+; procedure body
+define void @P_MINENG_SETSQD(%Frame_MINENG* %.slink, i32 %A, %T_RD %B, %T_SR* %C, %T_SF* %O)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_MINENG_SETSQD, align 8
+    %t1 = getelementptr inbounds %Frame_MINENG_SETSQD, %Frame_MINENG_SETSQD* %.frame, i32 0, i32 4
+    store %Frame_MINENG* %.slink, %Frame_MINENG** %t1
+    %t2 = getelementptr inbounds %Frame_MINENG_SETSQD, %Frame_MINENG_SETSQD* %.frame, i32 0, i32 0
+    store i32 %A, i32* %t2
+    %t3 = getelementptr inbounds %Frame_MINENG_SETSQD, %Frame_MINENG_SETSQD* %.frame, i32 0, i32 1
+    store %T_RD %B, %T_RD* %t3
+    %t4 = getelementptr inbounds %Frame_MINENG_SETSQD, %Frame_MINENG_SETSQD* %.frame, i32 0, i32 2
+    store %T_SR* %C, %T_SR** %t4
+    %t5 = getelementptr inbounds %Frame_MINENG_SETSQD, %Frame_MINENG_SETSQD* %.frame, i32 0, i32 3
+    store %T_SF* %O, %T_SF** %t5
+
+    ; body
+    %t6 = getelementptr inbounds %Frame_MINENG_SETSQD, %Frame_MINENG_SETSQD* %.frame, i32 0, i32 2
+    %t7 = load %T_SR*, %T_SR** %t6
+    store %T_SR %.dummy_set, %T_SR* %t7
+    %t8 = getelementptr inbounds %Frame_MINENG_SETSQD, %Frame_MINENG_SETSQD* %.frame, i32 0, i32 3
+    %t9 = load %T_SF*, %T_SF** %t8
+    store %T_SF %.dummy_set, %T_SF* %t9
+    ; nop
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3544
+;================================================================================
+; scope: MINENG_MINGEN (level : 3)
+
+; activation record
+%Frame_MINENG_MINGEN = type
+{
+    ; parameters
+    %T_RM,    ; 0: A
+    i32,    ; 1: B
+    i32,    ; 2: C
+
+    ; variables
+    %T_SF,    ; 3: INLF
+    %T_SR,    ; 4: INLR
+    %T_SF,    ; 5: INRF
+    %T_SR,    ; 6: INRR
+    i32,    ; 7: INTG
+    i32,    ; 8: INTI
+    i32,    ; 9: INTW
+
+    ; slink
+    %Frame_MINENG*    ; 10
+};
+
+; procedure body
+define void @P_MINENG_MINGEN(%Frame_MINENG* %.slink, %T_RM %A, i32 %B, i32 %C)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_MINENG_MINGEN, align 8
+    %t1 = getelementptr inbounds %Frame_MINENG_MINGEN, %Frame_MINENG_MINGEN* %.frame, i32 0, i32 10
+    store %Frame_MINENG* %.slink, %Frame_MINENG** %t1
+    %t2 = getelementptr inbounds %Frame_MINENG_MINGEN, %Frame_MINENG_MINGEN* %.frame, i32 0, i32 0
+    store %T_RM %A, %T_RM* %t2
+    %t3 = getelementptr inbounds %Frame_MINENG_MINGEN, %Frame_MINENG_MINGEN* %.frame, i32 0, i32 1
+    store i32 %B, i32* %t3
+    %t4 = getelementptr inbounds %Frame_MINENG_MINGEN, %Frame_MINENG_MINGEN* %.frame, i32 0, i32 2
+    store i32 %C, i32* %t4
+
+    ; body
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3635
+;================================================================================
+; scope: MYMOVE (level : 2)
+
+; activation record
+%Frame_MYMOVE = type
+{
+    ; variables
+    %T_RM,    ; 0: INRM
+
+    ; dummy
+    i8*
+};
+
+; procedure body
+define void @P_MYMOVE()
+{
+    ; allocate frame
+    %.frame = alloca %Frame_MYMOVE, align 8
+
+    ; body
+    call void @P_CREATE()
+    %t1 = getelementptr inbounds %Frame_MYMOVE, %Frame_MYMOVE* %.frame, i32 0, i32 0
+    %t2 = call i32 @F_SEARCH()
+    %t3 = getelementptr inbounds %T_RF, %T_RF* @MOVES, i32 0, i32 %t2
+    %t4 = load %T_RM, %T_RM* %t3
+    store %T_RM %t4, %T_RM* %t1
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3662
+;================================================================================
+; scope: YRMOVE (level : 2)
+
+; activation record
+%Frame_YRMOVE = type
+{
+    ; variables
+    i1,    ; 0: IFCA
+    i1,    ; 1: IFLD
+    i1,    ; 2: IFLF
+    i1,    ; 3: IFMV
+    i1,    ; 4: IFOO
+    i1,    ; 5: IFPR
+    i1,    ; 6: IFQS
+    i1,    ; 7: IFRD
+    i1,    ; 8: IFRF
+    i32,    ; 9: INCP
+    %T_SF,    ; 10: INLF
+    %T_SR,    ; 11: INLR
+    %T_SF,    ; 12: INRF
+    %T_RM,    ; 13: INRM
+    %T_SR,    ; 14: INRR
+    i1,    ; 15: INTB
+    i8,    ; 16: INTC
+    i32,    ; 17: INTG
+    i32,    ; 18: INTP
+    i32,    ; 19: INTW
+    i1,    ; 20: jumpin
+
+    ; dummy
+    i8*
+};
+
+; procedure body
+define void @P_YRMOVE()
+{
+    ; allocate frame
+    %.frame = alloca %Frame_YRMOVE, align 8
+
+    ; body
+    %t1 = getelementptr inbounds %Frame_YRMOVE, %Frame_YRMOVE* %.frame, i32 0, i32 20
+    store i1 0, i1* %t1
+    %t2 = getelementptr inbounds %Frame_YRMOVE, %Frame_YRMOVE* %.frame, i32 0, i32 15
+    store i1 0, i1* %t2
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3696
+;================================================================================
+; scope: YRMOVE_YRMHIT (level : 3)
+
+; activation record
+%Frame_YRMOVE_YRMHIT = type
+{
+    ; slink
+    %Frame_YRMOVE*    ; 0
+};
+
+; procedure body
+define void @P_YRMOVE_YRMHIT(%Frame_YRMOVE* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_YRMOVE_YRMHIT, align 8
+    %t1 = getelementptr inbounds %Frame_YRMOVE_YRMHIT, %Frame_YRMOVE_YRMHIT* %.frame, i32 0, i32 0
+    store %Frame_YRMOVE* %.slink, %Frame_YRMOVE** %t1
+
+    ; body
+    %t3 = getelementptr inbounds %Frame_YRMOVE_YRMHIT, %Frame_YRMOVE_YRMHIT* %.frame, i32 0, i32 0
+    %t4 = load %Frame_YRMOVE*, %Frame_YRMOVE** %t3
+    %t2 = getelementptr inbounds %Frame_YRMOVE, %Frame_YRMOVE* %t4, i32 0, i32 3
+    store i1 1, i1* %t2
+    %t6 = getelementptr inbounds %Frame_YRMOVE_YRMHIT, %Frame_YRMOVE_YRMHIT* %.frame, i32 0, i32 0
+    %t7 = load %Frame_YRMOVE*, %Frame_YRMOVE** %t6
+    %t5 = getelementptr inbounds %Frame_YRMOVE, %Frame_YRMOVE* %t7, i32 0, i32 13
+    %t10 = getelementptr inbounds %Frame_YRMOVE_YRMHIT, %Frame_YRMOVE_YRMHIT* %.frame, i32 0, i32 0
+    %t11 = load %Frame_YRMOVE*, %Frame_YRMOVE** %t10
+    %t9 = getelementptr inbounds %Frame_YRMOVE, %Frame_YRMOVE* %t11, i32 0, i32 19
+    %t8 = load i32, i32* %t9
+    %t12 = getelementptr inbounds %T_RF, %T_RF* @MOVES, i32 0, i32 %t8
+    %t13 = load %T_RM, %T_RM* %t12
+    store %T_RM %t13, %T_RM* %t5
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3714
+;================================================================================
+; scope: YRMOVE_YRMCOM (level : 3)
+
+; activation record
+%Frame_YRMOVE_YRMCOM = type
+{
+    ; slink
+    %Frame_YRMOVE*    ; 0
+};
+
+; procedure body
+define void @P_YRMOVE_YRMCOM(%Frame_YRMOVE* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_YRMOVE_YRMCOM, align 8
+    %t1 = getelementptr inbounds %Frame_YRMOVE_YRMCOM, %Frame_YRMOVE_YRMCOM* %.frame, i32 0, i32 0
+    store %Frame_YRMOVE* %.slink, %Frame_YRMOVE** %t1
+
+    ; body
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3738
+;================================================================================
+; scope: YRMOVE_YRMCAP (level : 3)
+
+; activation record
+%Frame_YRMOVE_YRMCAP = type
+{
+    ; slink
+    %Frame_YRMOVE*    ; 0
+};
+
+; procedure body
+define void @P_YRMOVE_YRMCAP(%Frame_YRMOVE* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_YRMOVE_YRMCAP, align 8
+    %t1 = getelementptr inbounds %Frame_YRMOVE_YRMCAP, %Frame_YRMOVE_YRMCAP* %.frame, i32 0, i32 0
+    store %Frame_YRMOVE* %.slink, %Frame_YRMOVE** %t1
+
+    ; body
+    %t3 = getelementptr inbounds %Frame_YRMOVE_YRMCAP, %Frame_YRMOVE_YRMCAP* %.frame, i32 0, i32 0
+    %t4 = load %Frame_YRMOVE*, %Frame_YRMOVE** %t3
+    %t2 = getelementptr inbounds %Frame_YRMOVE, %Frame_YRMOVE* %t4, i32 0, i32 0
+    store i1 1, i1* %t2
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3745
+;================================================================================
+; scope: YRMOVE_YRMCAS (level : 3)
+
+; activation record
+%Frame_YRMOVE_YRMCAS = type
+{
+    ; slink
+    %Frame_YRMOVE*    ; 0
+};
+
+; procedure body
+define void @P_YRMOVE_YRMCAS(%Frame_YRMOVE* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_YRMOVE_YRMCAS, align 8
+    %t1 = getelementptr inbounds %Frame_YRMOVE_YRMCAS, %Frame_YRMOVE_YRMCAS* %.frame, i32 0, i32 0
+    store %Frame_YRMOVE* %.slink, %Frame_YRMOVE** %t1
+
+    ; body
+    %t3 = getelementptr inbounds %Frame_YRMOVE_YRMCAS, %Frame_YRMOVE_YRMCAS* %.frame, i32 0, i32 0
+    %t4 = load %Frame_YRMOVE*, %Frame_YRMOVE** %t3
+    %t2 = getelementptr inbounds %Frame_YRMOVE, %Frame_YRMOVE* %t4, i32 0, i32 4
+    store i1 1, i1* %t2
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3752
+;================================================================================
+; scope: YRMOVE_YRMCPC (level : 3)
+
+; activation record
+%Frame_YRMOVE_YRMCPC = type
+{
+    ; slink
+    %Frame_YRMOVE*    ; 0
+};
+
+; procedure body
+define void @P_YRMOVE_YRMCPC(%Frame_YRMOVE* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_YRMOVE_YRMCPC, align 8
+    %t1 = getelementptr inbounds %Frame_YRMOVE_YRMCPC, %Frame_YRMOVE_YRMCPC* %.frame, i32 0, i32 0
+    store %Frame_YRMOVE* %.slink, %Frame_YRMOVE** %t1
+
+    ; body
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3765
+;================================================================================
+; scope: YRMOVE_YRMCQS (level : 3)
+
+; activation record
+%Frame_YRMOVE_YRMCQS = type
+{
+    ; slink
+    %Frame_YRMOVE*    ; 0
+};
+
+; procedure body
+define void @P_YRMOVE_YRMCQS(%Frame_YRMOVE* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_YRMOVE_YRMCQS, align 8
+    %t1 = getelementptr inbounds %Frame_YRMOVE_YRMCQS, %Frame_YRMOVE_YRMCQS* %.frame, i32 0, i32 0
+    store %Frame_YRMOVE* %.slink, %Frame_YRMOVE** %t1
+
+    ; body
+    %t3 = getelementptr inbounds %Frame_YRMOVE_YRMCQS, %Frame_YRMOVE_YRMCQS* %.frame, i32 0, i32 0
+    %t4 = load %Frame_YRMOVE*, %Frame_YRMOVE** %t3
+    %t2 = getelementptr inbounds %Frame_YRMOVE, %Frame_YRMOVE* %t4, i32 0, i32 6
+    store i1 1, i1* %t2
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3772
+;================================================================================
+; scope: YRMOVE_YRMLKQ (level : 3)
+
+; activation record
+%Frame_YRMOVE_YRMLKQ = type
+{
+    ; slink
+    %Frame_YRMOVE*    ; 0
+};
+
+; procedure body
+define void @P_YRMOVE_YRMLKQ(%Frame_YRMOVE* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_YRMOVE_YRMLKQ, align 8
+    %t1 = getelementptr inbounds %Frame_YRMOVE_YRMLKQ, %Frame_YRMOVE_YRMLKQ* %.frame, i32 0, i32 0
+    store %Frame_YRMOVE* %.slink, %Frame_YRMOVE** %t1
+
+    ; body
+    %t3 = getelementptr inbounds %Frame_YRMOVE_YRMLKQ, %Frame_YRMOVE_YRMLKQ* %.frame, i32 0, i32 0
+    %t4 = load %Frame_YRMOVE*, %Frame_YRMOVE** %t3
+    %t2 = getelementptr inbounds %Frame_YRMOVE, %Frame_YRMOVE* %t4, i32 0, i32 2
+    store i1 1, i1* %t2
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3783
+;================================================================================
+; scope: YRMOVE_YRMLRB (level : 3)
+
+; activation record
+%Frame_YRMOVE_YRMLRB = type
+{
+    ; slink
+    %Frame_YRMOVE*    ; 0
+};
+
+; procedure body
+define void @P_YRMOVE_YRMLRB(%Frame_YRMOVE* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_YRMOVE_YRMLRB, align 8
+    %t1 = getelementptr inbounds %Frame_YRMOVE_YRMLRB, %Frame_YRMOVE_YRMLRB* %.frame, i32 0, i32 0
+    store %Frame_YRMOVE* %.slink, %Frame_YRMOVE** %t1
+
+    ; body
+    %t3 = getelementptr inbounds %Frame_YRMOVE_YRMLRB, %Frame_YRMOVE_YRMLRB* %.frame, i32 0, i32 0
+    %t4 = load %Frame_YRMOVE*, %Frame_YRMOVE** %t3
+    %t2 = getelementptr inbounds %Frame_YRMOVE, %Frame_YRMOVE* %t4, i32 0, i32 1
+    store i1 1, i1* %t2
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3795
+;================================================================================
+; scope: YRMOVE_YRMLRK (level : 3)
+
+; activation record
+%Frame_YRMOVE_YRMLRK = type
+{
+    ; slink
+    %Frame_YRMOVE*    ; 0
+};
+
+; procedure body
+define void @P_YRMOVE_YRMLRK(%Frame_YRMOVE* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_YRMOVE_YRMLRK, align 8
+    %t1 = getelementptr inbounds %Frame_YRMOVE_YRMLRK, %Frame_YRMOVE_YRMLRK* %.frame, i32 0, i32 0
+    store %Frame_YRMOVE* %.slink, %Frame_YRMOVE** %t1
+
+    ; body
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3823
+;================================================================================
+; scope: YRMOVE_YRMNUL (level : 3)
+
+; activation record
+%Frame_YRMOVE_YRMNUL = type
+{
+    ; slink
+    %Frame_YRMOVE*    ; 0
+};
+
+; procedure body
+define void @P_YRMOVE_YRMNUL(%Frame_YRMOVE* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_YRMOVE_YRMNUL, align 8
+    %t1 = getelementptr inbounds %Frame_YRMOVE_YRMNUL, %Frame_YRMOVE_YRMNUL* %.frame, i32 0, i32 0
+    store %Frame_YRMOVE* %.slink, %Frame_YRMOVE** %t1
+
+    ; body
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3829
+;================================================================================
+; scope: YRMOVE_YRMPCM (level : 3)
+
+; activation record
+%Frame_YRMOVE_YRMPCM = type
+{
+    ; slink
+    %Frame_YRMOVE*    ; 0
+};
+
+; procedure body
+define void @P_YRMOVE_YRMPCM(%Frame_YRMOVE* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_YRMOVE_YRMPCM, align 8
+    %t1 = getelementptr inbounds %Frame_YRMOVE_YRMPCM, %Frame_YRMOVE_YRMPCM* %.frame, i32 0, i32 0
+    store %Frame_YRMOVE* %.slink, %Frame_YRMOVE** %t1
+
+    ; body
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3842
+;================================================================================
+; scope: YRMOVE_YRMPRO (level : 3)
+
+; activation record
+%Frame_YRMOVE_YRMPRO = type
+{
+    ; slink
+    %Frame_YRMOVE*    ; 0
+};
+
+; procedure body
+define void @P_YRMOVE_YRMPRO(%Frame_YRMOVE* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_YRMOVE_YRMPRO, align 8
+    %t1 = getelementptr inbounds %Frame_YRMOVE_YRMPRO, %Frame_YRMOVE_YRMPRO* %.frame, i32 0, i32 0
+    store %Frame_YRMOVE* %.slink, %Frame_YRMOVE** %t1
+
+    ; body
+    %t3 = getelementptr inbounds %Frame_YRMOVE_YRMPRO, %Frame_YRMOVE_YRMPRO* %.frame, i32 0, i32 0
+    %t4 = load %Frame_YRMOVE*, %Frame_YRMOVE** %t3
+    %t2 = getelementptr inbounds %Frame_YRMOVE, %Frame_YRMOVE* %t4, i32 0, i32 5
+    store i1 1, i1* %t2
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3855
+;================================================================================
+; scope: YRMOVE_YRMRKQ (level : 3)
+
+; activation record
+%Frame_YRMOVE_YRMRKQ = type
+{
+    ; slink
+    %Frame_YRMOVE*    ; 0
+};
+
+; procedure body
+define void @P_YRMOVE_YRMRKQ(%Frame_YRMOVE* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_YRMOVE_YRMRKQ, align 8
+    %t1 = getelementptr inbounds %Frame_YRMOVE_YRMRKQ, %Frame_YRMOVE_YRMRKQ* %.frame, i32 0, i32 0
+    store %Frame_YRMOVE* %.slink, %Frame_YRMOVE** %t1
+
+    ; body
+    %t3 = getelementptr inbounds %Frame_YRMOVE_YRMRKQ, %Frame_YRMOVE_YRMRKQ* %.frame, i32 0, i32 0
+    %t4 = load %Frame_YRMOVE*, %Frame_YRMOVE** %t3
+    %t2 = getelementptr inbounds %Frame_YRMOVE, %Frame_YRMOVE* %t4, i32 0, i32 8
+    store i1 1, i1* %t2
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3866
+;================================================================================
+; scope: YRMOVE_YRMRRB (level : 3)
+
+; activation record
+%Frame_YRMOVE_YRMRRB = type
+{
+    ; slink
+    %Frame_YRMOVE*    ; 0
+};
+
+; procedure body
+define void @P_YRMOVE_YRMRRB(%Frame_YRMOVE* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_YRMOVE_YRMRRB, align 8
+    %t1 = getelementptr inbounds %Frame_YRMOVE_YRMRRB, %Frame_YRMOVE_YRMRRB* %.frame, i32 0, i32 0
+    store %Frame_YRMOVE* %.slink, %Frame_YRMOVE** %t1
+
+    ; body
+    %t3 = getelementptr inbounds %Frame_YRMOVE_YRMRRB, %Frame_YRMOVE_YRMRRB* %.frame, i32 0, i32 0
+    %t4 = load %Frame_YRMOVE*, %Frame_YRMOVE** %t3
+    %t2 = getelementptr inbounds %Frame_YRMOVE, %Frame_YRMOVE* %t4, i32 0, i32 7
+    store i1 1, i1* %t2
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3878
+;================================================================================
+; scope: YRMOVE_YRMRRK (level : 3)
+
+; activation record
+%Frame_YRMOVE_YRMRRK = type
+{
+    ; slink
+    %Frame_YRMOVE*    ; 0
+};
+
+; procedure body
+define void @P_YRMOVE_YRMRRK(%Frame_YRMOVE* %.slink)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_YRMOVE_YRMRRK, align 8
+    %t1 = getelementptr inbounds %Frame_YRMOVE_YRMRRK, %Frame_YRMOVE_YRMRRK* %.frame, i32 0, i32 0
+    store %Frame_YRMOVE* %.slink, %Frame_YRMOVE** %t1
+
+    ; body
+    ; nop
+
+    ; epilogue
+    ret void
+}
+
+
+; line 3906
+;================================================================================
+; scope: YRMOVE_NCHIN (level : 3)
+
+; types
+%T_YRMOVE_NCHIN_subroutine_49 = type void (i8*)*
+
+; activation record
+%Frame_YRMOVE_NCHIN = type
+{
+    ; parameters
+    %T_SC,    ; 0: A
+    %T_YRMOVE_NCHIN_subroutine_49,    ; 1: YRMXXX
+
+    ; variables
+    i1,    ; 2: _fnvalue
+    i1,    ; 3: INTB
+
+    ; slink
+    %Frame_YRMOVE*    ; 4
+};
+
+; function body
+define i1 @F_YRMOVE_NCHIN(%Frame_YRMOVE* %.slink, %T_SC %A, %T_YRMOVE_NCHIN_subroutine_49 %YRMXXX)
+{
+    ; allocate frame
+    %.frame = alloca %Frame_YRMOVE_NCHIN, align 8
+    %t1 = getelementptr inbounds %Frame_YRMOVE_NCHIN, %Frame_YRMOVE_NCHIN* %.frame, i32 0, i32 4
+    store %Frame_YRMOVE* %.slink, %Frame_YRMOVE** %t1
+    %t2 = getelementptr inbounds %Frame_YRMOVE_NCHIN, %Frame_YRMOVE_NCHIN* %.frame, i32 0, i32 0
+    store %T_SC %A, %T_SC* %t2
+    %t3 = getelementptr inbounds %Frame_YRMOVE_NCHIN, %Frame_YRMOVE_NCHIN* %.frame, i32 0, i32 1
+    store %T_YRMOVE_NCHIN_subroutine_49 %YRMXXX, %T_YRMOVE_NCHIN_subroutine_49* %t3
+
+    ; body
+    %t4 = getelementptr inbounds %Frame_YRMOVE_NCHIN, %Frame_YRMOVE_NCHIN* %.frame, i32 0, i32 3
+    %t6 = icmp eq 0, true
+    store i1 %t6, i1* %t4
+    %t7 = getelementptr inbounds %Frame_YRMOVE_NCHIN, %Frame_YRMOVE_NCHIN* %.frame, i32 0, i32 2
+    %t9 = getelementptr inbounds %Frame_YRMOVE_NCHIN, %Frame_YRMOVE_NCHIN* %.frame, i32 0, i32 3
+    %t8 = load i1, i1* %t9
+    store i1 %t8, i1* %t7
+    ; nop
+
+    ; epilogue
+    %t10 = getelementptr inbounds %Frame_YRMOVE_NCHIN, %Frame_YRMOVE_NCHIN* %.frame, i32 0, i32 2
+    %t11 = load i1, i1* %t10
+    ret i1 %t11
+}
+
+
+;================================================================================
+; string literals
+
+@.str.62 = private unnamed_addr constant [11 x i8] c"          \00", align 1
+@.str.75 = private unnamed_addr constant [31 x i8] c"                              \00", align 1
+@.str.11 = private unnamed_addr constant [11 x i8] c"    *P    \00", align 1
+@.str.12 = private unnamed_addr constant [11 x i8] c"    *P/  1\00", align 1
+@.str.14 = private unnamed_addr constant [11 x i8] c"    *P/ R \00", align 1
+@.str.16 = private unnamed_addr constant [11 x i8] c"    *P/ R1\00", align 1
+@.str.18 = private unnamed_addr constant [11 x i8] c"    *P/KR \00", align 1
+@.str.20 = private unnamed_addr constant [11 x i8] c"    *P/KR1\00", align 1
+@.str.47 = private unnamed_addr constant [11 x i8] c"    -   R1\00", align 1
+@.str.48 = private unnamed_addr constant [11 x i8] c"    -  KR1\00", align 1
+@.str.5 = private unnamed_addr constant [11 x i8] c"    BLACK \00", align 1
+@.str.4 = private unnamed_addr constant [11 x i8] c"    WHITE \00", align 1
+@.str.59 = private unnamed_addr constant [11 x i8] c"   FROM   \00", align 1
+@.str.6 = private unnamed_addr constant [11 x i8] c"   NO ONE \00", align 1
+@.str.60 = private unnamed_addr constant [9 x i8] c"   TO   \00", align 1
+@.str.36 = private unnamed_addr constant [11 x i8] c"  R *P/KR1\00", align 1
+@.str.64 = private unnamed_addr constant [12 x i8] c" ENPASSANT.\00", align 1
+@.str.58 = private unnamed_addr constant [31 x i8] c" ENTER MOVE OR TYPE GO.       \00", align 1
+@.str.3 = private unnamed_addr constant [23 x i8] c" HI.  THIS IS CHESS .5\00", align 1
+@.str.74 = private unnamed_addr constant [31 x i8] c" ILLEGAL ENPASSANT FILE       \00", align 1
+@.str.63 = private unnamed_addr constant [10 x i8] c" TO MOVE.\00", align 1
+@.str.61 = private unnamed_addr constant [12 x i8] c" W RNBQKBNR\00", align 1
+@.str.76 = private unnamed_addr constant [11 x i8] c"-         \00", align 1
+@.str.77 = private unnamed_addr constant [11 x i8] c".         \00", align 1
+@.str.13 = private unnamed_addr constant [11 x i8] c"/  1*P    \00", align 1
+@.str.22 = private unnamed_addr constant [11 x i8] c"/  1*P/  1\00", align 1
+@.str.24 = private unnamed_addr constant [11 x i8] c"/  1*P/ R \00", align 1
+@.str.27 = private unnamed_addr constant [11 x i8] c"/  1*P/ R1\00", align 1
+@.str.31 = private unnamed_addr constant [11 x i8] c"/  1*P/KR \00", align 1
+@.str.34 = private unnamed_addr constant [11 x i8] c"/  1*P/KR1\00", align 1
+@.str.49 = private unnamed_addr constant [11 x i8] c"/  1-   R1\00", align 1
+@.str.51 = private unnamed_addr constant [11 x i8] c"/  1-  KR1\00", align 1
+@.str.15 = private unnamed_addr constant [11 x i8] c"/ R *P    \00", align 1
+@.str.25 = private unnamed_addr constant [11 x i8] c"/ R *P/  1\00", align 1
+@.str.23 = private unnamed_addr constant [11 x i8] c"/ R *P/ R \00", align 1
+@.str.29 = private unnamed_addr constant [11 x i8] c"/ R *P/ R1\00", align 1
+@.str.33 = private unnamed_addr constant [11 x i8] c"/ R *P/KR \00", align 1
+@.str.50 = private unnamed_addr constant [11 x i8] c"/ R -   R1\00", align 1
+@.str.52 = private unnamed_addr constant [11 x i8] c"/ R -  KR1\00", align 1
+@.str.17 = private unnamed_addr constant [11 x i8] c"/ R1*P    \00", align 1
+@.str.26 = private unnamed_addr constant [11 x i8] c"/ R1*P/  1\00", align 1
+@.str.28 = private unnamed_addr constant [11 x i8] c"/ R1*P/ R \00", align 1
+@.str.38 = private unnamed_addr constant [11 x i8] c"/ R1*P/ R1\00", align 1
+@.str.40 = private unnamed_addr constant [11 x i8] c"/ R1*P/KR \00", align 1
+@.str.43 = private unnamed_addr constant [11 x i8] c"/ R1*P/KR1\00", align 1
+@.str.53 = private unnamed_addr constant [11 x i8] c"/ R1-   R1\00", align 1
+@.str.55 = private unnamed_addr constant [11 x i8] c"/ R1-  KR1\00", align 1
+@.str.19 = private unnamed_addr constant [11 x i8] c"/KR *P    \00", align 1
+@.str.30 = private unnamed_addr constant [11 x i8] c"/KR *P/  1\00", align 1
+@.str.32 = private unnamed_addr constant [11 x i8] c"/KR *P/ R \00", align 1
+@.str.39 = private unnamed_addr constant [11 x i8] c"/KR *P/ R1\00", align 1
+@.str.41 = private unnamed_addr constant [11 x i8] c"/KR *P/KR \00", align 1
+@.str.45 = private unnamed_addr constant [11 x i8] c"/KR *P/KR1\00", align 1
+@.str.54 = private unnamed_addr constant [11 x i8] c"/KR -   R1\00", align 1
+@.str.56 = private unnamed_addr constant [11 x i8] c"/KR -  KR1\00", align 1
+@.str.21 = private unnamed_addr constant [11 x i8] c"/KR1*P    \00", align 1
+@.str.35 = private unnamed_addr constant [11 x i8] c"/KR1*P/  1\00", align 1
+@.str.37 = private unnamed_addr constant [11 x i8] c"/KR1*P/ R \00", align 1
+@.str.42 = private unnamed_addr constant [11 x i8] c"/KR1*P/ R1\00", align 1
+@.str.44 = private unnamed_addr constant [11 x i8] c"/KR1*P/KR \00", align 1
+@.str.46 = private unnamed_addr constant [11 x i8] c"/KR1*P/KR1\00", align 1
+@.str.57 = private unnamed_addr constant [11 x i8] c"/KR1-  KR1\00", align 1
+@.str.9 = private unnamed_addr constant [11 x i8] c"BLACK KING\00", align 1
+@.str.10 = private unnamed_addr constant [11 x i8] c"BLACK LONG\00", align 1
+@.str.70 = private unnamed_addr constant [11 x i8] c"K         \00", align 1
+@.str.71 = private unnamed_addr constant [11 x i8] c"KB        \00", align 1
+@.str.72 = private unnamed_addr constant [11 x i8] c"KN        \00", align 1
+@.str.73 = private unnamed_addr constant [11 x i8] c"KR        \00", align 1
+@.str.65 = private unnamed_addr constant [13 x i8] c"MOVE NUMBER \00", align 1
+@.str.69 = private unnamed_addr constant [11 x i8] c"Q         \00", align 1
+@.str.68 = private unnamed_addr constant [11 x i8] c"QB        \00", align 1
+@.str.67 = private unnamed_addr constant [11 x i8] c"QN        \00", align 1
+@.str.66 = private unnamed_addr constant [11 x i8] c"QR        \00", align 1
+@.str.7 = private unnamed_addr constant [11 x i8] c"WHITE KING\00", align 1
+@.str.8 = private unnamed_addr constant [11 x i8] c"WHITE LONG\00", align 1
+@.str.1 = private unnamed_addr constant [6 x i8] c"input\00", align 1
+@.str.2 = private unnamed_addr constant [7 x i8] c"output\00", align 1
+
+
+;================================================================================
+; metadata
+
+!llvm.dbg.cu = !{!279}
+!llvm.module.flags = !{!280, !281}
+!llvm.ident = !{!278}
+
+!0 = !DIFile(filename: "chess05ISO.pas", directory: "C:\Users\lemo\work\compilers\lpc\test")
+!1 = !DIBasicType(name: "boolean", size: 8, encoding: DW_ATE_boolean)
+!2 = !DIBasicType(name: "char", size: 8, encoding: DW_ATE_unsigned_char)
+!3 = !DIBasicType(name: "integer", size: 32, encoding: DW_ATE_signed)
+!4 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 0, baseType: !5, size: 64)
+!5 = !DIBasicType(name: "void", size: 0)
+!6 = !DIBasicType(name: "real", size: 64, encoding: DW_ATE_float)
+!7 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "text", file: !0, line: 0, baseType: null, size: 64)
+!8 = !DICompositeType(tag: DW_TAG_array_type, name: "arraytmofrs", file: !0, line: 146, baseType: !9, size: 192, elements: !24)
+!9 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "RS", file: !0, line: 129, size: 64, flags: DIFlagTypePassByValue, elements: !22)
+!10 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 131, baseType: !11, size: 64, elements: !16)
+!11 = !DICompositeType(tag: DW_TAG_array_type, name: "SX", file: !0, line: 77, baseType: !14, size: 32, elements: !13)
+!12 = !DISubrange(count: 32)
+!13 = !{!12}
+!14 = !DIBasicType(size: 1, encoding: DW_ATE_boolean)
+!15 = !DISubrange(count: 2)
+!16 = !{!15}
+!17 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 132, baseType: !3, size: 64, elements: !19)
+!18 = !DISubrange(count: 2)
+!19 = !{!18}
+!20 = !DIDerivedType(tag: DW_TAG_member, name: "RSSS", scope: !9, file: !0, line: 131, baseType: !10, size: 64, offset: 0)
+!21 = !DIDerivedType(tag: DW_TAG_member, name: "RSTI", scope: !9, file: !0, line: 132, baseType: !17, size: 64, offset: 0)
+!22 = !{!20,!21}
+!23 = !DISubrange(count: 3)
+!24 = !{!23}
+!25 = !DICompositeType(tag: DW_TAG_array_type, name: "arraytkofrs", file: !0, line: 147, baseType: !9, size: 1088, elements: !27)
+!26 = !DISubrange(count: 17)
+!27 = !{!26}
+!28 = !DICompositeType(tag: DW_TAG_array_type, name: "arraytfofrs", file: !0, line: 150, baseType: !9, size: 512, elements: !30)
+!29 = !DISubrange(count: 8)
+!30 = !{!29}
+!31 = !DICompositeType(tag: DW_TAG_array_type, name: "arraytkoftw", file: !0, line: 148, baseType: !32, size: 544, elements: !34)
+!32 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!33 = !DISubrange(count: 17)
+!34 = !{!33}
+!35 = !DICompositeType(tag: DW_TAG_array_type, name: "arraytpofte", file: !0, line: 149, baseType: !36, size: 416, elements: !38)
+!36 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
+!37 = !DISubrange(count: 13)
+!38 = !{!37}
+!39 = !DICompositeType(tag: DW_TAG_array_type, name: "arraytqofrs", file: !0, line: 152, baseType: !9, size: 256, elements: !41)
+!40 = !DISubrange(count: 4)
+!41 = !{!40}
+!42 = !DICompositeType(tag: DW_TAG_array_type, name: "arraytrofrs", file: !0, line: 151, baseType: !9, size: 512, elements: !44)
+!43 = !DISubrange(count: 8)
+!44 = !{!43}
+!45 = !DICompositeType(tag: DW_TAG_array_type, name: "RX", file: !0, line: 135, baseType: !9, size: 4096, elements: !47)
+!46 = !DISubrange(count: 64)
+!47 = !{!46}
+!48 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "RB", file: !0, line: 82, size: 2304, flags: DIFlagTypePassByValue, elements: !71)
+!49 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
+!50 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!51 = !DICompositeType(tag: DW_TAG_array_type, name: "SQ", file: !0, line: 75, baseType: !54, size: 32, elements: !53)
+!52 = !DISubrange(count: 4)
+!53 = !{!52}
+!54 = !DIBasicType(size: 1, encoding: DW_ATE_boolean)
+!55 = !DICompositeType(tag: DW_TAG_array_type, name: "RC", file: !0, line: 81, baseType: !56, size: 2048, elements: !58)
+!56 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
+!57 = !DISubrange(count: 64)
+!58 = !{!57}
+!59 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 89, baseType: !60, size: 2048, elements: !64)
+!60 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 89, baseType: !56, size: 256, elements: !62)
+!61 = !DISubrange(count: 8)
+!62 = !{!61}
+!63 = !DISubrange(count: 8)
+!64 = !{!63}
+!65 = !DIDerivedType(tag: DW_TAG_member, name: "RBTM", scope: !48, file: !0, line: 83, baseType: !49, size: 32, offset: 0)
+!66 = !DIDerivedType(tag: DW_TAG_member, name: "RBTS", scope: !48, file: !0, line: 84, baseType: !50, size: 32, offset: 32)
+!67 = !DIDerivedType(tag: DW_TAG_member, name: "RBTI", scope: !48, file: !0, line: 85, baseType: !3, size: 32, offset: 64)
+!68 = !DIDerivedType(tag: DW_TAG_member, name: "RBSQ", scope: !48, file: !0, line: 86, baseType: !51, size: 32, offset: 96)
+!69 = !DIDerivedType(tag: DW_TAG_member, name: "RBIS", scope: !48, file: !0, line: 88, baseType: !55, size: 2048, offset: 128)
+!70 = !DIDerivedType(tag: DW_TAG_member, name: "RBIRF", scope: !48, file: !0, line: 89, baseType: !59, size: 2048, offset: 128)
+!71 = !{!65,!66,!67,!68,!69,!70}
+!72 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 168, baseType: !73, size: 640, elements: !75)
+!73 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!74 = !DISubrange(count: 20)
+!75 = !{!74}
+!76 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
+!77 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
+!78 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 280, baseType: !9, size: 1024, elements: !80)
+!79 = !DISubrange(count: 16)
+!80 = !{!79}
+!81 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
+!82 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 199, baseType: !3, size: 256, elements: !84)
+!83 = !DISubrange(count: 8)
+!84 = !{!83}
+!85 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
+!86 = !DICompositeType(tag: DW_TAG_array_type, name: "RJ", file: !0, line: 94, baseType: !2, size: 592, elements: !88)
+!87 = !DISubrange(count: 74)
+!88 = !{!87}
+!89 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 176, baseType: !32, size: 576, elements: !91)
+!90 = !DISubrange(count: 18)
+!91 = !{!90}
+!92 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!93 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!94 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 177, baseType: !95, size: 8160, elements: !114)
+!95 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "RM", file: !0, line: 110, size: 480, flags: DIFlagTypePassByValue, elements: !112)
+!96 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!97 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
+!98 = !DIDerivedType(tag: DW_TAG_member, name: "RMFR", scope: !95, file: !0, line: 111, baseType: !96, size: 32, offset: 0)
+!99 = !DIDerivedType(tag: DW_TAG_member, name: "RMTO", scope: !95, file: !0, line: 112, baseType: !96, size: 32, offset: 32)
+!100 = !DIDerivedType(tag: DW_TAG_member, name: "RMCP", scope: !95, file: !0, line: 113, baseType: !56, size: 32, offset: 64)
+!101 = !DIDerivedType(tag: DW_TAG_member, name: "RMCA", scope: !95, file: !0, line: 114, baseType: !1, size: 8, offset: 96)
+!102 = !DIDerivedType(tag: DW_TAG_member, name: "RMAC", scope: !95, file: !0, line: 115, baseType: !1, size: 8, offset: 104)
+!103 = !DIDerivedType(tag: DW_TAG_member, name: "RMCH", scope: !95, file: !0, line: 116, baseType: !1, size: 8, offset: 112)
+!104 = !DIDerivedType(tag: DW_TAG_member, name: "RMMT", scope: !95, file: !0, line: 117, baseType: !1, size: 8, offset: 120)
+!105 = !DIDerivedType(tag: DW_TAG_member, name: "RMIL", scope: !95, file: !0, line: 118, baseType: !1, size: 8, offset: 128)
+!106 = !DIDerivedType(tag: DW_TAG_member, name: "RMSU", scope: !95, file: !0, line: 119, baseType: !1, size: 8, offset: 136)
+!107 = !DIDerivedType(tag: DW_TAG_member, name: "RMPR", scope: !95, file: !0, line: 120, baseType: !1, size: 8, offset: 144)
+!108 = !DIDerivedType(tag: DW_TAG_member, name: "RMOO", scope: !95, file: !0, line: 122, baseType: !1, size: 8, offset: 152)
+!109 = !DIDerivedType(tag: DW_TAG_member, name: "RMEP", scope: !95, file: !0, line: 123, baseType: !1, size: 8, offset: 160)
+!110 = !DIDerivedType(tag: DW_TAG_member, name: "RMQS", scope: !95, file: !0, line: 124, baseType: !1, size: 8, offset: 160)
+!111 = !DIDerivedType(tag: DW_TAG_member, name: "RMPP", scope: !95, file: !0, line: 126, baseType: !97, size: 32, offset: 160)
+!112 = !{!98,!99,!100,!101,!102,!103,!104,!105,!106,!107,!108,!109,!110,!111}
+!113 = !DISubrange(count: 17)
+!114 = !{!113}
+!115 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 184, baseType: !3, size: 96, elements: !117)
+!116 = !DISubrange(count: 3)
+!117 = !{!116}
+!118 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 174, baseType: !73, size: 544, elements: !120)
+!119 = !DISubrange(count: 17)
+!120 = !{!119}
+!121 = !DICompositeType(tag: DW_TAG_array_type, name: "RF", file: !0, line: 144, baseType: !95, size: 240000, elements: !123)
+!122 = !DISubrange(count: 500)
+!123 = !{!122}
+!124 = !DICompositeType(tag: DW_TAG_array_type, name: "RN", file: !0, line: 93, baseType: !2, size: 240, elements: !126)
+!125 = !DISubrange(count: 30)
+!126 = !{!125}
+!127 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 175, baseType: !3, size: 544, elements: !129)
+!128 = !DISubrange(count: 17)
+!129 = !{!128}
+!130 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 283, baseType: !49, size: 96, elements: !132)
+!131 = !DISubrange(count: 3)
+!132 = !{!131}
+!133 = !DIBasicType(name: "enum", size: 32, encoding: DW_ATE_signed)
+!134 = !DICompositeType(tag: DW_TAG_array_type, name: "RA", file: !0, line: 92, baseType: !2, size: 80, elements: !136)
+!135 = !DISubrange(count: 10)
+!136 = !{!135}
+!137 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "RD", file: !0, line: 95, size: 40, flags: DIFlagTypePassByValue, elements: !143)
+!138 = !DIDerivedType(tag: DW_TAG_member, name: "RDPC", scope: !137, file: !0, line: 97, baseType: !1, size: 8, offset: 0)
+!139 = !DIDerivedType(tag: DW_TAG_member, name: "RDSL", scope: !137, file: !0, line: 98, baseType: !1, size: 8, offset: 8)
+!140 = !DIDerivedType(tag: DW_TAG_member, name: "RDKQ", scope: !137, file: !0, line: 99, baseType: !1, size: 8, offset: 16)
+!141 = !DIDerivedType(tag: DW_TAG_member, name: "RDNB", scope: !137, file: !0, line: 100, baseType: !1, size: 8, offset: 24)
+!142 = !DIDerivedType(tag: DW_TAG_member, name: "RDRK", scope: !137, file: !0, line: 101, baseType: !1, size: 8, offset: 32)
+!143 = !{!138,!139,!140,!141,!142}
+!144 = !DICompositeType(tag: DW_TAG_array_type, name: "RE", file: !0, line: 143, baseType: !73, size: 16000, elements: !146)
+!145 = !DISubrange(count: 500)
+!146 = !{!145}
+!147 = distinct !DICompositeType(tag: DW_TAG_structure_type, name: "RY", file: !0, line: 137, size: 88, flags: DIFlagTypePassByValue, elements: !151)
+!148 = !DIDerivedType(tag: DW_TAG_member, name: "RYLS", scope: !147, file: !0, line: 138, baseType: !137, size: 40, offset: 0)
+!149 = !DIDerivedType(tag: DW_TAG_member, name: "RYCH", scope: !147, file: !0, line: 139, baseType: !2, size: 8, offset: 40)
+!150 = !DIDerivedType(tag: DW_TAG_member, name: "RYRS", scope: !147, file: !0, line: 140, baseType: !137, size: 40, offset: 48)
+!151 = !{!148,!149,!150}
+!152 = !DICompositeType(tag: DW_TAG_array_type, name: "SC", file: !0, line: 73, baseType: !155, size: 256, elements: !154)
+!153 = !DISubrange(count: 256)
+!154 = !{!153}
+!155 = !DIBasicType(size: 1, encoding: DW_ATE_boolean)
+!156 = !DICompositeType(tag: DW_TAG_array_type, name: "SF", file: !0, line: 74, baseType: !159, size: 32, elements: !158)
+!157 = !DISubrange(count: 8)
+!158 = !{!157}
+!159 = !DIBasicType(size: 1, encoding: DW_ATE_boolean)
+!160 = !DICompositeType(tag: DW_TAG_array_type, name: "SR", file: !0, line: 76, baseType: !163, size: 32, elements: !162)
+!161 = !DISubrange(count: 8)
+!162 = !{!161}
+!163 = !DIBasicType(size: 1, encoding: DW_ATE_boolean)
+!164 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 179, baseType: !85, size: 544, elements: !166)
+!165 = !DISubrange(count: 17)
+!166 = !{!165}
+!167 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 284, baseType: !147, size: 4136, elements: !169)
+!168 = !DISubrange(count: 47)
+!169 = !{!168}
+!170 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!171 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!172 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!173 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!174 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 162, baseType: !9, size: 832, elements: !176)
+!175 = !DISubrange(count: 13)
+!176 = !{!175}
+!177 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!178 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!179 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 237, baseType: !171, size: 7648, elements: !181)
+!180 = !DISubrange(count: 239)
+!181 = !{!180}
+!182 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 245, baseType: !95, size: 1920, elements: !184)
+!183 = !DISubrange(count: 4)
+!184 = !{!183}
+!185 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 235, baseType: !1, size: 104, elements: !187)
+!186 = !DISubrange(count: 13)
+!187 = !{!186}
+!188 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 247, baseType: !11, size: 2048, elements: !190)
+!189 = !DISubrange(count: 64)
+!190 = !{!189}
+!191 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 248, baseType: !2, size: 16, elements: !193)
+!192 = !DISubrange(count: 2)
+!193 = !{!192}
+!194 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 249, baseType: !171, size: 512, elements: !196)
+!195 = !DISubrange(count: 16)
+!196 = !{!195}
+!197 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 251, baseType: !2, size: 32, elements: !199)
+!198 = !DISubrange(count: 4)
+!199 = !{!198}
+!200 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 252, baseType: !201, size: 384, elements: !205)
+!201 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 252, baseType: !56, size: 96, elements: !203)
+!202 = !DISubrange(count: 3)
+!203 = !{!202}
+!204 = !DISubrange(count: 4)
+!205 = !{!204}
+!206 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 254, baseType: !50, size: 3840, elements: !208)
+!207 = !DISubrange(count: 120)
+!208 = !{!207}
+!209 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 255, baseType: !134, size: 240, elements: !211)
+!210 = !DISubrange(count: 3)
+!211 = !{!210}
+!212 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 256, baseType: !76, size: 96, elements: !214)
+!213 = !DISubrange(count: 3)
+!214 = !{!213}
+!215 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 257, baseType: !73, size: 96, elements: !217)
+!216 = !DISubrange(count: 3)
+!217 = !{!216}
+!218 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 258, baseType: !2, size: 104, elements: !220)
+!219 = !DISubrange(count: 13)
+!220 = !{!219}
+!221 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 259, baseType: !49, size: 416, elements: !223)
+!222 = !DISubrange(count: 13)
+!223 = !{!222}
+!224 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 260, baseType: !77, size: 416, elements: !226)
+!225 = !DISubrange(count: 13)
+!226 = !{!225}
+!227 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 261, baseType: !73, size: 416, elements: !229)
+!228 = !DISubrange(count: 13)
+!229 = !{!228}
+!230 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 262, baseType: !134, size: 320, elements: !232)
+!231 = !DISubrange(count: 4)
+!232 = !{!231}
+!233 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 263, baseType: !96, size: 128, elements: !235)
+!234 = !DISubrange(count: 4)
+!235 = !{!234}
+!236 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 264, baseType: !237, size: 2048, elements: !241)
+!237 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 264, baseType: !96, size: 256, elements: !239)
+!238 = !DISubrange(count: 8)
+!239 = !{!238}
+!240 = !DISubrange(count: 8)
+!241 = !{!240}
+!242 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 265, baseType: !81, size: 2048, elements: !244)
+!243 = !DISubrange(count: 64)
+!244 = !{!243}
+!245 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 266, baseType: !172, size: 2048, elements: !247)
+!246 = !DISubrange(count: 64)
+!247 = !{!246}
+!248 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 267, baseType: !133, size: 2048, elements: !250)
+!249 = !DISubrange(count: 64)
+!250 = !{!249}
+!251 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 268, baseType: !177, size: 2048, elements: !253)
+!252 = !DISubrange(count: 64)
+!253 = !{!252}
+!254 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 270, baseType: !178, size: 2048, elements: !256)
+!255 = !DISubrange(count: 64)
+!256 = !{!255}
+!257 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 272, baseType: !2, size: 48, elements: !259)
+!258 = !DISubrange(count: 6)
+!259 = !{!258}
+!260 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 273, baseType: !261, size: 576, elements: !265)
+!261 = !DICompositeType(tag: DW_TAG_array_type, file: !0, line: 273, baseType: !56, size: 96, elements: !263)
+!262 = !DISubrange(count: 3)
+!263 = !{!262}
+!264 = !DISubrange(count: 6)
+!265 = !{!264}
+!266 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 2829, baseType: !268, size: 64)
+!267 = !{null}
+!268 = !DISubroutineType(types: !267)
+!269 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 3338, baseType: !271, size: 64)
+!270 = !{null}
+!271 = !DISubroutineType(types: !270)
+!272 = !DIDerivedType(tag: DW_TAG_pointer_type, file: !0, line: 3910, baseType: !274, size: 64)
+!273 = !{null}
+!274 = !DISubroutineType(types: !273)
+!275 = !{!1,!2,!3,!4,!5,!6,!7,!8,!9,!10,!11,!17,!25,!28,!31,!32,!35,!36,!39,!42,!45,!48,!49,!50,!51,!55,!56,!59,!60,!72,!73,!76,!77,!78,!81,!82,!85,!86,!89,!92,!93,!94,!95,!96,!97,!115,!118,!121,!124,!127,!130,!133,!134,!137,!144,!147,!152,!156,!160,!164,!167,!170,!171,!172,!173,!174,!177,!178,!179,!182,!185,!188,!191,!194,!197,!200,!201,!206,!209,!212,!215,!218,!221,!224,!227,!230,!233,!236,!237,!242,!245,!248,!251,!254,!257,!260,!261,!266,!268,!269,!271,!272,!274}
+!276 = !{}
+!277 = !{}
+!278 = !{!"LPC 1.1"}
+!279 = distinct !DICompileUnit(language: DW_LANG_Pascal83, file: !0, producer: "LPC 1.1", isOptimized: true, runtimeVersion: 0, emissionKind: FullDebug, enums: !276, retainedTypes: !275, globals: !277, nameTableKind: None)
+!280 = !{i32 2, !"CodeView", i32 1}
+!281 = !{i32 2, !"Debug Info Version", i32 3}
+
