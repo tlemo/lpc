@@ -57,6 +57,10 @@ define void @P_()
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
 
+    ; body
+    call void @P_InitializeData()
+    ; nop
+
     ; cleanup
     %t3 = load %T_text, %T_text* @_output
     call void @_CloseFile(i8* %t3)
@@ -89,6 +93,20 @@ define void @P_CalculatePayment()
     ; allocate frame
     %.frame = alloca %Frame_CalculatePayment, align 8
 
+    ; body
+    %t1 = getelementptr inbounds %Frame_CalculatePayment, %Frame_CalculatePayment* %.frame, i32 0, i32 1
+    store double 1.00000, double* %t1
+    %t4 = load double, double* @OriginalLoan
+    %t5 = load double, double* @InterestRate
+    %t3 = fmul double %t4, %t5
+    %t9 = getelementptr inbounds %Frame_CalculatePayment, %Frame_CalculatePayment* %.frame, i32 0, i32 1
+    %t8 = load double, double* %t9
+    %t7 = fdiv double 1.00000, %t8
+    %t6 = fsub double 1.00000, %t7
+    %t2 = fdiv double %t3, %t6
+    store double %t2, double* @Payment
+    ; nop
+
     ; epilogue
     ret void
 }
@@ -111,6 +129,31 @@ define void @P_InitializeData()
     ; allocate frame
     %.frame = alloca %Frame_InitializeData, align 8
 
+    ; body
+    %t1 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t1, i32 0, i32 0, i8* getelementptr inbounds ([31 x i8], [31 x i8]* @.str.3, i32 0, i32 0), i32 30)
+    call void @_WriteLn(i8* %t1)
+    %t2 = load %T_text, %T_text* @_output
+    call void @_WriteLn(i8* %t2)
+    %t3 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([47 x i8], [47 x i8]* @.str.4, i32 0, i32 0), i32 46)
+    %t4 = load double, double* @OriginalLoan
+    store double %t4, double* @Balance
+    %t5 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([47 x i8], [47 x i8]* @.str.5, i32 0, i32 0), i32 46)
+    %t7 = load double, double* @InterestRate
+    %t6 = fdiv double %t7, 1200.00
+    store double %t6, double* @InterestRate
+    %t8 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t8, i32 0, i32 0, i8* getelementptr inbounds ([47 x i8], [47 x i8]* @.str.6, i32 0, i32 0), i32 46)
+    %t9 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t9, i32 0, i32 0, i8* getelementptr inbounds ([47 x i8], [47 x i8]* @.str.7, i32 0, i32 0), i32 46)
+    %t10 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t10, i32 0, i32 0, i8* getelementptr inbounds ([47 x i8], [47 x i8]* @.str.8, i32 0, i32 0), i32 46)
+    call void @P_CalculatePayment()
+    store double 0.000000, double* @AnnualAccumInterest
+    ; nop
+
     ; epilogue
     ret void
 }
@@ -132,6 +175,30 @@ define void @P_PrintAnnualHeader()
 {
     ; allocate frame
     %.frame = alloca %Frame_PrintAnnualHeader, align 8
+
+    ; body
+    %t1 = load %T_text, %T_text* @_output
+    call void @_WriteLn(i8* %t1)
+    %t2 = load %T_text, %T_text* @_output
+    call void @_WriteLn(i8* %t2)
+    %t3 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([24 x i8], [24 x i8]* @.str.9, i32 0, i32 0), i32 23)
+    %t4 = load double, double* @OriginalLoan
+    call void @_WriteReal(i8* %t3, i32 10, i32 2, double %t4)
+    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([20 x i8], [20 x i8]* @.str.10, i32 0, i32 0), i32 19)
+    %t6 = load double, double* @InterestRate
+    %t5 = fmul double 1200.00, %t6
+    call void @_WriteReal(i8* %t3, i32 6, i32 2, double %t5)
+    call void @_WriteChar(i8* %t3, i32 0, i32 0, i8 37)
+    call void @_WriteLn(i8* %t3)
+    %t7 = load %T_text, %T_text* @_output
+    call void @_WriteLn(i8* %t7)
+    %t8 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t8, i32 0, i32 0, i8* getelementptr inbounds ([46 x i8], [46 x i8]* @.str.11, i32 0, i32 0), i32 45)
+    call void @_WriteLn(i8* %t8)
+    %t9 = load %T_text, %T_text* @_output
+    call void @_WriteLn(i8* %t9)
+    ; nop
 
     ; epilogue
     ret void
@@ -159,6 +226,9 @@ define void @P_CalculateAndPrint()
     ; allocate frame
     %.frame = alloca %Frame_CalculateAndPrint, align 8
 
+    ; body
+    ; nop
+
     ; epilogue
     ret void
 }
@@ -181,6 +251,25 @@ define void @P_PrintAnnualSummary()
     ; allocate frame
     %.frame = alloca %Frame_PrintAnnualSummary, align 8
 
+    ; body
+    %t1 = load %T_text, %T_text* @_output
+    call void @_WriteLn(i8* %t1)
+    %t2 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t2, i32 0, i32 0, i8* getelementptr inbounds ([20 x i8], [20 x i8]* @.str.12, i32 0, i32 0), i32 19)
+    %t3 = load i32, i32* @Year
+    call void @_WriteInteger(i8* %t2, i32 5, i32 0, i32 %t3)
+    call void @_WriteString(i8* %t2, i32 0, i32 0, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.13, i32 0, i32 0), i32 3)
+    %t4 = load double, double* @AnnualAccumInterest
+    call void @_WriteReal(i8* %t2, i32 10, i32 2, double %t4)
+    call void @_WriteLn(i8* %t2)
+    store double 0.000000, double* @AnnualAccumInterest
+    %t6 = load i32, i32* @Year
+    %t5 = add i32 %t6, 1
+    store i32 %t5, i32* @Year
+    %t7 = load %T_text, %T_text* @_output
+    call void @_WriteLn(i8* %t7)
+    ; nop
+
     ; epilogue
     ret void
 }
@@ -189,6 +278,17 @@ define void @P_PrintAnnualSummary()
 ;================================================================================
 ; string literals
 
+@.str.10 = private unnamed_addr constant [20 x i8] c"   Interest rate = \00", align 1
+@.str.3 = private unnamed_addr constant [31 x i8] c"   Pascal amortization program\00", align 1
+@.str.13 = private unnamed_addr constant [4 x i8] c" = \00", align 1
+@.str.4 = private unnamed_addr constant [47 x i8] c"Enter amount borrowed                         \00", align 1
+@.str.5 = private unnamed_addr constant [47 x i8] c"Enter interest rate as percentage (i.e. 13.5) \00", align 1
+@.str.7 = private unnamed_addr constant [47 x i8] c"Enter month of first payment (i.e. 5 for May) \00", align 1
+@.str.6 = private unnamed_addr constant [47 x i8] c"Enter number of years of payoff               \00", align 1
+@.str.8 = private unnamed_addr constant [47 x i8] c"Enter year of first payment (i.e. 1991)       \00", align 1
+@.str.11 = private unnamed_addr constant [46 x i8] c"Month    payment  interest    princ   balance\00", align 1
+@.str.9 = private unnamed_addr constant [24 x i8] c"Original loan amount = \00", align 1
+@.str.12 = private unnamed_addr constant [20 x i8] c"Total interest for \00", align 1
 @.str.1 = private unnamed_addr constant [7 x i8] c"_input\00", align 1
 @.str.2 = private unnamed_addr constant [8 x i8] c"_output\00", align 1
 

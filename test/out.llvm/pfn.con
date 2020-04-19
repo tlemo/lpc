@@ -12,16 +12,7 @@ compiling pass 2 (target = llvm)
 -----------------------------------------------------
 
 Invoking LLC ...
-Exit code: 0
-
-Linking...
-Exit code: 0
-
-running the executable
------------------------------------------------------
-openFile(0)
-openFile(1)
-closeFile()
-closeFile()
-
-Exit code: 0
+llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\pfn.ll:100:63: error: expected value token
+    call void @P_foo_bar1(%Frame_foo* %.frame, i32 0,  %.dummy)
+                                                              ^
+Exit code: 1

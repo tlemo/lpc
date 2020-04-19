@@ -9,16 +9,7 @@ compiling pass 2 (target = llvm)
 -----------------------------------------------------
 
 Invoking LLC ...
-Exit code: 0
-
-Linking...
-Exit code: 0
-
-running the executable
------------------------------------------------------
-openFile(0)
-openFile(1)
-closeFile()
-closeFile()
-
-Exit code: 0
+llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\intrinsics.ll:54:57: error: expected value token
+    call void @_WriteReal(i8* %t3, i32 0, i32 0, double )
+                                                        ^
+Exit code: 1

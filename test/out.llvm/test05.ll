@@ -58,11 +58,30 @@ define void @P_()
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
 
-    ; cleanup
+    ; body
     %t3 = load %T_text, %T_text* @_output
-    call void @_CloseFile(i8* %t3)
-    %t4 = load %T_text, %T_text* @_input
-    call void @_CloseFile(i8* %t4)
+    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.3, i32 0, i32 0), i32 12)
+    call void @_WriteLn(i8* %t3)
+    %t4 = getelementptr inbounds %T_array_4, %T_array_4* @x, i32 0, i32 3
+    %t5 = getelementptr inbounds %T_array_5, %T_array_5* %t4, i32 0, i32 2
+    %t6 = getelementptr inbounds %T_array_6, %T_array_6* %t5, i32 0, i32 97
+    %t7 = getelementptr inbounds %T_array_7, %T_array_7* %t6, i32 0, i32 4
+    store i8 33, i8* %t7
+    %t8 = getelementptr inbounds %T_t1, %T_t1* @y, i32 0, i32 2
+    %t9 = getelementptr inbounds %T_array_3, %T_array_3* %t8, i32 0, i32 120
+009D1C00    store i32 , i32* %t9
+    %t15 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t15, i32 0, i32 0, i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.4, i32 0, i32 0), i32 9)
+    %t16 = call i32 @F_outter(i32 7)
+    call void @_WriteInteger(i8* %t15, i32 0, i32 0, i32 %t16)
+    call void @_WriteLn(i8* %t15)
+    ; nop
+
+    ; cleanup
+    %t17 = load %T_text, %T_text* @_output
+    call void @_CloseFile(i8* %t17)
+    %t18 = load %T_text, %T_text* @_input
+    call void @_CloseFile(i8* %t18)
 
     ; epilogue
     ret void
@@ -94,10 +113,15 @@ define i32 @F_outter(i32 %x)
     %t1 = getelementptr inbounds %Frame_outter, %Frame_outter* %.frame, i32 0, i32 0
     store i32 %x, i32* %t1
 
-    ; epilogue
+    ; body
     %t2 = getelementptr inbounds %Frame_outter, %Frame_outter* %.frame, i32 0, i32 1
-    %t3 = load i32, i32* %t2
-    ret i32 %t3
+    store i32 1, i32* %t2
+    ; nop
+
+    ; epilogue
+    %t3 = getelementptr inbounds %Frame_outter, %Frame_outter* %.frame, i32 0, i32 1
+    %t4 = load i32, i32* %t3
+    ret i32 %t4
 }
 
 
@@ -128,10 +152,26 @@ define i32 @F_outter_inner(%Frame_outter* %.slink, i32 %x)
     %t2 = getelementptr inbounds %Frame_outter_inner, %Frame_outter_inner* %.frame, i32 0, i32 0
     store i32 %x, i32* %t2
 
-    ; epilogue
+    ; body
     %t3 = getelementptr inbounds %Frame_outter_inner, %Frame_outter_inner* %.frame, i32 0, i32 1
-    %t4 = load i32, i32* %t3
-    ret i32 %t4
+    %t6 = getelementptr inbounds %Frame_outter_inner, %Frame_outter_inner* %.frame, i32 0, i32 0
+    %t5 = load i32, i32* %t6
+    %t4 = mul i32 %t5, 2
+    store i32 %t4, i32* %t3
+    %t8 = getelementptr inbounds %Frame_outter_inner, %Frame_outter_inner* %.frame, i32 0, i32 2
+    %t9 = load %Frame_outter*, %Frame_outter** %t8
+    %t7 = getelementptr inbounds %Frame_outter, %Frame_outter* %t9, i32 0, i32 1
+    store i32 7, i32* %t7
+    %t12 = getelementptr inbounds %Frame_outter_inner, %Frame_outter_inner* %.frame, i32 0, i32 0
+    %t11 = load i32, i32* %t12
+    %t10 = add i32 100, %t11
+    call void @P_outter_inner_setOutter(%Frame_outter_inner* %.frame, i32 %t10)
+    ; nop
+
+    ; epilogue
+    %t13 = getelementptr inbounds %Frame_outter_inner, %Frame_outter_inner* %.frame, i32 0, i32 1
+    %t14 = load i32, i32* %t13
+    ret i32 %t14
 }
 
 
@@ -159,6 +199,17 @@ define void @P_outter_inner_setOutter(%Frame_outter_inner* %.slink, i32 %x)
     %t2 = getelementptr inbounds %Frame_outter_inner_setOutter, %Frame_outter_inner_setOutter* %.frame, i32 0, i32 0
     store i32 %x, i32* %t2
 
+    ; body
+    %t4 = getelementptr inbounds %Frame_outter_inner_setOutter, %Frame_outter_inner_setOutter* %.frame, i32 0, i32 1
+    %t5 = load %Frame_outter_inner*, %Frame_outter_inner** %t4
+    %t6 = getelementptr inbounds %Frame_outter_inner, %Frame_outter_inner* %t5, i32 0, i32 2
+    %t7 = load %Frame_outter*, %Frame_outter** %t6
+    %t3 = getelementptr inbounds %Frame_outter, %Frame_outter* %t7, i32 0, i32 1
+    %t9 = getelementptr inbounds %Frame_outter_inner_setOutter, %Frame_outter_inner_setOutter* %.frame, i32 0, i32 0
+    %t8 = load i32, i32* %t9
+    store i32 %t8, i32* %t3
+    ; nop
+
     ; epilogue
     ret void
 }
@@ -169,6 +220,8 @@ define void @P_outter_inner_setOutter(%Frame_outter_inner* %.slink, i32 %x)
 
 @.str.1 = private unnamed_addr constant [7 x i8] c"_input\00", align 1
 @.str.2 = private unnamed_addr constant [8 x i8] c"_output\00", align 1
+@.str.3 = private unnamed_addr constant [13 x i8] c"hello, world\00", align 1
+@.str.4 = private unnamed_addr constant [10 x i8] c"outter = \00", align 1
 
 
 ;================================================================================

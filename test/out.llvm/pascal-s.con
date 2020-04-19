@@ -61,51 +61,5 @@ compiling pass 1 (LPC)
   warning on line 1015: 'op' hiding existing declaration on line 1012
   warning on line 1015: 'op' hiding existing declaration on line 1009
   warning on line 1017: 'fsys' hiding existing declaration on line 1014
-  warning on line 1017: 'fsys' hiding existing declaration on line 1011
-  warning on line 1017: 'fsys' hiding existing declaration on line 902
-  warning on line 1017: 'fsys' hiding existing declaration on line 900
-  warning on line 1017: 'fsys' hiding existing declaration on line 574
-  warning on line 1017: 'x' hiding existing declaration on line 1014
-  warning on line 1017: 'x' hiding existing declaration on line 1011
-  warning on line 1017: 'x' hiding existing declaration on line 902
-  warning on line 1017: 'x' hiding existing declaration on line 585
-  warning on line 1018: 'i' hiding existing declaration on line 901
-  warning on line 1057: 'typ' hiding existing declaration on line 679
-  warning on line 1230: 'x' hiding existing declaration on line 585
-  warning on line 1264: 'x' hiding existing declaration on line 585
-  warning on line 1281: 'x' hiding existing declaration on line 585
-  warning on line 1282: 'i' hiding existing declaration on line 901
-  warning on line 1288: 'k' hiding existing declaration on line 1282
-  warning on line 1330: 'x' hiding existing declaration on line 585
-  warning on line 1346: 'x' hiding existing declaration on line 585
-  warning on line 1356: 'x' hiding existing declaration on line 585
-  warning on line 1357: 'i' hiding existing declaration on line 901
-  warning on line 1388: 'i' hiding existing declaration on line 901
-  warning on line 1389: 'x' hiding existing declaration on line 585
-  warning on line 1521: 't' hiding existing declaration on line 242
-  warning on line 1522: 'b' hiding existing declaration on line 242
-  warning on line 1527: 'display' hiding existing declaration on line 244
-
-0 error(s), 84 warning(s)
-
-Exit code: 0
-
-compiling pass 2 (target = llvm)
------------------------------------------------------
-
-Invoking LLC ...
-Exit code: 0
-
-Linking...
-Exit code: 0
-
-running the executable
------------------------------------------------------
-openFile(0)
-openFile(1)
-openFile(2)
-closeFile()
-closeFile()
-closeFile()
-
-Exit code: 0
+  warning on Assertion failed: !"Unexpected string expression", file C:\Users\lemo\work\compilers\lpc\llvmBackend.cpp, line 1028
+Exit code: 3

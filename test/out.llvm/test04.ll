@@ -53,6 +53,9 @@ define void @P_()
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
 
+    ; body
+    ; nop
+
     ; cleanup
     %t3 = load %T_text, %T_text* @_output
     call void @_CloseFile(i8* %t3)
@@ -83,6 +86,9 @@ define void @P_foo()
 {
     ; allocate frame
     %.frame = alloca %Frame_foo, align 8
+
+    ; body
+    ; nop
 
     ; epilogue
     ret void

@@ -59,11 +59,21 @@ define void @P_()
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
 
-    ; cleanup
+    ; body
+    store i32 1, i32* @gv2
+    call void @P_test(i32* @gv2)
     %t3 = load %T_text, %T_text* @_output
-    call void @_CloseFile(i8* %t3)
-    %t4 = load %T_text, %T_text* @_input
-    call void @_CloseFile(i8* %t4)
+    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.3, i32 0, i32 0), i32 12)
+    %t4 = load i32, i32* @gv2
+    call void @_WriteInteger(i8* %t3, i32 0, i32 0, i32 %t4)
+    call void @_WriteLn(i8* %t3)
+    ; nop
+
+    ; cleanup
+    %t5 = load %T_text, %T_text* @_output
+    call void @_CloseFile(i8* %t5)
+    %t6 = load %T_text, %T_text* @_input
+    call void @_CloseFile(i8* %t6)
 
     ; epilogue
     ret void
@@ -101,10 +111,24 @@ define i32 @F_foo(%T_foo_subroutine_6 %pfn)
     %t1 = getelementptr inbounds %Frame_foo, %Frame_foo* %.frame, i32 0, i32 0
     store %T_foo_subroutine_6 %pfn, %T_foo_subroutine_6* %t1
 
+    ; body
+    %t2 = getelementptr inbounds %Frame_foo, %Frame_foo* %.frame, i32 0, i32 4
+    %t4 = getelementptr inbounds %T_UNION, %T_UNION* %t2, i32 0, i32 0
+    %t3 = bitcast i8* %t4 to i32*
+    store i32 100000, i32* %t3
+    %t5 = getelementptr inbounds %Frame_foo, %Frame_foo* %.frame, i32 0, i32 1
+    %t6 = load i32, i32* @gv
+    %t7 = load %T_REC, %T_REC* @gr
+    %t9 = getelementptr inbounds %Frame_foo, %Frame_foo* %.frame, i32 0, i32 4
+    %t8 = load %T_UNION, %T_UNION* %t9
+    %t10 = call i32 (i32 %t6, %T_REC %t7, %T_UNION %t8)
+    store i32 %t10, i32* %t5
+    ; nop
+
     ; epilogue
-    %t2 = getelementptr inbounds %Frame_foo, %Frame_foo* %.frame, i32 0, i32 1
-    %t3 = load i32, i32* %t2
-    ret i32 %t3
+    %t11 = getelementptr inbounds %Frame_foo, %Frame_foo* %.frame, i32 0, i32 1
+    %t12 = load i32, i32* %t11
+    ret i32 %t12
 }
 
 
@@ -129,6 +153,28 @@ define void @P_test(i32* %y)
     %.frame = alloca %Frame_test, align 8
     %t1 = getelementptr inbounds %Frame_test, %Frame_test* %.frame, i32 0, i32 0
     store i32* %y, i32** %t1
+
+    ; body
+    store i32 1000, i32* @gv
+    %t3 = getelementptr inbounds %T_REC, %T_REC* @gr, i32 0, i32 16
+    %t2 = bitcast i8* %t3 to %T_A*
+    %t4 = getelementptr inbounds %T_A, %T_A* %t2, i32 0, i32 0
+    store i32 100, i32* %t4
+    store i32 10000, i32* @gv2
+    %t5 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.4, i32 0, i32 0), i32 3)
+    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.5, i32 0, i32 0), i32 3)
+    %t6 = call i32 @F_foo( %.dummy)
+    call void @_WriteInteger(i8* %t5, i32 0, i32 0, i32 %t6)
+    call void @_WriteLn(i8* %t5)
+    %t7 = getelementptr inbounds %Frame_test, %Frame_test* %.frame, i32 0, i32 0
+    %t8 = load i32*, i32** %t7
+    %t11 = getelementptr inbounds %Frame_test, %Frame_test* %.frame, i32 0, i32 0
+    %t12 = load i32*, i32** %t11
+    %t10 = load i32, i32* %t12
+    %t9 = add i32 %t10, 2345
+    store i32 %t9, i32* %t8
+    ; nop
 
     ; epilogue
     ret void
@@ -168,18 +214,52 @@ define i32 @F_test_bar(%Frame_test* %.slink, i32 %x, %T_REC %r, %T_UNION %u)
     %t4 = getelementptr inbounds %Frame_test_bar, %Frame_test_bar* %.frame, i32 0, i32 2
     store i32 %x, i32* %t4
 
-    ; epilogue
+    ; body
     %t5 = getelementptr inbounds %Frame_test_bar, %Frame_test_bar* %.frame, i32 0, i32 3
-    %t6 = load i32, i32* %t5
-    ret i32 %t6
+    %t11 = getelementptr inbounds %Frame_test_bar, %Frame_test_bar* %.frame, i32 0, i32 2
+    %t10 = load i32, i32* %t11
+    %t12 = getelementptr inbounds %Frame_test_bar, %Frame_test_bar* %.frame, i32 0, i32 0
+    %t14 = getelementptr inbounds %T_REC, %T_REC* %t12, i32 0, i32 16
+    %t13 = bitcast i8* %t14 to %T_A*
+    %t15 = getelementptr inbounds %T_A, %T_A* %t13, i32 0, i32 0
+    %t16 = load i32, i32* %t15
+    %t9 = add i32 %t10, %t16
+    %t17 = getelementptr inbounds %Frame_test_bar, %Frame_test_bar* %.frame, i32 0, i32 1
+    %t19 = getelementptr inbounds %T_UNION, %T_UNION* %t17, i32 0, i32 4
+    %t18 = bitcast i8* %t19 to %T_array_3*
+    %t20 = getelementptr inbounds %T_array_3, %T_array_3* %t18, i32 0, i32 1
+    %t21 = getelementptr inbounds %T_array_4, %T_array_4* %t20, i32 0, i32 3
+    %t22 = load i32, i32* %t21
+    %t8 = add i32 %t9, %t22
+    %t23 = getelementptr inbounds %Frame_test_bar, %Frame_test_bar* %.frame, i32 0, i32 1
+    %t25 = getelementptr inbounds %T_UNION, %T_UNION* %t23, i32 0, i32 0
+    %t24 = bitcast i8* %t25 to i32*
+    %t26 = load i32, i32* %t24
+    %t7 = add i32 %t8, %t26
+    %t29 = getelementptr inbounds %Frame_test_bar, %Frame_test_bar* %.frame, i32 0, i32 4
+    %t30 = load %Frame_test*, %Frame_test** %t29
+    %t28 = getelementptr inbounds %Frame_test, %Frame_test* %t30, i32 0, i32 0
+    %t31 = load i32*, i32** %t28
+    %t27 = load i32, i32* %t31
+    %t6 = add i32 %t7, %t27
+    store i32 %t6, i32* %t5
+    ; nop
+
+    ; epilogue
+    %t32 = getelementptr inbounds %Frame_test_bar, %Frame_test_bar* %.frame, i32 0, i32 3
+    %t33 = load i32, i32* %t32
+    ret i32 %t33
 }
 
 
 ;================================================================================
 ; string literals
 
+@.str.5 = private unnamed_addr constant [4 x i8] c" = \00", align 1
 @.str.1 = private unnamed_addr constant [7 x i8] c"_input\00", align 1
 @.str.2 = private unnamed_addr constant [8 x i8] c"_output\00", align 1
+@.str.3 = private unnamed_addr constant [13 x i8] c"done, gv2 = \00", align 1
+@.str.4 = private unnamed_addr constant [4 x i8] c"foo\00", align 1
 
 
 ;================================================================================

@@ -1670,7 +1670,7 @@ private:
     {
         stringstream code;
         // TODO
-        return allocStr(code);
+        return newIrFragment(code.str(), "%.dummy.set");
     }
 
     // ast::WriteArgExpr should only appear as an argument to the write intrinsics

@@ -60,11 +60,30 @@ define void @P_()
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
 
-    ; cleanup
+    ; body
     %t3 = load %T_text, %T_text* @_output
-    call void @_CloseFile(i8* %t3)
-    %t4 = load %T_text, %T_text* @_input
-    call void @_CloseFile(i8* %t4)
+    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.3, i32 0, i32 0), i32 2)
+    %t4 = load %T_text, %T_text* @_output
+    %t5 = load i32, i32* @n
+    call void @_WriteInteger(i8* %t4, i32 0, i32 0, i32 %t5)
+    call void @_WriteLn(i8* %t4)
+    store i32 1, i32* @n1
+    %t6 = load i8*, i8** @virf
+    %t7 = bitcast i8* %t6 to %T_nod*
+    %t9 = getelementptr inbounds %T_nod, %T_nod* %t7, i32 0, i32 16
+    %t8 = bitcast i8* %t9 to i8**
+    store i8* null, i8** %t8
+    store i32 1, i32* @i
+    store i32 2, i32* @j
+    store i32 0, i32* @ns
+    store i32 1, i32* @niv
+    ; nop
+
+    ; cleanup
+    %t10 = load %T_text, %T_text* @_output
+    call void @_CloseFile(i8* %t10)
+    %t11 = load %T_text, %T_text* @_input
+    call void @_CloseFile(i8* %t11)
 
     ; epilogue
     ret void
@@ -102,6 +121,47 @@ define void @P_punere(i32* %x, i32* %y, i32* %z)
     %t3 = getelementptr inbounds %Frame_punere, %Frame_punere* %.frame, i32 0, i32 2
     store i32* %z, i32** %t3
 
+    ; body
+    %t5 = getelementptr inbounds %Frame_punere, %Frame_punere* %.frame, i32 0, i32 3
+    %t4 = load i8*, i8** %t5
+    %t6 = bitcast i8* %t4 to %T_nod*
+    %t7 = load i8*, i8** @virf
+    %t8 = bitcast i8* %t7 to %T_nod*
+    %t9 = load %T_nod, %T_nod* %t8
+    store %T_nod %t9, %T_nod* %t6
+    %t10 = load i8*, i8** @virf
+    %t11 = bitcast i8* %t10 to %T_nod*
+    %t13 = getelementptr inbounds %T_nod, %T_nod* %t11, i32 0, i32 16
+    %t12 = bitcast i8* %t13 to i8**
+    %t15 = getelementptr inbounds %Frame_punere, %Frame_punere* %.frame, i32 0, i32 3
+    %t14 = load i8*, i8** %t15
+    store i8* %t14, i8** %t12
+    %t16 = load i8*, i8** @virf
+    %t17 = bitcast i8* %t16 to %T_nod*
+    %t19 = getelementptr inbounds %T_nod, %T_nod* %t17, i32 0, i32 0
+    %t18 = bitcast i8* %t19 to i32*
+    %t21 = getelementptr inbounds %Frame_punere, %Frame_punere* %.frame, i32 0, i32 0
+    %t22 = load i32*, i32** %t21
+    %t20 = load i32, i32* %t22
+    store i32 %t20, i32* %t18
+    %t23 = load i8*, i8** @virf
+    %t24 = bitcast i8* %t23 to %T_nod*
+    %t26 = getelementptr inbounds %T_nod, %T_nod* %t24, i32 0, i32 4
+    %t25 = bitcast i8* %t26 to i32*
+    %t28 = getelementptr inbounds %Frame_punere, %Frame_punere* %.frame, i32 0, i32 1
+    %t29 = load i32*, i32** %t28
+    %t27 = load i32, i32* %t29
+    store i32 %t27, i32* %t25
+    %t30 = load i8*, i8** @virf
+    %t31 = bitcast i8* %t30 to %T_nod*
+    %t33 = getelementptr inbounds %T_nod, %T_nod* %t31, i32 0, i32 8
+    %t32 = bitcast i8* %t33 to i32*
+    %t35 = getelementptr inbounds %Frame_punere, %Frame_punere* %.frame, i32 0, i32 2
+    %t36 = load i32*, i32** %t35
+    %t34 = load i32, i32* %t36
+    store i32 %t34, i32* %t32
+    ; nop
+
     ; epilogue
     ret void
 }
@@ -124,6 +184,15 @@ define void @P_scoatere()
     ; allocate frame
     %.frame = alloca %Frame_scoatere, align 8
 
+    ; body
+    %t1 = load i8*, i8** @virf
+    %t2 = bitcast i8* %t1 to %T_nod*
+    %t4 = getelementptr inbounds %T_nod, %T_nod* %t2, i32 0, i32 16
+    %t3 = bitcast i8* %t4 to i8**
+    %t5 = load i8*, i8** %t3
+    store i8* %t5, i8** @virf
+    ; nop
+
     ; epilogue
     ret void
 }
@@ -134,6 +203,7 @@ define void @P_scoatere()
 
 @.str.1 = private unnamed_addr constant [7 x i8] c"_input\00", align 1
 @.str.2 = private unnamed_addr constant [8 x i8] c"_output\00", align 1
+@.str.3 = private unnamed_addr constant [3 x i8] c"n=\00", align 1
 
 
 ;================================================================================

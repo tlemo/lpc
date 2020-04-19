@@ -49,11 +49,22 @@ define void @P_()
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
 
-    ; cleanup
+    ; body
     %t3 = load %T_text, %T_text* @_output
-    call void @_CloseFile(i8* %t3)
-    %t4 = load %T_text, %T_text* @_input
-    call void @_CloseFile(i8* %t4)
+    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.3, i32 0, i32 0), i32 4)
+    call void @_WriteLn(i8* %t3)
+    call void @P_foo()
+    %t4 = load %T_text, %T_text* @_output
+    %t5 = load i32, i32* @v
+    call void @_WriteInteger(i8* %t4, i32 0, i32 0, i32 %t5)
+    call void @_WriteLn(i8* %t4)
+    ; nop
+
+    ; cleanup
+    %t6 = load %T_text, %T_text* @_output
+    call void @_CloseFile(i8* %t6)
+    %t7 = load %T_text, %T_text* @_input
+    call void @_CloseFile(i8* %t7)
 
     ; epilogue
     ret void
@@ -79,6 +90,24 @@ define void @P_foo()
 {
     ; allocate frame
     %.frame = alloca %Frame_foo, align 8
+
+    ; body
+    %t1 = getelementptr inbounds %Frame_foo, %Frame_foo* %.frame, i32 0, i32 0
+    store i32 123, i32* %t1
+    %t2 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t2, i32 0, i32 0, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.4, i32 0, i32 0), i32 3)
+    call void @_WriteLn(i8* %t2)
+    call void @P_foo_bar1(%Frame_foo* %.frame, i32 0,  %.dummy)
+    call void @P_foo_bar2(%Frame_foo* %.frame,  %.dummy)
+    %t3 = load %T_text, %T_text* @_output
+    %t5 = getelementptr inbounds %Frame_foo, %Frame_foo* %.frame, i32 0, i32 0
+    %t4 = load i32, i32* %t5
+    call void @_WriteInteger(i8* %t3, i32 0, i32 0, i32 %t4)
+    call void @_WriteChar(i8* %t3, i32 0, i32 0, i8 32)
+    %t6 = load i32, i32* @v
+    call void @_WriteInteger(i8* %t3, i32 0, i32 0, i32 %t6)
+    call void @_WriteLn(i8* %t3)
+    ; nop
 
     ; epilogue
     ret void
@@ -112,10 +141,30 @@ define i32 @F_foo_testPfn(%Frame_foo* %.slink, i32 %i)
     %t2 = getelementptr inbounds %Frame_foo_testPfn, %Frame_foo_testPfn* %.frame, i32 0, i32 0
     store i32 %i, i32* %t2
 
-    ; epilogue
+    ; body
     %t3 = getelementptr inbounds %Frame_foo_testPfn, %Frame_foo_testPfn* %.frame, i32 0, i32 1
-    %t4 = load i32, i32* %t3
-    ret i32 %t4
+    %t7 = getelementptr inbounds %Frame_foo_testPfn, %Frame_foo_testPfn* %.frame, i32 0, i32 0
+    %t6 = load i32, i32* %t7
+    %t5 = mul i32 %t6, 1000
+    %t10 = getelementptr inbounds %Frame_foo_testPfn, %Frame_foo_testPfn* %.frame, i32 0, i32 2
+    %t11 = load %Frame_foo*, %Frame_foo** %t10
+    %t9 = getelementptr inbounds %Frame_foo, %Frame_foo* %t11, i32 0, i32 0
+    %t8 = load i32, i32* %t9
+    %t4 = add i32 %t5, %t8
+    store i32 %t4, i32* %t3
+    %t12 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t12, i32 0, i32 0, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.5, i32 0, i32 0), i32 12)
+    %t14 = getelementptr inbounds %Frame_foo_testPfn, %Frame_foo_testPfn* %.frame, i32 0, i32 0
+    %t13 = load i32, i32* %t14
+    call void @_WriteInteger(i8* %t12, i32 0, i32 0, i32 %t13)
+    call void @_WriteChar(i8* %t12, i32 0, i32 0, i8 41)
+    call void @_WriteLn(i8* %t12)
+    ; nop
+
+    ; epilogue
+    %t15 = getelementptr inbounds %Frame_foo_testPfn, %Frame_foo_testPfn* %.frame, i32 0, i32 1
+    %t16 = load i32, i32* %t15
+    ret i32 %t16
 }
 
 
@@ -153,6 +202,41 @@ define void @P_foo_bar1(%Frame_foo* %.slink, i32 %i, %T_foo_bar1_subroutine_2 %p
     %t3 = getelementptr inbounds %Frame_foo_bar1, %Frame_foo_bar1* %.frame, i32 0, i32 1
     store %T_foo_bar1_subroutine_2 %pfn, %T_foo_bar1_subroutine_2* %t3
 
+    ; body
+    %t4 = getelementptr inbounds %Frame_foo_bar1, %Frame_foo_bar1* %.frame, i32 0, i32 2
+    %t6 = getelementptr inbounds %Frame_foo_bar1, %Frame_foo_bar1* %.frame, i32 0, i32 0
+    %t5 = load i32, i32* %t6
+    store i32 %t5, i32* %t4
+    %t7 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.6, i32 0, i32 0), i32 8)
+    call void @_WriteLn(i8* %t7)
+    %t8 = getelementptr inbounds %Frame_foo_bar1, %Frame_foo_bar1* %.frame, i32 0, i32 3
+    %t10 = getelementptr inbounds %Frame_foo_bar1, %Frame_foo_bar1* %.frame, i32 0, i32 0
+    %t9 = load i32, i32* %t10
+    %t11 = call i32 (i32 %t9)
+    store i32 %t11, i32* %t8
+    %t12 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t12, i32 0, i32 0, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.7, i32 0, i32 0), i32 6)
+    %t14 = getelementptr inbounds %Frame_foo_bar1, %Frame_foo_bar1* %.frame, i32 0, i32 3
+    %t13 = load i32, i32* %t14
+    call void @_WriteInteger(i8* %t12, i32 0, i32 0, i32 %t13)
+    call void @_WriteLn(i8* %t12)
+    %t15 = load %T_text, %T_text* @_output
+    %t17 = getelementptr inbounds %Frame_foo_bar1, %Frame_foo_bar1* %.frame, i32 0, i32 2
+    %t16 = load i32, i32* %t17
+    call void @_WriteInteger(i8* %t15, i32 0, i32 0, i32 %t16)
+    call void @_WriteChar(i8* %t15, i32 0, i32 0, i8 32)
+    %t20 = getelementptr inbounds %Frame_foo_bar1, %Frame_foo_bar1* %.frame, i32 0, i32 4
+    %t21 = load %Frame_foo*, %Frame_foo** %t20
+    %t19 = getelementptr inbounds %Frame_foo, %Frame_foo* %t21, i32 0, i32 0
+    %t18 = load i32, i32* %t19
+    call void @_WriteInteger(i8* %t15, i32 0, i32 0, i32 %t18)
+    call void @_WriteChar(i8* %t15, i32 0, i32 0, i8 32)
+    %t22 = load i32, i32* @v
+    call void @_WriteInteger(i8* %t15, i32 0, i32 0, i32 %t22)
+    call void @_WriteLn(i8* %t15)
+    ; nop
+
     ; epilogue
     ret void
 }
@@ -187,6 +271,37 @@ define void @P_foo_bar2(%Frame_foo* %.slink, %T_foo_bar2_subroutine_3 %pfn)
     store %Frame_foo* %.slink, %Frame_foo** %t1
     %t2 = getelementptr inbounds %Frame_foo_bar2, %Frame_foo_bar2* %.frame, i32 0, i32 0
     store %T_foo_bar2_subroutine_3 %pfn, %T_foo_bar2_subroutine_3* %t2
+
+    ; body
+    %t3 = getelementptr inbounds %Frame_foo_bar2, %Frame_foo_bar2* %.frame, i32 0, i32 1
+    store i32 1000, i32* %t3
+    %t4 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t4, i32 0, i32 0, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.8, i32 0, i32 0), i32 8)
+    call void @_WriteLn(i8* %t4)
+    %t7 = getelementptr inbounds %Frame_foo_bar2, %Frame_foo_bar2* %.frame, i32 0, i32 2
+    %t8 = load %Frame_foo*, %Frame_foo** %t7
+    %t6 = getelementptr inbounds %Frame_foo, %Frame_foo* %t8, i32 0, i32 0
+    %t5 = load i32, i32* %t6
+    call void (i32 %t5)
+    %t9 = getelementptr inbounds %Frame_foo_bar2, %Frame_foo_bar2* %.frame, i32 0, i32 2
+    %t10 = load %Frame_foo*, %Frame_foo** %t9
+    call void @P_foo_bar1(%Frame_foo* %t10, i32 1,  %.dummy)
+    call void @P_foo_bar2_moo(%Frame_foo_bar2* %.frame,  %.dummy)
+    %t11 = load %T_text, %T_text* @_output
+    %t13 = getelementptr inbounds %Frame_foo_bar2, %Frame_foo_bar2* %.frame, i32 0, i32 1
+    %t12 = load i32, i32* %t13
+    call void @_WriteInteger(i8* %t11, i32 0, i32 0, i32 %t12)
+    call void @_WriteChar(i8* %t11, i32 0, i32 0, i8 32)
+    %t16 = getelementptr inbounds %Frame_foo_bar2, %Frame_foo_bar2* %.frame, i32 0, i32 2
+    %t17 = load %Frame_foo*, %Frame_foo** %t16
+    %t15 = getelementptr inbounds %Frame_foo, %Frame_foo* %t17, i32 0, i32 0
+    %t14 = load i32, i32* %t15
+    call void @_WriteInteger(i8* %t11, i32 0, i32 0, i32 %t14)
+    call void @_WriteChar(i8* %t11, i32 0, i32 0, i8 32)
+    %t18 = load i32, i32* @v
+    call void @_WriteInteger(i8* %t11, i32 0, i32 0, i32 %t18)
+    call void @_WriteLn(i8* %t11)
+    ; nop
 
     ; epilogue
     ret void
@@ -224,6 +339,59 @@ define void @P_foo_bar2_moo(%Frame_foo_bar2* %.slink, %T_foo_bar2_moo_subroutine
     %t2 = getelementptr inbounds %Frame_foo_bar2_moo, %Frame_foo_bar2_moo* %.frame, i32 0, i32 0
     store %T_foo_bar2_moo_subroutine_4 %pfn, %T_foo_bar2_moo_subroutine_4* %t2
 
+    ; body
+    %t3 = getelementptr inbounds %Frame_foo_bar2_moo, %Frame_foo_bar2_moo* %.frame, i32 0, i32 1
+    %t4 = call i32 (i32 100)
+    store i32 %t4, i32* %t3
+    %t5 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.9, i32 0, i32 0), i32 12)
+    call void @_WriteLn(i8* %t5)
+    %t6 = getelementptr inbounds %Frame_foo_bar2_moo, %Frame_foo_bar2_moo* %.frame, i32 0, i32 2
+    %t9 = getelementptr inbounds %Frame_foo_bar2_moo, %Frame_foo_bar2_moo* %.frame, i32 0, i32 3
+    %t10 = load %Frame_foo_bar2*, %Frame_foo_bar2** %t9
+    %t11 = getelementptr inbounds %Frame_foo_bar2, %Frame_foo_bar2* %t10, i32 0, i32 2
+    %t12 = load %Frame_foo*, %Frame_foo** %t11
+    %t8 = getelementptr inbounds %Frame_foo, %Frame_foo* %t12, i32 0, i32 0
+    %t7 = load i32, i32* %t8
+    %t13 = call i32 (i32 %t7)
+    store i32 %t13, i32* %t6
+    %t14 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t14, i32 0, i32 0, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.7, i32 0, i32 0), i32 6)
+    %t16 = getelementptr inbounds %Frame_foo_bar2_moo, %Frame_foo_bar2_moo* %.frame, i32 0, i32 2
+    %t15 = load i32, i32* %t16
+    call void @_WriteInteger(i8* %t14, i32 0, i32 0, i32 %t15)
+    call void @_WriteLn(i8* %t14)
+    %t17 = getelementptr inbounds %Frame_foo_bar2_moo, %Frame_foo_bar2_moo* %.frame, i32 0, i32 3
+    %t18 = load %Frame_foo_bar2*, %Frame_foo_bar2** %t17
+    %t19 = getelementptr inbounds %Frame_foo_bar2, %Frame_foo_bar2* %t18, i32 0, i32 2
+    %t20 = load %Frame_foo*, %Frame_foo** %t19
+    %t22 = getelementptr inbounds %Frame_foo_bar2_moo, %Frame_foo_bar2_moo* %.frame, i32 0, i32 0
+    %t21 = load %T_foo_bar2_moo_subroutine_4, %T_foo_bar2_moo_subroutine_4* %t22
+    call void @P_foo_bar1(%Frame_foo* %t20, i32 2, %T_foo_bar2_moo_subroutine_4 %t21)
+    %t23 = load %T_text, %T_text* @_output
+    %t25 = getelementptr inbounds %Frame_foo_bar2_moo, %Frame_foo_bar2_moo* %.frame, i32 0, i32 1
+    %t24 = load i32, i32* %t25
+    call void @_WriteInteger(i8* %t23, i32 0, i32 0, i32 %t24)
+    call void @_WriteChar(i8* %t23, i32 0, i32 0, i8 32)
+    %t28 = getelementptr inbounds %Frame_foo_bar2_moo, %Frame_foo_bar2_moo* %.frame, i32 0, i32 3
+    %t29 = load %Frame_foo_bar2*, %Frame_foo_bar2** %t28
+    %t27 = getelementptr inbounds %Frame_foo_bar2, %Frame_foo_bar2* %t29, i32 0, i32 1
+    %t26 = load i32, i32* %t27
+    call void @_WriteInteger(i8* %t23, i32 0, i32 0, i32 %t26)
+    call void @_WriteChar(i8* %t23, i32 0, i32 0, i8 32)
+    %t32 = getelementptr inbounds %Frame_foo_bar2_moo, %Frame_foo_bar2_moo* %.frame, i32 0, i32 3
+    %t33 = load %Frame_foo_bar2*, %Frame_foo_bar2** %t32
+    %t34 = getelementptr inbounds %Frame_foo_bar2, %Frame_foo_bar2* %t33, i32 0, i32 2
+    %t35 = load %Frame_foo*, %Frame_foo** %t34
+    %t31 = getelementptr inbounds %Frame_foo, %Frame_foo* %t35, i32 0, i32 0
+    %t30 = load i32, i32* %t31
+    call void @_WriteInteger(i8* %t23, i32 0, i32 0, i32 %t30)
+    call void @_WriteChar(i8* %t23, i32 0, i32 0, i8 32)
+    %t36 = load i32, i32* @v
+    call void @_WriteInteger(i8* %t23, i32 0, i32 0, i32 %t36)
+    call void @_WriteLn(i8* %t23)
+    ; nop
+
     ; epilogue
     ret void
 }
@@ -256,10 +424,32 @@ define i32 @F_foo_bar2_testPfn(%Frame_foo_bar2* %.slink, i32 %i)
     %t2 = getelementptr inbounds %Frame_foo_bar2_testPfn, %Frame_foo_bar2_testPfn* %.frame, i32 0, i32 0
     store i32 %i, i32* %t2
 
-    ; epilogue
+    ; body
     %t3 = getelementptr inbounds %Frame_foo_bar2_testPfn, %Frame_foo_bar2_testPfn* %.frame, i32 0, i32 1
-    %t4 = load i32, i32* %t3
-    ret i32 %t4
+    %t7 = getelementptr inbounds %Frame_foo_bar2_testPfn, %Frame_foo_bar2_testPfn* %.frame, i32 0, i32 0
+    %t6 = load i32, i32* %t7
+    %t5 = mul i32 %t6, 100
+    %t10 = getelementptr inbounds %Frame_foo_bar2_testPfn, %Frame_foo_bar2_testPfn* %.frame, i32 0, i32 2
+    %t11 = load %Frame_foo_bar2*, %Frame_foo_bar2** %t10
+    %t12 = getelementptr inbounds %Frame_foo_bar2, %Frame_foo_bar2* %t11, i32 0, i32 2
+    %t13 = load %Frame_foo*, %Frame_foo** %t12
+    %t9 = getelementptr inbounds %Frame_foo, %Frame_foo* %t13, i32 0, i32 0
+    %t8 = load i32, i32* %t9
+    %t4 = add i32 %t5, %t8
+    store i32 %t4, i32* %t3
+    %t14 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t14, i32 0, i32 0, i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.10, i32 0, i32 0), i32 17)
+    %t16 = getelementptr inbounds %Frame_foo_bar2_testPfn, %Frame_foo_bar2_testPfn* %.frame, i32 0, i32 0
+    %t15 = load i32, i32* %t16
+    call void @_WriteInteger(i8* %t14, i32 0, i32 0, i32 %t15)
+    call void @_WriteChar(i8* %t14, i32 0, i32 0, i8 41)
+    call void @_WriteLn(i8* %t14)
+    ; nop
+
+    ; epilogue
+    %t17 = getelementptr inbounds %Frame_foo_bar2_testPfn, %Frame_foo_bar2_testPfn* %.frame, i32 0, i32 1
+    %t18 = load i32, i32* %t17
+    ret i32 %t18
 }
 
 
@@ -287,6 +477,16 @@ define void @P_foo_procPfn(%Frame_foo* %.slink, i32 %i)
     %t2 = getelementptr inbounds %Frame_foo_procPfn, %Frame_foo_procPfn* %.frame, i32 0, i32 0
     store i32 %i, i32* %t2
 
+    ; body
+    %t3 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.11, i32 0, i32 0), i32 12)
+    %t5 = getelementptr inbounds %Frame_foo_procPfn, %Frame_foo_procPfn* %.frame, i32 0, i32 0
+    %t4 = load i32, i32* %t5
+    call void @_WriteInteger(i8* %t3, i32 0, i32 0, i32 %t4)
+    call void @_WriteChar(i8* %t3, i32 0, i32 0, i8 41)
+    call void @_WriteLn(i8* %t3)
+    ; nop
+
     ; epilogue
     ret void
 }
@@ -297,6 +497,15 @@ define void @P_foo_procPfn(%Frame_foo* %.slink, i32 %i)
 
 @.str.1 = private unnamed_addr constant [7 x i8] c"_input\00", align 1
 @.str.2 = private unnamed_addr constant [8 x i8] c"_output\00", align 1
+@.str.4 = private unnamed_addr constant [4 x i8] c"foo\00", align 1
+@.str.6 = private unnamed_addr constant [9 x i8] c"foo.bar1\00", align 1
+@.str.8 = private unnamed_addr constant [9 x i8] c"foo.bar2\00", align 1
+@.str.9 = private unnamed_addr constant [13 x i8] c"foo.bar2.moo\00", align 1
+@.str.10 = private unnamed_addr constant [18 x i8] c"foo.bar2.testPfn(\00", align 1
+@.str.11 = private unnamed_addr constant [13 x i8] c"foo.procPfn(\00", align 1
+@.str.5 = private unnamed_addr constant [13 x i8] c"foo.testPfn(\00", align 1
+@.str.3 = private unnamed_addr constant [5 x i8] c"main\00", align 1
+@.str.7 = private unnamed_addr constant [7 x i8] c"pfn = \00", align 1
 
 
 ;================================================================================

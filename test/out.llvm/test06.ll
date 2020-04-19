@@ -50,11 +50,29 @@ define void @P_()
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
 
-    ; cleanup
+    ; body
+    call void @P_init(i8** @p)
+    call void @P_setValue(i32* @i, i8** @p)
     %t3 = load %T_text, %T_text* @_output
-    call void @_CloseFile(i8* %t3)
-    %t4 = load %T_text, %T_text* @_input
-    call void @_CloseFile(i8* %t4)
+    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.3, i32 0, i32 0), i32 4)
+    %t4 = load i32, i32* @i
+    call void @_WriteInteger(i8* %t3, i32 0, i32 0, i32 %t4)
+    call void @_WriteLn(i8* %t3)
+    %t5 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.4, i32 0, i32 0), i32 5)
+    %t6 = load i8*, i8** @p
+    %t7 = bitcast i8* %t6 to i32*
+    %t8 = load i32, i32* %t7
+    call void @_WriteInteger(i8* %t5, i32 0, i32 0, i32 %t8)
+    call void @_WriteLn(i8* %t5)
+    call void @P_free(i8** @p)
+    ; nop
+
+    ; cleanup
+    %t9 = load %T_text, %T_text* @_output
+    call void @_CloseFile(i8* %t9)
+    %t10 = load %T_text, %T_text* @_input
+    call void @_CloseFile(i8* %t10)
 
     ; epilogue
     ret void
@@ -82,6 +100,9 @@ define void @P_init(i8** %pointer)
     %.frame = alloca %Frame_init, align 8
     %t1 = getelementptr inbounds %Frame_init, %Frame_init* %.frame, i32 0, i32 0
     store i8** %pointer, i8*** %t1
+
+    ; body
+    ; nop
 
     ; epilogue
     ret void
@@ -113,6 +134,18 @@ define void @P_setValue(i32* %value, i8** %pointer)
     %t2 = getelementptr inbounds %Frame_setValue, %Frame_setValue* %.frame, i32 0, i32 1
     store i32* %value, i32** %t2
 
+    ; body
+    store i32 12345, i32* @i
+    %t4 = getelementptr inbounds %Frame_setValue, %Frame_setValue* %.frame, i32 0, i32 0
+    %t5 = load i8**, i8*** %t4
+    %t3 = load i8*, i8** %t5
+    %t6 = bitcast i8* %t3 to i32*
+    %t8 = getelementptr inbounds %Frame_setValue, %Frame_setValue* %.frame, i32 0, i32 1
+    %t9 = load i32*, i32** %t8
+    %t7 = load i32, i32* %t9
+    store i32 %t7, i32* %t6
+    ; nop
+
     ; epilogue
     ret void
 }
@@ -140,6 +173,9 @@ define void @P_free(i8** %pointer)
     %t1 = getelementptr inbounds %Frame_free, %Frame_free* %.frame, i32 0, i32 0
     store i8** %pointer, i8*** %t1
 
+    ; body
+    ; nop
+
     ; epilogue
     ret void
 }
@@ -150,6 +186,8 @@ define void @P_free(i8** %pointer)
 
 @.str.1 = private unnamed_addr constant [7 x i8] c"_input\00", align 1
 @.str.2 = private unnamed_addr constant [8 x i8] c"_output\00", align 1
+@.str.3 = private unnamed_addr constant [5 x i8] c"i = \00", align 1
+@.str.4 = private unnamed_addr constant [6 x i8] c"p^ = \00", align 1
 
 
 ;================================================================================

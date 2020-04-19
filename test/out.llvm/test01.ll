@@ -48,11 +48,17 @@ define void @P_()
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
 
-    ; cleanup
+    ; body
     %t3 = load %T_text, %T_text* @_output
-    call void @_CloseFile(i8* %t3)
-    %t4 = load %T_text, %T_text* @_input
+    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.3, i32 0, i32 0), i32 13)
+    call void @_WriteLn(i8* %t3)
+    ; nop
+
+    ; cleanup
+    %t4 = load %T_text, %T_text* @_output
     call void @_CloseFile(i8* %t4)
+    %t5 = load %T_text, %T_text* @_input
+    call void @_CloseFile(i8* %t5)
 
     ; epilogue
     ret void
@@ -62,6 +68,7 @@ define void @P_()
 ;================================================================================
 ; string literals
 
+@.str.3 = private unnamed_addr constant [14 x i8] c"Hello, world!\00", align 1
 @.str.1 = private unnamed_addr constant [7 x i8] c"_input\00", align 1
 @.str.2 = private unnamed_addr constant [8 x i8] c"_output\00", align 1
 

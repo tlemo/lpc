@@ -57,11 +57,30 @@ define void @P_()
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
 
-    ; cleanup
+    ; body
     %t3 = load %T_text, %T_text* @_output
-    call void @_CloseFile(i8* %t3)
-    %t4 = load %T_text, %T_text* @_input
-    call void @_CloseFile(i8* %t4)
+    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([41 x i8], [41 x i8]* @.str.3, i32 0, i32 0), i32 40)
+    call void @_WriteLn(i8* %t3)
+    %t4 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t4, i32 0, i32 0, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.4, i32 0, i32 0), i32 2)
+    %t5 = load %T_text, %T_text* @_output
+    %t6 = load i32, i32* @n
+    call void @_WriteInteger(i8* %t5, i32 0, i32 0, i32 %t6)
+    call void @_WriteLn(i8* %t5)
+    %t7 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.5, i32 0, i32 0), i32 2)
+    %t8 = load %T_text, %T_text* @_output
+    %t9 = load i32, i32* @k
+    call void @_WriteInteger(i8* %t8, i32 0, i32 0, i32 %t9)
+    call void @_WriteLn(i8* %t8)
+    store i32 0, i32* @ig
+    ; nop
+
+    ; cleanup
+    %t10 = load %T_text, %T_text* @_output
+    call void @_CloseFile(i8* %t10)
+    %t11 = load %T_text, %T_text* @_input
+    call void @_CloseFile(i8* %t11)
 
     ; epilogue
     ret void
@@ -94,6 +113,10 @@ define void @P_gen(%T_vec* %v)
     %t1 = getelementptr inbounds %Frame_gen, %Frame_gen* %.frame, i32 0, i32 0
     store %T_vec* %v, %T_vec** %t1
 
+    ; body
+    store i32 0, i32* @ig
+    ; nop
+
     ; epilogue
     ret void
 }
@@ -124,6 +147,11 @@ define void @P_prel(%T_vec %v)
     %t1 = getelementptr inbounds %Frame_prel, %Frame_prel* %.frame, i32 0, i32 0
     store %T_vec %v, %T_vec* %t1
 
+    ; body
+    %t2 = load %T_text, %T_text* @_output
+    call void @_WriteLn(i8* %t2)
+    ; nop
+
     ; epilogue
     ret void
 }
@@ -134,6 +162,9 @@ define void @P_prel(%T_vec %v)
 
 @.str.1 = private unnamed_addr constant [7 x i8] c"_input\00", align 1
 @.str.2 = private unnamed_addr constant [8 x i8] c"_output\00", align 1
+@.str.3 = private unnamed_addr constant [41 x i8] c"generarea combinarilor de n luate cåte k\00", align 1
+@.str.5 = private unnamed_addr constant [3 x i8] c"k=\00", align 1
+@.str.4 = private unnamed_addr constant [3 x i8] c"n=\00", align 1
 
 
 ;================================================================================

@@ -151,18 +151,7 @@ compiling pass 2 (target = llvm)
 -----------------------------------------------------
 
 Invoking LLC ...
-Exit code: 0
-
-Linking...
-Exit code: 0
-
-running the executable
------------------------------------------------------
-openFile(0)
-openFile(1)
-openFile(2)
-closeFile()
-closeFile()
-closeFile()
-
-Exit code: 0
+llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\p5_pcom.ll:252:40: error: use of undefined value '%.dummy_set'
+    call void @P_programme(%T_setofsys %.dummy_set)
+                                       ^
+Exit code: 1

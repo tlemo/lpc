@@ -57,11 +57,47 @@ define void @P_()
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @output
 
+    ; body
+    %t3 = load i8*, i8** @s
+    %t4 = bitcast i8* %t3 to %T_digitarray*
+    call void @P_initinteger(%T_digitarray* %t4, i32 0)
+    %t5 = load i8*, i8** @x
+    %t6 = bitcast i8* %t5 to %T_digitarray*
+    call void @P_initinteger(%T_digitarray* %t6, i32 1)
+    store i32 0, i32* @xs
+    %t7 = load i8*, i8** @s
+    %t8 = bitcast i8* %t7 to %T_digitarray*
+    %t9 = load i8*, i8** @x
+    %t10 = bitcast i8* %t9 to %T_digitarray*
+    %t11 = load i32, i32* @xs
+    call void @P_add(%T_digitarray* %t8, %T_digitarray* %t10, i32 %t11)
+    store i32 0, i32* @i
+    %t12 = load %T_text, %T_text* @output
+    call void @_WriteLn(i8* %t12)
+    %t13 = load %T_text, %T_text* @output
+    call void @_WriteChar(i8* %t13, i32 45, i32 0, i8 32)
+    call void @_WriteString(i8* %t13, i32 0, i32 0, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.3, i32 0, i32 0), i32 4)
+    %t14 = load i8*, i8** @s
+    %t15 = bitcast i8* %t14 to %T_digitarray*
+    %t16 = getelementptr inbounds %T_digitarray, %T_digitarray* %t15, i32 0, i32 0
+    %t17 = load i32, i32* %t16
+    call void @_WriteInteger(i8* %t13, i32 1, i32 0, i32 %t17)
+    call void @_WriteChar(i8* %t13, i32 0, i32 0, i8 46)
+    call void @_WriteLn(i8* %t13)
+    store i32 0, i32* @i
+    %t18 = load %T_text, %T_text* @output
+    call void @_WriteLn(i8* %t18)
+    %t19 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t19, i32 0, i32 0, i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.4, i32 0, i32 0), i32 14)
+    %t20 = load %T_text, %T_text* @output
+    call void @_WriteLn(i8* %t20)
+    ; nop
+
     ; cleanup
-    %t3 = load %T_text, %T_text* @output
-    call void @_CloseFile(i8* %t3)
-    %t4 = load %T_text, %T_text* @input
-    call void @_CloseFile(i8* %t4)
+    %t21 = load %T_text, %T_text* @output
+    call void @_CloseFile(i8* %t21)
+    %t22 = load %T_text, %T_text* @input
+    call void @_CloseFile(i8* %t22)
 
     ; epilogue
     ret void
@@ -95,6 +131,15 @@ define void @P_initinteger(%T_digitarray* %x, i32 %n)
     store i32 %n, i32* %t1
     %t2 = getelementptr inbounds %Frame_initinteger, %Frame_initinteger* %.frame, i32 0, i32 1
     store %T_digitarray* %x, %T_digitarray** %t2
+
+    ; body
+    %t3 = getelementptr inbounds %Frame_initinteger, %Frame_initinteger* %.frame, i32 0, i32 1
+    %t4 = load %T_digitarray*, %T_digitarray** %t3
+    %t5 = getelementptr inbounds %T_digitarray, %T_digitarray* %t4, i32 0, i32 0
+    %t7 = getelementptr inbounds %Frame_initinteger, %Frame_initinteger* %.frame, i32 0, i32 0
+    %t6 = load i32, i32* %t7
+    store i32 %t6, i32* %t5
+    ; nop
 
     ; epilogue
     ret void
@@ -139,6 +184,16 @@ define void @P_divide(%T_digitarray* %x, i32 %xs, i32 %n, %T_digitarray* %y, i32
     %t5 = getelementptr inbounds %Frame_divide, %Frame_divide* %.frame, i32 0, i32 4
     store i32* %ys, i32** %t5
 
+    ; body
+    %t6 = getelementptr inbounds %Frame_divide, %Frame_divide* %.frame, i32 0, i32 5
+    store i32 0, i32* %t6
+    %t7 = getelementptr inbounds %Frame_divide, %Frame_divide* %.frame, i32 0, i32 4
+    %t8 = load i32*, i32** %t7
+    %t10 = getelementptr inbounds %Frame_divide, %Frame_divide* %.frame, i32 0, i32 2
+    %t9 = load i32, i32* %t10
+    store i32 %t9, i32* %t8
+    ; nop
+
     ; epilogue
     ret void
 }
@@ -175,6 +230,15 @@ define void @P_add(%T_digitarray* %s, %T_digitarray* %x, i32 %xs)
     store %T_digitarray* %x, %T_digitarray** %t2
     %t3 = getelementptr inbounds %Frame_add, %Frame_add* %.frame, i32 0, i32 2
     store i32 %xs, i32* %t3
+
+    ; body
+    %t4 = getelementptr inbounds %Frame_add, %Frame_add* %.frame, i32 0, i32 3
+    store i32 0, i32* %t4
+    %t5 = getelementptr inbounds %Frame_add, %Frame_add* %.frame, i32 0, i32 4
+    %t7 = getelementptr inbounds %Frame_add, %Frame_add* %.frame, i32 0, i32 2
+    %t6 = load i32, i32* %t7
+    store i32 %t6, i32* %t5
+    ; nop
 
     ; epilogue
     ret void
@@ -213,6 +277,15 @@ define void @P_sub(%T_digitarray* %s, %T_digitarray* %x, i32 %xs)
     %t3 = getelementptr inbounds %Frame_sub, %Frame_sub* %.frame, i32 0, i32 2
     store i32 %xs, i32* %t3
 
+    ; body
+    %t4 = getelementptr inbounds %Frame_sub, %Frame_sub* %.frame, i32 0, i32 3
+    store i32 0, i32* %t4
+    %t5 = getelementptr inbounds %Frame_sub, %Frame_sub* %.frame, i32 0, i32 4
+    %t7 = getelementptr inbounds %Frame_sub, %Frame_sub* %.frame, i32 0, i32 2
+    %t6 = load i32, i32* %t7
+    store i32 %t6, i32* %t5
+    ; nop
+
     ; epilogue
     ret void
 }
@@ -221,6 +294,8 @@ define void @P_sub(%T_digitarray* %s, %T_digitarray* %x, i32 %xs)
 ;================================================================================
 ; string literals
 
+@.str.4 = private unnamed_addr constant [15 x i8] c"Final digits: \00", align 1
+@.str.3 = private unnamed_addr constant [5 x i8] c"e = \00", align 1
 @.str.1 = private unnamed_addr constant [6 x i8] c"input\00", align 1
 @.str.2 = private unnamed_addr constant [7 x i8] c"output\00", align 1
 

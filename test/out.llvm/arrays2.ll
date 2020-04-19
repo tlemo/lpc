@@ -58,11 +58,37 @@ define void @P_()
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
 
-    ; cleanup
+    ; body
     %t3 = load %T_text, %T_text* @_output
-    call void @_CloseFile(i8* %t3)
-    %t4 = load %T_text, %T_text* @_input
-    call void @_CloseFile(i8* %t4)
+    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([24 x i8], [24 x i8]* @.str.3, i32 0, i32 0), i32 23)
+    call void @_WriteLn(i8* %t3)
+    %t4 = load %T_text, %T_text* @_output
+    call void @_WriteLn(i8* %t4)
+    %t5 = getelementptr inbounds %T_array_4, %T_array_4* @Value, i32 0, i32 3
+    %t6 = getelementptr inbounds %T_array_5, %T_array_5* %t5, i32 0, i32 5
+    %t7 = sub i32 0, 1
+    store i32 %t7, i32* %t6
+    %t8 = getelementptr inbounds %T_array_4, %T_array_4* @Value, i32 0, i32 3
+    %t9 = getelementptr inbounds %T_array_5, %T_array_5* %t8, i32 0, i32 6
+    store i32 3, i32* %t9
+    %t10 = getelementptr inbounds %T_array_4, %T_array_4* @Value, i32 0, i32 3
+    %t11 = getelementptr inbounds %T_array_5, %T_array_5* %t10, i32 0, i32 6
+    %t12 = load i32, i32* %t11
+    %t13 = getelementptr inbounds %T_array_4, %T_array_4* @Value, i32 0, i32 %t12
+    %t14 = getelementptr inbounds %T_array_5, %T_array_5* %t13, i32 0, i32 7
+    store i32 2, i32* %t14
+    %t15 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t15, i32 0, i32 0, i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.4, i32 0, i32 0), i32 15)
+    call void @_WriteLn(i8* %t15)
+    %t16 = load %T_text, %T_text* @_output
+    call void @_WriteLn(i8* %t16)
+    ; nop
+
+    ; cleanup
+    %t17 = load %T_text, %T_text* @_output
+    call void @_CloseFile(i8* %t17)
+    %t18 = load %T_text, %T_text* @_input
+    call void @_CloseFile(i8* %t18)
 
     ; epilogue
     ret void
@@ -72,6 +98,8 @@ define void @P_()
 ;================================================================================
 ; string literals
 
+@.str.3 = private unnamed_addr constant [24 x i8] c" Output of checkerboard\00", align 1
+@.str.4 = private unnamed_addr constant [16 x i8] c"Output of value\00", align 1
 @.str.1 = private unnamed_addr constant [7 x i8] c"_input\00", align 1
 @.str.2 = private unnamed_addr constant [8 x i8] c"_output\00", align 1
 

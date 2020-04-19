@@ -38,14 +38,14 @@ declare dso_local void @_WriteLn(i8*)
 ; program variables
 @_input = dso_local global %T_text zeroinitializer
 @_output = dso_local global %T_text zeroinitializer
-@t1 = dso_local global i32 zeroinitializer
+@t1 = dso_local global i8 zeroinitializer
 @t2 = dso_local global i32 zeroinitializer
 @t3 = dso_local global i32 zeroinitializer
 @t4 = dso_local global i32 zeroinitializer
 @t5 = dso_local global i32 zeroinitializer
 @t6 = dso_local global i32 zeroinitializer
 @tmp = dso_local global %T_text zeroinitializer
-@v1 = dso_local global i32 zeroinitializer
+@v1 = dso_local global i8 zeroinitializer
 @v2 = dso_local global i32 zeroinitializer
 @v3 = dso_local global i32 zeroinitializer
 @v4 = dso_local global i32 zeroinitializer
@@ -63,13 +63,95 @@ define void @P_()
     %t3 = call i8* @_OpenTempFile(i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.3, i32 0, i32 0))
     store i8* %t3, i8** @tmp
 
-    ; cleanup
-    %t4 = load %T_text, %T_text* @tmp
-    call void @_CloseFile(i8* %t4)
+    ; body
+    store i8 120, i8* @v1
+    store i32 1, i32* @v2
+    store i32 200, i32* @v3
+    store i32 123, i32* @v4
+    store i32 32768, i32* @v5
+    %t4 = sub i32 0, 1
+    store i32 %t4, i32* @v6
     %t5 = load %T_text, %T_text* @_output
-    call void @_CloseFile(i8* %t5)
-    %t6 = load %T_text, %T_text* @_input
-    call void @_CloseFile(i8* %t6)
+    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.4, i32 0, i32 0), i32 12)
+    %t6 = load i8, i8* @v1
+    call void @_WriteChar(i8* %t5, i32 0, i32 0, i8 %t6)
+    call void @_WriteChar(i8* %t5, i32 0, i32 0, i8 32)
+    %t7 = load i32, i32* @v2
+    call void @_WriteInteger(i8* %t5, i32 0, i32 0, i32 %t7)
+    call void @_WriteChar(i8* %t5, i32 0, i32 0, i8 32)
+    %t8 = load i32, i32* @v3
+    call void @_WriteInteger(i8* %t5, i32 0, i32 0, i32 %t8)
+    call void @_WriteChar(i8* %t5, i32 0, i32 0, i8 32)
+    %t9 = load i32, i32* @v4
+    call void @_WriteInteger(i8* %t5, i32 0, i32 0, i32 %t9)
+    call void @_WriteChar(i8* %t5, i32 0, i32 0, i8 32)
+    %t10 = load i32, i32* @v5
+    call void @_WriteInteger(i8* %t5, i32 0, i32 0, i32 %t10)
+    call void @_WriteChar(i8* %t5, i32 0, i32 0, i8 32)
+    %t11 = load i32, i32* @v6
+    call void @_WriteInteger(i8* %t5, i32 0, i32 0, i32 %t11)
+    call void @_WriteLn(i8* %t5)
+    %t12 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t12, i32 0, i32 0, i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.5, i32 0, i32 0), i32 17)
+    call void @_WriteLn(i8* %t12)
+    %t13 = load %T_text, %T_text* @tmp
+    %t14 = load i8, i8* @v1
+    call void @_WriteChar(i8* %t13, i32 0, i32 0, i8 %t14)
+    call void @_WriteChar(i8* %t13, i32 0, i32 0, i8 32)
+    %t15 = load i32, i32* @v2
+    call void @_WriteInteger(i8* %t13, i32 0, i32 0, i32 %t15)
+    call void @_WriteChar(i8* %t13, i32 0, i32 0, i8 32)
+    %t16 = load i32, i32* @v3
+    call void @_WriteInteger(i8* %t13, i32 0, i32 0, i32 %t16)
+    call void @_WriteLn(i8* %t13)
+    %t17 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t17, i32 0, i32 0, i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.6, i32 0, i32 0), i32 17)
+    call void @_WriteLn(i8* %t17)
+    %t18 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t18, i32 0, i32 0, i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.7, i32 0, i32 0), i32 17)
+    call void @_WriteLn(i8* %t18)
+    %t19 = load %T_text, %T_text* @tmp
+    %t20 = load i32, i32* @v4
+    call void @_WriteInteger(i8* %t19, i32 0, i32 0, i32 %t20)
+    call void @_WriteChar(i8* %t19, i32 0, i32 0, i8 32)
+    %t21 = load i32, i32* @v5
+    call void @_WriteInteger(i8* %t19, i32 0, i32 0, i32 %t21)
+    call void @_WriteChar(i8* %t19, i32 0, i32 0, i8 32)
+    %t22 = load i32, i32* @v6
+    call void @_WriteInteger(i8* %t19, i32 0, i32 0, i32 %t22)
+    call void @_WriteLn(i8* %t19)
+    %t23 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t23, i32 0, i32 0, i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.8, i32 0, i32 0), i32 17)
+    call void @_WriteLn(i8* %t23)
+    %t24 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t24, i32 0, i32 0, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.9, i32 0, i32 0), i32 12)
+    %t25 = load i8, i8* @t1
+    call void @_WriteChar(i8* %t24, i32 0, i32 0, i8 %t25)
+    call void @_WriteChar(i8* %t24, i32 0, i32 0, i8 32)
+    %t26 = load i32, i32* @t2
+    call void @_WriteInteger(i8* %t24, i32 0, i32 0, i32 %t26)
+    call void @_WriteChar(i8* %t24, i32 0, i32 0, i8 32)
+    %t27 = load i32, i32* @t3
+    call void @_WriteInteger(i8* %t24, i32 0, i32 0, i32 %t27)
+    call void @_WriteChar(i8* %t24, i32 0, i32 0, i8 32)
+    %t28 = load i32, i32* @t4
+    call void @_WriteInteger(i8* %t24, i32 0, i32 0, i32 %t28)
+    call void @_WriteChar(i8* %t24, i32 0, i32 0, i8 32)
+    %t29 = load i32, i32* @t5
+    call void @_WriteInteger(i8* %t24, i32 0, i32 0, i32 %t29)
+    call void @_WriteChar(i8* %t24, i32 0, i32 0, i8 32)
+    %t30 = load i32, i32* @t6
+    call void @_WriteInteger(i8* %t24, i32 0, i32 0, i32 %t30)
+    call void @_WriteLn(i8* %t24)
+    ; nop
+
+    ; cleanup
+    %t31 = load %T_text, %T_text* @tmp
+    call void @_CloseFile(i8* %t31)
+    %t32 = load %T_text, %T_text* @_output
+    call void @_CloseFile(i8* %t32)
+    %t33 = load %T_text, %T_text* @_input
+    call void @_CloseFile(i8* %t33)
 
     ; epilogue
     ret void
@@ -81,7 +163,13 @@ define void @P_()
 
 @.str.1 = private unnamed_addr constant [7 x i8] c"_input\00", align 1
 @.str.2 = private unnamed_addr constant [8 x i8] c"_output\00", align 1
+@.str.9 = private unnamed_addr constant [13 x i8] c"final     : \00", align 1
+@.str.4 = private unnamed_addr constant [13 x i8] c"initial   : \00", align 1
+@.str.6 = private unnamed_addr constant [18 x i8] c"read part   1 ...\00", align 1
+@.str.8 = private unnamed_addr constant [18 x i8] c"read part   2 ...\00", align 1
 @.str.3 = private unnamed_addr constant [4 x i8] c"tmp\00", align 1
+@.str.5 = private unnamed_addr constant [18 x i8] c"write part  1 ...\00", align 1
+@.str.7 = private unnamed_addr constant [18 x i8] c"write part  2 ...\00", align 1
 
 
 ;================================================================================
@@ -99,7 +187,7 @@ define void @P_()
 !5 = !DIBasicType(name: "void", size: 0)
 !6 = !DIBasicType(name: "real", size: 64, encoding: DW_ATE_float)
 !7 = !DIDerivedType(tag: DW_TAG_pointer_type, name: "text", file: !0, line: 0, baseType: null, size: 64)
-!8 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
+!8 = !DIBasicType(name: "range of char", size: 8, encoding: DW_ATE_unsigned_char)
 !9 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !10 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)
 !11 = !DIBasicType(name: "range", size: 32, encoding: DW_ATE_signed)

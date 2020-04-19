@@ -52,11 +52,22 @@ define void @P_()
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
 
-    ; cleanup
+    ; body
     %t3 = load %T_text, %T_text* @_output
-    call void @_CloseFile(i8* %t3)
-    %t4 = load %T_text, %T_text* @_input
-    call void @_CloseFile(i8* %t4)
+    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @.str.3, i32 0, i32 0), i32 18)
+    call void @_WriteLn(i8* %t3)
+    %t4 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t4, i32 0, i32 0, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.4, i32 0, i32 0), i32 6)
+    call void @_WriteString(i8* %t4, i32 0, i32 0, i8* getelementptr inbounds (%T_array_2, %T_array_2* @myName, i32 0, i32 0), i32 16)
+    call void @_WriteChar(i8* %t4, i32 0, i32 0, i8 33)
+    call void @_WriteLn(i8* %t4)
+    ; nop
+
+    ; cleanup
+    %t5 = load %T_text, %T_text* @_output
+    call void @_CloseFile(i8* %t5)
+    %t6 = load %T_text, %T_text* @_input
+    call void @_CloseFile(i8* %t6)
 
     ; epilogue
     ret void
@@ -66,6 +77,8 @@ define void @P_()
 ;================================================================================
 ; string literals
 
+@.str.4 = private unnamed_addr constant [7 x i8] c"Hello,\00", align 1
+@.str.3 = private unnamed_addr constant [19 x i8] c"What is your name?\00", align 1
 @.str.1 = private unnamed_addr constant [7 x i8] c"_input\00", align 1
 @.str.2 = private unnamed_addr constant [8 x i8] c"_output\00", align 1
 

@@ -54,6 +54,10 @@ define void @P_()
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
 
+    ; body
+    store i32 1, i32* @i
+    ; nop
+
     ; cleanup
     %t3 = load %T_text, %T_text* @_output
     call void @_CloseFile(i8* %t3)
@@ -94,10 +98,17 @@ define i1 @F_f(%T_vec %x, i32 %i)
     %t2 = getelementptr inbounds %Frame_f, %Frame_f* %.frame, i32 0, i32 1
     store %T_vec %x, %T_vec* %t2
 
-    ; epilogue
+    ; body
     %t3 = getelementptr inbounds %Frame_f, %Frame_f* %.frame, i32 0, i32 2
-    %t4 = load i1, i1* %t3
-    ret i1 %t4
+    store i1 0, i1* %t3
+    %t4 = getelementptr inbounds %Frame_f, %Frame_f* %.frame, i32 0, i32 2
+    store i1 1, i1* %t4
+    ; nop
+
+    ; epilogue
+    %t5 = getelementptr inbounds %Frame_f, %Frame_f* %.frame, i32 0, i32 2
+    %t6 = load i1, i1* %t5
+    ret i1 %t6
 }
 
 

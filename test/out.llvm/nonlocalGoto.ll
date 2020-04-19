@@ -50,11 +50,51 @@ define void @P_()
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
 
-    ; cleanup
+    ; body
+    store i32 0, i32* @p1
+    store i32 0, i32* @p2
     %t3 = load %T_text, %T_text* @_output
-    call void @_CloseFile(i8* %t3)
-    %t4 = load %T_text, %T_text* @_input
-    call void @_CloseFile(i8* %t4)
+    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.3, i32 0, i32 0), i32 4)
+    call void @_WriteLn(i8* %t3)
+    %t4 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t4, i32 0, i32 0, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.4, i32 0, i32 0), i32 5)
+    %t5 = load i32, i32* @p1
+    call void @_WriteInteger(i8* %t4, i32 0, i32 0, i32 %t5)
+    call void @_WriteLn(i8* %t4)
+    %t6 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t6, i32 0, i32 0, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.5, i32 0, i32 0), i32 5)
+    %t7 = load i32, i32* @p2
+    call void @_WriteInteger(i8* %t6, i32 0, i32 0, i32 %t7)
+    call void @_WriteLn(i8* %t6)
+    %t9 = load i32, i32* @p1
+    %t8 = add i32 %t9, 1
+    store i32 %t8, i32* @p1
+    %t10 = load i32, i32* @p1
+    %t11 = call i32 @F_foo(i32 %t10)
+    store i32 %t11, i32* @p2
+    %t12 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t12, i32 0, i32 0, i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.6, i32 0, i32 0), i32 10)
+    call void @_WriteLn(i8* %t12)
+    %t13 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t13, i32 0, i32 0, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.7, i32 0, i32 0), i32 4)
+    call void @_WriteLn(i8* %t13)
+    %t14 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t14, i32 0, i32 0, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.4, i32 0, i32 0), i32 5)
+    %t15 = load i32, i32* @p1
+    call void @_WriteInteger(i8* %t14, i32 0, i32 0, i32 %t15)
+    call void @_WriteLn(i8* %t14)
+    %t16 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t16, i32 0, i32 0, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.5, i32 0, i32 0), i32 5)
+    %t17 = load i32, i32* @p2
+    call void @_WriteInteger(i8* %t16, i32 0, i32 0, i32 %t17)
+    call void @_WriteLn(i8* %t16)
+    ; nop
+
+    ; cleanup
+    %t18 = load %T_text, %T_text* @_output
+    call void @_CloseFile(i8* %t18)
+    %t19 = load %T_text, %T_text* @_input
+    call void @_CloseFile(i8* %t19)
 
     ; epilogue
     ret void
@@ -86,10 +126,19 @@ define i32 @F_foo(i32 %x)
     %t1 = getelementptr inbounds %Frame_foo, %Frame_foo* %.frame, i32 0, i32 0
     store i32 %x, i32* %t1
 
+    ; body
+    %t2 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t2, i32 0, i32 0, i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.6, i32 0, i32 0), i32 10)
+    call void @_WriteLn(i8* %t2)
+    %t3 = getelementptr inbounds %Frame_foo, %Frame_foo* %.frame, i32 0, i32 1
+    %t4 = sub i32 0, 1
+    store i32 %t4, i32* %t3
+    ; nop
+
     ; epilogue
-    %t2 = getelementptr inbounds %Frame_foo, %Frame_foo* %.frame, i32 0, i32 1
-    %t3 = load i32, i32* %t2
-    ret i32 %t3
+    %t5 = getelementptr inbounds %Frame_foo, %Frame_foo* %.frame, i32 0, i32 1
+    %t6 = load i32, i32* %t5
+    ret i32 %t6
 }
 
 
@@ -115,6 +164,15 @@ define void @P_bar(i32 %x)
     %t1 = getelementptr inbounds %Frame_bar, %Frame_bar* %.frame, i32 0, i32 0
     store i32 %x, i32* %t1
 
+    ; body
+    call void @P_bar_moo(%Frame_bar* %.frame)
+    %t2 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t2, i32 0, i32 0, i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.6, i32 0, i32 0), i32 10)
+    call void @_WriteLn(i8* %t2)
+    %t3 = call i32 @F_foo(i32 3)
+    store i32 %t3, i32* @p2
+    ; nop
+
     ; epilogue
     ret void
 }
@@ -139,6 +197,9 @@ define void @P_bar_moo(%Frame_bar* %.slink)
     %t1 = getelementptr inbounds %Frame_bar_moo, %Frame_bar_moo* %.frame, i32 0, i32 0
     store %Frame_bar* %.slink, %Frame_bar** %t1
 
+    ; body
+    ; nop
+
     ; epilogue
     ret void
 }
@@ -147,8 +208,13 @@ define void @P_bar_moo(%Frame_bar* %.slink)
 ;================================================================================
 ; string literals
 
+@.str.3 = private unnamed_addr constant [5 x i8] c"P_L1\00", align 1
+@.str.7 = private unnamed_addr constant [5 x i8] c"P_L2\00", align 1
+@.str.6 = private unnamed_addr constant [11 x i8] c"UNEXPECTED\00", align 1
 @.str.1 = private unnamed_addr constant [7 x i8] c"_input\00", align 1
 @.str.2 = private unnamed_addr constant [8 x i8] c"_output\00", align 1
+@.str.4 = private unnamed_addr constant [6 x i8] c"p1 = \00", align 1
+@.str.5 = private unnamed_addr constant [6 x i8] c"p2 = \00", align 1
 
 
 ;================================================================================

@@ -67,11 +67,82 @@ define void @P_()
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @output
 
+    ; body
+    call void @P_clear()
+    %t3 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 1
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.3, i32 0, i32 0), %T_string10* %t3
+    %t4 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 2
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.4, i32 0, i32 0), %T_string10* %t4
+    %t5 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 3
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.5, i32 0, i32 0), %T_string10* %t5
+    %t6 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 4
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.6, i32 0, i32 0), %T_string10* %t6
+    %t7 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 5
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.7, i32 0, i32 0), %T_string10* %t7
+    %t8 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 6
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.8, i32 0, i32 0), %T_string10* %t8
+    %t9 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 7
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.9, i32 0, i32 0), %T_string10* %t9
+    %t10 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 8
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.10, i32 0, i32 0), %T_string10* %t10
+    %t11 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 9
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.11, i32 0, i32 0), %T_string10* %t11
+    %t12 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 10
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.12, i32 0, i32 0), %T_string10* %t12
+    %t13 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 11
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.13, i32 0, i32 0), %T_string10* %t13
+    %t14 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 12
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.14, i32 0, i32 0), %T_string10* %t14
+    %t15 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 13
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.15, i32 0, i32 0), %T_string10* %t15
+    %t16 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 14
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.16, i32 0, i32 0), %T_string10* %t16
+    %t17 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 15
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.17, i32 0, i32 0), %T_string10* %t17
+    %t18 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 16
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.18, i32 0, i32 0), %T_string10* %t18
+    %t19 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 17
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.19, i32 0, i32 0), %T_string10* %t19
+    %t20 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 18
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.20, i32 0, i32 0), %T_string10* %t20
+    %t21 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 19
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.21, i32 0, i32 0), %T_string10* %t21
+    %t22 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 20
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.22, i32 0, i32 0), %T_string10* %t22
+    %t23 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 21
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.23, i32 0, i32 0), %T_string10* %t23
+    %t24 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 22
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.24, i32 0, i32 0), %T_string10* %t24
+    %t25 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 23
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.25, i32 0, i32 0), %T_string10* %t25
+    %t26 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 24
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.26, i32 0, i32 0), %T_string10* %t26
+    %t27 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 25
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.27, i32 0, i32 0), %T_string10* %t27
+    %t28 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 26
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.28, i32 0, i32 0), %T_string10* %t28
+    %t29 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 27
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.29, i32 0, i32 0), %T_string10* %t29
+    %t30 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 28
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.30, i32 0, i32 0), %T_string10* %t30
+    %t31 = getelementptr inbounds %T_array_3, %T_array_3* @keywd, i32 0, i32 29
+    store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.31, i32 0, i32 0), %T_string10* %t31
+    %t32 = load %T_text, %T_text* @output
+    call void @_WriteLn(i8* %t32)
+    %t33 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t33, i32 0, i32 0, i8* getelementptr inbounds ([62 x i8], [62 x i8]* @.str.32, i32 0, i32 0), i32 61)
+    call void @_WriteLn(i8* %t33)
+    %t34 = load %T_text, %T_text* @output
+    call void @_WriteLn(i8* %t34)
+    %t35 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t35, i32 0, i32 0, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.33, i32 0, i32 0), i32 6)
+    call void @_WriteLn(i8* %t35)
+
     ; cleanup
-    %t3 = load %T_text, %T_text* @output
-    call void @_CloseFile(i8* %t3)
-    %t4 = load %T_text, %T_text* @input
-    call void @_CloseFile(i8* %t4)
+    %t36 = load %T_text, %T_text* @output
+    call void @_CloseFile(i8* %t36)
+    %t37 = load %T_text, %T_text* @input
+    call void @_CloseFile(i8* %t37)
 
     ; epilogue
     ret void
@@ -103,6 +174,19 @@ define void @P_prtlin(%T_string80* %str)
     %.frame = alloca %Frame_prtlin, align 8
     %t1 = getelementptr inbounds %Frame_prtlin, %Frame_prtlin* %.frame, i32 0, i32 0
     store %T_string80* %str, %T_string80** %t1
+
+    ; body
+    %t2 = getelementptr inbounds %Frame_prtlin, %Frame_prtlin* %.frame, i32 0, i32 2
+    store i32 80, i32* %t2
+    %t3 = getelementptr inbounds %Frame_prtlin, %Frame_prtlin* %.frame, i32 0, i32 2
+    %t6 = getelementptr inbounds %Frame_prtlin, %Frame_prtlin* %.frame, i32 0, i32 2
+    %t5 = load i32, i32* %t6
+    %t4 = add i32 %t5, 1
+    store i32 %t4, i32* %t3
+    %t7 = getelementptr inbounds %Frame_prtlin, %Frame_prtlin* %.frame, i32 0, i32 1
+    store i32 1, i32* %t7
+    %t8 = load %T_text, %T_text* @output
+    call void @_WriteLn(i8* %t8)
 
     ; epilogue
     ret void
@@ -137,6 +221,17 @@ define void @P_prtlin_prtkey(%Frame_prtlin* %.slink, %T_string10* %str)
     %t2 = getelementptr inbounds %Frame_prtlin_prtkey, %Frame_prtlin_prtkey* %.frame, i32 0, i32 0
     store %T_string10* %str, %T_string10** %t2
 
+    ; body
+    %t3 = getelementptr inbounds %Frame_prtlin_prtkey, %Frame_prtlin_prtkey* %.frame, i32 0, i32 2
+    store i32 10, i32* %t3
+    %t4 = getelementptr inbounds %Frame_prtlin_prtkey, %Frame_prtlin_prtkey* %.frame, i32 0, i32 2
+    %t7 = getelementptr inbounds %Frame_prtlin_prtkey, %Frame_prtlin_prtkey* %.frame, i32 0, i32 2
+    %t6 = load i32, i32* %t7
+    %t5 = add i32 %t6, 1
+    store i32 %t5, i32* %t4
+    %t8 = getelementptr inbounds %Frame_prtlin_prtkey, %Frame_prtlin_prtkey* %.frame, i32 0, i32 1
+    store i32 1, i32* %t8
+
     ; epilogue
     ret void
 }
@@ -164,6 +259,10 @@ define void @P_prterr(i32 %err)
     %t1 = getelementptr inbounds %Frame_prterr, %Frame_prterr* %.frame, i32 0, i32 0
     store i32 %err, i32* %t1
 
+    ; body
+    %t2 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t2, i32 0, i32 0, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.34, i32 0, i32 0), i32 4)
+
     ; epilogue
     ret void
 }
@@ -190,10 +289,16 @@ define i8 @F_chkchr()
     ; allocate frame
     %.frame = alloca %Frame_chkchr, align 8
 
-    ; epilogue
+    ; body
     %t1 = getelementptr inbounds %Frame_chkchr, %Frame_chkchr* %.frame, i32 0, i32 0
-    %t2 = load i8, i8* %t1
-    ret i8 %t2
+    %t3 = getelementptr inbounds %Frame_chkchr, %Frame_chkchr* %.frame, i32 0, i32 1
+    %t2 = load i8, i8* %t3
+    store i8 %t2, i8* %t1
+
+    ; epilogue
+    %t4 = getelementptr inbounds %Frame_chkchr, %Frame_chkchr* %.frame, i32 0, i32 0
+    %t5 = load i8, i8* %t4
+    ret i8 %t5
 }
 
 
@@ -217,10 +322,16 @@ define i1 @F_chkend()
     ; allocate frame
     %.frame = alloca %Frame_chkend, align 8
 
-    ; epilogue
+    ; body
     %t1 = getelementptr inbounds %Frame_chkend, %Frame_chkend* %.frame, i32 0, i32 0
-    %t2 = load i1, i1* %t1
-    ret i1 %t2
+    %t3 = load i32, i32* @linec
+    %t2 = icmp sgt i32 %t3, 80
+    store i1 %t2, i1* %t1
+
+    ; epilogue
+    %t4 = getelementptr inbounds %Frame_chkend, %Frame_chkend* %.frame, i32 0, i32 0
+    %t5 = load i1, i1* %t4
+    ret i1 %t5
 }
 
 
@@ -244,10 +355,15 @@ define i8 @F_getchr()
     ; allocate frame
     %.frame = alloca %Frame_getchr, align 8
 
-    ; epilogue
+    ; body
     %t1 = getelementptr inbounds %Frame_getchr, %Frame_getchr* %.frame, i32 0, i32 0
-    %t2 = load i8, i8* %t1
-    ret i8 %t2
+    %t2 = call i8 @F_chkchr()
+    store i8 %t2, i8* %t1
+
+    ; epilogue
+    %t3 = getelementptr inbounds %Frame_getchr, %Frame_getchr* %.frame, i32 0, i32 0
+    %t4 = load i8, i8* %t3
+    ret i8 %t4
 }
 
 
@@ -276,10 +392,18 @@ define i1 @F_chknxt(i8 %c)
     %t1 = getelementptr inbounds %Frame_chknxt, %Frame_chknxt* %.frame, i32 0, i32 0
     store i8 %c, i8* %t1
 
-    ; epilogue
+    ; body
     %t2 = getelementptr inbounds %Frame_chknxt, %Frame_chknxt* %.frame, i32 0, i32 1
-    %t3 = load i1, i1* %t2
-    ret i1 %t3
+    %t5 = getelementptr inbounds %Frame_chknxt, %Frame_chknxt* %.frame, i32 0, i32 0
+    %t4 = load i8, i8* %t5
+    %t6 = call i8 @F_chkchr()
+    %t3 = icmp eq i32 %t4, %t6
+    store i1 %t3, i1* %t2
+
+    ; epilogue
+    %t7 = getelementptr inbounds %Frame_chknxt, %Frame_chknxt* %.frame, i32 0, i32 1
+    %t8 = load i1, i1* %t7
+    ret i1 %t8
 }
 
 
@@ -302,6 +426,9 @@ define void @P_skpspc()
 {
     ; allocate frame
     %.frame = alloca %Frame_skpspc, align 8
+
+    ; body
+    ; nop
 
     ; epilogue
     ret void
@@ -328,10 +455,24 @@ define i1 @F_chksend()
     ; allocate frame
     %.frame = alloca %Frame_chksend, align 8
 
-    ; epilogue
+    ; body
+    call void @P_skpspc()
     %t1 = getelementptr inbounds %Frame_chksend, %Frame_chksend* %.frame, i32 0, i32 0
-    %t2 = load i1, i1* %t1
-    ret i1 %t2
+L_expr_1:
+    %t3 = call i1 @F_chkend()
+    br i1 %t3, label %L_OR_shortcut_3, label %L_OR_eval_2
+L_OR_eval_2:
+    %t5 = call i8 @F_chkchr()
+    %t4 = icmp eq i32 %t5, 58
+    br label %L_OR_shortcut_3
+L_OR_shortcut_3:
+    %t2 = phi [%t4, %L_OR_eval_2], [true, %L_expr_1]
+    store i1 %t2, i1* %t1
+
+    ; epilogue
+    %t6 = getelementptr inbounds %Frame_chksend, %Frame_chksend* %.frame, i32 0, i32 0
+    %t7 = load i1, i1* %t6
+    ret i1 %t7
 }
 
 
@@ -362,10 +503,18 @@ define i1 @F_null(%T_string80* %str)
     %t1 = getelementptr inbounds %Frame_null, %Frame_null* %.frame, i32 0, i32 0
     store %T_string80* %str, %T_string80** %t1
 
+    ; body
+    %t2 = getelementptr inbounds %Frame_null, %Frame_null* %.frame, i32 0, i32 2
+    store i1 1, i1* %t2
+    %t3 = getelementptr inbounds %Frame_null, %Frame_null* %.frame, i32 0, i32 1
+    %t5 = getelementptr inbounds %Frame_null, %Frame_null* %.frame, i32 0, i32 2
+    %t4 = load i1, i1* %t5
+    store i1 %t4, i1* %t3
+
     ; epilogue
-    %t2 = getelementptr inbounds %Frame_null, %Frame_null* %.frame, i32 0, i32 1
-    %t3 = load i1, i1* %t2
-    ret i1 %t3
+    %t6 = getelementptr inbounds %Frame_null, %Frame_null* %.frame, i32 0, i32 1
+    %t7 = load i1, i1* %t6
+    ret i1 %t7
 }
 
 
@@ -394,10 +543,22 @@ define i1 @F_digit(i8 %c)
     %t1 = getelementptr inbounds %Frame_digit, %Frame_digit* %.frame, i32 0, i32 0
     store i8 %c, i8* %t1
 
-    ; epilogue
+    ; body
     %t2 = getelementptr inbounds %Frame_digit, %Frame_digit* %.frame, i32 0, i32 1
-    %t3 = load i1, i1* %t2
-    ret i1 %t3
+L_expr_1:
+009A1990009A1AC8    %t4 = icmp sge i32 , 
+    br i1 %t4, label %L_AND_eval_2, label %L_AND_shortcut_3
+L_AND_eval_2:
+009A1CD0009A16B8    %t7 = icmp sle i32 , 
+    br label %L_AND_shortcut_3
+L_AND_shortcut_3:
+    %t3 = phi [%t7, %L_AND_eval_2], [false, %L_expr_1]
+    store i1 %t3, i1* %t2
+
+    ; epilogue
+    %t10 = getelementptr inbounds %Frame_digit, %Frame_digit* %.frame, i32 0, i32 1
+    %t11 = load i1, i1* %t10
+    ret i1 %t11
 }
 
 
@@ -426,10 +587,16 @@ define i8 @F_lcase(i8 %c)
     %t1 = getelementptr inbounds %Frame_lcase, %Frame_lcase* %.frame, i32 0, i32 0
     store i8 %c, i8* %t1
 
-    ; epilogue
+    ; body
     %t2 = getelementptr inbounds %Frame_lcase, %Frame_lcase* %.frame, i32 0, i32 1
-    %t3 = load i8, i8* %t2
-    ret i8 %t3
+    %t4 = getelementptr inbounds %Frame_lcase, %Frame_lcase* %.frame, i32 0, i32 0
+    %t3 = load i8, i8* %t4
+    store i8 %t3, i8* %t2
+
+    ; epilogue
+    %t5 = getelementptr inbounds %Frame_lcase, %Frame_lcase* %.frame, i32 0, i32 1
+    %t6 = load i8, i8* %t5
+    ret i8 %t6
 }
 
 
@@ -458,10 +625,22 @@ define i1 @F_alpha(i8 %c)
     %t1 = getelementptr inbounds %Frame_alpha, %Frame_alpha* %.frame, i32 0, i32 0
     store i8 %c, i8* %t1
 
-    ; epilogue
+    ; body
     %t2 = getelementptr inbounds %Frame_alpha, %Frame_alpha* %.frame, i32 0, i32 1
-    %t3 = load i1, i1* %t2
-    ret i1 %t3
+L_expr_1:
+009A1990009A13E0    %t4 = icmp sge i32 , 
+    br i1 %t4, label %L_AND_eval_2, label %L_AND_shortcut_3
+L_AND_eval_2:
+009A1650009A1650    %t8 = icmp sle i32 , 
+    br label %L_AND_shortcut_3
+L_AND_shortcut_3:
+    %t3 = phi [%t8, %L_AND_eval_2], [false, %L_expr_1]
+    store i1 %t3, i1* %t2
+
+    ; epilogue
+    %t11 = getelementptr inbounds %Frame_alpha, %Frame_alpha* %.frame, i32 0, i32 1
+    %t12 = load i1, i1* %t11
+    ret i1 %t12
 }
 
 
@@ -493,10 +672,20 @@ define i32 @F_lint(%T_string80* %str)
     %t1 = getelementptr inbounds %Frame_lint, %Frame_lint* %.frame, i32 0, i32 0
     store %T_string80* %str, %T_string80** %t1
 
+    ; body
+    %t2 = getelementptr inbounds %Frame_lint, %Frame_lint* %.frame, i32 0, i32 4
+    store i32 0, i32* %t2
+    %t3 = getelementptr inbounds %Frame_lint, %Frame_lint* %.frame, i32 0, i32 3
+    store i32 1, i32* %t3
+    %t4 = getelementptr inbounds %Frame_lint, %Frame_lint* %.frame, i32 0, i32 1
+    %t6 = getelementptr inbounds %Frame_lint, %Frame_lint* %.frame, i32 0, i32 4
+    %t5 = load i32, i32* %t6
+    store i32 %t5, i32* %t4
+
     ; epilogue
-    %t2 = getelementptr inbounds %Frame_lint, %Frame_lint* %.frame, i32 0, i32 1
-    %t3 = load i32, i32* %t2
-    ret i32 %t3
+    %t7 = getelementptr inbounds %Frame_lint, %Frame_lint* %.frame, i32 0, i32 1
+    %t8 = load i32, i32* %t7
+    ret i32 %t8
 }
 
 
@@ -526,10 +715,18 @@ define i32 @F_schlab(i32 %lab)
     %t1 = getelementptr inbounds %Frame_schlab, %Frame_schlab* %.frame, i32 0, i32 0
     store i32 %lab, i32* %t1
 
+    ; body
+    %t2 = getelementptr inbounds %Frame_schlab, %Frame_schlab* %.frame, i32 0, i32 2
+    store i32 1, i32* %t2
+    %t3 = getelementptr inbounds %Frame_schlab, %Frame_schlab* %.frame, i32 0, i32 1
+    %t5 = getelementptr inbounds %Frame_schlab, %Frame_schlab* %.frame, i32 0, i32 2
+    %t4 = load i32, i32* %t5
+    store i32 %t4, i32* %t3
+
     ; epilogue
-    %t2 = getelementptr inbounds %Frame_schlab, %Frame_schlab* %.frame, i32 0, i32 1
-    %t3 = load i32, i32* %t2
-    ret i32 %t3
+    %t6 = getelementptr inbounds %Frame_schlab, %Frame_schlab* %.frame, i32 0, i32 1
+    %t7 = load i32, i32* %t6
+    ret i32 %t7
 }
 
 
@@ -558,6 +755,10 @@ define void @P_inpstr(%T_string80* %str)
     %t1 = getelementptr inbounds %Frame_inpstr, %Frame_inpstr* %.frame, i32 0, i32 0
     store %T_string80* %str, %T_string80** %t1
 
+    ; body
+    %t2 = getelementptr inbounds %Frame_inpstr, %Frame_inpstr* %.frame, i32 0, i32 1
+    store i32 1, i32* %t2
+
     ; epilogue
     ret void
 }
@@ -583,10 +784,16 @@ define i8 @F_getvar()
     ; allocate frame
     %.frame = alloca %Frame_getvar, align 8
 
-    ; epilogue
+    ; body
     %t1 = getelementptr inbounds %Frame_getvar, %Frame_getvar* %.frame, i32 0, i32 0
-    %t2 = load i8, i8* %t1
-    ret i8 %t2
+    %t2 = call i8 @F_getchr()
+    %t3 = call i8 @F_lcase(i8 %t2)
+    store i8 %t3, i8* %t1
+
+    ; epilogue
+    %t4 = getelementptr inbounds %Frame_getvar, %Frame_getvar* %.frame, i32 0, i32 0
+    %t5 = load i8, i8* %t4
+    ret i8 %t5
 }
 
 
@@ -618,6 +825,17 @@ define void @P_enter(%T_string80* %str)
     %.frame = alloca %Frame_enter, align 8
     %t1 = getelementptr inbounds %Frame_enter, %Frame_enter* %.frame, i32 0, i32 0
     store %T_string80* %str, %T_string80** %t1
+
+    ; body
+    %t2 = getelementptr inbounds %Frame_enter, %Frame_enter* %.frame, i32 0, i32 5
+    %t3 = getelementptr inbounds %Frame_enter, %Frame_enter* %.frame, i32 0, i32 0
+    %t4 = load %T_string80*, %T_string80** %t3
+    %t5 = call i32 @F_lint(%T_string80* %t4)
+    store i32 %t5, i32* %t2
+    %t6 = getelementptr inbounds %Frame_enter, %Frame_enter* %.frame, i32 0, i32 2
+    store i32 1, i32* %t6
+    %t7 = getelementptr inbounds %Frame_enter, %Frame_enter* %.frame, i32 0, i32 1
+    store i1 0, i1* %t7
 
     ; epilogue
     ret void
@@ -653,6 +871,12 @@ define void @P_keycom(%T_string80* %str)
     %.frame = alloca %Frame_keycom, align 8
     %t1 = getelementptr inbounds %Frame_keycom, %Frame_keycom* %.frame, i32 0, i32 0
     store %T_string80* %str, %T_string80** %t1
+
+    ; body
+    %t2 = getelementptr inbounds %Frame_keycom, %Frame_keycom* %.frame, i32 0, i32 3
+    store i32 1, i32* %t2
+    %t3 = getelementptr inbounds %Frame_keycom, %Frame_keycom* %.frame, i32 0, i32 4
+    store i32 1, i32* %t3
 
     ; epilogue
     ret void
@@ -695,10 +919,23 @@ define i1 @F_keycom_matstr(%Frame_keycom* %.slink, %T_string80* %stra, i32* %i, 
     %t4 = getelementptr inbounds %Frame_keycom_matstr, %Frame_keycom_matstr* %.frame, i32 0, i32 2
     store %T_string10* %strb, %T_string10** %t4
 
+    ; body
+    %t5 = getelementptr inbounds %Frame_keycom_matstr, %Frame_keycom_matstr* %.frame, i32 0, i32 5
+    %t7 = getelementptr inbounds %Frame_keycom_matstr, %Frame_keycom_matstr* %.frame, i32 0, i32 0
+    %t8 = load i32*, i32** %t7
+    %t6 = load i32, i32* %t8
+    store i32 %t6, i32* %t5
+    %t9 = getelementptr inbounds %Frame_keycom_matstr, %Frame_keycom_matstr* %.frame, i32 0, i32 6
+    store i32 1, i32* %t9
+    %t10 = getelementptr inbounds %Frame_keycom_matstr, %Frame_keycom_matstr* %.frame, i32 0, i32 3
+    %t12 = getelementptr inbounds %Frame_keycom_matstr, %Frame_keycom_matstr* %.frame, i32 0, i32 4
+    %t11 = load i1, i1* %t12
+    store i1 %t11, i1* %t10
+
     ; epilogue
-    %t5 = getelementptr inbounds %Frame_keycom_matstr, %Frame_keycom_matstr* %.frame, i32 0, i32 3
-    %t6 = load i1, i1* %t5
-    ret i1 %t6
+    %t13 = getelementptr inbounds %Frame_keycom_matstr, %Frame_keycom_matstr* %.frame, i32 0, i32 3
+    %t14 = load i1, i1* %t13
+    ret i1 %t14
 }
 
 
@@ -723,10 +960,19 @@ define i32 @F_getint()
     ; allocate frame
     %.frame = alloca %Frame_getint, align 8
 
+    ; body
+    %t1 = getelementptr inbounds %Frame_getint, %Frame_getint* %.frame, i32 0, i32 1
+    store i32 0, i32* %t1
+    call void @P_skpspc()
+    %t2 = getelementptr inbounds %Frame_getint, %Frame_getint* %.frame, i32 0, i32 0
+    %t4 = getelementptr inbounds %Frame_getint, %Frame_getint* %.frame, i32 0, i32 1
+    %t3 = load i32, i32* %t4
+    store i32 %t3, i32* %t2
+
     ; epilogue
-    %t1 = getelementptr inbounds %Frame_getint, %Frame_getint* %.frame, i32 0, i32 0
-    %t2 = load i32, i32* %t1
-    ret i32 %t2
+    %t5 = getelementptr inbounds %Frame_getint, %Frame_getint* %.frame, i32 0, i32 0
+    %t6 = load i32, i32* %t5
+    ret i32 %t6
 }
 
 
@@ -756,10 +1002,19 @@ define i32 @F_getval(%T_string80* %str)
     %t1 = getelementptr inbounds %Frame_getval, %Frame_getval* %.frame, i32 0, i32 0
     store %T_string80* %str, %T_string80** %t1
 
+    ; body
+    %t2 = getelementptr inbounds %Frame_getval, %Frame_getval* %.frame, i32 0, i32 2
+    store i32 1, i32* %t2
+    %t3 = getelementptr inbounds %Frame_getval, %Frame_getval* %.frame, i32 0, i32 1
+    %t4 = getelementptr inbounds %Frame_getval, %Frame_getval* %.frame, i32 0, i32 0
+    %t5 = load %T_string80*, %T_string80** %t4
+    %t6 = call i32 @F_lint(%T_string80* %t5)
+    store i32 %t6, i32* %t3
+
     ; epilogue
-    %t2 = getelementptr inbounds %Frame_getval, %Frame_getval* %.frame, i32 0, i32 1
-    %t3 = load i32, i32* %t2
-    ret i32 %t3
+    %t7 = getelementptr inbounds %Frame_getval, %Frame_getval* %.frame, i32 0, i32 1
+    %t8 = load i32, i32* %t7
+    ret i32 %t8
 }
 
 
@@ -790,10 +1045,20 @@ define i32 @F_getbval(%T_bstring80* %str)
     %t1 = getelementptr inbounds %Frame_getbval, %Frame_getbval* %.frame, i32 0, i32 0
     store %T_bstring80* %str, %T_bstring80** %t1
 
+    ; body
+    %t2 = getelementptr inbounds %Frame_getbval, %Frame_getbval* %.frame, i32 0, i32 2
+    store i32 1, i32* %t2
+    %t3 = getelementptr inbounds %Frame_getbval, %Frame_getbval* %.frame, i32 0, i32 3
+    store i32 0, i32* %t3
+    %t4 = getelementptr inbounds %Frame_getbval, %Frame_getbval* %.frame, i32 0, i32 1
+    %t6 = getelementptr inbounds %Frame_getbval, %Frame_getbval* %.frame, i32 0, i32 3
+    %t5 = load i32, i32* %t6
+    store i32 %t5, i32* %t4
+
     ; epilogue
-    %t2 = getelementptr inbounds %Frame_getbval, %Frame_getbval* %.frame, i32 0, i32 1
-    %t3 = load i32, i32* %t2
-    ret i32 %t3
+    %t7 = getelementptr inbounds %Frame_getbval, %Frame_getbval* %.frame, i32 0, i32 1
+    %t8 = load i32, i32* %t7
+    ret i32 %t8
 }
 
 
@@ -826,6 +1091,25 @@ define void @P_putbval(%T_bstring80* %str, i32 %v)
     %t2 = getelementptr inbounds %Frame_putbval, %Frame_putbval* %.frame, i32 0, i32 1
     store i32 %v, i32* %t2
 
+    ; body
+    %t3 = getelementptr inbounds %Frame_putbval, %Frame_putbval* %.frame, i32 0, i32 0
+    %t4 = load %T_bstring80*, %T_bstring80** %t3
+    %t6 = getelementptr inbounds %T_bstring80, %T_bstring80* %t4, i32 0, i32 0
+    %t5 = bitcast i8* %t6 to i32*
+    store i32 0, i32* %t5
+    %t7 = getelementptr inbounds %Frame_putbval, %Frame_putbval* %.frame, i32 0, i32 3
+    store i32 10000, i32* %t7
+    %t8 = getelementptr inbounds %Frame_putbval, %Frame_putbval* %.frame, i32 0, i32 2
+    store i32 1, i32* %t8
+    %t9 = getelementptr inbounds %Frame_putbval, %Frame_putbval* %.frame, i32 0, i32 0
+    %t10 = load %T_bstring80*, %T_bstring80** %t9
+    %t12 = getelementptr inbounds %T_bstring80, %T_bstring80* %t10, i32 0, i32 0
+    %t11 = bitcast i8* %t12 to i32*
+    %t15 = getelementptr inbounds %Frame_putbval, %Frame_putbval* %.frame, i32 0, i32 2
+    %t14 = load i32, i32* %t15
+    %t13 = sub i32 %t14, 1
+    store i32 %t13, i32* %t11
+
     ; epilogue
     ret void
 }
@@ -856,6 +1140,9 @@ define void @P_prtbstr(%T_bstring80* %bstr)
     %t1 = getelementptr inbounds %Frame_prtbstr, %Frame_prtbstr* %.frame, i32 0, i32 0
     store %T_bstring80* %bstr, %T_bstring80** %t1
 
+    ; body
+    ; nop
+
     ; epilogue
     ret void
 }
@@ -885,6 +1172,17 @@ define void @P_inpbstr(%T_bstring80* %bstr)
     %.frame = alloca %Frame_inpbstr, align 8
     %t1 = getelementptr inbounds %Frame_inpbstr, %Frame_inpbstr* %.frame, i32 0, i32 0
     store %T_bstring80* %bstr, %T_bstring80** %t1
+
+    ; body
+    %t2 = getelementptr inbounds %Frame_inpbstr, %Frame_inpbstr* %.frame, i32 0, i32 1
+    store i32 1, i32* %t2
+    %t3 = getelementptr inbounds %Frame_inpbstr, %Frame_inpbstr* %.frame, i32 0, i32 0
+    %t4 = load %T_bstring80*, %T_bstring80** %t3
+    %t6 = getelementptr inbounds %T_bstring80, %T_bstring80* %t4, i32 0, i32 0
+    %t5 = bitcast i8* %t6 to i32*
+    %t8 = getelementptr inbounds %Frame_inpbstr, %Frame_inpbstr* %.frame, i32 0, i32 1
+    %t7 = load i32, i32* %t8
+    store i32 %t7, i32* %t5
 
     ; epilogue
     ret void
@@ -919,6 +1217,24 @@ define void @P_cat(%T_bstring80* %bstra, %T_bstring80* %bstrb)
     %t2 = getelementptr inbounds %Frame_cat, %Frame_cat* %.frame, i32 0, i32 1
     store %T_bstring80* %bstrb, %T_bstring80** %t2
 
+    ; body
+    %t3 = getelementptr inbounds %Frame_cat, %Frame_cat* %.frame, i32 0, i32 0
+    %t4 = load %T_bstring80*, %T_bstring80** %t3
+    %t6 = getelementptr inbounds %T_bstring80, %T_bstring80* %t4, i32 0, i32 0
+    %t5 = bitcast i8* %t6 to i32*
+    %t8 = getelementptr inbounds %Frame_cat, %Frame_cat* %.frame, i32 0, i32 0
+    %t9 = load %T_bstring80*, %T_bstring80** %t8
+    %t11 = getelementptr inbounds %T_bstring80, %T_bstring80* %t9, i32 0, i32 0
+    %t10 = bitcast i8* %t11 to i32*
+    %t12 = load i32, i32* %t10
+    %t13 = getelementptr inbounds %Frame_cat, %Frame_cat* %.frame, i32 0, i32 1
+    %t14 = load %T_bstring80*, %T_bstring80** %t13
+    %t16 = getelementptr inbounds %T_bstring80, %T_bstring80* %t14, i32 0, i32 0
+    %t15 = bitcast i8* %t16 to i32*
+    %t17 = load i32, i32* %t15
+    %t7 = add i32 %t12, %t17
+    store i32 %t7, i32* %t5
+
     ; epilogue
     ret void
 }
@@ -944,10 +1260,26 @@ define i1 @F_chkequ()
     ; allocate frame
     %.frame = alloca %Frame_chkequ, align 8
 
-    ; epilogue
+    ; body
     %t1 = getelementptr inbounds %Frame_chkequ, %Frame_chkequ* %.frame, i32 0, i32 0
-    %t2 = load i1, i1* %t1
-    ret i1 %t2
+    %t4 = load i32, i32* @top
+    %t3 = sub i32 %t4, 1
+    %t5 = getelementptr inbounds %T_array_6, %T_array_6* @temp, i32 0, i32 %t3
+    %t7 = getelementptr inbounds %T_record_7, %T_record_7* %t5, i32 0, i32 4
+    %t6 = bitcast i8* %t7 to i32*
+    %t8 = load i32, i32* %t6
+    %t9 = load i32, i32* @top
+    %t10 = getelementptr inbounds %T_array_6, %T_array_6* @temp, i32 0, i32 %t9
+    %t12 = getelementptr inbounds %T_record_7, %T_record_7* %t10, i32 0, i32 4
+    %t11 = bitcast i8* %t12 to i32*
+    %t13 = load i32, i32* %t11
+    %t2 = icmp eq i32 %t8, %t13
+    store i1 %t2, i1* %t1
+
+    ; epilogue
+    %t14 = getelementptr inbounds %Frame_chkequ, %Frame_chkequ* %.frame, i32 0, i32 0
+    %t15 = load i1, i1* %t14
+    ret i1 %t15
 }
 
 
@@ -971,10 +1303,26 @@ define i1 @F_chkltn()
     ; allocate frame
     %.frame = alloca %Frame_chkltn, align 8
 
-    ; epilogue
+    ; body
     %t1 = getelementptr inbounds %Frame_chkltn, %Frame_chkltn* %.frame, i32 0, i32 0
-    %t2 = load i1, i1* %t1
-    ret i1 %t2
+    %t4 = load i32, i32* @top
+    %t3 = sub i32 %t4, 1
+    %t5 = getelementptr inbounds %T_array_6, %T_array_6* @temp, i32 0, i32 %t3
+    %t7 = getelementptr inbounds %T_record_7, %T_record_7* %t5, i32 0, i32 4
+    %t6 = bitcast i8* %t7 to i32*
+    %t8 = load i32, i32* %t6
+    %t9 = load i32, i32* @top
+    %t10 = getelementptr inbounds %T_array_6, %T_array_6* @temp, i32 0, i32 %t9
+    %t12 = getelementptr inbounds %T_record_7, %T_record_7* %t10, i32 0, i32 4
+    %t11 = bitcast i8* %t12 to i32*
+    %t13 = load i32, i32* %t11
+    %t2 = icmp slt i32 %t8, %t13
+    store i1 %t2, i1* %t1
+
+    ; epilogue
+    %t14 = getelementptr inbounds %Frame_chkltn, %Frame_chkltn* %.frame, i32 0, i32 0
+    %t15 = load i1, i1* %t14
+    ret i1 %t15
 }
 
 
@@ -998,10 +1346,26 @@ define i1 @F_chkgtn()
     ; allocate frame
     %.frame = alloca %Frame_chkgtn, align 8
 
-    ; epilogue
+    ; body
     %t1 = getelementptr inbounds %Frame_chkgtn, %Frame_chkgtn* %.frame, i32 0, i32 0
-    %t2 = load i1, i1* %t1
-    ret i1 %t2
+    %t4 = load i32, i32* @top
+    %t3 = sub i32 %t4, 1
+    %t5 = getelementptr inbounds %T_array_6, %T_array_6* @temp, i32 0, i32 %t3
+    %t7 = getelementptr inbounds %T_record_7, %T_record_7* %t5, i32 0, i32 4
+    %t6 = bitcast i8* %t7 to i32*
+    %t8 = load i32, i32* %t6
+    %t9 = load i32, i32* @top
+    %t10 = getelementptr inbounds %T_array_6, %T_array_6* @temp, i32 0, i32 %t9
+    %t12 = getelementptr inbounds %T_record_7, %T_record_7* %t10, i32 0, i32 4
+    %t11 = bitcast i8* %t12 to i32*
+    %t13 = load i32, i32* %t11
+    %t2 = icmp sgt i32 %t8, %t13
+    store i1 %t2, i1* %t1
+
+    ; epilogue
+    %t14 = getelementptr inbounds %Frame_chkgtn, %Frame_chkgtn* %.frame, i32 0, i32 0
+    %t15 = load i1, i1* %t14
+    ret i1 %t15
 }
 
 
@@ -1021,6 +1385,18 @@ define void @P_settrue()
 {
     ; allocate frame
     %.frame = alloca %Frame_settrue, align 8
+
+    ; body
+    %t1 = load i32, i32* @top
+    %t2 = getelementptr inbounds %T_array_6, %T_array_6* @temp, i32 0, i32 %t1
+    %t4 = getelementptr inbounds %T_record_7, %T_record_7* %t2, i32 0, i32 0
+    %t3 = bitcast i8* %t4 to i32*
+    store i32 0, i32* %t3
+    %t5 = load i32, i32* @top
+    %t6 = getelementptr inbounds %T_array_6, %T_array_6* @temp, i32 0, i32 %t5
+    %t8 = getelementptr inbounds %T_record_7, %T_record_7* %t6, i32 0, i32 4
+    %t7 = bitcast i8* %t8 to i32*
+    store i32 1, i32* %t7
 
     ; epilogue
     ret void
@@ -1043,6 +1419,18 @@ define void @P_setfalse()
 {
     ; allocate frame
     %.frame = alloca %Frame_setfalse, align 8
+
+    ; body
+    %t1 = load i32, i32* @top
+    %t2 = getelementptr inbounds %T_array_6, %T_array_6* @temp, i32 0, i32 %t1
+    %t4 = getelementptr inbounds %T_record_7, %T_record_7* %t2, i32 0, i32 0
+    %t3 = bitcast i8* %t4 to i32*
+    store i32 0, i32* %t3
+    %t5 = load i32, i32* @top
+    %t6 = getelementptr inbounds %T_array_6, %T_array_6* @temp, i32 0, i32 %t5
+    %t8 = getelementptr inbounds %T_record_7, %T_record_7* %t6, i32 0, i32 4
+    %t7 = bitcast i8* %t8 to i32*
+    store i32 0, i32* %t7
 
     ; epilogue
     ret void
@@ -1071,6 +1459,11 @@ define void @P_clear()
     ; allocate frame
     %.frame = alloca %Frame_clear, align 8
 
+    ; body
+    store i32 0, i32* @prgmc
+    store i32 1, i32* @linec
+    store i32 1, i32* @top
+
     ; epilogue
     ret void
 }
@@ -1096,6 +1489,11 @@ define void @P_clrvar()
     ; allocate frame
     %.frame = alloca %Frame_clrvar, align 8
 
+    ; body
+    store i32 0, i32* @prgmc
+    store i32 1, i32* @linec
+    store i32 1, i32* @top
+
     ; epilogue
     ret void
 }
@@ -1120,6 +1518,11 @@ define void @P_exec()
 {
     ; allocate frame
     %.frame = alloca %Frame_exec, align 8
+
+    ; body
+    store i32 1, i32* @linec
+    call void @P_skpspc()
+    ; nop
 
     ; epilogue
     ret void
@@ -1152,6 +1555,9 @@ define void @P_exec_stat(%Frame_exec* %.slink)
     %t1 = getelementptr inbounds %Frame_exec_stat, %Frame_exec_stat* %.frame, i32 0, i32 5
     store %Frame_exec* %.slink, %Frame_exec** %t1
 
+    ; body
+    call void @P_skpspc()
+
     ; epilogue
     ret void
 }
@@ -1175,6 +1581,10 @@ define void @P_exec_stat_expr(%Frame_exec_stat* %.slink)
     %.frame = alloca %Frame_exec_stat_expr, align 8
     %t1 = getelementptr inbounds %Frame_exec_stat_expr, %Frame_exec_stat_expr* %.frame, i32 0, i32 0
     store %Frame_exec_stat* %.slink, %Frame_exec_stat** %t1
+
+    ; body
+    call void @P_exec_stat_expr_sexpr(%Frame_exec_stat_expr* %.frame)
+    call void @P_skpspc()
 
     ; epilogue
     ret void
@@ -1200,6 +1610,10 @@ define void @P_exec_stat_expr_sexpr(%Frame_exec_stat_expr* %.slink)
     %t1 = getelementptr inbounds %Frame_exec_stat_expr_sexpr, %Frame_exec_stat_expr_sexpr* %.frame, i32 0, i32 0
     store %Frame_exec_stat_expr* %.slink, %Frame_exec_stat_expr** %t1
 
+    ; body
+    call void @P_exec_stat_expr_sexpr_term(%Frame_exec_stat_expr_sexpr* %.frame)
+    call void @P_skpspc()
+
     ; epilogue
     ret void
 }
@@ -1223,6 +1637,10 @@ define void @P_exec_stat_expr_sexpr_term(%Frame_exec_stat_expr_sexpr* %.slink)
     %.frame = alloca %Frame_exec_stat_expr_sexpr_term, align 8
     %t1 = getelementptr inbounds %Frame_exec_stat_expr_sexpr_term, %Frame_exec_stat_expr_sexpr_term* %.frame, i32 0, i32 0
     store %Frame_exec_stat_expr_sexpr* %.slink, %Frame_exec_stat_expr_sexpr** %t1
+
+    ; body
+    call void @P_exec_stat_expr_sexpr_term_factor(%Frame_exec_stat_expr_sexpr_term* %.frame)
+    call void @P_skpspc()
 
     ; epilogue
     ret void
@@ -1252,6 +1670,12 @@ define void @P_exec_stat_expr_sexpr_term_factor(%Frame_exec_stat_expr_sexpr_term
     %t1 = getelementptr inbounds %Frame_exec_stat_expr_sexpr_term_factor, %Frame_exec_stat_expr_sexpr_term_factor* %.frame, i32 0, i32 2
     store %Frame_exec_stat_expr_sexpr_term* %.slink, %Frame_exec_stat_expr_sexpr_term** %t1
 
+    ; body
+    call void @P_skpspc()
+    %t2 = getelementptr inbounds %Frame_exec_stat_expr_sexpr_term_factor, %Frame_exec_stat_expr_sexpr_term_factor* %.frame, i32 0, i32 0
+    %t3 = call i8 @F_chkchr()
+    store i8 %t3, i8* %t2
+
     ; epilogue
     ret void
 }
@@ -1276,6 +1700,14 @@ define void @P_exec_stat_let(%Frame_exec_stat* %.slink)
     %t1 = getelementptr inbounds %Frame_exec_stat_let, %Frame_exec_stat_let* %.frame, i32 0, i32 0
     store %Frame_exec_stat* %.slink, %Frame_exec_stat** %t1
 
+    ; body
+    call void @P_skpspc()
+    %t3 = getelementptr inbounds %Frame_exec_stat_let, %Frame_exec_stat_let* %.frame, i32 0, i32 0
+    %t4 = load %Frame_exec_stat*, %Frame_exec_stat** %t3
+    %t2 = getelementptr inbounds %Frame_exec_stat, %Frame_exec_stat* %t4, i32 0, i32 1
+    %t5 = call i8 @F_getvar()
+    store i8 %t5, i8* %t2
+
     ; epilogue
     ret void
 }
@@ -1284,8 +1716,40 @@ define void @P_exec_stat_let(%Frame_exec_stat* %.slink)
 ;================================================================================
 ; string literals
 
+@.str.22 = private unnamed_addr constant [11 x i8] c"*         \00", align 1
+@.str.34 = private unnamed_addr constant [5 x i8] c"*** \00", align 1
+@.str.20 = private unnamed_addr constant [11 x i8] c"+         \00", align 1
+@.str.21 = private unnamed_addr constant [11 x i8] c"-         \00", align 1
+@.str.23 = private unnamed_addr constant [11 x i8] c"/         \00", align 1
+@.str.18 = private unnamed_addr constant [11 x i8] c"<         \00", align 1
+@.str.14 = private unnamed_addr constant [11 x i8] c"<=        \00", align 1
+@.str.17 = private unnamed_addr constant [11 x i8] c"<>        \00", align 1
+@.str.16 = private unnamed_addr constant [11 x i8] c"=         \00", align 1
+@.str.19 = private unnamed_addr constant [11 x i8] c">         \00", align 1
+@.str.15 = private unnamed_addr constant [11 x i8] c">=        \00", align 1
+@.str.33 = private unnamed_addr constant [7 x i8] c"Bye...\00", align 1
+@.str.32 = private unnamed_addr constant [62 x i8] c"Tiny basic interpreter vs. 0.1 Copyright (C) 1994 S. A. Moore\00", align 1
+@.str.13 = private unnamed_addr constant [11 x i8] c"bye       \00", align 1
+@.str.31 = private unnamed_addr constant [11 x i8] c"chr       \00", align 1
+@.str.5 = private unnamed_addr constant [11 x i8] c"goto      \00", align 1
+@.str.6 = private unnamed_addr constant [11 x i8] c"if        \00", align 1
 @.str.1 = private unnamed_addr constant [6 x i8] c"input\00", align 1
+@.str.3 = private unnamed_addr constant [11 x i8] c"input     \00", align 1
+@.str.25 = private unnamed_addr constant [11 x i8] c"left$     \00", align 1
+@.str.12 = private unnamed_addr constant [11 x i8] c"let       \00", align 1
+@.str.10 = private unnamed_addr constant [11 x i8] c"list      \00", align 1
+@.str.27 = private unnamed_addr constant [11 x i8] c"mid$      \00", align 1
+@.str.24 = private unnamed_addr constant [11 x i8] c"mod       \00", align 1
+@.str.11 = private unnamed_addr constant [11 x i8] c"new       \00", align 1
 @.str.2 = private unnamed_addr constant [7 x i8] c"output\00", align 1
+@.str.4 = private unnamed_addr constant [11 x i8] c"print     \00", align 1
+@.str.7 = private unnamed_addr constant [11 x i8] c"rem       \00", align 1
+@.str.26 = private unnamed_addr constant [11 x i8] c"right$    \00", align 1
+@.str.9 = private unnamed_addr constant [11 x i8] c"run       \00", align 1
+@.str.8 = private unnamed_addr constant [11 x i8] c"stop      \00", align 1
+@.str.29 = private unnamed_addr constant [11 x i8] c"str$      \00", align 1
+@.str.28 = private unnamed_addr constant [11 x i8] c"then      \00", align 1
+@.str.30 = private unnamed_addr constant [11 x i8] c"val       \00", align 1
 
 
 ;================================================================================

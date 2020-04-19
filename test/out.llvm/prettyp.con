@@ -77,20 +77,7 @@ compiling pass 2 (target = llvm)
 -----------------------------------------------------
 
 Invoking LLC ...
-Exit code: 0
-
-Linking...
-Exit code: 0
-
-running the executable
------------------------------------------------------
-openFile(0)
-openFile(1)
-openFile(2)
-openFile(3)
-closeFile()
-closeFile()
-closeFile()
-closeFile()
-
-Exit code: 0
+llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\prettyp.ll:809:18: error: constant expression type mismatch
+    store %T_KEY getelementptr inbounds ([11 x i8], [11 x i8]* @.str.5, i32 0, i32 0), %T_KEY* %t24
+                 ^
+Exit code: 1

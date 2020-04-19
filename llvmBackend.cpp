@@ -148,7 +148,7 @@ VarPtr TypeGen::visit(ts::SetType* pType)
     assert(minValue >= 0);
     assert(maxValue < 256);
 
-    // the set representation is always [0, maxValue] as packed bits into 32bit "units"
+    // the set representation is always [0, maxValue] as bits packed into 32bit "units"
     // (so there are "maxValue + 1" bits)
     //
     const int count = maxValue + 1;
@@ -557,10 +557,22 @@ VarPtr TypeGen::visit(ts::SubroutineType* pType)
 VarPtr TypeGen::visit(ts::RangeType* pType)
 {
     auto pExt = ext(pType);
-    pExt->genName = "i32";
-    pExt->size = 4;
-    pExt->alignment = 4;
-    pExt->pMetadata->def = "!DIBasicType(name: \"range\", size: 32, encoding: DW_ATE_signed)";
+
+    if(pType->baseType()->isChar())
+    {
+        pExt->genName = "i8";
+        pExt->size = 1;
+        pExt->alignment = 1;
+        pExt->pMetadata->def = "!DIBasicType(name: \"range of char\", size: 8, encoding: DW_ATE_unsigned_char)";
+    }
+    else
+    {
+        pExt->genName = "i32";
+        pExt->size = 4;
+        pExt->alignment = 4;
+        pExt->pMetadata->def = "!DIBasicType(name: \"range\", size: 32, encoding: DW_ATE_signed)";
+    }
+
     return VarPtr();
 }
 
@@ -759,6 +771,8 @@ void LlvmBackend::_end()
 
 ///////////////////////////////////////////////////////////////////////////////
 //
+// TODO: honor record type alignments
+//
 void LlvmBackend::_outputFrame(obj::Subroutine* pSubroutine)
 {
     std::stringstream code;
@@ -912,12 +926,10 @@ void LlvmBackend::_outputSubroutine(obj::Subroutine* pSubroutine)
     code << _initFrame(pSubroutine);
     code << _genInitializers(pSubroutine);
 
-#if 0 // WIP
     auto bodyIr = gen(pSubroutine->pBody);
     assert(bodyIr->value.empty());
     code << TAB << "; body\n";
     code << bodyIr->code << "\n";
-#endif
 
     code << _genCleanup(pSubroutine);
     code << _genEpilogue(pSubroutine);
@@ -993,6 +1005,21 @@ IrFragment LlvmBackend::_getStringAddress(ast::Expr* pString)
         address << "getelementptr inbounds (" <<
             llvmType << ", " << llvmType << "* " <<
             varPtrIr.value << ", i32 0, i32 0)";
+
+        stringPtr = address.str();
+    }
+    else if (auto pParamExpr = pString->as<ast::ParamExpr>())
+    {
+        const auto paramPtrIr = _genParamAddress(pParamExpr->pParameter);
+        code << paramPtrIr.code;
+
+        // address value (as i8*)
+        //
+        const auto& llvmType = ext(pParamExpr->pType)->genName;
+        stringstream address;
+        address << "getelementptr inbounds (" <<
+            llvmType << ", " << llvmType << "* " <<
+            paramPtrIr.value << ", i32 0, i32 0)";
 
         stringPtr = address.str();
     }

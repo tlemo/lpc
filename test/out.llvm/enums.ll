@@ -55,11 +55,30 @@ define void @P_()
     %t2 = call i8* @_OpenFile(i32 1)
     store i8* %t2, i8** @_output
 
-    ; cleanup
+    ; body
     %t3 = load %T_text, %T_text* @_output
-    call void @_CloseFile(i8* %t3)
-    %t4 = load %T_text, %T_text* @_input
-    call void @_CloseFile(i8* %t4)
+    call void @_WriteString(i8* %t3, i32 33, i32 0, i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.3, i32 0, i32 0), i32 14)
+    call void @_WriteLn(i8* %t3)
+    %t4 = load %T_text, %T_text* @_output
+    call void @_WriteLn(i8* %t4)
+    %t5 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([32 x i8], [32 x i8]* @.str.4, i32 0, i32 0), i32 31)
+    %t6 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t6, i32 0, i32 0, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @.str.5, i32 0, i32 0), i32 18)
+    call void @_WriteLn(i8* %t6)
+    %t7 = load %T_text, %T_text* @_output
+    call void @_WriteLn(i8* %t7)
+    store double 12.0000, double* @RegularRate
+    store double 1.10000, double* @EveningPremium
+    store double 1.33000, double* @NightPremium
+    store double 1.25000, double* @WeekendPremium
+    ; nop
+
+    ; cleanup
+    %t8 = load %T_text, %T_text* @_output
+    call void @_CloseFile(i8* %t8)
+    %t9 = load %T_text, %T_text* @_input
+    call void @_CloseFile(i8* %t9)
 
     ; epilogue
     ret void
@@ -69,6 +88,9 @@ define void @P_()
 ;================================================================================
 ; string literals
 
+@.str.4 = private unnamed_addr constant [32 x i8] c"  DAY        Morning  Afternoon\00", align 1
+@.str.5 = private unnamed_addr constant [19 x i8] c"  Evening    Night\00", align 1
+@.str.3 = private unnamed_addr constant [15 x i8] c"Pay rate table\00", align 1
 @.str.1 = private unnamed_addr constant [7 x i8] c"_input\00", align 1
 @.str.2 = private unnamed_addr constant [8 x i8] c"_output\00", align 1
 

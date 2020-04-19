@@ -62,43 +62,5 @@ compiling pass 1 (LPC)
   warning on line 1711: 'f' hiding existing declaration on line 1699
   warning on line 1711: 'r' hiding existing declaration on line 1703
   warning on line 1716: 'f' hiding existing declaration on line 1699
-  warning on line 1716: 'c' hiding existing declaration on line 1700
-  warning on line 1716: 'c' hiding existing declaration on line 473
-  warning on line 1721: 'f' hiding existing declaration on line 1699
-  warning on line 1721: 'ad' hiding existing declaration on line 1702
-  warning on line 1721: 'ad' hiding existing declaration on line 470
-  warning on line 1721: 'w' hiding existing declaration on line 1699
-  warning on line 1721: 'l' hiding existing declaration on line 1699
-  warning on line 1722: 'i' hiding existing declaration on line 1699
-  warning on line 1722: 'i' hiding existing declaration on line 472
-  warning on line 1729: 'f' hiding existing declaration on line 1699
-  warning on line 1734: 'f' hiding existing declaration on line 1699
-  warning on line 1734: 'ad' hiding existing declaration on line 1702
-  warning on line 1734: 'ad' hiding existing declaration on line 470
-  warning on line 435: only Text files are supported
-
-0 error(s), 75 warning(s)
-
-Exit code: 0
-
-compiling pass 2 (target = llvm)
------------------------------------------------------
-
-Invoking LLC ...
-Exit code: 0
-
-Linking...
-Exit code: 0
-
-running the executable
------------------------------------------------------
-openFile(0)
-openFile(1)
-openFile(2)
-openFile(3)
-closeFile()
-closeFile()
-closeFile()
-closeFile()
-
-Exit code: 0
+  warniAssertion failed: !"Unexpected string expression", file C:\Users\lemo\work\compilers\lpc\llvmBackend.cpp, line 1028
+Exit code: 3
