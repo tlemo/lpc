@@ -72,7 +72,7 @@ define void @P_()
     ; line 33
     %t8 = getelementptr inbounds %T_t1, %T_t1* @y, i32 0, i32 2
     %t9 = getelementptr inbounds %T_array_3, %T_array_3* %t8, i32 0, i32 120
-    store i32 , i32* %t9
+    store i32 %.dummy.intrin, i32* %t9
     ; line 34
     %t10 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t10, i32 0, i32 0, i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.4, i32 0, i32 0), i32 9)
@@ -123,12 +123,23 @@ define i32 @F_outter(i32 %x)
     %t2 = getelementptr inbounds %Frame_outter, %Frame_outter* %.frame, i32 0, i32 1
     store i32 1, i32* %t2
     ; line 27
+    %t5 = getelementptr inbounds %Frame_outter, %Frame_outter* %.frame, i32 0, i32 0
+    %t4 = load i32, i32* %t5
+    %t6 = call i32 @F_outter_inner(%Frame_outter* %.frame, i32 %t4)
+    %t3 = icmp eq i32 %t6, 7
+    br i1 %t3, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 27
+    %t7 = getelementptr inbounds %Frame_outter, %Frame_outter* %.frame, i32 0, i32 1
+    store i32 2, i32* %t7
+    br label %L_endif_1
+L_endif_1:
     ; nop
 
     ; epilogue
-    %t3 = getelementptr inbounds %Frame_outter, %Frame_outter* %.frame, i32 0, i32 1
-    %t4 = load i32, i32* %t3
-    ret i32 %t4
+    %t8 = getelementptr inbounds %Frame_outter, %Frame_outter* %.frame, i32 0, i32 1
+    %t9 = load i32, i32* %t8
+    ret i32 %t9
 }
 
 

@@ -204,7 +204,7 @@ compiling pass 2 (target = llvm)
 -----------------------------------------------------
 
 Invoking LLC ...
-llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\iso7185pat.ll:786:59: error: expected value token
-    call void @_WriteInteger(i8* %t133, i32 1, i32 0, i32 )
-                                                          ^
+llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\iso7185pat.ll:536:17: error: expected number in address space
+    %t62 = phi [%t64, %L_AND_eval_1], [false, %L_AND_expr_1]
+                ^
 Exit code: 1

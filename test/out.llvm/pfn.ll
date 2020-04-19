@@ -236,21 +236,37 @@ define void @P_foo_bar1(%Frame_foo* %.slink, i32 %i, %T_foo_bar1_subroutine_2 %p
     call void @_WriteInteger(i8* %t12, i32 0, i32 0, i32 %t13)
     call void @_WriteLn(i8* %t12)
     ; line 25
-    ; line 26
-    %t15 = load %T_text, %T_text* @_output
-    %t17 = getelementptr inbounds %Frame_foo_bar1, %Frame_foo_bar1* %.frame, i32 0, i32 2
+    %t17 = getelementptr inbounds %Frame_foo_bar1, %Frame_foo_bar1* %.frame, i32 0, i32 0
     %t16 = load i32, i32* %t17
-    call void @_WriteInteger(i8* %t15, i32 0, i32 0, i32 %t16)
-    call void @_WriteChar(i8* %t15, i32 0, i32 0, i8 32)
-    %t20 = getelementptr inbounds %Frame_foo_bar1, %Frame_foo_bar1* %.frame, i32 0, i32 4
-    %t21 = load %Frame_foo*, %Frame_foo** %t20
-    %t19 = getelementptr inbounds %Frame_foo, %Frame_foo* %t21, i32 0, i32 0
-    %t18 = load i32, i32* %t19
-    call void @_WriteInteger(i8* %t15, i32 0, i32 0, i32 %t18)
-    call void @_WriteChar(i8* %t15, i32 0, i32 0, i8 32)
-    %t22 = load i32, i32* @v
-    call void @_WriteInteger(i8* %t15, i32 0, i32 0, i32 %t22)
-    call void @_WriteLn(i8* %t15)
+    %t15 = icmp slt i32 %t16, 3
+    br i1 %t15, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 25
+    %t18 = getelementptr inbounds %Frame_foo_bar1, %Frame_foo_bar1* %.frame, i32 0, i32 4
+    %t19 = load %Frame_foo*, %Frame_foo** %t18
+    %t22 = getelementptr inbounds %Frame_foo_bar1, %Frame_foo_bar1* %.frame, i32 0, i32 0
+    %t21 = load i32, i32* %t22
+    %t20 = add i32 %t21, 1
+    %t24 = getelementptr inbounds %Frame_foo_bar1, %Frame_foo_bar1* %.frame, i32 0, i32 1
+    %t23 = load %T_foo_bar1_subroutine_2, %T_foo_bar1_subroutine_2* %t24
+    call void @P_foo_bar1(%Frame_foo* %t19, i32 %t20, %T_foo_bar1_subroutine_2 %t23)
+    br label %L_endif_1
+L_endif_1:
+    ; line 26
+    %t25 = load %T_text, %T_text* @_output
+    %t27 = getelementptr inbounds %Frame_foo_bar1, %Frame_foo_bar1* %.frame, i32 0, i32 2
+    %t26 = load i32, i32* %t27
+    call void @_WriteInteger(i8* %t25, i32 0, i32 0, i32 %t26)
+    call void @_WriteChar(i8* %t25, i32 0, i32 0, i8 32)
+    %t30 = getelementptr inbounds %Frame_foo_bar1, %Frame_foo_bar1* %.frame, i32 0, i32 4
+    %t31 = load %Frame_foo*, %Frame_foo** %t30
+    %t29 = getelementptr inbounds %Frame_foo, %Frame_foo* %t31, i32 0, i32 0
+    %t28 = load i32, i32* %t29
+    call void @_WriteInteger(i8* %t25, i32 0, i32 0, i32 %t28)
+    call void @_WriteChar(i8* %t25, i32 0, i32 0, i8 32)
+    %t32 = load i32, i32* @v
+    call void @_WriteInteger(i8* %t25, i32 0, i32 0, i32 %t32)
+    call void @_WriteLn(i8* %t25)
     ; nop
 
     ; epilogue

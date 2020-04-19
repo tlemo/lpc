@@ -596,6 +596,84 @@ define void @P_load_update(%Frame_load* %.slink, i32 %x)
 
     ; body
     ; line 213
+    %t5 = getelementptr inbounds %Frame_load_update, %Frame_load_update* %.frame, i32 0, i32 4
+    %t6 = load %Frame_load*, %Frame_load** %t5
+    %t4 = getelementptr inbounds %Frame_load, %Frame_load* %t6, i32 0, i32 3
+    %t8 = getelementptr inbounds %Frame_load_update, %Frame_load_update* %.frame, i32 0, i32 0
+    %t7 = load i32, i32* %t8
+    %t9 = getelementptr inbounds %T_load_array_10, %T_load_array_10* %t4, i32 0, i32 %t7
+    %t11 = getelementptr inbounds %T_load_labelrec, %T_load_labelrec* %t9, i32 0, i32 4
+    %t10 = bitcast i8* %t11 to i32*
+    %t12 = load i32, i32* %t10
+    %t3 = icmp eq i32 %t12, 1
+    br i1 %t3, label %L_then_1, label %L_else_1
+L_then_1:
+    ; line 213
+    %t13 = getelementptr inbounds %Frame_load_update, %Frame_load_update* %.frame, i32 0, i32 4
+    %t14 = load %Frame_load*, %Frame_load** %t13
+    call void @P_load_errorl(%Frame_load* %t14, %T_beta getelementptr inbounds ([26 x i8], [26 x i8]* @.str.88, i32 0, i32 0))
+    br label %L_endif_1
+L_else_1:
+    ; line 215
+    %t17 = getelementptr inbounds %Frame_load_update, %Frame_load_update* %.frame, i32 0, i32 4
+    %t18 = load %Frame_load*, %Frame_load** %t17
+    %t16 = getelementptr inbounds %Frame_load, %Frame_load* %t18, i32 0, i32 3
+    %t20 = getelementptr inbounds %Frame_load_update, %Frame_load_update* %.frame, i32 0, i32 0
+    %t19 = load i32, i32* %t20
+    %t21 = getelementptr inbounds %T_load_array_10, %T_load_array_10* %t16, i32 0, i32 %t19
+    %t23 = getelementptr inbounds %T_load_labelrec, %T_load_labelrec* %t21, i32 0, i32 0
+    %t22 = bitcast i8* %t23 to i32*
+    %t24 = load i32, i32* %t22
+    %t25 = sub i32 0, 1
+    %t15 = icmp ne i32 %t24, %t25
+    br i1 %t15, label %L_then_2, label %L_endif_2
+L_then_2:
+    ; line 216
+    %t26 = getelementptr inbounds %Frame_load_update, %Frame_load_update* %.frame, i32 0, i32 1
+    %t28 = getelementptr inbounds %Frame_load_update, %Frame_load_update* %.frame, i32 0, i32 4
+    %t29 = load %Frame_load*, %Frame_load** %t28
+    %t27 = getelementptr inbounds %Frame_load, %Frame_load* %t29, i32 0, i32 3
+    %t31 = getelementptr inbounds %Frame_load_update, %Frame_load_update* %.frame, i32 0, i32 0
+    %t30 = load i32, i32* %t31
+    %t32 = getelementptr inbounds %T_load_array_10, %T_load_array_10* %t27, i32 0, i32 %t30
+    %t34 = getelementptr inbounds %T_load_labelrec, %T_load_labelrec* %t32, i32 0, i32 0
+    %t33 = bitcast i8* %t34 to i32*
+    %t35 = load i32, i32* %t33
+    store i32 %t35, i32* %t26
+    ; line 216
+    %t36 = getelementptr inbounds %Frame_load_update, %Frame_load_update* %.frame, i32 0, i32 2
+    store i1 0, i1* %t36
+    ; line 217
+    ; nop
+    br label %L_endif_2
+L_endif_2:
+    ; line 230
+    %t38 = getelementptr inbounds %Frame_load_update, %Frame_load_update* %.frame, i32 0, i32 4
+    %t39 = load %Frame_load*, %Frame_load** %t38
+    %t37 = getelementptr inbounds %Frame_load, %Frame_load* %t39, i32 0, i32 3
+    %t41 = getelementptr inbounds %Frame_load_update, %Frame_load_update* %.frame, i32 0, i32 0
+    %t40 = load i32, i32* %t41
+    %t42 = getelementptr inbounds %T_load_array_10, %T_load_array_10* %t37, i32 0, i32 %t40
+    %t44 = getelementptr inbounds %T_load_labelrec, %T_load_labelrec* %t42, i32 0, i32 4
+    %t43 = bitcast i8* %t44 to i32*
+    store i32 1, i32* %t43
+    ; line 231
+    %t46 = getelementptr inbounds %Frame_load_update, %Frame_load_update* %.frame, i32 0, i32 4
+    %t47 = load %Frame_load*, %Frame_load** %t46
+    %t45 = getelementptr inbounds %Frame_load, %Frame_load* %t47, i32 0, i32 3
+    %t49 = getelementptr inbounds %Frame_load_update, %Frame_load_update* %.frame, i32 0, i32 0
+    %t48 = load i32, i32* %t49
+    %t50 = getelementptr inbounds %T_load_array_10, %T_load_array_10* %t45, i32 0, i32 %t48
+    %t52 = getelementptr inbounds %T_load_labelrec, %T_load_labelrec* %t50, i32 0, i32 0
+    %t51 = bitcast i8* %t52 to i32*
+    %t55 = getelementptr inbounds %Frame_load_update, %Frame_load_update* %.frame, i32 0, i32 4
+    %t56 = load %Frame_load*, %Frame_load** %t55
+    %t54 = getelementptr inbounds %Frame_load, %Frame_load* %t56, i32 0, i32 4
+    %t53 = load i32, i32* %t54
+    store i32 %t53, i32* %t51
+    ; nop
+    br label %L_endif_1
+L_endif_1:
 
     ; epilogue
     ret void
@@ -680,12 +758,76 @@ define void @P_load_assemble(%Frame_load* %.slink)
     store %T_alfa %t3, %T_alfa* %t2
     ; line 305
     ; line 306
+    %t6 = load i32, i32* @op
+    %t5 = icmp eq i32 %t6, 62
+    br i1 %t5, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 306
+    %t7 = getelementptr inbounds %Frame_load_assemble, %Frame_load_assemble* %.frame, i32 0, i32 7
+    %t8 = load %Frame_load*, %Frame_load** %t7
+    call void @P_load_errorl(%Frame_load* %t8, %T_beta getelementptr inbounds ([26 x i8], [26 x i8]* @.str.89, i32 0, i32 0))
+    br label %L_endif_1
+L_endif_1:
     ; line 308
     ; line 458
+    br i1 %.dummy.intrin, label %L_then_2, label %L_else_2
+L_then_2:
+    ; line 459
+    %t10 = load i32, i32* @pc
+    %t9 = sdiv i32 %t10, 2
+    %t11 = getelementptr inbounds %T_array_2, %T_array_2* @code, i32 0, i32 %t9
+    %t13 = getelementptr inbounds %T_record_3, %T_record_3* %t11, i32 0, i32 12
+    %t12 = bitcast i8* %t13 to i32*
+    %t14 = load i32, i32* @op
+    store i32 %t14, i32* %t12
+    ; line 459
+    %t16 = load i32, i32* @pc
+    %t15 = sdiv i32 %t16, 2
+    %t17 = getelementptr inbounds %T_array_2, %T_array_2* @code, i32 0, i32 %t15
+    %t19 = getelementptr inbounds %T_record_3, %T_record_3* %t17, i32 0, i32 16
+    %t18 = bitcast i8* %t19 to i32*
+    %t20 = load i32, i32* @p
+    store i32 %t20, i32* %t18
+    ; line 459
+    %t22 = load i32, i32* @pc
+    %t21 = sdiv i32 %t22, 2
+    %t23 = getelementptr inbounds %T_array_2, %T_array_2* @code, i32 0, i32 %t21
+    %t25 = getelementptr inbounds %T_record_3, %T_record_3* %t23, i32 0, i32 20
+    %t24 = bitcast i8* %t25 to i32*
+    %t26 = load i32, i32* @q
+    store i32 %t26, i32* %t24
+    br label %L_endif_2
+L_else_2:
+    ; line 461
+    %t28 = load i32, i32* @pc
+    %t27 = sdiv i32 %t28, 2
+    %t29 = getelementptr inbounds %T_array_2, %T_array_2* @code, i32 0, i32 %t27
+    %t31 = getelementptr inbounds %T_record_3, %T_record_3* %t29, i32 0, i32 0
+    %t30 = bitcast i8* %t31 to i32*
+    %t32 = load i32, i32* @op
+    store i32 %t32, i32* %t30
+    ; line 461
+    %t34 = load i32, i32* @pc
+    %t33 = sdiv i32 %t34, 2
+    %t35 = getelementptr inbounds %T_array_2, %T_array_2* @code, i32 0, i32 %t33
+    %t37 = getelementptr inbounds %T_record_3, %T_record_3* %t35, i32 0, i32 4
+    %t36 = bitcast i8* %t37 to i32*
+    %t38 = load i32, i32* @p
+    store i32 %t38, i32* %t36
+    ; line 461
+    %t40 = load i32, i32* @pc
+    %t39 = sdiv i32 %t40, 2
+    %t41 = getelementptr inbounds %T_array_2, %T_array_2* @code, i32 0, i32 %t39
+    %t43 = getelementptr inbounds %T_record_3, %T_record_3* %t41, i32 0, i32 8
+    %t42 = bitcast i8* %t43 to i32*
+    %t44 = load i32, i32* @q
+    store i32 %t44, i32* %t42
+    br label %L_endif_2
+L_endif_2:
     ; line 463
-    %t6 = load i32, i32* @pc
-    %t5 = add i32 %t6, 1
-    store i32 %t5, i32* @pc
+    %t46 = load i32, i32* @pc
+    %t45 = add i32 %t46, 1
+    store i32 %t45, i32* @pc
     ; line 464
     br label %L_1
 L_1:
@@ -801,6 +943,12 @@ define void @P_load_assemble_getname(%Frame_load_assemble* %.slink)
     store i8 %t8, i8* %t7
     ; line 281
     ; line 282
+    %t14 = icmp eq i1 0, %.dummy.intrin
+    br i1 %t14, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 282
+    br label %L_endif_1
+L_endif_1:
     ; line 283
 
     ; epilogue
@@ -832,6 +980,27 @@ define void @P_load_assemble_typesymbol(%Frame_load_assemble* %.slink)
 
     ; body
     ; line 289
+    %t5 = getelementptr inbounds %Frame_load_assemble_typesymbol, %Frame_load_assemble_typesymbol* %.frame, i32 0, i32 1
+    %t6 = load %Frame_load_assemble*, %Frame_load_assemble** %t5
+    %t7 = getelementptr inbounds %Frame_load_assemble, %Frame_load_assemble* %t6, i32 0, i32 7
+    %t8 = load %Frame_load*, %Frame_load** %t7
+    %t4 = getelementptr inbounds %Frame_load, %Frame_load* %t8, i32 0, i32 1
+    %t3 = load i8, i8* %t4
+    %t2 = icmp ne i32 %t3, 105
+    br i1 %t2, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 291
+    ; line 298
+    %t10 = load i32, i32* @op
+    %t11 = getelementptr inbounds %T_array_4, %T_array_4* @cop, i32 0, i32 %t10
+    %t12 = load i32, i32* %t11
+    %t14 = getelementptr inbounds %Frame_load_assemble_typesymbol, %Frame_load_assemble_typesymbol* %.frame, i32 0, i32 0
+    %t13 = load i32, i32* %t14
+    %t9 = add i32 %t12, %t13
+    store i32 %t9, i32* @op
+    ; nop
+    br label %L_endif_1
+L_endif_1:
     ; nop
 
     ; epilogue
@@ -863,20 +1032,20 @@ define void @P_pmd()
     ; body
     ; line 490
     %t1 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t1, i32 0, i32 0, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.88, i32 0, i32 0), i32 5)
+    call void @_WriteString(i8* %t1, i32 0, i32 0, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.90, i32 0, i32 0), i32 5)
     %t3 = load i32, i32* @pc
     %t2 = sub i32 %t3, 1
     call void @_WriteInteger(i8* %t1, i32 5, i32 0, i32 %t2)
-    call void @_WriteString(i8* %t1, i32 0, i32 0, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.89, i32 0, i32 0), i32 5)
+    call void @_WriteString(i8* %t1, i32 0, i32 0, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.91, i32 0, i32 0), i32 5)
     %t4 = load i32, i32* @op
     call void @_WriteInteger(i8* %t1, i32 3, i32 0, i32 %t4)
-    call void @_WriteString(i8* %t1, i32 0, i32 0, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.90, i32 0, i32 0), i32 6)
+    call void @_WriteString(i8* %t1, i32 0, i32 0, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.92, i32 0, i32 0), i32 6)
     %t5 = load i32, i32* @sp
     call void @_WriteInteger(i8* %t1, i32 5, i32 0, i32 %t5)
-    call void @_WriteString(i8* %t1, i32 0, i32 0, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.91, i32 0, i32 0), i32 6)
+    call void @_WriteString(i8* %t1, i32 0, i32 0, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.93, i32 0, i32 0), i32 6)
     %t6 = load i32, i32* @mp
     call void @_WriteInteger(i8* %t1, i32 5, i32 0, i32 %t6)
-    call void @_WriteString(i8* %t1, i32 0, i32 0, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.92, i32 0, i32 0), i32 6)
+    call void @_WriteString(i8* %t1, i32 0, i32 0, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.94, i32 0, i32 0), i32 6)
     %t7 = load i32, i32* @np
     call void @_WriteInteger(i8* %t1, i32 5, i32 0, i32 %t7)
     ; line 492
@@ -884,7 +1053,7 @@ define void @P_pmd()
     call void @_WriteLn(i8* %t8)
     ; line 492
     %t9 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t9, i32 0, i32 0, i8* getelementptr inbounds ([39 x i8], [39 x i8]* @.str.93, i32 0, i32 0), i32 38)
+    call void @_WriteString(i8* %t9, i32 0, i32 0, i8* getelementptr inbounds ([39 x i8], [39 x i8]* @.str.95, i32 0, i32 0), i32 38)
     call void @_WriteLn(i8* %t9)
     ; line 494
     %t10 = getelementptr inbounds %Frame_pmd, %Frame_pmd* %.frame, i32 0, i32 1
@@ -933,27 +1102,65 @@ define void @P_pmd_pt(%Frame_pmd* %.slink)
     %t3 = load i32, i32* %t4
     call void @_WriteInteger(i8* %t2, i32 6, i32 0, i32 %t3)
     ; line 481
+    %t7 = icmp slt i32 %.dummy.intrin, 2147483647
+    br i1 %t7, label %L_then_1, label %L_else_1
+L_then_1:
+    ; line 481
+    %t8 = load %T_text, %T_text* @output
+    %t11 = getelementptr inbounds %Frame_pmd_pt, %Frame_pmd_pt* %.frame, i32 0, i32 0
+    %t12 = load %Frame_pmd*, %Frame_pmd** %t11
+    %t10 = getelementptr inbounds %Frame_pmd, %Frame_pmd* %t12, i32 0, i32 1
+    %t9 = load i32, i32* %t10
+    %t13 = getelementptr inbounds %T_array_8, %T_array_8* @store, i32 0, i32 %t9
+    %t15 = getelementptr inbounds %T_record_9, %T_record_9* %t13, i32 0, i32 0
+    %t14 = bitcast i8* %t15 to i32*
+    %t16 = load i32, i32* %t14
+    call void @_WriteInteger(i8* %t8, i32 0, i32 0, i32 %t16)
+    br label %L_endif_1
+L_else_1:
+    ; line 482
+    %t17 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t17, i32 0, i32 0, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.96, i32 0, i32 0), i32 8)
+    br label %L_endif_1
+L_endif_1:
     ; line 483
-    %t8 = getelementptr inbounds %Frame_pmd_pt, %Frame_pmd_pt* %.frame, i32 0, i32 0
-    %t9 = load %Frame_pmd*, %Frame_pmd** %t8
-    %t7 = getelementptr inbounds %Frame_pmd, %Frame_pmd* %t9, i32 0, i32 1
-    %t13 = getelementptr inbounds %Frame_pmd_pt, %Frame_pmd_pt* %.frame, i32 0, i32 0
-    %t14 = load %Frame_pmd*, %Frame_pmd** %t13
-    %t12 = getelementptr inbounds %Frame_pmd, %Frame_pmd* %t14, i32 0, i32 1
-    %t11 = load i32, i32* %t12
-    %t10 = sub i32 %t11, 1
-    store i32 %t10, i32* %t7
+    %t19 = getelementptr inbounds %Frame_pmd_pt, %Frame_pmd_pt* %.frame, i32 0, i32 0
+    %t20 = load %Frame_pmd*, %Frame_pmd** %t19
+    %t18 = getelementptr inbounds %Frame_pmd, %Frame_pmd* %t20, i32 0, i32 1
+    %t24 = getelementptr inbounds %Frame_pmd_pt, %Frame_pmd_pt* %.frame, i32 0, i32 0
+    %t25 = load %Frame_pmd*, %Frame_pmd** %t24
+    %t23 = getelementptr inbounds %Frame_pmd, %Frame_pmd* %t25, i32 0, i32 1
+    %t22 = load i32, i32* %t23
+    %t21 = sub i32 %t22, 1
+    store i32 %t21, i32* %t18
     ; line 484
-    %t16 = getelementptr inbounds %Frame_pmd_pt, %Frame_pmd_pt* %.frame, i32 0, i32 0
-    %t17 = load %Frame_pmd*, %Frame_pmd** %t16
-    %t15 = getelementptr inbounds %Frame_pmd, %Frame_pmd* %t17, i32 0, i32 0
-    %t21 = getelementptr inbounds %Frame_pmd_pt, %Frame_pmd_pt* %.frame, i32 0, i32 0
-    %t22 = load %Frame_pmd*, %Frame_pmd** %t21
-    %t20 = getelementptr inbounds %Frame_pmd, %Frame_pmd* %t22, i32 0, i32 0
-    %t19 = load i32, i32* %t20
-    %t18 = add i32 %t19, 1
-    store i32 %t18, i32* %t15
+    %t27 = getelementptr inbounds %Frame_pmd_pt, %Frame_pmd_pt* %.frame, i32 0, i32 0
+    %t28 = load %Frame_pmd*, %Frame_pmd** %t27
+    %t26 = getelementptr inbounds %Frame_pmd, %Frame_pmd* %t28, i32 0, i32 0
+    %t32 = getelementptr inbounds %Frame_pmd_pt, %Frame_pmd_pt* %.frame, i32 0, i32 0
+    %t33 = load %Frame_pmd*, %Frame_pmd** %t32
+    %t31 = getelementptr inbounds %Frame_pmd, %Frame_pmd* %t33, i32 0, i32 0
+    %t30 = load i32, i32* %t31
+    %t29 = add i32 %t30, 1
+    store i32 %t29, i32* %t26
     ; line 485
+    %t37 = getelementptr inbounds %Frame_pmd_pt, %Frame_pmd_pt* %.frame, i32 0, i32 0
+    %t38 = load %Frame_pmd*, %Frame_pmd** %t37
+    %t36 = getelementptr inbounds %Frame_pmd, %Frame_pmd* %t38, i32 0, i32 0
+    %t35 = load i32, i32* %t36
+    %t34 = icmp eq i32 %t35, 4
+    br i1 %t34, label %L_then_2, label %L_endif_2
+L_then_2:
+    ; line 486
+    %t39 = load %T_text, %T_text* @output
+    call void @_WriteLn(i8* %t39)
+    ; line 486
+    %t41 = getelementptr inbounds %Frame_pmd_pt, %Frame_pmd_pt* %.frame, i32 0, i32 0
+    %t42 = load %Frame_pmd*, %Frame_pmd** %t41
+    %t40 = getelementptr inbounds %Frame_pmd, %Frame_pmd* %t42, i32 0, i32 0
+    store i32 0, i32* %t40
+    br label %L_endif_2
+L_endif_2:
     ; nop
 
     ; epilogue
@@ -1314,7 +1521,7 @@ define void @P_callsp_readc(%Frame_callsp* %.slink, %T_text* %f)
     %t34 = getelementptr inbounds %T_array_8, %T_array_8* @store, i32 0, i32 %t33
     %t36 = getelementptr inbounds %T_record_9, %T_record_9* %t34, i32 0, i32 0
     %t35 = bitcast i8* %t36 to i32*
-    store i32 , i32* %t35
+    store i32 %.dummy.intrin, i32* %t35
     ; line 553
     %t38 = load i32, i32* @sp
     %t37 = sub i32 %t38, 2
@@ -1384,11 +1591,28 @@ define void @P_callsp_writestr(%Frame_callsp* %.slink, %T_text* %f)
     %t23 = load i32, i32* %t21
     store i32 %t23, i32* %t17
     ; line 562
+    %t26 = getelementptr inbounds %Frame_callsp_writestr, %Frame_callsp_writestr* %.frame, i32 0, i32 4
+    %t25 = load i32, i32* %t26
+    %t28 = getelementptr inbounds %Frame_callsp_writestr, %Frame_callsp_writestr* %.frame, i32 0, i32 3
+    %t27 = load i32, i32* %t28
+    %t24 = icmp sgt i32 %t25, %t27
+    br i1 %t24, label %L_then_1, label %L_else_1
+L_then_1:
+    ; line 562
+    br label %L_endif_1
+L_else_1:
+    ; line 563
+    %t29 = getelementptr inbounds %Frame_callsp_writestr, %Frame_callsp_writestr* %.frame, i32 0, i32 3
+    %t31 = getelementptr inbounds %Frame_callsp_writestr, %Frame_callsp_writestr* %.frame, i32 0, i32 4
+    %t30 = load i32, i32* %t31
+    store i32 %t30, i32* %t29
+    br label %L_endif_1
+L_endif_1:
     ; line 564
     ; line 565
-    %t25 = load i32, i32* @sp
-    %t24 = sub i32 %t25, 4
-    store i32 %t24, i32* @sp
+    %t33 = load i32, i32* @sp
+    %t32 = sub i32 %t33, 4
+    store i32 %t32, i32* @sp
 
     ; epilogue
     ret void
@@ -1515,12 +1739,14 @@ define void @P_callsp_putfile(%Frame_callsp* %.slink, %T_text* %f)
 ;================================================================================
 ; string literals
 
-@.str.91 = private unnamed_addr constant [7 x i8] c"  mp =\00", align 1
-@.str.92 = private unnamed_addr constant [7 x i8] c"  np =\00", align 1
-@.str.90 = private unnamed_addr constant [7 x i8] c"  sp =\00", align 1
-@.str.89 = private unnamed_addr constant [6 x i8] c" op =\00", align 1
-@.str.88 = private unnamed_addr constant [6 x i8] c" pc =\00", align 1
-@.str.93 = private unnamed_addr constant [39 x i8] c"--------------------------------------\00", align 1
+@.str.93 = private unnamed_addr constant [7 x i8] c"  mp =\00", align 1
+@.str.94 = private unnamed_addr constant [7 x i8] c"  np =\00", align 1
+@.str.92 = private unnamed_addr constant [7 x i8] c"  sp =\00", align 1
+@.str.88 = private unnamed_addr constant [26 x i8] c" duplicated label        \00", align 1
+@.str.89 = private unnamed_addr constant [26 x i8] c" illegal instruction     \00", align 1
+@.str.91 = private unnamed_addr constant [6 x i8] c" op =\00", align 1
+@.str.90 = private unnamed_addr constant [6 x i8] c" pc =\00", align 1
+@.str.95 = private unnamed_addr constant [39 x i8] c"--------------------------------------\00", align 1
 @.str.13 = private unnamed_addr constant [11 x i8] c"...       \00", align 1
 @.str.45 = private unnamed_addr constant [11 x i8] c"abi       \00", align 1
 @.str.46 = private unnamed_addr constant [11 x i8] c"abr       \00", align 1
@@ -1598,6 +1824,7 @@ define void @P_callsp_putfile(%Frame_callsp* %.slink, %T_text* %f)
 @.str.11 = private unnamed_addr constant [11 x i8] c"sto       \00", align 1
 @.str.63 = private unnamed_addr constant [11 x i8] c"stp       \00", align 1
 @.str.7 = private unnamed_addr constant [11 x i8] c"str       \00", align 1
+@.str.96 = private unnamed_addr constant [9 x i8] c"too big \00", align 1
 @.str.40 = private unnamed_addr constant [11 x i8] c"trc       \00", align 1
 @.str.66 = private unnamed_addr constant [11 x i8] c"ujc       \00", align 1
 @.str.28 = private unnamed_addr constant [11 x i8] c"ujp       \00", align 1

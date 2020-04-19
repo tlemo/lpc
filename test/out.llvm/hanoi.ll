@@ -248,6 +248,65 @@ define void @P_hanoi3(i32 %n, i32 %i, i32 %j)
 
     ; body
     ; line 41
+    %t6 = getelementptr inbounds %Frame_hanoi3, %Frame_hanoi3* %.frame, i32 0, i32 2
+    %t5 = load i32, i32* %t6
+    %t4 = icmp eq i32 %t5, 1
+    br i1 %t4, label %L_then_1, label %L_else_1
+L_then_1:
+    ; line 41
+    %t7 = load %T_text, %T_text* @_output
+    call void @_WriteChar(i8* %t7, i32 0, i32 0, i8 40)
+    %t9 = getelementptr inbounds %Frame_hanoi3, %Frame_hanoi3* %.frame, i32 0, i32 0
+    %t8 = load i32, i32* %t9
+    call void @_WriteInteger(i8* %t7, i32 0, i32 0, i32 %t8)
+    call void @_WriteChar(i8* %t7, i32 0, i32 0, i8 44)
+    %t11 = getelementptr inbounds %Frame_hanoi3, %Frame_hanoi3* %.frame, i32 0, i32 1
+    %t10 = load i32, i32* %t11
+    call void @_WriteInteger(i8* %t7, i32 0, i32 0, i32 %t10)
+    call void @_WriteChar(i8* %t7, i32 0, i32 0, i8 41)
+    br label %L_endif_1
+L_else_1:
+    ; line 42
+    %t12 = getelementptr inbounds %Frame_hanoi3, %Frame_hanoi3* %.frame, i32 0, i32 3
+    %t16 = getelementptr inbounds %Frame_hanoi3, %Frame_hanoi3* %.frame, i32 0, i32 0
+    %t15 = load i32, i32* %t16
+    %t14 = sub i32 6, %t15
+    %t18 = getelementptr inbounds %Frame_hanoi3, %Frame_hanoi3* %.frame, i32 0, i32 1
+    %t17 = load i32, i32* %t18
+    %t13 = sub i32 %t14, %t17
+    store i32 %t13, i32* %t12
+    ; line 43
+    %t21 = getelementptr inbounds %Frame_hanoi3, %Frame_hanoi3* %.frame, i32 0, i32 2
+    %t20 = load i32, i32* %t21
+    %t19 = sub i32 %t20, 1
+    %t23 = getelementptr inbounds %Frame_hanoi3, %Frame_hanoi3* %.frame, i32 0, i32 0
+    %t22 = load i32, i32* %t23
+    %t25 = getelementptr inbounds %Frame_hanoi3, %Frame_hanoi3* %.frame, i32 0, i32 3
+    %t24 = load i32, i32* %t25
+    call void @P_hanoi3(i32 %t19, i32 %t22, i32 %t24)
+    ; line 43
+    %t26 = load %T_text, %T_text* @_output
+    call void @_WriteChar(i8* %t26, i32 0, i32 0, i8 40)
+    %t28 = getelementptr inbounds %Frame_hanoi3, %Frame_hanoi3* %.frame, i32 0, i32 0
+    %t27 = load i32, i32* %t28
+    call void @_WriteInteger(i8* %t26, i32 0, i32 0, i32 %t27)
+    call void @_WriteChar(i8* %t26, i32 0, i32 0, i8 44)
+    %t30 = getelementptr inbounds %Frame_hanoi3, %Frame_hanoi3* %.frame, i32 0, i32 1
+    %t29 = load i32, i32* %t30
+    call void @_WriteInteger(i8* %t26, i32 0, i32 0, i32 %t29)
+    call void @_WriteChar(i8* %t26, i32 0, i32 0, i8 41)
+    ; line 43
+    %t33 = getelementptr inbounds %Frame_hanoi3, %Frame_hanoi3* %.frame, i32 0, i32 2
+    %t32 = load i32, i32* %t33
+    %t31 = sub i32 %t32, 1
+    %t35 = getelementptr inbounds %Frame_hanoi3, %Frame_hanoi3* %.frame, i32 0, i32 3
+    %t34 = load i32, i32* %t35
+    %t37 = getelementptr inbounds %Frame_hanoi3, %Frame_hanoi3* %.frame, i32 0, i32 1
+    %t36 = load i32, i32* %t37
+    call void @P_hanoi3(i32 %t31, i32 %t34, i32 %t36)
+    ; nop
+    br label %L_endif_1
+L_endif_1:
     ; nop
 
     ; epilogue

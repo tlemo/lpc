@@ -9,12 +9,7 @@ compiling pass 2 (target = llvm)
 -----------------------------------------------------
 
 Invoking LLC ...
-Exit code: 0
-
-Linking...
-Exit code: 0
-
-running the executable
------------------------------------------------------
-
-Exit code: 3221225477
+llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\test06.ll:76:23: error: '%t10' defined with type 'i8*' but expected 'i32'
+    %t9 = icmp eq i32 %t10, null
+                      ^
+Exit code: 1

@@ -131,12 +131,28 @@ define i32 @F_foo(%T_foo_subroutine_6 %pfn)
     store i32 %t10, i32* %t5
     ; line 46
     ; line 47
+    %t13 = getelementptr inbounds %Frame_foo, %Frame_foo* %.frame, i32 0, i32 3
+    %t12 = load i8*, i8** %t13
+    %t11 = icmp ne i32 %t12, null
+    br i1 %t11, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 49
+    %t15 = getelementptr inbounds %Frame_foo, %Frame_foo* %.frame, i32 0, i32 3
+    %t14 = load i8*, i8** %t15
+    %t16 = bitcast i8* %t14 to i32*
+    %t18 = load i32, i32* @gv
+    %t17 = srem i32 %t18, 256
+    store i32 %t17, i32* %t16
+    ; line 50
+    ; nop
+    br label %L_endif_1
+L_endif_1:
     ; nop
 
     ; epilogue
-    %t11 = getelementptr inbounds %Frame_foo, %Frame_foo* %.frame, i32 0, i32 1
-    %t12 = load i32, i32* %t11
-    ret i32 %t12
+    %t19 = getelementptr inbounds %Frame_foo, %Frame_foo* %.frame, i32 0, i32 1
+    %t20 = load i32, i32* %t19
+    ret i32 %t20
 }
 
 

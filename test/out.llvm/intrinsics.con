@@ -9,7 +9,7 @@ compiling pass 2 (target = llvm)
 -----------------------------------------------------
 
 Invoking LLC ...
-llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\intrinsics.ll:55:57: error: expected value token
-    call void @_WriteReal(i8* %t3, i32 0, i32 0, double )
+llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\intrinsics.ll:70:57: error: '%.dummy.intrin' defined with type 'double' but expected 'i32'
+    call void @_WriteInteger(i8* %t6, i32 0, i32 0, i32 %.dummy.intrin)
                                                         ^
 Exit code: 1

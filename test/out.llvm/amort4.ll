@@ -255,6 +255,79 @@ define void @P_CalculateAndPrint()
 
     ; body
     ; line 60
+    %t2 = load double, double* @Balance
+    %t1 = fcmp ugt double %t2, 0.000000
+    br i1 %t1, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 61
+    %t3 = getelementptr inbounds %Frame_CalculateAndPrint, %Frame_CalculateAndPrint* %.frame, i32 0, i32 0
+    %t5 = load double, double* @InterestRate
+    %t6 = load double, double* @Balance
+    %t4 = fmul double %t5, %t6
+    store double %t4, double* %t3
+    ; line 62
+    %t7 = getelementptr inbounds %Frame_CalculateAndPrint, %Frame_CalculateAndPrint* %.frame, i32 0, i32 1
+    %t9 = load double, double* @Payment
+    %t11 = getelementptr inbounds %Frame_CalculateAndPrint, %Frame_CalculateAndPrint* %.frame, i32 0, i32 0
+    %t10 = load double, double* %t11
+    %t8 = fsub double %t9, %t10
+    store double %t8, double* %t7
+    ; line 63
+    %t14 = getelementptr inbounds %Frame_CalculateAndPrint, %Frame_CalculateAndPrint* %.frame, i32 0, i32 1
+    %t13 = load double, double* %t14
+    %t15 = load double, double* @Balance
+    %t12 = fcmp ugt double %t13, %t15
+    br i1 %t12, label %L_then_2, label %L_else_2
+L_then_2:
+    ; line 64
+    %t16 = getelementptr inbounds %Frame_CalculateAndPrint, %Frame_CalculateAndPrint* %.frame, i32 0, i32 1
+    %t17 = load double, double* @Balance
+    store double %t17, double* %t16
+    ; line 65
+    %t20 = getelementptr inbounds %Frame_CalculateAndPrint, %Frame_CalculateAndPrint* %.frame, i32 0, i32 1
+    %t19 = load double, double* %t20
+    %t22 = getelementptr inbounds %Frame_CalculateAndPrint, %Frame_CalculateAndPrint* %.frame, i32 0, i32 0
+    %t21 = load double, double* %t22
+    %t18 = fadd double %t19, %t21
+    store double %t18, double* @Payment
+    ; line 66
+    store double 0.000000, double* @Balance
+    ; nop
+    br label %L_endif_2
+L_else_2:
+    ; line 69
+    %t24 = load double, double* @Balance
+    %t26 = getelementptr inbounds %Frame_CalculateAndPrint, %Frame_CalculateAndPrint* %.frame, i32 0, i32 1
+    %t25 = load double, double* %t26
+    %t23 = fsub double %t24, %t25
+    store double %t23, double* @Balance
+    ; nop
+    br label %L_endif_2
+L_endif_2:
+    ; line 71
+    %t28 = load double, double* @AnnualAccumInterest
+    %t30 = getelementptr inbounds %Frame_CalculateAndPrint, %Frame_CalculateAndPrint* %.frame, i32 0, i32 0
+    %t29 = load double, double* %t30
+    %t27 = fadd double %t28, %t29
+    store double %t27, double* @AnnualAccumInterest
+    ; line 73
+    %t31 = load %T_text, %T_text* @_output
+    %t32 = load i32, i32* @Month
+    call void @_WriteInteger(i8* %t31, i32 5, i32 0, i32 %t32)
+    %t33 = load double, double* @Payment
+    call void @_WriteReal(i8* %t31, i32 10, i32 2, double %t33)
+    %t35 = getelementptr inbounds %Frame_CalculateAndPrint, %Frame_CalculateAndPrint* %.frame, i32 0, i32 0
+    %t34 = load double, double* %t35
+    call void @_WriteReal(i8* %t31, i32 10, i32 2, double %t34)
+    %t37 = getelementptr inbounds %Frame_CalculateAndPrint, %Frame_CalculateAndPrint* %.frame, i32 0, i32 1
+    %t36 = load double, double* %t37
+    call void @_WriteReal(i8* %t31, i32 10, i32 2, double %t36)
+    %t38 = load double, double* @Balance
+    call void @_WriteReal(i8* %t31, i32 10, i32 2, double %t38)
+    call void @_WriteLn(i8* %t31)
+    ; nop
+    br label %L_endif_1
+L_endif_1:
     ; nop
 
     ; epilogue

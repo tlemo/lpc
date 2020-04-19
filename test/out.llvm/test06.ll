@@ -72,13 +72,29 @@ define void @P_()
     ; line 35
     call void @P_free(i8** @p)
     ; line 37
+    %t10 = load i8*, i8** @p
+    %t9 = icmp eq i32 %t10, null
+    br i1 %t9, label %L_then_1, label %L_else_1
+L_then_1:
+    ; line 38
+    %t11 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t11, i32 0, i32 0, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.5, i32 0, i32 0), i32 2)
+    call void @_WriteLn(i8* %t11)
+    br label %L_endif_1
+L_else_1:
+    ; line 40
+    %t12 = load %T_text, %T_text* @_output
+    call void @_WriteString(i8* %t12, i32 0, i32 0, i8* getelementptr inbounds ([8 x i8], [8 x i8]* @.str.6, i32 0, i32 0), i32 7)
+    call void @_WriteLn(i8* %t12)
+    br label %L_endif_1
+L_endif_1:
     ; nop
 
     ; cleanup
-    %t9 = load %T_text, %T_text* @_output
-    call void @_CloseFile(i8* %t9)
-    %t10 = load %T_text, %T_text* @_input
-    call void @_CloseFile(i8* %t10)
+    %t13 = load %T_text, %T_text* @_output
+    call void @_CloseFile(i8* %t13)
+    %t14 = load %T_text, %T_text* @_input
+    call void @_CloseFile(i8* %t14)
 
     ; epilogue
     ret void
@@ -194,9 +210,11 @@ define void @P_free(i8** %pointer)
 ;================================================================================
 ; string literals
 
+@.str.6 = private unnamed_addr constant [8 x i8] c"FAILED!\00", align 1
 @.str.1 = private unnamed_addr constant [7 x i8] c"_input\00", align 1
 @.str.2 = private unnamed_addr constant [8 x i8] c"_output\00", align 1
 @.str.3 = private unnamed_addr constant [5 x i8] c"i = \00", align 1
+@.str.5 = private unnamed_addr constant [3 x i8] c"ok\00", align 1
 @.str.4 = private unnamed_addr constant [6 x i8] c"p^ = \00", align 1
 
 

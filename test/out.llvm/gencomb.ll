@@ -126,6 +126,17 @@ define void @P_gen(%T_vec* %v)
 
     ; body
     ; line 11
+    %t3 = load i32, i32* @ig
+    %t2 = icmp eq i32 %t3, 0
+    br i1 %t2, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 12
+    ; line 13
+    store i32 1, i32* @ig
+    ; line 13
+    ; nop
+    br label %L_endif_1
+L_endif_1:
     ; line 15
     ; line 20
     store i32 0, i32* @ig

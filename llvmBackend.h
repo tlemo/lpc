@@ -461,10 +461,10 @@ private:
     //
     // L_<prefix>_<N>
     //
-    string _genLabel(const char* prefix)
+    string _genLabel(const char* prefix, int labelGen) const
     {
         stringstream label;
-        label << "L_" << prefix << "_" << m_labelGen++;
+        label << "L_" << prefix << "_" << labelGen;
         return label.str();
     }
 
@@ -496,7 +496,8 @@ private:
         }
 
         auto stmIr = unique_ptr<IrFragment>(pStm->accept(this).get<IrFragment>());
-        assert(stmIr->value.empty());
+        // TODO
+        //assert(stmIr->value.empty());
         code << stmIr->code;
 
         return unique_ptr<IrFragment>(new IrFragment{code.str(), ""});
@@ -911,15 +912,17 @@ private:
             //
             const auto leftIr = gen(pLeft);
             const auto rightIr = gen(pRight);
-            const auto exprLabel = _genLabel("expr");
 
-            code << exprLabel << ":\n";
+            const int labelGen = m_labelGen++;
 
             if (token == Parser::T_OR)
             {
-                const auto evalLabel = _genLabel("OR_eval");
-                const auto shortcutLabel = _genLabel("OR_shortcut");
+                const auto exprLabel = _genLabel("OR_expr", labelGen);
+                const auto evalLabel = _genLabel("OR_eval", labelGen);
+                const auto shortcutLabel = _genLabel("OR_shortcut", labelGen);
 
+                code << TAB << "br label %" << exprLabel << "\n";
+                code << exprLabel << ":\n";
                 code << leftIr->code;
                 code << TAB << "br i1 " << leftIr->value <<
                     ", label %" << shortcutLabel <<
@@ -934,9 +937,12 @@ private:
             }
             else
             {
-                const auto evalLabel = _genLabel("AND_eval");
-                const auto shortcutLabel = _genLabel("AND_shortcut");
+                const auto exprLabel = _genLabel("AND_expr", labelGen);
+                const auto evalLabel = _genLabel("AND_eval", labelGen);
+                const auto shortcutLabel = _genLabel("AND_shortcut", labelGen);
 
+                code << TAB << "br label %" << exprLabel << "\n";
+                code << exprLabel << ":\n";
                 code << leftIr->code;
                 code << TAB << "br i1 " << leftIr->value <<
                     ", label %" << evalLabel <<
@@ -1077,7 +1083,7 @@ private:
         case Parser::T_NOT:
             assert(pUnaryOp->pType->isBool());
             result = _genTempValue();
-            code << TAB << result << " = icmp eq 0, " << operandIr->value << "\n";
+            code << TAB << result << " = icmp eq i1 0, " << operandIr->value << "\n";
             break;
 
         default:
@@ -1259,7 +1265,7 @@ private:
 
         stringstream code;
         // TODO
-        return { code.str(), "" };
+        return { code.str(), "%.dummy.intrin" };
     }
 
     IrFragment _expandSqr(ast::ExprList* pArguments)
@@ -1269,7 +1275,7 @@ private:
 
         stringstream code;
         // TODO
-        return { code.str(), "" };
+        return { code.str(), "%.dummy.intrin" };
     }
 
     IrFragment _expandAbs(ast::ExprList* pArguments)
@@ -1279,10 +1285,11 @@ private:
 
         stringstream code;
         // TODO
-        return { code.str(), "" };
+        return { code.str(), "%.dummy.intrin" };
     }
 
-    IrFragment _expandFileIntrinsic(obj::IntrinsicId intrinsicId, ast::ExprList* pArguments)
+    IrFragment _expandFileIntrinsic(obj::IntrinsicId intrinsicId,
+        ast::ExprList* pArguments, bool returnValue)
     {
         const static unordered_map<obj::IntrinsicId, string> fileIntrinsics = 
         {
@@ -1301,7 +1308,7 @@ private:
 
         stringstream code;
         // TODO
-        return { code.str(), "" };
+        return { code.str(), returnValue ? "%.dummy.intrin" : "" };
     }
 
     // pack(a, start, z) intrinsic
@@ -1363,14 +1370,14 @@ private:
 
         stringstream code;
         // TODO
-        return { code.str(), "" };
+        return { code.str(), "%.dummy.intrin" };
     }
 
     IrFragment _expandHalt()
     {
         stringstream code;
         // TODO
-        return { code.str(), "" };
+        return { code.str(), "%.dummy.intrin" };
     }
 
     IrFragment _expandIncDec(ast::ExprList* pArguments, bool inc)
@@ -1380,7 +1387,7 @@ private:
 
         stringstream code;
         // TODO
-        return { code.str(), "" };
+        return { code.str(), "%.dummy.intrin" };
     }
 
     IrFragment _expandTrivialCast(ast::ExprList* pArguments)
@@ -1390,7 +1397,7 @@ private:
 
         stringstream code;
         // TODO
-        return { code.str(), "" };
+        return { code.str(), "%.dummy.intrin" };
     }
 
     IrFragment _expandTrunc(const char* name, ast::ExprList* pArguments)
@@ -1400,7 +1407,7 @@ private:
 
         stringstream code;
         // TODO
-        return { code.str(), "" };
+        return { code.str(), "%.dummy.intrin" };
     }
 
     IrFragment _expandDispose(ast::ExprList* pArguments, int line)
@@ -1499,14 +1506,16 @@ private:
         case obj::IN_UNPACK:
             return _expandUnpack(pArguments, pIntrinsic->line);
 
-        case obj::IN_EOF:
-        case obj::IN_EOLN:
         case obj::IN_REWRITE:
         case obj::IN_RESET:
-        case obj::IN_PUT:
-        case obj::IN_GET:
         case obj::IN_PAGE:
-            return _expandFileIntrinsic(pIntrinsic->intrinsicId, pArguments);
+        case obj::IN_PUT:
+            return _expandFileIntrinsic(pIntrinsic->intrinsicId, pArguments, false);
+
+        case obj::IN_EOF:
+        case obj::IN_EOLN:
+        case obj::IN_GET:
+            return _expandFileIntrinsic(pIntrinsic->intrinsicId, pArguments, true);
 
         default:
             assert(!"unexpected intrinsic id");
@@ -1730,7 +1739,50 @@ private:
     VarPtr visit(const ast::IfStm* pIfStm) override
     {
         stringstream code;
-        // TODO
+
+        const auto condIr = gen(pIfStm->pCondition);
+        assert(!condIr->value.empty());
+        code << condIr->code;
+
+        const int labelGen = m_labelGen++;
+
+        if(pIfStm->pElseStm == nullptr)
+        {
+            const auto thenIr = gen(pIfStm->pThenStm);
+            const auto thenLabel = _genLabel("then", labelGen);
+            const auto endifLabel = _genLabel("endif", labelGen);
+
+            code << TAB << "br i1 " << condIr->value << ", " <<
+                "label %" << thenLabel << ", " <<
+                "label %" << endifLabel << "\n";
+
+            code << thenLabel << ":\n";
+            code << thenIr->code;
+            code << TAB << "br label %" << endifLabel << "\n";
+            code << endifLabel << ":\n";
+        }
+        else
+        {
+            const auto thenIr = gen(pIfStm->pThenStm);
+            const auto elseIr = gen(pIfStm->pElseStm);
+            const auto thenLabel = _genLabel("then", labelGen);
+            const auto elseLabel = _genLabel("else", labelGen);
+            const auto endifLabel = _genLabel("endif", labelGen);
+
+            code << TAB << "br i1 " << condIr->value << ", " <<
+                "label %" << thenLabel << ", " <<
+                "label %" << elseLabel << "\n";
+
+            code << thenLabel << ":\n";
+            code << thenIr->code;
+            code << TAB << "br label %" << endifLabel << "\n";
+
+            code << elseLabel << ":\n";
+            code << elseIr->code;
+            code << TAB << "br label %" << endifLabel << "\n";
+            code << endifLabel << ":\n";
+        }
+
         return newIrFragment(code.str(), "");
     }
 
@@ -1816,7 +1868,8 @@ private:
     VarPtr visit(const ast::ProcCallStm* pProcCallStm) override
     {
         auto callIr = _genCall(pProcCallStm->pProc, pProcCallStm->pArguments, nullptr);
-        assert(callIr.value.empty());
+        // TODO
+        //assert(callIr.value.empty());
         return newIrFragment(callIr.code, callIr.value);
     }
 };

@@ -95,17 +95,25 @@ define void @P_()
     store i1 0, i1* @CRPENDING
     ; line 1529
     ; line 1589
+    %t5 = load i1, i1* @CRPENDING
+    br i1 %t5, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 1590
+    %t6 = load %T_text, %T_text* @OUTPUTFILE
+    call void @_WriteLn(i8* %t6)
+    br label %L_endif_1
+L_endif_1:
     ; nop
 
     ; cleanup
-    %t5 = load %T_text, %T_text* @OUTPUTFILE
-    call void @_CloseFile(i8* %t5)
-    %t6 = load %T_text, %T_text* @INPUTFILE
-    call void @_CloseFile(i8* %t6)
-    %t7 = load %T_text, %T_text* @_output
+    %t7 = load %T_text, %T_text* @OUTPUTFILE
     call void @_CloseFile(i8* %t7)
-    %t8 = load %T_text, %T_text* @_input
+    %t8 = load %T_text, %T_text* @INPUTFILE
     call void @_CloseFile(i8* %t8)
+    %t9 = load %T_text, %T_text* @_output
+    call void @_CloseFile(i8* %t9)
+    %t10 = load %T_text, %T_text* @_input
+    call void @_CloseFile(i8* %t10)
 
     ; epilogue
     ret void
@@ -149,8 +157,134 @@ define void @P_GETCHAR(%T_text* %INPUTFILE, %T_CHARINFO* %NEXTCHAR, %T_CHARINFO*
     %t6 = load %T_CHARINFO, %T_CHARINFO* %t8
     store %T_CHARINFO %t6, %T_CHARINFO* %t5
     ; line 328
+    br i1 %.dummy.intrin, label %L_then_1, label %L_else_1
+L_then_1:
+    ; line 330
+    %t9 = getelementptr inbounds %Frame_GETCHAR, %Frame_GETCHAR* %.frame, i32 0, i32 2
+    %t10 = load %T_CHARINFO*, %T_CHARINFO** %t9
+    %t12 = getelementptr inbounds %T_CHARINFO, %T_CHARINFO* %t10, i32 0, i32 0
+    %t11 = bitcast i8* %t12 to i32*
+    store i32 5, i32* %t11
+    br label %L_endif_1
+L_else_1:
+    ; line 332
+    br i1 %.dummy.intrin, label %L_then_2, label %L_else_2
+L_then_2:
+    ; line 334
+    %t13 = getelementptr inbounds %Frame_GETCHAR, %Frame_GETCHAR* %.frame, i32 0, i32 2
+    %t14 = load %T_CHARINFO*, %T_CHARINFO** %t13
+    %t16 = getelementptr inbounds %T_CHARINFO, %T_CHARINFO* %t14, i32 0, i32 0
+    %t15 = bitcast i8* %t16 to i32*
+    store i32 4, i32* %t15
+    br label %L_endif_2
+L_else_2:
+    ; line 336
+    br i1 true, label %L_then_3, label %L_else_3
+L_then_3:
+    ; line 338
+    %t18 = getelementptr inbounds %Frame_GETCHAR, %Frame_GETCHAR* %.frame, i32 0, i32 2
+    %t19 = load %T_CHARINFO*, %T_CHARINFO** %t18
+    %t21 = getelementptr inbounds %T_CHARINFO, %T_CHARINFO* %t19, i32 0, i32 0
+    %t20 = bitcast i8* %t21 to i32*
+    store i32 0, i32* %t20
+    br label %L_endif_3
+L_else_3:
+    ; line 340
+    br i1 true, label %L_then_4, label %L_else_4
+L_then_4:
+    ; line 342
+    %t23 = getelementptr inbounds %Frame_GETCHAR, %Frame_GETCHAR* %.frame, i32 0, i32 2
+    %t24 = load %T_CHARINFO*, %T_CHARINFO** %t23
+    %t26 = getelementptr inbounds %T_CHARINFO, %T_CHARINFO* %t24, i32 0, i32 0
+    %t25 = bitcast i8* %t26 to i32*
+    store i32 1, i32* %t25
+    br label %L_endif_4
+L_else_4:
+    ; line 344
+    %t29 = getelementptr inbounds %Frame_GETCHAR, %Frame_GETCHAR* %.frame, i32 0, i32 1
+    %t30 = load %T_text*, %T_text** %t29
+    %t28 = load %T_text, %T_text* %t30
+    %t31 = load i8, i8* %t28
+    %t27 = icmp eq i32 %t31, 39
+    br i1 %t27, label %L_then_5, label %L_else_5
+L_then_5:
+    ; line 346
+    %t32 = getelementptr inbounds %Frame_GETCHAR, %Frame_GETCHAR* %.frame, i32 0, i32 2
+    %t33 = load %T_CHARINFO*, %T_CHARINFO** %t32
+    %t35 = getelementptr inbounds %T_CHARINFO, %T_CHARINFO* %t33, i32 0, i32 0
+    %t34 = bitcast i8* %t35 to i32*
+    store i32 3, i32* %t34
+    br label %L_endif_5
+L_else_5:
+    ; line 348
+    %t38 = getelementptr inbounds %Frame_GETCHAR, %Frame_GETCHAR* %.frame, i32 0, i32 1
+    %t39 = load %T_text*, %T_text** %t38
+    %t37 = load %T_text, %T_text* %t39
+    %t40 = load i8, i8* %t37
+    %t36 = icmp eq i32 %t40, 32
+    br i1 %t36, label %L_then_6, label %L_else_6
+L_then_6:
+    ; line 350
+    %t41 = getelementptr inbounds %Frame_GETCHAR, %Frame_GETCHAR* %.frame, i32 0, i32 2
+    %t42 = load %T_CHARINFO*, %T_CHARINFO** %t41
+    %t44 = getelementptr inbounds %T_CHARINFO, %T_CHARINFO* %t42, i32 0, i32 0
+    %t43 = bitcast i8* %t44 to i32*
+    store i32 2, i32* %t43
+    br label %L_endif_6
+L_else_6:
+    ; line 352
+    %t45 = getelementptr inbounds %Frame_GETCHAR, %Frame_GETCHAR* %.frame, i32 0, i32 2
+    %t46 = load %T_CHARINFO*, %T_CHARINFO** %t45
+    %t48 = getelementptr inbounds %T_CHARINFO, %T_CHARINFO* %t46, i32 0, i32 0
+    %t47 = bitcast i8* %t48 to i32*
+    store i32 6, i32* %t47
+    br label %L_endif_6
+L_endif_6:
+    br label %L_endif_5
+L_endif_5:
+    br label %L_endif_4
+L_endif_4:
+    br label %L_endif_3
+L_endif_3:
+    br label %L_endif_2
+L_endif_2:
+    br label %L_endif_1
+L_endif_1:
     ; line 355
+    br i1 true, label %L_then_7, label %L_else_7
+L_then_7:
+    ; line 357
+    %t50 = getelementptr inbounds %Frame_GETCHAR, %Frame_GETCHAR* %.frame, i32 0, i32 2
+    %t51 = load %T_CHARINFO*, %T_CHARINFO** %t50
+    %t53 = getelementptr inbounds %T_CHARINFO, %T_CHARINFO* %t51, i32 0, i32 4
+    %t52 = bitcast i8* %t53 to i8*
+    store i8 32, i8* %t52
+    br label %L_endif_7
+L_else_7:
+    ; line 359
+    %t54 = getelementptr inbounds %Frame_GETCHAR, %Frame_GETCHAR* %.frame, i32 0, i32 2
+    %t55 = load %T_CHARINFO*, %T_CHARINFO** %t54
+    %t57 = getelementptr inbounds %T_CHARINFO, %T_CHARINFO* %t55, i32 0, i32 4
+    %t56 = bitcast i8* %t57 to i8*
+    %t59 = getelementptr inbounds %Frame_GETCHAR, %Frame_GETCHAR* %.frame, i32 0, i32 1
+    %t60 = load %T_text*, %T_text** %t59
+    %t58 = load %T_text, %T_text* %t60
+    %t61 = load i8, i8* %t58
+    store i8 %t61, i8* %t56
+    br label %L_endif_7
+L_endif_7:
     ; line 361
+    %t63 = getelementptr inbounds %Frame_GETCHAR, %Frame_GETCHAR* %.frame, i32 0, i32 2
+    %t64 = load %T_CHARINFO*, %T_CHARINFO** %t63
+    %t66 = getelementptr inbounds %T_CHARINFO, %T_CHARINFO* %t64, i32 0, i32 0
+    %t65 = bitcast i8* %t66 to i32*
+    %t67 = load i32, i32* %t65
+    %t62 = icmp ne i32 %t67, 5
+    br i1 %t62, label %L_then_8, label %L_endif_8
+L_then_8:
+    ; line 362
+    br label %L_endif_8
+L_endif_8:
 
     ; epilogue
     ret void
@@ -201,6 +335,35 @@ define void @P_STORENEXTCHAR(%T_text* %INPUTFILE, i32* %LENGTH, %T_CHARINFO* %CU
     %t11 = load %T_CHARINFO*, %T_CHARINFO** %t10
     call void @P_GETCHAR(%T_text* %t7, %T_CHARINFO* %t9, %T_CHARINFO* %t11)
     ; line 381
+    %t14 = getelementptr inbounds %Frame_STORENEXTCHAR, %Frame_STORENEXTCHAR* %.frame, i32 0, i32 2
+    %t15 = load i32*, i32** %t14
+    %t13 = load i32, i32* %t15
+    %t12 = icmp slt i32 %t13, 200
+    br i1 %t12, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 383
+    %t16 = getelementptr inbounds %Frame_STORENEXTCHAR, %Frame_STORENEXTCHAR* %.frame, i32 0, i32 2
+    %t17 = load i32*, i32** %t16
+    %t20 = getelementptr inbounds %Frame_STORENEXTCHAR, %Frame_STORENEXTCHAR* %.frame, i32 0, i32 2
+    %t21 = load i32*, i32** %t20
+    %t19 = load i32, i32* %t21
+    %t18 = add i32 %t19, 1
+    store i32 %t18, i32* %t17
+    ; line 385
+    %t22 = getelementptr inbounds %Frame_STORENEXTCHAR, %Frame_STORENEXTCHAR* %.frame, i32 0, i32 4
+    %t23 = load %T_STRING*, %T_STRING** %t22
+    %t25 = getelementptr inbounds %Frame_STORENEXTCHAR, %Frame_STORENEXTCHAR* %.frame, i32 0, i32 2
+    %t26 = load i32*, i32** %t25
+    %t24 = load i32, i32* %t26
+    %t27 = getelementptr inbounds %T_STRING, %T_STRING* %t23, i32 0, i32 %t24
+    %t28 = getelementptr inbounds %Frame_STORENEXTCHAR, %Frame_STORENEXTCHAR* %.frame, i32 0, i32 0
+    %t29 = load %T_CHARINFO*, %T_CHARINFO** %t28
+    %t31 = getelementptr inbounds %T_CHARINFO, %T_CHARINFO* %t29, i32 0, i32 4
+    %t30 = bitcast i8* %t31 to i8*
+    %t32 = load i8, i8* %t30
+    store i8 %t32, i8* %t27
+    br label %L_endif_1
+L_endif_1:
 
     ; epilogue
     ret void
@@ -301,6 +464,46 @@ define void @P_GETCOMMENT(%T_text* %INPUTFILE, %T_CHARINFO* %CURRCHAR, %T_CHARIN
     store i32 23, i32* %t8
     ; line 437
     ; line 448
+    br label %L_AND_expr_1
+L_AND_expr_1:
+    %t11 = getelementptr inbounds %Frame_GETCOMMENT, %Frame_GETCOMMENT* %.frame, i32 0, i32 0
+    %t12 = load %T_CHARINFO*, %T_CHARINFO** %t11
+    %t14 = getelementptr inbounds %T_CHARINFO, %T_CHARINFO* %t12, i32 0, i32 4
+    %t13 = bitcast i8* %t14 to i8*
+    %t15 = load i8, i8* %t13
+    %t10 = icmp eq i32 %t15, 42
+    br i1 %t10, label %L_AND_eval_1, label %L_AND_shortcut_1
+L_AND_eval_1:
+    %t17 = getelementptr inbounds %Frame_GETCOMMENT, %Frame_GETCOMMENT* %.frame, i32 0, i32 4
+    %t18 = load %T_CHARINFO*, %T_CHARINFO** %t17
+    %t20 = getelementptr inbounds %T_CHARINFO, %T_CHARINFO* %t18, i32 0, i32 4
+    %t19 = bitcast i8* %t20 to i8*
+    %t21 = load i8, i8* %t19
+    %t16 = icmp eq i32 %t21, 41
+    br label %L_AND_shortcut_1
+L_AND_shortcut_1:
+    %t9 = phi [%t16, %L_AND_eval_1], [false, %L_AND_expr_1]
+    br i1 %t9, label %L_then_2, label %L_endif_2
+L_then_2:
+    ; line 452
+    %t22 = getelementptr inbounds %Frame_GETCOMMENT, %Frame_GETCOMMENT* %.frame, i32 0, i32 1
+    %t23 = load %T_text*, %T_text** %t22
+    %t24 = getelementptr inbounds %Frame_GETCOMMENT, %Frame_GETCOMMENT* %.frame, i32 0, i32 2
+    %t25 = load i32*, i32** %t24
+    %t26 = getelementptr inbounds %Frame_GETCOMMENT, %Frame_GETCOMMENT* %.frame, i32 0, i32 0
+    %t27 = load %T_CHARINFO*, %T_CHARINFO** %t26
+    %t28 = getelementptr inbounds %Frame_GETCOMMENT, %Frame_GETCOMMENT* %.frame, i32 0, i32 4
+    %t29 = load %T_CHARINFO*, %T_CHARINFO** %t28
+    %t30 = getelementptr inbounds %Frame_GETCOMMENT, %Frame_GETCOMMENT* %.frame, i32 0, i32 5
+    %t31 = load %T_STRING*, %T_STRING** %t30
+    call void @P_STORENEXTCHAR(%T_text* %t23, i32* %t25, %T_CHARINFO* %t27, %T_CHARINFO* %t29, %T_STRING* %t31)
+    ; line 458
+    %t32 = getelementptr inbounds %Frame_GETCOMMENT, %Frame_GETCOMMENT* %.frame, i32 0, i32 3
+    %t33 = load i32*, i32** %t32
+    store i32 24, i32* %t33
+    ; nop
+    br label %L_endif_2
+L_endif_2:
 
     ; epilogue
     ret void
@@ -344,12 +547,40 @@ define i32 @F_IDTYPE(%T_STRING %VALUE, i32 %LENGTH)
     %t3 = getelementptr inbounds %Frame_IDTYPE, %Frame_IDTYPE* %.frame, i32 0, i32 2
     store i32 32, i32* %t3
     ; line 483
+    %t6 = getelementptr inbounds %Frame_IDTYPE, %Frame_IDTYPE* %.frame, i32 0, i32 0
+    %t5 = load i32, i32* %t6
+    %t4 = icmp sle i32 %t5, 10
+    br i1 %t4, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 485
+    ; line 488
+    ; line 491
+    %t7 = getelementptr inbounds %Frame_IDTYPE, %Frame_IDTYPE* %.frame, i32 0, i32 6
+    store i32 0, i32* %t7
+    ; line 492
+    %t8 = getelementptr inbounds %Frame_IDTYPE, %Frame_IDTYPE* %.frame, i32 0, i32 3
+    store i1 0, i1* %t8
+    ; line 494
+    ; line 500
+    %t10 = getelementptr inbounds %Frame_IDTYPE, %Frame_IDTYPE* %.frame, i32 0, i32 3
+    %t9 = load i1, i1* %t10
+    br i1 %t9, label %L_then_2, label %L_endif_2
+L_then_2:
+    ; line 501
+    %t11 = getelementptr inbounds %Frame_IDTYPE, %Frame_IDTYPE* %.frame, i32 0, i32 2
+    %t13 = getelementptr inbounds %Frame_IDTYPE, %Frame_IDTYPE* %.frame, i32 0, i32 6
+    %t12 = load i32, i32* %t13
+    store i32 %t12, i32* %t11
+    br label %L_endif_2
+L_endif_2:
+    br label %L_endif_1
+L_endif_1:
     ; nop
 
     ; epilogue
-    %t4 = getelementptr inbounds %Frame_IDTYPE, %Frame_IDTYPE* %.frame, i32 0, i32 2
-    %t5 = load i32, i32* %t4
-    ret i32 %t5
+    %t14 = getelementptr inbounds %Frame_IDTYPE, %Frame_IDTYPE* %.frame, i32 0, i32 2
+    %t15 = load i32, i32* %t14
+    ret i32 %t15
 }
 
 
@@ -404,6 +635,11 @@ define void @P_GETIDENTIFIER(%T_text* %INPUTFILE, %T_CHARINFO* %CURRCHAR, %T_CHA
     %t15 = call i32 @F_IDTYPE(%T_STRING %t9, i32 %t12)
     store i32 %t15, i32* %t8
     ; line 529
+    br i1 true, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 531
+    br label %L_endif_1
+L_endif_1:
 
     ; epilogue
     ret void
@@ -564,12 +800,39 @@ define i32 @F_CHARTYPE(%T_CHARINFO %CURRCHAR, %T_CHARINFO %NEXTCHAR)
     store i1 0, i1* %t16
     ; line 628
     ; line 634
+    %t18 = getelementptr inbounds %Frame_CHARTYPE, %Frame_CHARTYPE* %.frame, i32 0, i32 3
+    %t17 = load i1, i1* %t18
+    %t19 = icmp eq i1 0, %t17
+    br i1 %t19, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 636
+    %t20 = getelementptr inbounds %Frame_CHARTYPE, %Frame_CHARTYPE* %.frame, i32 0, i32 5
+    store i32 25, i32* %t20
+    ; line 638
+    br label %L_endif_1
+L_endif_1:
     ; line 646
+    %t22 = getelementptr inbounds %Frame_CHARTYPE, %Frame_CHARTYPE* %.frame, i32 0, i32 3
+    %t21 = load i1, i1* %t22
+    br i1 %t21, label %L_then_2, label %L_else_2
+L_then_2:
+    ; line 647
+    %t23 = getelementptr inbounds %Frame_CHARTYPE, %Frame_CHARTYPE* %.frame, i32 0, i32 2
+    %t25 = getelementptr inbounds %Frame_CHARTYPE, %Frame_CHARTYPE* %.frame, i32 0, i32 5
+    %t24 = load i32, i32* %t25
+    store i32 %t24, i32* %t23
+    br label %L_endif_2
+L_else_2:
+    ; line 649
+    %t26 = getelementptr inbounds %Frame_CHARTYPE, %Frame_CHARTYPE* %.frame, i32 0, i32 2
+    store i32 32, i32* %t26
+    br label %L_endif_2
+L_endif_2:
 
     ; epilogue
-    %t17 = getelementptr inbounds %Frame_CHARTYPE, %Frame_CHARTYPE* %.frame, i32 0, i32 2
-    %t18 = load i32, i32* %t17
-    ret i32 %t18
+    %t27 = getelementptr inbounds %Frame_CHARTYPE, %Frame_CHARTYPE* %.frame, i32 0, i32 2
+    %t28 = load i32, i32* %t27
+    ret i32 %t28
 }
 
 
@@ -635,6 +898,22 @@ define void @P_GETSPECIALCHAR(%T_text* %INPUTFILE, %T_CHARINFO* %CURRCHAR, %T_CH
     %t25 = call i32 @F_CHARTYPE(%T_CHARINFO %t19, %T_CHARINFO %t22)
     store i32 %t25, i32* %t18
     ; line 672
+    br i1 true, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 673
+    %t27 = getelementptr inbounds %Frame_GETSPECIALCHAR, %Frame_GETSPECIALCHAR* %.frame, i32 0, i32 1
+    %t28 = load %T_text*, %T_text** %t27
+    %t29 = getelementptr inbounds %Frame_GETSPECIALCHAR, %Frame_GETSPECIALCHAR* %.frame, i32 0, i32 2
+    %t30 = load i32*, i32** %t29
+    %t31 = getelementptr inbounds %Frame_GETSPECIALCHAR, %Frame_GETSPECIALCHAR* %.frame, i32 0, i32 0
+    %t32 = load %T_CHARINFO*, %T_CHARINFO** %t31
+    %t33 = getelementptr inbounds %Frame_GETSPECIALCHAR, %Frame_GETSPECIALCHAR* %.frame, i32 0, i32 4
+    %t34 = load %T_CHARINFO*, %T_CHARINFO** %t33
+    %t35 = getelementptr inbounds %Frame_GETSPECIALCHAR, %Frame_GETSPECIALCHAR* %.frame, i32 0, i32 5
+    %t36 = load %T_STRING*, %T_STRING** %t35
+    call void @P_STORENEXTCHAR(%T_text* %t28, i32* %t30, %T_CHARINFO* %t32, %T_CHARINFO* %t34, %T_STRING* %t36)
+    br label %L_endif_1
+L_endif_1:
     ; nop
 
     ; epilogue
@@ -763,6 +1042,64 @@ define void @P_GETSYMBOL(%T_text* %INPUTFILE, i8** %NEXTSYM, i8** %CURRSYM)
     %t35 = bitcast i8* %t36 to i32*
     store i32 0, i32* %t35
     ; line 764
+    %t39 = getelementptr inbounds %Frame_GETSYMBOL, %Frame_GETSYMBOL* %.frame, i32 0, i32 0
+    %t40 = load i8**, i8*** %t39
+    %t38 = load i8*, i8** %t40
+    %t41 = bitcast i8* %t38 to %T_SYMBOL*
+    %t43 = getelementptr inbounds %T_SYMBOL, %T_SYMBOL* %t41, i32 0, i32 0
+    %t42 = bitcast i8* %t43 to i32*
+    %t44 = load i32, i32* %t42
+    %t37 = icmp eq i32 %t44, 23
+    br i1 %t37, label %L_then_1, label %L_else_1
+L_then_1:
+    ; line 765
+    %t45 = getelementptr inbounds %Frame_GETSYMBOL, %Frame_GETSYMBOL* %.frame, i32 0, i32 1
+    %t46 = load %T_text*, %T_text** %t45
+    %t48 = getelementptr inbounds %Frame_GETSYMBOL, %Frame_GETSYMBOL* %.frame, i32 0, i32 2
+    %t49 = load i8**, i8*** %t48
+    %t47 = load i8*, i8** %t49
+    %t50 = bitcast i8* %t47 to %T_SYMBOL*
+    %t52 = getelementptr inbounds %T_SYMBOL, %T_SYMBOL* %t50, i32 0, i32 0
+    %t51 = bitcast i8* %t52 to i32*
+    %t54 = getelementptr inbounds %Frame_GETSYMBOL, %Frame_GETSYMBOL* %.frame, i32 0, i32 2
+    %t55 = load i8**, i8*** %t54
+    %t53 = load i8*, i8** %t55
+    %t56 = bitcast i8* %t53 to %T_SYMBOL*
+    %t58 = getelementptr inbounds %T_SYMBOL, %T_SYMBOL* %t56, i32 0, i32 4
+    %t57 = bitcast i8* %t58 to %T_STRING*
+    %t60 = getelementptr inbounds %Frame_GETSYMBOL, %Frame_GETSYMBOL* %.frame, i32 0, i32 2
+    %t61 = load i8**, i8*** %t60
+    %t59 = load i8*, i8** %t61
+    %t62 = bitcast i8* %t59 to %T_SYMBOL*
+    %t64 = getelementptr inbounds %T_SYMBOL, %T_SYMBOL* %t62, i32 0, i32 204
+    %t63 = bitcast i8* %t64 to i32*
+    call void @P_GETCOMMENT(%T_text* %t46, %T_CHARINFO* @CURRCHAR, %T_CHARINFO* @NEXTCHAR, i32* %t51, %T_STRING* %t57, i32* %t63)
+    br label %L_endif_1
+L_else_1:
+    ; line 772
+    %t65 = getelementptr inbounds %Frame_GETSYMBOL, %Frame_GETSYMBOL* %.frame, i32 0, i32 1
+    %t66 = load %T_text*, %T_text** %t65
+    %t68 = getelementptr inbounds %Frame_GETSYMBOL, %Frame_GETSYMBOL* %.frame, i32 0, i32 2
+    %t69 = load i8**, i8*** %t68
+    %t67 = load i8*, i8** %t69
+    %t70 = bitcast i8* %t67 to %T_SYMBOL*
+    %t72 = getelementptr inbounds %T_SYMBOL, %T_SYMBOL* %t70, i32 0, i32 0
+    %t71 = bitcast i8* %t72 to i32*
+    %t74 = getelementptr inbounds %Frame_GETSYMBOL, %Frame_GETSYMBOL* %.frame, i32 0, i32 2
+    %t75 = load i8**, i8*** %t74
+    %t73 = load i8*, i8** %t75
+    %t76 = bitcast i8* %t73 to %T_SYMBOL*
+    %t78 = getelementptr inbounds %T_SYMBOL, %T_SYMBOL* %t76, i32 0, i32 4
+    %t77 = bitcast i8* %t78 to %T_STRING*
+    %t80 = getelementptr inbounds %Frame_GETSYMBOL, %Frame_GETSYMBOL* %.frame, i32 0, i32 2
+    %t81 = load i8**, i8*** %t80
+    %t79 = load i8*, i8** %t81
+    %t82 = bitcast i8* %t79 to %T_SYMBOL*
+    %t84 = getelementptr inbounds %T_SYMBOL, %T_SYMBOL* %t82, i32 0, i32 204
+    %t83 = bitcast i8* %t84 to i32*
+    call void @P_GETNEXTSYMBOL(%T_text* %t66, %T_CHARINFO* @CURRCHAR, %T_CHARINFO* @NEXTCHAR, i32* %t71, %T_STRING* %t77, i32* %t83)
+    br label %L_endif_1
+L_endif_1:
     ; nop
     ; nop
 
@@ -1750,11 +2087,25 @@ define i1 @F_STACKEMPTY()
 
     ; body
     ; line 1179
+    %t2 = load i32, i32* @TOP
+    %t1 = icmp eq i32 %t2, 0
+    br i1 %t1, label %L_then_1, label %L_else_1
+L_then_1:
+    ; line 1180
+    %t3 = getelementptr inbounds %Frame_STACKEMPTY, %Frame_STACKEMPTY* %.frame, i32 0, i32 0
+    store i1 1, i1* %t3
+    br label %L_endif_1
+L_else_1:
+    ; line 1182
+    %t4 = getelementptr inbounds %Frame_STACKEMPTY, %Frame_STACKEMPTY* %.frame, i32 0, i32 0
+    store i1 0, i1* %t4
+    br label %L_endif_1
+L_endif_1:
 
     ; epilogue
-    %t1 = getelementptr inbounds %Frame_STACKEMPTY, %Frame_STACKEMPTY* %.frame, i32 0, i32 0
-    %t2 = load i1, i1* %t1
-    ret i1 %t2
+    %t5 = getelementptr inbounds %Frame_STACKEMPTY, %Frame_STACKEMPTY* %.frame, i32 0, i32 0
+    %t6 = load i1, i1* %t5
+    ret i1 %t6
 }
 
 
@@ -1780,11 +2131,25 @@ define i1 @F_STACKFULL()
 
     ; body
     ; line 1191
+    %t2 = load i32, i32* @TOP
+    %t1 = icmp eq i32 %t2, 100
+    br i1 %t1, label %L_then_1, label %L_else_1
+L_then_1:
+    ; line 1192
+    %t3 = getelementptr inbounds %Frame_STACKFULL, %Frame_STACKFULL* %.frame, i32 0, i32 0
+    store i1 1, i1* %t3
+    br label %L_endif_1
+L_else_1:
+    ; line 1194
+    %t4 = getelementptr inbounds %Frame_STACKFULL, %Frame_STACKFULL* %.frame, i32 0, i32 0
+    store i1 0, i1* %t4
+    br label %L_endif_1
+L_endif_1:
 
     ; epilogue
-    %t1 = getelementptr inbounds %Frame_STACKFULL, %Frame_STACKFULL* %.frame, i32 0, i32 0
-    %t2 = load i1, i1* %t1
-    ret i1 %t2
+    %t5 = getelementptr inbounds %Frame_STACKFULL, %Frame_STACKFULL* %.frame, i32 0, i32 0
+    %t6 = load i1, i1* %t5
+    ret i1 %t6
 }
 
 
@@ -1815,6 +2180,44 @@ define void @P_POPSTACK(i32* %INDENTSYMBOL, i32* %PREVMARGIN)
 
     ; body
     ; line 1204
+    %t3 = call i1 @F_STACKEMPTY()
+    %t4 = icmp eq i1 0, %t3
+    br i1 %t4, label %L_then_1, label %L_else_1
+L_then_1:
+    ; line 1206
+    %t5 = getelementptr inbounds %Frame_POPSTACK, %Frame_POPSTACK* %.frame, i32 0, i32 0
+    %t6 = load i32*, i32** %t5
+    %t7 = load i32, i32* @TOP
+    %t8 = getelementptr inbounds %T_SYMBOLSTACK, %T_SYMBOLSTACK* @STACK, i32 0, i32 %t7
+    %t10 = getelementptr inbounds %T_STACKENTRY, %T_STACKENTRY* %t8, i32 0, i32 0
+    %t9 = bitcast i8* %t10 to i32*
+    %t11 = load i32, i32* %t9
+    store i32 %t11, i32* %t6
+    ; line 1207
+    %t12 = getelementptr inbounds %Frame_POPSTACK, %Frame_POPSTACK* %.frame, i32 0, i32 1
+    %t13 = load i32*, i32** %t12
+    %t14 = load i32, i32* @TOP
+    %t15 = getelementptr inbounds %T_SYMBOLSTACK, %T_SYMBOLSTACK* @STACK, i32 0, i32 %t14
+    %t17 = getelementptr inbounds %T_STACKENTRY, %T_STACKENTRY* %t15, i32 0, i32 4
+    %t16 = bitcast i8* %t17 to i32*
+    %t18 = load i32, i32* %t16
+    store i32 %t18, i32* %t13
+    ; line 1209
+    %t20 = load i32, i32* @TOP
+    %t19 = sub i32 %t20, 1
+    store i32 %t19, i32* @TOP
+    br label %L_endif_1
+L_else_1:
+    ; line 1214
+    %t21 = getelementptr inbounds %Frame_POPSTACK, %Frame_POPSTACK* %.frame, i32 0, i32 0
+    %t22 = load i32*, i32** %t21
+    store i32 32, i32* %t22
+    ; line 1215
+    %t23 = getelementptr inbounds %Frame_POPSTACK, %Frame_POPSTACK* %.frame, i32 0, i32 1
+    %t24 = load i32*, i32** %t23
+    store i32 0, i32* %t24
+    br label %L_endif_1
+L_endif_1:
     ; nop
 
     ; epilogue
@@ -1908,6 +2311,18 @@ define void @P_WRITECRS(i32 %NUMBEROFCRS, i32* %CURRLINEPOS, %T_text* %OUTPUTFIL
 
     ; body
     ; line 1244
+    %t6 = getelementptr inbounds %Frame_WRITECRS, %Frame_WRITECRS* %.frame, i32 0, i32 1
+    %t5 = load i32, i32* %t6
+    %t4 = icmp sgt i32 %t5, 0
+    br i1 %t4, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 1246
+    ; line 1249
+    %t7 = getelementptr inbounds %Frame_WRITECRS, %Frame_WRITECRS* %.frame, i32 0, i32 0
+    %t8 = load i32*, i32** %t7
+    store i32 0, i32* %t8
+    br label %L_endif_1
+L_endif_1:
 
     ; epilogue
     ret void
@@ -1941,6 +2356,30 @@ define void @P_INSERTCR(i8** %CURRSYM, %T_text* %OUTPUTFILE)
 
     ; body
     ; line 1264
+    %t5 = getelementptr inbounds %Frame_INSERTCR, %Frame_INSERTCR* %.frame, i32 0, i32 0
+    %t6 = load i8**, i8*** %t5
+    %t4 = load i8*, i8** %t6
+    %t7 = bitcast i8* %t4 to %T_SYMBOL*
+    %t9 = getelementptr inbounds %T_SYMBOL, %T_SYMBOL* %t7, i32 0, i32 212
+    %t8 = bitcast i8* %t9 to i32*
+    %t10 = load i32, i32* %t8
+    %t3 = icmp eq i32 %t10, 0
+    br i1 %t3, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 1266
+    %t11 = getelementptr inbounds %Frame_INSERTCR, %Frame_INSERTCR* %.frame, i32 0, i32 1
+    %t12 = load %T_text*, %T_text** %t11
+    call void @P_WRITECRS(i32 1, i32* @CURRLINEPOS, %T_text* %t12)
+    ; line 1269
+    %t14 = getelementptr inbounds %Frame_INSERTCR, %Frame_INSERTCR* %.frame, i32 0, i32 0
+    %t15 = load i8**, i8*** %t14
+    %t13 = load i8*, i8** %t15
+    %t16 = bitcast i8* %t13 to %T_SYMBOL*
+    %t18 = getelementptr inbounds %T_SYMBOL, %T_SYMBOL* %t16, i32 0, i32 208
+    %t17 = bitcast i8* %t18 to i32*
+    store i32 0, i32* %t17
+    br label %L_endif_1
+L_endif_1:
 
     ; epilogue
     ret void
@@ -1974,6 +2413,69 @@ define void @P_INSERTBLANKLINE(i8** %CURRSYM, %T_text* %OUTPUTFILE)
 
     ; body
     ; line 1285
+    %t5 = getelementptr inbounds %Frame_INSERTBLANKLINE, %Frame_INSERTBLANKLINE* %.frame, i32 0, i32 0
+    %t6 = load i8**, i8*** %t5
+    %t4 = load i8*, i8** %t6
+    %t7 = bitcast i8* %t4 to %T_SYMBOL*
+    %t9 = getelementptr inbounds %T_SYMBOL, %T_SYMBOL* %t7, i32 0, i32 212
+    %t8 = bitcast i8* %t9 to i32*
+    %t10 = load i32, i32* %t8
+    %t3 = icmp eq i32 %t10, 0
+    br i1 %t3, label %L_then_1, label %L_else_1
+L_then_1:
+    ; line 1287
+    %t12 = load i32, i32* @CURRLINEPOS
+    %t11 = icmp eq i32 %t12, 0
+    br i1 %t11, label %L_then_2, label %L_else_2
+L_then_2:
+    ; line 1288
+    %t13 = getelementptr inbounds %Frame_INSERTBLANKLINE, %Frame_INSERTBLANKLINE* %.frame, i32 0, i32 1
+    %t14 = load %T_text*, %T_text** %t13
+    call void @P_WRITECRS(i32 1, i32* @CURRLINEPOS, %T_text* %t14)
+    br label %L_endif_2
+L_else_2:
+    ; line 1291
+    %t15 = getelementptr inbounds %Frame_INSERTBLANKLINE, %Frame_INSERTBLANKLINE* %.frame, i32 0, i32 1
+    %t16 = load %T_text*, %T_text** %t15
+    call void @P_WRITECRS(i32 2, i32* @CURRLINEPOS, %T_text* %t16)
+    br label %L_endif_2
+L_endif_2:
+    ; line 1294
+    %t18 = getelementptr inbounds %Frame_INSERTBLANKLINE, %Frame_INSERTBLANKLINE* %.frame, i32 0, i32 0
+    %t19 = load i8**, i8*** %t18
+    %t17 = load i8*, i8** %t19
+    %t20 = bitcast i8* %t17 to %T_SYMBOL*
+    %t22 = getelementptr inbounds %T_SYMBOL, %T_SYMBOL* %t20, i32 0, i32 208
+    %t21 = bitcast i8* %t22 to i32*
+    store i32 0, i32* %t21
+    br label %L_endif_1
+L_else_1:
+    ; line 1298
+    %t25 = getelementptr inbounds %Frame_INSERTBLANKLINE, %Frame_INSERTBLANKLINE* %.frame, i32 0, i32 0
+    %t26 = load i8**, i8*** %t25
+    %t24 = load i8*, i8** %t26
+    %t27 = bitcast i8* %t24 to %T_SYMBOL*
+    %t29 = getelementptr inbounds %T_SYMBOL, %T_SYMBOL* %t27, i32 0, i32 212
+    %t28 = bitcast i8* %t29 to i32*
+    %t30 = load i32, i32* %t28
+    %t23 = icmp eq i32 %t30, 1
+    br i1 %t23, label %L_then_3, label %L_endif_3
+L_then_3:
+    ; line 1299
+    %t32 = load i32, i32* @CURRLINEPOS
+    %t31 = icmp sgt i32 %t32, 0
+    br i1 %t31, label %L_then_4, label %L_endif_4
+L_then_4:
+    ; line 1300
+    %t33 = getelementptr inbounds %Frame_INSERTBLANKLINE, %Frame_INSERTBLANKLINE* %.frame, i32 0, i32 1
+    %t34 = load %T_text*, %T_text** %t33
+    call void @P_WRITECRS(i32 1, i32* @CURRLINEPOS, %T_text* %t34)
+    br label %L_endif_4
+L_endif_4:
+    br label %L_endif_3
+L_endif_3:
+    br label %L_endif_1
+L_endif_1:
 
     ; epilogue
     ret void
@@ -2008,6 +2510,26 @@ define void @P_LSHIFTON(%T_KEYSYMSET %DINDENTSYMBOLS)
 
     ; body
     ; line 1314
+    %t2 = call i1 @F_STACKEMPTY()
+    %t3 = icmp eq i1 0, %t2
+    br i1 %t3, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 1316
+    ; line 1326
+    %t5 = icmp eq i1 0, true
+    br i1 %t5, label %L_then_2, label %L_endif_2
+L_then_2:
+    ; line 1327
+    %t7 = getelementptr inbounds %Frame_LSHIFTON, %Frame_LSHIFTON* %.frame, i32 0, i32 1
+    %t6 = load i32, i32* %t7
+    %t9 = getelementptr inbounds %Frame_LSHIFTON, %Frame_LSHIFTON* %.frame, i32 0, i32 2
+    %t8 = load i32, i32* %t9
+    call void @P_PUSHSTACK(i32 %t6, i32 %t8)
+    br label %L_endif_2
+L_endif_2:
+    ; nop
+    br label %L_endif_1
+L_endif_1:
 
     ; epilogue
     ret void
@@ -2037,6 +2559,20 @@ define void @P_LSHIFT()
 
     ; body
     ; line 1343
+    %t1 = call i1 @F_STACKEMPTY()
+    %t2 = icmp eq i1 0, %t1
+    br i1 %t2, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 1344
+    %t3 = getelementptr inbounds %Frame_LSHIFT, %Frame_LSHIFT* %.frame, i32 0, i32 0
+    %t4 = getelementptr inbounds %Frame_LSHIFT, %Frame_LSHIFT* %.frame, i32 0, i32 1
+    call void @P_POPSTACK(i32* %t3, i32* %t4)
+    ; line 1346
+    %t6 = getelementptr inbounds %Frame_LSHIFT, %Frame_LSHIFT* %.frame, i32 0, i32 1
+    %t5 = load i32, i32* %t6
+    store i32 %t5, i32* @CURRMARGIN
+    br label %L_endif_1
+L_endif_1:
 
     ; epilogue
     ret void
@@ -2070,6 +2606,65 @@ define void @P_INSERTSPACE(i8** %SYMBOL, %T_text* %OUTPUTFILE)
 
     ; body
     ; line 1357
+    %t4 = load i32, i32* @CURRLINEPOS
+    %t3 = icmp slt i32 %t4, 72
+    br i1 %t3, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 1359
+    %t6 = getelementptr inbounds %Frame_INSERTSPACE, %Frame_INSERTSPACE* %.frame, i32 0, i32 0
+    %t7 = load %T_text*, %T_text** %t6
+    %t5 = load %T_text, %T_text* %t7
+    call void @_WriteChar(i8* %t5, i32 0, i32 0, i8 32)
+    ; line 1361
+    %t9 = load i32, i32* @CURRLINEPOS
+    %t8 = add i32 %t9, 1
+    store i32 %t8, i32* @CURRLINEPOS
+    ; line 1364
+    br label %L_AND_expr_2
+L_AND_expr_2:
+    %t13 = getelementptr inbounds %Frame_INSERTSPACE, %Frame_INSERTSPACE* %.frame, i32 0, i32 1
+    %t14 = load i8**, i8*** %t13
+    %t12 = load i8*, i8** %t14
+    %t15 = bitcast i8* %t12 to %T_SYMBOL*
+    %t17 = getelementptr inbounds %T_SYMBOL, %T_SYMBOL* %t15, i32 0, i32 212
+    %t16 = bitcast i8* %t17 to i32*
+    %t18 = load i32, i32* %t16
+    %t11 = icmp eq i32 %t18, 0
+    br i1 %t11, label %L_AND_eval_2, label %L_AND_shortcut_2
+L_AND_eval_2:
+    %t21 = getelementptr inbounds %Frame_INSERTSPACE, %Frame_INSERTSPACE* %.frame, i32 0, i32 1
+    %t22 = load i8**, i8*** %t21
+    %t20 = load i8*, i8** %t22
+    %t23 = bitcast i8* %t20 to %T_SYMBOL*
+    %t25 = getelementptr inbounds %T_SYMBOL, %T_SYMBOL* %t23, i32 0, i32 208
+    %t24 = bitcast i8* %t25 to i32*
+    %t26 = load i32, i32* %t24
+    %t19 = icmp sgt i32 %t26, 0
+    br label %L_AND_shortcut_2
+L_AND_shortcut_2:
+    %t10 = phi [%t19, %L_AND_eval_2], [false, %L_AND_expr_2]
+    br i1 %t10, label %L_then_3, label %L_endif_3
+L_then_3:
+    ; line 1365
+    %t28 = getelementptr inbounds %Frame_INSERTSPACE, %Frame_INSERTSPACE* %.frame, i32 0, i32 1
+    %t29 = load i8**, i8*** %t28
+    %t27 = load i8*, i8** %t29
+    %t30 = bitcast i8* %t27 to %T_SYMBOL*
+    %t32 = getelementptr inbounds %T_SYMBOL, %T_SYMBOL* %t30, i32 0, i32 208
+    %t31 = bitcast i8* %t32 to i32*
+    %t35 = getelementptr inbounds %Frame_INSERTSPACE, %Frame_INSERTSPACE* %.frame, i32 0, i32 1
+    %t36 = load i8**, i8*** %t35
+    %t34 = load i8*, i8** %t36
+    %t37 = bitcast i8* %t34 to %T_SYMBOL*
+    %t39 = getelementptr inbounds %T_SYMBOL, %T_SYMBOL* %t37, i32 0, i32 208
+    %t38 = bitcast i8* %t39 to i32*
+    %t40 = load i32, i32* %t38
+    %t33 = sub i32 %t40, 1
+    store i32 %t33, i32* %t31
+    br label %L_endif_3
+L_endif_3:
+    br label %L_endif_1
+L_endif_1:
 
     ; epilogue
     ret void
@@ -2214,19 +2809,122 @@ define void @P_PPSYMBOL(i8* %CURRSYM, %T_text* %OUTPUTFILE)
     %t10 = load %T_text*, %T_text** %t9
     call void @P_WRITECRS(i32 %t8, i32* @CURRLINEPOS, %T_text* %t10)
     ; line 1427
-    ; line 1434
-    ; line 1448
-    %t12 = getelementptr inbounds %Frame_PPSYMBOL, %Frame_PPSYMBOL* %.frame, i32 0, i32 2
-    %t11 = load i32, i32* %t12
-    %t13 = getelementptr inbounds %Frame_PPSYMBOL, %Frame_PPSYMBOL* %.frame, i32 0, i32 1
-    %t14 = load %T_text*, %T_text** %t13
-    call void @P_MOVELINEPOS(i32 %t11, i32* @CURRLINEPOS, %T_text* %t14)
-    ; line 1452
+    br label %L_OR_expr_1
+L_OR_expr_1:
+    %t14 = load i32, i32* @CURRLINEPOS
     %t16 = getelementptr inbounds %Frame_PPSYMBOL, %Frame_PPSYMBOL* %.frame, i32 0, i32 0
     %t15 = load i8*, i8** %t16
-    %t17 = getelementptr inbounds %Frame_PPSYMBOL, %Frame_PPSYMBOL* %.frame, i32 0, i32 1
-    %t18 = load %T_text*, %T_text** %t17
-    call void @P_PRINTSYMBOL(i8* %t15, i32* @CURRLINEPOS, %T_text* %t18)
+    %t17 = bitcast i8* %t15 to %T_SYMBOL*
+    %t19 = getelementptr inbounds %T_SYMBOL, %T_SYMBOL* %t17, i32 0, i32 208
+    %t18 = bitcast i8* %t19 to i32*
+    %t20 = load i32, i32* %t18
+    %t13 = add i32 %t14, %t20
+    %t21 = load i32, i32* @CURRMARGIN
+    %t12 = icmp sgt i32 %t13, %t21
+    br i1 %t12, label %L_OR_shortcut_1, label %L_OR_eval_1
+L_OR_eval_1:
+    br label %L_OR_shortcut_1
+L_OR_shortcut_1:
+    %t11 = phi [true, %L_OR_eval_1], [true, %L_OR_expr_1]
+    br i1 %t11, label %L_then_2, label %L_else_2
+L_then_2:
+    ; line 1430
+    %t23 = getelementptr inbounds %Frame_PPSYMBOL, %Frame_PPSYMBOL* %.frame, i32 0, i32 2
+    %t25 = load i32, i32* @CURRLINEPOS
+    %t27 = getelementptr inbounds %Frame_PPSYMBOL, %Frame_PPSYMBOL* %.frame, i32 0, i32 0
+    %t26 = load i8*, i8** %t27
+    %t28 = bitcast i8* %t26 to %T_SYMBOL*
+    %t30 = getelementptr inbounds %T_SYMBOL, %T_SYMBOL* %t28, i32 0, i32 208
+    %t29 = bitcast i8* %t30 to i32*
+    %t31 = load i32, i32* %t29
+    %t24 = add i32 %t25, %t31
+    store i32 %t24, i32* %t23
+    br label %L_endif_2
+L_else_2:
+    ; line 1432
+    %t32 = getelementptr inbounds %Frame_PPSYMBOL, %Frame_PPSYMBOL* %.frame, i32 0, i32 2
+    %t33 = load i32, i32* @CURRMARGIN
+    store i32 %t33, i32* %t32
+    br label %L_endif_2
+L_endif_2:
+    ; line 1434
+    %t37 = getelementptr inbounds %Frame_PPSYMBOL, %Frame_PPSYMBOL* %.frame, i32 0, i32 2
+    %t36 = load i32, i32* %t37
+    %t39 = getelementptr inbounds %Frame_PPSYMBOL, %Frame_PPSYMBOL* %.frame, i32 0, i32 0
+    %t38 = load i8*, i8** %t39
+    %t40 = bitcast i8* %t38 to %T_SYMBOL*
+    %t42 = getelementptr inbounds %T_SYMBOL, %T_SYMBOL* %t40, i32 0, i32 204
+    %t41 = bitcast i8* %t42 to i32*
+    %t43 = load i32, i32* %t41
+    %t35 = add i32 %t36, %t43
+    %t34 = icmp sgt i32 %t35, 72
+    br i1 %t34, label %L_then_3, label %L_endif_3
+L_then_3:
+    ; line 1436
+    %t44 = getelementptr inbounds %Frame_PPSYMBOL, %Frame_PPSYMBOL* %.frame, i32 0, i32 1
+    %t45 = load %T_text*, %T_text** %t44
+    call void @P_WRITECRS(i32 1, i32* @CURRLINEPOS, %T_text* %t45)
+    ; line 1439
+    %t48 = load i32, i32* @CURRMARGIN
+    %t50 = getelementptr inbounds %Frame_PPSYMBOL, %Frame_PPSYMBOL* %.frame, i32 0, i32 0
+    %t49 = load i8*, i8** %t50
+    %t51 = bitcast i8* %t49 to %T_SYMBOL*
+    %t53 = getelementptr inbounds %T_SYMBOL, %T_SYMBOL* %t51, i32 0, i32 204
+    %t52 = bitcast i8* %t53 to i32*
+    %t54 = load i32, i32* %t52
+    %t47 = add i32 %t48, %t54
+    %t46 = icmp sle i32 %t47, 72
+    br i1 %t46, label %L_then_4, label %L_else_4
+L_then_4:
+    ; line 1440
+    %t55 = getelementptr inbounds %Frame_PPSYMBOL, %Frame_PPSYMBOL* %.frame, i32 0, i32 2
+    %t56 = load i32, i32* @CURRMARGIN
+    store i32 %t56, i32* %t55
+    br label %L_endif_4
+L_else_4:
+    ; line 1441
+    %t59 = getelementptr inbounds %Frame_PPSYMBOL, %Frame_PPSYMBOL* %.frame, i32 0, i32 0
+    %t58 = load i8*, i8** %t59
+    %t60 = bitcast i8* %t58 to %T_SYMBOL*
+    %t62 = getelementptr inbounds %T_SYMBOL, %T_SYMBOL* %t60, i32 0, i32 204
+    %t61 = bitcast i8* %t62 to i32*
+    %t63 = load i32, i32* %t61
+    %t57 = icmp sle i32 %t63, 72
+    br i1 %t57, label %L_then_5, label %L_else_5
+L_then_5:
+    ; line 1442
+    %t64 = getelementptr inbounds %Frame_PPSYMBOL, %Frame_PPSYMBOL* %.frame, i32 0, i32 2
+    %t67 = getelementptr inbounds %Frame_PPSYMBOL, %Frame_PPSYMBOL* %.frame, i32 0, i32 0
+    %t66 = load i8*, i8** %t67
+    %t68 = bitcast i8* %t66 to %T_SYMBOL*
+    %t70 = getelementptr inbounds %T_SYMBOL, %T_SYMBOL* %t68, i32 0, i32 204
+    %t69 = bitcast i8* %t70 to i32*
+    %t71 = load i32, i32* %t69
+    %t65 = sub i32 72, %t71
+    store i32 %t65, i32* %t64
+    br label %L_endif_5
+L_else_5:
+    ; line 1444
+    %t72 = getelementptr inbounds %Frame_PPSYMBOL, %Frame_PPSYMBOL* %.frame, i32 0, i32 2
+    store i32 0, i32* %t72
+    br label %L_endif_5
+L_endif_5:
+    br label %L_endif_4
+L_endif_4:
+    br label %L_endif_3
+L_endif_3:
+    ; line 1448
+    %t74 = getelementptr inbounds %Frame_PPSYMBOL, %Frame_PPSYMBOL* %.frame, i32 0, i32 2
+    %t73 = load i32, i32* %t74
+    %t75 = getelementptr inbounds %Frame_PPSYMBOL, %Frame_PPSYMBOL* %.frame, i32 0, i32 1
+    %t76 = load %T_text*, %T_text** %t75
+    call void @P_MOVELINEPOS(i32 %t73, i32* @CURRLINEPOS, %T_text* %t76)
+    ; line 1452
+    %t78 = getelementptr inbounds %Frame_PPSYMBOL, %Frame_PPSYMBOL* %.frame, i32 0, i32 0
+    %t77 = load i8*, i8** %t78
+    %t79 = getelementptr inbounds %Frame_PPSYMBOL, %Frame_PPSYMBOL* %.frame, i32 0, i32 1
+    %t80 = load %T_text*, %T_text** %t79
+    call void @P_PRINTSYMBOL(i8* %t77, i32* @CURRLINEPOS, %T_text* %t80)
 
     ; epilogue
     ret void
@@ -2310,7 +3008,41 @@ define void @P_RSHIFT(i32 %CURRSYM)
 
     ; body
     ; line 1495
+    %t2 = call i1 @F_STACKFULL()
+    %t3 = icmp eq i1 0, %t2
+    br i1 %t3, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 1496
+    %t5 = getelementptr inbounds %Frame_RSHIFT, %Frame_RSHIFT* %.frame, i32 0, i32 0
+    %t4 = load i32, i32* %t5
+    %t6 = load i32, i32* @CURRMARGIN
+    call void @P_PUSHSTACK(i32 %t4, i32 %t6)
+    br label %L_endif_1
+L_endif_1:
     ; line 1499
+    %t8 = load i32, i32* @CURRMARGIN
+    %t7 = icmp slt i32 %t8, 30
+    br i1 %t7, label %L_then_2, label %L_else_2
+L_then_2:
+    ; line 1500
+    %t10 = load i32, i32* @CURRMARGIN
+    %t9 = add i32 %t10, 3
+    store i32 %t9, i32* @CURRMARGIN
+    br label %L_endif_2
+L_else_2:
+    ; line 1502
+    %t12 = load i32, i32* @CURRMARGIN
+    %t11 = icmp slt i32 %t12, 48
+    br i1 %t11, label %L_then_3, label %L_endif_3
+L_then_3:
+    ; line 1503
+    %t14 = load i32, i32* @CURRMARGIN
+    %t13 = add i32 %t14, 1
+    store i32 %t13, i32* @CURRMARGIN
+    br label %L_endif_3
+L_endif_3:
+    br label %L_endif_2
+L_endif_2:
 
     ; epilogue
     ret void
@@ -2341,9 +3073,20 @@ define void @P_RSHIFTTOCLP(i32 %CURRSYM)
 
     ; body
     ; line 1512
+    %t2 = call i1 @F_STACKFULL()
+    %t3 = icmp eq i1 0, %t2
+    br i1 %t3, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 1513
+    %t5 = getelementptr inbounds %Frame_RSHIFTTOCLP, %Frame_RSHIFTTOCLP* %.frame, i32 0, i32 0
+    %t4 = load i32, i32* %t5
+    %t6 = load i32, i32* @CURRMARGIN
+    call void @P_PUSHSTACK(i32 %t4, i32 %t6)
+    br label %L_endif_1
+L_endif_1:
     ; line 1516
-    %t2 = load i32, i32* @CURRLINEPOS
-    store i32 %t2, i32* @CURRMARGIN
+    %t7 = load i32, i32* @CURRLINEPOS
+    store i32 %t7, i32* @CURRMARGIN
     ; nop
 
     ; epilogue

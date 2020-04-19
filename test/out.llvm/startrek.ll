@@ -212,26 +212,44 @@ define i32 @F_random(i32 %low, i32 %hi)
     %t4 = sub i32 %t5, %t9
     store i32 %t4, i32* %t3
     ; line 91
+    %t16 = getelementptr inbounds %Frame_random, %Frame_random* %.frame, i32 0, i32 3
+    %t15 = load i32, i32* %t16
+    %t14 = icmp sgt i32 %t15, 0
+    br i1 %t14, label %L_then_1, label %L_else_1
+L_then_1:
+    ; line 91
+    %t18 = getelementptr inbounds %Frame_random, %Frame_random* %.frame, i32 0, i32 3
+    %t17 = load i32, i32* %t18
+    store i32 %t17, i32* @rndseq
+    br label %L_endif_1
+L_else_1:
+    ; line 91
+    %t21 = getelementptr inbounds %Frame_random, %Frame_random* %.frame, i32 0, i32 3
+    %t20 = load i32, i32* %t21
+    %t19 = add i32 %t20, 2147483647
+    store i32 %t19, i32* @rndseq
+    br label %L_endif_1
+L_endif_1:
     ; line 92
-    %t14 = getelementptr inbounds %Frame_random, %Frame_random* %.frame, i32 0, i32 2
-    %t17 = load i32, i32* @rndseq
-    %t22 = getelementptr inbounds %Frame_random, %Frame_random* %.frame, i32 0, i32 0
-    %t21 = load i32, i32* %t22
-    %t24 = getelementptr inbounds %Frame_random, %Frame_random* %.frame, i32 0, i32 1
-    %t23 = load i32, i32* %t24
-    %t20 = sub i32 %t21, %t23
-    %t19 = add i32 %t20, 1
-    %t18 = sdiv i32 2147483647, %t19
-    %t16 = sdiv i32 %t17, %t18
-    %t26 = getelementptr inbounds %Frame_random, %Frame_random* %.frame, i32 0, i32 1
-    %t25 = load i32, i32* %t26
-    %t15 = add i32 %t16, %t25
-    store i32 %t15, i32* %t14
+    %t22 = getelementptr inbounds %Frame_random, %Frame_random* %.frame, i32 0, i32 2
+    %t25 = load i32, i32* @rndseq
+    %t30 = getelementptr inbounds %Frame_random, %Frame_random* %.frame, i32 0, i32 0
+    %t29 = load i32, i32* %t30
+    %t32 = getelementptr inbounds %Frame_random, %Frame_random* %.frame, i32 0, i32 1
+    %t31 = load i32, i32* %t32
+    %t28 = sub i32 %t29, %t31
+    %t27 = add i32 %t28, 1
+    %t26 = sdiv i32 2147483647, %t27
+    %t24 = sdiv i32 %t25, %t26
+    %t34 = getelementptr inbounds %Frame_random, %Frame_random* %.frame, i32 0, i32 1
+    %t33 = load i32, i32* %t34
+    %t23 = add i32 %t24, %t33
+    store i32 %t23, i32* %t22
 
     ; epilogue
-    %t27 = getelementptr inbounds %Frame_random, %Frame_random* %.frame, i32 0, i32 2
-    %t28 = load i32, i32* %t27
-    ret i32 %t28
+    %t35 = getelementptr inbounds %Frame_random, %Frame_random* %.frame, i32 0, i32 2
+    %t36 = load i32, i32* %t35
+    ret i32 %t36
 }
 
 
@@ -269,7 +287,7 @@ define i32 @F_distance(i32 %pos1x, i32 %pos1y, %T_sectxy %pos2)
     ; body
     ; line 97
     %t4 = getelementptr inbounds %Frame_distance, %Frame_distance* %.frame, i32 0, i32 3
-    store i32 , i32* %t4
+    store i32 %.dummy.intrin, i32* %t4
     ; nop
 
     ; epilogue
@@ -354,12 +372,50 @@ define i32 @F_interval(i32 %number, i32 %minvalue, i32 %maxvalue)
 
     ; body
     ; line 107
+    %t6 = getelementptr inbounds %Frame_interval, %Frame_interval* %.frame, i32 0, i32 2
+    %t5 = load i32, i32* %t6
+    %t8 = getelementptr inbounds %Frame_interval, %Frame_interval* %.frame, i32 0, i32 1
+    %t7 = load i32, i32* %t8
+    %t4 = icmp slt i32 %t5, %t7
+    br i1 %t4, label %L_then_1, label %L_else_1
+L_then_1:
+    ; line 108
+    %t9 = getelementptr inbounds %Frame_interval, %Frame_interval* %.frame, i32 0, i32 3
+    %t11 = getelementptr inbounds %Frame_interval, %Frame_interval* %.frame, i32 0, i32 1
+    %t10 = load i32, i32* %t11
+    store i32 %t10, i32* %t9
+    br label %L_endif_1
+L_else_1:
+    ; line 110
+    %t14 = getelementptr inbounds %Frame_interval, %Frame_interval* %.frame, i32 0, i32 2
+    %t13 = load i32, i32* %t14
+    %t16 = getelementptr inbounds %Frame_interval, %Frame_interval* %.frame, i32 0, i32 0
+    %t15 = load i32, i32* %t16
+    %t12 = icmp sgt i32 %t13, %t15
+    br i1 %t12, label %L_then_2, label %L_else_2
+L_then_2:
+    ; line 111
+    %t17 = getelementptr inbounds %Frame_interval, %Frame_interval* %.frame, i32 0, i32 3
+    %t19 = getelementptr inbounds %Frame_interval, %Frame_interval* %.frame, i32 0, i32 0
+    %t18 = load i32, i32* %t19
+    store i32 %t18, i32* %t17
+    br label %L_endif_2
+L_else_2:
+    ; line 113
+    %t20 = getelementptr inbounds %Frame_interval, %Frame_interval* %.frame, i32 0, i32 3
+    %t22 = getelementptr inbounds %Frame_interval, %Frame_interval* %.frame, i32 0, i32 2
+    %t21 = load i32, i32* %t22
+    store i32 %t21, i32* %t20
+    br label %L_endif_2
+L_endif_2:
+    br label %L_endif_1
+L_endif_1:
     ; nop
 
     ; epilogue
-    %t4 = getelementptr inbounds %Frame_interval, %Frame_interval* %.frame, i32 0, i32 3
-    %t5 = load i32, i32* %t4
-    ret i32 %t5
+    %t23 = getelementptr inbounds %Frame_interval, %Frame_interval* %.frame, i32 0, i32 3
+    %t24 = load i32, i32* %t23
+    ret i32 %t24
 }
 
 
@@ -525,22 +581,54 @@ define void @P_initialize()
     %t49 = load i32, i32* @totalklingons
     store i32 %t49, i32* @startklingons
     ; line 175
+    %t52 = getelementptr inbounds %Frame_initialize, %Frame_initialize* %.frame, i32 0, i32 3
+    %t51 = load i32, i32* %t52
+    %t50 = icmp eq i32 %t51, 0
+    br i1 %t50, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 176
+    %t53 = call i32 @F_random(i32 0, i32 7)
+    %t54 = getelementptr inbounds %T_array_6, %T_array_6* @galaxy, i32 0, i32 %t53
+    %t55 = call i32 @F_random(i32 0, i32 7)
+    %t56 = getelementptr inbounds %T_array_7, %T_array_7* %t54, i32 0, i32 %t55
+    %t58 = getelementptr inbounds %T_quadrec, %T_quadrec* %t56, i32 0, i32 12
+    %t57 = bitcast i8* %t58 to i32*
+    store i32 1, i32* %t57
+    br label %L_endif_1
+L_endif_1:
     ; line 177
+    %t60 = load i32, i32* @totalkbases
+    %t59 = icmp eq i32 %t60, 0
+    br i1 %t59, label %L_then_2, label %L_endif_2
+L_then_2:
+    ; line 179
+    %t61 = call i32 @F_random(i32 0, i32 7)
+    %t62 = getelementptr inbounds %T_array_6, %T_array_6* @galaxy, i32 0, i32 %t61
+    %t63 = call i32 @F_random(i32 0, i32 7)
+    %t64 = getelementptr inbounds %T_array_7, %T_array_7* %t62, i32 0, i32 %t63
+    %t66 = getelementptr inbounds %T_quadrec, %T_quadrec* %t64, i32 0, i32 4
+    %t65 = bitcast i8* %t66 to i32*
+    store i32 1, i32* %t65
+    ; line 181
+    store i32 1, i32* @totalkbases
+    ; nop
+    br label %L_endif_2
+L_endif_2:
     ; line 183
-    %t50 = call i32 @F_random(i32 3000, i32 4000)
-    store i32 %t50, i32* @curyear
+    %t67 = call i32 @F_random(i32 3000, i32 4000)
+    store i32 %t67, i32* @curyear
     ; line 184
-    %t51 = load i32, i32* @curyear
-    store i32 %t51, i32* @startyear
+    %t68 = load i32, i32* @curyear
+    store i32 %t68, i32* @startyear
     ; line 185
-    %t53 = load i32, i32* @startyear
-    %t54 = call i32 @F_random(i32 10, i32 40)
-    %t52 = add i32 %t53, %t54
-    store i32 %t52, i32* @endyear
+    %t70 = load i32, i32* @startyear
+    %t71 = call i32 @F_random(i32 10, i32 40)
+    %t69 = add i32 %t70, %t71
+    store i32 %t69, i32* @endyear
     ; line 186
     store i32 0, i32* @badpoints
     ; line 187
-    store i8 , i8* @bell
+    store i8 %.dummy.intrin, i8* @bell
     ; line 188
     call void @P_reinitialize()
     ; nop
@@ -573,6 +661,61 @@ define void @P_setcondition()
 
     ; body
     ; line 194
+    %t3 = getelementptr inbounds %T_quadxy, %T_quadxy* @curquad, i32 0, i32 0
+    %t2 = bitcast i8* %t3 to i32*
+    %t4 = load i32, i32* %t2
+    %t5 = getelementptr inbounds %T_array_6, %T_array_6* @galaxy, i32 0, i32 %t4
+    %t7 = getelementptr inbounds %T_quadxy, %T_quadxy* @curquad, i32 0, i32 4
+    %t6 = bitcast i8* %t7 to i32*
+    %t8 = load i32, i32* %t6
+    %t9 = getelementptr inbounds %T_array_7, %T_array_7* %t5, i32 0, i32 %t8
+    %t11 = getelementptr inbounds %T_quadrec, %T_quadrec* %t9, i32 0, i32 4
+    %t10 = bitcast i8* %t11 to i32*
+    %t12 = load i32, i32* %t10
+    %t1 = icmp ne i32 %t12, 0
+    br i1 %t1, label %L_then_1, label %L_else_1
+L_then_1:
+    ; line 195
+    store i32 3, i32* @condition
+    br label %L_endif_1
+L_else_1:
+    ; line 197
+    %t15 = getelementptr inbounds %T_quadxy, %T_quadxy* @curquad, i32 0, i32 0
+    %t14 = bitcast i8* %t15 to i32*
+    %t16 = load i32, i32* %t14
+    %t17 = getelementptr inbounds %T_array_6, %T_array_6* @galaxy, i32 0, i32 %t16
+    %t19 = getelementptr inbounds %T_quadxy, %T_quadxy* @curquad, i32 0, i32 4
+    %t18 = bitcast i8* %t19 to i32*
+    %t20 = load i32, i32* %t18
+    %t21 = getelementptr inbounds %T_array_7, %T_array_7* %t17, i32 0, i32 %t20
+    %t23 = getelementptr inbounds %T_quadrec, %T_quadrec* %t21, i32 0, i32 8
+    %t22 = bitcast i8* %t23 to i32*
+    %t24 = load i32, i32* %t22
+    %t13 = icmp ne i32 %t24, 0
+    br i1 %t13, label %L_then_2, label %L_else_2
+L_then_2:
+    ; line 198
+    store i32 1, i32* @condition
+    br label %L_endif_2
+L_else_2:
+    ; line 200
+    %t26 = load i32, i32* @curenergy
+    %t27 = sdiv i32 5000, 10
+    %t25 = icmp slt i32 %t26, %t27
+    br i1 %t25, label %L_then_3, label %L_else_3
+L_then_3:
+    ; line 201
+    store i32 2, i32* @condition
+    br label %L_endif_3
+L_else_3:
+    ; line 203
+    store i32 0, i32* @condition
+    br label %L_endif_3
+L_endif_3:
+    br label %L_endif_2
+L_endif_2:
+    br label %L_endif_1
+L_endif_1:
     ; line 204
     ; nop
 
@@ -608,6 +751,56 @@ define void @P_klingonattack()
 
     ; body
     ; line 216
+    br label %L_OR_expr_1
+L_OR_expr_1:
+    %t4 = getelementptr inbounds %T_quadxy, %T_quadxy* @curquad, i32 0, i32 0
+    %t3 = bitcast i8* %t4 to i32*
+    %t5 = load i32, i32* %t3
+    %t6 = getelementptr inbounds %T_array_6, %T_array_6* @galaxy, i32 0, i32 %t5
+    %t8 = getelementptr inbounds %T_quadxy, %T_quadxy* @curquad, i32 0, i32 4
+    %t7 = bitcast i8* %t8 to i32*
+    %t9 = load i32, i32* %t7
+    %t10 = getelementptr inbounds %T_array_7, %T_array_7* %t6, i32 0, i32 %t9
+    %t12 = getelementptr inbounds %T_quadrec, %T_quadrec* %t10, i32 0, i32 4
+    %t11 = bitcast i8* %t12 to i32*
+    %t13 = load i32, i32* %t11
+    %t2 = icmp ne i32 %t13, 0
+    br i1 %t2, label %L_OR_shortcut_1, label %L_OR_eval_1
+L_OR_eval_1:
+    %t16 = getelementptr inbounds %T_quadxy, %T_quadxy* @curquad, i32 0, i32 0
+    %t15 = bitcast i8* %t16 to i32*
+    %t17 = load i32, i32* %t15
+    %t18 = getelementptr inbounds %T_array_6, %T_array_6* @galaxy, i32 0, i32 %t17
+    %t20 = getelementptr inbounds %T_quadxy, %T_quadxy* @curquad, i32 0, i32 4
+    %t19 = bitcast i8* %t20 to i32*
+    %t21 = load i32, i32* %t19
+    %t22 = getelementptr inbounds %T_array_7, %T_array_7* %t18, i32 0, i32 %t21
+    %t24 = getelementptr inbounds %T_quadrec, %T_quadrec* %t22, i32 0, i32 8
+    %t23 = bitcast i8* %t24 to i32*
+    %t25 = load i32, i32* %t23
+    %t14 = icmp ne i32 %t25, 0
+    br label %L_OR_shortcut_1
+L_OR_shortcut_1:
+    %t1 = phi [%t14, %L_OR_eval_1], [true, %L_OR_expr_1]
+    br i1 %t1, label %L_then_2, label %L_endif_2
+L_then_2:
+    ; line 218
+    %t27 = load i32, i32* @condition
+    %t26 = icmp eq i32 %t27, 4
+    br i1 %t26, label %L_then_3, label %L_else_3
+L_then_3:
+    ; line 219
+    %t28 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t28, i32 0, i32 0, i8* getelementptr inbounds ([40 x i8], [40 x i8]* @.str.16, i32 0, i32 0), i32 39)
+    call void @_WriteLn(i8* %t28)
+    br label %L_endif_3
+L_else_3:
+    ; line 221
+    br label %L_endif_3
+L_endif_3:
+    ; nop
+    br label %L_endif_2
+L_endif_2:
     ; nop
 
     ; epilogue
@@ -644,20 +837,38 @@ define void @P_printdigit(i32 %number, i1* %mustprint)
     ; line 243
     %t3 = getelementptr inbounds %Frame_printdigit, %Frame_printdigit* %.frame, i32 0, i32 0
     %t4 = load i1*, i1** %t3
-L_expr_1:
+    br label %L_OR_expr_1
+L_OR_expr_1:
     %t7 = getelementptr inbounds %Frame_printdigit, %Frame_printdigit* %.frame, i32 0, i32 0
     %t8 = load i1*, i1** %t7
     %t6 = load i1, i1* %t8
-    br i1 %t6, label %L_OR_shortcut_3, label %L_OR_eval_2
-L_OR_eval_2:
+    br i1 %t6, label %L_OR_shortcut_1, label %L_OR_eval_1
+L_OR_eval_1:
     %t11 = getelementptr inbounds %Frame_printdigit, %Frame_printdigit* %.frame, i32 0, i32 1
     %t10 = load i32, i32* %t11
     %t9 = icmp ne i32 %t10, 0
-    br label %L_OR_shortcut_3
-L_OR_shortcut_3:
-    %t5 = phi [%t9, %L_OR_eval_2], [true, %L_expr_1]
+    br label %L_OR_shortcut_1
+L_OR_shortcut_1:
+    %t5 = phi [%t9, %L_OR_eval_1], [true, %L_OR_expr_1]
     store i1 %t5, i1* %t4
     ; line 244
+    %t13 = getelementptr inbounds %Frame_printdigit, %Frame_printdigit* %.frame, i32 0, i32 0
+    %t14 = load i1*, i1** %t13
+    %t12 = load i1, i1* %t14
+    br i1 %t12, label %L_then_2, label %L_else_2
+L_then_2:
+    ; line 245
+    %t15 = load %T_text, %T_text* @output
+    %t17 = getelementptr inbounds %Frame_printdigit, %Frame_printdigit* %.frame, i32 0, i32 1
+    %t16 = load i32, i32* %t17
+    call void @_WriteInteger(i8* %t15, i32 1, i32 0, i32 %t16)
+    br label %L_endif_2
+L_else_2:
+    ; line 247
+    %t18 = load %T_text, %T_text* @output
+    call void @_WriteChar(i8* %t18, i32 0, i32 0, i8 32)
+    br label %L_endif_2
+L_endif_2:
     ; nop
 
     ; epilogue
@@ -889,6 +1100,31 @@ define void @P_printquadrant()
     ; line 304
     call void @P_setcondition()
     ; line 305
+    %t2 = getelementptr inbounds %T_array_4, %T_array_4* @device, i32 0, i32 49
+    %t4 = getelementptr inbounds %T_devicerec, %T_devicerec* %t2, i32 0, i32 20
+    %t3 = bitcast i8* %t4 to i32*
+    %t5 = load i32, i32* %t3
+    %t1 = icmp ne i32 %t5, 0
+    br i1 %t1, label %L_then_1, label %L_else_1
+L_then_1:
+    ; line 306
+    %t6 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t6, i32 0, i32 0, i8* getelementptr inbounds ([39 x i8], [39 x i8]* @.str.17, i32 0, i32 0), i32 38)
+    call void @_WriteLn(i8* %t6)
+    br label %L_endif_1
+L_else_1:
+    ; line 309
+    %t7 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([23 x i8], [23 x i8]* @.str.18, i32 0, i32 0), i32 22)
+    call void @_WriteLn(i8* %t7)
+    ; line 310
+    ; line 326
+    %t8 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t8, i32 0, i32 0, i8* getelementptr inbounds ([23 x i8], [23 x i8]* @.str.18, i32 0, i32 0), i32 22)
+    call void @_WriteLn(i8* %t8)
+    ; nop
+    br label %L_endif_1
+L_endif_1:
     ; nop
 
     ; epilogue
@@ -934,10 +1170,49 @@ define void @P_printgalaxy(i32 %topx, i32 %lefty, i32 %size, i1 %markhistory)
 
     ; body
     ; line 344
+    %t6 = getelementptr inbounds %Frame_printgalaxy, %Frame_printgalaxy* %.frame, i32 0, i32 1
+    %t5 = load i1, i1* %t6
+    br i1 %t5, label %L_then_1, label %L_else_1
+L_then_1:
+    ; line 345
+    %t7 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.19, i32 0, i32 0), i32 36)
+    %t9 = getelementptr inbounds %T_quadxy, %T_quadxy* @curquad, i32 0, i32 0
+    %t8 = bitcast i8* %t9 to i32*
+    %t10 = load i32, i32* %t8
+    call void @_WriteInteger(i8* %t7, i32 1, i32 0, i32 %t10)
+    call void @_WriteChar(i8* %t7, i32 0, i32 0, i8 45)
+    %t12 = getelementptr inbounds %T_quadxy, %T_quadxy* @curquad, i32 0, i32 4
+    %t11 = bitcast i8* %t12 to i32*
+    %t13 = load i32, i32* %t11
+    call void @_WriteInteger(i8* %t7, i32 1, i32 0, i32 %t13)
+    call void @_WriteLn(i8* %t7)
+    br label %L_endif_1
+L_else_1:
+    ; line 349
+    %t14 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t14, i32 0, i32 0, i8* getelementptr inbounds ([35 x i8], [35 x i8]* @.str.20, i32 0, i32 0), i32 34)
+    %t15 = load i32, i32* @curyear
+    call void @_WriteInteger(i8* %t14, i32 1, i32 0, i32 %t15)
+    call void @_WriteLn(i8* %t14)
+    ; line 350
+    %t17 = load i32, i32* @condition
+    %t16 = icmp ne i32 %t17, 4
+    br i1 %t16, label %L_then_2, label %L_endif_2
+L_then_2:
+    ; line 351
+    %t19 = load i32, i32* @curenergy
+    %t18 = sub i32 %t19, 100
+    store i32 %t18, i32* @curenergy
+    br label %L_endif_2
+L_endif_2:
+    ; nop
+    br label %L_endif_1
+L_endif_1:
     ; line 353
-    %t6 = getelementptr inbounds %Frame_printgalaxy, %Frame_printgalaxy* %.frame, i32 0, i32 2
-    %t5 = load i32, i32* %t6
-    call void @P_printgalaxy_printseparator(%Frame_printgalaxy* %.frame, i32 %t5)
+    %t21 = getelementptr inbounds %Frame_printgalaxy, %Frame_printgalaxy* %.frame, i32 0, i32 2
+    %t20 = load i32, i32* %t21
+    call void @P_printgalaxy_printseparator(%Frame_printgalaxy* %.frame, i32 %t20)
     ; line 354
     ; nop
 
@@ -1009,7 +1284,7 @@ define void @P_printdamage()
     ; body
     ; line 383
     %t1 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t1, i32 0, i32 0, i8* getelementptr inbounds ([31 x i8], [31 x i8]* @.str.16, i32 0, i32 0), i32 30)
+    call void @_WriteString(i8* %t1, i32 0, i32 0, i8* getelementptr inbounds ([31 x i8], [31 x i8]* @.str.21, i32 0, i32 0), i32 30)
     call void @_WriteLn(i8* %t1)
     ; line 384
     ; nop
@@ -1047,16 +1322,217 @@ define void @P_moveenterprise()
     ; body
     ; line 445
     %t1 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t1, i32 0, i32 0, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.17, i32 0, i32 0), i32 8)
+    call void @_WriteString(i8* %t1, i32 0, i32 0, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.22, i32 0, i32 0), i32 8)
     ; line 446
     ; line 447
     %t2 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t2, i32 0, i32 0, i8* getelementptr inbounds ([21 x i8], [21 x i8]* @.str.18, i32 0, i32 0), i32 20)
+    call void @_WriteString(i8* %t2, i32 0, i32 0, i8* getelementptr inbounds ([21 x i8], [21 x i8]* @.str.23, i32 0, i32 0), i32 20)
     ; line 448
     ; line 449
+    br label %L_OR_expr_3
+L_OR_expr_3:
+    br label %L_OR_expr_1
+L_OR_expr_1:
+    %t7 = getelementptr inbounds %Frame_moveenterprise, %Frame_moveenterprise* %.frame, i32 0, i32 1
+    %t6 = load double, double* %t7
+    %t5 = fcmp ult double %t6, 0.000000
+    br i1 %t5, label %L_OR_shortcut_1, label %L_OR_eval_1
+L_OR_eval_1:
+    %t10 = getelementptr inbounds %Frame_moveenterprise, %Frame_moveenterprise* %.frame, i32 0, i32 1
+    %t9 = load double, double* %t10
+    %t8 = fcmp ugt double %t9, 12.0000
+    br label %L_OR_shortcut_1
+L_OR_shortcut_1:
+    %t4 = phi [%t8, %L_OR_eval_1], [true, %L_OR_expr_1]
+    br i1 %t4, label %L_OR_shortcut_3, label %L_OR_eval_3
+L_OR_eval_3:
+    br label %L_AND_expr_2
+L_AND_expr_2:
+    %t14 = getelementptr inbounds %Frame_moveenterprise, %Frame_moveenterprise* %.frame, i32 0, i32 1
+    %t13 = load double, double* %t14
+    %t12 = fcmp ugt double %t13, 0.200000
+    br i1 %t12, label %L_AND_eval_2, label %L_AND_shortcut_2
+L_AND_eval_2:
+    %t16 = getelementptr inbounds %T_array_4, %T_array_4* @device, i32 0, i32 48
+    %t18 = getelementptr inbounds %T_devicerec, %T_devicerec* %t16, i32 0, i32 20
+    %t17 = bitcast i8* %t18 to i32*
+    %t19 = load i32, i32* %t17
+    %t15 = icmp ne i32 %t19, 0
+    br label %L_AND_shortcut_2
+L_AND_shortcut_2:
+    %t11 = phi [%t15, %L_AND_eval_2], [false, %L_AND_expr_2]
+    br label %L_OR_shortcut_3
+L_OR_shortcut_3:
+    %t3 = phi [%t11, %L_OR_eval_3], [true, %L_OR_expr_3]
+    br i1 %t3, label %L_then_4, label %L_else_4
+L_then_4:
+    ; line 451
+    %t20 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t20, i32 0, i32 0, i8* getelementptr inbounds ([24 x i8], [24 x i8]* @.str.24, i32 0, i32 0), i32 23)
+    call void @_WriteLn(i8* %t20)
+    br label %L_endif_4
+L_else_4:
+    ; line 454
+    %t22 = load i32, i32* @curyear
+    %t21 = add i32 %t22, 1
+    store i32 %t21, i32* @curyear
+    ; line 455
+    store i32 %.dummy.intrin, i32* @curenergy
+    ; line 456
+    call void @P_moveenterprise_handledamage(%Frame_moveenterprise* %.frame)
+    ; line 457
+    %t24 = getelementptr inbounds %T_sectxy, %T_sectxy* @cursect, i32 0, i32 0
+    %t23 = bitcast i8* %t24 to i32*
+    %t25 = load i32, i32* %t23
+    %t26 = getelementptr inbounds %T_array_9, %T_array_9* @quadrant, i32 0, i32 %t25
+    %t28 = getelementptr inbounds %T_sectxy, %T_sectxy* @cursect, i32 0, i32 4
+    %t27 = bitcast i8* %t28 to i32*
+    %t29 = load i32, i32* %t27
+    %t30 = getelementptr inbounds %T_array_10, %T_array_10* %t26, i32 0, i32 %t29
+    store i32 0, i32* %t30
+    ; line 458
+    %t31 = getelementptr inbounds %Frame_moveenterprise, %Frame_moveenterprise* %.frame, i32 0, i32 3
+    %t32 = getelementptr inbounds %Frame_moveenterprise, %Frame_moveenterprise* %.frame, i32 0, i32 5
+    %t33 = getelementptr inbounds %Frame_moveenterprise, %Frame_moveenterprise* %.frame, i32 0, i32 2
+    %t34 = getelementptr inbounds %Frame_moveenterprise, %Frame_moveenterprise* %.frame, i32 0, i32 4
+    %t36 = getelementptr inbounds %Frame_moveenterprise, %Frame_moveenterprise* %.frame, i32 0, i32 0
+    %t35 = load i32, i32* %t36
+    %t38 = getelementptr inbounds %Frame_moveenterprise, %Frame_moveenterprise* %.frame, i32 0, i32 1
+    %t37 = load double, double* %t38
+    call void @P_moveenterprise_moveintra(%Frame_moveenterprise* %.frame, double* %t31, double* %t32, double* %t33, double* %t34, i32 %t35, double %t37)
+    ; line 459
+    br label %L_AND_expr_5
+L_AND_expr_5:
+    br i1 true, label %L_AND_eval_5, label %L_AND_shortcut_5
+L_AND_eval_5:
+    br label %L_AND_shortcut_5
+L_AND_shortcut_5:
+    %t39 = phi [true, %L_AND_eval_5], [false, %L_AND_expr_5]
+    br i1 %t39, label %L_then_6, label %L_endif_6
+L_then_6:
+    ; line 461
+    %t43 = getelementptr inbounds %T_array_9, %T_array_9* @quadrant, i32 0, i32 %.dummy.intrin
+    %t44 = getelementptr inbounds %T_array_10, %T_array_10* %t43, i32 0, i32 %.dummy.intrin
+    %t45 = load i32, i32* %t44
+    %t42 = icmp eq i32 %t45, 5
+    br i1 %t42, label %L_then_7, label %L_endif_7
+L_then_7:
+    ; line 463
+    %t46 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t46, i32 0, i32 0, i8* getelementptr inbounds ([53 x i8], [53 x i8]* @.str.25, i32 0, i32 0), i32 52)
+    call void @_WriteInteger(i8* %t46, i32 1, i32 0, i32 %.dummy.intrin)
+    call void @_WriteChar(i8* %t46, i32 0, i32 0, i8 45)
+    call void @_WriteInteger(i8* %t46, i32 1, i32 0, i32 %.dummy.intrin)
+    call void @_WriteLn(i8* %t46)
+    ; line 465
+    %t47 = getelementptr inbounds %Frame_moveenterprise, %Frame_moveenterprise* %.frame, i32 0, i32 3
+    %t48 = getelementptr inbounds %Frame_moveenterprise, %Frame_moveenterprise* %.frame, i32 0, i32 5
+    %t49 = getelementptr inbounds %Frame_moveenterprise, %Frame_moveenterprise* %.frame, i32 0, i32 2
+    %t50 = getelementptr inbounds %Frame_moveenterprise, %Frame_moveenterprise* %.frame, i32 0, i32 4
+    %t54 = getelementptr inbounds %Frame_moveenterprise, %Frame_moveenterprise* %.frame, i32 0, i32 0
+    %t53 = load i32, i32* %t54
+    %t52 = add i32 %t53, 180
+    %t51 = srem i32 %t52, 360
+    %t56 = getelementptr inbounds %Frame_moveenterprise, %Frame_moveenterprise* %.frame, i32 0, i32 1
+    %t55 = load double, double* %t56
+    call void @P_moveenterprise_moveintra(%Frame_moveenterprise* %.frame, double* %t47, double* %t48, double* %t49, double* %t50, i32 %t51, double %t55)
+    ; nop
+    br label %L_endif_7
+L_endif_7:
+    br label %L_endif_6
+L_endif_6:
+    ; line 467
+    br label %L_AND_expr_8
+L_AND_expr_8:
+    br i1 true, label %L_AND_eval_8, label %L_AND_shortcut_8
+L_AND_eval_8:
+    br label %L_AND_shortcut_8
+L_AND_shortcut_8:
+    %t57 = phi [true, %L_AND_eval_8], [false, %L_AND_expr_8]
+    br i1 %t57, label %L_then_9, label %L_else_9
+L_then_9:
+    ; line 470
+    br i1 true, label %L_then_10, label %L_endif_10
+L_then_10:
+    ; line 473
+    %t61 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t61, i32 0, i32 0, i8* getelementptr inbounds ([40 x i8], [40 x i8]* @.str.26, i32 0, i32 0), i32 39)
+    call void @_WriteInteger(i8* %t61, i32 1, i32 0, i32 %.dummy.intrin)
+    call void @_WriteChar(i8* %t61, i32 0, i32 0, i8 45)
+    call void @_WriteInteger(i8* %t61, i32 1, i32 0, i32 %.dummy.intrin)
+    call void @_WriteLn(i8* %t61)
+    ; line 475
+    %t62 = getelementptr inbounds %Frame_moveenterprise, %Frame_moveenterprise* %.frame, i32 0, i32 3
+    %t65 = getelementptr inbounds %Frame_moveenterprise, %Frame_moveenterprise* %.frame, i32 0, i32 3
+    %t64 = load double, double* %t65
+    %t67 = getelementptr inbounds %Frame_moveenterprise, %Frame_moveenterprise* %.frame, i32 0, i32 2
+    %t66 = load double, double* %t67
+    %t63 = fsub double %t64, %t66
+    store double %t63, double* %t62
+    ; line 476
+    %t68 = getelementptr inbounds %Frame_moveenterprise, %Frame_moveenterprise* %.frame, i32 0, i32 5
+    %t71 = getelementptr inbounds %Frame_moveenterprise, %Frame_moveenterprise* %.frame, i32 0, i32 5
+    %t70 = load double, double* %t71
+    %t73 = getelementptr inbounds %Frame_moveenterprise, %Frame_moveenterprise* %.frame, i32 0, i32 4
+    %t72 = load double, double* %t73
+    %t69 = fsub double %t70, %t72
+    store double %t69, double* %t68
+    ; nop
+    br label %L_endif_10
+L_endif_10:
+    ; line 478
+    %t75 = getelementptr inbounds %T_sectxy, %T_sectxy* @cursect, i32 0, i32 0
+    %t74 = bitcast i8* %t75 to i32*
+    %t76 = call i32 @F_interval(i32 %.dummy.intrin, i32 0, i32 7)
+    store i32 %t76, i32* %t74
+    ; line 479
+    %t78 = getelementptr inbounds %T_sectxy, %T_sectxy* @cursect, i32 0, i32 4
+    %t77 = bitcast i8* %t78 to i32*
+    %t79 = call i32 @F_interval(i32 %.dummy.intrin, i32 0, i32 7)
+    store i32 %t79, i32* %t77
+    ; line 480
+    %t81 = getelementptr inbounds %T_sectxy, %T_sectxy* @cursect, i32 0, i32 0
+    %t80 = bitcast i8* %t81 to i32*
+    %t82 = load i32, i32* %t80
+    %t83 = getelementptr inbounds %T_array_9, %T_array_9* @quadrant, i32 0, i32 %t82
+    %t85 = getelementptr inbounds %T_sectxy, %T_sectxy* @cursect, i32 0, i32 4
+    %t84 = bitcast i8* %t85 to i32*
+    %t86 = load i32, i32* %t84
+    %t87 = getelementptr inbounds %T_array_10, %T_array_10* %t83, i32 0, i32 %t86
+    store i32 2, i32* %t87
+    ; nop
+    br label %L_endif_9
+L_else_9:
+    ; line 484
+    %t89 = getelementptr inbounds %T_quadxy, %T_quadxy* @curquad, i32 0, i32 0
+    %t88 = bitcast i8* %t89 to i32*
+    %t90 = call i32 @F_interval(i32 %.dummy.intrin, i32 0, i32 7)
+    store i32 %t90, i32* %t88
+    ; line 486
+    %t92 = getelementptr inbounds %T_quadxy, %T_quadxy* @curquad, i32 0, i32 4
+    %t91 = bitcast i8* %t92 to i32*
+    %t93 = call i32 @F_interval(i32 %.dummy.intrin, i32 0, i32 7)
+    store i32 %t93, i32* %t91
+    ; line 488
+    %t94 = load %T_quadxy, %T_quadxy* @curquad
+    call void @P_setupquad(%T_quadxy %t94, %T_sectxy* @cursect)
+    ; nop
+    br label %L_endif_9
+L_endif_9:
+    ; nop
+    br label %L_endif_4
+L_endif_4:
     ; line 491
     call void @P_setcondition()
     ; line 492
+    %t96 = load i32, i32* @condition
+    %t95 = icmp eq i32 %t96, 4
+    br i1 %t95, label %L_then_11, label %L_endif_11
+L_then_11:
+    ; line 493
+    call void @P_reinitialize()
+    br label %L_endif_11
+L_endif_11:
     ; nop
 
     ; epilogue
@@ -1090,6 +1566,99 @@ define void @P_moveenterprise_handledamage(%Frame_moveenterprise* %.slink)
     ; body
     ; line 395
     ; line 398
+    %t3 = call i32 @F_random(i32 0, i32 100)
+    %t2 = icmp slt i32 %t3, 6
+    br i1 %t2, label %L_then_1, label %L_else_1
+L_then_1:
+    ; line 400
+    %t4 = getelementptr inbounds %Frame_moveenterprise_handledamage, %Frame_moveenterprise_handledamage* %.frame, i32 0, i32 0
+    store i8 %.dummy.intrin, i8* %t4
+    ; line 401
+    %t5 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.27, i32 0, i32 0), i32 17)
+    %t7 = getelementptr inbounds %Frame_moveenterprise_handledamage, %Frame_moveenterprise_handledamage* %.frame, i32 0, i32 0
+    %t6 = load i8, i8* %t7
+    %t8 = getelementptr inbounds %T_array_4, %T_array_4* @device, i32 0, i32 %t6
+    %t10 = getelementptr inbounds %T_devicerec, %T_devicerec* %t8, i32 0, i32 0
+    %t9 = bitcast i8* %t10 to %T_array_5*
+    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds (%T_array_5, %T_array_5* %t9, i32 0, i32 0), i32 20)
+    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.28, i32 0, i32 0), i32 12)
+    call void @_WriteLn(i8* %t5)
+    ; line 402
+    %t12 = getelementptr inbounds %Frame_moveenterprise_handledamage, %Frame_moveenterprise_handledamage* %.frame, i32 0, i32 0
+    %t11 = load i8, i8* %t12
+    %t13 = getelementptr inbounds %T_array_4, %T_array_4* @device, i32 0, i32 %t11
+    %t15 = getelementptr inbounds %T_devicerec, %T_devicerec* %t13, i32 0, i32 20
+    %t14 = bitcast i8* %t15 to i32*
+    %t17 = getelementptr inbounds %Frame_moveenterprise_handledamage, %Frame_moveenterprise_handledamage* %.frame, i32 0, i32 0
+    %t16 = load i8, i8* %t17
+    %t18 = getelementptr inbounds %T_array_4, %T_array_4* @device, i32 0, i32 %t16
+    %t20 = getelementptr inbounds %T_devicerec, %T_devicerec* %t18, i32 0, i32 20
+    %t19 = bitcast i8* %t20 to i32*
+    %t21 = load i32, i32* %t19
+    %t22 = call i32 @F_random(i32 %t21, i32 5)
+    store i32 %t22, i32* %t14
+    ; nop
+    br label %L_endif_1
+L_else_1:
+    ; line 405
+    %t24 = call i32 @F_random(i32 0, i32 100)
+    %t23 = icmp slt i32 %t24, 12
+    br i1 %t23, label %L_then_2, label %L_endif_2
+L_then_2:
+    ; line 407
+    %t25 = getelementptr inbounds %Frame_moveenterprise_handledamage, %Frame_moveenterprise_handledamage* %.frame, i32 0, i32 0
+    store i8 %.dummy.intrin, i8* %t25
+    ; line 408
+    %t26 = getelementptr inbounds %Frame_moveenterprise_handledamage, %Frame_moveenterprise_handledamage* %.frame, i32 0, i32 1
+    %t28 = getelementptr inbounds %Frame_moveenterprise_handledamage, %Frame_moveenterprise_handledamage* %.frame, i32 0, i32 0
+    %t27 = load i8, i8* %t28
+    store i8 %t27, i8* %t26
+    ; line 409
+    ; line 416
+    %t31 = getelementptr inbounds %Frame_moveenterprise_handledamage, %Frame_moveenterprise_handledamage* %.frame, i32 0, i32 0
+    %t30 = load i8, i8* %t31
+    %t32 = getelementptr inbounds %T_array_4, %T_array_4* @device, i32 0, i32 %t30
+    %t34 = getelementptr inbounds %T_devicerec, %T_devicerec* %t32, i32 0, i32 20
+    %t33 = bitcast i8* %t34 to i32*
+    %t35 = load i32, i32* %t33
+    %t29 = icmp ne i32 %t35, 0
+    br i1 %t29, label %L_then_3, label %L_endif_3
+L_then_3:
+    ; line 418
+    %t36 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t36, i32 0, i32 0, i8* getelementptr inbounds ([12 x i8], [12 x i8]* @.str.29, i32 0, i32 0), i32 11)
+    %t38 = getelementptr inbounds %Frame_moveenterprise_handledamage, %Frame_moveenterprise_handledamage* %.frame, i32 0, i32 0
+    %t37 = load i8, i8* %t38
+    %t39 = getelementptr inbounds %T_array_4, %T_array_4* @device, i32 0, i32 %t37
+    %t41 = getelementptr inbounds %T_devicerec, %T_devicerec* %t39, i32 0, i32 0
+    %t40 = bitcast i8* %t41 to %T_array_5*
+    call void @_WriteString(i8* %t36, i32 0, i32 0, i8* getelementptr inbounds (%T_array_5, %T_array_5* %t40, i32 0, i32 0), i32 20)
+    call void @_WriteString(i8* %t36, i32 0, i32 0, i8* getelementptr inbounds ([30 x i8], [30 x i8]* @.str.30, i32 0, i32 0), i32 29)
+    call void @_WriteLn(i8* %t36)
+    ; line 420
+    %t43 = getelementptr inbounds %Frame_moveenterprise_handledamage, %Frame_moveenterprise_handledamage* %.frame, i32 0, i32 0
+    %t42 = load i8, i8* %t43
+    %t44 = getelementptr inbounds %T_array_4, %T_array_4* @device, i32 0, i32 %t42
+    %t46 = getelementptr inbounds %T_devicerec, %T_devicerec* %t44, i32 0, i32 20
+    %t45 = bitcast i8* %t46 to i32*
+    %t49 = getelementptr inbounds %Frame_moveenterprise_handledamage, %Frame_moveenterprise_handledamage* %.frame, i32 0, i32 0
+    %t48 = load i8, i8* %t49
+    %t50 = getelementptr inbounds %T_array_4, %T_array_4* @device, i32 0, i32 %t48
+    %t52 = getelementptr inbounds %T_devicerec, %T_devicerec* %t50, i32 0, i32 20
+    %t51 = bitcast i8* %t52 to i32*
+    %t53 = load i32, i32* %t51
+    %t47 = sub i32 %t53, 1
+    %t54 = call i32 @F_random(i32 0, i32 %t47)
+    store i32 %t54, i32* %t45
+    ; nop
+    br label %L_endif_3
+L_endif_3:
+    ; nop
+    br label %L_endif_2
+L_endif_2:
+    br label %L_endif_1
+L_endif_1:
     ; nop
 
     ; epilogue
@@ -1140,12 +1709,12 @@ define void @P_moveenterprise_moveintra(%Frame_moveenterprise* %.slink, double* 
     ; line 428
     %t8 = getelementptr inbounds %Frame_moveenterprise_moveintra, %Frame_moveenterprise_moveintra* %.frame, i32 0, i32 2
     %t9 = load double*, double** %t8
-    %t10 = fneg double 
+    %t10 = fneg double %.dummy.intrin
     store double %t10, double* %t9
     ; line 429
     %t11 = getelementptr inbounds %Frame_moveenterprise_moveintra, %Frame_moveenterprise_moveintra* %.frame, i32 0, i32 4
     %t12 = load double*, double** %t11
-    store double , double* %t12
+    store double %.dummy.intrin, double* %t12
     ; line 430
     %t13 = getelementptr inbounds %Frame_moveenterprise_moveintra, %Frame_moveenterprise_moveintra* %.frame, i32 0, i32 3
     %t14 = load double*, double** %t13
@@ -1195,15 +1764,51 @@ define void @P_firephasers()
     ; body
     ; line 499
     %t1 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t1, i32 0, i32 0, i8* getelementptr inbounds ([47 x i8], [47 x i8]* @.str.19, i32 0, i32 0), i32 46)
+    call void @_WriteString(i8* %t1, i32 0, i32 0, i8* getelementptr inbounds ([47 x i8], [47 x i8]* @.str.31, i32 0, i32 0), i32 46)
     %t2 = load i32, i32* @curenergy
     call void @_WriteInteger(i8* %t1, i32 1, i32 0, i32 %t2)
     call void @_WriteLn(i8* %t1)
     ; line 500
     %t3 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([26 x i8], [26 x i8]* @.str.20, i32 0, i32 0), i32 25)
+    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([26 x i8], [26 x i8]* @.str.32, i32 0, i32 0), i32 25)
     ; line 501
     ; line 502
+    %t6 = getelementptr inbounds %Frame_firephasers, %Frame_firephasers* %.frame, i32 0, i32 0
+    %t5 = load i32, i32* %t6
+    %t7 = load i32, i32* @curenergy
+    %t4 = icmp sgt i32 %t5, %t7
+    br i1 %t4, label %L_then_1, label %L_else_1
+L_then_1:
+    ; line 503
+    %t8 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t8, i32 0, i32 0, i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.33, i32 0, i32 0), i32 15)
+    call void @_WriteLn(i8* %t8)
+    br label %L_endif_1
+L_else_1:
+    ; line 505
+    %t11 = getelementptr inbounds %Frame_firephasers, %Frame_firephasers* %.frame, i32 0, i32 0
+    %t10 = load i32, i32* %t11
+    %t9 = icmp sgt i32 %t10, 0
+    br i1 %t9, label %L_then_2, label %L_endif_2
+L_then_2:
+    ; line 507
+    %t13 = load i32, i32* @condition
+    %t12 = icmp ne i32 %t13, 4
+    br i1 %t12, label %L_then_3, label %L_endif_3
+L_then_3:
+    ; line 508
+    %t15 = load i32, i32* @curenergy
+    %t17 = getelementptr inbounds %Frame_firephasers, %Frame_firephasers* %.frame, i32 0, i32 0
+    %t16 = load i32, i32* %t17
+    %t14 = sub i32 %t15, %t16
+    store i32 %t14, i32* @curenergy
+    br label %L_endif_3
+L_endif_3:
+    ; line 509
+    br label %L_endif_2
+L_endif_2:
+    br label %L_endif_1
+L_endif_1:
     ; nop
 
     ; epilogue
@@ -1239,6 +1844,80 @@ define void @P_firetorpedoes()
 
     ; body
     ; line 585
+    %t2 = load i32, i32* @curtorps
+    %t1 = icmp eq i32 %t2, 0
+    br i1 %t1, label %L_then_1, label %L_else_1
+L_then_1:
+    ; line 586
+    %t3 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([31 x i8], [31 x i8]* @.str.34, i32 0, i32 0), i32 30)
+    call void @_WriteLn(i8* %t3)
+    br label %L_endif_1
+L_else_1:
+    ; line 589
+    %t4 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t4, i32 0, i32 0, i8* getelementptr inbounds ([17 x i8], [17 x i8]* @.str.35, i32 0, i32 0), i32 16)
+    ; line 590
+    ; line 591
+    %t6 = load i32, i32* @condition
+    %t5 = icmp ne i32 %t6, 4
+    br i1 %t5, label %L_then_2, label %L_endif_2
+L_then_2:
+    ; line 592
+    %t8 = load i32, i32* @curtorps
+    %t7 = sub i32 %t8, 1
+    store i32 %t7, i32* @curtorps
+    br label %L_endif_2
+L_endif_2:
+    ; line 593
+    %t9 = getelementptr inbounds %Frame_firetorpedoes, %Frame_firetorpedoes* %.frame, i32 0, i32 3
+    %t10 = fneg double %.dummy.intrin
+    store double %t10, double* %t9
+    ; line 594
+    %t11 = getelementptr inbounds %Frame_firetorpedoes, %Frame_firetorpedoes* %.frame, i32 0, i32 5
+    store double %.dummy.intrin, double* %t11
+    ; line 595
+    %t12 = getelementptr inbounds %Frame_firetorpedoes, %Frame_firetorpedoes* %.frame, i32 0, i32 4
+    %t14 = getelementptr inbounds %T_sectxy, %T_sectxy* @cursect, i32 0, i32 0
+    %t13 = bitcast i8* %t14 to i32*
+    %t15 = load i32, i32* %t13
+    %t16 = sitofp i32 %t15 to double
+    store double %t16, double* %t12
+    ; line 596
+    %t17 = getelementptr inbounds %Frame_firetorpedoes, %Frame_firetorpedoes* %.frame, i32 0, i32 6
+    %t19 = getelementptr inbounds %T_sectxy, %T_sectxy* @cursect, i32 0, i32 4
+    %t18 = bitcast i8* %t19 to i32*
+    %t20 = load i32, i32* %t18
+    %t21 = sitofp i32 %t20 to double
+    store double %t21, double* %t17
+    ; line 597
+    %t22 = getelementptr inbounds %Frame_firetorpedoes, %Frame_firetorpedoes* %.frame, i32 0, i32 1
+    store i1 0, i1* %t22
+    ; line 598
+    %t23 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t23, i32 0, i32 0, i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.36, i32 0, i32 0), i32 14)
+    call void @_WriteLn(i8* %t23)
+    ; line 600
+    ; line 649
+    %t25 = getelementptr inbounds %Frame_firetorpedoes, %Frame_firetorpedoes* %.frame, i32 0, i32 1
+    %t24 = load i1, i1* %t25
+    br i1 %t24, label %L_then_3, label %L_else_3
+L_then_3:
+    ; line 650
+    %t26 = getelementptr inbounds %T_array_9, %T_array_9* @quadrant, i32 0, i32 %.dummy.intrin
+    %t27 = getelementptr inbounds %T_array_10, %T_array_10* %t26, i32 0, i32 %.dummy.intrin
+    store i32 0, i32* %t27
+    br label %L_endif_3
+L_else_3:
+    ; line 652
+    %t28 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t28, i32 0, i32 0, i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.37, i32 0, i32 0), i32 15)
+    call void @_WriteLn(i8* %t28)
+    br label %L_endif_3
+L_endif_3:
+    ; nop
+    br label %L_endif_1
+L_endif_1:
     ; nop
 
     ; epilogue
@@ -1283,9 +1962,50 @@ define void @P_firetorpedoes_hitnova(%Frame_firetorpedoes* %.slink, i32 %novax, 
     ; body
     ; line 541
     %t5 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.21, i32 0, i32 0), i32 36)
+    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.38, i32 0, i32 0), i32 36)
     call void @_WriteLn(i8* %t5)
     ; line 542
+    %t7 = load i32, i32* @condition
+    %t6 = icmp ne i32 %t7, 4
+    br i1 %t6, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 544
+    %t8 = getelementptr inbounds %Frame_firetorpedoes_hitnova, %Frame_firetorpedoes_hitnova* %.frame, i32 0, i32 3
+    %t11 = call i32 @F_random(i32 0, i32 10)
+    %t10 = mul i32 600, %t11
+    %t13 = getelementptr inbounds %Frame_firetorpedoes_hitnova, %Frame_firetorpedoes_hitnova* %.frame, i32 0, i32 1
+    %t12 = load i32, i32* %t13
+    %t15 = getelementptr inbounds %Frame_firetorpedoes_hitnova, %Frame_firetorpedoes_hitnova* %.frame, i32 0, i32 2
+    %t14 = load i32, i32* %t15
+    %t16 = load %T_sectxy, %T_sectxy* @cursect
+    %t17 = call i32 @F_distance(i32 %t12, i32 %t14, %T_sectxy %t16)
+    %t9 = sdiv i32 %t10, %t17
+    store i32 %t9, i32* %t8
+    ; line 545
+    %t20 = getelementptr inbounds %Frame_firetorpedoes_hitnova, %Frame_firetorpedoes_hitnova* %.frame, i32 0, i32 3
+    %t19 = load i32, i32* %t20
+    %t18 = icmp sgt i32 %t19, 0
+    br i1 %t18, label %L_then_2, label %L_endif_2
+L_then_2:
+    ; line 546
+    %t21 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t21, i32 0, i32 0, i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.39, i32 0, i32 0), i32 17)
+    %t23 = getelementptr inbounds %Frame_firetorpedoes_hitnova, %Frame_firetorpedoes_hitnova* %.frame, i32 0, i32 3
+    %t22 = load i32, i32* %t23
+    call void @_WriteInteger(i8* %t21, i32 1, i32 0, i32 %t22)
+    call void @_WriteString(i8* %t21, i32 0, i32 0, i8* getelementptr inbounds ([17 x i8], [17 x i8]* @.str.40, i32 0, i32 0), i32 16)
+    call void @_WriteLn(i8* %t21)
+    br label %L_endif_2
+L_endif_2:
+    ; line 547
+    %t25 = load i32, i32* @curenergy
+    %t27 = getelementptr inbounds %Frame_firetorpedoes_hitnova, %Frame_firetorpedoes_hitnova* %.frame, i32 0, i32 3
+    %t26 = load i32, i32* %t27
+    %t24 = sub i32 %t25, %t26
+    store i32 %t24, i32* @curenergy
+    ; nop
+    br label %L_endif_1
+L_endif_1:
     ; line 549
     ; nop
 
@@ -1327,7 +2047,7 @@ define void @P_firetorpedoes_hitklingbase(%Frame_firetorpedoes* %.slink, i32* %k
     ; body
     ; line 568
     %t3 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([35 x i8], [35 x i8]* @.str.22, i32 0, i32 0), i32 34)
+    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([35 x i8], [35 x i8]* @.str.41, i32 0, i32 0), i32 34)
     %t4 = load i8, i8* @bell
     call void @_WriteChar(i8* %t3, i32 0, i32 0, i8 %t4)
     call void @_WriteLn(i8* %t3)
@@ -1348,7 +2068,7 @@ define void @P_firetorpedoes_hitklingbase(%Frame_firetorpedoes* %.slink, i32* %k
     %t14 = getelementptr inbounds %Frame_firetorpedoes_hitklingbase, %Frame_firetorpedoes_hitklingbase* %.frame, i32 0, i32 2
     %t13 = load i32, i32* %t14
     call void @_WriteInteger(i8* %t12, i32 1, i32 0, i32 %t13)
-    call void @_WriteString(i8* %t12, i32 0, i32 0, i8* getelementptr inbounds ([35 x i8], [35 x i8]* @.str.23, i32 0, i32 0), i32 34)
+    call void @_WriteString(i8* %t12, i32 0, i32 0, i8* getelementptr inbounds ([35 x i8], [35 x i8]* @.str.42, i32 0, i32 0), i32 34)
     call void @_WriteLn(i8* %t12)
     ; line 581
     %t16 = load i32, i32* @totalklingons
@@ -1386,6 +2106,11 @@ define void @P_selfdestruct()
     ; body
     ; line 659
     ; line 664
+    br i1 true, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 665
+    br label %L_endif_1
+L_endif_1:
 
     ; epilogue
     ret void
@@ -1416,6 +2141,15 @@ define void @P_command()
     ; body
     ; line 672
     ; line 705
+    br i1 true, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 707
+    call void @P_klingonattack()
+    ; line 708
+    call void @P_printquadrant()
+    ; nop
+    br label %L_endif_1
+L_endif_1:
     ; nop
 
     ; epilogue
@@ -1446,7 +2180,7 @@ define void @P_instructions()
     ; body
     ; line 885
     %t1 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t1, i32 0, i32 0, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @.str.24, i32 0, i32 0), i32 18)
+    call void @_WriteString(i8* %t1, i32 0, i32 0, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @.str.43, i32 0, i32 0), i32 18)
     %t2 = load i32, i32* @curyear
     call void @_WriteInteger(i8* %t1, i32 1, i32 0, i32 %t2)
     call void @_WriteLn(i8* %t1)
@@ -1455,43 +2189,43 @@ define void @P_instructions()
     call void @_WriteLn(i8* %t3)
     ; line 887
     %t4 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t4, i32 0, i32 0, i8* getelementptr inbounds ([48 x i8], [48 x i8]* @.str.25, i32 0, i32 0), i32 47)
+    call void @_WriteString(i8* %t4, i32 0, i32 0, i8* getelementptr inbounds ([48 x i8], [48 x i8]* @.str.44, i32 0, i32 0), i32 47)
     call void @_WriteLn(i8* %t4)
     ; line 888
     %t5 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([48 x i8], [48 x i8]* @.str.26, i32 0, i32 0), i32 47)
+    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([48 x i8], [48 x i8]* @.str.45, i32 0, i32 0), i32 47)
     call void @_WriteLn(i8* %t5)
     ; line 889
     %t6 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t6, i32 0, i32 0, i8* getelementptr inbounds ([51 x i8], [51 x i8]* @.str.27, i32 0, i32 0), i32 50)
+    call void @_WriteString(i8* %t6, i32 0, i32 0, i8* getelementptr inbounds ([51 x i8], [51 x i8]* @.str.46, i32 0, i32 0), i32 50)
     call void @_WriteLn(i8* %t6)
     ; line 890
     %t7 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([27 x i8], [27 x i8]* @.str.28, i32 0, i32 0), i32 26)
+    call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([27 x i8], [27 x i8]* @.str.47, i32 0, i32 0), i32 26)
     %t8 = load i32, i32* @totalklingons
     call void @_WriteInteger(i8* %t7, i32 1, i32 0, i32 %t8)
-    call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.29, i32 0, i32 0), i32 17)
+    call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.48, i32 0, i32 0), i32 17)
     call void @_WriteLn(i8* %t7)
     ; line 891
     %t9 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t9, i32 0, i32 0, i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.30, i32 0, i32 0), i32 9)
+    call void @_WriteString(i8* %t9, i32 0, i32 0, i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.49, i32 0, i32 0), i32 9)
     %t12 = load i32, i32* @endyear
     %t13 = load i32, i32* @curyear
     %t11 = sub i32 %t12, %t13
     %t10 = add i32 %t11, 1
     call void @_WriteInteger(i8* %t9, i32 1, i32 0, i32 %t10)
-    call void @_WriteString(i8* %t9, i32 0, i32 0, i8* getelementptr inbounds ([25 x i8], [25 x i8]* @.str.31, i32 0, i32 0), i32 24)
+    call void @_WriteString(i8* %t9, i32 0, i32 0, i8* getelementptr inbounds ([25 x i8], [25 x i8]* @.str.50, i32 0, i32 0), i32 24)
     call void @_WriteLn(i8* %t9)
     ; line 892
     %t14 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t14, i32 0, i32 0, i8* getelementptr inbounds ([35 x i8], [35 x i8]* @.str.32, i32 0, i32 0), i32 34)
+    call void @_WriteString(i8* %t14, i32 0, i32 0, i8* getelementptr inbounds ([35 x i8], [35 x i8]* @.str.51, i32 0, i32 0), i32 34)
     %t15 = load i32, i32* @endyear
     call void @_WriteInteger(i8* %t14, i32 1, i32 0, i32 %t15)
-    call void @_WriteString(i8* %t14, i32 0, i32 0, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.33, i32 0, i32 0), i32 8)
+    call void @_WriteString(i8* %t14, i32 0, i32 0, i8* getelementptr inbounds ([9 x i8], [9 x i8]* @.str.52, i32 0, i32 0), i32 8)
     call void @_WriteLn(i8* %t14)
     ; line 893
     %t16 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t16, i32 0, i32 0, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.34, i32 0, i32 0), i32 36)
+    call void @_WriteString(i8* %t16, i32 0, i32 0, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.53, i32 0, i32 0), i32 36)
     %t18 = getelementptr inbounds %T_quadxy, %T_quadxy* @curquad, i32 0, i32 0
     %t17 = bitcast i8* %t18 to i32*
     %t19 = load i32, i32* %t17
@@ -1501,7 +2235,7 @@ define void @P_instructions()
     %t20 = bitcast i8* %t21 to i32*
     %t22 = load i32, i32* %t20
     call void @_WriteInteger(i8* %t16, i32 1, i32 0, i32 %t22)
-    call void @_WriteString(i8* %t16, i32 0, i32 0, i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.35, i32 0, i32 0), i32 9)
+    call void @_WriteString(i8* %t16, i32 0, i32 0, i8* getelementptr inbounds ([10 x i8], [10 x i8]* @.str.54, i32 0, i32 0), i32 9)
     %t24 = getelementptr inbounds %T_sectxy, %T_sectxy* @cursect, i32 0, i32 0
     %t23 = bitcast i8* %t24 to i32*
     %t25 = load i32, i32* %t23
@@ -1518,7 +2252,7 @@ define void @P_instructions()
     call void @_WriteLn(i8* %t29)
     ; line 896
     %t30 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t30, i32 0, i32 0, i8* getelementptr inbounds ([42 x i8], [42 x i8]* @.str.36, i32 0, i32 0), i32 41)
+    call void @_WriteString(i8* %t30, i32 0, i32 0, i8* getelementptr inbounds ([42 x i8], [42 x i8]* @.str.55, i32 0, i32 0), i32 41)
     ; line 897
     ; line 898
     %t31 = load %T_text, %T_text* @output
@@ -1527,6 +2261,29 @@ define void @P_instructions()
     %t32 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t32)
     ; line 900
+    br i1 true, label %L_then_1, label %L_endif_1
+L_then_1:
+    ; line 902
+    call void @P_instructions_page1(%Frame_instructions* %.frame)
+    ; line 903
+    call void @P_instructions_page2(%Frame_instructions* %.frame)
+    ; line 904
+    call void @P_instructions_page3(%Frame_instructions* %.frame)
+    ; line 905
+    call void @P_instructions_page4(%Frame_instructions* %.frame)
+    ; line 906
+    call void @P_instructions_page5(%Frame_instructions* %.frame)
+    ; line 907
+    call void @P_instructions_page6(%Frame_instructions* %.frame)
+    ; line 908
+    %t34 = load %T_text, %T_text* @output
+    call void @_WriteLn(i8* %t34)
+    ; line 909
+    %t35 = load %T_text, %T_text* @output
+    call void @_WriteLn(i8* %t35)
+    ; nop
+    br label %L_endif_1
+L_endif_1:
     ; nop
 
     ; epilogue
@@ -1559,7 +2316,7 @@ define void @P_instructions_spacewait(%Frame_instructions* %.slink)
     call void @_WriteLn(i8* %t2)
     ; line 718
     %t3 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([25 x i8], [25 x i8]* @.str.37, i32 0, i32 0), i32 24)
+    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([25 x i8], [25 x i8]* @.str.56, i32 0, i32 0), i32 24)
     ; line 719
     ; line 720
     %t4 = load %T_text, %T_text* @output
@@ -1593,89 +2350,89 @@ define void @P_instructions_page1(%Frame_instructions* %.slink)
     ; body
     ; line 725
     %t2 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t2, i32 0, i32 0, i8* getelementptr inbounds ([49 x i8], [49 x i8]* @.str.38, i32 0, i32 0), i32 48)
+    call void @_WriteString(i8* %t2, i32 0, i32 0, i8* getelementptr inbounds ([49 x i8], [49 x i8]* @.str.57, i32 0, i32 0), i32 48)
     call void @_WriteLn(i8* %t2)
     ; line 726
     %t3 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([23 x i8], [23 x i8]* @.str.39, i32 0, i32 0), i32 22)
+    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([23 x i8], [23 x i8]* @.str.58, i32 0, i32 0), i32 22)
     call void @_WriteLn(i8* %t3)
     ; line 727
     %t4 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t4)
     ; line 728
     %t5 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([32 x i8], [32 x i8]* @.str.40, i32 0, i32 0), i32 31)
+    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([32 x i8], [32 x i8]* @.str.59, i32 0, i32 0), i32 31)
     call void @_WriteLn(i8* %t5)
     ; line 729
     %t6 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t6, i32 0, i32 0, i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.41, i32 0, i32 0), i32 33)
+    call void @_WriteString(i8* %t6, i32 0, i32 0, i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.60, i32 0, i32 0), i32 33)
     call void @_WriteLn(i8* %t6)
     ; line 730
     %t7 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.42, i32 0, i32 0), i32 36)
+    call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.61, i32 0, i32 0), i32 36)
     call void @_WriteLn(i8* %t7)
     ; line 731
     %t8 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t8, i32 0, i32 0, i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.41, i32 0, i32 0), i32 33)
+    call void @_WriteString(i8* %t8, i32 0, i32 0, i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.60, i32 0, i32 0), i32 33)
     call void @_WriteLn(i8* %t8)
     ; line 732
     %t9 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t9, i32 0, i32 0, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.43, i32 0, i32 0), i32 36)
+    call void @_WriteString(i8* %t9, i32 0, i32 0, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.62, i32 0, i32 0), i32 36)
     call void @_WriteLn(i8* %t9)
     ; line 733
     %t10 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t10, i32 0, i32 0, i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.41, i32 0, i32 0), i32 33)
+    call void @_WriteString(i8* %t10, i32 0, i32 0, i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.60, i32 0, i32 0), i32 33)
     call void @_WriteLn(i8* %t10)
     ; line 734
     %t11 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t11, i32 0, i32 0, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.44, i32 0, i32 0), i32 36)
+    call void @_WriteString(i8* %t11, i32 0, i32 0, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.63, i32 0, i32 0), i32 36)
     call void @_WriteLn(i8* %t11)
     ; line 735
     %t12 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t12, i32 0, i32 0, i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.41, i32 0, i32 0), i32 33)
+    call void @_WriteString(i8* %t12, i32 0, i32 0, i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.60, i32 0, i32 0), i32 33)
     call void @_WriteLn(i8* %t12)
     ; line 736
     %t13 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t13, i32 0, i32 0, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.45, i32 0, i32 0), i32 36)
+    call void @_WriteString(i8* %t13, i32 0, i32 0, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.64, i32 0, i32 0), i32 36)
     call void @_WriteLn(i8* %t13)
     ; line 737
     %t14 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t14, i32 0, i32 0, i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.41, i32 0, i32 0), i32 33)
+    call void @_WriteString(i8* %t14, i32 0, i32 0, i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.60, i32 0, i32 0), i32 33)
     call void @_WriteLn(i8* %t14)
     ; line 738
     %t15 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t15, i32 0, i32 0, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.46, i32 0, i32 0), i32 36)
+    call void @_WriteString(i8* %t15, i32 0, i32 0, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.65, i32 0, i32 0), i32 36)
     call void @_WriteLn(i8* %t15)
     ; line 739
     %t16 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t16, i32 0, i32 0, i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.41, i32 0, i32 0), i32 33)
+    call void @_WriteString(i8* %t16, i32 0, i32 0, i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.60, i32 0, i32 0), i32 33)
     call void @_WriteLn(i8* %t16)
     ; line 740
     %t17 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t17, i32 0, i32 0, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.47, i32 0, i32 0), i32 36)
+    call void @_WriteString(i8* %t17, i32 0, i32 0, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.66, i32 0, i32 0), i32 36)
     call void @_WriteLn(i8* %t17)
     ; line 741
     %t18 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t18, i32 0, i32 0, i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.41, i32 0, i32 0), i32 33)
+    call void @_WriteString(i8* %t18, i32 0, i32 0, i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.60, i32 0, i32 0), i32 33)
     call void @_WriteLn(i8* %t18)
     ; line 742
     %t19 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t19, i32 0, i32 0, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.48, i32 0, i32 0), i32 36)
+    call void @_WriteString(i8* %t19, i32 0, i32 0, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.67, i32 0, i32 0), i32 36)
     call void @_WriteLn(i8* %t19)
     ; line 743
     %t20 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t20, i32 0, i32 0, i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.41, i32 0, i32 0), i32 33)
+    call void @_WriteString(i8* %t20, i32 0, i32 0, i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.60, i32 0, i32 0), i32 33)
     call void @_WriteLn(i8* %t20)
     ; line 744
     %t21 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t21, i32 0, i32 0, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.49, i32 0, i32 0), i32 36)
+    call void @_WriteString(i8* %t21, i32 0, i32 0, i8* getelementptr inbounds ([37 x i8], [37 x i8]* @.str.68, i32 0, i32 0), i32 36)
     call void @_WriteLn(i8* %t21)
     ; line 745
     %t22 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t22)
     ; line 746
     %t23 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t23, i32 0, i32 0, i8* getelementptr inbounds ([52 x i8], [52 x i8]* @.str.50, i32 0, i32 0), i32 51)
+    call void @_WriteString(i8* %t23, i32 0, i32 0, i8* getelementptr inbounds ([52 x i8], [52 x i8]* @.str.69, i32 0, i32 0), i32 51)
     call void @_WriteLn(i8* %t23)
     ; line 747
     %t24 = getelementptr inbounds %Frame_instructions_page1, %Frame_instructions_page1* %.frame, i32 0, i32 0
@@ -1713,87 +2470,87 @@ define void @P_instructions_page2(%Frame_instructions* %.slink)
     call void @_WriteLn(i8* %t2)
     ; line 753
     %t3 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.51, i32 0, i32 0), i32 15)
+    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.70, i32 0, i32 0), i32 15)
     call void @_WriteLn(i8* %t3)
     ; line 754
     %t4 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t4)
     ; line 755
     %t5 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([20 x i8], [20 x i8]* @.str.52, i32 0, i32 0), i32 19)
+    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([20 x i8], [20 x i8]* @.str.71, i32 0, i32 0), i32 19)
     call void @_WriteLn(i8* %t5)
     ; line 756
     %t6 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t6)
     ; line 757
     %t7 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([31 x i8], [31 x i8]* @.str.53, i32 0, i32 0), i32 30)
+    call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([31 x i8], [31 x i8]* @.str.72, i32 0, i32 0), i32 30)
     call void @_WriteLn(i8* %t7)
     ; line 758
     %t8 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t8, i32 0, i32 0, i8* getelementptr inbounds ([54 x i8], [54 x i8]* @.str.54, i32 0, i32 0), i32 53)
+    call void @_WriteString(i8* %t8, i32 0, i32 0, i8* getelementptr inbounds ([54 x i8], [54 x i8]* @.str.73, i32 0, i32 0), i32 53)
     call void @_WriteLn(i8* %t8)
     ; line 759
     %t9 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t9, i32 0, i32 0, i8* getelementptr inbounds ([28 x i8], [28 x i8]* @.str.55, i32 0, i32 0), i32 27)
+    call void @_WriteString(i8* %t9, i32 0, i32 0, i8* getelementptr inbounds ([28 x i8], [28 x i8]* @.str.74, i32 0, i32 0), i32 27)
     call void @_WriteLn(i8* %t9)
     ; line 760
     %t10 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t10)
     ; line 761
     %t11 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t11, i32 0, i32 0, i8* getelementptr inbounds ([23 x i8], [23 x i8]* @.str.56, i32 0, i32 0), i32 22)
+    call void @_WriteString(i8* %t11, i32 0, i32 0, i8* getelementptr inbounds ([23 x i8], [23 x i8]* @.str.75, i32 0, i32 0), i32 22)
     call void @_WriteLn(i8* %t11)
     ; line 762
     %t12 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t12, i32 0, i32 0, i8* getelementptr inbounds ([26 x i8], [26 x i8]* @.str.57, i32 0, i32 0), i32 25)
+    call void @_WriteString(i8* %t12, i32 0, i32 0, i8* getelementptr inbounds ([26 x i8], [26 x i8]* @.str.76, i32 0, i32 0), i32 25)
     call void @_WriteLn(i8* %t12)
     ; line 763
     %t13 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t13, i32 0, i32 0, i8* getelementptr inbounds ([25 x i8], [25 x i8]* @.str.58, i32 0, i32 0), i32 24)
+    call void @_WriteString(i8* %t13, i32 0, i32 0, i8* getelementptr inbounds ([25 x i8], [25 x i8]* @.str.77, i32 0, i32 0), i32 24)
     call void @_WriteLn(i8* %t13)
     ; line 764
     %t14 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t14, i32 0, i32 0, i8* getelementptr inbounds ([28 x i8], [28 x i8]* @.str.59, i32 0, i32 0), i32 27)
+    call void @_WriteString(i8* %t14, i32 0, i32 0, i8* getelementptr inbounds ([28 x i8], [28 x i8]* @.str.78, i32 0, i32 0), i32 27)
     call void @_WriteLn(i8* %t14)
     ; line 765
     %t15 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t15, i32 0, i32 0, i8* getelementptr inbounds ([25 x i8], [25 x i8]* @.str.60, i32 0, i32 0), i32 24)
+    call void @_WriteString(i8* %t15, i32 0, i32 0, i8* getelementptr inbounds ([25 x i8], [25 x i8]* @.str.79, i32 0, i32 0), i32 24)
     call void @_WriteLn(i8* %t15)
     ; line 766
     %t16 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t16, i32 0, i32 0, i8* getelementptr inbounds ([27 x i8], [27 x i8]* @.str.61, i32 0, i32 0), i32 26)
+    call void @_WriteString(i8* %t16, i32 0, i32 0, i8* getelementptr inbounds ([27 x i8], [27 x i8]* @.str.80, i32 0, i32 0), i32 26)
     call void @_WriteLn(i8* %t16)
     ; line 767
     %t17 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t17, i32 0, i32 0, i8* getelementptr inbounds ([24 x i8], [24 x i8]* @.str.62, i32 0, i32 0), i32 23)
+    call void @_WriteString(i8* %t17, i32 0, i32 0, i8* getelementptr inbounds ([24 x i8], [24 x i8]* @.str.81, i32 0, i32 0), i32 23)
     call void @_WriteLn(i8* %t17)
     ; line 768
     %t18 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t18)
     ; line 769
     %t19 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t19, i32 0, i32 0, i8* getelementptr inbounds ([43 x i8], [43 x i8]* @.str.63, i32 0, i32 0), i32 42)
+    call void @_WriteString(i8* %t19, i32 0, i32 0, i8* getelementptr inbounds ([43 x i8], [43 x i8]* @.str.82, i32 0, i32 0), i32 42)
     call void @_WriteLn(i8* %t19)
     ; line 770
     %t20 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t20, i32 0, i32 0, i8* getelementptr inbounds ([48 x i8], [48 x i8]* @.str.64, i32 0, i32 0), i32 47)
+    call void @_WriteString(i8* %t20, i32 0, i32 0, i8* getelementptr inbounds ([48 x i8], [48 x i8]* @.str.83, i32 0, i32 0), i32 47)
     call void @_WriteLn(i8* %t20)
     ; line 771
     %t21 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t21, i32 0, i32 0, i8* getelementptr inbounds ([51 x i8], [51 x i8]* @.str.65, i32 0, i32 0), i32 50)
+    call void @_WriteString(i8* %t21, i32 0, i32 0, i8* getelementptr inbounds ([51 x i8], [51 x i8]* @.str.84, i32 0, i32 0), i32 50)
     call void @_WriteLn(i8* %t21)
     ; line 772
     %t22 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t22, i32 0, i32 0, i8* getelementptr inbounds ([52 x i8], [52 x i8]* @.str.66, i32 0, i32 0), i32 51)
+    call void @_WriteString(i8* %t22, i32 0, i32 0, i8* getelementptr inbounds ([52 x i8], [52 x i8]* @.str.85, i32 0, i32 0), i32 51)
     call void @_WriteLn(i8* %t22)
     ; line 773
     %t23 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t23, i32 0, i32 0, i8* getelementptr inbounds ([53 x i8], [53 x i8]* @.str.67, i32 0, i32 0), i32 52)
+    call void @_WriteString(i8* %t23, i32 0, i32 0, i8* getelementptr inbounds ([53 x i8], [53 x i8]* @.str.86, i32 0, i32 0), i32 52)
     call void @_WriteLn(i8* %t23)
     ; line 774
     %t24 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t24, i32 0, i32 0, i8* getelementptr inbounds ([54 x i8], [54 x i8]* @.str.68, i32 0, i32 0), i32 53)
+    call void @_WriteString(i8* %t24, i32 0, i32 0, i8* getelementptr inbounds ([54 x i8], [54 x i8]* @.str.87, i32 0, i32 0), i32 53)
     call void @_WriteLn(i8* %t24)
     ; line 775
     %t25 = getelementptr inbounds %Frame_instructions_page2, %Frame_instructions_page2* %.frame, i32 0, i32 0
@@ -1831,98 +2588,98 @@ define void @P_instructions_page3(%Frame_instructions* %.slink)
     call void @_WriteLn(i8* %t2)
     ; line 781
     %t3 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([55 x i8], [55 x i8]* @.str.69, i32 0, i32 0), i32 54)
+    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([55 x i8], [55 x i8]* @.str.88, i32 0, i32 0), i32 54)
     call void @_WriteLn(i8* %t3)
     ; line 782
     %t4 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t4, i32 0, i32 0, i8* getelementptr inbounds ([56 x i8], [56 x i8]* @.str.70, i32 0, i32 0), i32 55)
+    call void @_WriteString(i8* %t4, i32 0, i32 0, i8* getelementptr inbounds ([56 x i8], [56 x i8]* @.str.89, i32 0, i32 0), i32 55)
     call void @_WriteLn(i8* %t4)
     ; line 783
     %t5 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([58 x i8], [58 x i8]* @.str.71, i32 0, i32 0), i32 57)
+    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([58 x i8], [58 x i8]* @.str.90, i32 0, i32 0), i32 57)
     call void @_WriteLn(i8* %t5)
     ; line 784
     %t6 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t6, i32 0, i32 0, i8* getelementptr inbounds ([59 x i8], [59 x i8]* @.str.72, i32 0, i32 0), i32 58)
+    call void @_WriteString(i8* %t6, i32 0, i32 0, i8* getelementptr inbounds ([59 x i8], [59 x i8]* @.str.91, i32 0, i32 0), i32 58)
     call void @_WriteLn(i8* %t6)
     ; line 785
     %t7 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([60 x i8], [60 x i8]* @.str.73, i32 0, i32 0), i32 59)
+    call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([60 x i8], [60 x i8]* @.str.92, i32 0, i32 0), i32 59)
     call void @_WriteLn(i8* %t7)
     ; line 786
     %t8 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t8, i32 0, i32 0, i8* getelementptr inbounds ([55 x i8], [55 x i8]* @.str.74, i32 0, i32 0), i32 54)
+    call void @_WriteString(i8* %t8, i32 0, i32 0, i8* getelementptr inbounds ([55 x i8], [55 x i8]* @.str.93, i32 0, i32 0), i32 54)
     call void @_WriteLn(i8* %t8)
     ; line 787
     %t9 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t9)
     ; line 788
     %t10 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t10, i32 0, i32 0, i8* getelementptr inbounds ([27 x i8], [27 x i8]* @.str.75, i32 0, i32 0), i32 26)
+    call void @_WriteString(i8* %t10, i32 0, i32 0, i8* getelementptr inbounds ([27 x i8], [27 x i8]* @.str.94, i32 0, i32 0), i32 26)
     call void @_WriteLn(i8* %t10)
     ; line 789
     %t11 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t11)
     ; line 790
     %t12 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t12, i32 0, i32 0, i8* getelementptr inbounds ([58 x i8], [58 x i8]* @.str.76, i32 0, i32 0), i32 57)
+    call void @_WriteString(i8* %t12, i32 0, i32 0, i8* getelementptr inbounds ([58 x i8], [58 x i8]* @.str.95, i32 0, i32 0), i32 57)
     call void @_WriteLn(i8* %t12)
     ; line 791
     %t13 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t13, i32 0, i32 0, i8* getelementptr inbounds ([55 x i8], [55 x i8]* @.str.77, i32 0, i32 0), i32 54)
+    call void @_WriteString(i8* %t13, i32 0, i32 0, i8* getelementptr inbounds ([55 x i8], [55 x i8]* @.str.96, i32 0, i32 0), i32 54)
     call void @_WriteLn(i8* %t13)
     ; line 792
     %t14 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t14, i32 0, i32 0, i8* getelementptr inbounds ([50 x i8], [50 x i8]* @.str.78, i32 0, i32 0), i32 49)
+    call void @_WriteString(i8* %t14, i32 0, i32 0, i8* getelementptr inbounds ([50 x i8], [50 x i8]* @.str.97, i32 0, i32 0), i32 49)
     call void @_WriteLn(i8* %t14)
     ; line 793
     %t15 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t15)
     ; line 794
     %t16 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t16, i32 0, i32 0, i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.79, i32 0, i32 0), i32 33)
+    call void @_WriteString(i8* %t16, i32 0, i32 0, i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.98, i32 0, i32 0), i32 33)
     call void @_WriteLn(i8* %t16)
     ; line 795
     %t17 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t17, i32 0, i32 0, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.80, i32 0, i32 0), i32 13)
+    call void @_WriteString(i8* %t17, i32 0, i32 0, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.99, i32 0, i32 0), i32 13)
     call void @_WriteChar(i8* %t17, i32 0, i32 0, i8 46)
-    call void @_WriteString(i8* %t17, i32 0, i32 0, i8* getelementptr inbounds ([24 x i8], [24 x i8]* @.str.81, i32 0, i32 0), i32 23)
+    call void @_WriteString(i8* %t17, i32 0, i32 0, i8* getelementptr inbounds ([24 x i8], [24 x i8]* @.str.100, i32 0, i32 0), i32 23)
     call void @_WriteLn(i8* %t17)
     ; line 796
     %t18 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t18, i32 0, i32 0, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.80, i32 0, i32 0), i32 13)
+    call void @_WriteString(i8* %t18, i32 0, i32 0, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.99, i32 0, i32 0), i32 13)
     call void @_WriteChar(i8* %t18, i32 0, i32 0, i8 42)
-    call void @_WriteString(i8* %t18, i32 0, i32 0, i8* getelementptr inbounds ([26 x i8], [26 x i8]* @.str.82, i32 0, i32 0), i32 25)
+    call void @_WriteString(i8* %t18, i32 0, i32 0, i8* getelementptr inbounds ([26 x i8], [26 x i8]* @.str.101, i32 0, i32 0), i32 25)
     call void @_WriteLn(i8* %t18)
     ; line 797
     %t19 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t19, i32 0, i32 0, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.80, i32 0, i32 0), i32 13)
+    call void @_WriteString(i8* %t19, i32 0, i32 0, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.99, i32 0, i32 0), i32 13)
     call void @_WriteChar(i8* %t19, i32 0, i32 0, i8 43)
-    call void @_WriteString(i8* %t19, i32 0, i32 0, i8* getelementptr inbounds ([29 x i8], [29 x i8]* @.str.83, i32 0, i32 0), i32 28)
+    call void @_WriteString(i8* %t19, i32 0, i32 0, i8* getelementptr inbounds ([29 x i8], [29 x i8]* @.str.102, i32 0, i32 0), i32 28)
     call void @_WriteLn(i8* %t19)
     ; line 798
     %t20 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t20, i32 0, i32 0, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.80, i32 0, i32 0), i32 13)
+    call void @_WriteString(i8* %t20, i32 0, i32 0, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.99, i32 0, i32 0), i32 13)
     call void @_WriteChar(i8* %t20, i32 0, i32 0, i8 69)
-    call void @_WriteString(i8* %t20, i32 0, i32 0, i8* getelementptr inbounds ([27 x i8], [27 x i8]* @.str.84, i32 0, i32 0), i32 26)
+    call void @_WriteString(i8* %t20, i32 0, i32 0, i8* getelementptr inbounds ([27 x i8], [27 x i8]* @.str.103, i32 0, i32 0), i32 26)
     call void @_WriteLn(i8* %t20)
     ; line 799
     %t21 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t21, i32 0, i32 0, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.80, i32 0, i32 0), i32 13)
+    call void @_WriteString(i8* %t21, i32 0, i32 0, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.99, i32 0, i32 0), i32 13)
     call void @_WriteChar(i8* %t21, i32 0, i32 0, i8 66)
-    call void @_WriteString(i8* %t21, i32 0, i32 0, i8* getelementptr inbounds ([30 x i8], [30 x i8]* @.str.85, i32 0, i32 0), i32 29)
+    call void @_WriteString(i8* %t21, i32 0, i32 0, i8* getelementptr inbounds ([30 x i8], [30 x i8]* @.str.104, i32 0, i32 0), i32 29)
     call void @_WriteLn(i8* %t21)
     ; line 800
     %t22 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t22, i32 0, i32 0, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.80, i32 0, i32 0), i32 13)
+    call void @_WriteString(i8* %t22, i32 0, i32 0, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.99, i32 0, i32 0), i32 13)
     call void @_WriteChar(i8* %t22, i32 0, i32 0, i8 75)
-    call void @_WriteString(i8* %t22, i32 0, i32 0, i8* getelementptr inbounds ([27 x i8], [27 x i8]* @.str.86, i32 0, i32 0), i32 26)
+    call void @_WriteString(i8* %t22, i32 0, i32 0, i8* getelementptr inbounds ([27 x i8], [27 x i8]* @.str.105, i32 0, i32 0), i32 26)
     call void @_WriteLn(i8* %t22)
     ; line 801
     %t23 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t23, i32 0, i32 0, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.80, i32 0, i32 0), i32 13)
+    call void @_WriteString(i8* %t23, i32 0, i32 0, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.99, i32 0, i32 0), i32 13)
     call void @_WriteChar(i8* %t23, i32 0, i32 0, i8 64)
-    call void @_WriteString(i8* %t23, i32 0, i32 0, i8* getelementptr inbounds ([27 x i8], [27 x i8]* @.str.87, i32 0, i32 0), i32 26)
+    call void @_WriteString(i8* %t23, i32 0, i32 0, i8* getelementptr inbounds ([27 x i8], [27 x i8]* @.str.106, i32 0, i32 0), i32 26)
     call void @_WriteLn(i8* %t23)
     ; line 802
     %t24 = getelementptr inbounds %Frame_instructions_page3, %Frame_instructions_page3* %.frame, i32 0, i32 0
@@ -1960,82 +2717,82 @@ define void @P_instructions_page4(%Frame_instructions* %.slink)
     call void @_WriteLn(i8* %t2)
     ; line 808
     %t3 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([26 x i8], [26 x i8]* @.str.88, i32 0, i32 0), i32 25)
+    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([26 x i8], [26 x i8]* @.str.107, i32 0, i32 0), i32 25)
     call void @_WriteLn(i8* %t3)
     ; line 809
     %t4 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t4)
     ; line 810
     %t5 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([57 x i8], [57 x i8]* @.str.89, i32 0, i32 0), i32 56)
+    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([57 x i8], [57 x i8]* @.str.108, i32 0, i32 0), i32 56)
     call void @_WriteLn(i8* %t5)
     ; line 811
     %t6 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t6, i32 0, i32 0, i8* getelementptr inbounds ([52 x i8], [52 x i8]* @.str.90, i32 0, i32 0), i32 51)
+    call void @_WriteString(i8* %t6, i32 0, i32 0, i8* getelementptr inbounds ([52 x i8], [52 x i8]* @.str.109, i32 0, i32 0), i32 51)
     call void @_WriteLn(i8* %t6)
     ; line 812
     %t7 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @.str.91, i32 0, i32 0), i32 18)
+    call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @.str.110, i32 0, i32 0), i32 18)
     call void @_WriteLn(i8* %t7)
     ; line 813
     %t8 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t8)
     ; line 814
     %t9 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t9, i32 0, i32 0, i8* getelementptr inbounds ([51 x i8], [51 x i8]* @.str.92, i32 0, i32 0), i32 50)
+    call void @_WriteString(i8* %t9, i32 0, i32 0, i8* getelementptr inbounds ([51 x i8], [51 x i8]* @.str.111, i32 0, i32 0), i32 50)
     call void @_WriteLn(i8* %t9)
     ; line 815
     %t10 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t10, i32 0, i32 0, i8* getelementptr inbounds ([62 x i8], [62 x i8]* @.str.93, i32 0, i32 0), i32 61)
+    call void @_WriteString(i8* %t10, i32 0, i32 0, i8* getelementptr inbounds ([62 x i8], [62 x i8]* @.str.112, i32 0, i32 0), i32 61)
     call void @_WriteLn(i8* %t10)
     ; line 816
     %t11 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t11, i32 0, i32 0, i8* getelementptr inbounds ([58 x i8], [58 x i8]* @.str.94, i32 0, i32 0), i32 57)
+    call void @_WriteString(i8* %t11, i32 0, i32 0, i8* getelementptr inbounds ([58 x i8], [58 x i8]* @.str.113, i32 0, i32 0), i32 57)
     call void @_WriteLn(i8* %t11)
     ; line 817
     %t12 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t12, i32 0, i32 0, i8* getelementptr inbounds ([58 x i8], [58 x i8]* @.str.95, i32 0, i32 0), i32 57)
+    call void @_WriteString(i8* %t12, i32 0, i32 0, i8* getelementptr inbounds ([58 x i8], [58 x i8]* @.str.114, i32 0, i32 0), i32 57)
     call void @_WriteLn(i8* %t12)
     ; line 818
     %t13 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t13)
     ; line 819
     %t14 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t14, i32 0, i32 0, i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.96, i32 0, i32 0), i32 14)
+    call void @_WriteString(i8* %t14, i32 0, i32 0, i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.115, i32 0, i32 0), i32 14)
     call void @_WriteLn(i8* %t14)
     ; line 820
     %t15 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t15, i32 0, i32 0, i8* getelementptr inbounds ([58 x i8], [58 x i8]* @.str.97, i32 0, i32 0), i32 57)
+    call void @_WriteString(i8* %t15, i32 0, i32 0, i8* getelementptr inbounds ([58 x i8], [58 x i8]* @.str.116, i32 0, i32 0), i32 57)
     call void @_WriteLn(i8* %t15)
     ; line 821
     %t16 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t16, i32 0, i32 0, i8* getelementptr inbounds ([59 x i8], [59 x i8]* @.str.98, i32 0, i32 0), i32 58)
+    call void @_WriteString(i8* %t16, i32 0, i32 0, i8* getelementptr inbounds ([59 x i8], [59 x i8]* @.str.117, i32 0, i32 0), i32 58)
     call void @_WriteLn(i8* %t16)
     ; line 822
     %t17 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t17, i32 0, i32 0, i8* getelementptr inbounds ([42 x i8], [42 x i8]* @.str.99, i32 0, i32 0), i32 41)
+    call void @_WriteString(i8* %t17, i32 0, i32 0, i8* getelementptr inbounds ([42 x i8], [42 x i8]* @.str.118, i32 0, i32 0), i32 41)
     call void @_WriteLn(i8* %t17)
     ; line 823
     %t18 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t18)
     ; line 824
     %t19 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t19, i32 0, i32 0, i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.100, i32 0, i32 0), i32 14)
+    call void @_WriteString(i8* %t19, i32 0, i32 0, i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.119, i32 0, i32 0), i32 14)
     call void @_WriteLn(i8* %t19)
     ; line 825
     %t20 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t20)
     ; line 826
     %t21 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t21, i32 0, i32 0, i8* getelementptr inbounds ([57 x i8], [57 x i8]* @.str.101, i32 0, i32 0), i32 56)
+    call void @_WriteString(i8* %t21, i32 0, i32 0, i8* getelementptr inbounds ([57 x i8], [57 x i8]* @.str.120, i32 0, i32 0), i32 56)
     call void @_WriteLn(i8* %t21)
     ; line 827
     %t22 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t22, i32 0, i32 0, i8* getelementptr inbounds ([56 x i8], [56 x i8]* @.str.102, i32 0, i32 0), i32 55)
+    call void @_WriteString(i8* %t22, i32 0, i32 0, i8* getelementptr inbounds ([56 x i8], [56 x i8]* @.str.121, i32 0, i32 0), i32 55)
     call void @_WriteLn(i8* %t22)
     ; line 828
     %t23 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t23, i32 0, i32 0, i8* getelementptr inbounds ([62 x i8], [62 x i8]* @.str.103, i32 0, i32 0), i32 61)
+    call void @_WriteString(i8* %t23, i32 0, i32 0, i8* getelementptr inbounds ([62 x i8], [62 x i8]* @.str.122, i32 0, i32 0), i32 61)
     call void @_WriteLn(i8* %t23)
     ; line 829
     %t24 = getelementptr inbounds %Frame_instructions_page4, %Frame_instructions_page4* %.frame, i32 0, i32 0
@@ -2073,86 +2830,86 @@ define void @P_instructions_page5(%Frame_instructions* %.slink)
     call void @_WriteLn(i8* %t2)
     ; line 835
     %t3 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([61 x i8], [61 x i8]* @.str.104, i32 0, i32 0), i32 60)
+    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([61 x i8], [61 x i8]* @.str.123, i32 0, i32 0), i32 60)
     call void @_WriteLn(i8* %t3)
     ; line 836
     %t4 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t4, i32 0, i32 0, i8* getelementptr inbounds ([64 x i8], [64 x i8]* @.str.105, i32 0, i32 0), i32 63)
+    call void @_WriteString(i8* %t4, i32 0, i32 0, i8* getelementptr inbounds ([64 x i8], [64 x i8]* @.str.124, i32 0, i32 0), i32 63)
     call void @_WriteLn(i8* %t4)
     ; line 837
     %t5 = load %T_text, %T_text* @output
     call void @_WriteInteger(i8* %t5, i32 5, i32 0, i32 300)
-    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([50 x i8], [50 x i8]* @.str.106, i32 0, i32 0), i32 49)
+    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([50 x i8], [50 x i8]* @.str.125, i32 0, i32 0), i32 49)
     call void @_WriteLn(i8* %t5)
     ; line 838
     %t6 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t6, i32 0, i32 0, i8* getelementptr inbounds ([63 x i8], [63 x i8]* @.str.107, i32 0, i32 0), i32 62)
+    call void @_WriteString(i8* %t6, i32 0, i32 0, i8* getelementptr inbounds ([63 x i8], [63 x i8]* @.str.126, i32 0, i32 0), i32 62)
     call void @_WriteLn(i8* %t6)
     ; line 839
     %t7 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([54 x i8], [54 x i8]* @.str.108, i32 0, i32 0), i32 53)
+    call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([54 x i8], [54 x i8]* @.str.127, i32 0, i32 0), i32 53)
     call void @_WriteLn(i8* %t7)
     ; line 840
     %t8 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t8)
     ; line 841
     %t9 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t9, i32 0, i32 0, i8* getelementptr inbounds ([24 x i8], [24 x i8]* @.str.109, i32 0, i32 0), i32 23)
+    call void @_WriteString(i8* %t9, i32 0, i32 0, i8* getelementptr inbounds ([24 x i8], [24 x i8]* @.str.128, i32 0, i32 0), i32 23)
     call void @_WriteLn(i8* %t9)
     ; line 842
     %t10 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t10)
     ; line 843
     %t11 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t11, i32 0, i32 0, i8* getelementptr inbounds ([32 x i8], [32 x i8]* @.str.110, i32 0, i32 0), i32 31)
+    call void @_WriteString(i8* %t11, i32 0, i32 0, i8* getelementptr inbounds ([32 x i8], [32 x i8]* @.str.129, i32 0, i32 0), i32 31)
     call void @_WriteInteger(i8* %t11, i32 0, i32 0, i32 10)
-    call void @_WriteString(i8* %t11, i32 0, i32 0, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @.str.111, i32 0, i32 0), i32 18)
+    call void @_WriteString(i8* %t11, i32 0, i32 0, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @.str.130, i32 0, i32 0), i32 18)
     call void @_WriteLn(i8* %t11)
     ; line 844
     %t12 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t12, i32 0, i32 0, i8* getelementptr inbounds ([59 x i8], [59 x i8]* @.str.112, i32 0, i32 0), i32 58)
+    call void @_WriteString(i8* %t12, i32 0, i32 0, i8* getelementptr inbounds ([59 x i8], [59 x i8]* @.str.131, i32 0, i32 0), i32 58)
     call void @_WriteLn(i8* %t12)
     ; line 845
     %t13 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t13, i32 0, i32 0, i8* getelementptr inbounds ([60 x i8], [60 x i8]* @.str.113, i32 0, i32 0), i32 59)
+    call void @_WriteString(i8* %t13, i32 0, i32 0, i8* getelementptr inbounds ([60 x i8], [60 x i8]* @.str.132, i32 0, i32 0), i32 59)
     call void @_WriteLn(i8* %t13)
     ; line 846
     %t14 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t14, i32 0, i32 0, i8* getelementptr inbounds ([60 x i8], [60 x i8]* @.str.114, i32 0, i32 0), i32 59)
+    call void @_WriteString(i8* %t14, i32 0, i32 0, i8* getelementptr inbounds ([60 x i8], [60 x i8]* @.str.133, i32 0, i32 0), i32 59)
     call void @_WriteLn(i8* %t14)
     ; line 847
     %t15 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t15, i32 0, i32 0, i8* getelementptr inbounds ([60 x i8], [60 x i8]* @.str.115, i32 0, i32 0), i32 59)
+    call void @_WriteString(i8* %t15, i32 0, i32 0, i8* getelementptr inbounds ([60 x i8], [60 x i8]* @.str.134, i32 0, i32 0), i32 59)
     call void @_WriteLn(i8* %t15)
     ; line 848
     %t16 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t16, i32 0, i32 0, i8* getelementptr inbounds ([60 x i8], [60 x i8]* @.str.116, i32 0, i32 0), i32 59)
+    call void @_WriteString(i8* %t16, i32 0, i32 0, i8* getelementptr inbounds ([60 x i8], [60 x i8]* @.str.135, i32 0, i32 0), i32 59)
     call void @_WriteLn(i8* %t16)
     ; line 849
     %t17 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t17)
     ; line 850
     %t18 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t18, i32 0, i32 0, i8* getelementptr inbounds ([29 x i8], [29 x i8]* @.str.117, i32 0, i32 0), i32 28)
+    call void @_WriteString(i8* %t18, i32 0, i32 0, i8* getelementptr inbounds ([29 x i8], [29 x i8]* @.str.136, i32 0, i32 0), i32 28)
     call void @_WriteLn(i8* %t18)
     ; line 851
     %t19 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t19)
     ; line 852
     %t20 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t20, i32 0, i32 0, i8* getelementptr inbounds ([62 x i8], [62 x i8]* @.str.118, i32 0, i32 0), i32 61)
+    call void @_WriteString(i8* %t20, i32 0, i32 0, i8* getelementptr inbounds ([62 x i8], [62 x i8]* @.str.137, i32 0, i32 0), i32 61)
     call void @_WriteLn(i8* %t20)
     ; line 853
     %t21 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t21, i32 0, i32 0, i8* getelementptr inbounds ([62 x i8], [62 x i8]* @.str.119, i32 0, i32 0), i32 61)
+    call void @_WriteString(i8* %t21, i32 0, i32 0, i8* getelementptr inbounds ([62 x i8], [62 x i8]* @.str.138, i32 0, i32 0), i32 61)
     call void @_WriteLn(i8* %t21)
     ; line 854
     %t22 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t22, i32 0, i32 0, i8* getelementptr inbounds ([60 x i8], [60 x i8]* @.str.120, i32 0, i32 0), i32 59)
+    call void @_WriteString(i8* %t22, i32 0, i32 0, i8* getelementptr inbounds ([60 x i8], [60 x i8]* @.str.139, i32 0, i32 0), i32 59)
     call void @_WriteLn(i8* %t22)
     ; line 855
     %t23 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t23, i32 0, i32 0, i8* getelementptr inbounds ([53 x i8], [53 x i8]* @.str.121, i32 0, i32 0), i32 52)
+    call void @_WriteString(i8* %t23, i32 0, i32 0, i8* getelementptr inbounds ([53 x i8], [53 x i8]* @.str.140, i32 0, i32 0), i32 52)
     call void @_WriteLn(i8* %t23)
     ; line 856
     %t24 = getelementptr inbounds %Frame_instructions_page5, %Frame_instructions_page5* %.frame, i32 0, i32 0
@@ -2190,71 +2947,71 @@ define void @P_instructions_page6(%Frame_instructions* %.slink)
     call void @_WriteLn(i8* %t2)
     ; line 862
     %t3 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([25 x i8], [25 x i8]* @.str.122, i32 0, i32 0), i32 24)
+    call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([25 x i8], [25 x i8]* @.str.141, i32 0, i32 0), i32 24)
     call void @_WriteLn(i8* %t3)
     ; line 863
     %t4 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t4)
     ; line 864
     %t5 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([59 x i8], [59 x i8]* @.str.123, i32 0, i32 0), i32 58)
+    call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([59 x i8], [59 x i8]* @.str.142, i32 0, i32 0), i32 58)
     call void @_WriteLn(i8* %t5)
     ; line 865
     %t6 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t6, i32 0, i32 0, i8* getelementptr inbounds ([60 x i8], [60 x i8]* @.str.124, i32 0, i32 0), i32 59)
+    call void @_WriteString(i8* %t6, i32 0, i32 0, i8* getelementptr inbounds ([60 x i8], [60 x i8]* @.str.143, i32 0, i32 0), i32 59)
     call void @_WriteLn(i8* %t6)
     ; line 866
     %t7 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([59 x i8], [59 x i8]* @.str.125, i32 0, i32 0), i32 58)
+    call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([59 x i8], [59 x i8]* @.str.144, i32 0, i32 0), i32 58)
     call void @_WriteLn(i8* %t7)
     ; line 867
     %t8 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t8, i32 0, i32 0, i8* getelementptr inbounds ([58 x i8], [58 x i8]* @.str.126, i32 0, i32 0), i32 57)
+    call void @_WriteString(i8* %t8, i32 0, i32 0, i8* getelementptr inbounds ([58 x i8], [58 x i8]* @.str.145, i32 0, i32 0), i32 57)
     call void @_WriteLn(i8* %t8)
     ; line 868
     %t9 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t9, i32 0, i32 0, i8* getelementptr inbounds ([51 x i8], [51 x i8]* @.str.127, i32 0, i32 0), i32 50)
+    call void @_WriteString(i8* %t9, i32 0, i32 0, i8* getelementptr inbounds ([51 x i8], [51 x i8]* @.str.146, i32 0, i32 0), i32 50)
     call void @_WriteLn(i8* %t9)
     ; line 869
     %t10 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t10)
     ; line 870
     %t11 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t11, i32 0, i32 0, i8* getelementptr inbounds ([22 x i8], [22 x i8]* @.str.128, i32 0, i32 0), i32 21)
+    call void @_WriteString(i8* %t11, i32 0, i32 0, i8* getelementptr inbounds ([22 x i8], [22 x i8]* @.str.147, i32 0, i32 0), i32 21)
     call void @_WriteLn(i8* %t11)
     ; line 871
     %t12 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t12)
     ; line 872
     %t13 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t13, i32 0, i32 0, i8* getelementptr inbounds ([62 x i8], [62 x i8]* @.str.129, i32 0, i32 0), i32 61)
+    call void @_WriteString(i8* %t13, i32 0, i32 0, i8* getelementptr inbounds ([62 x i8], [62 x i8]* @.str.148, i32 0, i32 0), i32 61)
     call void @_WriteLn(i8* %t13)
     ; line 873
     %t14 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t14, i32 0, i32 0, i8* getelementptr inbounds ([53 x i8], [53 x i8]* @.str.130, i32 0, i32 0), i32 52)
+    call void @_WriteString(i8* %t14, i32 0, i32 0, i8* getelementptr inbounds ([53 x i8], [53 x i8]* @.str.149, i32 0, i32 0), i32 52)
     call void @_WriteLn(i8* %t14)
     ; line 874
     %t15 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t15)
     ; line 875
     %t16 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t16, i32 0, i32 0, i8* getelementptr inbounds ([57 x i8], [57 x i8]* @.str.131, i32 0, i32 0), i32 56)
+    call void @_WriteString(i8* %t16, i32 0, i32 0, i8* getelementptr inbounds ([57 x i8], [57 x i8]* @.str.150, i32 0, i32 0), i32 56)
     call void @_WriteLn(i8* %t16)
     ; line 876
     %t17 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t17, i32 0, i32 0, i8* getelementptr inbounds ([59 x i8], [59 x i8]* @.str.132, i32 0, i32 0), i32 58)
+    call void @_WriteString(i8* %t17, i32 0, i32 0, i8* getelementptr inbounds ([59 x i8], [59 x i8]* @.str.151, i32 0, i32 0), i32 58)
     call void @_WriteLn(i8* %t17)
     ; line 877
     %t18 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t18, i32 0, i32 0, i8* getelementptr inbounds ([59 x i8], [59 x i8]* @.str.133, i32 0, i32 0), i32 58)
+    call void @_WriteString(i8* %t18, i32 0, i32 0, i8* getelementptr inbounds ([59 x i8], [59 x i8]* @.str.152, i32 0, i32 0), i32 58)
     call void @_WriteLn(i8* %t18)
     ; line 878
     %t19 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t19, i32 0, i32 0, i8* getelementptr inbounds ([58 x i8], [58 x i8]* @.str.134, i32 0, i32 0), i32 57)
+    call void @_WriteString(i8* %t19, i32 0, i32 0, i8* getelementptr inbounds ([58 x i8], [58 x i8]* @.str.153, i32 0, i32 0), i32 57)
     call void @_WriteLn(i8* %t19)
     ; line 879
     %t20 = load %T_text, %T_text* @output
-    call void @_WriteString(i8* %t20, i32 0, i32 0, i8* getelementptr inbounds ([42 x i8], [42 x i8]* @.str.135, i32 0, i32 0), i32 41)
+    call void @_WriteString(i8* %t20, i32 0, i32 0, i8* getelementptr inbounds ([42 x i8], [42 x i8]* @.str.154, i32 0, i32 0), i32 41)
     call void @_WriteLn(i8* %t20)
     ; line 880
     %t21 = load %T_text, %T_text* @output
@@ -2292,6 +3049,118 @@ define void @P_finishgame()
 
     ; body
     ; line 916
+    br label %L_OR_expr_1
+L_OR_expr_1:
+    %t3 = load i32, i32* @curenergy
+    %t2 = icmp sle i32 %t3, 0
+    br i1 %t2, label %L_OR_shortcut_1, label %L_OR_eval_1
+L_OR_eval_1:
+    %t5 = load i32, i32* @curyear
+    %t6 = load i32, i32* @endyear
+    %t4 = icmp sge i32 %t5, %t6
+    br label %L_OR_shortcut_1
+L_OR_shortcut_1:
+    %t1 = phi [%t4, %L_OR_eval_1], [true, %L_OR_expr_1]
+    br i1 %t1, label %L_then_2, label %L_else_2
+L_then_2:
+    ; line 918
+    %t7 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.155, i32 0, i32 0), i32 15)
+    %t8 = load i32, i32* @curyear
+    call void @_WriteInteger(i8* %t7, i32 1, i32 0, i32 %t8)
+    call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([27 x i8], [27 x i8]* @.str.156, i32 0, i32 0), i32 26)
+    call void @_WriteLn(i8* %t7)
+    ; line 919
+    %t9 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t9, i32 0, i32 0, i8* getelementptr inbounds ([53 x i8], [53 x i8]* @.str.157, i32 0, i32 0), i32 52)
+    call void @_WriteLn(i8* %t9)
+    ; line 920
+    %t10 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t10, i32 0, i32 0, i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.158, i32 0, i32 0), i32 10)
+    %t11 = load i32, i32* @totalklingons
+    call void @_WriteInteger(i8* %t10, i32 1, i32 0, i32 %t11)
+    call void @_WriteString(i8* %t10, i32 0, i32 0, i8* getelementptr inbounds ([26 x i8], [26 x i8]* @.str.159, i32 0, i32 0), i32 25)
+    call void @_WriteLn(i8* %t10)
+    ; line 921
+    %t12 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t12, i32 0, i32 0, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.160, i32 0, i32 0), i32 13)
+    call void @_WriteLn(i8* %t12)
+    ; nop
+    br label %L_endif_2
+L_else_2:
+    ; line 925
+    %t13 = getelementptr inbounds %Frame_finishgame, %Frame_finishgame* %.frame, i32 0, i32 0
+    %t16 = load i32, i32* @startklingons
+    %t18 = load i32, i32* @curyear
+    %t19 = load i32, i32* @startyear
+    %t17 = sub i32 %t18, %t19
+    %t15 = sdiv i32 %t16, %t17
+    %t14 = mul i32 %t15, 100
+    store i32 %t14, i32* %t13
+    ; line 926
+    %t20 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t20, i32 0, i32 0, i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.155, i32 0, i32 0), i32 15)
+    %t21 = load i32, i32* @curyear
+    call void @_WriteInteger(i8* %t20, i32 1, i32 0, i32 %t21)
+    call void @_WriteString(i8* %t20, i32 0, i32 0, i8* getelementptr inbounds ([27 x i8], [27 x i8]* @.str.161, i32 0, i32 0), i32 26)
+    call void @_WriteLn(i8* %t20)
+    ; line 927
+    %t22 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t22, i32 0, i32 0, i8* getelementptr inbounds ([58 x i8], [58 x i8]* @.str.162, i32 0, i32 0), i32 57)
+    call void @_WriteLn(i8* %t22)
+    ; line 928
+    %t23 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t23, i32 0, i32 0, i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.163, i32 0, i32 0), i32 17)
+    ; line 929
+    %t25 = load i32, i32* @badpoints
+    %t27 = getelementptr inbounds %Frame_finishgame, %Frame_finishgame* %.frame, i32 0, i32 0
+    %t26 = load i32, i32* %t27
+    %t24 = icmp sgt i32 %t25, %t26
+    br i1 %t24, label %L_then_3, label %L_else_3
+L_then_3:
+    ; line 931
+    %t28 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t28, i32 0, i32 0, i8* getelementptr inbounds ([33 x i8], [33 x i8]* @.str.164, i32 0, i32 0), i32 32)
+    call void @_WriteLn(i8* %t28)
+    ; line 932
+    %t29 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t29, i32 0, i32 0, i8* getelementptr inbounds ([52 x i8], [52 x i8]* @.str.165, i32 0, i32 0), i32 51)
+    call void @_WriteLn(i8* %t29)
+    ; line 933
+    %t30 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t30, i32 0, i32 0, i8* getelementptr inbounds ([50 x i8], [50 x i8]* @.str.166, i32 0, i32 0), i32 49)
+    call void @_WriteLn(i8* %t30)
+    ; line 934
+    %t31 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t31, i32 0, i32 0, i8* getelementptr inbounds ([20 x i8], [20 x i8]* @.str.167, i32 0, i32 0), i32 19)
+    call void @_WriteLn(i8* %t31)
+    ; nop
+    br label %L_endif_3
+L_else_3:
+    ; line 938
+    %t32 = load %T_text, %T_text* @output
+    call void @_WriteString(i8* %t32, i32 0, i32 0, i8* getelementptr inbounds ([34 x i8], [34 x i8]* @.str.168, i32 0, i32 0), i32 33)
+    call void @_WriteLn(i8* %t32)
+    ; line 939
+    %t33 = load %T_text, %T_text* @output
+    %t34 = load i32, i32* @startklingons
+    call void @_WriteInteger(i8* %t33, i32 1, i32 0, i32 %t34)
+    call void @_WriteString(i8* %t33, i32 0, i32 0, i8* getelementptr inbounds ([14 x i8], [14 x i8]* @.str.169, i32 0, i32 0), i32 13)
+    %t36 = load i32, i32* @curyear
+    %t37 = load i32, i32* @startyear
+    %t35 = sub i32 %t36, %t37
+    call void @_WriteInteger(i8* %t33, i32 1, i32 0, i32 %t35)
+    call void @_WriteString(i8* %t33, i32 0, i32 0, i8* getelementptr inbounds ([26 x i8], [26 x i8]* @.str.170, i32 0, i32 0), i32 25)
+    %t39 = getelementptr inbounds %Frame_finishgame, %Frame_finishgame* %.frame, i32 0, i32 0
+    %t38 = load i32, i32* %t39
+    call void @_WriteInteger(i8* %t33, i32 1, i32 0, i32 %t38)
+    call void @_WriteLn(i8* %t33)
+    ; nop
+    br label %L_endif_3
+L_endif_3:
+    ; nop
+    br label %L_endif_2
+L_endif_2:
     ; nop
 
     ; epilogue
@@ -2302,141 +3171,176 @@ define void @P_finishgame()
 ;================================================================================
 ; string literals
 
-@.str.80 = private unnamed_addr constant [14 x i8] c"             \00", align 1
-@.str.56 = private unnamed_addr constant [23 x i8] c"                     0\00", align 1
-@.str.60 = private unnamed_addr constant [25 x i8] c"                    /|\5C\5C\00", align 1
-@.str.62 = private unnamed_addr constant [24 x i8] c"                    180\00", align 1
-@.str.58 = private unnamed_addr constant [25 x i8] c"                    \5C\5C|/\00", align 1
-@.str.61 = private unnamed_addr constant [27 x i8] c"                 225 | 135\00", align 1
-@.str.57 = private unnamed_addr constant [26 x i8] c"                 315 | 45\00", align 1
-@.str.59 = private unnamed_addr constant [28 x i8] c"               270 --*-- 90\00", align 1
-@.str.67 = private unnamed_addr constant [53 x i8] c"            1  =                         1 quadrant.\00", align 1
-@.str.68 = private unnamed_addr constant [54 x i8] c"            2  =                         2 quadrants.\00", align 1
-@.str.85 = private unnamed_addr constant [30 x i8] c"            a Federation base\00", align 1
-@.str.87 = private unnamed_addr constant [27 x i8] c"            a Klingon base\00", align 1
-@.str.86 = private unnamed_addr constant [27 x i8] c"            a Klingon ship\00", align 1
-@.str.82 = private unnamed_addr constant [26 x i8] c"            a stable star\00", align 1
-@.str.83 = private unnamed_addr constant [29 x i8] c"            an unstable star\00", align 1
-@.str.81 = private unnamed_addr constant [24 x i8] c"            empty space\00", align 1
-@.str.84 = private unnamed_addr constant [27 x i8] c"            the Enterprise\00", align 1
-@.str.66 = private unnamed_addr constant [52 x i8] c"           .5  =                         4 sectors.\00", align 1
-@.str.79 = private unnamed_addr constant [34 x i8] c"          Symbol          Meaning\00", align 1
-@.str.94 = private unnamed_addr constant [58 x i8] c"        HUNDREDS                            KLINGON SHIPS\00", align 1
-@.str.93 = private unnamed_addr constant [62 x i8] c"        TENS                                FEDERATION BASES.\00", align 1
-@.str.95 = private unnamed_addr constant [58 x i8] c"        THOUSANDS                           KLINGON BASES\00", align 1
-@.str.65 = private unnamed_addr constant [51 x i8] c"     Warp  .2  =  The Enterprise travels 1 sector.\00", align 1
-@.str.98 = private unnamed_addr constant [59 x i8] c"    206 means 2 Klingons, 0 Federation bases, and 6 stars.\00", align 1
-@.str.97 = private unnamed_addr constant [58 x i8] c"    319 means 3 Klingons, 1 Federation base, and 9 stars.\00", align 1
-@.str.92 = private unnamed_addr constant [51 x i8] c"    The ONES digit represents the number of STARS.\00", align 1
-@.str.99 = private unnamed_addr constant [42 x i8] c"   1007 means 1 Klingon base and 7 stars.\00", align 1
-@.str.64 = private unnamed_addr constant [48 x i8] c"   Distance traveled = <warp factor> quadrants.\00", align 1
-@.str.69 = private unnamed_addr constant [55 x i8] c"   For example, if you travel from quadrant 1-1 in the\00", align 1
-@.str.54 = private unnamed_addr constant [54 x i8] c"   Numbers indicate direction starting at the top and\00", align 1
-@.str.70 = private unnamed_addr constant [56 x i8] c"   direction of 90 degrees at warp 2, you would stop at\00", align 1
-@.str.55 = private unnamed_addr constant [28 x i8] c"   going counter clockwise.\00", align 1
-@.str.73 = private unnamed_addr constant [60 x i8] c"   is blocked by something during an intra-quadrant travel,\00", align 1
-@.str.74 = private unnamed_addr constant [55 x i8] c"   it will stop in front of it (and waste a stardate).\00", align 1
-@.str.71 = private unnamed_addr constant [58 x i8] c"   quadrant 1-3 in the next stardate.  NOTE: every use of\00", align 1
-@.str.72 = private unnamed_addr constant [59 x i8] c"   the warp engines takes one stardate.  If the Enterprise\00", align 1
-@.str.40 = private unnamed_addr constant [32 x i8] c"  0   1   2   3   4   5   6   7\00", align 1
-@.str.101 = private unnamed_addr constant [57 x i8] c"  Any portion of the energy available can be fired.  The\00", align 1
-@.str.96 = private unnamed_addr constant [15 x i8] c"  For example:\00", align 1
-@.str.110 = private unnamed_addr constant [32 x i8] c"  Initially the Enterprise has \00", align 1
-@.str.129 = private unnamed_addr constant [62 x i8] c"  It is possible to implement a self-destruct sequence merely\00", align 1
-@.str.112 = private unnamed_addr constant [59 x i8] c"  One torpedo destroys whatever it hits.  The range of the\00", align 1
-@.str.118 = private unnamed_addr constant [62 x i8] c"  The damage control report lists the state of repair of each\00", align 1
-@.str.78 = private unnamed_addr constant [50 x i8] c"  The following symbols have meanings as follows:\00", align 1
-@.str.123 = private unnamed_addr constant [59 x i8] c"  The history computers keep a record of all the quadrants\00", align 1
-@.str.89 = private unnamed_addr constant [57 x i8] c"  The long range sensors display the objects in the nine\00", align 1
-@.str.76 = private unnamed_addr constant [58 x i8] c"  The short range sensors display a detailed view of the \00", align 1
-@.str.108 = private unnamed_addr constant [54 x i8] c"  against stars, Klingon bases, and Federation bases.\00", align 1
-@.str.102 = private unnamed_addr constant [56 x i8] c"  battle computer divides this amount among the Klingon\00", align 1
-@.str.130 = private unnamed_addr constant [53 x i8] c"  by invoking this command.  The game is terminated.\00", align 1
-@.str.90 = private unnamed_addr constant [52 x i8] c"  closest quadrants.  Each digit in each box means \00", align 1
-@.str.119 = private unnamed_addr constant [62 x i8] c"  device.  A non-zero state indicates the number of stardates\00", align 1
-@.str.105 = private unnamed_addr constant [64 x i8] c"  distance to the target.  A Klingon battle cruiser starts with\00", align 1
-@.str.126 = private unnamed_addr constant [58 x i8] c"  except that the entire galaxy is displayed.  A quadrant\00", align 1
-@.str.91 = private unnamed_addr constant [19 x i8] c"  means something:\00", align 1
-@.str.104 = private unnamed_addr constant [61 x i8] c"  of fire.  The effectiveness of a hit depends mostly on the\00", align 1
-@.str.113 = private unnamed_addr constant [60 x i8] c"  photon torpedoes (like phasers) is limited to the current\00", align 1
-@.str.77 = private unnamed_addr constant [55 x i8] c"  quadrant currently occupied by the Enterprise.  The \00", align 1
-@.str.114 = private unnamed_addr constant [60 x i8] c"  quadrant.  The course of a photon torpedo is set the same\00", align 1
-@.str.120 = private unnamed_addr constant [60 x i8] c"  required to repair the device.  Devices can be damaged by\00", align 1
-@.str.116 = private unnamed_addr constant [60 x i8] c"  restocked when the Enterprise docks at a Federation base.\00", align 1
-@.str.124 = private unnamed_addr constant [60 x i8] c"  scanned with the long range scanners.  The history report\00", align 1
-@.str.103 = private unnamed_addr constant [62 x i8] c"  ships in the quadrant and determines the various directions\00", align 1
-@.str.121 = private unnamed_addr constant [53 x i8] c"  space storms, and are repaired by time and truces.\00", align 1
-@.str.127 = private unnamed_addr constant [51 x i8] c"  that has not been scanned is printed as \22+++++\22.\00", align 1
-@.str.125 = private unnamed_addr constant [59 x i8] c"  uses the same display format as the long range scanners,\00", align 1
-@.str.115 = private unnamed_addr constant [60 x i8] c"  way as that of the Enterprise.  Torpedoes and phasers are\00", align 1
-@.str.107 = private unnamed_addr constant [63 x i8] c"  whatever energy is left.  Note that phasers are ineffective \00", align 1
-@.str.117 = private unnamed_addr constant [29 x i8] c" :: Damage Control Report ::\00", align 1
-@.str.122 = private unnamed_addr constant [25 x i8] c" :: History Computers ::\00", align 1
-@.str.88 = private unnamed_addr constant [26 x i8] c" :: Long Range Sensors ::\00", align 1
-@.str.100 = private unnamed_addr constant [15 x i8] c" :: Phasers ::\00", align 1
-@.str.109 = private unnamed_addr constant [24 x i8] c" :: Photon Torpedoes ::\00", align 1
-@.str.75 = private unnamed_addr constant [27 x i8] c" :: Short Range Sensors ::\00", align 1
-@.str.128 = private unnamed_addr constant [22 x i8] c" :: Suicide Device ::\00", align 1
-@.str.52 = private unnamed_addr constant [20 x i8] c" :: Warp Engines ::\00", align 1
-@.str.53 = private unnamed_addr constant [31 x i8] c" Course = a number in degrees.\00", align 1
-@.str.23 = private unnamed_addr constant [35 x i8] c" Klingons were killed while docked\00", align 1
-@.str.63 = private unnamed_addr constant [43 x i8] c" Warp Factor = a REAL number from 0 to 12.\00", align 1
-@.str.29 = private unnamed_addr constant [18 x i8] c" battle cruisers.\00", align 1
-@.str.111 = private unnamed_addr constant [19 x i8] c" photon torpedoes.\00", align 1
-@.str.31 = private unnamed_addr constant [25 x i8] c" solar years to complete\00", align 1
-@.str.106 = private unnamed_addr constant [50 x i8] c" units of energy.  It can fire an amount equal to\00", align 1
-@.str.33 = private unnamed_addr constant [9 x i8] c").  The \00", align 1
-@.str.22 = private unnamed_addr constant [35 x i8] c"*** Klingon Starbase DESTROYED ***\00", align 1
-@.str.35 = private unnamed_addr constant [10 x i8] c", sector \00", align 1
-@.str.41 = private unnamed_addr constant [34 x i8] c"---------------------------------\00", align 1
-@.str.51 = private unnamed_addr constant [16 x i8] c"::: DEVICES :::\00", align 1
-@.str.25 = private unnamed_addr constant [48 x i8] c"As commander of the United Starship Enterprise,\00", align 1
+@.str.99 = private unnamed_addr constant [14 x i8] c"             \00", align 1
+@.str.75 = private unnamed_addr constant [23 x i8] c"                     0\00", align 1
+@.str.79 = private unnamed_addr constant [25 x i8] c"                    /|\5C\5C\00", align 1
+@.str.81 = private unnamed_addr constant [24 x i8] c"                    180\00", align 1
+@.str.77 = private unnamed_addr constant [25 x i8] c"                    \5C\5C|/\00", align 1
+@.str.80 = private unnamed_addr constant [27 x i8] c"                 225 | 135\00", align 1
+@.str.76 = private unnamed_addr constant [26 x i8] c"                 315 | 45\00", align 1
+@.str.78 = private unnamed_addr constant [28 x i8] c"               270 --*-- 90\00", align 1
+@.str.86 = private unnamed_addr constant [53 x i8] c"            1  =                         1 quadrant.\00", align 1
+@.str.87 = private unnamed_addr constant [54 x i8] c"            2  =                         2 quadrants.\00", align 1
+@.str.104 = private unnamed_addr constant [30 x i8] c"            a Federation base\00", align 1
+@.str.106 = private unnamed_addr constant [27 x i8] c"            a Klingon base\00", align 1
+@.str.105 = private unnamed_addr constant [27 x i8] c"            a Klingon ship\00", align 1
+@.str.101 = private unnamed_addr constant [26 x i8] c"            a stable star\00", align 1
+@.str.102 = private unnamed_addr constant [29 x i8] c"            an unstable star\00", align 1
+@.str.100 = private unnamed_addr constant [24 x i8] c"            empty space\00", align 1
+@.str.103 = private unnamed_addr constant [27 x i8] c"            the Enterprise\00", align 1
+@.str.85 = private unnamed_addr constant [52 x i8] c"           .5  =                         4 sectors.\00", align 1
+@.str.98 = private unnamed_addr constant [34 x i8] c"          Symbol          Meaning\00", align 1
+@.str.113 = private unnamed_addr constant [58 x i8] c"        HUNDREDS                            KLINGON SHIPS\00", align 1
+@.str.112 = private unnamed_addr constant [62 x i8] c"        TENS                                FEDERATION BASES.\00", align 1
+@.str.114 = private unnamed_addr constant [58 x i8] c"        THOUSANDS                           KLINGON BASES\00", align 1
+@.str.84 = private unnamed_addr constant [51 x i8] c"     Warp  .2  =  The Enterprise travels 1 sector.\00", align 1
+@.str.117 = private unnamed_addr constant [59 x i8] c"    206 means 2 Klingons, 0 Federation bases, and 6 stars.\00", align 1
+@.str.116 = private unnamed_addr constant [58 x i8] c"    319 means 3 Klingons, 1 Federation base, and 9 stars.\00", align 1
+@.str.111 = private unnamed_addr constant [51 x i8] c"    The ONES digit represents the number of STARS.\00", align 1
+@.str.118 = private unnamed_addr constant [42 x i8] c"   1007 means 1 Klingon base and 7 stars.\00", align 1
+@.str.83 = private unnamed_addr constant [48 x i8] c"   Distance traveled = <warp factor> quadrants.\00", align 1
+@.str.88 = private unnamed_addr constant [55 x i8] c"   For example, if you travel from quadrant 1-1 in the\00", align 1
+@.str.73 = private unnamed_addr constant [54 x i8] c"   Numbers indicate direction starting at the top and\00", align 1
+@.str.89 = private unnamed_addr constant [56 x i8] c"   direction of 90 degrees at warp 2, you would stop at\00", align 1
+@.str.74 = private unnamed_addr constant [28 x i8] c"   going counter clockwise.\00", align 1
+@.str.92 = private unnamed_addr constant [60 x i8] c"   is blocked by something during an intra-quadrant travel,\00", align 1
+@.str.93 = private unnamed_addr constant [55 x i8] c"   it will stop in front of it (and waste a stardate).\00", align 1
+@.str.90 = private unnamed_addr constant [58 x i8] c"   quadrant 1-3 in the next stardate.  NOTE: every use of\00", align 1
+@.str.91 = private unnamed_addr constant [59 x i8] c"   the warp engines takes one stardate.  If the Enterprise\00", align 1
+@.str.59 = private unnamed_addr constant [32 x i8] c"  0   1   2   3   4   5   6   7\00", align 1
+@.str.120 = private unnamed_addr constant [57 x i8] c"  Any portion of the energy available can be fired.  The\00", align 1
+@.str.115 = private unnamed_addr constant [15 x i8] c"  For example:\00", align 1
+@.str.129 = private unnamed_addr constant [32 x i8] c"  Initially the Enterprise has \00", align 1
+@.str.148 = private unnamed_addr constant [62 x i8] c"  It is possible to implement a self-destruct sequence merely\00", align 1
+@.str.131 = private unnamed_addr constant [59 x i8] c"  One torpedo destroys whatever it hits.  The range of the\00", align 1
+@.str.137 = private unnamed_addr constant [62 x i8] c"  The damage control report lists the state of repair of each\00", align 1
+@.str.97 = private unnamed_addr constant [50 x i8] c"  The following symbols have meanings as follows:\00", align 1
+@.str.142 = private unnamed_addr constant [59 x i8] c"  The history computers keep a record of all the quadrants\00", align 1
+@.str.108 = private unnamed_addr constant [57 x i8] c"  The long range sensors display the objects in the nine\00", align 1
+@.str.95 = private unnamed_addr constant [58 x i8] c"  The short range sensors display a detailed view of the \00", align 1
+@.str.127 = private unnamed_addr constant [54 x i8] c"  against stars, Klingon bases, and Federation bases.\00", align 1
+@.str.121 = private unnamed_addr constant [56 x i8] c"  battle computer divides this amount among the Klingon\00", align 1
+@.str.149 = private unnamed_addr constant [53 x i8] c"  by invoking this command.  The game is terminated.\00", align 1
+@.str.109 = private unnamed_addr constant [52 x i8] c"  closest quadrants.  Each digit in each box means \00", align 1
+@.str.138 = private unnamed_addr constant [62 x i8] c"  device.  A non-zero state indicates the number of stardates\00", align 1
+@.str.124 = private unnamed_addr constant [64 x i8] c"  distance to the target.  A Klingon battle cruiser starts with\00", align 1
+@.str.145 = private unnamed_addr constant [58 x i8] c"  except that the entire galaxy is displayed.  A quadrant\00", align 1
+@.str.110 = private unnamed_addr constant [19 x i8] c"  means something:\00", align 1
+@.str.123 = private unnamed_addr constant [61 x i8] c"  of fire.  The effectiveness of a hit depends mostly on the\00", align 1
+@.str.132 = private unnamed_addr constant [60 x i8] c"  photon torpedoes (like phasers) is limited to the current\00", align 1
+@.str.96 = private unnamed_addr constant [55 x i8] c"  quadrant currently occupied by the Enterprise.  The \00", align 1
+@.str.133 = private unnamed_addr constant [60 x i8] c"  quadrant.  The course of a photon torpedo is set the same\00", align 1
+@.str.139 = private unnamed_addr constant [60 x i8] c"  required to repair the device.  Devices can be damaged by\00", align 1
+@.str.135 = private unnamed_addr constant [60 x i8] c"  restocked when the Enterprise docks at a Federation base.\00", align 1
+@.str.143 = private unnamed_addr constant [60 x i8] c"  scanned with the long range scanners.  The history report\00", align 1
+@.str.122 = private unnamed_addr constant [62 x i8] c"  ships in the quadrant and determines the various directions\00", align 1
+@.str.140 = private unnamed_addr constant [53 x i8] c"  space storms, and are repaired by time and truces.\00", align 1
+@.str.146 = private unnamed_addr constant [51 x i8] c"  that has not been scanned is printed as \22+++++\22.\00", align 1
+@.str.144 = private unnamed_addr constant [59 x i8] c"  uses the same display format as the long range scanners,\00", align 1
+@.str.134 = private unnamed_addr constant [60 x i8] c"  way as that of the Enterprise.  Torpedoes and phasers are\00", align 1
+@.str.126 = private unnamed_addr constant [63 x i8] c"  whatever energy is left.  Note that phasers are ineffective \00", align 1
+@.str.136 = private unnamed_addr constant [29 x i8] c" :: Damage Control Report ::\00", align 1
+@.str.141 = private unnamed_addr constant [25 x i8] c" :: History Computers ::\00", align 1
+@.str.107 = private unnamed_addr constant [26 x i8] c" :: Long Range Sensors ::\00", align 1
+@.str.119 = private unnamed_addr constant [15 x i8] c" :: Phasers ::\00", align 1
+@.str.128 = private unnamed_addr constant [24 x i8] c" :: Photon Torpedoes ::\00", align 1
+@.str.94 = private unnamed_addr constant [27 x i8] c" :: Short Range Sensors ::\00", align 1
+@.str.147 = private unnamed_addr constant [22 x i8] c" :: Suicide Device ::\00", align 1
+@.str.71 = private unnamed_addr constant [20 x i8] c" :: Warp Engines ::\00", align 1
+@.str.72 = private unnamed_addr constant [31 x i8] c" Course = a number in degrees.\00", align 1
+@.str.159 = private unnamed_addr constant [26 x i8] c" Klingon battle cruisers.\00", align 1
+@.str.169 = private unnamed_addr constant [14 x i8] c" Klingons in \00", align 1
+@.str.42 = private unnamed_addr constant [35 x i8] c" Klingons were killed while docked\00", align 1
+@.str.82 = private unnamed_addr constant [43 x i8] c" Warp Factor = a REAL number from 0 to 12.\00", align 1
+@.str.48 = private unnamed_addr constant [18 x i8] c" battle cruisers.\00", align 1
+@.str.28 = private unnamed_addr constant [13 x i8] c" damaged ***\00", align 1
+@.str.130 = private unnamed_addr constant [19 x i8] c" photon torpedoes.\00", align 1
+@.str.50 = private unnamed_addr constant [25 x i8] c" solar years to complete\00", align 1
+@.str.30 = private unnamed_addr constant [30 x i8] c" state of repair improved ***\00", align 1
+@.str.40 = private unnamed_addr constant [17 x i8] c" units of energy\00", align 1
+@.str.125 = private unnamed_addr constant [50 x i8] c" units of energy.  It can fire an amount equal to\00", align 1
+@.str.170 = private unnamed_addr constant [26 x i8] c" years gives a rating of \00", align 1
+@.str.52 = private unnamed_addr constant [9 x i8] c").  The \00", align 1
+@.str.41 = private unnamed_addr constant [35 x i8] c"*** Klingon Starbase DESTROYED ***\00", align 1
+@.str.17 = private unnamed_addr constant [39 x i8] c"*** Short Range Sensors Inoperable ***\00", align 1
+@.str.27 = private unnamed_addr constant [18 x i8] c"*** Space storm, \00", align 1
+@.str.29 = private unnamed_addr constant [12 x i8] c"*** Truce, \00", align 1
+@.str.54 = private unnamed_addr constant [10 x i8] c", sector \00", align 1
+@.str.18 = private unnamed_addr constant [23 x i8] c"----------------------\00", align 1
+@.str.60 = private unnamed_addr constant [34 x i8] c"---------------------------------\00", align 1
+@.str.156 = private unnamed_addr constant [27 x i8] c".  The Enterprise has been\00", align 1
+@.str.161 = private unnamed_addr constant [27 x i8] c".  The last Klingon battle\00", align 1
+@.str.70 = private unnamed_addr constant [16 x i8] c"::: DEVICES :::\00", align 1
+@.str.34 = private unnamed_addr constant [31 x i8] c"All photon torpedoes expended.\00", align 1
+@.str.44 = private unnamed_addr constant [48 x i8] c"As commander of the United Starship Enterprise,\00", align 1
 @.str.14 = private unnamed_addr constant [11 x i8] c"Black     \00", align 1
-@.str.17 = private unnamed_addr constant [9 x i8] c"Course: \00", align 1
+@.str.24 = private unnamed_addr constant [24 x i8] c"Can't move that fast !!\00", align 1
+@.str.25 = private unnamed_addr constant [53 x i8] c"Collision with starbase's elastic shields at sector \00", align 1
+@.str.22 = private unnamed_addr constant [9 x i8] c"Course: \00", align 1
 @.str.8 = private unnamed_addr constant [21 x i8] c"Damage Control      \00", align 1
-@.str.16 = private unnamed_addr constant [31 x i8] c"Device name:      Repair Time:\00", align 1
-@.str.36 = private unnamed_addr constant [42 x i8] c"Do you need further instructions (y/n) ? \00", align 1
+@.str.21 = private unnamed_addr constant [31 x i8] c"Device name:      Repair Time:\00", align 1
+@.str.55 = private unnamed_addr constant [42 x i8] c"Do you need further instructions (y/n) ? \00", align 1
 @.str.15 = private unnamed_addr constant [11 x i8] c"Docked    \00", align 1
-@.str.50 = private unnamed_addr constant [52 x i8] c"Each quadrant is similarly divided into 64 sectors.\00", align 1
-@.str.34 = private unnamed_addr constant [37 x i8] c"Enterprise is currently in quadrant \00", align 1
-@.str.135 = private unnamed_addr constant [42 x i8] c"Federation starbase.  G O O D   L U C K !\00", align 1
+@.str.69 = private unnamed_addr constant [52 x i8] c"Each quadrant is similarly divided into 64 sectors.\00", align 1
+@.str.26 = private unnamed_addr constant [40 x i8] c"Enterprise blocked by object at sector \00", align 1
+@.str.53 = private unnamed_addr constant [37 x i8] c"Enterprise is currently in quadrant \00", align 1
+@.str.39 = private unnamed_addr constant [18 x i8] c"Enterprise loses \00", align 1
+@.str.154 = private unnamed_addr constant [42 x i8] c"Federation starbase.  G O O D   L U C K !\00", align 1
 @.str.12 = private unnamed_addr constant [11 x i8] c"Green     \00", align 1
+@.str.20 = private unnamed_addr constant [35 x i8] c"History Computer Report; Stardate \00", align 1
 @.str.9 = private unnamed_addr constant [21 x i8] c"History Computers   \00", align 1
-@.str.37 = private unnamed_addr constant [25 x i8] c"Hit <return> to continue\00", align 1
-@.str.28 = private unnamed_addr constant [27 x i8] c"Klingon invasion force of \00", align 1
-@.str.27 = private unnamed_addr constant [51 x i8] c"Klingon menace.  To do this, you must destroy the \00", align 1
+@.str.56 = private unnamed_addr constant [25 x i8] c"Hit <return> to continue\00", align 1
+@.str.164 = private unnamed_addr constant [33 x i8] c"However, because of your wanton \00", align 1
+@.str.155 = private unnamed_addr constant [16 x i8] c"It is stardate \00", align 1
+@.str.47 = private unnamed_addr constant [27 x i8] c"Klingon invasion force of \00", align 1
+@.str.46 = private unnamed_addr constant [51 x i8] c"Klingon menace.  To do this, you must destroy the \00", align 1
+@.str.19 = private unnamed_addr constant [37 x i8] c"Long Range Sensor Scan For Quadrant \00", align 1
 @.str.5 = private unnamed_addr constant [21 x i8] c"Long Range Sensors  \00", align 1
-@.str.20 = private unnamed_addr constant [26 x i8] c"Number of units to fire: \00", align 1
-@.str.24 = private unnamed_addr constant [19 x i8] c"Orders:  Stardate \00", align 1
+@.str.32 = private unnamed_addr constant [26 x i8] c"Number of units to fire: \00", align 1
+@.str.43 = private unnamed_addr constant [19 x i8] c"Orders:  Stardate \00", align 1
 @.str.6 = private unnamed_addr constant [21 x i8] c"Phaser Control      \00", align 1
-@.str.19 = private unnamed_addr constant [47 x i8] c"Phasers locked on target.  Energy available = \00", align 1
+@.str.31 = private unnamed_addr constant [47 x i8] c"Phasers locked on target.  Energy available = \00", align 1
 @.str.7 = private unnamed_addr constant [21 x i8] c"Photon Tubes        \00", align 1
 @.str.11 = private unnamed_addr constant [11 x i8] c"Red       \00", align 1
 @.str.10 = private unnamed_addr constant [21 x i8] c"Self Destruct       \00", align 1
 @.str.4 = private unnamed_addr constant [21 x i8] c"Short Range Sensors \00", align 1
-@.str.38 = private unnamed_addr constant [49 x i8] c"The galaxy is divided into 64 quadrants with the\00", align 1
-@.str.131 = private unnamed_addr constant [57 x i8] c"To get a list of all commands, type \229\22 when asked for a\00", align 1
-@.str.21 = private unnamed_addr constant [37 x i8] c"Torpedo causes unstable star to nova\00", align 1
+@.str.16 = private unnamed_addr constant [40 x i8] c"Starbase shields protect the Enterprise\00", align 1
+@.str.57 = private unnamed_addr constant [49 x i8] c"The galaxy is divided into 64 quadrants with the\00", align 1
+@.str.150 = private unnamed_addr constant [57 x i8] c"To get a list of all commands, type \229\22 when asked for a\00", align 1
+@.str.38 = private unnamed_addr constant [37 x i8] c"Torpedo causes unstable star to nova\00", align 1
+@.str.35 = private unnamed_addr constant [17 x i8] c"Torpedo course: \00", align 1
+@.str.37 = private unnamed_addr constant [16 x i8] c"Torpedo missed.\00", align 1
+@.str.36 = private unnamed_addr constant [15 x i8] c"Torpedo track:\00", align 1
+@.str.33 = private unnamed_addr constant [16 x i8] c"Unable to fire.\00", align 1
 @.str.3 = private unnamed_addr constant [21 x i8] c"Warp Engines        \00", align 1
-@.str.18 = private unnamed_addr constant [21 x i8] c"Warp factor (0-12): \00", align 1
+@.str.23 = private unnamed_addr constant [21 x i8] c"Warp factor (0-12): \00", align 1
 @.str.13 = private unnamed_addr constant [11 x i8] c"Yellow    \00", align 1
-@.str.30 = private unnamed_addr constant [10 x i8] c"You have \00", align 1
-@.str.133 = private unnamed_addr constant [59 x i8] c"You have at least on supporting starbase.  Your energy and\00", align 1
-@.str.132 = private unnamed_addr constant [59 x i8] c"command.  All commands are terminated by the [RETURN] key.\00", align 1
-@.str.39 = private unnamed_addr constant [23 x i8] c"following coordinates:\00", align 1
+@.str.168 = private unnamed_addr constant [34 x i8] c"You are a hero and a new admiral.\00", align 1
+@.str.160 = private unnamed_addr constant [14 x i8] c"You are dead.\00", align 1
+@.str.49 = private unnamed_addr constant [10 x i8] c"You have \00", align 1
+@.str.152 = private unnamed_addr constant [59 x i8] c"You have at least on supporting starbase.  Your energy and\00", align 1
+@.str.158 = private unnamed_addr constant [11 x i8] c"are still \00", align 1
+@.str.151 = private unnamed_addr constant [59 x i8] c"command.  All commands are terminated by the [RETURN] key.\00", align 1
+@.str.162 = private unnamed_addr constant [58 x i8] c"cruiser in the galaxy has been destroyed.  The Federation\00", align 1
+@.str.157 = private unnamed_addr constant [53 x i8] c"destroyed.  The Federation will be conquered.  There\00", align 1
+@.str.165 = private unnamed_addr constant [52 x i8] c"destruction of Federation bases and planet systems,\00", align 1
+@.str.58 = private unnamed_addr constant [23 x i8] c"following coordinates:\00", align 1
+@.str.163 = private unnamed_addr constant [18 x i8] c"has been saved.  \00", align 1
 @.str.1 = private unnamed_addr constant [6 x i8] c"input\00", align 1
+@.str.167 = private unnamed_addr constant [20 x i8] c"light of day again.\00", align 1
 @.str.2 = private unnamed_addr constant [7 x i8] c"output\00", align 1
-@.str.134 = private unnamed_addr constant [58 x i8] c"photon torpedoes are replenished when you are docked at a\00", align 1
-@.str.32 = private unnamed_addr constant [35 x i8] c"your mission (i.e. until stardate \00", align 1
-@.str.26 = private unnamed_addr constant [48 x i8] c"your mission is to rid the galaxy of the deadly\00", align 1
-@.str.42 = private unnamed_addr constant [37 x i8] c"|   |   |   |   |   |   |   |   |  0\00", align 1
-@.str.43 = private unnamed_addr constant [37 x i8] c"|   |   |   |   |   |   |   |   |  1\00", align 1
-@.str.44 = private unnamed_addr constant [37 x i8] c"|   |   |   |   |   |   |   |   |  2\00", align 1
-@.str.45 = private unnamed_addr constant [37 x i8] c"|   |   |   |   |   |   |   |   |  3\00", align 1
-@.str.46 = private unnamed_addr constant [37 x i8] c"|   |   |   |   |   |   |   |   |  4\00", align 1
-@.str.47 = private unnamed_addr constant [37 x i8] c"|   |   |   |   |   |   |   |   |  5\00", align 1
-@.str.48 = private unnamed_addr constant [37 x i8] c"|   |   |   |   |   |   |   |   |  6\00", align 1
-@.str.49 = private unnamed_addr constant [37 x i8] c"|   |   |   |   |   |   |   |   |  7\00", align 1
+@.str.153 = private unnamed_addr constant [58 x i8] c"photon torpedoes are replenished when you are docked at a\00", align 1
+@.str.166 = private unnamed_addr constant [50 x i8] c"you have been thrown in the brig never to see the\00", align 1
+@.str.51 = private unnamed_addr constant [35 x i8] c"your mission (i.e. until stardate \00", align 1
+@.str.45 = private unnamed_addr constant [48 x i8] c"your mission is to rid the galaxy of the deadly\00", align 1
+@.str.61 = private unnamed_addr constant [37 x i8] c"|   |   |   |   |   |   |   |   |  0\00", align 1
+@.str.62 = private unnamed_addr constant [37 x i8] c"|   |   |   |   |   |   |   |   |  1\00", align 1
+@.str.63 = private unnamed_addr constant [37 x i8] c"|   |   |   |   |   |   |   |   |  2\00", align 1
+@.str.64 = private unnamed_addr constant [37 x i8] c"|   |   |   |   |   |   |   |   |  3\00", align 1
+@.str.65 = private unnamed_addr constant [37 x i8] c"|   |   |   |   |   |   |   |   |  4\00", align 1
+@.str.66 = private unnamed_addr constant [37 x i8] c"|   |   |   |   |   |   |   |   |  5\00", align 1
+@.str.67 = private unnamed_addr constant [37 x i8] c"|   |   |   |   |   |   |   |   |  6\00", align 1
+@.str.68 = private unnamed_addr constant [37 x i8] c"|   |   |   |   |   |   |   |   |  7\00", align 1
 
 
 ;================================================================================
