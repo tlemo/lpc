@@ -56,22 +56,32 @@ define void @P_()
     store i8* %t2, i8** @_output
 
     ; body
+    ; line 16
     %t3 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t3, i32 33, i32 0, i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.3, i32 0, i32 0), i32 14)
     call void @_WriteLn(i8* %t3)
+    ; line 17
     %t4 = load %T_text, %T_text* @_output
     call void @_WriteLn(i8* %t4)
+    ; line 18
     %t5 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([32 x i8], [32 x i8]* @.str.4, i32 0, i32 0), i32 31)
+    ; line 19
     %t6 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t6, i32 0, i32 0, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @.str.5, i32 0, i32 0), i32 18)
     call void @_WriteLn(i8* %t6)
+    ; line 20
     %t7 = load %T_text, %T_text* @_output
     call void @_WriteLn(i8* %t7)
+    ; line 22
     store double 12.0000, double* @RegularRate
+    ; line 23
     store double 1.10000, double* @EveningPremium
+    ; line 24
     store double 1.33000, double* @NightPremium
+    ; line 25
     store double 1.25000, double* @WeekendPremium
+    ; line 27
     ; nop
 
     ; cleanup

@@ -55,7 +55,10 @@ define void @P_()
     store i8* %t2, i8** @_output
 
     ; body
+    ; line 19
+    ; line 20
     store i32 1, i32* @i
+    ; line 21
     ; nop
 
     ; cleanup
@@ -99,8 +102,11 @@ define i1 @F_f(%T_vec %x, i32 %i)
     store %T_vec %x, %T_vec* %t2
 
     ; body
+    ; line 12
     %t3 = getelementptr inbounds %Frame_f, %Frame_f* %.frame, i32 0, i32 2
     store i1 0, i1* %t3
+    ; line 13
+    ; line 15
     %t4 = getelementptr inbounds %Frame_f, %Frame_f* %.frame, i32 0, i32 2
     store i1 1, i1* %t4
     br label %L_10

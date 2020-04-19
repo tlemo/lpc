@@ -58,21 +58,31 @@ define void @P_()
     store i8* %t2, i8** @_output
 
     ; body
+    ; line 43
     %t3 = call %T_A @F_fooA()
     store %T_A %t3, %T_A* @vA
+    ; line 44
     %t4 = call %T_S @F_fooS()
     store %T_S %t4, %T_S* @vS
+    ; line 45
     %t5 = call %T_R @F_fooR()
     store %T_R %t5, %T_R* @vR
+    ; line 47
+    ; line 50
     %t6 = load %T_text, %T_text* @_output
     call void @_WriteLn(i8* %t6)
+    ; line 52
     %t7 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.3, i32 0, i32 0), i32 6)
+    ; line 53
+    ; line 56
     %t8 = load %T_text, %T_text* @_output
     call void @_WriteChar(i8* %t8, i32 0, i32 0, i8 93)
     call void @_WriteLn(i8* %t8)
+    ; line 58
     %t9 = load %T_text, %T_text* @_output
     call void @_WriteLn(i8* %t9)
+    ; line 60
     %t10 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t10, i32 0, i32 0, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.4, i32 0, i32 0), i32 6)
     %t12 = getelementptr inbounds %T_R, %T_R* @vR, i32 0, i32 0
@@ -120,18 +130,23 @@ define %T_A @F_fooA()
     %.frame = alloca %Frame_fooA, align 8
 
     ; body
+    ; line 22
     %t1 = getelementptr inbounds %Frame_fooA, %Frame_fooA* %.frame, i32 0, i32 1
     %t2 = getelementptr inbounds %T_A, %T_A* %t1, i32 0, i32 0
     store i32 0, i32* %t2
+    ; line 23
     %t3 = getelementptr inbounds %Frame_fooA, %Frame_fooA* %.frame, i32 0, i32 1
     %t4 = getelementptr inbounds %T_A, %T_A* %t3, i32 0, i32 1
     store i32 1, i32* %t4
+    ; line 24
     %t5 = getelementptr inbounds %Frame_fooA, %Frame_fooA* %.frame, i32 0, i32 1
     %t6 = getelementptr inbounds %T_A, %T_A* %t5, i32 0, i32 2
     store i32 2, i32* %t6
+    ; line 25
     %t7 = getelementptr inbounds %Frame_fooA, %Frame_fooA* %.frame, i32 0, i32 1
     %t8 = getelementptr inbounds %T_A, %T_A* %t7, i32 0, i32 3
     store i32 3, i32* %t8
+    ; line 26
     %t9 = getelementptr inbounds %Frame_fooA, %Frame_fooA* %.frame, i32 0, i32 0
     %t11 = getelementptr inbounds %Frame_fooA, %Frame_fooA* %.frame, i32 0, i32 1
     %t10 = load %T_A, %T_A* %t11
@@ -166,6 +181,7 @@ define %T_S @F_fooS()
     %.frame = alloca %Frame_fooS, align 8
 
     ; body
+    ; line 31
     %t1 = getelementptr inbounds %Frame_fooS, %Frame_fooS* %.frame, i32 0, i32 0
     store %T_S %.dummy_set, %T_S* %t1
     ; nop
@@ -199,14 +215,17 @@ define %T_R @F_fooR()
     %.frame = alloca %Frame_fooR, align 8
 
     ; body
+    ; line 37
     %t1 = getelementptr inbounds %Frame_fooR, %Frame_fooR* %.frame, i32 0, i32 1
     %t3 = getelementptr inbounds %T_R, %T_R* %t1, i32 0, i32 0
     %t2 = bitcast i8* %t3 to i32*
     store i32 11, i32* %t2
+    ; line 38
     %t4 = getelementptr inbounds %Frame_fooR, %Frame_fooR* %.frame, i32 0, i32 1
     %t6 = getelementptr inbounds %T_R, %T_R* %t4, i32 0, i32 4
     %t5 = bitcast i8* %t6 to i32*
     store i32 22, i32* %t5
+    ; line 39
     %t7 = getelementptr inbounds %Frame_fooR, %Frame_fooR* %.frame, i32 0, i32 0
     %t9 = getelementptr inbounds %Frame_fooR, %Frame_fooR* %.frame, i32 0, i32 1
     %t8 = load %T_R, %T_R* %t9

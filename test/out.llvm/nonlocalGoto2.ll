@@ -49,27 +49,36 @@ define void @P_()
     store i8* %t2, i8** @_output
 
     ; body
+    ; line 34
     %t3 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.3, i32 0, i32 0), i32 5)
     call void @_WriteLn(i8* %t3)
+    ; line 35
     call void @P_foo()
+    ; line 36
     %t4 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t4, i32 0, i32 0, i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.4, i32 0, i32 0), i32 10)
     call void @_WriteLn(i8* %t4)
+    ; line 38
     br label %L_1
 L_1:
     %t5 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.5, i32 0, i32 0), i32 4)
     call void @_WriteLn(i8* %t5)
+    ; line 39
     call void @P_bar()
+    ; line 40
     %t6 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t6, i32 0, i32 0, i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.4, i32 0, i32 0), i32 10)
     call void @_WriteLn(i8* %t6)
+    ; line 41
+    ; line 43
     br label %L_2
 L_2:
     %t7 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.6, i32 0, i32 0), i32 4)
     call void @_WriteLn(i8* %t7)
+    ; line 44
     %t8 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t8, i32 0, i32 0, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.7, i32 0, i32 0), i32 4)
     call void @_WriteLn(i8* %t8)
@@ -104,9 +113,12 @@ define void @P_foo()
     %.frame = alloca %Frame_foo, align 8
 
     ; body
+    ; line 10
     %t1 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t1, i32 0, i32 0, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.8, i32 0, i32 0), i32 3)
     call void @_WriteLn(i8* %t1)
+    ; line 11
+    ; line 12
     %t2 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t2, i32 0, i32 0, i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.4, i32 0, i32 0), i32 10)
     call void @_WriteLn(i8* %t2)
@@ -135,15 +147,20 @@ define void @P_bar()
     %.frame = alloca %Frame_bar, align 8
 
     ; body
+    ; line 25
     %t1 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t1, i32 0, i32 0, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.9, i32 0, i32 0), i32 3)
     call void @_WriteLn(i8* %t1)
+    ; line 26
+    ; line 27
     %t2 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t2, i32 0, i32 0, i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.4, i32 0, i32 0), i32 10)
     call void @_WriteLn(i8* %t2)
+    ; line 29
     br label %L_1
 L_1:
     call void @P_bar_moo(%Frame_bar* %.frame)
+    ; line 30
     %t3 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.4, i32 0, i32 0), i32 10)
     call void @_WriteLn(i8* %t3)
@@ -174,12 +191,16 @@ define void @P_bar_moo(%Frame_bar* %.slink)
     store %Frame_bar* %.slink, %Frame_bar** %t1
 
     ; body
+    ; line 19
     %t2 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t2, i32 0, i32 0, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.10, i32 0, i32 0), i32 3)
     call void @_WriteLn(i8* %t2)
+    ; line 20
+    ; line 21
     %t3 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.4, i32 0, i32 0), i32 10)
     call void @_WriteLn(i8* %t3)
+    ; line 22
     ; nop
 
     ; epilogue

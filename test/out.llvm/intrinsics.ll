@@ -49,18 +49,22 @@ define void @P_()
     store i8* %t2, i8** @_output
 
     ; body
+    ; line 6
     %t3 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.3, i32 0, i32 0), i32 12)
     call void @_WriteReal(i8* %t3, i32 0, i32 0, double )
     call void @_WriteLn(i8* %t3)
+    ; line 7
     %t4 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t4, i32 0, i32 0, i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.4, i32 0, i32 0), i32 10)
     call void @_WriteReal(i8* %t4, i32 0, i32 0, double )
     call void @_WriteLn(i8* %t4)
+    ; line 8
     %t5 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.5, i32 0, i32 0), i32 12)
     call void @_WriteReal(i8* %t5, i32 0, i32 0, double )
     call void @_WriteLn(i8* %t5)
+    ; line 9
     %t6 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t6, i32 0, i32 0, i8* getelementptr inbounds ([11 x i8], [11 x i8]* @.str.6, i32 0, i32 0), i32 10)
     call void @_WriteInteger(i8* %t6, i32 0, i32 0, i32 )

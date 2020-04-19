@@ -94,7 +94,7 @@ compiling pass 2 (target = llvm)
 -----------------------------------------------------
 
 Invoking LLC ...
-llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\pascal-s.ll:121:19: error: constant expression type mismatch
+llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\pascal-s.ll:125:19: error: constant expression type mismatch
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.5, i32 0, i32 0), %T_alfa* %t6
                   ^
 Exit code: 1

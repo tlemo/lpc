@@ -9,7 +9,7 @@ compiling pass 2 (target = llvm)
 -----------------------------------------------------
 
 Invoking LLC ...
-llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\udtReturn.ll:170:16: error: use of undefined value '%.dummy_set'
+llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\udtReturn.ll:186:16: error: use of undefined value '%.dummy_set'
     store %T_S %.dummy_set, %T_S* %t1
                ^
 Exit code: 1

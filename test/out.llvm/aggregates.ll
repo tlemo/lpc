@@ -57,16 +57,20 @@ define void @P_()
     store i8* %t2, i8** @_output
 
     ; body
+    ; line 20
     %t3 = load %T_A, %T_A* @v2
     store %T_A %t3, %T_A* @v1
+    ; line 21
     %t4 = load %T_R, %T_R* @v4
     store %T_R %t4, %T_R* @v3
+    ; line 25
     %t6 = getelementptr inbounds %T_R, %T_R* @v3, i32 0, i32 0
     %t5 = bitcast i8* %t6 to %T_A*
     %t8 = getelementptr inbounds %T_R, %T_R* @v4, i32 0, i32 0
     %t7 = bitcast i8* %t8 to %T_A*
     %t9 = load %T_A, %T_A* %t7
     store %T_A %t9, %T_A* %t5
+    ; line 29
     %t11 = getelementptr inbounds %T_R, %T_R* @v3, i32 0, i32 0
     %t10 = bitcast i8* %t11 to %T_A*
     %t13 = getelementptr inbounds %T_R, %T_R* @v4, i32 0, i32 0

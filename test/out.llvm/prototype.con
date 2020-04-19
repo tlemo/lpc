@@ -9,7 +9,7 @@ compiling pass 2 (target = llvm)
 -----------------------------------------------------
 
 Invoking LLC ...
-llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\prototype.ll:124:22: error: argument name invalid in function type
+llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\prototype.ll:130:22: error: argument name invalid in function type
     %t10 = call i32 (i32 %t6, %T_REC %t7, %T_UNION %t8)
                      ^
 Exit code: 1

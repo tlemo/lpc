@@ -118,37 +118,55 @@ define void @P_()
     store i8* %t4, i8** @prr
 
     ; body
+    ; line 2065
     %t5 = load %T_text, %T_text* @output
     call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([27 x i8], [27 x i8]* @.str.5, i32 0, i32 0), i32 26)
     call void @_WriteInteger(i8* %t5, i32 1, i32 0, i32 1)
     call void @_WriteChar(i8* %t5, i32 0, i32 0, i8 46)
     call void @_WriteInteger(i8* %t5, i32 1, i32 0, i32 0)
     call void @_WriteLn(i8* %t5)
+    ; line 2066
     %t6 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t6)
+    ; line 2069
+    ; line 2071
     %t7 = load %T_text, %T_text* @output
     call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([27 x i8], [27 x i8]* @.str.6, i32 0, i32 0), i32 26)
     call void @_WriteLn(i8* %t7)
+    ; line 2072
     call void @P_load()
+    ; line 2073
     store i32 0, i32* @pc
+    ; line 2073
     %t8 = load i32, i32* @pctop
     store i32 %t8, i32* @sp
+    ; line 2073
     %t9 = load i32, i32* @pctop
     store i32 %t9, i32* @mp
+    ; line 2073
     %t10 = load i32, i32* @cp
     store i32 %t10, i32* @np
+    ; line 2073
     store i32 5, i32* @ep
+    ; line 2073
     store i32 0, i32* @srclin
+    ; line 2075
     store i1 1, i1* @interpreting
+    ; line 2077
     %t11 = load %T_text, %T_text* @output
     call void @_WriteString(i8* %t11, i32 0, i32 0, i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.7, i32 0, i32 0), i32 15)
     call void @_WriteLn(i8* %t11)
+    ; line 2078
     %t12 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t12)
+    ; line 2079
+    ; line 2492
+    ; line 2496
     br label %L_1
 L_1:
     %t13 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t13)
+    ; line 2497
     %t14 = load %T_text, %T_text* @output
     call void @_WriteString(i8* %t14, i32 0, i32 0, i8* getelementptr inbounds ([17 x i8], [17 x i8]* @.str.8, i32 0, i32 0), i32 16)
     call void @_WriteLn(i8* %t14)
@@ -201,6 +219,8 @@ define i32 @F_getint(i32 %a)
     store i32 %a, i32* %t1
 
     ; body
+    ; line 511
+    ; line 513
     %t2 = getelementptr inbounds %Frame_getint, %Frame_getint* %.frame, i32 0, i32 1
     %t3 = getelementptr inbounds %Frame_getint, %Frame_getint* %.frame, i32 0, i32 3
     %t5 = getelementptr inbounds %T_getint_record_14, %T_getint_record_14* %t3, i32 0, i32 0
@@ -249,12 +269,14 @@ define void @P_putint(i32 %a, i32 %x)
     store i32 %x, i32* %t2
 
     ; body
+    ; line 529
     %t3 = getelementptr inbounds %Frame_putint, %Frame_putint* %.frame, i32 0, i32 3
     %t5 = getelementptr inbounds %T_putint_record_17, %T_putint_record_17* %t3, i32 0, i32 0
     %t4 = bitcast i8* %t5 to i32*
     %t7 = getelementptr inbounds %Frame_putint, %Frame_putint* %.frame, i32 0, i32 1
     %t6 = load i32, i32* %t7
     store i32 %t6, i32* %t4
+    ; line 530
 
     ; epilogue
     ret void
@@ -293,6 +315,8 @@ define double @F_getrel(i32 %a)
     store i32 %a, i32* %t1
 
     ; body
+    ; line 546
+    ; line 547
     %t2 = getelementptr inbounds %Frame_getrel, %Frame_getrel* %.frame, i32 0, i32 1
     %t3 = getelementptr inbounds %Frame_getrel, %Frame_getrel* %.frame, i32 0, i32 3
     %t5 = getelementptr inbounds %T_getrel_record_20, %T_getrel_record_20* %t3, i32 0, i32 0
@@ -341,12 +365,14 @@ define void @P_putrel(i32 %a, double %f)
     store double %f, double* %t2
 
     ; body
+    ; line 563
     %t3 = getelementptr inbounds %Frame_putrel, %Frame_putrel* %.frame, i32 0, i32 3
     %t5 = getelementptr inbounds %T_putrel_record_23, %T_putrel_record_23* %t3, i32 0, i32 0
     %t4 = bitcast i8* %t5 to double*
     %t7 = getelementptr inbounds %Frame_putrel, %Frame_putrel* %.frame, i32 0, i32 1
     %t6 = load double, double* %t7
     store double %t6, double* %t4
+    ; line 564
 
     ; epilogue
     ret void
@@ -380,6 +406,8 @@ define i1 @F_getbol(i32 %a)
     store i32 %a, i32* %t1
 
     ; body
+    ; line 574
+    ; line 575
     %t2 = getelementptr inbounds %Frame_getbol, %Frame_getbol* %.frame, i32 0, i32 1
     %t4 = getelementptr inbounds %Frame_getbol, %Frame_getbol* %.frame, i32 0, i32 2
     %t3 = load i1, i1* %t4
@@ -418,6 +446,7 @@ define void @P_putbol(i32 %a, i1 %b)
     store i1 %b, i1* %t2
 
     ; body
+    ; line 583
     %t4 = getelementptr inbounds %Frame_putbol, %Frame_putbol* %.frame, i32 0, i32 0
     %t3 = load i32, i32* %t4
     %t5 = getelementptr inbounds %T_array_12, %T_array_12* @store, i32 0, i32 %t3
@@ -462,6 +491,8 @@ define void @P_getset(i32 %a, %T_settype* %s)
     store %T_settype* %s, %T_settype** %t2
 
     ; body
+    ; line 599
+    ; line 600
     %t3 = getelementptr inbounds %Frame_getset, %Frame_getset* %.frame, i32 0, i32 1
     %t4 = load %T_settype*, %T_settype** %t3
     %t5 = getelementptr inbounds %Frame_getset, %Frame_getset* %.frame, i32 0, i32 3
@@ -509,12 +540,14 @@ define void @P_putset(i32 %a, %T_settype %s)
     store %T_settype %s, %T_settype* %t2
 
     ; body
+    ; line 616
     %t3 = getelementptr inbounds %Frame_putset, %Frame_putset* %.frame, i32 0, i32 3
     %t5 = getelementptr inbounds %T_putset_record_29, %T_putset_record_29* %t3, i32 0, i32 0
     %t4 = bitcast i8* %t5 to %T_settype*
     %t7 = getelementptr inbounds %Frame_putset, %Frame_putset* %.frame, i32 0, i32 1
     %t6 = load %T_settype, %T_settype* %t7
     store %T_settype %t6, %T_settype* %t4
+    ; line 617
 
     ; epilogue
     ret void
@@ -547,6 +580,7 @@ define i8 @F_getchr(i32 %a)
     store i32 %a, i32* %t1
 
     ; body
+    ; line 625
     %t2 = getelementptr inbounds %Frame_getchr, %Frame_getchr* %.frame, i32 0, i32 1
     store i8 , i8* %t2
 
@@ -583,6 +617,7 @@ define void @P_putchr(i32 %a, i8 %c)
     store i8 %c, i8* %t2
 
     ; body
+    ; line 633
     %t4 = getelementptr inbounds %Frame_putchr, %Frame_putchr* %.frame, i32 0, i32 0
     %t3 = load i32, i32* %t4
     %t5 = getelementptr inbounds %T_array_12, %T_array_12* @store, i32 0, i32 %t3
@@ -625,6 +660,8 @@ define i32 @F_getadr(i32 %a)
     store i32 %a, i32* %t1
 
     ; body
+    ; line 649
+    ; line 650
     %t2 = getelementptr inbounds %Frame_getadr, %Frame_getadr* %.frame, i32 0, i32 1
     %t3 = getelementptr inbounds %Frame_getadr, %Frame_getadr* %.frame, i32 0, i32 3
     %t5 = getelementptr inbounds %T_getadr_record_32, %T_getadr_record_32* %t3, i32 0, i32 0
@@ -673,12 +710,14 @@ define void @P_putadr(i32 %a, i32 %ad)
     store i32 %ad, i32* %t2
 
     ; body
+    ; line 666
     %t3 = getelementptr inbounds %Frame_putadr, %Frame_putadr* %.frame, i32 0, i32 3
     %t5 = getelementptr inbounds %T_putadr_record_35, %T_putadr_record_35* %t3, i32 0, i32 0
     %t4 = bitcast i8* %t5 to i32*
     %t7 = getelementptr inbounds %Frame_putadr, %Frame_putadr* %.frame, i32 0, i32 1
     %t6 = load i32, i32* %t7
     store i32 %t6, i32* %t4
+    ; line 667
 
     ; epilogue
     ret void
@@ -716,11 +755,14 @@ define void @P_swpstk(i32 %l)
     store i32 %l, i32* %t1
 
     ; body
+    ; line 682
     %t2 = getelementptr inbounds %Frame_swpstk, %Frame_swpstk* %.frame, i32 0, i32 2
     %t4 = load i32, i32* @sp
     %t3 = sub i32 %t4, 4
     %t5 = call i32 @F_getadr(i32 %t3)
     store i32 %t5, i32* %t2
+    ; line 684
+    ; line 685
     %t8 = load i32, i32* @sp
     %t7 = sub i32 %t8, 4
     %t10 = getelementptr inbounds %Frame_swpstk, %Frame_swpstk* %.frame, i32 0, i32 0
@@ -729,6 +771,7 @@ define void @P_swpstk(i32 %l)
     %t12 = getelementptr inbounds %Frame_swpstk, %Frame_swpstk* %.frame, i32 0, i32 2
     %t11 = load i32, i32* %t12
     call void @P_putadr(i32 %t6, i32 %t11)
+    ; line 686
 
     ; epilogue
     ret void
@@ -758,9 +801,11 @@ define void @P_popint(i32* %i)
     store i32* %i, i32** %t1
 
     ; body
+    ; line 700
     %t3 = load i32, i32* @sp
     %t2 = sub i32 %t3, 4
     store i32 %t2, i32* @sp
+    ; line 700
     %t4 = getelementptr inbounds %Frame_popint, %Frame_popint* %.frame, i32 0, i32 0
     %t5 = load i32*, i32** %t4
     %t6 = load i32, i32* @sp
@@ -795,10 +840,12 @@ define void @P_pshint(i32 %i)
     store i32 %i, i32* %t1
 
     ; body
+    ; line 701
     %t2 = load i32, i32* @sp
     %t4 = getelementptr inbounds %Frame_pshint, %Frame_pshint* %.frame, i32 0, i32 0
     %t3 = load i32, i32* %t4
     call void @P_putint(i32 %t2, i32 %t3)
+    ; line 701
     %t6 = load i32, i32* @sp
     %t5 = add i32 %t6, 4
     store i32 %t5, i32* @sp
@@ -831,9 +878,11 @@ define void @P_poprel(double* %r)
     store double* %r, double** %t1
 
     ; body
+    ; line 702
     %t3 = load i32, i32* @sp
     %t2 = sub i32 %t3, 8
     store i32 %t2, i32* @sp
+    ; line 702
     %t4 = getelementptr inbounds %Frame_poprel, %Frame_poprel* %.frame, i32 0, i32 0
     %t5 = load double*, double** %t4
     %t6 = load i32, i32* @sp
@@ -868,10 +917,12 @@ define void @P_pshrel(double %r)
     store double %r, double* %t1
 
     ; body
+    ; line 703
     %t2 = load i32, i32* @sp
     %t4 = getelementptr inbounds %Frame_pshrel, %Frame_pshrel* %.frame, i32 0, i32 0
     %t3 = load double, double* %t4
     call void @P_putrel(i32 %t2, double %t3)
+    ; line 703
     %t6 = load i32, i32* @sp
     %t5 = add i32 %t6, 8
     store i32 %t5, i32* @sp
@@ -905,9 +956,11 @@ define void @P_popset(%T_settype* %s)
     store %T_settype* %s, %T_settype** %t1
 
     ; body
+    ; line 704
     %t3 = load i32, i32* @sp
     %t2 = sub i32 %t3, 32
     store i32 %t2, i32* @sp
+    ; line 704
     %t4 = load i32, i32* @sp
     %t5 = getelementptr inbounds %Frame_popset, %Frame_popset* %.frame, i32 0, i32 0
     %t6 = load %T_settype*, %T_settype** %t5
@@ -941,10 +994,12 @@ define void @P_pshset(%T_settype %s)
     store %T_settype %s, %T_settype* %t1
 
     ; body
+    ; line 705
     %t2 = load i32, i32* @sp
     %t4 = getelementptr inbounds %Frame_pshset, %Frame_pshset* %.frame, i32 0, i32 0
     %t3 = load %T_settype, %T_settype* %t4
     call void @P_putset(i32 %t2, %T_settype %t3)
+    ; line 705
     %t6 = load i32, i32* @sp
     %t5 = add i32 %t6, 32
     store i32 %t5, i32* @sp
@@ -977,9 +1032,11 @@ define void @P_popadr(i32* %a)
     store i32* %a, i32** %t1
 
     ; body
+    ; line 706
     %t3 = load i32, i32* @sp
     %t2 = sub i32 %t3, 4
     store i32 %t2, i32* @sp
+    ; line 706
     %t4 = getelementptr inbounds %Frame_popadr, %Frame_popadr* %.frame, i32 0, i32 0
     %t5 = load i32*, i32** %t4
     %t6 = load i32, i32* @sp
@@ -1014,10 +1071,12 @@ define void @P_pshadr(i32 %a)
     store i32 %a, i32* %t1
 
     ; body
+    ; line 707
     %t2 = load i32, i32* @sp
     %t4 = getelementptr inbounds %Frame_pshadr, %Frame_pshadr* %.frame, i32 0, i32 0
     %t3 = load i32, i32* %t4
     call void @P_putadr(i32 %t2, i32 %t3)
+    ; line 707
     %t6 = load i32, i32* @sp
     %t5 = add i32 %t6, 4
     store i32 %t5, i32* @sp
@@ -1058,8 +1117,11 @@ define void @P_wrthex(i32 %v, i32 %f)
     store i32 %v, i32* %t2
 
     ; body
+    ; line 714
     %t3 = getelementptr inbounds %Frame_wrthex, %Frame_wrthex* %.frame, i32 0, i32 4
     store i32 1, i32* %t3
+    ; line 715
+    ; line 716
 
     ; epilogue
     ret void
@@ -1095,11 +1157,13 @@ define void @P_lstins(i32* %ad)
     store i32* %ad, i32** %t1
 
     ; body
+    ; line 734
     %t2 = getelementptr inbounds %Frame_lstins, %Frame_lstins* %.frame, i32 0, i32 1
     %t4 = getelementptr inbounds %Frame_lstins, %Frame_lstins* %.frame, i32 0, i32 0
     %t5 = load i32*, i32** %t4
     %t3 = load i32, i32* %t5
     store i32 %t3, i32* %t2
+    ; line 735
     %t6 = getelementptr inbounds %Frame_lstins, %Frame_lstins* %.frame, i32 0, i32 2
     %t8 = getelementptr inbounds %Frame_lstins, %Frame_lstins* %.frame, i32 0, i32 0
     %t9 = load i32*, i32** %t8
@@ -1107,6 +1171,7 @@ define void @P_lstins(i32* %ad)
     %t10 = getelementptr inbounds %T_array_12, %T_array_12* @store, i32 0, i32 %t7
     %t11 = load i32, i32* %t10
     store i32 %t11, i32* %t6
+    ; line 735
     %t12 = getelementptr inbounds %Frame_lstins, %Frame_lstins* %.frame, i32 0, i32 0
     %t13 = load i32*, i32** %t12
     %t16 = getelementptr inbounds %Frame_lstins, %Frame_lstins* %.frame, i32 0, i32 0
@@ -1114,11 +1179,16 @@ define void @P_lstins(i32* %ad)
     %t15 = load i32, i32* %t17
     %t14 = add i32 %t15, 1
     store i32 %t14, i32* %t13
+    ; line 736
+    ; line 737
+    ; line 748
     %t18 = load %T_text, %T_text* @output
     call void @_WriteString(i8* %t18, i32 0, i32 0, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.9, i32 0, i32 0), i32 2)
+    ; line 749
     %t20 = getelementptr inbounds %Frame_lstins, %Frame_lstins* %.frame, i32 0, i32 2
     %t19 = load i32, i32* %t20
     call void @P_wrthex(i32 %t19, i32 2)
+    ; line 750
     %t21 = load %T_text, %T_text* @output
     call void @_WriteChar(i8* %t21, i32 0, i32 0, i8 32)
     %t23 = getelementptr inbounds %Frame_lstins, %Frame_lstins* %.frame, i32 0, i32 2
@@ -1126,6 +1196,7 @@ define void @P_lstins(i32* %ad)
     %t24 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 %t22
     call void @_WriteString(i8* %t21, i32 10, i32 0, i8* getelementptr inbounds (%T_alfa, %T_alfa* %t24, i32 0, i32 0), i32 10)
     call void @_WriteString(i8* %t21, i32 0, i32 0, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.10, i32 0, i32 0), i32 2)
+    ; line 751
 
     ; epilogue
     ret void
@@ -1153,21 +1224,29 @@ define void @P_dmpins()
     %.frame = alloca %Frame_dmpins, align 8
 
     ; body
+    ; line 768
     %t1 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t1)
+    ; line 769
     %t2 = load %T_text, %T_text* @output
     call void @_WriteString(i8* %t2, i32 0, i32 0, i8* getelementptr inbounds ([31 x i8], [31 x i8]* @.str.11, i32 0, i32 0), i32 30)
     call void @_WriteLn(i8* %t2)
+    ; line 770
     %t3 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t3)
+    ; line 771
     %t4 = load %T_text, %T_text* @output
     call void @_WriteString(i8* %t4, i32 0, i32 0, i8* getelementptr inbounds ([35 x i8], [35 x i8]* @.str.12, i32 0, i32 0), i32 34)
     call void @_WriteLn(i8* %t4)
+    ; line 772
     %t5 = load %T_text, %T_text* @output
     call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([35 x i8], [35 x i8]* @.str.13, i32 0, i32 0), i32 34)
     call void @_WriteLn(i8* %t5)
+    ; line 773
     %t6 = getelementptr inbounds %Frame_dmpins, %Frame_dmpins* %.frame, i32 0, i32 0
     store i32 0, i32* %t6
+    ; line 774
+    ; line 781
     %t7 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t7)
 
@@ -1205,12 +1284,14 @@ define void @P_alignu(i32 %algn, i32* %flc)
     store i32* %flc, i32** %t2
 
     ; body
+    ; line 790
     %t3 = getelementptr inbounds %Frame_alignu, %Frame_alignu* %.frame, i32 0, i32 2
     %t6 = getelementptr inbounds %Frame_alignu, %Frame_alignu* %.frame, i32 0, i32 1
     %t7 = load i32*, i32** %t6
     %t5 = load i32, i32* %t7
     %t4 = sub i32 %t5, 1
     store i32 %t4, i32* %t3
+    ; line 791
     %t8 = getelementptr inbounds %Frame_alignu, %Frame_alignu* %.frame, i32 0, i32 1
     %t9 = load i32*, i32** %t8
     %t13 = getelementptr inbounds %Frame_alignu, %Frame_alignu* %.frame, i32 0, i32 2
@@ -1263,12 +1344,14 @@ define void @P_alignd(i32 %algn, i32* %flc)
     store i32* %flc, i32** %t2
 
     ; body
+    ; line 799
     %t3 = getelementptr inbounds %Frame_alignd, %Frame_alignd* %.frame, i32 0, i32 2
     %t6 = getelementptr inbounds %Frame_alignd, %Frame_alignd* %.frame, i32 0, i32 1
     %t7 = load i32*, i32** %t6
     %t5 = load i32, i32* %t7
     %t4 = add i32 %t5, 1
     store i32 %t4, i32* %t3
+    ; line 800
     %t8 = getelementptr inbounds %Frame_alignd, %Frame_alignd* %.frame, i32 0, i32 1
     %t9 = load i32*, i32** %t8
     %t13 = getelementptr inbounds %Frame_alignd, %Frame_alignd* %.frame, i32 0, i32 2
@@ -1322,14 +1405,24 @@ define void @P_load()
     %.frame = alloca %Frame_load, align 8
 
     ; body
+    ; line 1407
     call void @P_load_init(%Frame_load* %.frame)
+    ; line 1408
     call void @P_load_generate(%Frame_load* %.frame)
+    ; line 1409
     %t1 = load i32, i32* @pc
     store i32 %t1, i32* @pctop
+    ; line 1410
     store i32 0, i32* @pc
+    ; line 1411
     call void @P_load_generate(%Frame_load* %.frame)
+    ; line 1412
     call void @P_alignu(i32 4, i32* @pctop)
+    ; line 1413
     call void @P_alignd(i32 4, i32* @cp)
+    ; line 1415
+    ; line 1429
+    ; line 1430
 
     ; epilogue
     ret void
@@ -1359,1132 +1452,1702 @@ define void @P_load_init(%Frame_load* %.slink)
     store %Frame_load* %.slink, %Frame_load** %t1
 
     ; body
+    ; line 821
+    ; line 836
     %t2 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 0
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.14, i32 0, i32 0), %T_alfa* %t2
+    ; line 836
     %t3 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 0
     store i1 1, i1* %t3
+    ; line 836
     %t4 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 0
     store i32 4, i32* %t4
+    ; line 837
     %t5 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 1
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.15, i32 0, i32 0), %T_alfa* %t5
+    ; line 837
     %t6 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 1
     store i1 0, i1* %t6
+    ; line 837
     %t7 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 1
     store i32 4, i32* %t7
+    ; line 838
     %t8 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 2
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.16, i32 0, i32 0), %T_alfa* %t8
+    ; line 838
     %t9 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 2
     store i1 1, i1* %t9
+    ; line 838
     %t10 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 2
     store i32 4, i32* %t10
+    ; line 839
     %t11 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 3
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.17, i32 0, i32 0), %T_alfa* %t11
+    ; line 839
     %t12 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 3
     store i1 0, i1* %t12
+    ; line 839
     %t13 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 3
     store i32 4, i32* %t13
+    ; line 840
     %t14 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 4
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.18, i32 0, i32 0), %T_alfa* %t14
+    ; line 840
     %t15 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 4
     store i1 1, i1* %t15
+    ; line 840
     %t16 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 4
     store i32 4, i32* %t16
+    ; line 841
     %t17 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 5
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.19, i32 0, i32 0), %T_alfa* %t17
+    ; line 841
     %t18 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 5
     store i1 0, i1* %t18
+    ; line 841
     %t19 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 5
     store i32 4, i32* %t19
+    ; line 842
     %t20 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 6
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.20, i32 0, i32 0), %T_alfa* %t20
+    ; line 842
     %t21 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 6
     store i1 0, i1* %t21
+    ; line 842
     %t22 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 6
     store i32 0, i32* %t22
+    ; line 843
     %t23 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 7
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.21, i32 0, i32 0), %T_alfa* %t23
+    ; line 843
     %t24 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 7
     store i1 0, i1* %t24
+    ; line 843
     %t25 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 7
     store i32 4, i32* %t25
+    ; line 844
     %t26 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 8
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.22, i32 0, i32 0), %T_alfa* %t26
+    ; line 844
     %t27 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 8
     store i1 0, i1* %t27
+    ; line 844
     %t28 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 8
     store i32 0, i32* %t28
+    ; line 845
     %t29 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 9
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.23, i32 0, i32 0), %T_alfa* %t29
+    ; line 845
     %t30 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 9
     store i1 0, i1* %t30
+    ; line 845
     %t31 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 9
     store i32 4, i32* %t31
+    ; line 846
     %t32 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 10
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.24, i32 0, i32 0), %T_alfa* %t32
+    ; line 846
     %t33 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 10
     store i1 0, i1* %t33
+    ; line 846
     %t34 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 10
     store i32 4, i32* %t34
+    ; line 847
     %t35 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 11
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.25, i32 0, i32 0), %T_alfa* %t35
+    ; line 847
     %t36 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 11
     store i1 1, i1* %t36
+    ; line 847
     %t37 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 11
     store i32 0, i32* %t37
+    ; line 848
     %t38 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 12
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.26, i32 0, i32 0), %T_alfa* %t38
+    ; line 848
     %t39 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 12
     store i1 1, i1* %t39
+    ; line 848
     %t40 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 12
     store i32 4, i32* %t40
+    ; line 849
     %t41 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 13
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.27, i32 0, i32 0), %T_alfa* %t41
+    ; line 849
     %t42 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 13
     store i1 0, i1* %t42
+    ; line 849
     %t43 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 13
     store i32 4, i32* %t43
+    ; line 850
     %t44 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 14
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.28, i32 0, i32 0), %T_alfa* %t44
+    ; line 850
     %t45 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 14
     store i1 0, i1* %t45
+    ; line 850
     %t46 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 14
     store i32 0, i32* %t46
+    ; line 851
     %t47 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 15
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.29, i32 0, i32 0), %T_alfa* %t47
+    ; line 851
     %t48 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 15
     store i1 0, i1* %t48
+    ; line 851
     %t49 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 15
     store i32 4, i32* %t49
+    ; line 852
     %t50 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 16
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.30, i32 0, i32 0), %T_alfa* %t50
+    ; line 852
     %t51 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 16
     store i1 0, i1* %t51
+    ; line 852
     %t52 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 16
     store i32 4, i32* %t52
+    ; line 853
     %t53 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 17
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.31, i32 0, i32 0), %T_alfa* %t53
+    ; line 853
     %t54 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 17
     store i1 0, i1* %t54
+    ; line 853
     %t55 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 17
     store i32 0, i32* %t55
+    ; line 854
     %t56 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 18
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.32, i32 0, i32 0), %T_alfa* %t56
+    ; line 854
     %t57 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 18
     store i1 0, i1* %t57
+    ; line 854
     %t58 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 18
     store i32 0, i32* %t58
+    ; line 855
     %t59 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 19
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.33, i32 0, i32 0), %T_alfa* %t59
+    ; line 855
     %t60 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 19
     store i1 0, i1* %t60
+    ; line 855
     %t61 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 19
     store i32 0, i32* %t61
+    ; line 856
     %t62 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 20
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.34, i32 0, i32 0), %T_alfa* %t62
+    ; line 856
     %t63 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 20
     store i1 0, i1* %t63
+    ; line 856
     %t64 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 20
     store i32 0, i32* %t64
+    ; line 857
     %t65 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 21
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.35, i32 0, i32 0), %T_alfa* %t65
+    ; line 857
     %t66 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 21
     store i1 0, i1* %t66
+    ; line 857
     %t67 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 21
     store i32 0, i32* %t67
+    ; line 858
     %t68 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 22
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.36, i32 0, i32 0), %T_alfa* %t68
+    ; line 858
     %t69 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 22
     store i1 0, i1* %t69
+    ; line 858
     %t70 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 22
     store i32 0, i32* %t70
+    ; line 859
     %t71 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 23
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.37, i32 0, i32 0), %T_alfa* %t71
+    ; line 859
     %t72 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 23
     store i1 0, i1* %t72
+    ; line 859
     %t73 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 23
     store i32 4, i32* %t73
+    ; line 860
     %t74 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 24
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.38, i32 0, i32 0), %T_alfa* %t74
+    ; line 860
     %t75 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 24
     store i1 0, i1* %t75
+    ; line 860
     %t76 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 24
     store i32 4, i32* %t76
+    ; line 861
     %t77 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 25
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.39, i32 0, i32 0), %T_alfa* %t77
+    ; line 861
     %t78 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 25
     store i1 0, i1* %t78
+    ; line 861
     %t79 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 25
     store i32 4, i32* %t79
+    ; line 862
     %t80 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 26
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.40, i32 0, i32 0), %T_alfa* %t80
+    ; line 862
     %t81 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 26
     store i1 0, i1* %t81
+    ; line 862
     %t82 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 26
     store i32 4, i32* %t82
+    ; line 863
     %t83 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 27
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.41, i32 0, i32 0), %T_alfa* %t83
+    ; line 863
     %t84 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 27
     store i1 0, i1* %t84
+    ; line 863
     %t85 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 27
     store i32 0, i32* %t85
+    ; line 864
     %t86 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 28
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.42, i32 0, i32 0), %T_alfa* %t86
+    ; line 864
     %t87 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 28
     store i1 0, i1* %t87
+    ; line 864
     %t88 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 28
     store i32 0, i32* %t88
+    ; line 865
     %t89 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 29
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.43, i32 0, i32 0), %T_alfa* %t89
+    ; line 865
     %t90 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 29
     store i1 0, i1* %t90
+    ; line 865
     %t91 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 29
     store i32 0, i32* %t91
+    ; line 866
     %t92 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 30
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.44, i32 0, i32 0), %T_alfa* %t92
+    ; line 866
     %t93 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 30
     store i1 0, i1* %t93
+    ; line 866
     %t94 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 30
     store i32 0, i32* %t94
+    ; line 867
     %t95 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 31
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.45, i32 0, i32 0), %T_alfa* %t95
+    ; line 867
     %t96 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 31
     store i1 0, i1* %t96
+    ; line 867
     %t97 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 31
     store i32 0, i32* %t97
+    ; line 868
     %t98 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 32
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.46, i32 0, i32 0), %T_alfa* %t98
+    ; line 868
     %t99 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 32
     store i1 0, i1* %t99
+    ; line 868
     %t100 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 32
     store i32 0, i32* %t100
+    ; line 869
     %t101 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 33
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.47, i32 0, i32 0), %T_alfa* %t101
+    ; line 869
     %t102 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 33
     store i1 0, i1* %t102
+    ; line 869
     %t103 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 33
     store i32 0, i32* %t103
+    ; line 870
     %t104 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 34
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.48, i32 0, i32 0), %T_alfa* %t104
+    ; line 870
     %t105 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 34
     store i1 0, i1* %t105
+    ; line 870
     %t106 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 34
     store i32 0, i32* %t106
+    ; line 871
     %t107 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 35
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.49, i32 0, i32 0), %T_alfa* %t107
+    ; line 871
     %t108 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 35
     store i1 0, i1* %t108
+    ; line 871
     %t109 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 35
     store i32 0, i32* %t109
+    ; line 872
     %t110 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 36
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.50, i32 0, i32 0), %T_alfa* %t110
+    ; line 872
     %t111 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 36
     store i1 0, i1* %t111
+    ; line 872
     %t112 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 36
     store i32 0, i32* %t112
+    ; line 873
     %t113 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 37
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.51, i32 0, i32 0), %T_alfa* %t113
+    ; line 873
     %t114 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 37
     store i1 0, i1* %t114
+    ; line 873
     %t115 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 37
     store i32 0, i32* %t115
+    ; line 874
     %t116 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 38
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.52, i32 0, i32 0), %T_alfa* %t116
+    ; line 874
     %t117 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 38
     store i1 0, i1* %t117
+    ; line 874
     %t118 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 38
     store i32 0, i32* %t118
+    ; line 875
     %t119 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 39
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.53, i32 0, i32 0), %T_alfa* %t119
+    ; line 875
     %t120 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 39
     store i1 0, i1* %t120
+    ; line 875
     %t121 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 39
     store i32 0, i32* %t121
+    ; line 876
     %t122 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 40
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.54, i32 0, i32 0), %T_alfa* %t122
+    ; line 876
     %t123 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 40
     store i1 0, i1* %t123
+    ; line 876
     %t124 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 40
     store i32 0, i32* %t124
+    ; line 877
     %t125 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 41
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.55, i32 0, i32 0), %T_alfa* %t125
+    ; line 877
     %t126 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 41
     store i1 0, i1* %t126
+    ; line 877
     %t127 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 41
     store i32 0, i32* %t127
+    ; line 878
     %t128 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 42
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.56, i32 0, i32 0), %T_alfa* %t128
+    ; line 878
     %t129 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 42
     store i1 0, i1* %t129
+    ; line 878
     %t130 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 42
     store i32 0, i32* %t130
+    ; line 879
     %t131 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 43
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.57, i32 0, i32 0), %T_alfa* %t131
+    ; line 879
     %t132 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 43
     store i1 0, i1* %t132
+    ; line 879
     %t133 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 43
     store i32 0, i32* %t133
+    ; line 880
     %t134 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 44
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.58, i32 0, i32 0), %T_alfa* %t134
+    ; line 880
     %t135 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 44
     store i1 0, i1* %t135
+    ; line 880
     %t136 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 44
     store i32 0, i32* %t136
+    ; line 881
     %t137 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 45
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.59, i32 0, i32 0), %T_alfa* %t137
+    ; line 881
     %t138 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 45
     store i1 0, i1* %t138
+    ; line 881
     %t139 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 45
     store i32 0, i32* %t139
+    ; line 882
     %t140 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 46
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.60, i32 0, i32 0), %T_alfa* %t140
+    ; line 882
     %t141 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 46
     store i1 0, i1* %t141
+    ; line 882
     %t142 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 46
     store i32 0, i32* %t142
+    ; line 883
     %t143 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 47
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.61, i32 0, i32 0), %T_alfa* %t143
+    ; line 883
     %t144 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 47
     store i1 0, i1* %t144
+    ; line 883
     %t145 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 47
     store i32 0, i32* %t145
+    ; line 884
     %t146 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 48
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.62, i32 0, i32 0), %T_alfa* %t146
+    ; line 884
     %t147 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 48
     store i1 0, i1* %t147
+    ; line 884
     %t148 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 48
     store i32 0, i32* %t148
+    ; line 885
     %t149 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 49
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.63, i32 0, i32 0), %T_alfa* %t149
+    ; line 885
     %t150 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 49
     store i1 0, i1* %t150
+    ; line 885
     %t151 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 49
     store i32 0, i32* %t151
+    ; line 886
     %t152 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 50
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.64, i32 0, i32 0), %T_alfa* %t152
+    ; line 886
     %t153 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 50
     store i1 0, i1* %t153
+    ; line 886
     %t154 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 50
     store i32 0, i32* %t154
+    ; line 887
     %t155 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 51
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.65, i32 0, i32 0), %T_alfa* %t155
+    ; line 887
     %t156 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 51
     store i1 0, i1* %t156
+    ; line 887
     %t157 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 51
     store i32 0, i32* %t157
+    ; line 888
     %t158 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 52
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.66, i32 0, i32 0), %T_alfa* %t158
+    ; line 888
     %t159 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 52
     store i1 0, i1* %t159
+    ; line 888
     %t160 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 52
     store i32 0, i32* %t160
+    ; line 889
     %t161 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 53
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.67, i32 0, i32 0), %T_alfa* %t161
+    ; line 889
     %t162 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 53
     store i1 0, i1* %t162
+    ; line 889
     %t163 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 53
     store i32 0, i32* %t163
+    ; line 890
     %t164 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 54
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.68, i32 0, i32 0), %T_alfa* %t164
+    ; line 890
     %t165 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 54
     store i1 0, i1* %t165
+    ; line 890
     %t166 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 54
     store i32 0, i32* %t166
+    ; line 891
     %t167 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 55
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.69, i32 0, i32 0), %T_alfa* %t167
+    ; line 891
     %t168 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 55
     store i1 0, i1* %t168
+    ; line 891
     %t169 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 55
     store i32 4, i32* %t169
+    ; line 892
     %t170 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 56
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.70, i32 0, i32 0), %T_alfa* %t170
+    ; line 892
     %t171 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 56
     store i1 0, i1* %t171
+    ; line 892
     %t172 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 56
     store i32 4, i32* %t172
+    ; line 893
     %t173 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 57
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.71, i32 0, i32 0), %T_alfa* %t173
+    ; line 893
     %t174 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 57
     store i1 0, i1* %t174
+    ; line 893
     %t175 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 57
     store i32 4, i32* %t175
+    ; line 894
     %t176 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 58
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.72, i32 0, i32 0), %T_alfa* %t176
+    ; line 894
     %t177 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 58
     store i1 0, i1* %t177
+    ; line 894
     %t178 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 58
     store i32 0, i32* %t178
+    ; line 895
     %t179 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 59
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.73, i32 0, i32 0), %T_alfa* %t179
+    ; line 895
     %t180 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 59
     store i1 0, i1* %t180
+    ; line 895
     %t181 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 59
     store i32 0, i32* %t181
+    ; line 896
     %t182 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 60
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.74, i32 0, i32 0), %T_alfa* %t182
+    ; line 896
     %t183 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 60
     store i1 0, i1* %t183
+    ; line 896
     %t184 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 60
     store i32 0, i32* %t184
+    ; line 897
     %t185 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 61
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.75, i32 0, i32 0), %T_alfa* %t185
+    ; line 897
     %t186 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 61
     store i1 0, i1* %t186
+    ; line 897
     %t187 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 61
     store i32 4, i32* %t187
+    ; line 898
     %t188 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 62
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.76, i32 0, i32 0), %T_alfa* %t188
+    ; line 898
     %t189 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 62
     store i1 0, i1* %t189
+    ; line 898
     %t190 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 62
     store i32 0, i32* %t190
+    ; line 899
     %t191 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 63
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.77, i32 0, i32 0), %T_alfa* %t191
+    ; line 899
     %t192 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 63
     store i1 0, i1* %t192
+    ; line 899
     %t193 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 63
     store i32 4, i32* %t193
+    ; line 900
     %t194 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 64
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.78, i32 0, i32 0), %T_alfa* %t194
+    ; line 900
     %t195 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 64
     store i1 0, i1* %t195
+    ; line 900
     %t196 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 64
     store i32 4, i32* %t196
+    ; line 901
     %t197 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 65
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.79, i32 0, i32 0), %T_alfa* %t197
+    ; line 901
     %t198 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 65
     store i1 0, i1* %t198
+    ; line 901
     %t199 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 65
     store i32 4, i32* %t199
+    ; line 902
     %t200 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 66
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.80, i32 0, i32 0), %T_alfa* %t200
+    ; line 902
     %t201 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 66
     store i1 0, i1* %t201
+    ; line 902
     %t202 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 66
     store i32 4, i32* %t202
+    ; line 903
     %t203 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 67
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.81, i32 0, i32 0), %T_alfa* %t203
+    ; line 903
     %t204 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 67
     store i1 0, i1* %t204
+    ; line 903
     %t205 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 67
     store i32 4, i32* %t205
+    ; line 904
     %t206 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 68
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.82, i32 0, i32 0), %T_alfa* %t206
+    ; line 904
     %t207 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 68
     store i1 0, i1* %t207
+    ; line 904
     %t208 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 68
     store i32 4, i32* %t208
+    ; line 905
     %t209 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 69
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.83, i32 0, i32 0), %T_alfa* %t209
+    ; line 905
     %t210 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 69
     store i1 0, i1* %t210
+    ; line 905
     %t211 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 69
     store i32 4, i32* %t211
+    ; line 906
     %t212 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 70
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.84, i32 0, i32 0), %T_alfa* %t212
+    ; line 906
     %t213 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 70
     store i1 1, i1* %t213
+    ; line 906
     %t214 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 70
     store i32 4, i32* %t214
+    ; line 907
     %t215 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 71
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.85, i32 0, i32 0), %T_alfa* %t215
+    ; line 907
     %t216 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 71
     store i1 1, i1* %t216
+    ; line 907
     %t217 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 71
     store i32 4, i32* %t217
+    ; line 908
     %t218 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 72
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.86, i32 0, i32 0), %T_alfa* %t218
+    ; line 908
     %t219 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 72
     store i1 1, i1* %t219
+    ; line 908
     %t220 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 72
     store i32 4, i32* %t220
+    ; line 909
     %t221 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 73
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.87, i32 0, i32 0), %T_alfa* %t221
+    ; line 909
     %t222 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 73
     store i1 1, i1* %t222
+    ; line 909
     %t223 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 73
     store i32 4, i32* %t223
+    ; line 910
     %t224 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 74
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.88, i32 0, i32 0), %T_alfa* %t224
+    ; line 910
     %t225 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 74
     store i1 1, i1* %t225
+    ; line 910
     %t226 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 74
     store i32 4, i32* %t226
+    ; line 911
     %t227 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 75
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.89, i32 0, i32 0), %T_alfa* %t227
+    ; line 911
     %t228 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 75
     store i1 0, i1* %t228
+    ; line 911
     %t229 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 75
     store i32 4, i32* %t229
+    ; line 912
     %t230 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 76
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.90, i32 0, i32 0), %T_alfa* %t230
+    ; line 912
     %t231 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 76
     store i1 0, i1* %t231
+    ; line 912
     %t232 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 76
     store i32 4, i32* %t232
+    ; line 913
     %t233 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 77
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.91, i32 0, i32 0), %T_alfa* %t233
+    ; line 913
     %t234 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 77
     store i1 0, i1* %t234
+    ; line 913
     %t235 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 77
     store i32 4, i32* %t235
+    ; line 914
     %t236 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 78
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.92, i32 0, i32 0), %T_alfa* %t236
+    ; line 914
     %t237 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 78
     store i1 0, i1* %t237
+    ; line 914
     %t238 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 78
     store i32 4, i32* %t238
+    ; line 915
     %t239 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 79
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.93, i32 0, i32 0), %T_alfa* %t239
+    ; line 915
     %t240 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 79
     store i1 0, i1* %t240
+    ; line 915
     %t241 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 79
     store i32 4, i32* %t241
+    ; line 916
     %t242 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 80
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.94, i32 0, i32 0), %T_alfa* %t242
+    ; line 916
     %t243 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 80
     store i1 0, i1* %t243
+    ; line 916
     %t244 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 80
     store i32 0, i32* %t244
+    ; line 917
     %t245 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 81
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.95, i32 0, i32 0), %T_alfa* %t245
+    ; line 917
     %t246 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 81
     store i1 0, i1* %t246
+    ; line 917
     %t247 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 81
     store i32 0, i32* %t247
+    ; line 918
     %t248 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 82
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.96, i32 0, i32 0), %T_alfa* %t248
+    ; line 918
     %t249 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 82
     store i1 0, i1* %t249
+    ; line 918
     %t250 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 82
     store i32 0, i32* %t250
+    ; line 919
     %t251 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 83
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.97, i32 0, i32 0), %T_alfa* %t251
+    ; line 919
     %t252 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 83
     store i1 0, i1* %t252
+    ; line 919
     %t253 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 83
     store i32 0, i32* %t253
+    ; line 920
     %t254 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 84
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.98, i32 0, i32 0), %T_alfa* %t254
+    ; line 920
     %t255 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 84
     store i1 0, i1* %t255
+    ; line 920
     %t256 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 84
     store i32 0, i32* %t256
+    ; line 921
     %t257 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 85
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.99, i32 0, i32 0), %T_alfa* %t257
+    ; line 921
     %t258 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 85
     store i1 0, i1* %t258
+    ; line 921
     %t259 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 85
     store i32 4, i32* %t259
+    ; line 922
     %t260 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 86
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.100, i32 0, i32 0), %T_alfa* %t260
+    ; line 922
     %t261 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 86
     store i1 0, i1* %t261
+    ; line 922
     %t262 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 86
     store i32 4, i32* %t262
+    ; line 923
     %t263 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 87
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.101, i32 0, i32 0), %T_alfa* %t263
+    ; line 923
     %t264 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 87
     store i1 0, i1* %t264
+    ; line 923
     %t265 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 87
     store i32 4, i32* %t265
+    ; line 924
     %t266 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 88
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.102, i32 0, i32 0), %T_alfa* %t266
+    ; line 924
     %t267 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 88
     store i1 0, i1* %t267
+    ; line 924
     %t268 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 88
     store i32 4, i32* %t268
+    ; line 925
     %t269 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 89
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.103, i32 0, i32 0), %T_alfa* %t269
+    ; line 925
     %t270 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 89
     store i1 0, i1* %t270
+    ; line 925
     %t271 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 89
     store i32 4, i32* %t271
+    ; line 926
     %t272 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 90
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.104, i32 0, i32 0), %T_alfa* %t272
+    ; line 926
     %t273 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 90
     store i1 0, i1* %t273
+    ; line 926
     %t274 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 90
     store i32 4, i32* %t274
+    ; line 927
     %t275 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 91
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.105, i32 0, i32 0), %T_alfa* %t275
+    ; line 927
     %t276 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 91
     store i1 0, i1* %t276
+    ; line 927
     %t277 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 91
     store i32 4, i32* %t277
+    ; line 928
     %t278 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 92
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.106, i32 0, i32 0), %T_alfa* %t278
+    ; line 928
     %t279 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 92
     store i1 0, i1* %t279
+    ; line 928
     %t280 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 92
     store i32 4, i32* %t280
+    ; line 929
     %t281 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 93
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.107, i32 0, i32 0), %T_alfa* %t281
+    ; line 929
     %t282 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 93
     store i1 0, i1* %t282
+    ; line 929
     %t283 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 93
     store i32 4, i32* %t283
+    ; line 930
     %t284 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 94
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.108, i32 0, i32 0), %T_alfa* %t284
+    ; line 930
     %t285 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 94
     store i1 0, i1* %t285
+    ; line 930
     %t286 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 94
     store i32 4, i32* %t286
+    ; line 931
     %t287 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 95
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.109, i32 0, i32 0), %T_alfa* %t287
+    ; line 931
     %t288 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 95
     store i1 0, i1* %t288
+    ; line 931
     %t289 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 95
     store i32 4, i32* %t289
+    ; line 932
     %t290 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 96
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.110, i32 0, i32 0), %T_alfa* %t290
+    ; line 932
     %t291 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 96
     store i1 0, i1* %t291
+    ; line 932
     %t292 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 96
     store i32 4, i32* %t292
+    ; line 933
     %t293 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 97
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.111, i32 0, i32 0), %T_alfa* %t293
+    ; line 933
     %t294 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 97
     store i1 0, i1* %t294
+    ; line 933
     %t295 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 97
     store i32 4, i32* %t295
+    ; line 934
     %t296 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 98
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.112, i32 0, i32 0), %T_alfa* %t296
+    ; line 934
     %t297 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 98
     store i1 0, i1* %t297
+    ; line 934
     %t298 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 98
     store i32 4, i32* %t298
+    ; line 935
     %t299 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 99
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.113, i32 0, i32 0), %T_alfa* %t299
+    ; line 935
     %t300 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 99
     store i1 0, i1* %t300
+    ; line 935
     %t301 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 99
     store i32 4, i32* %t301
+    ; line 936
     %t302 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 100
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.114, i32 0, i32 0), %T_alfa* %t302
+    ; line 936
     %t303 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 100
     store i1 0, i1* %t303
+    ; line 936
     %t304 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 100
     store i32 4, i32* %t304
+    ; line 937
     %t305 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 101
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.115, i32 0, i32 0), %T_alfa* %t305
+    ; line 937
     %t306 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 101
     store i1 0, i1* %t306
+    ; line 937
     %t307 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 101
     store i32 4, i32* %t307
+    ; line 938
     %t308 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 102
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.116, i32 0, i32 0), %T_alfa* %t308
+    ; line 938
     %t309 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 102
     store i1 0, i1* %t309
+    ; line 938
     %t310 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 102
     store i32 4, i32* %t310
+    ; line 939
     %t311 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 103
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.117, i32 0, i32 0), %T_alfa* %t311
+    ; line 939
     %t312 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 103
     store i1 0, i1* %t312
+    ; line 939
     %t313 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 103
     store i32 4, i32* %t313
+    ; line 940
     %t314 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 104
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.118, i32 0, i32 0), %T_alfa* %t314
+    ; line 940
     %t315 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 104
     store i1 0, i1* %t315
+    ; line 940
     %t316 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 104
     store i32 4, i32* %t316
+    ; line 941
     %t317 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 105
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.119, i32 0, i32 0), %T_alfa* %t317
+    ; line 941
     %t318 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 105
     store i1 1, i1* %t318
+    ; line 941
     %t319 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 105
     store i32 4, i32* %t319
+    ; line 942
     %t320 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 106
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.120, i32 0, i32 0), %T_alfa* %t320
+    ; line 942
     %t321 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 106
     store i1 1, i1* %t321
+    ; line 942
     %t322 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 106
     store i32 4, i32* %t322
+    ; line 943
     %t323 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 107
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.121, i32 0, i32 0), %T_alfa* %t323
+    ; line 943
     %t324 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 107
     store i1 1, i1* %t324
+    ; line 943
     %t325 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 107
     store i32 4, i32* %t325
+    ; line 944
     %t326 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 108
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.122, i32 0, i32 0), %T_alfa* %t326
+    ; line 944
     %t327 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 108
     store i1 1, i1* %t327
+    ; line 944
     %t328 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 108
     store i32 4, i32* %t328
+    ; line 945
     %t329 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 109
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.123, i32 0, i32 0), %T_alfa* %t329
+    ; line 945
     %t330 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 109
     store i1 1, i1* %t330
+    ; line 945
     %t331 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 109
     store i32 4, i32* %t331
+    ; line 946
     %t332 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 110
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.124, i32 0, i32 0), %T_alfa* %t332
+    ; line 946
     %t333 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 110
     store i1 0, i1* %t333
+    ; line 946
     %t334 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 110
     store i32 0, i32* %t334
+    ; line 947
     %t335 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 111
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.125, i32 0, i32 0), %T_alfa* %t335
+    ; line 947
     %t336 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 111
     store i1 0, i1* %t336
+    ; line 947
     %t337 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 111
     store i32 0, i32* %t337
+    ; line 948
     %t338 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 112
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.126, i32 0, i32 0), %T_alfa* %t338
+    ; line 948
     %t339 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 112
     store i1 1, i1* %t339
+    ; line 948
     %t340 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 112
     store i32 4, i32* %t340
+    ; line 949
     %t341 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 113
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.127, i32 0, i32 0), %T_alfa* %t341
+    ; line 949
     %t342 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 113
     store i1 1, i1* %t342
+    ; line 949
     %t343 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 113
     store i32 0, i32* %t343
+    ; line 950
     %t344 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 114
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.128, i32 0, i32 0), %T_alfa* %t344
+    ; line 950
     %t345 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 114
     store i1 1, i1* %t345
+    ; line 950
     %t346 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 114
     store i32 4, i32* %t346
+    ; line 951
     %t347 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 115
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.129, i32 0, i32 0), %T_alfa* %t347
+    ; line 951
     %t348 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 115
     store i1 0, i1* %t348
+    ; line 951
     %t349 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 115
     store i32 0, i32* %t349
+    ; line 952
     %t350 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 116
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.130, i32 0, i32 0), %T_alfa* %t350
+    ; line 952
     %t351 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 116
     store i1 0, i1* %t351
+    ; line 952
     %t352 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 116
     store i32 0, i32* %t352
+    ; line 953
     %t353 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 117
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.131, i32 0, i32 0), %T_alfa* %t353
+    ; line 953
     %t354 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 117
     store i1 0, i1* %t354
+    ; line 953
     %t355 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 117
     store i32 4, i32* %t355
+    ; line 954
     %t356 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 118
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.132, i32 0, i32 0), %T_alfa* %t356
+    ; line 954
     %t357 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 118
     store i1 0, i1* %t357
+    ; line 954
     %t358 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 118
     store i32 4, i32* %t358
+    ; line 955
     %t359 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 119
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.133, i32 0, i32 0), %T_alfa* %t359
+    ; line 955
     %t360 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 119
     store i1 0, i1* %t360
+    ; line 955
     %t361 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 119
     store i32 4, i32* %t361
+    ; line 956
     %t362 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 120
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.134, i32 0, i32 0), %T_alfa* %t362
+    ; line 956
     %t363 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 120
     store i1 1, i1* %t363
+    ; line 956
     %t364 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 120
     store i32 4, i32* %t364
+    ; line 957
     %t365 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 121
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.22, i32 0, i32 0), %T_alfa* %t365
+    ; line 957
     %t366 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 121
     store i1 0, i1* %t366
+    ; line 957
     %t367 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 121
     store i32 0, i32* %t367
+    ; line 958
     %t368 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 122
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.22, i32 0, i32 0), %T_alfa* %t368
+    ; line 958
     %t369 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 122
     store i1 0, i1* %t369
+    ; line 958
     %t370 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 122
     store i32 0, i32* %t370
+    ; line 959
     %t371 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 123
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.135, i32 0, i32 0), %T_alfa* %t371
+    ; line 959
     %t372 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 123
     store i1 0, i1* %t372
+    ; line 959
     %t373 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 123
     store i32 4, i32* %t373
+    ; line 960
     %t374 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 124
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.136, i32 0, i32 0), %T_alfa* %t374
+    ; line 960
     %t375 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 124
     store i1 0, i1* %t375
+    ; line 960
     %t376 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 124
     store i32 4, i32* %t376
+    ; line 961
     %t377 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 125
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.137, i32 0, i32 0), %T_alfa* %t377
+    ; line 961
     %t378 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 125
     store i1 0, i1* %t378
+    ; line 961
     %t379 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 125
     store i32 0, i32* %t379
+    ; line 962
     %t380 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 126
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.138, i32 0, i32 0), %T_alfa* %t380
+    ; line 962
     %t381 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 126
     store i1 0, i1* %t381
+    ; line 962
     %t382 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 126
     store i32 1, i32* %t382
+    ; line 963
     %t383 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 127
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.139, i32 0, i32 0), %T_alfa* %t383
+    ; line 963
     %t384 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 127
     store i1 0, i1* %t384
+    ; line 963
     %t385 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 127
     store i32 1, i32* %t385
+    ; line 964
     %t386 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 128
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.140, i32 0, i32 0), %T_alfa* %t386
+    ; line 964
     %t387 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 128
     store i1 0, i1* %t387
+    ; line 964
     %t388 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 128
     store i32 0, i32* %t388
+    ; line 965
     %t389 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 129
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.141, i32 0, i32 0), %T_alfa* %t389
+    ; line 965
     %t390 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 129
     store i1 0, i1* %t390
+    ; line 965
     %t391 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 129
     store i32 0, i32* %t391
+    ; line 966
     %t392 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 130
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.142, i32 0, i32 0), %T_alfa* %t392
+    ; line 966
     %t393 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 130
     store i1 0, i1* %t393
+    ; line 966
     %t394 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 130
     store i32 0, i32* %t394
+    ; line 967
     %t395 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 131
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.143, i32 0, i32 0), %T_alfa* %t395
+    ; line 967
     %t396 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 131
     store i1 0, i1* %t396
+    ; line 967
     %t397 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 131
     store i32 0, i32* %t397
+    ; line 968
     %t398 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 132
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.144, i32 0, i32 0), %T_alfa* %t398
+    ; line 968
     %t399 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 132
     store i1 0, i1* %t399
+    ; line 968
     %t400 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 132
     store i32 0, i32* %t400
+    ; line 969
     %t401 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 133
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.145, i32 0, i32 0), %T_alfa* %t401
+    ; line 969
     %t402 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 133
     store i1 0, i1* %t402
+    ; line 969
     %t403 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 133
     store i32 0, i32* %t403
+    ; line 970
     %t404 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 134
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.146, i32 0, i32 0), %T_alfa* %t404
+    ; line 970
     %t405 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 134
     store i1 0, i1* %t405
+    ; line 970
     %t406 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 134
     store i32 0, i32* %t406
+    ; line 971
     %t407 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 135
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.147, i32 0, i32 0), %T_alfa* %t407
+    ; line 971
     %t408 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 135
     store i1 0, i1* %t408
+    ; line 971
     %t409 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 135
     store i32 0, i32* %t409
+    ; line 972
     %t410 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 136
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.148, i32 0, i32 0), %T_alfa* %t410
+    ; line 972
     %t411 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 136
     store i1 0, i1* %t411
+    ; line 972
     %t412 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 136
     store i32 0, i32* %t412
+    ; line 973
     %t413 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 137
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.149, i32 0, i32 0), %T_alfa* %t413
+    ; line 973
     %t414 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 137
     store i1 0, i1* %t414
+    ; line 973
     %t415 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 137
     store i32 0, i32* %t415
+    ; line 974
     %t416 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 138
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.150, i32 0, i32 0), %T_alfa* %t416
+    ; line 974
     %t417 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 138
     store i1 0, i1* %t417
+    ; line 974
     %t418 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 138
     store i32 0, i32* %t418
+    ; line 975
     %t419 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 139
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.151, i32 0, i32 0), %T_alfa* %t419
+    ; line 975
     %t420 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 139
     store i1 0, i1* %t420
+    ; line 975
     %t421 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 139
     store i32 0, i32* %t421
+    ; line 976
     %t422 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 140
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.152, i32 0, i32 0), %T_alfa* %t422
+    ; line 976
     %t423 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 140
     store i1 0, i1* %t423
+    ; line 976
     %t424 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 140
     store i32 0, i32* %t424
+    ; line 977
     %t425 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 141
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.153, i32 0, i32 0), %T_alfa* %t425
+    ; line 977
     %t426 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 141
     store i1 0, i1* %t426
+    ; line 977
     %t427 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 141
     store i32 0, i32* %t427
+    ; line 978
     %t428 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 142
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.154, i32 0, i32 0), %T_alfa* %t428
+    ; line 978
     %t429 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 142
     store i1 0, i1* %t429
+    ; line 978
     %t430 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 142
     store i32 4, i32* %t430
+    ; line 979
     %t431 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 143
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.155, i32 0, i32 0), %T_alfa* %t431
+    ; line 979
     %t432 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 143
     store i1 0, i1* %t432
+    ; line 979
     %t433 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 143
     store i32 0, i32* %t433
+    ; line 980
     %t434 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 144
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.156, i32 0, i32 0), %T_alfa* %t434
+    ; line 980
     %t435 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 144
     store i1 0, i1* %t435
+    ; line 980
     %t436 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 144
     store i32 0, i32* %t436
+    ; line 981
     %t437 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 145
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.157, i32 0, i32 0), %T_alfa* %t437
+    ; line 981
     %t438 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 145
     store i1 0, i1* %t438
+    ; line 981
     %t439 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 145
     store i32 0, i32* %t439
+    ; line 982
     %t440 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 146
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.158, i32 0, i32 0), %T_alfa* %t440
+    ; line 982
     %t441 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 146
     store i1 0, i1* %t441
+    ; line 982
     %t442 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 146
     store i32 0, i32* %t442
+    ; line 983
     %t443 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 147
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.159, i32 0, i32 0), %T_alfa* %t443
+    ; line 983
     %t444 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 147
     store i1 0, i1* %t444
+    ; line 983
     %t445 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 147
     store i32 0, i32* %t445
+    ; line 984
     %t446 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 148
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.160, i32 0, i32 0), %T_alfa* %t446
+    ; line 984
     %t447 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 148
     store i1 0, i1* %t447
+    ; line 984
     %t448 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 148
     store i32 4, i32* %t448
+    ; line 985
     %t449 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 149
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.161, i32 0, i32 0), %T_alfa* %t449
+    ; line 985
     %t450 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 149
     store i1 0, i1* %t450
+    ; line 985
     %t451 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 149
     store i32 0, i32* %t451
+    ; line 986
     %t452 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 150
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.162, i32 0, i32 0), %T_alfa* %t452
+    ; line 986
     %t453 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 150
     store i1 0, i1* %t453
+    ; line 986
     %t454 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 150
     store i32 0, i32* %t454
+    ; line 987
     %t455 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 151
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.163, i32 0, i32 0), %T_alfa* %t455
+    ; line 987
     %t456 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 151
     store i1 0, i1* %t456
+    ; line 987
     %t457 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 151
     store i32 0, i32* %t457
+    ; line 988
     %t458 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 152
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.164, i32 0, i32 0), %T_alfa* %t458
+    ; line 988
     %t459 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 152
     store i1 0, i1* %t459
+    ; line 988
     %t460 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 152
     store i32 0, i32* %t460
+    ; line 989
     %t461 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 153
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.165, i32 0, i32 0), %T_alfa* %t461
+    ; line 989
     %t462 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 153
     store i1 0, i1* %t462
+    ; line 989
     %t463 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 153
     store i32 0, i32* %t463
+    ; line 990
     %t464 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 154
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.166, i32 0, i32 0), %T_alfa* %t464
+    ; line 990
     %t465 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 154
     store i1 0, i1* %t465
+    ; line 990
     %t466 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 154
     store i32 4, i32* %t466
+    ; line 991
     %t467 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 155
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.167, i32 0, i32 0), %T_alfa* %t467
+    ; line 991
     %t468 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 155
     store i1 0, i1* %t468
+    ; line 991
     %t469 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 155
     store i32 0, i32* %t469
+    ; line 992
     %t470 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 156
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.168, i32 0, i32 0), %T_alfa* %t470
+    ; line 992
     %t471 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 156
     store i1 0, i1* %t471
+    ; line 992
     %t472 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 156
     store i32 0, i32* %t472
+    ; line 993
     %t473 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 157
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.169, i32 0, i32 0), %T_alfa* %t473
+    ; line 993
     %t474 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 157
     store i1 0, i1* %t474
+    ; line 993
     %t475 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 157
     store i32 0, i32* %t475
+    ; line 994
     %t476 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 158
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.170, i32 0, i32 0), %T_alfa* %t476
+    ; line 994
     %t477 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 158
     store i1 0, i1* %t477
+    ; line 994
     %t478 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 158
     store i32 0, i32* %t478
+    ; line 995
     %t479 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 159
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.171, i32 0, i32 0), %T_alfa* %t479
+    ; line 995
     %t480 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 159
     store i1 0, i1* %t480
+    ; line 995
     %t481 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 159
     store i32 0, i32* %t481
+    ; line 996
     %t482 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 160
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.172, i32 0, i32 0), %T_alfa* %t482
+    ; line 996
     %t483 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 160
     store i1 0, i1* %t483
+    ; line 996
     %t484 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 160
     store i32 4, i32* %t484
+    ; line 997
     %t485 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 161
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.173, i32 0, i32 0), %T_alfa* %t485
+    ; line 997
     %t486 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 161
     store i1 0, i1* %t486
+    ; line 997
     %t487 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 161
     store i32 0, i32* %t487
+    ; line 998
     %t488 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 162
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.174, i32 0, i32 0), %T_alfa* %t488
+    ; line 998
     %t489 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 162
     store i1 0, i1* %t489
+    ; line 998
     %t490 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 162
     store i32 0, i32* %t490
+    ; line 999
     %t491 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 163
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.175, i32 0, i32 0), %T_alfa* %t491
+    ; line 999
     %t492 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 163
     store i1 0, i1* %t492
+    ; line 999
     %t493 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 163
     store i32 0, i32* %t493
+    ; line 1000
     %t494 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 164
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.176, i32 0, i32 0), %T_alfa* %t494
+    ; line 1000
     %t495 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 164
     store i1 0, i1* %t495
+    ; line 1000
     %t496 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 164
     store i32 0, i32* %t496
+    ; line 1001
     %t497 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 165
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.177, i32 0, i32 0), %T_alfa* %t497
+    ; line 1001
     %t498 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 165
     store i1 0, i1* %t498
+    ; line 1001
     %t499 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 165
     store i32 0, i32* %t499
+    ; line 1002
     %t500 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 166
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.178, i32 0, i32 0), %T_alfa* %t500
+    ; line 1002
     %t501 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 166
     store i1 0, i1* %t501
+    ; line 1002
     %t502 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 166
     store i32 4, i32* %t502
+    ; line 1003
     %t503 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 167
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.179, i32 0, i32 0), %T_alfa* %t503
+    ; line 1003
     %t504 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 167
     store i1 0, i1* %t504
+    ; line 1003
     %t505 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 167
     store i32 0, i32* %t505
+    ; line 1004
     %t506 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 168
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.180, i32 0, i32 0), %T_alfa* %t506
+    ; line 1004
     %t507 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 168
     store i1 0, i1* %t507
+    ; line 1004
     %t508 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 168
     store i32 0, i32* %t508
+    ; line 1005
     %t509 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 169
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.181, i32 0, i32 0), %T_alfa* %t509
+    ; line 1005
     %t510 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 169
     store i1 0, i1* %t510
+    ; line 1005
     %t511 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 169
     store i32 0, i32* %t511
+    ; line 1006
     %t512 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 170
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.182, i32 0, i32 0), %T_alfa* %t512
+    ; line 1006
     %t513 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 170
     store i1 0, i1* %t513
+    ; line 1006
     %t514 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 170
     store i32 0, i32* %t514
+    ; line 1007
     %t515 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 171
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.183, i32 0, i32 0), %T_alfa* %t515
+    ; line 1007
     %t516 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 171
     store i1 0, i1* %t516
+    ; line 1007
     %t517 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 171
     store i32 0, i32* %t517
+    ; line 1008
     %t518 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 172
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.184, i32 0, i32 0), %T_alfa* %t518
+    ; line 1008
     %t519 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 172
     store i1 0, i1* %t519
+    ; line 1008
     %t520 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 172
     store i32 4, i32* %t520
+    ; line 1009
     %t521 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 173
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.185, i32 0, i32 0), %T_alfa* %t521
+    ; line 1009
     %t522 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 173
     store i1 0, i1* %t522
+    ; line 1009
     %t523 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 173
     store i32 4, i32* %t523
+    ; line 1010
     %t524 = getelementptr inbounds %T_array_10, %T_array_10* @instr, i32 0, i32 174
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.186, i32 0, i32 0), %T_alfa* %t524
+    ; line 1010
     %t525 = getelementptr inbounds %T_array_7, %T_array_7* @insp, i32 0, i32 174
     store i1 0, i1* %t525
+    ; line 1010
     %t526 = getelementptr inbounds %T_array_8, %T_array_8* @insq, i32 0, i32 174
     store i32 4, i32* %t526
+    ; line 1013
     %t527 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 0
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.187, i32 0, i32 0), %T_alfa* %t527
+    ; line 1013
     %t528 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 1
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.188, i32 0, i32 0), %T_alfa* %t528
+    ; line 1014
     %t529 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 2
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.22, i32 0, i32 0), %T_alfa* %t529
+    ; line 1014
     %t530 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 3
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.189, i32 0, i32 0), %T_alfa* %t530
+    ; line 1015
     %t531 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 4
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.190, i32 0, i32 0), %T_alfa* %t531
+    ; line 1015
     %t532 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 5
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.191, i32 0, i32 0), %T_alfa* %t532
+    ; line 1016
     %t533 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 6
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.192, i32 0, i32 0), %T_alfa* %t533
+    ; line 1016
     %t534 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 7
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.193, i32 0, i32 0), %T_alfa* %t534
+    ; line 1017
     %t535 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 8
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.194, i32 0, i32 0), %T_alfa* %t535
+    ; line 1017
     %t536 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 9
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.195, i32 0, i32 0), %T_alfa* %t536
+    ; line 1018
     %t537 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 10
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.196, i32 0, i32 0), %T_alfa* %t537
+    ; line 1018
     %t538 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 11
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.197, i32 0, i32 0), %T_alfa* %t538
+    ; line 1019
     %t539 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 12
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.198, i32 0, i32 0), %T_alfa* %t539
+    ; line 1019
     %t540 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 13
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.199, i32 0, i32 0), %T_alfa* %t540
+    ; line 1020
     %t541 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 14
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.200, i32 0, i32 0), %T_alfa* %t541
+    ; line 1020
     %t542 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 15
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.201, i32 0, i32 0), %T_alfa* %t542
+    ; line 1021
     %t543 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 16
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.202, i32 0, i32 0), %T_alfa* %t543
+    ; line 1021
     %t544 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 17
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.203, i32 0, i32 0), %T_alfa* %t544
+    ; line 1022
     %t545 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 18
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.204, i32 0, i32 0), %T_alfa* %t545
+    ; line 1022
     %t546 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 19
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.205, i32 0, i32 0), %T_alfa* %t546
+    ; line 1023
     %t547 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 20
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.22, i32 0, i32 0), %T_alfa* %t547
+    ; line 1023
     %t548 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 21
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.206, i32 0, i32 0), %T_alfa* %t548
+    ; line 1024
     %t549 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 22
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.207, i32 0, i32 0), %T_alfa* %t549
+    ; line 1024
     %t550 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 23
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.208, i32 0, i32 0), %T_alfa* %t550
+    ; line 1025
     %t551 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 24
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.209, i32 0, i32 0), %T_alfa* %t551
+    ; line 1025
     %t552 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 25
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.210, i32 0, i32 0), %T_alfa* %t552
+    ; line 1026
     %t553 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 26
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.211, i32 0, i32 0), %T_alfa* %t553
+    ; line 1026
     %t554 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 27
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.212, i32 0, i32 0), %T_alfa* %t554
+    ; line 1027
     %t555 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 28
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.213, i32 0, i32 0), %T_alfa* %t555
+    ; line 1027
     %t556 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 29
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.214, i32 0, i32 0), %T_alfa* %t556
+    ; line 1028
     %t557 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 30
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.215, i32 0, i32 0), %T_alfa* %t557
+    ; line 1028
     %t558 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 31
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.216, i32 0, i32 0), %T_alfa* %t558
+    ; line 1029
     %t559 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 32
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.217, i32 0, i32 0), %T_alfa* %t559
+    ; line 1029
     %t560 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 33
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.218, i32 0, i32 0), %T_alfa* %t560
+    ; line 1030
     %t561 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 34
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.219, i32 0, i32 0), %T_alfa* %t561
+    ; line 1030
     %t562 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 35
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.220, i32 0, i32 0), %T_alfa* %t562
+    ; line 1031
     %t563 = getelementptr inbounds %T_array_11, %T_array_11* @sptable, i32 0, i32 36
     store %T_alfa getelementptr inbounds ([11 x i8], [11 x i8]* @.str.221, i32 0, i32 0), %T_alfa* %t563
+    ; line 1033
     store i32 9, i32* @pc
+    ; line 1034
     store i32 200000, i32* @cp
+    ; line 1035
+    ; line 1036
+    ; line 1039
+    ; line 1042
+    ; line 1044
     %t565 = getelementptr inbounds %Frame_load_init, %Frame_load_init* %.frame, i32 0, i32 1
     %t566 = load %Frame_load*, %Frame_load** %t565
     %t564 = getelementptr inbounds %Frame_load, %Frame_load* %t566, i32 0, i32 1
@@ -2520,8 +3183,10 @@ define void @P_load_errorl(%Frame_load* %.slink, %T_beta %string)
     store %T_beta %string, %T_beta* %t2
 
     ; body
+    ; line 1048
     %t3 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t3)
+    ; line 1049
     %t4 = load %T_text, %T_text* @output
     call void @_WriteString(i8* %t4, i32 0, i32 0, i8* getelementptr inbounds ([26 x i8], [26 x i8]* @.str.222, i32 0, i32 0), i32 25)
     %t7 = getelementptr inbounds %Frame_load_errorl, %Frame_load_errorl* %.frame, i32 0, i32 1
@@ -2533,6 +3198,7 @@ define void @P_load_errorl(%Frame_load* %.slink, %T_beta %string)
     %t9 = getelementptr inbounds %Frame_load_errorl, %Frame_load_errorl* %.frame, i32 0, i32 0
     call void @_WriteString(i8* %t4, i32 0, i32 0, i8* getelementptr inbounds (%T_beta, %T_beta* %t9, i32 0, i32 0), i32 25)
     call void @_WriteLn(i8* %t4)
+    ; line 1050
 
     ; epilogue
     ret void
@@ -2562,13 +3228,18 @@ define void @P_load_dmplabs(%Frame_load* %.slink)
     store %Frame_load* %.slink, %Frame_load** %t1
 
     ; body
+    ; line 1059
     %t2 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t2)
+    ; line 1060
     %t3 = load %T_text, %T_text* @output
     call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([12 x i8], [12 x i8]* @.str.224, i32 0, i32 0), i32 11)
     call void @_WriteLn(i8* %t3)
+    ; line 1061
     %t4 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t4)
+    ; line 1062
+    ; line 1069
     %t5 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t5)
 
@@ -2610,6 +3281,7 @@ define void @P_load_update(%Frame_load* %.slink, i32 %x)
     store i32 %x, i32* %t2
 
     ; body
+    ; line 1079
 
     ; epilogue
     ret void
@@ -2636,10 +3308,12 @@ define void @P_load_getnxt(%Frame_load* %.slink)
     store %Frame_load* %.slink, %Frame_load** %t1
 
     ; body
+    ; line 1102
     %t3 = getelementptr inbounds %Frame_load_getnxt, %Frame_load_getnxt* %.frame, i32 0, i32 0
     %t4 = load %Frame_load*, %Frame_load** %t3
     %t2 = getelementptr inbounds %Frame_load, %Frame_load* %t4, i32 0, i32 0
     store i8 32, i8* %t2
+    ; line 1103
 
     ; epilogue
     ret void
@@ -2666,6 +3340,7 @@ define void @P_load_skpspc(%Frame_load* %.slink)
     store %Frame_load* %.slink, %Frame_load** %t1
 
     ; body
+    ; line 1108
 
     ; epilogue
     ret void
@@ -2692,6 +3367,8 @@ define void @P_load_getlin(%Frame_load* %.slink)
     store %Frame_load* %.slink, %Frame_load** %t1
 
     ; body
+    ; line 1113
+    ; line 1114
     %t3 = getelementptr inbounds %Frame_load_getlin, %Frame_load_getlin* %.frame, i32 0, i32 0
     %t4 = load %Frame_load*, %Frame_load** %t3
     %t2 = getelementptr inbounds %Frame_load, %Frame_load* %t4, i32 0, i32 1
@@ -2731,8 +3408,10 @@ define void @P_load_generate(%Frame_load* %.slink)
     store %Frame_load* %.slink, %Frame_load** %t1
 
     ; body
+    ; line 1123
     %t2 = getelementptr inbounds %Frame_load_generate, %Frame_load_generate* %.frame, i32 0, i32 0
     store i1 1, i1* %t2
+    ; line 1124
 
     ; epilogue
     ret void
@@ -2776,10 +3455,18 @@ define void @P_load_assemble(%Frame_load* %.slink)
     store %Frame_load* %.slink, %Frame_load** %t1
 
     ; body
+    ; line 1220
     store i32 0, i32* @p
+    ; line 1220
     store i32 0, i32* @q
+    ; line 1220
     store i32 0, i32* @op
+    ; line 1221
     call void @P_load_assemble_getname(%Frame_load_assemble* %.frame)
+    ; line 1223
+    ; line 1224
+    ; line 1226
+    ; line 1401
     %t2 = getelementptr inbounds %Frame_load_assemble, %Frame_load_assemble* %.frame, i32 0, i32 12
     %t3 = load %Frame_load*, %Frame_load** %t2
     call void @P_load_getlin(%Frame_load* %t3)
@@ -2814,6 +3501,7 @@ define void @P_load_assemble_lookup(%Frame_load_assemble* %.slink, i32 %x)
     store i32 %x, i32* %t2
 
     ; body
+    ; line 1167
 
     ; epilogue
     ret void
@@ -2843,6 +3531,9 @@ define void @P_load_assemble_labelsearch(%Frame_load_assemble* %.slink)
     store %Frame_load_assemble* %.slink, %Frame_load_assemble** %t1
 
     ; body
+    ; line 1177
+    ; line 1178
+    ; line 1178
     %t2 = getelementptr inbounds %Frame_load_assemble_labelsearch, %Frame_load_assemble_labelsearch* %.frame, i32 0, i32 1
     %t3 = load %Frame_load_assemble*, %Frame_load_assemble** %t2
     %t5 = getelementptr inbounds %Frame_load_assemble_labelsearch, %Frame_load_assemble_labelsearch* %.frame, i32 0, i32 0
@@ -2877,8 +3568,13 @@ define void @P_load_assemble_getname(%Frame_load_assemble* %.slink)
     store %Frame_load_assemble* %.slink, %Frame_load_assemble** %t1
 
     ; body
+    ; line 1184
+    ; line 1185
+    ; line 1186
     %t2 = getelementptr inbounds %Frame_load_assemble_getname, %Frame_load_assemble_getname* %.frame, i32 0, i32 0
     store i32 1, i32* %t2
+    ; line 1187
+    ; line 1193
 
     ; epilogue
     ret void
@@ -2905,10 +3601,13 @@ define void @P_load_assemble_storeop(%Frame_load_assemble* %.slink)
     store %Frame_load_assemble* %.slink, %Frame_load_assemble** %t1
 
     ; body
+    ; line 1198
+    ; line 1199
     %t2 = load i32, i32* @pc
     %t3 = getelementptr inbounds %T_array_12, %T_array_12* @store, i32 0, i32 %t2
     %t4 = load i32, i32* @op
     store i32 %t4, i32* %t3
+    ; line 1199
     %t6 = load i32, i32* @pc
     %t5 = add i32 %t6, 1
     store i32 %t5, i32* @pc
@@ -2938,10 +3637,13 @@ define void @P_load_assemble_storep(%Frame_load_assemble* %.slink)
     store %Frame_load_assemble* %.slink, %Frame_load_assemble** %t1
 
     ; body
+    ; line 1204
+    ; line 1205
     %t2 = load i32, i32* @pc
     %t3 = getelementptr inbounds %T_array_12, %T_array_12* @store, i32 0, i32 %t2
     %t4 = load i32, i32* @p
     store i32 %t4, i32* %t3
+    ; line 1205
     %t6 = load i32, i32* @pc
     %t5 = add i32 %t6, 1
     store i32 %t5, i32* @pc
@@ -2971,9 +3673,12 @@ define void @P_load_assemble_storeq(%Frame_load_assemble* %.slink)
     store %Frame_load_assemble* %.slink, %Frame_load_assemble** %t1
 
     ; body
+    ; line 1210
+    ; line 1211
     %t2 = load i32, i32* @pc
     %t3 = load i32, i32* @q
     call void @P_putadr(i32 %t2, i32 %t3)
+    ; line 1211
     %t5 = load i32, i32* @pc
     %t4 = add i32 %t5, 4
     store i32 %t4, i32* @pc
@@ -3003,9 +3708,12 @@ define void @P_load_assemble_storeq1(%Frame_load_assemble* %.slink)
     store %Frame_load_assemble* %.slink, %Frame_load_assemble** %t1
 
     ; body
+    ; line 1216
+    ; line 1217
     %t2 = load i32, i32* @pc
     %t3 = load i32, i32* @q1
     call void @P_putadr(i32 %t2, i32 %t3)
+    ; line 1217
     %t5 = load i32, i32* @pc
     %t4 = add i32 %t5, 4
     store i32 %t4, i32* @pc
@@ -3037,6 +3745,7 @@ define void @P_pmd()
     %.frame = alloca %Frame_pmd, align 8
 
     ; body
+    ; line 1449
 
     ; epilogue
     ret void
@@ -3063,6 +3772,8 @@ define void @P_pmd_pt(%Frame_pmd* %.slink)
     store %Frame_pmd* %.slink, %Frame_pmd** %t1
 
     ; body
+    ; line 1440
+    ; line 1441
     %t4 = getelementptr inbounds %Frame_pmd_pt, %Frame_pmd_pt* %.frame, i32 0, i32 0
     %t5 = load %Frame_pmd*, %Frame_pmd** %t4
     %t3 = getelementptr inbounds %Frame_pmd, %Frame_pmd* %t5, i32 0, i32 1
@@ -3070,8 +3781,10 @@ define void @P_pmd_pt(%Frame_pmd* %.slink)
     %t6 = getelementptr inbounds %T_array_12, %T_array_12* @store, i32 0, i32 %t2
     %t7 = load i32, i32* %t6
     call void @P_wrthex(i32 %t7, i32 2)
+    ; line 1441
     %t8 = load %T_text, %T_text* @output
     call void @_WriteChar(i8* %t8, i32 0, i32 0, i8 32)
+    ; line 1442
     %t10 = getelementptr inbounds %Frame_pmd_pt, %Frame_pmd_pt* %.frame, i32 0, i32 0
     %t11 = load %Frame_pmd*, %Frame_pmd** %t10
     %t9 = getelementptr inbounds %Frame_pmd, %Frame_pmd* %t11, i32 0, i32 1
@@ -3081,6 +3794,7 @@ define void @P_pmd_pt(%Frame_pmd* %.slink)
     %t13 = load i32, i32* %t14
     %t12 = sub i32 %t13, 1
     store i32 %t12, i32* %t9
+    ; line 1443
     %t18 = getelementptr inbounds %Frame_pmd_pt, %Frame_pmd_pt* %.frame, i32 0, i32 0
     %t19 = load %Frame_pmd*, %Frame_pmd** %t18
     %t17 = getelementptr inbounds %Frame_pmd, %Frame_pmd* %t19, i32 0, i32 0
@@ -3090,6 +3804,7 @@ define void @P_pmd_pt(%Frame_pmd* %.slink)
     %t21 = load i32, i32* %t22
     %t20 = add i32 %t21, 1
     store i32 %t20, i32* %t17
+    ; line 1444
     ; nop
 
     ; epilogue
@@ -3120,16 +3835,22 @@ define void @P_errori(%T_beta %string)
     store %T_beta %string, %T_beta* %t1
 
     ; body
+    ; line 1483
     %t2 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t2)
+    ; line 1483
     %t3 = load %T_text, %T_text* @output
     call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.225, i32 0, i32 0), i32 17)
+    ; line 1484
+    ; line 1485
     %t4 = load %T_text, %T_text* @output
     call void @_WriteString(i8* %t4, i32 0, i32 0, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.9, i32 0, i32 0), i32 2)
     %t5 = getelementptr inbounds %Frame_errori, %Frame_errori* %.frame, i32 0, i32 0
     call void @_WriteString(i8* %t4, i32 0, i32 0, i8* getelementptr inbounds (%T_beta, %T_beta* %t5, i32 0, i32 0), i32 25)
     call void @_WriteLn(i8* %t4)
+    ; line 1486
     call void @P_pmd()
+    ; line 1486
 
     ; epilogue
     ret void
@@ -3163,9 +3884,12 @@ define i32 @F_base(i32 %ld)
     store i32 %ld, i32* %t1
 
     ; body
+    ; line 1491
     %t2 = getelementptr inbounds %Frame_base, %Frame_base* %.frame, i32 0, i32 2
     %t3 = load i32, i32* @mp
     store i32 %t3, i32* %t2
+    ; line 1492
+    ; line 1493
     %t4 = getelementptr inbounds %Frame_base, %Frame_base* %.frame, i32 0, i32 1
     %t6 = getelementptr inbounds %Frame_base, %Frame_base* %.frame, i32 0, i32 2
     %t5 = load i32, i32* %t6
@@ -3196,10 +3920,15 @@ define void @P_compare()
     %.frame = alloca %Frame_compare, align 8
 
     ; body
+    ; line 1499
     call void @P_popadr(i32* @a2)
+    ; line 1500
     call void @P_popadr(i32* @a1)
+    ; line 1501
     store i32 0, i32* @i
+    ; line 1501
     store i1 1, i1* @b
+    ; line 1502
 
     ; epilogue
     ret void
@@ -3233,6 +3962,7 @@ define void @P_valfil(i32 %fa)
     store i32 %fa, i32* %t1
 
     ; body
+    ; line 1510
 
     ; epilogue
     ret void
@@ -3262,9 +3992,11 @@ define void @P_valfilwm(i32 %fa)
     store i32 %fa, i32* %t1
 
     ; body
+    ; line 1530
     %t3 = getelementptr inbounds %Frame_valfilwm, %Frame_valfilwm* %.frame, i32 0, i32 0
     %t2 = load i32, i32* %t3
     call void @P_valfil(i32 %t2)
+    ; line 1531
 
     ; epilogue
     ret void
@@ -3294,9 +4026,11 @@ define void @P_valfilrm(i32 %fa)
     store i32 %fa, i32* %t1
 
     ; body
+    ; line 1536
     %t3 = getelementptr inbounds %Frame_valfilrm, %Frame_valfilrm* %.frame, i32 0, i32 0
     %t2 = load i32, i32* %t3
     call void @P_valfil(i32 %t2)
+    ; line 1537
 
     ; epilogue
     ret void
@@ -3321,10 +4055,12 @@ define void @P_getop()
     %.frame = alloca %Frame_getop, align 8
 
     ; body
+    ; line 1544
     %t1 = load i32, i32* @pc
     %t2 = getelementptr inbounds %T_array_12, %T_array_12* @store, i32 0, i32 %t1
     %t3 = load i32, i32* %t2
     store i32 %t3, i32* @op
+    ; line 1544
     %t5 = load i32, i32* @pc
     %t4 = add i32 %t5, 1
     store i32 %t4, i32* @pc
@@ -3352,10 +4088,12 @@ define void @P_getp()
     %.frame = alloca %Frame_getp, align 8
 
     ; body
+    ; line 1552
     %t1 = load i32, i32* @pc
     %t2 = getelementptr inbounds %T_array_12, %T_array_12* @store, i32 0, i32 %t1
     %t3 = load i32, i32* %t2
     store i32 %t3, i32* @p
+    ; line 1552
     %t5 = load i32, i32* @pc
     %t4 = add i32 %t5, 1
     store i32 %t4, i32* @pc
@@ -3383,9 +4121,11 @@ define void @P_getq()
     %.frame = alloca %Frame_getq, align 8
 
     ; body
+    ; line 1560
     %t1 = load i32, i32* @pc
     %t2 = call i32 @F_getadr(i32 %t1)
     store i32 %t2, i32* @q
+    ; line 1560
     %t4 = load i32, i32* @pc
     %t3 = add i32 %t4, 4
     store i32 %t3, i32* @pc
@@ -3413,9 +4153,11 @@ define void @P_getq1()
     %.frame = alloca %Frame_getq1, align 8
 
     ; body
+    ; line 1568
     %t1 = load i32, i32* @pc
     %t2 = call i32 @F_getadr(i32 %t1)
     store i32 %t2, i32* @q1
+    ; line 1568
     %t4 = load i32, i32* @pc
     %t3 = add i32 %t4, 4
     store i32 %t3, i32* @pc
@@ -3447,16 +4189,21 @@ define void @P_repspc()
     %.frame = alloca %Frame_repspc, align 8
 
     ; body
+    ; line 1588
     %t1 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t1)
+    ; line 1589
     %t2 = load %T_text, %T_text* @output
     call void @_WriteString(i8* %t2, i32 0, i32 0, i8* getelementptr inbounds ([21 x i8], [21 x i8]* @.str.226, i32 0, i32 0), i32 20)
     call void @_WriteLn(i8* %t2)
+    ; line 1590
     %t3 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t3)
+    ; line 1591
     %t4 = getelementptr inbounds %Frame_repspc, %Frame_repspc* %.frame, i32 0, i32 0
     %t5 = load i32, i32* @np
     store i32 %t5, i32* %t4
+    ; line 1592
 
     ; epilogue
     ret void
@@ -3493,12 +4240,16 @@ define void @P_fndfre(i32 %len, i32* %blk)
     store i32 %len, i32* %t2
 
     ; body
+    ; line 1605
     %t3 = getelementptr inbounds %Frame_fndfre, %Frame_fndfre* %.frame, i32 0, i32 2
     store i32 0, i32* %t3
+    ; line 1606
     %t4 = getelementptr inbounds %Frame_fndfre, %Frame_fndfre* %.frame, i32 0, i32 0
     %t5 = load i32*, i32** %t4
     %t6 = load i32, i32* @np
     store i32 %t6, i32* %t5
+    ; line 1607
+    ; line 1612
 
     ; epilogue
     ret void
@@ -3530,11 +4281,15 @@ define void @P_cscspc()
     %.frame = alloca %Frame_cscspc, align 8
 
     ; body
+    ; line 1631
     %t1 = getelementptr inbounds %Frame_cscspc, %Frame_cscspc* %.frame, i32 0, i32 2
     store i1 0, i1* %t1
+    ; line 1632
+    ; line 1638
     %t2 = getelementptr inbounds %Frame_cscspc, %Frame_cscspc* %.frame, i32 0, i32 0
     %t3 = load i32, i32* @np
     store i32 %t3, i32* %t2
+    ; line 1639
 
     ; epilogue
     ret void
@@ -3571,11 +4326,13 @@ define void @P_newspc(i32 %len, i32* %blk)
     store i32 %len, i32* %t2
 
     ; body
+    ; line 1658
     %t4 = getelementptr inbounds %Frame_newspc, %Frame_newspc* %.frame, i32 0, i32 1
     %t3 = load i32, i32* %t4
     %t5 = getelementptr inbounds %Frame_newspc, %Frame_newspc* %.frame, i32 0, i32 0
     %t6 = load i32*, i32** %t5
     call void @P_fndfre(i32 %t3, i32* %t6)
+    ; line 1659
 
     ; epilogue
     ret void
@@ -3611,15 +4368,20 @@ define void @P_dspspc(i32 %len, i32 %blk)
     store i32 %len, i32* %t2
 
     ; body
+    ; line 1676
     %t3 = getelementptr inbounds %Frame_dspspc, %Frame_dspspc* %.frame, i32 0, i32 1
     %t5 = getelementptr inbounds %Frame_dspspc, %Frame_dspspc* %.frame, i32 0, i32 1
     %t4 = load i32, i32* %t5
     store i32 %t4, i32* %t3
+    ; line 1677
+    ; line 1680
     %t6 = getelementptr inbounds %Frame_dspspc, %Frame_dspspc* %.frame, i32 0, i32 2
     %t9 = getelementptr inbounds %Frame_dspspc, %Frame_dspspc* %.frame, i32 0, i32 0
     %t8 = load i32, i32* %t9
     %t7 = sub i32 %t8, 4
     store i32 %t7, i32* %t6
+    ; line 1681
+    ; line 1682
 
     ; epilogue
     ret void
@@ -3652,6 +4414,7 @@ define i1 @F_isfree(i32 %blk)
     store i32 %blk, i32* %t1
 
     ; body
+    ; line 1692
     %t2 = getelementptr inbounds %Frame_isfree, %Frame_isfree* %.frame, i32 0, i32 1
     %t6 = getelementptr inbounds %Frame_isfree, %Frame_isfree* %.frame, i32 0, i32 0
     %t5 = load i32, i32* %t6
@@ -3699,6 +4462,9 @@ define void @P_callsp()
     %.frame = alloca %Frame_callsp, align 8
 
     ; body
+    ; line 1739
+    ; line 1742
+    ; line 1744
     ; nop
 
     ; epilogue
@@ -3734,6 +4500,8 @@ define void @P_callsp_readi(%Frame_callsp* %.slink, %T_text* %f, i32* %i)
     store i32* %i, i32** %t3
 
     ; body
+    ; line 1707
+    ; line 1708
     ; nop
 
     ; epilogue
@@ -3769,6 +4537,8 @@ define void @P_callsp_readr(%Frame_callsp* %.slink, %T_text* %f, double* %r)
     store double* %r, double** %t3
 
     ; body
+    ; line 1712
+    ; line 1713
     ; nop
 
     ; epilogue
@@ -3804,6 +4574,8 @@ define void @P_callsp_readc(%Frame_callsp* %.slink, %T_text* %f, i8* %c)
     store %T_text* %f, %T_text** %t3
 
     ; body
+    ; line 1717
+    ; line 1718
     ; nop
 
     ; epilogue
@@ -3848,6 +4620,8 @@ define void @P_callsp_writestr(%Frame_callsp* %.slink, %T_text* %f, i32 %ad, i32
     store i32 %w, i32* %t5
 
     ; body
+    ; line 1724
+    ; line 1726
 
     ; epilogue
     ret void
@@ -3879,6 +4653,8 @@ define void @P_callsp_getfile(%Frame_callsp* %.slink, %T_text* %f)
     store %T_text* %f, %T_text** %t2
 
     ; body
+    ; line 1730
+    ; line 1731
     ; nop
 
     ; epilogue
@@ -3914,6 +4690,7 @@ define void @P_callsp_putfile(%Frame_callsp* %.slink, %T_text* %f, i32* %ad)
     store %T_text* %f, %T_text** %t3
 
     ; body
+    ; line 1735
     %t5 = getelementptr inbounds %Frame_callsp_putfile, %Frame_callsp_putfile* %.frame, i32 0, i32 1
     %t6 = load %T_text*, %T_text** %t5
     %t4 = load %T_text, %T_text* %t6
@@ -3923,6 +4700,7 @@ define void @P_callsp_putfile(%Frame_callsp* %.slink, %T_text* %f, i32* %ad)
     %t7 = add i32 %t8, 1
     %t11 = call i8 @F_getchr(i32 %t7)
     store i8 %t11, i8* %t4
+    ; line 1735
 
     ; epilogue
     ret void

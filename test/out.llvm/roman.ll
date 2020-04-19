@@ -51,7 +51,9 @@ define void @P_()
     store i8* %t2, i8** @output
 
     ; body
+    ; line 7
     store i32 1, i32* @y
+    ; line 8
 
     ; cleanup
     %t3 = load %T_text, %T_text* @output

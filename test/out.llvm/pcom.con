@@ -111,7 +111,7 @@ compiling pass 2 (target = llvm)
 -----------------------------------------------------
 
 Invoking LLC ...
-llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\pcom.ll:196:40: error: use of undefined value '%.dummy_set'
+llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\pcom.ll:217:40: error: use of undefined value '%.dummy_set'
     call void @P_programme(%T_setofsys %.dummy_set)
                                        ^
 Exit code: 1

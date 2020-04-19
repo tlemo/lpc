@@ -61,22 +61,34 @@ define void @P_()
     store i8* %t2, i8** @_output
 
     ; body
+    ; line 29
     %t3 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.3, i32 0, i32 0), i32 2)
+    ; line 29
+    ; line 29
     %t4 = load %T_text, %T_text* @_output
     %t5 = load i32, i32* @n
     call void @_WriteInteger(i8* %t4, i32 0, i32 0, i32 %t5)
     call void @_WriteLn(i8* %t4)
+    ; line 30
     store i32 1, i32* @n1
+    ; line 31
+    ; line 32
+    ; line 33
     %t6 = load i8*, i8** @virf
     %t7 = bitcast i8* %t6 to %T_nod*
     %t9 = getelementptr inbounds %T_nod, %T_nod* %t7, i32 0, i32 16
     %t8 = bitcast i8* %t9 to i8**
     store i8* null, i8** %t8
+    ; line 34
     store i32 1, i32* @i
+    ; line 34
     store i32 2, i32* @j
+    ; line 35
     store i32 0, i32* @ns
+    ; line 35
     store i32 1, i32* @niv
+    ; line 36
     br label %L_1
 L_1:
     ; nop
@@ -124,6 +136,8 @@ define void @P_punere(i32* %x, i32* %y, i32* %z)
     store i32* %z, i32** %t3
 
     ; body
+    ; line 15
+    ; line 16
     %t5 = getelementptr inbounds %Frame_punere, %Frame_punere* %.frame, i32 0, i32 3
     %t4 = load i8*, i8** %t5
     %t6 = bitcast i8* %t4 to %T_nod*
@@ -131,6 +145,7 @@ define void @P_punere(i32* %x, i32* %y, i32* %z)
     %t8 = bitcast i8* %t7 to %T_nod*
     %t9 = load %T_nod, %T_nod* %t8
     store %T_nod %t9, %T_nod* %t6
+    ; line 17
     %t10 = load i8*, i8** @virf
     %t11 = bitcast i8* %t10 to %T_nod*
     %t13 = getelementptr inbounds %T_nod, %T_nod* %t11, i32 0, i32 16
@@ -138,6 +153,7 @@ define void @P_punere(i32* %x, i32* %y, i32* %z)
     %t15 = getelementptr inbounds %Frame_punere, %Frame_punere* %.frame, i32 0, i32 3
     %t14 = load i8*, i8** %t15
     store i8* %t14, i8** %t12
+    ; line 18
     %t16 = load i8*, i8** @virf
     %t17 = bitcast i8* %t16 to %T_nod*
     %t19 = getelementptr inbounds %T_nod, %T_nod* %t17, i32 0, i32 0
@@ -146,6 +162,7 @@ define void @P_punere(i32* %x, i32* %y, i32* %z)
     %t22 = load i32*, i32** %t21
     %t20 = load i32, i32* %t22
     store i32 %t20, i32* %t18
+    ; line 19
     %t23 = load i8*, i8** @virf
     %t24 = bitcast i8* %t23 to %T_nod*
     %t26 = getelementptr inbounds %T_nod, %T_nod* %t24, i32 0, i32 4
@@ -154,6 +171,7 @@ define void @P_punere(i32* %x, i32* %y, i32* %z)
     %t29 = load i32*, i32** %t28
     %t27 = load i32, i32* %t29
     store i32 %t27, i32* %t25
+    ; line 20
     %t30 = load i8*, i8** @virf
     %t31 = bitcast i8* %t30 to %T_nod*
     %t33 = getelementptr inbounds %T_nod, %T_nod* %t31, i32 0, i32 8
@@ -187,6 +205,7 @@ define void @P_scoatere()
     %.frame = alloca %Frame_scoatere, align 8
 
     ; body
+    ; line 25
     %t1 = load i8*, i8** @virf
     %t2 = bitcast i8* %t1 to %T_nod*
     %t4 = getelementptr inbounds %T_nod, %T_nod* %t2, i32 0, i32 16

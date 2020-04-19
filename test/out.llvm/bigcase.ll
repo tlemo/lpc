@@ -51,6 +51,7 @@ define void @P_()
     store i8* %t2, i8** @_output
 
     ; body
+    ; line 8
     ; nop
 
     ; cleanup

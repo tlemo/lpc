@@ -19,7 +19,7 @@ compiling pass 2 (target = llvm)
 -----------------------------------------------------
 
 Invoking LLC ...
-llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\startrek.ll:255:15: error: expected value token
+llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\startrek.ll:272:15: error: expected value token
     store i32 , i32* %t4
               ^
 Exit code: 1

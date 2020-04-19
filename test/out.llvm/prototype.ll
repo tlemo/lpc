@@ -60,8 +60,11 @@ define void @P_()
     store i8* %t2, i8** @_output
 
     ; body
+    ; line 72
     store i32 1, i32* @gv2
+    ; line 73
     call void @P_test(i32* @gv2)
+    ; line 74
     %t3 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.3, i32 0, i32 0), i32 12)
     %t4 = load i32, i32* @gv2
@@ -112,10 +115,13 @@ define i32 @F_foo(%T_foo_subroutine_6 %pfn)
     store %T_foo_subroutine_6 %pfn, %T_foo_subroutine_6* %t1
 
     ; body
+    ; line 40
     %t2 = getelementptr inbounds %Frame_foo, %Frame_foo* %.frame, i32 0, i32 4
     %t4 = getelementptr inbounds %T_UNION, %T_UNION* %t2, i32 0, i32 0
     %t3 = bitcast i8* %t4 to i32*
     store i32 100000, i32* %t3
+    ; line 42
+    ; line 44
     %t5 = getelementptr inbounds %Frame_foo, %Frame_foo* %.frame, i32 0, i32 1
     %t6 = load i32, i32* @gv
     %t7 = load %T_REC, %T_REC* @gr
@@ -123,6 +129,8 @@ define i32 @F_foo(%T_foo_subroutine_6 %pfn)
     %t8 = load %T_UNION, %T_UNION* %t9
     %t10 = call i32 (i32 %t6, %T_REC %t7, %T_UNION %t8)
     store i32 %t10, i32* %t5
+    ; line 46
+    ; line 47
     ; nop
 
     ; epilogue
@@ -155,18 +163,23 @@ define void @P_test(i32* %y)
     store i32* %y, i32** %t1
 
     ; body
+    ; line 62
     store i32 1000, i32* @gv
+    ; line 63
     %t3 = getelementptr inbounds %T_REC, %T_REC* @gr, i32 0, i32 16
     %t2 = bitcast i8* %t3 to %T_A*
     %t4 = getelementptr inbounds %T_A, %T_A* %t2, i32 0, i32 0
     store i32 100, i32* %t4
+    ; line 64
     store i32 10000, i32* @gv2
+    ; line 66
     %t5 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.4, i32 0, i32 0), i32 3)
     call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([4 x i8], [4 x i8]* @.str.5, i32 0, i32 0), i32 3)
     %t6 = call i32 @F_foo( %.dummy)
     call void @_WriteInteger(i8* %t5, i32 0, i32 0, i32 %t6)
     call void @_WriteLn(i8* %t5)
+    ; line 68
     %t7 = getelementptr inbounds %Frame_test, %Frame_test* %.frame, i32 0, i32 0
     %t8 = load i32*, i32** %t7
     %t11 = getelementptr inbounds %Frame_test, %Frame_test* %.frame, i32 0, i32 0
@@ -215,6 +228,7 @@ define i32 @F_test_bar(%Frame_test* %.slink, i32 %x, %T_REC %r, %T_UNION %u)
     store i32 %x, i32* %t4
 
     ; body
+    ; line 58
     %t5 = getelementptr inbounds %Frame_test_bar, %Frame_test_bar* %.frame, i32 0, i32 3
     %t11 = getelementptr inbounds %Frame_test_bar, %Frame_test_bar* %.frame, i32 0, i32 2
     %t10 = load i32, i32* %t11

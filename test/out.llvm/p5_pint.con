@@ -85,7 +85,7 @@ compiling pass 2 (target = llvm)
 -----------------------------------------------------
 
 Invoking LLC ...
-llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\p5_pint.ll:424:15: error: expected value token
+llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\p5_pint.ll:453:15: error: expected value token
     store i32 , i32* %t5
               ^
 Exit code: 1

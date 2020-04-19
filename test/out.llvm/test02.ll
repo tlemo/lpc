@@ -53,9 +53,12 @@ define void @P_()
     store i8* %t2, i8** @_output
 
     ; body
+    ; line 6
     %t3 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([19 x i8], [19 x i8]* @.str.3, i32 0, i32 0), i32 18)
     call void @_WriteLn(i8* %t3)
+    ; line 7
+    ; line 8
     %t4 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t4, i32 0, i32 0, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.4, i32 0, i32 0), i32 6)
     call void @_WriteString(i8* %t4, i32 0, i32 0, i8* getelementptr inbounds (%T_array_2, %T_array_2* @myName, i32 0, i32 0), i32 16)

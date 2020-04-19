@@ -58,7 +58,9 @@ define void @P_()
     store i8* %t2, i8** @_output
 
     ; body
+    ; line 89
     call void @P_InitializeData()
+    ; line 90
     ; nop
 
     ; cleanup
@@ -94,8 +96,11 @@ define void @P_CalculatePayment()
     %.frame = alloca %Frame_CalculatePayment, align 8
 
     ; body
+    ; line 19
     %t1 = getelementptr inbounds %Frame_CalculatePayment, %Frame_CalculatePayment* %.frame, i32 0, i32 1
     store double 1.00000, double* %t1
+    ; line 20
+    ; line 22
     %t4 = load double, double* @OriginalLoan
     %t5 = load double, double* @InterestRate
     %t3 = fmul double %t4, %t5
@@ -130,27 +135,43 @@ define void @P_InitializeData()
     %.frame = alloca %Frame_InitializeData, align 8
 
     ; body
+    ; line 27
     %t1 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t1, i32 0, i32 0, i8* getelementptr inbounds ([31 x i8], [31 x i8]* @.str.3, i32 0, i32 0), i32 30)
     call void @_WriteLn(i8* %t1)
+    ; line 28
     %t2 = load %T_text, %T_text* @_output
     call void @_WriteLn(i8* %t2)
+    ; line 29
     %t3 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([47 x i8], [47 x i8]* @.str.4, i32 0, i32 0), i32 46)
+    ; line 30
+    ; line 31
     %t4 = load double, double* @OriginalLoan
     store double %t4, double* @Balance
+    ; line 32
     %t5 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([47 x i8], [47 x i8]* @.str.5, i32 0, i32 0), i32 46)
+    ; line 33
+    ; line 34
     %t7 = load double, double* @InterestRate
     %t6 = fdiv double %t7, 1200.00
     store double %t6, double* @InterestRate
+    ; line 35
     %t8 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t8, i32 0, i32 0, i8* getelementptr inbounds ([47 x i8], [47 x i8]* @.str.6, i32 0, i32 0), i32 46)
+    ; line 36
+    ; line 37
     %t9 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t9, i32 0, i32 0, i8* getelementptr inbounds ([47 x i8], [47 x i8]* @.str.7, i32 0, i32 0), i32 46)
+    ; line 38
+    ; line 39
     %t10 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t10, i32 0, i32 0, i8* getelementptr inbounds ([47 x i8], [47 x i8]* @.str.8, i32 0, i32 0), i32 46)
+    ; line 40
+    ; line 41
     call void @P_CalculatePayment()
+    ; line 42
     store double 0.000000, double* @AnnualAccumInterest
     ; nop
 
@@ -177,10 +198,13 @@ define void @P_PrintAnnualHeader()
     %.frame = alloca %Frame_PrintAnnualHeader, align 8
 
     ; body
+    ; line 47
     %t1 = load %T_text, %T_text* @_output
     call void @_WriteLn(i8* %t1)
+    ; line 48
     %t2 = load %T_text, %T_text* @_output
     call void @_WriteLn(i8* %t2)
+    ; line 49
     %t3 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([24 x i8], [24 x i8]* @.str.9, i32 0, i32 0), i32 23)
     %t4 = load double, double* @OriginalLoan
@@ -191,11 +215,14 @@ define void @P_PrintAnnualHeader()
     call void @_WriteReal(i8* %t3, i32 6, i32 2, double %t5)
     call void @_WriteChar(i8* %t3, i32 0, i32 0, i8 37)
     call void @_WriteLn(i8* %t3)
+    ; line 51
     %t7 = load %T_text, %T_text* @_output
     call void @_WriteLn(i8* %t7)
+    ; line 52
     %t8 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t8, i32 0, i32 0, i8* getelementptr inbounds ([46 x i8], [46 x i8]* @.str.11, i32 0, i32 0), i32 45)
     call void @_WriteLn(i8* %t8)
+    ; line 53
     %t9 = load %T_text, %T_text* @_output
     call void @_WriteLn(i8* %t9)
     ; nop
@@ -227,6 +254,7 @@ define void @P_CalculateAndPrint()
     %.frame = alloca %Frame_CalculateAndPrint, align 8
 
     ; body
+    ; line 60
     ; nop
 
     ; epilogue
@@ -252,8 +280,10 @@ define void @P_PrintAnnualSummary()
     %.frame = alloca %Frame_PrintAnnualSummary, align 8
 
     ; body
+    ; line 80
     %t1 = load %T_text, %T_text* @_output
     call void @_WriteLn(i8* %t1)
+    ; line 81
     %t2 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t2, i32 0, i32 0, i8* getelementptr inbounds ([20 x i8], [20 x i8]* @.str.12, i32 0, i32 0), i32 19)
     %t3 = load i32, i32* @Year
@@ -262,10 +292,13 @@ define void @P_PrintAnnualSummary()
     %t4 = load double, double* @AnnualAccumInterest
     call void @_WriteReal(i8* %t2, i32 10, i32 2, double %t4)
     call void @_WriteLn(i8* %t2)
+    ; line 83
     store double 0.000000, double* @AnnualAccumInterest
+    ; line 84
     %t6 = load i32, i32* @Year
     %t5 = add i32 %t6, 1
     store i32 %t5, i32* @Year
+    ; line 85
     %t7 = load %T_text, %T_text* @_output
     call void @_WriteLn(i8* %t7)
     ; nop

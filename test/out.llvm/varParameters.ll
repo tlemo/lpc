@@ -58,30 +58,43 @@ define void @P_()
     store i8* %t2, i8** @_output
 
     ; body
+    ; line 69
+    ; line 71
     store %T_S %.dummy_set, %T_S* @VS
+    ; line 73
     %t4 = getelementptr inbounds %T_R, %T_R* @vR, i32 0, i32 0
     %t3 = bitcast i8* %t4 to i32*
     store i32 11, i32* %t3
+    ; line 74
     %t6 = getelementptr inbounds %T_R, %T_R* @vR, i32 0, i32 4
     %t5 = bitcast i8* %t6 to i32*
     store i32 22, i32* %t5
+    ; line 75
     %t8 = getelementptr inbounds %T_R, %T_R* @vR, i32 0, i32 8
     %t7 = bitcast i8* %t8 to double*
     store double 1.10000, double* %t7
+    ; line 76
     %t10 = getelementptr inbounds %T_R, %T_R* @vR, i32 0, i32 16
     %t9 = bitcast i8* %t10 to double*
     store double 2.20000, double* %t9
+    ; line 78
     store i32 1000, i32* @i
+    ; line 80
     call void @P_test(%T_A* @vA, %T_S* @VS, %T_R* @vR, i32* @i)
+    ; line 82
     %t11 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t11, i32 0, i32 0, i8* getelementptr inbounds ([31 x i8], [31 x i8]* @.str.3, i32 0, i32 0), i32 30)
     call void @_WriteLn(i8* %t11)
+    ; line 84
     %t12 = load %T_A, %T_A* @vA
     call void @P_printA(%T_A %t12)
+    ; line 85
     %t13 = load %T_S, %T_S* @VS
     call void @P_printS(%T_S %t13)
+    ; line 86
     %t14 = load %T_R, %T_R* @vR
     call void @P_printR(%T_R %t14)
+    ; line 87
     %t15 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t15, i32 0, i32 0, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.4, i32 0, i32 0), i32 4)
     %t16 = load i32, i32* @i
@@ -126,6 +139,8 @@ define void @P_printA(%T_A %arg)
     store %T_A %arg, %T_A* %t1
 
     ; body
+    ; line 23
+    ; line 25
     %t2 = load %T_text, %T_text* @_output
     call void @_WriteLn(i8* %t2)
     ; nop
@@ -161,11 +176,15 @@ define void @P_printS(%T_S %arg)
     store %T_S %arg, %T_S* %t1
 
     ; body
+    ; line 31
     %t2 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t2, i32 0, i32 0, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.5, i32 0, i32 0), i32 6)
+    ; line 32
+    ; line 35
     %t3 = load %T_text, %T_text* @_output
     call void @_WriteChar(i8* %t3, i32 0, i32 0, i8 93)
     call void @_WriteLn(i8* %t3)
+    ; line 36
     %t4 = load %T_text, %T_text* @_output
     call void @_WriteLn(i8* %t4)
     ; nop
@@ -198,6 +217,7 @@ define void @P_printR(%T_R %arg)
     store %T_R %arg, %T_R* %t1
 
     ; body
+    ; line 41
     %t2 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t2, i32 0, i32 0, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.6, i32 0, i32 0), i32 6)
     %t3 = getelementptr inbounds %Frame_printR, %Frame_printR* %.frame, i32 0, i32 0
@@ -206,6 +226,7 @@ define void @P_printR(%T_R %arg)
     %t6 = load i32, i32* %t4
     call void @_WriteInteger(i8* %t2, i32 0, i32 0, i32 %t6)
     call void @_WriteLn(i8* %t2)
+    ; line 42
     %t7 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.7, i32 0, i32 0), i32 6)
     %t8 = getelementptr inbounds %Frame_printR, %Frame_printR* %.frame, i32 0, i32 0
@@ -214,6 +235,7 @@ define void @P_printR(%T_R %arg)
     %t11 = load i32, i32* %t9
     call void @_WriteInteger(i8* %t7, i32 0, i32 0, i32 %t11)
     call void @_WriteLn(i8* %t7)
+    ; line 43
     %t12 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t12, i32 0, i32 0, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.8, i32 0, i32 0), i32 6)
     %t13 = getelementptr inbounds %Frame_printR, %Frame_printR* %.frame, i32 0, i32 0
@@ -222,6 +244,7 @@ define void @P_printR(%T_R %arg)
     %t16 = load double, double* %t14
     call void @_WriteReal(i8* %t12, i32 0, i32 0, double %t16)
     call void @_WriteLn(i8* %t12)
+    ; line 44
     %t17 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t17, i32 0, i32 0, i8* getelementptr inbounds ([7 x i8], [7 x i8]* @.str.9, i32 0, i32 0), i32 6)
     %t18 = getelementptr inbounds %Frame_printR, %Frame_printR* %.frame, i32 0, i32 0
@@ -230,6 +253,7 @@ define void @P_printR(%T_R %arg)
     %t21 = load double, double* %t19
     call void @_WriteReal(i8* %t17, i32 0, i32 0, double %t21)
     call void @_WriteLn(i8* %t17)
+    ; line 45
     %t22 = load %T_text, %T_text* @_output
     call void @_WriteLn(i8* %t22)
     ; nop
@@ -271,18 +295,22 @@ define void @P_test(%T_A* %a, %T_S* %s, %T_R* %r, i32* %i)
     store %T_S* %s, %T_S** %t4
 
     ; body
+    ; line 50
     %t6 = getelementptr inbounds %Frame_test, %Frame_test* %.frame, i32 0, i32 0
     %t7 = load %T_A*, %T_A** %t6
     %t5 = load %T_A, %T_A* %t7
     call void @P_printA(%T_A %t5)
+    ; line 51
     %t9 = getelementptr inbounds %Frame_test, %Frame_test* %.frame, i32 0, i32 3
     %t10 = load %T_S*, %T_S** %t9
     %t8 = load %T_S, %T_S* %t10
     call void @P_printS(%T_S %t8)
+    ; line 52
     %t12 = getelementptr inbounds %Frame_test, %Frame_test* %.frame, i32 0, i32 2
     %t13 = load %T_R*, %T_R** %t12
     %t11 = load %T_R, %T_R* %t13
     call void @P_printR(%T_R %t11)
+    ; line 53
     %t14 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t14, i32 0, i32 0, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.4, i32 0, i32 0), i32 4)
     %t16 = getelementptr inbounds %Frame_test, %Frame_test* %.frame, i32 0, i32 1
@@ -290,40 +318,48 @@ define void @P_test(%T_A* %a, %T_S* %s, %T_R* %r, i32* %i)
     %t15 = load i32, i32* %t17
     call void @_WriteInteger(i8* %t14, i32 0, i32 0, i32 %t15)
     call void @_WriteLn(i8* %t14)
+    ; line 55
     %t18 = getelementptr inbounds %Frame_test, %Frame_test* %.frame, i32 0, i32 0
     %t19 = load %T_A*, %T_A** %t18
     %t20 = getelementptr inbounds %T_A, %T_A* %t19, i32 0, i32 0
     store i32 123, i32* %t20
+    ; line 56
     %t21 = getelementptr inbounds %Frame_test, %Frame_test* %.frame, i32 0, i32 0
     %t22 = load %T_A*, %T_A** %t21
     %t23 = getelementptr inbounds %T_A, %T_A* %t22, i32 0, i32 9
     store i32 321, i32* %t23
+    ; line 58
     %t24 = getelementptr inbounds %Frame_test, %Frame_test* %.frame, i32 0, i32 3
     %t25 = load %T_S*, %T_S** %t24
     store %T_S %.dummy_set, %T_S* %t25
+    ; line 60
     %t26 = getelementptr inbounds %Frame_test, %Frame_test* %.frame, i32 0, i32 2
     %t27 = load %T_R*, %T_R** %t26
     %t29 = getelementptr inbounds %T_R, %T_R* %t27, i32 0, i32 0
     %t28 = bitcast i8* %t29 to i32*
     store i32 0, i32* %t28
+    ; line 61
     %t30 = getelementptr inbounds %Frame_test, %Frame_test* %.frame, i32 0, i32 2
     %t31 = load %T_R*, %T_R** %t30
     %t33 = getelementptr inbounds %T_R, %T_R* %t31, i32 0, i32 4
     %t32 = bitcast i8* %t33 to i32*
     %t34 = sub i32 0, 1
     store i32 %t34, i32* %t32
+    ; line 62
     %t35 = getelementptr inbounds %Frame_test, %Frame_test* %.frame, i32 0, i32 2
     %t36 = load %T_R*, %T_R** %t35
     %t38 = getelementptr inbounds %T_R, %T_R* %t36, i32 0, i32 8
     %t37 = bitcast i8* %t38 to double*
     %t39 = sitofp i32 0 to double
     store double %t39, double* %t37
+    ; line 63
     %t40 = getelementptr inbounds %Frame_test, %Frame_test* %.frame, i32 0, i32 2
     %t41 = load %T_R*, %T_R** %t40
     %t43 = getelementptr inbounds %T_R, %T_R* %t41, i32 0, i32 16
     %t42 = bitcast i8* %t43 to double*
     %t44 = fneg double 3.14000
     store double %t44, double* %t42
+    ; line 65
     %t45 = getelementptr inbounds %Frame_test, %Frame_test* %.frame, i32 0, i32 1
     %t46 = load i32*, i32** %t45
     store i32 1024, i32* %t46

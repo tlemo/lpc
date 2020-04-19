@@ -484,10 +484,8 @@ private:
         // generate the statement "header"
         // (line number and optional label)
         //
-#if 0
         if(NO_LOCATION != pStm->line)
             code << TAB << genLine(pStm->line);
-#endif
 
         if(pStm->pLabel != nullptr)
         {

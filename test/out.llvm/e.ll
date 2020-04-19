@@ -58,22 +58,32 @@ define void @P_()
     store i8* %t2, i8** @output
 
     ; body
+    ; line 102
+    ; line 102
+    ; line 103
     %t3 = load i8*, i8** @s
     %t4 = bitcast i8* %t3 to %T_digitarray*
     call void @P_initinteger(%T_digitarray* %t4, i32 0)
+    ; line 104
     %t5 = load i8*, i8** @x
     %t6 = bitcast i8* %t5 to %T_digitarray*
     call void @P_initinteger(%T_digitarray* %t6, i32 1)
+    ; line 105
     store i32 0, i32* @xs
+    ; line 106
     %t7 = load i8*, i8** @s
     %t8 = bitcast i8* %t7 to %T_digitarray*
     %t9 = load i8*, i8** @x
     %t10 = bitcast i8* %t9 to %T_digitarray*
     %t11 = load i32, i32* @xs
     call void @P_add(%T_digitarray* %t8, %T_digitarray* %t10, i32 %t11)
+    ; line 107
     store i32 0, i32* @i
+    ; line 108
+    ; line 114
     %t12 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t12)
+    ; line 115
     %t13 = load %T_text, %T_text* @output
     call void @_WriteChar(i8* %t13, i32 45, i32 0, i8 32)
     call void @_WriteString(i8* %t13, i32 0, i32 0, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.3, i32 0, i32 0), i32 4)
@@ -84,11 +94,17 @@ define void @P_()
     call void @_WriteInteger(i8* %t13, i32 1, i32 0, i32 %t17)
     call void @_WriteChar(i8* %t13, i32 0, i32 0, i8 46)
     call void @_WriteLn(i8* %t13)
+    ; line 116
     store i32 0, i32* @i
+    ; line 117
+    ; line 123
     %t18 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t18)
+    ; line 124
     %t19 = load %T_text, %T_text* @output
     call void @_WriteString(i8* %t19, i32 0, i32 0, i8* getelementptr inbounds ([15 x i8], [15 x i8]* @.str.4, i32 0, i32 0), i32 14)
+    ; line 125
+    ; line 128
     %t20 = load %T_text, %T_text* @output
     call void @_WriteLn(i8* %t20)
     ; nop
@@ -133,12 +149,14 @@ define void @P_initinteger(%T_digitarray* %x, i32 %n)
     store %T_digitarray* %x, %T_digitarray** %t2
 
     ; body
+    ; line 21
     %t3 = getelementptr inbounds %Frame_initinteger, %Frame_initinteger* %.frame, i32 0, i32 1
     %t4 = load %T_digitarray*, %T_digitarray** %t3
     %t5 = getelementptr inbounds %T_digitarray, %T_digitarray* %t4, i32 0, i32 0
     %t7 = getelementptr inbounds %Frame_initinteger, %Frame_initinteger* %.frame, i32 0, i32 0
     %t6 = load i32, i32* %t7
     store i32 %t6, i32* %t5
+    ; line 22
     ; nop
 
     ; epilogue
@@ -185,13 +203,17 @@ define void @P_divide(%T_digitarray* %x, i32 %xs, i32 %n, %T_digitarray* %y, i32
     store i32* %ys, i32** %t5
 
     ; body
+    ; line 31
     %t6 = getelementptr inbounds %Frame_divide, %Frame_divide* %.frame, i32 0, i32 5
     store i32 0, i32* %t6
+    ; line 32
+    ; line 37
     %t7 = getelementptr inbounds %Frame_divide, %Frame_divide* %.frame, i32 0, i32 4
     %t8 = load i32*, i32** %t7
     %t10 = getelementptr inbounds %Frame_divide, %Frame_divide* %.frame, i32 0, i32 2
     %t9 = load i32, i32* %t10
     store i32 %t9, i32* %t8
+    ; line 38
     ; nop
 
     ; epilogue
@@ -232,12 +254,16 @@ define void @P_add(%T_digitarray* %s, %T_digitarray* %x, i32 %xs)
     store i32 %xs, i32* %t3
 
     ; body
+    ; line 46
     %t4 = getelementptr inbounds %Frame_add, %Frame_add* %.frame, i32 0, i32 3
     store i32 0, i32* %t4
+    ; line 47
+    ; line 57
     %t5 = getelementptr inbounds %Frame_add, %Frame_add* %.frame, i32 0, i32 4
     %t7 = getelementptr inbounds %Frame_add, %Frame_add* %.frame, i32 0, i32 2
     %t6 = load i32, i32* %t7
     store i32 %t6, i32* %t5
+    ; line 58
     ; nop
 
     ; epilogue
@@ -278,12 +304,16 @@ define void @P_sub(%T_digitarray* %s, %T_digitarray* %x, i32 %xs)
     store i32 %xs, i32* %t3
 
     ; body
+    ; line 76
     %t4 = getelementptr inbounds %Frame_sub, %Frame_sub* %.frame, i32 0, i32 3
     store i32 0, i32* %t4
+    ; line 77
+    ; line 87
     %t5 = getelementptr inbounds %Frame_sub, %Frame_sub* %.frame, i32 0, i32 4
     %t7 = getelementptr inbounds %Frame_sub, %Frame_sub* %.frame, i32 0, i32 2
     %t6 = load i32, i32* %t7
     store i32 %t6, i32* %t5
+    ; line 88
     ; nop
 
     ; epilogue

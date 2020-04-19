@@ -61,25 +61,35 @@ define void @P_()
     store i8* %t2, i8** @_output
 
     ; body
+    ; line 47
     %t3 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.3, i32 0, i32 0), i32 5)
     call void @_WriteLn(i8* %t3)
+    ; line 47
     %t4 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t4, i32 0, i32 0, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.4, i32 0, i32 0), i32 2)
+    ; line 47
+    ; line 47
     %t5 = load %T_text, %T_text* @_output
     %t6 = load i32, i32* @n
     call void @_WriteInteger(i8* %t5, i32 0, i32 0, i32 %t6)
     call void @_WriteLn(i8* %t5)
+    ; line 48
     %t7 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([64 x i8], [64 x i8]* @.str.5, i32 0, i32 0), i32 63)
     call void @_WriteLn(i8* %t7)
+    ; line 49
     %t8 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t8, i32 0, i32 0, i8* getelementptr inbounds ([27 x i8], [27 x i8]* @.str.6, i32 0, i32 0), i32 26)
     call void @_WriteLn(i8* %t8)
+    ; line 50
     store i32 1, i32* @nn
+    ; line 50
+    ; line 50
     %t10 = load i32, i32* @nn
     %t9 = sub i32 %t10, 1
     store i32 %t9, i32* @nn
+    ; line 51
     ; nop
 
     ; cleanup
@@ -121,30 +131,36 @@ define void @P_hanoi1()
     %.frame = alloca %Frame_hanoi1, align 8
 
     ; body
+    ; line 8
     %t1 = getelementptr inbounds %Frame_hanoi1, %Frame_hanoi1* %.frame, i32 0, i32 3
     %t3 = load i32, i32* @nn
     %t2 = add i32 %t3, 1
     store i32 %t2, i32* %t1
+    ; line 8
     %t4 = getelementptr inbounds %Frame_hanoi1, %Frame_hanoi1* %.frame, i32 0, i32 4
     %t7 = getelementptr inbounds %Frame_hanoi1, %Frame_hanoi1* %.frame, i32 0, i32 3
     %t6 = load i32, i32* %t7
     %t5 = sdiv i32 %t6, 2
     store i32 %t5, i32* %t4
+    ; line 8
     %t8 = getelementptr inbounds %Frame_hanoi1, %Frame_hanoi1* %.frame, i32 0, i32 5
     %t11 = getelementptr inbounds %Frame_hanoi1, %Frame_hanoi1* %.frame, i32 0, i32 4
     %t10 = load i32, i32* %t11
     %t9 = sdiv i32 %t10, 2
     store i32 %t9, i32* %t8
+    ; line 8
     %t12 = getelementptr inbounds %T_array_2, %T_array_2* @M, i32 0, i32 1
     %t14 = getelementptr inbounds %Frame_hanoi1, %Frame_hanoi1* %.frame, i32 0, i32 4
     %t13 = load i32, i32* %t14
     %t15 = getelementptr inbounds %T_array_3, %T_array_3* %t12, i32 0, i32 %t13
     store i32 1, i32* %t15
+    ; line 8
     %t16 = getelementptr inbounds %T_array_2, %T_array_2* @M, i32 0, i32 2
     %t18 = getelementptr inbounds %Frame_hanoi1, %Frame_hanoi1* %.frame, i32 0, i32 4
     %t17 = load i32, i32* %t18
     %t19 = getelementptr inbounds %T_array_3, %T_array_3* %t16, i32 0, i32 %t17
     store i32 2, i32* %t19
+    ; line 9
     ; nop
 
     ; epilogue
@@ -177,14 +193,19 @@ define void @P_hanoi2()
     %.frame = alloca %Frame_hanoi2, align 8
 
     ; body
+    ; line 23
     %t1 = getelementptr inbounds %Frame_hanoi2, %Frame_hanoi2* %.frame, i32 0, i32 0
     store i32 1, i32* %t1
+    ; line 23
     %t2 = getelementptr inbounds %Frame_hanoi2, %Frame_hanoi2* %.frame, i32 0, i32 1
     store i32 2, i32* %t2
+    ; line 23
     %t3 = getelementptr inbounds %Frame_hanoi2, %Frame_hanoi2* %.frame, i32 0, i32 4
     store i32 0, i32* %t3
+    ; line 23
     %t4 = getelementptr inbounds %Frame_hanoi2, %Frame_hanoi2* %.frame, i32 0, i32 3
     store i32 1, i32* %t4
+    ; line 24
     br label %L_1
 L_1:
     ; nop
@@ -226,6 +247,7 @@ define void @P_hanoi3(i32 %n, i32 %i, i32 %j)
     store i32 %n, i32* %t3
 
     ; body
+    ; line 41
     ; nop
 
     ; epilogue

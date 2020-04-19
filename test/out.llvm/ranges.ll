@@ -64,13 +64,20 @@ define void @P_()
     store i8* %t3, i8** @tmp
 
     ; body
+    ; line 22
     store i8 120, i8* @v1
+    ; line 23
     store i32 1, i32* @v2
+    ; line 24
     store i32 200, i32* @v3
+    ; line 25
     store i32 123, i32* @v4
+    ; line 26
     store i32 32768, i32* @v5
+    ; line 27
     %t4 = sub i32 0, 1
     store i32 %t4, i32* @v6
+    ; line 29
     %t5 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.4, i32 0, i32 0), i32 12)
     %t6 = load i8, i8* @v1
@@ -91,9 +98,12 @@ define void @P_()
     %t11 = load i32, i32* @v6
     call void @_WriteInteger(i8* %t5, i32 0, i32 0, i32 %t11)
     call void @_WriteLn(i8* %t5)
+    ; line 31
     %t12 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t12, i32 0, i32 0, i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.5, i32 0, i32 0), i32 17)
     call void @_WriteLn(i8* %t12)
+    ; line 32
+    ; line 33
     %t13 = load %T_text, %T_text* @tmp
     %t14 = load i8, i8* @v1
     call void @_WriteChar(i8* %t13, i32 0, i32 0, i8 %t14)
@@ -104,12 +114,18 @@ define void @P_()
     %t16 = load i32, i32* @v3
     call void @_WriteInteger(i8* %t13, i32 0, i32 0, i32 %t16)
     call void @_WriteLn(i8* %t13)
+    ; line 35
     %t17 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t17, i32 0, i32 0, i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.6, i32 0, i32 0), i32 17)
     call void @_WriteLn(i8* %t17)
+    ; line 36
+    ; line 37
+    ; line 39
     %t18 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t18, i32 0, i32 0, i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.7, i32 0, i32 0), i32 17)
     call void @_WriteLn(i8* %t18)
+    ; line 40
+    ; line 41
     %t19 = load %T_text, %T_text* @tmp
     %t20 = load i32, i32* @v4
     call void @_WriteInteger(i8* %t19, i32 0, i32 0, i32 %t20)
@@ -120,9 +136,13 @@ define void @P_()
     %t22 = load i32, i32* @v6
     call void @_WriteInteger(i8* %t19, i32 0, i32 0, i32 %t22)
     call void @_WriteLn(i8* %t19)
+    ; line 43
     %t23 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t23, i32 0, i32 0, i8* getelementptr inbounds ([18 x i8], [18 x i8]* @.str.8, i32 0, i32 0), i32 17)
     call void @_WriteLn(i8* %t23)
+    ; line 44
+    ; line 45
+    ; line 47
     %t24 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t24, i32 0, i32 0, i8* getelementptr inbounds ([13 x i8], [13 x i8]* @.str.9, i32 0, i32 0), i32 12)
     %t25 = load i8, i8* @t1

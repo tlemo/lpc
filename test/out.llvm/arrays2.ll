@@ -59,29 +59,40 @@ define void @P_()
     store i8* %t2, i8** @_output
 
     ; body
+    ; line 9
+    ; line 16
     %t3 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([24 x i8], [24 x i8]* @.str.3, i32 0, i32 0), i32 23)
     call void @_WriteLn(i8* %t3)
+    ; line 17
     %t4 = load %T_text, %T_text* @_output
     call void @_WriteLn(i8* %t4)
+    ; line 18
+    ; line 24
     %t5 = getelementptr inbounds %T_array_4, %T_array_4* @Value, i32 0, i32 3
     %t6 = getelementptr inbounds %T_array_5, %T_array_5* %t5, i32 0, i32 5
     %t7 = sub i32 0, 1
     store i32 %t7, i32* %t6
+    ; line 25
     %t8 = getelementptr inbounds %T_array_4, %T_array_4* @Value, i32 0, i32 3
     %t9 = getelementptr inbounds %T_array_5, %T_array_5* %t8, i32 0, i32 6
     store i32 3, i32* %t9
+    ; line 26
     %t10 = getelementptr inbounds %T_array_4, %T_array_4* @Value, i32 0, i32 3
     %t11 = getelementptr inbounds %T_array_5, %T_array_5* %t10, i32 0, i32 6
     %t12 = load i32, i32* %t11
     %t13 = getelementptr inbounds %T_array_4, %T_array_4* @Value, i32 0, i32 %t12
     %t14 = getelementptr inbounds %T_array_5, %T_array_5* %t13, i32 0, i32 7
     store i32 2, i32* %t14
+    ; line 28
+    ; line 30
     %t15 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t15, i32 0, i32 0, i8* getelementptr inbounds ([16 x i8], [16 x i8]* @.str.4, i32 0, i32 0), i32 15)
     call void @_WriteLn(i8* %t15)
+    ; line 31
     %t16 = load %T_text, %T_text* @_output
     call void @_WriteLn(i8* %t16)
+    ; line 32
     ; nop
 
     ; cleanup

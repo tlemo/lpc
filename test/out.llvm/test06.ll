@@ -51,13 +51,17 @@ define void @P_()
     store i8* %t2, i8** @_output
 
     ; body
+    ; line 28
     call void @P_init(i8** @p)
+    ; line 30
     call void @P_setValue(i32* @i, i8** @p)
+    ; line 32
     %t3 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([5 x i8], [5 x i8]* @.str.3, i32 0, i32 0), i32 4)
     %t4 = load i32, i32* @i
     call void @_WriteInteger(i8* %t3, i32 0, i32 0, i32 %t4)
     call void @_WriteLn(i8* %t3)
+    ; line 33
     %t5 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t5, i32 0, i32 0, i8* getelementptr inbounds ([6 x i8], [6 x i8]* @.str.4, i32 0, i32 0), i32 5)
     %t6 = load i8*, i8** @p
@@ -65,7 +69,9 @@ define void @P_()
     %t8 = load i32, i32* %t7
     call void @_WriteInteger(i8* %t5, i32 0, i32 0, i32 %t8)
     call void @_WriteLn(i8* %t5)
+    ; line 35
     call void @P_free(i8** @p)
+    ; line 37
     ; nop
 
     ; cleanup
@@ -102,6 +108,7 @@ define void @P_init(i8** %pointer)
     store i8** %pointer, i8*** %t1
 
     ; body
+    ; line 13
     ; nop
 
     ; epilogue
@@ -135,7 +142,9 @@ define void @P_setValue(i32* %value, i8** %pointer)
     store i32* %value, i32** %t2
 
     ; body
+    ; line 18
     store i32 12345, i32* @i
+    ; line 19
     %t4 = getelementptr inbounds %Frame_setValue, %Frame_setValue* %.frame, i32 0, i32 0
     %t5 = load i8**, i8*** %t4
     %t3 = load i8*, i8** %t5
@@ -174,6 +183,7 @@ define void @P_free(i8** %pointer)
     store i8** %pointer, i8*** %t1
 
     ; body
+    ; line 24
     ; nop
 
     ; epilogue

@@ -27,7 +27,7 @@ compiling pass 2 (target = llvm)
 -----------------------------------------------------
 
 Invoking LLC ...
-llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\basics.ll:73:23: error: constant expression type mismatch
+llc.exe: error: llc.exe: C:\Users\lemo\work\compilers\lpc\test\out.llvm\basics.ll:75:23: error: constant expression type mismatch
     store %T_string10 getelementptr inbounds ([11 x i8], [11 x i8]* @.str.3, i32 0, i32 0), %T_string10* %t3
                       ^
 Exit code: 1

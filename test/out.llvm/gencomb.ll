@@ -58,22 +58,31 @@ define void @P_()
     store i8* %t2, i8** @_output
 
     ; body
+    ; line 31
     %t3 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t3, i32 0, i32 0, i8* getelementptr inbounds ([41 x i8], [41 x i8]* @.str.3, i32 0, i32 0), i32 40)
     call void @_WriteLn(i8* %t3)
+    ; line 32
     %t4 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t4, i32 0, i32 0, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.4, i32 0, i32 0), i32 2)
+    ; line 32
+    ; line 32
     %t5 = load %T_text, %T_text* @_output
     %t6 = load i32, i32* @n
     call void @_WriteInteger(i8* %t5, i32 0, i32 0, i32 %t6)
     call void @_WriteLn(i8* %t5)
+    ; line 33
     %t7 = load %T_text, %T_text* @_output
     call void @_WriteString(i8* %t7, i32 0, i32 0, i8* getelementptr inbounds ([3 x i8], [3 x i8]* @.str.5, i32 0, i32 0), i32 2)
+    ; line 33
+    ; line 33
     %t8 = load %T_text, %T_text* @_output
     %t9 = load i32, i32* @k
     call void @_WriteInteger(i8* %t8, i32 0, i32 0, i32 %t9)
     call void @_WriteLn(i8* %t8)
+    ; line 34
     store i32 0, i32* @ig
+    ; line 35
     br label %L_1
 L_1:
     ; nop
@@ -116,6 +125,9 @@ define void @P_gen(%T_vec* %v)
     store %T_vec* %v, %T_vec** %t1
 
     ; body
+    ; line 11
+    ; line 15
+    ; line 20
     store i32 0, i32* @ig
     br label %L_10
 L_10:
@@ -152,6 +164,8 @@ define void @P_prel(%T_vec %v)
     store %T_vec %v, %T_vec* %t1
 
     ; body
+    ; line 26
+    ; line 27
     %t2 = load %T_text, %T_text* @_output
     call void @_WriteLn(i8* %t2)
     ; nop
